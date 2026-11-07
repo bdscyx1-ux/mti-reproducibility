@@ -1,0 +1,92 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-verification-rule-v1",
+  "studyId": "Gate14Re-ME",
+  "ruleId": "gate14re-me-unity-2022.3.30f1c1-external-three-phase-composite-process-identity-v3",
+  "status": "FROZEN_TRUSTED_IDENTITY_RULE_FROM_OFFLINE_ADJUDICATION",
+  "frozenAtUtc": "2026-10-17T10:53:21.964108Z",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-offline-evidence-adjudication-attempt-005",
+  "sourceAttempt": {
+    "authorizationId": "gate14re-me-unity-executable-identity-rule-repair-attempt-004",
+    "outcomeRetained": "FAILED_CLOSED_NOT_ADJUDICATED",
+    "reclassified": false,
+    "evidenceInventoryDigestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c"
+  },
+  "applicability": {
+    "host": "CY的主机",
+    "unityVersion": "2022.3.30f1c1",
+    "unityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableExpectedSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "ntfsFileIdHex": "00000000000000000003000000032664",
+    "ntfsFileIndexLow64Hex": "0003000000032664",
+    "fileLengthBytes": 35821616,
+    "creationTimeUtc": "2024-06-11T11:26:54.0000000Z",
+    "lastWriteTimeUtc": "2024-06-11T11:26:54.0000000Z",
+    "signerSubject": "CN=优三缔科技（上海）有限公司, O=优三缔科技（上海）有限公司, S=上海市, C=CN",
+    "signerThumbprint": "3B027072EFDDD6DA096DCEE025CBAEC665AC3CA1"
+  },
+  "authoritativeIdentitySources": [
+    "two mutually agreeing external full-file SHA-256 implementations at prelaunch, live-concurrent and post-exit phases",
+    "stable external 64 KiB chunk sets, normalized regular-file path, NTFS file identity, PE identity, Authenticode signer, length and timestamps",
+    "historical live PID, creation time, executable path, exact command line, execute method and isolated project",
+    "in-process EditorApplication.applicationPath, Process.MainModule and QueryFullProcessImageName path agreement plus stable structural identity",
+    "terminal algorithm-free Unity probe receipt, SHA-256 known answers, natural exit-code-zero control-flow gate and persisted post-exit fingerprint"
+  ],
+  "nonAuthoritativeIdentitySources": [
+    "in-process File.OpenRead SHA-256",
+    "in-process shared FileStream SHA-256",
+    "in-process File.ReadAllBytes SHA-256 and its cross-hold stability",
+    "in-process chunk digests and their agreement with external reads",
+    "process name without PID, creation time, executable path and exact command line"
+  ],
+  "requirements": {
+    "externalThreePhaseExpectedSha256AndIndependentMethodAgreement": true,
+    "external64KiBChunksPathFileIdPeSignerAndMetadataStable": true,
+    "pidCreationTimePathCommandLineAndExecuteMethodBound": true,
+    "inProcessPathSourcesAndStructuralIdentityStable": true,
+    "knownAnswersPassed": true,
+    "normalExitAndPostExitReconfirmationRequired": true,
+    "inProcessSelfHashesRequiredForAuthorization": false,
+    "fileReadAllBytesRole": "DIAGNOSTIC_ONLY",
+    "anyAuthoritativeMismatchDisposition": "FAIL_CLOSED_NO_ADOPTION"
+  },
+  "evidenceClassification": "EXTERNAL_COMPOSITE_IDENTITY_AUTHORITATIVE_IN_PROCESS_READS_DIAGNOSTIC",
+  "explanationBoundary": "This rule establishes launch identity only. It does not reclassify attempt-004, explain process-local byte-read differences, certify Unity correctness, qualify D3, or authorize schema compatibility, qualification, an algorithm lane, collection, analysis, ranking or winner adjudication.",
+  "evidenceBindings": {
+    "offlineAdjudication": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/offline-evidence-adjudication.v1.json",
+      "sha256": "b3f7e26000176e7572c4140a4dfd3d694529dec31582e6e77ff905fe7ebb978c"
+    },
+    "attempt004FailureReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/failure-receipt.v1.json",
+      "sha256": "883f688d7d07a10bab4a5bbd2e186d2b74108bf0f01d65d61d84fc80ba8c543c"
+    },
+    "attempt004StatusV16": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v16.json",
+      "sha256": "6e7b993b64fccc114038bf70b56721ed2c0568c454d2a90852d9d5eeabaa9d1e"
+    },
+    "attempt004ExternalPrelaunchFingerprint": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/external-prelaunch-fingerprint.v1.json",
+      "sha256": "60f079e84444a456220e585bdf8467464a580bb46771aa773051f8b992cabc4f"
+    },
+    "attempt004ExternalConcurrentFingerprint": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/external-concurrent-fingerprint.v1.json",
+      "sha256": "dc4dc2c80066adb64687330626c3537b6fac71aa8d3ab3358ec5fc263b530464"
+    },
+    "attempt004ExternalPostExitFingerprint": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/external-post-exit-fingerprint.v1.json",
+      "sha256": "02174e0e6792af9236082e016f3281e3aad9bdc31f7687446500dc6fd0666862"
+    },
+    "attempt004ProcessLaunchReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/process-launch-receipt.v1.json",
+      "sha256": "852a3d0390840634b4791322be0858578039184a96ec9d825f7f343677faaf7c"
+    },
+    "attempt004ReadySnapshot": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/unity-output/in-process-ready-snapshot.v1.json",
+      "sha256": "492617d438a5ce7fee4d6453aaef3527555c391b6f74e9b99f8b98985b257076"
+    },
+    "attempt004UnityProbeReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/unity-output/unity-identity-probe-receipt.v1.json",
+      "sha256": "24f3cfba8815fdd3c73b178687b116c00ffd9d02a0a670c19f4d2cfd4e26d460"
+    }
+  }
+}

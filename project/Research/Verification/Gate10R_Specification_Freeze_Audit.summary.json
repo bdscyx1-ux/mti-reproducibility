@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "summaryKind": "gate10r-specification-test-design-freeze-audit-v1",
+  "savedAtUtc": "2026-10-06T08:10:24.7150912Z",
+  "assertionCount": 14,
+  "passedCount": 14,
+  "failedCount": 0,
+  "checks": [
+    {
+      "name": "active-design",
+      "passed": true,
+      "detail": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1"
+    },
+    {
+      "name": "formal-false",
+      "passed": true,
+      "detail": "False"
+    },
+    {
+      "name": "managed-128mib",
+      "passed": true,
+      "detail": "134217728"
+    },
+    {
+      "name": "native-512mib",
+      "passed": true,
+      "detail": "536870912"
+    },
+    {
+      "name": "precision-5pct",
+      "passed": true,
+      "detail": "0.05"
+    },
+    {
+      "name": "no-hard-cap",
+      "passed": true,
+      "detail": "null"
+    },
+    {
+      "name": "no-retry-resume",
+      "passed": true,
+      "detail": "false/false"
+    },
+    {
+      "name": "four-algorithms",
+      "passed": true,
+      "detail": "A*-R,D*L,C-FF,IDFF"
+    },
+    {
+      "name": "two-pair-contracts",
+      "passed": true,
+      "detail": "2/2"
+    },
+    {
+      "name": "forbidden-formal-root",
+      "passed": true,
+      "detail": "bound"
+    },
+    {
+      "name": "formal-root-absent",
+      "passed": true,
+      "detail": "absent"
+    },
+    {
+      "name": "spec-frozen-token",
+      "passed": true,
+      "detail": "present"
+    },
+    {
+      "name": "test-frozen-token",
+      "passed": true,
+      "detail": "present"
+    },
+    {
+      "name": "structural-exclusions-named",
+      "passed": true,
+      "detail": "present"
+    }
+  ],
+  "artifactHashes": {
+    "specification": "609f2a9a149908d92c3630e008f5d4dbf29d9d704dda5adacf80dd61da795039",
+    "testDesign": "187d651dd8030c366544fd229f3d64cce326d94b8c9b415b484a1a21f462ff7c",
+    "config": "2df51209310f8ec638464e95bc3ef99106337399b047e93540e005895de7984b"
+  },
+  "passed": true
+}
+

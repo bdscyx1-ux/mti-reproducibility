@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "artifactKind": "GATE13R-AX2-EXTERNAL-FORMAL-LAUNCH-RECEIPT",
+  "designId": "gate13r-ax2-shared32-b48-four-treatment-v1",
+  "status": "FORMAL-ACQUISITION-LIVE",
+  "recordedAtUtc": "2026-10-16T15:12:58.4613596Z",
+  "authorizationId": "gate13r-ax2-phasea-attempt-001-01702fd7-46a3-4c4d-947e-52b3bc7cdcb5",
+  "authorizationReceipt": {
+    "path": "H:/DDM_Final_Project/Research/Gate13R-AX2/Authorization/Gate13R_AX2_Formal_Collection_Authorization.v1.json",
+    "sha256": "cfd69878963d4d5df070429f2807625cc979d5897bd86f472985248b231851f8"
+  },
+  "measuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R-AX2/PhaseA/attempt-001",
+  "rootLaunchReceipt": {
+    "path": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R-AX2/PhaseA/attempt-001/_control/launch-receipt.v1.json",
+    "initialSha256": "2b075af0eb3cbee3238edf1fbc18204c4e6a02e7a6cd5419b41465485412c0c2",
+    "status": "FORMAL-ACQUISITION-LAUNCHED"
+  },
+  "supervisor": {
+    "path": "H:/DDM_Final_Project/Research/Gate13R-AX2/Execution/v1/Run-Gate13RAX2Collection.v1.ps1",
+    "sha256": "08902326d5aeb7ff7a7ce8210514923bac4fab1f3f240b877f39cc1f5c387354",
+    "pid": 52848,
+    "creationUtc": "2026-10-16T15:12:26.0250478Z",
+    "commandLineSha256": "9fae27a75f50ae4b7a26082e276d70213f0d2d269465481839969fcd973fa266",
+    "compositeIdentityMatchedAtReceipt": true,
+    "aliveAtReceipt": true
+  },
+  "frozenBindings": {
+    "authorizationPromptSha256": "e7125ba0cdba2e4e5957e07287d070ff16e12443d2febd1e0502e46bb738be05",
+    "terminologyClarificationSha256": "0a42cfc504d62ebfc4934499cecf047ff65403454b6816dee957743721f1cacb",
+    "finalReadinessSha256": "ec6d7634e830aaf51bfb5fbbe01cb1a1fdd20256aa13cee05e514ace52b27482",
+    "scheduleSha256": "3ea4198796bc5024194fb52f5e1c43ccbb51bf557186993b3703c19c2787838b",
+    "outputSchemaSha256": "de90d9bbfd72104e3176dd223e565a032ad6c0b21d098af2fbe7388ad2378a70",
+    "executionContractSha256": "9e4a127d5410b02e33e9b5f6e77d5a0fc6e4e637cbd9dc10b03e59e63aef03eb",
+    "blockRunnerSourceSha256": "11d2087032b5e09c7761a69f6a8ce963dbea5a19ebc9b09012a483c510b40e62",
+    "structuralValidatorSha256": "af0298440e786af07425cb42c6f03c9c3e11812dd0eeb981fceb503eea4cb8c3",
+    "rawCommitToolSha256": "38a47fb6f831350c66f85346f4f4b378ecb87dfd681e3d86ae9840c488790663",
+    "p1AnalysisImplementationSha256": "ab69d02ec61d348ed176b8616390968704ed4be72a53432d26ff463fe4c24e89",
+    "runtimeAssemblySha256": "656ff839dfcc528d44815fc7be74c2a56eaa8af7ad2b1c5db8c28797f529bd67",
+    "editorAssemblySha256": "7c3efd1a0f9b7cddffc1e1a88ada025db72ce484a03752a8d954d77eb580e128",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "pythonExecutableSha256": "b847bb9f4e48c19f585c8bf7d8b355f3f8c6d2125717ece9c9d7e16fb9f09de8",
+    "powerShellExecutableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139"
+  },
+  "design": {
+    "sharedGoalCampaigns": 32,
+    "blocksPerCampaign": 48,
+    "plannedCompleteBlocks": 1536,
+    "plannedNamedAlgorithmRunSamples": 6144,
+    "legacyAnonymousSampleCountIsOnlyRunCount": true,
+    "labelBlinded": false,
+    "algorithms": [
+      "BiA*-R",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "fourTreatmentWilliamsSchedule": true,
+    "freshUnityProcessPerCompleteBlock": true,
+    "algorithmsWithinBlockStrictlySerial": true,
+    "maximumWholeBlockTechnicalReplacements": 1,
+    "perAlgorithmRetryResumeTopUpMergeSkipReorder": false
+  },
+  "initialStructuralStatus": {
+    "status": "ACQUISITION-IN-PROGRESS",
+    "acceptedBlocks": 1,
+    "plannedBlocks": 1536,
+    "acceptedNamedAlgorithmRunSamples": 4,
+    "plannedNamedAlgorithmRunSamples": 6144,
+    "launchedProcesses": 1,
+    "wholeBlockReplacements": 0,
+    "currentRunnerCount": 1,
+    "failureReceiptPresent": false,
+    "acquisitionCompleteReceiptPresent": false
+  },
+  "scopeAttestation": {
+    "monitorReadOrInterpretedP1": false,
+    "formalP1AnalysisAuthorized": false,
+    "algorithmRankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false,
+    "subsequentExperimentAuthorized": false,
+    "wholeAttemptRestartAuthorized": false,
+    "rawCommitAndReadOnlyFreezeAuthorizedAfterAcquisition": true
+  }
+}

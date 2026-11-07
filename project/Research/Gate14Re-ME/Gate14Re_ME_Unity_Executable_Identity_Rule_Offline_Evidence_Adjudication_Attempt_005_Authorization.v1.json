@@ -1,0 +1,74 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-rule-offline-evidence-adjudication-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-offline-evidence-adjudication-attempt-005",
+  "status": "AUTHORIZED_OFFLINE_EVIDENCE_ONLY_UNITY_IDENTITY_RULE_ADJUDICATION",
+  "authorizedAtUtc": "2026-10-17T10:39:37.2059023Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME Unity 可执行身份规则离线证据裁决 attempt‑005：完整保留 attempt‑004 的失败状态与全部证据，不修改或改判 attempt‑004；禁止重新启动 Unity。仅允许创建并冻结一个独立只读离线裁决器，核对 attempt‑004 已冻结的启动前、运行中和退出后外部完整文件 SHA‑256、分块摘要、文件身份、PE/Authenticode/元数据、process launch receipt、Unity probe receipt，以及 PID、启动时间、可执行路径和命令行复合身份；运行中 File.ReadAllBytes 结果仅作为非权威诊断字段。仅当全部权威结构检查满足时，允许以 attempt‑005 身份冻结可信启动身份规则和 Gate14Re‑ME 新状态。不得删除或清理既有目录，不得运行 schema compatibility 自检，不得生成调度、输入或身份映射，不得创建 measured root，不得运行 planner、算法 lane、正式采集、正式分析、排名或赢家裁决；任一证据缺失、哈希不符或规则不满足均立即 fail closed；允许自动重试，直至通过。",
+  "scopeResolution": {
+    "attempt004OutcomeMustRemainFailedClosedNotAdjudicated": true,
+    "attempt004EvidenceMustRemainByteForByteUnchanged": true,
+    "unityLaunchAuthorized": false,
+    "offlineAdjudicationOnly": true,
+    "fileReadAllBytesRole": "NON_AUTHORITATIVE_DIAGNOSTIC_ONLY",
+    "automaticToolRepairRetryAuthorized": true,
+    "deterministicEvidenceMismatchMayBeRelaxed": false,
+    "retryInterpretation": "Automatic retry may repair only an attempt-005 adjudicator/tooling defect or transient read failure. It may not alter attempt-004 evidence, weaken a criterion, reclassify attempt-004, or repeat a deterministic evidence mismatch without a new scientific basis."
+  },
+  "authorizedActions": {
+    "createAttempt005AuthorizationPlanAdjudicatorAndFreezeManifest": true,
+    "readAndHashAttempt004FrozenEvidence": true,
+    "verifyThreeExternalFullFileSha256Phases": true,
+    "verifyThreeExternalChunkDigestSets": true,
+    "verifyStablePathFileIdPeAuthenticodeAndMetadata": true,
+    "verifyHistoricalPidStartTimeExecutablePathAndCommandLine": true,
+    "verifyReadySnapshotAndUnityProbeReceipt": true,
+    "verifyInProcessStructuralIdentityAndKnownAnswers": true,
+    "recordInProcessByteReadHashesAsDiagnosticOnly": true,
+    "freezeAttempt005AuditTrustedRuleTerminalReceiptEvidenceManifestAndStatusV17OnPass": true,
+    "freezeExactFailureEvidenceOnFailure": true
+  },
+  "executionLimits": {
+    "maximumUnityInvocations": 0,
+    "maximumAlgorithmLaneInvocations": 0,
+    "permittedEvidenceRootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004",
+    "permittedOutputRootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005",
+    "permittedStatusOutputRelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v17.json",
+    "expectedUnityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "expectedUnityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "expectedAttempt004FailureReceiptSha256": "883f688d7d07a10bab4a5bbd2e186d2b74108bf0f01d65d61d84fc80ba8c543c",
+    "expectedAttempt004StatusV16Sha256": "6e7b993b64fccc114038bf70b56721ed2c0568c454d2a90852d9d5eeabaa9d1e",
+    "expectedAttempt004EvidenceFileCount": 34,
+    "expectedAttempt004EvidenceInventoryDigestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c"
+  },
+  "authoritativeChecks": [
+    "attempt-004 failure receipt and status v16 remain exactly frozen and continue to say FAILED CLOSED / NOT_ADJUDICATED",
+    "all 34 attempt-004 evidence files retain their frozen relative paths, lengths, SHA-256 values and read-only attributes",
+    "the external prelaunch, live-concurrent and post-exit fingerprints each contain two agreeing SHA-256 methods equal to the frozen expected Unity SHA-256",
+    "the three 64 KiB external chunk sets, path, NTFS file ID, PE identity, Authenticode signer, length and timestamps are stable",
+    "the historical launch receipt, ready snapshot and terminal Unity probe receipt agree on PID, process start time, executable paths, exact authorized command-line identity and execute method",
+    "the Unity probe passed SHA-256 known answers, reports stable in-process structural identity, and reports no schema self-check, planner, algorithm lane or measured-root activity",
+    "the frozen attempt-004 orchestrator control flow proves the cleanup failure occurred only after normal Unity exit code 0, terminal probe receipt validation and post-exit fingerprint persistence"
+  ],
+  "diagnosticOnlyFields": [
+    "in-process File.OpenRead SHA-256",
+    "in-process shared FileStream SHA-256",
+    "in-process File.ReadAllBytes SHA-256",
+    "in-process chunk digests and agreement with external reads",
+    "cross-hold stability of any in-process byte-read hash"
+  ],
+  "prohibitedActions": {
+    "modifyDeleteCleanOrReclassifyAttempt004": true,
+    "launchOrRestartUnity": true,
+    "signalOrTerminateAnyProcess": true,
+    "modifyD3V3_1": true,
+    "runSchemaCompatibilitySelfCheck": true,
+    "generateScheduleInputsSeedsOrIdentityMappings": true,
+    "createQualificationPilotFormalOrOtherMeasuredRoot": true,
+    "runPlannerOracleOrAlgorithmLane": true,
+    "performCollectionAnalysisWeightingRankingOrWinnerAdjudication": true,
+    "treatInProcessByteReadHashesAsIdentityAuthority": true,
+    "weakenCriteriaToObtainPass": true
+  },
+  "terminalRule": "Attempt-005 may pass only from the already-frozen attempt-004 evidence, with zero Unity invocation in attempt-005, all authoritative structural checks true, all attempt-004 bytes unchanged before and after adjudication, and no prohibited activity. Attempt-004 itself remains FAILED CLOSED / NOT_ADJUDICATED. Any deterministic evidence mismatch fails closed and cannot be converted to pass by retry; automatic retry authority is limited to transparent, versioned repair of the attempt-005 adjudicator or a transient read failure without changing evidence or criteria."
+}

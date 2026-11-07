@@ -1,0 +1,65 @@
+{
+  "schema": "gate14re-me-status-v23",
+  "studyId": "Gate14Re-ME",
+  "status": "TRUSTED_TIMESTAMP_COMPARATOR_CORRIGENDUM_OFFLINE_QUALIFIED_PASS",
+  "version": 23,
+  "updatedAtUtc": "2026-10-17T12:18:05.7903788Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v22.json",
+    "sha256": "be3f26e833396c174de874f5dd7349530a454320bc33073d506812f980fb8a8d",
+    "retained": true
+  },
+  "priorTimestampComparatorAttempts": [
+    {
+      "attempt": "attempt-004",
+      "status": "FAILED_CLOSED_RETAINED_UNCHANGED",
+      "reclassified": false
+    },
+    {
+      "attempt": "attempt-005",
+      "status": "FAILED_CLOSED_RETAINED_UNCHANGED",
+      "reclassified": false
+    },
+    {
+      "attempt": "attempt-006",
+      "status": "FAILED_CLOSED_RETAINED_UNCHANGED",
+      "reclassified": false
+    }
+  ],
+  "trustedTimestampComparatorCorrigendumAttempt007": {
+    "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-auto-attempts-until-pass",
+    "attemptId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007",
+    "status": "PASS_TRUSTED_TIMESTAMP_COMPARATOR_OFFLINE_KNOWN_ANSWER",
+    "offlineKnownAnswerInvocationCount": 1,
+    "unityInvocationCount": 0,
+    "sameAttemptRetryPerformed": false,
+    "comparatorRelativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+    "comparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "knownAnswerReceiptRelativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/known-answer-receipt.v1.json",
+    "knownAnswerReceiptSha256": "ad64fb2bce32f2e6206f6f1f80baa30f273be212075603ee631f61b560cc1b63",
+    "trustedLaunchIdentityRuleModified": false
+  },
+  "adoptionState": {
+    "inputSchemaV2Adopted": false,
+    "planningSchemaBindingV2Adopted": false,
+    "timestampComparatorQualifiedOffline": true,
+    "schemaCompatibilityUnitySelfCheckPassed": false
+  },
+  "authorizationState": {
+    "autoAttemptsUntilPassAuthorizationSatisfiedAtAttempt007": true,
+    "unityLaunchAuthorized": false,
+    "schemaCompatibilityUnitySelfCheckAuthorized": false,
+    "qualificationPlanningAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "inputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize a new isolated algorithm-free Unity schema-compatibility attempt that imports the qualified timestamp comparator without weakening any other trusted identity requirement."
+}

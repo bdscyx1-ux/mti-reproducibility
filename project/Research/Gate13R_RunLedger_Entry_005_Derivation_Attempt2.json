@@ -1,0 +1,17 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-command-derivation-attempt2-failed",
+  "command": "Ran the versioned second mechanical command derivation. It failed closed because the transform expected three telemetryProbeResultSha256 occurrences while the frozen source contained five. The failure receipt and v2 derivation script were preserved; no Unity process or formal root was created.",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 1,
+  "input_sha256": {
+    "Gate13R_Command_Derivation_Attempt2_Failure.v1.json": "8fa97a065812e692198e06c98846699bbcfda8bc4be3828fded3b45ff31b1903"
+  },
+  "output_sha256": "8fa97a065812e692198e06c98846699bbcfda8bc4be3828fded3b45ff31b1903",
+  "gate_tokens": [
+    "DERIVATION-ATTEMPT2-FAILED-CLOSED",
+    "NO-UNITY",
+    "FORMAL-ROOT-ABSENT"
+  ]
+}

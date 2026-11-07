@@ -1,0 +1,373 @@
+{
+  "schema": "gate14re-mq-formal-fairness-and-topology-binding-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "FROZEN_FAIRNESS_TOPOLOGY_AND_ASSIGNMENT",
+  "host": {
+    "processorFamily": "AMD-Ryzen-9-7950X3D",
+    "physicalCoreCount": 16,
+    "ccdCount": 2,
+    "physicalCoresPerCcd": 8,
+    "causalCcdAttributionPermitted": false
+  },
+  "workerRules": {
+    "hardWindowsCpuSetBinding": true,
+    "oneLogicalSiblingPerPhysicalCore": true,
+    "laneAssignment": "lane-ordinal-mod-worker-count",
+    "outputRestore": "ascending-lane-ordinal",
+    "onePrivateGridPerLane": true,
+    "onePrivatePlannerPerLane": true,
+    "plannerSharedAcrossThreads": false,
+    "strictSerialFreshUnityProcesses": true,
+    "maximumConcurrentMeasuredUnityProcesses": 1,
+    "retry": false,
+    "replacement": false,
+    "partialBatchAcceptance": false
+  },
+  "conditionMatrix": [
+    {
+      "conditionIndex": 0,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 0,
+      "conditionId": "ST-DIRECT-LARGE-L3",
+      "executorMode": "direct",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 1,
+      "affinityPlanId": "LARGE_L3_CCD-W1",
+      "analysisRole": "overhead-sentinel"
+    },
+    {
+      "conditionIndex": 1,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 1,
+      "conditionId": "MQ-LARGE-L3-W1",
+      "executorMode": "managed",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 1,
+      "affinityPlanId": "LARGE_L3_CCD-W1",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 2,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 2,
+      "conditionId": "MQ-LARGE-L3-W2",
+      "executorMode": "managed",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 2,
+      "affinityPlanId": "LARGE_L3_CCD-W2",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 3,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 3,
+      "conditionId": "MQ-LARGE-L3-W4",
+      "executorMode": "managed",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 4,
+      "affinityPlanId": "LARGE_L3_CCD-W4",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 4,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 4,
+      "conditionId": "MQ-LARGE-L3-W8",
+      "executorMode": "managed",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 8,
+      "affinityPlanId": "LARGE_L3_CCD-W8",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 5,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 5,
+      "conditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "executorMode": "direct",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 1,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W1",
+      "analysisRole": "overhead-sentinel"
+    },
+    {
+      "conditionIndex": 6,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 6,
+      "conditionId": "MQ-HIGH-FREQUENCY-W1",
+      "executorMode": "managed",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 1,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W1",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 7,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 7,
+      "conditionId": "MQ-HIGH-FREQUENCY-W2",
+      "executorMode": "managed",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 2,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W2",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 8,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 8,
+      "conditionId": "MQ-HIGH-FREQUENCY-W4",
+      "executorMode": "managed",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 4,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W4",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 9,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 9,
+      "conditionId": "MQ-HIGH-FREQUENCY-W8",
+      "executorMode": "managed",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 8,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W8",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 10,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 10,
+      "conditionId": "MQ-DUAL-CCD-W8-4PLUS4",
+      "executorMode": "managed",
+      "topologyRole": "DUAL_CCD_BALANCED",
+      "workerCount": 8,
+      "affinityPlanId": "DUAL_CCD_BALANCED-W8",
+      "analysisRole": "key-secondary"
+    },
+    {
+      "conditionIndex": 11,
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "withinAlgorithmConditionIndex": 11,
+      "conditionId": "MQ-DUAL-CCD-W16-8PLUS8",
+      "executorMode": "managed",
+      "topologyRole": "DUAL_CCD_BALANCED",
+      "workerCount": 16,
+      "affinityPlanId": "DUAL_CCD_BALANCED-W16",
+      "analysisRole": "key-secondary"
+    },
+    {
+      "conditionIndex": 12,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 0,
+      "conditionId": "ST-DIRECT-LARGE-L3",
+      "executorMode": "direct",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 1,
+      "affinityPlanId": "LARGE_L3_CCD-W1",
+      "analysisRole": "overhead-sentinel"
+    },
+    {
+      "conditionIndex": 13,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 1,
+      "conditionId": "MQ-LARGE-L3-W1",
+      "executorMode": "managed",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 1,
+      "affinityPlanId": "LARGE_L3_CCD-W1",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 14,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 2,
+      "conditionId": "MQ-LARGE-L3-W2",
+      "executorMode": "managed",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 2,
+      "affinityPlanId": "LARGE_L3_CCD-W2",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 15,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 3,
+      "conditionId": "MQ-LARGE-L3-W4",
+      "executorMode": "managed",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 4,
+      "affinityPlanId": "LARGE_L3_CCD-W4",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 16,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 4,
+      "conditionId": "MQ-LARGE-L3-W8",
+      "executorMode": "managed",
+      "topologyRole": "LARGE_L3_CCD",
+      "workerCount": 8,
+      "affinityPlanId": "LARGE_L3_CCD-W8",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 17,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 5,
+      "conditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "executorMode": "direct",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 1,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W1",
+      "analysisRole": "overhead-sentinel"
+    },
+    {
+      "conditionIndex": 18,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 6,
+      "conditionId": "MQ-HIGH-FREQUENCY-W1",
+      "executorMode": "managed",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 1,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W1",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 19,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 7,
+      "conditionId": "MQ-HIGH-FREQUENCY-W2",
+      "executorMode": "managed",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 2,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W2",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 20,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 8,
+      "conditionId": "MQ-HIGH-FREQUENCY-W4",
+      "executorMode": "managed",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 4,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W4",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 21,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 9,
+      "conditionId": "MQ-HIGH-FREQUENCY-W8",
+      "executorMode": "managed",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "workerCount": 8,
+      "affinityPlanId": "HIGH_FREQUENCY_CCD-W8",
+      "analysisRole": "primary-slope"
+    },
+    {
+      "conditionIndex": 22,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 10,
+      "conditionId": "MQ-DUAL-CCD-W8-4PLUS4",
+      "executorMode": "managed",
+      "topologyRole": "DUAL_CCD_BALANCED",
+      "workerCount": 8,
+      "affinityPlanId": "DUAL_CCD_BALANCED-W8",
+      "analysisRole": "key-secondary"
+    },
+    {
+      "conditionIndex": 23,
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "withinAlgorithmConditionIndex": 11,
+      "conditionId": "MQ-DUAL-CCD-W16-8PLUS8",
+      "executorMode": "managed",
+      "topologyRole": "DUAL_CCD_BALANCED",
+      "workerCount": 16,
+      "affinityPlanId": "DUAL_CCD_BALANCED-W16",
+      "analysisRole": "key-secondary"
+    }
+  ],
+  "boundPrerequisites": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/external-freeze-receipt.v1.json",
+      "bytes": 1235,
+      "sha256": "6b67f820b5c841d99ec915a2966a24bb48535047753fa95fe828cc0343718814"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/terminal-receipt.v1.json",
+      "bytes": 1917,
+      "sha256": "c3eb67b53c28ed9a1d7a1d340f7f49230789af46c8fba8c445d9088ca60dec6e"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/topology-snapshot.v1.json",
+      "bytes": 15941,
+      "sha256": "0dbcb5d141ec3fe5545997b1591140d26625748315ed90bd022222a179193a72"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/affinity-plans.v1.json",
+      "bytes": 29705,
+      "sha256": "7f45ab8e5042081d489b19b0640c5c688e1288b746a877cfe31b1e81745262a8"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/external-freeze-receipt.v1.json",
+      "bytes": 2406,
+      "sha256": "c2bc8217e48bdb3248e97353538207f9386c2c866fd80e713fabadaf195df33b"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/terminal-receipt.v1.json",
+      "bytes": 1599,
+      "sha256": "d5429793cc940ad2e0a1c51fea760d2cbd43766849fb0d1f80f4752ba4c5d09e"
+    }
+  ],
+  "boundSources": [
+    {
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/WindowsCpuTopologyV1.cs",
+      "bytes": 25748,
+      "sha256": "a7301d86eb4846ba0dafddf1010561548ef99b7ad6c4adba39cd0037658f791d"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/ManagedMultiQueryExecutorV1.cs",
+      "bytes": 31705,
+      "sha256": "69066fa0b6dfd9844af8c99ed52c4b50d267a7cd96773de03b76f7b7b4af02bf"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/MQ/v2/Gate14ReMQFormalPerformanceKernelV2.cs",
+      "bytes": 20444,
+      "sha256": "c4006de15a6303b9568b0095bfdfdc7f1735df45d790c16d4bca755e40eb67a2"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "bytes": 34279,
+      "sha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "bytes": 46884,
+      "sha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "bytes": 10018,
+      "sha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "bytes": 5661,
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "bytes": 17536,
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "bytes": 30510,
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    }
+  ],
+  "createdAtUtc": "2026-10-21T07:33:32.1939533Z"
+}

@@ -1,0 +1,37 @@
+{
+  "executionEvidence": {
+    "offlineV1Failure": "PER_ROW_PATH_CANONICALIZATION_REMAINED_IN_V1",
+    "offlineV1ObservedRowsPerSecond": 1631.69,
+    "offlineV2ElapsedSeconds": 107.495,
+    "offlineV2PeakPrivateMemoryBytes": 81108992,
+    "offlineV2PeakWorkingSetBytes": 90746880,
+    "offlineV2SourceHashCacheHits": 7126242,
+    "offlineV2Status": "PASS_OFFLINE_NECESSARY_RAW_VALIDATION",
+    "originalValidationCompleted": false,
+    "originalValidationWindowBeforeUserStopSeconds": 5400.094
+  },
+  "oldValidatorDirectCodeEvidence": {
+    "actualRunnerMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV3.Run",
+    "oldRunnerMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV2.Run",
+    "perRowSourceBindingLine": 311,
+    "requireHashAlwaysCallsSha256File": true,
+    "requireHashDefinitionLine": 139,
+    "runnerMethodConstantLine": 35,
+    "wholeDatasetAppendLine": 351,
+    "wholeDatasetEnvelopeListLine": 324
+  },
+  "rootCauseConclusion": [
+    "The old validator re-hashed a row-bound source file on every source-bound raw row instead of once per distinct file.",
+    "The old validator retained every parsed row dictionary inside RowEnvelope lists for all tables before later checks, making memory scale with more than seven million rows.",
+    "Offline v1 removed repeated content hashing and whole-dataset retention but still repeated filesystem path canonicalization per row; its fail-closed performance evidence led to v2.",
+    "Offline v2 resolved and hashed 163 distinct row-bound paths once, used 7,126,242 cache hits, streamed rows, and completed in under two minutes.",
+    "The old validator also hard-coded RunnerV2 while attempt-009 used RunnerV3, so completion would have produced a false structural identity failure without a forward validator correction."
+  ],
+  "schema": "gate14re-me-validator-duration-root-cause-v1",
+  "validatedDatasetScale": {
+    "averageReferencesPerDistinctSourcePath": 43720.276,
+    "distinctRowBoundSourcePaths": 163,
+    "rowSourceBindingReferences": 7126405,
+    "rowsRetainedByOldLoadTablesDesign": 7126405
+  }
+}

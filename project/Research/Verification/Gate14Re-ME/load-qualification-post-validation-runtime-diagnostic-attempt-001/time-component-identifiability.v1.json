@@ -1,0 +1,74 @@
+{
+  "directlyMeasured": {
+    "inclusiveLaneBody": {
+      "maximumMilliseconds": 1445882.9231,
+      "minimumMilliseconds": 1228.4374,
+      "n": 972,
+      "p50Milliseconds": 22075.9657,
+      "p90Milliseconds": 310998.50039,
+      "p95Milliseconds": 381375.37002,
+      "p99Milliseconds": 658237.233077,
+      "totalHours": 22.371667
+    },
+    "interProcessGapBeforeLane": {
+      "maximumMilliseconds": 2034.748,
+      "minimumMilliseconds": 762.113,
+      "n": 972,
+      "p50Milliseconds": 799.051,
+      "p90Milliseconds": 838.0713,
+      "p95Milliseconds": 884.2475,
+      "p99Milliseconds": 993.31312,
+      "totalHours": 0.21833
+    },
+    "laneBodyToProcessWallRatio": {
+      "maximum": 0.99037,
+      "minimum": 0.075285,
+      "n": 972,
+      "p50": 0.582938,
+      "p90": 0.949491,
+      "p95": 0.959871,
+      "p99": 0.977105
+    },
+    "processWall": {
+      "maximumMilliseconds": 1462081.798,
+      "minimumMilliseconds": 16038.411,
+      "n": 972,
+      "p50Milliseconds": 37622.851,
+      "p90Milliseconds": 327720.4785,
+      "p95Milliseconds": 397654.47325,
+      "p99Milliseconds": 673603.25182,
+      "totalHours": 26.567818
+    },
+    "processWallP95TailOverlapWithLaneBodyP95Tail": 0.979592,
+    "processWallVsLaneBodyPearson": 0.999769
+  },
+  "driverEvidenceBoundary": {
+    "antivirusActivity": "not measured",
+    "diskPressureTimeSeries": "not measured",
+    "hostMemoryPressure": "not directly measured; private/working-set samples are structurally zero",
+    "prelaunchDiskFreeBytes": 213894758400,
+    "thermalThrottling": "not measured"
+  },
+  "interpretation": "High process-wall/lane-body concordance can localize the tail to the inclusive lane body rather than inter-process gaps, but cannot isolate pure algorithm compute from in-lane instrumentation, oracle work, serialization, or file I/O.",
+  "notSeparatelyIdentifiable": {
+    "exitFinalization": "No trustworthy workloadEndUtc is present.",
+    "pureAlgorithmCompute": "The permitted data have no trustworthy absolute algorithm/workload start and end timestamps. Inclusive lane-body also contains grid construction, oracle calls, instrumentation and raw writes.",
+    "unityStartup": "No trustworthy workloadStartUtc is present."
+  },
+  "resourceMetadata": {
+    "lanes": 972,
+    "lanesWithAnyPeakWorkingSetSample": 0,
+    "lanesWithAnyPrivateMemorySample": 0,
+    "lanesWithAnyWorkingSetSample": 0,
+    "managedMemoryMaxBytes": {
+      "maximum": 2347397120.0,
+      "minimum": 599834624.0,
+      "n": 972,
+      "p50": 829753344.0,
+      "p90": 1031060684.8,
+      "p95": 1995758387.199999,
+      "p99": 2133414789.12
+    }
+  },
+  "schema": "gate14re-me-runtime-component-identifiability-v1"
+}

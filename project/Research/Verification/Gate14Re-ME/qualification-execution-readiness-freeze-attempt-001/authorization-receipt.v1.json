@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-freeze-attempt-001-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-freeze-attempt-001",
+  "authorizedAtUtc": "2026-10-17T14:15:44.3556401Z",
+  "status": "AUTHORIZED_LIMITED_READ_ONLY_EXECUTION_READINESS_FREEZE",
+  "userAuthorization": "授权下一项最小阶段",
+  "interpretedStage": "Gate14Re-ME qualification execution readiness / prelaunch freeze attempt-001",
+  "authorizedOperations": [
+    "recompute and compare hashes of already frozen planning, schema, instrument, identity, runtime and execution artifacts",
+    "statically audit the qualification supervisor, RunnerV2, implementation manifest, receipt versions, stop/replacement state machine, structural validator and complete per-observation delivery path",
+    "read process metadata solely to confirm that no corresponding Gate14Re-ME Unity process is active",
+    "confirm that no qualification measured root exists",
+    "create and freeze one independent attempt-001 evidence package",
+    "fail closed without repair if any execution-readiness condition is not satisfied"
+  ],
+  "explicitlyNotAuthorized": [
+    "editing or repairing the qualification supervisor, RunnerV2, contracts, schemas, validators or delivery tools",
+    "changing or disclosing the sealed algorithm identity mapping",
+    "creating a qualification measured root",
+    "starting Unity",
+    "constructing or invoking a planner",
+    "executing an algorithm lane",
+    "creating qualification or formal observations",
+    "formal collection",
+    "formal analysis",
+    "ranking",
+    "winner adjudication",
+    "automatic retry or stage expansion"
+  ]
+}

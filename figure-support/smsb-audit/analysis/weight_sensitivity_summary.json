@@ -1,0 +1,305 @@
+{
+  "scheme_summaries": [
+    {
+      "scheme": "original",
+      "weights": {
+        "D1": 0.35,
+        "D2": 0.2,
+        "D3": 0.15,
+        "D4": 0.075,
+        "D5": 0.075,
+        "D6": 0.075,
+        "D7": 0.075
+      },
+      "point_winners": [
+        "IDFF"
+      ]
+    },
+    {
+      "scheme": "equal",
+      "weights": {
+        "D1": 0.14285714285714285,
+        "D2": 0.14285714285714285,
+        "D3": 0.14285714285714285,
+        "D4": 0.14285714285714285,
+        "D5": 0.14285714285714285,
+        "D6": 0.14285714285714285,
+        "D7": 0.14285714285714285
+      },
+      "point_winners": [
+        "IDFF"
+      ]
+    },
+    {
+      "scheme": "latency_priority",
+      "weights": {
+        "D1": 0.7,
+        "D2": 0.1,
+        "D3": 0.05,
+        "D4": 0.05,
+        "D5": 0.04,
+        "D6": 0.03,
+        "D7": 0.03
+      },
+      "point_winners": [
+        "IDFF"
+      ]
+    },
+    {
+      "scheme": "retained_state_priority",
+      "weights": {
+        "D1": 0.1,
+        "D2": 0.05,
+        "D3": 0.05,
+        "D4": 0.6,
+        "D5": 0.05,
+        "D6": 0.05,
+        "D7": 0.1
+      },
+      "point_winners": [
+        "A*-R"
+      ]
+    }
+  ],
+  "simplex_grid_step": 0.1,
+  "simplex_vectors": 8008,
+  "tie_vectors": 418,
+  "winner_counts": [
+    {
+      "algorithm": "A*-R",
+      "unique_top_count": 548,
+      "co_top_count_including_ties": 622,
+      "scenarios": 8008
+    },
+    {
+      "algorithm": "BiA*-R",
+      "unique_top_count": 0,
+      "co_top_count_including_ties": 1,
+      "scenarios": 8008
+    },
+    {
+      "algorithm": "D*L",
+      "unique_top_count": 256,
+      "co_top_count_including_ties": 288,
+      "scenarios": 8008
+    },
+    {
+      "algorithm": "LPA*",
+      "unique_top_count": 0,
+      "co_top_count_including_ties": 0,
+      "scenarios": 8008
+    },
+    {
+      "algorithm": "C-FF",
+      "unique_top_count": 2851,
+      "co_top_count_including_ties": 3220,
+      "scenarios": 8008
+    },
+    {
+      "algorithm": "IDFF",
+      "unique_top_count": 3935,
+      "co_top_count_including_ties": 4299,
+      "scenarios": 8008
+    }
+  ],
+  "counts_are_probabilities": false,
+  "statistically_separated_winner_recomputed": false,
+  "archived_primary_score_intervals": [
+    {
+      "algorithm": "IDFF",
+      "primaryScore": 83.0,
+      "conservativeSimultaneousScoreLower": 75.5,
+      "conservativeSimultaneousScoreUpper": 87.5
+    },
+    {
+      "algorithm": "C-FF",
+      "primaryScore": 74.5,
+      "conservativeSimultaneousScoreLower": 68.5,
+      "conservativeSimultaneousScoreUpper": 80.5
+    },
+    {
+      "algorithm": "A*-R",
+      "primaryScore": 54.75,
+      "conservativeSimultaneousScoreLower": 46.5,
+      "conservativeSimultaneousScoreUpper": 63.0
+    },
+    {
+      "algorithm": "LPA*",
+      "primaryScore": 32.75,
+      "conservativeSimultaneousScoreLower": 14.0,
+      "conservativeSimultaneousScoreUpper": 43.0
+    },
+    {
+      "algorithm": "D*L",
+      "primaryScore": 28.75,
+      "conservativeSimultaneousScoreLower": 14.0,
+      "conservativeSimultaneousScoreUpper": 43.0
+    },
+    {
+      "algorithm": "BiA*-R",
+      "primaryScore": 26.25,
+      "conservativeSimultaneousScoreLower": 25.5,
+      "conservativeSimultaneousScoreUpper": 39.0
+    }
+  ],
+  "archived_sensitivity": {
+    "equalWeights": {
+      "winners": [
+        "IDFF"
+      ],
+      "scores": {
+        "A*-R": 55.714285714285715,
+        "BiA*-R": 30.0,
+        "D*L": 37.142857142857146,
+        "LPA*": 34.285714285714285,
+        "C-FF": 70.0,
+        "IDFF": 72.85714285714286
+      }
+    },
+    "runtimeGroupSweepWinningSegments": [
+      {
+        "from": 0.0,
+        "to": 0.4468085106382979,
+        "winners": [
+          "C-FF"
+        ]
+      },
+      {
+        "from": 0.4468085106382979,
+        "to": 1.0,
+        "winners": [
+          "IDFF"
+        ]
+      }
+    ],
+    "runtimeGroupSweepBoundaryWinners": [
+      {
+        "rho": 0.0,
+        "winners": [
+          "C-FF"
+        ]
+      },
+      {
+        "rho": 0.4468085106382979,
+        "winners": [
+          "C-FF",
+          "IDFF"
+        ]
+      },
+      {
+        "rho": 1.0,
+        "winners": [
+          "IDFF"
+        ]
+      }
+    ],
+    "weightCornerScenarioCount": 128,
+    "cornerWinCounts": {
+      "A*-R": 0,
+      "BiA*-R": 0,
+      "D*L": 0,
+      "LPA*": 0,
+      "C-FF": 10,
+      "IDFF": 118
+    },
+    "cornerScoreRanges": {
+      "A*-R": [
+        45.468750000000014,
+        61.730769230769226
+      ],
+      "BiA*-R": [
+        16.406250000000004,
+        38.08823529411765
+      ],
+      "D*L": [
+        17.187499999999996,
+        46.09375000000001
+      ],
+      "LPA*": [
+        23.918918918918912,
+        45.344827586206904
+      ],
+      "C-FF": [
+        61.56249999999999,
+        83.75
+      ],
+      "IDFF": [
+        71.72413793103448,
+        90.00000000000001
+      ]
+    },
+    "leaveOneDomainOut": [
+      {
+        "removedDomain": "D1",
+        "A*-R": 51.923076923076934,
+        "BiA*-R": 29.615384615384617,
+        "D*L": 38.846153846153854,
+        "LPA*": 34.23076923076923,
+        "C-FF": 66.15384615384616,
+        "IDFF": 79.23076923076924,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D2",
+        "A*-R": 53.43750000000001,
+        "BiA*-R": 22.812500000000004,
+        "D*L": 33.43750000000001,
+        "LPA*": 38.43750000000001,
+        "C-FF": 73.12500000000001,
+        "IDFF": 78.75000000000001,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D3",
+        "A*-R": 60.88235294117647,
+        "BiA*-R": 30.882352941176478,
+        "D*L": 21.47058823529412,
+        "LPA*": 26.176470588235297,
+        "C-FF": 80.58823529411765,
+        "IDFF": 80.00000000000001,
+        "winners": "C-FF"
+      },
+      {
+        "removedDomain": "D4",
+        "A*-R": 51.891891891891895,
+        "BiA*-R": 21.08108108108108,
+        "D*L": 30.270270270270274,
+        "LPA*": 34.5945945945946,
+        "C-FF": 75.67567567567568,
+        "IDFF": 86.4864864864865,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D5",
+        "A*-R": 55.94594594594595,
+        "BiA*-R": 28.37837837837838,
+        "D*L": 26.21621621621622,
+        "LPA*": 33.78378378378379,
+        "C-FF": 72.43243243243244,
+        "IDFF": 83.24324324324326,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D6",
+        "A*-R": 52.70270270270271,
+        "BiA*-R": 23.513513513513516,
+        "D*L": 31.081081081081088,
+        "LPA*": 33.78378378378379,
+        "C-FF": 72.43243243243244,
+        "IDFF": 86.4864864864865,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D7",
+        "A*-R": 55.94594594594595,
+        "BiA*-R": 28.37837837837838,
+        "D*L": 22.972972972972975,
+        "LPA*": 28.91891891891892,
+        "C-FF": 78.91891891891893,
+        "IDFF": 84.86486486486487,
+        "winners": "IDFF"
+      }
+    ],
+    "scenarioFractionsAreNotProbabilities": true
+  }
+}

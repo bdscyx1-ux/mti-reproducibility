@@ -1,0 +1,54 @@
+{
+  "schema": "gate14re-me-load-qualification-read-only-acceptance-prelaunch-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "load-qualification-read-only-acceptance-attempt-001",
+  "status": "PASS_READY_FOR_ONE_SHOT_READ_ONLY_OFFLINE_ACCEPTANCE",
+  "rawAcquisition": {
+    "externalSupervisorNaturalExitZero": true,
+    "processLedgerRows": 775,
+    "processLedgerOrdinals": "0..774_STRICT_CONTIGUOUS",
+    "trustedNaturalExitZeroRows": 775,
+    "instrumentSelfTestProcesses": 1,
+    "oracleBatchProcesses": 6,
+    "emptyBoundaryProcesses": 12,
+    "laneProcesses": 756,
+    "acceptedSuperblocks": 126,
+    "algorithmNeutralOracleCaches": 126,
+    "failureLedgerRows": 0,
+    "replacementLedgerRows": 0,
+    "acquisitionFailureReceiptPresent": false,
+    "freezeManifestArtifacts": 8278,
+    "freezeManifestMissingArtifacts": 0,
+    "freezeManifestUnexpectedPreTerminalFiles": 0
+  },
+  "hashBindings": {
+    "acceptanceContractV4_3": "dfa6ded73db0ff97dca28880b81882f1a4babd44ea52e7ed963f338fb2dd0c1f",
+    "acceptanceLauncherV4_3": "a9396c4bc469b4688e732759ccceb73b59637331f8f50a9fe51ce7852ebbac9e",
+    "acceptanceToolV4_3": "cb0d2b9c03fe90e7e56e48b2702c65786f86006934255631faab9275a1527a44",
+    "acquisitionContractV4_2": "4498b9bf0b8d8e3cd92c6ddc65a6dbef1a61ec22f88acc6c63e52694cdeeaf7f",
+    "outputSchemaV4_1": "ed2db36b42cee326d78bd1a72cb79bd766676ba0bb0b5c40633af55b559160ae",
+    "scheduleV4": "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb",
+    "typedParquetRuntimeManifestV1": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "pythonExecutable": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "powerShellHost": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "sourceLaunchReceipt": "2b6e6d79ab6cb2df9764b4e9ae1cce224a0df65e1f993ecdd93ed7d5a1ed5a94",
+    "sourceAcquisitionFreezeManifest": "e9f0c54ef74a5e094452cbc8b3cfa91f8c4dd8ea062a863e8b5f76350e758702",
+    "sourceAcquisitionTerminal": "2adade4fdbf952bb7883bc956246268a65e31715df95c23280647316980b7ae0",
+    "externalTerminalObservation": "795389f6e24763744077ed53e1e2da36f0f0385f74ed18a0b8131bb11728b1ae"
+  },
+  "resourcePreflight": {
+    "sealedArtifactBytes": 2646459063,
+    "freeBytes": 203504893952,
+    "deliveryRootExistedBeforeLaunch": false,
+    "sourceTopControlReceiptsReadOnly": true
+  },
+  "acceptanceEfficiencyProfile": {
+    "streamingBoundedMemory": true,
+    "wholeDatasetRowsRetainedInMemory": false,
+    "perRowSourceFileRehash": false,
+    "sealedFilesHashedExactlyOnce": true,
+    "parquetBatchRows": 4096,
+    "typedParquetFullRoundTripRequired": true
+  },
+  "checkedAtUtc": "2026-10-19T22:18:09.9218920Z"
+}

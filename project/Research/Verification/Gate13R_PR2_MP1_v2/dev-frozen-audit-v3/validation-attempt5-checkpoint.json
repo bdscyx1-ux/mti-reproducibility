@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "checkpointKind": "gate13r-pr2-mp1-v2-validation-attempt5-checkpoint-v1",
+  "savedAtUtc": "2026-10-09T04:29:18.5390794Z",
+  "savedAtAsiaShanghai": "2026-10-09T12:29:18.5432757+08:00",
+  "state": "VALIDATION-FAILED-CLOSED",
+  "validationAttempt": 5,
+  "lastCompletedGate": "FORMAL-ATTEMPT2-FILECOUNT-BYTES-READONLY",
+  "failedGate": "FORMAL-ATTEMPT2-CANONICAL-TREE",
+  "failureCode": "ROOT-SPECIFIC-CANONICAL-TREE-FORMULA-NOT-APPLIED",
+  "safeNextAction": "Create a new versioned auditor and provenance revision that apply each frozen root's own historical canonical tree contract, then rerun validation in a fresh root.",
+  "validationOnlyRetryPermitted": true,
+  "measuredPilotStartPermitted": false,
+  "pilotV2RootExists": false,
+  "unityInvoked": false,
+  "measuredBlockCount": 0,
+  "formalAttempt3Authorized": false,
+  "formalAnalysisAuthorized": false,
+  "gate14RAuthorized": false
+}

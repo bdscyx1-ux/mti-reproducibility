@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13r-pr2-attempt3-monitoring-recovery-closure-audit-v1",
+  "capturedAtUtc": "2026-10-09T07:40:48.6230576Z",
+  "capturedAtAsiaShanghai": "2026-10-09T15:40:48.6249118+08:00",
+  "passed": true,
+  "executionClass": "NON-EXECUTING-READ-ONLY-CLOSURE",
+  "statusTokens": [
+    "ACTIVE-V2-MONITORING-RECOVERY-CLOSED",
+    "VALIDATION-ATTEMPT3-PASSED-56-OF-56",
+    "ACTIVE-V4-AUTHORIZATION-PROMPT-ROUTED",
+    "UPSTREAM-18-OF-18-BYTE-IDENTICAL",
+    "MANIFEST-BINDINGS-VERIFIED",
+    "RUN-LEDGER-CHAIN-OK",
+    "FORMAL-TARGETS-ABSENT",
+    "UNITY-NOT-RUNNING",
+    "UNITY-LOCK-ABSENT",
+    "MONITORING-ROOT-ABSENT-BEFORE-START",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "activePackage": {
+    "readinessJson": {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.json",
+      "sha256": "526a7fc6ff67e3c2ac0201f1f88dcc08b9af155e0a25d0332fd4aab189aa809c"
+    },
+    "terminalAudit": {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v3.json",
+      "sha256": "6290bcab9b051af1215bd3658cf88be91fbeec65729f8eed4ff3a5bfe9f59c9b"
+    },
+    "evidenceManifest": {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v5.json",
+      "sha256": "79f5cfd08b4f00559271e8889b88c9bd4991840ff9141815bb03e83c7a4d03bd"
+    },
+    "authorizationPrompt": {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v4.md",
+      "rawBytes": 20380,
+      "sha256": "35652dfb462191c10abca3c426fb3e9aeefe8f37beaee28358704568ca133bc5"
+    },
+    "overallProjectPlan": {
+      "relativePath": "Research/Overall_Project_Plan.md",
+      "rawBytes": 116440,
+      "sha256": "b39d36e957ffa7fc54ccb50a88d169d4822e3c9e943ed0dfb95780cd541df1c4"
+    },
+    "nextSessionCheckpoint": {
+      "relativePath": "Research/Next_Session_Checkpoint.md",
+      "rawBytes": 7268,
+      "sha256": "600c97cb0e4ddab93c4e4b161f5dbf943203ddf186106efdb544e4a21b3fe994"
+    }
+  },
+  "verification": {
+    "validationAttempt3Passed": true,
+    "validationTestCount": 56,
+    "upstreamKeyFiles": 18,
+    "upstreamHashMismatchCount": 0,
+    "terminalManifestBindingsChecked": 6,
+    "terminalManifestHashMismatchCount": 0,
+    "relevantJsonParseFailureCount": 0,
+    "automationContentCheck": "PASSED",
+    "automationSha256": "c66d41527f075137b2829a291fb303e1d81af940925e739fa3c898cb8f52b0e4",
+    "ledgerStatus": "ok",
+    "ledgerEntries": 9,
+    "ledgerAwaitingAnswerCount": 0,
+    "ledgerCannotConfirmCount": 0,
+    "ledgerNotRunCount": 0,
+    "ledgerMissingCount": 0
+  },
+  "materialPassport": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Run_Passport.md",
+    "rawBytes": 5076,
+    "sha256": "c32d229f40456c8497b938106f0371930bc89aa77f1015f337439cf41ea956a0"
+  },
+  "appendOnlyLedger": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Run_Passport_run_ledger.yaml",
+    "rawBytes": 11836,
+    "sha256": "065ec3a6bfaea8ed8b274339664a5534d165bc47308804edc836277ca688612e",
+    "lastSequence": 9,
+    "lastEntryHash": "f471b4a0f4d1e6950b2493d44f50ea6d73ad5b8b9711e60d4ad3b5e5d417a1ce"
+  },
+  "runtimeState": {
+    "formalRootExists": false,
+    "formalExecutionReceiptExists": false,
+    "formalExecutionStatusExists": false,
+    "formalMeasuredProcessesStarted": 0,
+    "formalMeasuredSamplesStarted": 0,
+    "unityEditorProcessCount": 0,
+    "unityProjectLockExists": false,
+    "monitoringRootExists": false
+  },
+  "recoveryBoundary": {
+    "prelaunchRepairCyclesMaximumTotal": 3,
+    "prelaunchRepairCyclesConsumed": 1,
+    "prelaunchRepairCyclesRemainingMaximum": 2,
+    "measuredAcquisitionRetryAllowed": false,
+    "measuredAcquisitionResumeAllowed": false,
+    "measuredAcquisitionTopUpAllowed": false,
+    "measuredAcquisitionPartialMergeAllowed": false,
+    "postAcquisitionNonUnityCommitRecoveryMaximumAttempts": 3
+  },
+  "nextStep": "WAIT-FOR-USER-TO-SEND-ACTIVE-V4-FORMAL-ATTEMPT3-AUTHORIZATION-PROMPT"
+}

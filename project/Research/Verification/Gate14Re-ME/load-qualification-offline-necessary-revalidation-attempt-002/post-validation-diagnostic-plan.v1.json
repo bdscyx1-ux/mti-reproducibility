@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-me-post-offline-validation-diagnostic-plan-v1",
+  "status": "FROZEN_BEFORE_VALIDATION_AND_BEFORE_IDENTITY_DISCLOSURE",
+  "questions": [
+    "Why did late acquisition fall to roughly 12-13 lanes per hour?",
+    "Which algorithms and G x N x F load cells produced long process-wall tails?",
+    "Can slow lanes be attributed to measured workload compute, Unity startup/finalization, inter-process gaps, or only described as an order-associated drift?",
+    "Which frozen ST workloads are structurally excessive for practical formal collection?",
+    "Why did the original full validator take excessively long and consume excessive memory?"
+  ],
+  "quantiles": {
+    "method": "linear interpolation equivalent to Python statistics.quantiles inclusive endpoints via explicit p*(n-1) indexing",
+    "reported": ["P50", "P90", "P95", "P99", "maximum"],
+    "missingRule": "do not impute missing timestamps or workload boundaries"
+  },
+  "tailRules": {
+    "pooledTailThreshold": "pooled valid lane process-wall P95 frozen after reading only the validated timing vector",
+    "algorithmDescriptors": ["P95/P50", "P99/P50", "max/P50", "share above pooled P95", "matched-superblock tail frequency"],
+    "orderStrata": "ordinal-based early/middle/late thirds, fixed before identity disclosure",
+    "recentSensitivity": ["last 10 percent", "last 100 lanes"],
+    "smallCellRule": "for low-n algorithm x G x N x F cells report n, min, median, max; do not present P99 as a stable population estimate"
+  },
+  "timeDecomposition": {
+    "processWall": "processExitUtc - processCreateUtc",
+    "interProcessGap": "nextProcessCreateUtc - priorProcessExitUtc",
+    "startup": "workloadStartUtc - processCreateUtc only if a trustworthy explicit boundary exists",
+    "compute": "workloadEndUtc - workloadStartUtc only if trustworthy explicit boundaries exist",
+    "finalization": "processExitUtc - workloadEndUtc only if a trustworthy explicit boundary exists",
+    "noResidualInference": true
+  },
+  "causalBoundary": "Order drift and correlations are descriptive. Thermal throttling, cache, antivirus, disk, or memory pressure are supported causes only with direct structural evidence; otherwise they remain candidate explanations.",
+  "scientificBoundary": "This is post-qualification engineering diagnosis, not formal algorithm-effect analysis and not authority to alter the scientific design."
+}

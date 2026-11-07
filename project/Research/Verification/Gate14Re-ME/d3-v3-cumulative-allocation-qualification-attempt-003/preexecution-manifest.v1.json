@@ -1,0 +1,70 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-preexecution-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "status": "READY_FOR_AUTHORIZED_AUTONOMOUS_REPAIR",
+  "createdAtUtc": "2026-10-17T06:39:39.8496993Z",
+  "authorization": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Attempt_003_Authorization.v1.json",
+    "sha256": "49a766a3e92ad197a1cf880d65766c24b2f2b21c426cf425e07f2d2a571d5bb2"
+  },
+  "plan": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Attempt_003_Plan.v1.md",
+    "sha256": "f746a80509a7725b3856d48533444f23d881db62b80113dab0226af18714bd10"
+  },
+  "priorEvidence": {
+    "statusV8Sha256": "1e82467a579aca94aaaa1205c143ee40aea50e00fd4397d971e5ea8e7c697c15",
+    "attempt001FreezeReceiptSha256": "5f52e2b6e7cb71624febe231b4ef56515a1f4d44c39048e20cd108df81bcd250",
+    "attempt002FreezeReceiptSha256": "46dfc3c38d09bb8ebd38844f9f1bd39bb7398a7075f934b6483b43d8da053b49"
+  },
+  "instrumentInputs": {
+    "prospectiveContractSha256": "a72d97113a4089f5d9532c6ac6d4bb817341339e5192afdaad6729a142cd5ff1",
+    "nativeSourceSha256": "12c41acc7dc106d314bd71d3bdc1d95e0346cc8467e0a1a1e1b3109093ef2a0d",
+    "managedWrapperSha256": "0fcac01678ec387aa2659543a2b84cba67b58ec97bdbfbc1e84aa77f5f0c3f9c",
+    "attempt001HarnessSha256": "78cfc48b00fa2890f4b17ea6e6de6e7719bab8c57870e5126a40b72d6e71c3f3",
+    "nativePluginMetaSha256": "84702a5d6098fd43c6e1fc2acf2ab6f9a65ee3566d846ee7937f4278b25c47ae"
+  },
+  "protectedBindings": {
+    "qualificationRunnerSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+    "outputSchemaSha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c",
+    "sixAlgorithmBindingSha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71"
+  },
+  "runtimeBindings": {
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "visualStudioSetupSha256": "f63840dda38637614aa982b94b1d544f0b54026f465c22f78d30765a130a2b73",
+    "vswhereSha256": "c54f3b7c9164ea9a0db8641e81ecdda80c2664ef5a47c4191406f848cc07c662",
+    "vcvars64Sha256": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209",
+    "clExeSha256": "fe251ef50a1545b1b0835ee17b1e785459712b38d79e45b5c1d3d28970a36619",
+    "linkExeSha256": "a364af801a8539e4324d9489313dbf001d959128451fc99a27b24676bbac058f",
+    "visualStudioCatalogSha256": "f0a50ea157222c29abd5ea6ff01bfc3c33b04e011c5e45ee2ca38ef0778e5643"
+  },
+  "sdkPreflight": {
+    "selectedComponent": "Microsoft.VisualStudio.Component.Windows11SDK.26100",
+    "windowsKitsRootExists": false,
+    "selectedComponentInstalled": false,
+    "attempt002ProvedUnsupportedOption": "--wait",
+    "attempt003InitialCommand": "setup.exe modify --installPath <VS2022Community> --add Microsoft.VisualStudio.Component.Windows11SDK.26100 --quiet --norestart"
+  },
+  "compilerPolicy": [
+    "/nologo",
+    "/std:c++17",
+    "/O2",
+    "/LD",
+    "/EHsc",
+    "/W4",
+    "/WX",
+    "/utf-8",
+    "/permissive-",
+    "/Brepro"
+  ],
+  "evidenceBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

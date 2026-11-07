@@ -1,0 +1,80 @@
+{
+    "schemaVersion": 1,
+    "runId": "gate6-replication-final-r002",
+    "scenarioId": "dynamic-corridors-sparse-v1",
+    "scenarioFingerprintSha256": "85df1443b080ad83f2fb397157bdc185fb0113b473eb1ce853bff86d3764c450",
+    "algorithmId": "A*-R",
+    "agentCount": 2,
+    "scheduledEventCount": 4,
+    "dynamicPlanningPhaseCount": 3,
+    "planOperationCount": 8,
+    "repairOperationCount": 4,
+    "succeededPlanCount": 8,
+    "noPathPlanCount": 0,
+    "budgetExceededPlanCount": 0,
+    "invalidPlanCount": 0,
+    "failedPlanCount": 0,
+    "budgetExceededOperationCount": 0,
+    "initializationMilliseconds": 0.3189,
+    "planP95Milliseconds": 1.0317,
+    "dynamicHandlingP95Milliseconds": 0.0253,
+    "totalPlannerElapsedMilliseconds": 1.4270999999999999,
+    "processedNodesOrCells": 592,
+    "expandedNodes": 102,
+    "relaxedEdges": 231,
+    "repairedCells": 0,
+    "managedAllocatedBytes": 724992,
+    "planSuccessRate": 1.0,
+    "budgetOverrunRate": 0.0,
+    "finalGridVersion": 4,
+    "usesFixedScenarioStarts": true,
+    "completed": true,
+    "dynamicPhases": [
+        {
+            "simulationTick": 10,
+            "eventIds": [
+                "close-upper-gate",
+                "open-center-north"
+            ],
+            "finalGridVersion": 2,
+            "repairOperationCount": 2,
+            "planOperationCount": 2,
+            "succeededPlanCount": 2,
+            "noPathPlanCount": 0,
+            "budgetExceededOperationCount": 0,
+            "repairElapsedMilliseconds": 0.0019000000000000003,
+            "replanElapsedMilliseconds": 0.0234,
+            "combinedElapsedMilliseconds": 0.0253
+        },
+        {
+            "simulationTick": 500000,
+            "eventIds": [
+                "move-lower-gate"
+            ],
+            "finalGridVersion": 3,
+            "repairOperationCount": 1,
+            "planOperationCount": 2,
+            "succeededPlanCount": 2,
+            "noPathPlanCount": 0,
+            "budgetExceededOperationCount": 0,
+            "repairElapsedMilliseconds": 0.0001,
+            "replanElapsedMilliseconds": 0.022,
+            "combinedElapsedMilliseconds": 0.022099999999999999
+        },
+        {
+            "simulationTick": 999999,
+            "eventIds": [
+                "restore-original-gates"
+            ],
+            "finalGridVersion": 4,
+            "repairOperationCount": 1,
+            "planOperationCount": 2,
+            "succeededPlanCount": 2,
+            "noPathPlanCount": 0,
+            "budgetExceededOperationCount": 0,
+            "repairElapsedMilliseconds": 0.0001,
+            "replanElapsedMilliseconds": 0.0181,
+            "combinedElapsedMilliseconds": 0.0182
+        }
+    ]
+}

@@ -1,0 +1,336 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-36h-four-lane-static-unit-summary-v1",
+    "completedAtUtc":  "2026-10-08T04:30:42.0823243Z",
+    "assertionCount":  64,
+    "passedAssertionCount":  63,
+    "failedAssertionCount":  1,
+    "assertions":  [
+                       {
+                           "name":  "plan-boundary",
+                           "passed":  true,
+                           "detail":  "Plan must remain non-formal and excluded from formal analysis."
+                       },
+                       {
+                           "name":  "matrix-and-lanes",
+                           "passed":  true,
+                           "detail":  "Expected 74 campaigns and four isolated lanes."
+                       },
+                       {
+                           "name":  "precision-10pct-uncapped",
+                           "passed":  true,
+                           "detail":  "Precision must be 10%, log(1.10), with no hard cap."
+                       },
+                       {
+                           "name":  "runtime-gates",
+                           "passed":  true,
+                           "detail":  "Readiness p95 and hard wall-clock gates must be 27 h and 36 h."
+                       },
+                       {
+                           "name":  "pilot-cardinality",
+                           "passed":  true,
+                           "detail":  "Pilot cardinalities differ from the frozen design."
+                       },
+                       {
+                           "name":  "protected-input-preservation",
+                           "passed":  true,
+                           "detail":  "Protected files checked: 22."
+                       },
+                       {
+                           "name":  "formal-root-absent-Gate13R_ProcessReuse_5pct",
+                           "passed":  true,
+                           "detail":  "Forbidden formal root: Research\\FormalRuns\\Gate13R_ProcessReuse_5pct\\v1"
+                       },
+                       {
+                           "name":  "formal-root-absent-Gate13R_36h_10pct_4Lane",
+                           "passed":  true,
+                           "detail":  "Forbidden formal root: Research\\FormalRuns\\Gate13R_36h_10pct_4Lane\\v1"
+                       },
+                       {
+                           "name":  "pilot-root-absent",
+                           "passed":  true,
+                           "detail":  "The sole pilot must not have started during static/unit validation."
+                       },
+                       {
+                           "name":  "schedule-core-validation",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "schedule-deterministic-rows",
+                           "passed":  true,
+                           "detail":  "Regenerated rows must be byte-stable after canonical serialization."
+                       },
+                       {
+                           "name":  "schedule-receipt-hash",
+                           "passed":  true,
+                           "detail":  "Schedule receipt does not bind the active schedule."
+                       },
+                       {
+                           "name":  "algorithm-position-lane-balance",
+                           "passed":  true,
+                           "detail":  "Every cohort/algorithm/position cell must be equal across all four lanes."
+                       },
+                       {
+                           "name":  "predecessor-carryover-balance",
+                           "passed":  true,
+                           "detail":  "Each campaign must balance NONE and every eligible ordered predecessor over 32 blocks."
+                       },
+                       {
+                           "name":  "lane-cohort-counts",
+                           "passed":  true,
+                           "detail":  "1, four-algorithm-shared-goal-v1=48;2, four-algorithm-shared-goal-v1=48;3, four-algorithm-shared-goal-v1=48;4, four-algorithm-shared-goal-v1=48;3, per-agent-heterogeneous-goal-v1=24;4, grouped-field-heterogeneous-goal-v1=24;1, per-agent-heterogeneous-goal-v1=24;2, grouped-field-heterogeneous-goal-v1=24;1, grouped-field-heterogeneous-goal-v1=24;2, per-agent-heterogeneous-goal-v1=24;4, per-agent-heterogeneous-goal-v1=24;3, grouped-field-heterogeneous-goal-v1=24"
+                       },
+                       {
+                           "name":  "uncapped-sample-size-formula",
+                           "passed":  true,
+                           "detail":  "Expected uncapped high-variance candidate 156."
+                       },
+                       {
+                           "name":  "playable-campaign-mapping",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "provenance-boundary",
+                           "passed":  true,
+                           "detail":  "Provenance must remain non-formal and match the plan design."
+                       },
+                       {
+                           "name":  "provenance-authorization",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R_36h_Redesign_Pilot_Authorization.v1.json"
+                       },
+                       {
+                           "name":  "provenance-specification",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R_36h_10pct_4Lane_Redesign_Specification.v1.md"
+                       },
+                       {
+                           "name":  "provenance-testDesign",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R_36h_10pct_4Lane_Test_Design.v1.md"
+                       },
+                       {
+                           "name":  "provenance-executionAuthorization",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R_36h_10pct_4Lane_Readiness_Amendment.v1.json"
+                       },
+                       {
+                           "name":  "provenance-config",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R_36h_10pct_4Lane_Pilot_Plan.v1.json"
+                       },
+                       {
+                           "name":  "provenance-schedule",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R_36h_10pct_4Lane_Pilot_Schedule.v1.json"
+                       },
+                       {
+                           "name":  "provenance-preservationBaseline",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R_36h_10pct_4Lane_PreWrite_Preservation_Baseline.v1.json"
+                       },
+                       {
+                           "name":  "provenance-commandDerivation",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R_36h_Concurrency_Command_Derivation.v1.json"
+                       },
+                       {
+                           "name":  "provenance-unityCommand",
+                           "passed":  true,
+                           "detail":  "Assets/_Scripts/Research/Editor/Gate13R36hConcurrencyBatchCommandV1.cs"
+                       },
+                       {
+                           "name":  "provenance-preparationModule",
+                           "passed":  true,
+                           "detail":  "Research/Gate13R36hConcurrencyPreparationV1.psm1"
+                       },
+                       {
+                           "name":  "provenance-blockRunner",
+                           "passed":  true,
+                           "detail":  "Research/Run-Gate13R36hBlockV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-telemetryRunner",
+                           "passed":  true,
+                           "detail":  "Research/Run-Gate13R36hTelemetryProbeV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-laneCopyInitializer",
+                           "passed":  true,
+                           "detail":  "Research/Initialize-Gate13R36hLaneCopiesV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-pilotOrchestrator",
+                           "passed":  true,
+                           "detail":  "Research/Run-Gate13R36hConcurrencyPilotV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-pilotAnalyzer",
+                           "passed":  true,
+                           "detail":  "Research/Analyze-Gate13R36hConcurrencyPilotV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-compileRunner",
+                           "passed":  true,
+                           "detail":  "Research/Verification/Run-Gate13R36hCompileV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-staticUnitRunner",
+                           "passed":  true,
+                           "detail":  "Research/Verification/Run-Gate13R36hStaticUnitV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-retainedRegressionRunner",
+                           "passed":  true,
+                           "detail":  "Research/Verification/Run-Gate13R36hRetainedRegressionV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-verificationRunner",
+                           "passed":  true,
+                           "detail":  "Research/Verification/Run-Gate13R36hVerificationV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-validationOnlyAuditRunner",
+                           "passed":  true,
+                           "detail":  "Research/Verification/Run-Gate13R36hValidationOnlyPrePilotAuditV1.ps1"
+                       },
+                       {
+                           "name":  "provenance-gate11BundleManifest",
+                           "passed":  true,
+                           "detail":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json"
+                       },
+                       {
+                           "name":  "parser-Gate13R36hConcurrencyPreparationV1.psm1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Run-Gate13R36hBlockV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Run-Gate13R36hTelemetryProbeV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Initialize-Gate13R36hLaneCopiesV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Run-Gate13R36hConcurrencyPilotV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Analyze-Gate13R36hConcurrencyPilotV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-New-Gate13R36hConcurrencyCommandV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-New-Gate13R36hPilotScheduleV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Run-Gate13R36hCompileV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Run-Gate13R36hStaticUnitV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Run-Gate13R36hRetainedRegressionV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Run-Gate13R36hVerificationV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "parser-Run-Gate13R36hValidationOnlyPrePilotAuditV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "binding-smoke-block",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Run-Gate13R36hBlockV1|1|Verification|H:\\DDM_Final_Project_Gate13R36H\\v1\\lane-01"
+                       },
+                       {
+                           "name":  "binding-smoke-telemetry",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Run-Gate13R36hTelemetryProbeV1|1|H:\\DDM_Final_Project_Gate13R36H\\v1\\lane-01"
+                       },
+                       {
+                           "name":  "binding-smoke-clones",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Initialize-Gate13R36hLaneCopiesV1|H:\\DDM_Final_Project_Gate13R36H\\v1"
+                       },
+                       {
+                           "name":  "binding-smoke-compile",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Run-Gate13R36hCompileV1|H:\\DDM_Final_Project"
+                       },
+                       {
+                           "name":  "binding-smoke-pilot",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Run-Gate13R36hConcurrencyPilotV1|H:\\DDM_Final_Project"
+                       },
+                       {
+                           "name":  "binding-smoke-analysis",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Analyze-Gate13R36hConcurrencyPilotV1|H:\\DDM_Final_Project"
+                       },
+                       {
+                           "name":  "binding-smoke-static",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Run-Gate13R36hStaticUnitV1|H:\\DDM_Final_Project"
+                       },
+                       {
+                           "name":  "binding-smoke-retained",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Run-Gate13R36hRetainedRegressionV1|H:\\DDM_Final_Project"
+                       },
+                       {
+                           "name":  "binding-smoke-verification",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Run-Gate13R36hVerificationV1|H:\\DDM_Final_Project"
+                       },
+                       {
+                           "name":  "binding-smoke-audit",
+                           "passed":  true,
+                           "detail":  "BINDING-SMOKE-PASSED|Run-Gate13R36hValidationOnlyPrePilotAuditV1|H:\\DDM_Final_Project"
+                       },
+                       {
+                           "name":  "unity-command-derivation",
+                           "passed":  true,
+                           "detail":  "Mechanical derivation and reverse transform must pass without semantic or formal-boundary changes."
+                       },
+                       {
+                           "name":  "telemetry-reset-source-signals",
+                           "passed":  false,
+                           "detail":  "Derived command must retain telemetry, reset, process-age, and managed-memory evidence."
+                       }
+                   ],
+    "failures":  [
+                     "telemetry-reset-source-signals: Derived command must retain telemetry, reset, process-age, and managed-memory evidence."
+                 ],
+    "formalCampaign":  false,
+    "pilotExecuted":  false,
+    "passed":  false
+}

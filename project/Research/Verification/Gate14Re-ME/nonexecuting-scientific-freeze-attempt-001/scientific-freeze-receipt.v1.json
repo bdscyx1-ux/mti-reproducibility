@@ -1,0 +1,138 @@
+{
+  "schema": "gate14re-me-scientific-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "receiptVersion": 1,
+  "createdLocalDate": "2026-10-17",
+  "authorizationId": "gate14re-me-nonexecuting-scientific-freeze-attempt-001",
+  "status": "PASS_NONEXECUTING_SCIENTIFIC_PROTOCOL_AND_RAW_DELIVERY_HARD_GATE_FROZEN_PRECOLLECTION_PARAMETERS_PENDING",
+  "frozenManifest": {
+    "path": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001/nonexecuting-design-manifest.v1.json",
+    "bytes": 4238,
+    "sha256": "8a2e7926359bd6085ff2c1937cae5292ffb59ba1b01d7b9ec595472bce7b8683"
+  },
+  "canonicalTree": {
+    "path": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001/canonical-tree.v1.jsonl",
+    "records": 10,
+    "bytes": 1722,
+    "sha256": "f2523ee164a377d872f546500cf24ae4f0097b50422bb2737ab42b408cab5f47"
+  },
+  "validationReceipt": {
+    "path": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001/validation-receipt.v1.json",
+    "bytes": 3710,
+    "sha256": "a93afee95aab95b18a860999176cd38c1d350a7cca298f6dcdde899370b5260c",
+    "testCount": 99,
+    "result": "PASS"
+  },
+  "scientificFreeze": {
+    "algorithms": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "independentUnit": "immutable input superblock",
+    "sixFreshProcessPairedLanes": true,
+    "primaryStructuralCells": 48,
+    "gridEdgeLevels": [
+      64,
+      128,
+      256
+    ],
+    "agentCountLevels": [
+      8,
+      32,
+      128,
+      512
+    ],
+    "changedCellLevels": [
+      1,
+      9,
+      81,
+      225
+    ],
+    "withinCellContextStrata": 18,
+    "eventGroupsPerLane": 24,
+    "primaryEndpointDomains": 7,
+    "majoritySupportMinimumDomains": 4,
+    "advantageDomainRequiresAllFiveComparators": true,
+    "confirmatoryContrastCount": 35,
+    "multiplicity": "Holm strong FWER alpha 0.05",
+    "ranking": false,
+    "winnerAdjudication": false,
+    "weightedComposite": false
+  },
+  "rawDataDeliveryFreeze": {
+    "completePerObservationRawDataDeliverable": true,
+    "hardScientificCondition": true,
+    "mandatoryForPrecollectionReadiness": true,
+    "mandatoryForFormalRawCommit": true,
+    "mandatoryBeforeFormalAnalysis": true,
+    "immutableMeasuredRootSeparatedFromDerivedDeliveryRoot": true,
+    "granularity": [
+      "sample-run lane",
+      "atomic metric-long",
+      "event group",
+      "operation/event/query",
+      "persistent-state component and measurement point",
+      "failure/replacement ledger"
+    ],
+    "deliveryFormats": [
+      "CSV",
+      "CSV.zst",
+      "Parquet",
+      "JSONL.zst",
+      "JSON",
+      "JSONL manifest"
+    ],
+    "requiredDeliveryArtifactCount": 13,
+    "dataDictionaryRequired": true,
+    "sourceProvenanceRequired": true,
+    "sourcePathAndSha256PerRawRecordRequired": true,
+    "canonicalTreeAndManifestRequired": true,
+    "deliveryReceiptRequired": true,
+    "aggregationOnlyDeliveryForbidden": true,
+    "failedVoidedAndReplacementSourceRowsRetained": true,
+    "requiredRawCommitReceiptStatus": "PASS_COMPLETE_PER_OBSERVATION_RAW_DATA_DELIVERABLE",
+    "requiredRawCommitState": [
+      "RAW_IMMUTABLE",
+      "COMPLETE_PER_OBSERVATION_DELIVERABLE",
+      "ANALYSIS_PENDING"
+    ]
+  },
+  "precollectionParameterState": {
+    "minimumPracticallyImportantEffects": "PENDING_SEPARATE_USER_AUTHORIZATION_AND_FREEZE",
+    "finalB": "PENDING_SEPARATE_USER_AUTHORIZATION_AND_FREEZE",
+    "BConstraint": "positive multiple of 36",
+    "targetPowerAtLeast": 0.9,
+    "sentinelMovementSubsetOrOmission": "PENDING_SEPARATE_USER_AUTHORIZATION_AND_FREEZE",
+    "formalObservationBlockedUntilResolved": true,
+    "thisPendingStateDoesNotUnfreezeTheProtocolOrRawDeliveryHardGate": true
+  },
+  "preCollectionState": {
+    "sixAlgorithmSourceSpecificationFairnessHashBinding": "PENDING",
+    "formalInputGeneration": "NOT_AUTHORIZED",
+    "runnerAndInstrumentationImplementation": "NOT_AUTHORIZED",
+    "exporterAndStructuralValidatorImplementation": "NOT_AUTHORIZED",
+    "compileOrUnityExecution": "NOT_AUTHORIZED",
+    "formalMeasuredRoot": "NOT_CREATED",
+    "formalAnalysisRoot": "NOT_CREATED",
+    "formalExportRoot": "NOT_CREATED",
+    "formalCollection": "NOT_AUTHORIZED",
+    "formalAnalysis": "NOT_AUTHORIZED"
+  },
+  "dataBoundary": {
+    "Gate14ReMEFormalObservationCount": 0,
+    "UnityProcessCount": 0,
+    "priorGate14ReObservationsReadOrReused": false,
+    "excludedGate14ReTB2ObservationsReadOrReused": false,
+    "directionalOutcomeAccessed": false
+  },
+  "changeControl": {
+    "scientificFrameworkOrRawDeliveryChange": "requires a new explicitly authorized scientific freeze",
+    "minimumPracticalEffectsAndFinalB": "requires the separately authorized precollection parameter amendment defined by the frozen protocol",
+    "implementationCollectionAnalysisOrLaterExperiment": "requires separate explicit user authorization"
+  },
+  "result": "PASS"
+}

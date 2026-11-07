@@ -1,0 +1,26 @@
+{
+    "schema": "gate14re-formal-executor-synthetic-validation-receipt-v1",
+    "studyId": "Gate14Re",
+    "status": "PASS",
+    "assertions": 14004,
+    "frozenBlocksValidated": 1536,
+    "frozenDesignCellsValidated": 32,
+    "movementBlocks": 768,
+    "m4Blocks": 768,
+    "checks": [
+        "frozen_design_plan_contract_schema_and_source_bindings",
+        "1536_unique_contiguous_blocks",
+        "32_cells_B48_and_Williams_12_per_row",
+        "module_condition_N_lane_and_scenario_bindings",
+        "M2_common_mask_positive_and_insufficient_cases",
+        "M4_1800_interval_median_and_nearest_rank_P95",
+        "invalid_frame_interval_fail_closed",
+        "synthetic_output_serialization_only",
+        "no_formal_authorization_root_or_observation"
+    ],
+    "realScenarioOutcomeRead": false,
+    "realScenarioOutcomeWritten": false,
+    "formalRootCreated": false,
+    "formalObservationProduced": false,
+    "formalPhaseAStarted": false
+}

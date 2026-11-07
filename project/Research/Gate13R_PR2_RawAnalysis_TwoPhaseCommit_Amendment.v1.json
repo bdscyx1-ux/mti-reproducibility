@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-pr2-raw-analysis-two-phase-commit-v1",
+  "status": "FROZEN-BEFORE-FORMAL-DATA",
+  "scope": "Gate 13R-PR2 S48/H48 formal raw-data acquisition and every later analysis attempt",
+  "compatibleWithActiveConfig": true,
+  "changesScientificEstimands": false,
+  "changesScheduleOrSampleCount": false,
+  "activeConfigRelativePath": "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+  "activeConfigSha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+  "activeScheduleRelativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+  "activeScheduleSha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+  "phase1RawAcquisition": {
+    "phaseId": "RAW-DATA-ACQUISITION-COMMIT",
+    "unityMeasuredExecutionAllowed": true,
+    "analysisAllowed": false,
+    "requiredTerminalTokens": [
+      "RAW-DATA-COMPLETE",
+      "ANALYSIS-PENDING",
+      "IMMUTABLE"
+    ],
+    "requiredArtifacts": [
+      "raw-execution-manifest.json",
+      "raw-payload-file-manifest.jsonl",
+      "raw-data-freeze-receipt.json",
+      "environment-end-snapshot.json",
+      "formal-checkpoint.json"
+    ],
+    "requiredAudits": [
+      "block-and-sample-completeness",
+      "file-count-and-original-byte-count",
+      "per-block-sample-summary-and-workload-result-sha256",
+      "schedule-williams-and-ab-ba-quota",
+      "environment-end-snapshot",
+      "canonical-raw-payload-tree-sha256"
+    ],
+    "immutablePayloadDefinition": "all schedule-owned block directories and their block/sample/summary/workload-result evidence; mutable orchestration status and later analysis outputs are excluded",
+    "ordinaryPostCollectionToolFailureMayTriggerUnityRerun": false,
+    "automaticUnityRetryResumeTopUpMergeAllowed": false
+  },
+  "postCollectionRawCommitRecovery": {
+    "appliesAfterAllUnityProcessesHaveCompleted": true,
+    "toolingFailureStatus": "UNITY-COLLECTION-COMPLETE / RAW-COMMIT-AUDIT-PENDING / NO-UNITY-RERUN",
+    "recoveryMode": "versioned read-only raw-commit audit recovery",
+    "preserveEveryFailedAuditAttempt": true,
+    "modifyRawPayloadAllowed": false,
+    "rerunUnityAllowed": false,
+    "rawDataCompleteMayBeDeclaredBeforeAuditPasses": false,
+    "provenRawContractViolationAction": "stop, retain evidence, and require separate user decision; never automatically rerun Unity"
+  },
+  "phase2Analysis": {
+    "phaseId": "READ-ONLY-ANALYSIS-COMMIT",
+    "authorizedByThisAmendment": false,
+    "unityInvocationAllowed": false,
+    "rawRootWriteAllowed": false,
+    "attemptRootPattern": "Research/Analysis/Gate13R_RQAligned_S48H48/v1/attempt-N",
+    "eachAttemptMustBind": [
+      "raw-data-freeze-receipt-sha256",
+      "raw-payload-tree-sha256",
+      "analysis-code-sha256",
+      "analysis-test-and-fixture-sha256"
+    ],
+    "failedAttemptPolicy": "retain failed attempt; version the analysis implementation; rerun tests; analyze the same frozen raw data in a new attempt",
+    "prePostRawHashEqualityRequired": true,
+    "analysisFailureMayTriggerUnityRerun": false
+  },
+  "failureClassification": {
+    "duringMeasuredSampleOrBlock": "existing fail-closed formal acquisition policy applies; stop before the next block",
+    "afterAllUnityBlocksToolingFailure": "freeze collected payload; do not rerun Unity; perform separately versioned read-only raw-commit audit recovery",
+    "provenMissingCorruptOrContractInvalidRawData": "do not declare RAW-DATA-COMPLETE; require separate user authorization for any new experiment"
+  },
+  "gate14RAuthorized": false
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "outcome": "D1_GEOMETRIC_MEAN",
+    "ratio": 0.758625492002943,
+    "ratio_ci95_percentile": [
+      0.7168771740316842,
+      0.8027814633452756
+    ],
+    "cell_ratio_min": 0.6260187980535311,
+    "cell_ratio_max": 1.0938908239838776,
+    "cells_below_one": 33,
+    "clusters": 1296,
+    "bootstrap_draws": 5000,
+    "resampling": "complete six-lane blocks within 36 G/N/F cells",
+    "estimand": "workload-average paired transformed difference, not the adjusted reference predictor",
+    "shifted_ratio": false
+  },
+  {
+    "outcome": "D1_NEAREST_RANK_P95",
+    "ratio": 1.118843963709945,
+    "ratio_ci95_percentile": [
+      1.0571625527966837,
+      1.1845954092650712
+    ],
+    "cell_ratio_min": 0.8460501986154801,
+    "cell_ratio_max": 1.7382535724289434,
+    "cells_below_one": 9,
+    "clusters": 1296,
+    "bootstrap_draws": 5000,
+    "resampling": "complete six-lane blocks within 36 G/N/F cells",
+    "estimand": "workload-average paired transformed difference, not the adjusted reference predictor",
+    "shifted_ratio": false
+  },
+  {
+    "outcome": "D2",
+    "ratio": 0.7580963934275715,
+    "ratio_ci95_percentile": [
+      0.7150888317222368,
+      0.8039522660808099
+    ],
+    "cell_ratio_min": 0.5938977644769531,
+    "cell_ratio_max": 1.1804332555245942,
+    "cells_below_one": 33,
+    "clusters": 1296,
+    "bootstrap_draws": 5000,
+    "resampling": "complete six-lane blocks within 36 G/N/F cells",
+    "estimand": "workload-average paired transformed difference, not the adjusted reference predictor",
+    "shifted_ratio": false
+  },
+  {
+    "outcome": "D3",
+    "ratio": 0.21512256239330793,
+    "ratio_ci95_percentile": [
+      0.20863662440155575,
+      0.22182281524755776
+    ],
+    "cell_ratio_min": 0.1266989878767092,
+    "cell_ratio_max": 0.3802718003160172,
+    "cells_below_one": 36,
+    "clusters": 1296,
+    "bootstrap_draws": 5000,
+    "resampling": "complete six-lane blocks within 36 G/N/F cells",
+    "estimand": "workload-average paired transformed difference, not the adjusted reference predictor",
+    "shifted_ratio": true
+  },
+  {
+    "outcome": "D4",
+    "ratio": 2.4163790156432317,
+    "ratio_ci95_percentile": [
+      2.4106160208469225,
+      2.4224334316020633
+    ],
+    "cell_ratio_min": 2.3045942041028087,
+    "cell_ratio_max": 2.4964071519084507,
+    "cells_below_one": 0,
+    "clusters": 1296,
+    "bootstrap_draws": 5000,
+    "resampling": "complete six-lane blocks within 36 G/N/F cells",
+    "estimand": "workload-average paired transformed difference, not the adjusted reference predictor",
+    "shifted_ratio": true
+  }
+]

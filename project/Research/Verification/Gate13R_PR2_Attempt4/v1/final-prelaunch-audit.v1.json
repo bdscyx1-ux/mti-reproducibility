@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "auditKind": "gate13r-pr2-formal-attempt4-final-prelaunch-audit-v1",
+  "auditedAtUtc": "2026-10-10T04:21:40.1466945Z",
+  "passed": true,
+  "formalTargetsAbsent": true,
+  "formalTargets": [
+    {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+      "exists": false
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v4.json",
+      "exists": false
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Status.v4.json",
+      "exists": false
+    }
+  ],
+  "frozenContract": {
+    "relativePath": "Research/Gate13R_PR2_Attempt4_Execution_Contract.v1.json",
+    "sha256": "a9c7a81e3c1a59aea37be1124a1237dabd6118e9f397050122bd76c308a16570",
+    "bindingCount": 39,
+    "allBindingsVerified": true
+  },
+  "executionContractSha256": "a9c7a81e3c1a59aea37be1124a1237dabd6118e9f397050122bd76c308a16570",
+  "authorizationSha256": "6a7cd7de621c771041813214339d12320b61b8617151c0eb8894c5651a609cb7",
+  "orchestratorSha256": "78852d7ef741c09fe07a4291412ddf4ed2b21174079b371eb33c729a755f3846",
+  "launcherSha256": "8cb87329e5e1cd71724b1162038aa6af1cbadbee2c9b393f2c99d0be199af4cc",
+  "blockWrapperSha256": "0e7a6cc8a01db5aa90858518cb00e2b126bb2745617799eb591a7532f70b417f",
+  "prelaunchTestSha256": "970d9c7d1874487e4ba278837d2493b923ab54a025cb77af773c16cf7769a7f0",
+  "monitorSha256": "03176eada8888c5f25e3b1aa3695106583effe627f3df7e7d6bd40fb06fa18f1",
+  "monitorWrapperSha256": "6148cf170b8ae99aa5403b150c76fb22b9e26228b0e27c30d9f37b8b4d0f4d54",
+  "monitorConfigSha256": "1ea47f3657144b06d06cc90cd3a3304c669490737bbf309310dccd2657c23ef2",
+  "statusSchemaSha256": "22a49dfc484e4e318b13178b810878ec190d4140028fb23cc707827d64d748bd",
+  "staticSyntheticTests": {
+    "summaryRelativePath": "Research/Verification/Gate13R_PR2_Attempt4/v1/prelaunch-attempt-1/summary.json",
+    "summarySha256": "bd8c504d56df0030a4ab187d0825ac67ba27846aa9b02f0a990d55194e1e02b1",
+    "passed": true,
+    "testCount": 33,
+    "passedTestCount": 33,
+    "failedTestCount": 0,
+    "unityInvocations": 0
+  },
+  "nativePowerShellValidation": {
+    "launcherValidationRelativePath": "Research/Verification/Gate13R_PR2_Attempt4/v1/prelaunch-attempt-1/launcher-validate-ps5.json",
+    "launcherValidationSha256": "4851ea9fd68d87af1c5a3e6073dd224aac3e6e18134a59242a3887afb65191c5",
+    "formalArgumentsOnlyRelativePath": "Research/Verification/Gate13R_PR2_Attempt4/v1/prelaunch-attempt-1/formal-launch-arguments-only.json",
+    "formalArgumentsOnlySha256": "05b0783b888b71f9d9de44a8ea28f58956a6d062682a8929ca3b7697c35691ee",
+    "powerShellPath": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "powerShellVersion": "5.1.26100.9444",
+    "powerShellEdition": "Desktop",
+    "powerShellExecutableSha256": "8bb6fa8c283b4d92120b1ef249a9b311b0f804d4cabbe9981159976c8be76a5e",
+    "bindingSmokePassed": true,
+    "noUnityLaunched": true
+  },
+  "deterministicNoLaunchPlans": [
+    {
+      "globalProcessOrdinal": 1,
+      "relativePath": "Research/Verification/Gate13R_PR2_Attempt4/v1/prelaunch-attempt-1/dry-run-p000001.json",
+      "sha256": "944fba6745942c00123906bf14e83a0a461fb164195ade2208e6008db7f0308d"
+    },
+    {
+      "globalProcessOrdinal": 1537,
+      "relativePath": "Research/Verification/Gate13R_PR2_Attempt4/v1/prelaunch-attempt-1/dry-run-p001537.json",
+      "sha256": "b256b5522dab55e029589f79756fac2c0ca08c75763fdeaa4c54edd25e252563"
+    },
+    {
+      "globalProcessOrdinal": 3552,
+      "relativePath": "Research/Verification/Gate13R_PR2_Attempt4/v1/prelaunch-attempt-1/dry-run-p003552.json",
+      "sha256": "6949291dc20f633a4c18cd1f5242e7e05dde218d84fb4f51194417b6d2d008ca"
+    }
+  ],
+  "monitorWriteBoundaryTest": {
+    "snapshotRelativePath": "Research/Monitoring/Gate13R_PR2_Attempt4/v1/progress-20261010T042124953163Z.json",
+    "snapshotSha256": "8b54f8d2187cfb8a74a69202ad45a35fcaae5f203119dbd62a3e94167cba1cea",
+    "status": "NOT-STARTED",
+    "notify": false,
+    "formalRawRootWritten": false,
+    "passed": true
+  },
+  "runtime": {
+    "pythonPath": "C:/Users/bdscy/AppData/Local/Python/pythoncore-3.14-64/python.exe",
+    "pythonVersion": "3.14.7",
+    "pythonExecutableSha256": "4942b86a6597e5aee0128daa00050ed79bc21f6e709a78eb19cbfeb0c2f39ac9",
+    "unityPath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityFileVersion": "2022.3.30.10935296",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "environment": {
+    "unityProcessCount": 0,
+    "projectUnityLockPresent": false,
+    "hDriveAvailableFreeBytes": 238603239424,
+    "minimumRequiredFreeBytes": 57397541440,
+    "storageGatePassed": true
+  },
+  "attempt3Preservation": {
+    "terminalStatusPreserved": true,
+    "statusSha256": "3aa224e3a21329c508df1d6e74e7b2052beefe5212405a880e24b66c33fcfaca",
+    "executionReceiptSha256": "53a9e68281f901cc2c430d1fdc34969393013da9c854528fb29355c97aed84f6",
+    "failureCheckpointSha256": "2afa262d4fa37dae129f17566d122f80cdcb1a83f2ae9ef8d482caae735dfad9",
+    "observationReuseAuthorized": false,
+    "crossAttemptMergeAuthorized": false
+  },
+  "operationalPolicy": {
+    "perCompletedBlockFormalEligibility": true,
+    "automaticResumeAuthorized": true,
+    "maximumAutomaticResumeCount": 3,
+    "sameFailureSignatureStopCount": 2,
+    "automaticMeasuredRetryAuthorized": false,
+    "partialOrAmbiguousBlockPolicy": "FAIL-CLOSED"
+  },
+  "phaseBFormalStatisticalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "launchDecision": "PASS-FOR-FRESH-ATTEMPT4-PHASE-A-FROM-ORDINAL-1"
+}

@@ -1,0 +1,174 @@
+{
+  "authorizationState": {
+    "formalAnalysisOutputRootState": "ABSENT",
+    "formalOutcomeDataLoadingAuthorized": false,
+    "gate14RAuthorized": false,
+    "phaseBFormalStatisticalAnalysisExecutionAuthorized": false,
+    "preparationAuthorized": true,
+    "separateExecutionAuthorizationFileState": "ABSENT",
+    "separateExecutionAuthorizationPath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Authorization.v2.json"
+  },
+  "checks": {
+    "allFrozenInputHashesMatch": true,
+    "allImplementationHashesMatch": true,
+    "allRepairLineageHashesMatch": true,
+    "analyzerStaticInspection": {
+      "astParsed": true,
+      "authorizationGuardsPresent": true,
+      "exactM1ThroughM5MetricConstantsFound": [],
+      "forbiddenCallsFound": [],
+      "forbiddenImportsFound": [],
+      "importedModuleRoots": [
+        "__future__",
+        "argparse",
+        "collections",
+        "hashlib",
+        "importlib",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "re",
+        "shutil",
+        "statistics",
+        "sys",
+        "typing",
+        "uuid"
+      ],
+      "mainGuardPresent": true,
+      "payloadManifestBaseRepairPresent": true
+    },
+    "analyzerSyntheticSelfTest": {
+      "analyzerId": "gate13r-pr2-attempt4-phaseb-analyzer-v2",
+      "formalAnalysisExecuted": false,
+      "formalRawOpened": false,
+      "gate14RExecuted": false,
+      "selfTest": "PASS"
+    },
+    "contractSemanticEquivalence": {
+      "designExact": true,
+      "executionSequenceExact": true,
+      "explicitExclusionsExact": true,
+      "failClosedRulesExact": true,
+      "frozenInputBindingsExact": true,
+      "outputSchemaBindingExact": true,
+      "outputSpecificationExact": true,
+      "soleSemanticChange": "rawInput.payloadManifestRelativePathBase=rawRoot/campaigns",
+      "statisticalContractExact": true
+    },
+    "formalRawReadyAuditPass": true,
+    "historicalV1ExecutionAuthorizationBoundOnlyToV1": true,
+    "outputSchemaBoundaryPass": true,
+    "preparationAuthorizationBoundaryPass": true,
+    "rawExecutionManifestPayloadRootRelativePath": "campaigns",
+    "rawFreezeReceiptPass": true,
+    "rawMetadataIdentityAfter": {
+      "fileCount": 110795,
+      "metadataSha256": "82a67e5b4156a08562a7c92db4fa63da1a90e3fc583c345e38e2263c33e45fca",
+      "rawBytes": 26474012996
+    },
+    "rawMetadataIdentityBefore": {
+      "fileCount": 110795,
+      "metadataSha256": "82a67e5b4156a08562a7c92db4fa63da1a90e3fc583c345e38e2263c33e45fca",
+      "rawBytes": 26474012996
+    },
+    "rawMetadataIdentityUnchanged": true,
+    "rawPayloadManifestStructure": {
+      "actualRawBytes": 26429810187,
+      "declaredRawBytes": 26429810187,
+      "existingFileCount": 89472,
+      "legacyRawRootDirectResolutionExistingFileCount": 0,
+      "manifestRows": 89472,
+      "outcomeValuesRead": false,
+      "payloadFileHashesComputed": false,
+      "payloadFilesOpened": false,
+      "relativePathResolutionBase": "rawRoot/campaigns",
+      "resolvedPayloadRoot": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v4\\campaigns",
+      "sizeMatchCount": 89472,
+      "uniqueRelativePathCount": 89472
+    },
+    "scheduleStructure": {
+      "cohortProcessCounts": {
+        "four-algorithm-shared-goal-v1": 1536,
+        "grouped-field-heterogeneous-goal-v1": 1008,
+        "per-agent-heterogeneous-goal-v1": 1008
+      },
+      "cohortSampleCounts": {
+        "four-algorithm-shared-goal-v1": 6144,
+        "grouped-field-heterogeneous-goal-v1": 2016,
+        "per-agent-heterogeneous-goal-v1": 2016
+      },
+      "heterogeneousWilliamsProcessRowCounts": {
+        "0": 1008,
+        "1": 1008
+      },
+      "matchedSuperblockCount": 1008,
+      "matchedSuperblockOrderCounts": {
+        "AB": 504,
+        "BA": 504
+      },
+      "processCount": 3552,
+      "sampleCount": 10176,
+      "sharedWilliamsRowCounts": {
+        "0": 384,
+        "1": 384,
+        "2": 384,
+        "3": 384
+      },
+      "uniqueBlockIdCount": 3552,
+      "uniqueRunIdCount": 10176
+    },
+    "topManifestStructure": {
+      "blockManifestFilesOpened": false,
+      "eligibilityCommitReferenceCount": 3552,
+      "perBlockCommitFilesOpened": false,
+      "processCount": 3552,
+      "rawEvidenceBlockReferenceCount": 3552,
+      "sampleCount": 10176,
+      "workloadResultFilesOpened": false
+    },
+    "uniqueRepairDelta": {
+      "analyzerDeltaExact": true,
+      "analyzerIdVersionChangeOnlyOtherThanFunctionalDelta": true,
+      "soleAuthorizedFunctionalDelta": "RAW-PAYLOAD-MANIFEST-RELATIVE-PATH-BASE-RAWROOT/CAMPAIGNS",
+      "statisticalAnalysisCodeUnchanged": true,
+      "v1AnalyzerSha256": "abf424437912640c0cc3e898eb3c89d83df841a7c19e1ec555113ebc0fa76f84",
+      "v1WrapperSha256": "afa97849b33ecd2ac972bb2415b233c909730a241e4e2fe51e7f1f08d2d0c0f2",
+      "v2AnalyzerSha256": "e124c6364e08e818d94a29b65ec3bc0ea44bcc898b7f5fe97febfb2a5bf53a88",
+      "v2WrapperSha256": "d276b44c32c8e028c80de942b07eebb7faf39cc446eb6a739678550f3587c68a",
+      "wrapperContractBindingVersionChangeOnly": true
+    },
+    "v2ExecutionAuthorizationAbsent": true,
+    "wrapperStaticInspection": {
+      "forbiddenCommandInvocationsFound": [],
+      "implementationHashChecksPresent": true,
+      "parsedAsText": true,
+      "separateAuthorizationGuardsPresent": true
+    }
+  },
+  "contractRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Contract.v2.json",
+  "contractSha256": "54d013bd81cb6dda2c9e2e72512236884b521ec511152237846b1e9fca2c1328",
+  "createdAtUtc": "2026-10-11T02:04:57.8758123Z",
+  "nextRequiredGate": {
+    "action": "SEPARATE-EXPLICIT-PHASEB-V2-FORMAL-ANALYSIS-EXECUTION-AUTHORIZATION",
+    "mustBindContractSha256": true,
+    "mustKeepGate14RUnauthorized": true
+  },
+  "nonActions": {
+    "M1ThroughM5ReadDerivedOrReported": false,
+    "P1ThroughP5OutcomeValuesRead": false,
+    "blockManifestsOpened": false,
+    "formalAnalysisOutputCreated": false,
+    "formalStatisticalAnalysisExecuted": false,
+    "gate14RExecuted": false,
+    "rawPayloadContentOpened": false,
+    "rawPayloadHashesComputed": false,
+    "rawRootWritten": false,
+    "unityLaunchedOrControlled": false,
+    "workloadResultFilesOpened": false
+  },
+  "preflightId": "gate13r-pr2-attempt4-phaseb-structural-preflight-v2",
+  "pythonVersion": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "schemaVersion": 1,
+  "status": "PASS-READY-FOR-SEPARATE-PHASEB-EXECUTION-AUTHORIZATION"
+}

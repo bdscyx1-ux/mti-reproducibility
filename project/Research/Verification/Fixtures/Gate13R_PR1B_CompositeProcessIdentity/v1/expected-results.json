@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "fixtureId": "gate13r-pr1b-v4-composite-process-identity-synthetic-expected-v1",
+  "bootstrap": {
+    "replicates": 20000,
+    "seed": 13012026,
+    "deterministicEqualityRequired": true,
+    "unit": "complete-mirrored-order-pair"
+  },
+  "checks": [
+    {"id": "legal-sequential-pid-reuse", "expected": "PASS"},
+    {"id": "illegal-overlapping-pid-reuse", "expectedReasonCode": "PID-LIFETIME-OVERLAP"},
+    {"id": "duplicate-os-process-identity", "expectedReasonCode": "DUPLICATE-OS-PROCESS-IDENTITY"},
+    {"id": "duplicate-block-evidence-identity", "expectedReasonCode": "DUPLICATE-BLOCK-EVIDENCE-IDENTITY"},
+    {"id": "one-process-identity-multiple-blocks", "expectedReasonCode": "PROCESS-IDENTITY-MULTIPLE-BLOCKS"},
+    {"id": "one-block-multiple-process-identities", "expectedReasonCode": "BLOCK-MULTIPLE-PROCESS-IDENTITIES"},
+    {"id": "missing-process-start", "expectedReasonCode": "PROCESS-START-MISSING"},
+    {"id": "non-utc-process-start", "expectedReasonCode": "PROCESS-START-NON-UTC"},
+    {"id": "malformed-process-start", "expectedReasonCode": "PROCESS-START-MALFORMED"},
+    {"id": "future-process-start", "expectedReasonCode": "PROCESS-START-FUTURE"},
+    {"id": "impossible-process-time-order", "expectedReasonCode": "PROCESS-TIME-ORDER-IMPOSSIBLE"},
+    {"id": "sample-block-pid-mismatch", "expectedReasonCode": "SAMPLE-BLOCK-PID-MISMATCH"},
+    {"id": "duplicate-run-id", "expectedReasonCode": "DUPLICATE-RUN-ID"},
+    {"id": "duplicate-schedule-key", "expectedReasonCode": "DUPLICATE-SCHEDULE-KEY"},
+    {"id": "bootstrap-20000-deterministic", "expected": "PASS"},
+    {"id": "frozen-v1-self-test", "expected": "PASS"},
+    {"id": "frozen-v4-self-test", "expected": "PASS"}
+  ]
+}

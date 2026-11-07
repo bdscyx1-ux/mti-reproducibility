@@ -1,0 +1,100 @@
+{
+  "schema": "gate14re-design-contract-v3",
+  "studyId": "Gate14Re",
+  "version": 3,
+  "createdLocalDate": "2026-10-15",
+  "status": "SCIENTIFIC_DESIGN_FROZEN_B48_DYNAMIC_EVENTS_IN_WINDOW_NON_EXECUTING",
+  "baseScientificContract": {
+    "path": "Research/Gate14Re/Gate14Re_Design_Contract.v2.json",
+    "bytes": 17035,
+    "sha256": "8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f",
+    "allUnmodifiedRulesRemainInForce": true
+  },
+  "baseNarrativePlan": {
+    "path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v2.md",
+    "bytes": 13845,
+    "sha256": "cbeca6d175500770357d1a610149abda58c816547d2c19cfa2e8ce9bebf5771f"
+  },
+  "changeClassification": "PRE_DATA_NON_OUTCOME_DRIVEN_EVENT_TIMING_CORRECTION",
+  "unchanged": {
+    "algorithms": true,
+    "conditionsAndSourceScenarioBytes": true,
+    "eventIdsOrdersBudgetsCoordinatesAndCellChanges": true,
+    "unitCountsAndQuantityAnchors": true,
+    "B48AndWilliamsAllocation": true,
+    "plannedProcesses1536AndSamples6144": true,
+    "sharedGoalArrivalAndMovementSemantics": true,
+    "M1ThroughM5DefinitionsAndThresholds": true,
+    "selectionMultiplicityAndNoForcedWinner": true,
+    "replacementAndNoPostHocExpansion": true,
+    "hardwareRenderAndWindowConfiguration": true
+  },
+  "sourceEventSchedule": [
+    {"eventId": "block-footprint", "sourceTick": 10, "order": 0},
+    {"eventId": "unblock-footprint", "sourceTick": 10, "order": 1},
+    {"eventId": "increase-cost-footprint", "sourceTick": 50000, "order": 0},
+    {"eventId": "decrease-cost-footprint", "sourceTick": 75000, "order": 0},
+    {"eventId": "restore-initial-state", "sourceTick": 99999, "order": 0}
+  ],
+  "gate14ReEventSchedule": {
+    "fixedStepSeconds": 0.02,
+    "movementCapSeconds": 180,
+    "events": [
+      {"eventId": "block-footprint", "tick": 10, "seconds": 0.2, "order": 0},
+      {"eventId": "unblock-footprint", "tick": 10, "seconds": 0.2, "order": 1},
+      {"eventId": "increase-cost-footprint", "tick": 1500, "seconds": 30, "order": 0},
+      {"eventId": "decrease-cost-footprint", "tick": 4500, "seconds": 90, "order": 0},
+      {"eventId": "restore-initial-state", "tick": 7500, "seconds": 150, "order": 0}
+    ],
+    "allTicksStrictlyWithinMovementCap": true,
+    "runtimeRandomGeneration": false,
+    "physicalMovingObstacleAgents": false,
+    "earlyCompletionMayAvoidLaterEvents": true,
+    "forcedExposureByExtendingM1OrReactivatingAgents": false,
+    "actualAppliedEventCountRole": "structural_diagnostic_only"
+  },
+  "adapterPolicy": {
+    "sourceScenarioFilesRemainUnmodified": true,
+    "retimingOccursInMemoryOnly": true,
+    "validateSourceIdTickOrderBudgetCellCountAndEveryCellChangeBeforeRetiming": true,
+    "resultDependentRetimingOrRedraw": false,
+    "eventContentDrift": "FAIL_CLOSED",
+    "missingDuplicateOrOutOfOrderEvent": "FAIL_CLOSED"
+  },
+  "runtimeSynchronizationGate": {
+    "applyToResearchNavigationGrid": true,
+    "sendSameChangeSetToPlannerRepair": true,
+    "requirePlannerGridVersionEquality": true,
+    "updateRenderedWalkabilityAndCostRepresentationInSameFrame": true,
+    "requireVisualRevisionToMatchGridRevision": true,
+    "rawStructuralFields": [
+      "eventId",
+      "scheduledTick",
+      "order",
+      "changedCellCount",
+      "previousGridVersion",
+      "newGridVersion",
+      "plannerRepairStatus",
+      "visualRevision"
+    ],
+    "versionMismatch": "FAIL_CLOSED"
+  },
+  "statisticalIntegrity": {
+    "independentUnitStillCompleteBlock": true,
+    "eventOrFrameNotIndependentReplicate": true,
+    "eventScheduleSameForAllAlgorithms": true,
+    "eventExposureNotNewSelectionMetric": true,
+    "effectMultiplicityAndEligibilityRulesUnchanged": true
+  },
+  "authorization": {
+    "v3ScientificCorrectionAuthorizedAndCompleted": true,
+    "researchOnlyImplementationCompileSyntheticAndShortPreflightAuthorized": true,
+    "formalPhaseALaunchAuthorized": false,
+    "formalMeasuredRootCreationAuthorized": false,
+    "formalAnalysisRootCreationAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "phaseBAuthorized": false,
+    "gate15Authorized": false
+  },
+  "scientificChoicesPending": []
+}

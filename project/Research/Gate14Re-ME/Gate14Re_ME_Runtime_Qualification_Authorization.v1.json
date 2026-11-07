@@ -1,0 +1,79 @@
+{
+  "schema": "gate14re-me-runtime-qualification-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-runtime-qualification-attempt-001",
+  "status": "AUTHORIZED_RUNTIME_QUALIFICATION_ONLY",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T04:53:36.3081286Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME 运行环境资格阶段：仅允许安装并冻结 typed‑Parquet 引擎、针对当前冻结实现执行 Unity 编译，以及运行 D2/D3/D4/clock 和数据导出 known‑answer 自检；不授权生成资格调度、输入或匿名身份映射，不授权创建资格 measured root，不授权任何算法 lane、正式采集、正式分析、排名或赢家裁决。",
+  "priorSourceFreeze": {
+    "implementationManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/implementation-manifest.v1.json",
+    "implementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "43c9dba8b49a1efe0802f6046170be57506c027af9ac764138843c60eef669f7"
+  },
+  "authorizedScope": {
+    "installTypedParquetEngine": true,
+    "freezeTypedParquetEngine": true,
+    "compileFrozenUnityImplementation": true,
+    "runD2GridReadProxyKnownAnswer": true,
+    "runD3AllocationCounterKnownAnswer": true,
+    "runD4PersistentStateSizerKnownAnswer": true,
+    "runClockMonotonicityKnownAnswer": true,
+    "runDataExporterKnownAnswer": true
+  },
+  "prohibitedScope": {
+    "qualificationScheduleGeneration": false,
+    "qualificationInputGeneration": false,
+    "anonymousIdentityMapGeneration": false,
+    "qualificationMeasuredRootCreation": false,
+    "algorithmLaneExecution": false,
+    "formalInputGeneration": false,
+    "formalMeasuredRootCreation": false,
+    "formalCollection": false,
+    "formalAnalysis": false,
+    "algorithmRanking": false,
+    "winnerAdjudication": false
+  },
+  "reservedPaths": {
+    "runtimeRootRelativePath": "Research/Gate14Re-ME/Runtime/v1",
+    "typedParquetPackageRootRelativePath": "Research/Gate14Re-ME/Runtime/v1/python-packages",
+    "wheelRootRelativePath": "Research/Gate14Re-ME/Runtime/v1/wheels",
+    "verificationRootRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001",
+    "csharpInstrumentOutputRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/csharp-instruments",
+    "pythonExportOutputRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/python-export"
+  },
+  "typedParquetBinding": {
+    "distribution": "pyarrow",
+    "version": "25.0.1",
+    "pythonAbi": "cp312",
+    "platform": "win_amd64",
+    "installMode": "isolated-project-local-from-hash-recorded-wheel"
+  },
+  "runtimeBindings": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "powershellExecutable": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "powershellExecutableSha256": "8bb6fa8c283b4d92120b1ef249a9b311b0f804d4cabbe9981159976c8be76a5e"
+  },
+  "executionLimits": {
+    "maximumConcurrentUnityProcesses": 1,
+    "dependencyProvisionTimeoutMilliseconds": 900000,
+    "unityCompilationTimeoutMilliseconds": 1200000,
+    "csharpInstrumentSelfTestTimeoutMilliseconds": 600000,
+    "pythonExporterSelfTestTimeoutMilliseconds": 600000,
+    "automaticRetryAuthorized": false
+  },
+  "evidenceBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "algorithmLanes": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

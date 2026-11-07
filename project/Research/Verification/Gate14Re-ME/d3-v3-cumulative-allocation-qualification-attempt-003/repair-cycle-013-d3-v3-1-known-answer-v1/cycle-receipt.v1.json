@@ -1,0 +1,80 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 13,
+  "status": "FAILED_PRESERVED_NONFINITE_JSON_CONTINUE_AUTHORIZED_REPAIR",
+  "completedAtUtc": "2026-10-17T07:48:25.0743070Z",
+  "phase": "algorithm-free-d3-v3-1-known-answer-v1",
+  "unityProcess": {
+    "pid": 45068,
+    "startedAtUtc": "2026-10-17T07:45:08.5326026Z",
+    "exitedAtUtc": "2026-10-17T07:46:03.2214110Z",
+    "exitCode": 0,
+    "harnessOwnedExit": true,
+    "unityProcessRemainingAfterExit": false
+  },
+  "scientificControls": {
+    "harnessReportedStatus": "PASS_D3_V3_1_TRUE_CUMULATIVE_MANAGED_ALLOCATION_QUALIFICATION",
+    "harnessReportedPassed": true,
+    "exactGcAllocMarkerPassed": true,
+    "beginUInt32SizeFourAbiPassed": true,
+    "positiveMetadataObserved": true,
+    "emptyWindowControlPassed": true,
+    "arrayScaleControlPassed": true,
+    "repeatedSmallObjectControlPassed": true,
+    "gcCumulativeBehaviorPassed": true,
+    "sameThreadControlPassed": true,
+    "crossThreadExclusionPassed": true,
+    "byteAndRateFormulaPassed": true,
+    "invalidMetadataCountsZero": true,
+    "overflowCountsZero": true,
+    "measuredWindowCount": 71
+  },
+  "postRunStructuralAudit": {
+    "strictJsonPassed": false,
+    "nonFiniteJsonTokenCount": 27,
+    "nonFiniteToken": "NaN",
+    "affectedField": "managedAllocationRateBytesPerSecond",
+    "cause": "Some zero-byte empty windows completed within the same Stopwatch tick. The V1 harness used double.NaN when elapsed ticks were zero, and Unity JsonUtility emitted that value as an unquoted NaN token, which is not permitted by RFC 8259 JSON.",
+    "scientificMeasurementFailure": false,
+    "qualificationAccepted": false,
+    "requiredRepair": "Create a new V2 harness without modifying V1. Serialize the rate of a zero-elapsed empty window as 0.0. Retain the positive one-MiB record requirement of elapsedTicks > 0 and the independent byte/rate recomputation check unchanged."
+  },
+  "artifacts": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-013-d3-v3-1-known-answer-v1/cycle-plan.v1.json",
+      "lengthBytes": 2734,
+      "sha256": "17b68674e68e9402892327786b66344a46c9856ac46e98928aadabb494f5363a"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-013-d3-v3-1-known-answer-v1/unity-known-answer.log",
+      "lengthBytes": 93813,
+      "sha256": "b459b23efcd908055d7c981fa63acc693d010816814a12ce1238c8af6c3d2d61"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-013-d3-v3-1-known-answer-v1/known-answer-output/d3-v3-1-known-answer-receipt.v1.json",
+      "lengthBytes": 71052,
+      "sha256": "cdb0ec350f6e03685863c8ea9e7b54e4fbb0104c06443818ada359ff9a41059f"
+    }
+  ],
+  "repairDisposition": {
+    "priorEvidenceRetained": true,
+    "v1HarnessModified": false,
+    "nativePluginRebuildRequired": false,
+    "automaticRepairAuthorized": true,
+    "nextRepairCycle": 14
+  },
+  "scientificBoundary": {
+    "priorEvidenceModifiedOrDeleted": false,
+    "priorDiagnosticsRerun": false,
+    "qualificationRunnerOrSchemaIntegrated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisRankingOrWinner": false,
+    "fallbackMetricUsed": false
+  }
+}

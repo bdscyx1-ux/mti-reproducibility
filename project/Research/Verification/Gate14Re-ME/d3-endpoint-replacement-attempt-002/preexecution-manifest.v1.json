@@ -1,0 +1,137 @@
+{
+  "schema": "gate14re-me-d3-endpoint-replacement-preexecution-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-endpoint-replacement-attempt-002",
+  "status": "FROZEN_D3_ENDPOINT_REPLACEMENT_PREEXECUTION",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T05:45:30.6042357Z",
+  "authorization": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Endpoint_Replacement_Authorization.v1.json",
+    "sha256": "5ce2907d37660129ce6751a54c6c48a660965bb8007a7f3ab21f8c1bd905e583"
+  },
+  "plan": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Endpoint_Replacement_Plan.v1.md",
+    "sha256": "4981b37f8a20fe705e857ffe648dd412e6cfbbdaa6ff5497568d9bcead7d72df"
+  },
+  "prospectiveContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v2/d3-managed-heap-occupancy-contract.prospective.v1.json",
+    "sha256": "5960c63ccb0468bf84802f649326d10edea0bd0527ada0c2fdf7342d26f4604d"
+  },
+  "priorEvidenceBindings": {
+    "failedRuntimeQualificationFailureReceiptSha256": "8a508261f9c779ff3d3e3481d5eaf28ebc9d4c513cb69fdc8d30456b3ad9b49a",
+    "failedRuntimeQualificationFreezeReceiptSha256": "042f3ca2d07b4b78db04a7b272929f6052cc51739c0aeeaa4e6998b75f5554c8",
+    "failedD3AmendmentFailureReceiptSha256": "abffc0f216a18666ffb046ab0d7ebe9058e54a15cb07d3ecadd5715352c91ee1",
+    "failedD3AmendmentFreezeReceiptSha256": "4c2671b3158e9aaa1276e133778850adf44c5ccde8734110e734548abbb21074",
+    "statusV5Sha256": "66b6a3adbd2c889d19994fa4f3b2a1e5f69cbe60bddb81040b713e3013c3dc80",
+    "priorImplementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+    "priorSourceFreezeReceiptSha256": "43c9dba8b49a1efe0802f6046170be57506c027af9ac764138843c60eef669f7"
+  },
+  "runtimeBinding": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "unityVersion": "2022.3.30f1c1",
+    "hardTimeoutMilliseconds": 600000,
+    "automaticRetryAuthorized": false,
+    "maximumConcurrentUnityProcesses": 1
+  },
+  "sourceArtifacts": [
+    {
+      "role": "v2-folder-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2.meta",
+      "sha256": "383a08462d056e2a3871deab3d67251dec1f733625b04b9bae65c0a0e10c218e",
+      "bytes": 169
+    },
+    {
+      "role": "d3-managed-heap-occupancy-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs",
+      "sha256": "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca",
+      "bytes": 1040
+    },
+    {
+      "role": "d3-managed-heap-occupancy-source-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs.meta",
+      "sha256": "a9604ec92d4a89edee2803b20b52cf7603045dd2650b89bbcc0bd883d90723cd",
+      "bytes": 240
+    },
+    {
+      "role": "d3-endpoint-known-answer-harness",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3EndpointReplacementRunnerV1.cs",
+      "sha256": "d05c2939ecd73d3582c9800e0f2a576260b1aa230400914668c4516e7ddc62fa",
+      "bytes": 32437
+    },
+    {
+      "role": "d3-endpoint-known-answer-harness-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3EndpointReplacementRunnerV1.cs.meta",
+      "sha256": "9a918a9b9cc5196f8a100f7e2eccfc0cf9db0452baff6789d26deddbd36a106f",
+      "bytes": 240
+    }
+  ],
+  "command": {
+    "executeMethod": "DDM.Research.Editor.Gate14ReMED3EndpointReplacementRunnerV1.Run",
+    "workingDirectory": "H:/DDM_Final_Project",
+    "projectPath": "H:/DDM_Final_Project",
+    "logRelativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/unity-d3-endpoint-known-answer.log",
+    "arguments": [
+      "-batchmode",
+      "-nographics",
+      "-quit",
+      "-projectPath",
+      "H:/DDM_Final_Project",
+      "-executeMethod",
+      "DDM.Research.Editor.Gate14ReMED3EndpointReplacementRunnerV1.Run",
+      "-logFile",
+      "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/unity-d3-endpoint-known-answer.log",
+      "--g14me-d3v2-authorization",
+      "H:/DDM_Final_Project/Research/Gate14Re-ME/Gate14Re_ME_D3_Endpoint_Replacement_Authorization.v1.json",
+      "--g14me-d3v2-authorization-sha256",
+      "5ce2907d37660129ce6751a54c6c48a660965bb8007a7f3ab21f8c1bd905e583",
+      "--g14me-d3v2-counter-source",
+      "H:/DDM_Final_Project/Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs",
+      "--g14me-d3v2-counter-source-sha256",
+      "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca",
+      "--g14me-d3v2-prospective-contract",
+      "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v2/d3-managed-heap-occupancy-contract.prospective.v1.json",
+      "--g14me-d3v2-prospective-contract-sha256",
+      "5960c63ccb0468bf84802f649326d10edea0bd0527ada0c2fdf7342d26f4604d",
+      "--g14me-d3v2-output-dir",
+      "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/d3-known-answer"
+    ]
+  },
+  "prospectiveAcceptance": {
+    "negativeControlPairs": 64,
+    "negativeControlMaximumAbsoluteDeltaBytes": 65536,
+    "positiveControls": [
+      {"requestedBytes": 8388608, "minimumObservedDeltaBytes": 7549748},
+      {"requestedBytes": 33554432, "minimumObservedDeltaBytes": 30198989}
+    ],
+    "requiredScaleSeparationBytes": 22649242,
+    "reclamationControl": {
+      "requestedBytes": 16777216,
+      "minimumAllocationDeltaBytes": 15099495,
+      "minimumRecoveredBytes": 13421773,
+      "postReclamationBaselineAllowanceBytes": 2097152
+    },
+    "thresholdsMayBeRelaxedAfterExecution": false
+  },
+  "staticBoundaryChecks": {
+    "authorizationJsonParsed": true,
+    "prospectiveContractJsonParsed": true,
+    "thresholdArithmeticMatched": true,
+    "unityExecutableHashMatched": true,
+    "priorEvidenceHashesMatched": true,
+    "prohibitedRootsAbsent": true,
+    "d3KnownAnswerOutputAbsent": true,
+    "matchingUnityProcessesBeforeLaunch": 0
+  },
+  "evidenceBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "dataExporterKnownAnswerRun": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

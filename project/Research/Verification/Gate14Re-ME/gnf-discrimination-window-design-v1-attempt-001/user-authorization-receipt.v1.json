@@ -1,0 +1,25 @@
+{
+  "schema": "gate14re-me-gnf-discrimination-window-user-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+  "receivedAtUtc": "2026-10-19T11:15:48.4641564Z",
+  "userInstructionsOriginal": [
+    "负载太高了，先保留现有结构，只降低最高负载，重新设计GNF的取值",
+    "只需要让六个算法的结果各有明显区分就行了，不要出现过大负载导致区分过大/时间过久和过小负载导致的结果没有区分度",
+    "最大值也要降低"
+  ],
+  "authorizedInterpretation": [
+    "preserve the 3 x 4 x 4 factorial cardinality and paired six-algorithm structure",
+    "lower the maximum load",
+    "identify and avoid a low-load region where anonymous six-lane results are not operationally distinguishable",
+    "perform one read-only anonymous D1/D2 discrimination-window calibration on sealed attempt-009 core event-group rows",
+    "write only to a new versioned Verification root"
+  ],
+  "notAuthorized": [
+    "identify, rank, or select a winning algorithm",
+    "use qualification observations as formal samples",
+    "write to sealed attempt-009 roots",
+    "start a new qualification or formal experiment",
+    "change the algorithm cohort, endpoint definitions, sample size, pairing, stopping rules, or strict-serial policy"
+  ]
+}

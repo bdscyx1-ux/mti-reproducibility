@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "diagnosisKind": "gate13r-36h-v12-four-lane-telemetry-compile-contention-diagnosis-v1",
+  "createdAtUtc": "2026-10-08T05:40:00Z",
+  "status": "CONFIRMED-PRE-PILOT-IMPLEMENTATION-DEFECT",
+  "attempt": 12,
+  "failedStage": "four-lane-telemetry",
+  "pilotStarted": false,
+  "formalCampaign": false,
+  "rootCause": {
+    "classification": "fresh-clone-first-import-il-post-processing-file-contention",
+    "lane": 4,
+    "component": "Unity.ILPP.Trigger / BurstILPostProcessor",
+    "contendedPath": "H:/DDM_Final_Project_Gate13R36H/v12/lane-04/Library/Bee/artifacts/1900b0aE.dag/post-processed/UnityEditor.UI.dll",
+    "exception": "System.IO.IOException: the file was in use by another process",
+    "interpretation": "The failure occurred during the first concurrent import/compile of four newly relocated project copies. It is not an algorithm result, workload failure, source-level C# compiler diagnostic, telemetry-threshold failure, or measured-pilot observation.",
+    "evidenceLines": [
+      1748,
+      1803,
+      1810,
+      1842,
+      1871
+    ]
+  },
+  "crossLaneEvidence": {
+    "lanes1To3Passed": true,
+    "lane1SummarySha256": "67b22c40e78223ed4c6eeaae712f3e675604d2f59ee81f960413f15dee8e9836",
+    "lane2SummarySha256": "02355fbd6daf915b676fcd71e0b45aa297934ba133ea0e7cbd62227d65aa91d6",
+    "lane3SummarySha256": "ae856ce3dbf01cb8eba4aecc6fc7d19cab7546a586361fc28eadf2b84435877d",
+    "lane4SummarySha256": "48474e2ab8b7cb9d62bc8e06028607ff63981fd84c2603c5c9235d9489de68cf",
+    "lane4UnityLogSha256": "f000927e76330252a9f8c7eaad6cd5c53489a1a29e6518914a913894e9b0ca2d",
+    "lane4UnityLogBytes": 211920
+  },
+  "lockEvidence": {
+    "path": "H:/DDM_Final_Project_Gate13R36H/v12/lane-04/Temp/UnityLockfile",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "creationTimeUtc": "2026-10-08T05:22:28.6670022Z",
+    "exclusiveOpenSucceededAfterFailure": true,
+    "unityProcessCountAfterFailure": 0,
+    "preservationPolicy": "PRESERVE-IN-PLACE-AS-V12-FAILURE-EVIDENCE; DO-NOT-CLEAN; DO-NOT-RETRY; DO-NOT-RESUME"
+  },
+  "frozenAttemptEvidence": {
+    "executionReceiptSha256": "4df6b7ade64bb904dbc4fb361c949fe59399924941812ff2c184c22d4294cf5f",
+    "verificationCheckpointSha256": "fa5f8c8311ebf059ff896369da52cdf21687eabe338fd4ad59bbb3563f7bb5dc",
+    "failureReceiptSha256": "de6e800bda9e54e1c8e2829af7c3da4cc6497fefc68bdccf9cdce455cf507485",
+    "partialOutputManifestSha256": "f76461fe8d53752669405d25154d3519b08b5a5fe871b710e03e51293f936ac3"
+  },
+  "authorizedRepairBoundary": {
+    "nextAttempt": 13,
+    "newCloneRootRequired": true,
+    "newVerificationRootRequired": true,
+    "serialLaneBootstrapCompileBeforeConcurrentTelemetry": true,
+    "bootstrapIsNonMeasured": true,
+    "bootstrapExecutesNoPlanningWorkload": true,
+    "naturalLockReleaseRequired": true,
+    "controlledCleanupAllowed": false,
+    "fourLaneConcurrentTelemetryStillRequired": true,
+    "fourLaneConcurrentPositiveBlockVerificationStillRequired": true,
+    "pilotDesignChanged": false,
+    "thresholdRelaxationAllowed": false,
+    "v12MutationAllowed": false
+  },
+  "passed": true
+}

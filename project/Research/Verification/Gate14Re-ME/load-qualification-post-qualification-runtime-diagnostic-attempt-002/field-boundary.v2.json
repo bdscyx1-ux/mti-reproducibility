@@ -1,0 +1,19 @@
+{
+  "schema": "gate14re-me-post-qualification-runtime-diagnostic-field-boundary-v2",
+  "status": "FROZEN_BEFORE_DIAGNOSTIC_COMPUTATION_AND_BEFORE_NAMED_IDENTITY_LOAD",
+  "allowedFields": [
+    "process-ledger schema, ordinal, mode, processId, creationTimeUtc, exitedAtUtc, exitCode, state and identity-receipt binding",
+    "lane-receipt inputId, superblockId, anonymousLaneId, input binding, laneWallClockMilliseconds, createdAtUtc, completion state and structural row cardinalities",
+    "frozen input designRegion, seed, gridEdge G, agentCount N, changedCellCount F, topology and structural stratum",
+    "process-resource CPU, managed-memory, private-memory, working-set and peak-working-set structural samples",
+    "host, process and disk structural metadata",
+    "frozen schedule and named identity mapping only after the anonymous result has been written, hashed and made read-only"
+  ],
+  "prohibitedFields": [
+    "algorithm output observations or endpoint values",
+    "path-quality or scientific-effect metrics",
+    "effect direction, formal contrasts, p-values, ranking, weighting or winner",
+    "qualification values used as formal scientific samples"
+  ],
+  "timeDecompositionBoundary": "Only process wall, inter-process gap and directly measured inclusive lane-body duration are identifiable. Inclusive lane body contains setup, planner work, oracle/cache use, instrumentation, resource sampling, serialization and raw writes. Pure algorithm compute, Unity startup and exit/finalization are not separately identifiable, and no residual may be relabeled as one of them."
+}

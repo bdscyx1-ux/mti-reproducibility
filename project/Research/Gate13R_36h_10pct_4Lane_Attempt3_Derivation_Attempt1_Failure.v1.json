@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "failureKind": "gate13r-36h-attempt3-prewrite-derivation-runtime-expression-failure-v1",
+  "failedAtUtc": "2026-10-08T04:45:30.5396840Z",
+  "status": "FAILED-PREWRITE-NO-V3-ARTIFACTS-NO-UNITY-NO-PILOT",
+  "error": "Windows PowerShell 5.1 parsed but did not execute an inline if statement used directly as a Test-Path argument; it attempted to invoke a command named if.",
+  "generatorRelativePath": "Research/Verification/New-Gate13R36hAttempt3ArtifactsV1.ps1",
+  "generatorSha256BeforeRepair": "b735f9398f3a6da89b7bb1f73b977244c4e1e932a8b5852614b0e80d5e11743d",
+  "generatorBytesBeforeRepair": 16314,
+  "allowedRepair": "Resolve the candidate path into a local variable before calling Test-Path; no other design or experiment semantics may change.",
+  "v3ArtifactCountExcludingGenerator": 0,
+  "verificationRootCreated": false,
+  "cloneRootCreated": false,
+  "pilotRootCreated": false,
+  "unityStarted": false,
+  "formalRootCreated": false,
+  "pilotAuthorizationConsumed": false
+}

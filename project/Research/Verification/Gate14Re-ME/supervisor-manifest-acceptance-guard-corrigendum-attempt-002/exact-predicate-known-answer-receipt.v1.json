@@ -1,0 +1,1580 @@
+{
+  "schema": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-exact-predicate-known-answer-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-auto-repair-until-pass-263a2c10-45da-4ede-ae8e-684baf3e9057",
+  "attemptId": "supervisor-manifest-acceptance-guard-corrigendum-attempt-002",
+  "status": "PASS_EXACT_SUPERVISOR_MANIFEST_ACCEPTANCE_PREDICATE_OFFLINE",
+  "passed": true,
+  "terminal": true,
+  "startedAtUtc": "2026-10-17T17:17:30.2153484+00:00",
+  "completedAtUtc": "2026-10-17T17:17:30.5693047+00:00",
+  "hostRuntime": {
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "version": "7.6.5"
+  },
+  "sourceSupervisor": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+    "sha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+    "exactPredicate": "$manifest.manifestGeneration -eq 3 -and $manifest.manifestSchemaV3 -eq 'gate14re-me-qualification-current-implementation-manifest-v3' -and $manifest.executionReadinessStatus -eq 'FROZEN_CURRENT_IMPLEMENTATION_COMPILED_AND_TERMINAL_CHAIN_CORRECTED_OFFLINE'"
+  },
+  "correctedSupervisor": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_1.ps1",
+    "sha256": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc",
+    "exactPredicate": "$manifest.manifestGeneration -eq 4 -and $manifest.manifestSchemaV3 -eq 'gate14re-me-qualification-current-implementation-manifest-v3' -and $manifest.executionReadinessStatus -eq 'FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE'",
+    "changedLineNumbers": [
+      540
+    ]
+  },
+  "authoritativeManifestV32AcceptedBySourcePredicate": false,
+  "authoritativeManifestV32AcceptedByCorrectedPredicate": true,
+  "successorManifestV33AcceptedByCorrectedPredicate": true,
+  "negativeCasesRejected": [
+    "wrong generation",
+    "wrong schema",
+    "stale readiness status",
+    "missing generation",
+    "missing schema",
+    "missing readiness status"
+  ],
+  "preservedSourceManifestArtifactCount": 48,
+  "successorManifestArtifactCount": 50,
+  "checksPassed": 304,
+  "checks": [
+    {
+      "name": "project root exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project"
+    },
+    {
+      "name": "attempt root exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\supervisor-manifest-acceptance-guard-corrigendum-attempt-002"
+    },
+    {
+      "name": "attempt root is inside project root",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\supervisor-manifest-acceptance-guard-corrigendum-attempt-002"
+    },
+    {
+      "name": "exact PowerShell host path",
+      "passed": true,
+      "observed": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe"
+    },
+    {
+      "name": "PowerShell host runtime exists",
+      "passed": true,
+      "observed": "C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe"
+    },
+    {
+      "name": "PowerShell host runtime SHA-256",
+      "passed": true,
+      "observed": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139"
+    },
+    {
+      "name": "exact PowerShell host version",
+      "passed": true,
+      "observed": "7.6.5"
+    },
+    {
+      "name": "retained source supervisor v3 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\Run-Gate14ReMELoadQualification.v3.ps1"
+    },
+    {
+      "name": "retained source supervisor v3 SHA-256",
+      "passed": true,
+      "observed": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035"
+    },
+    {
+      "name": "corrected supervisor v3.1 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\Run-Gate14ReMELoadQualification.v3_1.ps1"
+    },
+    {
+      "name": "corrected supervisor v3.1 SHA-256",
+      "passed": true,
+      "observed": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc"
+    },
+    {
+      "name": "retained execution contract v3.2 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\load-qualification-execution-contract.v3_2.json"
+    },
+    {
+      "name": "retained execution contract v3.2 SHA-256",
+      "passed": true,
+      "observed": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0"
+    },
+    {
+      "name": "corrected execution contract v3.3 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\load-qualification-execution-contract.v3_3.json"
+    },
+    {
+      "name": "corrected execution contract v3.3 SHA-256",
+      "passed": true,
+      "observed": "6e35abb3f36f956f0f685f816e2b2a7c1ce2aa513a86bd16d575964bd619802a"
+    },
+    {
+      "name": "retained implementation manifest v3.2 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\load-qualification-current-implementation-manifest.v3_2.json"
+    },
+    {
+      "name": "retained implementation manifest v3.2 SHA-256",
+      "passed": true,
+      "observed": "83ef4c7081a77f7093e9f37f53b786f628459c404ca9e89b78d6e93ce64d2514"
+    },
+    {
+      "name": "corrected implementation manifest v3.3 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\load-qualification-current-implementation-manifest.v3_3.json"
+    },
+    {
+      "name": "corrected implementation manifest v3.3 SHA-256",
+      "passed": true,
+      "observed": "a85968ee3c759c5f0c3c3bf3a5d9c3bda7c3cfca7628f3e983cb64142bfe4579"
+    },
+    {
+      "name": "retained load qualification execution attempt-002 failure receipt exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\load-qualification-execution-attempt-002\\failure-receipt.v1.json"
+    },
+    {
+      "name": "retained load qualification execution attempt-002 failure receipt SHA-256",
+      "passed": true,
+      "observed": "83882d9bcfba2cc08c86c87da9e8ae2fb920b32814b7b1fee165e59025323c10"
+    },
+    {
+      "name": "retained Status v33 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Gate14Re_ME_Status.v33.json"
+    },
+    {
+      "name": "retained Status v33 SHA-256",
+      "passed": true,
+      "observed": "f2e3f84699914aed337b0c5058038976e1eae272e7b9ca0421208b837b845c1d"
+    },
+    {
+      "name": "source supervisor remains read-only",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "source contract remains read-only",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "source manifest remains read-only",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "attempt-002 failure receipt remains read-only",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "Status v33 remains read-only",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "reserved measured root absent before known-answer",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate14Re-ME\\load-qualification\\attempt-001"
+    },
+    {
+      "name": "reserved delivery root absent before known-answer",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Exports\\Gate14Re-ME\\load-qualification\\attempt-001"
+    },
+    {
+      "name": "no Gate14Re-ME Unity runner before known-answer",
+      "passed": true,
+      "observed": 0
+    },
+    {
+      "name": "supervisor line count unchanged",
+      "passed": true,
+      "observed": 721
+    },
+    {
+      "name": "exactly one supervisor source line changed",
+      "passed": true,
+      "observed": "540"
+    },
+    {
+      "name": "only supervisor line 540 changed",
+      "passed": true,
+      "observed": 540
+    },
+    {
+      "name": "corrected supervisor PowerShell syntax",
+      "passed": true,
+      "observed": 0
+    },
+    {
+      "name": "one exact guard statement in Run-Gate14ReMELoadQualification.v3.ps1",
+      "passed": true,
+      "observed": 1
+    },
+    {
+      "name": "extractable exact guard syntax in Run-Gate14ReMELoadQualification.v3.ps1",
+      "passed": true,
+      "observed": "Require-Condition ($manifest.manifestGeneration -eq 3 -and $manifest.manifestSchemaV3 -eq 'gate14re-me-qualification-current-implementation-manifest-v3' -and $manifest.executionReadinessStatus -eq 'FROZEN_CURRENT_IMPLEMENTATION_COMPILED_AND_TERMINAL_CHAIN_CORRECTED_OFFLINE') 'Authoritative implementation manifest v3 state is not adopted.'"
+    },
+    {
+      "name": "one exact guard statement in Run-Gate14ReMELoadQualification.v3_1.ps1",
+      "passed": true,
+      "observed": 1
+    },
+    {
+      "name": "extractable exact guard syntax in Run-Gate14ReMELoadQualification.v3_1.ps1",
+      "passed": true,
+      "observed": "Require-Condition ($manifest.manifestGeneration -eq 4 -and $manifest.manifestSchemaV3 -eq 'gate14re-me-qualification-current-implementation-manifest-v3' -and $manifest.executionReadinessStatus -eq 'FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE') 'Authoritative implementation manifest v3 state is not adopted.'"
+    },
+    {
+      "name": "guard predicate changed",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "corrected predicate binds manifest generation 4",
+      "passed": true,
+      "observed": "$manifest.manifestGeneration -eq 4 -and $manifest.manifestSchemaV3 -eq 'gate14re-me-qualification-current-implementation-manifest-v3' -and $manifest.executionReadinessStatus -eq 'FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE'"
+    },
+    {
+      "name": "corrected predicate binds exact host-bound readiness status",
+      "passed": true,
+      "observed": "$manifest.manifestGeneration -eq 4 -and $manifest.manifestSchemaV3 -eq 'gate14re-me-qualification-current-implementation-manifest-v3' -and $manifest.executionReadinessStatus -eq 'FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE'"
+    },
+    {
+      "name": "source predicate reproduces rejection of authoritative manifest v3.2",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "corrected predicate accepts authoritative manifest v3.2",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "corrected predicate accepts successor manifest v3.3",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "positive synthetic manifest accepted",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "wrong generation rejected",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "wrong schema rejected",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "stale readiness status rejected",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "missing generation rejected",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "missing schema rejected",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "missing readiness status rejected",
+      "passed": true,
+      "observed": false
+    },
+    {
+      "name": "successor manifest authoritative header",
+      "passed": true,
+      "observed": "3.3"
+    },
+    {
+      "name": "successor contract frozen unauthorized header",
+      "passed": true,
+      "observed": "3.3"
+    },
+    {
+      "name": "successor contract binds corrected supervisor",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_1.ps1"
+    },
+    {
+      "name": "successor contract retains v3.2 without reclassification",
+      "passed": true,
+      "observed": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0"
+    },
+    {
+      "name": "successor contract preserves prohibited execution and analysis boundaries",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "successor manifest artifact paths are unique",
+      "passed": true,
+      "observed": 50
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "passed": true,
+      "observed": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\Gate14ReMELoadQualificationRunnerV2.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs SHA-256",
+      "passed": true,
+      "observed": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "passed": true,
+      "observed": 77345
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta",
+      "passed": true,
+      "observed": "35fb83fbbf5b516d392f42a41e3938e83c92707d13140cbb086c5637da0b3a41"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\Gate14ReMELoadQualificationRunnerV2.cs.meta"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta SHA-256",
+      "passed": true,
+      "observed": "35fb83fbbf5b516d392f42a41e3938e83c92707d13140cbb086c5637da0b3a41"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta",
+      "passed": true,
+      "observed": 243
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "passed": true,
+      "observed": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Gate14ReME\\v1\\Gate14ReMEQualificationContractsV1.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs SHA-256",
+      "passed": true,
+      "observed": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "passed": true,
+      "observed": 17536
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEInstrumentationV1.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEInstrumentationV1.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEInstrumentationV1.cs",
+      "passed": true,
+      "observed": "e3b52047276a3ae6961914881ba6aaf78bb6a913ca70e4edebb974b2b6deacdb"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEInstrumentationV1.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Gate14ReME\\v1\\Gate14ReMEInstrumentationV1.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEInstrumentationV1.cs SHA-256",
+      "passed": true,
+      "observed": "e3b52047276a3ae6961914881ba6aaf78bb6a913ca70e4edebb974b2b6deacdb"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEInstrumentationV1.cs",
+      "passed": true,
+      "observed": 17944
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "passed": true,
+      "observed": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Gate14ReME\\v1\\Gate14ReMEReferenceOracleV1.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs SHA-256",
+      "passed": true,
+      "observed": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "passed": true,
+      "observed": 30510
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs",
+      "passed": true,
+      "observed": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Gate14ReME\\v3\\Gate14ReMECumulativeAllocationCounterV2.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs SHA-256",
+      "passed": true,
+      "observed": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs",
+      "passed": true,
+      "observed": 6168
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta",
+      "passed": true,
+      "observed": "211d45395c902d2e32131a836227ca88e98e564f15287b196fd1df2b2b740528"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Gate14ReME\\v3\\Gate14ReMECumulativeAllocationCounterV2.cs.meta"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta SHA-256",
+      "passed": true,
+      "observed": "211d45395c902d2e32131a836227ca88e98e564f15287b196fd1df2b2b740528"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta",
+      "passed": true,
+      "observed": 243
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+      "passed": true,
+      "observed": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Gate14ReME\\v3\\Gate14ReMELoadQualificationD3V31ContractsV1.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs SHA-256",
+      "passed": true,
+      "observed": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+      "passed": true,
+      "observed": 14453
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta",
+      "passed": true,
+      "observed": "01437ac0e00e8d95d06fec5873aa087bb9292d30d2d54ac3b233d17308b83aff"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Gate14ReME\\v3\\Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta SHA-256",
+      "passed": true,
+      "observed": "01437ac0e00e8d95d06fec5873aa087bb9292d30d2d54ac3b233d17308b83aff"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta",
+      "passed": true,
+      "observed": 243
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp",
+      "passed": true,
+      "observed": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Native\\v3\\Gate14ReMED3AllocationCounterV31.cpp"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp SHA-256",
+      "passed": true,
+      "observed": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp",
+      "passed": true,
+      "observed": 11808
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+      "passed": true,
+      "observed": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+      "passed": true,
+      "observed": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63"
+    },
+    {
+      "name": "retained manifest artifact Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\Plugins\\x86_64\\Gate14ReMED3AllocationCounterV31.dll"
+    },
+    {
+      "name": "retained manifest artifact Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll SHA-256",
+      "passed": true,
+      "observed": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+      "passed": true,
+      "observed": 110592
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta",
+      "passed": true,
+      "observed": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta",
+      "passed": true,
+      "observed": "0da140fbc3f6a112402e27f4bbfb77f27953b99b4b0554ebcc4cd3b00642e8a4"
+    },
+    {
+      "name": "retained manifest artifact Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\Plugins\\x86_64\\Gate14ReMED3AllocationCounterV31.dll.meta"
+    },
+    {
+      "name": "retained manifest artifact Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta SHA-256",
+      "passed": true,
+      "observed": "0da140fbc3f6a112402e27f4bbfb77f27953b99b4b0554ebcc4cd3b00642e8a4"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta",
+      "passed": true,
+      "observed": 526
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+      "passed": true,
+      "observed": "a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\AStarRepeatedPlanner.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs SHA-256",
+      "passed": true,
+      "observed": "a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+      "passed": true,
+      "observed": 25807
+    },
+    {
+      "name": "successor manifest retains source artifact Research/AStar_Repeated_Specification.md",
+      "passed": true,
+      "observed": "Research/AStar_Repeated_Specification.md"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/AStar_Repeated_Specification.md",
+      "passed": true,
+      "observed": "0fe75b470bb0b1f256278ddf8089b86660a80a5c20c99006a140ff7c3ec8c5eb"
+    },
+    {
+      "name": "retained manifest artifact Research/AStar_Repeated_Specification.md exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\AStar_Repeated_Specification.md"
+    },
+    {
+      "name": "retained manifest artifact Research/AStar_Repeated_Specification.md SHA-256",
+      "passed": true,
+      "observed": "0fe75b470bb0b1f256278ddf8089b86660a80a5c20c99006a140ff7c3ec8c5eb"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/AStar_Repeated_Specification.md",
+      "passed": true,
+      "observed": 5064
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "passed": true,
+      "observed": "82316036aba90be69ca746288798bac1789cdb09afa65cf9ad4180975d1f947e"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\BidirectionalAStarRepeatedPlanner.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs SHA-256",
+      "passed": true,
+      "observed": "82316036aba90be69ca746288798bac1789cdb09afa65cf9ad4180975d1f947e"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "passed": true,
+      "observed": 34160
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "passed": true,
+      "observed": "Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "passed": true,
+      "observed": "593e21946de91c8ddab59f70be44084aeb8afe7ae72d52e490589f6e77f16ead"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate13R-AX2\\Algorithms\\Bidirectional_A_Star_Repeated_Specification.v1.md"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md SHA-256",
+      "passed": true,
+      "observed": "593e21946de91c8ddab59f70be44084aeb8afe7ae72d52e490589f6e77f16ead"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "passed": true,
+      "observed": 755
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+      "passed": true,
+      "observed": "ae9f1bdc2a30f924239145d8a165ed31d68f05b595916dbed21414fd1c69427f"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\DStarLitePlanner.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs SHA-256",
+      "passed": true,
+      "observed": "ae9f1bdc2a30f924239145d8a165ed31d68f05b595916dbed21414fd1c69427f"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+      "passed": true,
+      "observed": 39778
+    },
+    {
+      "name": "successor manifest retains source artifact Research/DStar_Lite_Specification.md",
+      "passed": true,
+      "observed": "Research/DStar_Lite_Specification.md"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/DStar_Lite_Specification.md",
+      "passed": true,
+      "observed": "65f03f4827c0bd2edceb967311451cace2a34642235457277cbbaaba222b01c3"
+    },
+    {
+      "name": "retained manifest artifact Research/DStar_Lite_Specification.md exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\DStar_Lite_Specification.md"
+    },
+    {
+      "name": "retained manifest artifact Research/DStar_Lite_Specification.md SHA-256",
+      "passed": true,
+      "observed": "65f03f4827c0bd2edceb967311451cace2a34642235457277cbbaaba222b01c3"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/DStar_Lite_Specification.md",
+      "passed": true,
+      "observed": 10784
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "passed": true,
+      "observed": "10686f9bf5b36ec06e8d5e98a7c54f8bdcc5a1c0d0664cb9a3eed6a806bc52c8"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\LifelongPlanningAStarPlanner.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs SHA-256",
+      "passed": true,
+      "observed": "10686f9bf5b36ec06e8d5e98a7c54f8bdcc5a1c0d0664cb9a3eed6a806bc52c8"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "passed": true,
+      "observed": 39828
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "passed": true,
+      "observed": "Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "passed": true,
+      "observed": "703e72a92207ceb05f0e63c35322f2a8e727b5e8be6e1dc699cd287ce254d4a9"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate13R-AX2\\Algorithms\\Lifelong_Planning_A_Star_Specification.v1.md"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md SHA-256",
+      "passed": true,
+      "observed": "703e72a92207ceb05f0e63c35322f2a8e727b5e8be6e1dc699cd287ce254d4a9"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "passed": true,
+      "observed": 767
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "passed": true,
+      "observed": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\CorrectedFullRecomputeFlowFieldPlanner.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs SHA-256",
+      "passed": true,
+      "observed": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "passed": true,
+      "observed": 34279
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "passed": true,
+      "observed": "Research/Corrected_Full_Recompute_Flow_Field_Specification.md"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "passed": true,
+      "observed": "6f29c7545c2f9d68ad0bfd2b707cb7f7798fd80b39816eb22010f278a6978223"
+    },
+    {
+      "name": "retained manifest artifact Research/Corrected_Full_Recompute_Flow_Field_Specification.md exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Corrected_Full_Recompute_Flow_Field_Specification.md"
+    },
+    {
+      "name": "retained manifest artifact Research/Corrected_Full_Recompute_Flow_Field_Specification.md SHA-256",
+      "passed": true,
+      "observed": "6f29c7545c2f9d68ad0bfd2b707cb7f7798fd80b39816eb22010f278a6978223"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "passed": true,
+      "observed": 10875
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "passed": true,
+      "observed": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\IncrementalDynamicFlowFieldPlanner.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs SHA-256",
+      "passed": true,
+      "observed": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "passed": true,
+      "observed": 46884
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "passed": true,
+      "observed": "Research/Incremental_Dynamic_Flow_Field_Specification.md"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "passed": true,
+      "observed": "8a7895c0daa38810a5b1087348be11b427cfeb1f6f0ed2f27730578ac84e70ef"
+    },
+    {
+      "name": "retained manifest artifact Research/Incremental_Dynamic_Flow_Field_Specification.md exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Incremental_Dynamic_Flow_Field_Specification.md"
+    },
+    {
+      "name": "retained manifest artifact Research/Incremental_Dynamic_Flow_Field_Specification.md SHA-256",
+      "passed": true,
+      "observed": "8a7895c0daa38810a5b1087348be11b427cfeb1f6f0ed2f27730578ac84e70ef"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "passed": true,
+      "observed": 14050
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "passed": true,
+      "observed": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Navigation/NavigationContracts.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Navigation\\NavigationContracts.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Navigation/NavigationContracts.cs SHA-256",
+      "passed": true,
+      "observed": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "passed": true,
+      "observed": 5661
+    },
+    {
+      "name": "successor manifest retains source artifact Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "passed": true,
+      "observed": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "passed": true,
+      "observed": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Grid\\ResearchNavigationGrid.cs"
+    },
+    {
+      "name": "retained manifest artifact Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs SHA-256",
+      "passed": true,
+      "observed": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"
+    },
+    {
+      "name": "retained manifest artifact byte count Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "passed": true,
+      "observed": 10018
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "passed": true,
+      "observed": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v2\\load-qualification-input-schema.v2.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json SHA-256",
+      "passed": true,
+      "observed": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "passed": true,
+      "observed": 4664
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "passed": true,
+      "observed": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v2\\load-qualification-planning-schema-binding.v2.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json SHA-256",
+      "passed": true,
+      "observed": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "passed": true,
+      "observed": 4360
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "passed": true,
+      "observed": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\load-qualification-instrument-contract.v3.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json SHA-256",
+      "passed": true,
+      "observed": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "passed": true,
+      "observed": 4771
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "passed": true,
+      "observed": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\d3-cumulative-managed-allocation-contract.qualified.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json SHA-256",
+      "passed": true,
+      "observed": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "passed": true,
+      "observed": 6971
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json",
+      "passed": true,
+      "observed": "bef0f0c143f325eb7b3ad9e5401cc89bc7d6ff3938287a9b049e985aac04e887"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v1\\load-qualification-resource-budget.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json SHA-256",
+      "passed": true,
+      "observed": "bef0f0c143f325eb7b3ad9e5401cc89bc7d6ff3938287a9b049e985aac04e887"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json",
+      "passed": true,
+      "observed": 3809
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json",
+      "passed": true,
+      "observed": "8a96a5a53d22617ef90134ac1a57e3b7115e5ea7ce03a6739c632fd52119f8a5"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v1\\load-qualification-schedule-schema.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json SHA-256",
+      "passed": true,
+      "observed": "8a96a5a53d22617ef90134ac1a57e3b7115e5ea7ce03a6739c632fd52119f8a5"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json",
+      "passed": true,
+      "observed": 2910
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "passed": true,
+      "observed": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v1\\six-algorithm-fairness-binding.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json SHA-256",
+      "passed": true,
+      "observed": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "passed": true,
+      "observed": 5257
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "passed": true,
+      "observed": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Runtime\\v1\\typed-parquet-runtime-manifest.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json SHA-256",
+      "passed": true,
+      "observed": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "passed": true,
+      "observed": 179214
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "passed": true,
+      "observed": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Gate14Re_ME_Data_Delivery_Contract.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json SHA-256",
+      "passed": true,
+      "observed": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "passed": true,
+      "observed": 14693
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "passed": true,
+      "observed": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "passed": true,
+      "observed": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\unity-executable-identity-rule-offline-adjudication-attempt-005\\trusted-launch-identity-rule.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json SHA-256",
+      "passed": true,
+      "observed": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "passed": true,
+      "observed": 5960
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "passed": true,
+      "observed": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "passed": true,
+      "observed": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007\\Gate14ReMETrustedTimestampComparatorV1.ps1"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1 SHA-256",
+      "passed": true,
+      "observed": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "passed": true,
+      "observed": 5350
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": "7e0cbe77cb8bb8f84642856c6356d318f708e168b52a92e6e348cdf948169aca"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-planning-asset-generation-v2-attempt-001\\planning-assets-freeze-manifest.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json SHA-256",
+      "passed": true,
+      "observed": "7e0cbe77cb8bb8f84642856c6356d318f708e168b52a92e6e348cdf948169aca"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": 59200
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "passed": true,
+      "observed": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "passed": true,
+      "observed": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-planning-asset-generation-v2-attempt-001\\planning-assets\\schedule\\formal-qualification-williams-schedule.v1.jsonl"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl SHA-256",
+      "passed": true,
+      "observed": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "passed": true,
+      "observed": 199834
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+      "passed": true,
+      "observed": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+      "passed": true,
+      "observed": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-planning-asset-generation-v2-attempt-001\\planning-assets\\identity\\anonymous-identity-binding.sealed.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json SHA-256",
+      "passed": true,
+      "observed": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+      "passed": true,
+      "observed": 1512
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json",
+      "passed": true,
+      "observed": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json",
+      "passed": true,
+      "observed": "07118a3b4be7e9cd0b044d073426d8db24ba116498d548c3bbfa42df2cdf9937"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-execution-binding-supervisor-v2-repair-attempt-002\\compile-identity-receipt.v1.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json SHA-256",
+      "passed": true,
+      "observed": "07118a3b4be7e9cd0b044d073426d8db24ba116498d548c3bbfa42df2cdf9937"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json",
+      "passed": true,
+      "observed": 2758
+    },
+    {
+      "name": "successor manifest retains source artifact Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+      "passed": true,
+      "observed": "Library/ScriptAssemblies/Assembly-CSharp-Editor.dll"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+      "passed": true,
+      "observed": "abef0c3232d02818e60a5603600fbc8899dba2fbe383e73b255a04eab01b5e88"
+    },
+    {
+      "name": "retained manifest artifact Library/ScriptAssemblies/Assembly-CSharp-Editor.dll exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Library\\ScriptAssemblies\\Assembly-CSharp-Editor.dll"
+    },
+    {
+      "name": "retained manifest artifact Library/ScriptAssemblies/Assembly-CSharp-Editor.dll SHA-256",
+      "passed": true,
+      "observed": "abef0c3232d02818e60a5603600fbc8899dba2fbe383e73b255a04eab01b5e88"
+    },
+    {
+      "name": "retained manifest artifact byte count Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+      "passed": true,
+      "observed": 937472
+    },
+    {
+      "name": "successor manifest retains source artifact Library/ScriptAssemblies/Assembly-CSharp.dll",
+      "passed": true,
+      "observed": "Library/ScriptAssemblies/Assembly-CSharp.dll"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Library/ScriptAssemblies/Assembly-CSharp.dll",
+      "passed": true,
+      "observed": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1"
+    },
+    {
+      "name": "retained manifest artifact Library/ScriptAssemblies/Assembly-CSharp.dll exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Library\\ScriptAssemblies\\Assembly-CSharp.dll"
+    },
+    {
+      "name": "retained manifest artifact Library/ScriptAssemblies/Assembly-CSharp.dll SHA-256",
+      "passed": true,
+      "observed": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1"
+    },
+    {
+      "name": "retained manifest artifact byte count Library/ScriptAssemblies/Assembly-CSharp.dll",
+      "passed": true,
+      "observed": 466432
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+      "passed": true,
+      "observed": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1 exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\Run-Gate14ReMELoadQualification.v3.ps1"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1 SHA-256",
+      "passed": true,
+      "observed": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+      "passed": true,
+      "observed": 52880
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json",
+      "passed": true,
+      "observed": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\load-qualification-output-schema.v3.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json SHA-256",
+      "passed": true,
+      "observed": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json",
+      "passed": true,
+      "observed": 13293
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json",
+      "passed": true,
+      "observed": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Execution\\v3\\load-qualification-execution-contract.v3_2.json"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json SHA-256",
+      "passed": true,
+      "observed": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json",
+      "passed": true,
+      "observed": 14281
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py",
+      "passed": true,
+      "observed": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Tools\\gate14re_me_qualification_structural_v3_1.py"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py SHA-256",
+      "passed": true,
+      "observed": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py",
+      "passed": true,
+      "observed": 57834
+    },
+    {
+      "name": "successor manifest retains source artifact Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py",
+      "passed": true,
+      "observed": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py"
+    },
+    {
+      "name": "successor manifest preserves source artifact binding Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py",
+      "passed": true,
+      "observed": "197b14309670fc38e26b421c458fbd4fc05abe8ba61f7f715497bbcffb19eb98"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py exists",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Tools\\gate14re_me_qualification_delivery_v2_2.py"
+    },
+    {
+      "name": "retained manifest artifact Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py SHA-256",
+      "passed": true,
+      "observed": "197b14309670fc38e26b421c458fbd4fc05abe8ba61f7f715497bbcffb19eb98"
+    },
+    {
+      "name": "retained manifest artifact byte count Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py",
+      "passed": true,
+      "observed": 33757
+    },
+    {
+      "name": "successor manifest binds corrected supervisor",
+      "passed": true,
+      "observed": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc"
+    },
+    {
+      "name": "successor manifest binds corrected contract",
+      "passed": true,
+      "observed": "6e35abb3f36f956f0f685f816e2b2a7c1ce2aa513a86bd16d575964bd619802a"
+    },
+    {
+      "name": "successor manifest preserves authorization boundary",
+      "passed": true,
+      "observed": true
+    },
+    {
+      "name": "reserved measured root absent after known-answer",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate14Re-ME\\load-qualification\\attempt-001"
+    },
+    {
+      "name": "reserved delivery root absent after known-answer",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Exports\\Gate14Re-ME\\load-qualification\\attempt-001"
+    },
+    {
+      "name": "no Gate14Re-ME Unity runner after known-answer",
+      "passed": true,
+      "observed": 0
+    }
+  ],
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "gate14UnityRunnerCountBefore": 0,
+    "gate14UnityRunnerCountAfter": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "nextGate": "SEPARATE_EXECUTION_READINESS_RECHECK_AUTHORIZATION_REQUIRED"
+}

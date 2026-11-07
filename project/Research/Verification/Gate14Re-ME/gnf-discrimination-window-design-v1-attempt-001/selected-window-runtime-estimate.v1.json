@@ -1,0 +1,63 @@
+{
+  "boundary": [
+    "Interpolation is a planning surrogate for unobserved levels, not qualification evidence.",
+    "The old fixed non-lane remainder is retained rather than credited with a speedup, making the qualification estimate conservative with respect to those phases.",
+    "A new qualification must begin from ordinal 0 in fresh roots after explicit approval and refreeze."
+  ],
+  "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+  "formalSTB36": {
+    "belowSevenDayDecisionGate": true,
+    "conservativeHours": 95.068,
+    "freshAlgorithmProcesses": 10368,
+    "planningDays": 4.753,
+    "planningWith20PercentHeadroomHours": 114.082,
+    "pointHours": 86.959
+  },
+  "highCorner": {
+    "F": 81,
+    "G": 128,
+    "N": 128,
+    "maximumAcrossAnonymousAlgorithmsEstimatedConservativeSeconds": 117.611215,
+    "maximumAcrossAnonymousAlgorithmsEstimatedP50Seconds": 56.16874,
+    "observedCellWorstProcessWallSecondsFromDiscriminationArtifact": 117.611215
+  },
+  "levels": {
+    "F": [
+      1,
+      9,
+      25,
+      81
+    ],
+    "G": [
+      64,
+      96,
+      128
+    ],
+    "N": [
+      32,
+      48,
+      80,
+      128
+    ]
+  },
+  "method": {
+    "algorithmIdentitiesEmitted": false,
+    "fixedNonLaneWallClockRemainderHoursFromOldQualification": 2.627281,
+    "gapP50Milliseconds": 799.051,
+    "gapP99Milliseconds": 993.31312,
+    "inputCoordinates": "log2(G), log2(N), log2(F)",
+    "outputCoordinate": "natural log process-wall duration",
+    "planningHeadroomMultiplier": 1.2
+  },
+  "newQualification": {
+    "algorithmLanes": 972,
+    "conservativeHours": 12.599,
+    "plannedProcesses": 1147,
+    "planningWith20PercentHeadroomHours": 15.119,
+    "pointHours": 11.243
+  },
+  "rankingOrWinnerProduced": false,
+  "schema": "gate14re-me-selected-window-runtime-estimate-v1",
+  "status": "PASS_PLANNING_SURROGATE_NEW_LEVELS_NOT_YET_QUALIFIED",
+  "studyId": "Gate14Re-ME"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate13r-pr1b-v2-memory-observability-independent-block-eligibility-v1",
+  "recordedAtUtc": "2026-10-08T12:01:54.7949329Z",
+  "recordedAtAsiaShanghai": "2026-10-08T20:01:54.7967083+08:00",
+  "authorizationBasis": "User explicitly authorized Gate 13R-PR1B v2 under the complete text in Research/Gate13R_PR1B_OrderEffect_Next_Authorization_Prompt.md.",
+  "authorized": {
+    "controlledStaleLockRecovery": true,
+    "versionedTelemetryObservabilityRepair": true,
+    "versionedIndependentBlockMemoryEligibilityAmendment": true,
+    "validationOnlyRepairRetryBeforeMeasuredPilot": true,
+    "oneFreshNonFormalBalancedMirroredPilot": true,
+    "postSuccessFrozenOrderEffectAnalysis": true,
+    "readinessPlanAndCheckpointUpdate": true
+  },
+  "notAuthorized": {
+    "gate13rFormalCampaign": true,
+    "gate13rFormalRoot": true,
+    "formalExecutionReceipt": true,
+    "gate14r": true,
+    "obsData": true,
+    "attempt1RetryResumeTopUpOrMerge": true,
+    "originalGameScriptOrSceneModification": true,
+    "measuredPilotAutomaticRetryOrResume": true
+  },
+  "attempt1TerminalStatus": "FAILED-NO-RETRY-NO-RESUME-NO-MERGE",
+  "attempt1RootRelativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect",
+  "verificationRootRelativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v9-gate13r-pr1b-order-effect-memory-v2",
+  "pilotRootRelativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2",
+  "reservedFormalRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned/v1",
+  "memoryPolicy": {
+    "sampleDiagnosticAlertBytes": 134217728,
+    "sampleEmergencyStopBytes": 268435456,
+    "twoSampleBlockRetainedManagedGrowthHardLimitBytes": 268435456,
+    "blockWorkingSetGrowthHardLimitBytes": 536870912,
+    "blockPrivateMemoryGrowthHardLimitBytes": 536870912
+  },
+  "formalCampaignAuthorized": false,
+  "gate14rAuthorized": false
+}

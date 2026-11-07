@@ -1,0 +1,193 @@
+{
+  "attempt3Created": false,
+  "checks": [
+    {
+      "evidence": 28020,
+      "name": "failed-root-file-count",
+      "passed": true
+    },
+    {
+      "evidence": 8536611302,
+      "name": "failed-root-raw-bytes",
+      "passed": true
+    },
+    {
+      "evidence": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+      "name": "failed-root-canonical-tree",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "first": [],
+        "notReadOnlyCount": 0
+      },
+      "name": "failed-root-all-files-read-only",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "name": "frozen-key-inputs-byte-identical",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "name": "v2-analysis-output-manifest-self-verifies",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "attempt3Created": false,
+        "fileCount": 5,
+        "files": [
+          {
+            "equal": true,
+            "file": "diagnostic-report.md",
+            "sha256A": "2ea81ef1633e5f9e181ea5e1974ea1b2cef64ddf3cc7611b37f0ad0345eaa43c",
+            "sha256B": "2ea81ef1633e5f9e181ea5e1974ea1b2cef64ddf3cc7611b37f0ad0345eaa43c"
+          },
+          {
+            "equal": true,
+            "file": "evidence-manifest.json",
+            "sha256A": "847e93f13fe7e46eea154741d3e93421ff7c4df389b1a7a2e10cb1b676e4eb3b",
+            "sha256B": "847e93f13fe7e46eea154741d3e93421ff7c4df389b1a7a2e10cb1b676e4eb3b"
+          },
+          {
+            "equal": true,
+            "file": "memory-enforcement-boundary-amendment.json",
+            "sha256A": "4874e51bd40bf343e28721a651628fafeaecef01e70dfd0271e8fa5ed18413c8",
+            "sha256B": "4874e51bd40bf343e28721a651628fafeaecef01e70dfd0271e8fa5ed18413c8"
+          },
+          {
+            "equal": true,
+            "file": "memory-enforcement-boundary-diagnostic.json",
+            "sha256A": "d79abf5e5efef617d725fa1620f044342df34e61f2039cb91221fe2e33dcc4f6",
+            "sha256B": "d79abf5e5efef617d725fa1620f044342df34e61f2039cb91221fe2e33dcc4f6"
+          },
+          {
+            "equal": true,
+            "file": "memory-policy-decision-matrix.json",
+            "sha256A": "967fc71b5f564bd28ea447e86e695206bbba3ee60551d44d70a1e62afeb6cc12",
+            "sha256B": "967fc71b5f564bd28ea447e86e695206bbba3ee60551d44d70a1e62afeb6cc12"
+          }
+        ],
+        "formalAnalysisPerformed": false,
+        "passed": true,
+        "schemaVersion": 1,
+        "summaryKind": "gate13r-pr2-attempt2-enforcement-boundary-deterministic-regeneration-v1",
+        "timestamp": "2026-10-09T02:45:04.2589196Z",
+        "unityInvoked": false
+      },
+      "name": "deterministic-regeneration",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "name": "v2-output-equals-BoundaryDeterminismA",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "name": "v2-output-equals-BoundaryDeterminismB",
+      "passed": true
+    },
+    {
+      "evidence": [],
+      "name": "all-validation-only-test-summaries-pass",
+      "passed": true
+    },
+    {
+      "evidence": 3736,
+      "name": "memory-evaluation-cardinality",
+      "passed": true
+    },
+    {
+      "evidence": null,
+      "name": "memory-evaluations-all-valid",
+      "passed": true
+    },
+    {
+      "evidence": null,
+      "name": "complete-block-cardinality",
+      "passed": true
+    },
+    {
+      "evidence": 3732,
+      "name": "complete-sample-cardinality",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "algorithmId": "A*-R",
+        "blockPrivateMemoryGrowthBytes": 646492160,
+        "blockWorkingSetGrowthBytes": 603987968,
+        "position": 1,
+        "predecessorAlgorithmId": "NONE",
+        "recordedVerdict": "PASS",
+        "runId": "g13rpr2-c52-b0022-p01-astar-r",
+        "whyRecordedVerdictRemainedPass": "Non-final block-limit exceedance is measured but enforcement is deferred."
+      },
+      "name": "first-crossing-position-one",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "algorithmId": "C-FF",
+        "interpretation": "C-FF is the final enforcement point, not an identified cause of the earlier native-memory crossing.",
+        "position": 4,
+        "predecessorAlgorithmId": "IDFF",
+        "reasonCode": "HARD-FAIL-BLOCK-WORKING-SET-512MIB+HARD-FAIL-BLOCK-PRIVATE-MEMORY-512MIB",
+        "runId": "g13rpr2-c52-b0022-p04-cff"
+      },
+      "name": "final-enforcement-position-four",
+      "passed": true
+    },
+    {
+      "evidence": {
+        "algorithmCause": "NOT-IDENTIFIABLE",
+        "managedLeak": "NOT-SUPPORTED-BY-FAILED-BLOCK-GATE",
+        "nativeLeak": "NOT-ESTABLISHED",
+        "positionEffect": "NOT-IDENTIFIABLE",
+        "predecessorEffect": "NOT-IDENTIFIABLE",
+        "scenarioScaleResidencyVsRunawayGrowth": "NOT-IDENTIFIABLE"
+      },
+      "name": "algorithm-cause-not-identifiable",
+      "passed": true
+    },
+    {
+      "evidence": null,
+      "name": "stale-lock-absent",
+      "passed": true
+    },
+    {
+      "evidence": null,
+      "name": "attempt3-formal-root-absent",
+      "passed": true
+    },
+    {
+      "evidence": null,
+      "name": "attempt3-execution-receipt-absent",
+      "passed": true
+    },
+    {
+      "evidence": null,
+      "name": "attempt2-raw-data-freeze-receipt-absent",
+      "passed": true
+    }
+  ],
+  "completedAtUtc": "2026-10-09T03:35:54.4454879Z",
+  "failedCount": 0,
+  "failedRoot": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+    "allFilesReadOnly": true,
+    "canonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "fileCount": 28020,
+    "rawBytes": 8536611302
+  },
+  "formalAnalysisPerformed": false,
+  "gate14RStarted": false,
+  "passed": true,
+  "passedCount": 21,
+  "schemaVersion": 1,
+  "summaryKind": "gate13r-pr2-attempt2-failure-diagnosis-final-validation-only-audit-v1",
+  "unityInvoked": false
+}

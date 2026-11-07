@@ -1,0 +1,20 @@
+{
+    "schemaVersion":  1,
+    "failureKind":  "gate13r-48h-three-lane-block-wrapper-failure-v1",
+    "failedAtUtc":  "2026-10-08T08:48:21.8078100Z",
+    "waveId":  "g13r48-verify-positive-wave",
+    "lane":  1,
+    "blockId":  "g13r48verify-core-r01-s1-shared-shared-b001",
+    "errors":  [
+                   "System.Management.Automation.RuntimeException: License admission timed out after 300 seconds.",
+                   "Lane Unity lock remains after quiescence.",
+                   "Serial-number license admission evidence is missing.",
+                   "Barrier-observed record missing or invalid.",
+                   "Unity exit code -1.",
+                   "Block manifest missing.",
+                   "Terminal block checkpoint missing/wrong."
+               ],
+    "automaticRetryAttempted":  false,
+    "automaticResumeAttempted":  false,
+    "formalCampaign":  false
+}

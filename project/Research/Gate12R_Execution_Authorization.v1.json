@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate12r-fresh-process-reuse-5pct-pilot-series-authorization-v1",
+  "authorizedAtLocal": "2026-10-07T15:30:00+08:00",
+  "status": "AUTHORIZED-GATE12R-SERIES-ONLY",
+  "executionDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "userAuthorizationSource": {
+    "relativePath": "Research/Gate10R_to_Gate12R_LedgerEntries/085-user-gate12r-authorization-source.txt",
+    "sha256": "12e5d16f94d8aa5752419dcef534c72bb4747749919a56641ca592e4ec9e7f33"
+  },
+  "ledgerCheckpointClosure": {
+    "relativePath": "Research/Gate10R_to_Gate12R_LedgerEntries/086-gate12r-authorization-checkpoint-closed.json",
+    "sha256": "a029108743275762c35c2c4ea5da18abb65f18bde4fb3e164e6fb5e922e4c6ad"
+  },
+  "authorized": {
+    "gate12rSpecificationAndTestFreeze": true,
+    "gate12rPrePilotGates": true,
+    "freshNonFormalPilotAttemptsUntilFirstPass": true,
+    "versionedImplementationCompatibilityAndOrchestrationRepair": true,
+    "freshVersionedRetryAfterAtomicFailureClosure": true,
+    "candidateNFormalAndReadinessOutputs": true
+  },
+  "immutableSemantics": [
+    "gate11r-matrix-and-anchor-subset",
+    "one-fresh-unity-process-per-williams-block",
+    "frozen-williams-order",
+    "algorithm-and-reset-semantics",
+    "psapi-cim-telemetry-and-memory-thresholds",
+    "two-sided-95pct-ci-5pct-relative-half-width",
+    "one-sided-90pct-sigma-upper",
+    "no-hard-cap",
+    "non-formal-exclusion-and-playable-separation"
+  ],
+  "notAuthorized": {
+    "gate13rPreparation": true,
+    "gate13rFormalCampaign": true,
+    "formalRootCreation": true,
+    "formalExecutionReceipt": true,
+    "historicalEvidenceMutation": true,
+    "gate11rBundleMutation": true,
+    "originalScriptOrSceneMutation": true,
+    "sameMeasuredAttemptResumeMergeOrOverwrite": true
+  },
+  "successStop": "GATE12R-PASSED-WAITING-FOR-GATE13R-AUTHORIZATION"
+}

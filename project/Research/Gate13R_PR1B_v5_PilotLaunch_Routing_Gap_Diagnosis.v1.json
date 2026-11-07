@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "gate13r-pr1b-v5-pilot-launch-routing-gap-diagnosis-v1",
+  "savedAtUtc": "2026-10-08T13:18:10.1145231Z",
+  "status": "V15-PASSED-PREPILOT-SUPERSEDED-FOR-PILOT-LAUNCH-ROUTING",
+  "v15VerificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5",
+  "v15TreeIdentitySha256": "c9aa248972b2f7b5d5dbfdf4ad0be707d276778f4f04a6485edc0145983e0802",
+  "v15PrePilotPassed": true,
+  "pilotRootCreated": false,
+  "pilotAttemptConsumed": false,
+  "gaps": [
+    {
+      "id": "UNBOUND-NONEXISTENT-ANALYZER-ROUTE",
+      "detail": "Pilot wrapper V5 mechanically routes the derived orchestrator to Analyze-Gate13RPR1BOrderEffectPilotV5.py, but the active tested and provenance-bound analyzer is V4."
+    },
+    {
+      "id": "PASSED-VERIFICATION-ROOT-MUTATION",
+      "detail": "Pilot wrapper V5 would create its derived launch harness inside the already-passed v15 verification root, invalidating the recorded v15 tree identity."
+    }
+  ],
+  "repairPolicy": "Versioned pre-pilot launch-routing repair and full fresh pre-pilot verification before any pilot-root creation.",
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

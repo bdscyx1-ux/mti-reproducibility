@@ -1,0 +1,128 @@
+{
+  "schema": "gate14re-me-load-qualification-acquisition-contract-v4.1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-bounded-gnf-discrimination-window-v4",
+  "status": "FROZEN_V4_1_ACQUISITION_ONLY_EXECUTION_UNAUTHORIZED",
+  "version": "4.1",
+  "entryPoint": {
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v4/Run-Gate14ReMELoadQualification.v4_1.ps1",
+    "supervisorSha256": "1787264268e78c75e4ad7adc0e1490f7e812ea62f0ac5ba4b742a0cc9cba0fb3",
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_1.cs",
+    "runnerSha256": "a3013097068325f314e6842dd9f9bdc2cedbc5d6773a51032200925228690a9f",
+    "runnerMetaRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_1.cs.meta",
+    "runnerMetaSha256": "6c5b7cdac5391397219e80a414f10ce5c78a3914571e38ab3419a65d0cf72175",
+    "runnerExecuteMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV4_1.Run"
+  },
+  "design": {
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81],
+    "coreCells": 36,
+    "coreReplicatesPerCell": 3,
+    "coreSuperblocks": 108,
+    "stressSuperblocks": 18,
+    "totalSuperblocks": 126,
+    "algorithmsPerSuperblock": 6,
+    "algorithmLanes": 756,
+    "freshProcesses": {
+      "instrumentSelfTest": 1,
+      "oracleBatch": 6,
+      "emptyBoundary": 12,
+      "algorithmLane": 756,
+      "total": 775
+    }
+  },
+  "designState": {
+    "qualificationDesignFrozen": true,
+    "overallFormalDesignFrozen": false,
+    "formalSampleSizeFinalized": false,
+    "qualificationExecutionAuthorized": false,
+    "reasonFormalDesignRemainsOpen": "finalB remains null until a terminally passing bounded qualification and reproduced anonymous power calculation"
+  },
+  "executionRules": {
+    "strictSerialFreshUnityProcesses": true,
+    "maximumConcurrentUnityProcesses": 1,
+    "replacement": 0,
+    "retry": false,
+    "resume": false,
+    "topUp": false,
+    "merge": false,
+    "skip": false,
+    "reorder": false,
+    "sameByteIdenticalInputWithinSuperblock": true,
+    "sameOracleWithinSuperblock": true,
+    "oneHashBoundAlgorithmNeutralOracleCachePerInput": true,
+    "referenceOracleEvaluationsInsideAlgorithmLane": 0,
+    "qualificationOnly": true,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  },
+  "acquisitionAcceptanceSeparation": {
+    "supervisorScope": "ACQUIRE_AND_SEAL_RAW_ONLY",
+    "qualificationTerminalPassAtSupervisorExit": false,
+    "offlineAcceptanceRequired": true,
+    "acceptanceMayModifyRawRoot": false,
+    "acceptanceMustUseNewVersionedRoot": true
+  },
+  "frozenBindings": {
+    "inputSchemaV4_1": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-input-schema.v4_1.json",
+      "sha256": "757d8d2e3283c5e66170a2ccece74ea41bcad3f581de9b3a9017d6b72cf1a9e9"
+    },
+    "scheduleSchemaV4_1": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-schedule-schema.v4_1.json",
+      "sha256": "62cd5b0880564d9d334482a4597dadb0ee653105db25d4b7f9b6854616944b2c"
+    },
+    "outputSchemaV4_1": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-output-schema.v4_1.json",
+      "sha256": "ed2db36b42cee326d78bd1a72cb79bd766676ba0bb0b5c40633af55b559160ae"
+    },
+    "resourceBudgetV4_1": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-resource-budget.v4_1.json",
+      "sha256": "b6938a75285167045fb9736e6c5a765dba1e54eb037edabec91d82e56d5ccc4e"
+    },
+    "sampleSizeDecisionV4_1": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/formal-sample-size-decision.v4_1.json",
+      "sha256": "952d64c34c9e7821386c36a60519a5003658e89b78dbb81f4c2233b702636980"
+    },
+    "instrumentContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"
+    },
+    "qualifiedD3V31": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    "planningAssetsManifestV4": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets-freeze-manifest.v4.json",
+      "sha256": "8624880f6fbe0b709dd6d2127b5861d62d862d592dcd2b0e311c579afffbeee3"
+    },
+    "scheduleV4": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/schedule/bounded-qualification-williams-schedule.v4.jsonl",
+      "sha256": "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb"
+    },
+    "sealedIdentityV4": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/identity/anonymous-identity-binding.sealed.v4.json",
+      "sha256": "77b88a23a559642d455edf0d4caad9a1f9c06b7ddf33703b8fd100f4a1878bd2"
+    },
+    "fairnessBindingV4_1File": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json",
+      "sha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca"
+    },
+    "trustedUnityIdentityRule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    "timestampComparator": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"
+    }
+  },
+  "authorizationState": {
+    "executionAuthorizationPresent": false,
+    "measuredRootReserved": false,
+    "unityExecutionStarted": false,
+    "nextRequiredAction": "A separate explicit launch decision must create one fresh attempt-specific execution authorization and bind brand-new evidence/measured/delivery roots; this frozen contract alone cannot start Unity."
+  }
+}

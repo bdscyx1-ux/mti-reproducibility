@@ -1,0 +1,92 @@
+- event_id: gate13r-pr2-attempt3-authorization-received-v1
+  recorded_at_utc: 2026-10-09T07:48:49.1652437Z
+  recorded_at_asia_shanghai: 2026-10-09T15:48:49.1690243+08:00
+  state: AUTHORIZATION-RECEIVED
+  detail: User authorized formal attempt 3 under prompt v4; Phase-B formal statistical analysis and Gate 14R remain unauthorized.
+  formal_targets_created: false
+  measured_processes_started: 0
+  measured_samples_started: 0
+- event_id: gate13r-pr2-attempt3-prewrite-audit-passed-v1
+  recorded_at_utc: 2026-10-09T07:48:49.1652437Z
+  recorded_at_asia_shanghai: 2026-10-09T15:48:49.1690243+08:00
+  state: PREWRITE-PRESERVATION-AUDIT-PASSED
+  detail: Formal v3 targets absent; Unity count zero; project lock absent; storage and historical read-only preservation checks passed.
+  formal_targets_created: false
+  measured_processes_started: 0
+  measured_samples_started: 0
+- event_id: gate13r-pr2-attempt3-prelaunch-repair-cycle2-failed-v1
+  recorded_at_utc: 2026-10-09T08:20:35.5289944Z
+  recorded_at_asia_shanghai: 2026-10-09T16:20:35.5317208+08:00
+  state: PRELAUNCH-FAILED-VERSIONED-REPAIR-ELIGIBLE
+  failure_signature: FINAL-PRELAUNCH/PARAMETER-BINDING-SMOKE/STRING-ARRAY-POSITIONAL-BINDING
+  detail: First final-audit execution passed 31/32 checks and exposed an isolated named-parameter smoke-test aggregation defect; failure evidence was frozen before repair.
+  failed_audit_sha256: b37c52d231caf8b212105f791ce1b7f907ac1d29d44eb286de46ad7b6bb8e665
+  formal_targets_created: false
+  measured_processes_started: 0
+  measured_samples_started: 0
+- event_id: gate13r-pr2-attempt3-prelaunch-repair-cycle2-targeted-pass-v1
+  recorded_at_utc: 2026-10-09T08:21:36.6763251Z
+  recorded_at_asia_shanghai: 2026-10-09T16:21:36.6783208+08:00
+  state: TARGETED-REPAIR-VALIDATION-PASSED
+  detail: Hashtable named-parameter splatting replaced the defective positional string-array carrier; four independent binding-smoke entry points passed with no Unity invocation.
+  repaired_audit_script_sha256: 43a7e0074b31fb63658eedd50fab162a82519d3f35bedae72f0ad68aad7dc813
+  remaining_prelaunch_repair_cycles: 1
+  formal_targets_created: false
+  measured_processes_started: 0
+  measured_samples_started: 0
+- event_id: gate13r-pr2-attempt3-final-prelaunch-passed-v2
+  recorded_at_utc: 2026-10-09T08:23:10.8104182Z
+  recorded_at_asia_shanghai: 2026-10-09T16:23:10.8104182+08:00
+  state: FINAL-PRELAUNCH-PASSED
+  detail: Versioned final audit passed 32/32 including frozen hashes, historical roots, schedule, two-stage commit, fresh Unity validation, licensing, power, environment, network, storage, native PowerShell identity, and heartbeat.
+  final_prelaunch_audit: Research/Verification/Gate13R_PR2_Attempt3_FormalExecution/v1/attempt-2-final-prelaunch-repair-cycle2/final-prelaunch-audit.v2.json
+  final_prelaunch_audit_sha256: 65b057695e8a4b15774042623b033a04d50e521e53a946495234af08c6131aeb
+  formal_targets_created: false
+  measured_processes_started: 0
+  measured_samples_started: 0
+- event_id: gate13r-pr2-attempt3-precommit-launcher-failed-cycle3-v1
+  recorded_at_utc: 2026-10-09T08:24:33.9179614Z
+  recorded_at_asia_shanghai: 2026-10-09T16:24:33.9179614+08:00
+  state: PRELAUNCH-FAILED-FINAL-VERSIONED-REPAIR-CYCLE-ELIGIBLE
+  failure_signature: FORMAL-PRECOMMIT/LAUNCHER/POWERSHELL-PATH-ARRAY-EXPRESSION-SPLIT
+  detail: Python rejected a split native-PowerShell path before create_receipt; formal targets and Unity remained absent.
+  stderr_sha256: 0dbc3659e2377f79726026e32cd6d8af9925a2e1c133cf70aeff4edfe16dd503
+  formal_targets_created: false
+  measured_processes_started: 0
+  measured_samples_started: 0
+- event_id: gate13r-pr2-attempt3-prelaunch-repair-cycle3-passed-v1
+  recorded_at_utc: 2026-10-09T08:29:05Z
+  recorded_at_asia_shanghai: 2026-10-09T16:29:05+08:00
+  state: FINAL-PRELAUNCH-PASSED-REPAIR-LIMIT-EXHAUSTED
+  detail: V2 launcher scalarized the native PowerShell path; targeted argument capture, parser/binding, 54/54 static tests, PS5/PS7 no-launch checks, and the 32/32 final audit passed.
+  final_prelaunch_audit: Research/Verification/Gate13R_PR2_Attempt3_FormalExecution/v1/attempt-3-prelaunch-repair-cycle3/final-prelaunch-audit.v3.json
+  final_prelaunch_audit_sha256: 32d2948860d955444b27f4e4560ad969fa93b477563b6f97992a57f6d2ca93ae
+  prelaunch_repair_cycles_remaining: 0
+  next_failure_requires_stop: true
+  formal_targets_created: false
+  measured_processes_started: 0
+  measured_samples_started: 0
+- event_id: gate13r-pr2-attempt3-formal-commit-and-acquisition-start-v1
+  recorded_at_utc: 2026-10-09T08:31:17.994367Z
+  recorded_at_asia_shanghai: 2026-10-09T16:31:17.994367+08:00
+  state: ACQUISITION-RUNNING
+  detail: Formal v3 root, immutable receipt identity, atomic status, and first fresh Unity block process were created after the 32/32 final audit; strict serial Phase-A acquisition began.
+  formal_root: H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v3
+  execution_receipt: Research/Gate13R_PR2_Formal_Execution_Receipt.v3.json
+  execution_receipt_sha256: 53a9e68281f901cc2c430d1fdc34969393013da9c854528fb29355c97aed84f6
+  active_launcher: Research/Run-Gate13RPR2FormalAttempt3V2.ps1
+  active_launcher_sha256: 2c8803d90677f097fd718865b5ae5d904dcaf39dc08ab1a8d6e47f4290a519fe
+  phase_b_analysis_authorized: false
+  gate14r_authorized: false
+  measured_retry_resume_topup_merge_authorized: false
+- event_id: gate13r-pr2-attempt3-operational-monitor-start-validated-v1
+  recorded_at_utc: 2026-10-09T08:32:46.713619Z
+  recorded_at_asia_shanghai: 2026-10-09T16:32:46.713619+08:00
+  state: ACQUISITION-RUNNING-MONITOR-VALIDATED
+  detail: Active V2 blinded monitor matched the receipt, status, schedule, candidate config, and owned Unity composite identity; first immutable operational snapshot was written outside the formal root.
+  completed_processes: 3
+  completed_samples: 12
+  snapshot: Research/Monitoring/Gate13R_PR2_Attempt3/v1/progress-20261009T083246713619Z.json
+  snapshot_sha256: a39a5e8e241f3f1a395d63caac8290fca946273579030ae66350a0e8e54403f8
+  monitor_health: OK
+  notification_reason: ACQUISITION-STARTED

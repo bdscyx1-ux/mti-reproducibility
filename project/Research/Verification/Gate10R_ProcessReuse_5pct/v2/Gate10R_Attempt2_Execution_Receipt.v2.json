@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "gate10r-attempt2-one-official-execution-receipt-v2",
+  "createdAtUtc": "2026-10-06T13:05:11.5015680Z",
+  "status": "AUTHORIZED-READY-FOR-ONE-OFFICIAL-EXECUTION",
+  "attempt": 2,
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "lineageId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "verificationRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v2",
+  "maximumOfficialExecutions": 1,
+  "officialExecutionCountBeforeReceipt": 0,
+  "preflight": {
+    "summaryRelativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Gate10R_Attempt2_Preflight.summary.v2.json",
+    "summarySha256": "dfb24677c34528688264ca0d8c3b8cb92c1004d7526b459275c9578f85cf35f4",
+    "assertionCount": 62,
+    "passedCount": 62,
+    "failedCount": 0,
+    "unityStarted": false,
+    "checkpointRelativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/gate10r-preflight-checkpoint.v2.json",
+    "checkpointSha256": "620fddf1c32466c5f029a8b0a7570c4139551feb045ba6459c52b54491a40c4a"
+  },
+  "config": {
+    "relativePath": "Research/Gate10R_ProcessReuse_5pct_Attempt2_Config.v2.json",
+    "sha256": "7cdbf4197d2f27479aa2e116c49af93d6fe64ce21c64f365be0d9369e73ad56a"
+  },
+  "provenance": {
+    "relativePath": "Research/Gate10R_ProcessReuse_5pct_Attempt2_Provenance.v2.json",
+    "sha256": "00dc5ed344f9602dae9f79aba5fe63d75ce784eba712b69b0df4055945c3b372"
+  },
+  "authorization": {
+    "relativePath": "Research/Gate10R_Attempt2_Execution_Authorization.v1.json",
+    "sha256": "91892f5b5468832f3cf9b4c0ba19f46711229f9811c73ef5a75bb6073973af70"
+  },
+  "attempt1Boundary": {
+    "verificationRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v1",
+    "failureReceiptSha256": "a1d501c72fa1e1a21f041c9cb7c73967b85e0dafbe2b74fe1cf83d003613917a",
+    "partialManifestSha256": "9dc16acfc7bab0f72d621fd6620f83235411e3afa6d9138fbde1445f87ff138e",
+    "checkpointSha256": "069272d95443a4e4ef1aa2ddf8fe15147150e6d811ee95fa5e64f8d10dfda65a",
+    "mutationAllowed": false,
+    "resumeAllowed": false
+  },
+  "officialSequence": [
+    "Research/Verification/Run-Gate10RUnitTestsV2.ps1",
+    "Research/Verification/Run-Gate10RCompileV2.ps1",
+    "Research/Run-Gate10RTelemetryProbeV2.ps1",
+    "Research/Verification/Run-Gate10RBlockVerificationV2.ps1",
+    "Research/Verification/Run-Gate10RRetainedRegressionV2.ps1",
+    "Research/Verification/Run-Gate10RFinalAuditV2.ps1"
+  ],
+  "executionEnvironment": {
+    "shell": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "projectPath": "H:/DDM_Final_Project",
+    "projectPathExplicit": true,
+    "projectPathAbsolute": true,
+    "nativePSModulePathRequired": true,
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe"
+  },
+  "failurePolicy": {
+    "failClosed": true,
+    "automaticRetry": false,
+    "automaticResume": false,
+    "continueAfterHardFailure": false
+  },
+  "gate11RContinuationConditionalOnGate10RPass": true,
+  "gate12RContinuationConditionalOnGate11RPass": true,
+  "gate13RPreparationAuthorized": false,
+  "gate13RFormalCampaignAuthorized": false,
+  "gate13RFormalRootCreationAuthorized": false,
+  "formalCampaign": false
+}

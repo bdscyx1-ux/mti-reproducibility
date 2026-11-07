@@ -1,0 +1,74 @@
+{
+  "schema": "gate14re-implementation-contract-v1",
+  "studyId": "Gate14Re",
+  "status": "PRE_DATA_RESEARCH_ONLY_IMPLEMENTATION_FROZEN",
+  "scientificBindings": [
+    {"path":"Research/Gate14Re/Gate14Re_Design_Contract.v2.json","sha256":"8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f"},
+    {"path":"Research/Gate14Re/Gate14Re_Design_Contract.v3.json","sha256":"88c3119e0b6dbbe4d1a3a2a95bd04d619e3d68edbd38b0903c6d4037a4d0e1f3"},
+    {"path":"Research/Gate14Re/Gate14Re_Scientific_Freeze_Receipt.v2.json","sha256":"ec741e55f849f84d642c18f3731ce82f034e7647c15114d145c69b30e293373e"}
+  ],
+  "sharedMovementAdapter": {
+    "appliesIdenticallyToAllFourPlanners": true,
+    "fixedStepSeconds": 0.02,
+    "horizontalSpeedWorldUnitsPerSecond": 20.0,
+    "speedDerivation": "existing_production_PlayerUnit_and_FlowField_prefab_speed",
+    "speedBindings": [
+      {"path":"Assets/_Scripts/_NavMeshScripts/PlayerUnit.cs","bytes":577,"sha256":"5ac5880f375d8b20805586d3f31290eb8d766f8ef67181e284a3353da63259ef"},
+      {"path":"Assets/Prefabs/FlowField/FlowField_PlayerUnit.prefab","bytes":6765,"sha256":"ccd5801f661ed5658536b855ca7dcfffb0c4fe5751034d7e5dd78139da24df2b"}
+    ],
+    "waypoints": "planner_grid_path_cell_centers",
+    "initialPlan": "after_measurement_release",
+    "replan": "all_active_units_after_each_authorized_event",
+    "perTickAlgorithmSpecificMovementController": false,
+    "physicalCollisionOrAvoidanceAdded": false,
+    "arrivalDwellTicks": 10,
+    "arrivalRadiusCellMultiplier": 0.75,
+    "forcedContinuousMovement": false,
+    "forcedRespawnOrGoalLoop": false,
+    "authorizedBlockedOccupancyRule": "finish_only_the_already_selected_single_legal_egress_edge_then_replan_on_first_walkable_cell_else_no_path",
+    "eventAppliedBeforeMovementAtSameTick": true
+  },
+  "rendering": {
+    "canonicalUnitVisualPrefab": {
+      "path": "Assets/Prefabs/NavMesh/NavMesh_PlayerUnit.prefab",
+      "bytes": 6489,
+      "sha256": "1212387a9e6822a880f177155bb9bab82a162dbee080ba7ee2423d9baf12c012"
+    },
+    "algorithmSpecificLegacyMovementComponentsDisabled": true,
+    "sharedAdapterMovesTransforms": true,
+    "allNRenderersRemainEnabled": true,
+    "gridWalkabilityAndCostTextureUpdatedInEventFrame": true,
+    "camera": "top_down_orthographic_full_grid_plus_5_percent_margin_16_by_9_no_UI_no_debug_gizmos"
+  },
+  "preflight": {
+    "realOutcomeEstimation": false,
+    "movementCompatibility": "short_nonformal_no_outcome_preflight",
+    "resourceAdmission": "N512_instantiation_and_rendering_without_M1_M4_summary",
+    "allowedOutput": [
+      "structural_pass_fail",
+      "unit_count",
+      "rendered_frame_count",
+      "grid_planner_visual_version_equality",
+      "process_peak_private_bytes",
+      "binding_hashes"
+    ],
+    "forbiddenOutput": [
+      "M1",
+      "M2",
+      "M3",
+      "M4_frame_summary_or_FPS",
+      "M5_algorithm_result",
+      "algorithm_ranking",
+      "winner",
+      "superiority"
+    ]
+  },
+  "authorization": {
+    "implementationCompileSyntheticAndShortPreflight": true,
+    "formalPhaseA": false,
+    "formalMeasuredRootCreation": false,
+    "formalAnalysis": false,
+    "phaseB": false,
+    "gate15": false
+  }
+}

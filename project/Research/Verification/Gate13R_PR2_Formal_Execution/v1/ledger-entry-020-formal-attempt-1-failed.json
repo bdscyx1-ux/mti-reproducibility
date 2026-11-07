@@ -1,0 +1,32 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 S48-H48 formal raw acquisition attempt 1 terminal failure and immutable evidence freeze",
+  "command": "Run-Gate13RPR2FormalCampaignV4.ps1 as hidden independent native Windows PowerShell 5.1 process; fail closed at global process ordinal 1",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "gate_tokens": [
+    "FORMAL-ATTEMPT-1-CONSUMED",
+    "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "GLOBAL-PROCESS-ORDINAL-1",
+    "FORMAL-COMMITTED-PROCESSES-0",
+    "FORMAL-COMMITTED-SAMPLES-0",
+    "GENERATED-BUT-EXCLUDED-SAMPLE-ARTIFACTS-4",
+    "POST-UNITY-BLOCK-WRAPPER-VALIDATION-IMPLEMENTATION-DEFECT",
+    "EMBEDDED-SAMPLE-FORMALCAMPAIGN-PROPERTY-MISSING",
+    "PARTIAL-ATTEMPT-EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "FORMAL-ROOT-READ-ONLY",
+    "UNITY-QUIESCENT",
+    "NEW-USER-AUTHORIZATION-REQUIRED"
+  ],
+  "input_sha256": {
+    "Gate13R_PR2_Formal_Execution_Status.v1.json": "a7dd97d766a23fc001ac2e8adca5f34206932906a8d6452de55fa43d28d544be",
+    "FormalRuns/Gate13R_RQAligned_S48H48/v1/formal-checkpoint.json": "f09dd3322bf868da15ef9e12387a345aa6ca056a082c4d8c9e8deffe0e83799e",
+    "FormalRuns/Gate13R_RQAligned_S48H48/v1/partial-output-manifest.json": "9ee77190f21cf3b216f9ab84f3c8b2fd77c1944fa09259ddea58775a48278cfc",
+    "Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-failure-diagnosis.json": "efaf6cee119575deae056ef432a4202d2f1629a696b8ac975156995cde52dc2e",
+    "Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-partial-tree-manifest.json": "93d6d9efd4232a3f995621d2ad5c62951dcbdf10f7ede13d9b37948aad755ab5",
+    "Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-evidence-freeze-receipt.json": "481678f143e577a243c651aef86b0a960d22709836fa36be302e2e6608670b25",
+    "Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-evidence-manifest.json": "0f3a2612abc799f04f6e828ee747efdb8b8dda594c35c84fbccad27a734d5fc5",
+    "Verification/Gate13R_PR2_Formal_Execution/v1/orchestrator.stderr.log": "4f4e24552e078cbd61934b2152d665590eaf754578b07766bc7adac247fd71ab"
+  }
+}

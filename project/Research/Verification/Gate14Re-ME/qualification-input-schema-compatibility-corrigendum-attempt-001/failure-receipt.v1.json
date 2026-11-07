@@ -1,0 +1,83 @@
+{
+  "schema": "gate14re-me-input-schema-compatibility-corrigendum-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-001",
+  "status": "FAILED_CLOSED_UNITY_EXECUTABLE_HASH_VIEW_MISMATCH",
+  "failedAtUtc": "2026-10-17T08:56:40.4774673Z",
+  "frozenAtUtc": "2026-10-17T08:58:40.1327983Z",
+  "phase": "single-algorithm-free-unity-jsonutility-oracle-header-self-check",
+  "exactPrimaryDiagnostic": "The authorized Unity executable hash matched immediately before launch and again after process exit (0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf), but the self-check obtained ad243c5b18041d674874864cea86626623ff366a6363aede529fec923e80579e when hashing the same EditorApplication.applicationPath in process. The mandatory compound executable identity check therefore failed before JsonUtility or oracle-header assertions.",
+  "stageResults": {
+    "correctedSchemaCandidateCreated": true,
+    "runtimeBundleSchemaIdentityPreserved": true,
+    "onlyTopologyConstraintAdded": true,
+    "schemaPositiveAndNegativeKnownAnswersPassed": true,
+    "unityInvocationCount": 1,
+    "unityCompilationSucceeded": true,
+    "unitySelfCheckMethodExecuted": true,
+    "unityExecutableIdentityConsistencyPassed": false,
+    "jsonUtilityTopologyRoundTripExecuted": false,
+    "actualOracleHeaderControlsExecuted": false,
+    "terminalStagePassed": false
+  },
+  "hashObservations": {
+    "unityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "lengthBytes": 35821616,
+    "lastWriteTimeUtc": "2024-06-11T11:26:54.0000000Z",
+    "expectedSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "externalPrelaunchSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "inProcessSha256": "ad243c5b18041d674874864cea86626623ff366a6363aede529fec923e80579e",
+    "externalPostExitSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "causeDetermined": false
+  },
+  "evidenceBindings": {
+    "schemaKnownAnswerReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/schema-known-answer-receipt.v1.json",
+      "lengthBytes": 6621,
+      "sha256": "76977549e66d3e98af3e4f214b507bda1bba9d5d13006762d0f004bd62f40358"
+    },
+    "unitySelfCheckReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/unity-self-check-output/input-schema-compatibility-self-check-receipt.v1.json",
+      "lengthBytes": 8436,
+      "sha256": "f9a3ee42729fc055836e8448043278732cd43decf2ca2a06c58e135fb979944b"
+    },
+    "unityLog": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/unity-self-check.log",
+      "lengthBytes": 95852,
+      "sha256": "bffeb712a6c14871d7c69a599dab4c4576cdc9cd6fbbb172ae12a18758b5da7b"
+    },
+    "postExitIdentityAudit": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/post-exit-unity-identity-audit.v1.json",
+      "lengthBytes": 3610,
+      "sha256": "9585fdc3b2b250dc1801d9a81d41d045cee1028a0d1d9707f982664133fcee41"
+    },
+    "sourceAndEvidenceFreezeManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/source-and-evidence-freeze-manifest.v1.json",
+      "lengthBytes": 4363,
+      "sha256": "9ad8a0ce59a286f5c32704f612154d6f751bb38d8bcd3003a8902da5bc1dc2b9"
+    }
+  },
+  "failClosedDisposition": {
+    "unityRetryPerformed": false,
+    "attempt002Created": false,
+    "schemaCandidateAdoptedForPlanning": false,
+    "planningBindingCandidateAdopted": false,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "qualificationMeasuredRootCreated": false,
+    "plannerConstructedOrInvoked": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "priorEvidenceDeletedOrModified": false,
+    "allAttempt001EvidenceRetained": true
+  },
+  "nextMinimumAuthorizationRequired": {
+    "stage": "algorithm-free Unity executable identity discrepancy audit",
+    "minimumAllowedWork": "Retain attempt-001 unchanged; reproduce and explain the external-versus-in-process hash discrepancy without an algorithm lane, planning output, or measured root; establish and freeze one trustworthy prelaunch/process identity rule. Do not retry the schema compatibility Unity self-check in the same authorization.",
+    "stillProhibited": "No schedule, qualification input, identity mapping, measured root, planner, algorithm lane, formal collection, formal analysis, ranking, or winner adjudication."
+  }
+}

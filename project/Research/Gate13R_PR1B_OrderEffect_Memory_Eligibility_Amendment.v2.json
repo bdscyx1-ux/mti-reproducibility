@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "amendmentId": "gate13r-pr1b-managed-memory-observability-independent-block-eligibility-v2",
+  "status": "FROZEN-BEFORE-NEW-UNITY-DATA",
+  "authorizationRelativePath": "Research/Gate13R_PR1B_v2_Authorization.v1.json",
+  "supersedesForFuturePr1bAttemptsOnly": "gate12r-sample-128mib-block-128mib-per-sample-v1",
+  "attempt1Disposition": [
+    "FAILED-NO-RETRY-NO-RESUME-NO-MERGE",
+    "EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "EXCLUDED-FROM-ORDER-EFFECT-INFERENCE"
+  ],
+  "independentUnit": "one-fresh-unity-editor-process-running-one-complete-two-sample-heterogeneous-williams-block",
+  "policy": {
+    "policyId": "gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1",
+    "sampleAlertThresholdBytes": 134217728,
+    "sampleAlertComparison": "sample-retained-managed-growth > threshold",
+    "sampleAlertVerdict": "MEMORY-ALERT-128MIB",
+    "sampleAlertExcludesObservation": false,
+    "sampleEmergencyStopBytes": 268435456,
+    "sampleEmergencyComparison": "sample-retained-managed-growth > threshold",
+    "sampleEmergencyVerdict": "HARD-FAIL-SAMPLE-EMERGENCY-256MIB",
+    "twoSampleBlockManagedGrowthHardLimitBytes": 268435456,
+    "blockManagedComparison": "complete-block-net-growth > threshold",
+    "blockWorkingSetGrowthHardLimitBytes": 536870912,
+    "blockPrivateMemoryGrowthHardLimitBytes": 536870912,
+    "boundarySemantics": "exact-threshold-values-pass",
+    "fullGcBeforeAndAfterEachSampleRequired": true,
+    "completeResetRequired": true,
+    "plannerResetRequired": true,
+    "loggerDisposalRequired": true,
+    "structuralExactMatchRequired": true,
+    "failClosed": true
+  },
+  "durableEvaluation": {
+    "fileName": "memory-gate-evaluation.json",
+    "atomicWriteRequired": true,
+    "mustExistBeforeThresholdDecision": true,
+    "failureArtifactsMustReferencePathAndSha256": true,
+    "missingOrInvalidTelemetryIsHardFailure": true,
+    "rejectedTelemetryConditions": [
+      "missing-capture",
+      "non-finite-process-age",
+      "mixed-process-id",
+      "mixed-process-start-time",
+      "timestamp-order",
+      "process-age-order",
+      "non-positive-memory-counter",
+      "gc-count-order",
+      "delta-overflow",
+      "atomic-write-failure"
+    ]
+  },
+  "scientificRationale": "The complete fresh Unity Williams-block process is the independent experimental unit. A per-sample retained delta can include first-load, JIT, and cache effects as well as leakage. The former 128 MiB value therefore remains a visible diagnostic alert, while a 256 MiB per-sample emergency stop and the unchanged complete-block/native hard gates prevent uncontrolled growth and cross-sample contamination.",
+  "unchangedResearchSemantics": {
+    "metrics": ["P1", "P2", "P3", "P4", "P5"],
+    "contrasts": ["C1", "C2", "C3", "C4"],
+    "orderEstimand": "AB-minus-BA paired log-ratio difference",
+    "confidenceLevel": 0.95,
+    "orderBiasMultiplicativeBound": 1.1,
+    "bootstrapReplicates": 20000,
+    "bootstrapSeed": 13012026,
+    "scenarioCount": 3,
+    "mirroredPairsPerScenario": 32,
+    "williamsRowsChanged": false,
+    "scenarioRotationChanged": false,
+    "algorithmSemanticsChanged": false
+  },
+  "alertSensitivity": {
+    "allEligibleBlocksIsPrimary": true,
+    "alertObservationsRetained": true,
+    "noAlertSubsetIsSensitivityOnly": true,
+    "noAlertSubsetMayNotReplacePrimary": true,
+    "reportAlertCountsByScenarioCohortAlgorithmPositionPredecessorAndWave": true,
+    "reportCarryoverAfterAlert": true
+  },
+  "formalCampaign": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

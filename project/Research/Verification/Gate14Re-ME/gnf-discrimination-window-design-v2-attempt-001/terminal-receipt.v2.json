@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-gnf-window-terminal-receipt-v2",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v2-attempt-001",
+  "completedAtUtc": "2026-10-19T11:28:46Z",
+  "status": "PASS_PROPOSED_3X3X4_BOUNDED_GNF_WINDOW_NO_EXECUTION_STARTED",
+  "proposal": {
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81],
+    "coreCells": 36,
+    "qualificationFreshProcesses": 895,
+    "formalB36AlgorithmProcesses": 7776,
+    "highCornerStructuralProxyReductionPercent": 97.75
+  },
+  "runtimePlanning": {
+    "qualificationPointHours": 9.487,
+    "qualificationConservativeHours": 10.699,
+    "qualificationPlanningWith20PercentHeadroomHours": 12.839,
+    "formalB36PointHours": 65.889,
+    "formalB36ConservativeHours": 72.260,
+    "formalB36PlanningWith20PercentHeadroomHours": 86.712,
+    "formalB36PlanningDays": 3.613,
+    "belowSevenDayDecisionGate": true,
+    "status": "PLANNING_SURROGATE_NEW_LEVELS_NOT_YET_QUALIFIED"
+  },
+  "sourceState": {
+    "attempt009QualificationTerminalPass": false,
+    "attempt009PausedSealStatus": "PASS_PAUSED_SEAL_CREATED_QUALIFICATION_NOT_PASS",
+    "attempt009PausedSealReceiptSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705",
+    "attempt009MeasuredManifestSha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f",
+    "sourceRootsModified": false,
+    "currentUnityQualificationRunnerCount": 0
+  },
+  "integrity": {
+    "selectedDesignSha256": "aec051d91accd2af8e51baa3a7f8cfd41458065a8551f11a2dec9981bc2cacfd",
+    "runtimeEstimateSha256": "c67eb4d2f03287d216ff2e1340a3c0cb0c5daa970fbf4216910ced56b94846db",
+    "reportSha256": "c1821f01d4c488b956b5bdef6a9284fb72f6757962a0f1fb6ccfbec4ca60ad4f",
+    "fileManifestSha256": "18477042363852113834be24845046a0daff6ce24521a81cb6d93a2392072d11",
+    "fileManifestReplay": "PASS"
+  },
+  "scientificBoundary": {
+    "algorithmIdentityEmitted": false,
+    "effectRankingOrWinnerProduced": false,
+    "G96N64F25AlreadyQualified": false,
+    "newQualificationAuthorizedOrStarted": false,
+    "formalExecutionAuthorizedOrStarted": false
+  },
+  "requiredNextState": "WAIT_FOR_EXPLICIT_APPROVAL_OF_EXACT_LEVELS_THEN_REFREEZE_IMPLEMENTATION_CONTRACT_SCHEDULE_AND_RUN_READINESS"
+}

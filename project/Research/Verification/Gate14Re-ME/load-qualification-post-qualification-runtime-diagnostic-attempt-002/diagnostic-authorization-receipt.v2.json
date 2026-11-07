@@ -1,0 +1,26 @@
+{
+  "schema": "gate14re-me-post-qualification-runtime-diagnostic-authorization-receipt-v2",
+  "studyId": "Gate14Re-ME",
+  "status": "AUTHORIZED_AFTER_TERMINAL_QUALIFICATION_PASS",
+  "authorizationSource": "direct user instructions in the current thread and the active heartbeat scope",
+  "userInstruction": "qualification 跑完后解除算法身份密封，计算每种算法的进程墙钟时间分布、P50/P90/P95/P99/最大值、长尾倾向、慢 G×N×F 单元，以及可证实的 Unity 启动、退出、进程间隔或系统尾段因素；先匿名预测并冻结，再解封名称；不得读取算法效果观测或做赢家裁决。",
+  "activationSatisfiedBy": {
+    "qualificationStatus": "PASS_QUALIFICATION_TERMINAL",
+    "qualificationTerminalPassReceiptSha256": "9ffc2c83896f1516eea969619ccc8c07f6be1bdab85cecead7224fc8f9cbeafa"
+  },
+  "allowed": [
+    "anonymous and named process/lane runtime distributions",
+    "G x N x F runtime and structural-load stratification",
+    "execution-order, recent-window and inter-process-gap diagnostics",
+    "bounded CPU, memory, disk, process and host structural metadata",
+    "parameterized formal-ST runtime budgeting and the 168-hour decision gate"
+  ],
+  "prohibited": [
+    "algorithm quality or scientific-effect comparison",
+    "ranking, weighting or winner adjudication",
+    "using qualification data as formal scientific samples",
+    "automatic design modification",
+    "automatic formal ST, MQ or MT launch",
+    "migration-package build, installer or credential copy, or ZIP creation"
+  ]
+}

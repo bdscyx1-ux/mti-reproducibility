@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-defect-repair-v9",
+  "createdAtUtc": "2026-10-08T05:20:00Z",
+  "status": "AUTHORIZED-NONEXECUTING-REPAIR",
+  "formalCampaignAuthorized": false,
+  "pilotAuthorizationCount": 1,
+  "pilotAuthorizationConsumed": false,
+  "sourceAttempt": 8,
+  "targetAttempt": 9,
+  "confirmedDefect": {
+    "phase": "frozen-evidence-resolution-before-output-derivation",
+    "description": "A generic v7-to-v8 version route changed the immutable attempt-2 static evidence directory PreImplementation/v7/StaticUnitV2 to an invalid v8 directory.",
+    "scientificEffect": "none; no v8 experimental script, verification root, lane copy, Unity process, pilot sample, or formal artifact was created"
+  },
+  "authorizedRepair": "In a new versioned attempt, restore every historical attempt-2 PreImplementation/StaticUnitV2 binding to v7 after current-attempt routing and verify that all frozen paths exist before writing outputs.",
+  "unchangedSemantics": {
+    "campaignMatrixCount": 74,
+    "relative95CiHalfWidthTarget": 0.10,
+    "hardSampleCap": null,
+    "isolatedLaneCount": 4,
+    "unityProcessUnit": "one fresh Unity Editor process per Williams block",
+    "readinessP95MaximumHours": 27,
+    "formalWallClockMaximumHours": 36,
+    "pilotMeasuredBlockCount": 384,
+    "pilotMeasuredSampleCount": 1152,
+    "pilotWarmupBlockCount": 8,
+    "retainedManagedMemoryRuleMiBPerSample": 128
+  },
+  "immutableAttempt8Evidence": {
+    "partialManifestSha256": "e5d13a884db48c81af62f61c37bcfcd68202cbcb4821b2fb366377dfe566a0cb",
+    "failureReceiptSha256": "16b34d76c6cbb6c150dfe85ae28cc5d209b0763e598196d10003e1f6ff98248a",
+    "checkpointSha256": "9c0c506eab53fee402cc1b15b45ae7192282afe9e1bf3e32051420641dc60529"
+  },
+  "prohibitions": [
+    "do not modify, overwrite, resume or reinterpret attempts 1 through 8",
+    "do not change scientific, memory, precision, schedule, process or readiness semantics",
+    "do not create a formal root or formal execution receipt",
+    "do not start a formal campaign",
+    "do not consume more than the single authorized NON-FORMAL pilot"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "gate14re-mq-cff-idff-authorized-formal-design-rules-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v1",
+  "status": "FROZEN_BEFORE_IDENTITY_BLIND_POWER_B_PENDING",
+  "proposalSha256": "137fb31287ec131bfad348cd7bb85fd4bdb8f82f012e21d6c7065e97817cf295",
+  "scientificQuestion": "For each of C-FF and IDFF, does the frozen managed fixed-worker-pool implementation provide statistically supported and practically important reductions in matched batch wall time as physical-core worker count increases within one CCD and from balanced dual-CCD W8 to W16, while preserving all correctness and oracle hard gates?",
+  "paperRole": "supplemental managed multi-query deployment and scalability evidence that strengthens the existing paper; not a second main algorithm-ranking experiment",
+  "independence": {
+    "independentFromFormalST": true,
+    "independentFromMT": true,
+    "qualificationObservationsAreFormalSamples": false,
+    "formalSTObservationsAreMqSamples": false,
+    "formalSTArtifactsMayBeMutated": false
+  },
+  "matchedBlock": {
+    "privateWorkloadLanes": 16,
+    "algorithms": 2,
+    "conditionsPerAlgorithm": 12,
+    "freshUnityProcesses": 24,
+    "sameOpaqueInputsAndSeedsAcrossAll24Processes": true,
+    "primaryInferenceUnit": "complete matched block",
+    "laneAndEventRows": "nested measurements only"
+  },
+  "conditionsPerAlgorithm": [
+    "LARGE_L3_CCD:ST-direct",
+    "LARGE_L3_CCD:MQ-1",
+    "LARGE_L3_CCD:MQ-2",
+    "LARGE_L3_CCD:MQ-4",
+    "LARGE_L3_CCD:MQ-8",
+    "HIGH_FREQUENCY_CCD:ST-direct",
+    "HIGH_FREQUENCY_CCD:MQ-1",
+    "HIGH_FREQUENCY_CCD:MQ-2",
+    "HIGH_FREQUENCY_CCD:MQ-4",
+    "HIGH_FREQUENCY_CCD:MQ-8",
+    "DUAL_CCD_BALANCED:MQ-8-4-plus-4",
+    "DUAL_CCD_BALANCED:MQ-16-8-plus-8"
+  ],
+  "primaryEndpoint": {
+    "field": "batchWallSeconds",
+    "direction": "lower-is-better",
+    "transform": "natural-log",
+    "singleCcdEstimand": "within-block equal-weight OLS slope of log(batchWallSeconds) on log2(workerCount) for W1 W2 W4 W8",
+    "dualCcdEstimand": "within-block log(batchWallSeconds_W16 / batchWallSeconds_W8)"
+  },
+  "primaryFamily": [
+    {"id":"P1","opaqueSlot":"OPAQUE-A","topology":"LARGE_L3_CCD","estimand":"single-CCD log2-worker slope"},
+    {"id":"P2","opaqueSlot":"OPAQUE-A","topology":"HIGH_FREQUENCY_CCD","estimand":"single-CCD log2-worker slope"},
+    {"id":"P3","opaqueSlot":"OPAQUE-B","topology":"LARGE_L3_CCD","estimand":"single-CCD log2-worker slope"},
+    {"id":"P4","opaqueSlot":"OPAQUE-B","topology":"HIGH_FREQUENCY_CCD","estimand":"single-CCD log2-worker slope"},
+    {"id":"P5","opaqueSlot":"OPAQUE-A","topology":"DUAL_CCD_BALANCED","estimand":"W16-versus-W8 paired log ratio"},
+    {"id":"P6","opaqueSlot":"OPAQUE-B","topology":"DUAL_CCD_BALANCED","estimand":"W16-versus-W8 paired log ratio"}
+  ],
+  "mipe": {
+    "ratio": 0.90,
+    "logScaleExact": -0.10536051565782628,
+    "interpretation": "at least 10 percent lower batch wall time per worker doubling or for W16 versus W8",
+    "role": "planning alternative and practical-importance threshold; superiority null remains zero"
+  },
+  "inference": {
+    "nullPerHypothesis": "estimand >= 0",
+    "alternativePerHypothesis": "estimand < 0",
+    "familywiseAlpha": 0.05,
+    "sidedness": "one-sided",
+    "multiplicity": "Holm strong FWER across exactly six primary hypotheses",
+    "claimRule": "Holm-adjusted one-sided p < 0.05, simultaneous confidence interval below zero, and point estimate at or beyond the MIPE",
+    "studyLevelWinnerOrMajorityScore": false
+  },
+  "power": {
+    "candidateB": [36,72,108,144],
+    "target": 0.90,
+    "selectionRule": "smallest B whose worst of six Holm-adjusted opaque-primary Monte Carlo rejection-power Wilson 95 percent lower bounds is at least 0.90",
+    "planningAlternative": "all six primary estimands equal -0.10536051565782628",
+    "identityBlindNuisanceOnly": true,
+    "noPassingCandidate": "stop without final formal freeze and request a separately authorized redesign"
+  },
+  "execution": {
+    "freshUnityProcessPerAlgorithmConditionBlock": true,
+    "strictSerialMeasuredProcesses": true,
+    "maximumConcurrentMeasuredUnityProcesses": 1,
+    "internalMqWorkersOnlyInsideCurrentProcess": true,
+    "hardWindowsCpuSetBinding": true,
+    "oneLogicalSiblingPerPhysicalCore": true,
+    "randomizedCounterbalancedOpaqueProcessOrder": true,
+    "noSmtWorkers": true,
+    "noSingleCcdW16": true,
+    "noMq32": true
+  },
+  "correctnessAndStopping": {
+    "allCorrectnessAndOracleHardGatesRetained": true,
+    "correctnessNeverWeightedWithPerformance": true,
+    "allInputAndOracleSourceHashesBound": true,
+    "allAffinityBindingsObserved": true,
+    "allLanesAndBatchesComplete": true,
+    "benefitStopping": false,
+    "futilityStopping": false,
+    "adaptiveReestimation": false,
+    "retry": false,
+    "partialResume": false,
+    "replacement": false,
+    "topUp": false,
+    "mergeAcrossAttempts": false,
+    "failurePolicy": "fail closed and preserve the entire failed attempt; any successor requires wholly new execution measured delivery and acceptance roots"
+  },
+  "secondaryBoundary": {
+    "stDirectVersusMqW1": "descriptive implementation-overhead sentinel only",
+    "crossAlgorithmInteractions": "exploratory estimates and intervals only",
+    "algorithmRankingOrWinner": false,
+    "causalCcdAttribution": false,
+    "movementTransferClaims": false
+  },
+  "formalCollectionAuthorized": false,
+  "formalAnalysisAuthorized": false
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-36h-attempt8-generator-derivation-v1",
+  "createdAtUtc": "2026-10-08T05:10:21.7303560Z",
+  "sourceRelativePath": "Research/Verification/New-Gate13R36hAttempt7ArtifactsV1.ps1",
+  "sourceSha256": "a7a98a4065edfb2c7ab655b757db21f48bf10cea3917b07bf6e8e1df76af9e86",
+  "destinationRelativePath": "Research/Verification/New-Gate13R36hAttempt8ArtifactsV1.ps1",
+  "destinationSha256": "1ad63c830c1095062565fdf0392a0d8d88bd2c5001964fca8369c9b09425089b",
+  "amendmentRelativePath": "Research/Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v8.json",
+  "amendmentSha256": "90d6319ba316792b846bf0958a4618a308591424a73bd64d32ba67ad5fbb1b76",
+  "attempt7FailureReceiptSha256": "a35fd3aa3a69be1a7201f75d6f10289270b2dc2402de43d38091cd3d400a9b18",
+  "attempt7StaticSummarySha256": "84fbb2105ed4ae6f710f35e389a10019c823ebd747d5d824d8ef0adfe88a48f3",
+  "routes": [
+    {
+      "from": "Attempt7",
+      "to": "Attempt8",
+      "count": 5
+    },
+    {
+      "from": "attempt7",
+      "to": "attempt8",
+      "count": 4
+    },
+    {
+      "from": "V7",
+      "to": "V8",
+      "count": 60
+    },
+    {
+      "from": "v7",
+      "to": "v8",
+      "count": 75
+    },
+    {
+      "from": "$plan.pilotAttempt=7",
+      "to": "$plan.pilotAttempt=8",
+      "count": 1
+    },
+    {
+      "from": "$staticListFrom=\"'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV8.ps1'\"\n$staticListTo=\"'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV8.ps1','Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1'\"",
+      "to": "$staticListFrom=\"'Research\\Verification\\Run-Gate13R36hVerificationV8.ps1','Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV8.ps1'\"\n$staticListTo=$staticListFrom+\",'Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1'\"",
+      "count": 1
+    },
+    {
+      "from": "    'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV6.ps1',",
+      "to": "    'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV6.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v7.json',\n    'Research\\Verification\\New-Gate13R36hAttempt7GeneratorV1.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt7_Generator_Derivation_Receipt.v1.json',\n    'Research\\Verification\\New-Gate13R36hAttempt7ArtifactsV1.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt7_Derivation_Receipt.v1.json',\n    'Research\\Verification\\Write-Gate13R36hAttempt7StaticFailureV1.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt7_PreImplementation_Static_Partial_Manifest.v1.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt7_PreImplementation_Static_Failure.v1.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt7_PreImplementation_Static_Checkpoint.v1.json',\n    'Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v10\\StaticUnitV7\\summary.json',\n    'Research\\Gate13R36hConcurrencyPreparationV7.psm1',\n    'Research\\Initialize-Gate13R36hLaneCopiesV7.ps1',\n    'Research\\Run-Gate13R36hTelemetryProbeV7.ps1',\n    'Research\\Run-Gate13R36hConcurrencyPilotV7.ps1',\n    'Research\\Analyze-Gate13R36hConcurrencyPilotV7.ps1',\n    'Research\\Run-Gate13R36hBlockV7.ps1',\n    'Research\\Verification\\New-Gate13R36hPilotScheduleV7.ps1',\n    'Research\\Verification\\Run-Gate13R36hStaticUnitV7.ps1',\n    'Research\\Verification\\Run-Gate13R36hRetainedRegressionV7.ps1',\n    'Research\\Verification\\Run-Gate13R36hVerificationV7.ps1',\n    'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV7.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_Pilot_Plan.v7.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Pilot_Schedule.v7.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Pilot_Schedule_Generation.v7.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Provenance.v7.json',",
+      "count": 1
+    },
+    {
+      "from": "$plan.upstreamHashes|Add-Member -NotePropertyName attempt6DerivationManifest -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Partial_Manifest.v1.json'))",
+      "to": "$plan.upstreamHashes|Add-Member -NotePropertyName attempt6DerivationManifest -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Partial_Manifest.v1.json'))\n$plan.upstreamHashes|Add-Member -NotePropertyName attempt7StaticFailure -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt7_PreImplementation_Static_Failure.v1.json'))\n$plan.upstreamHashes|Add-Member -NotePropertyName attempt7StaticSummary -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v10\\StaticUnitV7\\summary.json'))",
+      "count": 1
+    },
+    {
+      "from": "attempt6Checkpoint=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Checkpoint.v1.json';expectedNegativeLockTestDesign=",
+      "to": "attempt6Checkpoint=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Checkpoint.v1.json';attempt7Amendment=Bound 'Research\\Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v7.json';attempt7GeneratorBuilder=Bound 'Research\\Verification\\New-Gate13R36hAttempt7GeneratorV1.ps1';attempt7GeneratorReceipt=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt7_Generator_Derivation_Receipt.v1.json';attempt7DerivationGenerator=Bound 'Research\\Verification\\New-Gate13R36hAttempt7ArtifactsV1.ps1';attempt7DerivationReceipt=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt7_Derivation_Receipt.v1.json';attempt7StaticSummary=Bound 'Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v10\\StaticUnitV7\\summary.json';attempt7PartialManifest=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt7_PreImplementation_Static_Partial_Manifest.v1.json';attempt7FailureReceipt=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt7_PreImplementation_Static_Failure.v1.json';attempt7Checkpoint=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt7_PreImplementation_Static_Checkpoint.v1.json';expectedNegativeLockTestDesign=",
+      "count": 1
+    },
+    {
+      "from": "attempt2EvidencePreserved=$true;attempt4EvidencePreserved=$true;attempt5EvidencePreserved=$true;attempt6EvidencePreserved=$true;pilotRootCreated=$false",
+      "to": "attempt2EvidencePreserved=$true;attempt4EvidencePreserved=$true;attempt5EvidencePreserved=$true;attempt6EvidencePreserved=$true;attempt7EvidencePreserved=$true;pilotRootCreated=$false",
+      "count": 1
+    },
+    {
+      "from": "Frozen v1-v6 evidence changed during v8 derivation",
+      "to": "Frozen v1-v7 evidence changed during v8 derivation",
+      "count": 1
+    }
+  ],
+  "windowsPowerShell51ParsePassed": true,
+  "verificationRootCreated": false,
+  "pilotRootCreated": false,
+  "formalCampaign": false,
+  "pilotStarted": false,
+  "passed": true
+}

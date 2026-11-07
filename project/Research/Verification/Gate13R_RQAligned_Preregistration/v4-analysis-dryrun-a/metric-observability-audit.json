@@ -1,0 +1,115 @@
+{
+  "auditKind": "gate13r-rq-aligned-metric-observability-audit-v1",
+  "generatedAtUtc": "2026-10-08T10:40:36.7028036Z",
+  "instrumentationGap": false,
+  "metricDerivationErrors": [],
+  "passed": true,
+  "planningResourceMetrics": [
+    {
+      "expectedSampleCount": 1152,
+      "metricId": "P1",
+      "missingOrNonfiniteCount": 0,
+      "negativeCount": 0,
+      "presentFiniteCount": 1152,
+      "status": "OBSERVABLE",
+      "strictlyPositiveCount": 1152,
+      "zeroCount": 0
+    },
+    {
+      "expectedSampleCount": 1152,
+      "metricId": "P2",
+      "missingOrNonfiniteCount": 0,
+      "negativeCount": 0,
+      "presentFiniteCount": 1152,
+      "status": "OBSERVABLE",
+      "strictlyPositiveCount": 1152,
+      "zeroCount": 0
+    },
+    {
+      "expectedSampleCount": 1152,
+      "metricId": "P3",
+      "missingOrNonfiniteCount": 0,
+      "negativeCount": 0,
+      "presentFiniteCount": 1152,
+      "status": "OBSERVABLE",
+      "strictlyPositiveCount": 1152,
+      "zeroCount": 0
+    },
+    {
+      "expectedSampleCount": 1152,
+      "metricId": "P4",
+      "missingOrNonfiniteCount": 0,
+      "negativeCount": 0,
+      "presentFiniteCount": 1152,
+      "status": "OBSERVABLE",
+      "strictlyPositiveCount": 1152,
+      "zeroCount": 0
+    },
+    {
+      "expectedSampleCount": 1152,
+      "invalidDerivedCount": 0,
+      "metricId": "P5",
+      "overallZeroEventSampleCount": 1152,
+      "planZeroEventSampleCount": 1152,
+      "repairZeroEventSampleCount": 1152,
+      "status": "OBSERVABLE-AS-COUNTS",
+      "validDerivedCount": 1152
+    }
+  ],
+  "prospectiveGate14RMetrics": [
+    {
+      "candidateNFormal": null,
+      "metricId": "M1",
+      "power": null,
+      "status": "PROSPECTIVE-GATE14R/NOT-OBSERVED-IN-GATE12R/VARIANCE-NOT-ESTIMABLE-FROM-GATE12R",
+      "variance": null
+    },
+    {
+      "candidateNFormal": null,
+      "metricId": "M2",
+      "power": null,
+      "status": "PROSPECTIVE-GATE14R/NOT-OBSERVED-IN-GATE12R/VARIANCE-NOT-ESTIMABLE-FROM-GATE12R",
+      "variance": null
+    },
+    {
+      "candidateNFormal": null,
+      "metricId": "M3",
+      "power": null,
+      "status": "PROSPECTIVE-GATE14R/NOT-OBSERVED-IN-GATE12R/VARIANCE-NOT-ESTIMABLE-FROM-GATE12R",
+      "variance": null
+    },
+    {
+      "candidateNFormal": null,
+      "metricId": "M4",
+      "power": null,
+      "status": "PROSPECTIVE-GATE14R/NOT-OBSERVED-IN-GATE12R/VARIANCE-NOT-ESTIMABLE-FROM-GATE12R",
+      "variance": null
+    },
+    {
+      "candidateNFormal": null,
+      "metricId": "M5",
+      "power": null,
+      "status": "PROSPECTIVE-GATE14R/NOT-OBSERVED-IN-GATE12R/VARIANCE-NOT-ESTIMABLE-FROM-GATE12R",
+      "variance": null
+    }
+  ],
+  "schemaVersion": 1,
+  "source": {
+    "blockAlgorithmSets": {
+      "A*-R|C-FF|D*L|IDFF": 192,
+      "A*-R|D*L": 96,
+      "C-FF|IDFF": 96
+    },
+    "campaignCount": 12,
+    "excludedFromFormalAnalysis": true,
+    "executionManifestSha256": "fce4c7f9c7fe7df5f424c8a8ae888133942ed49dbede71d4499e502ba812ebd6",
+    "formalCampaign": false,
+    "independentUnit": "ONE-FRESH-UNITY-EDITOR-PROCESS-PER-COMPLETE-WILLIAMS-BLOCK",
+    "measuredBlockCount": 384,
+    "measuredSampleCount": 1152,
+    "pilotManifestSha256": "5b0678518423816212ea27f6cbb0bea18c1d11110ed10aefa1a238c17e0a53b6",
+    "pilotRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+    "uniqueRunIdCount": 1152,
+    "uniqueUnityProcessIdentityCount": 384
+  }
+}

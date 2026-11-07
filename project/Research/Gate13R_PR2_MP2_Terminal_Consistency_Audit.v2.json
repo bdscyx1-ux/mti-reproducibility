@@ -1,0 +1,707 @@
+{
+  "auditId": "gate13r-pr2-mp2-terminal-consistency-audit-v2",
+  "authorizationBoundaryVerification": {
+    "forbiddenTargets": [
+      {
+        "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3",
+        "exists": false
+      },
+      {
+        "absolutePath": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+        "exists": false
+      },
+      {
+        "absolutePath": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Status.v3.json",
+        "exists": false
+      }
+    ],
+    "formalAttempt3MeasuredCampaignExecuted": false,
+    "formalStatisticalAnalysisExecuted": false,
+    "gate14RExecuted": false,
+    "passed": false,
+    "unityEditorProcesses": [],
+    "unityProjectLock": {
+      "absolutePath": "H:\\DDM_Final_Project\\Temp\\UnityLockfile",
+      "exists": false
+    }
+  },
+  "evidenceManifest": {
+    "rawBytes": 67679,
+    "relativePath": "Research/Gate13R_PR2_MP2_Evidence_Manifest.v2.json",
+    "sha256": "48f8760e93b42a72ebc396dc6fa31e20ea01ead8df7c89c91c80a87515471dbb"
+  },
+  "formalDesignVerification": {
+    "campaignCount": 74,
+    "matchedSuperblockCount": 1008,
+    "maximumConcurrentUnityEditors": 1,
+    "passed": true,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "schedule": {
+      "rawBytes": 11220567,
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    "scheduleManifest": {
+      "rawBytes": 32861,
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+      "sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"
+    }
+  },
+  "nextAction": "WAIT-FOR-SEPARATE-GATE13R-PR2-FORMAL-ATTEMPT3-AUTHORIZATION",
+  "passed": false,
+  "readinessCheckpoint": {
+    "rawBytes": 13651,
+    "relativePath": "Research/Gate13R_PR2_MP2_NonExecuting_Readiness_Checkpoint.v1.json",
+    "sha256": "88333a15f3e5deb0eb7998bf15a5f1976df5de9a0382350016aa8623ad4680f8"
+  },
+  "runLedger": {
+    "entryCount": 8,
+    "expectedSteps": {
+      "mp2-evidence-manifest-v1": "failed",
+      "mp2-evidence-manifest-v2": "passed",
+      "mp2-nonexecuting-readiness": "passed",
+      "mp2-validation-attempt-1": "failed",
+      "mp2-validation-attempt-2": "failed",
+      "mp2-validation-attempt-3": "failed",
+      "mp2-validation-attempt-4": "passed"
+    },
+    "lastEntryHash": "2bc2e99bf5e70f4b326fe1aa42a9a73e5e59a05d79126b4f3a54cde50a688aba",
+    "ledgerStatus": "ok",
+    "passed": true,
+    "rawBytes": 8297,
+    "recordedSteps": {
+      "mp2-evidence-manifest-v1": "failed",
+      "mp2-evidence-manifest-v2": "passed",
+      "mp2-nonexecuting-readiness": "passed",
+      "mp2-validation-attempt-1": "failed",
+      "mp2-validation-attempt-2": "failed",
+      "mp2-validation-attempt-3": "failed",
+      "mp2-validation-attempt-4": "passed"
+    },
+    "relativePath": "Research/Gate13R_PR2_MP2_Run_Passport_run_ledger.yaml",
+    "reportExitCode": 0,
+    "reportStderr": "",
+    "sha256": "c3cbaf36583ca0b6aacc47bffe19e111f881c6cbcc2b054d41d9e1a5b917def9",
+    "showExitCode": 0,
+    "showStderr": ""
+  },
+  "runPassport": {
+    "rawBytes": 3919,
+    "relativePath": "Research/Gate13R_PR2_MP2_Run_Passport.md",
+    "sha256": "e0705b105674cc3a3982591561737f23231faaf5638450d113c44d4810c72db5"
+  },
+  "savedAtAsiaShanghai": "2026-10-09T14:43:13+08:00",
+  "savedAtUtc": "2026-10-09T06:43:13Z",
+  "schemaVersion": 1,
+  "selectedArtifactVerification": {
+    "checked": 64,
+    "checks": [
+      {
+        "actualRawBytes": 151708,
+        "actualSha256": "21f86b21a49c936edd5e65fde750d269a54be984186d9c802cbc2804b2691c75",
+        "exists": true,
+        "expectedRawBytes": 151708,
+        "expectedSha256": "21f86b21a49c936edd5e65fde750d269a54be984186d9c802cbc2804b2691c75",
+        "passed": true,
+        "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV5.cs"
+      },
+      {
+        "actualRawBytes": 9446,
+        "actualSha256": "5d453f4c3d0c5a379e9eefaa680ff6cd548cebdfc81858c16b0e59a59e5f9549",
+        "exists": true,
+        "expectedRawBytes": 9446,
+        "expectedSha256": "5d453f4c3d0c5a379e9eefaa680ff6cd548cebdfc81858c16b0e59a59e5f9549",
+        "passed": true,
+        "relativePath": "Research/Finalize-Gate13RPR2MP2ValidationV1.py"
+      },
+      {
+        "actualRawBytes": 14743,
+        "actualSha256": "8d152de177ce4b3d1c6449a92592771dc0c318184be57d71d0b071d0dc5e6e10",
+        "exists": true,
+        "expectedRawBytes": 14743,
+        "expectedSha256": "8d152de177ce4b3d1c6449a92592771dc0c318184be57d71d0b071d0dc5e6e10",
+        "passed": true,
+        "relativePath": "Research/Gate13RPR2MP2MemoryPolicyV1.psm1"
+      },
+      {
+        "actualRawBytes": 14872,
+        "actualSha256": "7f9e7252fc4a158573ca67f54baa7fa4a0d0c981f3240aa706d46a96d283ffc4",
+        "exists": true,
+        "expectedRawBytes": 14872,
+        "expectedSha256": "7f9e7252fc4a158573ca67f54baa7fa4a0d0c981f3240aa706d46a96d283ffc4",
+        "passed": true,
+        "relativePath": "Research/Gate13RPR2MP2MemoryPolicyV2.psm1"
+      },
+      {
+        "actualRawBytes": 12029,
+        "actualSha256": "5450ae3c10be99c6febc1ddd5a6fbb8e07e2673da9f39af4d356676e070b7438",
+        "exists": true,
+        "expectedRawBytes": 12029,
+        "expectedSha256": "5450ae3c10be99c6febc1ddd5a6fbb8e07e2673da9f39af4d356676e070b7438",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.md"
+      },
+      {
+        "actualRawBytes": 1512,
+        "actualSha256": "e92bbd42a8cd011a23b628b9870f0d98f1eed593d5e61ebd9bbd0b3f0dedd208",
+        "exists": true,
+        "expectedRawBytes": 1512,
+        "expectedSha256": "e92bbd42a8cd011a23b628b9870f0d98f1eed593d5e61ebd9bbd0b3f0dedd208",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Authorization.v1.json"
+      },
+      {
+        "actualRawBytes": 66404,
+        "actualSha256": "28f0d44e701ab131bdecbd167dfe1169ce61ad62e476921b56f247c7a22af5d5",
+        "exists": true,
+        "expectedRawBytes": 66404,
+        "expectedSha256": "28f0d44e701ab131bdecbd167dfe1169ce61ad62e476921b56f247c7a22af5d5",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Evidence_Manifest.v1.json"
+      },
+      {
+        "actualRawBytes": 1240,
+        "actualSha256": "fdee380b59ef99c4bce7e020e84de903f85b2543b12f10bd87218a9a4ccbc072",
+        "exists": true,
+        "expectedRawBytes": 1240,
+        "expectedSha256": "fdee380b59ef99c4bce7e020e84de903f85b2543b12f10bd87218a9a4ccbc072",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Evidence_Manifest_v1_Failure_Receipt.v1.json"
+      },
+      {
+        "actualRawBytes": 3251,
+        "actualSha256": "f1b556b3052c865640651bec58751a61dd3823422027fcbef0bf4fdd3a25dd8a",
+        "exists": true,
+        "expectedRawBytes": 3251,
+        "expectedSha256": "f1b556b3052c865640651bec58751a61dd3823422027fcbef0bf4fdd3a25dd8a",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_ExpectedNegative_LockHygiene_Repair_Amendment.v1.json"
+      },
+      {
+        "actualRawBytes": 8220,
+        "actualSha256": "bbf41f14682a85e061799a5cb9daed2122d6f8631a878b22bb714ede161bbe9e",
+        "exists": true,
+        "expectedRawBytes": 8220,
+        "expectedSha256": "bbf41f14682a85e061799a5cb9daed2122d6f8631a878b22bb714ede161bbe9e",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Final_Validation_Audit.v1.json"
+      },
+      {
+        "actualRawBytes": 1793,
+        "actualSha256": "b7f8a14eb6c8a7f39605194b2082a7175cd8df88b01f154a6225e5aa8bc71058",
+        "exists": true,
+        "expectedRawBytes": 1793,
+        "expectedSha256": "b7f8a14eb6c8a7f39605194b2082a7175cd8df88b01f154a6225e5aa8bc71058",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Adapter.v1.json"
+      },
+      {
+        "actualRawBytes": 1793,
+        "actualSha256": "262f4d896f13156bc0018a71303ee9e3e954ab503409fa60df1f1f0c7ce0e818",
+        "exists": true,
+        "expectedRawBytes": 1793,
+        "expectedSha256": "262f4d896f13156bc0018a71303ee9e3e954ab503409fa60df1f1f0c7ce0e818",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Adapter.v2.json"
+      },
+      {
+        "actualRawBytes": 2033,
+        "actualSha256": "2cad63b1c89608b2053552ef8c1261603f81231365689ba232d950fc279c4f62",
+        "exists": true,
+        "expectedRawBytes": 2033,
+        "expectedSha256": "2cad63b1c89608b2053552ef8c1261603f81231365689ba232d950fc279c4f62",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Adapter.v4.json"
+      },
+      {
+        "actualRawBytes": 292485,
+        "actualSha256": "a7ff6c2f9c81cd136504db2ed593b881b1749d57464cb8d53ea019c3a45b78ad",
+        "exists": true,
+        "expectedRawBytes": 292485,
+        "expectedSha256": "a7ff6c2f9c81cd136504db2ed593b881b1749d57464cb8d53ea019c3a45b78ad",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Config.v1.json"
+      },
+      {
+        "actualRawBytes": 292485,
+        "actualSha256": "95bd85dd0ac506055e5a417c4df8092f6f1e33deb2c04f26c5db094518c6bd59",
+        "exists": true,
+        "expectedRawBytes": 292485,
+        "expectedSha256": "95bd85dd0ac506055e5a417c4df8092f6f1e33deb2c04f26c5db094518c6bd59",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Config.v2.json"
+      },
+      {
+        "actualRawBytes": 293260,
+        "actualSha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+        "exists": true,
+        "expectedRawBytes": 293260,
+        "expectedSha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Config.v4.json"
+      },
+      {
+        "actualRawBytes": 1614,
+        "actualSha256": "bec24d1ac792dbd0eb5065d778ffd7f3ba2a2b09db90682546cf9a4ede8c1e8a",
+        "exists": true,
+        "expectedRawBytes": 1614,
+        "expectedSha256": "bec24d1ac792dbd0eb5065d778ffd7f3ba2a2b09db90682546cf9a4ede8c1e8a",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Formal_Config_Amendment.v1.json"
+      },
+      {
+        "actualRawBytes": 1614,
+        "actualSha256": "131bd156f14d9b0b4f200b619f1745ae37b019cbde3da627aab90f32ac3d079b",
+        "exists": true,
+        "expectedRawBytes": 1614,
+        "expectedSha256": "131bd156f14d9b0b4f200b619f1745ae37b019cbde3da627aab90f32ac3d079b",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Formal_Config_Amendment.v2.json"
+      },
+      {
+        "actualRawBytes": 1336,
+        "actualSha256": "fd8d904a59af33405a22c2442b63d2ccdaa60a75057b48bbbc0454ee281a7d36",
+        "exists": true,
+        "expectedRawBytes": 1336,
+        "expectedSha256": "fd8d904a59af33405a22c2442b63d2ccdaa60a75057b48bbbc0454ee281a7d36",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Memory_Policy_Amendment.v1.json"
+      },
+      {
+        "actualRawBytes": 1336,
+        "actualSha256": "4825f4a7863be74ff3691a129c77b92b58da75bac4041c2f265737c207bdbe69",
+        "exists": true,
+        "expectedRawBytes": 1336,
+        "expectedSha256": "4825f4a7863be74ff3691a129c77b92b58da75bac4041c2f265737c207bdbe69",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Memory_Policy_Amendment.v2.json"
+      },
+      {
+        "actualRawBytes": 2183,
+        "actualSha256": "105e7f81638813cf04395cd11b6e9ecc7cd7eb9ddd49ea4f224d7084c863185e",
+        "exists": true,
+        "expectedRawBytes": 2183,
+        "expectedSha256": "105e7f81638813cf04395cd11b6e9ecc7cd7eb9ddd49ea4f224d7084c863185e",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Memory_Policy_Registry.v1.json"
+      },
+      {
+        "actualRawBytes": 2183,
+        "actualSha256": "1070821ef6264510eb2e7427d7887aaca08bb5d2e7854d48f61a6c8e1285490f",
+        "exists": true,
+        "expectedRawBytes": 2183,
+        "expectedSha256": "1070821ef6264510eb2e7427d7887aaca08bb5d2e7854d48f61a6c8e1285490f",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Memory_Policy_Registry.v2.json"
+      },
+      {
+        "actualRawBytes": 7966,
+        "actualSha256": "063476899e32f439b0936c4da100219f86b24b17e42df09a0ab4c2cb12ef8215",
+        "exists": true,
+        "expectedRawBytes": 7966,
+        "expectedSha256": "063476899e32f439b0936c4da100219f86b24b17e42df09a0ab4c2cb12ef8215",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_NonExecuting_Next_Authorization_Prompt.md"
+      },
+      {
+        "actualRawBytes": 13651,
+        "actualSha256": "88333a15f3e5deb0eb7998bf15a5f1976df5de9a0382350016aa8623ad4680f8",
+        "exists": true,
+        "expectedRawBytes": 13651,
+        "expectedSha256": "88333a15f3e5deb0eb7998bf15a5f1976df5de9a0382350016aa8623ad4680f8",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_NonExecuting_Readiness_Checkpoint.v1.json"
+      },
+      {
+        "actualRawBytes": 2083,
+        "actualSha256": "98da736bcff2005918071ba66cbc8efb13af46569bf04e9618671b93a0d3993e",
+        "exists": true,
+        "expectedRawBytes": 2083,
+        "expectedSha256": "98da736bcff2005918071ba66cbc8efb13af46569bf04e9618671b93a0d3993e",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_NonExecuting_Readiness_Checkpoint.v1.md"
+      },
+      {
+        "actualRawBytes": 4690,
+        "actualSha256": "4de2d056e1562b40d596942f49a7a99880c3d974c5b4ac738aa4d289b2737ce3",
+        "exists": true,
+        "expectedRawBytes": 4690,
+        "expectedSha256": "4de2d056e1562b40d596942f49a7a99880c3d974c5b4ac738aa4d289b2737ce3",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_PreWrite_Preservation_Audit.v1.json"
+      },
+      {
+        "actualRawBytes": 7594,
+        "actualSha256": "8d50caf96ef34cd72ab643818f58e45a575e7438d61e8b477334d3ec3b7298e7",
+        "exists": true,
+        "expectedRawBytes": 7594,
+        "expectedSha256": "8d50caf96ef34cd72ab643818f58e45a575e7438d61e8b477334d3ec3b7298e7",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Provenance.v1.json"
+      },
+      {
+        "actualRawBytes": 7594,
+        "actualSha256": "c6c7f90596708183debace5063d322903c9ce39ac9ff0998783b4067fe1cd010",
+        "exists": true,
+        "expectedRawBytes": 7594,
+        "expectedSha256": "c6c7f90596708183debace5063d322903c9ce39ac9ff0998783b4067fe1cd010",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Provenance.v2.json"
+      },
+      {
+        "actualRawBytes": 6675,
+        "actualSha256": "0f2c666ac4dc324687073fcdd913833e4d7d72dc8ad88bfaa5b1184bcfb7c37f",
+        "exists": true,
+        "expectedRawBytes": 6675,
+        "expectedSha256": "0f2c666ac4dc324687073fcdd913833e4d7d72dc8ad88bfaa5b1184bcfb7c37f",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Provenance.v4.json"
+      },
+      {
+        "actualRawBytes": 3919,
+        "actualSha256": "e0705b105674cc3a3982591561737f23231faaf5638450d113c44d4810c72db5",
+        "exists": true,
+        "expectedRawBytes": 3919,
+        "expectedSha256": "e0705b105674cc3a3982591561737f23231faaf5638450d113c44d4810c72db5",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Run_Passport.md"
+      },
+      {
+        "actualRawBytes": 48721,
+        "actualSha256": "f7f25732316b3ec6c121edea8f907c1c609ae743775623e5198bde9523f16010",
+        "exists": true,
+        "expectedRawBytes": 48721,
+        "expectedSha256": "f7f25732316b3ec6c121edea8f907c1c609ae743775623e5198bde9523f16010",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Scenario_Policy_Mapping.v1.json"
+      },
+      {
+        "actualRawBytes": 48721,
+        "actualSha256": "5dd5daf640831ea49d5fa9e0bb1a318e71669ee9e426bf346f7eebc36f0c5055",
+        "exists": true,
+        "expectedRawBytes": 48721,
+        "expectedSha256": "5dd5daf640831ea49d5fa9e0bb1a318e71669ee9e426bf346f7eebc36f0c5055",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Scenario_Policy_Mapping.v2.json"
+      },
+      {
+        "actualRawBytes": 4172877,
+        "actualSha256": "3f85724ad96522d313d06f3bafb59744eeed4c0c4c9033373864225acc838193",
+        "exists": true,
+        "expectedRawBytes": 4172877,
+        "expectedSha256": "3f85724ad96522d313d06f3bafb59744eeed4c0c4c9033373864225acc838193",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Schedule_Policy_Overlay.v1.jsonl"
+      },
+      {
+        "actualRawBytes": 4172877,
+        "actualSha256": "c87cc7eab158dc7a111867364b9c06c2314f44c644ef2a4b8e33348bd1876d13",
+        "exists": true,
+        "expectedRawBytes": 4172877,
+        "expectedSha256": "c87cc7eab158dc7a111867364b9c06c2314f44c644ef2a4b8e33348bd1876d13",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Schedule_Policy_Overlay.v2.jsonl"
+      },
+      {
+        "actualRawBytes": 1016,
+        "actualSha256": "df033820a7d96a6ee5ec687077693cc66147ff17371bce28d30d716e75d72157",
+        "exists": true,
+        "expectedRawBytes": 1016,
+        "expectedSha256": "df033820a7d96a6ee5ec687077693cc66147ff17371bce28d30d716e75d72157",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Schedule_Policy_Overlay_Manifest.v1.json"
+      },
+      {
+        "actualRawBytes": 1016,
+        "actualSha256": "772d876aa4396e4229397e611011b5562024b90ebc5b5bf36ee85680184672c0",
+        "exists": true,
+        "expectedRawBytes": 1016,
+        "expectedSha256": "772d876aa4396e4229397e611011b5562024b90ebc5b5bf36ee85680184672c0",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Schedule_Policy_Overlay_Manifest.v2.json"
+      },
+      {
+        "actualRawBytes": 1571,
+        "actualSha256": "ffd4128458d9fd217812d80fdff28c2b8df752c5d1eeb46fa0aa47f8861253a9",
+        "exists": true,
+        "expectedRawBytes": 1571,
+        "expectedSha256": "ffd4128458d9fd217812d80fdff28c2b8df752c5d1eeb46fa0aa47f8861253a9",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Schema.v1.json"
+      },
+      {
+        "actualRawBytes": 1571,
+        "actualSha256": "8f97e1c171be3c8b5ada5e9960afb300834d6507c7fe555340354dc037e8e1ef",
+        "exists": true,
+        "expectedRawBytes": 1571,
+        "expectedSha256": "8f97e1c171be3c8b5ada5e9960afb300834d6507c7fe555340354dc037e8e1ef",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Schema.v2.json"
+      },
+      {
+        "actualRawBytes": 8842,
+        "actualSha256": "283055b35cd60c8014ea181e029ec169c6f19eccb4bab9220d46f799b18fce71",
+        "exists": true,
+        "expectedRawBytes": 8842,
+        "expectedSha256": "283055b35cd60c8014ea181e029ec169c6f19eccb4bab9220d46f799b18fce71",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Specification.v1.md"
+      },
+      {
+        "actualRawBytes": 6158,
+        "actualSha256": "45cfd1d5a12fa551d62b9cde4506dac71e2fd1a0c227a6d899d67d12f71db5d3",
+        "exists": true,
+        "expectedRawBytes": 6158,
+        "expectedSha256": "45cfd1d5a12fa551d62b9cde4506dac71e2fd1a0c227a6d899d67d12f71db5d3",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_Test_Design.v1.md"
+      },
+      {
+        "actualRawBytes": 468,
+        "actualSha256": "21d43f76656b3d51538b0ba8d2ac51ba6743898cc915233565096a9fbd2595d0",
+        "exists": true,
+        "expectedRawBytes": 468,
+        "expectedSha256": "21d43f76656b3d51538b0ba8d2ac51ba6743898cc915233565096a9fbd2595d0",
+        "passed": true,
+        "relativePath": "Research/Gate13R_PR2_MP2_User_Authorization.v1.txt"
+      },
+      {
+        "actualRawBytes": 29117,
+        "actualSha256": "7292e0acff8e10f29c137d34a8cb806be58b9632c82722cfdbbfc27c64e99441",
+        "exists": true,
+        "expectedRawBytes": 29117,
+        "expectedSha256": "7292e0acff8e10f29c137d34a8cb806be58b9632c82722cfdbbfc27c64e99441",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2ArtifactsV1.py"
+      },
+      {
+        "actualRawBytes": 29117,
+        "actualSha256": "0bd158189d7f941fe8f6ebfbeb396b97aa3d0b6fc078dbc95a862d5bdfea7bb9",
+        "exists": true,
+        "expectedRawBytes": 29117,
+        "expectedSha256": "0bd158189d7f941fe8f6ebfbeb396b97aa3d0b6fc078dbc95a862d5bdfea7bb9",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2ArtifactsV2.py"
+      },
+      {
+        "actualRawBytes": 10333,
+        "actualSha256": "9729e0056b6616f2d43c47d4cc4ac76c320ab3ecff36a6a9a3896ed62f11d316",
+        "exists": true,
+        "expectedRawBytes": 10333,
+        "expectedSha256": "9729e0056b6616f2d43c47d4cc4ac76c320ab3ecff36a6a9a3896ed62f11d316",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2BlockPlanV1.py"
+      },
+      {
+        "actualRawBytes": 10333,
+        "actualSha256": "493ee43d60bf96fd9c26e43669f7f590049fbf6fb15c1493be31a3ba7599fad1",
+        "exists": true,
+        "expectedRawBytes": 10333,
+        "expectedSha256": "493ee43d60bf96fd9c26e43669f7f590049fbf6fb15c1493be31a3ba7599fad1",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2BlockPlanV2.py"
+      },
+      {
+        "actualRawBytes": 10336,
+        "actualSha256": "15da79fbf60c0cc438db8baf115e33dcbac953241d09ae469d55a37a17aa2c5b",
+        "exists": true,
+        "expectedRawBytes": 10336,
+        "expectedSha256": "15da79fbf60c0cc438db8baf115e33dcbac953241d09ae469d55a37a17aa2c5b",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2BlockPlanV3.py"
+      },
+      {
+        "actualRawBytes": 10336,
+        "actualSha256": "11365fb3c694ae2fab6c9d3c3cb3c93f3cbe3e6f2f7a30373730f5a236ce8785",
+        "exists": true,
+        "expectedRawBytes": 10336,
+        "expectedSha256": "11365fb3c694ae2fab6c9d3c3cb3c93f3cbe3e6f2f7a30373730f5a236ce8785",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2BlockPlanV4.py"
+      },
+      {
+        "actualRawBytes": 8163,
+        "actualSha256": "3668637582eddee077b97a78d06f31a2f1e9df20b6ecf4b28e5c04d6981e1449",
+        "exists": true,
+        "expectedRawBytes": 8163,
+        "expectedSha256": "3668637582eddee077b97a78d06f31a2f1e9df20b6ecf4b28e5c04d6981e1449",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2EvidenceManifestV1.py"
+      },
+      {
+        "actualRawBytes": 8627,
+        "actualSha256": "feb26da7d83c028ae7eeb6e2e4e8642c5d040f15494e0f5bb0fe59649fc47d47",
+        "exists": true,
+        "expectedRawBytes": 8627,
+        "expectedSha256": "feb26da7d83c028ae7eeb6e2e4e8642c5d040f15494e0f5bb0fe59649fc47d47",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2EvidenceManifestV2.py"
+      },
+      {
+        "actualRawBytes": 11203,
+        "actualSha256": "0a3dd2a1f66c974e343050eb8f9236b6ef3e4b2b13d657a3378dc16dd483817b",
+        "exists": true,
+        "expectedRawBytes": 11203,
+        "expectedSha256": "0a3dd2a1f66c974e343050eb8f9236b6ef3e4b2b13d657a3378dc16dd483817b",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2ReadinessV1.py"
+      },
+      {
+        "actualRawBytes": 10798,
+        "actualSha256": "6a140ee1d8a11b9f4da171239faaaff2ff85c18ae1fb15d217c257b8519edfac",
+        "exists": true,
+        "expectedRawBytes": 10798,
+        "expectedSha256": "6a140ee1d8a11b9f4da171239faaaff2ff85c18ae1fb15d217c257b8519edfac",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2WrapperRepairArtifactsV3.py"
+      },
+      {
+        "actualRawBytes": 11980,
+        "actualSha256": "d6f2a515a566885be532d5afa1bb335b0f0356aff6c6fe56ce3e9d90bca02d2f",
+        "exists": true,
+        "expectedRawBytes": 11980,
+        "expectedSha256": "d6f2a515a566885be532d5afa1bb335b0f0356aff6c6fe56ce3e9d90bca02d2f",
+        "passed": true,
+        "relativePath": "Research/New-Gate13RPR2MP2WrapperRepairArtifactsV4.py"
+      },
+      {
+        "actualRawBytes": 6857,
+        "actualSha256": "0f8b8024704fe09cd4de449681d410c8f2141745e9c0a12c85ad1f2f41927fc0",
+        "exists": true,
+        "expectedRawBytes": 6857,
+        "expectedSha256": "0f8b8024704fe09cd4de449681d410c8f2141745e9c0a12c85ad1f2f41927fc0",
+        "passed": true,
+        "relativePath": "Research/Next_Session_Checkpoint.md"
+      },
+      {
+        "actualRawBytes": 111957,
+        "actualSha256": "6b1c5573b17f44c13f881cb3fe41f4d5d6a5b0335342dce6806bc6dd6be93050",
+        "exists": true,
+        "expectedRawBytes": 111957,
+        "expectedSha256": "6b1c5573b17f44c13f881cb3fe41f4d5d6a5b0335342dce6806bc6dd6be93050",
+        "passed": true,
+        "relativePath": "Research/Overall_Project_Plan.md"
+      },
+      {
+        "actualRawBytes": 15408,
+        "actualSha256": "9c561263a895fc9e3008a4377d3f3e122aa99d81d89269528750d312b7c235c0",
+        "exists": true,
+        "expectedRawBytes": 15408,
+        "expectedSha256": "9c561263a895fc9e3008a4377d3f3e122aa99d81d89269528750d312b7c235c0",
+        "passed": true,
+        "relativePath": "Research/Run-Gate13RPR2MP2FormalBlockV1.ps1"
+      },
+      {
+        "actualRawBytes": 15408,
+        "actualSha256": "6c7e3a22274d9a3f4b7a5f2635873a431154ecd88918a822fc00e77b1579d891",
+        "exists": true,
+        "expectedRawBytes": 15408,
+        "expectedSha256": "6c7e3a22274d9a3f4b7a5f2635873a431154ecd88918a822fc00e77b1579d891",
+        "passed": true,
+        "relativePath": "Research/Run-Gate13RPR2MP2FormalBlockV2.ps1"
+      },
+      {
+        "actualRawBytes": 15729,
+        "actualSha256": "fc0c42b858afb8e8d80c6f10544a0d7fb75694ae8c57910d205cea721731ff13",
+        "exists": true,
+        "expectedRawBytes": 15729,
+        "expectedSha256": "fc0c42b858afb8e8d80c6f10544a0d7fb75694ae8c57910d205cea721731ff13",
+        "passed": true,
+        "relativePath": "Research/Run-Gate13RPR2MP2FormalBlockV3.ps1"
+      },
+      {
+        "actualRawBytes": 18110,
+        "actualSha256": "a8840bb1030e461f4eda5a6036ed3bc1a0e51b40a3fedcd81cba56b471868dda",
+        "exists": true,
+        "expectedRawBytes": 18110,
+        "expectedSha256": "a8840bb1030e461f4eda5a6036ed3bc1a0e51b40a3fedcd81cba56b471868dda",
+        "passed": true,
+        "relativePath": "Research/Test-Gate13RPR2MP2V1.py"
+      },
+      {
+        "actualRawBytes": 18110,
+        "actualSha256": "5485a7f7b2aaa254f9c6b20e5524fb0dbbf2795cd42a61af93482b21b56c389f",
+        "exists": true,
+        "expectedRawBytes": 18110,
+        "expectedSha256": "5485a7f7b2aaa254f9c6b20e5524fb0dbbf2795cd42a61af93482b21b56c389f",
+        "passed": true,
+        "relativePath": "Research/Test-Gate13RPR2MP2V2.py"
+      },
+      {
+        "actualRawBytes": 18472,
+        "actualSha256": "e664429b336b20b1011fc251041f35217e68e2b8b0c1aa6d2ed5d40c14f66794",
+        "exists": true,
+        "expectedRawBytes": 18472,
+        "expectedSha256": "e664429b336b20b1011fc251041f35217e68e2b8b0c1aa6d2ed5d40c14f66794",
+        "passed": true,
+        "relativePath": "Research/Test-Gate13RPR2MP2V3.py"
+      },
+      {
+        "actualRawBytes": 18472,
+        "actualSha256": "477737ed5d682d26954284a10025f972d9737beafb62d3bea0297891ca3b1f2e",
+        "exists": true,
+        "expectedRawBytes": 18472,
+        "expectedSha256": "477737ed5d682d26954284a10025f972d9737beafb62d3bea0297891ca3b1f2e",
+        "passed": true,
+        "relativePath": "Research/Test-Gate13RPR2MP2V4.py"
+      },
+      {
+        "actualRawBytes": 6478,
+        "actualSha256": "1a4dac35af3f2aafdccf54afa21ec1388f5c247ad796d664cc81f6f71baf6e10",
+        "exists": true,
+        "expectedRawBytes": 6478,
+        "expectedSha256": "1a4dac35af3f2aafdccf54afa21ec1388f5c247ad796d664cc81f6f71baf6e10",
+        "passed": true,
+        "relativePath": "Research/Verification/Freeze-Gate13RPR2MP2ValidationAttemptV1.ps1"
+      },
+      {
+        "actualRawBytes": 7509,
+        "actualSha256": "d9de826dbe380348008a473449823fb979b9a976224a14c6b2054a2c6c8f55e4",
+        "exists": true,
+        "expectedRawBytes": 7509,
+        "expectedSha256": "d9de826dbe380348008a473449823fb979b9a976224a14c6b2054a2c6c8f55e4",
+        "passed": true,
+        "relativePath": "Research/Verification/Run-Gate13RPR2MP2MemoryPolicySelfTestV1.ps1"
+      },
+      {
+        "actualRawBytes": 9038,
+        "actualSha256": "ba142189fa9ac115ff0932db4afe1b914ed1cff33bd2132eec7df3e2f4d460be",
+        "exists": true,
+        "expectedRawBytes": 9038,
+        "expectedSha256": "ba142189fa9ac115ff0932db4afe1b914ed1cff33bd2132eec7df3e2f4d460be",
+        "passed": true,
+        "relativePath": "Research/Verification/Run-Gate13RPR2MP2TelemetryProbeV1.ps1"
+      }
+    ],
+    "failed": 0,
+    "passed": true
+  },
+  "statusTokens": [
+    "GATE13R-PR2-MP2-TERMINAL-AUDIT-FAILED",
+    "NON-EXECUTING",
+    "TERMINAL-AUDIT-ATTEMPT1-FAILED-PRESERVED",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "FORMAL-ROOT-ABSENT",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "terminalAuditAttempt1FailureReceipt": {
+    "rawBytes": 1176,
+    "relativePath": "Research/Gate13R_PR2_MP2_Terminal_Audit_Attempt1_Failure_Receipt.v1.json",
+    "sha256": "8b4259ed179efa1a714c1ffb2c5d8d9db121dd945e887b2129f2d4d8ef2180ac"
+  },
+  "validationTreeVerification": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_MP2\\v1",
+    "actualFileCount": 216,
+    "actualRawBytes": 104922700,
+    "actualTreeSha256": "adc584f3ddc75f2f6dc541f3085e62ca20a8948694b3baede30818b47df0e5df",
+    "expectedFileCount": 216,
+    "expectedRawBytes": 104922700,
+    "expectedTreeSha256": "adc584f3ddc75f2f6dc541f3085e62ca20a8948694b3baede30818b47df0e5df",
+    "firstMismatches": [],
+    "firstMissing": [],
+    "mismatchCount": 0,
+    "passed": true
+  }
+}

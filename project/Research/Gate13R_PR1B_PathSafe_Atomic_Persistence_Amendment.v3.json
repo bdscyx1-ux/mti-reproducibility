@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 3,
+  "amendmentId": "gate13r-pr1b-v3-windows-mono-path-safe-atomic-persistence-v1",
+  "status": "FROZEN-BEFORE-V3-IMPLEMENTATION-AND-UNITY-VERIFICATION",
+  "formalCampaignAuthorized": false,
+  "gate14rAuthorized": false,
+  "parentScientificAmendment": {
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Memory_Eligibility_Amendment.v2.json",
+    "sha256": "579a70a9e27094a3b2c80aa12401325f56dd638c5c2ad049cb7ff5c9992131d1"
+  },
+  "rootCause": {
+    "reasonCode": "WINDOWS-MONO-MAX-PATH-AT-ATOMIC-TEMP-FILE",
+    "failedAlgorithmId": "IDFF",
+    "failedPosition": 2,
+    "failedLegacyTemporaryPathLengthCharacters": 260,
+    "successfulCffLegacyTemporaryPathLengthCharacters": 259,
+    "exceptionType": "System.IO.DirectoryNotFoundException",
+    "classification": "PERSISTENCE-IMPLEMENTATION-DEFECT-NOT-ALGORITHM-SCENARIO-MEMORY-OR-STATISTICAL-FAILURE"
+  },
+  "repairContract": {
+    "temporaryLeafPattern": ".g13tmp-<32-lowercase-hex-guid>",
+    "maximumTemporaryLeafCharacters": 40,
+    "sameVerifiedFinalDirectory": true,
+    "sameVolumeAtomicMoveOrReplace": true,
+    "requireExistingParent": true,
+    "requireAllowedRootContainment": true,
+    "rejectReparsePointInAllowedChain": true,
+    "rejectDirectoryAtFinalPath": true,
+    "rejectExistingFinalEvidenceUnlessExplicitMutableCheckpoint": true,
+    "createTemporaryWithCreateNew": true,
+    "cleanupOnlyInvocationOwnedTemporary": true,
+    "revalidateBeforeCommit": true,
+    "durableEvaluationBeforeThresholdDecision": true
+  },
+  "unchangedMemoryPolicy": {
+    "policyId": "gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1",
+    "sampleAlertThresholdBytes": 134217728,
+    "sampleEmergencyStopBytes": 268435456,
+    "twoSampleBlockManagedGrowthHardLimitBytes": 268435456,
+    "blockWorkingSetGrowthHardLimitBytes": 536870912,
+    "blockPrivateMemoryGrowthHardLimitBytes": 536870912,
+    "exactThresholdPasses": true
+  },
+  "unchangedStatisticalContract": {
+    "metrics": ["P1", "P2", "P3", "P4", "P5"],
+    "contrasts": ["C1", "C2", "C3", "C4", "C5"],
+    "orderDiagnostic": "AB-minus-BA",
+    "confidenceLevel": 0.95,
+    "orderBiasAbsoluteLogBound": 0.09531017980432493,
+    "bootstrapReplicates": 20000,
+    "bootstrapSeed": 13012026,
+    "scenarioCount": 3,
+    "mirroredPairsPerScenario": 32,
+    "measuredFreshUnityBlockProcesses": 384,
+    "measuredAlgorithmSamples": 768
+  },
+  "pilotPolicy": {
+    "classification": ["NON-FORMAL", "EXCLUDED-FROM-FORMAL-ANALYSIS"],
+    "strictSerial": true,
+    "maximumConcurrentUnityProcesses": 1,
+    "freshProcessPerCompleteBlock": true,
+    "retryAfterPilotRootCreation": false,
+    "resume": false,
+    "topUp": false,
+    "historicalMerge": false
+  }
+}

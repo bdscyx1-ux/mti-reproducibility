@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "provenanceId": "gate13r-36h-10pct-four-isolated-editor-lanes-provenance-v1",
+  "createdAtUtc": "2026-10-08T04:27:11.0768891Z",
+  "executionDesignId": "gate13r-36h-10pct-four-isolated-editor-lanes-v1",
+  "status": "NON-FORMAL / EXCLUDED-FROM-FORMAL-ANALYSIS",
+  "formalCampaign": false,
+  "formalExecutionAuthorized": false,
+  "pilotExecutionAuthorizedCount": 1,
+  "automaticPilotRetryAuthorized": false,
+  "sameAttemptResumeAuthorized": false,
+  "authorization": {
+    "relativePath": "Research/Gate13R_36h_Redesign_Pilot_Authorization.v1.json",
+    "sha256": "a8c97f506048727a84558e22a680f619f71f8ecdb3762dc59b4c1a91764de123",
+    "bytes": 2041
+  },
+  "specification": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_Redesign_Specification.v1.md",
+    "sha256": "68bad5a35eac48e46fe5c7099dc4b4f347616f814046b70075e993d665c11260",
+    "bytes": 9426
+  },
+  "testDesign": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_Test_Design.v1.md",
+    "sha256": "4793a5e72f49569566fd07a1496447714f84e41492f3d107860020f1716d9767",
+    "bytes": 6750
+  },
+  "executionAuthorization": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_Readiness_Amendment.v1.json",
+    "sha256": "3019d138e7cba4fc0a789c65457379f84a6b86d13af4045d916bb81edf16ed04",
+    "bytes": 2980
+  },
+  "config": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_Pilot_Plan.v1.json",
+    "sha256": "eadcf9e436352ce62ab50b7a4051e7f1fccbe8c5f234760f6220bddef17be16b",
+    "bytes": 7452
+  },
+  "schedule": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_Pilot_Schedule.v1.json",
+    "sha256": "fac7f2458e7a5c9e50356797d505619de30fa954ebc6c951783e70c6aa005941",
+    "bytes": 374985
+  },
+  "preservationBaseline": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_PreWrite_Preservation_Baseline.v1.json",
+    "sha256": "df5bd22bcf13fa46850f5e8f67decc2608a22d035ff0e8d9a14a5c857e59d1d0",
+    "bytes": 4658
+  },
+  "commandDerivation": {
+    "relativePath": "Research/Gate13R_36h_Concurrency_Command_Derivation.v1.json",
+    "sha256": "129ba477c568457f82d84d124a17b7c884021cd23ad89af2f7f9f3fe03a2c187",
+    "bytes": 2891
+  },
+  "unityCommand": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate13R36hConcurrencyBatchCommandV1.cs",
+    "sha256": "842ca34cce82774ad4b892e003dec55c7a4bae0a3dedbbe0f769a6e9a376f404",
+    "bytes": 65602
+  },
+  "preparationModule": {
+    "relativePath": "Research/Gate13R36hConcurrencyPreparationV1.psm1",
+    "sha256": "01145afcd7fcb8b4e708a3be5433aa9fe94cb52e7370b86867898e3a1cf77909",
+    "bytes": 15746
+  },
+  "blockRunner": {
+    "relativePath": "Research/Run-Gate13R36hBlockV1.ps1",
+    "sha256": "9b37bac6c420f6e5db15bf942e1be89411c79e3d4531069ef7d9eb1487ecc0af",
+    "bytes": 14594
+  },
+  "telemetryRunner": {
+    "relativePath": "Research/Run-Gate13R36hTelemetryProbeV1.ps1",
+    "sha256": "a4451bf3cbdff977940696c0b84ba384856d1d97c820666adf5593bc4d9cb3e4",
+    "bytes": 9035
+  },
+  "laneCopyInitializer": {
+    "relativePath": "Research/Initialize-Gate13R36hLaneCopiesV1.ps1",
+    "sha256": "a0e2137665dc7a7ef46a45bd23d84a908bb63f509b437c62ffe5e41774f3ade5",
+    "bytes": 9153
+  },
+  "pilotOrchestrator": {
+    "relativePath": "Research/Run-Gate13R36hConcurrencyPilotV1.ps1",
+    "sha256": "56128e6f3d12bbf5269b4458881de5606031e643d3b4aba49f2941323768f32d",
+    "bytes": 15807
+  },
+  "pilotAnalyzer": {
+    "relativePath": "Research/Analyze-Gate13R36hConcurrencyPilotV1.ps1",
+    "sha256": "7da61e3912d6d76b6f4460de79d027a02142d0b1ba0a881043f40e33d6f5c9fd",
+    "bytes": 21398
+  },
+  "compileRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R36hCompileV1.ps1",
+    "sha256": "54d2edc215dcd40efc5bc9936b58caec2f7606d5e1ac28d762221f1ca03f26aa",
+    "bytes": 4680
+  },
+  "staticUnitRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R36hStaticUnitV1.ps1",
+    "sha256": "47836613d3596383139ecd37a741e226f8a4f12cbed39548341f79da8c31759d",
+    "bytes": 16039
+  },
+  "retainedRegressionRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R36hRetainedRegressionV1.ps1",
+    "sha256": "3444d7bb322fd69aab64e40a0417f6b8b1c105b4cda30c8e33fc8c225122c121",
+    "bytes": 5372
+  },
+  "verificationRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R36hVerificationV1.ps1",
+    "sha256": "5233863cc72e8fd9c8ae6aa4acf059180febd491ecc0c6301f87497d617bc719",
+    "bytes": 19139
+  },
+  "validationOnlyAuditRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R36hValidationOnlyPrePilotAuditV1.ps1",
+    "sha256": "cb7c1b2e125caf4d8e56d4e3e9e66dc1d57852051e78b71b24ceddc07f188d68",
+    "bytes": 12885
+  },
+  "gate11BundleManifest": {
+    "relativePath": "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+    "sha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+    "bytes": 207760
+  },
+  "unityEditor": {
+    "absolutePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "productVersion": "2022.3.30f1c1_a6dc00fbe362",
+    "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "paths": {
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v1",
+    "pilotRoot": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v1",
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v1",
+    "reservedFormalRoot": "Research/FormalRuns/Gate13R_36h_10pct_4Lane/v1"
+  }
+}

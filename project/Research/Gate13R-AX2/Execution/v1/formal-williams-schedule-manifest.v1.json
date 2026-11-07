@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "artifactKind": "GATE13R-AX2-FORMAL-WILLIAMS-SCHEDULE-MANIFEST",
+  "designId": "gate13r-ax2-shared32-b48-four-treatment-v1",
+  "status": "NON_EXECUTING_SCHEDULE_FROZEN",
+  "sourceBindings": {
+    "gate13rSchedule": {
+      "path": "Research/Gate13R_Formal_Williams_Block_Schedule.v1.jsonl",
+      "sha256": "dc460db08f501ef39869de29602cc0caf15106a264f930b55eb1875336c91aa6"
+    },
+    "gate11rCatalog": {
+      "path": "Research/FormalScenarios/Gate11R_5pct/v1/catalog.json",
+      "sha256": "f99f1aff29e5fe244fa637d28ce243c4ca94f5679ad9bfb95f96a39ea6147e84"
+    },
+    "gate11rMatrix": {
+      "path": "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json",
+      "sha256": "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3"
+    },
+    "gate11rBundleManifest": {
+      "path": "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+      "sha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc"
+    }
+  },
+  "algorithmIdsInBaseOrder": [
+    "BiA*-R",
+    "LPA*",
+    "C-FF",
+    "IDFF"
+  ],
+  "primaryContrasts": [
+    "BiA*-R/C-FF",
+    "BiA*-R/IDFF",
+    "LPA*/C-FF",
+    "LPA*/IDFF"
+  ],
+  "campaignCount": 32,
+  "blocksPerCampaign": 48,
+  "completeBlockCount": 1536,
+  "algorithmSampleCount": 6144,
+  "perAlgorithmSampleCount": 1536,
+  "williamsRowCounts": {
+    "0": 384,
+    "1": 384,
+    "2": 384,
+    "3": 384
+  },
+  "perAlgorithmPositionCounts": {
+    "BiA*-R": {
+      "1": 384,
+      "2": 384,
+      "3": 384,
+      "4": 384
+    },
+    "LPA*": {
+      "1": 384,
+      "2": 384,
+      "3": 384,
+      "4": 384
+    },
+    "C-FF": {
+      "1": 384,
+      "2": 384,
+      "3": 384,
+      "4": 384
+    },
+    "IDFF": {
+      "1": 384,
+      "2": 384,
+      "3": 384,
+      "4": 384
+    }
+  },
+  "campaignIdsInExecutionOrder": [
+    "core-r01-s1-shared--shared",
+    "core-r01-s2-shared--shared",
+    "core-r02-s1-shared--shared",
+    "core-r02-s2-shared--shared",
+    "core-r03-s1-shared--shared",
+    "core-r03-s2-shared--shared",
+    "core-r04-s1-shared--shared",
+    "core-r04-s2-shared--shared",
+    "core-r05-s1-shared--shared",
+    "core-r05-s2-shared--shared",
+    "core-r06-s1-shared--shared",
+    "core-r06-s2-shared--shared",
+    "core-r07-s1-shared--shared",
+    "core-r07-s2-shared--shared",
+    "core-r08-s1-shared--shared",
+    "core-r08-s2-shared--shared",
+    "grid-scale-g032-shared--shared",
+    "grid-scale-g064-shared--shared",
+    "grid-scale-g128-shared--shared",
+    "grid-scale-g256-shared--shared",
+    "agent-scale-a001-shared--shared",
+    "agent-scale-a008-shared--shared",
+    "agent-scale-a032-shared--shared",
+    "agent-scale-a128-shared--shared",
+    "agent-scale-a512-shared--shared",
+    "dynamic-footprint-f001-shared--shared",
+    "dynamic-footprint-f009-shared--shared",
+    "dynamic-footprint-f025-shared--shared",
+    "dynamic-footprint-f081-shared--shared",
+    "dynamic-footprint-f225-shared--shared",
+    "reachability-c4-shared--shared",
+    "reachability-c8-strict-shared--shared"
+  ],
+  "schedule": {
+    "path": "Research/Gate13R-AX2/Execution/v1/formal-williams-schedule.v1.jsonl",
+    "sha256": "3ea4198796bc5024194fb52f5e1c43ccbb51bf557186993b3703c19c2787838b",
+    "lineCount": 1536
+  },
+  "formalCollectionAuthorized": false
+}

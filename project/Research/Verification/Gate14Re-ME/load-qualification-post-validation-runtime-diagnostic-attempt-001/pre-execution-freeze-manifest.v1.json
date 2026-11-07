@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-post-validation-runtime-diagnostic-pre-execution-freeze-v1",
+  "studyId": "Gate14Re-ME",
+  "diagnosticAttemptId": "load-qualification-post-validation-runtime-diagnostic-attempt-001",
+  "status": "FROZEN_FOR_ONE_SHOT_EXECUTION",
+  "frozenAtUtc": "2026-10-19T10:44:01.4942918Z",
+  "files": [
+    {
+      "absolutePath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-post-validation-runtime-diagnostic-attempt-001/analysis-plan.v1.json",
+      "bytes": 4417,
+      "sha256": "10fb245b8fc218302081a206475635f3657a0fd09f9913954c0e2b2cc0dfd028"
+    },
+    {
+      "absolutePath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-post-validation-runtime-diagnostic-attempt-001/diagnostic-authorization-receipt.v1.json",
+      "bytes": 1716,
+      "sha256": "899d9881732bdce0be8e6518e8decc9351360f248b677a81b0d999b281eb625a"
+    },
+    {
+      "absolutePath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-post-validation-runtime-diagnostic-attempt-001/field-boundary.v1.json",
+      "bytes": 1391,
+      "sha256": "88b5ecf98f78be250b5ba74a4868ee4348c0f2888a82be92604bbb58e8a4fa1b"
+    },
+    {
+      "absolutePath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-post-validation-runtime-diagnostic-attempt-001/runtime_diagnostic_v1.py",
+      "bytes": 58346,
+      "sha256": "64dfcc7a759936a208b3f460f389073ac75e8cfdf39340eed142539cf3560f20"
+    },
+    {
+      "absolutePath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-post-validation-runtime-diagnostic-attempt-001/Run-RuntimeDiagnostic.v1.ps1",
+      "bytes": 3350,
+      "sha256": "e50925a9ed807f248d6167d86a5569bca5701a54ce1b04adaaa16ce1f347f060"
+    }
+  ],
+  "runtime": {
+    "pythonPath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonBytes": 107312,
+    "pythonSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+  },
+  "externalBindings": {
+    "offlineValidationResultSha256": "2afcc259c47e390ff07c2c1cc2d295fe45d3aff249666174e93d862d0f4b9270",
+    "identityMappingSha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+    "scheduleSha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+    "oldValidatorSha256": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e",
+    "offlineValidatorV2Sha256": "bd5c938184ba38a7168c5207846d44637476a7fbee15c707ea06eeaebe227b63"
+  },
+  "executionRule": "one-shot; fail closed; source measured/evidence roots remain read-only"
+}

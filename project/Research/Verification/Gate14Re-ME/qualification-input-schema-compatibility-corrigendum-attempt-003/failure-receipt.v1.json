@@ -1,0 +1,44 @@
+{
+  "schema": "gate14re-me-input-schema-compatibility-attempt-003-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-003",
+  "status": "FAILED_CLOSED_INPUT_SCHEMA_COMPATIBILITY_ATTEMPT_003",
+  "failedAtUtc": "2026-10-17T11:43:19.8984106Z",
+  "exceptionType": "System.InvalidOperationException",
+  "exactFailure": "External prelaunch fingerprint does not satisfy the trusted rule.",
+  "stackTrace": "at Require-Condition, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-input-schema-compatibility-corrigendum-attempt-003\\Invoke-Gate14ReMEInputSchemaCompatibilityAttempt003.ps1: line 50\r\nat <ScriptBlock>, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-input-schema-compatibility-corrigendum-attempt-003\\Invoke-Gate14ReMEInputSchemaCompatibilityAttempt003.ps1: line 507",
+  "unityInvocationCount": 0,
+  "unityExitCode": null,
+  "retryPerformed": false,
+  "signalOrForcedTerminationSent": false,
+  "attempt001Evidence": {
+    "beforeContentDigestSha256": "f8401239543226c4b96d89b08db2150e7e578b55afc53e7f80aaa7062fd03fb3",
+    "afterContentDigestSha256": "f8401239543226c4b96d89b08db2150e7e578b55afc53e7f80aaa7062fd03fb3",
+    "unchanged": true,
+    "reclassified": false
+  },
+  "attempt002Evidence": {
+    "beforeContentDigestSha256": "6feaa2fa863bf1546e5e7d7fe6367ad4da605b7318936e4c0189baa7ab33f9fc",
+    "afterContentDigestSha256": "6feaa2fa863bf1546e5e7d7fe6367ad4da605b7318936e4c0189baa7ab33f9fc",
+    "unchanged": true,
+    "reclassified": false
+  },
+  "candidateAdoption": {
+    "inputSchemaV2Adopted": false,
+    "planningSchemaBindingV2Adopted": false
+  },
+  "scientificBoundary": {
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "transientIsolatedUnityCachesRemoved": []
+  }
+}

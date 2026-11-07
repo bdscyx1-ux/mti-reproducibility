@@ -1,0 +1,48 @@
+{
+  "schema": "gate14re-me-formal-st-freeze-index-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_CONTRACT_SET_READY_FOR_PACKAGE_BUILD_NOT_BUILT",
+  "contracts": [
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-analysis-contract.v5_0.json","bytes":3194,"sha256":"ed884beebaabb05cc039c6e401169cb80659386558e6af95f3eaec9bfec519cd"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-data-delivery-binding.v5_0.json","bytes":1574,"sha256":"a06ca8ed0e1e055b27a3b60791985a39ac06d8b5804acef69ad637386fe9f9f2"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-endpoint-mipe-contract.v5_0.json","bytes":3191,"sha256":"6b38e152c8a17c0bedcd2e700aa8274167e2e0831b33c13cdfbb5227b1354132"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-execution-contract.v5_0.json","bytes":2515,"sha256":"a2fe5232b87e68047f3e1df7a2da11718fa756451a8813fd07119a011329eac2"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-fairness-runtime-binding.v5_0.json","bytes":4319,"sha256":"fb0aff4f17618022ad4818b0f3afbf9ce44b804f97bfd2f9027e7bd3d9a8a06f"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-implementation-build-input-binding.v5_0.json","bytes":4147,"sha256":"6882706a9b8bdde9790ad3ebdb9b6fa456ac1f925f18afb834c6c420fcb7fc5d"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-parameter-amendment.v5_0.json","bytes":2113,"sha256":"f50c2cc150dac4f56f24d67cc3eff8d662bd2a69338486c2f62d5528209d5bca"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-resource-budget.v5_0.json","bytes":2262,"sha256":"31a9bc6b085add9652fdf9c845361e0498591a75885b47dbc3c1db640e236401"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-sample-size-decision.v5_0.json","bytes":1751,"sha256":"d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-schedule-contract.v5_0.json","bytes":2377,"sha256":"d480b1a1fda1dda0737015e66064e58aa5f84d87fa5d594d3bab65d9b7712cbc"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-scientific-design.v5_0.json","bytes":3855,"sha256":"78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708"},
+    {"relativePath":"Research/Gate14Re-ME/Execution/v5/formal-st-stopping-and-replacement-contract.v5_0.json","bytes":2415,"sha256":"39a1b52c19b1103a4bf2a97a6d61ff5c6d59c0eeef5f931d22ff3b69bd3dbe1c"}
+  ],
+  "decisiveEvidence": [
+    {"role":"qualification terminal PASS","relativePath":"Research/Verification/Gate14Re-ME/load-qualification-read-only-acceptance-attempt-001/qualification-terminal-pass-receipt.v1.json","sha256":"9ffc2c83896f1516eea969619ccc8c07f6be1bdab85cecead7224fc8f9cbeafa"},
+    {"role":"post-qualification runtime diagnostic PASS","relativePath":"Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/terminal-receipt.v2.json","sha256":"92e2cd918f55bae33c38bd8a71b915b5ab7b5f96e8a31ccbeb06d9533b980e6e"},
+    {"role":"identity-blind power terminal PASS","relativePath":"Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/terminal-receipt.v1.json","sha256":"759b86917e3caa43083142e2f7a066c66e88cc47c640d2f0ea90e618dbf5f81d"},
+    {"role":"identity-blind power final freeze","relativePath":"Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/final-evidence-freeze-manifest.v1.json","sha256":"aa4402dca4c327895e45292e66ed60d0d5162e5a5eaa8bcdb1712a2349479477"}
+  ],
+  "finalParameters": {
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81],
+    "B": 36,
+    "superblocks": 1296,
+    "measuredLaneProcesses": 7776,
+    "mipeRatio": 0.9,
+    "mipeLogRatio": -0.10536051565782628,
+    "movementTransferSentinel": "OMITTED",
+    "correctnessAndOracleHardGates": "RETAINED",
+    "planningHoursWith20PercentHeadroom": 83.493,
+    "sevenDayGateTriggered": false
+  },
+  "boundary": {
+    "formalScheduleRowsGenerated": 0,
+    "formalInputsGenerated": 0,
+    "formalPackageBuilt": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "MQOrMTStarted": false
+  }
+}

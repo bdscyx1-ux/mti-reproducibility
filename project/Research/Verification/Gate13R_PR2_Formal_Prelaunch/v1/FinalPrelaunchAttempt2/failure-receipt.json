@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-final-prelaunch-attempt2-failure-receipt-v1",
+  "failedAtUtc": "2026-10-08T17:34:42.5162561Z",
+  "status": "FAILED-PRELAUNCH-LOCALIZATION-PARSER / UNITY-NOT-LAUNCHED / FORMAL-ROOT-ABSENT / FORMAL-RECEIPT-ABSENT",
+  "failedImplementationRelativePath": "Research/Test-Gate13RPR2FinalPrelaunchV2.ps1",
+  "failedImplementationSha256": "4d95cb6d84e0a80b1021bd6b51a8ebc73ab28b4cc289bebe403796299ffce4f5",
+  "auditRelativePath": "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt2/audit.json",
+  "auditSha256": "845f39b4e3ad3ff2ced008bcec4a82f880a48a3401d330f0ad3cb4743abb1361",
+  "checkResult": "24/26",
+  "failedChecks": [
+    "sleep-disabled-on-ac",
+    "hibernate-disabled-on-ac"
+  ],
+  "failureClass": "LOCALIZED-POWERCFG-LABEL-PARSER-MISMATCH",
+  "observedPowerSchemeGuid": "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+  "observedAcLineStatus": 1,
+  "formalRootExistsAfterFailure": false,
+  "formalExecutionReceiptExistsAfterFailure": false,
+  "formalExecutionStatusExistsAfterFailure": false,
+  "unityEditorProcessCountAfterFailure": 0,
+  "projectLockExistsAfterFailure": false,
+  "frozenInputModified": false,
+  "formalAttemptConsumed": false,
+  "retryScope": "VERSIONED-PRELAUNCH-VALIDATION-ONLY"
+}

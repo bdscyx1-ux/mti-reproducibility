@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-me-formal-st-v5-migration-package-build-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "attempt": 3,
+  "status": "FROZEN_FORWARD_BUILD_PLAN",
+  "sourceBoundary": {
+    "formalFreezeIndexSha256": "35c3b98e42cc21b200308460c6b93fb48961b4a450522acc23958c76b70b00dd",
+    "formalB": 36,
+    "formalSuperblocks": 1296,
+    "formalLanes": 7776,
+    "formalInputsIncluded": 0,
+    "formalScheduleRowsIncluded": 0,
+    "executionAuthorizationIncluded": false
+  },
+  "forwardFixesOnly": [
+    "exact-path exemptions for three Python standard-library modules named secrets.py or token.py",
+    "Unity success path returns normally under launcher -quit; explicit EditorApplication.Exit is reserved for failure"
+  ],
+  "validationSequence": [
+    "complete staged file SHA-256 manifest",
+    "credential-path exclusion scan",
+    "typed-Parquet and fail-closed known-answer tests",
+    "algorithm-free Unity compile/readiness with natural exit code zero",
+    "ZIP64 build and CRC verification",
+    "fresh extraction and complete manifest verification",
+    "algorithm-free readiness from the extracted package"
+  ],
+  "prohibited": ["formal input generation", "formal schedule materialization", "formal ST collection", "formal analysis", "MQ", "MT", "credential copy"]
+}

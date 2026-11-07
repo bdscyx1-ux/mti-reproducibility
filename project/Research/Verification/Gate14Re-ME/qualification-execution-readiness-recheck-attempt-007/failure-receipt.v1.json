@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-007-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-007",
+  "status": "FAILED_CLOSED_READINESS_AUDIT_TOOL_STRICTMODE_SCALAR_COUNT",
+  "passed": false,
+  "terminal": true,
+  "failedAtUtc": "2026-10-17T18:06:57.6573295Z",
+  "exactFailure": {
+    "exceptionType": "System.Management.Automation.PropertyNotFoundStrict",
+    "message": "The property 'Count' cannot be found on this object. Verify that the property exists.",
+    "cause": "The Williams position-balance predicate applied .Count directly to a pipeline result that is null when no positions differ from the expected count under Set-StrictMode.",
+    "scientificAssetFailure": false,
+    "bindingFailure": false,
+    "qualificationReadinessDeterminationProduced": false
+  },
+  "auditTool": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-007/Invoke-Gate14ReMEQualificationExecutionReadinessRecheckV7.ps1",
+    "sha256": "fc12a4e183b67740b4b2ae46e4c15cb596ae01b9fb3f750835674bc5e140de9c",
+    "bytes": 30101,
+    "parserErrors": 0,
+    "invocationCount": 1,
+    "exitCode": 1
+  },
+  "preservation": {
+    "attempt007WillNotBeModifiedOrReclassified": true,
+    "statusV37Retained": true,
+    "loadQualificationExecutionAttempt003Retained": true,
+    "failedAttempt001MeasuredRootRetainedReadOnly": true,
+    "prospectiveAttempt002RootsAbsent": true
+  },
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "instrumentInvocationCount": 0,
+    "oracleInvocationCount": 0,
+    "emptyBoundaryInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false
+  },
+  "disposition": "FAIL_CLOSED_PRESERVE_ATTEMPT_007; a forward-only attempt-008 may fix only the audit-tool scalar-count expression under the previously granted readiness-recheck-until-pass authorization."
+}

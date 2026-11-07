@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "artifactKind": "GATE13R-AX2-FINAL-PRECOLLECTION-READINESS",
+  "designId": "gate13r-ax2-shared32-b48-four-treatment-v1",
+  "status": "FINAL-READINESS-PASS",
+  "completedAtUtc": "2026-10-16T15:03:36.111208Z",
+  "design": {
+    "campaignCount": 32,
+    "blocksPerCampaign": 48,
+    "completeBlockCount": 1536,
+    "anonymousSampleCount": 6144,
+    "algorithms": [
+      "BiA*-R",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "schedule": "four-treatment Williams",
+    "freshUnityProcessPerCompleteBlock": true
+  },
+  "frozenExecutionContract": {
+    "path": "H:\\DDM_Final_Project\\Research\\Gate13R-AX2\\Execution\\v1\\execution-contract.v3.json",
+    "sha256": "9e4a127d5410b02e33e9b5f6e77d5a0fc6e4e637cbd9dc10b03e59e63aef03eb",
+    "frozenPackageFileCount": 25,
+    "allFrozenPackageHashesMatch": true,
+    "formalCollectionAuthorized": false
+  },
+  "evidence": {
+    "coreReadiness": {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\core-readiness-v1\\core-readiness.v1.json",
+      "sha256": "8707c2b76a55ff1cf61a122de9cc65939842d9ddbf41f407ceb45c500c9d1111",
+      "status": "CORE-READINESS-PASS"
+    },
+    "algorithmCorrectness": {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\algorithm-correctness-v1\\algorithm-correctness.v1.json",
+      "sha256": "46790d4a40e962e7a19f4ce5668ec101b543ebc32862aed578604f93032e49c3",
+      "assertionCount": 962,
+      "status": "PASS"
+    },
+    "compile": {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\compile\\compile-receipt.v3.json",
+      "sha256": "515b4b1d80c4c3d511b363b455c427ed6a79f696823ed247afefb9adf47b0c6c",
+      "passed": true
+    },
+    "structuralSelftest": {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\tool-selftests\\structural-selftest.v1.json",
+      "sha256": "dab54e25718dd7233cbd4643c98d3414f76c70c2d7f087eae1c7458a28c4a7e1",
+      "passed": true
+    },
+    "scheduleValidation": {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\tool-selftests\\schedule-validation.v1.json",
+      "sha256": "8487343f57dbe0b1f9f274beb713d2348d9f75b20d7959749b5593b3ecbe2d31",
+      "passed": true
+    },
+    "p1AnalysisSelftest": {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\tool-selftests\\p1-analysis-selftest.v1.json",
+      "sha256": "dbbcbe896240ed65543c64f5ba812521f2e467c3784018a78c1eb9e4f2cd6f0b",
+      "passed": true
+    },
+    "expectedFailureAndRawCommitRejection": {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\tool-selftests\\expected-failure-and-raw-rejection-test.v1.json",
+      "sha256": "b95cec79a43b73f6d101e7f2bbdd0db105e5c598fd5ed4ebfd71e0ccc5c9013f",
+      "passed": true
+    },
+    "formalAuthorizationGuard": {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\tool-selftests\\formal-authorization-guard-test.v1.json",
+      "sha256": "a23d9749d5adf871b0386a0e752076e0b1e0b270f18709333af252fd9d11064b",
+      "passed": true
+    }
+  },
+  "tests": {
+    "positiveSmokeAndRawCommit": {
+      "root": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\final-smoke-positive",
+      "acceptedBlocks": 1,
+      "anonymousSamples": 4,
+      "freshProcesses": 1,
+      "wholeBlockReplacements": 0,
+      "rawCompleteReceiptSha256": "dde483acd566d4616af512561faf8023b208f865737c91c0fcf099a8c496125b",
+      "manifestFileCount": 24,
+      "readOnlyFileCount": 27,
+      "p1AggregatedOrInterpreted": false,
+      "passed": true
+    },
+    "memoryG256": {
+      "root": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\final-memory-g256",
+      "blockId": "g13rax2-c20-b0001",
+      "scenarioClass": "grid-scale-g256",
+      "acceptedBlocks": 1,
+      "anonymousSamples": 4,
+      "freshProcesses": 1,
+      "wholeBlockReplacements": 0,
+      "peakWorkingSetBytes": 1799954432,
+      "peakPrivateMemoryBytes": 2053685248,
+      "timedOut": false,
+      "structuralValidationPassed": true,
+      "postHocHardMemoryThresholdApplied": false,
+      "interpretation": "Observed completion evidence only; not a universal resource guarantee.",
+      "passed": true
+    },
+    "expectedFailure": {
+      "blockId": "g13rax2-c01-b0002",
+      "injectedFailurePosition": 3,
+      "replacementDisabled": true,
+      "supervisorExitCode": 2,
+      "acceptedBlocks": 0,
+      "acceptedAnonymousSamples": 0,
+      "wholeBlockReplacements": 0,
+      "acquisitionCompleteReceiptAbsent": true,
+      "acceptedBlockReceiptsAbsent": true,
+      "rawCommitDirectoryAbsent": true,
+      "rawCommitRejectionExitCode": 2,
+      "rawCommitRejectionReasonMatched": true
+    },
+    "formalAuthorizationGuard": {
+      "supervisorExitCode": 2,
+      "missingAuthorizationRejected": true,
+      "formalRootCreated": false,
+      "unityProcessLaunched": false
+    }
+  },
+  "supersededVerificationAttempts": [
+    {
+      "path": "Research/Verification/Gate13R-AX2/precollection-readiness-v1/smoke-positive/_control/failure-receipt.v1.json",
+      "sha256": "51cc8edde95501286c72c8dbbf767cb29fbfe45a72bd797720cba29a0fc13d10",
+      "excludedFromReadinessEvidence": true,
+      "sampleReuseAuthorized": false
+    },
+    {
+      "path": "Research/Verification/Gate13R-AX2/precollection-readiness-v1/expected-failure/_control/failure-receipt.v1.json",
+      "sha256": "dfb80ea1c69181ab260b2191d5a9ee652aa7ce557756c055bc5b9d5f2c0bd14f",
+      "excludedFromReadinessEvidence": true,
+      "sampleReuseAuthorized": false
+    }
+  ],
+  "scopeAttestation": {
+    "formalCollectionStarted": false,
+    "formalLaunchReceiptCount": 0,
+    "originalGate13RRawOrAnalysisReadOrModified": false,
+    "verificationSamplesAreNonFormal": true,
+    "verificationSamplesMayBeMergedIntoFormalAttempt": false,
+    "p1FormalAnalysisExecuted": false,
+    "winnerDeclared": false
+  },
+  "authorizationState": {
+    "formalCollectionAuthorized": false,
+    "singleAttemptFormalAuthorizationPromptMayNowBeGenerated": true,
+    "formalCollectionMayNotStartWithoutSeparateUserAuthorization": true
+  }
+}

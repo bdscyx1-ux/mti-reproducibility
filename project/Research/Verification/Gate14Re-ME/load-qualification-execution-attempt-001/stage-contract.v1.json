@@ -1,0 +1,38 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-001-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-001-921b3fd4-9f0d-4c0b-b6ad-caed4aea83d2",
+  "attemptId": "load-qualification-execution-attempt-001",
+  "status": "FAIL_CLOSED_PREFLIGHT_RUNTIME_COMPATIBILITY_GATE",
+  "createdAtUtc": "2026-10-17T16:08:57.6142198Z",
+  "entryRule": "No measured root, delivery root, supervisor process or Unity process may be created until every frozen authorization, hash, runtime capability, storage and process precondition passes.",
+  "authoritativeInputs": [
+    {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v29.json",
+      "sha256": "e439e2a2c83e87510a783b8b13026838e77d9ab3d3560ec7caef6908172063a2"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-003/terminal-readiness-receipt.v1.json",
+      "sha256": "fb94db25887dc30a8765980bb4c6d735388266da9285e82c0a441f1dcd9bb653"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_1.json",
+      "sha256": "af0b370258c2bce8b51cd6215c5c790dda6727a3a3eb581fa21713950d53bdf6"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+      "sha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035"
+    }
+  ],
+  "failurePolicy": {
+    "failClosed": true,
+    "preserveEvidence": true,
+    "startSupervisorAfterFailedPreflight": false,
+    "startUnityAfterFailedPreflight": false,
+    "createMeasuredOrDeliveryRootAfterFailedPreflight": false,
+    "repairWithinThisAuthorization": false,
+    "retryWithinThisAuthorization": false,
+    "createNewAttemptAutomatically": false
+  }
+}

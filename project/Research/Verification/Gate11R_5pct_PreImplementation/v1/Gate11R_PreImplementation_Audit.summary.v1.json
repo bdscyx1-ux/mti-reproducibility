@@ -1,0 +1,406 @@
+{
+    "schemaVersion":  1,
+    "auditId":  "gate11r-preimplementation-audit-v1",
+    "createdAtUtc":  "2026-10-07T02:22:26.7840547Z",
+    "projectPath":  "H:\\DDM_Final_Project",
+    "status":  "FAILED",
+    "checkCount":  74,
+    "passedCount":  73,
+    "failedCount":  1,
+    "unityStarted":  false,
+    "officialProductionRootCreated":  false,
+    "bindings":  [
+                     {
+                         "relativePath":  "Research/Gate11R_PreWrite_Preservation_Audit.v1.json",
+                         "bytes":  5561,
+                         "sha256":  "f5c868597cf4b49e677411bf8f05c2b045882d5fa36eb152f120f0fb972017c9"
+                     },
+                     {
+                         "relativePath":  "Research/Gate11R_Execution_Authorization.v1.json",
+                         "bytes":  1336,
+                         "sha256":  "4d652688fefdd319b0316fd4c0390c894fcff2fe55dfbb83809e82a027248bfa"
+                     },
+                     {
+                         "relativePath":  "Research/Gate11R_5pct_Scenario_Playable_Specification.v1.md",
+                         "bytes":  12482,
+                         "sha256":  "18b04a31e7099a7bad52791bd3699b649d31060d06e559ffa1cb6cc6d4810a5d"
+                     },
+                     {
+                         "relativePath":  "Research/Gate11R_5pct_Scenario_Playable_Test_Design.v1.md",
+                         "bytes":  8640,
+                         "sha256":  "9acbc130a920863d421d00a2add4d7e556f8ca3bc65f92241856438ec32d317e"
+                     }
+                 ],
+    "checks":  [
+                   {
+                       "id":  "project-path-absolute",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project"
+                   },
+                   {
+                       "id":  "prewrite-audit-passed",
+                       "passed":  true,
+                       "detail":  "PASSED"
+                   },
+                   {
+                       "id":  "authorization-status",
+                       "passed":  true,
+                       "detail":  "AUTHORIZED"
+                   },
+                   {
+                       "id":  "active-design-id",
+                       "passed":  true,
+                       "detail":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1"
+                   },
+                   {
+                       "id":  "failure-policy",
+                       "passed":  true,
+                       "detail":  "FAIL-CLOSED-AT-FIRST-HARD-GATE-NO-AUTO-RETRY-NO-AUTO-RESUME"
+                   },
+                   {
+                       "id":  "authorization-source-exists",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Gate10R_to_Gate12R_LedgerEntries\\063-user-gate11r-authorization-source.txt"
+                   },
+                   {
+                       "id":  "authorization-source-hash",
+                       "passed":  true,
+                       "detail":  "49485321501bc10220279c61a6d4d5530b7d50110c83ee59f72e867ee4b798be"
+                   },
+                   {
+                       "id":  "gate10r-terminal-checkpoint-hash",
+                       "passed":  true,
+                       "detail":  "fab889a1ff9f2d7911a6018b9cd3316e4dbff6e1c8cd8523678488ef252cbf56"
+                   },
+                   {
+                       "id":  "gate10r-final-audit-hash",
+                       "passed":  true,
+                       "detail":  "8714fea2235d488abad7278bd6ccef9cf50f75aae57969220f40a19de16dd72c"
+                   },
+                   {
+                       "id":  "gate10r-terminal-status",
+                       "passed":  true,
+                       "detail":  "GATE10R-PASSED-WAITING-FOR-USER-AUTHORIZATION"
+                   },
+                   {
+                       "id":  "protected-tree-Research-Verification-Gate10R_ProcessReuse_5pct-v1",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":4,\"rawBytes\":9577,\"treeSha256\":\"2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-Verification-Gate10R_ProcessReuse_5pct-v2",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":101,\"rawBytes\":9375526,\"treeSha256\":\"da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-Verification-Gate10R_ProcessReuse_5pct-v3",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":165,\"rawBytes\":14661809,\"treeSha256\":\"29f5aa8f0461abb120792dea0f2806e46e4dc9836aa843ce747f2436c1645a23\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-Verification-Gate10R_ProcessReuse_5pct-v4",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":169,\"rawBytes\":14661848,\"treeSha256\":\"ac7f70b2098f6fc28eaa48116faabe1a527f34168d1c851f5a5d7e8cbbbc53b2\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-FormalScenarios-v1",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":57,\"rawBytes\":124776145,\"treeSha256\":\"d7a1c20022870e9987cb21dfef98dd8b8c88624deb7de33df4cff0fffecf9b88\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-PilotRuns-Gate12-v1",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":1694,\"rawBytes\":577893148,\"treeSha256\":\"64a1be1cf1339f40e596d5a1545320e6b7a5edb453a6f515f905430ab38310f7\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-PilotRuns-Gate12-v1-failed-pre-sample-attempt1",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":1,\"rawBytes\":20841,\"treeSha256\":\"64aa59ed9cd425d59079fff4dea4b48be1b0e8b3b6fc60e7d10d8a0ac7a5ceac\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-PilotRuns-Gate12-v1-failed-warmup-attempt2",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":103,\"rawBytes\":14187382,\"treeSha256\":\"435a60aabd6f4df85aa166b73e1cd9fddba193d92523d55876500b2a6b36bfd5\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-FormalRuns-Gate13-v1",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":891,\"rawBytes\":129667391,\"treeSha256\":\"39d395dc87a033870c0d8638d3f56ddaede0e57a7497b6264d4fafcf2f8107fa\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-PilotRuns-Gate13_ProcessReuse-v1",
+                       "passed":  false,
+                       "detail":  "{\"exists\":true,\"fileCount\":838,\"rawBytes\":91219643,\"treeSha256\":\"20f151c53bbc979a0e14f988edd6ae717e0e8c128b33b492b4dfb922fc3924cc\"}"
+                   },
+                   {
+                       "id":  "protected-tree-Research-PilotRuns-Gate13_ProcessReuse-v2",
+                       "passed":  true,
+                       "detail":  "{\"exists\":true,\"fileCount\":4,\"rawBytes\":8899,\"treeSha256\":\"21f59a6b6f7617bb0a745408543aa67d371c41cef356649b442185f0584edbc7\"}"
+                   },
+                   {
+                       "id":  "protected-material-Assets-_Scripts-Research-Scenarios-FormalScenarioMatrixGenerator.cs",
+                       "passed":  true,
+                       "detail":  "bytes=29920;sha256=248ee464d4ddbc900b229ff4f86386308f652f229751aaef7cff6e72fbc981cb"
+                   },
+                   {
+                       "id":  "protected-material-Assets-_Scripts-Research-Scenarios-FormalScenarioMatrixGenerator.cs.meta",
+                       "passed":  true,
+                       "detail":  "bytes=243;sha256=ebdda2bc3c36f82f49c3e8088505d0ecc089af6513fae976a706903d6fb07ca9"
+                   },
+                   {
+                       "id":  "protected-material-Assets-_Scripts-Research-Scenarios-DeterministicScenarioDefinition.cs",
+                       "passed":  true,
+                       "detail":  "bytes=28465;sha256=97a5dba23c74dad389357e6d79c1a404a52bfe00f52a86a13385f50228f51670"
+                   },
+                   {
+                       "id":  "protected-material-Assets-_Scripts-Research-Scenarios-DeterministicScenarioJson.cs",
+                       "passed":  true,
+                       "detail":  "bytes=24085;sha256=ecd9c1a2c060e0e279341e1c1dddc49dacc2d6a0afe2720b46c9ecf7d0837716"
+                   },
+                   {
+                       "id":  "protected-material-Assets-_Scripts-Research-Editor-Gate11FormalScenarioMatrixCommand.cs",
+                       "passed":  true,
+                       "detail":  "bytes=100547;sha256=6edd91d11500ed15fdd744ce02d2b887a6a6ee244eb5c9172ab22ca552a63d8f"
+                   },
+                   {
+                       "id":  "protected-material-Research-Gate10R_Onward_ProcessReuse_5pct_Experiment_Plan.md",
+                       "passed":  true,
+                       "detail":  "bytes=21689;sha256=0cababa30b17fd23cb713b3774622205971cde338f179356d5e7ac06acc04c67"
+                   },
+                   {
+                       "id":  "protected-material-Research-Gate10R_ProcessReuse_5pct_Specification.md",
+                       "passed":  true,
+                       "detail":  "bytes=8463;sha256=609f2a9a149908d92c3630e008f5d4dbf29d9d704dda5adacf80dd61da795039"
+                   },
+                   {
+                       "id":  "protected-material-Research-Gate10R_ProcessReuse_5pct_Test_Design.md",
+                       "passed":  true,
+                       "detail":  "bytes=6246;sha256=187d651dd8030c366544fd229f3d64cce326d94b8c9b415b484a1a21f462ff7c"
+                   },
+                   {
+                       "id":  "protected-material-Research-Verification-Run-Gate12AnalysisUnitTests.ps1",
+                       "passed":  true,
+                       "detail":  "bytes=13713;sha256=e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1"
+                   },
+                   {
+                       "id":  "protected-material-Research-Verification-Gate12_AnalysisUnitTests.summary.json",
+                       "passed":  true,
+                       "detail":  "bytes=1748;sha256=1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d"
+                   },
+                   {
+                       "id":  "root-absent-Research-FormalScenarios-Gate11R_5pct-v1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\FormalScenarios\\Gate11R_5pct\\v1"
+                   },
+                   {
+                       "id":  "root-absent-Research-PlayableExperiments-Gate11R_5pct-v1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\PlayableExperiments\\Gate11R_5pct\\v1"
+                   },
+                   {
+                       "id":  "root-absent-Assets-_Scenes-Research-Playable-Gate11R_5pct-v1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Assets\\_Scenes\\Research\\Playable\\Gate11R_5pct\\v1"
+                   },
+                   {
+                       "id":  "root-absent-Research-Verification-Gate11R_5pct-v1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate11R_5pct\\v1"
+                   },
+                   {
+                       "id":  "root-absent-Research-PilotRuns-Gate12R_ProcessReuse_5pct-v1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate12R_ProcessReuse_5pct\\v1"
+                   },
+                   {
+                       "id":  "root-absent-Research-FormalRuns-Gate13R_ProcessReuse_5pct-v1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_ProcessReuse_5pct\\v1"
+                   },
+                   {
+                       "id":  "spec-contract-specificationId",
+                       "passed":  true,
+                       "detail":  "gate11r-process-reuse-5pct-scenario-playable-spec-v1"
+                   },
+                   {
+                       "id":  "spec-contract-scenarioMatrixId",
+                       "passed":  true,
+                       "detail":  "gate11r-process-reuse-5pct-scenario-matrix-v1"
+                   },
+                   {
+                       "id":  "spec-contract-generatorId",
+                       "passed":  true,
+                       "detail":  "ddm-gate11r-formal-scenario-generator-v1"
+                   },
+                   {
+                       "id":  "spec-contract-preregistrationId",
+                       "passed":  true,
+                       "detail":  "ddm-gate11r-planning-preregistration-v1"
+                   },
+                   {
+                       "id":  "spec-contract-playableBundleId",
+                       "passed":  true,
+                       "detail":  "gate11r-playable-experiment-bundle-v1"
+                   },
+                   {
+                       "id":  "spec-contract-scenarioCount",
+                       "passed":  true,
+                       "detail":  "53 unique canonical scenarios"
+                   },
+                   {
+                       "id":  "spec-contract-campaignCount",
+                       "passed":  true,
+                       "detail":  "74 campaign conditions"
+                   },
+                   {
+                       "id":  "spec-contract-cellCount",
+                       "passed":  true,
+                       "detail":  "212 eligible algorithm cells"
+                   },
+                   {
+                       "id":  "spec-contract-precision",
+                       "passed":  true,
+                       "detail":  "h = ln(1.05) = 0.048790164169432"
+                   },
+                   {
+                       "id":  "spec-contract-noCap",
+                       "passed":  true,
+                       "detail":  "There is no hard cap"
+                   },
+                   {
+                       "id":  "spec-contract-watermarkPrefix",
+                       "passed":  true,
+                       "detail":  "VISUALIZATION REPLAY"
+                   },
+                   {
+                       "id":  "spec-contract-watermarkSuffix",
+                       "passed":  true,
+                       "detail":  "NOT A TIMING RUN"
+                   },
+                   {
+                       "id":  "spec-contract-glyph",
+                       "passed":  true,
+                       "detail":  "research-visual-direction-glyph-v1"
+                   },
+                   {
+                       "id":  "spec-contract-passedState",
+                       "passed":  true,
+                       "detail":  "GATE11R-PASSED-WAITING-FOR-GATE12R-AUTHORIZATION"
+                   },
+                   {
+                       "id":  "preregistration-86786f01d831",
+                       "passed":  true,
+                       "detail":  "P1:"
+                   },
+                   {
+                       "id":  "preregistration-ef7f58393dbe",
+                       "passed":  true,
+                       "detail":  "P2:"
+                   },
+                   {
+                       "id":  "preregistration-18e89ef92ff3",
+                       "passed":  true,
+                       "detail":  "P3:"
+                   },
+                   {
+                       "id":  "preregistration-a1b10e6f1fcc",
+                       "passed":  true,
+                       "detail":  "P4:"
+                   },
+                   {
+                       "id":  "preregistration-03325dcf9982",
+                       "passed":  true,
+                       "detail":  "Secondary families S1"
+                   },
+                   {
+                       "id":  "pilot-anchor-core-r01-s1-shared",
+                       "passed":  true,
+                       "detail":  "core-r01-s1-shared"
+                   },
+                   {
+                       "id":  "pilot-anchor-core-r07-s2-shared",
+                       "passed":  true,
+                       "detail":  "core-r07-s2-shared"
+                   },
+                   {
+                       "id":  "pilot-anchor-grid-scale-g256-shared",
+                       "passed":  true,
+                       "detail":  "grid-scale-g256-shared"
+                   },
+                   {
+                       "id":  "pilot-anchor-agent-scale-a512-shared",
+                       "passed":  true,
+                       "detail":  "agent-scale-a512-shared"
+                   },
+                   {
+                       "id":  "pilot-anchor-dynamic-footprint-f225-shared",
+                       "passed":  true,
+                       "detail":  "dynamic-footprint-f225-shared"
+                   },
+                   {
+                       "id":  "pilot-anchor-reachability-c8-strict-shared",
+                       "passed":  true,
+                       "detail":  "reachability-c8-strict-shared"
+                   },
+                   {
+                       "id":  "pilot-anchor-core-r01-s1-hetero",
+                       "passed":  true,
+                       "detail":  "core-r01-s1-hetero"
+                   },
+                   {
+                       "id":  "pilot-anchor-core-r07-s2-hetero",
+                       "passed":  true,
+                       "detail":  "core-r07-s2-hetero"
+                   },
+                   {
+                       "id":  "pilot-anchor-goal-count-g32-hetero",
+                       "passed":  true,
+                       "detail":  "goal-count-g32-hetero"
+                   },
+                   {
+                       "id":  "test-design-8c5f205f207f",
+                       "passed":  true,
+                       "detail":  "one official Gate 11R attempt"
+                   },
+                   {
+                       "id":  "test-design-a6769f97ea7e",
+                       "passed":  true,
+                       "detail":  "fail closed"
+                   },
+                   {
+                       "id":  "test-design-68b8e26a6670",
+                       "passed":  true,
+                       "detail":  "no automatic retry or resume"
+                   },
+                   {
+                       "id":  "test-design-a1b1fcedb023",
+                       "passed":  true,
+                       "detail":  "53 scenarios, 74 campaigns, 212 algorithm cells"
+                   },
+                   {
+                       "id":  "test-design-288cc8060882",
+                       "passed":  true,
+                       "detail":  "separate-process scenario and Playable verification"
+                   },
+                   {
+                       "id":  "test-design-f5b6b69d8ab6",
+                       "passed":  true,
+                       "detail":  "Gate 12R and Gate 13R are never invoked"
+                   },
+                   {
+                       "id":  "no-unity-process",
+                       "passed":  true,
+                       "detail":  "count=0"
+                   },
+                   {
+                       "id":  "no-unity-lockfile",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Temp\\UnityLockfile"
+                   },
+                   {
+                       "id":  "verified-unity-present",
+                       "passed":  true,
+                       "detail":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe"
+                   }
+               ]
+}

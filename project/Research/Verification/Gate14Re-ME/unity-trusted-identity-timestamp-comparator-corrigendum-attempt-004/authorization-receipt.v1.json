@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004",
+  "status": "AUTHORIZED_OFFLINE_TIMESTAMP_COMPARATOR_KNOWN_ANSWER_ONLY",
+  "authorizedAtUtc": "2026-10-17T11:49:59.2203314Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME Unity trusted identity timestamp comparator corrigendum attempt‑004：完整保留 qualification input schema compatibility corrigendum attempt‑003 的失败状态、Status v19 和全部证据，不删除、不修改、不改判；不得重新启动 Unity。仅允许创建独立 attempt‑004 证据目录，将 trusted launch identity 外部指纹中的 creationTimeUtc 与 lastWriteTimeUtc 比较从原始字符串相等修正为严格 DateTimeOffset round-trip 解析后按 UTC instant/ticks 相等，并同时保留双方原始文本。只允许运行无 Unity 的离线 known-answer：必须确认 2024-06-11T11:26:54Z 与 2024-06-11T11:26:54.0000000Z 判为同一时刻，确认任一真实时间差异、无效文本、缺失值或非唯一解析均 fail closed；不得修改 trusted launch identity rule v1、不得降低 SHA‑256、分块摘要、路径、NTFS 文件身份、PE、Authenticode、文件长度或进程复合身份要求。只有全部离线断言通过，才允许冻结修复后的比较器源码、哈希、known-answer receipt 和新的状态；不得运行 schema compatibility Unity 自检，不得生成调度、输入或匿名身份映射，不得创建 measured root，不得运行 planner、算法 lane、正式采集、正式分析、排名或赢家裁决。",
+  "scope": {
+    "offlineOnly": true,
+    "unityLaunchAuthorized": false,
+    "automaticRetryAuthorized": false,
+    "preserveAttempt003Unchanged": true,
+    "preserveStatusV19Unchanged": true,
+    "modifyTrustedLaunchIdentityRuleAuthorized": false,
+    "authorizedRepair": "Parse both timestamp texts through a strict DateTimeOffset round-trip contract, preserve both original texts, and compare the resulting UTC ticks."
+  },
+  "prohibited": {
+    "deleteModifyOrReclassifyAttempt003": true,
+    "modifyOrOverwriteStatusV19": true,
+    "launchUnity": true,
+    "runSchemaCompatibilityUnitySelfCheck": true,
+    "weakenAnyNonTimestampIdentityRequirement": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputBundles": true,
+    "generateAnonymousIdentityMapping": true,
+    "createMeasuredRoot": true,
+    "runPlanner": true,
+    "runAlgorithmLane": true,
+    "formalCollection": true,
+    "formalAnalysis": true,
+    "algorithmRanking": true,
+    "winnerAdjudication": true
+  }
+}

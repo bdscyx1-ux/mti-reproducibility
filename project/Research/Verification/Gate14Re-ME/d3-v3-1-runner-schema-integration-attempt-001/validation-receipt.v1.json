@@ -1,0 +1,72 @@
+{
+  "schema": "gate14re-me-d3-v3-1-runner-schema-integration-validation-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-runner-schema-integration-attempt-001",
+  "status": "PASS_D3_V3_1_RUNNER_SCHEMA_INTEGRATION_VALIDATION",
+  "validatedAtUtc": "2026-10-17T08:14:27.3664256Z",
+  "unityCompilation": {
+    "unityVersion": "2022.3.30f1c1",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "batchmode": true,
+    "nographics": true,
+    "burstCompilationDisabled": true,
+    "exitCode": 0,
+    "csharpCompilerErrorCount": 0,
+    "projectUnrelatedWarningCount": 2,
+    "projectUnrelatedWarnings": [
+      "Assets/_Scripts/FlowFieldScripts_Attempt 2/Unit.cs(33,19): warning CS0414: The field 'Unit.gravityMultiplier' is assigned but its value is never used"
+    ],
+    "logRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/unity-compile/unity-compile.log",
+    "logLengthBytes": 79412,
+    "logSha256": "cdd3072fa56fe082c35d5a6b951c8beaa31a76a75aba1272e5424f0256e77d54"
+  },
+  "algorithmFreeIntegrationSelfCheck": {
+    "executeMethod": "DDM.Research.Editor.D3V31IntegrationAttempt001.Gate14ReMED3V31RunnerSchemaIntegrationSelfCheckV1.Run",
+    "exitCode": 0,
+    "receiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/unity-self-check-output/integration-self-check-receipt.v1.json",
+    "receiptLengthBytes": 8471,
+    "receiptSha256": "b0dbcc4d178f5770325ceaea613c0d736c27b52849f33f413953e69f488eb41c",
+    "receiptStatus": "PASS_D3_V3_1_RUNNER_SCHEMA_INTEGRATION_SELF_CHECK",
+    "strictJsonParsed": true,
+    "nonFiniteJsonTokenCount": 0,
+    "bindingCount": 13,
+    "allBindingsMatched": true,
+    "outputSchemaHeaderPassed": true,
+    "d3RawFieldSetPassed": true,
+    "eventAndEmptyJoinFieldsPassed": true,
+    "oldSnapshotFieldsExcludedFromV2Tables": true,
+    "runnerSourceBindingPassed": true,
+    "runnerTypeAndEntryPointPassed": true,
+    "syntheticStrictJsonRoundTripPassed": true,
+    "syntheticRateFormulaPassed": true,
+    "logRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/unity-integration-self-check.log",
+    "logLengthBytes": 82199,
+    "logSha256": "07f1332386da53c4bdf68d51ade1b4ab1165db9c653e5d6e08b47ec877f6ab30"
+  },
+  "protectedBindings": {
+    "parentD3V31FreezeReceiptUnchanged": true,
+    "runnerV1Unchanged": true,
+    "outputSchemaV1Unchanged": true,
+    "sixAlgorithmFairnessBindingUnchanged": true,
+    "qualifiedD3ContractUnchanged": true,
+    "nativeD3BinaryUnchanged": true,
+    "managedD3WrapperUnchanged": true
+  },
+  "scientificBoundary": {
+    "qualifiedD3EndpointChanged": false,
+    "d3RuntimeKnownAnswerRerun": false,
+    "nativeD3WindowOpenedByThisStage": false,
+    "plannerConstructed": false,
+    "algorithmLaneExecuted": false,
+    "scheduleGenerated": false,
+    "qualificationInputGenerated": false,
+    "anonymousIdentityMappingGenerated": false,
+    "qualificationMeasuredRootCreated": false,
+    "formalMeasuredRootCreated": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "unityProcessRemaining": 0,
+    "unityPackageManagerProcessRemaining": 0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate10r-to-gate12r-sequential-execution-v1",
+  "recordedAt": "2026-10-06T16:20:00+08:00",
+  "status": "AUTHORIZED-PENDING-PREFLIGHT",
+  "source": {
+    "attachmentPath": "C:/Users/bdscy/.codex/attachments/fe1503ac-f6e4-4b9c-bc2e-2bdd1de8b865/已粘贴的文本.txt",
+    "copiedSourceRelativePath": "Research/Gate10R_to_Gate12R_LedgerEntries/001-user-authorization-source.txt",
+    "bytes": 16506,
+    "sha256": "8388109eba29c6ea577bd64d1664506536a0fd08290c82aa8ae8b70a457e4314"
+  },
+  "activeDesignId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "authorizedGates": [
+    "10R",
+    "11R",
+    "12R"
+  ],
+  "automaticTransitionWithinAuthorizedGates": true,
+  "hardFailurePolicy": "SAVE-ATOMIC-EVIDENCE-AND-STOP-NO-AUTO-RETRY-NO-RESUME",
+  "gate12RPilotExecutionsAuthorized": 1,
+  "gate13RFormalPreparationAuthorized": false,
+  "gate13RFormalCampaignAuthorized": false,
+  "formalRootMayBeCreated": false,
+  "reservedFormalRoot": "Research/FormalRuns/Gate13R_ProcessReuse_5pct/v1"
+}
+

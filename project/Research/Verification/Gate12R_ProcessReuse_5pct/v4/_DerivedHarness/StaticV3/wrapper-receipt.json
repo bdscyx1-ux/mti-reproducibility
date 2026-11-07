@@ -1,0 +1,30 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-static-unit-plan-v2-wrapper-v3",
+    "createdAtUtc":  "2026-10-07T11:59:18.6780382Z",
+    "sourceSha256":  "dfc8c94e3e2103946aa165c65beb58aa5b0aa744ba948984ac66766de9e8e049",
+    "derivedSha256":  "dd2be39ebb321fb717491667e84d5daada19c7a35c7d920856eb59b905db3bff",
+    "routes":  [
+                   {
+                       "from":  "Gate12R_PreWrite_Preservation_Baseline.v1.json",
+                       "to":  "Gate12R_PreWrite_Preservation_Baseline.v2.json",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Gate12R_5pct_ProcessReuse_Pilot_Plan.v1.json",
+                       "to":  "Gate12R_5pct_ProcessReuse_Pilot_Plan.v2.json",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "68f32ee7acdeaa4c43a4f4932825e40e552bb5df473a96c66a9dcffef45d8ff3",
+                       "to":  "c76a0a1dc2ecc4efbc4f5419bee9890cf275c9b1fec7e4c64b22d8e2688849cf",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "summaryKind=\u0027gate12r-static-unit-audit-v1\u0027",
+                       "to":  "summaryKind=\u0027gate12r-static-unit-audit-v3-pilot-plan-v2-reset-contract\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "frozenDesignSemanticsChanged":  false
+}

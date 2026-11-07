@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-002-external-launch-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-002-1531999d-c89b-4200-9564-e40ea58e941d",
+  "attemptId": "load-qualification-execution-attempt-002",
+  "status": "SUPERVISOR_LAUNCHED_THEN_NATURALLY_EXITED_DURING_PREFLIGHT",
+  "launchedAtUtc": "2026-10-17T16:59:50.2636759Z",
+  "supervisorProcess": {
+    "pid": 89112,
+    "creationTimeUtc": "2026-10-17T16:59:49.8817110Z",
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "executableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "version": "7.6.5",
+    "processFoundAtLaunch": true,
+    "aliveAtLaunchReceiptCapture": true,
+    "naturalExitObservedAfterLaunch": true,
+    "signalOrForcedTerminationSent": false,
+    "exitCodeCaptured": false,
+    "exitCode": null
+  },
+  "launchBinding": {
+    "launchContractRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002/launch-contract.v1.json",
+    "launchContractSha256": "33d9708a12c1d20514e3362adf27154087ca8ad29c5527305a464e8f2c7a7c12",
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+    "supervisorSha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+    "executionAuthorizationRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002/execution-authorization.v1.json",
+    "executionAuthorizationSha256": "c06ff9bce107f26cd61d016d7581a5f24c4602c618708a6f4f62058fa74affdc",
+    "executionContractSha256": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0",
+    "implementationManifestSha256": "83ef4c7081a77f7093e9f37f53b786f628459c404ca9e89b78d6e93ce64d2514"
+  },
+  "processOutput": {
+    "stdoutRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002/supervisor.stdout.log",
+    "stdoutBytes": 0,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002/supervisor.stderr.log",
+    "stderrBytes": 359,
+    "stderrSha256": "038fb51786b9ec7e7f6e4141e8967a2dfe35cfe50456f1a8914d47246f9739e7"
+  },
+  "boundaryAtPostExitInspection": {
+    "supervisorProcessCount": 0,
+    "unityProcessCount": 0,
+    "measuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0
+  }
+}

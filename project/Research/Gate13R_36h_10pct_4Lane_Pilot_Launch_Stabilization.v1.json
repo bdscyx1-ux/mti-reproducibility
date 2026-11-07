@@ -1,0 +1,58 @@
+{
+    "schemaVersion":  1,
+    "evidenceKind":  "gate13r-36h-v16-noninvasive-pilot-launch-stabilization-v1",
+    "createdAtUtc":  "2026-10-08T06:17:36.0874330Z",
+    "status":  "PASSED-INVOKING-FROZEN-PILOT",
+    "thresholdBytes":  17179869184,
+    "maximumWaitSeconds":  600,
+    "sampleIntervalSeconds":  5,
+    "requiredConsecutivePassingSamples":  3,
+    "sampleCount":  3,
+    "samples":  [
+                    {
+                        "sampledAtUtc":  "2026-10-08T06:17:25.9660562Z",
+                        "freePhysicalMemoryBytes":  21486325760,
+                        "thresholdBytes":  17179869184,
+                        "unityProcessCount":  0,
+                        "laneLockCount":  0,
+                        "passed":  true,
+                        "consecutivePassingSamples":  1
+                    },
+                    {
+                        "sampledAtUtc":  "2026-10-08T06:17:31.0268778Z",
+                        "freePhysicalMemoryBytes":  21495595008,
+                        "thresholdBytes":  17179869184,
+                        "unityProcessCount":  0,
+                        "laneLockCount":  0,
+                        "passed":  true,
+                        "consecutivePassingSamples":  2
+                    },
+                    {
+                        "sampledAtUtc":  "2026-10-08T06:17:36.0874330Z",
+                        "freePhysicalMemoryBytes":  21503639552,
+                        "thresholdBytes":  17179869184,
+                        "unityProcessCount":  0,
+                        "laneLockCount":  0,
+                        "passed":  true,
+                        "consecutivePassingSamples":  3
+                    }
+                ],
+    "startedAt":  "2026-10-08T14:17:25.8223100+08:00",
+    "completedAt":  "2026-10-08T14:17:36.0874330+08:00",
+    "wallSeconds":  10.265122999999999,
+    "processTerminationUsed":  false,
+    "workingSetTrimmingUsed":  false,
+    "cacheFlushUsed":  false,
+    "thresholdRelaxed":  false,
+    "pilotOrchestratorRelativePath":  "Research/Run-Gate13R36hConcurrencyPilotV16.ps1",
+    "pilotOrchestratorSha256":  "a783cc0326d9f5e6c550a61afeb1dbf8799dffe4666ed5ad7408273de13d82a4",
+    "diagnosisRelativePath":  "Research/Gate13R_36h_10pct_4Lane_v16_Pilot_PreRoot_FreeMemory_Race_Diagnosis.v1.json",
+    "diagnosisSha256":  "85cf71818b0338b78daac6ba91df4ebc3921fd44c0d337f72a67370287632c3a",
+    "prePilotAuditRelativePath":  "Research/Verification/Gate13R_36h_10pct_4Lane/v16/ValidationOnlyPrePilotAudit.summary.json",
+    "prePilotAuditSha256":  "a61cd65f423f46ebe0bf64183768b853d13c4c4aac49f8372c53ffe64373fd92",
+    "pilotRootCreated":  false,
+    "formalRootCreated":  false,
+    "error":  "",
+    "passed":  true,
+    "formalCampaign":  false
+}

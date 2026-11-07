@@ -1,0 +1,36 @@
+{
+  "schema": "gate14re-mq-formal-external-launch-observation-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "authorizationId": "gate14re-mq-formal-collection-attempt-003-f9cf80a8-7ad8-4ec4-8568-bb4d90a9a445",
+  "status": "SUPERVISOR_IDENTITY_VERIFIED_AND_ORDINAL_0_TRUSTED_IDENTITY_ACCEPTED_COLLECTION_ACTIVE",
+  "observedAtUtc": "2026-10-21T17:43:48.6362151+00:00",
+  "prelaunchAuditSha256": "d184ca9d7b3fe0475593af51ddacb5572d8991689046466604063c1fa4ca59ef",
+  "launchContractSha256": "dca4e236acf4346fb6b375f70931f042253aeb1356cb34db8d72e318424ab70f",
+  "supervisorPid": 24904,
+  "supervisorIdentity": {
+    "alive": true,
+    "creationTimeUtc": "2026-10-21T17:43:23.8430845Z",
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "executableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "commandLine": "\"C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoProfile -NonInteractive -File H:\\DDM_Final_Project\\Research\\Gate14Re-MQ-CFF-IDFF\\Execution\\v2\\Run-Gate14ReMQFormalCollection.v2_2.ps1 -ProjectRoot H:\\DDM_Final_Project -MeasuredRoot H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate14Re-MQ-CFF-IDFF\\formal-mq\\v2\\attempt-003 -ExecutionAuthorization H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-MQ-CFF-IDFF\\formal-collection-execution-attempt-003\\execution-authorization.v2.json -ExecutionAuthorizationSha256 189d62a4f321cefe2d75055f34a4a02b3695c9086ce240c4f9afa880065fc7a6 -ImplementationManifest H:\\DDM_Final_Project\\Research\\Gate14Re-MQ-CFF-IDFF\\Design\\v2\\formal-mq-implementation-manifest.v2_4.json -ImplementationManifestSha256 d88c6281edc6cad895aa9fb9ef5c27542c6819f2a879a10c670807accb13561f -ExecutionContract H:\\DDM_Final_Project\\Research\\Gate14Re-MQ-CFF-IDFF\\Design\\v2\\formal-mq-execution-contract.v2.json -ExecutionContractSha256 d4406a0af544185993450205df358dc7e92abcd5fe0d051f4721cb9300277266 -Schedule H:\\DDM_Final_Project\\Research\\Gate14Re-MQ-CFF-IDFF\\Execution\\v2\\formal-process-schedule.v2.jsonl -ScheduleSha256 70121c16dd42472610ddeddb3848dcd25d279390930def5b66d29049316c44a5 -BlockInputs H:\\DDM_Final_Project\\Research\\Gate14Re-MQ-CFF-IDFF\\FormalInputs\\v2\\formal-block-input-assignments.v2.jsonl -BlockInputsSha256 bf4d9cf0cf6bd808c02c24b95035cb4e887b883c5399ea8be7f47e4514d465db -IdentityMap H:\\DDM_Final_Project\\Research\\Gate14Re-MQ-CFF-IDFF\\Execution\\v2\\opaque-algorithm-identity-map.v2.json -IdentityMapSha256 aac226811f2e6ce2acf15f3fe3c5b0ad3861569992aef3cc5822d7188dbb8059 -FairnessBinding H:\\DDM_Final_Project\\Research\\Gate14Re-MQ-CFF-IDFF\\Design\\v2\\fairness-and-topology-binding.v2.json -FairnessBindingSha256 941f2f62464105d5c5e09e16126a1dff6cc4b74ab7a565ec8942b03342c466bb -ResourceBudget H:\\DDM_Final_Project\\Research\\Gate14Re-MQ-CFF-IDFF\\Design\\v2\\formal-mq-resource-budget.v2.json -ResourceBudgetSha256 9459b06376cbfceb8f0c1659e642d3355a0560ce76d47bb0693020a0f033f2aa -UnityExecutable H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe -UnityExecutableSha256 0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "measuredLaunchReceipt": {
+    "relativePath": "Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003/_control/launch-receipt.v2.json",
+    "sha256": "7092364d3d4273fb50a439d4b109c619b057f32fb0ad44631c8a898eb311e296",
+    "status": "AUTHORIZED_AND_LAUNCHED_STRICT_SERIAL_FORMAL_MQ"
+  },
+  "ordinal0IdentityObservation": {
+    "runnerPid": 16204,
+    "creationTime": "2026-10-22T01:43:24.585842+08:00",
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "runnerMethodBound": true,
+    "measuredRootBound": true,
+    "ordinal": 0,
+    "trustedIdentityAcquisitionPassed": true
+  },
+  "processLedgerRowsAtObservation": 0,
+  "failureLedgerRowsAtObservation": 0,
+  "replacementLedgerRowsAtObservation": 0,
+  "formalAnalysisStarted": false
+}

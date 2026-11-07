@@ -1,0 +1,770 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "gate13r-pr2-mp1-v2-validation-partial-manifest-v1",
+  "savedAtUtc": "2026-10-09T04:25:28.9599228Z",
+  "failedStep": "13-frozen-roots-audit",
+  "fileCount": 152,
+  "bytes": 2624570,
+  "files": [
+    {
+      "relativePath": "BlockValidation/block-validation-summary.json",
+      "bytes": 1115,
+      "sha256": "f165cd9ddebda3fb1f39b69eb60193918bffbd44907ef82caa32735560d14c9e"
+    },
+    {
+      "relativePath": "BlockValidation/external-start/mp1-validation-negative-fail-closed.json",
+      "bytes": 926,
+      "sha256": "0b983b9df4242cda22ea62797ae3a89c74b761d15e0016de9085ee2b54cddbee"
+    },
+    {
+      "relativePath": "BlockValidation/external-start/mp1-validation-positive-complete-block.json",
+      "bytes": 931,
+      "sha256": "bdfc8ba905cfe25c3e0facc1444a81bf25e45ad058e3648a978fa0f4f41248cd"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed.lock-hygiene/mp1-validation-negative-fail-closed.lock-capture.json",
+      "bytes": 1807,
+      "sha256": "25d76fce7e4f586c45b2018c2753fb7f7ade5d5ef5df294b6b95d8ee90d30847"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed.lock-hygiene/mp1-validation-negative-fail-closed.lock-cleanup.json",
+      "bytes": 1606,
+      "sha256": "6c15d30ec5c490d84346089ab830921ebfc6cf8464e92d89c7b5f51c76aeed05"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/block-checkpoint.json",
+      "bytes": 734,
+      "sha256": "d09e1db2b9c6bd70ca1b30baf4cc06b238a8880798d23f3dd6604c52a8718643"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/block-failure.json",
+      "bytes": 1062,
+      "sha256": "f845fb0213a2e4173523d49ea9d0daf221b4e2fa780b28319d870d13a0c3357f"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/block-plan.json",
+      "bytes": 3556,
+      "sha256": "f0b447719e7d04581bb82a05a5432509220390bb2698416efad187e7692bea61"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/block-stage-telemetry.json",
+      "bytes": 14255,
+      "sha256": "305ac79a6252bd32df45860c0357c496a85b6527a30ad99b119a1d3ceb5682a4"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/external-stage-telemetry.json",
+      "bytes": 3474,
+      "sha256": "fb2973b8b98ff178e8a742998169ec292186cef2a6be7b1513a77dfa18e6976d"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/runs/p01-dstar-l/manifest.json",
+      "bytes": 6161,
+      "sha256": "3dad322b8b6fc729925599ee8645d989028bb4794f12e0c306c851a184e2e7df"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/runs/p01-dstar-l/memory-gate-evaluation.json",
+      "bytes": 3423,
+      "sha256": "a2336c114f40f0f92c2e988029a95bee5702ed78426d182874419aee496e3701"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/runs/p01-dstar-l/operations.jsonl",
+      "bytes": 161293,
+      "sha256": "a18d05171c6486a475ae73b1214be97ae7e1e35b4eaac29d0a0c96782e08d91a"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/runs/p01-dstar-l/sample-summary.json",
+      "bytes": 1148,
+      "sha256": "733676d3b204ab751cc4139b7c7843ecd83e7394c058bee8b04698c220552284"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/runs/p01-dstar-l/scenario.canonical.json",
+      "bytes": 245929,
+      "sha256": "d0f93e804fdf944877cdbbdd1485e37fa5ef274d0c853e9b649fa2e80395c9aa"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/runs/p01-dstar-l/workload-result.json",
+      "bytes": 6082,
+      "sha256": "22730af47e9291dbaaaadbace3d8188a25b9518e937ec0c4d9ef48b27f57c32e"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/Unity.log",
+      "bytes": 23349,
+      "sha256": "03232026d600d25d03a3502e9448272dd392dcd71c03079f950a25b66241dea2"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/wrapper-failure-resolution.json",
+      "bytes": 849,
+      "sha256": "89910b98a2c7ff5ab7bfb79a573a5c3b82a8e7a74cfe4ee034f1d1512651d251"
+    },
+    {
+      "relativePath": "BlockValidation/negative-fail-closed/wrapper-summary.json",
+      "bytes": 1596,
+      "sha256": "efcc53b7648b6003d06e8c223aa245c4a82575c2bde07a6ce32519f30035ba01"
+    },
+    {
+      "relativePath": "BlockValidation/plans/negative-fail-closed.json",
+      "bytes": 3556,
+      "sha256": "f0b447719e7d04581bb82a05a5432509220390bb2698416efad187e7692bea61"
+    },
+    {
+      "relativePath": "BlockValidation/plans/positive-complete-block.json",
+      "bytes": 3562,
+      "sha256": "3076d1402735eac5ac46fa49d9e20da365e7b45e555fc4db41cae397b0ad586c"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block.lock-hygiene/mp1-validation-positive-complete-block.quiescence.json",
+      "bytes": 698,
+      "sha256": "7bbd13aa3e459bf00529fa188d96b121df457c23b695859d83dfc0d97ef71f72"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/block-checkpoint.json",
+      "bytes": 761,
+      "sha256": "4417a2040afe3a41c30f523c69edfd7aea0f51d5f2183c8f855e0d4c6e083c7f"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/block-manifest.json",
+      "bytes": 10719,
+      "sha256": "07c7800a8852e171707b03e8f1971e58d08763078d84f1eb22c8aab3eced6448"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/block-plan.json",
+      "bytes": 3562,
+      "sha256": "3076d1402735eac5ac46fa49d9e20da365e7b45e555fc4db41cae397b0ad586c"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/block-stage-telemetry.json",
+      "bytes": 44445,
+      "sha256": "ca7f00d0d21e2c3bcbd04501655a26148683f59ee37d8d4db079faf2aaba28f7"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/external-stage-telemetry.json",
+      "bytes": 3466,
+      "sha256": "83e2ad73ae513d19c5ab7b9732fe6fdb77465b35f3be7470f1059d84aa53f848"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p01-astar-r/manifest.json",
+      "bytes": 6184,
+      "sha256": "e4c77c505e1cbf4bde0e364810012ea6c14ceb4fb5d63a02d49ab46bc8b9e58d"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p01-astar-r/memory-gate-evaluation.json",
+      "bytes": 3445,
+      "sha256": "59785be9747924c809377308376090dc7402de3167ffabf7cde175cc00ec8423"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p01-astar-r/operations.jsonl",
+      "bytes": 163070,
+      "sha256": "79da4681fcc33c668d489f488e6c21b39bd4d097052c1d2ce164dafbc464d2f2"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p01-astar-r/sample-summary.json",
+      "bytes": 1152,
+      "sha256": "cd23f7a551fba528b785f5be2711c8811d34bcf72836825ffe0f283ee610ccae"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p01-astar-r/scenario.canonical.json",
+      "bytes": 245929,
+      "sha256": "d0f93e804fdf944877cdbbdd1485e37fa5ef274d0c853e9b649fa2e80395c9aa"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p01-astar-r/workload-result.json",
+      "bytes": 6060,
+      "sha256": "803ce51d598713bd523929c86a5bbd34f98e50d409a3a03474820defa68f6566"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p02-dstar-l/manifest.json",
+      "bytes": 6179,
+      "sha256": "c4691bb3aecb919c85cc856d848ea837491ca9c6033dd9a4f7b4ab64dfdda163"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p02-dstar-l/memory-gate-evaluation.json",
+      "bytes": 3444,
+      "sha256": "ea3e55e344d358b51b3780bccf96d39e100ac02ec7f679ced02b13568b6c9eb4"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p02-dstar-l/operations.jsonl",
+      "bytes": 160712,
+      "sha256": "a3d80d1828ac63712ec385127009ad2807a6729dffc638c9eb25da4aca79ac65"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p02-dstar-l/sample-summary.json",
+      "bytes": 1151,
+      "sha256": "105cb983efb4a062e5bf5a87b25462e10c5ba2d2737a099aa91b7cf4ae48c73d"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p02-dstar-l/scenario.canonical.json",
+      "bytes": 245929,
+      "sha256": "d0f93e804fdf944877cdbbdd1485e37fa5ef274d0c853e9b649fa2e80395c9aa"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p02-dstar-l/workload-result.json",
+      "bytes": 6092,
+      "sha256": "0e8f8a9bd5bc03dc49b5551a99bf38da788ea40aa8b76b1983f8b518f4727e83"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p03-idff/manifest.json",
+      "bytes": 6249,
+      "sha256": "c65be69e83ce5a792af9890bc23fffb4e3094dd82f0f3c16bcd780d9b5b8c252"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p03-idff/memory-gate-evaluation.json",
+      "bytes": 3426,
+      "sha256": "26f5de39b713250cf0a5fba139e595dc12c8b91d3e00978ccba2f4e16d66d2ba"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p03-idff/operations.jsonl",
+      "bytes": 159558,
+      "sha256": "10190d5cbc58aafc32a22331378956ae30b4157758b9c33d5747a16faa247a2b"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p03-idff/sample-summary.json",
+      "bytes": 1148,
+      "sha256": "095ef0945601d32989e8cefdb75f75c169d0ad041640b0766aa59f7616358582"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p03-idff/scenario.canonical.json",
+      "bytes": 245929,
+      "sha256": "d0f93e804fdf944877cdbbdd1485e37fa5ef274d0c853e9b649fa2e80395c9aa"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p03-idff/workload-result.json",
+      "bytes": 6094,
+      "sha256": "f14b00c7ec9491b169770e2d904d935a79340e449bb747e0e648690df75fb827"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p04-cff/manifest.json",
+      "bytes": 6252,
+      "sha256": "dcbdf202f4780e297c5c2f51818623b39077fd4ac17178f91514dff4af25093b"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p04-cff/memory-gate-evaluation.json",
+      "bytes": 3433,
+      "sha256": "fef293554066a680399d04e91faf7fbe321b1fc76b59046000b6f144253445e3"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p04-cff/operations.jsonl",
+      "bytes": 159200,
+      "sha256": "d900a49851d55503b2f0f920d19f35749a544e53e7965fc1e35a8da6aece6cc1"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p04-cff/sample-summary.json",
+      "bytes": 1148,
+      "sha256": "c7140c6af88426229092969017bdc9e610eb4ab54f0ef22900b636c57b22d769"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p04-cff/scenario.canonical.json",
+      "bytes": 245929,
+      "sha256": "d0f93e804fdf944877cdbbdd1485e37fa5ef274d0c853e9b649fa2e80395c9aa"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/runs/p04-cff/workload-result.json",
+      "bytes": 6116,
+      "sha256": "8ee421caa5a74965981d0219ad52b1156f805a9d02ca072ed550f230f40e2f3b"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/Unity.log",
+      "bytes": 63987,
+      "sha256": "55019c771b4c3cbf339388c698dea4c3f8a8f9caf92076c8204fa10803759368"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/wrapper-failure-resolution.json",
+      "bytes": 461,
+      "sha256": "fc9ec7a2357fa64a44ceb8444cac05357b3dfe5749e20a6ad17b368f21254741"
+    },
+    {
+      "relativePath": "BlockValidation/positive-complete-block/wrapper-summary.json",
+      "bytes": 1595,
+      "sha256": "178b65f8c8105fb0addf3c85ba2d3c5161f523ddb3d6ab4e8706e36ef6db13cc"
+    },
+    {
+      "relativePath": "BlockValidation/validation-execution-receipt.json",
+      "bytes": 490,
+      "sha256": "e5b97d6370b079b1e0d3af8029ff39e60f2cf9c564f54109766b38e2e55ec69e"
+    },
+    {
+      "relativePath": "CheckpointPS51/checkpoint-state-machine-summary.json",
+      "bytes": 2928,
+      "sha256": "b84e96b5c6c028b6db76d1c33b771eba191743f4582675f598a9ce42e54f9281"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-after-last-before-freeze/checkpoint.json",
+      "bytes": 1766,
+      "sha256": "c16b349f69d843791fbd096d551c0af4aa39202ed99d26d53c26653ce11b7af1"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-after-last-before-freeze/failure-receipt.json",
+      "bytes": 128,
+      "sha256": "1d21f7b8a950a1b21d54fa672093baad50a27608c8f7b75a585d3edd5069696d"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-after-last-before-freeze/partial-output-manifest.json",
+      "bytes": 114,
+      "sha256": "06078113d2658196c327ba9db0e2a1eba228e69f8251397567f5ae4be6eb1926"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-before-first-block/checkpoint.json",
+      "bytes": 1659,
+      "sha256": "bee57df29e55222c1e8727c8f1b7b881725f012cfb8dfda79f9fc673b05ac55e"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-before-first-block/failure-receipt.json",
+      "bytes": 122,
+      "sha256": "f74da943cbd2bdbe5f1d7656b37168a9c4a202f2ff60cb11a27d527b384d39ad"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-before-first-block/partial-output-manifest.json",
+      "bytes": 114,
+      "sha256": "06078113d2658196c327ba9db0e2a1eba228e69f8251397567f5ae4be6eb1926"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-inside-block/checkpoint.json",
+      "bytes": 1710,
+      "sha256": "9a0f49eefc033a364e16b4605fd92c89f1c4a74b47f5fe8917c5b8ef5ce7a83a"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-inside-block/failure-receipt.json",
+      "bytes": 116,
+      "sha256": "0daa0031c822ce9da780934de2cbea127726ed45e807de1e5d2ff94268be1b77"
+    },
+    {
+      "relativePath": "CheckpointPS51/failure-inside-block/partial-output-manifest.json",
+      "bytes": 114,
+      "sha256": "06078113d2658196c327ba9db0e2a1eba228e69f8251397567f5ae4be6eb1926"
+    },
+    {
+      "relativePath": "CheckpointPS51/success-checkpoint.json",
+      "bytes": 1793,
+      "sha256": "4593bb75d82447476d9124a98c4055d06fd0c1b81895f2ccc788f19b0194f22f"
+    },
+    {
+      "relativePath": "CheckpointPS7/checkpoint-state-machine-summary.json",
+      "bytes": 1911,
+      "sha256": "621fe5850424f966f694f732efceaf7b63778eb9ca254ebdc5a29e8fb73d47ac"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-after-last-before-freeze/checkpoint.json",
+      "bytes": 1637,
+      "sha256": "98bb1d8fef034e2828620ecc2cc1663e4ad0bf35df026408e193efeea20666e0"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-after-last-before-freeze/failure-receipt.json",
+      "bytes": 119,
+      "sha256": "ac10d297f35d71f2174912f647a4f08f643ad2ead097ee257f49f6cce579d57d"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-after-last-before-freeze/partial-output-manifest.json",
+      "bytes": 102,
+      "sha256": "983a4661f08384ffd65a65039f1aa487c353d4e71569fb20bd0e5e8214b0030b"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-before-first-block/checkpoint.json",
+      "bytes": 1548,
+      "sha256": "094bf2f7d15ee96405708a7ec6829e9a86063325876bf1e674e96aa6338c1e62"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-before-first-block/failure-receipt.json",
+      "bytes": 113,
+      "sha256": "5a0f579ffe5531f3993cee7f418eb2e7fa64b37b069e36d40d43b0deef753a4c"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-before-first-block/partial-output-manifest.json",
+      "bytes": 102,
+      "sha256": "983a4661f08384ffd65a65039f1aa487c353d4e71569fb20bd0e5e8214b0030b"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-inside-block/checkpoint.json",
+      "bytes": 1590,
+      "sha256": "879153efdeb3d2446d313779d5a1f691a81fc8e08057ee369242596b3e919796"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-inside-block/failure-receipt.json",
+      "bytes": 107,
+      "sha256": "1100dea092348935f49b4efcc51d5921aeb5217c5a71c3ebab33767bb1453489"
+    },
+    {
+      "relativePath": "CheckpointPS7/failure-inside-block/partial-output-manifest.json",
+      "bytes": 102,
+      "sha256": "983a4661f08384ffd65a65039f1aa487c353d4e71569fb20bd0e5e8214b0030b"
+    },
+    {
+      "relativePath": "CheckpointPS7/success-checkpoint.json",
+      "bytes": 1664,
+      "sha256": "cbb06cce8da23db8e4633368a502336d56418064405eaa6734a4939dd495fc21"
+    },
+    {
+      "relativePath": "FailurePrecedencePS51/block-failure.json",
+      "bytes": 168,
+      "sha256": "b52d3aafe96d8f15ae6957aaaf318f2026f5c2f8927aa068b9dd928e1b673da5"
+    },
+    {
+      "relativePath": "FailurePrecedencePS51/quiescence-failure.json",
+      "bytes": 71,
+      "sha256": "cfcd19adc020cfcc009ae99a3cd9c53f53add1634fd7cb878738974573aceb57"
+    },
+    {
+      "relativePath": "FailurePrecedencePS51/summary.json",
+      "bytes": 1895,
+      "sha256": "bb331002e270e24cbbb76b7fe053b6885c2f35fe77e10c2a0e70c1cfb0742f4b"
+    },
+    {
+      "relativePath": "FailurePrecedencePS7/block-failure.json",
+      "bytes": 156,
+      "sha256": "7b466f4bda9514737dcb3e1b0c236f9e58f3ec3f48423d04c5a78f1e682aae4c"
+    },
+    {
+      "relativePath": "FailurePrecedencePS7/quiescence-failure.json",
+      "bytes": 65,
+      "sha256": "4c96ab89f00a947922a501a722a9ed298efa1ee888437503aefa86daf76094bc"
+    },
+    {
+      "relativePath": "FailurePrecedencePS7/summary.json",
+      "bytes": 1175,
+      "sha256": "fed3998650a94d77194b8a26fe321ba5252b6ef6bc2012d0b47b3b711efab920"
+    },
+    {
+      "relativePath": "FrozenRoots/frozen-roots-audit.json",
+      "bytes": 2200,
+      "sha256": "325df099baf368071d9d1dd305772690da28f83b7719fc47a5cca697957287ce"
+    },
+    {
+      "relativePath": "Logs/01-static-unit.log",
+      "bytes": 169,
+      "sha256": "17f6ff1d52ed7303ceeeb74fdc1207c2aa6f455fce9ecb687a44e5649f692ca4"
+    },
+    {
+      "relativePath": "Logs/02-parser-ps51.log",
+      "bytes": 3553,
+      "sha256": "cea7d89e3ce30e31ad6ac1a2fff664903cb5db7d30af094dff6a73c27d7b8e65"
+    },
+    {
+      "relativePath": "Logs/02-parser-ps7.log",
+      "bytes": 1898,
+      "sha256": "653b89823c7593fc7985389b3ca6537dc62b3d299f24bcef1b513c6ee3c8898e"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-block-validation.log",
+      "bytes": 95,
+      "sha256": "44cd2af8c714d78c1993f919840514219bcbcd1605e851750d36350385f39931"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-block-wrapper.log",
+      "bytes": 82,
+      "sha256": "befb43f2c6b5d7900f6003fa1cd3e34de44a61ed675f8d15cc639586b41a2315"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-campaign.log",
+      "bytes": 77,
+      "sha256": "73bca8906d20de875ca5167882d1ba7e979e3a36f9133b10bdd88f19e4bd1106"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-checkpoint-fixtures.log",
+      "bytes": 86,
+      "sha256": "9c10d031b845cb56d39e780b29cb2dd864707ba284790d4a76afff6739e0eb45"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-finalizer.log",
+      "bytes": 76,
+      "sha256": "8b5424e0599645fb09bce1ed3b7d2034d964fb0dd86388ccd853d717c9598ed8"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-launcher.log",
+      "bytes": 79,
+      "sha256": "9c3ddf3caf38b5cbc70bf8c09ffcff9fb80c5b9a1fb5e0bee17d356555e134a5"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-prepilot-orchestrator.log",
+      "bytes": 84,
+      "sha256": "364bf9baf5abed55219aa6dc2904fd39d12a96b8c6a81020f3d4f023eda45ae4"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-telemetry.log",
+      "bytes": 91,
+      "sha256": "aaf6abf2c83d9300b8f759cd4ac1d4743135cc38bfd528bce56fd18195243636"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-unity-self-tests.log",
+      "bytes": 91,
+      "sha256": "1cac3b0ced276f4e1c8a5ffb838450ad3e97a10231775b53bdb18f0374542fca"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps51-zero-block-fixture.log",
+      "bytes": 80,
+      "sha256": "b298bf84eb694a9e0883410329a3acc2c60c5456cf1da9139a9ff0b6b203383d"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-block-validation.log",
+      "bytes": 95,
+      "sha256": "44cd2af8c714d78c1993f919840514219bcbcd1605e851750d36350385f39931"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-block-wrapper.log",
+      "bytes": 82,
+      "sha256": "befb43f2c6b5d7900f6003fa1cd3e34de44a61ed675f8d15cc639586b41a2315"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-campaign.log",
+      "bytes": 77,
+      "sha256": "73bca8906d20de875ca5167882d1ba7e979e3a36f9133b10bdd88f19e4bd1106"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-checkpoint-fixtures.log",
+      "bytes": 86,
+      "sha256": "9c10d031b845cb56d39e780b29cb2dd864707ba284790d4a76afff6739e0eb45"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-finalizer.log",
+      "bytes": 76,
+      "sha256": "8b5424e0599645fb09bce1ed3b7d2034d964fb0dd86388ccd853d717c9598ed8"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-launcher.log",
+      "bytes": 79,
+      "sha256": "9c3ddf3caf38b5cbc70bf8c09ffcff9fb80c5b9a1fb5e0bee17d356555e134a5"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-prepilot-orchestrator.log",
+      "bytes": 84,
+      "sha256": "364bf9baf5abed55219aa6dc2904fd39d12a96b8c6a81020f3d4f023eda45ae4"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-telemetry.log",
+      "bytes": 91,
+      "sha256": "aaf6abf2c83d9300b8f759cd4ac1d4743135cc38bfd528bce56fd18195243636"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-unity-self-tests.log",
+      "bytes": 91,
+      "sha256": "1cac3b0ced276f4e1c8a5ffb838450ad3e97a10231775b53bdb18f0374542fca"
+    },
+    {
+      "relativePath": "Logs/03-binding-ps7-zero-block-fixture.log",
+      "bytes": 80,
+      "sha256": "b298bf84eb694a9e0883410329a3acc2c60c5456cf1da9139a9ff0b6b203383d"
+    },
+    {
+      "relativePath": "Logs/04-checkpoint-ps7.log",
+      "bytes": 75,
+      "sha256": "518d9811b2185d247c8d759d28d98f807fd6926f5e29d410ef401b244d54bb34"
+    },
+    {
+      "relativePath": "Logs/05-checkpoint-ps51.log",
+      "bytes": 84,
+      "sha256": "09eaa1d17c66e3271e7d20828e88188df1dff44b4046d1e3dde08476ee61b7ed"
+    },
+    {
+      "relativePath": "Logs/06-zero-block-ps7.log",
+      "bytes": 522,
+      "sha256": "365f50b67cb53ac640c42ed49328a83ca6ed382ed083a7905128e5107147d716"
+    },
+    {
+      "relativePath": "Logs/07-zero-block-ps51.log",
+      "bytes": 729,
+      "sha256": "4482b449be396d3f880c6eb8968b861d6c32c52f9d557a9160d844c71ae2ceb6"
+    },
+    {
+      "relativePath": "Logs/08-unity-self-tests.log",
+      "bytes": 43,
+      "sha256": "76caf00ec312439748fd2e34a77982f933781e6c6a2ac68c3c196abd962381af"
+    },
+    {
+      "relativePath": "Logs/09-telemetry-probe.log",
+      "bytes": 45,
+      "sha256": "72ce72167977bda3d86051da34c264889d1c919e26193b3611d52543726d493b"
+    },
+    {
+      "relativePath": "Logs/10-positive-negative-blocks.log",
+      "bytes": 223,
+      "sha256": "0ff71b5c23b12f3f4b13b8fd6de3fa145a38a61620aa9ff23e8420030c0b8c5d"
+    },
+    {
+      "relativePath": "Logs/11-failure-precedence-ps7.log",
+      "bytes": 37,
+      "sha256": "f46b16aa66b7c04e881449d17e9d876a808bf8561e78daa6b6375b486582943e"
+    },
+    {
+      "relativePath": "Logs/12-failure-precedence-ps51.log",
+      "bytes": 46,
+      "sha256": "e2752724c051b98f72616a6ab67330fe8495083b7bc353bcb8f8f6e60e95e6c9"
+    },
+    {
+      "relativePath": "Logs/13-frozen-roots-audit.log",
+      "bytes": 748,
+      "sha256": "c2d18522c96492d6f1f44a61080875bb190d89726485d1df59967a21ac817ff9"
+    },
+    {
+      "relativePath": "RuntimeValidation/runtime-validation-summary.json",
+      "bytes": 2627,
+      "sha256": "48c64cfbc511f2b7628a8692008949313948685b8949b20d95a8c4d2d605c82b"
+    },
+    {
+      "relativePath": "Static/static-unit-summary.json",
+      "bytes": 39847,
+      "sha256": "04167be9fb2d63e3b6616f95c89597b8a40ea5f8dd7600232819ce4fa46d6a96"
+    },
+    {
+      "relativePath": "TelemetryProbe/probe.lock-hygiene/gate13r-pr2-formal-telemetry-probe.quiescence.json",
+      "bytes": 694,
+      "sha256": "cb8936ffb4e2b3bb9c53e8a92d98ff0051058f58f65b51afcd59e984256a19f6"
+    },
+    {
+      "relativePath": "TelemetryProbe/probe.summary.json",
+      "bytes": 814,
+      "sha256": "f3419631458fc16a647ea8cb75fd6401b64a69509b7b3fcb65515594cce1b997"
+    },
+    {
+      "relativePath": "TelemetryProbe/probe.Unity.log",
+      "bytes": 67139,
+      "sha256": "b002a3a4bf2ea4f13efeea3a1a238bd20415d466dc12a8dce3620c3f2f8e9530"
+    },
+    {
+      "relativePath": "TelemetryProbe/probe.wrapper.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "TelemetryProbe/probe.wrapper.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "TelemetryProbe/probe/external-os-query.json",
+      "bytes": 459,
+      "sha256": "36503ebdae9416f2565d6cf452d7af4041916cee4be7b696753ddebaa389e137"
+    },
+    {
+      "relativePath": "TelemetryProbe/probe/telemetry-probe-ready.json",
+      "bytes": 930,
+      "sha256": "0721f3d9a5b140574836e179513cc908c866053e8e5e620af09e7c6c053e4271"
+    },
+    {
+      "relativePath": "TelemetryProbe/probe/telemetry-probe-result.json",
+      "bytes": 2505,
+      "sha256": "4c2d78eafaa32506b334d820b3626b20bff5f38f4699b7ac713a0226811d8ae9"
+    },
+    {
+      "relativePath": "UnitySelfTests/MemoryPolicySelfTest.lock-hygiene/gate13r-pr2-formal-self-test-MemoryPolicySelfTest.quiescence.json",
+      "bytes": 709,
+      "sha256": "9191cf30284739f7b1ae51fc9becf0f3d9f0b8534f943c9cbaeb1a09cc50fde5"
+    },
+    {
+      "relativePath": "UnitySelfTests/MemoryPolicySelfTest.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "UnitySelfTests/MemoryPolicySelfTest.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "UnitySelfTests/MemoryPolicySelfTest.Unity.log",
+      "bytes": 67235,
+      "sha256": "4a98441b84ad3c631d9e8fb6793ae655393c99994992497006d95449c1d3a747"
+    },
+    {
+      "relativePath": "UnitySelfTests/MemoryPolicySelfTest.wrapper-summary.json",
+      "bytes": 1087,
+      "sha256": "bd00c7dc3852dec575d66ba8d795c855851ca4e4efbc1e8c9c8f2d4d68ed55b0"
+    },
+    {
+      "relativePath": "UnitySelfTests/MemoryPolicySelfTest/memory-policy-self-test.json",
+      "bytes": 7764,
+      "sha256": "e77a57b03b67c909798a4ac9c5921e763e84644dcbcb40b59fc64ff580767667"
+    },
+    {
+      "relativePath": "UnitySelfTests/PathSafeAtomicSelfTest.lock-hygiene/gate13r-pr2-formal-self-test-PathSafeAtomicSelfTest.quiescence.json",
+      "bytes": 711,
+      "sha256": "dbb8d0adf0687a82c3b68205a61a94d5f9b5ba42c61e2353783a4c3a3bf21078"
+    },
+    {
+      "relativePath": "UnitySelfTests/PathSafeAtomicSelfTest.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "UnitySelfTests/PathSafeAtomicSelfTest.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "UnitySelfTests/PathSafeAtomicSelfTest.Unity.log",
+      "bytes": 67209,
+      "sha256": "bc5d7d45e4a70eb6207177c6e8475492811c082de6c138259fe5ef04613d18a1"
+    },
+    {
+      "relativePath": "UnitySelfTests/PathSafeAtomicSelfTest.wrapper-summary.json",
+      "bytes": 1096,
+      "sha256": "3ea15764c25930bc238cfcf5f830bb3c8fbb741e3950359e49afb0e98446c86c"
+    },
+    {
+      "relativePath": "UnitySelfTests/PathSafeAtomicSelfTest/ordinary/immutable-evidence.json",
+      "bytes": 72,
+      "sha256": "f1c71146d79477e25fd0afb39bad2490cb9822b8dbb167d314e46efd54a552d7"
+    },
+    {
+      "relativePath": "UnitySelfTests/PathSafeAtomicSelfTest/ordinary/mutable-checkpoint.json",
+      "bytes": 71,
+      "sha256": "69eb499c771a87b247a09b4f976494a1bb43d565cafad66a4edfdf19043fe211"
+    },
+    {
+      "relativePath": "UnitySelfTests/PathSafeAtomicSelfTest/path-safe-atomic-self-test.json",
+      "bytes": 7886,
+      "sha256": "ccbd32502b405300ce13b833a958c332668117f40f69287f7d9d7caf4991a817"
+    },
+    {
+      "relativePath": "UnitySelfTests/unity-self-tests-summary.json",
+      "bytes": 491,
+      "sha256": "cfdc3a550514181caa7600abf82f8086d44f8d64b1c5bbc67f1293b84780d22b"
+    },
+    {
+      "relativePath": "ZeroBlockPS51/pilot-checkpoint.json",
+      "bytes": 1722,
+      "sha256": "f8c289d370eb8bfeb7ef9c43c43fd9484f62376f846c6201ef4185d7f25ccda6"
+    },
+    {
+      "relativePath": "ZeroBlockPS51/pilot-failure-receipt.json",
+      "bytes": 1231,
+      "sha256": "d4d508c95512b224fcfc7bdfb9ef08f9c8598c2892321364b9bf71cd3242d8f6"
+    },
+    {
+      "relativePath": "ZeroBlockPS51/pilot-partial-output-manifest.json",
+      "bytes": 760,
+      "sha256": "b2b817ef6b272a2587cb42d71a58b251944cbd55859b59b8c5806d6e3d18de27"
+    },
+    {
+      "relativePath": "ZeroBlockPS51/validation-execution-receipt.json",
+      "bytes": 687,
+      "sha256": "fab8fdaa00af7ee2293e073536920f278e35ff37c40ce7f735ed1caba5cab1c3"
+    },
+    {
+      "relativePath": "ZeroBlockPS51/zero-block-failure-summary.json",
+      "bytes": 545,
+      "sha256": "40cf28144269fe3ef4fdfb4b08d4a54abb1636d04a7fd4a8c6f8ff32b2f8be7b"
+    },
+    {
+      "relativePath": "ZeroBlockPS7/pilot-checkpoint.json",
+      "bytes": 1602,
+      "sha256": "9f43c5b3b71226f98194610f86dbbe6510f8163edb4bd427843ac231b890d3ea"
+    },
+    {
+      "relativePath": "ZeroBlockPS7/pilot-failure-receipt.json",
+      "bytes": 1149,
+      "sha256": "c8fbe251a686fcc43905cdb53297b16cd110ddbfae8c65b60e3aea33d0d8fafb"
+    },
+    {
+      "relativePath": "ZeroBlockPS7/pilot-partial-output-manifest.json",
+      "bytes": 682,
+      "sha256": "5fd63c159c0e791a1daa7c79257dfd3e11dd1485db6d5ab9d27fdba5825badfd"
+    },
+    {
+      "relativePath": "ZeroBlockPS7/validation-execution-receipt.json",
+      "bytes": 686,
+      "sha256": "0504d7009bb92ecdeace3456e323d2a24ad5de88cda6d843d0e43f4d0dd33de1"
+    },
+    {
+      "relativePath": "ZeroBlockPS7/zero-block-failure-summary.json",
+      "bytes": 590,
+      "sha256": "a5b55949fe4f71e7acd7b63d82057edca467b6907cf8d40ad01c9e5c7e0a6a43"
+    }
+  ]
+}

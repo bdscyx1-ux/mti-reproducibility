@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-formal-st-v5.3-readiness-terminal-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-v5-3-authorization-readiness-attempt-002",
+  "status": "PASS_ALGORITHM_FREE_COMPILE_BURST_NATURAL_EXIT",
+  "implementationRevision": "v5.3-authorization-contract-parity-fix",
+  "authorization": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/user-authorization-receipt.v1.json",
+    "bytes": 999,
+    "sha256": "766a0b976fda074845ebf8dafa1fdaf84b4089e132fb99baf46beed1e346ab51"
+  },
+  "process": {
+    "pid": 32316,
+    "creationTimeUtc": "2026-10-26T12:10:47.6211998Z",
+    "exitedAtUtc": "2026-10-26T12:11:03.4362406Z",
+    "exitCode": 0,
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "executableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "exactCommandLine": "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe\" -batchmode -nographics -projectPath H:/DDM_Final_Project -executeMethod DDM.Research.Editor.Gate14ReMEReadinessCompileExitV4.Run --g14me-readiness-receipt H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/compile-readiness-receipt.v4.json -logFile H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/unity-readiness.log",
+    "commandLineQuitPresent": false,
+    "naturalExitObserved": true
+  },
+  "burst": {
+    "finalCompilationDone": true,
+    "elapsedMilliseconds": 1103,
+    "reflectedType": "Unity.Burst.BurstCompiler, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "reflectedMethod": "IsCurrentCompilationDone"
+  },
+  "artifacts": {
+    "compileReadinessReceiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/compile-readiness-receipt.v4.json",
+    "compileReadinessReceiptBytes": 529,
+    "compileReadinessReceiptSha256": "91493822460d1be73057a0f53ddcb2e2ccf25cb835b1a0fd69c16924c56dde78",
+    "unityLogRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/unity-readiness.log",
+    "unityLogBytes": 81590,
+    "unityLogSha256": "39113ede60a283e6623dd3b40d88abcc5d1a8c0f1b40c9f886ac761e4b24692e",
+    "disallowedLogMatchCount": 0
+  },
+  "scope": {
+    "qualificationExecuted": false,
+    "algorithmLaneExecuted": false,
+    "formalInputRead": false,
+    "formalMeasuredRootCreated": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "activeUnityProcessCountAfterExit": 0
+  }
+}

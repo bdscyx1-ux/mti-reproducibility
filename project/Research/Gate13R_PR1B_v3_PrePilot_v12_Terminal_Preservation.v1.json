@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "gate13r-pr1b-v3-prepilot-v12-terminal-preservation-v1",
+  "savedAtUtc": "2026-10-08T13:03:08.1188295Z",
+  "savedAtAsiaShanghai": "2026-10-08T21:03:08.1223429+08:00",
+  "status": "FAILED-NO-PILOT",
+  "disposition": [
+    "PRESERVE-BYTE-EXACT",
+    "NO-OVERWRITE",
+    "NO-RESUME",
+    "NO-REINTERPRETATION-AS-PASS"
+  ],
+  "resolvedVerificationRoot": "H:/DDM_Final_Project/Research/Verification/Gate12R_ProcessReuse_5pct/v12-gate13r-pr1b-order-effect-pathsafe-v3",
+  "rootIdentity": {
+    "fileCount": 7,
+    "rawBytes": 25700,
+    "treeIdentityAlgorithm": "sha256-of-utf8-lines-relativePath-tab-rawBytes-tab-sha256-sorted-by-full-path",
+    "treeIdentitySha256": "4ae0c0ea30e65b0cf5e15bbdffeffd8155e7e5de341c262f4ad3d2e00c4f12fe"
+  },
+  "files": [
+    {
+      "relativePath": "checkpoint.json",
+      "rawBytes": 453,
+      "sha256": "61bfa763c500d13b81bf273833787386d9c8b168f551c878487f7368788e615f"
+    },
+    {
+      "relativePath": "execution-receipt.json",
+      "rawBytes": 742,
+      "sha256": "ba2e4d65f7917bacb9823507a1c10594804ab58c49498c3e7f8353197fa3f572"
+    },
+    {
+      "relativePath": "failure-receipt.json",
+      "rawBytes": 1947,
+      "sha256": "f37384086ae14031c92de77597581e4f66eb1a9ac2bb6d696f46f8d78175af5f"
+    },
+    {
+      "relativePath": "Orchestration/01-static-unit.stderr.log",
+      "rawBytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Orchestration/01-static-unit.stdout.log",
+      "rawBytes": 60,
+      "sha256": "6ff224787e940376f002acdb47e6b55171866a5692acee9a5840ea0314b80de9"
+    },
+    {
+      "relativePath": "StaticUnit/analyzer-self-test.json",
+      "rawBytes": 832,
+      "sha256": "376822ece834970bb91c1b43fdb7380298c2c7cd30f7dcbe71637b96e54ec0f6"
+    },
+    {
+      "relativePath": "StaticUnit/summary.json",
+      "rawBytes": 21666,
+      "sha256": "8e456db127a8d0b1e776a8f1e43eca2e48100f9953dab4103e9b2764dae50362"
+    }
+  ],
+  "observedFacts": {
+    "staticUnitPassed": true,
+    "staticUnitCheckCount": 85,
+    "staticUnitPassedCheckCount": 85,
+    "unityInvoked": false,
+    "unityProcessCountAtPreservation": 0,
+    "unityLockExistsAtPreservation": false,
+    "pilotRootCreated": false,
+    "measuredPilotStarted": false,
+    "formalRootCreated": false,
+    "formalCampaign": false
+  },
+  "failureClass": "WINDOWS-POWERSHELL-5.1-NULL-BACKUP-FILE-REPLACE-COMPATIBILITY",
+  "nextAttemptPolicy": "VERSIONED-PREPILOT-REPAIR-ONLY",
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

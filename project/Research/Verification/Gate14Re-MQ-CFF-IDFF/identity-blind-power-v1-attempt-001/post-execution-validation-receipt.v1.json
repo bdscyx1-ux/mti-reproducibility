@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-post-execution-validation-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "identity-blind-power-v1-attempt-001",
+  "validatedAtUtc": "2026-10-21T06:05:51.7447845Z",
+  "status": "PASS_VALIDATED_FAIL_CLOSED_NO_CANDIDATE",
+  "checks": {
+    "terminalStatusIsFailClosedNoCandidate": true,
+    "candidateSetExactly36_72_108_144": true,
+    "allSixOpaquePrimariesPresentAtEveryCandidate": true,
+    "noCandidatePassesFrozenCriterion": true,
+    "selectedBIsNull": true,
+    "powerIsMonotoneNondecreasingAcrossB": true,
+    "everyWilsonIntervalContainsItsMonteCarloEstimate": true,
+    "terminalBindsPowerResult": true,
+    "terminalBindsNuisanceSummary": true,
+    "terminalBindsInputInventory": true,
+    "inputInventoryHasSixFrozenSources": true,
+    "identityMappingNotOpened": true,
+    "namedAlgorithmEffectsNotComputedOrReported": true,
+    "formalCollectionNotStarted": true,
+    "formalAnalysisNotStarted": true
+  },
+  "frozenOutcome": {
+    "selectedB": null,
+    "worstOpaquePrimaryAtB144": "P6",
+    "worstPowerAtB144": 0.718165,
+    "worstWilson95LowerAtB144": 0.7161891158620226,
+    "requiredWilson95Lower": 0.90,
+    "disposition": "Stop before implementation schedule freeze and prelaunch readiness; request separately authorized scientific redesign."
+  },
+  "powerResultSha256": "78ad7905c4c8b85f4eb8b7d614d690af41e63b17146877e2f7c29ea734963b66",
+  "terminalReceiptSha256": "b33bdccc90633a7d672ad492e7153f930e42130e1c89894653a8502d425b8554"
+}

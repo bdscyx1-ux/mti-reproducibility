@@ -1,0 +1,42 @@
+{
+    "schema": "gate14re-synthetic-validation-receipt-v1",
+    "studyId": "Gate14Re",
+    "stage": "research_only_incremental_validation",
+    "status": "PASS",
+    "assertions": 5255,
+    "conditionBindingsValidated": 8,
+    "productionAlgorithmsStructurallyExercised": 4,
+    "eventScheduleTicks": [
+        10,
+        10,
+        1500,
+        4500,
+        7500
+    ],
+    "quantityLevelsValidated": [
+        1,
+        8,
+        32,
+        128,
+        512
+    ],
+    "checks": [
+        "frozen_v2_v3_hash_and_readonly_bindings",
+        "all_eight_source_scenario_hashes_and_event_content",
+        "in_memory_tick_only_retiming",
+        "grid_planner_visual_version_lockstep_all_four_production_planners",
+        "same_tick_order_and_all_five_events",
+        "shared_movement_kernel_known_answer_all_four_production_planners",
+        "N1_N8_N32_N128_canonical_prefix",
+        "N512_deterministic_reachable_distinct_start_construction",
+        "tampered_hash_definition_event_and_visual_revision_fail_closed",
+        "unsupported_N_fail_closed",
+        "no_formal_root_and_no_outcome_output"
+    ],
+    "actualOutcomeValuesRead": false,
+    "actualOutcomeValuesWritten": false,
+    "formalObservationProduced": false,
+    "formalPhaseAStarted": false,
+    "formalMeasuredRootCreated": false,
+    "formalAnalysisRootCreated": false
+}

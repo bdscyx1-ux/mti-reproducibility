@@ -1,0 +1,6 @@
+﻿Family / scope,Varied levels,Fixed settings,Seed / ID rule
+Grid / 4 shared,"G = 32, 64, 128, 256",N = 64; F = 25; 8 neighbors; W; 18% obstacles,120000 + G; grid-scale-g{GGG}-shared
+Agent / 5 shared,"N = 1, 8, 32, 128, 512",G = 128; F = 25; 4 neighbors; W; 18% obstacles,130000 + N; agent-scale-a{NNN}-shared
+Footprint / 5 shared,"F = 1, 9, 25, 81, 225",G = 128; N = 64; 8 neighbors; W; 18% obstacles,140000 + F; dynamic-footprint-f{FFF}-shared
+Reachability / 2 shared,4 or 8 neighbors,G = 64; N = 32; F = 1; U; 62 blocked cells,160004 / 160008; reachability-c4-shared / reachability-c8-strict-shared
+Goal count / 5 heterogeneous,"H = 2, 4, 8, 16, 32",G = 128; N = 128; F = 25; 8 neighbors; W; 18% obstacles,150000 + H; goal-count-g{HH}-hetero

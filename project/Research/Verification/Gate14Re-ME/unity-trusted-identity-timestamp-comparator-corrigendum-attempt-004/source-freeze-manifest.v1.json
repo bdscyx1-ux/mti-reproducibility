@@ -1,0 +1,114 @@
+{
+  "schema": "gate14re-me-trusted-timestamp-comparator-attempt-004-source-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004",
+  "status": "FROZEN_PREEXECUTION_SOURCES_AND_BINDINGS",
+  "frozenAtUtc": "2026-10-17T11:53:31.9880294Z",
+  "projectRoot": "H:/DDM_Final_Project",
+  "executionMode": "OFFLINE_NO_UNITY",
+  "retainedAttempt003": {
+    "rootRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003",
+    "status": "FAILED_CLOSED_RETAINED_UNCHANGED",
+    "fileCount": 15,
+    "contentDigestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef",
+    "reclassificationAuthorized": false,
+    "deletionAuthorized": false,
+    "modificationAuthorized": false
+  },
+  "bindings": [
+    {
+      "role": "parent-status-v19",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v19.json",
+      "lengthBytes": 1507,
+      "sha256": "94a4697c7bb501d21aefcc0f44abd34cac026cccbf5b074c0b831efb5c14213c"
+    },
+    {
+      "role": "trusted-launch-identity-rule-v1",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "lengthBytes": 5960,
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    {
+      "role": "attempt003-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/failure-receipt.v1.json",
+      "lengthBytes": 2259,
+      "sha256": "aea859d3b2935ff71d66a4cd9bcdd005c3acddf093e409b712e129374a9b5a97"
+    },
+    {
+      "role": "attempt003-source-freeze-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/source-freeze-manifest.v1.json",
+      "lengthBytes": 11113,
+      "sha256": "a2e3950fc4bd0e6915521c8d30e50888043a688ee2463350064764e34f7588b6"
+    },
+    {
+      "role": "attempt003-final-evidence-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/source-and-evidence-freeze-manifest.v1.json",
+      "lengthBytes": 4806,
+      "sha256": "0d87c68508c5505a1b886d3206af56d92f4c0c792daabba0ffac7591b6ae2277"
+    },
+    {
+      "role": "attempt004-authorization-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004/authorization-receipt.v1.json",
+      "lengthBytes": 2733,
+      "sha256": "0cc1b6dd920dcecbc15500a338a416408a01f347bc4461caeb885fae14a2303b"
+    },
+    {
+      "role": "attempt004-stage-contract",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004/stage-contract.v1.json",
+      "lengthBytes": 2587,
+      "sha256": "d6857bad613f6a1cdfc01f53cda398a753e31338de5c1e48883a7f97201ce312"
+    },
+    {
+      "role": "attempt004-timestamp-comparator-source",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "lengthBytes": 4794,
+      "sha256": "499334605fa4a0ec00ff4b75c175339eb16a31827b1eb4ca1df781ca7dae00b7"
+    },
+    {
+      "role": "attempt004-offline-known-answer-orchestrator",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004/Invoke-Gate14ReMETrustedTimestampComparatorCorrigendumAttempt004.ps1",
+      "lengthBytes": 31898,
+      "sha256": "db8039782594719cd752b4dec7b56bdc33d4d9a730889aa68c797ab9aff002c5"
+    }
+  ],
+  "knownAnswerContract": {
+    "expectedCaseCount": 16,
+    "requiredEquivalentPair": [
+      "2024-06-11T11:26:54Z",
+      "2024-06-11T11:26:54.0000000Z"
+    ],
+    "successfulComparisonBasis": "UTC_TICKS",
+    "originalTextsMustBePreserved": true,
+    "realTimeDifferenceDisposition": "FAIL_CLOSED",
+    "invalidValueDisposition": "FAIL_CLOSED",
+    "missingValueDisposition": "FAIL_CLOSED",
+    "nonUniqueParseDisposition": "FAIL_CLOSED"
+  },
+  "preservedNonTimestampRequirements": {
+    "trustedRuleModified": false,
+    "sha256RequirementWeakened": false,
+    "chunkDigestRequirementWeakened": false,
+    "pathRequirementWeakened": false,
+    "ntfsFileIdentityRequirementWeakened": false,
+    "peRequirementWeakened": false,
+    "authenticodeRequirementWeakened": false,
+    "fileLengthRequirementWeakened": false,
+    "processCompositeIdentityRequirementWeakened": false
+  },
+  "executionBoundary": {
+    "offlineKnownAnswerInvocationMaximum": 1,
+    "automaticRetryAuthorized": false,
+    "unityInvocationMaximum": 0,
+    "schemaCompatibilitySelfCheckAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

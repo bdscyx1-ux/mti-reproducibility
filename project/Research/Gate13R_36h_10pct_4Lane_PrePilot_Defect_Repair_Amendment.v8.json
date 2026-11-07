@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-defect-repair-v8",
+  "createdAtUtc": "2026-10-08T05:16:00Z",
+  "status": "AUTHORIZED-NONEXECUTING-REPAIR",
+  "formalCampaignAuthorized": false,
+  "pilotAuthorizationCount": 1,
+  "pilotAuthorizationConsumed": false,
+  "sourceAttempt": 7,
+  "targetAttempt": 8,
+  "confirmedDefect": {
+    "phase": "preimplementation-static-unit",
+    "assertionsPassed": 114,
+    "assertionsTotal": 115,
+    "failedAssertion": "binding-smoke-audit",
+    "description": "A generic source-list overlay matched both the parser inventory and the audit smoke entry, converting the audit smoke script field into two paths.",
+    "scientificEffect": "none; all scientific, precision, runtime, schedule, Playable, provenance, parser and other binding assertions passed; no Unity or pilot ran"
+  },
+  "authorizedRepair": "In a new attempt, match the unique parser-inventory tail containing verification plus audit scripts, append the frozen lock-hygiene unit there only, and leave the audit smoke script field singular.",
+  "unchangedSemantics": {
+    "campaignMatrixCount": 74,
+    "relative95CiHalfWidthTarget": 0.10,
+    "hardSampleCap": null,
+    "isolatedLaneCount": 4,
+    "unityProcessUnit": "one fresh Unity Editor process per Williams block",
+    "readinessP95MaximumHours": 27,
+    "formalWallClockMaximumHours": 36,
+    "pilotMeasuredBlockCount": 384,
+    "pilotMeasuredSampleCount": 1152,
+    "pilotWarmupBlockCount": 8,
+    "retainedManagedMemoryRuleMiBPerSample": 128
+  },
+  "immutableAttempt7Evidence": {
+    "staticSummarySha256": "84fbb2105ed4ae6f710f35e389a10019c823ebd747d5d824d8ef0adfe88a48f3",
+    "partialManifestSha256": "52674826e1966504d8cef2df0e44aa304fe13eb350df6fd6477a0441513fcc93",
+    "failureReceiptSha256": "a35fd3aa3a69be1a7201f75d6f10289270b2dc2402de43d38091cd3d400a9b18",
+    "checkpointSha256": "b56b746d4fdf63bd8ddf9b3281412b302cfc98dd480c7f01c2d67583bfaf164e"
+  },
+  "prohibitions": [
+    "do not modify, overwrite, resume or reinterpret attempts 1 through 7",
+    "do not weaken thresholds or change experimental semantics",
+    "do not create a formal root or formal execution receipt",
+    "do not start a formal campaign",
+    "do not consume more than the single authorized NON-FORMAL pilot"
+  ]
+}

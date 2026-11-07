@@ -1,0 +1,238 @@
+{
+  "schema": "gate14re-me-unity-identity-offline-adjudication-source-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-offline-evidence-adjudication-attempt-005",
+  "status": "FROZEN_PREEXECUTION_OFFLINE_ADJUDICATION_SOURCES",
+  "frozenAtUtc": "2026-10-17T10:45:02.3954589Z",
+  "bindings": [
+    {
+      "role": "attempt-005-authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Rule_Offline_Evidence_Adjudication_Attempt_005_Authorization.v1.json",
+      "lengthBytes": 6548,
+      "sha256": "c91eaf6c3bdac0ff8d47c388ff86a21662230de20cde0747280bdcc76ef7a721"
+    },
+    {
+      "role": "attempt-005-plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Rule_Offline_Evidence_Adjudication_Attempt_005_Plan.v1.md",
+      "lengthBytes": 4928,
+      "sha256": "c752440f2d071bf770019ff554237f3e2614358b9b03ca240fd81be86505a05f"
+    },
+    {
+      "role": "attempt-005-offline-adjudicator",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_unity_identity_offline_adjudication_v1.py",
+      "lengthBytes": 62490,
+      "sha256": "4949b15d5ab77d77dc1c274d5b495f157f7330c910eb2ebb21096704a59c1734"
+    },
+    {
+      "role": "retained-status-v16",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v16.json",
+      "lengthBytes": 1447,
+      "sha256": "6e7b993b64fccc114038bf70b56721ed2c0568c454d2a90852d9d5eeabaa9d1e"
+    },
+    {
+      "role": "retained-attempt-004-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/failure-receipt.v1.json",
+      "lengthBytes": 1759,
+      "sha256": "883f688d7d07a10bab4a5bbd2e186d2b74108bf0f01d65d61d84fc80ba8c543c"
+    },
+    {
+      "role": "retained-attempt-004-orchestrator",
+      "relativePath": "Research/Gate14Re-ME/Tools/Invoke-Gate14ReMEUnityExecutableIdentityAuditV4.ps1",
+      "lengthBytes": 68686,
+      "sha256": "3317558dd838137c7fba783262d465b967da60e232e6a64c10d1af1acf23a747"
+    }
+  ],
+  "runtime": {
+    "role": "python-runtime",
+    "absolutePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "version": "Python 3.12.14",
+    "lengthBytes": 107312,
+    "sha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+  },
+  "retainedAttempt004Inventory": {
+    "rootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004",
+    "fileCount": 34,
+    "digestAlgorithm": "SHA-256 over UTF-8 rows sorted case-insensitively by relative path; each row is relativePath<TAB>lengthBytes<TAB>sha256<LF>",
+    "digestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c",
+    "entries": [
+      {
+        "relativePath": "external-concurrent-fingerprint.v1.json",
+        "lengthBytes": 103408,
+        "sha256": "dc4dc2c80066adb64687330626c3537b6fac71aa8d3ab3358ec5fc263b530464"
+      },
+      {
+        "relativePath": "external-post-exit-fingerprint.v1.json",
+        "lengthBytes": 103391,
+        "sha256": "02174e0e6792af9236082e016f3281e3aad9bdc31f7687446500dc6fd0666862"
+      },
+      {
+        "relativePath": "external-prelaunch-fingerprint.v1.json",
+        "lengthBytes": 103391,
+        "sha256": "60f079e84444a456220e585bdf8467464a580bb46771aa773051f8b992cabc4f"
+      },
+      {
+        "relativePath": "failure-receipt.v1.json",
+        "lengthBytes": 1759,
+        "sha256": "883f688d7d07a10bab4a5bbd2e186d2b74108bf0f01d65d61d84fc80ba8c543c"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/Assets/Editor.meta",
+        "lengthBytes": 172,
+        "sha256": "53388c43f4bc53c6d40a3032f865d1644ad7aee67295f3804c05302d266aa03c"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/Assets/Editor/Gate14ReMEUnityExecutableIdentityAuditV4.cs",
+        "lengthBytes": 45381,
+        "sha256": "9ef956d7a8a2ff0ec2efc5450ae7e15d0975299e75ac0016b6b51b332d9ac0c2"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/Assets/Editor/Gate14ReMEUnityExecutableIdentityAuditV4.cs.meta",
+        "lengthBytes": 243,
+        "sha256": "8f63a19288ec19debc51f659e856567704be547ee7e098ba36eecf371e1d32d1"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/Packages/manifest.json",
+        "lengthBytes": 25,
+        "sha256": "bfb62e6eafd1bf6db3ca8fa70b6712d62d1ba3562451585ece7bdb56ffcd2f73"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/AudioManager.asset",
+        "lengthBytes": 443,
+        "sha256": "9a554916fe138ebcad8443ee9b079363ecc72795c39d0e80f5f7ca99e2c6f5e7"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/ClusterInputManager.asset",
+        "lengthBytes": 114,
+        "sha256": "40e65dd214bf254955d2c8829ca8ce2130fd3510485560ce012e9a1ddd93e623"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/DynamicsManager.asset",
+        "lengthBytes": 1394,
+        "sha256": "62fd35da36080a098d3e9f90cf4af6c655fe582091c33e505b812cf9aa36fee1"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/EditorBuildSettings.asset",
+        "lengthBytes": 160,
+        "sha256": "1942c088ddfeeef348fdf12390e2a2d6da51056e197458d67969d44e7b2cbbd3"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/EditorSettings.asset",
+        "lengthBytes": 1502,
+        "sha256": "6f8761b516f06ff2f0373b6310571cf7951f63afb86c56bfd7be832e06a9987b"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/GraphicsSettings.asset",
+        "lengthBytes": 2392,
+        "sha256": "96fbec3a726513347293fb201477836277ade290a0bd7bd473cea90ffe896820"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/InputManager.asset",
+        "lengthBytes": 5816,
+        "sha256": "d0f454ddb880912abcae92e3e12957a7446786ba89e24937e019ff3bbc0d4300"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/MemorySettings.asset",
+        "lengthBytes": 1192,
+        "sha256": "1e8379a461b10ae09f3f696911088c16875d63e87ed5f2d95df9e1892703f9fd"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/NavMeshAreas.asset",
+        "lengthBytes": 1361,
+        "sha256": "7ebbf8f53b8033104e1878b95ca07a28d0954092d81c220f14196a42f651e658"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/Physics2DSettings.asset",
+        "lengthBytes": 1635,
+        "sha256": "531861618163b01648a075414f6e864506ad8fe0a0d4d0096aa1fbbfcd3937dc"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/PresetManager.asset",
+        "lengthBytes": 146,
+        "sha256": "29c125923fe6e29f90190d4fce1c82d660e7051546e2c9d02908d18c9cf2436c"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/ProjectSettings.asset",
+        "lengthBytes": 23164,
+        "sha256": "d42e88e4244646ddd7d16c854a1872056bdd87e96a27c4fc3c96eadd4808a9bb"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/ProjectVersion.txt",
+        "lengthBytes": 89,
+        "sha256": "48aa38463f4a9877772b9643daa63322b4dbdd55a69848006ec6bec8cc0b35ef"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/QualitySettings.asset",
+        "lengthBytes": 9183,
+        "sha256": "944b52d523bcb15b945bc80924b9289f59185ab19bce8a00e99eec345bde6440"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/TagManager.asset",
+        "lengthBytes": 378,
+        "sha256": "8e18b1c820e9c09e16bbd1f1b7842e9fb3b0158a0921b0964e0b8fa12c6e2c01"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/TimeManager.asset",
+        "lengthBytes": 202,
+        "sha256": "1a83e54adbbda7c9f4851103a0c6ab7f6448a3343d4ea5b7620452fa08416ecd"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/UnityConnectSettings.asset",
+        "lengthBytes": 1044,
+        "sha256": "5af4c69bb69f1d9dfbbc47b01eb6522e3ea41e672791e080a003c8deacae9ab5"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/VersionControlSettings.asset",
+        "lengthBytes": 188,
+        "sha256": "e7bda45bf7a394745fee1316e6c71fa676004d591ad1f3aa247fd3e4ceb86071"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/ProjectSettings/VFXManager.asset",
+        "lengthBytes": 465,
+        "sha256": "3f31266c7c1910447586e71b041dabd58d8371715ac3142d3e38ace46121f4ab"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/UserSettings/EditorUserSettings.asset",
+        "lengthBytes": 623,
+        "sha256": "a46b9a7da016bcf8146e25f899687254343d0bef01eafc47c9c14ebb527e9d1f"
+      },
+      {
+        "relativePath": "isolated-unity-audit-project/UserSettings/Search.settings",
+        "lengthBytes": 2,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      {
+        "relativePath": "prior-attempt-inventory.before.v1.json",
+        "lengthBytes": 13162,
+        "sha256": "d788ecfaf2827db85108800b61db0fefa2bba785d0c6324b99fd018670214448"
+      },
+      {
+        "relativePath": "process-launch-receipt.v1.json",
+        "lengthBytes": 2597,
+        "sha256": "852a3d0390840634b4791322be0858578039184a96ec9d825f7f343677faaf7c"
+      },
+      {
+        "relativePath": "unity-identity-probe.log",
+        "lengthBytes": 89082,
+        "sha256": "d51b203028454075ce369d76f8079a7f0cd43b50d96cf2e7903bfa77988116d1"
+      },
+      {
+        "relativePath": "unity-output/in-process-ready-snapshot.v1.json",
+        "lengthBytes": 134518,
+        "sha256": "492617d438a5ce7fee4d6453aaef3527555c391b6f74e9b99f8b98985b257076"
+      },
+      {
+        "relativePath": "unity-output/unity-identity-probe-receipt.v1.json",
+        "lengthBytes": 272427,
+        "sha256": "24f3cfba8815fdd3c73b178687b116c00ffd9d02a0a670c19f4d2cfd4e26d460"
+      }
+    ]
+  },
+  "outputBoundary": {
+    "maximumUnityInvocations": 0,
+    "permittedOutputRootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005",
+    "permittedStatusOutputRelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v17.json",
+    "attempt004MayBeModifiedOrReclassified": false,
+    "cleanupOrDeletionAuthorized": false,
+    "schemaCompatibilityOrScientificQualificationAuthorized": false
+  }
+}

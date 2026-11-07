@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "planId": "gate13-r2-process-reuse-pilot-plan-v1",
+  "planKind": "isolated-non-formal-process-reuse-pilot-v1",
+  "recordedAt": "2026-10-06T13:20:00+08:00",
+  "materialPassport": {
+    "originSkill": "experiment-agent",
+    "originMode": "plan",
+    "verificationStatus": "PLAN-FROZEN-BEFORE-IMPLEMENTATION",
+    "versionLabel": "gate13_process_reuse_pilot_plan_v1"
+  },
+  "authorizationBoundary": {
+    "authorizationReference": "user-message-2026-10-06-gate13-cold-process-to-process-reuse-controlled-design-migration",
+    "implementationAndNonFormalPilotAuthorized": true,
+    "formalCampaignAuthorized": false,
+    "formalExecutionReceiptAllowed": false,
+    "formalOutputRootCreationAllowed": false,
+    "automaticRetryAllowed": false,
+    "automaticResumeAllowed": false
+  },
+  "paths": {
+    "pilotRootRelativePath": "Research/PilotRuns/Gate13_ProcessReuse/v1",
+    "reservedFormalRootRelativePath": "Research/FormalRuns/Gate13_ProcessReuse/v1",
+    "pilotRootCreateNewOnly": true,
+    "reservedFormalRootMustRemainAbsent": true
+  },
+  "frozenInputs": {
+    "specification": {
+      "relativePath": "Research/Gate13_ProcessReuse_Specification.md",
+      "sha256": "06b8f79aff15301acb45a478ac054e0a444be3581fe4cb05f4c5a106dc6e256d"
+    },
+    "testDesign": {
+      "relativePath": "Research/Gate13_ProcessReuse_Test_Design.md",
+      "sha256": "45aed83d000ef8db41a5d910394422ba576ffe96a3543ac67415aa147bc1fefb"
+    },
+    "coldFormalConfig": {
+      "relativePath": "Research/Gate13_Formal_Campaign_Config.v1.json",
+      "sha256": "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874"
+    },
+    "readinessAmendment": {
+      "relativePath": "Research/Gate13_Readiness_Amendment.v1.json",
+      "sha256": "1ccf5c6e1e2c646d160e7b597381c797cc14e6123134a28b429fcb773515e8b2"
+    },
+    "coldTerminationReceipt": {
+      "relativePath": "Research/Gate13_ColdProcess_Termination_Receipt.v1.json",
+      "sha256": "4661a3edc6e569b068e065456ab34f839d60030b1d668a925ca5b9dad9e481a4"
+    },
+    "gate11BundleManifest": {
+      "relativePath": "Research/FormalScenarios/v1/bundle-manifest.json",
+      "sha256": "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e"
+    },
+    "gate11Matrix": {
+      "relativePath": "Research/FormalScenarios/v1/formal-scenario-matrix.json",
+      "sha256": "404df63d38bccd66bb665446e0f2cbf3e5f8c7293f543b3213bde4206435fe9f"
+    },
+    "gate11Preregistration": {
+      "relativePath": "Research/FormalScenarios/v1/preregistered-analysis.json",
+      "sha256": "7e947885c38fcf9307fd9202585dda3b2b5d11334f495428760009a2aa202b5b"
+    },
+    "gate12Plan": {
+      "relativePath": "Research/Gate12_Pilot_Plan.v1.json",
+      "sha256": "cc63505f444223c06a7f69a979c6a0d2e7f0d29e8217d910fe46b61db5618ce4"
+    },
+    "gate12SuccessfulPilotManifest": {
+      "relativePath": "Research/PilotRuns/Gate12/v1/pilot-manifest.json",
+      "sha256": "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a"
+    },
+    "planningWorkloadRunner": {
+      "relativePath": "Assets/_Scripts/Research/Experiments/DeterministicPlanningWorkloadRunner.cs",
+      "sha256": "8ae626ebc9d6c30b510ea0b57a7b1ed6f513a7535551caebf9a0e805debe9a6f"
+    },
+    "coldBatchCommand": {
+      "relativePath": "Assets/_Scripts/Research/Editor/ResearchPlanningBatchCommand.cs",
+      "sha256": "10f9b1b921a87e60753e4eb9be53c43ce89d524ce2e8044274ae332715b74ced"
+    },
+    "experimentRunner": {
+      "relativePath": "Assets/_Scripts/Research/Experiments/ExperimentRunner.cs",
+      "sha256": "8f0cfde8fa032edb8684c920b8179b0da177ffefc520aea3962d9dc692fde997"
+    },
+    "jsonlLogger": {
+      "relativePath": "Assets/_Scripts/Research/Logging/JsonlExperimentLogger.cs",
+      "sha256": "4669b760737f880074ac5ba3512601cf520dbf70daf6685a06cb42a9b627bb98"
+    },
+    "fairnessContracts": {
+      "relativePath": "Assets/_Scripts/Research/Experiments/PlanningFairnessContracts.cs",
+      "sha256": "42e1865294439986e808547115b22ccaaff53f3293790a8c4a135fb529ef3a60"
+    }
+  },
+  "implementationBinding": {
+    "requiredBeforeAnyUnityPilotInvocation": true,
+    "processReuseBatchCommandRelativePath": "Assets/_Scripts/Research/Editor/ResearchPlanningProcessReuseBatchCommand.cs",
+    "processReusePowerShellRunnerRelativePath": "Research/Run-PlanningProcessReuseBlock.ps1",
+    "processReuseModuleRelativePath": "Research/Gate13ProcessReusePreparation.psm1",
+    "provenanceRelativePath": "Research/Gate13_ProcessReuse_Provenance.v1.json"
+  },
+  "unity": {
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "productVersion": "2022.3.30f1c1_a6dc00fbe362",
+    "executableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "environmentPreflight": {
+    "requiredActivePowerSchemeGuid": "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+    "requiredActivePowerSchemeName": "High performance",
+    "requireAcOnline": true,
+    "minimumFreePhysicalMemoryBytes": 4294967296,
+    "cpuLoadSampleCount": 5,
+    "cpuLoadSampleIntervalSeconds": 1,
+    "maximumMeanCpuLoadPercent": 50.0,
+    "requireNoUnityProcess": true,
+    "requireNoUnityLockfile": true,
+    "temperatureUnavailablePolicy": "record-unavailable-and-rely-on-controlled-warmup-plus-balanced-order-v1"
+  },
+  "processReusePolicy": {
+    "designId": "one-fresh-unity-process-per-williams-block-v1",
+    "oneBlockPerUnityProcess": true,
+    "oneSamplePerAlgorithmPerProcess": true,
+    "longLivedCampaignProcessAllowed": false,
+    "forcedGcBeforeEverySample": true,
+    "forcedGcSequence": "collect-wait-finalizers-collect-v1",
+    "forcedGcInsidePlannerTiming": false,
+    "blockFailurePolicy": "fail-closed-no-later-position-no-retry-no-resume-v1"
+  },
+  "warmup": {
+    "analysisExcluded": true,
+    "campaignId": "g13r2-warmup-core-r01-s1-shared-s4",
+    "scenarioRelativePath": "Research/FormalScenarios/v1/Scenarios/core-r01-s1-shared.scenario.json",
+    "scenarioSourceSha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+    "comparisonCohortId": "four-algorithm-shared-goal-v1",
+    "block": 1,
+    "sampleCount": 4,
+    "quietStabilizationSecondsAfterWarmup": 10
+  },
+  "freshColdReferences": [
+    {
+      "scenarioId": "core-r01-s1-shared",
+      "scenarioRelativePath": "Research/FormalScenarios/v1/Scenarios/core-r01-s1-shared.scenario.json",
+      "scenarioSourceSha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "comparisonCohortId": "four-algorithm-shared-goal-v1",
+      "algorithms": ["A*-R", "D*L", "C-FF", "IDFF"]
+    },
+    {
+      "scenarioId": "core-r01-s1-hetero",
+      "scenarioRelativePath": "Research/FormalScenarios/v1/Scenarios/core-r01-s1-hetero.scenario.json",
+      "scenarioSourceSha256": "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+      "comparisonCohortId": "per-agent-and-grouped-structural-control-only-v1",
+      "algorithms": ["A*-R", "D*L", "C-FF", "IDFF"]
+    }
+  ],
+  "measuredCampaigns": [
+    {
+      "ordinal": 1,
+      "campaignId": "g13r2p-c001-core-r01-s1-shared-s4",
+      "sourceColdCampaignId": "g13-c001-core-r01-s1-shared-s4",
+      "scenarioId": "core-r01-s1-shared",
+      "scenarioRelativePath": "Research/FormalScenarios/v1/Scenarios/core-r01-s1-shared.scenario.json",
+      "scenarioSourceSha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "scenarioFingerprintSha256": "b8ffb21c181056ac8019d6e8f5a1d0e4c7990bdec8f163bb2725fbf546e68c04",
+      "comparisonCohortId": "four-algorithm-shared-goal-v1",
+      "algorithms": ["A*-R", "D*L", "C-FF", "IDFF"],
+      "blocks": 12,
+      "expectedBlockProcessCount": 12,
+      "expectedSampleCount": 48
+    },
+    {
+      "ordinal": 2,
+      "campaignId": "g13r2p-c002-core-r01-s1-hetero-pa2",
+      "sourceColdCampaignId": "g13-c002-core-r01-s1-hetero-pa2",
+      "scenarioId": "core-r01-s1-hetero",
+      "scenarioRelativePath": "Research/FormalScenarios/v1/Scenarios/core-r01-s1-hetero.scenario.json",
+      "scenarioSourceSha256": "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+      "scenarioFingerprintSha256": "9651ef01599dfe45576434bd38dd0970f890223d3cfb416ca1cedad65e1c0c83",
+      "comparisonCohortId": "per-agent-heterogeneous-goal-v1",
+      "algorithms": ["A*-R", "D*L"],
+      "blocks": 12,
+      "expectedBlockProcessCount": 12,
+      "expectedSampleCount": 24
+    },
+    {
+      "ordinal": 3,
+      "campaignId": "g13r2p-c003-core-r01-s1-hetero-gf2",
+      "sourceColdCampaignId": "g13-c003-core-r01-s1-hetero-gf2",
+      "scenarioId": "core-r01-s1-hetero",
+      "scenarioRelativePath": "Research/FormalScenarios/v1/Scenarios/core-r01-s1-hetero.scenario.json",
+      "scenarioSourceSha256": "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+      "scenarioFingerprintSha256": "9651ef01599dfe45576434bd38dd0970f890223d3cfb416ca1cedad65e1c0c83",
+      "comparisonCohortId": "grouped-field-heterogeneous-goal-v1",
+      "algorithms": ["C-FF", "IDFF"],
+      "blocks": 12,
+      "expectedBlockProcessCount": 12,
+      "expectedSampleCount": 24
+    }
+  ],
+  "totals": {
+    "warmupBlockProcessCount": 1,
+    "warmupSampleCount": 4,
+    "freshColdProcessCount": 8,
+    "freshColdSampleCount": 8,
+    "measuredBlockProcessCount": 36,
+    "measuredSampleCount": 96,
+    "totalUnityProcessCount": 45,
+    "totalSampleCount": 108
+  },
+  "analysis": {
+    "primaryEndpointId": "dynamicHandlingMillisecondsPerScheduledEvent",
+    "transform": "natural-log-v1",
+    "precisionRelativeHalfWidthTarget": 0.10,
+    "z": 1.96,
+    "minimumIndependentBlocks": 30,
+    "cycleMultiple": 4,
+    "maximumIndependentBlocks": 148,
+    "independentUnit": "williams-block-unity-process-v1",
+    "withinProcessSamplesCorrelated": true,
+    "candidateRule": "maximum-of-marginal-log-sigma-and-within-block-paired-log-difference-requirements-v1",
+    "significanceEarlyStoppingAllowed": false,
+    "trendEarlyStoppingAllowed": false,
+    "varianceReestimationDuringFormalCampaignAllowed": false,
+    "excludedSources": [
+      "Research/FormalRuns/Gate13/v1",
+      "warmup",
+      "fresh-cold-reference"
+    ]
+  },
+  "hardMemoryLimits": {
+    "maximumManagedMemoryGrowthBytesPerBlock": 134217728,
+    "maximumWorkingSetGrowthBytesPerBlock": 536870912
+  }
+}

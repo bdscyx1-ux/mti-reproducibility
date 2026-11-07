@@ -1,0 +1,25 @@
+{
+  "kind": "tool_receipt",
+  "step": "monitoring-recovery-readiness-v2",
+  "command": "Finalize the active v2 monitoring/recovery readiness after correcting every current-plan route to the full versioned v4 authorization prompt; preserve all prior packages and bind the final terminal audit, evidence manifest, heartbeat and prompt without Unity or formal target creation.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 1,
+  "gate_tokens": [
+    "MONITORING-RECOVERY-V2-VALIDATED",
+    "FINAL-PROMPT-ROUTE-CONSISTENT",
+    "HEARTBEAT-ACTIVE",
+    "PRELAUNCH-REPAIR-CYCLE-1-CONSUMED",
+    "WAIT-FOR-FORMAL-ATTEMPT3-AUTHORIZATION",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "input_sha256": {
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.json": "526a7fc6ff67e3c2ac0201f1f88dcc08b9af155e0a25d0332fd4aab189aa809c",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.md": "0f9bd5b9c14d8407a2a6f4750832d2b4daf25cac7a2d645da2a6e6556fe77df0",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v3.json": "6290bcab9b051af1215bd3658cf88be91fbeec65729f8eed4ff3a5bfe9f59c9b",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v5.json": "79f5cfd08b4f00559271e8889b88c9bd4991840ff9141815bb03e83c7a4d03bd",
+    "Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v4.md": "35652dfb462191c10abca3c426fb3e9aeefe8f37beaee28358704568ca133bc5",
+    "C:\\Users\\bdscy\\.codex\\automations\\gate13r-attempt3-hourly-progress\\automation.toml": "c66d41527f075137b2829a291fb303e1d81af940925e739fa3c898cb8f52b0e4"
+  }
+}

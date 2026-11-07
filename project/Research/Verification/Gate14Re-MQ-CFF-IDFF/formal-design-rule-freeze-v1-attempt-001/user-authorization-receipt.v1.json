@@ -1,0 +1,27 @@
+{
+  "schema": "gate14re-mq-cff-idff-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "formal-design-rule-freeze-v1-attempt-001",
+  "status": "AUTHORIZED_FORMAL_DESIGN_POWER_IMPLEMENTATION_SCHEDULE_AND_PRELAUNCH_READINESS_ONLY",
+  "authorizedAtUtc": "2026-10-21T05:51:56.2415042Z",
+  "sourceTextExact": "授权按现有 MQ 正式设计提案执行设计冻结、identity-blind 功效计算、B 选择、实现与日程冻结及 prelaunch readiness；正式 MQ collection 在 readiness PASS 并报告后再单独等待我的启动授权。",
+  "proposalBinding": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/FormalDesignProposal/v1/formal-mq-design-recommendation.v1.json",
+    "sha256": "137fb31287ec131bfad348cd7bb85fd4bdb8f82f012e21d6c7065e97817cf295"
+  },
+  "authorized": [
+    "freeze the six P1-P6 within-algorithm primary estimands",
+    "freeze the MQ-specific 10 percent MIPE and one-sided Holm FWER 0.05 family",
+    "run identity-blind nuisance-only power computation",
+    "select the smallest passing B from 36 72 108 144",
+    "freeze formal MQ implementation and schedule after a valid B selection",
+    "perform compile known-answer and prelaunch readiness checks"
+  ],
+  "notAuthorized": [
+    "formal MQ collection launch",
+    "formal MQ effect analysis",
+    "formal ST collection or analysis",
+    "MT collection or analysis",
+    "retry replacement top-up resume or merge across failed formal attempts"
+  ]
+}

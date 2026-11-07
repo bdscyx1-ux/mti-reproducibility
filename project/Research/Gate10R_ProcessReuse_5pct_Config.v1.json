@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "configId": "gate10r-process-reuse-5pct-config-v1",
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "lineageId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "status": "FROZEN-BEFORE-IMPLEMENTATION",
+  "formalCampaign": false,
+  "projectRoot": "H:/DDM_Final_Project",
+  "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+  "verificationRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v1",
+  "sourcePaths": {
+    "unityCommand": "Assets/_Scripts/Research/Editor/Gate10RProcessReuseBatchCommand.cs",
+    "preparationModule": "Research/Gate10RProcessReusePreparation.psm1",
+    "blockRunner": "Research/Run-Gate10RProcessReuseBlock.ps1",
+    "telemetryProbe": "Research/Run-Gate10RTelemetryProbe.ps1",
+    "coldReferenceRunner": "Research/Run-Gate10RColdReference.ps1"
+  },
+  "cohorts": {
+    "shared": {
+      "id": "four-algorithm-shared-goal-v1",
+      "algorithms": [
+        "A*-R",
+        "D*L",
+        "C-FF",
+        "IDFF"
+      ],
+      "blockSize": 4
+    },
+    "perAgent": {
+      "id": "per-agent-heterogeneous-goal-v1",
+      "algorithms": [
+        "A*-R",
+        "D*L"
+      ],
+      "blockSize": 2
+    },
+    "groupedField": {
+      "id": "grouped-field-heterogeneous-goal-v1",
+      "algorithms": [
+        "C-FF",
+        "IDFF"
+      ],
+      "blockSize": 2
+    }
+  },
+  "thresholds": {
+    "sampleRetainedManagedGrowthBytes": 134217728,
+    "blockRetainedManagedGrowthBytes": 134217728,
+    "blockWorkingSetGrowthBytes": 536870912,
+    "blockPrivateMemoryGrowthBytes": 536870912,
+    "telemetryAbsoluteToleranceBytes": 67108864,
+    "telemetryRelativeTolerance": 0.25,
+    "telemetryTimeoutSeconds": 60,
+    "creationTimeToleranceSeconds": 2
+  },
+  "precisionPolicy": {
+    "targetRelativeCiHalfWidth": 0.05,
+    "logHalfWidth": 0.048790164169432,
+    "confidenceLevel": 0.95,
+    "criticalValue": 1.96,
+    "minimumBlocks": 32,
+    "cycleMultiple": 4,
+    "hardCap": null,
+    "usedForGate10RFixtureSizing": false
+  },
+  "structuralProjection": {
+    "comparison": "exact-match",
+    "excludedFieldClasses": [
+      "run/output identity",
+      "timestamp/duration",
+      "process identity/age",
+      "native/managed/GC telemetry",
+      "allocation bytes",
+      "hashes containing an allowed excluded field"
+    ],
+    "wildcardExclusionsAllowed": false
+  },
+  "failurePolicy": {
+    "failClosed": true,
+    "automaticRetry": false,
+    "automaticResume": false,
+    "partialBlockAdmissible": false
+  },
+  "forbiddenRoots": [
+    "Research/FormalScenarios/Gate11R_5pct/v1",
+    "Research/PlayableExperiments/Gate11R_5pct/v1",
+    "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v1",
+    "Research/FormalRuns/Gate13R_ProcessReuse_5pct/v1"
+  ]
+}
+

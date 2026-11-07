@@ -1,0 +1,97 @@
+{
+  "schema": "gate14re-me-load-qualification-freeze-readiness-checkpoint-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "PASS_LOAD_QUALIFICATION_PROTOCOL_FROZEN_QUALIFICATION_NOT_READY_NOT_AUTHORIZED",
+  "exactBindings": [
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Freeze_Authorization.v1.json",
+      "sha256": "5e2c6b7781069b41c18929bac80705d9523c8fe47d51403d1b51d11012085c1f"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Protocol.v1.json",
+      "sha256": "93f176513ba09f07abe2cb3182a5e7c20662495773d810c54caa7d9589dfa364"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v2.md",
+      "sha256": "774942ace72f98961fa65fc97c43ecbc7f850f2dbad47775dc5ff1b96eb4c4d0"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v2.json",
+      "sha256": "73d81fe3be7c0e8f1ba6bbf25e584d86137a2e196d89ec03de7e8d59bf6412f5"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v2.json",
+      "sha256": "8960c2050f34ff56a8f680f092bdc4cf156ed8cff4ae264015411cbb249255d6"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Status.v2.json",
+      "sha256": "287b2483dc87bae95e1a0891d30879e58eaad0fea02c3d3885111506284f050a"
+    },
+    {
+      "path": "Research/Validate-Gate14ReMELoadQualificationFreezeV1.py",
+      "sha256": "0a205f99a0686dcb550c3456c860b4825097c37e9c39c765ea12d21125835c37"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/precollection-load-qualification-freeze-attempt-001/validation-receipt.v1.json",
+      "sha256": "2f1c353f453af4f9c1236adcce8a1bd384cc6052db7b817f65adaacf56b66ecc"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/precollection-load-qualification-freeze-attempt-001/load-qualification-freeze-manifest.v1.json",
+      "sha256": "849e0b2bcc33a84b803e15e6371bf94c30d129d006df55d8e65c83b41771678e"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/precollection-load-qualification-freeze-attempt-001/canonical-tree.v1.jsonl",
+      "sha256": "ddeebfa20079c63fb41f765f86f64be94211e5f394a0a25306418fdb41cdadd2"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/precollection-load-qualification-freeze-attempt-001/load-qualification-freeze-receipt.v1.json",
+      "sha256": "62a59fd3c290a6a430b8e051ee078628e0e6c2ce40e6cdd467cb23c4ce07b547"
+    }
+  ],
+  "checks": {
+    "explicitUserAuthorization": "PASS",
+    "v1ArtifactsHashUnchangedAndReadOnly": "PASS",
+    "sixAlgorithmsAndOriginalEndpointsUnchanged": "PASS",
+    "noRankingWinnerWeightedComposite": "PASS",
+    "pilotSuperblockDefinedAsIndependentUnit": "PASS",
+    "anonymousPerLaneDecisionBoundary": "PASS",
+    "fullFortyEightCellThreeSeedCoverage": "PASS",
+    "eighteenHighCornerContextStressCoverage": "PASS",
+    "williamsExecutionPositionBalance": "PASS",
+    "emptyBoundaryTimingReference": "PASS",
+    "algorithmNeutralPathLengthAndAffectedAgentGate": "PASS",
+    "measurementFloorGate": "PASS",
+    "perLevelCoverageGate": "PASS",
+    "withinLaneFourFoldDynamicRangeGate": "PASS",
+    "timeoutMemoryStorageCeilingAndTwoFoldHeadroom": "PASS",
+    "completePerObservationQualificationDataGate": "PASS",
+    "failClosedPassAndFailureStatuses": "PASS",
+    "MIPEFinalBAndExactBudgetsNotInvented": "PASS",
+    "noQualificationRoot": "PASS",
+    "noFormalMeasuredAnalysisOrExportRoot": "PASS",
+    "noPriorObservationAccess": "PASS",
+    "noUnityExecution": "PASS",
+    "outcomeFreeValidation239Checks": "PASS"
+  },
+  "readiness": {
+    "v2ScientificAmendmentFrozen": true,
+    "loadQualificationProtocolFrozen": true,
+    "loadQualificationImplementationReady": false,
+    "sixAlgorithmSourceSpecificationFairnessHashBindingReady": false,
+    "referenceOracleHashBindingReady": false,
+    "instrumentAndDeliveryKnownAnswerImplementationReady": false,
+    "exactTimeoutMemoryAndStorageCeilingsReady": false,
+    "qualificationInputGenerationAuthorized": false,
+    "qualificationRootMayBeCreated": false,
+    "qualificationExecutionAuthorized": false,
+    "formalInputDrawMayBegin": false,
+    "formalMeasuredRootMayBeCreated": false,
+    "finalBReady": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  },
+  "nextPermittedStageOnlyAfterNewUserAuthorization": "outcome-independent implementation and freeze of qualification runner, reference oracle, instruments, raw-delivery machinery, six-algorithm fairness bindings, and exact timeout/memory/storage ceilings; generating qualification inputs, creating its root, or running Unity still requires a separate explicit execution authorization",
+  "result": "PASS"
+}

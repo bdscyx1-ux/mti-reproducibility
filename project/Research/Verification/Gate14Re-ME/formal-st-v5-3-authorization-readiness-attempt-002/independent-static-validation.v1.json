@@ -1,0 +1,88 @@
+{
+  "schema": "gate14re-me-formal-st-v5.3-independent-static-validation-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_FORWARD_ONLY_AUTHORIZATION_CONTRACT_PARITY_FIX_STATIC_VALIDATION",
+  "validatedAtUtc": "2026-10-26T12:13:42.7977509Z",
+  "implementationRevision": "v5.3-authorization-contract-parity-fix",
+  "supervisor": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5_3/Run-Gate14ReMEFormalST.v5_3.ps1",
+    "bytes": 72906,
+    "sha256": "fcfbc5c080e714c3c3e079797195b455d9a32db29e937ccb37768a34a3cbdda1",
+    "powerShellParseErrorCount": 0,
+    "scriptParameterCount": 23,
+    "caseInsensitiveParameterAssignmentCollisionCount": 0,
+    "legacyCollidingAssignmentPresent": false,
+    "repairedInputFreezeDocumentAssignmentPresent": true,
+    "typedRunnerAuthorizationFieldCount": 24,
+    "supervisorRequiredAuthorizationFieldCount": 24,
+    "typedRunnerAuthorizationFieldMismatchCount": 0,
+    "authorizationIdNonemptyGuardPresent": true,
+    "relativePathParityGuardsPresent": true,
+    "lowerCaseUuidV4NonceGuardPresent": true,
+    "preflightOnlyBranchLine": 883,
+    "firstMeasuredRootMutationLine": 904,
+    "preflightOnlyBranchPrecedesMeasuredRootMutation": true,
+    "unityArgumentQuitAdded": false,
+    "runnerMethodUnchanged": true
+  },
+  "sourceDiff": {
+    "baseSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_2/Run-Gate14ReMEFormalST.v5_2.ps1",
+    "baseSupervisorSha256": "cbcdc4030eac2e4d79ae1fbafa5c1a2fe1a3ee7e25c00044575974bf78fb9889",
+    "allowedChangesOnly": true,
+    "changes": [
+      "require all 24 serialized Gate14ReMEFormalSTExecutionAuthorizationV5 fields before any measured-root mutation",
+      "require a nonempty authorizationId",
+      "require exact authorization-to-command relative-path parity for implementation manifest, acquisition contract, input freeze manifest, and schedule",
+      "require authorizationNonce to be a lower-case UUIDv4",
+      "record authorization-contract parity in preflight and launch receipts",
+      "advance only the operational implementation revision label"
+    ]
+  },
+  "implementationManifestCandidateValidation": {
+    "artifactCountBeforeReadinessBindings": 47,
+    "duplicatePathCount": 0,
+    "hashOrCardinalityFailureCount": 0,
+    "rule": "The final v5.3 implementation manifest is frozen only after this validation and the readiness terminal are appended as exact-hash artifacts."
+  },
+  "contract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5_3/formal-st-acquisition-contract.v5_3.json",
+    "bytes": 10809,
+    "sha256": "b668fee1f1d245a3a898f958ea4b81af2fa328e2139d57ceebc162a3fb26a55b",
+    "frozenBindingCount": 36,
+    "frozenBindingFailureCount": 0,
+    "selfBoundSupervisorSha256": "fcfbc5c080e714c3c3e079797195b455d9a32db29e937ccb37768a34a3cbdda1"
+  },
+  "algorithmFreeReadiness": {
+    "attemptId": "formal-st-v5-3-authorization-readiness-attempt-002",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "144da1e966b14f010440e15a6f9865b4b0424128b35a03127e04ec5a769eead2",
+    "unityExitCode": 0,
+    "burstFinalCompilationDone": true,
+    "commandLineQuitPresent": false,
+    "algorithmLaneExecuted": false,
+    "disallowedLogMatchCount": 0,
+    "activeUnityProcessCountAfterExit": 0
+  },
+  "unchangedBindings": {
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "sampleSizeDecisionSha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5",
+    "formalInputFreezeManifestSha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "runnerSha256": "12c44c11d831a28a5277b7f3b86687dfbe6572d50b93a74635a7437995c02d12",
+    "operationalResourceBudgetSha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2",
+    "sixAlgorithmFairnessBindingSha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "scientificBoundary": {
+    "scientificDesignChanged": false,
+    "formalInputsChanged": false,
+    "scheduleChanged": false,
+    "algorithmsChanged": false,
+    "metricsChanged": false,
+    "sampleRulesChanged": false,
+    "timeoutsChanged": false,
+    "formalMeasuredRootCreated": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false
+  }
+}

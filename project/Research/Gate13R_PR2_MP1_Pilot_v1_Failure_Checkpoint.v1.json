@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "checkpointKind": "gate13r-pr2-mp1-pilot-v1-failure-checkpoint-v1",
+  "savedAtUtc": "2026-10-09T03:43:00Z",
+  "status": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / ZERO-MEASURED-BLOCKS / IMMUTABLE",
+  "failureClass": "ORCHESTRATION-CHECKPOINT-SCHEMA-DEFECT",
+  "failureStage": "START-TRANSITION-BEFORE-FIRST-UNITY-BLOCK",
+  "diagnosis": {
+    "sourceRelativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotV1.ps1",
+    "sourceSha256": "1f68a539743099126a79d61d6defbcb351fd0b17c0e67cfd7cd581d82e4bc594",
+    "sourceLine": 64,
+    "error": "The deserialized checkpoint PSCustomObject did not contain startedAtUtc, so StrictMode rejected assignment before the first block plan or Unity process was created.",
+    "rawContractViolated": false,
+    "algorithmOrScenarioFailure": false
+  },
+  "prePilotValidation": {
+    "passedChecks": 29,
+    "totalChecks": 29,
+    "finalAuditSha256": "7d06eae1e44f23b53b72119f77dbe9f187d8404f7785bb13f92d84f3c773426d",
+    "readinessCheckpointSha256": "0c38ac7b981ee16f93b11cb00c278f86953766be51680a490cec9b05d22503d0"
+  },
+  "pilotV1": {
+    "absoluteRoot": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v1",
+    "expectedMeasuredBlocks": 96,
+    "expectedMeasuredSamples": 384,
+    "completedMeasuredBlocks": 0,
+    "completedMeasuredSamples": 0,
+    "warmupProcesses": 0,
+    "unityEditorProcessStarted": false,
+    "rawDataComplete": false,
+    "phaseACommitted": false,
+    "fileCount": 5,
+    "rawBytes": 5247,
+    "canonicalTreeSha256": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+    "allFilesReadOnly": true,
+    "executionReceiptSha256": "a7b8b63842704302be546aaa51d992264c854fc5961605a3bed209a7be160ae3",
+    "failedCheckpointSha256": "f884c02d80ed4f35fdc69437eeee6a650767b3ee64959774e436482e147dd550",
+    "failureReceiptSha256": "7eaee708fc0dd23e6f391ea2e4e3450d0313b2f0f91a59d2eb71e5b30cc3d214",
+    "partialManifestSha256": "30a7cc396d02aeab273a73e6356401455da38352af290c83decf29afc18250e2",
+    "failurePreservationReceiptSha256": "6d129e01b678871754413ca853051f7f8b921dad3ee572d35e96775fde57087e"
+  },
+  "failurePreservation": {
+    "attempt1FailureReceiptSha256": "5a059dd6e2ef79ae3ed666ec17dfb38bdfb7c59e34b9fcc222ce17dc27c2569d",
+    "attempt1Issue": "PowerShell 7/.NET 10 rejected File.Replace with a null backup path; original checkpoint remained intact.",
+    "recoveryMethod": "A versioned preservation-only recovery used File.Replace with a nonempty backup path; it did not start or retry the pilot.",
+    "recoveryScriptSha256": "4b3e8d94cc97c09d8cce13abd9a4514d36352407d1577670df1cb6a03d6f7ebd"
+  },
+  "upstreamPostFailureAudit": {
+    "auditSha256": "06c2c53bdf2096a53bc5ba4ccd2fd2f39c9b293f4d19ab8a2be5dcd0904bbd24",
+    "attempt2FormalFileCount": 28020,
+    "attempt2FormalRawBytes": 8536611302,
+    "attempt2FormalCanonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "attempt2FormalAllFilesReadOnly": true,
+    "unityProcessCount": 0,
+    "unityLockfileExists": false,
+    "formalAttempt3RootExists": false,
+    "formalAttempt3ReceiptExists": false
+  },
+  "authorizationBoundary": {
+    "pilotV1RetryAuthorized": false,
+    "pilotV1ResumeAuthorized": false,
+    "pilotV1TopUpAuthorized": false,
+    "pilotV1PartialMergeAuthorized": false,
+    "freshPilotV2Authorized": false,
+    "formalAttempt3Authorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "nextRequiredAction": "USER-AUTHORIZATION-REQUIRED-FOR-VERSIONED-V2-REPAIR-VALIDATION-AND-ONE-FRESH-PILOT"
+}

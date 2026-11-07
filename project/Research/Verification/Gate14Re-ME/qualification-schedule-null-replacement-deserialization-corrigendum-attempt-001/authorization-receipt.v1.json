@@ -1,0 +1,32 @@
+{
+  "schema": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "status": "AUTHORIZED_MINIMAL_FORWARD_ONLY_RUNNER_DESERIALIZATION_CORRIGENDUM",
+  "authorizedAtUtc": "2026-10-17T17:49:20.4187303Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME qualification schedule null‑replacement deserialization corrigendum attempt‑001：完整保留 load qualification execution attempt‑003、Status v37、失败 measured root 及全部证据，不删除、不修改、不改判，不允许 retry、resume 或复用 attempt‑001 measured root。仅允许前瞻性修复 RunnerV2 的 schedule replacement 判定，使 JSON replacement:null 与字段缺失均严格解释为“无 replacement”，完整合法 replacement 仍按原规则验证，空对象或部分字段 replacement 必须 fail closed；创建隔离的无算法 Unity known‑answer，覆盖 null、字段缺失、完整合法 replacement、空对象和部分字段五类情况；允许必要编译并冻结修改后的源码、程序集、哈希、合同和 terminal receipt。通过后再更新新执行所需的 measured/delivery root 绑定并执行一次只读 execution‑readiness recheck。本阶段不得创建新的 qualification measured/delivery root，不得运行 instrument、oracle、empty-boundary 或算法 lane，不得进行 qualification/formal 采集、正式分析、排名、加权或赢家裁决。",
+  "authorized": {
+    "forwardOnlyRunnerV2ScheduleReplacementInterpretationRepair": true,
+    "isolatedAlgorithmFreeUnityKnownAnswer": true,
+    "knownAnswerCases": [
+      "replacement-null",
+      "replacement-member-omitted",
+      "complete-valid-replacement-object",
+      "empty-replacement-object",
+      "partial-replacement-object"
+    ],
+    "necessaryCompilation": true,
+    "freezeModifiedSourceAssembliesHashesContractAndTerminalReceipt": true
+  },
+  "prohibited": {
+    "modifyOrReclassifyExecutionAttempt003": true,
+    "modifyOrReuseFailedMeasuredRoot": true,
+    "retryOrResumeExecutionAttempt003": true,
+    "createQualificationMeasuredRoot": true,
+    "createQualificationDeliveryRoot": true,
+    "runInstrumentOracleEmptyBoundaryOrAlgorithmLane": true,
+    "qualificationOrFormalCollection": true,
+    "formalAnalysisRankingWeightingOrWinnerAdjudication": true
+  }
+}

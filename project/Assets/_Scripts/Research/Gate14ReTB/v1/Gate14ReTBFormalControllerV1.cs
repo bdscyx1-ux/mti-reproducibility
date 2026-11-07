@@ -1,0 +1,809 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Text;
+using DDM.Research.Algorithms;
+using DDM.Research.Gate14Re.V1;
+using DDM.Research.Grid;
+using DDM.Research.Navigation;
+using DDM.Research.Scenarios;
+using UnityEngine;
+using UnityEngine.AI;
+
+namespace DDM.Research.Gate14ReTB.V1
+{
+    /// <summary>
+    /// One anonymous algorithm sample per fresh process. Production identity is
+    /// recovered only inside this process from DPAPI custody and is never placed in
+    /// sample output, trace headers, validation markers, or Unity object names.
+    /// </summary>
+    public sealed class Gate14ReTBFormalControllerV1 : MonoBehaviour
+    {
+        private enum RuntimePhase { None, Validation, Warmup, Measuring, Finished }
+
+        private const int FrameIntervalCapacity = 1000000;
+        public GameObject unitVisualPrefab;
+
+        private readonly List<GameObject> unitObjects = new List<GameObject>();
+        private RuntimePhase phase;
+        private bool finishing;
+        private bool collectionStarted;
+        private bool movementEnded;
+        private string mode;
+        private string projectRoot;
+        private string outputPath;
+        private string tracePath;
+        private string measuredRoot;
+        private string planSha256;
+        private string executionContractSha256;
+        private string executableSha256;
+        private string assemblyCSharpSha256;
+        private string buildReceiptSha256;
+        private string buildTreeSha256;
+        private string authorizationId;
+        private Gate14ReTBStage1SampleV1 sample;
+        private Gate14ReTBStage1SuperblockV1 superblock;
+        private Gate14ReTBInputBundleV1 bundle;
+        private Gate14ReTBPreparedScenarioV1 prepared;
+        private Gate14ReMovementKernelV1 kernel;
+        private IReadOnlyList<Gate14ReUnitStateV1> states;
+        private Gate14ReTextureVisualGridV1 textureVisual;
+        private Gate14ReTBTraceRecorderV1 traceRecorder;
+        private GameObject unitRoot;
+        private GameObject gridSurface;
+        private long[] arrivalTicks;
+        private double[] frameIntervals;
+        private int frameIntervalCount;
+        private int warmupFrames;
+        private long previousFrameTimestamp;
+        private long lastTraceTick = -1L;
+
+        private void Start()
+        {
+            byte[] plaintext = null;
+            try
+            {
+                Dictionary<string, string> arguments = ParseArguments(Environment.GetCommandLineArgs());
+                mode = Required(arguments, "gate14re-tb-mode");
+                if (mode != "validation" && mode != "formal") throw new InvalidOperationException("Runner mode must be validation or formal.");
+                projectRoot = Path.GetFullPath(Required(arguments, "gate14re-tb-project-root"));
+                string planPath = Path.GetFullPath(Required(arguments, "gate14re-tb-plan"));
+                planSha256 = RequiredLowerSha(arguments, "gate14re-tb-plan-sha256");
+                string contractPath = Path.GetFullPath(Required(arguments, "gate14re-tb-execution-contract"));
+                executionContractSha256 = RequiredLowerSha(arguments, "gate14re-tb-execution-contract-sha256");
+                string commitmentPath = Path.GetFullPath(Required(arguments, "gate14re-tb-custody-commitment"));
+                string commitmentSha256 = RequiredLowerSha(arguments, "gate14re-tb-custody-commitment-sha256");
+                string sampleId = Required(arguments, "gate14re-tb-sample-id");
+                outputPath = Path.GetFullPath(Required(arguments, "gate14re-tb-output"));
+                tracePath = Path.GetFullPath(Required(arguments, "gate14re-tb-trace"));
+                buildTreeSha256 = RequiredLowerSha(arguments, "gate14re-tb-build-tree-sha256");
+
+                RequireReadOnlyFile(planPath, planSha256);
+                RequireReadOnlyFile(contractPath, executionContractSha256);
+                RequireReadOnlyFile(commitmentPath, commitmentSha256);
+                Gate14ReTBStage1PlanV1 plan = JsonUtility.FromJson<Gate14ReTBStage1PlanV1>(File.ReadAllText(planPath, Encoding.UTF8));
+                Gate14ReTBExecutionContractV1 contract = JsonUtility.FromJson<Gate14ReTBExecutionContractV1>(File.ReadAllText(contractPath, Encoding.UTF8));
+                Gate14ReTBLabelCustodyCommitmentV1 commitment = JsonUtility.FromJson<Gate14ReTBLabelCustodyCommitmentV1>(File.ReadAllText(commitmentPath, Encoding.UTF8));
+                ValidatePlan(plan);
+                ValidateContract(contract, plan, planSha256, commitmentSha256);
+                ValidateCommitment(commitment);
+                sample = FindSample(plan, sampleId);
+                superblock = FindSuperblock(plan, sample.superblockId);
+                ValidateSampleAgainstSuperblock(sample, superblock);
+
+                executableSha256 = Sha256File(GetCurrentExecutablePath());
+                assemblyCSharpSha256 = Sha256File(GetCurrentAssemblyPath());
+                buildReceiptSha256 = Sha256File(GetAdjacentBuildReceiptPath());
+                if (mode == "formal")
+                {
+                    ValidateFormalAuthorization(arguments);
+                    collectionStarted = true;
+                }
+                else
+                {
+                    string verificationRoot = Path.GetFullPath(Path.Combine(projectRoot, "Research", "Verification", "Gate14Re-TB"));
+                    RequireContained(outputPath, verificationRoot, "Validation output");
+                    RequireContained(tracePath, verificationRoot, "Validation trace");
+                    Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+                    Directory.CreateDirectory(Path.GetDirectoryName(tracePath));
+                }
+
+                string bundlePath = Path.GetFullPath(Path.Combine(projectRoot, sample.bundleRelativePath.Replace('/', Path.DirectorySeparatorChar)));
+                RequireContained(bundlePath, Path.Combine(projectRoot, "Research", "Gate14Re-TB", "Execution", "v1", "input-bundles"), "Input bundle");
+                RequireReadOnlyFile(bundlePath, sample.bundleFileSha256);
+                if (new FileInfo(bundlePath).Length != sample.bundleFileBytes) throw new InvalidOperationException("Input bundle byte count mismatch.");
+                bundle = JsonUtility.FromJson<Gate14ReTBInputBundleV1>(File.ReadAllText(bundlePath, Encoding.UTF8));
+                ValidateBundleBinding(bundle, sample, superblock);
+
+                string payloadPath = Path.GetFullPath(Path.Combine(projectRoot, commitment.protection.payloadRelativePath.Replace('/', Path.DirectorySeparatorChar)));
+                string entropyPath = Path.GetFullPath(Path.Combine(projectRoot, commitment.protection.entropyRelativePath.Replace('/', Path.DirectorySeparatorChar)));
+                RequireReadOnlyFile(payloadPath, commitment.protection.payloadSha256);
+                RequireReadOnlyFile(entropyPath, commitment.protection.entropySha256);
+                byte[] entropy = File.ReadAllBytes(entropyPath);
+                try { plaintext = Gate14ReTBDpapiV1.UnprotectCurrentUserNoUi(File.ReadAllBytes(payloadPath), entropy); }
+                finally { Array.Clear(entropy, 0, entropy.Length); }
+                if (Sha256Bytes(plaintext) != commitment.mappingCommitmentSha256) throw new InvalidOperationException("Label custody plaintext commitment mismatch.");
+                Gate14ReTBLabelCustodySecretV1 secret = JsonUtility.FromJson<Gate14ReTBLabelCustodySecretV1>(Encoding.UTF8.GetString(plaintext));
+                string productionAlgorithmId = ResolveAndValidateAnonymousLabel(secret, commitment, sample.anonymousAlgorithmLabel);
+                Array.Clear(plaintext, 0, plaintext.Length);
+                plaintext = null;
+
+                string scenarioPath = Path.GetFullPath(Path.Combine(projectRoot, sample.sourceScenarioRelativePath.Replace('/', Path.DirectorySeparatorChar)));
+                if (!File.Exists(scenarioPath) || Sha256File(scenarioPath) != sample.sourceScenarioSha256) throw new InvalidOperationException("Source scenario binding failed.");
+                LoadedDeterministicScenario loaded = DeterministicScenarioJson.LoadFromFile(scenarioPath);
+                prepared = Gate14ReTBProtocolV1.Prepare(loaded, bundle);
+                ConfigureEnvironment();
+                ConfigureCamera(prepared.Resolved);
+                gridSurface = CreateGridSurface(prepared.Resolved);
+                textureVisual = new Gate14ReTextureVisualGridV1(gridSurface.GetComponent<Renderer>());
+                InstantiateUnitVisuals(prepared.Resolved);
+                kernel = new Gate14ReMovementKernelV1(sample.sampleId, prepared.Resolved, CreatePlanner(productionAlgorithmId), textureVisual);
+                states = kernel.Units;
+                arrivalTicks = new long[states.Count];
+                for (int index = 0; index < arrivalTicks.Length; index++) arrivalTicks[index] = -1L;
+                frameIntervals = new double[FrameIntervalCapacity];
+                traceRecorder = new Gate14ReTBTraceRecorderV1(CreateTraceHeader(), states);
+                UpdateUnitVisualPositions();
+                if (mode == "validation")
+                {
+                    kernel.Release();
+                    phase = RuntimePhase.Validation;
+                }
+                else
+                {
+                    warmupFrames = 0;
+                    phase = RuntimePhase.Warmup;
+                }
+            }
+            catch (Exception exception)
+            {
+                if (plaintext != null) Array.Clear(plaintext, 0, plaintext.Length);
+                FinishFailure(exception);
+            }
+        }
+
+        private void Update()
+        {
+            if (finishing || kernel == null || phase != RuntimePhase.Validation) return;
+            try
+            {
+                int guard = 0;
+                while (kernel.CurrentTick < 10L && guard++ < 32)
+                {
+                    kernel.AdvanceOneFixedTick();
+                    CaptureArrivalTicks();
+                    CaptureTraceAtRegisteredTick();
+                }
+                UpdateUnitVisualPositions();
+                if (kernel.CurrentTick != 10L || kernel.StructuralEventRecords.Count != 2 || kernel.GridVersion != kernel.PlannerGridVersion || textureVisual.VisualRevision != kernel.GridVersion)
+                    throw new InvalidOperationException("Validation did not apply the first ordered event pair in grid/planner/visual lockstep.");
+                Gate14ReTBValidationMarkerV1 marker = new Gate14ReTBValidationMarkerV1
+                {
+                    schema = "gate14re-tb-runner-validation-marker-v1",
+                    studyId = "Gate14Re-TB",
+                    status = "PASS",
+                    sampleId = sample.sampleId,
+                    anonymousAlgorithmLabel = sample.anonymousAlgorithmLabel,
+                    unitCount = bundle.unitCount,
+                    structuralEventCount = kernel.StructuralEventRecords.Count,
+                    inputBundlePrepared = true,
+                    labelCustodyResolvedInMemory = true,
+                    productionIdentityWritten = false,
+                    traceBufferPreallocated = traceRecorder.BufferPreallocated,
+                    formalObservationProduced = false,
+                    m1ThroughM5OutputProduced = false,
+                    collectionStarted = false
+                };
+                WriteAtomicJson(outputPath, marker, true);
+                FinishAndQuit(0);
+            }
+            catch (Exception exception) { FinishFailure(exception); }
+        }
+
+        private void FixedUpdate()
+        {
+            if (finishing || kernel == null || phase != RuntimePhase.Measuring || movementEnded) return;
+            try
+            {
+                if (!AllUnitsTerminal() && kernel.CurrentTick + 1L < Gate14ReTBProtocolV1.MovementCapTicks)
+                {
+                    kernel.AdvanceOneFixedTick();
+                    CaptureArrivalTicks();
+                    UpdateUnitVisualPositions();
+                    CaptureTraceAtRegisteredTick();
+                }
+                movementEnded = AllUnitsTerminal() || kernel.CurrentTick + 1L >= Gate14ReTBProtocolV1.MovementCapTicks;
+                if (movementEnded && kernel.CurrentTick >= 0L && lastTraceTick != kernel.CurrentTick)
+                {
+                    traceRecorder.Capture(kernel.CurrentTick, kernel.GridVersion, kernel.StructuralEventRecords.Count);
+                    lastTraceTick = kernel.CurrentTick;
+                }
+            }
+            catch (Exception exception) { FinishFailure(exception); }
+        }
+
+        private void LateUpdate()
+        {
+            if (finishing || kernel == null) return;
+            try
+            {
+                if (phase == RuntimePhase.Warmup)
+                {
+                    warmupFrames++;
+                    if (warmupFrames >= Gate14ReTBProtocolV1.WarmupRenderedFrames)
+                    {
+                        kernel.Release();
+                        previousFrameTimestamp = Stopwatch.GetTimestamp();
+                        phase = RuntimePhase.Measuring;
+                    }
+                    return;
+                }
+                if (phase != RuntimePhase.Measuring) return;
+                long now = Stopwatch.GetTimestamp();
+                double interval = (double)(now - previousFrameTimestamp) / Stopwatch.Frequency;
+                previousFrameTimestamp = now;
+                if (interval <= 0d || double.IsNaN(interval) || double.IsInfinity(interval)) throw new InvalidOperationException("Rendered frame interval is non-positive or non-finite.");
+                if (frameIntervalCount >= frameIntervals.Length) throw new InvalidOperationException("Preallocated rendered-frame interval capacity was exceeded.");
+                frameIntervals[frameIntervalCount++] = interval;
+                if (movementEnded) CompleteFormalSample();
+            }
+            catch (Exception exception) { FinishFailure(exception); }
+        }
+
+        private void CompleteFormalSample()
+        {
+            if (mode != "formal" || !collectionStarted) throw new InvalidOperationException("Formal output is forbidden without an authorized collection.");
+            CaptureArrivalTicks();
+            if (traceRecorder.CapturedCount < 1) throw new InvalidOperationException("No visual trace frame was captured.");
+            Gate14ReTBTraceWriteResultV1 trace = traceRecorder.Flush(tracePath);
+            Gate14ReTBUnitRawV1[] units = new Gate14ReTBUnitRawV1[states.Count];
+            int arrivedCount = 0, activeCount = 0, noPathCount = 0, budgetCount = 0, invalidCount = 0, internalCount = 0;
+            List<string> critical = new List<string>();
+            HashSet<int> identities = new HashSet<int>();
+            for (int index = 0; index < states.Count; index++)
+            {
+                Gate14ReUnitStateV1 state = states[index];
+                if (!identities.Add(state.AgentId)) critical.Add("duplicate_unit_identity:" + state.AgentId.ToString(CultureInfo.InvariantCulture));
+                switch (state.State)
+                {
+                    case Gate14ReUnitTerminalStateV1.Arrived: arrivedCount++; break;
+                    case Gate14ReUnitTerminalStateV1.Active: activeCount++; break;
+                    case Gate14ReUnitTerminalStateV1.NoPath: noPathCount++; break;
+                    case Gate14ReUnitTerminalStateV1.BudgetExceeded: budgetCount++; break;
+                    case Gate14ReUnitTerminalStateV1.InvalidPlan: invalidCount++; critical.Add("illegal_or_invalid_plan:" + state.AgentId.ToString(CultureInfo.InvariantCulture)); break;
+                    case Gate14ReUnitTerminalStateV1.InternalFailure: internalCount++; break;
+                }
+                if (!IsFinite(state.Position)) critical.Add("nonfinite_position:" + state.AgentId.ToString(CultureInfo.InvariantCulture));
+                if (state.State == Gate14ReUnitTerminalStateV1.Arrived && (!state.CurrentCell.Equals(state.Goal) || arrivalTicks[index] < 0L))
+                    critical.Add("wrong_goal_completion:" + state.AgentId.ToString(CultureInfo.InvariantCulture));
+                units[index] = new Gate14ReTBUnitRawV1
+                {
+                    unitIndex = state.AgentId,
+                    terminalState = state.State.ToString(),
+                    arrived = state.State == Gate14ReUnitTerminalStateV1.Arrived,
+                    arrivalTick = arrivalTicks[index],
+                    cumulativeHorizontalPathLength = state.CumulativeHorizontalPathLength
+                };
+            }
+            if (identities.Count != bundle.unitCount) critical.Add("missing_unit_identity");
+            double[] rawIntervals = new double[frameIntervalCount];
+            Array.Copy(frameIntervals, rawIntervals, frameIntervalCount);
+            double median, p95;
+            SummarizeFrameIntervals(rawIntervals, out median, out p95);
+            int rendererCount = CountUnitsWithEnabledRenderer();
+            if (rendererCount != bundle.unitCount) throw new InvalidOperationException("Full-population renderer cardinality changed during measurement.");
+
+            Gate14ReTBSampleOutputV1 output = new Gate14ReTBSampleOutputV1
+            {
+                schema = "gate14re-tb-anonymous-sample-output-v1",
+                studyId = "Gate14Re-TB",
+                status = "COMPLETE",
+                stage = "BLINDED_INTERNAL_PILOT_B0",
+                sampleId = sample.sampleId,
+                superblockId = sample.superblockId,
+                anonymousAlgorithmLabel = sample.anonymousAlgorithmLabel,
+                orderPosition = sample.orderPosition,
+                module = bundle.module,
+                conditionId = bundle.conditionId,
+                unitCount = bundle.unitCount,
+                drawIndex = bundle.drawIndex,
+                distanceStratum = bundle.distanceStratum,
+                bundleSha256 = bundle.bundleSha256,
+                bundleFileSha256 = sample.bundleFileSha256,
+                sourceScenarioSha256 = sample.sourceScenarioSha256,
+                planSha256 = planSha256,
+                executionContractSha256 = executionContractSha256,
+                executableSha256 = executableSha256,
+                assemblyCSharpSha256 = assemblyCSharpSha256,
+                buildReceiptSha256 = buildReceiptSha256,
+                authorizationId = authorizationId,
+                allUnitsArrived = arrivedCount == states.Count,
+                arrivedCount = arrivedCount,
+                activeAtCapCount = activeCount,
+                noPathCount = noPathCount,
+                budgetExceededCount = budgetCount,
+                invalidPlanCount = invalidCount,
+                internalFailureCount = internalCount,
+                m1Seconds = arrivedCount == states.Count ? Math.Max(0d, (kernel.CurrentTick + 1L) * Gate14ReTBProtocolV1.FixedStepSeconds) : Gate14ReTBProtocolV1.MovementCapSeconds,
+                units = units,
+                m5CriticalViolationCount = critical.Count,
+                m5CriticalViolationCodes = critical.ToArray(),
+                warmupRenderedFrames = warmupFrames,
+                measuredRenderedFrameIntervals = rawIntervals.Length,
+                frameIntervalsSeconds = rawIntervals,
+                medianFrameTimeSeconds = median,
+                nearestRankP95FrameTimeSeconds = p95,
+                simulationTickAtEnd = kernel.CurrentTick,
+                structuralEventCount = kernel.StructuralEventRecords.Count,
+                structuralEvents = CopyEvents(kernel.StructuralEventRecords),
+                traceRawRelativePath = Forward(Path.GetRelativePath(measuredRoot, tracePath)),
+                traceRawSha256 = trace.traceRawSha256,
+                traceMerkleRootSha256 = trace.traceMerkleRootSha256,
+                traceChunkCount = trace.traceChunkCount,
+                traceCapturedTickCount = trace.traceCapturedTickCount,
+                traceCompressionPending = true,
+                productionAlgorithmIdentityPresent = false,
+                complete = true,
+                formalObservationProduced = true
+            };
+            WriteAtomicJson(outputPath, output, false);
+            FinishAndQuit(0);
+        }
+
+        private Gate14ReTBTraceHeaderV1 CreateTraceHeader()
+        {
+            return new Gate14ReTBTraceHeaderV1
+            {
+                schema = "gate14re-tb-trace-header-v1",
+                studyId = "Gate14Re-TB",
+                sampleId = sample.sampleId,
+                superblockId = sample.superblockId,
+                anonymousAlgorithmLabel = sample.anonymousAlgorithmLabel,
+                conditionId = bundle.conditionId,
+                unitCount = bundle.unitCount,
+                inputBundleSha256 = bundle.bundleSha256,
+                buildTreeSha256 = buildTreeSha256,
+                assemblySha256 = assemblyCSharpSha256,
+                fixedStepSeconds = Gate14ReTBProtocolV1.FixedStepSeconds,
+                captureEveryFixedTicks = Gate14ReTBProtocolV1.TraceCaptureEveryTicks,
+                movementCapTicks = Gate14ReTBProtocolV1.MovementCapTicks
+            };
+        }
+
+        private void CaptureTraceAtRegisteredTick()
+        {
+            long tick = kernel.CurrentTick;
+            if (tick >= 0L && tick % Gate14ReTBProtocolV1.TraceCaptureEveryTicks == 0L && tick != lastTraceTick)
+            {
+                traceRecorder.Capture(tick, kernel.GridVersion, kernel.StructuralEventRecords.Count);
+                lastTraceTick = tick;
+            }
+        }
+
+        private void CaptureArrivalTicks()
+        {
+            for (int index = 0; index < states.Count; index++)
+                if (arrivalTicks[index] < 0L && states[index].State == Gate14ReUnitTerminalStateV1.Arrived) arrivalTicks[index] = kernel.CurrentTick;
+        }
+
+        private bool AllUnitsTerminal()
+        {
+            for (int index = 0; index < states.Count; index++) if (states[index].State == Gate14ReUnitTerminalStateV1.Active) return false;
+            return true;
+        }
+
+        private void ValidateFormalAuthorization(Dictionary<string, string> arguments)
+        {
+            string path = Path.GetFullPath(Required(arguments, "gate14re-tb-authorization"));
+            string sha = RequiredLowerSha(arguments, "gate14re-tb-authorization-sha256");
+            RequireReadOnlyFile(path, sha);
+            Gate14ReTBAuthorizationV1 authorization = JsonUtility.FromJson<Gate14ReTBAuthorizationV1>(File.ReadAllText(path, Encoding.UTF8));
+            if (authorization == null || authorization.schema != "gate14re-tb-collection-authorization-v1" || authorization.studyId != "Gate14Re-TB" || authorization.status != "AUTHORIZED" || !authorization.userExplicitlyAuthorizedCollection)
+                throw new InvalidOperationException("Collection authorization schema/status binding failed.");
+            if (authorization.stage != "BLINDED_INTERNAL_PILOT_B0" || authorization.planSha256 != planSha256 || authorization.executionContractSha256 != executionContractSha256 || authorization.executableSha256 != executableSha256 || authorization.assemblyCSharpSha256 != assemblyCSharpSha256 || authorization.buildReceiptSha256 != buildReceiptSha256)
+                throw new InvalidOperationException("Collection authorization does not bind this stage, plan, contract, executable, assembly, and build receipt.");
+            if (string.IsNullOrWhiteSpace(authorization.authorizationId)) throw new InvalidOperationException("Collection authorization id is missing.");
+            measuredRoot = Path.GetFullPath(authorization.measuredRoot);
+            RequireContained(measuredRoot, Path.Combine(projectRoot, "Research", "PilotRuns", "Gate14Re-TB"), "Measured root");
+            RequireContained(outputPath, measuredRoot, "Formal sample output");
+            RequireContained(tracePath, measuredRoot, "Formal trace output");
+            if (!Directory.Exists(measuredRoot) || !Directory.Exists(Path.GetDirectoryName(outputPath)) || !Directory.Exists(Path.GetDirectoryName(tracePath)))
+                throw new DirectoryNotFoundException("The authorized supervisor must create the measured root and sample directory before launch.");
+            if (File.Exists(outputPath) || File.Exists(outputPath + ".tmp") || File.Exists(tracePath) || File.Exists(tracePath + ".tmp"))
+                throw new IOException("Formal sample overwrite/resume is forbidden.");
+            authorizationId = authorization.authorizationId;
+        }
+
+        private static void ValidatePlan(Gate14ReTBStage1PlanV1 plan)
+        {
+            if (plan == null || plan.schema != "gate14re-tb-stage1-anonymous-execution-plan-v1" || plan.studyId != "Gate14Re-TB" || plan.version != 1 || plan.status != "FROZEN_NON_EXECUTING_NOT_AUTHORIZED" || plan.stage != "BLINDED_INTERNAL_PILOT_B0")
+                throw new InvalidOperationException("Anonymous stage-1 plan header is invalid.");
+            if (plan.B0 != 24 || plan.designCellCount != 16 || plan.plannedUniqueSuperblocks != 384 || plan.plannedFreshUnityProcesses != 1536 || plan.processesPerSuperblock != 4 || plan.algorithmIdentityPresent || !plan.wholeSuperblockAtomicity || plan.perAlgorithmRetryResumeTopUpMergeSkipReorder)
+                throw new InvalidOperationException("Anonymous stage-1 plan design binding is invalid.");
+            if (plan.anonymousLabels == null || plan.anonymousLabels.Length != 4 || plan.superblocks == null || plan.superblocks.Length != 384 || plan.samples == null || plan.samples.Length != 1536)
+                throw new InvalidOperationException("Anonymous stage-1 plan cardinality is invalid.");
+        }
+
+        private static void ValidateContract(Gate14ReTBExecutionContractV1 contract, Gate14ReTBStage1PlanV1 plan, string planSha256, string commitmentSha256)
+        {
+            if (contract == null || contract.schema != "gate14re-tb-execution-contract-v1" || contract.studyId != "Gate14Re-TB" || contract.version != 1 || contract.status != "FROZEN_NON_EXECUTING_NOT_AUTHORIZED" || contract.stage != plan.stage)
+                throw new InvalidOperationException("Execution contract header is invalid.");
+            if (contract.stage1PlanSha256 != planSha256 || contract.inputBundleFileManifestSha256 != plan.inputBundleFileManifestSha256 || contract.labelCustodyCommitmentSha256 != commitmentSha256 || contract.fixedStepSeconds != Gate14ReTBProtocolV1.FixedStepSeconds || contract.movementCapSeconds != Gate14ReTBProtocolV1.MovementCapSeconds || contract.preReleaseWarmupRenderedFrames != Gate14ReTBProtocolV1.WarmupRenderedFrames || contract.traceCaptureEveryFixedTicks != Gate14ReTBProtocolV1.TraceCaptureEveryTicks)
+                throw new InvalidOperationException("Execution contract timing/input/custody binding failed.");
+            if (contract.perProcessHardTimeoutSeconds != 3600 || contract.maximumWholeSuperblockTechnicalReplacements != 1 || !contract.oneFreshProcessPerAnonymousLabel || contract.productionIdentityPermittedInOutput || contract.fileIoDuringMeasuredWindow || contract.compressionDuringMeasuredWindow || contract.collectionAuthorized)
+                throw new InvalidOperationException("Execution contract isolation/authorization policy drifted.");
+        }
+
+        private static void ValidateCommitment(Gate14ReTBLabelCustodyCommitmentV1 value)
+        {
+            if (value == null || value.schema != "gate14re-tb-label-custody-commitment-v1" || value.studyId != "Gate14Re-TB" || value.status != "FROZEN_MAPPING_ENCRYPTED_NOT_RELEASED" || value.plaintextMappingPersisted || value.mappingMayBeReleasedBeforeFrozenWinnerAdjudication || value.unblindingAuthorized)
+                throw new InvalidOperationException("Label custody commitment header/policy is invalid.");
+            if (value.protection == null || value.protection.mechanism != "Windows DPAPI CryptProtectData" || value.protection.scope != "CurrentUser on this host account" || !value.protection.uiForbidden)
+                throw new InvalidOperationException("Label custody protection mechanism drifted.");
+        }
+
+        private static string ResolveAndValidateAnonymousLabel(Gate14ReTBLabelCustodySecretV1 secret, Gate14ReTBLabelCustodyCommitmentV1 commitment, string requestedLabel)
+        {
+            if (secret == null || secret.schema != "gate14re-tb-label-custody-secret-v1" || secret.studyId != "Gate14Re-TB" || secret.custodyId != commitment.custodyId || secret.mapping == null || secret.mapping.Length != 4)
+                throw new InvalidOperationException("Decrypted label custody structure is invalid.");
+            HashSet<string> labels = new HashSet<string>(StringComparer.Ordinal);
+            HashSet<string> algorithms = new HashSet<string>(StringComparer.Ordinal);
+            string selected = null;
+            for (int index = 0; index < secret.mapping.Length; index++)
+            {
+                Gate14ReTBLabelMapEntryV1 entry = secret.mapping[index];
+                if (entry == null || !labels.Add(entry.anonymousLabel) || !algorithms.Add(entry.productionAlgorithmId)) throw new InvalidOperationException("Label custody is not a bijection.");
+                if (entry.anonymousLabel == requestedLabel) selected = entry.productionAlgorithmId;
+            }
+            string[] expectedLabels = { "K1", "K2", "K3", "K4" };
+            string[] expectedAlgorithms = { NavigationAlgorithmIds.AStarRepeated, NavigationAlgorithmIds.DStarLite, NavigationAlgorithmIds.CorrectedFullRecomputeFlowField, NavigationAlgorithmIds.IncrementalDynamicFlowField };
+            for (int index = 0; index < expectedLabels.Length; index++) if (!labels.Contains(expectedLabels[index])) throw new InvalidOperationException("Label custody anonymous set is invalid.");
+            for (int index = 0; index < expectedAlgorithms.Length; index++) if (!algorithms.Contains(expectedAlgorithms[index])) throw new InvalidOperationException("Label custody production set is invalid.");
+            if (selected == null) throw new InvalidOperationException("Requested anonymous label is absent from custody.");
+            return selected;
+        }
+
+        private static Gate14ReTBStage1SampleV1 FindSample(Gate14ReTBStage1PlanV1 plan, string id)
+        {
+            Gate14ReTBStage1SampleV1 found = null;
+            for (int index = 0; index < plan.samples.Length; index++) if (plan.samples[index].sampleId == id) { if (found != null) throw new InvalidOperationException("Duplicate sample id."); found = plan.samples[index]; }
+            if (found == null) throw new InvalidOperationException("Requested anonymous sample is absent from the frozen plan.");
+            return found;
+        }
+
+        private static Gate14ReTBStage1SuperblockV1 FindSuperblock(Gate14ReTBStage1PlanV1 plan, string id)
+        {
+            Gate14ReTBStage1SuperblockV1 found = null;
+            for (int index = 0; index < plan.superblocks.Length; index++) if (plan.superblocks[index].superblockId == id) { if (found != null) throw new InvalidOperationException("Duplicate superblock id."); found = plan.superblocks[index]; }
+            if (found == null) throw new InvalidOperationException("Sample superblock is absent from the frozen plan.");
+            return found;
+        }
+
+        private static void ValidateSampleAgainstSuperblock(Gate14ReTBStage1SampleV1 sample, Gate14ReTBStage1SuperblockV1 block)
+        {
+            if (sample.orderPosition < 1 || sample.orderPosition > 4 || sample.hardTimeoutSeconds != 3600 || block.maximumWholeSuperblockTechnicalReplacements != 1 || block.anonymousLabelsInOrder == null || block.sampleIdsInOrder == null || block.anonymousLabelsInOrder.Length != 4 || block.sampleIdsInOrder.Length != 4)
+                throw new InvalidOperationException("Sample/superblock execution policy is invalid.");
+            int index = sample.orderPosition - 1;
+            if (block.sampleIdsInOrder[index] != sample.sampleId || block.anonymousLabelsInOrder[index] != sample.anonymousAlgorithmLabel)
+                throw new InvalidOperationException("Sample/order binding mismatch.");
+        }
+
+        private static void ValidateBundleBinding(Gate14ReTBInputBundleV1 value, Gate14ReTBStage1SampleV1 sample, Gate14ReTBStage1SuperblockV1 block)
+        {
+            if (value == null || value.superblockId != sample.superblockId || value.superblockId != block.superblockId || value.bundleSha256 != sample.bundleSha256 || value.sourceScenarioRelativePath != sample.sourceScenarioRelativePath || value.sourceScenarioSha256 != sample.sourceScenarioSha256 || value.module != block.module || value.conditionId != block.conditionId || value.unitCount != block.unitCount || value.drawIndex != block.drawIndex || value.distanceStratum != block.distanceStratum)
+                throw new InvalidOperationException("Input bundle/sample/superblock binding mismatch.");
+        }
+
+        private void InstantiateUnitVisuals(ResolvedDeterministicScenario scenario)
+        {
+            if (unitVisualPrefab == null) throw new InvalidOperationException("Canonical unit visual prefab is not bound.");
+            unitRoot = new GameObject("Gate14Re-TB anonymous rendered units");
+            unitRoot.SetActive(false);
+            ResearchGridWorldTransform transform = scenario.CreateWorldTransform();
+            for (int index = 0; index < scenario.Agents.Count; index++)
+            {
+                ResolvedScenarioAgent agent = scenario.Agents[index];
+                GameObject instance = Instantiate(unitVisualPrefab, unitRoot.transform);
+                instance.name = "gate14re-tb-unit-" + agent.AgentId.ToString("D4", CultureInfo.InvariantCulture);
+                DisableLegacyMotion(instance);
+                instance.transform.position = WithVisualHeight(transform.GridToWorldCenter(agent.Start, scenario.GridWidth, scenario.GridHeight));
+                unitObjects.Add(instance);
+            }
+            unitRoot.SetActive(true);
+            if (unitObjects.Count != scenario.Agents.Count || CountUnitsWithEnabledRenderer() != scenario.Agents.Count) throw new InvalidOperationException("Failed to instantiate and render the full population.");
+        }
+
+        private void UpdateUnitVisualPositions()
+        {
+            if (states.Count != unitObjects.Count) throw new InvalidOperationException("Unit state/render object count mismatch.");
+            for (int index = 0; index < states.Count; index++) unitObjects[index].transform.position = WithVisualHeight(states[index].Position);
+        }
+
+        private int CountUnitsWithEnabledRenderer()
+        {
+            int count = 0;
+            for (int index = 0; index < unitObjects.Count; index++)
+            {
+                Renderer[] renderers = unitObjects[index].GetComponentsInChildren<Renderer>(true);
+                bool any = false;
+                for (int renderer = 0; renderer < renderers.Length; renderer++) any |= renderers[renderer].enabled && renderers[renderer].gameObject.activeInHierarchy;
+                if (any) count++;
+            }
+            return count;
+        }
+
+        private static INavigationPlanner CreatePlanner(string id)
+        {
+            if (id == NavigationAlgorithmIds.AStarRepeated) return new AStarRepeatedPlanner();
+            if (id == NavigationAlgorithmIds.DStarLite) return new DStarLitePlanner();
+            if (id == NavigationAlgorithmIds.CorrectedFullRecomputeFlowField) return new CorrectedFullRecomputeFlowFieldPlanner();
+            if (id == NavigationAlgorithmIds.IncrementalDynamicFlowField) return new IncrementalDynamicFlowFieldPlanner();
+            throw new InvalidOperationException("Custody resolved an unsupported production planner.");
+        }
+
+        private static GameObject CreateGridSurface(ResolvedDeterministicScenario scenario)
+        {
+            GameObject surface = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            surface.name = "Gate14Re-TB rendered navigation grid";
+            Collider collider = surface.GetComponent<Collider>();
+            if (collider != null) Destroy(collider);
+            float width = scenario.GridWidth * scenario.CellSize;
+            float height = scenario.GridHeight * scenario.CellSize;
+            surface.transform.position = new Vector3(scenario.WorldOrigin.x + width * 0.5f, scenario.WorldOrigin.y - 0.05f, scenario.WorldOrigin.z + height * 0.5f);
+            surface.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+            surface.transform.localScale = new Vector3(width, height, 1f);
+            return surface;
+        }
+
+        private static void ConfigureCamera(ResolvedDeterministicScenario scenario)
+        {
+            GameObject cameraObject = new GameObject("Gate14Re-TB frozen top-down camera");
+            Camera camera = cameraObject.AddComponent<Camera>();
+            float width = scenario.GridWidth * scenario.CellSize;
+            float height = scenario.GridHeight * scenario.CellSize;
+            cameraObject.transform.position = new Vector3(scenario.WorldOrigin.x + width * 0.5f, scenario.WorldOrigin.y + Math.Max(width, height) * 1.2f + 20f, scenario.WorldOrigin.z + height * 0.5f);
+            cameraObject.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+            camera.orthographic = true;
+            camera.orthographicSize = Math.Max(height * 0.525f, width * 0.525f / (16f / 9f));
+            camera.clearFlags = CameraClearFlags.SolidColor;
+            camera.backgroundColor = new Color(0.015f, 0.018f, 0.022f, 1f);
+            camera.nearClipPlane = 0.1f;
+            camera.farClipPlane = Math.Max(width, height) * 3f + 100f;
+        }
+
+        private static void DisableLegacyMotion(GameObject instance)
+        {
+            MonoBehaviour[] scripts = instance.GetComponentsInChildren<MonoBehaviour>(true);
+            for (int index = 0; index < scripts.Length; index++) scripts[index].enabled = false;
+            NavMeshAgent[] agents = instance.GetComponentsInChildren<NavMeshAgent>(true);
+            for (int index = 0; index < agents.Length; index++) agents[index].enabled = false;
+            Collider[] colliders = instance.GetComponentsInChildren<Collider>(true);
+            for (int index = 0; index < colliders.Length; index++) colliders[index].enabled = false;
+            Rigidbody[] bodies = instance.GetComponentsInChildren<Rigidbody>(true);
+            for (int index = 0; index < bodies.Length; index++) { bodies[index].velocity = Vector3.zero; bodies[index].angularVelocity = Vector3.zero; bodies[index].isKinematic = true; bodies[index].useGravity = false; }
+        }
+
+        private static void ConfigureEnvironment()
+        {
+            Application.runInBackground = true;
+            Application.targetFrameRate = -1;
+            QualitySettings.vSyncCount = 0;
+            if (QualitySettings.names.Length > 5) QualitySettings.SetQualityLevel(5, true);
+            Time.fixedDeltaTime = (float)Gate14ReTBProtocolV1.FixedStepSeconds;
+            Screen.SetResolution(1920, 1080, FullScreenMode.FullScreenWindow);
+        }
+
+        private static Gate14ReTBStructuralEventRawV1[] CopyEvents(IReadOnlyList<Gate14ReStructuralEventRecordV1> source)
+        {
+            Gate14ReTBStructuralEventRawV1[] result = new Gate14ReTBStructuralEventRawV1[source.Count];
+            for (int index = 0; index < source.Count; index++)
+            {
+                Gate14ReStructuralEventRecordV1 item = source[index];
+                result[index] = new Gate14ReTBStructuralEventRawV1 { eventId = item.eventId, scheduledTick = item.scheduledTick, order = item.order, changedCellCount = item.changedCellCount, previousGridVersion = item.previousGridVersion, newGridVersion = item.newGridVersion, plannerRepairStatus = item.plannerRepairStatus, plannerFailureReason = item.plannerFailureReason, visualRevision = item.visualRevision };
+            }
+            return result;
+        }
+
+        private static void SummarizeFrameIntervals(double[] values, out double median, out double p95)
+        {
+            if (values == null || values.Length < 1) throw new InvalidOperationException("No rendered frame intervals were captured.");
+            double[] ordered = (double[])values.Clone();
+            Array.Sort(ordered);
+            int middle = ordered.Length / 2;
+            median = (ordered.Length & 1) == 1 ? ordered[middle] : 0.5d * (ordered[middle - 1] + ordered[middle]);
+            int rank = Math.Max(1, (int)Math.Ceiling(0.95d * ordered.Length));
+            p95 = ordered[rank - 1];
+        }
+
+        private void FinishFailure(Exception exception)
+        {
+            if (finishing) return;
+            finishing = true;
+            try
+            {
+                Gate14ReTBFailureV1 failure = new Gate14ReTBFailureV1
+                {
+                    schema = "gate14re-tb-runner-failure-v1",
+                    studyId = "Gate14Re-TB",
+                    status = "FAIL_CLOSED",
+                    sampleId = sample == null ? string.Empty : sample.sampleId,
+                    exceptionType = exception == null ? "unknown" : exception.GetType().FullName,
+                    message = exception == null ? "Unknown runner failure." : exception.Message,
+                    partialSampleAdmissible = false,
+                    formalObservationProduced = false,
+                    collectionStarted = collectionStarted
+                };
+                string target = string.IsNullOrWhiteSpace(outputPath) ? string.Empty : (mode == "formal" ? outputPath + ".failure.json" : outputPath);
+                if (!string.IsNullOrWhiteSpace(target) && !File.Exists(target)) WriteAtomicJson(target, failure, true);
+            }
+            catch { }
+            UnityEngine.Debug.LogException(exception);
+            FinishAndQuit(1);
+        }
+
+        private void FinishAndQuit(int exitCode) { phase = RuntimePhase.Finished; finishing = true; Application.Quit(exitCode); }
+
+        private static string GetCurrentExecutablePath()
+        {
+            using (Process process = Process.GetCurrentProcess())
+            {
+                if (process.MainModule == null || string.IsNullOrWhiteSpace(process.MainModule.FileName)) throw new InvalidOperationException("Cannot resolve current executable path.");
+                return Path.GetFullPath(process.MainModule.FileName);
+            }
+        }
+
+        private static string GetCurrentAssemblyPath()
+        {
+            string location = typeof(Gate14ReTBFormalControllerV1).Assembly.Location;
+            if (string.IsNullOrWhiteSpace(location) || !File.Exists(location)) throw new InvalidOperationException("Cannot resolve Assembly-CSharp.dll.");
+            return Path.GetFullPath(location);
+        }
+
+        private static string GetAdjacentBuildReceiptPath()
+        {
+            string path = Path.Combine(Path.GetDirectoryName(GetCurrentExecutablePath()), "build-receipt.v1.json");
+            if (!File.Exists(path) || (File.GetAttributes(path) & FileAttributes.ReadOnly) == 0) throw new InvalidOperationException("Frozen build receipt is missing or not ReadOnly.");
+            return path;
+        }
+
+        private static Dictionary<string, string> ParseArguments(string[] args)
+        {
+            Dictionary<string, string> result = new Dictionary<string, string>(StringComparer.Ordinal);
+            for (int index = 0; index < args.Length; index++)
+            {
+                if (!args[index].StartsWith("--", StringComparison.Ordinal)) continue;
+                string key = args[index].Substring(2);
+                if (index + 1 >= args.Length || args[index + 1].StartsWith("--", StringComparison.Ordinal)) throw new InvalidOperationException("Missing value for --" + key + ".");
+                result.Add(key, args[++index]);
+            }
+            return result;
+        }
+
+        private static string Required(Dictionary<string, string> arguments, string key)
+        {
+            string value;
+            if (!arguments.TryGetValue(key, out value) || string.IsNullOrWhiteSpace(value)) throw new InvalidOperationException("Missing required --" + key + " argument.");
+            return value;
+        }
+
+        private static string RequiredLowerSha(Dictionary<string, string> arguments, string key)
+        {
+            string value = Required(arguments, key).ToLowerInvariant();
+            if (value.Length != 64) throw new InvalidOperationException("Invalid SHA-256 argument.");
+            for (int index = 0; index < value.Length; index++) if (!Uri.IsHexDigit(value[index])) throw new InvalidOperationException("Invalid SHA-256 argument.");
+            return value;
+        }
+
+        private static void RequireReadOnlyFile(string path, string sha256)
+        {
+            if (!File.Exists(path)) throw new FileNotFoundException("Required frozen file is missing.", path);
+            if ((File.GetAttributes(path) & FileAttributes.ReadOnly) == 0) throw new InvalidOperationException("Required frozen file is not ReadOnly: " + path);
+            if (Sha256File(path) != sha256) throw new InvalidOperationException("Required frozen file SHA-256 mismatch: " + path);
+        }
+
+        private static void RequireContained(string child, string parent, string label)
+        {
+            string normalizedParent = Path.GetFullPath(parent).TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar) + Path.DirectorySeparatorChar;
+            string normalizedChild = Path.GetFullPath(child);
+            if (string.Equals(normalizedChild.TrimEnd(Path.DirectorySeparatorChar), normalizedParent.TrimEnd(Path.DirectorySeparatorChar), StringComparison.OrdinalIgnoreCase)) return;
+            if (!normalizedChild.StartsWith(normalizedParent, StringComparison.OrdinalIgnoreCase)) throw new InvalidOperationException(label + " escapes its authorized root.");
+        }
+
+        private static string Sha256File(string path)
+        {
+            using (FileStream stream = File.OpenRead(path))
+            using (SHA256 sha = SHA256.Create()) return Hex(sha.ComputeHash(stream));
+        }
+
+        private static string Sha256Bytes(byte[] value)
+        {
+            using (SHA256 sha = SHA256.Create()) return Hex(sha.ComputeHash(value));
+        }
+
+        private static string Hex(byte[] digest)
+        {
+            StringBuilder builder = new StringBuilder(digest.Length * 2);
+            for (int index = 0; index < digest.Length; index++) builder.Append(digest[index].ToString("x2", CultureInfo.InvariantCulture));
+            return builder.ToString();
+        }
+
+        private static void WriteAtomicJson(string path, object value, bool allowDirectoryCreation)
+        {
+            string directory = Path.GetDirectoryName(path);
+            if (allowDirectoryCreation) Directory.CreateDirectory(directory);
+            if (!Directory.Exists(directory)) throw new DirectoryNotFoundException("Output directory does not exist: " + directory);
+            if (File.Exists(path) || File.Exists(path + ".tmp")) throw new IOException("Output overwrite is forbidden: " + path);
+            string temporary = path + ".tmp";
+            string json = JsonUtility.ToJson(value, true).Replace("\r\n", "\n").Replace("\r", "\n") + "\n";
+            File.WriteAllText(temporary, json, new UTF8Encoding(false));
+            File.Move(temporary, path);
+        }
+
+        private static bool IsFinite(Vector3 position) { return !(float.IsNaN(position.x) || float.IsNaN(position.y) || float.IsNaN(position.z) || float.IsInfinity(position.x) || float.IsInfinity(position.y) || float.IsInfinity(position.z)); }
+        private static Vector3 WithVisualHeight(Vector3 position) { position.y += 1f; return position; }
+        private static string Forward(string path) { return path.Replace('\\', '/'); }
+    }
+
+    public static class Gate14ReTBDpapiV1
+    {
+        private const int CryptprotectUiForbidden = 0x1;
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct DataBlob
+        {
+            public int cbData;
+            public IntPtr pbData;
+        }
+
+        [DllImport("crypt32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool CryptUnprotectData(
+            ref DataBlob dataIn,
+            out IntPtr description,
+            ref DataBlob optionalEntropy,
+            IntPtr reserved,
+            IntPtr promptStruct,
+            int flags,
+            out DataBlob dataOut);
+
+        [DllImport("kernel32.dll", SetLastError = false)]
+        private static extern IntPtr LocalFree(IntPtr memory);
+
+        public static byte[] UnprotectCurrentUserNoUi(byte[] encrypted, byte[] entropy)
+        {
+            if (encrypted == null || encrypted.Length == 0 || entropy == null || entropy.Length == 0) throw new InvalidOperationException("DPAPI input is empty.");
+            GCHandle encryptedHandle = default(GCHandle);
+            GCHandle entropyHandle = default(GCHandle);
+            DataBlob output = new DataBlob();
+            IntPtr description = IntPtr.Zero;
+            try
+            {
+                encryptedHandle = GCHandle.Alloc(encrypted, GCHandleType.Pinned);
+                entropyHandle = GCHandle.Alloc(entropy, GCHandleType.Pinned);
+                DataBlob input = new DataBlob { cbData = encrypted.Length, pbData = encryptedHandle.AddrOfPinnedObject() };
+                DataBlob entropyBlob = new DataBlob { cbData = entropy.Length, pbData = entropyHandle.AddrOfPinnedObject() };
+                if (!CryptUnprotectData(ref input, out description, ref entropyBlob, IntPtr.Zero, IntPtr.Zero, CryptprotectUiForbidden, out output))
+                    throw new InvalidOperationException("Windows DPAPI custody decryption failed with error " + Marshal.GetLastWin32Error().ToString(CultureInfo.InvariantCulture) + ".");
+                if (output.cbData <= 0 || output.pbData == IntPtr.Zero) throw new InvalidOperationException("Windows DPAPI returned an empty custody payload.");
+                byte[] result = new byte[output.cbData];
+                Marshal.Copy(output.pbData, result, 0, result.Length);
+                return result;
+            }
+            finally
+            {
+                if (output.pbData != IntPtr.Zero)
+                {
+                    for (int index = 0; index < output.cbData; index++) Marshal.WriteByte(output.pbData, index, 0);
+                    LocalFree(output.pbData);
+                }
+                if (description != IntPtr.Zero) LocalFree(description);
+                if (entropyHandle.IsAllocated) entropyHandle.Free();
+                if (encryptedHandle.IsAllocated) encryptedHandle.Free();
+            }
+        }
+    }
+}

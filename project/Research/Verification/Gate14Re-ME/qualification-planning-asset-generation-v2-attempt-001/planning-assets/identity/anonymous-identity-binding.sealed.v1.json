@@ -1,0 +1,56 @@
+{
+  "schema": "gate14re-me-sealed-anonymous-identity-binding-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v2-attempt-001",
+  "status": "SEALED_UNTIL_QUALIFICATION_DECISION_FROZEN",
+  "createdAtUtc": "2026-10-17T13:59:17.804518Z",
+  "identityBindingId": "gate14re-me-qualification-anonymous-six-lane-v1",
+  "generationMethod": "operating-system CSPRNG Fisher-Yates permutation",
+  "generationNonceHex": "354a5e77f33027a31afbe617c0beeb7c4a160a3301e0411233b6b95131455f91",
+  "namedAlgorithms": [
+    "A*-R",
+    "BiA*-R",
+    "D*L",
+    "LPA*",
+    "C-FF",
+    "IDFF"
+  ],
+  "anonymousLaneIds": [
+    "ALG-A",
+    "ALG-B",
+    "ALG-C",
+    "ALG-D",
+    "ALG-E",
+    "ALG-F"
+  ],
+  "bijection": [
+    {
+      "algorithmId": "A*-R",
+      "anonymousLaneId": "ALG-B"
+    },
+    {
+      "algorithmId": "BiA*-R",
+      "anonymousLaneId": "ALG-C"
+    },
+    {
+      "algorithmId": "D*L",
+      "anonymousLaneId": "ALG-D"
+    },
+    {
+      "algorithmId": "LPA*",
+      "anonymousLaneId": "ALG-E"
+    },
+    {
+      "algorithmId": "C-FF",
+      "anonymousLaneId": "ALG-F"
+    },
+    {
+      "algorithmId": "IDFF",
+      "anonymousLaneId": "ALG-A"
+    }
+  ],
+  "qualificationReportsMayExposeNamedIdentity": false,
+  "unsealCondition": "qualification decision terminal receipt is frozen and a separate identity-unsealing authorization is granted"
+}

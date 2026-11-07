@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "amendmentKind": "gate13r-pr2-attempt2-embedded-block-sample-contract-amendment-v1",
+  "recordedAtUtc": "2026-10-08T17:58:03Z",
+  "status": "FROZEN-BEFORE-IMPLEMENTATION",
+  "sourceProducer": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV2.cs",
+    "sha256": "af9156588bc259dfa8cafeec4adb82c93a2b07f5e2ae772b4b0fd4115dce28a8",
+    "className": "DDM.Research.Editor.Gate13RPR2FormalBatchCommandV2"
+  },
+  "targetProducer": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV3.cs",
+    "className": "DDM.Research.Editor.Gate13RPR2FormalBatchCommandV3"
+  },
+  "affectedDocument": {
+    "manifestKind": "gate13r-pr2-rq-aligned-s48-h48-formal-block-manifest-v1",
+    "jsonPointer": "/samples/*/formalCampaign",
+    "required": true,
+    "jsonType": "boolean",
+    "const": true,
+    "missingPolicy": "FAIL-CLOSED",
+    "falsePolicy": "FAIL-CLOSED",
+    "nullPolicy": "FAIL-CLOSED",
+    "wrongTypePolicy": "FAIL-CLOSED",
+    "coercionAllowed": false,
+    "defaultAllowed": false
+  },
+  "crossDocumentRequirements": [
+    "block-manifest.formalCampaign == true",
+    "block-manifest.samples[*].formalCampaign == true",
+    "sample-summary.formalCampaign == true",
+    "child-manifest.formalCampaign == true",
+    "memory-gate-evaluation.formalCampaign == true"
+  ],
+  "scientificDesignChanged": false,
+  "frozenScheduleChanged": false,
+  "algorithmOrScenarioChanged": false,
+  "formalStatisticalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "immutable": true
+}

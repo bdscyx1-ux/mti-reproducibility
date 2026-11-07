@@ -1,0 +1,75 @@
+{
+  "schema": "gate14re-me-d3-runtime-compatibility-amendment-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-runtime-compatibility-amendment-attempt-001",
+  "status": "FAIL_CLOSED_D3_CANDIDATE_API_NOT_IN_UNITY_COMPILE_SURFACE",
+  "version": 1,
+  "failedAtUtc": "2026-10-17T05:29:34.5344814Z",
+  "failedStage": "unity-compile-before-d3-known-answer",
+  "exactReason": "Unity compilation failed with CS0117 at Gate14ReMEAllocationCounterV2.cs(15,29): System.GC does not contain a definition for GetTotalAllocatedBytes. Therefore the prospectively selected process-wide counter is not available in the bound Unity 2022.3.30f1c1 compile surface, and no D3 positive or negative known-answer control executed.",
+  "candidate": {
+    "counterId": "GC.GetTotalAllocatedBytes(precise:true)-process-wide-v2",
+    "intendedScope": "process-wide managed allocations during the synchronous measured boundary",
+    "sourceOriginalRelativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs",
+    "sourcePreservedRelativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failed-candidate-source/Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs",
+    "sourceSha256": "d7a0b679180b59101a41279bf0750646dcdc672f526ddcb7feafbc9ba3fd82ce",
+    "compilePassed": false,
+    "runtimeKnownAnswerStarted": false,
+    "runtimeKnownAnswerReceiptCreated": false
+  },
+  "unityProcess": {
+    "processId": 54364,
+    "processCreationUtc": "2026-10-17T05:29:23.8789214Z",
+    "processExitObservedAtUtc": "2026-10-17T05:29:34.5344814Z",
+    "elapsedMilliseconds": 10061,
+    "exitCode": 1,
+    "commandLineSha256": "910235764d8c374d6bb3469254aba8ea64e6a536eb4b64855d9d8415664ee9d1",
+    "automaticRetryPerformed": false,
+    "hardTimeoutTriggered": false
+  },
+  "compileEvidence": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "unityVersion": "2022.3.30f1c1",
+    "logRelativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/unity-d3-known-answer.log",
+    "logSha256": "96b5e5558e2c960600c2752479c5f2a404a62243a0a2f0a2673b754534ba78a0",
+    "logBytes": 60098,
+    "compilerErrorCode": "CS0117",
+    "uniqueCompilerErrorCount": 1,
+    "compilerErrorText": "'GC' does not contain a definition for 'GetTotalAllocatedBytes'"
+  },
+  "sourcePreservation": {
+    "activeCandidateCounterExists": false,
+    "activeCandidateHarnessExists": false,
+    "failedCandidateBytesPreservedReadOnly": true,
+    "priorFrozenInstrumentationUnchangedSha256": "e3b52047276a3ae6961914881ba6aaf78bb6a913ca70e4edebb974b2b6deacdb",
+    "priorFrozenLoadRunnerUnchangedSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+    "projectCompileRevalidatedAfterCandidateWithdrawal": false
+  },
+  "bindings": {
+    "authorizationSha256": "a3d6d370caba32c586a57ab205bcb8dc5e745130c87410aeec35318cc837463c",
+    "planSha256": "9db7d8e0e3c04d719ebd789da5d3cbf8b5f4368f5bc82bdb68a6c2749ae58df1",
+    "preexecutionManifestSha256": "bbf989968c12813143b32694950639e3998cd5cd5c936eb043997fb8899ea8f0",
+    "priorRuntimeFailureReceiptSha256": "8a508261f9c779ff3d3e3481d5eaf28ebc9d4c513cb69fdc8d30456b3ad9b49a",
+    "priorRuntimeFreezeReceiptSha256": "042f3ca2d07b4b78db04a7b272929f6052cc51739c0aeeaa4e6998b75f5554c8",
+    "priorSourceImplementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4"
+  },
+  "downstreamDisposition": {
+    "d3ThresholdsChangedAfterExecution": false,
+    "fallbackCounterTested": false,
+    "versionedD3InstrumentContractCreated": false,
+    "successfulSourceImplementationFreezeCreated": false,
+    "runtimeQualificationAttempt001Retried": false,
+    "runtimeQualificationAttempt002Started": false,
+    "dataExporterKnownAnswerRun": false,
+    "qualificationScheduleGenerated": false,
+    "qualificationInputsGenerated": false,
+    "anonymousIdentityMapGenerated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "nextRequiredAction": "A new separate minimum authorization is required to investigate and prospectively freeze a different Unity-compatible D3 mechanism or to replace D3 with a different allocation-related endpoint. Do not retry this amendment attempt and do not start runtime-qualification attempt-002."
+}

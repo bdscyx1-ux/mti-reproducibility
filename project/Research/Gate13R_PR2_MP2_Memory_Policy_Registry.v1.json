@@ -1,0 +1,60 @@
+{
+  "evidenceRole": "PILOT-INFORMED / EXCLUDED-FROM-FORMAL-ANALYSIS",
+  "failurePrecedence": "DURABLE-UNITY-BLOCK-CAUSE-BEFORE-EXIT-TIMEOUT-AND-SECONDARY-LOCK-EVIDENCE",
+  "frozenAtAsiaShanghai": "2026-10-09T13:41:37.9745416+08:00",
+  "frozenAtUtc": "2026-10-09T05:41:37.9696416Z",
+  "hostSafety": {
+    "absoluteNativeEmergencyBytes": 4294967296,
+    "availablePhysicalMemoryFloorBytes": 8589934592,
+    "exactThresholdPasses": true,
+    "relativeNativeGrowthEmergencyBytes": 2147483648,
+    "telemetryOverflowOrUnverifiableSustainedGrowth": "FAIL-CLOSED"
+  },
+  "nativeResidency": {
+    "adaptiveRelaxationAllowed": false,
+    "advisoryRule": "DURABLY-RECORD-AND-CONTINUE",
+    "attributionScope": "WHOLE-BLOCK-PROCESS",
+    "eligibleStages": [
+      "after-forced-cleanup",
+      "post-block-pre-exit"
+    ],
+    "exactThresholdPasses": true,
+    "hardRule": "DURABLY-RECORD-AND-FORBID-NEXT-BLOCK",
+    "metric": "max(workingSetDeltaFromBlockBaselineBytes, privateMemoryDeltaFromBlockBaselineBytes)",
+    "rawAfterWorkloadRule": "DIAGNOSTIC-ONLY-EXCEPT-HOST-EMERGENCY",
+    "tiers": [
+      {
+        "advisoryBytes": 536870912,
+        "allowedMaximumGridDimensions": [
+          32,
+          64,
+          128
+        ],
+        "hardBytes": 671088640,
+        "tierId": "MP2-NATIVE-LE128"
+      },
+      {
+        "advisoryBytes": 671088640,
+        "allowedMaximumGridDimensions": [
+          256
+        ],
+        "hardBytes": 805306368,
+        "tierId": "MP2-NATIVE-EQ256"
+      }
+    ],
+    "unknownOrAmbiguousRule": "CONFIGURATION-HARD-FAIL-BEFORE-MEASURED-LAUNCH"
+  },
+  "noAutomaticRetryResumeTopUpMerge": true,
+  "policyId": "gate13r-pr2-mp2-layered-scenario-aware-memory-policy-v1",
+  "registryId": "gate13r-pr2-mp2-memory-policy-registry-v1",
+  "retainedManaged": {
+    "blockEmergencyBytes": 268435456,
+    "boundary": "AFTER-FORCED-CLEANUP",
+    "exactThresholdPasses": true,
+    "sampleAlertBytes": 134217728,
+    "sampleEmergencyBytes": 268435456
+  },
+  "schemaVersion": 1,
+  "status": "FROZEN-PROSPECTIVE / NON-EXECUTING / FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+  "twoStageCommit": "RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE; VERSIONED-READ-ONLY-ANALYSIS"
+}

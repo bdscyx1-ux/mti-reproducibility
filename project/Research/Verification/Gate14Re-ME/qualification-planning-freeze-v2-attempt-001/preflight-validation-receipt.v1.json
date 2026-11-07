@@ -1,0 +1,115 @@
+{
+  "schema": "gate14re-me-qualification-planning-freeze-v2-attempt-001-preflight-validation-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-planning-freeze-v2-attempt-001",
+  "status": "PASS_QUALIFICATION_PLANNING_FREEZE_V2_PREFLIGHT",
+  "validatedAtUtc": "2026-10-17T13:34:26.4783766Z",
+  "checksPassed": 81,
+  "checksFailed": 0,
+  "sameAttemptRetryPerformed": false,
+  "unityInvocations": 0,
+  "validationMethod": "read-only PowerShell object, hash, cardinality, filesystem-boundary and process-metadata checks",
+  "stageArtifactBindings": {
+    "authorizationReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/authorization-receipt.v1.json",
+      "lengthBytes": 4106,
+      "sha256": "9ecf7caada3ce2248e9235e65a5c1557b4207c847c3a6897924cc416d08a9962"
+    },
+    "stageContract": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/stage-contract.v1.json",
+      "lengthBytes": 8170,
+      "sha256": "4e2f87b19188f6a068fc075f7c49a34fde95f9ed8ded3f093bbfda9705ae5f67"
+    },
+    "qualificationDesignFreeze": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/qualification-design-freeze.v2.json",
+      "lengthBytes": 16489,
+      "sha256": "067736663b75c7d4fdb545e947959da787a0ee727c276fd0a6e9385bd831f390"
+    },
+    "humanReadablePlan": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/qualification-planning-freeze.v2.md",
+      "lengthBytes": 9860,
+      "sha256": "820b74a9a1e0e10d853b88bc78208d0bc68dfd9fb9ea7e1cb3be39455852756f"
+    }
+  },
+  "contractChecks": {
+    "statusV26RequiredStateMatched": true,
+    "inputSchemaV2Only": true,
+    "planningSchemaBindingV2Only": true,
+    "legacySchemaV1ExcludedFromFuturePlanning": true,
+    "schemaAdoptionTerminalReceiptMatched": true,
+    "trustedUnityIdentityRuleMatched": true,
+    "timestampComparatorKnownAnswerPassed": true,
+    "allBoundHashesMatched": true
+  },
+  "instrumentChecks": {
+    "D2GridReadProxyKnownAnswerPassed": true,
+    "D2SemanticInvariancePassed": true,
+    "D3LegacyCounterFailureRetained": true,
+    "D3V31QualificationPassed": true,
+    "D3V31RunnerSchemaIntegrationPassed": true,
+    "D4PersistentStateSyntheticFixturePassed": true,
+    "clockMonotonicityPassed": true,
+    "clockSamples": 10000,
+    "completePerObservationToolingPassed": true,
+    "aggregationOnlyPackage": false
+  },
+  "designCardinalityChecks": {
+    "coreStructuralCells": 48,
+    "corePilotSuperblocks": 144,
+    "contextStrata": 18,
+    "exactCoreOccurrencesPerContextStratum": 8,
+    "stressPilotSuperblocks": 18,
+    "totalPilotSuperblocks": 162,
+    "algorithmLanesPerSuperblock": 6,
+    "freshAlgorithmProcesses": 972,
+    "eventGroupsPerLane": 24,
+    "expectedEventGroupRows": 23328,
+    "williamsSequences": 6,
+    "exactRepetitionsPerWilliamsSequence": 27,
+    "emptyBoundaryProcesses": 12,
+    "emptyBoundaryIterationsPerProcess": 1000,
+    "emptyBoundaryRows": 12000,
+    "allFormulasRecomputedAndMatched": true
+  },
+  "sourceAndFairnessChecks": {
+    "namedAlgorithmCount": 6,
+    "anonymousLaneCount": 6,
+    "allAlgorithmImplementationHashesMatched": true,
+    "allAlgorithmSpecificationHashesMatched": true,
+    "navigationContractAndGridHashesMatched": true,
+    "runtimeDtoOracleRunnerAndSchemaBindingHashesMatched": true
+  },
+  "historicalEvidenceChecks": {
+    "historicalAttemptRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-attempt-001",
+    "historicalFailureReceiptSha256": "f3ebfb70faba9d48d39d12eeff5fe64cfc2776ac73c0b672e1ecf04273b4b2c6",
+    "historicalFailureStatusRetained": true,
+    "historicalEvidenceReadOnly": true,
+    "historicalEvidenceModified": false,
+    "historicalEvidenceReclassified": false
+  },
+  "scopeAudit": {
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "unityProcessesLaunched": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "activeGate14ReMEUnityProcessCount": 0,
+    "prohibitedRootsAbsent": [
+      "Research/PilotRuns/Gate14Re-ME",
+      "Research/FormalRuns/Gate14Re-ME",
+      "Research/Analysis/Gate14Re-ME",
+      "Research/Exports/Gate14Re-ME",
+      "Research/QualificationRuns/Gate14Re-ME",
+      "Research/MeasuredRuns/Gate14Re-ME"
+    ]
+  },
+  "terminalEligibility": "PASS_READY_TO_FREEZE_NONEXECUTING_QUALIFICATION_PLANNING_DESIGN"
+}

@@ -1,0 +1,1385 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using DDM.Research.Algorithms;
+using DDM.Research.Experiments;
+using DDM.Research.Logging;
+using DDM.Research.Navigation;
+using DDM.Research.Scenarios;
+using UnityEngine;
+
+namespace DDM.Research.Editor
+{
+    /// <summary>
+    /// Gate 10R research-only entry point. This additive command leaves the
+    /// v1/V2 process-reuse implementations untouched, uses native Windows process
+    /// counters, and takes the managed-memory endpoint only after the non-inlined
+    /// sample method has returned and a full collection boundary has completed.
+    /// </summary>
+    public static class Gate13R48h3LaneBatchCommandV1
+    {
+        private const string DesignId = "gate13r-48h-10pct-three-isolated-editor-lanes-serial-license-admission-v1";
+        private const string MemoryGatePolicyId = "gate12r-sample-128mib-block-128mib-per-sample-v1";
+        private const string BlockManagedLimitFormulaId = "checked-sample-limit-times-expected-sample-count-v1";
+        private const string NativeTelemetrySourceId = "windows-psapi-getprocessmemoryinfo-process_memory_counters_ex-v1";
+        private const long SampleManagedGrowthLimitBytes = 134217728L;
+        private const long NativeGrowthLimitBytes = 536870912L;
+        private const long ProbeAbsoluteToleranceBytes = 67108864L;
+        private const double ProbeRelativeTolerance = 0.25d;
+        private const int ProbeTimeoutSeconds = 60;
+        private const double ProbeCreationTimeToleranceSeconds = 2d;
+        private const int MaximumBarrierTimeoutSeconds = 900;
+        private static readonly UTF8Encoding Utf8WithoutBom = new UTF8Encoding(false);
+        private static readonly Regex SafeId = new Regex("^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$", RegexOptions.CultureInvariant);
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct PROCESS_MEMORY_COUNTERS_EX
+        {
+            public uint cb;
+            public uint PageFaultCount;
+            public UIntPtr PeakWorkingSetSize;
+            public UIntPtr WorkingSetSize;
+            public UIntPtr QuotaPeakPagedPoolUsage;
+            public UIntPtr QuotaPagedPoolUsage;
+            public UIntPtr QuotaPeakNonPagedPoolUsage;
+            public UIntPtr QuotaNonPagedPoolUsage;
+            public UIntPtr PagefileUsage;
+            public UIntPtr PeakPagefileUsage;
+            public UIntPtr PrivateUsage;
+        }
+
+        [DllImport("psapi.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static extern bool GetProcessMemoryInfo(
+            IntPtr processHandle,
+            out PROCESS_MEMORY_COUNTERS_EX counters,
+            uint size);
+
+        [Serializable]
+        private sealed class BlockPlan
+        {
+            public int schemaVersion;
+            public string planId;
+            public string designId;
+            public string blockId;
+            public string campaignId;
+            public string scenarioRelativePath;
+            public string scenarioSourceSha256;
+            public string comparisonCohortId;
+            public int block;
+            public bool formalCampaign;
+            public string analysisRole;
+            public int verificationInjectedFailurePosition;
+            public string pilotPlanRelativePath;
+            public string pilotPlanSha256;
+            public string specificationRelativePath;
+            public string specificationSha256;
+            public string testDesignRelativePath;
+            public string testDesignSha256;
+            public string amendmentRelativePath;
+            public string amendmentSha256;
+            public string commandRelativePath;
+            public string commandSha256;
+            public string provenanceRelativePath;
+            public string provenanceSha256;
+            public string telemetryProbeResultRelativePath;
+            public string telemetryProbeResultSha256;
+            public BlockEntry[] entries = new BlockEntry[0];
+        }
+
+        [Serializable]
+        private sealed class BlockEntry
+        {
+            public int position;
+            public string algorithmId;
+            public string predecessorAlgorithmId;
+            public string runId;
+            public string directory;
+        }
+
+        [Serializable]
+        private sealed class ProcessTelemetry
+        {
+            public int schemaVersion = 1;
+            public string sourceId = NativeTelemetrySourceId;
+            public string capturedAtUtc;
+            public int processId;
+            public string processStartTimeUtc;
+            public double processAgeMilliseconds;
+            public long workingSetBytes;
+            public long privateMemoryBytes;
+            public long managedMemoryBytes;
+            public int gcCollectionCount0;
+            public int gcCollectionCount1;
+            public int gcCollectionCount2;
+        }
+
+        [Serializable]
+        private sealed class ProcessReuseSampleManifest
+        {
+            public int schemaVersion = 5;
+            public string executionDesignId = DesignId;
+            public string runId;
+            public string algorithmId;
+            public int fairnessSchemaVersion;
+            public string fairnessProtocolId;
+            public string fairnessProtocolRelativePath;
+            public string fairnessProtocolSha256;
+            public string algorithmSpecificationId;
+            public string algorithmSpecificationRelativePath;
+            public string algorithmSpecificationSha256;
+            public string algorithmImplementationRelativePath;
+            public string algorithmImplementationSha256;
+            public string workloadSpecificationId;
+            public string workloadSpecificationRelativePath;
+            public string workloadSpecificationSha256;
+            public string goalCohortId;
+            public string comparisonCohortId;
+            public int distinctGoalCount;
+            public int plannerInstanceCount;
+            public int persistentStateInstanceCount;
+            public int sharedFieldInstanceCount;
+            public string plannerStateModelId;
+            public string processedWorkUnit;
+            public string nativeMetricsSemanticsId;
+            public bool dynamicCostIncludesAllRepairsAndPostEventPlans;
+            public string scenarioSourcePath;
+            public string scenarioSourceSha256;
+            public string scenarioFingerprintSha256;
+            public string canonicalScenarioFile;
+            public string canonicalScenarioSha256;
+            public string operationsJsonlFile;
+            public string operationsJsonlSha256;
+            public string workloadResultFile;
+            public string workloadResultSha256;
+            public string unityVersion;
+            public string runtimePlatform;
+            public string startedAtUtc;
+            public string completedAtUtc;
+            public long enqueuedLogRecords;
+            public long writtenLogRecords;
+            public int planOperationCount;
+            public int repairOperationCount;
+            public string blockId;
+            public int block;
+            public int position;
+            public int cohortSize;
+            public string predecessorAlgorithmId;
+            public string blockPlanSha256;
+            public string processReuseSpecificationSha256;
+            public string processReuseTestDesignSha256;
+            public string processReuseAmendmentSha256;
+            public string processReuseCommandSha256;
+            public string telemetryProbeResultSha256;
+            public string memoryGatePolicyId;
+            public long maximumSampleRetainedManagedGrowthBytes;
+            public bool forcedGcBeforeCompleted;
+            public bool forcedGcAfterCompleted;
+            public bool sampleStateCreatedFresh;
+            public bool heavySampleReferencesReturned;
+            public bool plannerResetCompleted;
+            public bool loggerDisposed;
+            public bool formalCampaign;
+            public ProcessTelemetry telemetryBeforeSample;
+            public ProcessTelemetry telemetryRawAfterWorkload;
+            public ProcessTelemetry telemetryAfterCleanup;
+            public long sampleRetainedManagedGrowthBytes;
+            public bool retainedManagedGrowthWithinLimit;
+            public bool completed;
+        }
+
+        [Serializable]
+        private sealed class BlockChildRecord
+        {
+            public int position;
+            public string algorithmId;
+            public string predecessorAlgorithmId;
+            public string runId;
+            public string outputRelativePath;
+            public string manifestRelativePath;
+            public string manifestSha256;
+            public string summaryRelativePath;
+            public string summarySha256;
+            public string workloadResultRelativePath;
+            public string workloadResultSha256;
+            public int processId;
+            public double processAgeBeforeMilliseconds;
+            public double processAgeRawAfterMilliseconds;
+            public double processAgeAfterCleanupMilliseconds;
+            public long workingSetBeforeBytes;
+            public long workingSetRawAfterBytes;
+            public long workingSetAfterCleanupBytes;
+            public long privateMemoryBeforeBytes;
+            public long privateMemoryRawAfterBytes;
+            public long privateMemoryAfterCleanupBytes;
+            public long managedMemoryBeforeBytes;
+            public long managedMemoryRawAfterBytes;
+            public long managedMemoryAfterCleanupBytes;
+            public long sampleRetainedManagedGrowthBytes;
+            public int gcCollectionDelta0;
+            public int gcCollectionDelta1;
+            public int gcCollectionDelta2;
+            public double totalPlannerElapsedMilliseconds;
+            public double dynamicHandlingMillisecondsPerScheduledEvent;
+            public bool completed;
+        }
+
+        [Serializable]
+        private sealed class ProcessReuseSampleSummary
+        {
+            public int schemaVersion = 2;
+            public string summaryKind = "gate13r-48h-10pct-three-lane-nonformal-sample-summary-v1";
+            public string executionDesignId = DesignId;
+            public string runId;
+            public string blockId;
+            public int block;
+            public int position;
+            public string algorithmId;
+            public string predecessorAlgorithmId;
+            public int processId;
+            public string processStartTimeUtc;
+            public string workloadResultRelativePath;
+            public string workloadResultSha256;
+            public string manifestRelativePath;
+            public string manifestSha256;
+            public string completedAtUtc;
+            public bool formalCampaign;
+            public bool completed;
+        }
+
+        [Serializable]
+        private sealed class BlockManifest
+        {
+            public int schemaVersion = 3;
+            public string manifestKind = "gate13r-48h-10pct-three-lane-nonformal-block-manifest-v1";
+            public string executionDesignId = DesignId;
+            public string blockId;
+            public string campaignId;
+            public string comparisonCohortId;
+            public string scenarioRelativePath;
+            public string scenarioSourceSha256;
+            public string blockPlanSha256;
+            public int block;
+            public int processId;
+            public string processStartTimeUtc;
+            public string startedAtUtc;
+            public string completedAtUtc;
+            public int expectedSampleCount;
+            public int completedSampleCount;
+            public bool oneBlockPerUnityProcess;
+            public bool oneSamplePerAlgorithmPerProcess;
+            public bool allSamplesShareProcessId;
+            public bool orderMatchesBlockPlan;
+            public long blockRetainedManagedGrowthBytes;
+            public long blockWorkingSetGrowthBytes;
+            public long blockPrivateMemoryGrowthBytes;
+            public string memoryGatePolicyId;
+            public string blockManagedLimitFormulaId;
+            public long maximumSampleRetainedManagedGrowthBytes;
+            public long maximumManagedGrowthBytes;
+            public long maximumNativeGrowthBytes;
+            public bool hardMemoryRulesPassed;
+            public bool formalCampaign;
+            public BlockChildRecord[] samples = new BlockChildRecord[0];
+            public bool completed;
+        }
+
+        [Serializable]
+        private sealed class BlockCheckpoint
+        {
+            public int schemaVersion = 2;
+            public string checkpointKind = "gate13r-48h-10pct-three-lane-nonformal-block-checkpoint-v1";
+            public string blockId;
+            public string status;
+            public string savedAtUtc;
+            public int processId;
+            public int expectedSampleCount;
+            public int completedSampleCount;
+            public int currentPosition;
+            public string currentRunId;
+            public string error;
+            public bool automaticRetryAuthorized;
+            public bool automaticResumeAuthorized;
+            public bool formalCampaign;
+        }
+
+        [Serializable]
+        private sealed class BlockFailure
+        {
+            public int schemaVersion = 2;
+            public string failureKind = "gate13r-48h-10pct-three-lane-nonformal-block-failure-v1";
+            public string failedAtUtc;
+            public string blockId;
+            public int processId;
+            public int completedSampleCount;
+            public int failedPosition;
+            public string failedRunId;
+            public string exceptionType;
+            public string message;
+            public string stackTrace;
+            public bool laterPositionsExecuted;
+            public bool automaticRetryAttempted;
+            public bool automaticResumeAttempted;
+            public bool formalCampaign;
+        }
+
+        [Serializable]
+        private sealed class SampleFailure
+        {
+            public int schemaVersion = 2;
+            public string failedAtUtc;
+            public string exceptionType;
+            public string message;
+            public string stackTrace;
+        }
+
+        private sealed class SampleCoreResult
+        {
+            public string childDirectory;
+            public string resultPath;
+            public string manifestPath;
+            public string summaryPath;
+            public string resultFileName;
+            public string manifestFileName;
+            public string summaryFileName;
+            public ProcessReuseSampleManifest manifest;
+            public double totalPlannerElapsedMilliseconds;
+            public double dynamicHandlingMillisecondsPerScheduledEvent;
+            public bool workloadCompleted;
+        }
+
+        [Serializable]
+        private sealed class TelemetryProbeReady
+        {
+            public int schemaVersion = 1;
+            public string readyKind = "gate13r-48h-10pct-three-lane-telemetry-probe-ready-v1";
+            public string executionDesignId = DesignId;
+            public string writtenAtUtc;
+            public string executablePath;
+            public string expectedExternalQueryFile = "external-os-query.json";
+            public ProcessTelemetry nativeBefore;
+        }
+
+        [Serializable]
+        private sealed class ExternalOsQuery
+        {
+            public int schemaVersion;
+            public string queryKind;
+            public string querySourceId;
+            public string queriedAtUtc;
+            public int processId;
+            public string name;
+            public string executablePath;
+            public string creationDateUtc;
+            public long workingSetBytes;
+            public long privateMemoryBytes;
+        }
+
+        [Serializable]
+        private sealed class TelemetryProbeResult
+        {
+            public int schemaVersion = 1;
+            public string resultKind = "gate13r-48h-10pct-three-lane-telemetry-probe-result-v1";
+            public string executionDesignId = DesignId;
+            public string completedAtUtc;
+            public string inProcessSourceId = NativeTelemetrySourceId;
+            public string externalSourceId;
+            public ProcessTelemetry nativeBefore;
+            public ExternalOsQuery externalQuery;
+            public ProcessTelemetry nativeAfter;
+            public long workingSetDistanceToNativeIntervalBytes;
+            public long workingSetToleranceBytes;
+            public bool workingSetPassed;
+            public long privateMemoryDistanceToNativeIntervalBytes;
+            public long privateMemoryToleranceBytes;
+            public bool privateMemoryPassed;
+            public double creationTimeDifferenceSeconds;
+            public double handshakeDurationSeconds;
+            public bool pidPassed;
+            public bool executablePassed;
+            public bool timestampOrderPassed;
+            public bool creationTimePassed;
+            public string error;
+            public bool passed;
+        }
+
+        [Serializable]
+        private sealed class MethodReadyRecord
+        {
+            public int schemaVersion = 1;
+            public string readyKind = "gate13r-48h-three-lane-method-ready-v1";
+            public string executionDesignId = DesignId;
+            public string waveId;
+            public string barrierTokenSha256;
+            public string blockPlanSha256;
+            public int processId;
+            public string processStartTimeUtc;
+            public string writtenAtUtc;
+            public bool planningWorkloadStarted;
+            public bool formalCampaign;
+        }
+
+        [Serializable]
+        private sealed class BarrierReleaseRecord
+        {
+            public int schemaVersion;
+            public string releaseKind;
+            public string executionDesignId;
+            public string waveId;
+            public string barrierToken;
+            public int laneCount;
+            public string releasedAtUtc;
+            public bool formalCampaign;
+        }
+
+        [Serializable]
+        private sealed class BarrierObservedRecord
+        {
+            public int schemaVersion = 1;
+            public string observedKind = "gate13r-48h-three-lane-barrier-observed-v1";
+            public string executionDesignId = DesignId;
+            public string waveId;
+            public string barrierTokenSha256;
+            public int processId;
+            public string observedAtUtc;
+            public double waitMilliseconds;
+            public bool planningWorkloadStartedAfterRelease;
+            public bool formalCampaign;
+        }
+
+        [Serializable]
+        private sealed class BarrierProbeResult
+        {
+            public int schemaVersion = 1;
+            public string resultKind = "gate13r-48h-three-lane-license-barrier-probe-result-v1";
+            public string executionDesignId = DesignId;
+            public string waveId;
+            public string barrierTokenSha256;
+            public int processId;
+            public string processStartTimeUtc;
+            public string completedAtUtc;
+            public double barrierWaitMilliseconds;
+            public bool planningWorkloadExecuted;
+            public bool formalCampaign;
+            public bool passed;
+        }
+
+        public static void ProbeLicenseBarrier()
+        {
+            string outputRoot = null;
+            try
+            {
+                string[] arguments = Environment.GetCommandLineArgs();
+                outputRoot = Path.GetFullPath(RequiredOption(arguments, "-ddmGate13ROutputDirectory"));
+                string barrierRoot = Path.GetFullPath(RequiredOption(arguments, "-ddmGate13RBarrierRoot"));
+                string readyPath = Path.GetFullPath(RequiredOption(arguments, "-ddmGate13RMethodReadyPath"));
+                string releasePath = Path.GetFullPath(RequiredOption(arguments, "-ddmGate13RBarrierReleasePath"));
+                string waveId = RequiredSafeOption(arguments, "-ddmGate13RWaveId");
+                string barrierToken = RequiredSafeOption(arguments, "-ddmGate13RBarrierToken");
+                int timeoutSeconds = RequiredBarrierTimeout(arguments);
+                ValidateBarrierPaths(outputRoot, barrierRoot, readyPath, releasePath);
+                EnsureFreshOutputDirectory(outputRoot);
+                Directory.CreateDirectory(outputRoot);
+                Process process = Process.GetCurrentProcess();
+                WriteCreateNewJson(readyPath, NewMethodReady(process, waveId, barrierToken, string.Empty));
+                Stopwatch wait = Stopwatch.StartNew();
+                WaitForBarrierRelease(releasePath, waveId, barrierToken, timeoutSeconds);
+                WriteCreateNewJson(Path.Combine(outputRoot, "barrier-observed.json"), NewBarrierObserved(process, waveId, barrierToken, wait.Elapsed.TotalMilliseconds, false));
+                WriteCreateNewJson(Path.Combine(outputRoot, "barrier-probe-result.json"), new BarrierProbeResult
+                {
+                    waveId = waveId,
+                    barrierTokenSha256 = ComputeStringSha256(barrierToken),
+                    processId = process.Id,
+                    processStartTimeUtc = process.StartTime.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture),
+                    completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                    barrierWaitMilliseconds = wait.Elapsed.TotalMilliseconds,
+                    planningWorkloadExecuted = false,
+                    formalCampaign = false,
+                    passed = true
+                });
+                UnityEngine.Debug.Log("DDM Gate 13R three-lane licensing/barrier probe passed.");
+            }
+            catch (Exception exception)
+            {
+                if (!string.IsNullOrWhiteSpace(outputRoot))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(outputRoot);
+                        WriteAtomicJson(Path.Combine(outputRoot, "barrier-probe-failure.json"), new SampleFailure
+                        {
+                            failedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                            exceptionType = exception.GetType().FullName,
+                            message = exception.Message,
+                            stackTrace = exception.ToString()
+                        });
+                    }
+                    catch { }
+                }
+                UnityEngine.Debug.LogException(exception);
+                throw;
+            }
+        }
+
+        public static void ProbeTelemetry()
+        {
+            string outputDirectory = null;
+            TelemetryProbeResult result = new TelemetryProbeResult();
+            try
+            {
+                string[] arguments = Environment.GetCommandLineArgs();
+                outputDirectory = Path.GetFullPath(RequiredOption(arguments, "-ddmGate10RTelemetryProbeDirectory"));
+                EnsureFreshOutputDirectory(outputDirectory);
+                Directory.CreateDirectory(outputDirectory);
+                Process process = Process.GetCurrentProcess();
+                string executablePath = Path.GetFullPath(process.MainModule.FileName);
+                ProcessTelemetry before = CaptureTelemetry(process);
+                result.nativeBefore = before;
+                WriteAtomicJson(Path.Combine(outputDirectory, "telemetry-probe-ready.json"), new TelemetryProbeReady
+                {
+                    writtenAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                    executablePath = executablePath,
+                    nativeBefore = before
+                });
+
+                string externalPath = Path.Combine(outputDirectory, "external-os-query.json");
+                Stopwatch wait = Stopwatch.StartNew();
+                while (!File.Exists(externalPath) && wait.Elapsed < TimeSpan.FromSeconds(ProbeTimeoutSeconds)) Thread.Sleep(100);
+                if (!File.Exists(externalPath)) throw new TimeoutException("Timed out waiting for the independent Win32_Process query.");
+
+                ExternalOsQuery external = JsonUtility.FromJson<ExternalOsQuery>(File.ReadAllText(externalPath, Encoding.UTF8));
+                if (external == null) throw new InvalidOperationException("The independent OS query JSON is invalid.");
+                ProcessTelemetry after = CaptureTelemetry(process);
+                result.externalQuery = external;
+                result.nativeAfter = after;
+                result.externalSourceId = external.querySourceId;
+                result.pidPassed = external.processId == before.processId && after.processId == before.processId;
+                result.executablePassed = PathsEqual(executablePath, external.executablePath);
+
+                DateTime beforeUtc = ParseUtc(before.capturedAtUtc, "native before timestamp");
+                DateTime externalUtc = ParseUtc(external.queriedAtUtc, "external query timestamp");
+                DateTime afterUtc = ParseUtc(after.capturedAtUtc, "native after timestamp");
+                DateTime nativeStartUtc = ParseUtc(before.processStartTimeUtc, "native process start timestamp");
+                DateTime externalStartUtc = ParseUtc(external.creationDateUtc, "external process creation timestamp");
+                result.timestampOrderPassed = beforeUtc < externalUtc && externalUtc < afterUtc;
+                result.creationTimeDifferenceSeconds = Math.Abs((externalStartUtc - nativeStartUtc).TotalSeconds);
+                result.creationTimePassed = result.creationTimeDifferenceSeconds <= ProbeCreationTimeToleranceSeconds;
+                result.handshakeDurationSeconds = (afterUtc - beforeUtc).TotalSeconds;
+
+                result.workingSetDistanceToNativeIntervalBytes = DistanceToClosedInterval(
+                    external.workingSetBytes,
+                    before.workingSetBytes,
+                    after.workingSetBytes);
+                result.workingSetToleranceBytes = ProbeTolerance(
+                    external.workingSetBytes,
+                    before.workingSetBytes,
+                    after.workingSetBytes);
+                result.workingSetPassed = ValuesPositive(external.workingSetBytes, before.workingSetBytes, after.workingSetBytes)
+                    && result.workingSetDistanceToNativeIntervalBytes <= result.workingSetToleranceBytes;
+
+                result.privateMemoryDistanceToNativeIntervalBytes = DistanceToClosedInterval(
+                    external.privateMemoryBytes,
+                    before.privateMemoryBytes,
+                    after.privateMemoryBytes);
+                result.privateMemoryToleranceBytes = ProbeTolerance(
+                    external.privateMemoryBytes,
+                    before.privateMemoryBytes,
+                    after.privateMemoryBytes);
+                result.privateMemoryPassed = ValuesPositive(external.privateMemoryBytes, before.privateMemoryBytes, after.privateMemoryBytes)
+                    && result.privateMemoryDistanceToNativeIntervalBytes <= result.privateMemoryToleranceBytes;
+
+                result.passed = result.pidPassed
+                    && result.executablePassed
+                    && result.timestampOrderPassed
+                    && result.creationTimePassed
+                    && result.handshakeDurationSeconds >= 0d
+                    && result.handshakeDurationSeconds <= ProbeTimeoutSeconds
+                    && result.workingSetPassed
+                    && result.privateMemoryPassed;
+                result.completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture);
+                result.error = result.passed ? string.Empty : "One or more frozen telemetry-probe acceptance rules failed.";
+                WriteAtomicJson(Path.Combine(outputDirectory, "telemetry-probe-result.json"), result);
+                if (!result.passed) throw new InvalidOperationException(result.error);
+                UnityEngine.Debug.Log("DDM Gate 10R native telemetry probe passed.");
+            }
+            catch (Exception exception)
+            {
+                if (!string.IsNullOrWhiteSpace(outputDirectory))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(outputDirectory);
+                        result.completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture);
+                        result.error = exception.ToString();
+                        result.passed = false;
+                        WriteAtomicJson(Path.Combine(outputDirectory, "telemetry-probe-result.json"), result);
+                    }
+                    catch { }
+                }
+                UnityEngine.Debug.LogException(exception);
+                throw;
+            }
+        }
+
+        public static void Run()
+        {
+            string outputRoot = null;
+            BlockPlan plan = null;
+            List<BlockChildRecord> completed = new List<BlockChildRecord>();
+            int currentPosition = 0;
+            string currentRunId = null;
+            DateTime blockStartedUtc = DateTime.MinValue;
+            Process process = Process.GetCurrentProcess();
+            int processId = process.Id;
+            try
+            {
+                string[] arguments = Environment.GetCommandLineArgs();
+                string projectRoot = Directory.GetParent(Application.dataPath).FullName;
+                string planPath = Path.GetFullPath(RequiredOption(arguments, "-ddmGate10RBlockPlanPath"));
+                string expectedPlanSha256 = RequiredOption(arguments, "-ddmGate10RBlockPlanSha256");
+                outputRoot = Path.GetFullPath(RequiredOption(arguments, "-ddmGate10ROutputDirectory"));
+                string barrierRoot = Path.GetFullPath(RequiredOption(arguments, "-ddmGate13RBarrierRoot"));
+                string readyPath = Path.GetFullPath(RequiredOption(arguments, "-ddmGate13RMethodReadyPath"));
+                string releasePath = Path.GetFullPath(RequiredOption(arguments, "-ddmGate13RBarrierReleasePath"));
+                string waveId = RequiredSafeOption(arguments, "-ddmGate13RWaveId");
+                string barrierToken = RequiredSafeOption(arguments, "-ddmGate13RBarrierToken");
+                int barrierTimeoutSeconds = RequiredBarrierTimeout(arguments);
+                ValidateBarrierPaths(outputRoot, barrierRoot, readyPath, releasePath);
+                if (!File.Exists(planPath)) throw new FileNotFoundException("Gate 10R process-reuse block plan is missing.", planPath);
+                string actualPlanSha256 = ComputeFileSha256(planPath);
+                if (!string.Equals(actualPlanSha256, expectedPlanSha256, StringComparison.Ordinal)) throw new InvalidOperationException("Block-plan SHA-256 mismatch.");
+                plan = JsonUtility.FromJson<BlockPlan>(File.ReadAllText(planPath, Encoding.UTF8));
+                ValidatePlan(plan, projectRoot, outputRoot);
+                EnsureFreshOutputDirectory(outputRoot);
+                Directory.CreateDirectory(outputRoot);
+                WriteCheckpoint(outputRoot, plan, processId, "waiting-barrier", completed.Count, 0, null, null);
+
+                string scenarioPath = Path.GetFullPath(Path.Combine(projectRoot, plan.scenarioRelativePath.Replace('/', Path.DirectorySeparatorChar)));
+                if (!File.Exists(scenarioPath)) throw new FileNotFoundException("Scenario file is missing.", scenarioPath);
+                if (!string.Equals(ComputeFileSha256(scenarioPath), plan.scenarioSourceSha256, StringComparison.Ordinal)) throw new InvalidOperationException("Scenario source SHA-256 mismatch.");
+
+                WriteCreateNewJson(readyPath, NewMethodReady(process, waveId, barrierToken, actualPlanSha256));
+                Stopwatch barrierWait = Stopwatch.StartNew();
+                WaitForBarrierRelease(releasePath, waveId, barrierToken, barrierTimeoutSeconds);
+                WriteCreateNewJson(Path.Combine(outputRoot, "barrier-observed.json"), NewBarrierObserved(process, waveId, barrierToken, barrierWait.Elapsed.TotalMilliseconds, true));
+                blockStartedUtc = DateTime.UtcNow;
+                WriteCheckpoint(outputRoot, plan, processId, "block-started-after-barrier", completed.Count, 0, null, null);
+
+                for (int index = 0; index < plan.entries.Length; index++)
+                {
+                    BlockEntry entry = plan.entries[index];
+                    currentPosition = entry.position;
+                    currentRunId = entry.runId;
+                    WriteCheckpoint(outputRoot, plan, processId, "running-sample", completed.Count, currentPosition, currentRunId, null);
+                    if (plan.verificationInjectedFailurePosition == currentPosition) throw new InvalidOperationException("Injected Gate 10R verification failure at position " + currentPosition.ToString(CultureInfo.InvariantCulture) + ".");
+                    BlockChildRecord child = RunSample(projectRoot, outputRoot, scenarioPath, plan, entry, actualPlanSha256, process);
+                    completed.Add(child);
+                    WriteCheckpoint(outputRoot, plan, processId, "sample-completed", completed.Count, currentPosition, currentRunId, null);
+                }
+
+                ValidateCompletedBlock(plan, completed, processId);
+                long managedGrowth = completed[completed.Count - 1].managedMemoryAfterCleanupBytes - completed[0].managedMemoryBeforeBytes;
+                long workingSetGrowth = completed[completed.Count - 1].workingSetAfterCleanupBytes - completed[0].workingSetBeforeBytes;
+                long privateMemoryGrowth = completed[completed.Count - 1].privateMemoryAfterCleanupBytes - completed[0].privateMemoryBeforeBytes;
+                long blockManagedGrowthLimitBytes = checked(SampleManagedGrowthLimitBytes * completed.Count);
+                if (managedGrowth > blockManagedGrowthLimitBytes) throw new InvalidOperationException("Block retained managed-memory growth exceeded the frozen per-sample-scaled limit.");
+                if (workingSetGrowth > NativeGrowthLimitBytes) throw new InvalidOperationException("Block working-set growth exceeded the frozen 512 MiB limit.");
+                if (privateMemoryGrowth > NativeGrowthLimitBytes) throw new InvalidOperationException("Block private-memory growth exceeded the frozen 512 MiB limit.");
+
+                BlockManifest blockManifest = new BlockManifest
+                {
+                    blockId = plan.blockId,
+                    campaignId = plan.campaignId,
+                    comparisonCohortId = plan.comparisonCohortId,
+                    scenarioRelativePath = plan.scenarioRelativePath,
+                    scenarioSourceSha256 = plan.scenarioSourceSha256,
+                    blockPlanSha256 = actualPlanSha256,
+                    block = plan.block,
+                    processId = processId,
+                    processStartTimeUtc = process.StartTime.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture),
+                    startedAtUtc = blockStartedUtc.ToString("O", CultureInfo.InvariantCulture),
+                    completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                    expectedSampleCount = plan.entries.Length,
+                    completedSampleCount = completed.Count,
+                    oneBlockPerUnityProcess = true,
+                    oneSamplePerAlgorithmPerProcess = true,
+                    allSamplesShareProcessId = true,
+                    orderMatchesBlockPlan = true,
+                    blockRetainedManagedGrowthBytes = managedGrowth,
+                    blockWorkingSetGrowthBytes = workingSetGrowth,
+                    blockPrivateMemoryGrowthBytes = privateMemoryGrowth,
+                    memoryGatePolicyId = MemoryGatePolicyId,
+                    blockManagedLimitFormulaId = BlockManagedLimitFormulaId,
+                    maximumSampleRetainedManagedGrowthBytes = SampleManagedGrowthLimitBytes,
+                    maximumManagedGrowthBytes = blockManagedGrowthLimitBytes,
+                    maximumNativeGrowthBytes = NativeGrowthLimitBytes,
+                    hardMemoryRulesPassed = true,
+                    formalCampaign = plan.formalCampaign,
+                    samples = completed.ToArray(),
+                    completed = true
+                };
+                WriteAtomicJson(Path.Combine(outputRoot, "block-manifest.json"), blockManifest);
+                WriteCheckpoint(outputRoot, plan, processId, "block-completed", completed.Count, 0, null, null);
+                UnityEngine.Debug.Log("DDM Gate 10R process-reuse block completed: " + plan.blockId);
+            }
+            catch (Exception exception)
+            {
+                if (!string.IsNullOrWhiteSpace(outputRoot))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(outputRoot);
+                        WriteAtomicJson(Path.Combine(outputRoot, "block-failure.json"), new BlockFailure
+                        {
+                            failedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                            blockId = plan == null ? string.Empty : plan.blockId,
+                            processId = processId,
+                            completedSampleCount = completed.Count,
+                            failedPosition = currentPosition,
+                            failedRunId = currentRunId ?? string.Empty,
+                            exceptionType = exception.GetType().FullName,
+                            message = exception.Message,
+                            stackTrace = exception.ToString(),
+                            laterPositionsExecuted = false,
+                            automaticRetryAttempted = false,
+                            automaticResumeAttempted = false,
+                            formalCampaign = plan != null && plan.formalCampaign
+                        });
+                        if (plan != null) WriteCheckpoint(outputRoot, plan, processId, "failed-no-auto-retry", completed.Count, currentPosition, currentRunId, exception.Message);
+                    }
+                    catch { }
+                }
+                UnityEngine.Debug.LogException(exception);
+                throw;
+            }
+        }
+
+        private static BlockChildRecord RunSample(
+            string projectRoot,
+            string outputRoot,
+            string scenarioPath,
+            BlockPlan plan,
+            BlockEntry entry,
+            string blockPlanSha256,
+            Process process)
+        {
+            string childDirectory = ResolveChildDirectory(outputRoot, entry.directory);
+            EnsureFreshOutputDirectory(childDirectory);
+            try
+            {
+                ForceCollectionBoundary();
+                ProcessTelemetry before = CaptureTelemetry(process);
+                SampleCoreResult core = RunSampleCore(projectRoot, childDirectory, scenarioPath, plan, entry, blockPlanSha256, before, process);
+                ForceCollectionBoundary();
+                ProcessTelemetry afterCleanup = CaptureTelemetry(process);
+                return FinalizeSample(plan, entry, before, afterCleanup, core);
+            }
+            catch (Exception exception)
+            {
+                if (Directory.Exists(childDirectory))
+                {
+                    try
+                    {
+                        WriteAtomicJson(Path.Combine(childDirectory, "failure.json"), new SampleFailure
+                        {
+                            failedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                            exceptionType = exception.GetType().FullName,
+                            message = exception.Message,
+                            stackTrace = exception.ToString()
+                        });
+                    }
+                    catch { }
+                }
+                throw;
+            }
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private static SampleCoreResult RunSampleCore(
+            string projectRoot,
+            string childDirectory,
+            string scenarioPath,
+            BlockPlan plan,
+            BlockEntry entry,
+            string blockPlanSha256,
+            ProcessTelemetry before,
+            Process process)
+        {
+            DateTime startedUtc = DateTime.UtcNow;
+            INavigationPlanner planner = CreatePlanner(entry.algorithmId);
+            PlanningRunProvenance provenance = BuildProvenance(projectRoot, entry.algorithmId);
+            LoadedDeterministicScenario loaded = DeterministicScenarioJson.LoadFromFile(scenarioPath);
+            Directory.CreateDirectory(childDirectory);
+
+            const string canonicalFileName = "scenario.canonical.json";
+            const string operationsFileName = "operations.jsonl";
+            const string resultFileName = "workload-result.json";
+            const string manifestFileName = "manifest.json";
+            const string summaryFileName = "sample-summary.json";
+            string canonicalPath = Path.Combine(childDirectory, canonicalFileName);
+            string operationsPath = Path.Combine(childDirectory, operationsFileName);
+            string resultPath = Path.Combine(childDirectory, resultFileName);
+            string manifestPath = Path.Combine(childDirectory, manifestFileName);
+            string summaryPath = Path.Combine(childDirectory, summaryFileName);
+
+            string canonicalSha256 = DeterministicScenarioJson.SaveCanonical(canonicalPath, loaded.Resolved, false);
+            PlanningWorkloadResult workload;
+            long enqueued;
+            long written;
+            bool loggerDisposed = false;
+            using (JsonlExperimentLogger logger = new JsonlExperimentLogger(operationsPath, ExperimentLogFileMode.CreateNew))
+            {
+                workload = DeterministicPlanningWorkloadRunner.Run(entry.runId, loaded.Definition, planner, logger, provenance);
+                logger.Flush(TimeSpan.FromSeconds(30d));
+                enqueued = logger.EnqueuedCount;
+                written = logger.WrittenCount;
+            }
+            loggerDisposed = true;
+            if (!workload.completed) throw new InvalidOperationException("Planning workload did not complete; refusing to publish a sample completion marker.");
+            WriteAtomicJson(resultPath, workload);
+            ProcessTelemetry rawAfter = CaptureTelemetry(process);
+            planner.Reset();
+
+            ProcessReuseSampleManifest manifest = new ProcessReuseSampleManifest
+            {
+                runId = entry.runId,
+                algorithmId = entry.algorithmId,
+                fairnessSchemaVersion = workload.fairnessSchemaVersion,
+                fairnessProtocolId = workload.fairnessProtocolId,
+                fairnessProtocolRelativePath = workload.fairnessProtocolRelativePath,
+                fairnessProtocolSha256 = workload.fairnessProtocolSha256,
+                algorithmSpecificationId = workload.algorithmSpecificationId,
+                algorithmSpecificationRelativePath = workload.algorithmSpecificationRelativePath,
+                algorithmSpecificationSha256 = workload.algorithmSpecificationSha256,
+                algorithmImplementationRelativePath = workload.algorithmImplementationRelativePath,
+                algorithmImplementationSha256 = workload.algorithmImplementationSha256,
+                workloadSpecificationId = workload.workloadSpecificationId,
+                workloadSpecificationRelativePath = workload.workloadSpecificationRelativePath,
+                workloadSpecificationSha256 = workload.workloadSpecificationSha256,
+                goalCohortId = workload.goalCohortId,
+                comparisonCohortId = workload.comparisonCohortId,
+                distinctGoalCount = workload.distinctGoalCount,
+                plannerInstanceCount = workload.plannerInstanceCount,
+                persistentStateInstanceCount = workload.persistentStateInstanceCount,
+                sharedFieldInstanceCount = workload.sharedFieldInstanceCount,
+                plannerStateModelId = workload.plannerStateModelId,
+                processedWorkUnit = workload.processedWorkUnit,
+                nativeMetricsSemanticsId = workload.nativeMetricsSemanticsId,
+                dynamicCostIncludesAllRepairsAndPostEventPlans = workload.dynamicCostIncludesAllRepairsAndPostEventPlans,
+                scenarioSourcePath = loaded.SourcePath,
+                scenarioSourceSha256 = loaded.SourceSha256,
+                scenarioFingerprintSha256 = loaded.Resolved.FingerprintSha256,
+                canonicalScenarioFile = canonicalFileName,
+                canonicalScenarioSha256 = canonicalSha256,
+                operationsJsonlFile = operationsFileName,
+                operationsJsonlSha256 = ComputeFileSha256(operationsPath),
+                workloadResultFile = resultFileName,
+                workloadResultSha256 = ComputeFileSha256(resultPath),
+                unityVersion = Application.unityVersion,
+                runtimePlatform = Application.platform.ToString(),
+                startedAtUtc = startedUtc.ToString("O", CultureInfo.InvariantCulture),
+                enqueuedLogRecords = enqueued,
+                writtenLogRecords = written,
+                planOperationCount = workload.planOperationCount,
+                repairOperationCount = workload.repairOperationCount,
+                blockId = plan.blockId,
+                block = plan.block,
+                position = entry.position,
+                cohortSize = plan.entries.Length,
+                predecessorAlgorithmId = entry.predecessorAlgorithmId,
+                blockPlanSha256 = blockPlanSha256,
+                processReuseSpecificationSha256 = plan.specificationSha256,
+                processReuseTestDesignSha256 = plan.testDesignSha256,
+                processReuseAmendmentSha256 = plan.amendmentSha256,
+                processReuseCommandSha256 = plan.commandSha256,
+                telemetryProbeResultSha256 = plan.telemetryProbeResultSha256,
+                memoryGatePolicyId = MemoryGatePolicyId,
+                maximumSampleRetainedManagedGrowthBytes = SampleManagedGrowthLimitBytes,
+                forcedGcBeforeCompleted = true,
+                forcedGcAfterCompleted = false,
+                sampleStateCreatedFresh = true,
+                heavySampleReferencesReturned = false,
+                plannerResetCompleted = true,
+                loggerDisposed = loggerDisposed,
+                formalCampaign = plan.formalCampaign,
+                telemetryBeforeSample = before,
+                telemetryRawAfterWorkload = rawAfter,
+                completed = false
+            };
+
+            return new SampleCoreResult
+            {
+                childDirectory = childDirectory,
+                resultPath = resultPath,
+                manifestPath = manifestPath,
+                summaryPath = summaryPath,
+                resultFileName = resultFileName,
+                manifestFileName = manifestFileName,
+                summaryFileName = summaryFileName,
+                manifest = manifest,
+                totalPlannerElapsedMilliseconds = workload.totalPlannerElapsedMilliseconds,
+                dynamicHandlingMillisecondsPerScheduledEvent = workload.dynamicHandlingMillisecondsPerScheduledEvent,
+                workloadCompleted = workload.completed
+            };
+        }
+
+        private static BlockChildRecord FinalizeSample(
+            BlockPlan plan,
+            BlockEntry entry,
+            ProcessTelemetry before,
+            ProcessTelemetry afterCleanup,
+            SampleCoreResult core)
+        {
+            ProcessTelemetry rawAfter = core.manifest.telemetryRawAfterWorkload;
+            ValidateTelemetrySequence(before, rawAfter, afterCleanup);
+            long retainedManagedGrowth = afterCleanup.managedMemoryBytes - before.managedMemoryBytes;
+            if (retainedManagedGrowth > SampleManagedGrowthLimitBytes) throw new InvalidOperationException("Sample retained managed-memory growth exceeded the frozen 128 MiB limit.");
+
+            core.manifest.telemetryAfterCleanup = afterCleanup;
+            core.manifest.sampleRetainedManagedGrowthBytes = retainedManagedGrowth;
+            core.manifest.retainedManagedGrowthWithinLimit = true;
+            core.manifest.forcedGcAfterCompleted = true;
+            core.manifest.completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture);
+            core.manifest.completed = core.workloadCompleted;
+            WriteAtomicJson(core.manifestPath, core.manifest);
+            string resultSha256 = ComputeFileSha256(core.resultPath);
+            string manifestSha256 = ComputeFileSha256(core.manifestPath);
+
+            ProcessReuseSampleSummary summary = new ProcessReuseSampleSummary
+            {
+                runId = entry.runId,
+                blockId = plan.blockId,
+                block = plan.block,
+                position = entry.position,
+                algorithmId = entry.algorithmId,
+                predecessorAlgorithmId = entry.predecessorAlgorithmId,
+                processId = before.processId,
+                processStartTimeUtc = before.processStartTimeUtc,
+                workloadResultRelativePath = core.resultFileName,
+                workloadResultSha256 = resultSha256,
+                manifestRelativePath = core.manifestFileName,
+                manifestSha256 = manifestSha256,
+                completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                formalCampaign = plan.formalCampaign,
+                completed = true
+            };
+            WriteAtomicJson(core.summaryPath, summary);
+
+            return new BlockChildRecord
+            {
+                position = entry.position,
+                algorithmId = entry.algorithmId,
+                predecessorAlgorithmId = entry.predecessorAlgorithmId,
+                runId = entry.runId,
+                outputRelativePath = NormalizeRelative(entry.directory),
+                manifestRelativePath = NormalizeRelative(Path.Combine(entry.directory, core.manifestFileName)),
+                manifestSha256 = manifestSha256,
+                summaryRelativePath = NormalizeRelative(Path.Combine(entry.directory, core.summaryFileName)),
+                summarySha256 = ComputeFileSha256(core.summaryPath),
+                workloadResultRelativePath = NormalizeRelative(Path.Combine(entry.directory, core.resultFileName)),
+                workloadResultSha256 = resultSha256,
+                processId = before.processId,
+                processAgeBeforeMilliseconds = before.processAgeMilliseconds,
+                processAgeRawAfterMilliseconds = rawAfter.processAgeMilliseconds,
+                processAgeAfterCleanupMilliseconds = afterCleanup.processAgeMilliseconds,
+                workingSetBeforeBytes = before.workingSetBytes,
+                workingSetRawAfterBytes = rawAfter.workingSetBytes,
+                workingSetAfterCleanupBytes = afterCleanup.workingSetBytes,
+                privateMemoryBeforeBytes = before.privateMemoryBytes,
+                privateMemoryRawAfterBytes = rawAfter.privateMemoryBytes,
+                privateMemoryAfterCleanupBytes = afterCleanup.privateMemoryBytes,
+                managedMemoryBeforeBytes = before.managedMemoryBytes,
+                managedMemoryRawAfterBytes = rawAfter.managedMemoryBytes,
+                managedMemoryAfterCleanupBytes = afterCleanup.managedMemoryBytes,
+                sampleRetainedManagedGrowthBytes = retainedManagedGrowth,
+                gcCollectionDelta0 = afterCleanup.gcCollectionCount0 - before.gcCollectionCount0,
+                gcCollectionDelta1 = afterCleanup.gcCollectionCount1 - before.gcCollectionCount1,
+                gcCollectionDelta2 = afterCleanup.gcCollectionCount2 - before.gcCollectionCount2,
+                totalPlannerElapsedMilliseconds = core.totalPlannerElapsedMilliseconds,
+                dynamicHandlingMillisecondsPerScheduledEvent = core.dynamicHandlingMillisecondsPerScheduledEvent,
+                completed = core.workloadCompleted
+            };
+        }
+
+        private static void ValidatePlan(BlockPlan plan, string projectRoot, string outputRoot)
+        {
+            if (plan == null || plan.schemaVersion != 2) throw new InvalidOperationException("Unsupported Gate 10R process-reuse block-plan schema.");
+            if (!string.Equals(plan.designId, DesignId, StringComparison.Ordinal)) throw new InvalidOperationException("Gate 10R process-reuse design identity mismatch.");
+            if (plan.formalCampaign) throw new InvalidOperationException("This command invocation is not authorized to produce formal samples.");
+            if (!SafeId.IsMatch(plan.planId ?? string.Empty) || !SafeId.IsMatch(plan.blockId ?? string.Empty) || !SafeId.IsMatch(plan.campaignId ?? string.Empty)) throw new InvalidOperationException("Unsafe block/campaign/plan identity.");
+            if (plan.block < 1) throw new InvalidOperationException("Block ordinal must be positive.");
+            string[] expectedAlgorithms = ExpectedAlgorithms(plan.comparisonCohortId);
+            if (plan.entries == null || plan.entries.Length != expectedAlgorithms.Length) throw new InvalidOperationException("Block entry count does not match cohort size.");
+            if (plan.verificationInjectedFailurePosition < 0 || plan.verificationInjectedFailurePosition > plan.entries.Length) throw new InvalidOperationException("Injected verification failure position is outside the block.");
+            if (plan.verificationInjectedFailurePosition > 0 && !string.Equals(plan.analysisRole, "excluded-negative-fail-closed-verification", StringComparison.Ordinal)) throw new InvalidOperationException("Injected failure is permitted only for the excluded negative verification fixture.");
+            HashSet<string> algorithms = new HashSet<string>(StringComparer.Ordinal);
+            HashSet<string> runIds = new HashSet<string>(StringComparer.Ordinal);
+            string[] expectedRow = WilliamsRow(expectedAlgorithms, (plan.block - 1) % expectedAlgorithms.Length);
+            for (int index = 0; index < plan.entries.Length; index++)
+            {
+                BlockEntry entry = plan.entries[index];
+                int expectedPosition = index + 1;
+                string expectedPredecessor = index == 0 ? "NONE" : plan.entries[index - 1].algorithmId;
+                if (entry == null || entry.position != expectedPosition) throw new InvalidOperationException("Block positions must be contiguous and one-based.");
+                if (!string.Equals(entry.algorithmId, expectedRow[index], StringComparison.Ordinal)) throw new InvalidOperationException("Block order differs from the frozen Williams row.");
+                if (!string.Equals(entry.predecessorAlgorithmId, expectedPredecessor, StringComparison.Ordinal)) throw new InvalidOperationException("Predecessor identity mismatch.");
+                if (!algorithms.Add(entry.algorithmId)) throw new InvalidOperationException("An algorithm appears more than once in the process.");
+                if (!SafeId.IsMatch(entry.runId ?? string.Empty) || !runIds.Add(entry.runId)) throw new InvalidOperationException("Unsafe or duplicate run ID.");
+                ResolveChildDirectory(outputRoot, entry.directory);
+            }
+            if (algorithms.Count != expectedAlgorithms.Length) throw new InvalidOperationException("The block does not contain the exact authorized cohort.");
+            ValidateBoundFile(projectRoot, plan.pilotPlanRelativePath, plan.pilotPlanSha256, "Gate 10R config");
+            ValidateBoundFile(projectRoot, plan.specificationRelativePath, plan.specificationSha256, "Gate 10R specification");
+            ValidateBoundFile(projectRoot, plan.testDesignRelativePath, plan.testDesignSha256, "Gate 10R test design");
+            ValidateBoundFile(projectRoot, plan.amendmentRelativePath, plan.amendmentSha256, "Gate 10R authorization");
+            ValidateBoundFile(projectRoot, plan.commandRelativePath, plan.commandSha256, "Gate 10R command");
+            ValidateBoundFile(projectRoot, plan.provenanceRelativePath, plan.provenanceSha256, "Gate 10R provenance");
+            ValidateBoundFile(projectRoot, plan.telemetryProbeResultRelativePath, plan.telemetryProbeResultSha256, "successful telemetry probe result");
+        }
+
+        private static void ValidateCompletedBlock(BlockPlan plan, List<BlockChildRecord> completed, int processId)
+        {
+            if (completed.Count != plan.entries.Length) throw new InvalidOperationException("A partial block cannot be marked complete.");
+            HashSet<string> algorithms = new HashSet<string>(StringComparer.Ordinal);
+            for (int index = 0; index < completed.Count; index++)
+            {
+                BlockChildRecord child = completed[index];
+                BlockEntry entry = plan.entries[index];
+                if (!child.completed || child.position != entry.position || child.algorithmId != entry.algorithmId || child.runId != entry.runId) throw new InvalidOperationException("Completed child identity/order mismatch.");
+                if (child.processId != processId) throw new InvalidOperationException("Samples in one block reported mixed process IDs.");
+                if (!algorithms.Add(child.algorithmId)) throw new InvalidOperationException("Duplicate algorithm in completed block.");
+            }
+        }
+
+        private static void ValidateTelemetrySequence(ProcessTelemetry before, ProcessTelemetry rawAfter, ProcessTelemetry afterCleanup)
+        {
+            if (before == null || rawAfter == null || afterCleanup == null) throw new InvalidOperationException("A required telemetry capture is missing.");
+            if (before.processId != rawAfter.processId || before.processId != afterCleanup.processId) throw new InvalidOperationException("Telemetry captures contain mixed process IDs.");
+            if (!string.Equals(before.processStartTimeUtc, rawAfter.processStartTimeUtc, StringComparison.Ordinal) || !string.Equals(before.processStartTimeUtc, afterCleanup.processStartTimeUtc, StringComparison.Ordinal)) throw new InvalidOperationException("Telemetry captures contain mixed process start times.");
+            if (before.processAgeMilliseconds > rawAfter.processAgeMilliseconds || rawAfter.processAgeMilliseconds > afterCleanup.processAgeMilliseconds) throw new InvalidOperationException("Telemetry process ages are not ordered.");
+            if (!ValuesPositive(before.workingSetBytes, rawAfter.workingSetBytes, afterCleanup.workingSetBytes)) throw new InvalidOperationException("Working-set telemetry must be positive at every capture.");
+            if (!ValuesPositive(before.privateMemoryBytes, rawAfter.privateMemoryBytes, afterCleanup.privateMemoryBytes)) throw new InvalidOperationException("Private-memory telemetry must be positive at every capture.");
+            if (!ValuesPositive(before.managedMemoryBytes, rawAfter.managedMemoryBytes, afterCleanup.managedMemoryBytes)) throw new InvalidOperationException("Managed-memory telemetry must be positive at every capture.");
+            if (afterCleanup.gcCollectionCount0 < before.gcCollectionCount0 || afterCleanup.gcCollectionCount1 < before.gcCollectionCount1 || afterCleanup.gcCollectionCount2 < before.gcCollectionCount2) throw new InvalidOperationException("GC collection counters decreased.");
+        }
+
+        private static void ForceCollectionBoundary()
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
+
+        private static ProcessTelemetry CaptureTelemetry(Process process)
+        {
+            PROCESS_MEMORY_COUNTERS_EX counters;
+            uint size = checked((uint)Marshal.SizeOf(typeof(PROCESS_MEMORY_COUNTERS_EX)));
+            if (!GetProcessMemoryInfo(process.Handle, out counters, size)) throw new InvalidOperationException("GetProcessMemoryInfo failed with Win32 error " + Marshal.GetLastWin32Error().ToString(CultureInfo.InvariantCulture) + ".");
+            long workingSet = CheckedUIntPtrToInt64(counters.WorkingSetSize, "WorkingSetSize");
+            long privateMemory = CheckedUIntPtrToInt64(counters.PrivateUsage, "PrivateUsage");
+            long managed = GC.GetTotalMemory(false);
+            if (workingSet <= 0L || privateMemory <= 0L || managed <= 0L) throw new InvalidOperationException("Native/managed telemetry must be strictly positive.");
+            DateTime capturedUtc = DateTime.UtcNow;
+            DateTime startUtc = process.StartTime.ToUniversalTime();
+            return new ProcessTelemetry
+            {
+                capturedAtUtc = capturedUtc.ToString("O", CultureInfo.InvariantCulture),
+                processId = process.Id,
+                processStartTimeUtc = startUtc.ToString("O", CultureInfo.InvariantCulture),
+                processAgeMilliseconds = Math.Max(0d, (capturedUtc - startUtc).TotalMilliseconds),
+                workingSetBytes = workingSet,
+                privateMemoryBytes = privateMemory,
+                managedMemoryBytes = managed,
+                gcCollectionCount0 = GC.CollectionCount(0),
+                gcCollectionCount1 = GC.CollectionCount(1),
+                gcCollectionCount2 = GC.CollectionCount(2)
+            };
+        }
+
+        private static long CheckedUIntPtrToInt64(UIntPtr value, string label)
+        {
+            ulong unsigned = value.ToUInt64();
+            if (unsigned > long.MaxValue) throw new OverflowException(label + " exceeds Int64.");
+            return (long)unsigned;
+        }
+
+        private static long DistanceToClosedInterval(long value, long first, long second)
+        {
+            long lower = Math.Min(first, second);
+            long upper = Math.Max(first, second);
+            if (value < lower) return lower - value;
+            if (value > upper) return value - upper;
+            return 0L;
+        }
+
+        private static long ProbeTolerance(long external, long before, long after)
+        {
+            long maximum = Math.Max(external, Math.Max(before, after));
+            long relative = checked((long)Math.Ceiling(ProbeRelativeTolerance * maximum));
+            return Math.Max(ProbeAbsoluteToleranceBytes, relative);
+        }
+
+        private static bool ValuesPositive(long first, long second, long third)
+        {
+            return first > 0L && second > 0L && third > 0L;
+        }
+
+        private static DateTime ParseUtc(string value, string label)
+        {
+            DateTime parsed;
+            if (!DateTime.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.RoundtripKind, out parsed)) throw new InvalidOperationException("Invalid " + label + ".");
+            return parsed.ToUniversalTime();
+        }
+
+        private static bool PathsEqual(string first, string second)
+        {
+            if (string.IsNullOrWhiteSpace(first) || string.IsNullOrWhiteSpace(second)) return false;
+            return string.Equals(Path.GetFullPath(first), Path.GetFullPath(second), StringComparison.OrdinalIgnoreCase);
+        }
+
+        private static INavigationPlanner CreatePlanner(string algorithmId)
+        {
+            if (algorithmId == NavigationAlgorithmIds.AStarRepeated) return new AStarRepeatedPlanner();
+            if (algorithmId == NavigationAlgorithmIds.DStarLite) return new DStarLitePlanner();
+            if (algorithmId == NavigationAlgorithmIds.CorrectedFullRecomputeFlowField) return new CorrectedFullRecomputeFlowFieldPlanner();
+            if (algorithmId == NavigationAlgorithmIds.IncrementalDynamicFlowField) return new IncrementalDynamicFlowFieldPlanner();
+            throw new NotSupportedException("Unauthorized Gate 10R process-reuse planner: " + algorithmId);
+        }
+
+        private static PlanningRunProvenance BuildProvenance(string projectRoot, string algorithmId)
+        {
+            PlanningAlgorithmFairnessProfile profile = PlanningFairnessContracts.GetProfile(algorithmId);
+            PlanningRunProvenance provenance = new PlanningRunProvenance
+            {
+                fairnessProtocolId = PlanningFairnessContracts.FairnessProtocolId,
+                fairnessProtocolRelativePath = PlanningFairnessContracts.FairnessProtocolRelativePath,
+                fairnessProtocolSha256 = HashProjectFile(projectRoot, PlanningFairnessContracts.FairnessProtocolRelativePath),
+                algorithmId = profile.AlgorithmId,
+                algorithmSpecificationId = profile.SpecificationId,
+                algorithmSpecificationRelativePath = profile.SpecificationRelativePath,
+                algorithmSpecificationSha256 = HashProjectFile(projectRoot, profile.SpecificationRelativePath),
+                algorithmImplementationRelativePath = profile.ImplementationRelativePath,
+                algorithmImplementationSha256 = HashProjectFile(projectRoot, profile.ImplementationRelativePath),
+                workloadSpecificationId = PlanningFairnessContracts.WorkloadSpecificationId,
+                workloadSpecificationRelativePath = PlanningFairnessContracts.WorkloadSpecificationRelativePath,
+                workloadSpecificationSha256 = HashProjectFile(projectRoot, PlanningFairnessContracts.WorkloadSpecificationRelativePath)
+            };
+            PlanningFairnessContracts.ValidateProvenance(provenance, algorithmId);
+            return provenance;
+        }
+
+        private static string[] ExpectedAlgorithms(string cohortId)
+        {
+            if (cohortId == "four-algorithm-shared-goal-v1") return new[] { "A*-R", "D*L", "C-FF", "IDFF" };
+            if (cohortId == "per-agent-heterogeneous-goal-v1") return new[] { "A*-R", "D*L" };
+            if (cohortId == "grouped-field-heterogeneous-goal-v1") return new[] { "C-FF", "IDFF" };
+            throw new InvalidOperationException("Unsupported comparison cohort: " + cohortId);
+        }
+
+        private static string[] WilliamsRow(string[] items, int rowIndex)
+        {
+            int count = items.Length;
+            int[] baseIndices = new int[count];
+            baseIndices[0] = 0;
+            for (int step = 1; step < count; step++) baseIndices[step] = step % 2 == 1 ? (step + 1) / 2 : count - (step / 2);
+            string[] row = new string[count];
+            for (int index = 0; index < count; index++) row[index] = items[(baseIndices[index] + rowIndex) % count];
+            return row;
+        }
+
+        private static void WriteCheckpoint(string outputRoot, BlockPlan plan, int processId, string status, int completedCount, int currentPosition, string currentRunId, string error)
+        {
+            WriteAtomicJson(Path.Combine(outputRoot, "block-checkpoint.json"), new BlockCheckpoint
+            {
+                blockId = plan.blockId,
+                status = status,
+                savedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                processId = processId,
+                expectedSampleCount = plan.entries.Length,
+                completedSampleCount = completedCount,
+                currentPosition = currentPosition,
+                currentRunId = currentRunId ?? string.Empty,
+                error = error ?? string.Empty,
+                automaticRetryAuthorized = false,
+                automaticResumeAuthorized = false,
+                formalCampaign = plan.formalCampaign
+            });
+        }
+
+        private static void ValidateBoundFile(string projectRoot, string relativePath, string expectedSha256, string label)
+        {
+            if (string.IsNullOrWhiteSpace(relativePath) || Path.IsPathRooted(relativePath)) throw new InvalidOperationException("Invalid " + label + " relative path.");
+            string path = Path.GetFullPath(Path.Combine(projectRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)));
+            if (!IsWithin(path, projectRoot) || !File.Exists(path)) throw new FileNotFoundException("Bound " + label + " is missing or outside the project.", path);
+            if (!string.Equals(ComputeFileSha256(path), expectedSha256, StringComparison.Ordinal)) throw new InvalidOperationException("Bound " + label + " SHA-256 mismatch.");
+        }
+
+        private static string ResolveChildDirectory(string outputRoot, string relativePath)
+        {
+            if (string.IsNullOrWhiteSpace(relativePath) || Path.IsPathRooted(relativePath)) throw new InvalidOperationException("Child output path must be a non-empty relative path.");
+            string fullPath = Path.GetFullPath(Path.Combine(outputRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)));
+            if (!IsWithin(fullPath, outputRoot) || string.Equals(fullPath.TrimEnd(Path.DirectorySeparatorChar), outputRoot.TrimEnd(Path.DirectorySeparatorChar), StringComparison.OrdinalIgnoreCase)) throw new InvalidOperationException("Child output path escapes or equals the block root.");
+            return fullPath;
+        }
+
+        private static bool IsWithin(string candidate, string root)
+        {
+            string normalizedRoot = Path.GetFullPath(root).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
+            string normalizedCandidate = Path.GetFullPath(candidate);
+            return normalizedCandidate.StartsWith(normalizedRoot, StringComparison.OrdinalIgnoreCase);
+        }
+
+        private static string RequiredOption(string[] arguments, string option)
+        {
+            string value = null;
+            for (int index = 0; index < arguments.Length; index++)
+            {
+                if (!string.Equals(arguments[index], option, StringComparison.Ordinal)) continue;
+                if (value != null) throw new ArgumentException("Command-line option was supplied more than once: " + option);
+                if (index + 1 >= arguments.Length || string.IsNullOrWhiteSpace(arguments[index + 1])) throw new ArgumentException("Command-line option requires a value: " + option);
+                value = arguments[index + 1];
+            }
+            if (value == null) throw new ArgumentException("Required command-line option is missing: " + option);
+            return value;
+        }
+
+        private static string RequiredSafeOption(string[] arguments, string option)
+        {
+            string value = RequiredOption(arguments, option);
+            if (!SafeId.IsMatch(value)) throw new ArgumentException("Unsafe command-line identity: " + option);
+            return value;
+        }
+
+        private static int RequiredBarrierTimeout(string[] arguments)
+        {
+            int value;
+            if (!int.TryParse(RequiredOption(arguments, "-ddmGate13RBarrierTimeoutSeconds"), NumberStyles.Integer, CultureInfo.InvariantCulture, out value)
+                || value < 1 || value > MaximumBarrierTimeoutSeconds) throw new ArgumentOutOfRangeException("-ddmGate13RBarrierTimeoutSeconds");
+            return value;
+        }
+
+        private static void ValidateBarrierPaths(string outputRoot, string barrierRoot, string readyPath, string releasePath)
+        {
+            string normalizedBarrierRoot = Path.GetFullPath(barrierRoot);
+            if (!Directory.Exists(normalizedBarrierRoot)) throw new DirectoryNotFoundException("Barrier root is missing: " + normalizedBarrierRoot);
+            if (!IsWithin(outputRoot, normalizedBarrierRoot)) throw new InvalidOperationException("Output root must be inside the wave barrier root.");
+            if (!IsWithin(readyPath, outputRoot)) throw new InvalidOperationException("Method-ready path must be inside the block/probe output root.");
+            if (!IsWithin(releasePath, normalizedBarrierRoot)) throw new InvalidOperationException("Barrier-release path must be inside the wave barrier root.");
+            if (File.Exists(readyPath)) throw new IOException("Create-new method-ready record already exists: " + readyPath);
+        }
+
+        private static MethodReadyRecord NewMethodReady(Process process, string waveId, string barrierToken, string blockPlanSha256)
+        {
+            return new MethodReadyRecord
+            {
+                waveId = waveId,
+                barrierTokenSha256 = ComputeStringSha256(barrierToken),
+                blockPlanSha256 = blockPlanSha256 ?? string.Empty,
+                processId = process.Id,
+                processStartTimeUtc = process.StartTime.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture),
+                writtenAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                planningWorkloadStarted = false,
+                formalCampaign = false
+            };
+        }
+
+        private static BarrierObservedRecord NewBarrierObserved(Process process, string waveId, string barrierToken, double waitMilliseconds, bool workload)
+        {
+            return new BarrierObservedRecord
+            {
+                waveId = waveId,
+                barrierTokenSha256 = ComputeStringSha256(barrierToken),
+                processId = process.Id,
+                observedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                waitMilliseconds = waitMilliseconds,
+                planningWorkloadStartedAfterRelease = workload,
+                formalCampaign = false
+            };
+        }
+
+        private static void WaitForBarrierRelease(string releasePath, string waveId, string barrierToken, int timeoutSeconds)
+        {
+            Stopwatch wait = Stopwatch.StartNew();
+            while (!File.Exists(releasePath) && wait.Elapsed < TimeSpan.FromSeconds(timeoutSeconds)) Thread.Sleep(50);
+            if (!File.Exists(releasePath)) throw new TimeoutException("Timed out waiting for the synchronized three-lane barrier release.");
+            BarrierReleaseRecord release = JsonUtility.FromJson<BarrierReleaseRecord>(File.ReadAllText(releasePath, Encoding.UTF8));
+            if (release == null || release.schemaVersion != 1
+                || !string.Equals(release.releaseKind, "gate13r-48h-three-lane-wave-release-v1", StringComparison.Ordinal)
+                || !string.Equals(release.executionDesignId, DesignId, StringComparison.Ordinal)
+                || !string.Equals(release.waveId, waveId, StringComparison.Ordinal)
+                || !string.Equals(release.barrierToken, barrierToken, StringComparison.Ordinal)
+                || release.laneCount != 3 || release.formalCampaign) throw new InvalidOperationException("Barrier release identity or boundary is invalid.");
+            ParseUtc(release.releasedAtUtc, "barrier release timestamp");
+        }
+
+        private static void EnsureFreshOutputDirectory(string outputDirectory)
+        {
+            if (File.Exists(outputDirectory)) throw new IOException("Output path is an existing file: " + outputDirectory);
+            if (Directory.Exists(outputDirectory) && Directory.GetFileSystemEntries(outputDirectory).Length > 0) throw new IOException("Output directory is not empty; refusing to mix or overwrite runs: " + outputDirectory);
+        }
+
+        private static string HashProjectFile(string projectRoot, string relativePath)
+        {
+            string path = Path.GetFullPath(Path.Combine(projectRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)));
+            if (!File.Exists(path)) throw new FileNotFoundException("Required provenance source is missing.", path);
+            return ComputeFileSha256(path);
+        }
+
+        private static string ComputeFileSha256(string path)
+        {
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                return BitConverter.ToString(sha256.ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
+            }
+        }
+
+        private static string ComputeStringSha256(string value)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                return BitConverter.ToString(sha256.ComputeHash(Utf8WithoutBom.GetBytes(value))).Replace("-", string.Empty).ToLowerInvariant();
+            }
+        }
+
+        private static string NormalizeRelative(string value)
+        {
+            return value.Replace(Path.DirectorySeparatorChar, '/');
+        }
+
+        private static void WriteJson<T>(string path, T value)
+        {
+            string json = JsonUtility.ToJson(value, true).Replace("\r\n", "\n").Replace("\r", "\n");
+            if (!json.EndsWith("\n", StringComparison.Ordinal)) json += "\n";
+            File.WriteAllText(path, json, Utf8WithoutBom);
+        }
+
+        private static void WriteAtomicJson<T>(string path, T value)
+        {
+            string temporary = path + ".tmp-" + Guid.NewGuid().ToString("N");
+            WriteJson(temporary, value);
+            if (File.Exists(path)) File.Replace(temporary, path, null);
+            else File.Move(temporary, path);
+        }
+
+        private static void WriteCreateNewJson<T>(string path, T value)
+        {
+            if (File.Exists(path)) throw new IOException("Create-new JSON target already exists: " + path);
+            string parent = Path.GetDirectoryName(path);
+            if (string.IsNullOrWhiteSpace(parent)) throw new InvalidOperationException("Create-new JSON target has no parent directory.");
+            Directory.CreateDirectory(parent);
+            string temporary = path + ".tmp-" + Guid.NewGuid().ToString("N");
+            WriteJson(temporary, value);
+            if (File.Exists(path)) throw new IOException("Create-new JSON target appeared concurrently: " + path);
+            File.Move(temporary, path);
+        }
+    }
+}

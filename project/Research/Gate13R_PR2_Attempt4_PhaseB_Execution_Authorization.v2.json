@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "GATE13R-PR2-ATTEMPT4-PHASEB-FORMAL-ANALYSIS-EXECUTION",
+  "authorizationId": "gate13r-pr2-attempt4-phaseb-v2-formal-analysis-execution-20261011t021337z",
+  "issuedAtUtc": "2026-10-11T02:13:37.5317445Z",
+  "issuedAtAsiaShanghai": "2026-10-11T10:13:37.5317445+08:00",
+  "authorizedBy": "USER-EXPLICIT-IN-CURRENT-THREAD",
+  "exactUserExecutionAuthorization": "授权按上述精确命令单次执行 Gate 13R-PR2 attempt 4 的 Phase B v2 正式统计分析；授权只读加载冻结的 P1–P5 正式结果并生成冻结契约规定的输出；绑定 Phase B v2 契约 SHA-256 `54d013bd81cb6dda2c9e2e72512236884b521ec511152237846b1e9fca2c1328`；原始数据根保持只读；不授权 Gate 14R，不授权 M1–M5，不授权任何实验重跑、补样、替换或重排；不授权自动重试。",
+  "contractRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Contract.v2.json",
+  "contractSha256": "54d013bd81cb6dda2c9e2e72512236884b521ec511152237846b1e9fca2c1328",
+  "preflightReportRelativePath": "Research/Verification/Gate13R_PR2_Attempt4_PhaseB/v2/structural-preflight-report.v2.json",
+  "preflightReportSha256": "67628ff2d09a6d19e9ee693d121d77af9b9fa0da7eeb081b165550c91262c972",
+  "frozenOutputTimestampUtc": "2026-10-11T02:13:37.5317445Z",
+  "outputRootRelativePath": "Research/Analysis/Gate13R_PR2_Attempt4_PhaseB/v1",
+  "rawRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+  "phaseBFormalStatisticalAnalysisAuthorized": true,
+  "formalOutcomeDataLoadingAuthorized": true,
+  "formalEffectEstimationAuthorized": true,
+  "formalInferenceAuthorized": true,
+  "formalAnalysisOutputCommitAuthorized": true,
+  "rawRootMutationAuthorized": false,
+  "unityLaunchOrControlAuthorized": false,
+  "experimentLaunchStopSignalResumeRetryTopUpMergeSkipReplaceOrReorderAuthorized": false,
+  "gate14RAuthorized": false,
+  "analysisScope": {
+    "authorizedMetricIds": [
+      "P1",
+      "P2",
+      "P3-PER-AGENT",
+      "P3-SCALING-SLOPE",
+      "P4",
+      "P5"
+    ],
+    "authorizedContrasts": ["C1", "C2", "C3", "C4", "C5"],
+    "authorizedCohorts": [
+      "four-algorithm-shared-goal-v1",
+      "per-agent-heterogeneous-goal-v1",
+      "grouped-field-heterogeneous-goal-v1"
+    ],
+    "mustUseFrozenScheduleAndAllFormallyEligibleBlocks": true,
+    "mustRetainMissingnessAndFailureReasons": true,
+    "mustUseFrozenMultiplicityAndConclusionRules": true,
+    "payloadManifestRelativePathBase": "rawRoot/campaigns"
+  },
+  "explicitExclusions": {
+    "gate14RAuthorized": false,
+    "movementMetricIdsAuthorized": [],
+    "M1ThroughM5LoadingDerivationAnalysisOrReportingAuthorized": false,
+    "playableOrObsTimingAuthorized": false,
+    "rawRootWritesAuthorized": false,
+    "experimentRerunAuthorized": false,
+    "sampleTopUpAuthorized": false,
+    "sampleReplacementAuthorized": false,
+    "sampleReorderingAuthorized": false,
+    "outcomeConditionedDesignChangeAuthorized": false
+  },
+  "executionInstruction": {
+    "exactCommandConfirmed": true,
+    "exactCommand": "& 'H:\\DDM_Final_Project\\Research\\Run-Gate13RPR2Attempt4PhaseBV2.ps1' -ProjectPath 'H:\\DDM_Final_Project' -AuthorizationPath 'H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Attempt4_PhaseB_Execution_Authorization.v2.json'",
+    "wrapperRelativePath": "Research/Run-Gate13RPR2Attempt4PhaseBV2.ps1",
+    "projectPath": "H:/DDM_Final_Project",
+    "authorizationRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Authorization.v2.json",
+    "singleExecutionOnly": true,
+    "automaticRetryAuthorized": false,
+    "overwriteAuthorized": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate12r-canonical-input-upstream-reference-v1",
+  "createdAtUtc": "2026-10-07T14:40:34.9583513Z",
+  "scope": "Gate12R versioned storage implementation only",
+  "trigger": "pilot-attempt-2-frozen-p95-storage-hard-gate",
+  "sourceAttempt": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v2",
+  "sourceAttemptEligibleForAnalysis": false,
+  "storageRule": {
+    "externalizableArtifact": "scenario.canonical.json",
+    "requiredSourceRootRelativePath": "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios",
+    "requiredGate11BundleManifestSha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+    "requiredChecksBeforeLocalCopyRemoval": [
+      "local-canonical-file-exists",
+      "frozen-upstream-source-exists",
+      "local-sha256-equals-manifest-canonical-sha256",
+      "upstream-sha256-equals-manifest-scenario-source-sha256",
+      "local-sha256-equals-upstream-sha256",
+      "local-raw-bytes-equals-upstream-raw-bytes",
+      "upstream-path-is-contained-by-frozen-gate11r-scenario-root"
+    ],
+    "manifestStorageKind": "frozen-gate11r-upstream-reference-v1",
+    "onAnyMismatch": "fail-closed-before-publication",
+    "formalIncrementalRawBytes": "count-output-files-that-physically-exist-in-the-new-formal-root;do-not-recount-preexisting-frozen-upstream-input",
+    "compressionUsed": false,
+    "lossyTransformationUsed": false
+  },
+  "unchanged": {
+    "executionDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "oneFreshUnityProcessPerWilliamsBlock": true,
+    "williamsOrder": true,
+    "algorithmSemantics": true,
+    "scenarioBytes": true,
+    "timedWorkloadBoundary": true,
+    "telemetryBoundary": true,
+    "resetContract": true,
+    "memoryThresholds": true,
+    "precisionRelativeHalfWidth": 0.05,
+    "hardCap": null,
+    "p95SafetyMultiplier": 1.5,
+    "freeSpaceReserveBytes": 21474836480,
+    "exclusionRules": true
+  },
+  "freshPilotRequired": true,
+  "failedAttemptResumeAllowed": false,
+  "failedAttemptMergeAllowed": false,
+  "gate13rAuthorized": false
+}

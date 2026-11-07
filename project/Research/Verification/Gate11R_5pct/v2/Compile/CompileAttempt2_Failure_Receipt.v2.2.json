@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "gate11r-attempt2-compile-attempt2-failure-v2.2",
+  "createdAtUtc": "2026-10-07T02:49:20.0000000Z",
+  "status": "FAILED-REPAIR-AUTHORIZED",
+  "stage": "unity-compilation",
+  "unityExitCode": 1,
+  "compilerErrorCode": "CS0246",
+  "compilerErrorCount": 1,
+  "rootCause": "The verification method used the nonexistent type name Scenario instead of UnityEngine.SceneManagement.Scene.",
+  "allowedRepair": "Replace the single mistyped type token; no research or visualization semantics change.",
+  "unityLog": {
+    "path": "Research/Verification/Gate11R_5pct/v2/Compile/compile-attempt2.Unity.log",
+    "rawBytes": 61462,
+    "sha256": "cb670fea4e2ca0f3771d1f0c0f7302a4708e2aab8c986c1448de4e6849f8fb4e"
+  },
+  "unityProcessCountAfterExit": 0,
+  "staleUnityLockObserved": true,
+  "productionRootsCreated": false,
+  "automaticRetryAuthorized": true
+}

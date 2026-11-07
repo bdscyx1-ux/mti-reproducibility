@@ -1,0 +1,54 @@
+{
+  "schema": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-source-and-evidence-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-001",
+  "status": "FROZEN_FAILED_CLOSED_EVIDENCE_UNMODIFIED",
+  "terminalFailureStatus": "FAILED_CLOSED_EXECUTION_BINDING_SUPERVISOR_V2_REPAIR",
+  "exactFailure": "prelaunch creation timestamp mismatch: TRUSTED_NOT_STRICT_ISO8601_OFFSET_TIMESTAMP",
+  "unityInvocationCount": 0,
+  "unityLaunched": false,
+  "measuredRootCreated": false,
+  "deliveryRootCreated": false,
+  "algorithmLaneExecutions": 0,
+  "qualificationObservations": 0,
+  "formalObservations": 0,
+  "files": [
+    {
+      "relativePath": "authorization-receipt.v1.json",
+      "bytes": 1715,
+      "sha256": "aa90c4df5c9116aa695640f1e3be729a404cd6c712d4e4bcf3cedb6705105f8a"
+    },
+    {
+      "relativePath": "failure-receipt.v1.json",
+      "bytes": 911,
+      "sha256": "e5842af9ec3a6205aa9e9014ad1fddd6fab2f99696995577575c4ae4607d4c3e"
+    },
+    {
+      "relativePath": "Invoke-Gate14ReMEQualificationExecutionBindingSupervisorV2RepairAttempt001.ps1",
+      "bytes": 31741,
+      "sha256": "31f0707b3841908e901c2ab2ff80e2471af3d1f5e01e5a3c333541beca51c43e"
+    },
+    {
+      "relativePath": "load-qualification-execution-contract.v2.failed-source.json",
+      "bytes": 8938,
+      "sha256": "91622adb4965e6c1778ce6eb42420eac626bf97806bd58c418d41dc0a0a1a868"
+    },
+    {
+      "relativePath": "precompile-static-known-answer-receipt.v1.json",
+      "bytes": 1137,
+      "sha256": "adfa3f4dea92bfe8a1eeeb73a4bf902bd822ac8ebfcf35cf8fed3612bbb8ba3a"
+    },
+    {
+      "relativePath": "Run-Gate14ReMELoadQualification.v2.failed-source.ps1",
+      "bytes": 52424,
+      "sha256": "f51e0eb8f3d1367fdcc0a2fa450fb7f9e7994dc64954eff7f0cae2a92c9e6755"
+    },
+    {
+      "relativePath": "stage-contract.v1.json",
+      "bytes": 2509,
+      "sha256": "b18027ceb42907beb2a6cdbc42b56662cc4ae0de22583fb2c029ef50703f623a"
+    }
+  ],
+  "selfExcludedFromFilesToAvoidRecursiveHash": true,
+  "supersededOrReclassified": false
+}

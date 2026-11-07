@@ -1,0 +1,24 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-pilot-reset-contract-route-wrapper-v4",
+    "createdAtUtc":  "2026-10-07T12:06:19.3983139Z",
+    "sourceSha256":  "7788e459b2fcb7b63f33a3cf16e8fcc8f81723381c73ed3b3e3c65df4e9305d8",
+    "derivedSha256":  "acd67f6265dba15742fc98d925cf07b2cd868ee715098711b26c13f8203edc2e",
+    "routes":  [
+                   {
+                       "from":  "Research\\Run-Gate12RProcessReuseBlock.ps1",
+                       "to":  "Research\\Run-Gate12RProcessReuseBlockV2.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Run-Gate12RColdReference.ps1",
+                       "to":  "Research\\Run-Gate12RColdReferenceV3.ps1",
+                       "replacementCount":  1
+                   }
+               ],
+    "pilotAttempt1ResumeAllowed":  false,
+    "partialAttemptMergeAllowed":  false,
+    "thresholdsChanged":  false,
+    "formalRootCreated":  false,
+    "gate13rAuthorized":  false
+}

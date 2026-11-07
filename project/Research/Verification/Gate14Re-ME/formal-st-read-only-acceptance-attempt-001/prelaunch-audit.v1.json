@@ -1,0 +1,46 @@
+{
+  "schema": "gate14re-me-formal-st-read-only-acceptance-prelaunch-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_READY_FOR_SINGLE_INDEPENDENT_READ_ONLY_ACCEPTANCE_ATTEMPT",
+  "sourceMeasuredRootRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "outputRootRelativePath": "Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-001",
+  "outputRootFreshAndAbsent": true,
+  "authorizationSha256": "5caf6fc5d4566449f890c833af68bb647f7ac5acba4e4f47710e7d5c34f787b4",
+  "compatibilityContractSha256": "dbda102cb9fbbec995b35f389868904ceff5fc05ef81c8e87ff059de1dec23af",
+  "compatibilityAdapterSha256": "b4a5774bcbbdc7b3b76bb5fc2050f61c8b90ecfb0ef9c3bac01d1a1501e79da9",
+  "launchContractSha256": "a3f37676d8e447e2e486a4c96d91aef2ac25c01660da8f468fbd110cac729a6a",
+  "controlValidationSha256": "5929cbb0c28ba294a12296299e19262e6a2d61ccc2aece7af82544e39c248a54",
+  "sealedInventoryReplay": {
+    "files": 108007,
+    "bytes": 24019279692,
+    "allCurrentHashesMatchSeal": true
+  },
+  "controlPlane": {
+    "scheduleRows": 1296,
+    "acceptedSuperblocks": 1296,
+    "laneReceipts": 7776,
+    "processLedgerRows": 7843,
+    "trustedProcessIdentityReceipts": 7843,
+    "preservedResolvedTechnicalFailureRows": 2,
+    "failureResolutionV1Validated": true,
+    "failureResolutionV2Validated": true,
+    "replacementRows": 0,
+    "replayedAlgorithmLanes": 0,
+    "pass": true
+  },
+  "requiredAcceptance": {
+    "completeRawDelivery": true,
+    "typedParquetFullValueTypeOrderRoundTrip": true,
+    "sourceTreeMetadataDigestBeforeAndAfterMustMatch": true
+  },
+  "boundaries": {
+    "sourceMeasuredRootWriteBack": false,
+    "formalAnalysisAuthorized": false,
+    "effectInterpretationAuthorized": false,
+    "rankingOrWinnerAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "automaticRetryAuthorized": false
+  },
+  "createdAtUtc": "2026-10-30T10:37:44.996Z"
+}

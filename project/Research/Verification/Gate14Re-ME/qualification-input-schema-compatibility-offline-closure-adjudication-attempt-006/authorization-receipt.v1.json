@@ -1,0 +1,44 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-authorization-v2",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006",
+  "status": "AUTHORIZED_ONE_OFFLINE_READ_ONLY_CORRECTED_HASH_CLOSURE_NO_UNITY",
+  "authorizedAtUtc": "2026-10-17T13:08:39.3457868Z",
+  "authorizationBasis": [
+    "用户此前明确授权所有后续 attempt，要求直到 attempt 通过后再索要下一阶段授权。",
+    "用户在 attempt-005 fail-closed 报告的‘下一步’位置明确要求继续。",
+    "本授权仅实施上一报告所列的 attempt-006 最小修复，不扩大科学阶段。"
+  ],
+  "authorizedCorrection": {
+    "field": "expectedUnityReceiptSha256",
+    "from": "47ec9b695010ceb46e9d4422eaacdc03ab75afec75d3f19fb2618840c488790663",
+    "to": "47ec9b695010ceb46e9d4422eaacdc03ab75afec75d3f19fb261884b5022f23e",
+    "basis": "attempt-004 terminal receipt file, attempt-004 terminal evidence manifest, and attempt-005 source-freeze binding all independently bind the corrected value"
+  },
+  "authorizedActions": [
+    "create one independent attempt-006 evidence directory",
+    "preserve attempt-004, attempt-005, Status v24 and Status v25 without deletion, modification or reclassification",
+    "freeze a corrected copy of the offline adjudicator with only the authorized receipt-hash correction plus attempt/status versioning and prior-failure retention checks",
+    "execute the corrected offline adjudicator exactly once without launching Unity",
+    "freeze terminal PASS and Status v26 only if every structural predicate passes",
+    "adopt input schema v2 and planning schema binding v2 only after terminal PASS"
+  ],
+  "prohibitedActions": [
+    "launch or restart Unity",
+    "delete, modify, clean, overwrite or reclassify attempt-004 or attempt-005",
+    "delete, modify, overwrite or reclassify Status v24 or Status v25",
+    "automatic retry within attempt-006",
+    "schedule generation",
+    "qualification input bundle generation",
+    "anonymous identity mapping generation",
+    "measured root creation",
+    "planner execution",
+    "algorithm lane execution",
+    "formal collection",
+    "formal analysis",
+    "algorithm ranking",
+    "winner adjudication"
+  ],
+  "successDisposition": "FREEZE_TERMINAL_PASS_STATUS_V26_AND_ADOPT_INPUT_SCHEMA_V2_AND_PLANNING_SCHEMA_BINDING_V2",
+  "failureDisposition": "FAIL_CLOSED_FREEZE_ATTEMPT_006_FAILURE_EVIDENCE_NO_RETRY_NO_ADOPTION"
+}

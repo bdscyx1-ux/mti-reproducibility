@@ -1,0 +1,19 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 final preservation environment storage audit attempt 1",
+  "command": "Test-Gate13RPR2FinalPrelaunchV1.ps1 under native Windows PowerShell 5.1",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "gate_tokens": [
+    "PRELAUNCH-VALIDATOR-IMPLEMENTATION-DEFECT",
+    "NAMED-PARAMETER-MISMATCH",
+    "FORMAL-ROOT-ABSENT",
+    "UNITY-NOT-LAUNCHED"
+  ],
+  "input_sha256": {
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt1/failure-receipt.json": "9189d5c394b7af05d3f8e57bf4dde7bbbebbdeb21f823b49e683bbfe8cfbfec0",
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt1/failure-checkpoint.json": "44b4867d72da4efdbe342a32834fe85da26ca1c091fe70a6f4378da9d034daef",
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt1/partial-output-manifest.json": "3f3eaa35c10d4809ca9564d5d15cbe1cae7da3cc260c23b3cf022408602f699a"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-contract-v5.2-any-four-of-five-domain-rule",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_AUTHORIZED_ANY_FOUR_OF_FIVE_DOMAIN_RULE",
+  "sourceAcceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "analysisAttempt": "attempt-004",
+  "independentUnit": "superblock",
+  "pairedCluster": "superblock",
+  "primaryModel": {
+    "positiveOutcomes": "natural log",
+    "zeroPermittingOutcomes": "log1p plus mandatory raw-scale summaries",
+    "fixedEffects": [
+      "algorithm",
+      "centered log2(N)",
+      "centered log2(F)",
+      "centered log2(G^2)",
+      "changeTopology",
+      "graphProfile",
+      "sameTickAtomicPartitions",
+      "executionPosition",
+      "algorithm by centered log2(N)",
+      "algorithm by centered log2(F)",
+      "algorithm by centered log2(G^2)"
+    ],
+    "primaryEstimator": "prespecified mixed-effects model with superblock pairing",
+    "nonconvergenceFallback": "same fixed-effect formula with superblock-cluster-robust covariance",
+    "modelSelectionByPValueDirectionOrWinner": false
+  },
+  "confirmatoryFamily": {
+    "target": "IDFF",
+    "comparators": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF"],
+    "domainGateComparators": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF"],
+    "minimumComparatorHypothesesRequiredForDomainPass": 4,
+    "domains": 7,
+    "hypotheses": 35,
+    "primitiveContrasts": 40,
+    "direction": "one-sided lower is better",
+    "familywiseAlpha": 0.05,
+    "multiplicity": "Holm strong FWER",
+    "pValueFamily": "all 35 composite hypotheses, including C-FF",
+    "intervalMultiplicity": "two-sided Bonferroni over 40 primitive contrasts",
+    "D1IntersectionUnion": "for each comparator, domain p-value is max of geometric-mean and P95 one-sided p-values; both simultaneous intervals must be entirely below ratio 1",
+    "D2ToD4NullBoundary": "ratio or ratio-like contrast equals 1 on the declared scale",
+    "D5ToD7NullBoundary": "slope difference equals 0",
+    "domainPass": "valid hard gates plus at least four of the five target-versus-comparator hypotheses rejected after Holm with favorable direction and simultaneous intervals",
+    "domainPassOutput": "integer 1 when the rule passes, otherwise integer 0",
+    "failedComparatorReporting": "for every failed comparator hypothesis, report effect, simultaneous interval, Holm-adjusted p-value, and concrete failure explanation",
+    "cFFRole": "one of the five domain-gating comparators; if its hypothesis fails, report the same complete failure details",
+    "primaryClaimPass": "at least four of seven domains have domainPass equal to 1",
+    "invalidDomainRemovedFromDenominator": false
+  },
+  "mipeInterpretation": {
+    "purpose": "planning alternative and practical-importance flag",
+    "ratioThreshold": 0.9,
+    "slopeThreshold": -0.10536051565782628,
+    "doesNotShiftStatisticalNullToMipe": true,
+    "mandatoryReporting": "For every IDFF-comparator domain contrast, report estimate, interval, adjusted p-value, direction, MIPE flag, and hypothesis pass status."
+  },
+  "secondaryReporting": {
+    "allSixAlgorithms": true,
+    "fullFifteenPairMatrices": "exploratory, separately multiplicity controlled, never ordered or ranked",
+    "rawIndependentN": true,
+    "missingnessAndEligibility": true,
+    "rawDistributions": true,
+    "rankingTable": false,
+    "aggregateScore": false,
+    "winnerField": false
+  },
+  "hardGates": {
+    "correctnessOracle": "all frozen path-status, version, legality, and reference-oracle checks retained",
+    "D3CounterValidity": "mandatory",
+    "D4SizingFormulaValidity": "mandatory",
+    "completeAcceptedDelivery": "mandatory before analysis",
+    "gateFailureAfterCollection": "affected domain remains in denominator and cannot pass"
+  },
+  "ruleRevision": {
+    "authorizedAfterPriorFiveComparatorAnalysis": true,
+    "previousAnalysisAttempt": "attempt-003",
+    "previousAttemptStatus": "superseded because it interpreted the four comparators as a fixed subset excluding C-FF",
+    "correctedRule": "any four of the same five formal comparator hypotheses",
+    "sourceDataReusedWithoutModification": true,
+    "statisticalModelAndMultiplicityUnchanged": true
+  },
+  "executionBoundary": {
+    "formalAnalysisAuthorized": true,
+    "formalEffectsComputedByThisFreeze": false,
+    "qualificationEffectsUsed": false,
+    "MQOrMTAuthorized": false
+  },
+  "createdAtUtc": "2026-10-30T13:06:19.263Z"
+}

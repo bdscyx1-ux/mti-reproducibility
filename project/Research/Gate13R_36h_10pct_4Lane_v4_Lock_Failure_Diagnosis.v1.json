@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "diagnosisId": "gate13r-36h-v4-expected-negative-stale-lock-diagnosis-v1",
+  "createdAtUtc": "2026-10-08T04:56:00.0000000Z",
+  "status": "READ-ONLY-DIAGNOSIS-V4-PRESERVED",
+  "failedVerificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v4",
+  "failedLaneRoot": "H:/DDM_Final_Project_Gate13R36H/v4/lane-01",
+  "failureEvidence": {
+    "executionReceiptSha256": "0ea5ae76fad3a9f5e7a86291bf335fe8da932385ed216aefd1e472ad1ed3695e",
+    "checkpointSha256": "426fee95aa7471672e229609380c1682b8b54ee3866d4a06e32b85ef5034c5d2",
+    "failureReceiptSha256": "f87bf43e878d07a01d13d0bc222055a6f94795e0f16ed58b8e4fd29069791c97",
+    "partialManifestSha256": "2859606357b1497bd3507bab2ae638a8c2079c2b280c763da5273934e506ad8e",
+    "laneCopySummarySha256": "4babe821a31e0e818565a23abae09600d3eda405fafb9381a708d079d4608d1e"
+  },
+  "negativeFixture": {
+    "analysisRole": "excluded-negative-fail-closed-verification",
+    "expectFailure": true,
+    "ownedProcessId": 43664,
+    "ownedProcessStartedAt": "2026-10-08T12:53:40.7886980+08:00",
+    "ownedProcessCompletedAt": "2026-10-08T12:53:58.8099988+08:00",
+    "unityExitCode": 1,
+    "completedSampleCount": 1,
+    "laterPositionsExecuted": false,
+    "unityProcessCountAfter": 0,
+    "wrapperSummarySha256": "a3ca0db851c538d1a7d3f61beeb3a373127c8c4a09017f1071a4139ee42ecd85"
+  },
+  "staleLockSnapshot": {
+    "expectedPath": "H:/DDM_Final_Project_Gate13R36H/v4/lane-01/Temp/UnityLockfile",
+    "resolvedPath": "H:/DDM_Final_Project_Gate13R36H/v4/lane-01/Temp/UnityLockfile",
+    "pathMatchesExpected": true,
+    "exists": true,
+    "isLeaf": true,
+    "isReparsePoint": false,
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "creationTimeUtc": "2026-10-08T04:53:43.8905944Z",
+    "lastWriteTimeUtc": "2026-10-08T04:53:43.8905944Z",
+    "exclusiveReadWriteAvailable": true
+  },
+  "frozenEligibilityEvaluation": {
+    "moduleRelativePath": "Research/Gate10RLockHygieneV3.psm1",
+    "moduleSha256": "9eba2284dc90fcf6dbbc59080301c1ac6db14c5029f8adab69db234c94f879d6",
+    "specificationRelativePath": "Research/Gate10R_Attempt3_Lock_Hygiene_Specification.v1.md",
+    "specificationSha256": "dcd67695fcd9a9b5398666f24e3c414a164aea889d959169dad4cc70541f4c1d",
+    "role": "expected-negative",
+    "eligible": true,
+    "errors": [],
+    "actionTaken": "NONE-READ-ONLY-DIAGNOSIS"
+  },
+  "causalFinding": "The Gate13R v4 block wrapper reimplemented natural quiescence but omitted the already frozen controlled expected-negative cleanup path. This is a wrapper orchestration defect, not an algorithm, scenario, precision, threshold, or Unity command failure.",
+  "pilotStarted": false,
+  "formalCampaign": false
+}

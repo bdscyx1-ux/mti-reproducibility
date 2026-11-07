@@ -1,0 +1,26 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-cold-reference-derived-location-compatibility-wrapper-v3",
+    "createdAtUtc":  "2026-10-08T13:24:06.8005917Z",
+    "sourceSha256":  "f828437bb6b1a959d7341eb74ae315f4270da1666fb83fde5ac2848a8502757f",
+    "derivedSha256":  "0f229da293fe0e5db12fe06496c64b489ecda0bf17fb268c68833c9b95f48d42",
+    "routes":  [
+                   {
+                       "from":  "$compiler=if(Test-Path -LiteralPath $unityLog){@(Select-String -LiteralPath $unityLog -Pattern \u0027error CS\\d+|Compilation failed|Scripts have compiler errors|executeMethod.+could not be found\u0027 -CaseSensitive:$false)}else{@()}",
+                       "to":  "$compiler=@();if(Test-Path -LiteralPath $unityLog){$compiler=@(Select-String -LiteralPath $unityLog -Pattern \u0027error CS\\d+|Compilation failed|Scripts have compiler errors|executeMethod.+could not be found\u0027 -CaseSensitive:$false)}",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Import-Module (Join-Path $PSScriptRoot \u0027Gate12RProcessReusePreparation.psm1\u0027) -Force",
+                       "to":  "Import-Module (Join-Path $ProjectPath \u0027Research\\Gate12RProcessReusePreparation.psm1\u0027) -Force",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Import-Module (Join-Path $PSScriptRoot \u0027Gate10RLockHygieneV3.psm1\u0027) -Force",
+                       "to":  "Import-Module (Join-Path $ProjectPath \u0027Research\\Gate10RLockHygieneV3.psm1\u0027) -Force",
+                       "replacementCount":  1
+                   }
+               ],
+    "repair":  "empty-array-plus-explicit-project-research-module-path",
+    "researchSemanticsChanged":  false
+}

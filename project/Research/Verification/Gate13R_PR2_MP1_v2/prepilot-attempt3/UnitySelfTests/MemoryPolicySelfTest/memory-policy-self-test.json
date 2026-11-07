@@ -1,0 +1,208 @@
+{
+    "schemaVersion": 1,
+    "summaryKind": "gate13r-pr2-mp1-memory-policy-self-test-v1",
+    "completedAtUtc": "2026-10-09T04:19:35.4937443Z",
+    "testCount": 10,
+    "passedTestCount": 10,
+    "tests": [
+        {
+            "id": "below-128-pass",
+            "sampleGrowthBytes": 134217727,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+        },
+        {
+            "id": "exact-128-pass",
+            "sampleGrowthBytes": 134217728,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+        },
+        {
+            "id": "above-128-alert",
+            "sampleGrowthBytes": 134217729,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "MEMORY-ALERT-128MIB",
+            "expectedReasonCode": "MEMORY-ALERT-128MIB",
+            "actualVerdict": "MEMORY-ALERT-128MIB",
+            "actualReasonCode": "MEMORY-ALERT-128MIB",
+            "passed": true
+        },
+        {
+            "id": "exact-256-alert-not-emergency",
+            "sampleGrowthBytes": 268435456,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "MEMORY-ALERT-128MIB",
+            "expectedReasonCode": "MEMORY-ALERT-128MIB",
+            "actualVerdict": "MEMORY-ALERT-128MIB",
+            "actualReasonCode": "MEMORY-ALERT-128MIB",
+            "passed": true
+        },
+        {
+            "id": "above-256-emergency",
+            "sampleGrowthBytes": 268435457,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "HARD-FAIL",
+            "expectedReasonCode": "HARD-FAIL-SAMPLE-EMERGENCY-256MIB",
+            "actualVerdict": "HARD-FAIL",
+            "actualReasonCode": "HARD-FAIL-SAMPLE-EMERGENCY-256MIB",
+            "passed": true
+        },
+        {
+            "id": "final-block-exact-256-pass",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 268435456,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": true,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+        },
+        {
+            "id": "final-block-above-256-fail",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 268435457,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": true,
+            "expectedVerdict": "HARD-FAIL",
+            "expectedReasonCode": "HARD-FAIL-BLOCK-MANAGED-256MIB",
+            "actualVerdict": "HARD-FAIL",
+            "actualReasonCode": "HARD-FAIL-BLOCK-MANAGED-256MIB",
+            "passed": true
+        },
+        {
+            "id": "nonfinal-block-above-256-fail",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 268435457,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "HARD-FAIL",
+            "expectedReasonCode": "HARD-FAIL-BLOCK-MANAGED-256MIB",
+            "actualVerdict": "HARD-FAIL",
+            "actualReasonCode": "HARD-FAIL-BLOCK-MANAGED-256MIB",
+            "passed": true
+        },
+        {
+            "id": "native-exact-512-diagnostic-pass",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 536870912,
+            "blockPrivateMemoryGrowthBytes": 536870912,
+            "finalSampleInBlock": true,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+        },
+        {
+            "id": "native-above-512-diagnostic-pass",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 536870913,
+            "blockPrivateMemoryGrowthBytes": 536870913,
+            "finalSampleInBlock": true,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+        }
+    ],
+    "telemetryValidationTestCount": 8,
+    "telemetryValidationPassedTestCount": 8,
+    "telemetryValidationTests": [
+        {
+            "id": "valid-sequence",
+            "expectedPassed": true,
+            "expectedReasonCode": "PASS",
+            "actualPassed": true,
+            "actualReasonCode": "PASS",
+            "passed": true
+        },
+        {
+            "id": "missing-before",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-MISSING",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-MISSING",
+            "passed": true
+        },
+        {
+            "id": "mixed-pid",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-MIXED-PID",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-MIXED-PID",
+            "passed": true
+        },
+        {
+            "id": "mixed-process-start",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-MIXED-PROCESS-START",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-MIXED-PROCESS-START",
+            "passed": true
+        },
+        {
+            "id": "nonfinite-process-age",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-NONFINITE-PROCESS-AGE",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-NONFINITE-PROCESS-AGE",
+            "passed": true
+        },
+        {
+            "id": "process-age-order",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-PROCESS-AGE-ORDER",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-PROCESS-AGE-ORDER",
+            "passed": true
+        },
+        {
+            "id": "nonpositive-working-set",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-WORKING-SET-NONPOSITIVE",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-WORKING-SET-NONPOSITIVE",
+            "passed": true
+        },
+        {
+            "id": "gc-count-order",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-GC-COUNT-ORDER",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-GC-COUNT-ORDER",
+            "passed": true
+        }
+    ],
+    "passed": true
+}

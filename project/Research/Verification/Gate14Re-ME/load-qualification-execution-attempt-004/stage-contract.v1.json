@@ -1,0 +1,112 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-004-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-004-05296e8f-0603-406e-9cfa-93a58cc7fec0",
+  "attemptId": "load-qualification-execution-attempt-004",
+  "status": "AUTHORIZED_EXACT_HASH_PREFLIGHT_AND_SINGLE_QUALIFICATION_EXECUTION",
+  "createdAtUtc": "2026-10-17T18:21:51.3717056Z",
+  "evidenceAttemptMeaning": "This is the single newly authorized qualification execution. Prior execution evidence attempts remain frozen and are not retried, resumed, merged, topped up, reclassified or reused.",
+  "retainedPriorExecutionAttempts": [
+    {
+      "attemptId": "load-qualification-execution-attempt-001",
+      "retained": true,
+      "reclassified": false,
+      "measuredRootCreated": false,
+      "deliveryRootCreated": false
+    },
+    {
+      "attemptId": "load-qualification-execution-attempt-002",
+      "retained": true,
+      "reclassified": false,
+      "measuredRootCreated": false,
+      "deliveryRootCreated": false
+    },
+    {
+      "attemptId": "load-qualification-execution-attempt-003",
+      "retained": true,
+      "reclassified": false,
+      "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+      "deliveryRootCreated": false,
+      "algorithmLaneExecutionCount": 0,
+      "qualificationObservationCount": 0
+    }
+  ],
+  "authoritativeInputs": [
+    {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v38.json",
+      "sha256": "686b8aaa610d0432f3f08a53c01ff083183b9da415906006034eaec5f22d959c"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/terminal-readiness-receipt.v1.json",
+      "sha256": "565a2e5a1f97d67e37c037db05db610feabf93237d717d67e86d0be82c534a6a"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/freeze-manifest.v1.json",
+      "sha256": "4f53177ec47863d2338644dbc3e211b2bef585c1dbb4a773f64dbf3c474cd1ba"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/terminal-pass-receipt.v1.json",
+      "sha256": "bcf1be2a17d34d7677455c61e9108836c43b251f287ae474d0a9e0591bfd5819"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_4.json",
+      "sha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_4.json",
+      "sha256": "1e56697a40692ff76fc01273ec4e5b8b7953ea88dcfe228eeeb317d9705a69c1"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_2.ps1",
+      "sha256": "a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409"
+    }
+  ],
+  "supervisorHostRuntime": {
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "version": "7.6.5",
+    "commandPrefix": [
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-File"
+    ]
+  },
+  "reservedRoots": {
+    "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-002",
+    "bothAbsentBeforeLaunch": true,
+    "reuseOfFailedAttempt001MeasuredRootAllowed": false
+  },
+  "executionClosure": {
+    "instrumentSelfTestProcesses": 1,
+    "oracleProcesses": 162,
+    "emptyBoundaryProcesses": 12,
+    "algorithmLaneProcesses": 972,
+    "totalStrictSerialFreshUnityProcesses": 1147,
+    "qualificationSuperblocks": 162,
+    "replacementPolicy": "ZERO_REPLACEMENT_FAIL_STOP"
+  },
+  "failurePolicy": {
+    "failClosed": true,
+    "preserveEvidence": true,
+    "retryWithinThisAttempt": false,
+    "resumeWithinThisAttempt": false,
+    "topUpMergeSkipReorderOrParallelAllowed": false,
+    "forcedTerminationOrSignalAllowed": false,
+    "createNewAttemptAutomatically": false,
+    "automaticRepairAfterFailure": false
+  },
+  "scientificBoundary": {
+    "qualificationOnly": true,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "crossAlgorithmEffectsAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false,
+    "sealedIdentityMappingMayBeOpened": false
+  }
+}

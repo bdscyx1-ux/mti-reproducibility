@@ -1,0 +1,65 @@
+{
+    "schemaVersion":  1,
+    "auditId":  "gate10r-attempt4-terminal-integrity-audit-v2",
+    "savedAtUtc":  "2026-10-06T15:29:02.9271421Z",
+    "status":  "GATE10R-PASSED-WAITING-FOR-USER-AUTHORIZATION",
+    "retryReason":  "v1 incorrectly treated two archive_entry reference rows as project-root material files and required all 26 CSV rows to equal the documented 24 material baseline entries",
+    "supersedesAuditResult":  "Research/Gate10R_Attempt4_Terminal_Integrity_Audit.v1.json",
+    "preservesFailedAudit":  true,
+    "assertionCount":  8,
+    "passedCount":  8,
+    "failedCount":  0,
+    "checks":  [
+                   {
+                       "name":  "v1-failure-evidence-preserved",
+                       "passed":  true,
+                       "detail":  "0064302e24b68a796b7e470c0abfa64ef5ab25baef19949ee62f485bc8973506"
+                   },
+                   {
+                       "name":  "v1-single-audit-scope-failure",
+                       "passed":  true,
+                       "detail":  "failed=frozen-baseline-24"
+                   },
+                   {
+                       "name":  "corrected-frozen-baseline-material-scope",
+                       "passed":  true,
+                       "detail":  "material=24;archiveEntries=2;errors=0"
+                   },
+                   {
+                       "name":  "v4-tree-unchanged-since-v1-audit",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":169,\"rawBytes\":14661848,\"treeSha256\":\"ac7f70b2098f6fc28eaa48116faabe1a527f34168d1c851f5a5d7e8cbbbc53b2\"}"
+                   },
+                   {
+                       "name":  "gate10r-final-audit-still-passed",
+                       "passed":  true,
+                       "detail":  "55/55;sha256=8714fea2235d488abad7278bd6ccef9cf50f75aae57969220f40a19de16dd72c"
+                   },
+                   {
+                       "name":  "gate10r-terminal-checkpoint-still-passed",
+                       "passed":  true,
+                       "detail":  "GATE10R-PASSED-WAITING-FOR-USER-AUTHORIZATION"
+                   },
+                   {
+                       "name":  "unauthorized-downstream-roots-absent",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "runtime-clean",
+                       "passed":  true,
+                       "detail":  "Unity=0;UnityLockfile=absent"
+                   }
+               ],
+    "materialBaselineEntryCount":  24,
+    "archiveReferenceEntryCount":  2,
+    "v4Tree":  {
+                   "fileCount":  169,
+                   "rawBytes":  14661848,
+                   "treeSha256":  "ac7f70b2098f6fc28eaa48116faabe1a527f34168d1c851f5a5d7e8cbbbc53b2"
+               },
+    "gate11RAuthorized":  false,
+    "gate12RAuthorized":  false,
+    "gate13RAuthorized":  false,
+    "formalCampaign":  false
+}

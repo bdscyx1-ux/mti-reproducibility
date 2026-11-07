@@ -1,0 +1,3552 @@
+{
+  "schema": "revision20261103-b-analysis-v1",
+  "studyId": "DDM-Revision-20261103-B",
+  "status": "COMPLETE",
+  "blockCount": 768,
+  "movementBlocks": 384,
+  "callbackBlocks": 384,
+  "algorithmSamples": 3072,
+  "analysisSourceSha256": "9c5bbbadfa06afc3ad715c5ceb579f4f10e8f022b694e50c37c0caeb4c217401",
+  "analyzerSha256": "a48937951f9be61849d320a7225573aebf3885b759689c11e8bb5d4bc5db3aaa",
+  "zeroVarianceConvention": "Original deterministic convention retained: a zero-variance paired log contrast uses point intervals; p=1 for exactly zero contrast, p=0 for nonzero contrast. These finite-input results do not establish population certainty.",
+  "scope": "Eight fixed main conditions N128, short trajectories after initial disjoint block/unblock; callbacks are batch-mode main-loop diagnostics, not displayed frame or interaction latency.",
+  "eligibility": {
+    "schema": "gate14re-phase-b-eligibility-v1",
+    "independentUnit": "complete block",
+    "M3": {
+      "A": {
+        "productionAlgorithmId": "A*-R",
+        "conditions": {
+          "C01": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C02": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C03": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C04": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C05": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C06": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C07": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C08": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          }
+        },
+        "passesAllEightConditions": true
+      },
+      "B": {
+        "productionAlgorithmId": "D*L",
+        "conditions": {
+          "C01": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C02": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C03": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C04": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C05": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C06": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C07": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C08": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          }
+        },
+        "passesAllEightConditions": true
+      },
+      "C": {
+        "productionAlgorithmId": "C-FF",
+        "conditions": {
+          "C01": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C02": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C03": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C04": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C05": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C06": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C07": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C08": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          }
+        },
+        "passesAllEightConditions": true
+      },
+      "D": {
+        "productionAlgorithmId": "IDFF",
+        "conditions": {
+          "C01": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C02": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C03": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C04": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C05": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C06": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C07": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          },
+          "C08": {
+            "completedBlocks": 48,
+            "plannedBlocks": 48,
+            "completionProportion": 1.0,
+            "wilson95CI": [
+              0.9258998703338824,
+              0.9999999999999999
+            ],
+            "passes45Of48": true,
+            "terminalReasonTotals": {
+              "activeAtCap": 0,
+              "noPath": 0,
+              "budgetExceeded": 0,
+              "invalidPlan": 0,
+              "internalFailure": 0
+            }
+          }
+        },
+        "passesAllEightConditions": true
+      }
+    },
+    "M4": {
+      "A": {
+        "productionAlgorithmId": "A*-R",
+        "conditions": {
+          "C01": {
+            "blockP95MedianSeconds": 3.035e-05,
+            "blockP95MedianMilliseconds": 0.03035,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C02": {
+            "blockP95MedianSeconds": 3.0850000000000004e-05,
+            "blockP95MedianMilliseconds": 0.030850000000000006,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C03": {
+            "blockP95MedianSeconds": 3.115e-05,
+            "blockP95MedianMilliseconds": 0.031149999999999997,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C04": {
+            "blockP95MedianSeconds": 3.075e-05,
+            "blockP95MedianMilliseconds": 0.030750000000000003,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C05": {
+            "blockP95MedianSeconds": 3.4800000000000006e-05,
+            "blockP95MedianMilliseconds": 0.034800000000000005,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C06": {
+            "blockP95MedianSeconds": 3.485e-05,
+            "blockP95MedianMilliseconds": 0.03485,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C07": {
+            "blockP95MedianSeconds": 3.165e-05,
+            "blockP95MedianMilliseconds": 0.03165,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C08": {
+            "blockP95MedianSeconds": 3.08e-05,
+            "blockP95MedianMilliseconds": 0.030800000000000004,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          }
+        },
+        "passesAllEightConditions": true
+      },
+      "B": {
+        "productionAlgorithmId": "D*L",
+        "conditions": {
+          "C01": {
+            "blockP95MedianSeconds": 3.07e-05,
+            "blockP95MedianMilliseconds": 0.0307,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C02": {
+            "blockP95MedianSeconds": 3.04e-05,
+            "blockP95MedianMilliseconds": 0.0304,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C03": {
+            "blockP95MedianSeconds": 3.075e-05,
+            "blockP95MedianMilliseconds": 0.030750000000000003,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C04": {
+            "blockP95MedianSeconds": 3.08e-05,
+            "blockP95MedianMilliseconds": 0.030800000000000004,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C05": {
+            "blockP95MedianSeconds": 3.11e-05,
+            "blockP95MedianMilliseconds": 0.031099999999999996,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C06": {
+            "blockP95MedianSeconds": 3.225e-05,
+            "blockP95MedianMilliseconds": 0.03225,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C07": {
+            "blockP95MedianSeconds": 3.135e-05,
+            "blockP95MedianMilliseconds": 0.03135,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C08": {
+            "blockP95MedianSeconds": 3.055e-05,
+            "blockP95MedianMilliseconds": 0.030549999999999997,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          }
+        },
+        "passesAllEightConditions": true
+      },
+      "C": {
+        "productionAlgorithmId": "C-FF",
+        "conditions": {
+          "C01": {
+            "blockP95MedianSeconds": 3.0999999999999995e-05,
+            "blockP95MedianMilliseconds": 0.030999999999999993,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C02": {
+            "blockP95MedianSeconds": 3.04e-05,
+            "blockP95MedianMilliseconds": 0.0304,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C03": {
+            "blockP95MedianSeconds": 3.04e-05,
+            "blockP95MedianMilliseconds": 0.0304,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C04": {
+            "blockP95MedianSeconds": 3.055e-05,
+            "blockP95MedianMilliseconds": 0.030549999999999997,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C05": {
+            "blockP95MedianSeconds": 3.185e-05,
+            "blockP95MedianMilliseconds": 0.03185,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C06": {
+            "blockP95MedianSeconds": 3.1049999999999996e-05,
+            "blockP95MedianMilliseconds": 0.031049999999999994,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C07": {
+            "blockP95MedianSeconds": 3.095e-05,
+            "blockP95MedianMilliseconds": 0.030950000000000002,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C08": {
+            "blockP95MedianSeconds": 3.0999999999999995e-05,
+            "blockP95MedianMilliseconds": 0.030999999999999993,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          }
+        },
+        "passesAllEightConditions": true
+      },
+      "D": {
+        "productionAlgorithmId": "IDFF",
+        "conditions": {
+          "C01": {
+            "blockP95MedianSeconds": 3.03e-05,
+            "blockP95MedianMilliseconds": 0.0303,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C02": {
+            "blockP95MedianSeconds": 3.07e-05,
+            "blockP95MedianMilliseconds": 0.0307,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C03": {
+            "blockP95MedianSeconds": 3.125e-05,
+            "blockP95MedianMilliseconds": 0.03125,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C04": {
+            "blockP95MedianSeconds": 3.115e-05,
+            "blockP95MedianMilliseconds": 0.031149999999999997,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C05": {
+            "blockP95MedianSeconds": 3.4399999999999996e-05,
+            "blockP95MedianMilliseconds": 0.03439999999999999,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C06": {
+            "blockP95MedianSeconds": 3.05e-05,
+            "blockP95MedianMilliseconds": 0.0305,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C07": {
+            "blockP95MedianSeconds": 3.07e-05,
+            "blockP95MedianMilliseconds": 0.0307,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          },
+          "C08": {
+            "blockP95MedianSeconds": 3.06e-05,
+            "blockP95MedianMilliseconds": 0.0306,
+            "blocksAbove50Milliseconds": 0,
+            "plannedBlocks": 48,
+            "medianGateMaximumMilliseconds": 33.333,
+            "tailCountGateMaximum": 3,
+            "passes": true
+          }
+        },
+        "passesAllEightConditions": true
+      }
+    },
+    "M5": {
+      "A": {
+        "productionAlgorithmId": "A*-R",
+        "criticalViolationCount": 0,
+        "affectedBlocks": 0,
+        "criticalViolationCodes": {},
+        "passesZeroCriticalViolations": true
+      },
+      "B": {
+        "productionAlgorithmId": "D*L",
+        "criticalViolationCount": 0,
+        "affectedBlocks": 0,
+        "criticalViolationCodes": {},
+        "passesZeroCriticalViolations": true
+      },
+      "C": {
+        "productionAlgorithmId": "C-FF",
+        "criticalViolationCount": 0,
+        "affectedBlocks": 0,
+        "criticalViolationCodes": {},
+        "passesZeroCriticalViolations": true
+      },
+      "D": {
+        "productionAlgorithmId": "IDFF",
+        "criticalViolationCount": 0,
+        "affectedBlocks": 0,
+        "criticalViolationCodes": {},
+        "passesZeroCriticalViolations": true
+      }
+    },
+    "summary": {
+      "A": {
+        "productionAlgorithmId": "A*-R",
+        "M3Pass": true,
+        "M4Pass": true,
+        "M5Pass": true,
+        "eligible": true
+      },
+      "B": {
+        "productionAlgorithmId": "D*L",
+        "M3Pass": true,
+        "M4Pass": true,
+        "M5Pass": true,
+        "eligible": true
+      },
+      "C": {
+        "productionAlgorithmId": "C-FF",
+        "M3Pass": true,
+        "M4Pass": true,
+        "M5Pass": true,
+        "eligible": true
+      },
+      "D": {
+        "productionAlgorithmId": "IDFF",
+        "M3Pass": true,
+        "M4Pass": true,
+        "M5Pass": true,
+        "eligible": true
+      }
+    },
+    "eligibleAlgorithms": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "eligibleProductionAlgorithms": [
+      "A*-R",
+      "D*L",
+      "C-FF",
+      "IDFF"
+    ]
+  },
+  "m1": {
+    "schema": "gate14re-phase-b-m1-pairwise-v1",
+    "metric": "M1",
+    "effectOrientation": "first algorithm divided by second algorithm; lower is better",
+    "conditionsEquallyWeighted": true,
+    "independentUnit": "complete block",
+    "pairedWithinBlock": true,
+    "multiplicity": {
+      "tests": "Holm step-down adjusted p-values across six unordered algorithm pairs",
+      "decisionIntervals": "Bonferroni simultaneous 95% intervals across the same six pairs",
+      "exactHolmRectangularIntervalsClaimed": false
+    },
+    "includedBlocksByCondition": {
+      "C01": 48,
+      "C02": 48,
+      "C03": 48,
+      "C04": 48,
+      "C05": 48,
+      "C06": 48,
+      "C07": 48,
+      "C08": 48
+    },
+    "pairs": [
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "A/B",
+        "firstAlgorithm": "A",
+        "secondAlgorithm": "B",
+        "firstProductionAlgorithm": "A*-R",
+        "secondProductionAlgorithm": "D*L",
+        "holmAdjustedTwoSidedP": 1.0
+      },
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "A/C",
+        "firstAlgorithm": "A",
+        "secondAlgorithm": "C",
+        "firstProductionAlgorithm": "A*-R",
+        "secondProductionAlgorithm": "C-FF",
+        "holmAdjustedTwoSidedP": 1.0
+      },
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "A/D",
+        "firstAlgorithm": "A",
+        "secondAlgorithm": "D",
+        "firstProductionAlgorithm": "A*-R",
+        "secondProductionAlgorithm": "IDFF",
+        "holmAdjustedTwoSidedP": 1.0
+      },
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "B/C",
+        "firstAlgorithm": "B",
+        "secondAlgorithm": "C",
+        "firstProductionAlgorithm": "D*L",
+        "secondProductionAlgorithm": "C-FF",
+        "holmAdjustedTwoSidedP": 1.0
+      },
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "B/D",
+        "firstAlgorithm": "B",
+        "secondAlgorithm": "D",
+        "firstProductionAlgorithm": "D*L",
+        "secondProductionAlgorithm": "IDFF",
+        "holmAdjustedTwoSidedP": 1.0
+      },
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "C/D",
+        "firstAlgorithm": "C",
+        "secondAlgorithm": "D",
+        "firstProductionAlgorithm": "C-FF",
+        "secondProductionAlgorithm": "IDFF",
+        "holmAdjustedTwoSidedP": 1.0
+      }
+    ]
+  },
+  "m2": {
+    "schema": "gate14re-phase-b-m2-pairwise-v1",
+    "metric": "M2",
+    "effectOrientation": "first algorithm divided by second algorithm; lower is better",
+    "conditionsEquallyWeighted": true,
+    "independentUnit": "complete block",
+    "pairedWithinBlock": true,
+    "multiplicity": {
+      "tests": "Holm step-down adjusted p-values across six unordered algorithm pairs",
+      "decisionIntervals": "Bonferroni simultaneous 95% intervals across the same six pairs",
+      "exactHolmRectangularIntervalsClaimed": false
+    },
+    "includedBlocksByCondition": {
+      "C01": 48,
+      "C02": 48,
+      "C03": 48,
+      "C04": 48,
+      "C05": 48,
+      "C06": 48,
+      "C07": 48,
+      "C08": 48
+    },
+    "pairs": [
+      {
+        "estimateLog": 7.32680599080382e-06,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": null,
+        "unadjustedTwoSidedP": 0.0,
+        "ordinary95LogCI": [
+          7.32680599080382e-06,
+          7.32680599080382e-06
+        ],
+        "ordinary95RatioCI": [
+          1.000007326832832,
+          1.000007326832832
+        ],
+        "simultaneous95LogCI": [
+          7.32680599080382e-06,
+          7.32680599080382e-06
+        ],
+        "simultaneous95RatioCI": [
+          1.000007326832832,
+          1.000007326832832
+        ],
+        "ratioEstimate": 1.000007326832832,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": -0.0013890055934320245
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": -2.7733704222043798e-09
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.00023746446918870845
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 4.561266114011531e-05
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0018681618040066184
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": -0.0018044730352375637
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0008131029184150762
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.00028775399721592265
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "A/B",
+        "firstAlgorithm": "A",
+        "secondAlgorithm": "B",
+        "firstProductionAlgorithm": "A*-R",
+        "secondProductionAlgorithm": "D*L",
+        "holmAdjustedTwoSidedP": 0.0
+      },
+      {
+        "estimateLog": 7.32680599080382e-06,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": null,
+        "unadjustedTwoSidedP": 0.0,
+        "ordinary95LogCI": [
+          7.32680599080382e-06,
+          7.32680599080382e-06
+        ],
+        "ordinary95RatioCI": [
+          1.000007326832832,
+          1.000007326832832
+        ],
+        "simultaneous95LogCI": [
+          7.32680599080382e-06,
+          7.32680599080382e-06
+        ],
+        "simultaneous95RatioCI": [
+          1.000007326832832,
+          1.000007326832832
+        ],
+        "ratioEstimate": 1.000007326832832,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": -0.0013890055934320245
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": -2.7733704222043798e-09
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.00023746446918870845
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 4.561266114011531e-05
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0018681618040066184
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": -0.0018044730352375637
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0008131029184150762
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.00028775399721592265
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "A/C",
+        "firstAlgorithm": "A",
+        "secondAlgorithm": "C",
+        "firstProductionAlgorithm": "A*-R",
+        "secondProductionAlgorithm": "C-FF",
+        "holmAdjustedTwoSidedP": 0.0
+      },
+      {
+        "estimateLog": 7.32680599080382e-06,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": null,
+        "unadjustedTwoSidedP": 0.0,
+        "ordinary95LogCI": [
+          7.32680599080382e-06,
+          7.32680599080382e-06
+        ],
+        "ordinary95RatioCI": [
+          1.000007326832832,
+          1.000007326832832
+        ],
+        "simultaneous95LogCI": [
+          7.32680599080382e-06,
+          7.32680599080382e-06
+        ],
+        "simultaneous95RatioCI": [
+          1.000007326832832,
+          1.000007326832832
+        ],
+        "ratioEstimate": 1.000007326832832,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": -0.0013890055934320245
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": -2.7733704222043798e-09
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.00023746446918870845
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 4.561266114011531e-05
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0018681618040066184
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": -0.0018044730352375637
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0008131029184150762
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.00028775399721592265
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "A/D",
+        "firstAlgorithm": "A",
+        "secondAlgorithm": "D",
+        "firstProductionAlgorithm": "A*-R",
+        "secondProductionAlgorithm": "IDFF",
+        "holmAdjustedTwoSidedP": 0.0
+      },
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "B/C",
+        "firstAlgorithm": "B",
+        "secondAlgorithm": "C",
+        "firstProductionAlgorithm": "D*L",
+        "secondProductionAlgorithm": "C-FF",
+        "holmAdjustedTwoSidedP": 1.0
+      },
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "B/D",
+        "firstAlgorithm": "B",
+        "secondAlgorithm": "D",
+        "firstProductionAlgorithm": "D*L",
+        "secondProductionAlgorithm": "IDFF",
+        "holmAdjustedTwoSidedP": 1.0
+      },
+      {
+        "estimateLog": 0.0,
+        "standardErrorLog": 0.0,
+        "degreesOfFreedom": null,
+        "tStatistic": 0.0,
+        "unadjustedTwoSidedP": 1.0,
+        "ordinary95LogCI": [
+          0.0,
+          0.0
+        ],
+        "ordinary95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "simultaneous95LogCI": [
+          0.0,
+          0.0
+        ],
+        "simultaneous95RatioCI": [
+          1.0,
+          1.0
+        ],
+        "ratioEstimate": 1.0,
+        "strata": {
+          "C01": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C02": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C03": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C04": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C05": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C06": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C07": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          },
+          "C08": {
+            "n": 48,
+            "meanLogEffect": 0.0
+          }
+        },
+        "totalIndependentBlocks": 384,
+        "pair": "C/D",
+        "firstAlgorithm": "C",
+        "secondAlgorithm": "D",
+        "firstProductionAlgorithm": "C-FF",
+        "secondProductionAlgorithm": "IDFF",
+        "holmAdjustedTwoSidedP": 1.0
+      }
+    ]
+  },
+  "decision": {
+    "schema": "gate14re-phase-b-winner-adjudication-v1",
+    "status": "NO_UNIQUE_WINNER",
+    "winnerAlgorithmLabel": null,
+    "winnerProductionAlgorithmId": null,
+    "eligibleAlgorithms": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "eligibleProductionAlgorithms": [
+      "A*-R",
+      "D*L",
+      "C-FF",
+      "IDFF"
+    ],
+    "retainedCandidateAlgorithms": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "retainedCandidateProductionAlgorithms": [
+      "A*-R",
+      "D*L",
+      "C-FF",
+      "IDFF"
+    ],
+    "basis": "The preregistered M1/M2 evidence did not uniquely select one eligible algorithm without forcing a ranking.",
+    "evidence": {
+      "A": {
+        "M1UniqueRule": {
+          "B": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          },
+          "C": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          },
+          "D": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          }
+        },
+        "M2SecondaryRule": {
+          "B": {
+            "ratioEstimate": 1.000007326832832,
+            "simultaneousUpper": 1.000007326832832,
+            "passesUpperBelow1_00": false
+          },
+          "C": {
+            "ratioEstimate": 1.000007326832832,
+            "simultaneousUpper": 1.000007326832832,
+            "passesUpperBelow1_00": false
+          },
+          "D": {
+            "ratioEstimate": 1.000007326832832,
+            "simultaneousUpper": 1.000007326832832,
+            "passesUpperBelow1_00": false
+          }
+        }
+      },
+      "B": {
+        "M1UniqueRule": {
+          "A": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          },
+          "C": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          },
+          "D": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          }
+        },
+        "M2SecondaryRule": {
+          "A": {
+            "ratioEstimate": 0.9999926732208501,
+            "simultaneousUpper": 0.9999926732208501,
+            "passesUpperBelow1_00": true
+          },
+          "C": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow1_00": false
+          },
+          "D": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow1_00": false
+          }
+        }
+      },
+      "C": {
+        "M1UniqueRule": {
+          "A": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          },
+          "B": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          },
+          "D": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          }
+        },
+        "M2SecondaryRule": {
+          "A": {
+            "ratioEstimate": 0.9999926732208501,
+            "simultaneousUpper": 0.9999926732208501,
+            "passesUpperBelow1_00": true
+          },
+          "B": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow1_00": false
+          },
+          "D": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow1_00": false
+          }
+        }
+      },
+      "D": {
+        "M1UniqueRule": {
+          "A": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          },
+          "B": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          },
+          "C": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow0_95": false
+          }
+        },
+        "M2SecondaryRule": {
+          "A": {
+            "ratioEstimate": 0.9999926732208501,
+            "simultaneousUpper": 0.9999926732208501,
+            "passesUpperBelow1_00": true
+          },
+          "B": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow1_00": false
+          },
+          "C": {
+            "ratioEstimate": 1.0,
+            "simultaneousUpper": 1.0,
+            "passesUpperBelow1_00": false
+          }
+        }
+      },
+      "M1TieBand": {
+        "allEligiblePairsWhollyWithin0_95To1_05": true,
+        "pairs": [
+          {
+            "pair": "A/B",
+            "simultaneous95RatioCI": [
+              1.0,
+              1.0
+            ],
+            "whollyWithinTieBand": true
+          },
+          {
+            "pair": "A/C",
+            "simultaneous95RatioCI": [
+              1.0,
+              1.0
+            ],
+            "whollyWithinTieBand": true
+          },
+          {
+            "pair": "A/D",
+            "simultaneous95RatioCI": [
+              1.0,
+              1.0
+            ],
+            "whollyWithinTieBand": true
+          },
+          {
+            "pair": "B/C",
+            "simultaneous95RatioCI": [
+              1.0,
+              1.0
+            ],
+            "whollyWithinTieBand": true
+          },
+          {
+            "pair": "B/D",
+            "simultaneous95RatioCI": [
+              1.0,
+              1.0
+            ],
+            "whollyWithinTieBand": true
+          },
+          {
+            "pair": "C/D",
+            "simultaneous95RatioCI": [
+              1.0,
+              1.0
+            ],
+            "whollyWithinTieBand": true
+          }
+        ]
+      }
+    },
+    "forcedWinner": false,
+    "postHocExpansionPerformed": false
+  },
+  "descriptive": {
+    "schema": "gate14re-phase-b-descriptive-main-summaries-v1",
+    "scope": "module A at N=128",
+    "algorithms": {
+      "A": {
+        "productionAlgorithmId": "A*-R",
+        "M1ByCondition": {
+          "C01": {
+            "nBlocks": 48,
+            "geometricMean": 6.180000000000001,
+            "ordinary95CI": [
+              6.180000000000001,
+              6.180000000000001
+            ],
+            "arithmeticMedian": 6.18,
+            "minimum": 6.18,
+            "maximum": 6.18
+          },
+          "C02": {
+            "nBlocks": 48,
+            "geometricMean": 5.24,
+            "ordinary95CI": [
+              5.24,
+              5.24
+            ],
+            "arithmeticMedian": 5.24,
+            "minimum": 5.24,
+            "maximum": 5.24
+          },
+          "C03": {
+            "nBlocks": 48,
+            "geometricMean": 4.1,
+            "ordinary95CI": [
+              4.1,
+              4.1
+            ],
+            "arithmeticMedian": 4.1,
+            "minimum": 4.1,
+            "maximum": 4.1
+          },
+          "C04": {
+            "nBlocks": 48,
+            "geometricMean": 4.42,
+            "ordinary95CI": [
+              4.42,
+              4.42
+            ],
+            "arithmeticMedian": 4.42,
+            "minimum": 4.42,
+            "maximum": 4.42
+          },
+          "C05": {
+            "nBlocks": 48,
+            "geometricMean": 11.839999999999998,
+            "ordinary95CI": [
+              11.839999999999998,
+              11.839999999999998
+            ],
+            "arithmeticMedian": 11.84,
+            "minimum": 11.84,
+            "maximum": 11.84
+          },
+          "C06": {
+            "nBlocks": 48,
+            "geometricMean": 11.78,
+            "ordinary95CI": [
+              11.78,
+              11.78
+            ],
+            "arithmeticMedian": 11.78,
+            "minimum": 11.78,
+            "maximum": 11.78
+          },
+          "C07": {
+            "nBlocks": 48,
+            "geometricMean": 7.299999999999999,
+            "ordinary95CI": [
+              7.299999999999999,
+              7.299999999999999
+            ],
+            "arithmeticMedian": 7.3,
+            "minimum": 7.3,
+            "maximum": 7.3
+          },
+          "C08": {
+            "nBlocks": 48,
+            "geometricMean": 6.9399999999999995,
+            "ordinary95CI": [
+              6.9399999999999995,
+              6.9399999999999995
+            ],
+            "arithmeticMedian": 6.94,
+            "minimum": 6.94,
+            "maximum": 6.94
+          }
+        },
+        "M2ByCondition": {
+          "C01": {
+            "nBlocks": 48,
+            "geometricMean": 59.4986607675965,
+            "ordinary95CI": [
+              59.4986607675965,
+              59.4986607675965
+            ],
+            "arithmeticMedian": 59.498660767596476,
+            "minimum": 59.498660767596476,
+            "maximum": 59.498660767596476
+          },
+          "C02": {
+            "nBlocks": 48,
+            "geometricMean": 53.729798567087315,
+            "ordinary95CI": [
+              53.729798567087315,
+              53.729798567087315
+            ],
+            "arithmeticMedian": 53.72979856708733,
+            "minimum": 53.72979856708733,
+            "maximum": 53.72979856708733
+          },
+          "C03": {
+            "nBlocks": 48,
+            "geometricMean": 40.47682918955906,
+            "ordinary95CI": [
+              40.47682918955906,
+              40.47682918955906
+            ],
+            "arithmeticMedian": 40.47682918955907,
+            "minimum": 40.47682918955907,
+            "maximum": 40.47682918955907
+          },
+          "C04": {
+            "nBlocks": 48,
+            "geometricMean": 43.49985445445177,
+            "ordinary95CI": [
+              43.49985445445177,
+              43.49985445445177
+            ],
+            "arithmeticMedian": 43.49985445445178,
+            "minimum": 43.49985445445178,
+            "maximum": 43.49985445445178
+          },
+          "C05": {
+            "nBlocks": 48,
+            "geometricMean": 117.20312491431827,
+            "ordinary95CI": [
+              117.20312491431827,
+              117.20312491431827
+            ],
+            "arithmeticMedian": 117.20312491431832,
+            "minimum": 117.20312491431832,
+            "maximum": 117.20312491431832
+          },
+          "C06": {
+            "nBlocks": 48,
+            "geometricMean": 121.1171874403954,
+            "ordinary95CI": [
+              121.1171874403954,
+              121.1171874403954
+            ],
+            "arithmeticMedian": 121.11718744039536,
+            "minimum": 121.11718744039536,
+            "maximum": 121.11718744039536
+          },
+          "C07": {
+            "nBlocks": 48,
+            "geometricMean": 72.9499759005177,
+            "ordinary95CI": [
+              72.9499759005177,
+              72.9499759005177
+            ],
+            "arithmeticMedian": 72.94997590051773,
+            "minimum": 72.94997590051773,
+            "maximum": 72.94997590051773
+          },
+          "C08": {
+            "nBlocks": 48,
+            "geometricMean": 69.21692710325031,
+            "ordinary95CI": [
+              69.21692710325031,
+              69.21692710325031
+            ],
+            "arithmeticMedian": 69.21692710325031,
+            "minimum": 69.21692710325031,
+            "maximum": 69.21692710325031
+          }
+        },
+        "M4ByCondition": {
+          "C01": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4264041120351102e-05,
+              "ordinary95CI": [
+                2.418260659489501e-05,
+                2.4345749875217088e-05
+              ],
+              "arithmeticMedian": 2.4350000000000002e-05,
+              "minimum": 2.32e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.294802642033167e-05,
+              "ordinary95CI": [
+                3.149291583867624e-05,
+                3.447036948105293e-05
+              ],
+              "arithmeticMedian": 3.035e-05,
+              "minimum": 2.85e-05,
+              "maximum": 5.46e-05
+            }
+          },
+          "C02": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4278582194908277e-05,
+              "ordinary95CI": [
+                2.419600877626021e-05,
+                2.4361437410836643e-05
+              ],
+              "arithmeticMedian": 2.44e-05,
+              "minimum": 2.32e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.3072652568534025e-05,
+              "ordinary95CI": [
+                3.1679812996806086e-05,
+                3.452672994090071e-05
+              ],
+              "arithmeticMedian": 3.0850000000000004e-05,
+              "minimum": 2.76e-05,
+              "maximum": 4.88e-05
+            }
+          },
+          "C03": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4167177838732883e-05,
+              "ordinary95CI": [
+                2.3983344500229552e-05,
+                2.435242026746318e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.05e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.406739621887346e-05,
+              "ordinary95CI": [
+                3.2100029328562475e-05,
+                3.615534033487713e-05
+              ],
+              "arithmeticMedian": 3.115e-05,
+              "minimum": 2.81e-05,
+              "maximum": 7.44e-05
+            }
+          },
+          "C04": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.417249322433753e-05,
+              "ordinary95CI": [
+                2.405062052489686e-05,
+                2.429498349432502e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.26e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.351468799990296e-05,
+              "ordinary95CI": [
+                3.202626936566491e-05,
+                3.507228078631753e-05
+              ],
+              "arithmeticMedian": 3.075e-05,
+              "minimum": 2.88e-05,
+              "maximum": 4.52e-05
+            }
+          },
+          "C05": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.551096137951588e-05,
+              "ordinary95CI": [
+                2.4712746579892654e-05,
+                2.6334958293817365e-05
+              ],
+              "arithmeticMedian": 2.4449999999999998e-05,
+              "minimum": 1.6e-05,
+              "maximum": 2.98e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.503198715014666e-05,
+              "ordinary95CI": [
+                3.354000280489721e-05,
+                3.6590340520450115e-05
+              ],
+              "arithmeticMedian": 3.4800000000000006e-05,
+              "minimum": 2.9e-05,
+              "maximum": 5.65e-05
+            }
+          },
+          "C06": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.5551724082737955e-05,
+              "ordinary95CI": [
+                2.496631248278406e-05,
+                2.615086244917356e-05
+              ],
+              "arithmeticMedian": 2.455e-05,
+              "minimum": 2.24e-05,
+              "maximum": 2.96e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.4615032254038565e-05,
+              "ordinary95CI": [
+                3.316739161265214e-05,
+                3.6125857346317845e-05
+              ],
+              "arithmeticMedian": 3.485e-05,
+              "minimum": 2.65e-05,
+              "maximum": 5.05e-05
+            }
+          },
+          "C07": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.395264850251602e-05,
+              "ordinary95CI": [
+                2.3798800986810554e-05,
+                2.4107490566564572e-05
+              ],
+              "arithmeticMedian": 2.41e-05,
+              "minimum": 2.22e-05,
+              "maximum": 2.45e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.4761041834395e-05,
+              "ordinary95CI": [
+                3.31048518800737e-05,
+                3.650008868155882e-05
+              ],
+              "arithmeticMedian": 3.165e-05,
+              "minimum": 2.92e-05,
+              "maximum": 5.34e-05
+            }
+          },
+          "C08": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.411972349580971e-05,
+              "ordinary95CI": [
+                2.392966986979846e-05,
+                2.4311286560979818e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.0450000000000002e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.3394188124556486e-05,
+              "ordinary95CI": [
+                3.188781121548705e-05,
+                3.497172612326119e-05
+              ],
+              "arithmeticMedian": 3.08e-05,
+              "minimum": 2.84e-05,
+              "maximum": 5.35e-05
+            }
+          }
+        }
+      },
+      "B": {
+        "productionAlgorithmId": "D*L",
+        "M1ByCondition": {
+          "C01": {
+            "nBlocks": 48,
+            "geometricMean": 6.180000000000001,
+            "ordinary95CI": [
+              6.180000000000001,
+              6.180000000000001
+            ],
+            "arithmeticMedian": 6.18,
+            "minimum": 6.18,
+            "maximum": 6.18
+          },
+          "C02": {
+            "nBlocks": 48,
+            "geometricMean": 5.24,
+            "ordinary95CI": [
+              5.24,
+              5.24
+            ],
+            "arithmeticMedian": 5.24,
+            "minimum": 5.24,
+            "maximum": 5.24
+          },
+          "C03": {
+            "nBlocks": 48,
+            "geometricMean": 4.1,
+            "ordinary95CI": [
+              4.1,
+              4.1
+            ],
+            "arithmeticMedian": 4.1,
+            "minimum": 4.1,
+            "maximum": 4.1
+          },
+          "C04": {
+            "nBlocks": 48,
+            "geometricMean": 4.42,
+            "ordinary95CI": [
+              4.42,
+              4.42
+            ],
+            "arithmeticMedian": 4.42,
+            "minimum": 4.42,
+            "maximum": 4.42
+          },
+          "C05": {
+            "nBlocks": 48,
+            "geometricMean": 11.839999999999998,
+            "ordinary95CI": [
+              11.839999999999998,
+              11.839999999999998
+            ],
+            "arithmeticMedian": 11.84,
+            "minimum": 11.84,
+            "maximum": 11.84
+          },
+          "C06": {
+            "nBlocks": 48,
+            "geometricMean": 11.78,
+            "ordinary95CI": [
+              11.78,
+              11.78
+            ],
+            "arithmeticMedian": 11.78,
+            "minimum": 11.78,
+            "maximum": 11.78
+          },
+          "C07": {
+            "nBlocks": 48,
+            "geometricMean": 7.299999999999999,
+            "ordinary95CI": [
+              7.299999999999999,
+              7.299999999999999
+            ],
+            "arithmeticMedian": 7.3,
+            "minimum": 7.3,
+            "maximum": 7.3
+          },
+          "C08": {
+            "nBlocks": 48,
+            "geometricMean": 6.9399999999999995,
+            "ordinary95CI": [
+              6.9399999999999995,
+              6.9399999999999995
+            ],
+            "arithmeticMedian": 6.94,
+            "minimum": 6.94,
+            "maximum": 6.94
+          }
+        },
+        "M2ByCondition": {
+          "C01": {
+            "nBlocks": 48,
+            "geometricMean": 59.58136216325841,
+            "ordinary95CI": [
+              59.58136216325841,
+              59.58136216325841
+            ],
+            "arithmeticMedian": 59.5813621632584,
+            "minimum": 59.5813621632584,
+            "maximum": 59.5813621632584
+          },
+          "C02": {
+            "nBlocks": 48,
+            "geometricMean": 53.72979871609995,
+            "ordinary95CI": [
+              53.72979871609995,
+              53.72979871609995
+            ],
+            "arithmeticMedian": 53.72979871609995,
+            "minimum": 53.72979871609995,
+            "maximum": 53.72979871609995
+          },
+          "C03": {
+            "nBlocks": 48,
+            "geometricMean": 40.46721852194233,
+            "ordinary95CI": [
+              40.46721852194233,
+              40.46721852194233
+            ],
+            "arithmeticMedian": 40.46721852194233,
+            "minimum": 40.46721852194233,
+            "maximum": 40.46721852194233
+          },
+          "C04": {
+            "nBlocks": 48,
+            "geometricMean": 43.497870355581256,
+            "ordinary95CI": [
+              43.497870355581256,
+              43.497870355581256
+            ],
+            "arithmeticMedian": 43.49787035558126,
+            "minimum": 43.49787035558126,
+            "maximum": 43.49787035558126
+          },
+          "C05": {
+            "nBlocks": 48,
+            "geometricMean": 116.98437490686771,
+            "ordinary95CI": [
+              116.98437490686771,
+              116.98437490686771
+            ],
+            "arithmeticMedian": 116.98437490686774,
+            "minimum": 116.98437490686774,
+            "maximum": 116.98437490686774
+          },
+          "C06": {
+            "nBlocks": 48,
+            "geometricMean": 121.33593744412059,
+            "ordinary95CI": [
+              121.33593744412059,
+              121.33593744412059
+            ],
+            "arithmeticMedian": 121.33593744412065,
+            "minimum": 121.33593744412065,
+            "maximum": 121.33593744412065
+          },
+          "C07": {
+            "nBlocks": 48,
+            "geometricMean": 72.89068417062064,
+            "ordinary95CI": [
+              72.89068417062064,
+              72.89068417062064
+            ],
+            "arithmeticMedian": 72.89068417062067,
+            "minimum": 72.89068417062067,
+            "maximum": 72.89068417062067
+          },
+          "C08": {
+            "nBlocks": 48,
+            "geometricMean": 69.19701252118907,
+            "ordinary95CI": [
+              69.19701252118907,
+              69.19701252118907
+            ],
+            "arithmeticMedian": 69.19701252118907,
+            "minimum": 69.19701252118907,
+            "maximum": 69.19701252118907
+          }
+        },
+        "M4ByCondition": {
+          "C01": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.401181776494063e-05,
+              "ordinary95CI": [
+                2.352586478669384e-05,
+                2.450780864399184e-05
+              ],
+              "arithmeticMedian": 2.4350000000000002e-05,
+              "minimum": 1.505e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.3078620476174e-05,
+              "ordinary95CI": [
+                3.145109115252176e-05,
+                3.4790371097157456e-05
+              ],
+              "arithmeticMedian": 3.07e-05,
+              "minimum": 2.79e-05,
+              "maximum": 7.72e-05
+            }
+          },
+          "C02": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.419343545992158e-05,
+              "ordinary95CI": [
+                2.4026115221935203e-05,
+                2.4361920932561218e-05
+              ],
+              "arithmeticMedian": 2.44e-05,
+              "minimum": 2.12e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.347547554080975e-05,
+              "ordinary95CI": [
+                3.161374510366836e-05,
+                3.544684310601719e-05
+              ],
+              "arithmeticMedian": 3.04e-05,
+              "minimum": 2.88e-05,
+              "maximum": 6.77e-05
+            }
+          },
+          "C03": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4210421720611462e-05,
+              "ordinary95CI": [
+                2.4096004471694436e-05,
+                2.4325382267354698e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.29e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.279909225981324e-05,
+              "ordinary95CI": [
+                3.146630856661244e-05,
+                3.4188327200515846e-05
+              ],
+              "arithmeticMedian": 3.075e-05,
+              "minimum": 2.81e-05,
+              "maximum": 4.65e-05
+            }
+          },
+          "C04": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.41601115640506e-05,
+              "ordinary95CI": [
+                2.4060136390201308e-05,
+                2.4260502156799603e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.27e-05,
+              "maximum": 2.45e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.301262349702935e-05,
+              "ordinary95CI": [
+                3.1571729814681344e-05,
+                3.4519277738460336e-05
+              ],
+              "arithmeticMedian": 3.08e-05,
+              "minimum": 2.77e-05,
+              "maximum": 4.72e-05
+            }
+          },
+          "C05": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.5155038293829613e-05,
+              "ordinary95CI": [
+                2.4588476198747053e-05,
+                2.5734654984284e-05
+              ],
+              "arithmeticMedian": 2.4350000000000002e-05,
+              "minimum": 2.23e-05,
+              "maximum": 2.96e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.408128015764611e-05,
+              "ordinary95CI": [
+                3.248333593193176e-05,
+                3.575783163459367e-05
+              ],
+              "arithmeticMedian": 3.11e-05,
+              "minimum": 2.94e-05,
+              "maximum": 5.92e-05
+            }
+          },
+          "C06": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.5282156577746025e-05,
+              "ordinary95CI": [
+                2.4693031668128723e-05,
+                2.5885336795103423e-05
+              ],
+              "arithmeticMedian": 2.45e-05,
+              "minimum": 2.18e-05,
+              "maximum": 2.9449999999999998e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.3492398747157604e-05,
+              "ordinary95CI": [
+                3.2207914661814366e-05,
+                3.4828109351908394e-05
+              ],
+              "arithmeticMedian": 3.225e-05,
+              "minimum": 2.72e-05,
+              "maximum": 4.62e-05
+            }
+          },
+          "C07": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4062241649481947e-05,
+              "ordinary95CI": [
+                2.385976697868515e-05,
+                2.4266434526175344e-05
+              ],
+              "arithmeticMedian": 2.42e-05,
+              "minimum": 2.0549999999999998e-05,
+              "maximum": 2.455e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.483959940511264e-05,
+              "ordinary95CI": [
+                3.2601270094028315e-05,
+                3.723160733333087e-05
+              ],
+              "arithmeticMedian": 3.135e-05,
+              "minimum": 2.91e-05,
+              "maximum": 8.68e-05
+            }
+          },
+          "C08": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4225949169916332e-05,
+              "ordinary95CI": [
+                2.413047277888289e-05,
+                2.4321803329811925e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.31e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.3060724953215194e-05,
+              "ordinary95CI": [
+                3.154655806017722e-05,
+                3.4647568598360285e-05
+              ],
+              "arithmeticMedian": 3.055e-05,
+              "minimum": 2.85e-05,
+              "maximum": 6.39e-05
+            }
+          }
+        }
+      },
+      "C": {
+        "productionAlgorithmId": "C-FF",
+        "M1ByCondition": {
+          "C01": {
+            "nBlocks": 48,
+            "geometricMean": 6.180000000000001,
+            "ordinary95CI": [
+              6.180000000000001,
+              6.180000000000001
+            ],
+            "arithmeticMedian": 6.18,
+            "minimum": 6.18,
+            "maximum": 6.18
+          },
+          "C02": {
+            "nBlocks": 48,
+            "geometricMean": 5.24,
+            "ordinary95CI": [
+              5.24,
+              5.24
+            ],
+            "arithmeticMedian": 5.24,
+            "minimum": 5.24,
+            "maximum": 5.24
+          },
+          "C03": {
+            "nBlocks": 48,
+            "geometricMean": 4.1,
+            "ordinary95CI": [
+              4.1,
+              4.1
+            ],
+            "arithmeticMedian": 4.1,
+            "minimum": 4.1,
+            "maximum": 4.1
+          },
+          "C04": {
+            "nBlocks": 48,
+            "geometricMean": 4.42,
+            "ordinary95CI": [
+              4.42,
+              4.42
+            ],
+            "arithmeticMedian": 4.42,
+            "minimum": 4.42,
+            "maximum": 4.42
+          },
+          "C05": {
+            "nBlocks": 48,
+            "geometricMean": 11.839999999999998,
+            "ordinary95CI": [
+              11.839999999999998,
+              11.839999999999998
+            ],
+            "arithmeticMedian": 11.84,
+            "minimum": 11.84,
+            "maximum": 11.84
+          },
+          "C06": {
+            "nBlocks": 48,
+            "geometricMean": 11.78,
+            "ordinary95CI": [
+              11.78,
+              11.78
+            ],
+            "arithmeticMedian": 11.78,
+            "minimum": 11.78,
+            "maximum": 11.78
+          },
+          "C07": {
+            "nBlocks": 48,
+            "geometricMean": 7.299999999999999,
+            "ordinary95CI": [
+              7.299999999999999,
+              7.299999999999999
+            ],
+            "arithmeticMedian": 7.3,
+            "minimum": 7.3,
+            "maximum": 7.3
+          },
+          "C08": {
+            "nBlocks": 48,
+            "geometricMean": 6.9399999999999995,
+            "ordinary95CI": [
+              6.9399999999999995,
+              6.9399999999999995
+            ],
+            "arithmeticMedian": 6.94,
+            "minimum": 6.94,
+            "maximum": 6.94
+          }
+        },
+        "M2ByCondition": {
+          "C01": {
+            "nBlocks": 48,
+            "geometricMean": 59.58136216325841,
+            "ordinary95CI": [
+              59.58136216325841,
+              59.58136216325841
+            ],
+            "arithmeticMedian": 59.5813621632584,
+            "minimum": 59.5813621632584,
+            "maximum": 59.5813621632584
+          },
+          "C02": {
+            "nBlocks": 48,
+            "geometricMean": 53.72979871609995,
+            "ordinary95CI": [
+              53.72979871609995,
+              53.72979871609995
+            ],
+            "arithmeticMedian": 53.72979871609995,
+            "minimum": 53.72979871609995,
+            "maximum": 53.72979871609995
+          },
+          "C03": {
+            "nBlocks": 48,
+            "geometricMean": 40.46721852194233,
+            "ordinary95CI": [
+              40.46721852194233,
+              40.46721852194233
+            ],
+            "arithmeticMedian": 40.46721852194233,
+            "minimum": 40.46721852194233,
+            "maximum": 40.46721852194233
+          },
+          "C04": {
+            "nBlocks": 48,
+            "geometricMean": 43.497870355581256,
+            "ordinary95CI": [
+              43.497870355581256,
+              43.497870355581256
+            ],
+            "arithmeticMedian": 43.49787035558126,
+            "minimum": 43.49787035558126,
+            "maximum": 43.49787035558126
+          },
+          "C05": {
+            "nBlocks": 48,
+            "geometricMean": 116.98437490686771,
+            "ordinary95CI": [
+              116.98437490686771,
+              116.98437490686771
+            ],
+            "arithmeticMedian": 116.98437490686774,
+            "minimum": 116.98437490686774,
+            "maximum": 116.98437490686774
+          },
+          "C06": {
+            "nBlocks": 48,
+            "geometricMean": 121.33593744412059,
+            "ordinary95CI": [
+              121.33593744412059,
+              121.33593744412059
+            ],
+            "arithmeticMedian": 121.33593744412065,
+            "minimum": 121.33593744412065,
+            "maximum": 121.33593744412065
+          },
+          "C07": {
+            "nBlocks": 48,
+            "geometricMean": 72.89068417062064,
+            "ordinary95CI": [
+              72.89068417062064,
+              72.89068417062064
+            ],
+            "arithmeticMedian": 72.89068417062067,
+            "minimum": 72.89068417062067,
+            "maximum": 72.89068417062067
+          },
+          "C08": {
+            "nBlocks": 48,
+            "geometricMean": 69.19701252118907,
+            "ordinary95CI": [
+              69.19701252118907,
+              69.19701252118907
+            ],
+            "arithmeticMedian": 69.19701252118907,
+            "minimum": 69.19701252118907,
+            "maximum": 69.19701252118907
+          }
+        },
+        "M4ByCondition": {
+          "C01": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4214489546749474e-05,
+              "ordinary95CI": [
+                2.411903794871093e-05,
+                2.4310318896487216e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.3e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.373781589025644e-05,
+              "ordinary95CI": [
+                3.203543175444278e-05,
+                3.553066585053859e-05
+              ],
+              "arithmeticMedian": 3.0999999999999995e-05,
+              "minimum": 2.75e-05,
+              "maximum": 6.98e-05
+            }
+          },
+          "C02": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4221458634380552e-05,
+              "ordinary95CI": [
+                2.4119123412157474e-05,
+                2.4324228055538995e-05
+              ],
+              "arithmeticMedian": 2.4350000000000002e-05,
+              "minimum": 2.28e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.294349285308168e-05,
+              "ordinary95CI": [
+                3.159686079845441e-05,
+                3.434751725127488e-05
+              ],
+              "arithmeticMedian": 3.04e-05,
+              "minimum": 2.77e-05,
+              "maximum": 4.51e-05
+            }
+          },
+          "C03": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4223290376945133e-05,
+              "ordinary95CI": [
+                2.4115629793593485e-05,
+                2.4331431594694758e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.25e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.308601789116923e-05,
+              "ordinary95CI": [
+                3.163786010193248e-05,
+                3.460046211620697e-05
+              ],
+              "arithmeticMedian": 3.04e-05,
+              "minimum": 2.81e-05,
+              "maximum": 4.66e-05
+            }
+          },
+          "C04": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.420348615986006e-05,
+              "ordinary95CI": [
+                2.4076872113376017e-05,
+                2.433076603688436e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.23e-05,
+              "maximum": 2.47e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.302775223777171e-05,
+              "ordinary95CI": [
+                3.148511138378462e-05,
+                3.464597614355056e-05
+              ],
+              "arithmeticMedian": 3.055e-05,
+              "minimum": 2.84e-05,
+              "maximum": 5.45e-05
+            }
+          },
+          "C05": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4461247240685277e-05,
+              "ordinary95CI": [
+                2.4151699464690205e-05,
+                2.4774762432131322e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.36e-05,
+              "maximum": 2.91e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.44807946254125e-05,
+              "ordinary95CI": [
+                3.2556036859305055e-05,
+                3.651934672325022e-05
+              ],
+              "arithmeticMedian": 3.185e-05,
+              "minimum": 2.84e-05,
+              "maximum": 6.77e-05
+            }
+          },
+          "C06": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.452895635863896e-05,
+              "ordinary95CI": [
+                2.4252701959584085e-05,
+                2.480835747895913e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.315e-05,
+              "maximum": 2.88e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.3863070457990595e-05,
+              "ordinary95CI": [
+                3.2023753857615555e-05,
+                3.580803006235127e-05
+              ],
+              "arithmeticMedian": 3.1049999999999996e-05,
+              "minimum": 2.66e-05,
+              "maximum": 7.13e-05
+            }
+          },
+          "C07": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.3904456628844732e-05,
+              "ordinary95CI": [
+                2.3474056967123282e-05,
+                2.434274772020143e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 1.77e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.438142237918967e-05,
+              "ordinary95CI": [
+                3.256715497906845e-05,
+                3.6296759897387154e-05
+              ],
+              "arithmeticMedian": 3.095e-05,
+              "minimum": 2.86e-05,
+              "maximum": 5.47e-05
+            }
+          },
+          "C08": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.406300679167239e-05,
+              "ordinary95CI": [
+                2.3781922251432224e-05,
+                2.4347413541022768e-05
+              ],
+              "arithmeticMedian": 2.4350000000000002e-05,
+              "minimum": 1.925e-05,
+              "maximum": 2.47e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.432626778824837e-05,
+              "ordinary95CI": [
+                3.241842445393055e-05,
+                3.634638882420076e-05
+              ],
+              "arithmeticMedian": 3.0999999999999995e-05,
+              "minimum": 2.85e-05,
+              "maximum": 5.76e-05
+            }
+          }
+        }
+      },
+      "D": {
+        "productionAlgorithmId": "IDFF",
+        "M1ByCondition": {
+          "C01": {
+            "nBlocks": 48,
+            "geometricMean": 6.180000000000001,
+            "ordinary95CI": [
+              6.180000000000001,
+              6.180000000000001
+            ],
+            "arithmeticMedian": 6.18,
+            "minimum": 6.18,
+            "maximum": 6.18
+          },
+          "C02": {
+            "nBlocks": 48,
+            "geometricMean": 5.24,
+            "ordinary95CI": [
+              5.24,
+              5.24
+            ],
+            "arithmeticMedian": 5.24,
+            "minimum": 5.24,
+            "maximum": 5.24
+          },
+          "C03": {
+            "nBlocks": 48,
+            "geometricMean": 4.1,
+            "ordinary95CI": [
+              4.1,
+              4.1
+            ],
+            "arithmeticMedian": 4.1,
+            "minimum": 4.1,
+            "maximum": 4.1
+          },
+          "C04": {
+            "nBlocks": 48,
+            "geometricMean": 4.42,
+            "ordinary95CI": [
+              4.42,
+              4.42
+            ],
+            "arithmeticMedian": 4.42,
+            "minimum": 4.42,
+            "maximum": 4.42
+          },
+          "C05": {
+            "nBlocks": 48,
+            "geometricMean": 11.839999999999998,
+            "ordinary95CI": [
+              11.839999999999998,
+              11.839999999999998
+            ],
+            "arithmeticMedian": 11.84,
+            "minimum": 11.84,
+            "maximum": 11.84
+          },
+          "C06": {
+            "nBlocks": 48,
+            "geometricMean": 11.78,
+            "ordinary95CI": [
+              11.78,
+              11.78
+            ],
+            "arithmeticMedian": 11.78,
+            "minimum": 11.78,
+            "maximum": 11.78
+          },
+          "C07": {
+            "nBlocks": 48,
+            "geometricMean": 7.299999999999999,
+            "ordinary95CI": [
+              7.299999999999999,
+              7.299999999999999
+            ],
+            "arithmeticMedian": 7.3,
+            "minimum": 7.3,
+            "maximum": 7.3
+          },
+          "C08": {
+            "nBlocks": 48,
+            "geometricMean": 6.9399999999999995,
+            "ordinary95CI": [
+              6.9399999999999995,
+              6.9399999999999995
+            ],
+            "arithmeticMedian": 6.94,
+            "minimum": 6.94,
+            "maximum": 6.94
+          }
+        },
+        "M2ByCondition": {
+          "C01": {
+            "nBlocks": 48,
+            "geometricMean": 59.58136216325841,
+            "ordinary95CI": [
+              59.58136216325841,
+              59.58136216325841
+            ],
+            "arithmeticMedian": 59.5813621632584,
+            "minimum": 59.5813621632584,
+            "maximum": 59.5813621632584
+          },
+          "C02": {
+            "nBlocks": 48,
+            "geometricMean": 53.72979871609995,
+            "ordinary95CI": [
+              53.72979871609995,
+              53.72979871609995
+            ],
+            "arithmeticMedian": 53.72979871609995,
+            "minimum": 53.72979871609995,
+            "maximum": 53.72979871609995
+          },
+          "C03": {
+            "nBlocks": 48,
+            "geometricMean": 40.46721852194233,
+            "ordinary95CI": [
+              40.46721852194233,
+              40.46721852194233
+            ],
+            "arithmeticMedian": 40.46721852194233,
+            "minimum": 40.46721852194233,
+            "maximum": 40.46721852194233
+          },
+          "C04": {
+            "nBlocks": 48,
+            "geometricMean": 43.497870355581256,
+            "ordinary95CI": [
+              43.497870355581256,
+              43.497870355581256
+            ],
+            "arithmeticMedian": 43.49787035558126,
+            "minimum": 43.49787035558126,
+            "maximum": 43.49787035558126
+          },
+          "C05": {
+            "nBlocks": 48,
+            "geometricMean": 116.98437490686771,
+            "ordinary95CI": [
+              116.98437490686771,
+              116.98437490686771
+            ],
+            "arithmeticMedian": 116.98437490686774,
+            "minimum": 116.98437490686774,
+            "maximum": 116.98437490686774
+          },
+          "C06": {
+            "nBlocks": 48,
+            "geometricMean": 121.33593744412059,
+            "ordinary95CI": [
+              121.33593744412059,
+              121.33593744412059
+            ],
+            "arithmeticMedian": 121.33593744412065,
+            "minimum": 121.33593744412065,
+            "maximum": 121.33593744412065
+          },
+          "C07": {
+            "nBlocks": 48,
+            "geometricMean": 72.89068417062064,
+            "ordinary95CI": [
+              72.89068417062064,
+              72.89068417062064
+            ],
+            "arithmeticMedian": 72.89068417062067,
+            "minimum": 72.89068417062067,
+            "maximum": 72.89068417062067
+          },
+          "C08": {
+            "nBlocks": 48,
+            "geometricMean": 69.19701252118907,
+            "ordinary95CI": [
+              69.19701252118907,
+              69.19701252118907
+            ],
+            "arithmeticMedian": 69.19701252118907,
+            "minimum": 69.19701252118907,
+            "maximum": 69.19701252118907
+          }
+        },
+        "M4ByCondition": {
+          "C01": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4237377233960884e-05,
+              "ordinary95CI": [
+                2.4141282239359713e-05,
+                2.4333854737158566e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.32e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.287604092414181e-05,
+              "ordinary95CI": [
+                3.120544783098e-05,
+                3.463606972410829e-05
+              ],
+              "arithmeticMedian": 3.03e-05,
+              "minimum": 2.81e-05,
+              "maximum": 6.62e-05
+            }
+          },
+          "C02": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4276188825481868e-05,
+              "ordinary95CI": [
+                2.4215075879630488e-05,
+                2.4337456005504106e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.38e-05,
+              "maximum": 2.47e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.323299536469717e-05,
+              "ordinary95CI": [
+                3.192212522722403e-05,
+                3.4597695894260044e-05
+              ],
+              "arithmeticMedian": 3.07e-05,
+              "minimum": 2.8e-05,
+              "maximum": 4.65e-05
+            }
+          },
+          "C03": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4256227249197724e-05,
+              "ordinary95CI": [
+                2.4189544234118636e-05,
+                2.4323094088513308e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.36e-05,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.3675474346813326e-05,
+              "ordinary95CI": [
+                3.2107757869302873e-05,
+                3.531973727655075e-05
+              ],
+              "arithmeticMedian": 3.125e-05,
+              "minimum": 2.76e-05,
+              "maximum": 5.3e-05
+            }
+          },
+          "C04": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4256745409778085e-05,
+              "ordinary95CI": [
+                2.4175346658348167e-05,
+                2.43384182320136e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 2.36e-05,
+              "maximum": 2.47e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.372491767023542e-05,
+              "ordinary95CI": [
+                3.215633747590951e-05,
+                3.5370012916310445e-05
+              ],
+              "arithmeticMedian": 3.115e-05,
+              "minimum": 2.74e-05,
+              "maximum": 5.32e-05
+            }
+          },
+          "C05": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.520909500474367e-05,
+              "ordinary95CI": [
+                2.4686892899948085e-05,
+                2.5742343256146612e-05
+              ],
+              "arithmeticMedian": 2.44e-05,
+              "minimum": 2.34e-05,
+              "maximum": 2.94e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.402027612126379e-05,
+              "ordinary95CI": [
+                3.284135749434463e-05,
+                3.524151483586922e-05
+              ],
+              "arithmeticMedian": 3.4399999999999996e-05,
+              "minimum": 2.89e-05,
+              "maximum": 4.41e-05
+            }
+          },
+          "C06": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.4794651588254584e-05,
+              "ordinary95CI": [
+                2.425167898036963e-05,
+                2.5349780849423302e-05
+              ],
+              "arithmeticMedian": 2.45e-05,
+              "minimum": 1.71e-05,
+              "maximum": 2.93e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.324215911797411e-05,
+              "ordinary95CI": [
+                3.148753060481879e-05,
+                3.5094563517648356e-05
+              ],
+              "arithmeticMedian": 3.05e-05,
+              "minimum": 2.78e-05,
+              "maximum": 6.99e-05
+            }
+          },
+          "C07": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.369236705892767e-05,
+              "ordinary95CI": [
+                2.2723071729400315e-05,
+                2.4703009502394193e-05
+              ],
+              "arithmeticMedian": 2.4275e-05,
+              "minimum": 9e-06,
+              "maximum": 2.46e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.400208295510861e-05,
+              "ordinary95CI": [
+                3.223080423943037e-05,
+                3.587070420885409e-05
+              ],
+              "arithmeticMedian": 3.07e-05,
+              "minimum": 2.87e-05,
+              "maximum": 5.4e-05
+            }
+          },
+          "C08": {
+            "medianFrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 2.410165480139063e-05,
+              "ordinary95CI": [
+                2.3812071216245918e-05,
+                2.4394760073163253e-05
+              ],
+              "arithmeticMedian": 2.43e-05,
+              "minimum": 1.89e-05,
+              "maximum": 2.47e-05
+            },
+            "P95FrameTimeSeconds": {
+              "nBlocks": 48,
+              "geometricMean": 3.322191292098749e-05,
+              "ordinary95CI": [
+                3.1474912111608224e-05,
+                3.5065880222827464e-05
+              ],
+              "arithmeticMedian": 3.06e-05,
+              "minimum": 2.8e-05,
+              "maximum": 5.54e-05
+            }
+          }
+        }
+      }
+    }
+  },
+  "pythonVersion": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpyVersion": "2.3.5",
+  "completedUtc": "2026-11-03T22:02:29.843996+00:00"
+}

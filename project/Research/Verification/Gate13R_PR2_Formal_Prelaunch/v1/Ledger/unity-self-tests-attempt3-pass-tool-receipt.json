@@ -1,0 +1,20 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 formal prelaunch Unity self-tests attempt 3",
+  "command": "Run-Gate13RPR2FormalUnitySelfTestsV3.ps1 under native Windows PowerShell 5.1",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 2,
+  "gate_tokens": [
+    "UNITY-COMPILE-PASSED",
+    "MEMORY-POLICY-12-OF-12",
+    "TELEMETRY-VALIDATION-8-OF-8",
+    "PATH-SAFE-ATOMIC-PASSED",
+    "LICENSE-ENTITLEMENT-PASSED",
+    "LOCK-HYGIENE-PASSED",
+    "NO-MEASURED-SAMPLE"
+  ],
+  "input_paths": [
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV3/unity-self-tests-summary.json"
+  ]
+}

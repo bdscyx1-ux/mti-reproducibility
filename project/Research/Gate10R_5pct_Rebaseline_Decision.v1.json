@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "decisionId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "createdAt": "2026-10-06T15:45:00+08:00",
+  "status": "PLANNING-BASELINE-NOT-EXECUTION-AUTHORIZATION",
+  "userDecision": {
+    "restartFromGate": 10,
+    "precisionTargetRelativeCiHalfWidth": 0.05,
+    "executionUnit": "one-fresh-unity-editor-process-per-complete-williams-block",
+    "playableSceneCoverageRequired": true,
+    "updateOverallAndExperimentPlans": true
+  },
+  "lineage": {
+    "retainedPrerequisiteGates": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "newActiveGates": ["10R", "11R", "12R", "13R", "15R", "15V-R", "16R"],
+    "oldGate10OnwardStatus": "HISTORICAL-SUPERSEDED-NOT-DELETED",
+    "historicalTimingVarianceAndCandidateNReusable": false,
+    "historicalImplementationAndFailureEvidenceReusableForProspectiveDesign": true,
+    "oldRootsMayBeRetriedResumedOverwrittenOrMerged": false
+  },
+  "executionDesign": {
+    "designId": "one-fresh-unity-process-per-williams-block-gate10r-v1",
+    "independentCluster": "williams-block-unity-process",
+    "fourAlgorithmBlockSize": 4,
+    "twoAlgorithmBlockSize": 2,
+    "algorithmOccursAtMostOncePerProcess": true,
+    "processMayExecuteMoreThanOneBlock": false,
+    "processMayCrossScenarioCohortOrCampaign": false,
+    "campaignLongProcessAllowed": false,
+    "samplesWithinBlockAreIndependent": false,
+    "samplesWithinBlockArePairedCorrelatedObservations": true,
+    "sampleResetRequired": [
+      "scenario-definition",
+      "resolved-scenario",
+      "research-grid",
+      "planner",
+      "experiment-runner",
+      "logger-and-writer-thread",
+      "metrics-collector",
+      "manifest-state",
+      "all-mutable-static-sample-state"
+    ],
+    "failClosedAtSampleFailure": true,
+    "automaticRetry": false,
+    "automaticResume": false
+  },
+  "telemetryAndMemory": {
+    "workingSetSource": "windows-psapi-getprocessmemoryinfo-process_memory_counters_ex.WorkingSetSize",
+    "privateMemorySource": "windows-psapi-getprocessmemoryinfo-process_memory_counters_ex.PrivateUsage",
+    "independentCrossCheck": "cim-win32_process",
+    "allAuthoritativeValuesMustBePositive": true,
+    "managedEndpoint": "post-return-post-full-gc-retained-memory",
+    "sampleRetainedManagedGrowthLimitBytes": 134217728,
+    "blockRetainedManagedGrowthLimitBytes": 134217728,
+    "blockWorkingSetGrowthLimitBytes": 536870912,
+    "blockPrivateMemoryGrowthLimitBytes": 536870912,
+    "thresholdsMayBeRelaxedAfterPilotObservation": false
+  },
+  "plannedMatrix": {
+    "status": "TARGET-FOR-GATE11R-SPECIFICATION-AND-REGENERATION",
+    "uniqueCanonicalScenarioCount": 53,
+    "campaignConditionCount": 74,
+    "eligibleAlgorithmCellCount": 212,
+    "sharedScenarioCount": 32,
+    "heterogeneousScenarioCount": 21,
+    "heterogeneousScenarioHasTwoSeparateCohorts": true,
+    "newBundleRoot": "Research/FormalScenarios/Gate11R_5pct/v1",
+    "oldBundleIsDirectExecutionInput": false
+  },
+  "playableCoverage": {
+    "sceneContractId": "gate11r-playable-experiment-scene-v1",
+    "directionGlyphId": "research-visual-direction-glyph-v1",
+    "sceneRoot": "Assets/_Scenes/Research/Playable/Gate11R_5pct/v1",
+    "uniqueUnitySceneTarget": 53,
+    "campaignLaunchProfileTarget": 74,
+    "algorithmCellPresetTarget": 212,
+    "onePhysicalScenePerStatisticalRepeat": false,
+    "repeatMapping": "Every repeat maps to its canonical scenario scene plus campaign profile, algorithm preset, Williams block ordinal, position, and run identity.",
+    "editorPlayRequired": true,
+    "headlessBenchmarkLoadsPlayableScene": false,
+    "visualizationExcludedFromTimingAnalysis": true,
+    "formalResultExactStructuralReplayRequiredBeforeRecording": true,
+    "obsRecordingOccursAfterStatisticsFreeze": true,
+    "originalScenesMayBeModified": false
+  },
+  "plannedPilot": {
+    "gate": "12R",
+    "root": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v1",
+    "analysisRole": "NON-FORMAL-EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "anchorSharedScenarioIds": [
+      "core-r01-s1-shared",
+      "core-r07-s2-shared",
+      "grid-scale-g256-shared",
+      "agent-scale-a512-shared",
+      "dynamic-footprint-f225-shared",
+      "reachability-c8-strict-shared"
+    ],
+    "anchorHeterogeneousScenarioIds": [
+      "core-r01-s1-hetero",
+      "core-r07-s2-hetero",
+      "goal-count-g32-hetero"
+    ],
+    "measuredCampaignCount": 12,
+    "measuredBlocksPerCampaign": 32,
+    "measuredBlockProcessCount": 384,
+    "measuredSampleCount": 1152,
+    "excludedWarmupBlockProcessCount": 8,
+    "excludedWarmupSampleCount": 24,
+    "freshColdStructuralControlProcessCount": 36,
+    "freshColdStructuralControlSampleCount": 36,
+    "telemetryProbeProcessCount": 1,
+    "plannedPilotWorkloadProcessCountIncludingWarmupAndColdControls": 428,
+    "plannedPilotWorkloadSampleCountIncludingWarmupAndColdControls": 1212,
+    "plannedPilotUnityProcessCountIncludingTelemetryProbe": 429,
+    "prePilotVerificationFixtureProcessesExcludedFromCounts": true,
+    "singleAuthorizedExecutionOnly": true
+  },
+  "precision": {
+    "targetId": "two-sided-95pct-relative-ci-half-width-5pct-v1",
+    "targetRelativeHalfWidth": 0.05,
+    "confidenceLevel": 0.95,
+    "logHalfWidth": 0.048790164169432,
+    "criticalValue": 1.96,
+    "minimumBlocksPerCampaign": 32,
+    "cycleMultiple": 4,
+    "pilotSigmaEstimator": "maximum one-sided-90pct-upper-confidence-bound for marginal log SD and paired log-difference SD across the fixed anchor cells",
+    "rawFormula": "ceil((1.96 * sigma_upper / ln(1.05))^2)",
+    "formalFormula": "next_multiple_of_4(max(32, raw_n))",
+    "familyCandidate": "maximum of marginal and paired requirements",
+    "sharedP1P3Harmonization": "use the larger shared-cohort requirement",
+    "inheritedCap148Applies": false,
+    "newHardCapDefined": false,
+    "resourceDecision": "Gate 12R reports uncapped required n, wall time, storage, process count, and a feasibility decision package; any cap, scope reduction, or precision change requires a separate prospective amendment before Gate 13R.",
+    "significanceTrendOrFavorableEarlyStoppingAllowed": false
+  },
+  "gateSequence": [
+    {
+      "gate": "10R",
+      "deliverable": "New fairness, block-process, reset, telemetry, carryover, provenance, atomicity, and metric contracts plus verified runner skeleton",
+      "unityCampaignAuthorized": false
+    },
+    {
+      "gate": "11R",
+      "deliverable": "New scenario/preregistration bundle and complete Playable Scene/campaign-profile/algorithm-preset coverage",
+      "timingPilotAuthorized": false
+    },
+    {
+      "gate": "12R",
+      "deliverable": "One fresh non-formal process-reuse pilot, 5% candidate n, correlation and resource feasibility",
+      "requiresSeparateAuthorization": true
+    },
+    {
+      "gate": "13R",
+      "deliverable": "Nonexecuting formal preparation followed by separately authorized block-process formal campaign",
+      "requiresSeparateFormalAuthorization": true
+    },
+    {
+      "gate": "15R",
+      "deliverable": "Preregistered block-aware statistical analysis and frozen result tables",
+      "requiresSuccessfulGate13R": true
+    },
+    {
+      "gate": "15V-R",
+      "deliverable": "Deterministic playable replay traces and OBS recordings using the Gate 11R scenes",
+      "timingEvidence": false
+    },
+    {
+      "gate": "16R",
+      "deliverable": "Paper and reproducibility package",
+      "requiresCompletedAnalysisAndVisualizationManifest": true
+    }
+  ],
+  "authorizationBoundary": {
+    "thisFileAuthorizesGate10RImplementation": false,
+    "thisFileAuthorizesUnityExecution": false,
+    "thisFileAuthorizesScenarioOrSceneGeneration": false,
+    "thisFileAuthorizesPilot": false,
+    "thisFileAuthorizesFormalCampaign": false,
+    "nextRequiredAuthorization": "Gate 10R specification and test-design work only"
+  }
+}

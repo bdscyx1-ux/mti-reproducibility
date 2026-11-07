@@ -1,0 +1,83 @@
+{
+  "schema": "gate14re-me-status-v6",
+  "studyId": "Gate14Re-ME",
+  "status": "D3_V2_MANAGED_HEAP_OCCUPANCY_SOURCE_FROZEN_KNOWN_ANSWER_PASSED",
+  "version": 6,
+  "updatedAtUtc": "2026-10-17T05:49:36.3894121Z",
+  "priorD3Failures": [
+    {
+      "attempt": "runtime-qualification-attempt-001",
+      "status": "FAILED_CLOSED_THREAD_LOCAL_COUNTER_ZERO_RESPONSE",
+      "freezeReceiptSha256": "042f3ca2d07b4b78db04a7b272929f6052cc51739c0aeeaa4e6998b75f5554c8"
+    },
+    {
+      "attempt": "d3-runtime-compatibility-amendment-attempt-001",
+      "status": "FAILED_CLOSED_PROCESS_WIDE_API_NOT_IN_COMPILE_SURFACE",
+      "freezeReceiptSha256": "4c2671b3158e9aaa1276e133778850adf44c5ccde8734110e734548abbb21074"
+    }
+  ],
+  "d3EndpointReplacement": {
+    "attempt": "d3-endpoint-replacement-attempt-002",
+    "authorizationId": "gate14re-me-d3-endpoint-replacement-attempt-002",
+    "endpointId": "D3",
+    "semanticVersion": 2,
+    "endpointName": "event-boundary managed-heap occupancy",
+    "counterId": "GC.GetTotalMemory(false)-managed-heap-occupancy-v1",
+    "primaryRawField": "eventGroupManagedHeapBytesEnd",
+    "cumulativeAllocationCounter": false,
+    "knownAnswerPassed": true,
+    "negativeControlPassed": true,
+    "positiveControlsPassed": true,
+    "scaleSeparationPassed": true,
+    "reclamationControlPassed": true,
+    "knownAnswerReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/d3-known-answer/d3-known-answer-receipt.v1.json",
+    "knownAnswerReceiptSha256": "e8b16d76e339c87fe5485edcd68c8a6518ce40a5e49acf15b6e8cc6dadfc65aa",
+    "instrumentContractRelativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-instrument-contract.v2.json",
+    "instrumentContractSha256": "e402dfc90362a3ac07f5342d218f19c67d31d46f82bec584d5d817fbccb9f0bf",
+    "sourceFreezeManifestRelativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/source-freeze-manifest.v1.json",
+    "sourceFreezeManifestSha256": "4ed57ddfbfb2d0b6b73e2b8c0480c0d2fce575505c580afe0efc1af622ddea0a"
+  },
+  "currentQualifiedCapabilities": {
+    "typedParquetRuntimeFrozen": true,
+    "unityCompilationPassedForCurrentProjectSources": true,
+    "d2GridReadProxyPassed": true,
+    "d2SemanticInvariancePassed": true,
+    "d3V1AllocationCounterQualified": false,
+    "d3V2ManagedHeapOccupancyStandaloneQualified": true,
+    "d3V2IntegratedIntoQualificationRunner": false,
+    "d3V2IntegratedIntoOutputSchema": false,
+    "d4PersistentStateSizerPassed": true,
+    "clockMonotonicityPassed": true,
+    "exportKnownAnswerStatus": "NOT_RUN_IN_THIS_AUTHORIZATION"
+  },
+  "scientificBoundary": {
+    "sourceOnlyFreeze": true,
+    "algorithmSourcesModified": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "authorizationState": {
+    "retryPriorD3AttemptsAuthorized": false,
+    "integrateD3V2IntoQualificationRunnerAuthorized": false,
+    "versionOutputSchemaForD3V2Authorized": false,
+    "runtimeQualificationAttempt002Authorized": false,
+    "dataExporterKnownAnswerAuthorizedNow": false,
+    "qualificationScheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize the next minimum stage to version the raw output schema and integrate D3 v2 into a new qualification runner revision, followed only by compilation/static conformance checks. No algorithm lane or full runtime qualification is implied."
+}

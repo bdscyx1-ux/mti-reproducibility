@@ -1,0 +1,81 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-pre-pilot-canonical-reference-route-wrapper-v6",
+    "createdAtUtc":  "2026-10-07T15:06:05.8935503Z",
+    "sourceSha256":  "ca7fb7566aae8382793adbc16cdc60dd3010f0157803f3bd275973cc4f4441d3",
+    "derivedSha256":  "2e4490a7af9bd397b0d5c4c43b375eff18b13c21399fbe27b744b1530091eb2a",
+    "routes":  [
+                   {
+                       "from":  "Run-Gate12RProcessReuseBlock.ps1",
+                       "to":  "Run-Gate12RProcessReuseBlockV4.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RStaticUnitAudit.ps1",
+                       "to":  "Run-Gate12RStaticUnitAuditV4.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RCompile.ps1",
+                       "to":  "Run-Gate12RCompileV3.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RTelemetryProbe.ps1",
+                       "to":  "Run-Gate12RTelemetryProbeV3.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RColdReference.ps1",
+                       "to":  "Run-Gate12RColdReferenceV3.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RPilot.ps1",
+                       "to":  "Run-Gate12RPilotV5.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RBlockAndRegressionGates.ps1",
+                       "to":  "Run-Gate12RBlockAndRegressionGatesV5.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RValidationOnlyPrePilotAudit.ps1",
+                       "to":  "Run-Gate12RValidationOnlyPrePilotAuditV3.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "attempt=[int]$plan.attempt",
+                       "to":  "attempt=[int]$provenance.attempt",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate12r-pre-pilot-gates-execution-receipt-v1\u0027",
+                       "to":  "receiptKind=\u0027gate12r-pre-pilot-gates-execution-receipt-v6\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "checkpointKind=\u0027gate12r-pre-pilot-verification-checkpoint-v1\u0027",
+                       "to":  "checkpointKind=\u0027gate12r-pre-pilot-verification-checkpoint-v6\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "manifestKind=\u0027gate12r-pre-pilot-partial-output-manifest-v1\u0027",
+                       "to":  "manifestKind=\u0027gate12r-pre-pilot-partial-output-manifest-v6\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate12r-pre-pilot-gates-failure-receipt-v1\u0027",
+                       "to":  "receiptKind=\u0027gate12r-pre-pilot-gates-failure-receipt-v6\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "failedPilotPreservationReauditSha256":  "fee9498d72ede5553f6fb80015fb8143ce7e57a597fb3736e31425c68e545b48",
+    "failedPilotRootsModified":  false,
+    "failedPilotResumeAttempted":  false,
+    "researchAlgorithmSemanticsChanged":  false,
+    "thresholdsChanged":  false,
+    "pilotRootCreatedBeforeChild":  false,
+    "formalRootCreatedBeforeChild":  false
+}

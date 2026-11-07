@@ -1,0 +1,98 @@
+{
+  "schema": "gate14re-me-d3-runtime-compatibility-amendment-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-runtime-compatibility-amendment-attempt-001",
+  "status": "FROZEN_FAIL_CLOSED_D3_COMPATIBILITY_COMPILE_API_UNAVAILABLE",
+  "version": 1,
+  "frozenAtUtc": "2026-10-17T05:34:21.6409001Z",
+  "outcome": {
+    "candidateCounterId": "GC.GetTotalAllocatedBytes(precise:true)-process-wide-v2",
+    "unityCompilationPassed": false,
+    "compilerErrorCode": "CS0117",
+    "compilerError": "System.GC does not contain a definition for GetTotalAllocatedBytes",
+    "d3RuntimeKnownAnswerExecuted": false,
+    "negativeControlsExecuted": 0,
+    "positiveControlsExecuted": 0,
+    "candidateQualified": false,
+    "versionedD3InstrumentContractCreated": false,
+    "successfulSourceImplementationFreezeCreated": false,
+    "failureEvidenceFrozen": true
+  },
+  "frozenBindings": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Runtime_Compatibility_Amendment_Authorization.v1.json",
+      "sha256": "a3d6d370caba32c586a57ab205bcb8dc5e745130c87410aeec35318cc837463c"
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Runtime_Compatibility_Amendment_Plan.v1.md",
+      "sha256": "9db7d8e0e3c04d719ebd789da5d3cbf8b5f4368f5bc82bdb68a6c2749ae58df1"
+    },
+    {
+      "role": "preexecution-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/preexecution-manifest.v1.json",
+      "sha256": "bbf989968c12813143b32694950639e3998cd5cd5c936eb043997fb8899ea8f0"
+    },
+    {
+      "role": "unity-log",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/unity-d3-known-answer.log",
+      "sha256": "96b5e5558e2c960600c2752479c5f2a404a62243a0a2f0a2673b754534ba78a0"
+    },
+    {
+      "role": "failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failure-receipt.v1.json",
+      "sha256": "abffc0f216a18666ffb046ab0d7ebe9058e54a15cb07d3ecadd5715352c91ee1"
+    },
+    {
+      "role": "failure-evidence-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failure-evidence-manifest.v1.json",
+      "sha256": "587a8cbc94da4a551ced320a28dc02181c1858d5bba4c617763c915f9f98b16c"
+    },
+    {
+      "role": "status-v5",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v5.json",
+      "sha256": "66b6a3adbd2c889d19994fa4f3b2a1e5f69cbe60bddb81040b713e3013c3dc80"
+    },
+    {
+      "role": "validator",
+      "relativePath": "Research/Validate-Gate14ReMED3RuntimeCompatibilityAmendmentAttempt001V1.py",
+      "sha256": "f3768bce74bce5c7aa3f0f5bea72d7e12ce48b9b4cc7b67fdfc08625ee15ef6b"
+    },
+    {
+      "role": "validation-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/validation-receipt.v1.json",
+      "sha256": "b5660cc15d83f40d79dde9cbbbe433b4242d0ba277d354ae94375cb7d62943dc"
+    }
+  ],
+  "validation": {
+    "status": "PASS_FAILURE_EVIDENCE_FROZEN",
+    "checksPassed": 120,
+    "checksFailed": 0,
+    "currentUnityProcessCount": 0
+  },
+  "activeProjectDisposition": {
+    "failedCandidateCounterInActiveAssets": false,
+    "failedCandidateHarnessInActiveAssets": false,
+    "failedCandidateSourcePreservedReadOnlyUnderVerification": true,
+    "priorFrozenInstrumentationSha256": "e3b52047276a3ae6961914881ba6aaf78bb6a913ca70e4edebb974b2b6deacdb",
+    "priorFrozenLoadRunnerSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+    "projectCompileRevalidatedAfterCandidateWithdrawal": false
+  },
+  "scientificBoundary": {
+    "automaticRetryPerformed": false,
+    "fallbackCounterTested": false,
+    "runtimeQualificationAttempt001Retried": false,
+    "runtimeQualificationAttempt002Started": false,
+    "dataExporterKnownAnswerRun": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "nextRequiredAction": "Do not retry this attempt. A separate minimum authorization is required to investigate a different Unity-compatible D3 mechanism or an explicitly redefined allocation-related endpoint; runtime-qualification attempt-002 remains unauthorized."
+}

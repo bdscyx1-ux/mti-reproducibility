@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "provenanceKind": "gate13r-pr2-s48-h48-formal-execution-adapter-provenance-v3",
+  "provenanceId": "gate13r-pr2-s48-h48-formal-execution-adapter-provenance-v3",
+  "createdAtUtc": "2026-10-08T17:26:29.8139578Z",
+  "createdAtLocal": "2026-10-09T01:26:29.8159637+08:00",
+  "timeZone": "Asia/Shanghai",
+  "status": "PRELAUNCH-VALIDATED-CANDIDATE / FORMAL-ROOT-ABSENT / FORMAL-RECEIPT-ABSENT",
+  "formalRootResolved": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1",
+  "authorization": {
+    "authorizationId": "gate13r-pr2-s48-h48-formal-raw-acquisition-two-phase-authorization-v2",
+    "relativePath": "Research/Gate13R_PR2_Formal_Execution_Authorization.v2.json",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Formal_Execution_Authorization.v2.json",
+    "sha256": "b39323958710c4962cf868ae3ba6057f42649e8f23fb7f5feb04ffd12c438759"
+  },
+  "supplementalAuthorization": {
+    "authorizationId": "gate13r-pr2-two-phase-supplemental-authorization-v1",
+    "relativePath": "Research/Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt",
+    "sha256": "4af69eb71362f89698d38760db335985a015af49f176dd7f81805cb6d2d4821a"
+  },
+  "twoPhaseCommit": {
+    "id": "gate13r-pr2-raw-analysis-two-phase-commit-v1",
+    "amendment": {
+      "relativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+      "sha256": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df"
+    },
+    "specification": {
+      "relativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+      "sha256": "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5"
+    },
+    "ordinaryPostCollectionToolFailureMayRerunUnity": false,
+    "analysisFailureMayRerunUnity": false,
+    "formalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "activeFrozenPreparation": {
+    "readiness": {
+      "relativePath": "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+      "sha256": "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc"
+    },
+    "config": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+      "sha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"
+    },
+    "schedule": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    "scheduleManifest": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+      "sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"
+    },
+    "storageWallClockPreflight": {
+      "relativePath": "Research/Gate13R_PR2_Storage_WallClock_Preflight.v2.json",
+      "sha256": "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435"
+    },
+    "preparationProvenance": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json",
+      "sha256": "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56"
+    },
+    "preparationSchema": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json",
+      "sha256": "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e"
+    }
+  },
+  "unityAdapter": {
+    "sourceRelativePath": "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3.cs",
+    "sourceSha256": "a47a731c979d58304230a150947ca1bb50207d13d1214b7d4de6e683bba6b5d6",
+    "targetRelativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV2.cs",
+    "targetSha256": "af9156588bc259dfa8cafeec4adb82c93a2b07f5e2ae772b4b0fd4115dce28a8",
+    "derivationReceiptRelativePath": "Research/Gate13R_PR2_Formal_Unity_Adapter_Derivation_Receipt.v2.json",
+    "derivationReceiptSha256": "5e188d2efe8187efaa4bd83e4a830a2e818bde62692ac57974106313199045f6",
+    "algorithmScenarioResetTelemetryMemorySemanticsChanged": false,
+    "formalBindingsAndTwoOrFourSampleCohortAcceptanceChanged": true
+  },
+  "executionImplementation": [
+    {
+      "role": "shared-module-and-raw-commit-auditor",
+      "relativePath": "Research/Gate13RPR2FormalExecutionV3.psm1",
+      "sha256": "5eaf15a3f1891d17849cf5c417aabaa03bcac7d25771e83ab905060b2db74b74"
+    },
+    {
+      "role": "one-block-one-process-wrapper",
+      "relativePath": "Research/Run-Gate13RPR2FormalBlockV4.ps1",
+      "sha256": "30bf36239aaf321a4d454bf71f777a668476b1b962021d30ec3bb4d6abe25f54"
+    },
+    {
+      "role": "strict-serial-one-shot-orchestrator",
+      "relativePath": "Research/Run-Gate13RPR2FormalCampaignV4.ps1",
+      "sha256": "66821f7642a260a80a5ea30f3e45a4e93e4dbc0c78095a3bcf2800d86bf65b53"
+    },
+    {
+      "role": "telemetry-probe",
+      "relativePath": "Research/Run-Gate13RPR2FormalTelemetryProbeV3.ps1",
+      "sha256": "7bad2277fe642881c3289fc25333e16b2353b1676686bc114a584d47e3b07dbc"
+    },
+    {
+      "role": "unity-compile-memory-atomic-self-tests",
+      "relativePath": "Research/Run-Gate13RPR2FormalUnitySelfTestsV3.ps1",
+      "sha256": "a05ac8097d9fc2d5bc39e2cd08ca7e0b6d8208db99ca5d2b8e8f85b337513918"
+    },
+    {
+      "role": "unit-and-two-phase-fixtures",
+      "relativePath": "Research/Test-Gate13RPR2FormalExecutionV4.ps1",
+      "sha256": "c0814b287f7d2fe54298ecd6f38e3427cbf41cbc4db8f50c85a9cd8b7e704e14"
+    }
+  ],
+  "prelaunchEvidence": {
+    "prelaunchTestDesign": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Prelaunch_Test_Design.v1.md",
+      "sha256": "84c29a754ab419e95acacca0b27afabd261895c1f01affd572be6d26bb52c006"
+    },
+    "latestUnitSummary": {
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/AdapterUnitV5/summary.json",
+      "sha256": "59f9d702c4900918647ec7efbdca299716bbe097bee37283b66a55f0072aa821",
+      "result": "PASS-35-OF-35"
+    },
+    "unitySelfTestsSummary": {
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV3/unity-self-tests-summary.json",
+      "sha256": "1feaf6a2714e5cb9cff6e07237baafbe03699681ff1b26289554898cee8b2614",
+      "result": "PASS"
+    },
+    "telemetryProbeSummary": {
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/TelemetryProbeV3/Probe.summary.json",
+      "sha256": "d75e8884450b5291aa8e8f599185f17aa4c2b1417e906ed00bfd25f8d4a5fc5e",
+      "result": "PASS"
+    },
+    "staticScheduleSummary": {
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/adapter-static-schedule-summary.v4.json",
+      "sha256": "73f1294515cb7ae0a279c53886654a8f61cffcba060f0c03c0f8564afb29dd4c",
+      "result": "PASS-36-OF-36"
+    }
+  },
+  "processContract": {
+    "selectedDesign": "S48-H48",
+    "campaignCount": 74,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "maximumCompleteWilliamsBlocksPerProcess": 1,
+    "automaticRetry": false,
+    "automaticResume": false,
+    "topUp": false,
+    "partialAttemptMerge": false
+  },
+  "authorizationBoundary": {
+    "formalRootExistedAtCreation": false,
+    "formalExecutionReceiptExistedAtCreation": false,
+    "formalExecutionStatusExistedAtCreation": false,
+    "unityEditorProcessCountAtCreation": 0,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  }
+}

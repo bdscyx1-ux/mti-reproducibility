@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate12r-managed-memory-aggregation-amendment-v1",
+  "status": "FROZEN-BEFORE-FRESH-PILOT-ATTEMPT-4",
+  "authorizationBasis": "User explicitly authorized changing the former 128 MiB retained managed-memory hard gate and continuing Gate 12R until passage.",
+  "supersedesOnly": [
+    "The fixed 134217728-byte block retained-managed-growth limit in Gate12R_5pct_ProcessReuse_Pilot_Specification.v1.md.",
+    "The fixed 134217728-byte block retained-managed-growth value in Gate12R_5pct_ProcessReuse_Pilot_Plan.v3.json."
+  ],
+  "unchanged": {
+    "sampleRetainedManagedGrowthLimitBytes": 134217728,
+    "blockWorkingSetGrowthLimitBytes": 536870912,
+    "blockPrivateMemoryGrowthLimitBytes": 536870912,
+    "fullGcBoundary": "GC.Collect; WaitForPendingFinalizers; GC.Collect",
+    "telemetry": "PSAPI in-process with independent CIM cross-check",
+    "precisionRelativeHalfWidth": 0.05,
+    "formalSampleCap": null,
+    "williamsOrder": true,
+    "scenarioMatrix": true,
+    "algorithmSemantics": true,
+    "perSampleReset": true,
+    "failClosed": true
+  },
+  "newBlockRule": {
+    "policyId": "gate12r-sample-128mib-block-128mib-per-sample-v1",
+    "formula": "maximumBlockRetainedManagedGrowthBytes = checked(134217728 * expectedSampleCount)",
+    "twoSampleBlockLimitBytes": 268435456,
+    "fourSampleBlockLimitBytes": 536870912,
+    "negativeGrowthAllowedAndRecorded": true,
+    "rawPostWorkloadGrowthDiagnosticOnly": true
+  },
+  "historicalAttempts": {
+    "attempt3Status": "FAILED-NO-RESUME-NO-MERGE",
+    "attempt3EligibleForAnalysis": false,
+    "attempt3Root": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v3",
+    "attempt3CompletedMeasuredBlocks": 328
+  },
+  "prospectiveRequirements": [
+    "Use a new versioned Unity command and pilot plan.",
+    "Run parser, static, unit, compile, telemetry, positive, negative fail-closed, independent-process, cold structural, retained-regression, hash/provenance, and validation-only gates before the pilot.",
+    "Verify the 128 MiB sample gate independently from the scaled block gate.",
+    "Verify exact two-sample and four-sample block limits and checked arithmetic.",
+    "Run the next pilot from an entirely fresh output root and do not merge any prior attempt."
+  ],
+  "gate13rAuthorized": false
+}

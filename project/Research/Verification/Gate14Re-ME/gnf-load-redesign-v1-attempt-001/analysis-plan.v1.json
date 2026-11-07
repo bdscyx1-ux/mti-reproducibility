@@ -1,0 +1,74 @@
+{
+  "schema": "gate14re-me-gnf-load-redesign-analysis-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "redesignAttemptId": "gnf-load-redesign-v1-attempt-001",
+  "status": "FROZEN_BEFORE_CANDIDATE_COMPUTATION",
+  "frozenAtUtc": "2026-10-19T11:07:51.5585643Z",
+  "sourceAttemptId": "load-qualification-execution-attempt-009",
+  "sourceDataState": "SEALED_READ_ONLY; original qualification terminal PASS is not claimed",
+  "preservedStructure": {
+    "factorLevelCounts": {"G": 3, "N": 4, "F": 4},
+    "coreFactorialCells": 48,
+    "coreSeedsPerCell": 3,
+    "coreSuperblocks": 144,
+    "stressContextStrata": 18,
+    "totalQualificationSuperblocks": 162,
+    "algorithmCount": 6,
+    "qualificationAlgorithmLanes": 972,
+    "plannedFreshProcessesIncludingInstrumentOracleAndEmptyBoundary": 1147,
+    "pairedInputsAndWilliamsOrder": "unchanged",
+    "metricsGatesAndScientificQuestion": "unchanged except that the high-anchor coordinate must bind to the newly approved maxima"
+  },
+  "fixedLowerLevels": {
+    "G": [64, 128],
+    "N": [8, 32, 128],
+    "F": [1, 9, 81]
+  },
+  "oldMaximumLevels": {"G": 256, "N": 512, "F": 225},
+  "predeclaredCandidates": [
+    {
+      "candidateId": "MILD",
+      "maximumLevels": {"G": 224, "N": 384, "F": 196},
+      "rationale": "smallest named reduction; G remains a multiple of 32, N a multiple of 64, and F is 14 squared"
+    },
+    {
+      "candidateId": "BALANCED",
+      "maximumLevels": {"G": 192, "N": 256, "F": 144},
+      "rationale": "middle reduction; G is 3 x 64, N remains a power of two, and F is 12 squared"
+    },
+    {
+      "candidateId": "STRONG",
+      "maximumLevels": {"G": 160, "N": 192, "F": 100},
+      "rationale": "largest named reduction while every new maximum remains strictly above the retained penultimate level; F is 10 squared"
+    }
+  ],
+  "candidateValidityRules": [
+    "128 < Gmax < 256 and Gmax is divisible by 32",
+    "128 < Nmax < 512 and Nmax is divisible by 64",
+    "81 < Fmax < 225 and Fmax is a perfect square",
+    "Fmax >= 16 so every existing same-tick partition level remains feasible",
+    "all lower levels and all structure outside the three maxima remain byte-for-byte conceptually unchanged"
+  ],
+  "runtimeModel": {
+    "scope": "formal core algorithm-lane process walls plus strict-serial inter-process gaps",
+    "interpolation": "for each algorithm and timing statistic, multilinear interpolation of log(duration) on log2(G), log2(N), and log2(F), using the surrounding observed core factorial cells",
+    "pointStatistic": "process-wall P50 of the three pilot lanes per algorithm x core cell",
+    "conservativeStatistic": "maximum process wall of the three pilot lanes per algorithm x core cell",
+    "pointFormulaPerB": "sum 288 interpolated cell P50 values plus 288 pooled lane-gap P50 values",
+    "conservativeFormulaPerB": "sum 288 interpolated cell maxima plus 288 pooled lane-gap P99 values",
+    "planningFormula": "conservative estimate x 1.20 operational headroom",
+    "reportedB": 36,
+    "decisionGateHours": 168,
+    "modelLimit": "new maxima are unobserved; interpolation is planning-only and must be recalibrated by a new qualification"
+  },
+  "recommendationRule": "Evaluate candidates in MILD, BALANCED, STRONG order and recommend the least aggressive candidate whose B=36 planning budget with 20 percent headroom is below 168 hours. If none passes, make no GNF recommendation. User approval remains required before any refreeze or implementation change.",
+  "outputs": [
+    "input-file-inventory.v1.jsonl",
+    "candidate-runtime-estimates.v1.csv",
+    "candidate-runtime-estimates.v1.json",
+    "recommended-gnf-design.v1.json",
+    "redesign-report.v1.md",
+    "file-manifest.v1.jsonl",
+    "terminal-receipt.v1.json"
+  ]
+}

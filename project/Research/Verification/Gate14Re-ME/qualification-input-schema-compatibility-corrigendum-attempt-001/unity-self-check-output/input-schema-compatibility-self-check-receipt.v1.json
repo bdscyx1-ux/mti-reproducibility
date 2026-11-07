@@ -1,0 +1,155 @@
+{
+    "schema": "gate14re-me-input-schema-compatibility-unity-self-check-receipt-v1",
+    "studyId": "Gate14Re-ME",
+    "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-001",
+    "status": "FAILED_CLOSED_INPUT_SCHEMA_COMPATIBILITY_UNITY_SELF_CHECK",
+    "createdAtUtc": "2026-10-17T08:56:40.1509611Z",
+    "completedAtUtc": "2026-10-17T08:56:40.4774673Z",
+    "unityVersion": "2022.3.30f1c1",
+    "unityExecutablePath": "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe",
+    "unityExecutableSha256": "ad243c5b18041d674874864cea86626623ff366a6363aede529fec923e80579e",
+    "passed": false,
+    "terminal": true,
+    "authorizationHeaderPassed": false,
+    "planningBindingHeaderPassed": false,
+    "schemaKnownAnswerReceiptPassed": false,
+    "parentAndProtectedHashesPassed": true,
+    "reflectionTargetFound": false,
+    "jsonUtilitySerializedTopology": false,
+    "jsonUtilityRoundTripPreservedTopology": false,
+    "positiveOracleHeaderPassed": false,
+    "missingTopologyJsonControlConstructed": false,
+    "missingTopologyOracleHeaderFailedAsExpected": false,
+    "mismatchedTopologyJsonControlConstructed": false,
+    "mismatchedTopologyOracleHeaderFailedAsExpected": false,
+    "expectedOracleFailureMessage": "Event-group topology must match the input context.",
+    "missingTopologyObservedFailure": "",
+    "mismatchedTopologyObservedFailure": "",
+    "prohibitedRootsAbsentBefore": true,
+    "prohibitedRootsAbsentAfter": false,
+    "plannerConstructedOrInvoked": false,
+    "algorithmLaneExecuted": false,
+    "scheduleInputOrIdentityGenerated": false,
+    "qualificationMeasuredRootCreated": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "bindings": [
+        {
+            "role": "authorization",
+            "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Input_Schema_Compatibility_Corrigendum_Authorization.v1.json",
+            "lengthBytes": 5847,
+            "expectedSha256": "dc8a9e5563e0b428f895f7de56265e78d51b3c57b59295fc9ad4f0bf86c7d6b6",
+            "actualSha256": "dc8a9e5563e0b428f895f7de56265e78d51b3c57b59295fc9ad4f0bf86c7d6b6",
+            "matched": true
+        },
+        {
+            "role": "corrigendum-plan",
+            "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Input_Schema_Compatibility_Corrigendum_Plan.v1.md",
+            "lengthBytes": 3721,
+            "expectedSha256": "6d93d2542baaccd82375ad364ad1ebfa2dc45c7e55bb4b52c917afc7b27fccbb",
+            "actualSha256": "6d93d2542baaccd82375ad364ad1ebfa2dc45c7e55bb4b52c917afc7b27fccbb",
+            "matched": true
+        },
+        {
+            "role": "parent-status-v11",
+            "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v11.json",
+            "lengthBytes": 5056,
+            "expectedSha256": "4bd0f8b512fec16daf3e5dd793caf8420fafd3f80b4f95cd3aca4981f469e47e",
+            "actualSha256": "4bd0f8b512fec16daf3e5dd793caf8420fafd3f80b4f95cd3aca4981f469e47e",
+            "matched": true
+        },
+        {
+            "role": "retained-planning-failure",
+            "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-attempt-001/failure-receipt.v1.json",
+            "lengthBytes": 3737,
+            "expectedSha256": "f3ebfb70faba9d48d39d12eeff5fe64cfc2776ac73c0b672e1ecf04273b4b2c6",
+            "actualSha256": "f3ebfb70faba9d48d39d12eeff5fe64cfc2776ac73c0b672e1ecf04273b4b2c6",
+            "matched": true
+        },
+        {
+            "role": "retained-preflight-audit",
+            "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-attempt-001/preflight-compatibility-audit.v1.json",
+            "lengthBytes": 4458,
+            "expectedSha256": "68fa5cb6c4a3a9c87d29f06acb69dd93f2081f060f69e192478fdedf2231afcf",
+            "actualSha256": "68fa5cb6c4a3a9c87d29f06acb69dd93f2081f060f69e192478fdedf2231afcf",
+            "matched": true
+        },
+        {
+            "role": "legacy-input-schema-v1",
+            "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-input-schema.v1.json",
+            "lengthBytes": 4244,
+            "expectedSha256": "12105816916eaadc6575ed28dc96a6bb4a9863d2dbbe70cc034ebcfbf1de2c6b",
+            "actualSha256": "12105816916eaadc6575ed28dc96a6bb4a9863d2dbbe70cc034ebcfbf1de2c6b",
+            "matched": true
+        },
+        {
+            "role": "corrected-input-schema-v2",
+            "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+            "lengthBytes": 4664,
+            "expectedSha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+            "actualSha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+            "matched": true
+        },
+        {
+            "role": "planning-schema-binding-v2",
+            "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+            "lengthBytes": 4360,
+            "expectedSha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+            "actualSha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+            "matched": true
+        },
+        {
+            "role": "schema-known-answer-tool",
+            "relativePath": "Research/Gate14Re-ME/Tools/Test-Gate14ReMEInputSchemaCompatibilityV1.ps1",
+            "lengthBytes": 14272,
+            "expectedSha256": "b7931734393352dca71397f293428bb18685c912bb41709e04a88db0a16c20c3",
+            "actualSha256": "b7931734393352dca71397f293428bb18685c912bb41709e04a88db0a16c20c3",
+            "matched": true
+        },
+        {
+            "role": "schema-known-answer-receipt",
+            "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/schema-known-answer-receipt.v1.json",
+            "lengthBytes": 6621,
+            "expectedSha256": "76977549e66d3e98af3e4f214b507bda1bba9d5d13006762d0f004bd62f40358",
+            "actualSha256": "76977549e66d3e98af3e4f214b507bda1bba9d5d13006762d0f004bd62f40358",
+            "matched": true
+        },
+        {
+            "role": "qualification-contracts-source",
+            "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+            "lengthBytes": 17536,
+            "expectedSha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4",
+            "actualSha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4",
+            "matched": true
+        },
+        {
+            "role": "reference-oracle-source",
+            "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+            "lengthBytes": 30510,
+            "expectedSha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25",
+            "actualSha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25",
+            "matched": true
+        },
+        {
+            "role": "qualification-runner-v2-source",
+            "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+            "lengthBytes": 77345,
+            "expectedSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+            "actualSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+            "matched": true
+        },
+        {
+            "role": "navigation-contracts-source",
+            "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+            "lengthBytes": 5661,
+            "expectedSha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa",
+            "actualSha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa",
+            "matched": true
+        }
+    ],
+    "exceptionType": "System.InvalidOperationException",
+    "exactFailure": "Unity executable hash mismatch.",
+    "stackTrace": "System.InvalidOperationException: Unity executable hash mismatch.\r\n  at DDM.Research.Editor.InputSchemaCorrigendumAttempt001.Gate14ReMEInputSchemaCompatibilitySelfCheckV1.Run () [0x001e1] in H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\Gate14ReMEInputSchemaCompatibilitySelfCheckV1.cs:172 "
+}

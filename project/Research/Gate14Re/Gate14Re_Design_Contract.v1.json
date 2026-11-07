@@ -1,0 +1,108 @@
+{
+  "schema": "gate14re-design-contract-v1",
+  "studyId": "Gate14Re",
+  "version": 1,
+  "createdLocalDate": "2026-10-15",
+  "status": "DESIGN_STARTED_B16_FROZEN_NON_EXECUTING",
+  "lineage": {
+    "fromScratch": true,
+    "inheritPriorArtifacts": false,
+    "inheritPriorObservations": false,
+    "inheritPriorAnalyses": false,
+    "priorConclusionsAdmissible": false
+  },
+  "objectives": [
+    "Select the better-performing eligible algorithm among four fixed production algorithms under registered application conditions.",
+    "Estimate how movement and full-population rendering performance change with unit count."
+  ],
+  "fixedDesign": {
+    "algorithmCount": 4,
+    "applicationConditionCount": 8,
+    "quantityAnchorConditionCount": 2,
+    "sharedGoalPerRun": true,
+    "identicalFrozenInitialSnapshotWithinBlock": true,
+    "resetAllMethodPrivateStateBetweenAlgorithms": true,
+    "identicalEventTimelineWithinBlock": true,
+    "unitCountLevels": [1, 8, 32, 128, 512],
+    "lanes": [
+      "movement_M1_M2_M3_M5",
+      "full_population_render_M4"
+    ],
+    "independentUnit": "complete_input_block_in_one_fresh_unity_process",
+    "blocksPerDesignCellB": 16,
+    "williamsRows": [
+      ["A", "B", "D", "C"],
+      ["B", "C", "A", "D"],
+      ["C", "D", "B", "A"],
+      ["D", "A", "C", "B"]
+    ],
+    "usesPerWilliamsRowPerCell": 4,
+    "mainModuleProcesses": 256,
+    "quantityExtensionProcesses": 256,
+    "plannedValidProcesses": 512,
+    "algorithmLaneSamples": 2048
+  },
+  "metricRoles": {
+    "M1": "primary_completion_time_lower_is_better",
+    "M2": "trajectory_cost_guard_and_secondary_lower_is_better",
+    "M3": "reliability_eligibility",
+    "M4": "full_population_frame_time_eligibility_and_scaling",
+    "M5": "correctness_safety_eligibility"
+  },
+  "selectionPolicy": {
+    "eligibilityBeforePerformance": true,
+    "primaryMetric": "M1",
+    "guardMetric": "M2",
+    "secondaryMetricWhenM1DoesNotUniquelySelect": "M2",
+    "forcedWinner": false,
+    "independentNIsBlockCount": true,
+    "pairwiseComparisonCount": 6,
+    "multiplicity": "Holm_across_six_pairwise_algorithm_comparisons",
+    "uncertaintyLevel": 0.95
+  },
+  "quantityModel": {
+    "primaryOutcomes": ["M1", "M4"],
+    "supportiveOutcomes": ["M2", "M3", "M5"],
+    "predictor": "log2_unit_count",
+    "requiredInteraction": "algorithm_by_log2_unit_count",
+    "winnerSelectionAt": "N_primary"
+  },
+  "replacementPolicy": {
+    "infrastructureFailure": "replace_entire_block_at_most_once_without_increasing_analyzable_B",
+    "algorithmSpecificTimeoutOrFailure": "retain_as_outcome_no_replacement",
+    "partialBlockDueToInfrastructureFailure": "exclude_whole_block_from_primary_estimation",
+    "algorithmSpecificFailureDoesNotMakeBlockPartial": true
+  },
+  "minimumPreExecutionSteps": [
+    "single_design_freeze",
+    "single_implementation_compile_and_synthetic_validation",
+    "single_short_live_preflight_with_N512_resource_admission",
+    "separately_authorized_formal_phase_A"
+  ],
+  "notRequired": [
+    "numerical_pilot",
+    "blind_nuisance_projection",
+    "monte_carlo_sample_size_search",
+    "historical_raw_tree_rescan",
+    "reuse_of_prior_observations"
+  ],
+  "pendingScientificInputs": [
+    "four_algorithm_identity_and_binary_bindings",
+    "eight_condition_registry",
+    "two_quantity_anchor_conditions",
+    "N_primary_from_fixed_unit_count_levels",
+    "M1_minimum_practically_important_difference_delta_M1",
+    "M2_maximum_acceptable_worsening_delta_M2",
+    "M3_M4_M5_engineering_eligibility_thresholds_or_event_table",
+    "shared_goal_arrival_radius_and_dwell_rule",
+    "frozen_hardware_render_and_window_configuration"
+  ],
+  "authorization": {
+    "designWorkAuthorized": true,
+    "implementationAuthorized": false,
+    "formalPhaseALaunchAuthorized": false,
+    "formalMeasuredRootCreationAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "gate15Authorized": false
+  }
+}

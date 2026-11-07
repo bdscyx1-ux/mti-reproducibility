@@ -1,0 +1,23 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-36h-v16-readiness-verification",
+  "command": "Executed the versioned v16 nonexecuting readiness verification after parser, binding, static and lock-hygiene gates. Created four isolated lane copies, completed serial nonmeasured bootstrap, four-lane telemetry, positive and negative block tests, independent-process repeatability, cold structural controls, retained regression and final validation-only audit. No pilot or formal root existed during verification.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "input_paths": [
+    "Gate13R_36h_10pct_4Lane_Pilot_Plan.v16.json",
+    "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v16.json",
+    "Gate13R_36h_10pct_4Lane_Provenance.v16.json"
+  ],
+  "output_sha256": "a61cd65f423f46ebe0bf64183768b853d13c4c4aac49f8372c53ffe64373fd92",
+  "gate_tokens": [
+    "V16-READINESS-VERIFICATION-PASSED",
+    "STATIC-201-OF-201",
+    "LOCK-HYGIENE-14-OF-14",
+    "STRUCTURAL-24-OF-24-ZERO-MISMATCH",
+    "RETAINED-REGRESSION-63-OF-63",
+    "FINAL-AUDIT-169-OF-169",
+    "FORMAL-ROOT-ABSENT"
+  ]
+}

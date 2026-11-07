@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-formal-st-schedule-schema-v5.0",
+  "title": "Gate14Re-ME formal ST schedule row v5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema","ordinal","cellOrdinal","replicateIndex","contextStratumIndex","orderIndex","superblockId","inputRelativePath","inputSha256","algorithmOrder","replacement"],
+  "properties": {
+    "schema": {"const":"gate14re-me-formal-st-schedule-row-v5"},
+    "ordinal": {"type":"integer","minimum":0,"maximum":1295},
+    "cellOrdinal": {"type":"integer","minimum":0,"maximum":35},
+    "replicateIndex": {"type":"integer","minimum":0,"maximum":35},
+    "contextStratumIndex": {"type":"integer","minimum":0,"maximum":17},
+    "orderIndex": {"type":"integer","minimum":0,"maximum":5},
+    "superblockId": {"type":"string","pattern":"^formal-sb-[0-9]{4}$"},
+    "inputRelativePath": {"type":"string","minLength":1},
+    "inputSha256": {"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "algorithmOrder": {
+      "type":"array","minItems":6,"maxItems":6,
+      "items": {
+        "type":"object","additionalProperties":false,
+        "required":["algorithmId","anonymousLaneId","identityBindingSha256"],
+        "properties": {
+          "algorithmId":{"enum":["A*-R","BiA*-R","D*L","LPA*","C-FF","IDFF"]},
+          "anonymousLaneId":{"enum":["ALG-A","ALG-B","ALG-C","ALG-D","ALG-E","ALG-F"]},
+          "identityBindingSha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "replacement": {"type":"null"}
+  }
+}

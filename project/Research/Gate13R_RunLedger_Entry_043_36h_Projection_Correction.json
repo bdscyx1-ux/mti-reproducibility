@@ -1,0 +1,20 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-36h-readonly-projection-subsecond-correction",
+  "command": "Independently recomputed every candidate's serial p95, ideal parallel p95 and 36-hour efficiency from the exact frozen cohort p95 block times. Preserved the original decision record and added a versioned correction for three cached values whose maximum absolute discrepancy was below one second; rounded values and the recommendation did not change. No Unity or formal execution occurred.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "input_sha256": {
+    "Gate13R_36h_WallClock_Constraint.v1.json": "4aea18a96fb70bec76ed469c34dd7888082c7a07107d390b94bbddbd8883b2a0",
+    "PilotRuns/Gate12R_ProcessReuse_5pct/v4/budget-storage-projection.json": "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f"
+  },
+  "output_sha256": "2a3906135f1fd64e73206de0ad5a163011368ea87a77a5c7bb9bc201a763694f",
+  "gate_tokens": [
+    "PROJECTION-RECOMPUTED-FROM-EXACT-COHORT-P95",
+    "MAX-CORRECTION-BELOW-ONE-SECOND",
+    "ROUNDED-VALUES-UNCHANGED",
+    "RECOMMENDATION-UNCHANGED",
+    "NO-FORMAL-EXECUTION"
+  ]
+}

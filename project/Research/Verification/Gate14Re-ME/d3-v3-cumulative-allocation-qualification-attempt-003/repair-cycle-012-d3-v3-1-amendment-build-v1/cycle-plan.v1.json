@@ -1,0 +1,58 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 12,
+  "status": "AUTHORIZED_IN_PROGRESS",
+  "createdAtUtc": "2026-10-17T07:42:10.8022094Z",
+  "phase": "d3-v3-1-versioned-abi-amendment-and-native-build",
+  "scope": "Build exactly one versioned production DLL from the simplified D3-v3.1 source using the already frozen hermetic SDK; perform PE/export checks; do not run Unity or any algorithm.",
+  "compilerPolicy": [
+    "/nologo",
+    "/std:c++17",
+    "/O2",
+    "/LD",
+    "/EHsc",
+    "/W4",
+    "/WX",
+    "/utf-8",
+    "/permissive-",
+    "/Brepro",
+    "/DNOMINMAX"
+  ],
+  "bindings": {
+    "amendmentAuthorizationSha256": "ef7bd18de40303e14b849a81e7c9fe85d5e2d56420836e5255375d332674d0a8",
+    "simplifiedPlanSha256": "df2558447342b8185e294f99baf4571c8128c877916d0cf43b61093a38d6b179",
+    "prospectiveContractSha256": "d253566d4acafad0ca6f1fdaad839f17e7dbc461b53e253e9c1192f1a04abc98",
+    "nativeSourceSha256": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2",
+    "managedWrapperSha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007",
+    "knownAnswerHarnessSha256": "37ae24d4bd036a4dc5f68cfc80389c62230335ee8fc1ba018b3111ee931527a1",
+    "sdkFreezeManifestRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk-freeze-manifest.v1.json",
+    "compilerSha256": "fe251ef50a1545b1b0835ee17b1e785459712b38d79e45b5c1d3d28970a36619",
+    "unityPluginApiRoot": "H:/UnityEditor/2022.3.30f1c1/Editor/Data/PluginAPI"
+  },
+  "requiredExports": [
+    "Gate14ReMED3V31_IsReady",
+    "Gate14ReMED3V31_GetMarkerSeen",
+    "Gate14ReMED3V31_GetCreateCallbackRegistrationCode",
+    "Gate14ReMED3V31_GetMarkerCallbackRegistrationCode",
+    "Gate14ReMED3V31_GetRequiredMetadataTypeValue",
+    "Gate14ReMED3V31_GetRequiredMetadataSizeBytes",
+    "Gate14ReMED3V31_GetCurrentNativeThreadId",
+    "Gate14ReMED3V31_BeginWindow",
+    "Gate14ReMED3V31_SnapshotWindow",
+    "Gate14ReMED3V31_EndWindow",
+    "UnityPluginLoad",
+    "UnityPluginUnload"
+  ],
+  "scientificBoundary": {
+    "priorDiagnosticsRerun": false,
+    "unityProcessStarted": false,
+    "qualificationRunnerOrSchemaIntegrated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalAnalysisRankingOrWinner": false
+  }
+}

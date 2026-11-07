@@ -1,0 +1,98 @@
+{
+  "schema": "gate14re-me-status-v34",
+  "studyId": "Gate14Re-ME",
+  "status": "SUPERVISOR_MANIFEST_ACCEPTANCE_GUARD_CORRIGENDUM_ATTEMPT_002_PASS_EXECUTION_READINESS_RECHECK_AUTHORIZATION_PENDING",
+  "version": 34,
+  "updatedAtUtc": "2026-10-17T17:17:42.7838873+00:00",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v33.json",
+    "sha256": "f2e3f84699914aed337b0c5058038976e1eae272e7b9ca0421208b837b845c1d",
+    "retained": true,
+    "modifiedOrReclassified": false
+  },
+  "retainedLoadQualificationExecutionAttempt002Failure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002/failure-receipt.v1.json",
+    "sha256": "83882d9bcfba2cc08c86c87da9e8ae2fb920b32814b7b1fee165e59025323c10",
+    "statusRetained": "FAILED_CLOSED_PREFLIGHT_SUPERVISOR_MANIFEST_STATE_GUARD_MISMATCH",
+    "modifiedOrReclassified": false
+  },
+  "supervisorManifestAcceptanceGuardCorrigendumAttempt001": {
+    "passed": false,
+    "failureClass": "OFFLINE_KNOWN_ANSWER_HARNESS_RECEIPT_BOOLEAN_LITERAL",
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001/failure-receipt.v1.json",
+    "failureReceiptSha256": "1cb8861ca48098cff1556f9a83c501b5700aaade337980c6b9a0865753583412",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001/freeze-manifest.v1.json",
+    "freezeManifestSha256": "103066173a69eb94500dc148e737fb9a1d23b5ea9f794c20ab10ce06634268f5",
+    "checksPassedBeforeReceiptFailure": 304,
+    "modifiedOrReclassified": false
+  },
+  "supervisorManifestAcceptanceGuardCorrigendumAttempt002": {
+    "authorizationId": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-auto-repair-until-pass-263a2c10-45da-4ede-ae8e-684baf3e9057",
+    "attemptId": "supervisor-manifest-acceptance-guard-corrigendum-attempt-002",
+    "passed": true,
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-002/terminal-pass-receipt.v1.json",
+    "terminalReceiptSha256": "499f23b98f6e6e75053451d583acb6205020ec34978e6f0f8454b32a25a03ac8",
+    "knownAnswerRelativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-002/exact-predicate-known-answer-receipt.v1.json",
+    "knownAnswerSha256": "870b2fc9dfb18202b422a60ba50d738c011e0767c9031d4c85d51aa4a1c19397",
+    "checksPassed": 304,
+    "negativeCasesRejected": 6
+  },
+  "adoptedCorrectedBindings": {
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_1.ps1",
+    "supervisorSha256": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc",
+    "supervisorRevision": "3.1",
+    "changedLine": 540,
+    "changedLineCount": 1,
+    "executionContractRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_3.json",
+    "executionContractSha256": "6e35abb3f36f956f0f685f816e2b2a7c1ce2aa513a86bd16d575964bd619802a",
+    "executionContractRevision": "3.3",
+    "implementationManifestRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_3.json",
+    "implementationManifestSha256": "a85968ee3c759c5f0c3c3bf3a5d9c3bda7c3cfca7628f3e983cb64142bfe4579",
+    "implementationManifestRevision": "3.3",
+    "manifestGeneration": 4,
+    "executionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE"
+  },
+  "predicateAdjudication": {
+    "sourcePredicateRejectedAuthoritativeManifestV32": true,
+    "correctedPredicateAcceptedAuthoritativeManifestV32": true,
+    "correctedPredicateAcceptedSuccessorManifestV33": true,
+    "wrongGenerationRejected": true,
+    "wrongSchemaRejected": true,
+    "staleStatusRejected": true,
+    "missingFieldsRejected": true
+  },
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "instrumentInvocationCount": 0,
+    "oracleInvocationCount": 0,
+    "emptyBoundaryInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingPerformed": false,
+    "weightingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "authorizationState": {
+    "supervisorManifestAcceptanceGuardCorrigendumAuthorizationConsumed": true,
+    "corrigendumTerminalPass": true,
+    "readinessRecheckAuthorized": false,
+    "newQualificationExecutionAttemptAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "unityInvocationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "deliveryRootCreationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Obtain a separate authorization for a read-only, no-Unity execution-readiness recheck bound to supervisor v3.1 SHA-256 33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc, execution contract v3.3 SHA-256 6e35abb3f36f956f0f685f816e2b2a7c1ce2aa513a86bd16d575964bd619802a, implementation manifest v3.3 SHA-256 a85968ee3c759c5f0c3c3bf3a5d9c3bda7c3cfca7628f3e983cb64142bfe4579 and the corrigendum terminal receipt. A qualification execution attempt remains unauthorized."
+}

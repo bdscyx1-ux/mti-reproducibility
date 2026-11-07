@@ -1,0 +1,296 @@
+{
+    "schemaVersion":  4,
+    "provenanceId":  "gate13-r2-process-reuse-provenance-v4",
+    "recordedAt":  "2026-10-06T14:21:15.2151105+08:00",
+    "materialPassport":  {
+                             "originSkill":  "experiment-agent",
+                             "originMode":  "run",
+                             "verificationStatus":  "IMPLEMENTATION-FROZEN-PRE-PILOT-AFTER-OWNED-PID-WAIT-FIX",
+                             "versionLabel":  "gate13_r2_process_reuse_provenance_v4"
+                         },
+    "supersedes":  {
+                       "provenanceV3":  {
+                                            "relativePath":  "Research/Gate13_ProcessReuse_Provenance.v3.json",
+                                            "sha256":  "7b020377c57c03e85caa90a43ea0f9d65a415fc5924c806aede0373077ee5fd2",
+                                            "byteCount":  16447
+                                        },
+                       "failedAuditAttempt3":  {
+                                                   "relativePath":  "Research/Verification/Gate13R2_PrePilotAudit_Attempt3_Failure.v1.json",
+                                                   "sha256":  "d0a51354bb7f2308329adb8303d549965568b30bf419d748f3c1dc6e3bb3c15a",
+                                                   "byteCount":  2141
+                                               },
+                       "provenanceV2":  {
+                                            "relativePath":  "Research/Gate13_ProcessReuse_Provenance.v2.json",
+                                            "sha256":  "9830ca79d19469c7d8b584454a344605f847cfad14eff195a140027e5e70059f",
+                                            "byteCount":  15189
+                                        },
+                       "failedAuditAttempt2":  {
+                                                   "relativePath":  "Research/Verification/Gate13R2_PrePilotAudit_Attempt2_Failure.v1.json",
+                                                   "sha256":  "aa939dbb5ac834052ab8639ef8222e68405e31b5c5f1591c06aec3441fb05282",
+                                                   "byteCount":  1597
+                                               },
+                       "provenanceV1":  {
+                                            "relativePath":  "Research/Gate13_ProcessReuse_Provenance.v1.json",
+                                            "sha256":  "00ea49c8c2b2ffefdf8c9f7b74ed78cfa43ee18d997ec8079e6d858f058dc8f1",
+                                            "byteCount":  13961
+                                        },
+                       "failedAuditAttempt1":  {
+                                                   "relativePath":  "Research/Verification/Gate13R2_PrePilotAudit_Attempt1_Failure.v1.json",
+                                                   "sha256":  "700fb64ef98fc9d61aff5034ede17bbce6bcf0176a583a69221cb3ef988c0b41",
+                                                   "byteCount":  1242
+                                               },
+                       "reason":  "The valid negative fixture exposed a Windows Start-Process -Wait host hang after Unity exit; all new wrappers now start once and wait by the exact owned PID. Original cold wrapper remains unchanged.",
+                       "designChanged":  false,
+                       "pilotSubsetChanged":  false,
+                       "statisticalPolicyChanged":  false,
+                       "negativeFixtureRerunAllowed":  false
+                   },
+    "authorizationBoundary":  {
+                                  "authorizationReference":  "user-message-2026-10-06-gate13-cold-process-to-process-reuse-controlled-design-migration",
+                                  "nonFormalPilotAuthorized":  true,
+                                  "formalCampaignAuthorized":  false,
+                                  "formalOutputRootCreationAllowed":  false,
+                                  "formalExecutionReceiptAllowed":  false,
+                                  "automaticRetryAllowed":  false,
+                                  "automaticResumeAllowed":  false
+                              },
+    "specification":  {
+                          "relativePath":  "Research/Gate13_ProcessReuse_Specification.md",
+                          "sha256":  "06b8f79aff15301acb45a478ac054e0a444be3581fe4cb05f4c5a106dc6e256d",
+                          "byteCount":  11313
+                      },
+    "testDesign":  {
+                       "relativePath":  "Research/Gate13_ProcessReuse_Test_Design.md",
+                       "sha256":  "45aed83d000ef8db41a5d910394422ba576ffe96a3543ac67415aa147bc1fefb",
+                       "byteCount":  8363
+                   },
+    "pilotPlan":  {
+                      "relativePath":  "Research/Gate13_ProcessReuse_Pilot_Plan.v1.json",
+                      "sha256":  "de79edaca2bfd7016fd9a50dba85a511c2bdfc6bdce99d629e20e4bded4ca8d9",
+                      "byteCount":  10245
+                  },
+    "processReuseBatchCommand":  {
+                                     "relativePath":  "Assets/_Scripts/Research/Editor/ResearchPlanningProcessReuseBatchCommand.cs",
+                                     "sha256":  "08ab7b3c593f55232d59d6266714eeae33c2c93be846e55ac8a235928fee1c33",
+                                     "byteCount":  42745
+                                 },
+    "processReuseBatchCommandMeta":  {
+                                         "relativePath":  "Assets/_Scripts/Research/Editor/ResearchPlanningProcessReuseBatchCommand.cs.meta",
+                                         "sha256":  "b24d524813d988389a148ed75b7fda4966df6aa68b53929d8bd786c503ac563b",
+                                         "byteCount":  243
+                                     },
+    "processReusePowerShellRunner":  {
+                                         "relativePath":  "Research/Run-PlanningProcessReuseBlock.ps1",
+                                         "sha256":  "d2e0a04749ceae06291a23316e80442efd5cacfb9ff274ebf235bf51b920ac8c",
+                                         "byteCount":  9628
+                                     },
+    "freshColdReferenceRunner":  {
+                                     "relativePath":  "Research/Run-Gate13ProcessReuseColdReference.ps1",
+                                     "sha256":  "e2acb67f1562894743cd9156971a3b243ab4e0797fb4b1c68d7dbb72db4c2ae0",
+                                     "byteCount":  5874
+                                 },
+    "processReusePreparationModule":  {
+                                          "relativePath":  "Research/Gate13ProcessReusePreparation.psm1",
+                                          "sha256":  "b96093362ab40c48f12fb44e6d3ab515322f6d48448fcf71225d9e3b690e7508",
+                                          "byteCount":  43182
+                                      },
+    "pilotOrchestrator":  {
+                              "relativePath":  "Research/Run-Gate13ProcessReusePilot.ps1",
+                              "sha256":  "45c0be731e659736e2edea23c69da1757300aab4a855d35303300d7a1621afe5",
+                              "byteCount":  21907
+                          },
+    "pilotAnalyzer":  {
+                          "relativePath":  "Research/Analyze-Gate13ProcessReusePilot.ps1",
+                          "sha256":  "2f5bc6e48d4e0875cc2ae5d75c3b6b9b1a6f8399dbad6922ade3c2d3c54c1899",
+                          "byteCount":  40178
+                      },
+    "formalPreparationGenerator":  {
+                                       "relativePath":  "Research/New-Gate13ProcessReuseFormalPreparation.ps1",
+                                       "sha256":  "2c9a119b2f8c5e995d7b250cea407586adf5ecca4eaf2c033a76978ca30fd82e",
+                                       "byteCount":  12525
+                                   },
+    "provenanceGenerator":  {
+                                "relativePath":  "Research/New-Gate13ProcessReuseProvenanceV4.ps1",
+                                "sha256":  "d7f55da922a06660f21d53f4c7594a6b994d45d83e3658b9ef5dcb05bf9b7009",
+                                "byteCount":  10871
+                            },
+    "prePilotAuditScript":  {
+                                "relativePath":  "Research/Verification/Run-Gate13ProcessReusePrePilotAudit.ps1",
+                                "sha256":  "7126bd2b40ba6085e84ea8a9247067109a617e6b4e3536632694396ae6c94812",
+                                "byteCount":  32448
+                            },
+    "retainedRegressionSummary":  {
+                                      "relativePath":  "Research/Verification/Gate13R2_RetainedRegression63.summary.json",
+                                      "sha256":  "dffdfb2fe1d5ca6de8df40ea2af9f178d828ab7dcf1d700cf952cc11d03b6396",
+                                      "byteCount":  1748
+                                  },
+    "unityCompileEvidence":  {
+                                 "relativePath":  "Research/Verification/Gate13R2_ProcessReuse_Compile.v3.log",
+                                 "sha256":  "b4f02654af7c09f44116665162186b4f2dd6abe0f67101aca2168b13b7c2d9fc",
+                                 "byteCount":  74128
+                             },
+    "negativeFixturePlan":  {
+                                "relativePath":  "Research/Verification/Gate13R2_NegativeBlockFixture.v1.block-plan.json",
+                                "sha256":  "d07df17d467342de94e09eab8e7af84d11290fb6ff3862a8c926c02ba48fba3f",
+                                "byteCount":  2893
+                            },
+    "negativeFixtureUnityLog":  {
+                                    "relativePath":  "Research/Verification/Gate13R2_NegativeBlockFixture.v1.Unity.log",
+                                    "sha256":  "270a3d3ec806b6c07086c1b8c932c4f46a92ac608e1d2377c5c450f3f4e4b8ab",
+                                    "byteCount":  24860
+                                },
+    "negativeFixtureFailure":  {
+                                   "relativePath":  "Research/Verification/Gate13R2_NegativeBlockFixture.v1/block-failure.json",
+                                   "sha256":  "3c108becef5a9e059558e9cb646562ebbc82dc135c0d8c3d044fbb73638126c4",
+                                   "byteCount":  1965
+                               },
+    "negativeFixtureCheckpoint":  {
+                                      "relativePath":  "Research/Verification/Gate13R2_NegativeBlockFixture.v1/block-checkpoint.json",
+                                      "sha256":  "c35ef97b835b615afff2ae1068c7feaaa36dbd87e7fd9d6c2c65cfadd988f8b0",
+                                      "byteCount":  711
+                                  },
+    "negativeFixtureSampleSummary":  {
+                                         "relativePath":  "Research/Verification/Gate13R2_NegativeBlockFixture.v1/runs/p01-astar-r/sample-summary.json",
+                                         "sha256":  "acbd4242d438967a5cde08f0db880403efa87d74b1428ad3a7ac87723249232d",
+                                         "byteCount":  863
+                                     },
+    "negativeFixtureSampleManifest":  {
+                                          "relativePath":  "Research/Verification/Gate13R2_NegativeBlockFixture.v1/runs/p01-astar-r/manifest.json",
+                                          "sha256":  "792fe16eff21f2a8d847bce322040525d0e43a99fd4411f928540a1d1fd97e2a",
+                                          "byteCount":  4100
+                                      },
+    "negativeFixtureWorkloadResult":  {
+                                          "relativePath":  "Research/Verification/Gate13R2_NegativeBlockFixture.v1/runs/p01-astar-r/workload-result.json",
+                                          "sha256":  "a47da83d28e5e21e549a3e0ef367288fe1da150aaa19e37789b6383d5bffcefe",
+                                          "byteCount":  6094
+                                      },
+    "coldTerminationReceipt":  {
+                                   "relativePath":  "Research/Gate13_ColdProcess_Termination_Receipt.v1.json",
+                                   "sha256":  "4661a3edc6e569b068e065456ab34f839d60030b1d668a925ca5b9dad9e481a4",
+                                   "byteCount":  7100
+                               },
+    "coldPreTerminationSnapshot":  {
+                                       "relativePath":  "Research/Gate13_ColdProcess_PreTermination_Snapshot.v1.json",
+                                       "sha256":  "42c45962d19735ccb9387e4e2c348d493d30875738d6035843d377d4c9c948ec",
+                                       "byteCount":  17733
+                                   },
+    "coldPartialOutputManifest":  {
+                                      "relativePath":  "Research/Gate13_ColdProcess_Partial_Output_Manifest.v1.json",
+                                      "sha256":  "f3ea8fa2f39bfbbb89380efb0389fc1c1f7d0cdf3849cc0ae45da75c2e960c82",
+                                      "byteCount":  448845
+                                  },
+    "coldExclusionMarker":  {
+                                "relativePath":  "Research/Gate13_ColdProcess_Exclusion_Marker.v1.json",
+                                "sha256":  "076e5b0a599845f6c7424fda221507c5837c6aa49cdbe94427d2f6e9e00dd91e",
+                                "byteCount":  1042
+                            },
+    "coldFormalConfig":  {
+                             "relativePath":  "Research/Gate13_Formal_Campaign_Config.v1.json",
+                             "sha256":  "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874",
+                             "byteCount":  201615
+                         },
+    "coldReadinessAmendment":  {
+                                   "relativePath":  "Research/Gate13_Readiness_Amendment.v1.json",
+                                   "sha256":  "1ccf5c6e1e2c646d160e7b597381c797cc14e6123134a28b429fcb773515e8b2",
+                                   "byteCount":  9486
+                               },
+    "coldExecutionAuthorizationV1":  {
+                                         "relativePath":  "Research/Gate13_Execution_Authorization.v1.json",
+                                         "sha256":  "864740f428c8a0c40c9883c9b9a77988968e68610cf19d48d61529959ec95cc8",
+                                         "byteCount":  1178
+                                     },
+    "coldExecutionAuthorizationV2":  {
+                                         "relativePath":  "Research/Gate13_Execution_Authorization.v2.json",
+                                         "sha256":  "5f3898914c29a3413f70d1ee1c5b7afbe84c05ac7987677f6083227dd93417a8",
+                                         "byteCount":  1694
+                                     },
+    "gate11BundleManifest":  {
+                                 "relativePath":  "Research/FormalScenarios/v1/bundle-manifest.json",
+                                 "sha256":  "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+                                 "byteCount":  39078
+                             },
+    "gate11Matrix":  {
+                         "relativePath":  "Research/FormalScenarios/v1/formal-scenario-matrix.json",
+                         "sha256":  "404df63d38bccd66bb665446e0f2cbf3e5f8c7293f543b3213bde4206435fe9f",
+                         "byteCount":  185057
+                     },
+    "gate11Preregistration":  {
+                                  "relativePath":  "Research/FormalScenarios/v1/preregistered-analysis.json",
+                                  "sha256":  "7e947885c38fcf9307fd9202585dda3b2b5d11334f495428760009a2aa202b5b",
+                                  "byteCount":  6328
+                              },
+    "gate12Plan":  {
+                       "relativePath":  "Research/Gate12_Pilot_Plan.v1.json",
+                       "sha256":  "cc63505f444223c06a7f69a979c6a0d2e7f0d29e8217d910fe46b61db5618ce4",
+                       "byteCount":  13652
+                   },
+    "gate12SuccessfulPilotManifest":  {
+                                          "relativePath":  "Research/PilotRuns/Gate12/v1/pilot-manifest.json",
+                                          "sha256":  "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a",
+                                          "byteCount":  32562
+                                      },
+    "gate12FinalAudit":  {
+                             "relativePath":  "Research/Verification/Gate12_FinalAudit.summary.json",
+                             "sha256":  "87a5d93dead6dc367ab0716ad2e4e2239570fc42577be978d0f0378ca14f78c8",
+                             "byteCount":  14902
+                         },
+    "fairnessSpecification":  {
+                                  "relativePath":  "Research/Four_Algorithm_Fairness_and_Unified_Campaign_Specification.md",
+                                  "sha256":  "42a4a8439c3d7b46b7644bed14b8f91d87bae4c6f8b2183a73609ee5461e82dd",
+                                  "byteCount":  11062
+                              },
+    "workloadSpecification":  {
+                                  "relativePath":  "Research/Scenario_IO_and_Planning_Workload_Specification.md",
+                                  "sha256":  "2af12d33c4a010b14511f86d11d2f45634cac794b6763ea1cc36e8f1940a8ea1",
+                                  "byteCount":  3983
+                              },
+    "planningWorkloadRunner":  {
+                                   "relativePath":  "Assets/_Scripts/Research/Experiments/DeterministicPlanningWorkloadRunner.cs",
+                                   "sha256":  "8ae626ebc9d6c30b510ea0b57a7b1ed6f513a7535551caebf9a0e805debe9a6f",
+                                   "byteCount":  20819
+                               },
+    "coldBatchCommand":  {
+                             "relativePath":  "Assets/_Scripts/Research/Editor/ResearchPlanningBatchCommand.cs",
+                             "sha256":  "10f9b1b921a87e60753e4eb9be53c43ce89d524ce2e8044274ae332715b74ced",
+                             "byteCount":  15539
+                         },
+    "experimentRunner":  {
+                             "relativePath":  "Assets/_Scripts/Research/Experiments/ExperimentRunner.cs",
+                             "sha256":  "8f0cfde8fa032edb8684c920b8179b0da177ffefc520aea3962d9dc692fde997",
+                             "byteCount":  16232
+                         },
+    "jsonlLogger":  {
+                        "relativePath":  "Assets/_Scripts/Research/Logging/JsonlExperimentLogger.cs",
+                        "sha256":  "4669b760737f880074ac5ba3512601cf520dbf70daf6685a06cb42a9b627bb98",
+                        "byteCount":  8519
+                    },
+    "fairnessContracts":  {
+                              "relativePath":  "Assets/_Scripts/Research/Experiments/PlanningFairnessContracts.cs",
+                              "sha256":  "42e1865294439986e808547115b22ccaaff53f3293790a8c4a135fb529ef3a60",
+                              "byteCount":  12916
+                          },
+    "coldWorkloadPowerShellRunner":  {
+                                         "relativePath":  "Research/Run-PlanningWorkload.ps1",
+                                         "sha256":  "c75bed92db9b6df5d1123198acb5358fd58297aa770e78acd0c4530cf9fbbbfb",
+                                         "byteCount":  4975
+                                     },
+    "unity":  {
+                  "executablePath":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe",
+                  "productVersion":  "2022.3.30f1c1_a6dc00fbe362",
+                  "executableSha256":  "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+              },
+    "executionDesign":  {
+                            "designId":  "one-fresh-unity-process-per-williams-block-v1",
+                            "independentUnit":  "williams-block-unity-process-v1",
+                            "oneBlockPerUnityProcess":  true,
+                            "algorithmAtMostOncePerProcess":  true,
+                            "longLivedCampaignProcessAllowed":  false,
+                            "formalCampaign":  false
+                        },
+    "paths":  {
+                  "pilotRootRelativePath":  "Research/PilotRuns/Gate13_ProcessReuse/v1",
+                  "reservedFormalRootRelativePath":  "Research/FormalRuns/Gate13_ProcessReuse/v1",
+                  "pilotRootExistsAtFreeze":  false,
+                  "reservedFormalRootExistsAtFreeze":  false
+              }
+}

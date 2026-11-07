@@ -1,0 +1,236 @@
+{
+  "checks": [
+    {
+      "id": "T01-json-and-schema-parse",
+      "passed": true
+    },
+    {
+      "id": "T02-frozen-design-hashes",
+      "passed": true
+    },
+    {
+      "id": "T03-real-formal-targets-absent-pre",
+      "passed": true
+    },
+    {
+      "id": "T04-zero-unity-and-lock-pre",
+      "passed": true
+    },
+    {
+      "id": "T05-static-no-unity-launch-or-kill",
+      "passed": true
+    },
+    {
+      "id": "T06-all-targets-absent-not-started-quiet",
+      "passed": true
+    },
+    {
+      "id": "T07-partial-target-action-required",
+      "passed": true
+    },
+    {
+      "id": "T08-valid-running-operational-fields",
+      "passed": true
+    },
+    {
+      "id": "T09-first-running-start-event",
+      "passed": true
+    },
+    {
+      "id": "T10-before-next-hour-no-report",
+      "passed": true
+    },
+    {
+      "id": "T11-new-hour-exactly-one-report",
+      "passed": true
+    },
+    {
+      "error": "['HOURLY-PROGRESS', 'STALL-SUSPECTED']",
+      "errorType": "AssertionError",
+      "id": "T12-missed-slots-no-catchup-flood",
+      "passed": false,
+      "traceback": "Traceback (most recent call last):\n  File \"H:\\DDM_Final_Project\\Research\\Test-Gate13RPR2Attempt3MonitoringRecoveryV1.py\", line 174, in check\n    function()\n    ~~~~~~~~^^\n  File \"H:\\DDM_Final_Project\\Research\\Test-Gate13RPR2Attempt3MonitoringRecoveryV1.py\", line 358, in missed_slots\n    require(snap[\"notificationReason\"] == [\"HOURLY-PROGRESS\"], str(snap[\"notificationReason\"]))\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"H:\\DDM_Final_Project\\Research\\Test-Gate13RPR2Attempt3MonitoringRecoveryV1.py\", line 38, in require\n    raise AssertionError(message)\nAssertionError: ['HOURLY-PROGRESS', 'STALL-SUSPECTED']\n"
+    },
+    {
+      "id": "T13-failure-event-immediate",
+      "passed": true
+    },
+    {
+      "id": "T14-completion-event-immediate",
+      "passed": true
+    },
+    {
+      "id": "T15-acknowledged-terminal-quiet",
+      "passed": true
+    },
+    {
+      "id": "T16-snapshot-complete-allowed-top-level",
+      "passed": true
+    },
+    {
+      "id": "T17-blinding-and-rendered-report",
+      "passed": true
+    },
+    {
+      "id": "T18-monitor-output-isolated-from-formal-root",
+      "passed": true
+    },
+    {
+      "id": "T19-counter-regression-fail-closed",
+      "passed": true
+    },
+    {
+      "id": "T20-count-above-total-rejected",
+      "passed": true
+    },
+    {
+      "id": "T21-global-ordinal-range-rejected",
+      "passed": true
+    },
+    {
+      "id": "T22-attempt-ordinal-rejected",
+      "passed": true
+    },
+    {
+      "id": "T23-root-receipt-config-schedule-identity",
+      "passed": true
+    },
+    {
+      "id": "T24-composite-process-mismatch-action",
+      "passed": true
+    },
+    {
+      "id": "T25-invalid-telemetry-action",
+      "passed": true
+    },
+    {
+      "id": "T26-valid-telemetry-preserved",
+      "passed": true
+    },
+    {
+      "id": "T27-status-age-exact-boundary",
+      "passed": true
+    },
+    {
+      "id": "T28-status-age-exclusive-crossing",
+      "passed": true
+    },
+    {
+      "id": "T29-no-progress-exact-boundary",
+      "passed": true
+    },
+    {
+      "id": "T30-no-progress-exclusive-crossing",
+      "passed": true
+    },
+    {
+      "id": "T31-missing-process-exact-boundary",
+      "passed": true
+    },
+    {
+      "id": "T32-missing-process-exclusive-crossing",
+      "passed": true
+    },
+    {
+      "id": "T33-hard-timeout-overdue-no-kill",
+      "passed": true
+    },
+    {
+      "id": "T34-eta-min-positive-and-safety-factor",
+      "passed": true
+    },
+    {
+      "id": "T35-eta-zero-rate-unavailable",
+      "passed": true
+    },
+    {
+      "id": "T36-prelaunch-all-requirements-eligible",
+      "passed": true
+    },
+    {
+      "id": "T37-prelaunch-root-or-measured-rejects",
+      "passed": true
+    },
+    {
+      "id": "T38-never-repairable-classes",
+      "passed": true
+    },
+    {
+      "id": "T39-prelaunch-three-cycle-limit",
+      "passed": true
+    },
+    {
+      "id": "T40-repeated-signature-stop",
+      "passed": true
+    },
+    {
+      "id": "T41-acquisition-diagnostics-only",
+      "passed": true
+    },
+    {
+      "id": "T42-acquisition-no-advance",
+      "passed": true
+    },
+    {
+      "id": "T43-post-acquisition-commit-eligible",
+      "passed": true
+    },
+    {
+      "id": "T44-commit-never-returns-unity",
+      "passed": true
+    },
+    {
+      "id": "T45-commit-attempt-and-signature-limits",
+      "passed": true
+    },
+    {
+      "id": "T46-raw-contract-violation-user-action",
+      "passed": true
+    },
+    {
+      "id": "T47-read-retry-exact-three-0-2-5",
+      "passed": true
+    },
+    {
+      "id": "T48-later-read-success-retains-anomaly",
+      "passed": true
+    },
+    {
+      "id": "T49-atomic-snapshot-under-verification-root",
+      "passed": true
+    },
+    {
+      "id": "T50-immutable-snapshot-overwrite-rejected",
+      "passed": true
+    },
+    {
+      "id": "T51-fixed-fixture-deterministic-bytes",
+      "passed": true
+    },
+    {
+      "id": "T52-python-pwsh-winps-parser-binding",
+      "passed": true
+    },
+    {
+      "id": "T53-no-launch-dry-run-and-cadence-contract",
+      "passed": true
+    },
+    {
+      "id": "T54-final-formal-absence-and-frozen-hashes",
+      "passed": true
+    }
+  ],
+  "completedAtUtc": "2026-10-09T07:07:12.789770Z",
+  "failedTestCount": 1,
+  "formalReceiptCreated": false,
+  "formalRootCreated": false,
+  "formalStatusCreated": false,
+  "outputRoot": "Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-1",
+  "passed": false,
+  "passedTestCount": 53,
+  "schemaVersion": 1,
+  "startedAtUtc": "2026-10-09T07:07:09.868630Z",
+  "summaryKind": "gate13r-pr2-attempt3-monitoring-recovery-validation-summary-v1",
+  "testCount": 54,
+  "unityInvocations": 0
+}

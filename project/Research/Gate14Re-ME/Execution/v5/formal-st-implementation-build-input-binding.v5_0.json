@@ -1,0 +1,48 @@
+{
+  "schema": "gate14re-me-formal-st-implementation-build-input-binding-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_REUSABLE_BUILD_INPUTS_READY_FORMAL_PACKAGE_NOT_BUILT",
+  "reusePolicy": "Stable qualified components remain exact-hash dependencies. Every formal-ST-owned wrapper, schema, launcher, supervisor, receipt, and package file must be newly named v5 and may copy qualified logic only under the new v5 name with an explicit lineage hash.",
+  "qualifiedReusableComponents": [
+    {"role":"qualification implementation evidence","relativePath":"Research/Gate14Re-ME/Execution/v4/load-qualification-current-implementation-manifest.v4_2.json","sha256":"ae9c6bc5641b36808d896b5cfcc509cb835a55b8c667212f7af5787fcf6b2a00"},
+    {"role":"runner kernel source","relativePath":"Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_2.cs","sha256":"622d97031efe51a1ea89fc2da95e5b473c170b817d452e76d3b25d81b228140d"},
+    {"role":"bounded geometry validator","relativePath":"Assets/_Scripts/Research/Gate14ReME/v4/Gate14ReMEInputGeometryValidatorV4_2.cs","sha256":"08e2b067e667a11a0cae2f6162721bbd3b59c2e32ce806d247bd10aa63487eb9"},
+    {"role":"reference oracle","relativePath":"Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs","sha256":"3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"},
+    {"role":"qualification contracts","relativePath":"Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs","sha256":"0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"},
+    {"role":"D3 runtime contracts","relativePath":"Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs","sha256":"a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902"},
+    {"role":"typed Parquet runtime","relativePath":"Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json","sha256":"254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"}
+  ],
+  "formalV5BuildDeliverablesRequiredBeforeReadiness": [
+    "Gate14ReMEFormalSTRunnerV5 source and meta with no qualification-only class or filename identity",
+    "Run-Gate14ReMEFormalST.v5_0.ps1 strict-serial acquisition supervisor",
+    "formal v5 input, schedule, output, process-ledger, receipt, and acquisition schemas",
+    "formal v5 streaming bounded-memory independent acceptance launcher and tool",
+    "formal v5 input and oracle-cache generator using the frozen 1296-superblock schedule rule",
+    "formal v5 implementation manifest binding every source, contract, runtime, schedule, input, and tool hash",
+    "algorithm-free compile/readiness guard and natural-exit-zero receipt",
+    "known-answer tests for trusted process identity, ordinal continuity, failure sealing, raw completeness, typed-Parquet round trip, and no same-attempt resume/top-up/merge/skip/reorder"
+  ],
+  "oracleSimplification": {
+    "required": true,
+    "rule": "compute one algorithm-neutral immutable reference-oracle cache per formal input before measured collection, hash-bind it, and reuse it read-only across the six paired lanes",
+    "referenceOracleEvaluationsInsideMeasuredLane": 0,
+    "batching": "package build may choose an engineering batch count only after target-host readiness, without changing inputs, algorithm lanes, scientific factors, or measured observations",
+    "formalOracleCacheGenerationIsMeasuredOutcome": false
+  },
+  "acceptanceSimplification": {
+    "required": true,
+    "rule": "separate acquisition from acceptance; deduplicate source hashes, stream rows with bounded memory, retain only required join/uniqueness state, preserve canonical raw evidence, and gate on typed-Parquet full round trip",
+    "sourceMeasuredRootWriteBack": false
+  },
+  "buildBoundary": {
+    "formalV5SourceCopiesCreatedByThisFreeze": 0,
+    "compilePerformedByThisFreeze": false,
+    "packageStagingRootCreated": false,
+    "packageTestRootCreated": false,
+    "installerOrCredentialCopied": false,
+    "zipCreated": false,
+    "formalMeasuredRootCreated": false,
+    "formalCollectionStarted": false
+  }
+}

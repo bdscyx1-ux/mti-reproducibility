@@ -1,0 +1,143 @@
+{
+  "schema": "gate14re-me-status-v38",
+  "studyId": "Gate14Re-ME",
+  "status": "QUALIFICATION_SCHEDULE_NULL_REPLACEMENT_CORRIGENDUM_PASS_EXECUTION_READINESS_PASS_NEW_EXECUTION_AUTHORIZATION_PENDING",
+  "version": 38,
+  "updatedAtUtc": "2026-10-17T18:13:34.6619033Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v37.json",
+    "sha256": "effa1a9270965c537bb24c2915f3f4498fd992bc2a29e601acdceba60c8dd232",
+    "retained": true,
+    "reclassified": false
+  },
+  "retainedFailedExecution": {
+    "attemptId": "load-qualification-execution-attempt-003",
+    "terminalFailureReceiptRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/terminal-failure-receipt.v1.json",
+    "terminalFailureReceiptSha256": "ec78b55c4f7be0d00433958806a26b7ef1e1a3dd75ce140a9013079cadf13df9",
+    "technicalFailureAdjudicationSha256": "0de24cf90557e0e4dcdfa26f299d152f6883af85b3cce4e9ec8a887f693d23ca",
+    "freezeManifestSha256": "10764c3f357eeec90eb138701d4c29a3d16a6e1047dbbc48a4a26be551fee249",
+    "attemptInventoryDigestSha256": "4609899169ed8db7e4dea41590aa81b1329a8f3a40f7bc7359f89e1baf01afc6",
+    "failedMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+    "failedMeasuredRootInventoryDigestSha256": "bde45ebf6b3945dd8fea8a141805d3c9ddf45605ed6a4e6e228791679576a4cd",
+    "failedMeasuredRootReadOnly": true,
+    "modifiedOrReclassified": false
+  },
+  "nullReplacementCorrigendum": {
+    "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+    "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+    "passed": true,
+    "terminal": true,
+    "terminalPassReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/terminal-pass-receipt.v1.json",
+    "terminalPassReceiptSha256": "bcf1be2a17d34d7677455c61e9108836c43b251f287ae474d0a9e0591bfd5819",
+    "corrigendumPassReceiptSha256": "4c56ddecf1fb191dca2188c68b30aa56691f5cc498d5d92879ffd125efc14df2",
+    "compiledImplementationFreezeManifestSha256": "c8194b7f89940a02dd38749acb97c9e1627de91cecf99d1844ff384e3929fea9",
+    "interpretationRule": {
+      "replacementJsonNull": "NO_REPLACEMENT",
+      "replacementFieldMissing": "NO_REPLACEMENT",
+      "completeValidReplacementObject": "PRESERVE_AND_VALIDATE_UNDER_EXISTING_RULES",
+      "emptyReplacementObject": "FAIL_CLOSED",
+      "partialReplacementObject": "FAIL_CLOSED"
+    },
+    "knownAnswer": {
+      "requiredCases": 5,
+      "passedCases": 5,
+      "unityInvocationCount": 1,
+      "naturalExitCode": 0,
+      "retryPerformed": false,
+      "algorithmLaneExecutionCount": 0
+    }
+  },
+  "executionReadiness": {
+    "attemptId": "qualification-execution-readiness-recheck-attempt-009",
+    "passed": true,
+    "terminal": true,
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "565a2e5a1f97d67e37c037db05db610feabf93237d717d67e86d0be82c534a6a",
+    "auditRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/readiness-recheck-audit.v9.json",
+    "auditSha256": "5a3c8fe4bd1f894d0d5982453d1c4b2d830ec8868e5f791d9da8f9e53fc59986",
+    "totalChecks": 24,
+    "passedChecks": 24,
+    "failedChecks": 0,
+    "retainedFailedRechecks": [
+      {
+        "attemptId": "qualification-execution-readiness-recheck-attempt-007",
+        "failureReceiptSha256": "445638ac28fe6fbcbb11f1701f3ac5be2aa7df8d89fd8ec8e543f12f8d963792",
+        "freezeManifestSha256": "538e4ac60d5edfa4313670663d46f6984a72220599b796707123d8d26f2ce9fa",
+        "modifiedOrReclassified": false
+      },
+      {
+        "attemptId": "qualification-execution-readiness-recheck-attempt-008",
+        "failureReceiptSha256": "7289444e069b77e3558159f20dee906082e4f6e42dd72fd2235a54dcac4076f4",
+        "freezeManifestSha256": "b6548bd55ecad099d1aa4d038e4b918254fc4dfa8b7cb9125a8666d784a575bb",
+        "modifiedOrReclassified": false
+      }
+    ]
+  },
+  "authoritativeProspectiveExecutionChain": {
+    "runnerV2": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "sha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401"
+    },
+    "compiledEditorAssembly": {
+      "relativePath": "Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+      "sha256": "3d1165d306227a6ec27b1b7472342d04dd3f52770852f522f7c9db4297440b18"
+    },
+    "compiledRuntimeAssembly": {
+      "relativePath": "Library/ScriptAssemblies/Assembly-CSharp.dll",
+      "sha256": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1"
+    },
+    "supervisorV32": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_2.ps1",
+      "sha256": "a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409"
+    },
+    "executionContractV34": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_4.json",
+      "sha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85"
+    },
+    "implementationManifestV34": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_4.json",
+      "sha256": "1e56697a40692ff76fc01273ec4e5b8b7953ea88dcfe228eeeb317d9705a69c1"
+    },
+    "schedule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+      "rows": 162,
+      "replacementNullRows": 162
+    },
+    "prospectiveMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "prospectiveDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-002",
+    "prospectiveRootsCreated": false,
+    "expectedSerialFreshUnityProcesses": 1147,
+    "maximumConcurrentUnityProcesses": 1,
+    "replacementPolicy": "ZERO_REPLACEMENT_FAIL_STOP"
+  },
+  "scientificBoundary": {
+    "qualificationMeasuredRootCreatedByCorrigendum": false,
+    "deliveryRootCreatedByCorrigendum": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "instrumentQualificationRunCount": 0,
+    "oracleRunCount": 0,
+    "emptyBoundaryRunCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "authorizationState": {
+    "nullReplacementCorrigendumCompleted": true,
+    "executionReadinessRecheckCompleted": true,
+    "newQualificationExecutionAttemptAuthorized": false,
+    "prospectiveAttempt002RootCreationAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false,
+    "separateExactHashExecutionAuthorizationRequired": true
+  },
+  "nextRequiredAction": "Obtain a separate exact-hash authorization for one new Gate14Re-ME load qualification execution attempt bound to RunnerV2 e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401, supervisor v3.2 a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409, execution contract v3.4 e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85, implementation manifest v3.4 1e56697a40692ff76fc01273ec4e5b8b7953ea88dcfe228eeeb317d9705a69c1, readiness attempt-009 receipt 565a2e5a1f97d67e37c037db05db610feabf93237d717d67e86d0be82c534a6a, and new attempt-002 measured/delivery roots."
+}

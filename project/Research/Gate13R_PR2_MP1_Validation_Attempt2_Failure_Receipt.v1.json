@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-mp1-prepilot-validation-attempt2-failure-v1",
+  "failedAtUtc": "2026-10-09T03:28:00Z",
+  "stage": "dual-runtime-parameter-binding-smoke",
+  "reasonCode": "NESTED-ARRAY-PASSED-AS-PROJECTPATH",
+  "diagnosis": "The aggregate smoke driver wrapped each parameter array as one object, so PowerShell attempted to convert the full array into the scalar ProjectPath parameter. The target script did not enter its body.",
+  "sourceImplementationFailure": false,
+  "unityInvoked": false,
+  "measuredPilotRootCreated": false,
+  "formalAttempt3Created": false,
+  "status": "FAILED-PRESERVED / VALIDATION-HARNESS-ONLY"
+}

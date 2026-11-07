@@ -1,0 +1,486 @@
+{
+    "schemaVersion":  1,
+    "auditKind":  "gate13r-pr2-s48-h48-formal-final-prelaunch-environment-storage-preservation-audit-v1",
+    "observedAtUtc":  "2026-10-08T17:34:34.3408400Z",
+    "observedAtLocal":  "2026-10-09T01:34:34.3428472+08:00",
+    "timeZone":  "Asia/Shanghai",
+    "projectPath":  "H:/DDM_Final_Project",
+    "formalRootResolved":  "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1",
+    "checks":  [
+                   {
+                       "name":  "frozen-upstream-trees-byte-identical",
+                       "passed":  true,
+                       "detail":  "trees=6"
+                   },
+                   {
+                       "name":  "frozen-upstream-key-files-byte-identical",
+                       "passed":  true,
+                       "detail":  "files=12"
+                   },
+                   {
+                       "name":  "active-frozen-input-hashes",
+                       "passed":  true,
+                       "detail":  "files=15"
+                   },
+                   {
+                       "name":  "unit-and-two-phase-fixtures-pass",
+                       "passed":  true,
+                       "detail":  "35/35"
+                   },
+                   {
+                       "name":  "active-static-deterministic-audit-pass",
+                       "passed":  true,
+                       "detail":  "54/54"
+                   },
+                   {
+                       "name":  "negative-no-receipt-fail-closed-pass",
+                       "passed":  true,
+                       "detail":  "formal root absent and Unity not launched"
+                   },
+                   {
+                       "name":  "unity-compile-memory-atomic-self-tests-pass",
+                       "passed":  true,
+                       "detail":  "1feaf6a2714e5cb9cff6e07237baafbe03699681ff1b26289554898cee8b2614"
+                   },
+                   {
+                       "name":  "telemetry-psapi-cim-license-probe-pass",
+                       "passed":  true,
+                       "detail":  "d75e8884450b5291aa8e8f599185f17aa4c2b1417e906ed00bfd25f8d4a5fc5e"
+                   },
+                   {
+                       "name":  "fresh-unity-license-entitlement-evidence",
+                       "passed":  true,
+                       "detail":  "f2b77fd09591fa802b39b44e4cfb1df3ae17ab78f3be2cd335428b9ce4226922"
+                   },
+                   {
+                       "name":  "high-performance-power-scheme",
+                       "passed":  true,
+                       "detail":  "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)"
+                   },
+                   {
+                       "name":  "ac-online",
+                       "passed":  true,
+                       "detail":  "available=True; ac=1"
+                   },
+                   {
+                       "name":  "sleep-disabled-on-ac",
+                       "passed":  false,
+                       "detail":  "acIndex="
+                   },
+                   {
+                       "name":  "hibernate-disabled-on-ac",
+                       "passed":  false,
+                       "detail":  "acIndex=; unavailable=False"
+                   },
+                   {
+                       "name":  "free-physical-memory-at-least-4gib",
+                       "passed":  true,
+                       "detail":  20128817152
+                   },
+                   {
+                       "name":  "quiet-mean-cpu-load-at-most-50pct",
+                       "passed":  true,
+                       "detail":  3.6
+                   },
+                   {
+                       "name":  "thermal-policy-observed",
+                       "passed":  true,
+                       "detail":  "unavailable-under-preregistered-policy"
+                   },
+                   {
+                       "name":  "unity-network-tcp443-reachable",
+                       "passed":  true,
+                       "detail":  "remote=28.0.0.105; port=443"
+                   },
+                   {
+                       "name":  "raw-byte-budget-arithmetic",
+                       "passed":  true,
+                       "detail":  "minimum=57397541440"
+                   },
+                   {
+                       "name":  "h-drive-free-space",
+                       "passed":  true,
+                       "detail":  "available=276232503296; minimum=57397541440"
+                   },
+                   {
+                       "name":  "zero-unity-processes",
+                       "passed":  true,
+                       "detail":  "count=0"
+                   },
+                   {
+                       "name":  "unity-project-lock-absent",
+                       "passed":  true,
+                       "detail":  "present=False"
+                   },
+                   {
+                       "name":  "native-windows-powershell-5.1",
+                       "passed":  true,
+                       "detail":  "5.1.26100.9444|Desktop"
+                   },
+                   {
+                       "name":  "native-psmodulepath-exact",
+                       "passed":  true,
+                       "detail":  "C:\\Users\\bdscy\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\Modules"
+                   },
+                   {
+                       "name":  "formal-root-absent-before-authorization-commit",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v1"
+                   },
+                   {
+                       "name":  "formal-receipt-absent-before-authorization-commit",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Receipt.v1.json"
+                   },
+                   {
+                       "name":  "formal-status-absent-before-authorization-commit",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Status.v1.json"
+                   }
+               ],
+    "checkCount":  26,
+    "passedCheckCount":  24,
+    "failedCheckCount":  2,
+    "failedCheckNames":  [
+                             "sleep-disabled-on-ac",
+                             "hibernate-disabled-on-ac"
+                         ],
+    "frozenTreeAudit":  [
+                            {
+                                "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+                                "expected":  {
+                                                 "fileCount":  169,
+                                                 "rawBytes":  14661848,
+                                                 "canonicalTreeSha256":  "a62fcb5c0104e1ce493d8ca006f753cbd20341839c588c6ffd856cbe438beb6a"
+                                             },
+                                "actual":  {
+                                               "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+                                               "fileCount":  169,
+                                               "rawBytes":  14661848,
+                                               "canonicalTreeSha256":  "a62fcb5c0104e1ce493d8ca006f753cbd20341839c588c6ffd856cbe438beb6a"
+                                           },
+                                "passed":  true
+                            },
+                            {
+                                "relativePath":  "Research/FormalScenarios/Gate11R_5pct/v1",
+                                "expected":  {
+                                                 "fileCount":  57,
+                                                 "rawBytes":  125218919,
+                                                 "canonicalTreeSha256":  "0f41d8db5c01e9a1f1c14c7ee295151150d2efd91f6fc597fdb0b71b4f7eabe5"
+                                             },
+                                "actual":  {
+                                               "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/FormalScenarios/Gate11R_5pct/v1",
+                                               "fileCount":  57,
+                                               "rawBytes":  125218919,
+                                               "canonicalTreeSha256":  "0f41d8db5c01e9a1f1c14c7ee295151150d2efd91f6fc597fdb0b71b4f7eabe5"
+                                           },
+                                "passed":  true
+                            },
+                            {
+                                "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+                                "expected":  {
+                                                 "fileCount":  8714,
+                                                 "rawBytes":  554204972,
+                                                 "canonicalTreeSha256":  "e0c54bfe122b67d9a7aea6bea44fd6e936b002065488c0225979f7fadd919513"
+                                             },
+                                "actual":  {
+                                               "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+                                               "fileCount":  8714,
+                                               "rawBytes":  554204972,
+                                               "canonicalTreeSha256":  "e0c54bfe122b67d9a7aea6bea44fd6e936b002065488c0225979f7fadd919513"
+                                           },
+                                "passed":  true
+                            },
+                            {
+                                "relativePath":  "Research/Analysis/Gate13R_RQAligned_Preregistration/v1",
+                                "expected":  {
+                                                 "fileCount":  8,
+                                                 "rawBytes":  620326,
+                                                 "canonicalTreeSha256":  "af9b8236a17110bb3b63c2fbe5be108d0229ae5da84f4036c99736e209c79d3a"
+                                             },
+                                "actual":  {
+                                               "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Analysis/Gate13R_RQAligned_Preregistration/v1",
+                                               "fileCount":  8,
+                                               "rawBytes":  620326,
+                                               "canonicalTreeSha256":  "af9b8236a17110bb3b63c2fbe5be108d0229ae5da84f4036c99736e209c79d3a"
+                                           },
+                                "passed":  true
+                            },
+                            {
+                                "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+                                "expected":  {
+                                                 "fileCount":  9118,
+                                                 "rawBytes":  253513394,
+                                                 "canonicalTreeSha256":  "647fa0aa60f7cd0bd7763d94c1750f23efd803a2642ca69c1f21081de890faa9"
+                                             },
+                                "actual":  {
+                                               "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+                                               "fileCount":  9118,
+                                               "rawBytes":  253513394,
+                                               "canonicalTreeSha256":  "647fa0aa60f7cd0bd7763d94c1750f23efd803a2642ca69c1f21081de890faa9"
+                                           },
+                                "passed":  true
+                            },
+                            {
+                                "relativePath":  "Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+                                "expected":  {
+                                                 "fileCount":  8,
+                                                 "rawBytes":  116998,
+                                                 "canonicalTreeSha256":  "70f4f10c3ccd4f4428284c946f233e97cd2052408d74b4c72f24055f3f6c06bd"
+                                             },
+                                "actual":  {
+                                               "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+                                               "fileCount":  8,
+                                               "rawBytes":  116998,
+                                               "canonicalTreeSha256":  "70f4f10c3ccd4f4428284c946f233e97cd2052408d74b4c72f24055f3f6c06bd"
+                                           },
+                                "passed":  true
+                            }
+                        ],
+    "frozenKeyFileAudit":  [
+                               {
+                                   "relativePath":  "Research/Gate13R_PR1B_v4_Next_Authorization_Prompt.md",
+                                   "expectedSha256":  "41060497a5157675865ddf7753cd80c471de9ac5106ed2819ce28977016fab9a",
+                                   "actualSha256":  "41060497a5157675865ddf7753cd80c471de9ac5106ed2819ce28977016fab9a",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+                                   "expectedSha256":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+                                   "actualSha256":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json",
+                                   "expectedSha256":  "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3",
+                                   "actualSha256":  "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/PlayableExperiments/Gate11R_5pct/v1/algorithm-preset-catalog.json",
+                                   "expectedSha256":  "c0aad543e8dfe8ab8f5245b6d579a459b586f030d18e3cb360917fbce6393253",
+                                   "actualSha256":  "c0aad543e8dfe8ab8f5245b6d579a459b586f030d18e3cb360917fbce6393253",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/Gate12R_Readiness_Checkpoint.v1.json",
+                                   "expectedSha256":  "93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d",
+                                   "actualSha256":  "93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/Gate13R_RQAligned_Preregistration_Amendment.v1.json",
+                                   "expectedSha256":  "9bf388293094b89e5dcbe0ad6f76c66be6200a1db1223ef1015f10bb24477a83",
+                                   "actualSha256":  "9bf388293094b89e5dcbe0ad6f76c66be6200a1db1223ef1015f10bb24477a83",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/Gate13R_RQAligned_Metric_Registry.v1.json",
+                                   "expectedSha256":  "ca990d308f180452e7cd0a9a152c9e6c852bac9cf611e5aa2b9e686821b79b93",
+                                   "actualSha256":  "ca990d308f180452e7cd0a9a152c9e6c852bac9cf611e5aa2b9e686821b79b93",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/Gate13R_RQAligned_Contrast_Registry.v1.json",
+                                   "expectedSha256":  "fba8fbe41ecfbdb4f4d7fa5b4aad74be00b874e41c3b83c562fc1f2d250fcc47",
+                                   "actualSha256":  "fba8fbe41ecfbdb4f4d7fa5b4aad74be00b874e41c3b83c562fc1f2d250fcc47",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/Analysis/Gate13R_RQAligned_Preregistration/v1/wallclock-storage-decision-table.json",
+                                   "expectedSha256":  "ecde05838a5a6316af5b2393726b1010b97f372d63d0ea5cf0bc3ea059ca8c45",
+                                   "actualSha256":  "ecde05838a5a6316af5b2393726b1010b97f372d63d0ea5cf0bc3ea059ca8c45",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v9.json",
+                                   "expectedSha256":  "40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784",
+                                   "actualSha256":  "40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Recovery_Readiness_Checkpoint.v1.json",
+                                   "expectedSha256":  "b2416975737afcfceef7fbd3a4b2f2af132aa11e134f9936d09120f460df081f",
+                                   "actualSha256":  "b2416975737afcfceef7fbd3a4b2f2af132aa11e134f9936d09120f460df081f",
+                                   "passed":  true
+                               },
+                               {
+                                   "relativePath":  "Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1/recovered-order-effect-analysis.json",
+                                   "expectedSha256":  "da58006ab03e9166c31c82489d7ae7bd8024b362a6b9da08878a05453609fee0",
+                                   "actualSha256":  "da58006ab03e9166c31c82489d7ae7bd8024b362a6b9da08878a05453609fee0",
+                                   "passed":  true
+                               }
+                           ],
+    "activeHashAudit":  [
+                            {
+                                "logicalName":  "readiness",
+                                "relativePath":  "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+                                "expectedSha256":  "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc",
+                                "actualSha256":  "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "config",
+                                "relativePath":  "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+                                "expectedSha256":  "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+                                "actualSha256":  "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "schedule",
+                                "relativePath":  "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+                                "expectedSha256":  "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+                                "actualSha256":  "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "scheduleManifest",
+                                "relativePath":  "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+                                "expectedSha256":  "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+                                "actualSha256":  "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "storagePreflight",
+                                "relativePath":  "Research/Gate13R_PR2_Storage_WallClock_Preflight.v2.json",
+                                "expectedSha256":  "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435",
+                                "actualSha256":  "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "preparationProvenance",
+                                "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json",
+                                "expectedSha256":  "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56",
+                                "actualSha256":  "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "preparationSchema",
+                                "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json",
+                                "expectedSha256":  "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e",
+                                "actualSha256":  "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "twoPhaseAmendment",
+                                "relativePath":  "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+                                "expectedSha256":  "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+                                "actualSha256":  "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "twoPhaseSpecification",
+                                "relativePath":  "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+                                "expectedSha256":  "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5",
+                                "actualSha256":  "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "formalAuthorization",
+                                "relativePath":  "Research/Gate13R_PR2_Formal_Execution_Authorization.v2.json",
+                                "expectedSha256":  "b39323958710c4962cf868ae3ba6057f42649e8f23fb7f5feb04ffd12c438759",
+                                "actualSha256":  "b39323958710c4962cf868ae3ba6057f42649e8f23fb7f5feb04ffd12c438759",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "supplementalAuthorization",
+                                "relativePath":  "Research/Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt",
+                                "expectedSha256":  "4af69eb71362f89698d38760db335985a015af49f176dd7f81805cb6d2d4821a",
+                                "actualSha256":  "4af69eb71362f89698d38760db335985a015af49f176dd7f81805cb6d2d4821a",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "command",
+                                "relativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV2.cs",
+                                "expectedSha256":  "af9156588bc259dfa8cafeec4adb82c93a2b07f5e2ae772b4b0fd4115dce28a8",
+                                "actualSha256":  "af9156588bc259dfa8cafeec4adb82c93a2b07f5e2ae772b4b0fd4115dce28a8",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "module",
+                                "relativePath":  "Research/Gate13RPR2FormalExecutionV3.psm1",
+                                "expectedSha256":  "5eaf15a3f1891d17849cf5c417aabaa03bcac7d25771e83ab905060b2db74b74",
+                                "actualSha256":  "5eaf15a3f1891d17849cf5c417aabaa03bcac7d25771e83ab905060b2db74b74",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "blockWrapper",
+                                "relativePath":  "Research/Run-Gate13RPR2FormalBlockV4.ps1",
+                                "expectedSha256":  "30bf36239aaf321a4d454bf71f777a668476b1b962021d30ec3bb4d6abe25f54",
+                                "actualSha256":  "30bf36239aaf321a4d454bf71f777a668476b1b962021d30ec3bb4d6abe25f54",
+                                "passed":  true
+                            },
+                            {
+                                "logicalName":  "orchestrator",
+                                "relativePath":  "Research/Run-Gate13RPR2FormalCampaignV4.ps1",
+                                "expectedSha256":  "66821f7642a260a80a5ea30f3e45a4e93e4dbc0c78095a3bcf2800d86bf65b53",
+                                "actualSha256":  "66821f7642a260a80a5ea30f3e45a4e93e4dbc0c78095a3bcf2800d86bf65b53",
+                                "passed":  true
+                            }
+                        ],
+    "environment":  {
+                        "computerName":  "CY的主机",
+                        "userName":  "bdscy",
+                        "operatingSystem":  "Microsoft Windows 11 专业版",
+                        "operatingSystemVersion":  "10.0.26300",
+                        "cpuModels":  [
+                                          "AMD Ryzen 9 7950X3D 16-Core Processor"
+                                      ],
+                        "logicalProcessorCount":  32,
+                        "totalPhysicalMemoryBytes":  33396609024,
+                        "freePhysicalMemoryBytes":  20128817152,
+                        "cpuLoadSamplesPercent":  [
+                                                      0,
+                                                      1,
+                                                      3,
+                                                      4,
+                                                      10
+                                                  ],
+                        "meanCpuLoadPercent":  3.6,
+                        "powerSchemeRaw":  "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)",
+                        "powerSchemeGuid":  "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+                        "systemPowerStatusAvailable":  true,
+                        "acLineStatus":  1,
+                        "batteryFlag":  128,
+                        "sleepAcSeconds":  null,
+                        "hibernateAcSeconds":  null,
+                        "hibernateUnavailable":  false,
+                        "availableSleepStatesRaw":  "此系统上有以下睡眠状态:\r\n    待机 (S3)\r\n\r\n此系统上没有以下睡眠状态:\r\n    待机 (S1)\r\n\t系统固件不支持此待机状态。\r\n\r\n    待机 (S2)\r\n\t系统固件不支持此待机状态。\r\n\r\n    休眠\r\n\t尚未启用休眠。\r\n\r\n    待机(S0 低电量待机)\r\n\t系统固件不支持此待机状态。\r\n\r\n    混合睡眠\r\n\t休眠不可用。\r\n\r\n    快速启动\r\n\t休眠不可用。",
+                        "thermalTemperaturesCelsius":  [
+
+                                                       ],
+                        "thermalStatus":  "unavailable-under-preregistered-policy",
+                        "thermalQueryError":  "不支持 ",
+                        "networkHost":  "packages.unity.cn",
+                        "networkPort":  443,
+                        "networkRemoteAddress":  "28.0.0.105",
+                        "networkTcpSucceeded":  true,
+                        "powerShellVersion":  "5.1.26100.9444",
+                        "powerShellEdition":  "Desktop",
+                        "psModulePath":  "C:\\Users\\bdscy\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\Modules"
+                    },
+    "storage":  {
+                    "drive":  "H:",
+                    "availableFreeBytes":  276232503296,
+                    "projectedP95RawBytes":  9631912320,
+                    "projectedSafetyBytes":  14447868480,
+                    "reserveBytes":  42949672960,
+                    "minimumLaunchFreeBytes":  57397541440,
+                    "passed":  true
+                },
+    "licenseEvidence":  {
+                            "telemetrySummaryRelativePath":  "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/TelemetryProbeV3/Probe.summary.json",
+                            "telemetrySummarySha256":  "d75e8884450b5291aa8e8f599185f17aa4c2b1417e906ed00bfd25f8d4a5fc5e",
+                            "telemetryUnityLogRelativePath":  "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/TelemetryProbeV3/Probe.Unity.log",
+                            "telemetryUnityLogSha256":  "f2b77fd09591fa802b39b44e4cfb1df3ae17ab78f3be2cd335428b9ce4226922",
+                            "serialAssigned":  true,
+                            "entitlementResolutionObserved":  true,
+                            "passed":  true
+                        },
+    "formalRootAbsent":  true,
+    "formalExecutionReceiptAbsent":  true,
+    "formalStatusAbsent":  true,
+    "unityEditorProcessCount":  0,
+    "unityLockExists":  false,
+    "passed":  false
+}

@@ -1,0 +1,99 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-004-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-004-05296e8f-0603-406e-9cfa-93a58cc7fec0",
+  "attemptId": "load-qualification-execution-attempt-004",
+  "status": "FROZEN_FAILED_CLOSED_NO_RETRY_NO_RESUME_NO_REPLACEMENT",
+  "createdAtUtc": "2026-10-17T18:29:38.9379058Z",
+  "terminalFailureReceiptSha256": "89ae588df381230399790bff540913294fab98532c276ff3048d7d21290b5ff8",
+  "evidenceFiles": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/execution-authorization.v1.json",
+      "sha256": "fc9e00f9ca88f333c4f5ec3a78cf2c6f7ccf1535e1e120796898f9b7d9e1699a"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/stage-contract.v1.json",
+      "sha256": "9f544e9340abe1681da70f04eafb062955f4ff8c77526a538219bf0506fbe5f7"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/prelaunch-audit.v1.json",
+      "sha256": "406941f6f583cb96e371e84f2b20d192554189f4ae68957301180c8126598be6"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/launch-contract.v1.json",
+      "sha256": "5f6316ddca667cff889a5f038a660f029bfca2f955a47b843420e95ebf931bf0"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/external-launch-and-terminal-observation.v1.json",
+      "sha256": "d78f0fc496a9505d8ea4474b21bdddbc6427918ff52ab6118d53232789b990de"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/measured-root-terminal-inventory.v1.json",
+      "sha256": "5580f58e4eb3b0815176040bd7b1c16826e83c0cb6bfe61bd3f6bacc08a88c1a"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/supervisor.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/supervisor.stderr.log",
+      "sha256": "0f0c582fec088b127ce7f1a6e712d80ab4b9c3e721a096e627493abc315134f7"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/technical-failure-adjudication.v1.json",
+      "sha256": "79c9efac1e9cfe6111439560b0cc5565f0ce7c42f0627fce8dc4be75de1dacab"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/terminal-failure-receipt.v1.json",
+      "sha256": "89ae588df381230399790bff540913294fab98532c276ff3048d7d21290b5ff8"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v38.json",
+      "sha256": "686b8aaa610d0432f3f08a53c01ff083183b9da415906006034eaec5f22d959c"
+    }
+  ],
+  "measuredRootEvidence": [
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/launch-receipt.v2.json",
+      "sha256": "a9aded15cf91d2da9acb5750767cb649b6afeaa631aa740e4dfbfd30b8afa90d"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/failure-receipt.v2.json",
+      "sha256": "bafbf3e36a4bad7699b7338ca166deb9495bc3cfbd1e664e17ab250ca77a5fa9"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/process-ledger.raw.v2.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/failures-and-voids.raw.v1.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/replacement-ledger.raw.v1.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/unity-logs/process-0000.unity.log",
+      "sha256": "8584f1a11703d1fc417e9dd55af610ba44a2cf6fd2c214aeb32fdf22bb45c769"
+    }
+  ],
+  "scientificBoundary": {
+    "unityInvocationCount": 1,
+    "instrumentSelfTestCompletions": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "deliveryRootCreated": false,
+    "retryPerformed": false,
+    "resumePerformed": false,
+    "replacementPerformed": false,
+    "newAttemptCreatedAutomatically": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "immutabilityIntent": "All listed stable execution evidence and measured-root files are set read-only after hash verification. The failed attempt-002 measured root is retained and must not be retried, resumed, reused, topped up, merged, deleted or reclassified."
+}

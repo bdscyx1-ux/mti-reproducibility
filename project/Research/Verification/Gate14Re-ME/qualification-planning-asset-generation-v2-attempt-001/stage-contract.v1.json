@@ -1,0 +1,72 @@
+{
+  "schema": "gate14re-me-qualification-planning-asset-generation-v2-attempt-001-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v2-attempt-001",
+  "createdAtUtc": "2026-10-17T13:59:17.804518Z",
+  "mode": "OFFLINE_NONEXECUTING_PLANNING_ASSET_GENERATION",
+  "attemptRootRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001",
+  "uniqueContracts": {
+    "statusV27": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v27.json",
+      "sha256": "17c9e19bd5a27b6c6db7e8b50894cb87cad24e11fe9ab61d687bb07f10ea82c0"
+    },
+    "qualificationDesign": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/qualification-design-freeze.v2.json",
+      "sha256": "067736663b75c7d4fdb545e947959da787a0ee727c276fd0a6e9385bd831f390"
+    },
+    "inputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    "planningSchemaBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    },
+    "scheduleSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json",
+      "sha256": "8a96a5a53d22617ef90134ac1a57e3b7115e5ea7ce03a6739c632fd52119f8a5"
+    },
+    "sixAlgorithmFairnessBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "sha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71"
+    },
+    "referenceOracleSource": {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    }
+  },
+  "tooling": {
+    "generator": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/generate_and_validate_planning_assets_v1.py",
+      "sha256": "8fae6325f6e81980e4c10b2ac3ede3d301ee7bc43ea10cb4b32229320c0bad34"
+    },
+    "jsonSchemaDriver": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/validate_json_schemas_v1.ps1",
+      "sha256": "b379568175cb0290e834c8e338ba38457a1fad59482bc0b5a322138226762a5d"
+    }
+  },
+  "requiredOutputs": {
+    "sealedIdentityBindingCount": 1,
+    "coreInputBundleCount": 144,
+    "stressInputBundleCount": 18,
+    "totalInputBundleCount": 162,
+    "scheduleRowCount": 162,
+    "williamsSequenceCount": 6,
+    "repetitionsPerWilliamsSequence": 27
+  },
+  "executionBoundary": {
+    "measuredRootCreated": false,
+    "unityInvocationsMaximum": 0,
+    "plannerInvocationsMaximum": 0,
+    "algorithmLaneExecutionsMaximum": 0,
+    "qualificationObservationsMaximum": 0,
+    "formalObservationsMaximum": 0,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "failureDisposition": "preserve all evidence and partial assets; do not adopt them; fail closed"
+}

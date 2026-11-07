@@ -1,0 +1,129 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-48h-three-lane-windows-powershell51-binding-smoke-v1",
+    "completedAtUtc":  "2026-10-08T08:25:40.2280411Z",
+    "caseCount":  13,
+    "failedCaseCount":  0,
+    "cases":  [
+                  {
+                      "name":  "plan-generator",
+                      "script":  "Research\\Verification\\New-Gate13R48h3LanePlanV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\plan-generator.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\plan-generator.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|New-Gate13R48h3LanePlanV1|H:\\DDM_Final_Project\\Research\\Gate13R_48h_10pct_3Lane_Pilot_Plan.v1.json",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "schedule-generator",
+                      "script":  "Research\\Verification\\New-Gate13R48h3LaneScheduleV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\schedule-generator.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\schedule-generator.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|New-Gate13R48h3LaneScheduleV1|H:\\DDM_Final_Project\\Research\\Gate13R_48h_10pct_3Lane_Pilot_Schedule.v1.json",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "compile",
+                      "script":  "Research\\Verification\\Run-Gate13R48h3LaneCompileV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\compile.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\compile.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Run-Gate13R48h3LaneCompileV1|H:\\DDM_Final_Project",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "static",
+                      "script":  "Research\\Verification\\Run-Gate13R48h3LaneStaticUnitV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\static.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\static.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Run-Gate13R48h3LaneStaticUnitV1|H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingStatic",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "initializer",
+                      "script":  "Research\\Initialize-Gate13R48h3LaneCopiesV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\initializer.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\initializer.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Initialize-Gate13R48h3LaneLaneCopiesV1|H:\\DDM_Final_Project_Gate13R48H\\v1",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "telemetry",
+                      "script":  "Research\\Run-Gate13R48h3LaneTelemetryProbeV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\telemetry.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\telemetry.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Run-Gate13R48h3LaneTelemetryProbeV1|1|H:\\DDM_Final_Project_Gate13R48H\\v1\\lane-01",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "bootstrap",
+                      "script":  "Research\\Verification\\Run-Gate13R48h3LaneBootstrapCompileV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\bootstrap.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\bootstrap.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Run-Gate13R48h3LaneLaneBootstrapCompileV1|1|H:\\DDM_Final_Project_Gate13R48H\\v1\\lane-01",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "block",
+                      "script":  "Research\\Run-Gate13R48h3LaneBlockV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\block.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\block.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Run-Gate13R48h3LaneBlockV1|1|Verification|H:\\DDM_Final_Project_Gate13R48H\\v1\\lane-01",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "license-probe",
+                      "script":  "Research\\Run-Gate13R48h3LaneLicenseProbeV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\license-probe.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\license-probe.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Run-Gate13R48h3LaneLicenseProbeV1|1|binding-wave",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "licensing-stress",
+                      "script":  "Research\\Verification\\Run-Gate13R48h3LaneLicensingStressV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\licensing-stress.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\licensing-stress.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Run-Gate13R48h3LaneLicensingStressV1|H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane\\v1\\LicensingStress",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "pilot",
+                      "script":  "Research\\Run-Gate13R48h3LanePilotV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\pilot.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\pilot.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Run-Gate13R48h3LanePilotV1|H:\\DDM_Final_Project",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "analyzer",
+                      "script":  "Research\\Analyze-Gate13R48h3LanePilotV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\analyzer.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\analyzer.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Analyze-Gate13R48h3LaneConcurrencyPilotV1|H:\\DDM_Final_Project",
+                      "passed":  true
+                  },
+                  {
+                      "name":  "stabilization",
+                      "script":  "Research\\Verification\\Wait-Gate13R48h3LaneEnvironmentStabilizationV1.ps1",
+                      "exitCode":  0,
+                      "stdout":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\stabilization.stdout.log",
+                      "stderr":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_48h_10pct_3Lane_PreImplementation\\v1\\BindingSmokeV3\\stabilization.stderr.log",
+                      "output":  "BINDING-SMOKE-PASSED|Wait-Gate13R48h3LaneEnvironmentStabilizationV1|H:\\DDM_Final_Project",
+                      "passed":  true
+                  }
+              ],
+    "unityProcessCountAfter":  0,
+    "formalCampaign":  false,
+    "passed":  true
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-attempt2-static-validation-attempt1-failure-receipt-v1",
+  "status": "FAILED-VALIDATOR-IMPLEMENTATION-DEFECT-PRESERVED",
+  "passedChecks": 44,
+  "totalChecks": 46,
+  "failedChecks": [
+    "producer-required-field-once",
+    "campaign-two-phase"
+  ],
+  "diagnosis": [
+    "The producer field-count assertion was not scoped to BlockChildRecord and therefore counted a pre-existing adjacent field in another record class.",
+    "The two-phase assertion required the raw-contract status literal in the campaign even though that token is returned by the campaign-bound V5 module."
+  ],
+  "scientificOrExecutionContractDefectFound": false,
+  "formalRootV2Created": false,
+  "unityStarted": false,
+  "nextAction": "Preserve V1 and run a versioned V2 validator with class-scoped producer and module-plus-campaign two-phase checks."
+}

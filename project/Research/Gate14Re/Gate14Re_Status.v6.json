@@ -1,0 +1,45 @@
+{
+  "schema": "gate14re-status-v6",
+  "studyId": "Gate14Re",
+  "status": "FORMAL-PHASE-B-ANALYSIS-COMPLETE",
+  "substatus": "NO-UNIQUE-WINNER",
+  "scientificDesign": {
+    "fixedB": 48,
+    "designCells": 32,
+    "completedBlocks": 1536,
+    "completedAlgorithmLaneSamples": 6144,
+    "algorithms": ["A*-R", "D*L", "C-FF", "IDFF"],
+    "outcomes": ["M1", "M2", "M3", "M4", "M5"],
+    "quantityLevels": [1, 8, 32, 128, 512],
+    "forcedContinuousMovement": false,
+    "dynamicEventAdapter": "frozen deterministic in-memory structural event sequence"
+  },
+  "phaseA": {
+    "status": "FORMAL-PHASE-A-RAW-COMPLETE",
+    "root": "Research/FormalRuns/Gate14Re/PhaseA/attempt-001",
+    "rawCompleteSha256": "0fa68436e37333c5ccbc3360a3fd49460b9a338add16f95dc4f307de33e696fa",
+    "canonicalTreeSha256": "0c1e0bc2c8b286aa866901fdb26fbafc87bb5490f4578250eb2f4e2401df72dc",
+    "immutableReadOnly": true
+  },
+  "phaseB": {
+    "status": "FORMAL-PHASE-B-ANALYSIS-COMPLETE",
+    "root": "Research/Analysis/Gate14Re/PhaseB/attempt-001",
+    "analysisReceiptSha256": "1c1a45784d858fe2953a76c604bb4649515d216321c4acb9bd9e4c0a4482801d",
+    "analysisCanonicalTreeSha256": "5754a2027fb77839bb736e44c5c6e21faddd2c7b652d5a9fb6a02b2e643a933d",
+    "winnerAdjudicationStatus": "NO_UNIQUE_WINNER",
+    "eligibleAlgorithms": ["A*-R", "C-FF", "IDFF"],
+    "ineligibleAlgorithms": ["D*L"],
+    "retainedCandidateAlgorithms": ["A*-R", "C-FF", "IDFF"],
+    "forcedWinner": false,
+    "postHocExpansionPerformed": false,
+    "immutableReadOnly": true
+  },
+  "formalAnalysisRootExists": true,
+  "formalObservationProduced": true,
+  "formalPhaseAStarted": true,
+  "formalPhaseAComplete": true,
+  "formalPhaseBStarted": true,
+  "formalPhaseBComplete": true,
+  "gate15Started": false,
+  "nextRequiredAction": "user_scientific_decision_on_no_unique_winner_or_separate_gate15_authorization"
+}

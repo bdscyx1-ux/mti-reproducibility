@@ -1,0 +1,150 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "attemptId": "qualification-execution-readiness-freeze-attempt-001",
+  "completedAtUtc": "2026-10-17T14:15:44.3556401Z",
+  "mode": "READ_ONLY_OFFLINE_PRELAUNCH_AUDIT",
+  "status": "FAIL_CLOSED_EXECUTION_CHAIN_NOT_READY",
+  "passed": false,
+  "auditTool": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/audit_qualification_execution_readiness_v1.py",
+    "sha256": "71b0b97b3cee2cd2bcd92bf6fefbadcf11f02611828cc08701a3195603606909"
+  },
+  "auditInvocation": {
+    "exitCode": 2,
+    "totalChecks": 46,
+    "passedChecks": 39,
+    "failedChecks": 7,
+    "upstreamOrBoundaryFailures": []
+  },
+  "passedReadinessDomains": {
+    "allBoundArtifactHashesMatched": true,
+    "allFrozenRuntimeExecutableHashesMatched": true,
+    "planningAssetsTerminalPass": true,
+    "coreInputBundles": 144,
+    "stressInputBundles": 18,
+    "scheduleRows": 162,
+    "uniqueSuperblockIds": 162,
+    "outputRawTableCount": 10,
+    "completePerObservationDeliveryFormats": [
+      "UTF-8 JSON Lines",
+      "RFC 4180 CSV",
+      "gzip-compressed UTF-8 JSON Lines",
+      "typed Parquet"
+    ],
+    "aggregateOnlyAllowed": false,
+    "trustedIdentityRuleQualified": true,
+    "timestampComparatorKnownAnswerPass": true,
+    "measuredRootAbsent": true,
+    "matchingUnityProcessCount": 0
+  },
+  "hardBlockers": [
+    {
+      "blockerId": "EXE-001-SUPERVISOR-RUNNER-METHOD-VERSION",
+      "reason": "The frozen supervisor invokes DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV1.Run, while the adopted instrument contract v3 binds Gate14ReMELoadQualificationRunnerV2.cs.",
+      "evidence": [
+        "Research/Gate14Re-ME/Execution/v1/Run-Gate14ReMELoadQualification.v1.ps1:22",
+        "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json"
+      ],
+      "disposition": "FAIL_CLOSED_NO_EXECUTION"
+    },
+    {
+      "blockerId": "EXE-002-RECEIPT-VERSION-MISMATCH",
+      "reason": "The supervisor requires lane, empty-boundary and instrument receipts with v1 filenames, while RunnerV2 emits the corresponding v2 receipts.",
+      "supervisorRequires": [
+        "lane-receipt.v1.json",
+        "empty-boundary-receipt.v1.json",
+        "instrument-csharp-receipt.v1.json"
+      ],
+      "runnerV2Emits": [
+        "lane-receipt.v2.json",
+        "empty-boundary-receipt.v2.json",
+        "instrument-csharp-receipt.v2.json"
+      ],
+      "disposition": "FAIL_CLOSED_NO_EXECUTION"
+    },
+    {
+      "blockerId": "EXE-003-STALE-IMPLEMENTATION-MANIFEST",
+      "reason": "The only supervisor-bound implementation manifest is status FROZEN_IMPLEMENTATION_SOURCE_ONLY_UNCOMPILED and contains RunnerV1/v1 contracts. It omits RunnerV2, input schema v2, instrument contract v3, output schema v2, the qualified D3-v3.1 contract, structural-v2 and delivery-v2. RunnerV2 independently requires its own exact source hash to be present in that manifest, so it would reject this manifest before acquisition.",
+      "missingCurrentBindings": [
+        "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+        "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+        "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+        "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+        "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+        "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v2.py",
+        "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2.py"
+      ],
+      "disposition": "FAIL_CLOSED_NO_EXECUTION"
+    },
+    {
+      "blockerId": "EXE-004-TRUSTED-UNITY-IDENTITY-NOT-WIRED",
+      "reason": "The supervisor performs a prelaunch file hash but does not bind the trusted identity rule or attempt-007 comparator, and does not perform the required live/post-exit external fingerprints plus PID, creation time, executable path and exact command-line composite verification.",
+      "observed": {
+        "trustedRuleReference": false,
+        "timestampComparatorReference": false,
+        "pidCreationPathCommandLineComposite": false,
+        "postExitFingerprintReconfirmation": false
+      },
+      "disposition": "FAIL_CLOSED_NO_EXECUTION"
+    },
+    {
+      "blockerId": "EXE-005-STRUCTURAL-DELIVERY-COMMIT-NOT-WIRED",
+      "reason": "The supervisor stops at QUALIFICATION-RAW-COMMIT-PENDING and does not invoke the frozen structural-v2 validator or delivery-v2 tool, so it cannot enforce the complete per-observation deliverable as a terminal execution state.",
+      "observed": {
+        "structuralV2Called": false,
+        "deliveryV2Called": false,
+        "currentTerminalState": "QUALIFICATION-RAW-COMMIT-PENDING"
+      },
+      "disposition": "FAIL_CLOSED_NO_EXECUTION"
+    },
+    {
+      "blockerId": "EXE-006-LAUNCH-RECEIPT-INCOMPLETE-BINDINGS",
+      "reason": "The current launch receipt does not bind the planning-assets manifest, input schema v2, output schema v2, qualified D3 contract, trusted Unity identity rule/comparator, structural-v2, delivery-v2 or typed-Parquet runtime.",
+      "missingBindings": [
+        "planning-assets-freeze-manifest.v1.json",
+        "load-qualification-input-schema.v2.json",
+        "load-qualification-output-schema.v2.json",
+        "d3-cumulative-managed-allocation-contract.qualified.v1.json",
+        "trusted-launch-identity-rule.v1.json",
+        "Gate14ReMETrustedTimestampComparatorV1.ps1",
+        "gate14re_me_qualification_structural_v2.py",
+        "gate14re_me_qualification_delivery_v2.py",
+        "typed-parquet-runtime-manifest.v1.json"
+      ],
+      "disposition": "FAIL_CLOSED_NO_EXECUTION"
+    }
+  ],
+  "capabilityGaps": [
+    {
+      "gapId": "CAP-001-NO-PREGENERATED-WHOLE-SUPERBLOCK-REPLACEMENTS",
+      "classification": "NONBLOCKING_FOR_THIS_OFFLINE_AUDIT_BUT_REQUIRES_EXPLICIT_PREEXECUTION_DISPOSITION",
+      "scheduleRows": 162,
+      "rowsWithBoundReplacement": 0,
+      "rowsWithNullReplacement": 162,
+      "meaning": "The frozen maximum of one whole-superblock replacement is a ceiling, not a guarantee. With the current assets, a primary technical failure would fail closed because no replacement input is bound.",
+      "notClassifiedAs": "an upstream planning-assets integrity failure"
+    }
+  ],
+  "scientificBoundary": {
+    "measuredRootCreated": false,
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "analysisPerformed": false,
+    "rankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "sealedIdentityMappingDisclosed": false
+  },
+  "adoptionDecision": {
+    "currentExecutionChainAdopted": false,
+    "qualificationExecutionAuthorizedByThisReceipt": false,
+    "globalStatusUpdated": false,
+    "repairPerformed": false,
+    "automaticRetryPerformed": false
+  }
+}

@@ -1,0 +1,38 @@
+--- frozen/analyze_b.py
++++ portable/analyze_b.py
+@@ -1,7 +1,10 @@
+ """Analyze only newly acquired B main conditions; fail closed on incomplete data."""
+ import argparse,collections,csv,hashlib,importlib.util,json,math,pathlib,statistics,sys,datetime
+-ROOT=pathlib.Path(__file__).resolve().parent
+-SOURCE=ROOT/'evidence/Analyze-Gate14ReFormalPhaseBV1.py'
++from portable_paths import configuration, resolve_recorded_path
++ARGS=configuration()
++ROOT=ARGS.input_root
++OUTPUT=ARGS.output_root
++SOURCE=pathlib.Path(__file__).resolve().parents[1]/'supplement-20261103/evidence/Analyze-Gate14ReFormalPhaseBV1.py'
+ SOURCE_HASH='9c5bbbadfa06afc3ad715c5ceb579f4f10e8f022b694e50c37c0caeb4c217401'
+ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+ def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+@@ -21,7 +24,7 @@
+  expected={b['blockId']:b for b in plan['blocks']};seen=set();blocks=[];audit=[]
+  for job in jobs:
+   b=job['block'];bid=b['blockId'];require(bid in expected and b==expected[bid] and bid not in seen,'Duplicate or changed planned block');seen.add(bid)
+-  path=pathlib.Path(job['outputPath']).resolve();require(path.is_relative_to((ROOT/'B').resolve()),'Nonformal input prohibited')
++  path=resolve_recorded_path(job['outputPath'],ROOT).resolve();require(path.is_relative_to((ROOT/'B').resolve()),'Nonformal input prohibited')
+   require(path.is_file(),'Incomplete acquisition: missing '+str(path))
+   block=read(path);digest=sha(path)
+   require(block.get('schema')=='revision20261103-b-output-v1' and block.get('studyId')=='DDM-Revision-20261103-B' and block.get('status')=='COMPLETE','Output identity/status mismatch '+bid)
+@@ -67,11 +70,11 @@
+  return blocks,audit
+ 
+ def main():
+- parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
++ args=ARGS
+  engine=load_engine();selftest=engine.run_self_test(None)
+  if args.check:
+   print(json.dumps(dict(status='PASS',analysisSourceSha256=SOURCE_HASH,checkCount=selftest['checkCount'],pythonVersion=sys.version,numpyVersion=engine.np.__version__,formalDataOpened=False),ensure_ascii=False));return
+- destination=ROOT/'analysis/B';require(not destination.exists(),'Final analysis already exists; refusing overwrite')
++ destination=OUTPUT/'B';require(not destination.exists(),'Final analysis already exists; refusing overwrite')
+  blocks,audit=acquire_blocks()
+  eligibility=engine.evaluate_eligibility(blocks);m1=engine.build_pairwise(blocks,metric='M1');m2=engine.build_pairwise(blocks,metric='M2');decision=engine.adjudicate_winner(eligibility,m1,m2);descriptive=engine.descriptive_algorithm_summaries(blocks)
+  summary=dict(schema='revision20261103-b-analysis-v1',studyId='DDM-Revision-20261103-B',status='COMPLETE',blockCount=768,movementBlocks=384,callbackBlocks=384,algorithmSamples=3072,analysisSourceSha256=SOURCE_HASH,analyzerSha256=sha(pathlib.Path(__file__)),zeroVarianceConvention='Original deterministic convention retained: a zero-variance paired log contrast uses point intervals; p=1 for exactly zero contrast, p=0 for nonzero contrast. These finite-input results do not establish population certainty.',scope='Eight fixed main conditions N128, short trajectories after initial disjoint block/unblock; callbacks are batch-mode main-loop diagnostics, not displayed frame or interaction latency.',eligibility=eligibility,m1=m1,m2=m2,decision=decision,descriptive=descriptive,pythonVersion=sys.version,numpyVersion=engine.np.__version__,completedUtc=datetime.datetime.now(datetime.timezone.utc).isoformat())

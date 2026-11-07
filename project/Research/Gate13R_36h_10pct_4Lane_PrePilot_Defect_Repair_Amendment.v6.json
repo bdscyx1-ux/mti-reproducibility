@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-defect-repair-v6",
+  "createdAtUtc": "2026-10-08T05:08:00Z",
+  "status": "AUTHORIZED-NONEXECUTING-REPAIR",
+  "formalCampaignAuthorized": false,
+  "pilotAuthorizationCount": 1,
+  "pilotAuthorizationConsumed": false,
+  "sourceAttempt": 5,
+  "targetAttempt": 6,
+  "confirmedDefect": {
+    "phase": "authorized-overlay-construction-before-any-root",
+    "type": "Windows PowerShell 5.1 StrictMode variable interpolation",
+    "description": "Attempt 5 interpolated the generated static-unit script variable $preImplementationRoot while the derivation generator itself was executing. The variable intentionally belongs to the generated script scope and was therefore undefined in the generator scope.",
+    "scientificEffect": "none; no Unity process, verification root, lane copy, pilot sample, or formal artifact was created"
+  },
+  "authorizedRepair": {
+    "scope": "versioned orchestration-only repair",
+    "mechanism": "preserve $ProjectPath and $preImplementationRoot as literal generated-script variables by escaping them in the attempt-6 generator string",
+    "additionalBindings": [
+      "attempt-5 failure receipt, partial manifest, checkpoint and all partial-file hashes",
+      "attempt-4 lock diagnosis and frozen Gate 10R lock-hygiene policy/module",
+      "attempt-5 expected-negative lock-hygiene test design and passing no-Unity unit evidence"
+    ]
+  },
+  "unchangedSemantics": {
+    "campaignMatrixCount": 74,
+    "relative95CiHalfWidthTarget": 0.10,
+    "hardSampleCap": null,
+    "isolatedLaneCount": 4,
+    "unityProcessUnit": "one fresh Unity Editor process per Williams block",
+    "readinessP95MaximumHours": 27,
+    "formalWallClockMaximumHours": 36,
+    "pilotSubsetCampaignCount": 12,
+    "measuredBlocksPerCampaign": 32,
+    "pilotMeasuredBlockCount": 384,
+    "pilotMeasuredSampleCount": 1152,
+    "pilotWarmupBlockCount": 8,
+    "retainedManagedMemoryRuleMiBPerSample": 128
+  },
+  "immutableAttempt5Evidence": {
+    "partialManifestSha256": "f62366baa7d0147d85563039605c5cae15fde20d491bffe295c6e94d061dcd6c",
+    "failureReceiptSha256": "b0e21fec82dc717c2089a8d110050971b635cb8fd4ce876d7fc70b39f961861d",
+    "checkpointSha256": "bb56b58e4b045953ccb16dfaab078fdb3c512246c6809c06baf1a5192fd7a9ba"
+  },
+  "prohibitions": [
+    "do not modify, resume, overwrite or reinterpret attempt 5",
+    "do not weaken any threshold or scientific gate",
+    "do not create a formal output root or formal execution receipt",
+    "do not start a formal timing campaign",
+    "do not consume more than the single already-authorized NON-FORMAL pilot"
+  ]
+}

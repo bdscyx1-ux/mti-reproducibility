@@ -1,0 +1,32 @@
+{
+  "schema": "gate14re-me-formal-st-end-to-end-package-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "packageId": "gate14re-me-formal-st-v5-end-to-end-package-attempt-004",
+  "status": "AUTHORIZED_BUILD_AND_TEST_END_TO_END_PACKAGE_THROUGH_ACCEPTED_DATA_PACKAGE",
+  "userStatements": [
+    "授权执行第10项：依据已冻结的 formal ST v5 合同建立全新的 package staging/build/test roots，构建并验证一键迁移包；不得启动正式 ST collection、formal analysis、MQ 或 MT。凭据不得写入 ZIP，若确需复制凭据，须先单独列出目标位置和保护方式供我确认。",
+    "现在的一键迁移包内还需要给授权吗？我希望的迁移包是涵盖所有授权直至生成数据包"
+  ],
+  "endToEndUserScopeSha256": "0dafa5724cdea831a27d8490fc6f6f5df6b1d2815a1bd9ad2328d9f767a50409",
+  "authorizedBuildActions": {
+    "newStagingRoot": true,
+    "newBuildRoot": true,
+    "newTestRoot": true,
+    "zipCreation": true,
+    "algorithmFreeReadinessTest": true,
+    "authorizationChainDryRun": true
+  },
+  "prohibitedDuringPackageBuildAndTest": {
+    "formalInputGeneration": true,
+    "formalCollection": true,
+    "formalAnalysis": true,
+    "mq": true,
+    "mt": true,
+    "credentialCopy": true
+  },
+  "credentialPolicy": {
+    "credentialsInZip": false,
+    "credentialCopyAuthorized": false,
+    "unityInstallerIsNotACredential": true
+  }
+}

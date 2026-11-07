@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-formal-st-acquisition-schema-v5.0",
+  "title": "Gate14Re-ME formal ST acquisition terminal receipt v5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema","studyId","status","scheduleRows","acceptedSuperblocks","measuredLanes","unityProcessCount","wholeSuperblockReplacements","formalCollectionAuthorized","formalAnalysisAuthorized","createdAtUtc"],
+  "properties": {
+    "schema":{"const":"gate14re-me-formal-st-acquisition-complete-receipt-v5"},
+    "studyId":{"const":"Gate14Re-ME"},
+    "status":{"const":"RAW_ACQUISITION_PASS_ACCEPTANCE_PENDING"},
+    "scheduleRows":{"const":1296},
+    "acceptedSuperblocks":{"const":1296},
+    "measuredLanes":{"const":7776},
+    "unityProcessCount":{"type":"integer","minimum":7789,"maximum":9084},
+    "wholeSuperblockReplacements":{"const":0},
+    "formalCollectionAuthorized":{"const":true},
+    "formalAnalysisAuthorized":{"const":false},
+    "createdAtUtc":{"type":"string","format":"date-time"}
+  }
+}

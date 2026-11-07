@@ -1,0 +1,76 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-discrepancy-audit-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-discrepancy-audit-attempt-003",
+  "status": "AUTHORIZED_ALGORITHM_FREE_UNITY_EXECUTABLE_IDENTITY_DISCREPANCY_AUDIT",
+  "authorizedAtUtc": "2026-10-17T09:44:14.8323940Z",
+  "userAuthorizationTextExact": "授权下一项最小授权",
+  "scopeResolution": {
+    "resolvedAgainstImmediatelyPrecedingProposal": true,
+    "authorizedStoppingPoint": "Preserve the complete attempt-001 and attempt-002 frozen failure sets; create versioned attempt-003 sources; repair only the case-insensitive collision between the local $matches variable and PowerShell automatic $Matches in Get-HashValue by renaming the local variable to $hashMatches; freeze all source hashes; then invoke the original isolated algorithm-free Unity identity probe at most once.",
+    "auditMethodMayChange": false,
+    "observationScopeMayExpand": false,
+    "automaticRetryAuthorized": false,
+    "scientificDesignChangeAuthorized": false,
+    "schemaCompatibilitySelfCheckRetryAuthorized": false,
+    "qualificationPlanningAuthorized": false,
+    "algorithmExecutionAuthorized": false
+  },
+  "authorizedActions": {
+    "retainAttempt001FailureEvidence": true,
+    "retainAttempt002FailureEvidence": true,
+    "createVersionedAttempt003SourceCopies": true,
+    "renameLocalMatchesVariableToHashMatchesInGetHashValueOnly": true,
+    "updateAttempt003EvidencePathsAuthorizationIdAndVersionedStatusBinding": true,
+    "recomputeAndFreezeAttempt003SourceHashes": true,
+    "launchExactlyOneOriginalIsolatedAlgorithmFreeUnityIdentityProbe": true,
+    "freezeAttempt003DiagnosticEvidenceAndTerminalStatus": true
+  },
+  "executionLimits": {
+    "maximumUnityBatchmodeInvocations": 1,
+    "maximumUnityExecuteMethodInvocations": 1,
+    "permittedExecuteMethod": "DDM.Research.Editor.UnityExecutableIdentityAuditAttempt001.Gate14ReMEUnityExecutableIdentityAuditV1.Run",
+    "permittedVerificationRootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003",
+    "permittedUnityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "permittedUnityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "inProcessObservationHoldSeconds": 30,
+    "automaticUnityRetryAuthorized": false,
+    "processSignalOrForcedTerminationAuthorized": false
+  },
+  "permittedSourceDelta": {
+    "semanticRepairCount": 1,
+    "semanticRepair": "Within Get-HashValue only, rename the local variable $matches and all of its local references to $hashMatches.",
+    "regexConditionChanged": false,
+    "returnValueSemanticsChanged": false,
+    "mechanicalAttemptVersioningOnly": [
+      "attempt-003 authorization and evidence-root identifiers",
+      "attempt-003 authorization, plan, probe-source and orchestrator paths",
+      "parent status v14 and new terminal status v15 bindings",
+      "attempt-003 current-evidence relative paths"
+    ],
+    "probeObservationFieldsChanged": false,
+    "classificationLogicChanged": false,
+    "trustedRuleLogicChanged": false,
+    "executeMethodChanged": false,
+    "holdSecondsChanged": false
+  },
+  "prohibitedActions": {
+    "modifyOrDeleteAttempt001Evidence": true,
+    "modifyOrDeleteAttempt002Evidence": true,
+    "modifyIdentityAuditMethod": true,
+    "expandObservationScope": true,
+    "automaticallyRetryUnityIdentityProbe": true,
+    "invokeInputSchemaCompatibilitySelfCheckV1": true,
+    "invokeAnyGate14ReMEPlanner": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputs": true,
+    "generateAnonymousIdentityMapping": true,
+    "createAnyMeasuredRoot": true,
+    "executeAnyAlgorithmLane": true,
+    "performFormalCollection": true,
+    "performFormalAnalysis": true,
+    "rankAlgorithms": true,
+    "adjudicateWinner": true
+  },
+  "terminalRule": "Pass only if attempt-001 and attempt-002 remain byte-identical and read only, the attempt-003 source delta is limited to the authorized Get-HashValue local-variable rename plus mechanical version/evidence routing, exactly one original isolated algorithm-free Unity identity-probe invocation occurs, no retry or prohibited activity occurs, and the original audit reaches its own pass condition. Any other failure consumes attempt-003 and fails closed without further repair or retry."
+}

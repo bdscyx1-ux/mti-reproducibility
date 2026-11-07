@@ -1,0 +1,100 @@
+{
+  "schema": "gate14re-me-d3-runtime-compatibility-amendment-failure-evidence-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-runtime-compatibility-amendment-attempt-001",
+  "status": "FROZEN_FAILURE_EVIDENCE_MANIFEST",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T05:32:01.7095964Z",
+  "artifacts": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Runtime_Compatibility_Amendment_Authorization.v1.json",
+      "sha256": "a3d6d370caba32c586a57ab205bcb8dc5e745130c87410aeec35318cc837463c",
+      "bytes": 4872
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Runtime_Compatibility_Amendment_Plan.v1.md",
+      "sha256": "9db7d8e0e3c04d719ebd789da5d3cbf8b5f4368f5bc82bdb68a6c2749ae58df1",
+      "bytes": 3711
+    },
+    {
+      "role": "preexecution-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/preexecution-manifest.v1.json",
+      "sha256": "bbf989968c12813143b32694950639e3998cd5cd5c936eb043997fb8899ea8f0",
+      "bytes": 5245
+    },
+    {
+      "role": "unity-log",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/unity-d3-known-answer.log",
+      "sha256": "96b5e5558e2c960600c2752479c5f2a404a62243a0a2f0a2673b754534ba78a0",
+      "bytes": 60098
+    },
+    {
+      "role": "failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failure-receipt.v1.json",
+      "sha256": "abffc0f216a18666ffb046ab0d7ebe9058e54a15cb07d3ecadd5715352c91ee1",
+      "bytes": 4597
+    },
+    {
+      "role": "status-v5",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v5.json",
+      "sha256": "66b6a3adbd2c889d19994fa4f3b2a1e5f69cbe60bddb81040b713e3013c3dc80",
+      "bytes": 2753
+    },
+    {
+      "role": "failed-candidate-folder-meta",
+      "originalRelativePath": "Assets/_Scripts/Research/Gate14ReME/v2.meta",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failed-candidate-source/Assets/_Scripts/Research/Gate14ReME/v2.meta",
+      "sha256": "615736219ad26f4b2cc5f11cc24a4a75489b1c46ff657e91a9c168dbd4bcb6de",
+      "bytes": 169
+    },
+    {
+      "role": "failed-candidate-counter-source",
+      "originalRelativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failed-candidate-source/Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs",
+      "sha256": "d7a0b679180b59101a41279bf0750646dcdc672f526ddcb7feafbc9ba3fd82ce",
+      "bytes": 1080
+    },
+    {
+      "role": "failed-candidate-counter-meta",
+      "originalRelativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs.meta",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failed-candidate-source/Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs.meta",
+      "sha256": "53e5d701d327e17ed27fb97a9cc4863cd3336b8022330fbe64d19d7f9b9eb3e1",
+      "bytes": 240
+    },
+    {
+      "role": "failed-candidate-harness-source",
+      "originalRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3RuntimeCompatibilityRunnerV1.cs",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failed-candidate-source/Assets/_Scripts/Research/Editor/Gate14ReMED3RuntimeCompatibilityRunnerV1.cs",
+      "sha256": "8f508dbdfb349f41cff2945173e047b7d5779ae695b83a2da4e1a7d05ffca35f",
+      "bytes": 23485
+    },
+    {
+      "role": "failed-candidate-harness-meta",
+      "originalRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3RuntimeCompatibilityRunnerV1.cs.meta",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failed-candidate-source/Assets/_Scripts/Research/Editor/Gate14ReMED3RuntimeCompatibilityRunnerV1.cs.meta",
+      "sha256": "ff7b7f68aeeddc8875dacb787066dc0f1947f10739c6769a29d6f4f81385d8c6",
+      "bytes": 240
+    }
+  ],
+  "activeProjectDisposition": {
+    "candidateCounterWithdrawnFromAssets": true,
+    "candidateHarnessWithdrawnFromAssets": true,
+    "priorFrozenD3SourceModified": false,
+    "priorFrozenLoadRunnerModified": false,
+    "successfulD3V2SourceFrozenForUse": false
+  },
+  "scientificBoundary": {
+    "d3RuntimeKnownAnswerExecuted": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "dataExporterKnownAnswerRun": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

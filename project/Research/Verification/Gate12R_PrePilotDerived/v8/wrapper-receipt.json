@@ -1,0 +1,107 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-pre-pilot-plan-v6-module-v2-route-wrapper-v8",
+    "createdAtUtc":  "2026-10-07T18:10:13.9700790Z",
+    "sourceSha256":  "ca7fb7566aae8382793adbc16cdc60dd3010f0157803f3bd275973cc4f4441d3",
+    "derivedSha256":  "2a74902f03f00400640df4cb0bb7737db235cb6f8553f591b4e897eef2cad10a",
+    "routes":  [
+                   {
+                       "from":  "Run-Gate12RProcessReuseBlock.ps1",
+                       "to":  "Run-Gate12RProcessReuseBlockV5.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RStaticUnitAudit.ps1",
+                       "to":  "Run-Gate12RStaticUnitAuditV6.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RCompile.ps1",
+                       "to":  "Run-Gate12RCompileV4.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RTelemetryProbe.ps1",
+                       "to":  "Run-Gate12RTelemetryProbeV3.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RColdReference.ps1",
+                       "to":  "Run-Gate12RColdReferenceV3.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RPilot.ps1",
+                       "to":  "Run-Gate12RPilotV7.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RBlockAndRegressionGates.ps1",
+                       "to":  "Run-Gate12RBlockAndRegressionGatesV7.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RValidationOnlyPrePilotAudit.ps1",
+                       "to":  "Run-Gate12RValidationOnlyPrePilotAuditV5.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Research\\Gate12RProcessReusePreparation.psm1",
+                       "to":  "Research\\Gate12RProcessReusePreparationV2.psm1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Analyze-Gate12RPilot.ps1",
+                       "to":  "Analyze-Gate12RPilotV2.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RPostPilotReadinessAudit.ps1",
+                       "to":  "Run-Gate12RPostPilotReadinessAuditV2.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "attempt=[int]$plan.attempt",
+                       "to":  "attempt=[int]$provenance.attempt",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate12r-pre-pilot-gates-execution-receipt-v1\u0027",
+                       "to":  "receiptKind=\u0027gate12r-pre-pilot-gates-execution-receipt-v8-plan-module-v2\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "checkpointKind=\u0027gate12r-pre-pilot-verification-checkpoint-v1\u0027",
+                       "to":  "checkpointKind=\u0027gate12r-pre-pilot-verification-checkpoint-v8-plan-module-v2\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "manifestKind=\u0027gate12r-pre-pilot-partial-output-manifest-v1\u0027",
+                       "to":  "manifestKind=\u0027gate12r-pre-pilot-partial-output-manifest-v8-plan-module-v2\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate12r-pre-pilot-gates-failure-receipt-v1\u0027",
+                       "to":  "receiptKind=\u0027gate12r-pre-pilot-gates-failure-receipt-v8-plan-module-v2\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "failedPrePilotAttempt6Root":  "Research/Verification/Gate12R_ProcessReuse_5pct/v6",
+    "failedPrePilotAttempt6PreservationReauditSha256":  "136bf9fcfce8c4b117878e007428d499723ea41d1c16defb65176163a70e04c1",
+    "failedPilotAttempts":  [
+                                1,
+                                2,
+                                3
+                            ],
+    "failedPilotPreservationReauditSha256":  "1e7c762ea54d22b7ec4fab9d7a22c18d56e774778dbee38183c156d5f498081a",
+    "failedPilotRootsModified":  false,
+    "failedPilotResumeAttempted":  false,
+    "planModuleCompatibilityChanged":  true,
+    "researchAlgorithmSemanticsChanged":  false,
+    "thresholdsChanged":  true,
+    "sampleThresholdChanged":  false,
+    "blockAggregationRuleChanged":  true,
+    "memoryGatePolicyId":  "gate12r-sample-128mib-block-128mib-per-sample-v1",
+    "pilotRootCreatedBeforeChild":  false,
+    "formalRootCreatedBeforeChild":  false
+}

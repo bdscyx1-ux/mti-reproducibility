@@ -1,0 +1,66 @@
+{
+  "schema": "gate14re-me-status-v43",
+  "studyId": "Gate14Re-ME",
+  "status": "ATTEMPT_007_EXTERNAL_LAUNCHER_FALSE_POSITIVE_FROZEN_PARENT_GUARD_CORRIGENDUM_AND_READINESS_PASS_QUALIFICATION_EXECUTION_AUTHORIZED",
+  "version": 43,
+  "updatedAtUtc": "2026-10-17T23:20:50.0000000Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v42.json",
+    "sha256": "7ede5d8e4c263202bbbf31652383af7ee5367a4f4c4c9c9ef6851ef5f1e465f1",
+    "retained": true,
+    "reclassified": false
+  },
+  "retainedFailedExecution": {
+    "attemptId": "load-qualification-execution-attempt-007",
+    "failureFreezeRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-007/failure-freeze-receipt.v1.json",
+    "failureFreezeSha256": "36376be89fe0005ead5603311301c8209408af5a7ab29116cd350aec5f168ade",
+    "externalLauncherFailureRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-007/external-launcher-failure-receipt.v1.json",
+    "externalLauncherFailureSha256": "dee8b9691654bcdc5f3b611d0dc4c0fbd42d65c5cf2785996ba14b2c3ac135fb",
+    "failedMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-005",
+    "failedDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-005",
+    "supervisorProcessStarted": false,
+    "unityProcessCount": 0,
+    "qualificationObservations": 0,
+    "modifiedOrReclassified": false,
+    "reused": false
+  },
+  "externalLaunchParentGuardCorrigendum": {
+    "attemptId": "qualification-external-launch-parent-guard-corrigendum-attempt-001",
+    "corrigendumPassReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-external-launch-parent-guard-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+    "corrigendumPassReceiptSha256": "130e13cec8ec350d17db3d229268b1cdf5effdecb11af58a62127cca812cdb33",
+    "supervisorV36Sha256": "446ce9a166f6858ea4366a9b5d4a528d57ed020ceb557eb16c1a7b06f1dfee87",
+    "executionContractV38Sha256": "25ec3203d87027d124c95a5f0288349eecdeffd2e015cce3166a959d659f8af2",
+    "implementationManifestV38Sha256": "b375380db093af86ccc41f291c1d527ee25363b84d10a95d469aaf71931b8aee",
+    "launcherGuardWeakened": false,
+    "passed": true
+  },
+  "executionReadiness": {
+    "attemptId": "qualification-execution-readiness-recheck-attempt-013",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-013/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "5251c397302b863188c319dc9e5bb109b8e30c487f9d847a51314e43c6c3c18a",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-013/freeze-manifest.v1.json",
+    "freezeManifestSha256": "fa0bd4389834fe3c78b8fde4ef1dd15359f39607b93b39a50d5959226102d9fa",
+    "passed": true
+  },
+  "nextExecution": {
+    "evidenceAttemptId": "load-qualification-execution-attempt-008",
+    "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-006",
+    "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-006",
+    "expectedFreshUnityProcesses": 1147,
+    "strictSerial": true,
+    "zeroReplacementFailStop": true,
+    "minimalParentLaunchCommandRequired": true,
+    "withinAttemptRetryResumeTopUpMergeSkipReorderOrParallelAuthorized": false
+  },
+  "authorizationState": {
+    "technicalRepairAndFreshAttemptLoopAuthorizedUntilQualificationExecutionPass": true,
+    "qualificationExecutionAuthorized": true,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "crossAlgorithmEffectInterpretationAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Create one exact-hash execution authorization for execution attempt-008 bound to the fresh attempt-006 measured and delivery roots, then invoke its frozen launcher exactly once from a minimal parent command line that contains no supervisor filename. Preserve any technical failure before a later forward-only repair and fresh attempt; stop only at qualification execution terminal PASS."
+}

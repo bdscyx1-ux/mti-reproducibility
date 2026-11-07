@@ -1,0 +1,27 @@
+{
+  "schema": "gate14re-me-qualification-planning-v4-failure-freeze-v4",
+  "version": 4,
+  "status": "FROZEN_FAILED_PLANNING_ATTEMPT_NO_ASSETS_ADOPTED",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-planning-asset-generation-v4-attempt-001",
+  "frozenAtUtc": "2026-10-19T11:56:00.000Z",
+  "exactReason": "Python NameError: JSON literal null was used in a Python dictionary instead of None.",
+  "failureOccurredBefore": [
+    "stage contract creation",
+    "upstream hash preflight",
+    "identity binding creation",
+    "input generation",
+    "schedule generation",
+    "Unity execution"
+  ],
+  "artifacts": [
+    {"relativePath": "authorization-receipt.v4.json", "bytes": 1325, "sha256": "85402174fd4a5a5eaa5e11c3866b7a2362971e74f0b9c0c975852c8de2d9c1a3"},
+    {"relativePath": "failure-receipt.v4.json", "bytes": 1660, "sha256": "9a90482af77b8df5075a52f19274b3aa05b573bbe5b594fe93462e46deeb17e2"},
+    {"relativePath": "generate_and_validate_planning_assets_v4_0.py", "bytes": 68753, "sha256": "2378ef3c4ccfc2d606857021ba3d31be555f82d17a0b590369796a04919c89f2"},
+    {"relativePath": "validate_json_schemas_v4_0.ps1", "bytes": 4055, "sha256": "37bf49d4d360d5a0c3c088c8b1fb9f50f636e32e933c78c1465bd5fa9a37b965"}
+  ],
+  "sameAttemptRetryAllowed": false,
+  "partialAssetsMayBeAdopted": false,
+  "measuredRootCreated": false,
+  "unityInvocations": 0
+}

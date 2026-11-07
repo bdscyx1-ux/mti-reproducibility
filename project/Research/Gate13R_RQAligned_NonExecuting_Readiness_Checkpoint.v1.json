@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "gate13r-rq-aligned-nonexecuting-readiness-v1",
+  "savedAtUtc": "2026-10-08T10:58:00Z",
+  "savedAtAsiaShanghai": "2026-10-08T18:58:00+08:00",
+  "status": [
+    "PREREGISTRATION-AMENDMENT-VALIDATED",
+    "SHARED-PRIMARY-FROZEN",
+    "HETEROGENEOUS-SECONDARY-FROZEN",
+    "GATE12R-PILOT-REANALYZED",
+    "HETERO-ORDER-IMBALANCE-AUDITED",
+    "FORMAL-SAMPLE-DESIGN-UNFROZEN",
+    "GATE13R-FORMAL-NOT-AUTHORIZED"
+  ],
+  "scope": "NON-EXECUTING/PILOT-INFORMED/PROSPECTIVE-BEFORE-FORMAL-DATA",
+  "activeUpstream": {
+    "gate10R": "ATTEMPT-4-PASSED",
+    "executionDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "gate11R": "ATTEMPT-2-RETAINED-BUNDLE-PASSED",
+    "gate11RBundleManifestSha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+    "gate12R": "V4-PILOT-PASSED/NON-FORMAL/READ-ONLY"
+  },
+  "researchContract": {
+    "matrixCampaignCount": 74,
+    "primaryScope": "SHARED-GOAL-FOUR-ALGORITHM-COMPLETE-WILLIAMS-BLOCK",
+    "primaryEndpoint": "P1",
+    "primaryContrasts": ["C1:C-FF/A*-R", "C2:C-FF/D*L", "C3:IDFF/A*-R", "C4:IDFF/D*L", "C5:IDFF/C-FF-TWO-SIDED"],
+    "familyWiseAlpha": 0.05,
+    "multiplicity": "HOLM",
+    "supportiveEndpoints": ["P2", "P3", "P4", "P5"],
+    "prospectiveGate14REndpoints": ["M1", "M2", "M3", "M4", "M5"],
+    "heterogeneousScope": "SECONDARY-SYSTEM-TREATMENT",
+    "strictSerial": true,
+    "oneFreshUnityProcessPerCompleteWilliamsBlock": true,
+    "maximumConcurrentUnityEditors": 1
+  },
+  "gate12RReadOnlyAudit": {
+    "measuredWilliamsBlocks": 384,
+    "measuredAlgorithmSamples": 1152,
+    "pilotCampaigns": 12,
+    "uniqueRunIds": 1152,
+    "uniqueUnityProcessIdentities": 384,
+    "p1ThroughP4FiniteCountEach": 1152,
+    "p5ValidDerivedCount": 1152,
+    "p5OverallZeroEventSampleCount": 1152,
+    "p3ScalingSlope": "NOT-ESTIMABLE-FROM-GATE12R-V4/FORMAL-DESIGN-MAPPING-AVAILABLE",
+    "m1ThroughM5": "NOT-OBSERVED-IN-GATE12R/VARIANCE-NOT-ESTIMABLE-FROM-GATE12R"
+  },
+  "heterogeneousAudit": {
+    "candidateMatchedPairs": 96,
+    "sameWavePairs": 96,
+    "adjacentPairs": 89,
+    "perAgentThenGrouped": 89,
+    "groupedThenPerAgent": 7,
+    "identity": "MATCHABLE-BY-SCENARIO-AND-BLOCK/SAME-WAVE/ORDER-IMBALANCED/NOT-ABBA-BALANCED/PILOT-DESCRIPTIVE-ONLY",
+    "supplementalPilotVerdict": "INSUFFICIENT-EVIDENCE-FOR-DECISION"
+  },
+  "candidateDesigns": [
+    {"id":"S32/H32","processes":2368,"samples":6784,"p50Hours":13.872123633777777,"p95Hours":17.636921380444445,"safetyBytes":9631912320},
+    {"id":"S40/H32","processes":2624,"samples":7808,"p50Hours":15.739632056888889,"p95Hours":20.156078230222224,"safetyBytes":11678959872},
+    {"id":"S48/H32","processes":2880,"samples":8832,"p50Hours":17.60714048,"p95Hours":22.67523508,"safetyBytes":13726007424},
+    {"id":"S40/H40","processes":2960,"samples":8480,"p50Hours":17.34015454222222,"p95Hours":22.046151725555553,"safetyBytes":12039890400},
+    {"id":"S48/H40","processes":3216,"samples":9504,"p50Hours":19.207662965333334,"p95Hours":24.565308575333336,"safetyBytes":14086937952},
+    {"id":"S48/H48","processes":3552,"samples":10176,"p50Hours":20.808185450666667,"p95Hours":26.45538207066667,"safetyBytes":14447868480}
+  ],
+  "preAmendmentBaseline": {
+    "id": "OLD-144-204-108",
+    "processes": 11160,
+    "samples": 31536,
+    "p50Hours": 64.830802096,
+    "p95Hours": 83.904223147,
+    "status": "PRE-AMENDMENT-COMPARISON-BASELINE/SUPERSEDED-PENDING-RQ-ALIGNED-SAMPLE-DESIGN-DECISION/NOT-AUTHORIZED-FOR-LAUNCH"
+  },
+  "recommendedButUnfrozen": {
+    "candidateId": "S48/H32",
+    "processes": 2880,
+    "samples": 8832,
+    "p50Hours": 17.60714048,
+    "conservativeP95Hours": 22.67523508,
+    "minimumFreeBytesIncluding40GiBReserve": 56675680384,
+    "reason": "Largest preregistered shared-primary S with minimum preregistered secondary H; full matrix; balanced Williams/ABBA; below prior 36-hour planning boundary.",
+    "limitation": "At a 10% assumed true effect, no S32-S48 candidate reaches 80% Holm-worst-threshold power for all five contrasts; C2 is limiting. At a 15% assumed effect, S48 reaches approximately 81% for limiting C2. These are planning scenarios, not a practical-superiority threshold."
+  },
+  "validation": {
+    "finalAuditPath": "Research/Verification/Gate13R_RQAligned_Preregistration/v7-final-audit/FinalAudit.summary.json",
+    "finalAuditSha256": "ab182be70b12b4619afe9939df218cd79a2454f3434bf907f5e103f79c245755",
+    "passed": 66,
+    "failed": 0,
+    "deterministicRegeneration": "BYTE-IDENTICAL-TWO-ISOLATED-ROOTS"
+  },
+  "analysisHashes": {
+    "metricObservability": "6892f10e87dac88e4635f037a9ed13109f387ef01cd46776a579b865cb9bcba0",
+    "contrastVarianceReanalysis": "c8ebe33baf87ca8d78efe1ee6b86857016cf363375fa27448fd51042694edf5e",
+    "heterogeneousOrderAudit": "396c9610a9cf2db2139b8b62565a68f7e344550f5e2b70b5e72e8209cbdf5c83",
+    "estimabilityMatrix": "832d701d02dde5f7aab8c55b132c767ead06d4111799c07cd436aacf09b6a912",
+    "candidateDesignSensitivity": "25f6d1ca6434fa6a4da99d305d4afa4d31e2e79a52a53805f67b44ced1578e51",
+    "wallclockStorageDecisionTable": "ecde05838a5a6316af5b2393726b1010b97f372d63d0ea5cf0bc3ea059ca8c45"
+  },
+  "preservation": {
+    "gate10RRootUnchanged": true,
+    "gate11RRootUnchanged": true,
+    "gate12RRootUnchanged": true,
+    "oldGate13RFilesUnchanged": true
+  },
+  "formalRootExists": false,
+  "formalExecutionReceiptExists": false,
+  "unityStarted": false,
+  "nextRequiredUserDecisions": [
+    "Whether to keep statistical-superiority threshold at ratio 1 with 15% only as a planning effect scenario, or freeze a nonzero practical-superiority margin.",
+    "Whether to freeze S48/H32 or another candidate.",
+    "Whether heterogeneous results remain secondary descriptive without a supplemental balanced pilot, or require a supplemental balanced pilot."
+  ]
+}

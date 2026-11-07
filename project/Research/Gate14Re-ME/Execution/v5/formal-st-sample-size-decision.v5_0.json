@@ -1,0 +1,38 @@
+{
+  "schema": "gate14re-me-formal-st-sample-size-decision-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FINAL_FROZEN_PRECOLLECTION",
+  "independentUnit": "one complete six-algorithm paired superblock",
+  "structuralCells": 36,
+  "candidateB": [36, 72, 108, 144],
+  "targetPowerAtLeast": 0.9,
+  "selectionRule": "smallest candidate whose worst opaque-target Wilson 95% lower Monte Carlo power bound is at least 0.90",
+  "selectedB": 36,
+  "plannedIndependentSuperblocks": 1296,
+  "plannedMeasuredAlgorithmLanes": 7776,
+  "plannedPrimaryEventGroupRows": 186624,
+  "powerEvidence": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/power-result.v1.json",
+    "sha256": "b21ed3a52f918c1cd4f0d30140349cf2c71f5e9fb3688cf39f1972c7f1917864",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/terminal-receipt.v1.json",
+    "terminalReceiptSha256": "759b86917e3caa43083142e2f7a066c66e88cc47c640d2f0ea90e618dbf5f81d",
+    "finalEvidenceFreezeRelativePath": "Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/final-evidence-freeze-manifest.v1.json",
+    "identityBlindNuisanceOnly": true,
+    "namedEffectsUsed": false,
+    "qualificationObservationsBecomeFormalSamples": false
+  },
+  "runtimeGate": {
+    "planningHoursWith20PercentHeadroom": 83.493,
+    "sevenDayGateHours": 168,
+    "triggered": false
+  },
+  "fixedRules": {
+    "formalAdaptiveExpansion": false,
+    "postOutcomeTopUp": false,
+    "optionalStoppingForBenefitOrFutility": false,
+    "BChangeAfterFormalInputDraw": false,
+    "BChangeAfterAnyFormalObservation": false
+  },
+  "formalCollectionAuthorized": false
+}

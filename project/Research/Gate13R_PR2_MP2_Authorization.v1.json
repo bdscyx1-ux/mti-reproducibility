@@ -1,0 +1,42 @@
+{
+  "authorizationId": "gate13r-pr2-mp2-nonexecuting-memory-policy-formal-attempt3-readiness-v1",
+  "authorizationKind": "gate13r-pr2-mp2-user-authorization-v1",
+  "authorizedAtAsiaShanghai": "2026-10-09T13:41:37.9745416+08:00",
+  "authorizedAtUtc": "2026-10-09T05:41:37.9696416Z",
+  "authorizedScope": {
+    "candidateFormalAttempt3AdapterImplementation": true,
+    "candidateFormalAttempt3Configuration": true,
+    "formalAttempt3ExecutionReceiptCreation": false,
+    "formalAttempt3MeasuredCampaign": false,
+    "formalAttempt3OutputRootCreation": false,
+    "formalStatisticalAnalysis": false,
+    "gate14R": false,
+    "isolatedUnityCompileSelfTestAndValidationOnlyBlocks": true,
+    "memoryPolicyFreeze": true,
+    "validationOnlyVersionedRepairAndRetry": true
+  },
+  "labels": [
+    "NON-EXECUTING",
+    "VALIDATION-ONLY",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "prompt": {
+    "relativePath": "Research/Gate13R_PR2_MP2_NonExecuting_Next_Authorization_Prompt.md",
+    "sha256": "063476899e32f439b0936c4da100219f86b24b17e42df09a0ab4c2cb12ef8215"
+  },
+  "userAuthorizationText": {
+    "relativePath": "Research/Gate13R_PR2_MP2_User_Authorization.v1.txt"
+  },
+  "prohibitions": [
+    "NO-FORMAL-ATTEMPT3-ROOT",
+    "NO-FORMAL-ATTEMPT3-RECEIPT",
+    "NO-FORMAL-MEASURED-BLOCK",
+    "NO-FORMAL-STATISTICAL-ANALYSIS",
+    "NO-GATE14R",
+    "NO-PILOT-V1-V2-RETRY-RESUME-TOPUP-MERGE",
+    "NO-UPSTREAM-MUTATION"
+  ],
+  "schemaVersion": 1
+}

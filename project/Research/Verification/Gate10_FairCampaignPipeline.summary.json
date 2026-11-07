@@ -1,0 +1,93 @@
+﻿{
+    "savedAt":  "2026-10-05T16:47:43.4227575+08:00",
+    "fixtureDirectory":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10_FairCampaignFixture_Final",
+    "campaignManifestPath":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10_FairCampaignFixture_Final\\campaign-manifest.json",
+    "campaignManifestSha256":  "4d9d61b15f2e375909c541f6070bd405624e90ae516e6ecb7d7b4ebb7585e987",
+    "scenarioSourceSha256":  "98981cd9504d1132099f1812209125c4110b2d3987c581e6ff1696c22d5985a3",
+    "sampleCount":  16,
+    "algorithmCounts":  {
+                            "A*-R":  4,
+                            "D*L":  4,
+                            "C-FF":  4,
+                            "IDFF":  4
+                        },
+    "positionCounts":  {
+                           "A*-R":  {
+                                        "p1":  1,
+                                        "p2":  1,
+                                        "p3":  1,
+                                        "p4":  1
+                                    },
+                           "D*L":  {
+                                       "p1":  1,
+                                       "p2":  1,
+                                       "p3":  1,
+                                       "p4":  1
+                                   },
+                           "C-FF":  {
+                                        "p1":  1,
+                                        "p2":  1,
+                                        "p3":  1,
+                                        "p4":  1
+                                    },
+                           "IDFF":  {
+                                        "p1":  1,
+                                        "p2":  1,
+                                        "p3":  1,
+                                        "p4":  1
+                                    }
+                       },
+    "orderedPredecessorCounts":  {
+                                     "A*-R\u003eD*L":  1,
+                                     "D*L\u003eIDFF":  1,
+                                     "IDFF\u003eC-FF":  1,
+                                     "D*L\u003eC-FF":  1,
+                                     "C-FF\u003eA*-R":  1,
+                                     "A*-R\u003eIDFF":  1,
+                                     "C-FF\u003eIDFF":  1,
+                                     "IDFF\u003eD*L":  1,
+                                     "D*L\u003eA*-R":  1,
+                                     "IDFF\u003eA*-R":  1,
+                                     "A*-R\u003eC-FF":  1,
+                                     "C-FF\u003eD*L":  1
+                                 },
+    "totalJsonlRecords":  272,
+    "totalPlannerRecords":  208,
+    "totalLifecycleRecords":  48,
+    "totalWorkloadRecords":  16,
+    "totalPlanOperations":  128,
+    "totalRepairOperations":  64,
+    "totalSucceededPlans":  128,
+    "totalBudgetExceededOperations":  0,
+    "overwriteGuard":  {
+                           "exitCode":  1,
+                           "manifestUnchanged":  true,
+                           "output":  "powershell.exe : Output directory is not empty; refusing to overwrite: H:\\DDM_Final_Project\\Research\\Verification\\Gate1\r\n0_FairCampaignFix\r\nAt H:\\DDM_Final_Project\\Research\\Verification\\Run-Gate10CampaignPipelineVerification.ps1:219 char:24\r\n+ ... iteOutput = \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $ca ...\r\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (Output director...FairCampaignFix:String) [], RemoteException\r\n    + FullyQualifiedErrorId : NativeCommandError\r\n \r\nture_Final\r\nAt H:\\DDM_Final_Project\\Research\\Run-FairPlanningCampaign.ps1:51 char:78\r\n+ ... nt -gt 0) { throw \"Output directory is not empty; refusing to overwri ...\r\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (Output director...gnFixture_Final:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : Output directory is not empty; refusing to overwrite: H:\\DDM_Final_Project\\Research\\Veri \r\n   fication\\Gate10_FairCampaignFixture_Final"
+                       },
+    "invalidBlockCountGuard":  {
+                                   "exitCode":  1,
+                                   "outputDirectoryCreated":  false,
+                                   "output":  "powershell.exe : Blocks must be a positive multiple of the cohort algorithm count (4) so every Williams balance cycle i\r\ns complete.\r\nAt H:\\DDM_Final_Project\\Research\\Verification\\Run-Gate10CampaignPipelineVerification.ps1:232 char:27\r\n+ ... ockOutput = \u0026 powershell -NoProfile -ExecutionPolicy Bypass -File $ca ...\r\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (Blocks must be ...le is complete.:String) [], RemoteException\r\n    + FullyQualifiedErrorId : NativeCommandError\r\n \r\nAt H:\\DDM_Final_Project\\Research\\Run-FairPlanningCampaign.ps1:37 char:5\r\n+     throw \"Blocks must be a positive multiple of the cohort algorithm ...\r\n+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (Blocks must be ...le is complete.:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : Blocks must be a positive multiple of the cohort algorithm count (4) so every Williams b \r\n   alance cycle is complete."
+                               },
+    "validationErrors":  [
+
+                         ],
+    "checks":  {
+                   "fixedCampaignManifestHash":  true,
+                   "nonFormalPipelineFixture":  true,
+                   "frozenProtocolAndWorkloadIdentity":  true,
+                   "exactWilliamsSchedule":  true,
+                   "positionBalance":  true,
+                   "orderedPredecessorBalance":  true,
+                   "childArtifactsAndHashes":  true,
+                   "provenanceAndCohortIdentity":  true,
+                   "workloadAccounting":  true,
+                   "jsonlCompleteness":  true,
+                   "noOverwriteGuard":  true,
+                   "invalidBlockCountGuard":  true
+               },
+    "failedChecks":  [
+
+                     ],
+    "passed":  true
+}

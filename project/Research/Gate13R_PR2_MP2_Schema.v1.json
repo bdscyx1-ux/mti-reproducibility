@@ -1,0 +1,72 @@
+{
+  "$defs": {
+    "scenarioMapping": {
+      "additionalProperties": true,
+      "properties": {
+        "canonicalMaximumGridDimension": {
+          "enum": [
+            32,
+            64,
+            128,
+            256
+          ]
+        },
+        "nativeAdvisoryBytes": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "nativeHardBytes": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "scenarioId": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scenarioRelativePath": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scenarioSourceSha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "tierId": {
+          "$ref": "#/$defs/tierId"
+        }
+      },
+      "required": [
+        "scenarioId",
+        "scenarioRelativePath",
+        "scenarioSourceSha256",
+        "canonicalMaximumGridDimension",
+        "tierId",
+        "nativeAdvisoryBytes",
+        "nativeHardBytes"
+      ],
+      "type": "object"
+    },
+    "sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "tierId": {
+      "enum": [
+        "MP2-NATIVE-LE128",
+        "MP2-NATIVE-EQ256"
+      ]
+    }
+  },
+  "$id": "gate13r-pr2-mp2-artifacts-schema-v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schemaVersion"
+  ],
+  "title": "Gate 13R-PR2-MP2 policy mapping and candidate config schema",
+  "type": "object"
+}

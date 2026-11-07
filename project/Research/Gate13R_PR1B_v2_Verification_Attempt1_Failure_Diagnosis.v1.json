@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "diagnosisId": "gate13r-pr1b-v2-verification-attempt1-failure-diagnosis-v1",
+  "createdAtUtc": "2026-10-08T12:29:21.2384582Z",
+  "createdAtAsiaShanghai": "2026-10-08T20:29:21.2384582+08:00",
+  "status": "VERIFICATION-ATTEMPT-1-FROZEN-FAILED-BEFORE-PILOT",
+  "verificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v9-gate13r-pr1b-order-effect-memory-v2",
+  "verificationRootInventory": {
+    "fileCount": 20,
+    "rawBytes": 176860,
+    "canonicalTreeSha256": "5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74",
+    "lastWriteUtc": "2026-10-08T12:26:29.2301447Z"
+  },
+  "observedEvidence": {
+    "staticUnitPassed": true,
+    "unityCompilePassed": true,
+    "unityExitCode": 0,
+    "unityBatchLogEndsSuccessfully": true,
+    "memoryPolicySelfTestResultRelativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v9-gate13r-pr1b-order-effect-memory-v2/MemoryPolicySelfTest/memory-policy-self-test.json",
+    "memoryPolicySelfTestResultRawBytes": 8778,
+    "memoryPolicySelfTestResultSha256": "3806169c3ed19ee26d2627964cd94b07939948f6596a2a2d8d128eca93d20a35",
+    "thresholdFixtureCount": 12,
+    "thresholdFixturePassedCount": 12,
+    "telemetryValidationFixtureCount": 8,
+    "telemetryValidationFixturePassedCount": 8,
+    "unityLogRawBytes": 67284,
+    "unityLogSha256AfterHandleRelease": "efc5223e81b1b37afdfa582e0464e0a29bcfff9b8360141b1dd91153665b78b5"
+  },
+  "primaryFailure": {
+    "class": "WINDOWS-POWERSHELL-5.1-PARAMETER-VALIDATION-COMPATIBILITY",
+    "location": "Research/Verification/Run-Gate13RPR1BMemoryPolicySelfTestV2.ps1",
+    "cause": "Invoke-Gate10RPostExitQuiescenceV3 was called with Role memory-policy-self-test, but the frozen Gate10RLockHygieneV3 role ValidateSet accepts only expected-negative, positive, compile, telemetry, or cold-reference.",
+    "scientificContractAffected": false,
+    "measuredPilotStarted": false
+  },
+  "secondaryFailure": {
+    "class": "FAILURE-EVIDENCE-HASHING-FILE-SHARE-RACE",
+    "location": "Research/Verification/Run-Gate13RPR1BPrePilotV2.ps1",
+    "cause": "The failure-path partial manifest used a non-sharing hash helper while MemoryPolicySelfTest.Unity.log was temporarily still held, so partial-manifest generation obscured the full primary exception.",
+    "scientificContractAffected": false
+  },
+  "terminalEnvironment": {
+    "unityProcessCount": 0,
+    "unityProjectLockPresent": false,
+    "pilotV6RootPresent": false,
+    "reservedFormalRootPresent": false
+  },
+  "disposition": [
+    "PRESERVE-V9-BYTE-FOR-BYTE",
+    "NO-RESUME",
+    "NO-MERGE",
+    "NO-PILOT-DATA-PRODUCED",
+    "VERSIONED-PREMEASUREMENT-REPAIR-AUTHORIZED"
+  ],
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

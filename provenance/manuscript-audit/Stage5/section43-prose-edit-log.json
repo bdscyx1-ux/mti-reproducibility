@@ -1,0 +1,34 @@
+{
+  "editedAt": "2026-11-04T10:56:46.998051+08:00",
+  "file": "C:\\Users\\bdscy\\Desktop\\新建文件夹 (2)\\Evidence_Revision_20261103\\Stage5\\MTI_Manuscript_Supplemented.docx",
+  "beforeSha256": "7ae3036dde6df5a9ad6c5e5527b00117c3163fe4cf18b0b3daced35d6e958ce4",
+  "afterSha256": "b64b6104765146b997379a9acb5e981f519e4abbc36b44fbbb20be4d3d445924",
+  "changes": [
+    {
+      "before": "All six eligible M1 pairwise ratios in the supplemental acquisition were 1.000000. The M2 ratio was 1.00000733 for A*-R against each other backend; D*L, C-FF, and IDFF had mutual ratios of 1.00000000. The retained deterministic zero-variance convention yields point intervals on these fixed inputs, not certainty for new maps. The original decision rule again selected no unique winner, now with all four backends eligible. The new common mask includes all agents, so its M2 values are not directly interchangeable with historical masked distances.",
+      "after": "All four algorithms completed every movement block, with identical completion times within each condition (4.10–11.84 simulated seconds; Table 5). Path lengths ranged from 40.46722 to 121.33594 scene units across conditions and algorithms. D*L, C-FF, and IDFF had identical path lengths within each condition; A*-R differed from them by at most 0.21875 scene units. The prespecified decision rule selected no unique winner among the four eligible algorithms; the full comparisons are reported in Supplementary Section S9. These results describe the tested inputs and do not establish equivalent performance on new maps. All 128 agents contribute to the new path-length measurements, so these values are not directly interchangeable with historical distances calculated from reduced common-agent sets."
+    },
+    {
+      "before": "In the historical acquisition at the two quantity anchors, A*-R, C-FF, and IDFF had a fitted M1 ratio of 1.2325 per doubling of agent count (model-based 95% interval 1.1957–1.2705). D*L's corresponding ratio was 1.5275 (1.4988–1.5568), including its failure-coded runs. The main-loop callback summaries and full quantity results are available in Supplementary Section S3. Successful movement runs exercised the initial 0.20 s block/unblock sequence; later cost changes belong to the configured schedule beyond their completion times. The supplemental acquisition did not repeat quantity levels or recompute the historical exploratory ranking.",
+      "after": "The historical agent-count experiment and main-loop callback summaries are reported in Supplementary Section S3. Those agent-count results belong to the earlier acquisition; the historical D*L records include incomplete runs assigned the 180 s limit and do not describe the corrected implementation. The supplemental acquisition tested only 128 agents and did not repeat the agent-count experiment or recompute the historical exploratory ranking. Its successful movement runs experienced the blocking and unblocking events at 0.20 s and finished before the later cost changes scheduled at 30, 90, and 150 s. The new results therefore support completion under the tested short-duration conditions, while longer-running dynamic movement remains outside their scope."
+    }
+  ],
+  "scope": "Two body paragraphs after Table 5 only; original table, footnote, comments and other package parts retained",
+  "verification": {
+    "minTime": 4.1,
+    "maxTime": 11.84,
+    "minPathLength": 40.46721852194233,
+    "maxPathLength": 121.33593744412065,
+    "maxAbsolutePathDifference": 0.2187500074505806
+  },
+  "renderQa": {
+    "status": "PASS",
+    "pages": 19,
+    "visuallyRecheckedPages": [
+      13,
+      14,
+      15
+    ],
+    "otherPages": "PNG hashes match previously visually inspected pages"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-prelaunch-static-schedule-v5-attempt1-failure-receipt-v1",
+  "failedAtUtc": "2026-10-08T17:28:57.0708356Z",
+  "status": "FAILED-PRELAUNCH-VALIDATION-IMPLEMENTATION-DEFECT / UNITY-NOT-LAUNCHED / FORMAL-ROOT-ABSENT / FORMAL-RECEIPT-ABSENT",
+  "failedImplementationRelativePath": "Research/Test-Gate13RPR2FormalExecutionAdapterV5.py",
+  "failedImplementationSha256": "6f2999f34678545cf0a37880f8708dbb7da3045696679b9a437b253a05aa4307",
+  "failureClass": "MANIFEST-PROPERTY-NAME-MISMATCH",
+  "failureMessage": "KeyError: 'totals' while reading the frozen schedule manifest",
+  "frozenManifestActualCountProperties": [
+    "campaignCount",
+    "processRecordCount",
+    "sampleIdentityCount",
+    "heterogeneousMatchedSuperblockCount"
+  ],
+  "formalRootResolved": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1",
+  "formalRootExistsAfterFailure": false,
+  "formalExecutionReceiptExistsAfterFailure": false,
+  "unityEditorProcessCountAfterFailure": 0,
+  "projectLockExistsAfterFailure": false,
+  "frozenInputModified": false,
+  "formalAttemptConsumed": false,
+  "retryScope": "VERSIONED-PRELAUNCH-VALIDATION-ONLY"
+}

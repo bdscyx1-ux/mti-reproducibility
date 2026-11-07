@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-defect-repair-v12",
+  "createdAtUtc": "2026-10-08T05:22:00Z",
+  "status": "AUTHORIZED-NONEXECUTING-REPAIR",
+  "formalCampaignAuthorized": false,
+  "pilotAuthorizationCount": 1,
+  "pilotAuthorizationConsumed": false,
+  "sourceAttempt": 11,
+  "targetAttempt": 12,
+  "confirmedDefect": "The frozen V5 lock-hygiene unit runner correctly rejected the V11 official verification output directory because its official-root boundary was version-specific.",
+  "authorizedRepair": "Use the mechanically derived V12 lock-hygiene unit runner, which changes only runner identity and versioned output-boundary tokens and retains the frozen Gate10R module and all 14 test semantics.",
+  "repairEvidence": {
+    "v11DiagnosisSha256": "7ee9b5fe35916a30806944571074721a9d6d94023f19f55086bddb1d504bea0c",
+    "unitV12Sha256": "4abbe6d186d59f4169e20343a965b42c6b073b73c50c86ed68a228fd127cfd38",
+    "unitV12DerivationReceiptSha256": "6d36bd75650cfab73c3063960ece8ee0e6dafffb7a9e06ee20879d612705e385",
+    "unitV12PreImplementationSummarySha256": "134ac525b0fc4240ad6c7318106aefd17b7aa8626a4d559c5e5f6fe170122ded",
+    "unitV12AssertionsPassed": 14,
+    "unitV12AssertionsTotal": 14
+  },
+  "unchangedSemantics": {
+    "campaignMatrixCount": 74,
+    "relative95CiHalfWidthTarget": 0.10,
+    "hardSampleCap": null,
+    "isolatedLaneCount": 4,
+    "unityProcessUnit": "one fresh Unity Editor process per Williams block",
+    "readinessP95MaximumHours": 27,
+    "formalWallClockMaximumHours": 36,
+    "pilotMeasuredBlockCount": 384,
+    "pilotMeasuredSampleCount": 1152,
+    "pilotWarmupBlockCount": 8,
+    "retainedManagedMemoryRuleMiBPerSample": 128
+  },
+  "prohibitions": [
+    "do not modify or resume v11",
+    "do not broaden output authorization beyond v12 official verification and the preimplementation root",
+    "do not weaken lock eligibility or refusal tests",
+    "do not change experimental semantics or thresholds",
+    "do not create a formal root or start a formal campaign",
+    "do not consume more than the single authorized NON-FORMAL pilot"
+  ]
+}

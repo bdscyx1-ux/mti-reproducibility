@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "gate13r-pr2-s48-h48-formal-campaign-user-authorization-v1",
+  "authorizedAtLocalDate": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "authorizationPrompt": {
+    "relativePath": "Research/Gate13R_PR2_Formal_Campaign_Next_Authorization_Prompt.md",
+    "sha256": "0cdfa4dfe87ce5642be675a16653d9b8cb5cb29721bdda742a3cfd97ae566661",
+    "userSuppliedCompleteTextInChat": true
+  },
+  "authorizedScope": {
+    "formalRawAcquisitionAttemptCount": 1,
+    "selectedDesign": "S48-H48",
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "rawDataCommitAuthorized": true,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "activeInputs": {
+    "readinessSha256": "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc",
+    "configSha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+    "scheduleSha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "scheduleManifestSha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+    "storageWallClockPreflightSha256": "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435",
+    "preparationProvenanceSha256": "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56",
+    "preparationSchemaSha256": "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e"
+  },
+  "additionalFrozenExecutionRule": {
+    "amendmentId": "gate13r-pr2-raw-analysis-two-phase-commit-v1",
+    "amendmentRelativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+    "amendmentSha256": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+    "reason": "Prevent an ordinary post-collection auditor or analysis implementation defect from triggering a Unity rerun after complete data acquisition.",
+    "terminalRawState": "RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE",
+    "changesScientificContract": false,
+    "changesFrozenConfigOrSchedule": false
+  },
+  "failurePolicy": {
+    "automaticRetry": false,
+    "automaticResume": false,
+    "topUp": false,
+    "partialAttemptMerge": false,
+    "ordinaryPostCollectionToolFailureMayRerunUnity": false,
+    "analysisFailureMayRerunUnity": false,
+    "provenRawContractViolationRequiresSeparateUserDecision": true
+  },
+  "formalRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1"
+}

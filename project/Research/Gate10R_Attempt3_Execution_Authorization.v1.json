@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate10r-attempt3-lock-hygiene-only-v1",
+  "createdAtUtc": "2026-10-06T13:38:55.3304786Z",
+  "status": "AUTHORIZED-GATE10R-ONLY-ONE-ATTEMPT",
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "lineageId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "attempt": 3,
+  "authorizationSource": {
+    "relativePath": "Research/Gate10R_to_Gate12R_LedgerEntries/026-user-gate10-only-authorization-source.txt",
+    "sha256": "58c4690cd5d3ce17f9a1b7a8f91def3893985a9609420f945ecdaca74f6817d6",
+    "bytes": 112
+  },
+  "runLedger": {
+    "passportRelativePath": "Research/Gate10R_to_Gate12R_Execution_Run_Passport.md",
+    "passportSha256AtAuthorization": "13986cf7bbedc6a94e70a55ff81cce8afb396a4226bc7fbf85df4b58da77ba9d",
+    "ledgerRelativePath": "Research/Gate10R_to_Gate12R_Execution_Run_Passport_run_ledger.yaml",
+    "ledgerSha256AfterAuthorizationClose": "e2770b6fa0774e08035463ee40a5e713b606164dcfe00ca87c004138be2eb5c6",
+    "authorizationOpenSequence": 21,
+    "authorizationCloseSequence": 22
+  },
+  "allowedChanges": [
+    "add versioned-v3 lock-hygiene specification, tests, module, wrappers, config, provenance, receipt, logs, manifest, and checkpoint",
+    "capture and remove only the exact pre-existing zero-byte project UnityLockfile after all frozen safety predicates pass",
+    "capture and remove a post-exit UnityLockfile only for the owned expected-negative Gate 10R fixture after all frozen safety predicates pass",
+    "execute one complete Gate 10R attempt 3 after all no-Unity preflight checks pass"
+  ],
+  "forbiddenChanges": [
+    "modify or append experimental data to attempt-1 or attempt-2 roots",
+    "change algorithms, Unity command, preparation module, Williams order, reset, telemetry, memory thresholds, precision policy, or structural projection",
+    "clean a lock after a positive, compile, telemetry, or cold-reference Unity process",
+    "delete any path other than the exact H:/DDM_Final_Project/Temp/UnityLockfile under the frozen predicates",
+    "start Gate 11R, Gate 12R, or Gate 13R"
+  ],
+  "attempt3VerificationRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v3",
+  "attempt3MaximumOfficialExecutions": 1,
+  "automaticRetryAuthorized": false,
+  "automaticResumeAuthorized": false,
+  "gate11RConditionalContinuationAuthorized": false,
+  "gate12RConditionalContinuationAuthorized": false,
+  "gate13RPreparationAuthorized": false,
+  "gate13RFormalCampaignAuthorized": false,
+  "formalCampaign": false
+}
+

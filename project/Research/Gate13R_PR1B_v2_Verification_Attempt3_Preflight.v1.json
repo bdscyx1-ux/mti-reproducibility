@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "preflightId": "gate13r-pr1b-v2-verification-attempt3-preflight-v1",
+  "status": "PASSED-VERIFICATION-V11-MAY-START",
+  "pilotPlanRelativePath": "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v4.json",
+  "pilotPlanSha256": "105b0aa0ae988cc00194bfd0052a6856aa321821ca8a873b379ff11c83320850",
+  "provenanceRelativePath": "Research/Gate13R_PR1B_OrderEffect_Provenance.v4.json",
+  "provenanceSha256": "9bc4eb46eea708ce9d90c822fc9248bf54ba41b026368e69bbcb8e3f3c7722a2",
+  "checks": [
+    {"id":"windows-powershell-5.1-parser-and-binding","scripts":2,"passed":true},
+    {"id":"provenance-bound-files","count":50,"passed":true},
+    {"id":"deterministic-schedule","campaigns":6,"measuredProcesses":384,"warmupProcesses":12,"passed":true},
+    {"id":"mechanical-derivation","frozenTokenCount":13,"routeCount":4,"eachRouteCount":1,"parseErrors":0,"passed":true},
+    {"id":"v9-preservation","fileCount":20,"rawBytes":176860,"treeSha256":"5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74","passed":true},
+    {"id":"v10-preservation","fileCount":39,"rawBytes":275071,"treeSha256":"5d20fbea2e6e734c9feddc2ed199a365bc307caac1a4b2cef3bb680cfebb2d44","passed":true},
+    {"id":"unity-closed-and-lock-absent","passed":true},
+    {"id":"pilot-v6-verification-v11-formal-roots-absent","passed":true}
+  ],
+  "scientificContractChanged": false,
+  "measuredPilotStarted": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-003-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-attempt-003",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-003",
+  "status": "FROZEN_READ_ONLY_NO_UNITY_RECHECK_CONTRACT",
+  "createdAtUtc": "2026-10-17T16:02:03.444602Z",
+  "authoritativeInputStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v28.json",
+    "sha256": "e8bc1bdca534d9f6c90ba0db689f17c3a165a9c64fb4318517e44551ff159640"
+  },
+  "retainedAttempts": {
+    "readinessAttempt002": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002",
+      "receipt": "failure-receipt.v1.json",
+      "receiptSha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+      "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE"
+    },
+    "terminalCorrigendumAttempt001": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-001",
+      "receipt": "failure-receipt.v1.json",
+      "receiptSha256": "b195c99e01bc20900762b3752ff6172a64fac4bb914609bf1ba83d832ed99340",
+      "status": "FAILED_CLOSED_TERMINAL_CHAIN_CORRIGENDUM"
+    },
+    "terminalCorrigendumAttempt002": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-002",
+      "receipt": "terminal-pass-receipt.v1.json",
+      "receiptSha256": "bf7e157f6f25ea19d6cd898745476cd6c88569fbc99c1d614abd76945ca33cad",
+      "status": "PASS_TERMINAL_CHAIN_CORRIGENDUM_OFFLINE_ONLY"
+    }
+  },
+  "auditMode": "READ_ONLY_STATIC_AND_EXISTING_OFFLINE_KNOWN_ANSWER",
+  "passRule": "Every recorded check must pass; otherwise freeze failure evidence and do not create Status v29.",
+  "claimBoundary": "PASS establishes prospective execution readiness of the frozen chain only. It does not assert that any of the 1,147 qualification processes or any qualification observation has run.",
+  "mutationBoundary": [
+    "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-003",
+    "Research/Gate14Re-ME/Gate14Re_ME_Status.v29.json on PASS only"
+  ],
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "sealedIdentityMappingOpened": false
+  }
+}

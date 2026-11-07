@@ -1,0 +1,45 @@
+{
+  "schema": "gate14re-me-formal-st-stopping-and-replacement-contract-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_PRECOLLECTION",
+  "plannedB": 36,
+  "adaptiveRules": {
+    "benefitStopping": false,
+    "futilityStopping": false,
+    "sampleSizeReestimation": false,
+    "postOutcomeTopUp": false,
+    "endpointDropping": false,
+    "cellDropping": false,
+    "algorithmDropping": false
+  },
+  "laneHardStops": {
+    "eventGroupHardTimeoutMilliseconds": 300000,
+    "laneWallClockHardTimeoutMilliseconds": 600000,
+    "plannerOperationBudgetMilliseconds": 240000,
+    "repairOperationBudgetMilliseconds": 240000,
+    "initializationOperationBudgetMilliseconds": 600000,
+    "laneAssignedCommittedMemoryBytes": 17179869184,
+    "interpretation": "A threshold crossing is a recorded algorithm-lane failure outcome; it never authorizes a lane retry, partial resume, or same-algorithm replacement."
+  },
+  "replacementPolicy": {
+    "algorithmSpecificFailure": "retain as an outcome; no retry or replacement",
+    "infrastructureFailureBeforeAnyAlgorithmOutcomeInTheAffectedSuperblock": "void the whole six-lane superblock and permit at most one documented whole-superblock replacement in the entire formal collection",
+    "maximumWholeSuperblockTechnicalReplacements": 1,
+    "replacementMustUse": "a precommitted spare input generated and frozen before collection, with all six lanes rerun from fresh processes",
+    "outcomeDependentReplacement": false,
+    "partialSuperblockReplacement": false,
+    "originalFailureEvidenceRetained": true
+  },
+  "withinAttemptProhibitions": [
+    "lane retry",
+    "partial resume",
+    "top-up",
+    "merge across formal attempts",
+    "skip",
+    "outcome-dependent reorder",
+    "parallel measured lanes"
+  ],
+  "technicalFailClosed": "Any contract, hash, schema, cardinality, ordinal, trusted-identity, correctness, oracle-cache, or source-binding mismatch stops the active execution and preserves all evidence. A new execution attempt requires a separately frozen readiness and authorization; observations from failed attempts cannot be merged into a later successful root.",
+  "scientificCompletion": "Complete only after all planned nonvoid superblocks and permitted precommitted replacement, if any, have terminal trusted natural-exit evidence and the independent read-only delivery acceptance passes."
+}

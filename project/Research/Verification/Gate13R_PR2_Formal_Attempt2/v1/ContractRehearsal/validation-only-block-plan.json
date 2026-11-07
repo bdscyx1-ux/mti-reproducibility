@@ -1,0 +1,65 @@
+{
+    "schemaVersion":  2,
+    "planId":  "gate13r-pr2-formal-block-plan-v1",
+    "designId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "blockId":  "g13rpr2-c01-b0001",
+    "campaignId":  "core-r01-s1-shared--shared",
+    "scenarioRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios/core-r01-s1-shared.scenario.json",
+    "scenarioSourceSha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+    "comparisonCohortId":  "four-algorithm-shared-goal-v1",
+    "block":  1,
+    "williamsRowIndex":  0,
+    "formalCampaign":  true,
+    "analysisRole":  "formal-timing",
+    "verificationInjectedFailurePosition":  0,
+    "formalConfigRelativePath":  "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+    "formalConfigSha256":  "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+    "specificationRelativePath":  "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+    "specificationSha256":  "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5",
+    "testDesignRelativePath":  "Research/Gate13R_PR2_Attempt2_Prelaunch_Test_Design.v1.md",
+    "testDesignSha256":  "f9032bf6cb67be563a8c86e3dc69b441102545df565124fe8662b60ca0415695",
+    "amendmentRelativePath":  "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+    "amendmentSha256":  "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+    "commandRelativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV4.cs",
+    "commandSha256":  "ef12eb01b903318c5ce9455d5872cff5e7f505f3d1496ffc860d512173be5467",
+    "provenanceRelativePath":  "Research/Gate13R_PR2_Attempt2_Validation_Provenance.v1.json",
+    "provenanceSha256":  "ae90d30a282339e8218fa58462f74d593ecf5a79e1f7a79ca8d7c210a9ec7ffe",
+    "executionReceiptRelativePath":  "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/ContractRehearsal/validation-only-rehearsal-receipt.json",
+    "executionReceiptSha256":  "2cd4fc1e8593836a56bd92dab7198c3d9c771960e8ff7ee885401bde84bad33c",
+    "globalProcessOrdinal":  1,
+    "matchedSuperblock":  null,
+    "entries":  [
+                    {
+                        "position":  1,
+                        "algorithmId":  "A*-R",
+                        "predecessorAlgorithmId":  "NONE",
+                        "runId":  "g13rpr2-c01-b0001-p01-astar-r",
+                        "directory":  "runs/p01-astar-r"
+                    },
+                    {
+                        "position":  2,
+                        "algorithmId":  "D*L",
+                        "predecessorAlgorithmId":  "A*-R",
+                        "runId":  "g13rpr2-c01-b0001-p02-dstar-l",
+                        "directory":  "runs/p02-dstar-l"
+                    },
+                    {
+                        "position":  3,
+                        "algorithmId":  "IDFF",
+                        "predecessorAlgorithmId":  "D*L",
+                        "runId":  "g13rpr2-c01-b0001-p03-idff",
+                        "directory":  "runs/p03-idff"
+                    },
+                    {
+                        "position":  4,
+                        "algorithmId":  "C-FF",
+                        "predecessorAlgorithmId":  "IDFF",
+                        "runId":  "g13rpr2-c01-b0001-p04-cff",
+                        "directory":  "runs/p04-cff"
+                    }
+                ],
+    "validationOnly":  true,
+    "excludedFromFormalAnalysis":  true,
+    "formalExecutionAuthorized":  false,
+    "contractRehearsalId":  "gate13r-pr2-attempt2-embedded-contract-rehearsal-v1"
+}

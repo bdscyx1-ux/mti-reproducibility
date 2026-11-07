@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "amendmentKind": "gate13r-36h-prepilot-fresh-clone-bootstrap-amendment-v13",
+  "createdAtUtc": "2026-10-08T05:41:00Z",
+  "status": "AUTHORIZED-VERSIONED-PRE-PILOT-DEFECT-REPAIR",
+  "authorizationScope": "Existing user authorization permits versioned repair of pre-pilot implementation and verification defects before the single measured non-formal pilot is consumed.",
+  "upstreamDiagnosis": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_v12_Telemetry_Compile_Contention_Diagnosis.v1.json",
+    "sha256": "014e39a38dcb45bf025340a39ea99b3504628311b2b6f124749e3a32576d43d4"
+  },
+  "repair": {
+    "attempt": 13,
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v13",
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v13",
+    "pilotRoot": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v13",
+    "policyId": "serial-nonmeasured-fresh-lane-bootstrap-before-concurrent-gates-v1",
+    "laneOrder": [1, 2, 3, 4],
+    "processes": 4,
+    "oneFreshUnityEditorProcessPerLane": true,
+    "executePlanningWorkload": false,
+    "measured": false,
+    "excludedFromFormalAnalysis": true,
+    "serial": true,
+    "requiredBeforeConcurrentTelemetry": true,
+    "naturalUnityExitRequired": true,
+    "naturalLockReleaseWithinSeconds": 60,
+    "controlledLockCleanupAllowed": false,
+    "compilerAndImportErrorsFailClosed": true
+  },
+  "unchangedFrozenSemantics": {
+    "formalCampaignCount": 74,
+    "relative95CiHalfWidth": 0.10,
+    "logHalfWidth": 0.0953101798043249,
+    "hardCap": null,
+    "isolatedUnityEditorLanes": 4,
+    "freshUnityProcessPerWilliamsBlock": true,
+    "measuredPilotCampaigns": 12,
+    "measuredBlocksPerCampaign": 32,
+    "measuredBlockProcesses": 384,
+    "measuredSamples": 1152,
+    "warmupProcesses": 8,
+    "pilotUnityProcesses": 392,
+    "readinessP95HoursMaximum": 27,
+    "formalEndToEndHoursMaximum": 36,
+    "sampleRetainedManagedMemoryLimitBytes": 134217728,
+    "blockRetainedManagedMemoryLimitBytesPerSample": 134217728,
+    "williamsOrderChanged": false,
+    "resetSemanticsChanged": false,
+    "telemetryThresholdsChanged": false,
+    "algorithmSemanticsChanged": false,
+    "playableMappingsChanged": false
+  },
+  "executionBoundary": {
+    "pilotExecutionAuthorizedCount": 1,
+    "pilotExecutionConsumedBeforeAttempt13": 0,
+    "prePilotVersionedRepairAllowed": true,
+    "measuredPilotRetryAllowed": false,
+    "sameAttemptResumeAllowed": false,
+    "formalCampaignAuthorized": false,
+    "formalRootCreationAllowed": false
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-corrigendum-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-002",
+  "status": "FROZEN_PREEXECUTION_SCOPE",
+  "executeMethod": "DDM.Research.Editor.InputSchemaCorrigendumAttempt002.Gate14ReMEInputSchemaCompatibilitySelfCheckV2.Run",
+  "unityVersion": "2022.3.30f1c1",
+  "unityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+  "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+  "expectedOracleFailure": "Event-group topology must match the input context.",
+  "requiredChecks": [
+    "all frozen source and evidence bindings match",
+    "attempt-001 inventory is unchanged before and after",
+    "trusted Unity identity rule is satisfied at external prelaunch, live-concurrent, and post-exit phases",
+    "in-process path and structural executable identity is stable",
+    "JsonUtility serializes eventGroups[*].topology",
+    "JsonUtility deserializes eventGroups[*].topology without loss",
+    "actual private ValidateGroupHeader reflection target is invoked",
+    "matching topology passes",
+    "missing topology fails with the frozen reason",
+    "mismatched topology fails with the frozen reason",
+    "process exits naturally with code zero",
+    "all prohibited scientific activity remains absent"
+  ],
+  "terminalRule": "Adopt input schema v2 and planning schema binding v2 only if every required check passes in the single authorized Unity invocation. Otherwise retain evidence and fail closed without retry or scope expansion."
+}

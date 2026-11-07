@@ -1,0 +1,102 @@
+{
+  "schema": "gate14re-formal-execution-contract-v2",
+  "studyId": "Gate14Re",
+  "version": 2,
+  "status": "FROZEN_NONEXECUTING",
+  "supersedes": {
+    "scope": "formal build identity and authorization binding only",
+    "path": "Research/Gate14Re/Execution/Gate14Re_Formal_Execution_Contract.v1.json",
+    "sha256": "ef73091a360e62e370eddc7d17e88ea8dd1e075dd490f915578bf3920ee9e579"
+  },
+  "designBindings": {
+    "planV2Sha256": "cbeca6d175500770357d1a610149abda58c816547d2c19cfa2e8ce9bebf5771f",
+    "contractV2Sha256": "8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f",
+    "planV3Sha256": "3ea4bcf824b5e83c1be3d98ae96590c58dc444555388b301675a3e91d27bedcc",
+    "contractV3Sha256": "88c3119e0b6dbbe4d1a3a2a95bd04d619e3d68edbd38b0903c6d4037a4d0e1f3"
+  },
+  "blockPlan": {
+    "path": "Research/Gate14Re/Execution/Gate14Re_Formal_Block_Plan.v1.json",
+    "bytes": 1169554,
+    "sha256": "9d12fab76865477fed1742c1d51cc79eb57a06c2fcf40e0544f2045cfffd552d",
+    "fixedB": 48,
+    "designCells": 32,
+    "plannedValidProcesses": 1536,
+    "movementProcesses": 768,
+    "m4Processes": 768,
+    "algorithmLaneSamples": 6144
+  },
+  "formalRootWhenSeparatelyAuthorized": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re/PhaseA/attempt-001",
+  "processModel": {
+    "freshUnityProcessPerBlock": true,
+    "serialExecution": true,
+    "fourAlgorithmsPerProcess": true,
+    "sameFrozenInputWithinBlock": true,
+    "newWorldPlannerTelemetryAndVisualStatePerAlgorithm": true,
+    "algorithmOrder": "frozen_Williams_row_from_block_plan",
+    "perProcessHardTimeoutSeconds": 3600,
+    "wholeBlockReplacementMaximum": 1,
+    "partialBlockAdmissible": false,
+    "processRetryResumeTopUpMergeSkipOrReorder": false
+  },
+  "movementLane": {
+    "executionClock": "accelerated_exact_0.02_second_fixed_step_simulation",
+    "m1Clock": "simulation_seconds_not_wall_clock",
+    "maximumTicks": 9000,
+    "maximumM1Seconds": 180,
+    "rendering": "canonical_full_population_view_updated_during_accelerated_simulation",
+    "plannerBudgets": "unchanged_production_wall_cpu_budget_per_operation",
+    "rawRecords": [
+      "per_agent_terminal_state",
+      "per_agent_arrival_tick",
+      "per_agent_cumulative_horizontal_path_length",
+      "algorithm_level_terminal_counts",
+      "M5_critical_violation_codes",
+      "structural_event_records",
+      "block_common_M2_mask"
+    ]
+  },
+  "m4Lane": {
+    "executionClock": "real_rendered_frames_and_monotonic_wall_clock",
+    "warmupRenderedFramesPerAlgorithm": 600,
+    "measuredFrameIntervalsPerAlgorithm": 1800,
+    "rawIntervalsRetained": true,
+    "blockSummaries": [
+      "median_frame_time_seconds",
+      "nearest_rank_P95_frame_time_seconds"
+    ],
+    "allNUnitsInstantiatedAndRendered": true,
+    "forcedContinuousMovement": false
+  },
+  "writePolicy": {
+    "oneAtomicJsonPerCompleteBlock": true,
+    "overwriteForbidden": true,
+    "failureReceiptSeparate": true,
+    "failedPartialBlockNeverAdopted": true,
+    "formalRootCreatedOnlyAfterExplicitUserAuthorization": true
+  },
+  "authorizationGuard": {
+    "authorizationSchema": "gate14re-formal-phase-a-authorization-v2",
+    "formalRunnerRequiresReadOnlyAuthorizationReceipt": true,
+    "authorizationMustBindPlanSha256": true,
+    "authorizationMustBindExecutableSha256": true,
+    "authorizationMustBindAssemblyCSharpSha256": true,
+    "authorizationMustBindReadOnlyBuildReceiptSha256": true,
+    "authorizationMustBindFormalRoot": true,
+    "genericUnityLauncherExecutableAloneIsInsufficient": true,
+    "currentFormalPhaseAAuthorized": false
+  },
+  "outputIdentityBinding": {
+    "schema": "gate14re-formal-block-output-v2",
+    "recordsPlanSha256": true,
+    "recordsExecutableSha256": true,
+    "recordsAssemblyCSharpSha256": true,
+    "recordsBuildReceiptSha256": true
+  },
+  "forbiddenBeforeSeparateAuthorization": [
+    "create_formal_root",
+    "start_formal_process",
+    "produce_formal_observation",
+    "run_formal_analysis",
+    "start_Gate15V_R_or_OBS"
+  ]
+}

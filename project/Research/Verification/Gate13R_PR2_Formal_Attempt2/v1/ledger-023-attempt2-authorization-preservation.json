@@ -1,0 +1,25 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 attempt 2 authorization recording and pre-write preservation audit",
+  "command": "Recorded the exact user authorization, validated the versioned authorization record, and performed a read-only attempt-1/upstream preservation and attempt-2 namespace absence audit before creating repair implementation files.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "gate_tokens": [
+    "ATTEMPT2-AUTHORIZATION-RECORDED",
+    "ATTEMPT1-CANONICAL-TREE-HASH-VERIFIED",
+    "ATTEMPT1-31-FILES-3338221-BYTES-READ-ONLY",
+    "ATTEMPT2-FORMAL-ROOT-ABSENT",
+    "ATTEMPT2-RECEIPT-AND-STATUS-ABSENT",
+    "UNITY-QUIESCENT",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "input_sha256": {
+    "Gate13R_PR2_Attempt2_Next_Authorization_Prompt.md": "5dd1b5859045bb14db374edc3aa6b28539af125abfcbb54b66a91f0a716a6927",
+    "Gate13R_PR2_Attempt2_User_Authorization.v1.txt": "9a7926af6167b843202d19a8d0b77623285f7a555bc2325ac230f68233575fbf",
+    "Gate13R_PR2_Attempt2_PreWrite_Preservation_Audit.v1.json": "f0df04c611206fcc5638b326e6752996b005e8688c29a013289a544144e48961",
+    "Gate13R_PR2_Attempt2_Execution_Authorization.v1.json": "db59641e09429b697d688a2554781ff577d38a74ac34ef505360a8813adfe4cb",
+    "Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-partial-tree-manifest.json": "93d6d9efd4232a3f995621d2ad5c62951dcbdf10f7ede13d9b37948aad755ab5"
+  }
+}

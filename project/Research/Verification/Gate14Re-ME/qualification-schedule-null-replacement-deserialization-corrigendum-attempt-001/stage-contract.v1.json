@@ -1,0 +1,69 @@
+{
+  "schema": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "status": "FROZEN_AUTHORIZED_SCOPE_BEFORE_REPAIR",
+  "createdAtUtc": "2026-10-17T17:49:20.4187303Z",
+  "repairTarget": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "preRepairSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "onlyAuthorizedSemanticChange": "Classify the top-level raw JSON replacement token before JsonUtility normalization: member missing or JSON null means no replacement; a JSON object remains a replacement and must satisfy the complete frozen shape and all existing downstream validation; any other token, empty object, partial object, duplicate member, or malformed JSON fails closed."
+  },
+  "retainedEvidence": {
+    "statusV37": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v37.json",
+      "sha256": "effa1a9270965c537bb24c2915f3f4498fd992bc2a29e601acdceba60c8dd232",
+      "modifiedOrReclassified": false
+    },
+    "executionAttempt003TerminalFailure": {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/terminal-failure-receipt.v1.json",
+      "sha256": "ec78b55c4f7be0d00433958806a26b7ef1e1a3dd75ce140a9013079cadf13df9",
+      "modifiedOrReclassified": false
+    },
+    "executionAttempt003TechnicalAdjudication": {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/technical-failure-adjudication.v1.json",
+      "sha256": "0de24cf90557e0e4dcdfa26f299d152f6883af85b3cce4e9ec8a887f693d23ca",
+      "modifiedOrReclassified": false
+    },
+    "executionAttempt003FreezeManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/freeze-manifest.v1.json",
+      "sha256": "10764c3f357eeec90eb138701d4c29a3d16a6e1047dbbc48a4a26be551fee249",
+      "modifiedOrReclassified": false
+    },
+    "failedMeasuredRoot": {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+      "exists": true,
+      "fileCountBefore": 6,
+      "writableFileCountBefore": 0,
+      "reuseAuthorized": false,
+      "modifiedOrReclassified": false
+    }
+  },
+  "frozenInputs": {
+    "schedule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471"
+    },
+    "unityExecutable": {
+      "path": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+      "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+    },
+    "trustedUnityIdentityRule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    "timestampComparator": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"
+    }
+  },
+  "executionLimit": {
+    "maximumUnityInvocations": 1,
+    "unityKnownAnswerOnly": true,
+    "algorithmExecutionAllowed": false,
+    "newMeasuredOrDeliveryRootAllowed": false,
+    "automaticRetryAllowed": false,
+    "terminalPassThenStopForSeparateBindingAndReadinessAuthorization": true
+  }
+}

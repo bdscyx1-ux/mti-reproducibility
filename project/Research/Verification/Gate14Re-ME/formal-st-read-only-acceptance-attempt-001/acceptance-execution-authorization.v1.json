@@ -1,0 +1,41 @@
+{
+  "schema": "gate14re-me-formal-st-read-only-acceptance-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "authorizationId": "gate14re-me-formal-st-attempt-003-read-only-acceptance-f24d119c-c741-44ba-a483-40ab7ec70d73",
+  "status": "AUTHORIZED_INDEPENDENT_READ_ONLY_ACCEPTANCE_WITH_RECOVERY_COMPATIBILITY",
+  "authorizationSource": {
+    "kind": "direct-user-authorization",
+    "verbatim": "授权进行下一步",
+    "interpretedStage": "independent read-only offline acceptance immediately following acquisition-only PASS",
+    "formalAnalysisExcluded": true
+  },
+  "sourceMeasuredRootRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "sourceAcquisitionFreezeManifestSha256": "6ff425c9fbd2c8a8c8d7d9855283aede09f61fb090e56ca7e89e406572f7459c",
+  "sourceAcquisitionTerminalSha256": "87ee435e9e0aaa564ed8c2f989b65588d66198b492a315625a8d2f6a5b818d07",
+  "compatibilityContractRelativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/recovery-compatible-acceptance-contract.v1.json",
+  "compatibilityContractSha256": "dbda102cb9fbbec995b35f389868904ceff5fc05ef81c8e87ff059de1dec23af",
+  "compatibilityAdapterRelativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/gate14re_me_formal_st_acceptance_attempt003_adapter_v1.py",
+  "compatibilityAdapterSha256": "b4a5774bcbbdc7b3b76bb5fc2050f61c8b90ecfb0ef9c3bac01d1a1501e79da9",
+  "outputRootRelativePath": "Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-001",
+  "readOnlyAcceptanceAuthorized": true,
+  "acceptedDataPackageCreationAuthorized": true,
+  "rawObservationParsingForAcceptanceOnlyAuthorized": true,
+  "authorizedAcceptanceOperations": [
+    "replay and verify the complete acquisition freeze manifest",
+    "validate control-plane identities, cardinalities, joins, and source bindings",
+    "parse every sealed raw row solely for schema, provenance, type, order, cardinality, and round-trip validation",
+    "create complete typed Parquet views in a fresh accepted-data-package root",
+    "verify complete value, type, provenance, and row-order round trip",
+    "retain both resolved technical failure rows and their resolution evidence"
+  ],
+  "sourceWriteBackAuthorized": false,
+  "formalAnalysisAuthorized": false,
+  "effectInterpretationAuthorized": false,
+  "rankingOrWinnerAuthorized": false,
+  "mqAuthorized": false,
+  "mtAuthorized": false,
+  "scientificDesignModificationAuthorized": false,
+  "sameAttemptAcceptanceRetryAuthorized": false,
+  "authorizedAtUtc": "2026-10-30T10:19:57.5003179Z"
+}

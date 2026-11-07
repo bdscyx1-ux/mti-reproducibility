@@ -1,0 +1,41 @@
+{
+  "schema": "gate14re-me-formal-st-operational-resource-budget-v5",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_FORMAL_ST_V5_OPERATIONAL_LIMITS",
+  "implementationRevision": "v5.1-host-lifecycle-corrigendum",
+  "maximumConcurrentUnityProcesses": 1,
+  "maximumWholeSuperblockTechnicalReplacements": 0,
+  "eventGroupHardTimeoutMilliseconds": 300000,
+  "laneWallClockHardTimeoutMilliseconds": 600000,
+  "oracleBatchHardTimeoutMilliseconds": 3600000,
+  "instrumentProcessHardTimeoutMilliseconds": 600000,
+  "emptyBoundaryProcessHardTimeoutMilliseconds": 300000,
+  "unityStartupAndValidationHardTimeoutMilliseconds": 1800000,
+  "burstCompletionTimeoutMilliseconds": 300000,
+  "editorNaturalExitGraceMilliseconds": 300000,
+  "lifecyclePollMilliseconds": 250,
+  "lifecycleReceiptObservationGraceMilliseconds": 5000,
+  "plannerOperationBudgetMilliseconds": 240000,
+  "repairOperationBudgetMilliseconds": 240000,
+  "initializationOperationBudgetMilliseconds": 600000,
+  "laneAssignedCommittedMemoryBytes": 17179869184,
+  "formalRawAndDeliveryReservedStorageBytes": 64310367960,
+  "runtimePlanningHeadroomFactor": 1.2,
+  "oracleCacheV5": {
+    "minimumBatchCount": 1,
+    "maximumBatchCount": 1296,
+    "assignmentRule": "schedule-ordinal-mod-authorization-batch-count-v5",
+    "algorithmNeutralImmutablePerInputCache": true,
+    "laneReferenceOracleEvaluations": 0,
+    "strictSerialFreshUnityBatchProcesses": true
+  },
+  "interpretation": {
+    "scientificTimeoutsUnchanged": "The event-group, lane, oracle-batch, instrument, empty-boundary, planner, repair and initialization limits are byte-for-value unchanged from v5.0.",
+    "hostLifecycleSeparation": "Unity startup/validation, measured-mode execution, post-output Burst completion and natural editor exit are separately observed. Host cleanup time is never charged to a measured algorithm interval.",
+    "runnerOwnedExit": "Formal Unity command lines omit -quit. After output freeze and stable Burst completion, the versioned runner is the sole owner of EditorApplication.Exit.",
+    "operationalReplacementChoice": "The scientific stopping contract permits at most one precommitted whole-superblock technical replacement. This executable v5.1 implementation elects the stricter zero-replacement fail-stop policy; it does not expand, weaken, or silently exercise that optional allowance.",
+    "timeouts": "A timeout is a terminal technical failure of the active execution attempt. The supervisor records structural process evidence, sends no signal, and never authorizes retry, resume, top-up, merge, skip, reorder or parallel completion.",
+    "targetHostRecheck": "All resource limits and free-space requirements must be rechecked before any later collection authorization."
+  }
+}

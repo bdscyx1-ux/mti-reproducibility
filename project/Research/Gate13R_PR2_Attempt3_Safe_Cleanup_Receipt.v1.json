@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "1.0.0",
+  "receiptId": "Gate13R-PR2-Attempt3-Safe-Cleanup-v1",
+  "operation": "TRANSIENT-ARTIFACT-CLEANUP",
+  "status": "COMPLETED",
+  "authorizedByUser": "先清除Gate 13R attempt 3遗留的无用文件",
+  "scopeRule": "Only reproducible, non-formal Attempt-3 monitoring and Python bytecode artifacts that are not referenced by a frozen contract were removed.",
+  "completedAtUtc": "2026-10-11T12:33:26.4067885Z",
+  "completedAtAsiaShanghai": "2026-10-11T20:33:26.4112890+08:00",
+  "removedSummary": {
+    "targetCount": 9,
+    "fileCount": 239,
+    "rawBytes": 1006802,
+    "recoverability": "Deleted artifacts were disposable monitoring snapshots, an empty lock, or reproducible Python bytecode. They are not restored by this receipt."
+  },
+  "removedTargets": [
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\.Gate13R_PR2_Attempt3_Monitoring_Recovery_Run_Passport_run_ledger.yaml.lock",
+      "kind": "file",
+      "fileCount": 1,
+      "rawBytes": 0
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Monitoring\\Gate13R_PR2_Attempt3",
+      "kind": "directory",
+      "fileCount": 231,
+      "rawBytes": 734090
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\__pycache__\\Gate13RPR2Attempt3ExecutionV1.cpython-314.pyc",
+      "kind": "file",
+      "fileCount": 1,
+      "rawBytes": 106204
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\__pycache__\\Gate13RPR2Attempt3MonitoringRecoveryV1.cpython-314.pyc",
+      "kind": "file",
+      "fileCount": 1,
+      "rawBytes": 61648
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\__pycache__\\Gate13RPR2Attempt3MonitoringRecoveryV2.cpython-314.pyc",
+      "kind": "file",
+      "fileCount": 1,
+      "rawBytes": 6672
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\__pycache__\\Test-Gate13RPR2Attempt3MonitoringRecoveryV1.cpython-314.pyc",
+      "kind": "file",
+      "fileCount": 1,
+      "rawBytes": 69935
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\__pycache__\\Test-Gate13RPR2Attempt3MonitoringRecoveryV2.cpython-314.pyc",
+      "kind": "file",
+      "fileCount": 1,
+      "rawBytes": 3159
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\__pycache__\\Test-Gate13RPR2Attempt3MonitoringRecoveryV3.cpython-314.pyc",
+      "kind": "file",
+      "fileCount": 1,
+      "rawBytes": 5078
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\__pycache__\\Test-Gate13RPR2FormalAttempt3PrelaunchV1.cpython-314.pyc",
+      "kind": "file",
+      "fileCount": 1,
+      "rawBytes": 20016
+    }
+  ],
+  "postconditions": {
+    "allRemovedTargetsAbsent": true,
+    "formalAttempt3RawRootDeleted": false,
+    "formalAttempt3LineagePreserved": true,
+    "attempt4ArtifactsModified": false,
+    "unityLaunched": false,
+    "processesStoppedOrSignaled": false
+  },
+  "preservedBindings": [
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Status.v3.json",
+      "sha256": "3aa224e3a21329c508df1d6e74e7b2052beefe5212405a880e24b66c33fcfaca"
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+      "sha256": "53a9e68281f901cc2c430d1fdc34969393013da9c854528fb29355c97aed84f6"
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3\\_control\\formal-failure-checkpoint.json",
+      "sha256": "2afa262d4fa37dae129f17566d122f80cdcb1a83f2ae9ef8d482caae735dfad9"
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Gate13RPR2Attempt3ExecutionV1.py",
+      "sha256": "03bc5e8e73f6e74cd164f7d045dff028b670d3a4b967940a68dc41e1d0fa5a3c"
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Adapter.v4.json",
+      "sha256": "2cad63b1c89608b2053552ef8c1261603f81231365689ba232d950fc279c4f62"
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Config.v4.json",
+      "sha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042"
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Attempt4_Execution_Contract.v1.json",
+      "sha256": "a9c7a81e3c1a59aea37be1124a1237dabd6118e9f397050122bd76c308a16570"
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Attempt4_Historical_Preservation_Baseline.v1.json",
+      "sha256": "6cbc7bfa3a5b2e1026d9af1b5b37458a98966724db5f6f85f3e37cf051c0abd0"
+    }
+  ],
+  "preservedFormalRoot": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3"
+}

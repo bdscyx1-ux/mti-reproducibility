@@ -1,0 +1,19 @@
+Gate 13R-PR2-MP1 v2 validation attempt 5
+Captured at UTC: 2026-10-09T04:29:18.5390794Z
+Captured at Asia/Shanghai: 2026-10-09T12:29:18.5432757+08:00
+
+Scope: validation-only frozen-root identity probe; no Unity Editor was started and no measured pilot root was created.
+
+Result: FAILED-CLOSED.
+
+Observed evidence:
+- pilot v1: 5 files, 5,247 bytes, all read-only, tree SHA-256 a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265 (passed).
+- formal attempt 2: 28,020 files, 8,536,611,302 bytes, all read-only (count/bytes/read-only passed).
+- the v3 auditor incorrectly applied the pilot-v1 pipe-delimited tree formula to formal attempt 2 and obtained d3e51fbba63b1abaaa047aea81687fffffad074b1217f57ebf8eccb645fe474b.
+- the frozen formal-attempt-2 contract instead uses Unicode-ordinal relative paths and TAB-delimited canonical lines, each terminated by LF; its historical SHA-256 remains aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e.
+
+Diagnosis: validation implementation defect only; no frozen-root mutation was observed. A new versioned auditor must use the root-specific historical canonicalization contract.
+
+Automatic measured-pilot retry/resume/top-up/merge: not applicable and not attempted.
+Formal attempt 3: not created or started.
+Gate 14R: not started.

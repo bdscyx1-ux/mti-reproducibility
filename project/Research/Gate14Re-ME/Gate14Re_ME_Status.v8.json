@@ -1,0 +1,112 @@
+{
+  "schema": "gate14re-me-status-v8",
+  "studyId": "Gate14Re-ME",
+  "status": "D3_V3_ATTEMPT_002_FAILED_CLOSED_SDK_INSTALLER_ARGUMENT_REJECTED",
+  "version": 8,
+  "updatedAtUtc": "2026-10-17T06:33:00.6841371Z",
+  "previousStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v7.json",
+    "sha256": "2974e518d7d897347a13c63a6b611248378baf6c7f761cccc59c74bd8300eba5",
+    "retained": true
+  },
+  "d3V2Disposition": {
+    "status": "RETIRED_PROSPECTIVELY_AS_FORMAL_D3_EVIDENCE_RETAINED",
+    "standaloneKnownAnswerEvidenceStillRetained": true,
+    "contractRelativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-instrument-contract.v2.json",
+    "contractSha256": "e402dfc90362a3ac07f5342d218f19c67d31d46f82bec584d5d817fbccb9f0bf",
+    "sourceRelativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs",
+    "sourceSha256": "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca",
+    "mayBeUsedAsFormalD3WithoutNewAuthorization": false
+  },
+  "d3V3QualificationAttempts": [
+    {
+      "attempt": "d3-v3-cumulative-allocation-qualification-attempt-001",
+      "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-001",
+      "status": "FROZEN_FAILED_CLOSED_NATIVE_BUILD_ENVIRONMENT_WINDOWS_SDK_ABSENT",
+      "nativeSourceImplemented": true,
+      "nativeBinaryBuilt": false,
+      "unityKnownAnswerRun": false,
+      "qualified": false,
+      "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/failure-receipt.v1.json",
+      "failureReceiptSha256": "3ad510a4ec142f8ac58dfc497eb6e48ee2de03cf8579463662252ca23816ba85",
+      "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/freeze-receipt.v1.json",
+      "freezeReceiptSha256": "5f52e2b6e7cb71624febe231b4ef56515a1f4d44c39048e20cd108df81bcd250"
+    },
+    {
+      "attempt": "d3-v3-cumulative-allocation-qualification-attempt-002",
+      "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-002",
+      "status": "FROZEN_FAILED_CLOSED_SDK_INSTALLER_COMMAND_REJECTED",
+      "selectedSdkComponent": "Microsoft.VisualStudio.Component.Windows11SDK.26100",
+      "sdkInstalled": false,
+      "hostToolchainModified": false,
+      "nativeBuildStarted": false,
+      "nativeBinaryBuilt": false,
+      "unityKnownAnswerRun": false,
+      "qualified": false,
+      "exactFailure": "Visual Studio Installer 4.10.30.62513 rejected the unsupported --wait option with exit code 87 before modifying the VS instance.",
+      "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002/failure-receipt.v1.json",
+      "failureReceiptSha256": "0b592fadcf976828a3fadd04f782eb25715f598a3826c8c8d40e27e60214a168",
+      "validationReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002/validation-receipt.v1.json",
+      "validationReceiptSha256": "96fa707285568a7556c8f7781d26a9840002989543d0b5788a4c7a76d3c8ec00",
+      "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002/freeze-receipt.v1.json",
+      "freezeReceiptSha256": "46dfc3c38d09bb8ebd38844f9f1bd39bb7398a7075f934b6483b43d8da053b49"
+    }
+  ],
+  "currentD3State": {
+    "formalD3Endpoint": null,
+    "d3V3CumulativeAllocationCounterQualified": false,
+    "compatibleWindowsSdkInstalledAndFrozen": false,
+    "safeToCompileD3V3NativePluginUnderCurrentClosedAttempt": false,
+    "safeToIntegrateQualificationRunner": false,
+    "safeToVersionOutputSchema": false,
+    "algorithmLaneExecutionEligible": false
+  },
+  "currentQualifiedCapabilities": {
+    "typedParquetRuntimeFrozen": true,
+    "unityCompilationPassedForPreexistingProjectSources": true,
+    "d2GridReadProxyPassed": true,
+    "d2SemanticInvariancePassed": true,
+    "d3V2HistoricalStandaloneEvidenceRetained": true,
+    "d3V3NativePluginBuilt": false,
+    "d3V3KnownAnswerPassed": false,
+    "d4PersistentStateSizerPassed": true,
+    "clockMonotonicityPassed": true,
+    "exportKnownAnswerStatus": "NOT_RUN_IN_THIS_AUTHORIZATION"
+  },
+  "scientificBoundary": {
+    "failureEvidenceFrozen": true,
+    "hostToolchainModifiedByAttempt002": false,
+    "currentQualificationRunnerModified": false,
+    "currentOutputSchemaModified": false,
+    "algorithmSourcesModified": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "fallbackMetricUsed": false
+  },
+  "authorizationState": {
+    "attempt002AuthorizationConsumed": true,
+    "retryAttempt002Authorized": false,
+    "createD3V3Attempt003Authorized": false,
+    "invokeCorrectedInstallerSyntaxAuthorized": false,
+    "integrateQualificationRunnerAuthorized": false,
+    "versionOutputSchemaAuthorized": false,
+    "qualificationScheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize d3-v3-cumulative-allocation-qualification-attempt-003 to invoke Microsoft.VisualStudio.Component.Windows11SDK.26100 with the installer-supported modify syntax omitting --wait, monitor setup and the VS instance to a verified terminal state, freeze SDK paths and critical hashes, then make one native build and only after build success one original algorithm-free known-answer run. Attempt-002 is immutable and must not be resumed."
+}

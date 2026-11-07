@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "provenanceKind": "gate13r-pr2-attempt2-preformal-validation-provenance-v1",
+  "status": "STATIC-UNIT-COMPILE-TELEMETRY-RETAINED-PASSED / CONTRACT-REHEARSAL-PENDING",
+  "authorization": {
+    "authorizationId": "gate13r-pr2-s48-h48-formal-attempt-2-embedded-sample-contract-repair-and-one-raw-acquisition-v1",
+    "relativePath": "Research/Gate13R_PR2_Attempt2_Execution_Authorization.v1.json",
+    "sha256": "db59641e09429b697d688a2554781ff577d38a74ac34ef505360a8813adfe4cb",
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "frozenScientificInputs": {
+    "readinessSha256": "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc",
+    "configSha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+    "scheduleSha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "scheduleManifestSha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+    "twoPhaseAmendmentSha256": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+    "twoPhaseSpecificationSha256": "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5"
+  },
+  "attempt1": {
+    "status": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / PARTIAL-ATTEMPT-EVIDENCE / EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "fileCount": 31,
+    "rawBytes": 3338221,
+    "canonicalTreeSha256": "026b9830f220b06af3f0a106f638b3d918d115ba08f5f06c13d9d76542ba4f56",
+    "allFilesReadOnly": true
+  },
+  "activeStack": {
+    "command": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV4.cs",
+      "sha256": "ef12eb01b903318c5ce9455d5872cff5e7f505f3d1496ffc860d512173be5467"
+    },
+    "module": {
+      "relativePath": "Research/Gate13RPR2FormalExecutionV5.psm1",
+      "sha256": "2f87e3b9844ccd7d85ba8c7cf8bfd4736a6bef6ceb4400b33d38a206d53c69ce"
+    },
+    "blockWrapper": {
+      "relativePath": "Research/Run-Gate13RPR2FormalBlockV6.ps1",
+      "sha256": "06e2a51c1fe2f23e8189310d4708cd2a21f36bfd205bfbddf8df002ad0ac8e2a"
+    },
+    "campaignOrchestrator": {
+      "relativePath": "Research/Run-Gate13RPR2FormalCampaignV6.ps1",
+      "sha256": "17ac97da23b2bf77b7d6beed8e901ed7c768095a7791f2ee2f2f0dfe211c155a"
+    },
+    "mechanicalDerivationReceipt": {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Mechanical_Derivation_Receipt.v2.json",
+      "sha256": "84c915c5d663ccaeafb74a6c96fd1a6b338cdf5a8c65978bba1739a858c1895e"
+    }
+  },
+  "validationEvidence": {
+    "parserAndBindingSha256": "1a01daf8ea5f559939234b4ead7bf637510e1d0b56fe57a8797bf6744b9ffd1c",
+    "contractUnitWindowsPowerShell5Sha256": "9f59bb4359f2601077cb88696713c4f4d1a2f9afa5ec303372099ee414c0568c",
+    "contractUnitPowerShell7Sha256": "8b517bcd4391a276c64b5ea45ea8cdc901270a4b9f8debe316e8be3f90e950a1",
+    "staticScheduleValidationSha256": "62ec4fec264cd92b451bd3435ea359b99e8535f63219542c3ed75f8129da70b0",
+    "unitySelfTestsSha256": "a124a1551ff529003ac4b16e627005f0534b84e970f3d01ea806934de7bf5c44",
+    "telemetryProbeSha256": "a0e0854342bfd571ee502b1b515b1b21923680095504d99c776f5221babb8660",
+    "retainedRegression63Sha256": "01130445af48c1f3798c211de81bbd76c98bcc55637a38618c2a59c33e6f5edd",
+    "contractUnitTests": "18/18",
+    "staticChecks": "46/46",
+    "retainedRegression": "63/63"
+  },
+  "processContract": {
+    "campaignCount": 74,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "heterogeneousMatchedSuperblockCount": 1008,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "oneFreshProcessPerCompleteWilliamsBlock": true
+  },
+  "validationOnly": true,
+  "formalRootV2Created": false,
+  "formalExecutionReceiptV2Created": false,
+  "immutable": true
+}

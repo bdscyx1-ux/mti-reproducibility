@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate13r-pr2-attempt3-monitoring-recovery-nonexecuting-v1",
+  "savedAtUtc": "2026-10-09T06:52:39Z",
+  "savedAtAsiaShanghai": "2026-10-09T14:52:39+08:00",
+  "userWords": "接受",
+  "acceptedDecision": {
+    "hourlyOperationalProgressReport": true,
+    "silentWatcherCadenceMinutes": 5,
+    "prelaunchVersionedAutomaticRepairRetry": true,
+    "measuredAcquisitionAutomaticDiagnostics": true,
+    "measuredSampleOrBlockAutomaticRetry": false,
+    "measuredResumeTopUpMerge": false,
+    "postAcquisitionNonUnityCommitRecovery": true
+  },
+  "authorizationBoundary": {
+    "nonExecutingImplementation": true,
+    "syntheticValidation": true,
+    "unityLaunch": false,
+    "formalRootCreation": false,
+    "formalExecutionReceiptCreation": false,
+    "formalMeasuredCampaign": false,
+    "formalStatisticalAnalysis": false,
+    "gate14R": false
+  },
+  "upstreamReadiness": {
+    "relativePath": "Research/Gate13R_PR2_MP2_NonExecuting_Readiness_Checkpoint.v1.json",
+    "sha256": "88333a15f3e5deb0eb7998bf15a5f1976df5de9a0382350016aa8623ad4680f8"
+  },
+  "preWriteAudit": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_PreWrite_Preservation_Audit.v1.json"
+  },
+  "externalHeartbeatAutomationId": "gate13r-attempt3-hourly-progress"
+}

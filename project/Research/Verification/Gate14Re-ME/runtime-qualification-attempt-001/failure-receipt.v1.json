@@ -1,0 +1,83 @@
+{
+  "schema": "gate14re-me-runtime-qualification-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-runtime-qualification-attempt-001",
+  "status": "FAIL_CLOSED_D3_ALLOCATION_COUNTER_POSITIVE_CONTROL",
+  "version": 1,
+  "failedAtUtc": "2026-10-17T05:03:13.5014173Z",
+  "failedStage": "csharp-d2-d3-d4-clock-known-answer",
+  "exactReason": "Gate14ReMEAllocationCounterV1.Capture returned no observable increase across a 1048576-byte positive-control allocation: before/after difference was 0 bytes, so the frozen D3 allocation counter is not qualified in this Unity runtime.",
+  "runtimeProvisioning": {
+    "typedParquetDistribution": "pyarrow==25.0.1",
+    "wheelName": "pyarrow-25.0.1-cp312-cp312-win_amd64.whl",
+    "wheelSha256": "8858d7bfc22e3f51529aeaa4077225029724623e4595dc9eff8c793935c34140",
+    "runtimeManifestRelativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+    "runtimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "wheelArtifactCount": 1,
+    "installedFileCount": 762,
+    "runtimeFileCountIncludingWheelAndManifest": 764,
+    "mutableRuntimeFiles": 0,
+    "status": "PASS_TYPED_PARQUET_RUNTIME_VERIFIED"
+  },
+  "dependencyProvisioningLogs": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/pip-download.log",
+      "sha256": "ba0fa92a56806dab41fd60c060aed80c71a54e7c4d32637b6aa79b195d81cd2a",
+      "bytes": 653434,
+      "exitCode": 0
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/pip-install.log",
+      "sha256": "baa6eff3ca2f0e18e1febc190f0ccdb1830a875bb7cca8ea527e27a976da8d75",
+      "bytes": 2151,
+      "exitCode": 0
+    }
+  ],
+  "unityCompilation": {
+    "status": "PASS_UNITY_FROZEN_IMPLEMENTATION_COMPILE",
+    "compileReceiptRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/unity-compile-receipt.v1.json",
+    "compileReceiptSha256": "8bf340c15b8438e053ef21b47d35ced495b3939033423e40c6164e9799d0e019",
+    "compileLogRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/unity-compile.log",
+    "compileLogSha256": "1b81ab325ae4491d9229915027ae6711d56f2aa544d543340000cf4bd08dc53c",
+    "compilerErrorMatches": 0
+  },
+  "csharpKnownAnswer": {
+    "processId": 61928,
+    "processCreationLocal": "2026-10-17T13:03:02.232963+08:00",
+    "processExitObservedAtUtc": "2026-10-17T05:03:26.0279266Z",
+    "commandLineSha256": "869dc055ed421bfdfef4f494b3a3879512bbd1a99ec1b07014a7571a50d65cdf",
+    "receiptRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/csharp-instruments/instrument-runtime-receipt.v1.json",
+    "receiptSha256": "be76050b64107f57b5b1086b3fcd318aa3d964c23f5f8dd9935798ff51f5b231",
+    "unityLogRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/unity-instrument-self-test.log",
+    "unityLogSha256": "5d3ff6ae59468c0dc68ed158342e905c55e37b4d778ad2fd8c36fa97efef74da",
+    "d2GridReadProxyKnownAnswerPassed": true,
+    "d2SemanticInvariancePassed": true,
+    "d3AllocationCounterPositiveControlPassed": false,
+    "d3ExpectedMinimumDifferenceBytes": 1048576,
+    "d3ActualDifferenceBytes": 0,
+    "d4PersistentStateSizerSyntheticFixturePassed": true,
+    "clockMonotonicityPassed": true,
+    "clockSamples": 10000
+  },
+  "downstreamDisposition": {
+    "automaticRetryPerformed": false,
+    "frozenImplementationModified": false,
+    "exportKnownAnswerRun": false,
+    "exportKnownAnswerReason": "Not run because the immediately preceding mandatory C# known-answer stage failed closed.",
+    "qualificationScheduleGenerated": false,
+    "qualificationInputsGenerated": false,
+    "anonymousIdentityMapGenerated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "bindings": {
+    "runtimeAuthorizationSha256": "86f2e82282b98e5dd9d0e0f855faffcfee37c59ba9b18f03d2a0a417fee60b2d",
+    "preexecutionManifestSha256": "8cbf8de6fd151daa311e309dd854e9986956da5c8d5796dd8dad47c085a1ee1d",
+    "implementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+    "sourceFreezeReceiptSha256": "43c9dba8b49a1efe0802f6046170be57506c027af9ac764138843c60eef669f7"
+  },
+  "nextRequiredAction": "A new, separate authorization is required to amend and re-freeze D3 for the observed Unity runtime, followed by a new runtime-qualification attempt. Re-running attempt-001 is prohibited."
+}

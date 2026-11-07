@@ -1,0 +1,46 @@
+{
+  "schema": "gate14re-me-formal-st-migration-package-build-plan-v2",
+  "status": "FROZEN_ATTEMPT_005_PLAN_BEFORE_MUTATION",
+  "packageId": "gate14re-me-formal-st-v5-end-to-end-package-attempt-005",
+  "userScopeSha256": "2c4a54779d75be1683dfcfa8291f626b0963e831dc17488e117e2dd62d9b77f8",
+  "scope": {
+    "researchSource": "Research/**",
+    "explicitExclusions": {
+      "Research/FormalRuns": "user-requested exclusion of measured/formal run data",
+      "Research/Packages": "package-output exclusion prevents recursive embedding and excludes the superseded Unity-bearing archive",
+      "Research/PackageStaging": "ephemeral package-construction output; excluded to prevent self-inclusion",
+      "Research/PackageTests": "ephemeral extraction/readiness output; excluded to prevent self-inclusion"
+    },
+    "projectPayload": [
+      "Assets/_Scripts",
+      "Assets/Plugins",
+      "Packages",
+      "ProjectSettings"
+    ],
+    "portableRuntimes": [
+      "Python",
+      "PowerShell"
+    ],
+    "unityEditorInstaller": false,
+    "unityHubInstaller": false
+  },
+  "tests": [
+    "frozen-hash validation",
+    "complete Research source inventory reconciliation",
+    "six-algorithm implementation/specification semantic closure",
+    "credential and Unity-installer exclusion",
+    "complete per-file manifest validation",
+    "authorization-chain dry run",
+    "ZIP64 CRC and fresh extraction",
+    "algorithm-free Unity compile/readiness using exact preinstalled Unity"
+  ],
+  "failurePolicy": "FAIL_CLOSED_PRESERVE_ATTEMPT_005_ROOTS_NO_SAME_ATTEMPT_RETRY",
+  "formalExecutionBoundary": {
+    "formalInputsCreated": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "mqStarted": false,
+    "mtStarted": false
+  },
+  "plannedAtUtc": "2026-10-23T03:29:19.515084Z"
+}

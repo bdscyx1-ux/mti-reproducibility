@@ -1,0 +1,41 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-tool-binding-delta-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_EVIDENCE_BINDING_ONLY_DELTA",
+  "predecessorTool": {
+    "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_formal_st_analysis_v1.py",
+    "sha256": "5d33f87ba51b67ea2b6bf72bc32c5a7845f14b549d3c30f58b7fb085468c9c9d",
+    "bytes": 98500
+  },
+  "attempt002Tool": {
+    "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_formal_st_analysis_v1_1.py",
+    "sha256": "fb10ed4d52a9aad557a041a4909c21f561e176979e7668fcd06b9048f84379c9",
+    "bytes": 98500
+  },
+  "exactChanges": [
+    {
+      "line": 1706,
+      "before": "AUTHORIZED_FORMAL_ST_ANALYSIS_ATTEMPT_001",
+      "after": "AUTHORIZED_FORMAL_ST_ANALYSIS_ATTEMPT_002",
+      "purpose": "bind authorization receipt to the new execution attempt"
+    },
+    {
+      "line": 1714,
+      "before": "FROZEN_AUTHORIZED_FORMAL_ST_ANALYSIS_ATTEMPT_001",
+      "after": "FROZEN_AUTHORIZED_FORMAL_ST_ANALYSIS_ATTEMPT_002",
+      "purpose": "bind execution contract to the new execution attempt"
+    }
+  ],
+  "verification": {
+    "byteDelta": 0,
+    "byteIdenticalAfterExactTwoLiteralReversion": true,
+    "revertedAttempt002ToolSha256": "5d33f87ba51b67ea2b6bf72bc32c5a7845f14b549d3c30f58b7fb085468c9c9d",
+    "statisticalFormulaChanges": 0,
+    "modelChanges": 0,
+    "endpointChanges": 0,
+    "multiplicityChanges": 0,
+    "outputLogicChanges": 0
+  },
+  "formalObservationsRead": false,
+  "createdAtUtc": "2026-10-30T12:23:36.170Z"
+}

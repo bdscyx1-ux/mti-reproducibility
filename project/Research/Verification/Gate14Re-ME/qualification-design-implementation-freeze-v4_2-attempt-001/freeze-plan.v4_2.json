@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-me-qualification-design-implementation-freeze-plan-v4.2",
+  "studyId": "Gate14Re-ME",
+  "status": "PREDECLARED_V4_2_TECHNICAL_REPAIR_FREEZE_BEFORE_FRESH_EXECUTION",
+  "scope": {
+    "qualificationDesign": "Unchanged: G={64,96,128}, N={32,64,128}, F={1,9,25,81}; 108 core plus 18 stress superblocks.",
+    "oracleStage": "Unchanged: six strict-serial algorithm-neutral oracle-batch processes; one immutable source/hash-bound cache per input; zero reference-oracle evaluation inside algorithm lanes.",
+    "acquisition": "Unchanged: 1 instrument + 6 oracle-batch + 12 empty-boundary + 756 algorithm-lane = 775 strict-serial fresh Unity processes.",
+    "technicalRepair": "Replace only the stale v1 input-geometry policy binding with the version-owned v4.2 validator and update runner, supervisor and read-only acceptance bindings.",
+    "acceptance": "Independent read-only offline streaming necessary acceptance v4.3 with bounded-memory typed-Parquet full round trip.",
+    "formalSampleSize": "Not finalized; finalB remains null pending terminal qualification PASS and reproduced anonymous power.",
+    "migrationPackage": "Step 9 is authorized only after steps 1-8; package construction and ZIP generation remain outside scope."
+  },
+  "predeclaredChecks": [
+    "all implementation-manifest artifact byte counts and SHA-256 values match",
+    "attempt-010 failure evidence is frozen and neither its measured root nor its authorization is reused",
+    "v4.2 acquisition contract binds RunnerV4_2, the version-owned geometry validator and supervisor v4.2",
+    "v4.3 acceptance contract binds its launcher/tool and the v4.2 source acquisition contract",
+    "schedule has 126 ordinal-contiguous rows, 108 core and 18 stress superblocks, 756 lanes and all input hashes match",
+    "G/N/F levels and the stress corner match the unchanged frozen design",
+    "supervisor cardinality is 775 and preserves strict seriality and zero retry/resume/top-up/merge/skip/reorder/replacement",
+    "RunnerV4_2 uses Gate14ReMEInputGeometryValidatorV4_2 and performs zero reference-oracle evaluation inside lanes",
+    "exact v4.2 sources have a natural-exit-zero Unity/Burst compile readiness receipt",
+    "no Unity process is active and the next measured/delivery roots do not yet exist",
+    "formal collection, effects analysis, ranking, winner adjudication and migration-package build remain unauthorized"
+  ],
+  "passMeaning": "The unchanged qualification design with the minimal v4.2 technical repair is frozen and eligible for a separate one-shot attempt-specific authorization using new roots.",
+  "createdAtUtc": "2026-10-19T14:27:30.0269150Z"
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-nonexecuting-compile-validation-and-final-audit-passed",
+  "command": "Executed the authorized non-executing validation sequence. Unity compilation exited 0 with zero compiler errors and natural lock absence. Schedule validation passed 32 assertions for 42064 blocks and 119200 samples. Validation-only orchestration passed. The execute-without-receipt fixture exited 1 as expected before Unity/root creation. Final audit passed 47 assertions with status GATE13R-NONEXECUTING-PREPARATION-PASSED-FORMAL-CAMPAIGN-NOT-AUTHORIZED.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 1,
+  "input_sha256": {
+    "Verification/Gate13R_NonExecuting_Preparation/v2/Compile/summary.json": "16e90398699f3631ea6327d1bfa24f2a0827c5378bcf71f5daf8520c6e027fb2",
+    "Verification/Gate13R_NonExecuting_Preparation/v2/ScheduleValidation.summary.json": "b61ff027615febe4021dcf05bb6f9bd860b5d48d37df46e3f9863b1d5f4b7678",
+    "Verification/Gate13R_NonExecuting_Preparation/v2/OrchestratorValidation.summary.json": "4af0f2e89ac7cb0e729cab7d32bcff43960a249259b17519f5a9e8505757393b"
+  },
+  "output_sha256": "498cd50b23d85a2e3686010b346a77417c6fdb32c3146d95f49b8818c8741cb7",
+  "gate_tokens": [
+    "UNITY-COMPILE-PASSED",
+    "SCHEDULE-32-OF-32",
+    "NEGATIVE-RECEIPT-GUARD-PASSED",
+    "FINAL-AUDIT-47-OF-47",
+    "FORMAL-CAMPAIGN-NOT-AUTHORIZED",
+    "FORMAL-ROOT-ABSENT"
+  ]
+}

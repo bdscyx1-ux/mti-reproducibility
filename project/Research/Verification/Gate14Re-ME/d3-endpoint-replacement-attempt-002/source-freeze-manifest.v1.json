@@ -1,0 +1,138 @@
+{
+  "schema": "gate14re-me-d3-endpoint-replacement-source-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-endpoint-replacement-attempt-002",
+  "status": "SOURCE_FREEZE_CANDIDATE_D3_V2_KNOWN_ANSWER_PASSED",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T05:48:50.2218334Z",
+  "artifacts": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Endpoint_Replacement_Authorization.v1.json",
+      "sha256": "5ce2907d37660129ce6751a54c6c48a660965bb8007a7f3ab21f8c1bd905e583",
+      "bytes": 6263
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Endpoint_Replacement_Plan.v1.md",
+      "sha256": "4981b37f8a20fe705e857ffe648dd412e6cfbbdaa6ff5497568d9bcead7d72df",
+      "bytes": 4697
+    },
+    {
+      "role": "prospective-d3-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/d3-managed-heap-occupancy-contract.prospective.v1.json",
+      "sha256": "5960c63ccb0468bf84802f649326d10edea0bd0527ada0c2fdf7342d26f4604d",
+      "bytes": 2710
+    },
+    {
+      "role": "preexecution-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/preexecution-manifest.v1.json",
+      "sha256": "7d004248125a5068210d8c691cad3d687ac6058e78ea5003596e2d24feed19d1",
+      "bytes": 6382
+    },
+    {
+      "role": "v2-folder-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2.meta",
+      "sha256": "383a08462d056e2a3871deab3d67251dec1f733625b04b9bae65c0a0e10c218e",
+      "bytes": 169
+    },
+    {
+      "role": "d3-v2-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs",
+      "sha256": "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca",
+      "bytes": 1040
+    },
+    {
+      "role": "d3-v2-source-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs.meta",
+      "sha256": "a9604ec92d4a89edee2803b20b52cf7603045dd2650b89bbcc0bd883d90723cd",
+      "bytes": 240
+    },
+    {
+      "role": "d3-v2-known-answer-harness",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3EndpointReplacementRunnerV1.cs",
+      "sha256": "d05c2939ecd73d3582c9800e0f2a576260b1aa230400914668c4516e7ddc62fa",
+      "bytes": 32437
+    },
+    {
+      "role": "d3-v2-known-answer-harness-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3EndpointReplacementRunnerV1.cs.meta",
+      "sha256": "9a918a9b9cc5196f8a100f7e2eccfc0cf9db0452baff6789d26deddbd36a106f",
+      "bytes": 240
+    },
+    {
+      "role": "known-answer-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/d3-known-answer/d3-known-answer-receipt.v1.json",
+      "sha256": "e8b16d76e339c87fe5485edcd68c8a6518ce40a5e49acf15b6e8cc6dadfc65aa",
+      "bytes": 17742
+    },
+    {
+      "role": "unity-log",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/unity-d3-endpoint-known-answer.log",
+      "sha256": "7a52346f7fc09a9ee12869cb5b4d445b1b8d9e7d0f30b7ecb17fade00b834d7b",
+      "bytes": 130764
+    },
+    {
+      "role": "unity-process-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/unity-process-receipt.v1.json",
+      "sha256": "3565571501f9b9a6afbb6fb78b4c0b54ce54bc91595de4d82238b9be7cd4d311",
+      "bytes": 2826
+    },
+    {
+      "role": "final-d3-v2-instrument-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-instrument-contract.v2.json",
+      "sha256": "e402dfc90362a3ac07f5342d218f19c67d31d46f82bec584d5d817fbccb9f0bf",
+      "bytes": 4536
+    }
+  ],
+  "knownAnswerSummary": {
+    "status": "PASS_D3_MANAGED_HEAP_OCCUPANCY_KNOWN_ANSWER",
+    "negativeControlPairs": 64,
+    "negativeControlObservedMaximumAbsoluteDeltaBytes": 0,
+    "smallPositiveRequestedBytes": 8388608,
+    "smallPositiveObservedDeltaBytes": 8441856,
+    "largePositiveRequestedBytes": 33554432,
+    "largePositiveObservedDeltaBytes": 34656256,
+    "observedScaleSeparationBytes": 26214400,
+    "reclamationRequestedBytes": 16777216,
+    "reclamationObservedAllocationDeltaBytes": 17088512,
+    "reclamationObservedRecoveredBytes": 16986112,
+    "reclamationPostBaselineSignedDeltaBytes": 102400,
+    "allProspectiveControlsPassed": true
+  },
+  "compileDisposition": {
+    "initialStaleBeeGraphDiagnosticPreserved": true,
+    "sameProcessAdditionalGraphRunObserved": true,
+    "finalTundraBuildSuccessObserved": true,
+    "finalAssembliesReloaded": true,
+    "newHarnessExecutedAfterFinalReload": true,
+    "unresolvedFinalCompilerErrors": 0
+  },
+  "unchangedFrozenExecutionSurface": {
+    "sixAlgorithmFairnessBindingRelativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+    "sixAlgorithmFairnessBindingSha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71",
+    "allSixAlgorithmSourceHashesStillMatchBinding": true,
+    "loadQualificationRunnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV1.cs",
+    "loadQualificationRunnerSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+    "outputSchemaV1RelativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-output-schema.v1.json",
+    "outputSchemaV1Sha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c",
+    "instrumentContractV1RelativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-instrument-contract.v1.json",
+    "instrumentContractV1Sha256": "7515851e9b447c0e17c580e0cbad86186d156f606cb8828616cd7f4f50ea4503"
+  },
+  "freezeBoundary": {
+    "sourceOnly": true,
+    "d3V2StandaloneQualified": true,
+    "d3V2IntegratedIntoLoadRunner": false,
+    "d3V2IntegratedIntoOutputSchema": false,
+    "runtimeQualificationAttempt002Started": false,
+    "dataExporterKnownAnswerRun": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "preservationId": "gate13r-pr1b-order-effect-pilot-attempt1-terminal-preservation-v1",
+  "capturedAtUtc": "2026-10-08T11:53:23.2413692Z",
+  "capturedAtAsiaShanghai": "2026-10-08T19:53:23.2430976+08:00",
+  "status": "FAILED-NO-RETRY-NO-RESUME-NO-MERGE",
+  "formalCampaign": false,
+  "excludedFromFormalAnalysis": true,
+  "excludedFromOrderEffectInference": true,
+  "pilotRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect",
+  "pilotPlan": {
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v1.json",
+    "sha256": "8ec3d90c8a09fa88db2d58c8b4bf9b8ce830e236e41b669671317d6c778e3dc7"
+  },
+  "provenance": {
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Provenance.v1.json",
+    "sha256": "030ebe59a509c945fb3efd4abac2dfe0c2ee1b7cf3dbb842de096612f0829c45"
+  },
+  "prePilotAudit": {
+    "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v8-gate13r-pr1b-order-effect/ValidationOnlyPrePilotAudit.summary.json",
+    "sha256": "600834ac071e9d1f4ccd0674853c14d3b1fccb09c38166f6bda7d35f4e2d333f",
+    "passedChecks": 38,
+    "totalChecks": 38
+  },
+  "executionReceipt": {
+    "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/execution-receipt.json",
+    "sha256": "00571a4ace4b1c30fd23f623e5cfad54afa5774b0f0fc2b60d132f3226b5a8ae"
+  },
+  "progress": {
+    "plannedWarmupProcesses": 12,
+    "completedWarmupProcesses": 12,
+    "completedWarmupSamples": 24,
+    "plannedMeasuredProcesses": 384,
+    "completedMeasuredProcesses": 12,
+    "completedMeasuredSamples": 24,
+    "plannedMeasuredMirroredPairs": 96,
+    "completedMeasuredMirroredPairs": 3,
+    "attemptedFailedProcessOrdinalIncludingWarmup": 25,
+    "attemptedFailedMeasuredProcessOrdinal": 13,
+    "completedCheckpointEntryCount": 24
+  },
+  "failure": {
+    "failedAtUtc": "2026-10-08T11:48:43.8200824Z",
+    "scenarioId": "core-r07-s2-hetero",
+    "wave": 2,
+    "block": 2,
+    "superblockOrder": "BA",
+    "cohortProcessPosition": 1,
+    "comparisonCohortId": "grouped-field-heterogeneous-goal-v1",
+    "algorithmId": "IDFF",
+    "algorithmPosition": 1,
+    "predecessorAlgorithmId": "NONE",
+    "processId": 13692,
+    "runId": "g13r-pr1b-m-b002-ba-s1-core-r07-s2-hetero-grouped-field-b002-p01-idff",
+    "primaryFailure": "Sample retained managed-memory growth exceeded the frozen 128 MiB limit.",
+    "primaryFailureKind": "PER-SAMPLE-RETAINED-MANAGED-MEMORY-HARD-GATE",
+    "workloadCompletedBeforeGate": true,
+    "laterPositionsExecuted": false,
+    "secondaryQuiescenceFailure": "Unity exited with code 1 and left an exclusively accessible zero-byte project lock; cleanup was not authorized.",
+    "exactRetainedGrowthPersisted": false,
+    "observabilityGap": "The v3 Unity command throws before writing telemetryAfterCleanup and sampleRetainedManagedGrowthBytes to a durable artifact. Only the fact that growth exceeded 134217728 bytes is recoverable."
+  },
+  "failureEvidence": [
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/failure-receipt.json",
+      "rawBytes": 638,
+      "sha256": "ca378535590d9fda229d1b8f41511b0301269ba004d8b782ccae20208f3a4d25"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/pilot-checkpoint.json",
+      "rawBytes": 55887,
+      "sha256": "c1d0350a2ec6025743be82005247ddf180ff00aa99bbfb0d3ab7e5e39b762132"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/partial-output-manifest.json",
+      "rawBytes": 171694,
+      "sha256": "08449a4ada4149b3e665d29ec94c32abf5a9ed725e8738e0e9e42e1b699d60a6"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/measured/wave-002/slot-01-core-r07-s2-hetero/pair-b002/ba-s1/p01-grouped-field/block-failure.json",
+      "rawBytes": 2063,
+      "sha256": "50f79367bd3d5c62e70b7da9e16130d0ed382368bef754b4ca024ae68f232297"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/measured/wave-002/slot-01-core-r07-s2-hetero/pair-b002/ba-s1/p01-grouped-field/block-checkpoint.json",
+      "rawBytes": 681,
+      "sha256": "9923317fcdf2d6f33fd9414f5cecd1b94ec1c27f5bd3b2af6dc6b8b75830c589"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/measured/wave-002/slot-01-core-r07-s2-hetero/pair-b002/ba-s1/p01-grouped-field/runs/p01-idff/failure.json",
+      "rawBytes": 1406,
+      "sha256": "ce5e672963a0588c95ebed69998e251bcd57a919f7788fd0acc38f6862eaddea"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/measured/wave-002/slot-01-core-r07-s2-hetero/pair-b002/ba-s1/p01-grouped-field/runs/p01-idff/workload-result.json",
+      "rawBytes": 6164,
+      "sha256": "99bb9183ca0ee46f4ca012a4f79c64a6c1970c6784dd2ee15086b0fda1372efd"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/measured/wave-002/slot-01-core-r07-s2-hetero/pair-b002/ba-s1/p01-grouped-field.Unity.log",
+      "rawBytes": 25353,
+      "sha256": "25387037e1ac6f7315e3bf7d5a705440b941b09f9745c5278c6c64df765f8de2"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/measured/wave-002/slot-01-core-r07-s2-hetero/pair-b002/ba-s1/p01-grouped-field.lock-hygiene/g13r-pr1b-m-b002-ba-s1-core-r07-s2-hetero-grouped-field-b002.quiescence-failure.json",
+      "rawBytes": 1310,
+      "sha256": "8cab614422d02ef9acd858bf5e18acf2212774112ef0ecd8adf99cd16dd245eb"
+    }
+  ],
+  "partialRootInventory": {
+    "manifestEnumeratedFileCount": 424,
+    "manifestEnumeratedRawBytes": 17884985,
+    "rootFileCountIncludingPartialManifest": 425,
+    "rootRawBytesIncludingPartialManifest": 18056679,
+    "lastWriteUtc": "2026-10-08T11:49:44.8972673Z"
+  },
+  "readOnlyDiagnosis": {
+    "gate12rV4CompletedSampleCountWithRetainedTelemetry": 1176,
+    "gate12rV4SamplesOver128MiB": 0,
+    "gate12rV4MaximumObservedRetainedGrowthMiB": 101.26,
+    "gate12rV4IdffPosition1Count": 98,
+    "gate12rV4IdffPosition1P95MiB": 79.18,
+    "gate12rV4IdffPosition1MaximumMiB": 95.22,
+    "exactHistoricalCounterpartRetainedGrowthBytes": -92839936,
+    "exactHistoricalCounterpartRetainedGrowthMiB": -88.54,
+    "failedWorkloadStructuralFieldAudit": "PASS",
+    "failedWorkloadStructuralFieldsCompared": 34,
+    "failedWorkloadStructuralFieldsEqual": 34,
+    "interpretation": "The workload completed and its deterministic structural counters matched the frozen historical counterpart. The failure is a retained-memory eligibility/telemetry event, not evidence of an algorithm correctness divergence. Its exact magnitude is not recoverable from attempt 1."
+  },
+  "postRunState": {
+    "projectUnityProcessCount": 0,
+    "reservedFormalRootExists": false,
+    "formalExecutionReceiptExists": false,
+    "formalTimingSamplesCreated": false,
+    "projectLockPresent": true,
+    "projectLockRawBytes": 0,
+    "projectLockExclusiveReadWriteAvailable": true,
+    "projectLockDisposition": "PRESERVED-PENDING-SEPARATE-CONTROLLED-RECOVERY-AUTHORIZATION"
+  },
+  "frozenInputPostAudit": {
+    "preWriteAuditRelativePath": "Research/Gate13R_PR1B_OrderEffect_PreWrite_Preservation_Audit.v1.json",
+    "preWriteAuditSha256": "e19b86ed4aa7b7f4edcf0ce88d0d20a616393eee89b9b2bb363a217e739b9445",
+    "auditedInputCount": 15,
+    "unchangedInputCount": 15,
+    "mismatches": [],
+    "passed": true
+  },
+  "prohibitions": {
+    "retryAttempt1": true,
+    "resumeAttempt1": true,
+    "topUpAttempt1": true,
+    "mergeAttempt1": true,
+    "usePartialDataForOrderEffectInference": true,
+    "usePartialDataForFormalInference": true,
+    "deleteOrRewriteAttempt1": true,
+    "launchGate13RFormal": true
+  },
+  "nextState": "AWAITING-SEPARATE-V2-MEMORY-OBSERVABILITY-AND-ELIGIBILITY-AMENDMENT-AUTHORIZATION"
+}

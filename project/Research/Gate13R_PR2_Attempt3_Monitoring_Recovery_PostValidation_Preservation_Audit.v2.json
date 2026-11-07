@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13r-pr2-attempt3-monitoring-recovery-postvalidation-preservation-audit-v2",
+  "capturedAtUtc": "2026-10-09T07:25:00Z",
+  "capturedAtAsiaShanghai": "2026-10-09T15:25:00+08:00",
+  "passed": true,
+  "statusTokens": [
+    "NON-EXECUTING",
+    "VERSIONED-PRELAUNCH-REPAIR-CYCLE-1",
+    "V1-EVIDENCE-PRESERVED",
+    "V2-MONITOR-VALIDATED",
+    "UPSTREAM-BYTE-IDENTICAL",
+    "FORMAL-TARGETS-ABSENT",
+    "UNITY-NOT-RUNNING",
+    "UNITY-LOCK-ABSENT"
+  ],
+  "defectReceipt": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_PostReadiness_Defect_Receipt.v1.json",
+    "sha256": "6786632fa89493a78936f7f91c9fb3ee2dc21e43618460db881d609953f2f503",
+    "failureSignature": "SCHEDULED-REPORT-STATE-OMITS-RAW-COMMIT-RECOVERY"
+  },
+  "preservedV1": [
+    {"relativePath": "Research/Gate13RPR2Attempt3MonitoringRecoveryV1.py", "sha256": "e09eee5be46e3db8f79044d9711d5bf444a513977f0c31c600d551b0c9ade077"},
+    {"relativePath": "Research/Get-Gate13RPR2Attempt3OperationalProgressV1.ps1", "sha256": "234ef08b17d8830e8d7358b1729e41cdaffc73bfcad91ff692d3eecd2bac81d4"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json", "sha256": "6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v1.json", "sha256": "9f011ba057df79535c3ebbede12df9a75b5e4f0c3aed5586bdf3961a181bcf49"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v2.md", "sha256": "54a6e4b1db4006ba2c03cdc7395bd109e1e07dc3a6e212f5dc5252bb5e541fb6"}
+  ],
+  "activeV2": {
+    "config": {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Config.v2.json", "sha256": "b88da3901a2c2cc494140a8cd2e3f37b546f637935bc940a8941a850d42770c6"},
+    "repairSpecification": {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Implementation_Repair.v2.md", "sha256": "0822efd540be52f58e5f190dd6280328871cad3a2070d13a8a5574edeca1bd66"},
+    "monitor": {"relativePath": "Research/Gate13RPR2Attempt3MonitoringRecoveryV2.py", "sha256": "6d1cd6b1f0542c2985fb0c11d3da6caee6c0413f0c5fe13f335897fef8f4c162"},
+    "wrapper": {"relativePath": "Research/Get-Gate13RPR2Attempt3OperationalProgressV2.ps1", "sha256": "8b9c3733aae86b4adbe03c9bc7806931947746d864854d438bf2a67d09f537c5"},
+    "testHarness": {"relativePath": "Research/Test-Gate13RPR2Attempt3MonitoringRecoveryV3.py", "sha256": "88b9bde2852c67100db9269fad9062949366aad10d2b43614eaf94bc8b4a60a4"}
+  },
+  "validationAttempt3": {
+    "root": "Research/Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3",
+    "status": "PASSED",
+    "testCount": 56,
+    "passedTestCount": 56,
+    "validationSummarySha256": "6a2980fab5e31c87d93882fafd5882b903309a3a8be0d76f024adfb3d670026f",
+    "passReceiptSha256": "2192288de6f036c6e4411818cc10837d1d07a2828f92417589b6e2d16c0832c1",
+    "partialOutputManifestSha256": "6b949fc2102a1f566f57063fe6d00fa411e1b4761c7d8c4813ecf386b003d1bb",
+    "rawCommitHourlyReportTest": "PASSED",
+    "rawCommitStatusStaleAdvisoryTest": "PASSED",
+    "unityInvocations": 0
+  },
+  "upstreamPreservation": {
+    "preWriteKeyFileCount": 18,
+    "matchingKeyFileCount": 18,
+    "mismatchCount": 0,
+    "scheduleV2Sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "candidateConfigV4Sha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042"
+  },
+  "runtimeState": {
+    "formalRootExists": false,
+    "formalReceiptExists": false,
+    "formalStatusExists": false,
+    "unityEditorProcessCount": 0,
+    "unityProjectLockExists": false,
+    "formalMeasuredProcessesStarted": 0,
+    "formalMeasuredSamplesStarted": 0
+  },
+  "validatedRepair": {
+    "scheduledReportStates": [
+      "ACQUISITION-RUNNING",
+      "ACQUISITION-COMPLETE-COMMIT-PENDING",
+      "RAW-COMMIT-RECOVERY"
+    ],
+    "watcherCadenceMinutes": 5,
+    "scheduledReportCadenceMinutes": 60,
+    "experimentalSemanticsChanged": false,
+    "measuredRetryBoundaryChanged": false
+  }
+}

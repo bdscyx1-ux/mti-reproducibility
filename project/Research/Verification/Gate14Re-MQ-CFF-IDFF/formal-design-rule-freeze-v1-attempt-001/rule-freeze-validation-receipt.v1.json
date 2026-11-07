@@ -1,0 +1,36 @@
+{
+  "schema": "gate14re-mq-cff-idff-formal-design-rule-freeze-validation-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "formal-design-rule-freeze-v1-attempt-001",
+  "validatedAtUtc": "2026-10-21T05:59:13.1111369Z",
+  "status": "PASS_PROSPECTIVE_RULE_FREEZE",
+  "checks": {
+    "proposalHashMatches": true,
+    "authorizationProposalHashMatches": true,
+    "authorizedDesignHashBoundByPowerPlan": true,
+    "primaryFamilyExactlyP1ThroughP6": true,
+    "mipeRatioExactly0_90": true,
+    "mipeLogThresholdExactlyMinus0_10536051565782628": true,
+    "candidateBExactly36_72_108_144": true,
+    "powerTargetExactly0_90": true,
+    "identityBlindNuisanceRequired": true,
+    "allCorrectnessAndOracleHardGatesRetained": true,
+    "noAdaptiveReestimationOrEarlyStopping": true,
+    "noRetryResumeReplacementTopUpOrMerge": true,
+    "formalCollectionNotAuthorized": true,
+    "formalAnalysisNotAuthorized": true,
+    "powerScriptCompiles": true,
+    "forbiddenIdentityMemberAccessAbsent": true
+  },
+  "bindings": {
+    "proposalSha256": "137fb31287ec131bfad348cd7bb85fd4bdb8f82f012e21d6c7065e97817cf295",
+    "userAuthorizationSha256": "c80d794fcaa92b44c5f2f97ff35c3449d4e2c93f075b65829efd5202191c2f21",
+    "authorizedDesignSha256": "896ac312b95c78ceb179820fb97b2b38d471f542d6ddfbd00c7666595321fd18",
+    "analysisPlanSha256": "9d93a310090aa47dcafa3ab7a90dc2518c691d13d90ef5aebecf98548cf5051c",
+    "fieldBoundarySha256": "f5bd0e13e6f1d243022a4f7889fb89958e1c49d3a4e5c0c55560b517b110b14d",
+    "powerScriptSha256": "858906ae1ae6cb1656313fc49d74fc9e83e93558f019fc00a79deeae91eea80a"
+  },
+  "timingValuesUsedToChooseOrModifyRules": false,
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "gate14re-mq-formal-external-terminal-observation-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "authorizationId": "gate14re-mq-formal-collection-attempt-003-f9cf80a8-7ad8-4ec4-8568-bb4d90a9a445",
+  "status": "SUPERVISOR_NATURAL_EXIT_ZERO_AND_COLLECTION_CONTROL_TERMINAL_VERIFIED",
+  "observedAtUtc": "2026-10-22T04:00:12.0971139+00:00",
+  "supervisorPid": 24904,
+  "supervisorCreationTimeUtc": "2026-10-21T17:43:23.8430845Z",
+  "supervisorExecutablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+  "supervisorExecutableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+  "supervisorRelativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/Run-Gate14ReMQFormalCollection.v2_2.ps1",
+  "supervisorSha256": "61b717834f820e564e62883281b0bdb76ca63d5119d1ef361dda506823cea3cd",
+  "externalLaunchObservationSha256": "b57640058cda197106d0a9b047bc46fa692d6c46ed01a85bee23ed77cd24d40d",
+  "lastObservedAliveAtUtc": "2026-10-22T03:41:54+00:00",
+  "firstObservedAbsentAtUtc": "2026-10-22T03:56:56+00:00",
+  "supervisorAliveAtTerminalObservation": false,
+  "matchingMeasuredUnityRunnerCount": 0,
+  "exitCode": 0,
+  "exitCodeEvidence": {
+    "mode": "FROZEN_SUCCESS_BRANCH_TERMINAL_RECEIPTS_AND_PROCESS_ABSENCE",
+    "successBranchExitCode": 0,
+    "successBranchExitLine": 459,
+    "failureBranchRethrows": true,
+    "failureBranchThrowLine": 500,
+    "acquisitionTerminalReceiptStatus": "PASS_RAW_FORMAL_MQ_COLLECTION_COMPLETE_ANALYSIS_NOT_STARTED",
+    "failureReceiptPresent": false,
+    "failureLedgerRows": 0,
+    "replacementLedgerRows": 0
+  },
+  "naturalExitObserved": true,
+  "signalOrForcedTerminationSent": false,
+  "processLedgerRows": 864,
+  "processOrdinalRange": "0..863",
+  "allProcessRowsTrustedIdentityNaturalExitZero": true,
+  "terminalControlFiles": [
+    {
+      "name": "acquisition-complete.v2.json",
+      "bytes": 377,
+      "sha256": "49d8dd3224a8b602ddabf3894aeb65b5cb3665b35e7c2881d4872f5e1dfaf33f"
+    },
+    {
+      "name": "acquisition-freeze-manifest.v2.json",
+      "bytes": 876412,
+      "sha256": "df3d760b678e1fb4bc4c863f23d7911600e76eefedae5efb0c197f53d021e6f0"
+    },
+    {
+      "name": "acquisition-terminal-receipt.v2.json",
+      "bytes": 708,
+      "sha256": "78a7b6acd2a46c2ff3babc38ef8814a82fd32152930b0e7c36b30ad795052aac"
+    }
+  ],
+  "formalAnalysisStarted": false,
+  "stStarted": false,
+  "mtStarted": false,
+  "algorithmObservationsReadOrInterpreted": false
+}

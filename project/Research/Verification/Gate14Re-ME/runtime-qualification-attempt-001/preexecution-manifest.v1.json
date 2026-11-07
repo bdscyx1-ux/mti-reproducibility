@@ -1,0 +1,87 @@
+{
+  "schema": "gate14re-me-runtime-qualification-preexecution-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-runtime-qualification-attempt-001",
+  "status": "FROZEN_RUNTIME_QUALIFICATION_PREEXECUTION",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T04:59:01.8288386Z",
+  "priorSourceFreeze": {
+    "validationStatus": "PASS_SOURCE_ONLY_IMPLEMENTATION_FREEZE",
+    "checksPassed": 240,
+    "checksFailed": 0,
+    "unityProcessesLaunched": 0,
+    "implementationManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/implementation-manifest.v1.json",
+    "implementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "43c9dba8b49a1efe0802f6046170be57506c027af9ac764138843c60eef669f7",
+    "validatorRelativePath": "Research/Validate-Gate14ReMEQualificationImplementationFreezeV1.py",
+    "validatorSha256": "4650b80d749523020cb8085e2f771fb6ffd1ff903fd98d62262b6fc61dba0a4a"
+  },
+  "runtimeBindings": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "powershellExecutable": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "powershellExecutableSha256": "8bb6fa8c283b4d92120b1ef249a9b311b0f804d4cabbe9981159976c8be76a5e"
+  },
+  "artifacts": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Runtime_Qualification_Authorization.v1.json",
+      "sha256": "86f2e82282b98e5dd9d0e0f855faffcfee37c59ba9b18f03d2a0a417fee60b2d",
+      "bytes": 4129
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Runtime_Qualification_Plan.v1.md",
+      "sha256": "a2fa22904cb227b0ea3b329ee688b6169bdd381b5f164e4e53ab5f6a1ce03f70",
+      "bytes": 2875
+    },
+    {
+      "role": "unity-known-answer-harness",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEEnvironmentQualificationRunnerV1.cs",
+      "sha256": "11e4ecdbde355284a55c84997b3e258850bfd5c1a3b0000ee08cffbdb35a0da9",
+      "bytes": 19095
+    },
+    {
+      "role": "unity-known-answer-harness-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEEnvironmentQualificationRunnerV1.cs.meta",
+      "sha256": "a387847096be2a9af516aa48d9cfb5a962c418778b5fb2cb87cb60e93a912c1b",
+      "bytes": 240
+    },
+    {
+      "role": "typed-parquet-runtime-freezer",
+      "relativePath": "Research/Gate14Re-ME/Tools/freeze_gate14re_me_typed_parquet_runtime_v1.py",
+      "sha256": "53573f9cfc4d705b06487735bbe3627a5fbc572922f74f8a58a7cc28bea9d603",
+      "bytes": 11767
+    },
+    {
+      "role": "export-known-answer-harness",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_runtime_export_known_answer_v1.py",
+      "sha256": "86ef01fb4fba28831fb1d1e8750d377dcd1bb5e50992bf30529a33114bec1388",
+      "bytes": 12474
+    }
+  ],
+  "staticChecks": {
+    "authorizationJsonParsed": true,
+    "pythonAstParsePassed": true,
+    "csharpDelimiterAndLexicalCheckPassed": true,
+    "prohibitedRootsAbsent": true
+  },
+  "executionPolicy": {
+    "automaticRetryAuthorized": false,
+    "maximumConcurrentUnityProcesses": 1,
+    "onlyExactAuthorizationBoundPathsMayBeCreated": true
+  },
+  "evidenceBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

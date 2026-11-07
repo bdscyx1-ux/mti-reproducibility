@@ -1,0 +1,133 @@
+{
+  "schema": "gate14re-me-schema-v2-tooling-known-answer-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-schema-v2-tooling-bridge-attempt-001",
+  "status": "PASS_SCHEMA_V2_TOOLING_SYNTHETIC_KNOWN_ANSWER",
+  "completedAtUtc": "2026-10-17T08:31:16.011916Z",
+  "verificationAttemptRelativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001",
+  "executionRootRelativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/repair-cycle-001",
+  "repairCycle": "repair-cycle-001",
+  "initialFailureEvidenceRetained": true,
+  "positiveStructuralValidation": {
+    "schema": "gate14re-me-qualification-structural-validation-v2",
+    "studyId": "Gate14Re-ME",
+    "status": "PASS_SCHEMA_V2_STRUCTURAL_COMPLETE_RAW_NO_INFERENCE",
+    "profile": "synthetic-known-answer",
+    "outputSchemaSha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb",
+    "d3ContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "identityBindingSha256": "f5cb5febb214a520ad88fe5b592c1688ccae291ee8059615a90d1badff5c302c",
+    "tableRows": {
+      "oracle-agent-checks": 0,
+      "oracle-event-checks": 0,
+      "operations": 0,
+      "event-groups": 24,
+      "d3-windows": 1025,
+      "persistent-state": 0,
+      "process-resources": 0,
+      "empty-boundary": 1000,
+      "replacement-ledger": 0,
+      "failures-and-voids": 0
+    },
+    "laneReceipts": 1,
+    "emptyBoundaryReceipts": 1,
+    "eventGroupD3Joins": 24,
+    "emptyBoundaryD3Joins": 1000,
+    "d3WindowRecordIdsUnique": true,
+    "d3JoinsOneToOneAndComplete": true,
+    "retiredSnapshotFieldsAbsent": true,
+    "operationManagedAllocatedBytesTreatedAsD3": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "qualificationReusedForFormalInference": false
+  },
+  "positiveDeliveryBuild": {
+    "schema": "gate14re-me-qualification-delivery-receipt-v2",
+    "studyId": "Gate14Re-ME",
+    "status": "PASS_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+    "deliveryManifestRelativePath": "delivery-manifest.v2.json",
+    "deliveryManifestSha256": "1cb1d490d2397e6295a4883e23090349d550ca042a39bd97673ec8748e4a2070",
+    "completeValueTypeOrderRoundTripPassed": true,
+    "typedParquetRoundTripPassed": true,
+    "d3JoinsOneToOneAndComplete": true,
+    "aggregateOnlyPackage": false,
+    "formalAnalysisAuthorized": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "positiveDeliveryVerification": {
+    "schema": "gate14re-me-qualification-delivery-receipt-v2",
+    "studyId": "Gate14Re-ME",
+    "status": "PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+    "deliveryManifestSha256": "1cb1d490d2397e6295a4883e23090349d550ca042a39bd97673ec8748e4a2070",
+    "tables": 10,
+    "products": 40,
+    "completeValueTypeOrderRoundTripPassed": true,
+    "typedParquetRoundTripPassed": true,
+    "d3JoinsOneToOneAndComplete": true,
+    "aggregateOnlyPackage": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "negativeTests": [
+    {
+      "testId": "tamper-source-hash",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "row-bound source at H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\schema-v2-tooling-bridge-attempt-001\\repair-cycle-001\\negative-fixtures\\tamper-source-hash\\raw\\superblocks\\SYNTHETIC-SB-000\\ALG-A\\d3-windows.raw.v1.jsonl:1 SHA-256 mismatch: expected 0000000000000000000000000000000000000000000000000000000000000000; actual 1db49bf411a8e1b8915091aacad53686f9e0a37fde55877bdc212d7ec7d76729"
+    },
+    {
+      "testId": "missing-d3-join-row",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "lane requires 24 event rows and 25 D3 windows: H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\schema-v2-tooling-bridge-attempt-001\\repair-cycle-001\\negative-fixtures\\missing-d3-join-row\\raw\\superblocks\\SYNTHETIC-SB-000\\ALG-A"
+    },
+    {
+      "testId": "duplicate-record-id",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "duplicate recordId in d3-windows: synthetic-d3-init"
+    },
+    {
+      "testId": "bool-as-int-type-substitution",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "integer required (bool rejected): H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\schema-v2-tooling-bridge-attempt-001\\repair-cycle-001\\negative-fixtures\\bool-as-int-type-substitution\\raw\\superblocks\\SYNTHETIC-SB-000\\ALG-A\\d3-windows.raw.v1.jsonl:2:managedAllocationBytes"
+    },
+    {
+      "testId": "rate-formula-mismatch",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "D3 allocation-rate formula mismatch: H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\schema-v2-tooling-bridge-attempt-001\\repair-cycle-001\\negative-fixtures\\rate-formula-mismatch\\raw\\superblocks\\SYNTHETIC-SB-000\\ALG-A\\d3-windows.raw.v1.jsonl:2"
+    },
+    {
+      "testId": "retired-snapshot-field-injection",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "retired D3 snapshot field(s) ['allocationCounterStart']: H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\schema-v2-tooling-bridge-attempt-001\\repair-cycle-001\\negative-fixtures\\retired-snapshot-field-injection\\raw\\superblocks\\SYNTHETIC-SB-000\\ALG-A\\d3-windows.raw.v1.jsonl:2"
+    },
+    {
+      "testId": "anonymous-label-swap",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "invalid anonymous lane: H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\schema-v2-tooling-bridge-attempt-001\\repair-cycle-001\\negative-fixtures\\anonymous-label-swap\\raw\\superblocks\\SYNTHETIC-SB-000\\ALG-A\\event-groups.raw.v2.jsonl:1"
+    },
+    {
+      "testId": "delivery-product-tamper",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "delivery product d3-windows/d3-windows.v2.jsonl SHA-256 mismatch: expected 647fde7cd2fc632cd23b311249469376b83c9ceab03d6ee6d57392408695220b; actual 7e83ecf3e57d6a107a67f5cefd8cb31fbe62b57537e9cb958737024ccc591e57"
+    },
+    {
+      "testId": "delivery-product-missing-file",
+      "status": "PASS_EXPECTED_FAIL_CLOSED",
+      "reason": "missing delivery product event-groups/event-groups.v2.parquet: H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\schema-v2-tooling-bridge-attempt-001\\repair-cycle-001\\negative-delivery-missing-file\\event-groups\\event-groups.v2.parquet"
+    }
+  ],
+  "negativeTestsPassed": 9,
+  "syntheticRawRows": 2049,
+  "syntheticD3WindowRows": 1025,
+  "syntheticEventGroupRows": 24,
+  "syntheticEmptyBoundaryRows": 1000,
+  "qualificationScheduleRows": 0,
+  "qualificationInputs": 0,
+  "anonymousIdentityMappings": 0,
+  "qualificationMeasuredRootCreated": false,
+  "algorithmPlannerConstructedOrInvoked": false,
+  "algorithmLanesExecuted": 0,
+  "formalObservations": 0,
+  "formalAnalysisPerformed": false,
+  "crossAlgorithmEffectsComputed": false,
+  "rankingOrWinnerComputed": false
+}

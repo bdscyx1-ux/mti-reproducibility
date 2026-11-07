@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-load-qualification-schedule-row-v4-1",
+  "title": "Gate14Re-ME bounded-window load-qualification schedule row v4.1",
+  "description": "Frozen version-owned v4.1 copy of the unchanged 126-row bounded-window qualification schedule schema. It permits exact reuse of the existing frozen planning assets, does not authorize execution, and does not finalize the formal-study sample size.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "ordinal",
+    "superblockId",
+    "inputRelativePath",
+    "inputSha256",
+    "algorithmOrder",
+    "replacement"
+  ],
+  "properties": {
+    "schema": {"const": "gate14re-me-load-qualification-schedule-row-v4"},
+    "ordinal": {"type": "integer", "minimum": 0, "maximum": 125},
+    "superblockId": {"type": "string", "minLength": 1},
+    "inputRelativePath": {"type": "string", "minLength": 1},
+    "inputSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "algorithmOrder": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {"$ref": "#/$defs/lane"}
+    },
+    "replacement": {
+      "oneOf": [
+        {"type": "null"},
+        {"$ref": "#/$defs/replacement"}
+      ]
+    }
+  },
+  "$defs": {
+    "lane": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithmId", "anonymousLaneId", "identityBindingSha256"],
+      "properties": {
+        "algorithmId": {"enum": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF", "IDFF"]},
+        "anonymousLaneId": {"enum": ["ALG-A", "ALG-B", "ALG-C", "ALG-D", "ALG-E", "ALG-F"]},
+        "identityBindingSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "replacement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["superblockId", "inputRelativePath", "inputSha256"],
+      "properties": {
+        "superblockId": {"type": "string", "minLength": 1},
+        "inputRelativePath": {"type": "string", "minLength": 1},
+        "inputSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  },
+  "semanticChecksOutsideJsonSchema": [
+    "the JSON Lines file contains exactly 126 rows with ordinal equal to zero-based line order",
+    "primary superblock IDs and primary input paths are unique",
+    "every referenced input bundle has the exact input schema/study/protocol identity, its superblockId matches the schedule entry and every inputId is globally unique",
+    "replacement superblock IDs and input paths are unique and disjoint from all primary values",
+    "each row contains each named algorithm and each anonymous lane exactly once",
+    "all lane entries bind one common lower-case SHA-256 identity map",
+    "every referenced input exists inside the project and matches its SHA-256"
+  ],
+  "authorizationBoundary": {
+    "schemaFrozen": true,
+    "qualificationDesignFrozen": true,
+    "overallFormalDesignFrozen": false,
+    "formalSampleSizeFinalized": false,
+    "priorFrozenScheduleRowStructureReusedWithoutChange": true,
+    "scheduleRowsGenerated": 0,
+    "reusedFrozenScheduleRows": 126,
+    "scheduleGenerationAuthorized": false,
+    "identityBindingGenerated": false,
+    "qualificationExecutionAuthorized": false,
+    "plannedRows": 126,
+    "plannedFreshProcesses": 775
+  }
+}

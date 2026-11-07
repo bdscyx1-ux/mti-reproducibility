@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr2-mp2-evidence-manifest-v1-failure-receipt-v1",
+  "savedAtUtc": "2026-10-09T06:40:04Z",
+  "savedAtAsiaShanghai": "2026-10-09T14:40:04+08:00",
+  "status": "FAILED-PRESERVED-NO-OVERWRITE",
+  "failedArtifact": {
+    "relativePath": "Research/Gate13R_PR2_MP2_Evidence_Manifest.v1.json",
+    "sha256": "28f0d44e701ab131bdecbd167dfe1169ce61ad62e476921b56f247c7a22af5d5"
+  },
+  "reasonCode": "POST-MANIFEST-PASSPORT-TERMINAL-STATUS-UPDATE",
+  "reason": "The run passport was intentionally advanced from in-progress to its terminal non-executing-readiness-passed state after evidence manifest v1 was written, so the passport hash embedded in v1 no longer matched the current passport.",
+  "mismatch": {
+    "relativePath": "Research/Gate13R_PR2_MP2_Run_Passport.md",
+    "recordedSha256": "c9b0bdcc71e5a8dfaad7a606f4eb665bdc1e61d9cd3af659aa54755c136266fe",
+    "currentSha256": "e0705b105674cc3a3982591561737f23231faaf5638450d113c44d4810c72db5"
+  },
+  "impact": {
+    "experimentalDataAffected": false,
+    "frozenUpstreamAffected": false,
+    "formalAttempt3Started": false,
+    "correctiveAction": "Preserve v1 byte-for-byte and create a versioned v2 manifest after passport finalization."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-36h-attempt7-generator-derivation-v1",
+  "createdAtUtc": "2026-10-08T05:08:07.9107989Z",
+  "sourceRelativePath": "Research/Verification/New-Gate13R36hAttempt6ArtifactsV1.ps1",
+  "sourceSha256": "2c1a2e5d37b2b344a56472b2009d4434f2557c78b8bce1c34b0f4ea976cf7a08",
+  "destinationRelativePath": "Research/Verification/New-Gate13R36hAttempt7ArtifactsV1.ps1",
+  "destinationSha256": "a7a98a4065edfb2c7ab655b757db21f48bf10cea3917b07bf6e8e1df76af9e86",
+  "amendmentRelativePath": "Research/Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v7.json",
+  "amendmentSha256": "158745553e90713bc10beb14097f8569c0f5f61b8bff74476d89169871fceba0",
+  "attempt6FailureReceiptSha256": "4fac4277e0d4d7d21b28117a62158c5d80dcf169e3c1eda98683f41c1dac1268",
+  "attempt6PartialManifestSha256": "3debc65a44cc349045f56af539dedb7a85e65afba930084bb7e3e88505fba47e",
+  "routes": [
+    {
+      "from": "Attempt6",
+      "to": "Attempt7",
+      "count": 5
+    },
+    {
+      "from": "attempt6",
+      "to": "attempt7",
+      "count": 4
+    },
+    {
+      "from": "V6",
+      "to": "V7",
+      "count": 60
+    },
+    {
+      "from": "v6",
+      "to": "v7",
+      "count": 67
+    },
+    {
+      "from": "$plan.pilotAttempt=6",
+      "to": "$plan.pilotAttempt=7",
+      "count": 1
+    },
+    {
+      "from": "$staticSmokeFrom=\"@{name='analysis';script='Research\\Analyze-Gate13R36hConcurrencyPilotV7.ps1';arguments=@('-ProjectPath',$ProjectPath,'-PilotRoot',(Join-Path $ProjectPath 'Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v7'),'-BindingSmokeOnly')},\"",
+      "to": "$staticSmokeFrom=\"@{name='analysis';script='Research\\Analyze-Gate13R36hConcurrencyPilotV7.ps1';arguments=@('-ProjectPath',`$ProjectPath,'-PilotRoot',(Join-Path `$ProjectPath 'Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v7'),'-BindingSmokeOnly')},\"",
+      "count": 1
+    },
+    {
+      "from": "    'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV5.ps1',",
+      "to": "    'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV5.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v6.json',\n    'Research\\Verification\\New-Gate13R36hAttempt6GeneratorV1.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Generator_Derivation_Receipt.v1.json',\n    'Research\\Verification\\New-Gate13R36hAttempt6ArtifactsV1.ps1',\n    'Research\\Verification\\Write-Gate13R36hAttempt6DerivationFailureV1.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Partial_Manifest.v1.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Failure.v1.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Checkpoint.v1.json',\n    'Research\\Gate13R36hConcurrencyPreparationV6.psm1',\n    'Research\\Initialize-Gate13R36hLaneCopiesV6.ps1',\n    'Research\\Run-Gate13R36hTelemetryProbeV6.ps1',\n    'Research\\Run-Gate13R36hConcurrencyPilotV6.ps1',\n    'Research\\Analyze-Gate13R36hConcurrencyPilotV6.ps1',\n    'Research\\Run-Gate13R36hBlockV6.ps1',\n    'Research\\Verification\\New-Gate13R36hPilotScheduleV6.ps1',\n    'Research\\Verification\\Run-Gate13R36hStaticUnitV6.ps1',\n    'Research\\Verification\\Run-Gate13R36hRetainedRegressionV6.ps1',\n    'Research\\Verification\\Run-Gate13R36hVerificationV6.ps1',\n    'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV6.ps1',",
+      "count": 1
+    },
+    {
+      "from": "$plan.upstreamHashes|Add-Member -NotePropertyName attempt5DerivationManifest -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Partial_Manifest.v1.json'))",
+      "to": "$plan.upstreamHashes|Add-Member -NotePropertyName attempt5DerivationManifest -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Partial_Manifest.v1.json'))\n$plan.upstreamHashes|Add-Member -NotePropertyName attempt6DerivationFailure -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Failure.v1.json'))\n$plan.upstreamHashes|Add-Member -NotePropertyName attempt6DerivationManifest -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Partial_Manifest.v1.json'))",
+      "count": 1
+    },
+    {
+      "from": "attempt5Checkpoint=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Checkpoint.v1.json';expectedNegativeLockTestDesign=",
+      "to": "attempt5Checkpoint=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Checkpoint.v1.json';attempt6Amendment=Bound 'Research\\Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v6.json';attempt6GeneratorBuilder=Bound 'Research\\Verification\\New-Gate13R36hAttempt6GeneratorV1.ps1';attempt6GeneratorReceipt=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Generator_Derivation_Receipt.v1.json';attempt6DerivationGenerator=Bound 'Research\\Verification\\New-Gate13R36hAttempt6ArtifactsV1.ps1';attempt6PartialManifest=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Partial_Manifest.v1.json';attempt6FailureReceipt=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Failure.v1.json';attempt6Checkpoint=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Checkpoint.v1.json';expectedNegativeLockTestDesign=",
+      "count": 1
+    },
+    {
+      "from": "attempt2EvidencePreserved=$true;attempt4EvidencePreserved=$true;attempt5EvidencePreserved=$true;pilotRootCreated=$false",
+      "to": "attempt2EvidencePreserved=$true;attempt4EvidencePreserved=$true;attempt5EvidencePreserved=$true;attempt6EvidencePreserved=$true;pilotRootCreated=$false",
+      "count": 1
+    },
+    {
+      "from": "Frozen v1-v5 evidence changed during v7 derivation",
+      "to": "Frozen v1-v6 evidence changed during v7 derivation",
+      "count": 1
+    }
+  ],
+  "windowsPowerShell51ParsePassed": true,
+  "verificationRootCreated": false,
+  "pilotRootCreated": false,
+  "formalCampaign": false,
+  "pilotStarted": false,
+  "passed": true
+}

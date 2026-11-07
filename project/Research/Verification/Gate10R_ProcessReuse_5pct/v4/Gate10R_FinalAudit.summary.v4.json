@@ -1,0 +1,295 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate10r-final-audit-attempt4-v4",
+    "savedAtUtc":  "2026-10-06T15:25:03.7197979Z",
+    "attempt":  4,
+    "assertionCount":  55,
+    "passedCount":  55,
+    "failedCount":  0,
+    "checks":  [
+                   {
+                       "name":  "no-prior-final-evidence",
+                       "passed":  true,
+                       "detail":  "create-new paths confirmed"
+                   },
+                   {
+                       "name":  "preflight-pass",
+                       "passed":  true,
+                       "detail":  "16/16"
+                   },
+                   {
+                       "name":  "preflight-checkpoint",
+                       "passed":  true,
+                       "detail":  "GATE10R-ATTEMPT4-OFFICIAL-PREFLIGHT-PASSED-RECEIPT-CONSUMED"
+                   },
+                   {
+                       "name":  "unit-tests",
+                       "passed":  true,
+                       "detail":  "59/59"
+                   },
+                   {
+                       "name":  "unity-compile",
+                       "passed":  true,
+                       "detail":  "exit=0;lock=natural-lock-absence"
+                   },
+                   {
+                       "name":  "telemetry-probe",
+                       "passed":  true,
+                       "detail":  "pid=11676;lock=natural-lock-absence"
+                   },
+                   {
+                       "name":  "block-verification",
+                       "passed":  true,
+                       "detail":  "comparisons=10;mismatch=0"
+                   },
+                   {
+                       "name":  "block-cardinality",
+                       "passed":  true,
+                       "detail":  "4/6/10"
+                   },
+                   {
+                       "name":  "independent-process-repeatability",
+                       "passed":  true,
+                       "detail":  "required"
+                   },
+                   {
+                       "name":  "negative-fail-closed",
+                       "passed":  true,
+                       "detail":  "required"
+                   },
+                   {
+                       "name":  "lock-hygiene-modes",
+                       "passed":  true,
+                       "detail":  "negative=controlled-expected-negative-cleanup"
+                   },
+                   {
+                       "name":  "retained-regression-63",
+                       "passed":  true,
+                       "detail":  "failures=0;assertions=63"
+                   },
+                   {
+                       "name":  "retained-regression-file-scope-wrapper",
+                       "passed":  true,
+                       "detail":  "Windows PowerShell 5.1 -File"
+                   },
+                   {
+                       "name":  "config-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-process-reuse-5pct-attempt4-filescope-retained-regression-config-v4"
+                   },
+                   {
+                       "name":  "provenance-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-process-reuse-5pct-attempt4-filescope-retained-regression-provenance-v4"
+                   },
+                   {
+                       "name":  "retry-provenance-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-attempt4-outside-preflight-retry2-provenance-v4.2"
+                   },
+                   {
+                       "name":  "resume-provenance-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-attempt4-official-resume1-provenance-v4.3"
+                   },
+                   {
+                       "name":  "compatible-provenance-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-attempt4-block-plan-compatibility-provenance-v4.3"
+                   },
+                   {
+                       "name":  "authorization-gate10-only",
+                       "passed":  true,
+                       "detail":  "gate10r-attempt4-filescope-retained-regression-series-authorization-v1"
+                   },
+                   {
+                       "name":  "provenance-file-bindings",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "unity-binary-bound",
+                       "passed":  true,
+                       "detail":  "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+                   },
+                   {
+                       "name":  "attempt4-execution-receipt",
+                       "passed":  true,
+                       "detail":  "CONSUMED-FOR-ONE-OFFICIAL-GATE10R-EXECUTION"
+                   },
+                   {
+                       "name":  "attempt4-resume1-receipt",
+                       "passed":  true,
+                       "detail":  "CONSUMED-FOR-ONE-OFFICIAL-GATE10R-RESUME"
+                   },
+                   {
+                       "name":  "outside-root-preflight-bound",
+                       "passed":  true,
+                       "detail":  "c99937522b8067a42a4be32f68f3459fded299667dea9ad1543e9cdb6fa2ba2f"
+                   },
+                   {
+                       "name":  "frozen-retained-source-unchanged",
+                       "passed":  true,
+                       "detail":  "e56a3881...6885b1"
+                   },
+                   {
+                       "name":  "frozen-retained-summary-unchanged",
+                       "passed":  true,
+                       "detail":  "1536ae45...136e54d"
+                   },
+                   {
+                       "name":  "attempt1-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":4,\"rawBytes\":9577,\"treeSha256\":\"2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d\"}"
+                   },
+                   {
+                       "name":  "attempt2-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":101,\"rawBytes\":9375526,\"treeSha256\":\"da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce\"}"
+                   },
+                   {
+                       "name":  "attempt3-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":165,\"rawBytes\":14661809,\"treeSha256\":\"29f5aa8f0461abb120792dea0f2806e46e4dc9836aa843ce747f2436c1645a23\"}"
+                   },
+                   {
+                       "name":  "block-lock-receipt-positive-two",
+                       "passed":  true,
+                       "detail":  "mode=natural-lock-absence;sha=abfcfa592e59db4af8f344538bb78ae057155214512cb3fe82aa9781e5113d76"
+                   },
+                   {
+                       "name":  "block-lock-receipt-positive-four-a",
+                       "passed":  true,
+                       "detail":  "mode=natural-lock-absence;sha=09a9da72260d5b059cba4ead087bf452f09313df378c0e014c95ad13607daccd"
+                   },
+                   {
+                       "name":  "block-lock-receipt-positive-four-b",
+                       "passed":  true,
+                       "detail":  "mode=natural-lock-absence;sha=a12909525036e29b7cf7b7ef310d3b59140fa1bfb7c6b2c2f1ab840fcd1b527d"
+                   },
+                   {
+                       "name":  "block-lock-receipt-negative-fail-closed",
+                       "passed":  true,
+                       "detail":  "mode=controlled-expected-negative-cleanup;sha=d73693904b70c255fbf6a5318f2f92464492450ae2ece7dad9af4481817c47b8"
+                   },
+                   {
+                       "name":  "cold-lock-natural-shared-A*-R",
+                       "passed":  true,
+                       "detail":  "514a223edc04787cd805b191271f3c1cfcced29cfaf035a3eca664152e92df34"
+                   },
+                   {
+                       "name":  "cold-lock-natural-shared-D*L",
+                       "passed":  true,
+                       "detail":  "ea4a8e3128c5a42db20047e6f105dee5d8313a4f4a4bc65bcae2965bdc35f5b0"
+                   },
+                   {
+                       "name":  "cold-lock-natural-shared-C-FF",
+                       "passed":  true,
+                       "detail":  "6237e91106fa196044e0c389af82edd5e0bc426649910028ff036ee0f6328093"
+                   },
+                   {
+                       "name":  "cold-lock-natural-shared-IDFF",
+                       "passed":  true,
+                       "detail":  "49f13b645a864ac86462a872e07d52dfcabf6d1a7d693b36e01e5ce59d823505"
+                   },
+                   {
+                       "name":  "cold-lock-natural-hetero-A*-R",
+                       "passed":  true,
+                       "detail":  "37f5e359180e26d505dc429357ee7cbf33a3babda8e05edaa6f122b3541fec8c"
+                   },
+                   {
+                       "name":  "cold-lock-natural-hetero-D*L",
+                       "passed":  true,
+                       "detail":  "a21a9a2936c9d8d7776634748c03360534a0746b83e94692c8e4ad0bdc0332a7"
+                   },
+                   {
+                       "name":  "fixture-positive-two",
+                       "passed":  true,
+                       "detail":  "pid=4476;samples=2"
+                   },
+                   {
+                       "name":  "fixture-positive-four-a",
+                       "passed":  true,
+                       "detail":  "pid=11408;samples=4"
+                   },
+                   {
+                       "name":  "fixture-positive-four-b",
+                       "passed":  true,
+                       "detail":  "pid=18416;samples=4"
+                   },
+                   {
+                       "name":  "negative-terminal-state",
+                       "passed":  true,
+                       "detail":  "failed-no-auto-retry"
+                   },
+                   {
+                       "name":  "failed-block-attempt-produced-no-sample-files",
+                       "passed":  true,
+                       "detail":  "files=0"
+                   },
+                   {
+                       "name":  "historical-cold-root",
+                       "passed":  true,
+                       "detail":  "891/129667391/0"
+                   },
+                   {
+                       "name":  "historical-process-reuse-v1-root",
+                       "passed":  true,
+                       "detail":  "838/91219643/0"
+                   },
+                   {
+                       "name":  "historical-process-reuse-v2-root",
+                       "passed":  true,
+                       "detail":  "4/8899/0"
+                   },
+                   {
+                       "name":  "original-archive-unchanged",
+                       "passed":  true,
+                       "detail":  "b2431197...bcd5aa"
+                   },
+                   {
+                       "name":  "absent-Research-FormalScenarios-Gate11R_5pct-v1",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "absent-Research-PlayableExperiments-Gate11R_5pct-v1",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "absent-Assets-_Scenes-Research-Playable-Gate11R_5pct-v1",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "absent-Research-PilotRuns-Gate12R_ProcessReuse_5pct-v1",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "absent-Research-FormalRuns-Gate13R_ProcessReuse_5pct-v1",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "no-unity-process",
+                       "passed":  true,
+                       "detail":  "zero"
+                   },
+                   {
+                       "name":  "no-project-lock",
+                       "passed":  true,
+                       "detail":  "absent"
+                   }
+               ],
+    "evidenceManifestRelativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v4/Gate10R_Evidence_Manifest.v4.json",
+    "evidenceManifestSha256":  "95bb77828c4fa94d4d002bf455a8c2b2f9c9938d99840f61fba6f56c0c003106",
+    "gate11RAuthorized":  false,
+    "gate12RAuthorized":  false,
+    "gate13RAuthorized":  false,
+    "formalCampaign":  false,
+    "automaticRetryAttempted":  false,
+    "automaticResumeAttempted":  false,
+    "passed":  true
+}

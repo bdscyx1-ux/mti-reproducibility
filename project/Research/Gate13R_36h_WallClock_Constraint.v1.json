@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "gate13r-prospective-wall-clock-constraint-v1",
+  "recordId": "gate13r-formal-wallclock-hard-ceiling-36h-v1",
+  "recordedAtLocal": "2026-10-08T11:51:03.0546824+08:00",
+  "prospective": true,
+  "formalCampaignAuthorized": false,
+  "userDecision": {
+    "hardEndToEndWallClockHours": 36,
+    "supersedesPriorHardEndToEndWallClockHours": 48,
+    "exactUserWords": "将墙钟规定改为36小时；为什么这次的Gate 13R的样本数和时间比之前的Gate 13多那么多"
+  },
+  "scope": {
+    "startBoundary": "formal-launch-preflight-start",
+    "endBoundary": "terminal-formal-checkpoint-atomically-written",
+    "includes": [
+      "launch-preflight",
+      "formal-warmup-if-required-by-the-future-design",
+      "all-formal-williams-block-processes",
+      "hash-and-manifest-finalization",
+      "terminal-checkpoint-write"
+    ],
+    "automaticRetryOrResumeAllowed": false
+  },
+  "effectOnExistingFrozenDesign": {
+    "configRelativePath": "Research/Gate13R_Formal_Campaign_Config.v1.json",
+    "configSha256": "af5a164cdabeeff08cd6cd00b21ecd732fcbdc7f51be3454f99aaf65b2ef5109",
+    "readinessCheckpointRelativePath": "Research/Gate13R_NonExecuting_Readiness_Checkpoint.v1.json",
+    "readinessCheckpointSha256": "4cb0763f9b1717b8e92ac8f3a1b13b1b09d543fd3f720da9b61e06e7a4dce182",
+    "existingSerialP95Hours": 317.0656483551111,
+    "disposition": "PRESERVE-BYTE-FOR-BYTE-AS-UNEXECUTED-HISTORICAL-READINESS-EVIDENCE",
+    "launchAllowedUnderThisConstraint": false,
+    "inPlaceModificationAllowed": false,
+    "futureRequirement": "A new versioned prospective design, concurrency pilot, sample-size calculation, config, schedule, readiness checkpoint and separate formal authorization are required before launch."
+  },
+  "readOnlyCandidateProjections": [
+    {
+      "relativeHalfWidthPercent": 5.0,
+      "candidateBlocksPerCampaign": {
+        "four-algorithm-shared-goal-v1": 548,
+        "per-agent-heterogeneous-goal-v1": 768,
+        "grouped-field-heterogeneous-goal-v1": 400
+      },
+      "blockProcessCount": 42064,
+      "sampleCount": 119200,
+      "serialP95Hours": 317.0656483551111,
+      "lanesForIdealP95AtOrBelow27Hours": 12,
+      "idealP95HoursAtThoseLanes": 26.422137362925923,
+      "minimumParallelEfficiencyFor36Hours": 0.7339482600812757
+    },
+    {
+      "relativeHalfWidthPercent": 7.5,
+      "candidateBlocksPerCampaign": {
+        "four-algorithm-shared-goal-v1": 252,
+        "per-agent-heterogeneous-goal-v1": 352,
+        "grouped-field-heterogeneous-goal-v1": 184
+      },
+      "blockProcessCount": 19320,
+      "sampleCount": 54768,
+      "serialP95Hours": 145.6508406211111,
+      "lanesForIdealP95AtOrBelow27Hours": 6,
+      "idealP95HoursAtThoseLanes": 24.275140103518517,
+      "minimumParallelEfficiencyFor36Hours": 0.6743094473199588
+    },
+    {
+      "relativeHalfWidthPercent": 10.0,
+      "candidateBlocksPerCampaign": {
+        "four-algorithm-shared-goal-v1": 144,
+        "per-agent-heterogeneous-goal-v1": 204,
+        "grouped-field-heterogeneous-goal-v1": 108
+      },
+      "blockProcessCount": 11160,
+      "sampleCount": 31536,
+      "serialP95Hours": 83.9039878266667,
+      "lanesForIdealP95AtOrBelow27Hours": 4,
+      "idealP95HoursAtThoseLanes": 20.975996956666673,
+      "minimumParallelEfficiencyFor36Hours": 0.5826665821296299,
+      "recommendationStatus": "RECOMMENDED-FOR-FUTURE-USER-SELECTION-NOT-YET-FROZEN"
+    },
+    {
+      "relativeHalfWidthPercent": 15.0,
+      "candidateBlocksPerCampaign": {
+        "four-algorithm-shared-goal-v1": 68,
+        "per-agent-heterogeneous-goal-v1": 96,
+        "grouped-field-heterogeneous-goal-v1": 52
+      },
+      "blockProcessCount": 5284,
+      "sampleCount": 14920,
+      "serialP95Hours": 39.67670373388889,
+      "lanesForIdealP95AtOrBelow27Hours": 2,
+      "idealP95HoursAtThoseLanes": 19.838351866944446,
+      "minimumParallelEfficiencyFor36Hours": 0.5510653296373457
+    }
+  ],
+  "recommendedReadinessPolicy": {
+    "status": "ADVISORY-PENDING-USER-DESIGN-SELECTION",
+    "targetProjectedP95Hours": 27,
+    "rationale": "Reserve 25 percent of the 36-hour hard ceiling for launch preflight, finalization, lane imbalance and observed concurrency loss.",
+    "candidate": "10-percent-per-campaign-relative-half-width-with-four-isolated-unity-editor-lanes",
+    "requiredBeforeFreeze": [
+      "isolated-project-clone-per-lane",
+      "fresh-concurrency-pilot",
+      "lane-by-position-and-cohort-balance",
+      "CPU-affinity-and-CCD-policy",
+      "thermal-power-I/O-and-background-process-preflight",
+      "cross-lane-structural-exact-match",
+      "parallel-efficiency-and-tail-runtime-estimation",
+      "new-sample-size-storage-and-readiness-audit"
+    ]
+  },
+  "decisionStillRequired": "Select the prospective precision/concurrency design. No candidate in this record is authorized or frozen by this wall-clock decision alone.",
+  "evidenceBindings": {
+    "oldGate13ConfigRelativePath": "Research/Gate13_Formal_Campaign_Config.v1.json",
+    "oldGate13ConfigSha256": "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874",
+    "currentGate13RConfigRelativePath": "Research/Gate13R_Formal_Campaign_Config.v1.json",
+    "currentGate13RConfigSha256": "af5a164cdabeeff08cd6cd00b21ecd732fcbdc7f51be3454f99aaf65b2ef5109",
+    "gate12rCandidateRelativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/candidate-n-formal.json",
+    "gate12rCandidateSha256": "5e77d9b69c4c0e45dec204ca1943867453d29dcbdf1ebd24f0809af6d649c387",
+    "gate12rBudgetRelativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/budget-storage-projection.json",
+    "gate12rBudgetSha256": "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f"
+  }
+}

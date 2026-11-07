@@ -1,0 +1,68 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 10,
+  "status": "PASS_NATIVE_METADATA_PROBE_BUILD_AND_STATIC_CHECK",
+  "completedAtUtc": "2026-10-17T07:16:15Z",
+  "phase": "native-gc-alloc-metadata-shape-probe-build",
+  "nativeSourceSha256": "f66001204394c0e2b1f0e7193e4516426d0f1fc49bb5bee617847a16703fe6bc",
+  "compilerPolicy": [
+    "/std:c++17",
+    "/O2",
+    "/EHsc",
+    "/W4",
+    "/WX",
+    "/utf-8",
+    "/permissive-",
+    "/Brepro",
+    "/DNOMINMAX"
+  ],
+  "compilerExitCode": 0,
+  "linkerExitCode": 0,
+  "warnings": 0,
+  "artifacts": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-010-metadata-shape-probe-build-v1/build/Gate14ReMED3AllocationMetadataProbeV1.dll",
+      "lengthBytes": 109568,
+      "sha256": "1f774f2e0b8637c3ee8d55bd98a2e889bf06c2f6ef3910728d4f2ec804caa5b2"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-010-metadata-shape-probe-build-v1/build/Gate14ReMED3AllocationMetadataProbeV1.obj",
+      "lengthBytes": 22990,
+      "sha256": "2acbbecf72aae056410e90d586bc1bac3f3a760573729ab270531fb646a40fc1"
+    },
+    {
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationMetadataProbeV1.dll",
+      "lengthBytes": 109568,
+      "sha256": "1f774f2e0b8637c3ee8d55bd98a2e889bf06c2f6ef3910728d4f2ec804caa5b2"
+    }
+  ],
+  "staticChecks": {
+    "peMachine": "x86-64",
+    "onlyRuntimeDependentModule": "KERNEL32.dll",
+    "allEightRequiredExportsPresent": true,
+    "exports": [
+      "Gate14ReMED3V3Probe_Begin",
+      "Gate14ReMED3V3Probe_End",
+      "Gate14ReMED3V3Probe_GetCreateCallbackRegistrationCode",
+      "Gate14ReMED3V3Probe_GetMarkerCallbackRegistrationCode",
+      "Gate14ReMED3V3Probe_GetMarkerSeen",
+      "Gate14ReMED3V3Probe_IsReady",
+      "UnityPluginLoad",
+      "UnityPluginUnload"
+    ],
+    "localBinaryAuthenticodeStatus": "NotSigned",
+    "localBinarySigningRequiredForDiagnostic": false
+  },
+  "scientificBoundary": {
+    "probeCountsAsD3Qualification": false,
+    "criteriaRelaxed": false,
+    "fallbackMetricUsed": false,
+    "algorithmLaneExecuted": false,
+    "qualificationMeasuredRootCreated": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

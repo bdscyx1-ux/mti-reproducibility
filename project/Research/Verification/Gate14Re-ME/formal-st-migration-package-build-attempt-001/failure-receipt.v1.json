@@ -1,0 +1,23 @@
+{
+  "schema": "gate14re-me-formal-st-v5-migration-package-build-failure-v1",
+  "studyId": "Gate14Re-ME",
+  "attempt": 1,
+  "status": "FAIL_CLOSED_FALSE_POSITIVE_CREDENTIAL_PATH_CLASSIFICATION",
+  "failedStage": "staged-package-install-and-readiness-preflight",
+  "technicalCause": "The credential-path classifier treated the Python 3.12 standard-library module MigrationRuntime/Python/Lib/lib2to3/pgen2/token.py as credential material because its basename is token.py.",
+  "securityFinding": "No credential, account, Unity activation, token value, password, private key, or secret was present or copied. This was a path-name false positive before Unity was launched.",
+  "preservation": {
+    "stagingRootPreserved": "Research/PackageStaging/Gate14Re-ME/formal-st/v5/attempt-001",
+    "manifestSha256": "0c82c0d371bc6289cd3c7669b26977496d349d1e86274177faeef19ff0a462b6",
+    "zipCreated": false,
+    "unityReadinessStarted": false,
+    "formalInputsCreated": 0,
+    "formalScheduleRowsCreated": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "mqStarted": false,
+    "mtStarted": false
+  },
+  "sameAttemptRepairPerformed": false,
+  "forwardFix": "A new attempt may allow only the three exact Python standard-library module paths secrets.py and token.py while retaining every other credential-path prohibition."
+}

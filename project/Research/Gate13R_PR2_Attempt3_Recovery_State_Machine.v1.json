@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "stateMachineId": "gate13r-pr2-attempt3-bounded-recovery-v1",
+  "states": [
+    "NOT-STARTED",
+    "PRELAUNCH-VALIDATING",
+    "PRELAUNCH-REPAIRABLE-FAILURE",
+    "PRELAUNCH-HARD-STOP",
+    "READY-FOR-SEPARATE-FORMAL-LAUNCH",
+    "ACQUISITION-RUNNING",
+    "ACQUISITION-HARD-FAIL",
+    "ACQUISITION-COMPLETE-COMMIT-PENDING",
+    "RAW-COMMIT-RECOVERY",
+    "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE",
+    "USER-ACTION-REQUIRED"
+  ],
+  "prelaunch": {
+    "automaticVersionedRepairAllowed": true,
+    "maximumRepairCycles": 3,
+    "stopAfterConsecutiveSameFailureSignature": 2,
+    "required": [
+      "formalRootAbsent",
+      "formalReceiptAbsent",
+      "formalStatusAbsent",
+      "measuredProcessCountZero",
+      "measuredSampleCountZero",
+      "defectConfinedToNewAttempt3Artifacts",
+      "frozenInputsUnchanged",
+      "targetedValidationPassed"
+    ],
+    "neverRepairable": [
+      "FROZEN-HASH-MISMATCH",
+      "RESEARCH-CONTRACT-MISMATCH",
+      "SCIENTIFIC-IDENTIFIABILITY-FAILURE",
+      "AMBIGUOUS-SCENARIO-POLICY",
+      "FORMAL-PATH-PREEXISTS",
+      "GATE-RELAXATION-REQUIRED"
+    ]
+  },
+  "acquisition": {
+    "automaticDiagnosticsAllowed": true,
+    "automaticMeasuredRetryAllowed": false,
+    "automaticResumeAllowed": false,
+    "automaticTopUpAllowed": false,
+    "partialAttemptMergeAllowed": false,
+    "skipOrReplaceFailedBlockAllowed": false,
+    "advanceAfterHardFailureAllowed": false,
+    "automaticAttempt4CreationAllowed": false,
+    "terminalFailureToken": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE"
+  },
+  "postAcquisitionCommit": {
+    "automaticNonUnityRecoveryAllowed": true,
+    "maximumRecoveryAttempts": 3,
+    "stopAfterConsecutiveSameFailureSignature": 2,
+    "required": [
+      "completedProcessCountEquals3552",
+      "completedSampleCountEquals10176",
+      "acquisitionCompleteEvidencePresent",
+      "rawTreeIdentityStableAcrossTwoReads",
+      "zeroUnityProcesses",
+      "unityLockAbsent",
+      "noMeasuredFileMutation",
+      "syntheticCommitValidationPassed"
+    ],
+    "successState": "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE",
+    "unityAcquisitionAllowed": false,
+    "rawContractViolationDisposition": "USER-ACTION-REQUIRED"
+  }
+}

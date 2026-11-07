@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "GATE13R-PR2-ATTEMPT4-PHASEB-V2-REPAIR-PREPARATION-ONLY",
+  "authorizationId": "gate13r-pr2-attempt4-phaseb-v2-repair-preparation-v1",
+  "issuedAtUtc": "2026-10-11T02:02:36.6653056Z",
+  "issuedAtAsiaShanghai": "2026-10-11T10:02:36.6653056+08:00",
+  "authorizedBy": "USER-EXPLICIT-IN-CURRENT-THREAD",
+  "exactUserAuthorizationZh": "授权为 Gate 13R-PR2 attempt 4 准备 Phase B v2 修正版冻结执行包和结构性预检；仅修正 payload manifest 相对路径的解析基准为 `rawRoot/campaigns`，保持其他正式统计方案、输入绑定和输出规范不变；暂不执行统计分析；原始数据根保持只读；不授权 Gate 14R，不授权 M1–M5，不授权任何实验重跑、补样、替换或重排。",
+  "attemptIdentity": {
+    "gate": "Gate 13R-PR2",
+    "formalAttemptOrdinal": 4,
+    "phase": "B",
+    "repairVersion": 2,
+    "rawRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4"
+  },
+  "repairScope": {
+    "soleAuthorizedFunctionalDelta": "RAW-PAYLOAD-MANIFEST-RELATIVE-PATH-BASE-RAWROOT/CAMPAIGNS",
+    "oldResolutionBase": "rawRoot",
+    "newResolutionBase": "rawRoot/campaigns",
+    "formalStatisticalPlanMustRemainUnchanged": true,
+    "frozenInputBindingsMustRemainUnchanged": true,
+    "outputSpecificationMustRemainUnchanged": true,
+    "outputSchemaVersionMustRemainV1": true
+  },
+  "authorizedPreparationActions": [
+    "CREATE-PHASEB-V2-REPAIR-PREPARATION-AUTHORIZATION-PACKAGE",
+    "CREATE-AND-FREEZE-DEDICATED-PHASEB-V2-ANALYZER-WITH-SOLE-AUTHORIZED-PATH-BASE-REPAIR",
+    "CREATE-AND-FREEZE-PHASEB-V2-EXECUTION-WRAPPER",
+    "REUSE-UNCHANGED-FROZEN-PHASEB-V1-OUTPUT-SCHEMA",
+    "RUN-STRUCTURAL-ONLY-V2-PREFLIGHT",
+    "RUN-SYNTHETIC-ONLY-SELF-TESTS",
+    "READ-FROZEN-MANIFESTS-HASHES-SIZES-COUNTS-AND-SCHEMA-WITHOUT-OUTCOME-ANALYSIS",
+    "STAT-PAYLOAD-FILES-BELOW-RAWROOT/CAMPAIGNS-WITHOUT-OPENING-PAYLOAD-CONTENT"
+  ],
+  "authorizationBoundary": {
+    "phaseBFormalStatisticalAnalysisExecutionAuthorized": false,
+    "formalOutcomeDataLoadingAuthorized": false,
+    "formalEffectEstimationAuthorized": false,
+    "formalInferenceAuthorized": false,
+    "formalAnalysisOutputCommitAuthorized": false,
+    "gate14RAuthorized": false,
+    "M1ThroughM5Authorized": false,
+    "rawRootMutationAuthorized": false,
+    "unityLaunchOrControlAuthorized": false,
+    "experimentLaunchStopSignalResumeRetryTopUpMergeSkipReplaceOrReorderAuthorized": false
+  },
+  "prohibitedUntilSeparateExplicitV2ExecutionAuthorization": [
+    "EXECUTE-PHASEB-FORMAL-STATISTICAL-ANALYSIS",
+    "OPEN-OR-HASH-RAW-PAYLOAD-CONTENT-DURING-PREFLIGHT",
+    "READ-OR-DERIVE-P1-THROUGH-P5-OUTCOME-VALUES-FOR-INFERENCE",
+    "REPORT-CONTRASTS-EFFECTS-INTERVALS-PVALUES-RANKINGS-WINNERS-OR-SUPERIORITY",
+    "CREATE-FORMAL-PHASEB-ANALYSIS-OUTPUT-ROOT",
+    "EXECUTE-OR-AUTHORIZE-GATE14R",
+    "READ-DERIVE-OR-REPORT-M1-THROUGH-M5",
+    "WRITE-ANYTHING-INSIDE-FROZEN-RAW-ROOT",
+    "LAUNCH-STOP-SIGNAL-RESUME-RETRY-TOPUP-MERGE-SKIP-REPLACE-OR-REORDER-EXPERIMENT-WORK"
+  ],
+  "repairLineageBindings": {
+    "v1PhaseBContract": {
+      "relativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Contract.v1.json",
+      "sha256": "b59f6828cb1fd14dd7cb9911bd4260aafd8421828da5644cfdc016f33f9c6692"
+    },
+    "v1Analyzer": {
+      "relativePath": "Research/Analyze-Gate13RPR2Attempt4PhaseBV1.py",
+      "sha256": "abf424437912640c0cc3e898eb3c89d83df841a7c19e1ec555113ebc0fa76f84"
+    },
+    "v1ExecutionWrapper": {
+      "relativePath": "Research/Run-Gate13RPR2Attempt4PhaseBV1.ps1",
+      "sha256": "afa97849b33ecd2ac972bb2415b233c909730a241e4e2fe51e7f1f08d2d0c0f2"
+    },
+    "v1ExecutionAuthorization": {
+      "relativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Authorization.v1.json",
+      "sha256": "14330563008232fdc35665fb61bc3ea2e127fb611eb3684b6a7a95492f66b050"
+    }
+  },
+  "frozenEvidenceBindings": {
+    "attempt4ExecutionContract": {
+      "relativePath": "Research/Gate13R_PR2_Attempt4_Execution_Contract.v1.json",
+      "sha256": "a9c7a81e3c1a59aea37be1124a1237dabd6118e9f397050122bd76c308a16570"
+    },
+    "rawDataFreezeReceipt": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/raw-data-freeze-receipt.json",
+      "sha256": "4fa1304e12a7150058c6c7550d72ea712ab39c0372ece9e1d2dfdfe1489bf7a8"
+    },
+    "formalRawReadyAudit": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/formal-raw-ready-for-separate-analysis-authorization-audit.json",
+      "sha256": "d305e2908a0b7ef91d155ddc4dfec98dea3eb50b6e420b5f73c59b4348b14f95"
+    },
+    "rawExecutionManifest": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/raw-execution-manifest.json",
+      "sha256": "be11d30195c2038b777f5c998ad144dc8cdbdbb39bea31a7aaadea5c687f1be5"
+    },
+    "rawPayloadFileManifest": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/raw-payload-file-manifest.jsonl",
+      "sha256": "ddd438471c0736ddc6f3445fb118712c2ac0371e919eee80e3af79212d25ee5a"
+    },
+    "canonicalRawTreeSha256": "02cbeed034d6a7211e2d6b7e2b3832a0485d25fb703a2b0f561bf50f7a838c1b"
+  },
+  "requiredFutureExecutionAuthorization": {
+    "required": true,
+    "mustBeSeparateFromThisPreparationAuthorization": true,
+    "expectedRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Authorization.v2.json",
+    "requiredAuthorizationKind": "GATE13R-PR2-ATTEMPT4-PHASEB-FORMAL-ANALYSIS-EXECUTION",
+    "mustBindFrozenPhaseBContractVersion": 2,
+    "mustBindExactFrozenPhaseBContractSha256": true,
+    "v1ExecutionAuthorizationCannotAuthorizeV2": true,
+    "mustKeepGate14RAuthorizedFalse": true,
+    "mustKeepM1ThroughM5Unauthorized": true,
+    "mustKeepRawRootMutationUnauthorized": true,
+    "currentExpectedFileState": "ABSENT"
+  }
+}

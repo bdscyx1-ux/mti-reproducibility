@@ -1,0 +1,305 @@
+{
+  "candidateResults": [
+    {
+      "B36ConservativeHours": 233.906,
+      "B36PlanningDays": 11.695,
+      "B36PlanningHours": 280.687,
+      "B36PlanningReductionVersusOriginalPercent": 0.0,
+      "B36PointHours": 199.887,
+      "FLevels": [
+        1,
+        9,
+        81,
+        225
+      ],
+      "FMaximum": 225,
+      "GLevels": [
+        64,
+        128,
+        256
+      ],
+      "GMaximum": 256,
+      "NLevels": [
+        8,
+        32,
+        128,
+        512
+      ],
+      "NMaximum": 512,
+      "belowSevenDayGate": false,
+      "candidateId": "ORIGINAL_REFERENCE",
+      "conservativeHoursPerB": 6.497378,
+      "coreCells": 48,
+      "coreCellsWithAtLeastOneChangedMaximum": 0,
+      "highCornerStructuralProxyRatioToOriginal": 1.0,
+      "highCornerStructuralProxyReductionPercent": 0.0,
+      "lanesPerB": 288,
+      "planningHoursPerBWith20PercentHeadroom": 7.796854,
+      "pointHoursPerB": 5.55243,
+      "unchangedCoreCells": 48
+    },
+    {
+      "B36ConservativeHours": 191.663,
+      "B36PlanningDays": 9.583,
+      "B36PlanningHours": 229.996,
+      "B36PlanningReductionVersusOriginalPercent": 18.06,
+      "B36PointHours": 163.799,
+      "FLevels": [
+        1,
+        9,
+        81,
+        196
+      ],
+      "FMaximum": 196,
+      "GLevels": [
+        64,
+        128,
+        224
+      ],
+      "GMaximum": 224,
+      "NLevels": [
+        8,
+        32,
+        128,
+        384
+      ],
+      "NMaximum": 384,
+      "belowSevenDayGate": false,
+      "candidateId": "MILD",
+      "conservativeHoursPerB": 5.323972,
+      "coreCells": 48,
+      "coreCellsWithAtLeastOneChangedMaximum": 30,
+      "highCornerStructuralProxyRatioToOriginal": 0.500208,
+      "highCornerStructuralProxyReductionPercent": 49.979,
+      "lanesPerB": 288,
+      "planningHoursPerBWith20PercentHeadroom": 6.388766,
+      "pointHoursPerB": 4.549963,
+      "unchangedCoreCells": 18
+    },
+    {
+      "B36ConservativeHours": 150.736,
+      "B36PlanningDays": 7.537,
+      "B36PlanningHours": 180.884,
+      "B36PlanningReductionVersusOriginalPercent": 35.557,
+      "B36PointHours": 128.557,
+      "FLevels": [
+        1,
+        9,
+        81,
+        144
+      ],
+      "FMaximum": 144,
+      "GLevels": [
+        64,
+        128,
+        192
+      ],
+      "GMaximum": 192,
+      "NLevels": [
+        8,
+        32,
+        128,
+        256
+      ],
+      "NMaximum": 256,
+      "belowSevenDayGate": false,
+      "candidateId": "BALANCED",
+      "conservativeHoursPerB": 4.187118,
+      "coreCells": 48,
+      "coreCellsWithAtLeastOneChangedMaximum": 30,
+      "highCornerStructuralProxyRatioToOriginal": 0.18,
+      "highCornerStructuralProxyReductionPercent": 82.0,
+      "lanesPerB": 288,
+      "planningHoursPerBWith20PercentHeadroom": 5.024542,
+      "pointHoursPerB": 3.571023,
+      "unchangedCoreCells": 18
+    },
+    {
+      "B36ConservativeHours": 125.49,
+      "B36PlanningDays": 6.275,
+      "B36PlanningHours": 150.588,
+      "B36PlanningReductionVersusOriginalPercent": 46.35,
+      "B36PointHours": 107.13,
+      "FLevels": [
+        1,
+        9,
+        81,
+        100
+      ],
+      "FMaximum": 100,
+      "GLevels": [
+        64,
+        128,
+        160
+      ],
+      "GMaximum": 160,
+      "NLevels": [
+        8,
+        32,
+        128,
+        192
+      ],
+      "NMaximum": 192,
+      "belowSevenDayGate": true,
+      "candidateId": "STRONG",
+      "conservativeHoursPerB": 3.48584,
+      "coreCells": 48,
+      "coreCellsWithAtLeastOneChangedMaximum": 30,
+      "highCornerStructuralProxyRatioToOriginal": 0.065104,
+      "highCornerStructuralProxyReductionPercent": 93.49,
+      "lanesPerB": 288,
+      "planningHoursPerBWith20PercentHeadroom": 4.183008,
+      "pointHoursPerB": 2.975842,
+      "unchangedCoreCells": 18
+    }
+  ],
+  "estimatedHighCornerByAlgorithm": {
+    "BALANCED": [
+      {
+        "algorithmId": "A*-R",
+        "estimatedMaximumMilliseconds": 118136.3971,
+        "estimatedP50Milliseconds": 101710.742346
+      },
+      {
+        "algorithmId": "BiA*-R",
+        "estimatedMaximumMilliseconds": 193317.496347,
+        "estimatedP50Milliseconds": 156623.101331
+      },
+      {
+        "algorithmId": "C-FF",
+        "estimatedMaximumMilliseconds": 67649.309133,
+        "estimatedP50Milliseconds": 60842.034783
+      },
+      {
+        "algorithmId": "D*L",
+        "estimatedMaximumMilliseconds": 301927.087561,
+        "estimatedP50Milliseconds": 224534.612555
+      },
+      {
+        "algorithmId": "IDFF",
+        "estimatedMaximumMilliseconds": 65544.213305,
+        "estimatedP50Milliseconds": 53848.98023
+      },
+      {
+        "algorithmId": "LPA*",
+        "estimatedMaximumMilliseconds": 303310.474158,
+        "estimatedP50Milliseconds": 224842.457049
+      }
+    ],
+    "MILD": [
+      {
+        "algorithmId": "A*-R",
+        "estimatedMaximumMilliseconds": 190035.103633,
+        "estimatedP50Milliseconds": 175360.982556
+      },
+      {
+        "algorithmId": "BiA*-R",
+        "estimatedMaximumMilliseconds": 334895.988069,
+        "estimatedP50Milliseconds": 290700.944445
+      },
+      {
+        "algorithmId": "C-FF",
+        "estimatedMaximumMilliseconds": 90788.029107,
+        "estimatedP50Milliseconds": 84660.940937
+      },
+      {
+        "algorithmId": "D*L",
+        "estimatedMaximumMilliseconds": 503232.364723,
+        "estimatedP50Milliseconds": 355988.859145
+      },
+      {
+        "algorithmId": "IDFF",
+        "estimatedMaximumMilliseconds": 78643.582339,
+        "estimatedP50Milliseconds": 67640.731195
+      },
+      {
+        "algorithmId": "LPA*",
+        "estimatedMaximumMilliseconds": 513173.129017,
+        "estimatedP50Milliseconds": 363994.465163
+      }
+    ],
+    "ORIGINAL_REFERENCE": [
+      {
+        "algorithmId": "A*-R",
+        "estimatedMaximumMilliseconds": 270560.088,
+        "estimatedP50Milliseconds": 267714.168
+      },
+      {
+        "algorithmId": "BiA*-R",
+        "estimatedMaximumMilliseconds": 500448.571,
+        "estimatedP50Milliseconds": 467132.376
+      },
+      {
+        "algorithmId": "C-FF",
+        "estimatedMaximumMilliseconds": 110396.163,
+        "estimatedP50Milliseconds": 104075.522
+      },
+      {
+        "algorithmId": "D*L",
+        "estimatedMaximumMilliseconds": 678537.19,
+        "estimatedP50Milliseconds": 409754.926
+      },
+      {
+        "algorithmId": "IDFF",
+        "estimatedMaximumMilliseconds": 82997.742,
+        "estimatedP50Milliseconds": 76937.307
+      },
+      {
+        "algorithmId": "LPA*",
+        "estimatedMaximumMilliseconds": 706128.418,
+        "estimatedP50Milliseconds": 427843.712
+      }
+    ],
+    "STRONG": [
+      {
+        "algorithmId": "A*-R",
+        "estimatedMaximumMilliseconds": 75303.551906,
+        "estimatedP50Milliseconds": 65567.546887
+      },
+      {
+        "algorithmId": "BiA*-R",
+        "estimatedMaximumMilliseconds": 112440.510347,
+        "estimatedP50Milliseconds": 93445.390333
+      },
+      {
+        "algorithmId": "C-FF",
+        "estimatedMaximumMilliseconds": 51492.843168,
+        "estimatedP50Milliseconds": 44402.149113
+      },
+      {
+        "algorithmId": "D*L",
+        "estimatedMaximumMilliseconds": 186514.626278,
+        "estimatedP50Milliseconds": 121053.472773
+      },
+      {
+        "algorithmId": "IDFF",
+        "estimatedMaximumMilliseconds": 51288.772062,
+        "estimatedP50Milliseconds": 42903.422265
+      },
+      {
+        "algorithmId": "LPA*",
+        "estimatedMaximumMilliseconds": 186150.80341,
+        "estimatedP50Milliseconds": 120461.816579
+      }
+    ]
+  },
+  "model": {
+    "conservativeStatistic": "cell process-wall maximum",
+    "decisionGateHours": 168.0,
+    "gapP50Milliseconds": 799.051,
+    "gapP99Milliseconds": 993.31312,
+    "inputCoordinates": "log2(G), log2(N), log2(F)",
+    "method": "multilinear interpolation within the observed old factorial envelope",
+    "outputCoordinate": "natural log process-wall duration",
+    "planningHeadroomMultiplier": 1.2,
+    "pointStatistic": "cell process-wall P50",
+    "warning": "Planning surrogate only. New maxima are unobserved and require a new qualification."
+  },
+  "recommendationStatus": "PROPOSED_PENDING_USER_APPROVAL_AND_NEW_QUALIFICATION",
+  "recommendedCandidateId": "STRONG",
+  "redesignAttemptId": "gnf-load-redesign-v1-attempt-001",
+  "schema": "gate14re-me-gnf-load-redesign-candidate-runtime-estimates-v1",
+  "scientificBoundary": "No algorithm outcome observation, effect metric, rank, weight, or winner was read or produced.",
+  "status": "PASS_TIMING_ONLY_CANDIDATE_EVALUATION",
+  "studyId": "Gate14Re-ME"
+}

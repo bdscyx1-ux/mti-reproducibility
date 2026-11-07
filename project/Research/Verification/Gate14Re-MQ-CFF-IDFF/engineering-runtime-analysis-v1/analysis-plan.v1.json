@@ -1,0 +1,55 @@
+{
+  "schema": "gate14re-mq-engineering-runtime-analysis-plan-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "status": "FROZEN_BEFORE_ENGINEERING_RUNTIME_ANALYSIS",
+  "scope": "post-qualification engineering resource diagnosis and prospective runtime budgeting only",
+  "authorizedInputs": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/external-freeze-receipt.v1.json",
+      "sha256": "c2bc8217e48bdb3248e97353538207f9386c2c866fd80e713fabadaf195df33b"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/terminal-receipt.v1.json",
+      "sha256": "d5429793cc940ad2e0a1c51fea760d2cbd43766849fb0d1f80f4752ba4c5d09e"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/independent-validation-receipt.v1.json",
+      "sha256": "2aa8d07c3957cc260753f7a14043c404d106a20db40ab3b9b5863f91f176a4c3"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/condition-summaries.engineering.v1.jsonl",
+      "sha256": "bd53448f0357ba4bbce932b4d563a16e39640b18cb06a08b1f6cd7e4a51ae174"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/technical-batches.raw.v1.jsonl",
+      "sha256": "3b1fc6a3c3b7a40faa4ce17b50e9f279ac7eb21cef08d4c42478589ae955443f"
+    }
+  ],
+  "permittedDerivations": [
+    "sum of the 24 observed batch wall times",
+    "whole-process residual wall time after subtracting summed batch wall time",
+    "same-algorithm same-CCD technical wall-time speedup relative to ST-direct",
+    "parallel efficiency as technical speedup divided by configured worker count",
+    "matched-worker descriptive CCD wall-time ratios without causal attribution",
+    "prospective runtime budgets for candidate B values 36, 72, 108, and 144"
+  ],
+  "freshProcessBudgetModel": {
+    "processesPerMatchedBlock": 24,
+    "nominalSecondsPerBlock": "sumBatchWallSeconds + 24 * observedWholeProcessResidualSeconds",
+    "conservativeMultiplier": 1.5,
+    "stressMultiplier": 1.9,
+    "interpretation": "planning envelopes only; the residual from one multi-batch Unity process is applied once per proposed fresh process to avoid understating startup/finalization cost"
+  },
+  "candidateB": [36, 72, 108, 144],
+  "prohibitions": [
+    "formal effect estimation",
+    "formal hypothesis testing",
+    "algorithm quality comparison",
+    "winner ranking",
+    "automatic choice of formal B",
+    "automatic inheritance of formal ST MIPE, power, multiplicity, or stopping rules",
+    "launching formal MQ collection or analysis"
+  ],
+  "claimBoundary": "All named algorithm and topology results are technical runtime diagnostics from a non-powered, non-randomized qualification. CCD differences combine topology, cache, and frequency effects and are not causal.",
+  "createdAtUtc": "2026-10-21T05:19:51.1215986Z"
+}

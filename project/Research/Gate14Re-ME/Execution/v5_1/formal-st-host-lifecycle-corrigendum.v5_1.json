@@ -1,0 +1,97 @@
+{
+  "schema": "gate14re-me-formal-st-host-lifecycle-corrigendum-v5.1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "status": "FROZEN_FORWARD_ONLY_HOST_LIFECYCLE_REPAIR_SCIENTIFIC_DESIGN_UNCHANGED",
+  "defect": {
+    "class": "UNITY_EDITOR_POST_OUTPUT_SHUTDOWN_TIMEOUT",
+    "observedMechanism": "The v5.0 process command line supplied -quit while the execute-method runner also called EditorApplication.Exit. The supervisor additionally charged startup, execution, Burst drain and native editor cleanup to one mode timeout.",
+    "risk": "A scientifically complete mode output could be followed by a host teardown race or be misclassified as a measured-mode timeout.",
+    "algorithmObservationNeededForDiagnosis": false
+  },
+  "repair": {
+    "commandLineQuitRemoved": true,
+    "runnerSoleTerminalExitOwner": true,
+    "stableBurstCompletionRequiredBeforeExit": true,
+    "lifecycleReceiptsAdded": [
+      "MODE_EXECUTION_STARTED",
+      "MODE_OUTPUT_FROZEN",
+      "BURST_COMPILATION_STABLY_DONE",
+      "PROCESS_FAILED_BEFORE_NATURAL_EXIT"
+    ],
+    "independentTimeoutWindowsAdded": [
+      "UNITY_STARTUP_AND_VALIDATION",
+      "MODE_EXECUTION",
+      "POST_OUTPUT_BURST_DRAIN",
+      "EDITOR_NATURAL_EXIT"
+    ],
+    "timeoutAction": "FAIL_CLOSED_RECORD_STRUCTURAL_PROCESS_EVIDENCE_SEND_NO_SIGNAL",
+    "processHandleDisposedAfterEveryFreshProcess": true,
+    "sameAttemptRetryResumeTopUpReplacementMergeSkipReorder": false
+  },
+  "sourceBindings": {
+    "v5Supervisor": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/Run-Gate14ReMEFormalST.v5_0.ps1",
+      "sha256": "281c8eef6d2070ce96df12b3dd8fd1b320fb0c7dcd3caa7dbf09f1a7b16c7f17"
+    },
+    "v5Runner": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEFormalSTRunnerV5.cs",
+      "sha256": "3fa3c76656519a906540a5b56cb7ca66a19444f051c133ce7b54a67f244b4b0c"
+    },
+    "v5OperationalBudget": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-operational-resource-budget.v5_0.json",
+      "sha256": "5f8d3febcf774118f05e29bd668ee55544882893426bb21464d2ed3bfdd77533"
+    }
+  },
+  "forwardBindings": {
+    "v5_1Supervisor": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_1/Run-Gate14ReMEFormalST.v5_1.ps1",
+      "sha256": "7ab5584a763fb72ea58b2a0aa677ce072b02858d1f86428b2aea8f74f2e77300"
+    },
+    "v5_1Runner": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEFormalSTRunnerV5_1.cs",
+      "sha256": "12c44c11d831a28a5277b7f3b86687dfbe6572d50b93a74635a7437995c02d12"
+    },
+    "v5_1OperationalBudget": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-operational-resource-budget.v5_1.json",
+      "sha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2"
+    }
+  },
+  "scientificInvariants": {
+    "scientificDesignRelativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-scientific-design.v5_0.json",
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "sampleSizeDecisionRelativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-sample-size-decision.v5_0.json",
+    "sampleSizeDecisionSha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5",
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81],
+    "B": 36,
+    "structuralCells": 36,
+    "superblocks": 1296,
+    "algorithmLanes": 7776,
+    "algorithms": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF", "IDFF"],
+    "metricsChanged": false,
+    "sampleRuleChanged": false,
+    "scheduleRuleChanged": false,
+    "algorithmImplementationChanged": false,
+    "scientificTimeoutsChanged": false
+  },
+  "readinessEvidence": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/terminal-readiness-receipt.v1.json",
+    "sha256": "4ef0530f35b973a68712b8c818d3b5f91390e39620de09707425f7e87946859e",
+    "freshUnityProcesses": 4,
+    "capturedExitCodeZeroProcesses": 3,
+    "allProcessesGoneAfterExit": true,
+    "algorithmsInstantiated": 0
+  },
+  "boundary": {
+    "formalCollectionStartedByThisCorrigendum": false,
+    "formalAnalysisAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "algorithmEffectsReadOrInterpreted": false,
+    "migrationPackageModified": false
+  },
+  "frozenAtUtc": "2026-10-26T11:13:44.1703280Z"
+}

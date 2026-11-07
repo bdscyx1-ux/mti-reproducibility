@@ -1,0 +1,59 @@
+{
+  "schema": "gate14re-me-d3-v3-1-simplified-abi-amendment-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "status": "AUTHORIZED_D3_V3_1_SIMPLIFIED_ABI_QUALIFICATION_CONTINUATION",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T07:38:00.6829088Z",
+  "userAuthorizationTextExact": "采用上述简化方案再恢复实现",
+  "resolvedMethodDecision": {
+    "scientificEndpointUnchanged": "owner-thread cumulative managed allocation bytes from the exact GC.Alloc marker during an explicit native measurement window",
+    "abiAmendment": "Require the Unity 2022.3.30f1c1-observed Begin-event allocation-size payload as UInt32 with four bytes and a non-null pointer, then losslessly widen each positive value to a checked 64-bit cumulative counter.",
+    "gcControlCorrection": "Counters must never decrease. Whenever event count is unchanged, bytes must remain exactly unchanged; whenever event count increases, bytes must increase consistently. Forced collection is not required to be allocation-free.",
+    "simplifiedActiveChain": [
+      "one versioned Windows x86-64 production plugin",
+      "one thin managed P/Invoke wrapper",
+      "one algorithm-free known-answer harness that writes one terminal PASS/FAIL receipt containing all completed stages and raw records collected before failure"
+    ],
+    "reusedRecord": "The 1 MiB known-array record is reused for same-thread positivity and the byte/rate formula; no separate rate-payload window is run.",
+    "diagnosticsNotRepeated": [
+      "the prior array diagnostic",
+      "the prior metadata-shape probe"
+    ]
+  },
+  "evidenceBasis": {
+    "metadataProbeReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-009-metadata-shape-probe-v1/probe-output/metadata-shape-probe-receipt.v1.json",
+    "metadataProbeReceiptSha256": "f6294cbd635901b481b71733d4a35cef5dd2051892578d5becd5ae4e2aeb9bbe",
+    "repairCycle011ReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-011-metadata-shape-probe-run-v1/cycle-receipt.v1.json",
+    "observedDataBearingEventType": "Begin",
+    "observedMetadataType": "UInt32",
+    "observedMetadataTypeValue": 3,
+    "observedMetadataSizeBytes": 4,
+    "observedDataPointerNonNull": true,
+    "observedCompanionEvent": "End without metadata"
+  },
+  "authorizedScope": {
+    "appendVersionedProspectiveContract": true,
+    "appendVersionedNativePluginSourceAndBinary": true,
+    "appendThinManagedWrapper": true,
+    "appendOneAlgorithmFreeKnownAnswerHarness": true,
+    "reuseFrozenHermeticSdkAndCompilerPolicy": true,
+    "runOneKnownAnswerAfterSuccessfulBuild": true,
+    "repairWithinSameBoundedInstrumentQualificationIfNeeded": true,
+    "freezePassingSourceBinaryContractsHashesAndReceipts": true
+  },
+  "prohibitedScope": {
+    "modifyOrDeletePriorEvidence": false,
+    "rerunPriorArrayDiagnostic": false,
+    "rerunPriorMetadataShapeProbe": false,
+    "integrateQualificationRunner": false,
+    "modifyOrVersionFormalOutputSchema": false,
+    "generateScheduleInputsOrIdentityMappings": false,
+    "createQualificationMeasuredRoot": false,
+    "executeAlgorithmLane": false,
+    "formalCollectionOrAnalysis": false,
+    "rankingOrWinnerAdjudication": false,
+    "fallbackMetric": false
+  }
+}

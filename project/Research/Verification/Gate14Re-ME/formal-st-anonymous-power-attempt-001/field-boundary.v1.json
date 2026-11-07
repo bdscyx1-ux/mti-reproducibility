@@ -1,0 +1,51 @@
+{
+  "schema": "gate14re-me-formal-st-anonymous-power-field-boundary-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-anonymous-power-attempt-001",
+  "purpose": "Select final B prospectively from identity-blind nuisance covariance without estimating or reporting named algorithm effects.",
+  "allowedInputs": {
+    "schedule": ["ordinal", "superblockId", "algorithmOrder[].anonymousLaneId"],
+    "eventGroups": [
+      "superblockId", "designRegion", "anonymousLaneId", "gridEdge", "agentCount",
+      "changedCellCount", "changeTopology", "graphProfile", "sameTickAtomicPartitions",
+      "contextStratumId", "eventGroupIndex", "eventGroupElapsedMilliseconds",
+      "d3WindowRecordId", "d3CounterValid", "gridAccessorCallsTotal", "eligible",
+      "finitePositiveElapsed", "counterValid"
+    ],
+    "d3Windows": [
+      "recordId", "superblockId", "anonymousLaneId", "measurementScope",
+      "eventGroupIndex", "managedAllocationBytes", "counterValid"
+    ],
+    "persistentState": [
+      "superblockId", "anonymousLaneId", "measurementPointId", "eventGroupIndex",
+      "persistentStateBytesTotal", "valid"
+    ],
+    "runtimePrediction": [
+      "rows[].B", "rows[].planningWith20PercentHeadroomHours",
+      "rows[].atOrAboveSevenDayGate", "sevenDayDecisionGateHours"
+    ]
+  },
+  "forbiddenInputs": [
+    "algorithmId",
+    "identity mapping or production identity",
+    "named algorithm means, effect estimates, directions, ranks, weights, or winner",
+    "qualification outcomes as formal observations",
+    "prior formal-effect observations",
+    "movement-transfer observations"
+  ],
+  "allowedDerivedQuantities": [
+    "anonymous lane-level endpoint summaries needed only to estimate nuisance covariance",
+    "identity-blind design-matrix rank and cluster-robust covariance",
+    "opaque-target contrast standard errors and covariance",
+    "Monte Carlo power at the prospectively fixed MIPE",
+    "Wilson lower confidence bound for Monte Carlo power",
+    "runtime budget lookup for the selected B"
+  ],
+  "outputSuppression": [
+    "do not serialize fitted coefficients",
+    "do not serialize endpoint means or target-versus-comparator observed contrasts",
+    "do not unseal, infer, or report real algorithm identities",
+    "do not interpret qualification quality or effectiveness"
+  ],
+  "failClosed": "Any forbidden field access, input hash mismatch, schema/cardinality/ordinal mismatch, non-finite quantity, rank failure, covariance failure, or inability to meet power causes a terminal fail-closed result without selecting or freezing B."
+}

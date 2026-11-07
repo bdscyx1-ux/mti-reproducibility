@@ -1,0 +1,56 @@
+{
+  "schema": "gate14re-formal-phase-a-launch-readiness-v1",
+  "studyId": "Gate14Re",
+  "status": "FORMAL-PHASE-A-LAUNCH-READY",
+  "substatus": "NOT-AUTHORIZED-NOT-STARTED",
+  "fixedB": 48,
+  "plannedBlocks": 1536,
+  "plannedAlgorithmLaneSamples": 6144,
+  "implementationManifest": {
+    "path": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/implementation-manifest.v1.json",
+    "bytes": 6709,
+    "sha256": "108b4d697d2d16542f8da6a81b1bba04c6bc9e7d08a24469eb10bbbe15e8b955"
+  },
+  "authoritativeBindings": {
+    "planSha256": "9d12fab76865477fed1742c1d51cc79eb57a06c2fcf40e0544f2045cfffd552d",
+    "executionContractSha256": "6309d031e00fcf53380e74343adff5863c88aa1c11cb72542cd352a2f19c2bd3",
+    "outputSchemaSha256": "0c248a4046df959bae078f360ba5d4dfc322d603dc0bdd8e920b492db11325c2",
+    "executableSha256": "88b1b04971f8b712ddd0f18bca4f7296d287fdd6cdadef57c155d37b9ef0928c",
+    "assemblyCSharpSha256": "2f763a06d43a5777d6ce47cdba998d5482e82557ad35ee72f9e07dcd193b2961",
+    "buildReceiptSha256": "d110c97ca2f2f3d5a38490497ebfcf714d976c75b2397a68d46787e29c51ec9a",
+    "buildCanonicalTreeSha256": "c4da85e66f9898834bc30b5e5618021458405f9a5962266c4d336479202abd46",
+    "buildFreezeReceiptSha256": "9df8bf66fa7df1d23e3454be5b23cdb99b907fa3e1848942b3845f56373c7199",
+    "supervisorSha256": "3c0bcf6f228656d58fde5a22f07846bb26b29351ffb7a71f4d6ae30ee5530b49",
+    "authorizationTemplateSha256": "2a9511aa6f0d9ba6499a65275f74efb8057a3bcff1f1142ac363a8639cd46191"
+  },
+  "passedGates": [
+    "clean_compile_only_attempt_008",
+    "pure_synthetic_14013_assertions_1536_blocks_32_cells",
+    "accepted_build_attempt_003_full_151_file_canonical_tree_frozen_readonly",
+    "live_validation_four_algorithms_two_ordered_events_no_outcome",
+    "live_formal_missing_authorization_fail_closed_before_phase_start",
+    "serial_supervisor_1536_schedule_and_synthetic_output_validation",
+    "tampered_assembly_identity_and_M4_cardinality_rejected",
+    "formal_and_analysis_roots_absent"
+  ],
+  "executionRules": {
+    "freshProcessPerBlock": true,
+    "serial": true,
+    "fourAlgorithmsPerProcess": true,
+    "processHardTimeoutSeconds": 3600,
+    "maximumWholeBlockReplacementPerBlock": 1,
+    "perAlgorithmRetryResumeTopUpMergeSkipOrReorder": false,
+    "completeFourAlgorithmBlockOnly": true,
+    "formalAnalysisNotPartOfPhaseALaunch": true
+  },
+  "formalRootWhenAuthorized": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re/PhaseA/attempt-001",
+  "authorizationReceiptPathWhenAuthorized": "Research/Gate14Re/Execution/Gate14Re_Formal_PhaseA_Authorization.v2.json",
+  "authorizationTemplatePath": "Research/Gate14Re/Execution/Gate14Re_Formal_PhaseA_Authorization_Template.v2.json",
+  "formalAuthorizationIssued": false,
+  "formalRootExists": false,
+  "formalObservationProduced": false,
+  "formalPhaseAStarted": false,
+  "formalPhaseBStarted": false,
+  "gate15Started": false,
+  "nextRequiredAction": "obtain_separate_explicit_user_authorization_for_formal_Gate14Re_Phase_A"
+}

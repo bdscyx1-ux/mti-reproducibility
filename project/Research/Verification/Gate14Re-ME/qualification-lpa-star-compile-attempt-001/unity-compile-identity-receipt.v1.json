@@ -1,0 +1,54 @@
+{
+  "schema": "gate14re-me-unity-compile-identity-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-closed-loop-until-execution-pass-2026-10-18",
+  "attemptId": "qualification-lpa-star-compile-attempt-001",
+  "status": "PASS_COMPILE_ONLY_NATURAL_EXIT",
+  "purpose": "Compile the prospective LPA* oracle-correctness repair and bounded diagnostic source before a read-only readiness freeze.",
+  "startedAtUtc": "2026-10-18T02:35:27.7350830Z",
+  "endedAtUtc": "2026-10-18T02:35:41.2002119Z",
+  "process": {
+    "pid": 91008,
+    "creationTimeUtc": "2026-10-18T02:35:27.7350830Z",
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "executableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "commandLine": "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe\" -batchmode -nographics -quit -projectPath H:/DDM_Final_Project -logFile H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-lpa-star-compile-attempt-001\\unity-compile.log",
+    "executeMethod": null,
+    "naturalExit": true,
+    "exitCode": 0
+  },
+  "sourceBindings": {
+    "lpaStarPlannerRelativePath": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+    "lpaStarPlannerSha256": "948bdc4019e96776c8d382f381c159041038ac191f4b6000debd94f7daf8a82a",
+    "diagnosticRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELifelongPlanningAStarCorrectnessDiagnosticV1.cs",
+    "diagnosticSha256": "040fe66d8f049b5fd644b5e565ffa26638062be67614587f71f9b6e51d2d56ed",
+    "diagnosticMetaRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELifelongPlanningAStarCorrectnessDiagnosticV1.cs.meta",
+    "diagnosticMetaSha256": "16e56068ef1b1ca74004d3526df41e01a83e0d8426273fe1d54fac3b43c255be"
+  },
+  "compiledArtifacts": {
+    "editorAssemblyRelativePath": "Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+    "editorAssemblySha256": "019d3268eaa0b4ba0c991fc2ba8650839cc6e0ec4f036898ce1012a0afca76d4",
+    "editorAssemblyBytes": 1054720,
+    "runtimeAssemblyRelativePath": "Library/ScriptAssemblies/Assembly-CSharp.dll",
+    "runtimeAssemblySha256": "392c791d5b59460b9460d5ede02f1e1de0265221a99091efed13c70c8772b059",
+    "runtimeAssemblyBytes": 466432
+  },
+  "unityLog": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-lpa-star-compile-attempt-001/unity-compile.log",
+    "sha256": "3b2501ea3557e04e0194c9c405670e2c12951a31ae6fb54a37ca7a90cebbd3ef",
+    "compilerErrorCount": 0,
+    "batchmodeSuccessMarkerPresent": true
+  },
+  "evidenceBoundary": {
+    "unityInvocationCount": 1,
+    "algorithmCodeInvoked": false,
+    "qualificationProcessInvoked": false,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationProduced": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  }
+}

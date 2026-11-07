@@ -1,0 +1,48 @@
+{
+  "schema": "gate14re-me-qualification-implementation-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-implementation-freeze-attempt-001",
+  "status": "FROZEN_SOURCE_ONLY_IMPLEMENTATION_VALIDATED",
+  "version": 1,
+  "frozenLocalDate": "2026-10-17",
+  "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/freeze-manifest.v1.json",
+  "freezeManifestSha256": "840f7495b24cf191f1200a6861920f1c4740816f5d4679cd845aca332d6823d3",
+  "implementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+  "validationReceiptSha256": "b51df3d2908a79a7b7cdc110c75a3fdd3ba06625e6a8a5c3552ba5a214d6ef93",
+  "readinessCheckpointSha256": "ad67af748da89934b73bd74ccf147c3ef73f89406a9154cf5514c2e44055fd65",
+  "canonicalTreeSha256": "c11a4ecc7631e3a7fb737e794897a89c2f18bb0d8b5b2d5dc3038e2958717151",
+  "validation": {
+    "status": "PASS_SOURCE_ONLY_IMPLEMENTATION_FREEZE",
+    "checksPassed": 240,
+    "checksFailed": 0
+  },
+  "frozenCapabilities": {
+    "qualificationRunnerSource": true,
+    "algorithmNeutralOracleSource": true,
+    "D1D2D3D4InstrumentSource": true,
+    "serialFreshProcessSupervisorSource": true,
+    "structuralValidatorSource": true,
+    "completePerObservationDeliverySource": true,
+    "sixAlgorithmFairnessHashes": true,
+    "absoluteResourceBudgets": true,
+    "scheduleSchemaWithoutGeneratedSchedule": true
+  },
+  "explicitlyNotClaimed": {
+    "unityCompilationPassed": true,
+    "runtimeInstrumentQualificationPassed": true,
+    "typedParquetDeliveryReady": true,
+    "qualificationExecutionReady": true,
+    "qualificationPassed": true,
+    "formalCollectionReady": true,
+    "anyAlgorithmAdvantage": true
+  },
+  "dataBoundary": {
+    "qualificationInputsGenerated": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "UnityProcessesLaunched": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "nextRequiredAction": "a further separate qualification-only authorization is required for typed-Parquet dependency freezing, Unity compilation, runtime instrument qualification, schedule/input/identity generation, measured-root creation and qualification execution"
+}

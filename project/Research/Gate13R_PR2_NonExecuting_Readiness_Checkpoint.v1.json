@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "gate13r-pr2-nonexecuting-formal-preparation-readiness-v1",
+  "createdAtUtc": "2026-10-08T16:18:51.0666337+00:00",
+  "createdAtLocal": "2026-10-09T00:18:51.0666337+08:00",
+  "timeZone": "Asia/Shanghai",
+  "status": "PR2-NONEXECUTING-PREPARATION-VALIDATED / S48-H48-FROZEN / FORMAL-CONFIG-AND-SCHEDULE-READY / FORMAL-ROOT-ABSENT / FORMAL-EXECUTION-RECEIPT-ABSENT / UNITY-NOT-LAUNCHED / GATE13R-FORMAL-NOT-AUTHORIZED / GATE14R-NOT-AUTHORIZED",
+  "activeFormalPreparation": {
+    "designId": "gate13r-rq-aligned-s48-h48-strict-serial-v1",
+    "artifactSetVersion": 2,
+    "config": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+      "rawBytes": 288367,
+      "sha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"
+    },
+    "schedule": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "rawBytes": 11220567,
+      "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    "scheduleManifest": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+      "rawBytes": 32861,
+      "sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"
+    },
+    "storageWallClockPreflight": {
+      "relativePath": "Research/Gate13R_PR2_Storage_WallClock_Preflight.v2.json",
+      "rawBytes": 2082,
+      "sha256": "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435"
+    },
+    "provenance": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json",
+      "rawBytes": 5352,
+      "sha256": "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56"
+    },
+    "schema": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json",
+      "rawBytes": 3611,
+      "sha256": "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e"
+    },
+    "ordinalPreWriteAudit": {
+      "relativePath": "Research/Gate13R_PR2_PreWrite_Preservation_Audit.v2.json",
+      "rawBytes": 5182,
+      "sha256": "d02d49773e6404e036e1d5c3d7c8851f5a39e8d9ba129091ad27552a9779d2eb"
+    }
+  },
+  "frozenCounts": {
+    "scenarioCount": 53,
+    "campaignCount": 74,
+    "eligiblePresetCount": 212,
+    "sharedCampaignCount": 32,
+    "sharedBlocksPerCampaign": 48,
+    "sharedProcessCount": 1536,
+    "sharedSampleCount": 6144,
+    "heterogeneousScenarioCount": 21,
+    "heterogeneousMatchedSuperblocksPerScenario": 48,
+    "heterogeneousMatchedSuperblockCount": 1008,
+    "heterogeneousProcessCount": 2016,
+    "heterogeneousSampleCount": 4032,
+    "ABPerHeterogeneousScenario": 24,
+    "BAPerHeterogeneousScenario": 24,
+    "totalProcessCount": 3552,
+    "totalSampleCount": 10176
+  },
+  "scientificContract": {
+    "primaryEndpoint": "P1-dynamicHandlingMillisecondsPerScheduledEvent",
+    "sharedConfirmatoryFamily": ["C1", "C2", "C3", "C4", "C5"],
+    "multiplicity": "Holm FWER 0.05",
+    "heterogeneousC1ToC4": "SECONDARY-SYSTEM-TREATMENT-CONTRAST",
+    "supportiveEndpoints": ["P2", "P3", "P4", "P5"],
+    "prospectiveGate14REndpoints": ["M1", "M2", "M3", "M4", "M5"],
+    "planningEffectAnchor": 0.15,
+    "planningEffectAnchorIsPracticalMargin": false,
+    "practicalSuperiorityMargin": null
+  },
+  "executionContract": {
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "oneFreshUnityProcessPerCompleteWilliamsBlock": true,
+    "maximumBlocksPerProcess": 1,
+    "perSampleCompleteReset": true,
+    "automaticRetry": false,
+    "automaticResume": false,
+    "topUp": false,
+    "partialAttemptMerge": false,
+    "playableAndObsExcludedFromTiming": true
+  },
+  "resourceProjection": {
+    "serialP50Hours": 20.808185450666667,
+    "conservativeSummedP95Hours": 26.45538207066667,
+    "projectedP95RawBytes": 9631912320,
+    "safetyMultiplier": 1.5,
+    "projectedSafetyBytes": 14447868480,
+    "reserveBytes": 42949672960,
+    "minimumLaunchFreeBytes": 57397541440,
+    "preparationObservedFreeBytes": 276247064576,
+    "formalLaunchRecheckRequired": true
+  },
+  "validation": {
+    "successfulAttempt": 4,
+    "verificationRoot": {
+      "relativePath": "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v4",
+      "fileCount": 14,
+      "rawBytes": 11585336,
+      "canonicalOrdinalTreeSha256": "4c1262219f4923ba201de089b4bcf0b3be11c8c59c8dab2a9623bf53f4e38d29"
+    },
+    "coreChecks": "63/63",
+    "finalAudit": {
+      "relativePath": "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v4/validation-only-final-audit.json",
+      "sha256": "0d635da5c2fba649c91de129c4b36e2c884dbdea6e2a68fdaed9953dd0c10f41"
+    },
+    "deterministicRegeneration": "BYTE-IDENTICAL-6-OF-6",
+    "frozenTreesPrePostUnchanged": true,
+    "windowsPowerShell51ParserAndExecution": "PASS",
+    "failedAttemptsRetained": [
+      {
+        "attempt": 1,
+        "reason": "PowerShell 5.1 versus 7 culture collation divergence",
+        "rootTreeSha256": "be1493a4e73354dd8cd4d4f4d5d25cb7dd2105b72d740b89bc17c394c7bb98ea"
+      },
+      {
+        "attempt": 2,
+        "reason": "v1 pre-write hashes were runtime/culture sorted rather than ordinal",
+        "rootTreeSha256": "ac9c0ddca7ca97207b391732cc65d7ba8276ed9089af84e59252adf0dec67589"
+      },
+      {
+        "attempt": 3,
+        "reason": "new schema manifest property-name mismatch; 62/63 core checks passed",
+        "rootTreeSha256": "482e3a92fafec64866f4cf445d8f3052e638c1aa4c05b0009f277a31c63cfab3"
+      }
+    ]
+  },
+  "upstreamDisposition": {
+    "Gate13RPR1Bv7Pilot": "FAILED / NON-FORMAL / COMPLETE-RAW-EXECUTION / EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "Gate13RPR1Bv4Recovery": "PILOT-DIAGNOSTIC-ONLY / EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "legacyPR2ArtifactSetV1": "RETAINED-FAILED-SCHEMA-VALIDATION-HISTORY / NOT-AUTHORIZED-FOR-LAUNCH",
+    "oldSerial10pctV2": "PRE-AMENDMENT-COMPARISON-BASELINE / NOT-AUTHORIZED-FOR-LAUNCH"
+  },
+  "authorizationBoundary": {
+    "formalRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v1",
+    "formalRootExists": false,
+    "formalExecutionReceiptExists": false,
+    "unityEditorProcessCount": 0,
+    "gate13RFormalCampaignAuthorized": false,
+    "gate14RAuthorized": false,
+    "nextAuthorizationPromptRelativePath": "Research/Gate13R_PR2_Formal_Campaign_Next_Authorization_Prompt.md"
+  }
+}

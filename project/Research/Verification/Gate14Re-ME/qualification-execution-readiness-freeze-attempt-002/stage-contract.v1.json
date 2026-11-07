@@ -1,0 +1,31 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-freeze-attempt-002-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-freeze-attempt-002",
+  "attemptId": "qualification-execution-readiness-freeze-attempt-002",
+  "mode": "READ_ONLY_OFFLINE_NO_UNITY_EXECUTION_READINESS_AUDIT",
+  "passRule": "Every check must pass. A PASS terminal receipt is forbidden if any path, hash, cardinality, schedule, identity, budget, serial-process, zero-replacement, or terminal structural/delivery-chain check fails.",
+  "retainedEvidenceRoots": [
+    "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001",
+    "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-001",
+    "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002"
+  ],
+  "expectedProcessFormula": {
+    "instrumentSelfTest": 1,
+    "oracle": 162,
+    "emptyBoundary": 12,
+    "algorithmLane": 972,
+    "total": 1147,
+    "maximumConcurrentUnityProcesses": 1
+  },
+  "prohibitions": {
+    "unityInvocations": 0,
+    "measuredRootCreations": 0,
+    "deliveryRootCreations": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationOrFormalObservations": 0,
+    "analysisRankingOrWinner": false
+  },
+  "failureDisposition": "Preserve evidence and fail closed without repair, retry, replacement, root creation, Unity launch, or execution authorization."
+}

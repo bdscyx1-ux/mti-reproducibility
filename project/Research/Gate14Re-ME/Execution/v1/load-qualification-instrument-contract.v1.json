@@ -1,0 +1,162 @@
+{
+  "schema": "gate14re-me-load-qualification-instrument-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_SOURCE_ONLY_INSTRUMENT_CONTRACT",
+  "version": 1,
+  "endpoints": [
+    {
+      "endpointId": "D1",
+      "name": "event-group elapsed wall-clock milliseconds",
+      "unit": "ms",
+      "rawField": "eventGroupElapsedMilliseconds",
+      "boundary": "one complete event group: all atomic repairs followed by all N path queries",
+      "clock": "System.Diagnostics.Stopwatch",
+      "eligibility": "finite, strictly positive, oracle-correct, no operation-budget excess, and at or below the frozen event-group hard timeout",
+      "aggregationInQualification": "within-anonymous-lane geometry checks only; no cross-algorithm effect, rank or winner"
+    },
+    {
+      "endpointId": "D2",
+      "name": "planner-visible grid accessor calls",
+      "unit": "calls",
+      "rawFields": [
+        "gridContainsCalls",
+        "gridIsWalkableCalls",
+        "gridGetTraversalCostCalls",
+        "gridAccessorCallsTotal"
+      ],
+      "formula": "total = Contains + IsWalkable + GetTraversalCost",
+      "boundary": "same event-group boundary as D1",
+      "counterScope": "only public IReadOnlyNavigationGrid accessor calls made through the read-only proxy; wrapped-grid internal calls are not double counted",
+      "knownAnswer": {
+        "fixture": "3x3 all-walkable unit-cost grid; one explicit call to each accessor",
+        "expectedContains": 1,
+        "expectedIsWalkable": 1,
+        "expectedGetTraversalCost": 1,
+        "expectedTotal": 3,
+        "semanticInvarianceRequired": true
+      }
+    },
+    {
+      "endpointId": "D3",
+      "name": "managed allocations on the measured Unity thread",
+      "unit": "bytes",
+      "rawFields": [
+        "allocationCounterStart",
+        "allocationCounterEnd",
+        "eventGroupManagedAllocatedBytes"
+      ],
+      "formula": "end - start",
+      "counterId": "GC.GetAllocatedBytesForCurrentThread-v1",
+      "boundary": "same event-group boundary as D1",
+      "zeroPolicy": "a valid zero is retained and is not coerced, censored or replaced",
+      "positiveControl": {
+        "operation": "allocate and retain a 1048576-byte array within one counter interval",
+        "required": "end > start and difference >= 1048576"
+      }
+    },
+    {
+      "endpointId": "D4",
+      "name": "planner-owned persistent logical-capacity bytes",
+      "unit": "logical bytes",
+      "rawFile": "persistent-state.raw.v1.jsonl",
+      "formulaId": "gate14re-me-persistent-state-logical-capacity-v1",
+      "measurementPoints": "after initialization, after initial queries, and after each of 24 event groups: 26 points per lane",
+      "exclusions": [
+        "CLR object headers",
+        "allocator overhead",
+        "stack and transient locals",
+        "RSS and unrelated managed heap",
+        "input grid storage owned outside the planner"
+      ],
+      "bytesPerElement": {
+        "Boolean": 1,
+        "Int32": 4,
+        "Int64": 8,
+        "Double": 8,
+        "GridCoordinate": 8,
+        "NavigationGridChange": 16,
+        "DStarOrLpaKeyNode": 48,
+        "CffIntegrationNode": 48,
+        "IdffRepairNode": 56
+      },
+      "componentsByStateModel": {
+        "common": [
+          "declaredGoals.Count or declaredGoalSet.Count",
+          "canonicalGoals.Length when present"
+        ],
+        "D*L_or_LPA*": [
+          "per-agent G array length",
+          "per-agent Rhs array length",
+          "per-agent QueueRevisions array length",
+          "per-agent queue backing-array length",
+          "agent-state dictionary logical key count"
+        ],
+        "C-FF": [
+          "Integration",
+          "HasOwner",
+          "Owner",
+          "ActiveGoal",
+          "HasDirection",
+          "Next"
+        ],
+        "IDFF": [
+          "gCost",
+          "gHasOwner",
+          "gOwner",
+          "rhsCost",
+          "rhsHasOwner",
+          "rhsOwner",
+          "activeGoal",
+          "hasDirection",
+          "next",
+          "queueRevisions",
+          "pendingChanges",
+          "repairCounted",
+          "directionDirty",
+          "directionDirtyIndices capacity",
+          "repair-queue backing-array length"
+        ]
+      },
+      "syntheticFixture": {
+        "doubleArrayLength": 7,
+        "booleanArrayLength": 11,
+        "intListCapacity": 13,
+        "expectedComponentBytes": [56, 11, 52],
+        "expectedTotalBytes": 119
+      },
+      "zeroPolicy": "a structurally valid zero is retained for planners with no owned persistent search arrays"
+    }
+  ],
+  "processResources": {
+    "rawFile": "process-resources.raw.v1.jsonl",
+    "fields": [
+      "privateMemoryBytes",
+      "workingSetBytes",
+      "managedMemoryBytes",
+      "peakWorkingSetBytes"
+    ],
+    "sameMeasurementPointsAsD4": true,
+    "qualificationCeilingUsesPrivateMemoryBytes": true
+  },
+  "requiredInstrumentQualification": {
+    "gridReadProxyKnownAnswer": true,
+    "gridReadProxySemanticInvariance": true,
+    "allocationCounterPositiveControl": true,
+    "persistentStateSizerSyntheticFixture": true,
+    "clockMonotonicity": true,
+    "rawToCsvAndJsonlGzipRoundTrip": true,
+    "typedParquetRoundTrip": true,
+    "tamperNegativeTest": true,
+    "missingNegativeTest": true,
+    "duplicateNegativeTest": true,
+    "anonymousLabelSwapNegativeTest": true
+  },
+  "currentStageEvidence": {
+    "sourceImplemented": true,
+    "unityCompilationPerformed": false,
+    "runtimeKnownAnswerTestsPerformed": false,
+    "typedParquetEngineAvailable": false,
+    "qualificationObservationCount": 0
+  }
+}

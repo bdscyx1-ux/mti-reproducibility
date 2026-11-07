@@ -1,0 +1,208 @@
+{
+  "status": "PASS",
+  "scope": "Comparable axes edges and equal-span widths; not a font or collision audit",
+  "tolerance_pt": 1.5,
+  "panels": [
+    {
+      "axis": 0,
+      "row": [
+        0,
+        1
+      ],
+      "column": [
+        0,
+        1
+      ],
+      "rectangle_pt": [
+        56.160000000000004,
+        463.104990825688,
+        255.4374193548387,
+        588.8159999999999
+      ]
+    },
+    {
+      "axis": 1,
+      "row": [
+        0,
+        1
+      ],
+      "column": [
+        1,
+        2
+      ],
+      "rectangle_pt": [
+        351.0905806451613,
+        463.104990825688,
+        550.368,
+        588.8159999999999
+      ]
+    },
+    {
+      "axis": 2,
+      "row": [
+        1,
+        2
+      ],
+      "column": [
+        0,
+        1
+      ],
+      "rectangle_pt": [
+        56.160000000000004,
+        251.91049541284394,
+        255.4374193548387,
+        377.62150458715587
+      ]
+    },
+    {
+      "axis": 3,
+      "row": [
+        1,
+        2
+      ],
+      "column": [
+        1,
+        2
+      ],
+      "rectangle_pt": [
+        351.0905806451613,
+        251.91049541284394,
+        550.368,
+        377.62150458715587
+      ]
+    },
+    {
+      "axis": 4,
+      "row": [
+        2,
+        3
+      ],
+      "column": [
+        0,
+        1
+      ],
+      "rectangle_pt": [
+        56.160000000000004,
+        40.715999999999894,
+        255.4374193548387,
+        166.42700917431185
+      ]
+    },
+    {
+      "axis": 5,
+      "row": [
+        2,
+        3
+      ],
+      "column": [
+        1,
+        2
+      ],
+      "rectangle_pt": [
+        351.0905806451613,
+        40.715999999999894,
+        550.368,
+        166.42700917431185
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "axes": [
+        0,
+        1
+      ],
+      "check": "row_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        0,
+        1
+      ],
+      "check": "equal_span_width",
+      "error_pt": 2.842170943040401e-14
+    },
+    {
+      "axes": [
+        0,
+        2
+      ],
+      "check": "column_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        0,
+        4
+      ],
+      "check": "column_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        1,
+        3
+      ],
+      "check": "column_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        1,
+        5
+      ],
+      "check": "column_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        2,
+        3
+      ],
+      "check": "row_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        2,
+        3
+      ],
+      "check": "equal_span_width",
+      "error_pt": 2.842170943040401e-14
+    },
+    {
+      "axes": [
+        2,
+        4
+      ],
+      "check": "column_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        3,
+        5
+      ],
+      "check": "column_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        4,
+        5
+      ],
+      "check": "row_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        4,
+        5
+      ],
+      "check": "equal_span_width",
+      "error_pt": 2.842170943040401e-14
+    }
+  ],
+  "failures": []
+}

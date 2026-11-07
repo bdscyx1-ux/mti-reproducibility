@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-formal-st-receipt-schema-v5.0",
+  "title": "Gate14Re-ME formal ST receipt envelope v5",
+  "type": "object",
+  "required": ["schema","studyId","status"],
+  "properties": {
+    "schema":{"type":"string","pattern":"^gate14re-me-formal-st-.*-v5$"},
+    "studyId":{"const":"Gate14Re-ME"},
+    "status":{"type":"string","minLength":1},
+    "createdAtUtc":{"type":"string","format":"date-time"},
+    "formalAnalysisPerformed":{"const":false},
+    "mqPerformed":{"const":false},
+    "mtPerformed":{"const":false}
+  }
+}

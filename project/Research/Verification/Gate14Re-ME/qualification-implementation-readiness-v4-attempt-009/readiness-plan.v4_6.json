@@ -1,0 +1,51 @@
+{
+  "schema": "gate14re-me-qualification-implementation-readiness-plan-v4.6",
+  "studyId": "Gate14Re-ME",
+  "readinessAttemptId": "qualification-implementation-readiness-v4-attempt-009",
+  "status": "PROVISIONAL_EXACT_V4_2_SOURCE_COMPILE_CHECK_NOT_DESIGN_CHANGE_NOT_EXECUTION_AUTHORIZATION",
+  "purpose": "Repeat only the algorithm-free v4.2 compile/Burst readiness check in a fresh root so the Unity natural exit code is synchronously observed. This executes no qualification, oracle acquisition, algorithm lane, acceptance, formal collection, or analysis.",
+  "executeMethod": "DDM.Research.Editor.Gate14ReMEReadinessCompileExitV4.Run",
+  "expected": {
+    "unityNaturalExitCode": 0,
+    "compilerErrors": 0,
+    "burstCurrentCompilationDone": true,
+    "qualificationExecuted": false,
+    "oracleAcquisitionExecuted": false,
+    "algorithmLaneExecuted": false,
+    "measuredRootCreated": false
+  },
+  "candidateAssets": [
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_2.cs",
+      "sha256": "622d97031efe51a1ea89fc2da95e5b473c170b817d452e76d3b25d81b228140d"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_2.cs.meta",
+      "sha256": "fe193b1f2899fd6aae3510c032291c3ef2948687a27245d8cd2d847696ef8e92"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v4/Gate14ReMEInputGeometryValidatorV4_2.cs",
+      "sha256": "08e2b067e667a11a0cae2f6162721bbd3b59c2e32ce806d247bd10aa63487eb9"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v4/Gate14ReMEInputGeometryValidatorV4_2.cs.meta",
+      "sha256": "f51bcabccfcbe372d49d10f31a53cfd74c6443d7de593252c2c368b1b282bac8"
+    }
+  ],
+  "compatibilityEvidence": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-technical-repair-v4_2-attempt-001/gnf-validator-compatibility-receipt.v1.json",
+    "sha256": "fd0af4e29dbe73aa90ec29de117a5c66333b0e6dead3de7f8a1fb88bcf9acd11",
+    "scheduleRowsValidated": 126,
+    "algorithmObservationsRead": false
+  },
+  "priorReadinessAttempt": {
+    "readinessAttemptId": "qualification-implementation-readiness-v4-attempt-008",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-readiness-v4-attempt-008/terminal-readiness-receipt.v4_6.json",
+    "reasonNotReusable": "External Unity exit code was not synchronously observed.",
+    "sameRootRetry": false
+  },
+  "qualificationDesignChanged": false,
+  "overallFormalDesignFrozen": false,
+  "executionAuthorized": false,
+  "createdAtUtc": "2026-10-19T14:26:04.8196162Z"
+}

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "planKind": "gate13r-strict-serial-10pct-formal-plan-v1",
+  "planId": "gate13r-74-campaign-strict-serial-10pct-uncapped-v1",
+  "executionDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "formalDesignId": "gate13r-one-fresh-unity-process-per-williams-block-10pct-uncapped-serial-v1",
+  "formalCampaignConfigured": false,
+  "formalCampaignAuthorized": false,
+  "formalRootCreated": false,
+  "formalTimingExecuted": false,
+  "reservedFormalRoot": "Research/FormalRuns/Gate13R_Serial_10pct/v1",
+  "processSemantics": {
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "oneFreshUnityEditorProcessPerCompleteWilliamsBlock": true,
+    "maximumWilliamsBlocksPerProcess": 1,
+    "oneOccurrencePerEligibleAlgorithmPerProcess": true,
+    "crossBlockReuseAllowed": false,
+    "crossCampaignReuseAllowed": false,
+    "completePerSampleResetRequired": true
+  },
+  "cohorts": [
+    {
+      "comparisonCohortId": "four-algorithm-shared-goal-v1",
+      "campaignCount": 32,
+      "blocksPerCampaign": 144,
+      "blockProcessCount": 4608,
+      "samplesPerBlock": 4,
+      "sampleCount": 18432,
+      "p50BlockWallSeconds": 26.2618372,
+      "p95BlockWallSeconds": 35.4256432,
+      "projectedRawBytesWithSafety": 36846855936
+    },
+    {
+      "comparisonCohortId": "per-agent-heterogeneous-goal-v1",
+      "campaignCount": 21,
+      "blocksPerCampaign": 204,
+      "blockProcessCount": 4284,
+      "samplesPerBlock": 2,
+      "sampleCount": 8568,
+      "p50BlockWallSeconds": 17.1582088,
+      "p95BlockWallSeconds": 23.2917994,
+      "projectedRawBytesWithSafety": 4603085172
+    },
+    {
+      "comparisonCohortId": "grouped-field-heterogeneous-goal-v1",
+      "campaignCount": 21,
+      "blocksPerCampaign": 108,
+      "blockProcessCount": 2268,
+      "samplesPerBlock": 2,
+      "sampleCount": 4536,
+      "p50BlockWallSeconds": 17.1387016,
+      "p95BlockWallSeconds": 17.2097755,
+      "projectedRawBytesWithSafety": 2435634684
+    }
+  ],
+  "totals": {
+    "scenarioCount": 53,
+    "campaignCount": 74,
+    "eligibleCellCount": 212,
+    "blockProcessCount": 11160,
+    "sampleCount": 31536,
+    "serialP50Seconds": 233390.8875456,
+    "serialP95Seconds": 302055.2033292,
+    "serialP50Hours": 64.830802096,
+    "serialP95Hours": 83.904223147,
+    "projectedRawBytesWithSafety": 43885575792,
+    "storageReserveBytes": 42949672960,
+    "minimumLaunchFreeBytes": 86835248752
+  },
+  "failurePolicy": {
+    "failClosed": true,
+    "startNextProcessOnlyAfterPriorProcessValidated": true,
+    "automaticRetryAllowed": false,
+    "automaticResumeAllowed": false,
+    "partialBlockEligible": false,
+    "partialAttemptMergeAllowed": false
+  },
+  "licensingPolicy": {
+    "serialAssignmentRequired": true,
+    "terminalPatterns": [
+      "No valid Unity Editor license found",
+      "License is not active (com.unity.editor.headless)"
+    ],
+    "accessTokenWarningIsDiagnosticOnlyAfterSerialAssignmentAndExitZero": true
+  },
+  "playable": {
+    "sceneCount": 53,
+    "profileCount": 74,
+    "presetCount": 212,
+    "visualizationOnly": true,
+    "timingEvidenceAllowed": false
+  },
+  "requiredBeforeFormalAuthorization": [
+    "exact versioned formal config and schedule manifest",
+    "hash-bound provenance and execution receipt schema",
+    "validation-only receipt guard and storage preflight",
+    "explicit user acceptance of the serial wall-clock projection or a new numeric limit"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-009-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-until-pass-3bb50249-7ac1-49e5-af37-839465bc47bd",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-009",
+  "status": "FROZEN_FORWARD_ONLY_AUDIT_BUDGET_FIELD_REPAIR_READ_ONLY_NO_UNITY_SCOPE",
+  "createdAtUtc": "2026-10-17T18:09:11.0940898Z",
+  "auditToolChange": {
+    "priorRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-008/Invoke-Gate14ReMEQualificationExecutionReadinessRecheckV8.ps1",
+    "priorSha256": "4f3f5973250b80fc3deef87c0736b9efa422d34b6f7a56c91b2c0a5c8f9fe9c2",
+    "newRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/Invoke-Gate14ReMEQualificationExecutionReadinessRecheckV9.ps1",
+    "onlySemanticChange": "Read the existing frozen resource-budget v1 field laneAssignedCommittedMemoryBytes instead of a nonexistent qualificationAssignedMemoryBytes field; update attempt/schema/status identifiers from v8 to v9.",
+    "scientificOrExecutionAssetChanged": false
+  },
+  "prospectiveBindings": {
+    "supervisorSha256": "a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409",
+    "executionContractSha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85",
+    "implementationManifestSha256": "1e56697a40692ff76fc01273ec4e5b8b7953ea88dcfe228eeeb317d9705a69c1",
+    "compiledImplementationFreezeManifestSha256": "c8194b7f89940a02dd38749acb97c9e1627de91cecf99d1844ff384e3929fea9",
+    "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-002"
+  },
+  "prohibited": {
+    "unityInvocation": true,
+    "rootCreation": true,
+    "qualificationOrFormalObservation": true,
+    "analysisRankingWeightingOrWinner": true
+  }
+}

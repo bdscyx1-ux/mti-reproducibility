@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-formal-prelaunch-unity-self-tests-failure-receipt-v1",
+  "attemptId": "gate13r-pr2-formal-prelaunch-unity-self-tests-v2",
+  "savedAtUtc": "2026-10-08T17:20:39.1562200Z",
+  "status": "FAILED-PRESERVED-NOT-FORMAL-DATA",
+  "wrapper": {
+    "relativePath": "Research/Run-Gate13RPR2FormalUnitySelfTestsV2.ps1",
+    "sha256": "b386d335630b4d2fb9089f082ffbabe8d57edced6318a8d0bcf033d93b27a072"
+  },
+  "failure": {
+    "stage": "memory-policy-wrapper-compiler-match-count",
+    "code": "STRICT-MODE-NULL-COUNT-AFTER-EMPTY-PIPELINE",
+    "message": "Windows PowerShell 5.1 collapsed the zero-match pipeline result to null; strict-mode Count access failed.",
+    "classification": "prelaunch wrapper implementation defect",
+    "scientificThresholdFailure": false,
+    "unityCompilationFailure": false,
+    "memoryPolicyFailure": false
+  },
+  "observedEvidence": {
+    "memoryPolicyTestCount": 12,
+    "memoryPolicyPassedTestCount": 12,
+    "telemetryValidationTestCount": 8,
+    "telemetryValidationPassedTestCount": 8,
+    "unityLockAbsent": true,
+    "unityProcessCountAfterFailure": 0
+  },
+  "authorizationBoundary": {
+    "formalRootCreated": false,
+    "formalExecutionReceiptCreated": false,
+    "measuredSampleCreated": false,
+    "formalCampaignStarted": false,
+    "gate14RStarted": false,
+    "versionedPrelaunchRepairAuthorized": true
+  },
+  "preservation": {
+    "partialOutputManifest": "partial-output-manifest.json",
+    "failureCheckpoint": "failure-checkpoint.json",
+    "attemptMustRemainUnmodified": true,
+    "mayBeReinterpretedAsPassed": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "gate14re-me-trusted-timestamp-comparator-attempt-005-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-auto-attempts-until-pass",
+  "attemptId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-005",
+  "status": "FAILED_CLOSED_TRUSTED_TIMESTAMP_COMPARATOR_ATTEMPT_005",
+  "failedAtUtc": "2026-10-17T12:04:01.4311016Z",
+  "exceptionType": "System.InvalidOperationException",
+  "exactFailure": "One or more offline timestamp known-answer cases failed: frozen-rule-creation-zero-fraction-equivalence, frozen-rule-lastwrite-zero-fraction-equivalence, explicit-offset-equivalence, identical-seven-digit-fraction, one-second-difference, same-wall-clock-different-offset, invalid-observed-text, missing-observed-value, excessive-fraction-observed-value, invalid-offset-observed-value",
+  "stackTrace": "at Require-Condition, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\unity-trusted-identity-timestamp-comparator-corrigendum-attempt-005\\Invoke-Gate14ReMETrustedTimestampComparatorCorrigendumAttempt005.ps1: line 43\r\nat <ScriptBlock>, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\unity-trusted-identity-timestamp-comparator-corrigendum-attempt-005\\Invoke-Gate14ReMETrustedTimestampComparatorCorrigendumAttempt005.ps1: line 339",
+  "offlineKnownAnswerInvocationCount": 1,
+  "sameAttemptRetryPerformed": false,
+  "unityInvocationCount": 0,
+  "retainedEvidence": {
+    "attempt003BeforeDigestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef",
+    "attempt003AfterDigestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef",
+    "attempt003Unchanged": true,
+    "attempt004BeforeDigestSha256": "83b30dc296f8acc92e95bcd55a64b0635cd65b1192bfe511795ca3bf125c69f6",
+    "attempt004AfterDigestSha256": "83b30dc296f8acc92e95bcd55a64b0635cd65b1192bfe511795ca3bf125c69f6",
+    "attempt004Unchanged": true,
+    "priorEvidenceReclassified": false
+  },
+  "scientificBoundary": {
+    "unityInvocations": 0,
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "lastHourLaneCompletions": 81,
+  "loadAssociations": {
+    "FvsLogInclusiveLaneBodyPearson": 0.43061,
+    "GvsLogInclusiveLaneBodyPearson": 0.39404,
+    "NvsLogInclusiveLaneBodyPearson": 0.777382,
+    "boundary": "Descriptive associations only; G, N, F, anonymous lane identity, context and order are not mutually randomized for causal attribution."
+  },
+  "longTailAssessment": {
+    "descriptorLeaderVotes": {
+      "D*L": 4,
+      "LPA*": 1
+    },
+    "descriptorLeaders": {
+      "matchedSuperblockMaximumFrequency": "LPA*",
+      "maximumToP50": "D*L",
+      "p95ToP50": "D*L",
+      "p99ToP50": "D*L",
+      "shareAbovePooledP95": "D*L"
+    },
+    "mostProminentAlgorithmOrNoSingleDominant": "D*L",
+    "reason": "strict plurality across the five predeclared long-tail descriptors (4/5)"
+  },
+  "notSupportedAsCauses": [
+    "thermal throttling",
+    "cache state",
+    "antivirus",
+    "disk pressure",
+    "host memory pressure"
+  ],
+  "processWallP95TailOverlapWithInclusiveLaneBodyP95Tail": 0.973684,
+  "processWallVsInclusiveLaneBodyPearson": 0.992141,
+  "schema": "gate14re-me-load-runtime-cause-summary-v2",
+  "scientificBoundary": "Not a formal effect comparison, ranking, weighting, or winner adjudication.",
+  "status": "POST_QUALIFICATION_DESCRIPTIVE_ENGINEERING_DIAGNOSTIC_COMPLETE",
+  "supportedConclusions": [
+    "Observed process-wall tails can be compared directly with inclusive lane-body and strict-serial gap tails.",
+    "G, N, F and order composition describe where slow lanes occur, subject to frozen-schedule confounding.",
+    "The optimized independent streaming acceptance completed the full typed-Parquet value/type/order round trip without modifying source roots."
+  ],
+  "unidentifiable": [
+    "pure algorithm compute",
+    "Unity startup",
+    "exit/finalization"
+  ]
+}

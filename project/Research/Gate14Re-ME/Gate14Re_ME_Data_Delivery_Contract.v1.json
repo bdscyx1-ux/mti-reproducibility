@@ -1,0 +1,328 @@
+{
+  "schema": "gate14re-me-data-delivery-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "FROZEN_NONEXECUTING_HARD_GATE",
+  "purpose": "Guarantee that every raw observation for every named algorithm and every recorded metric is preserved, traceable, independently exportable, and deliverable without relying on an analysis result or an aggregation-only file.",
+  "hardCondition": {
+    "completePerObservationRawDataDeliverable": true,
+    "mandatoryForPrecollectionReadiness": true,
+    "mandatoryForFormalRawCommit": true,
+    "mandatoryBeforeAnyFormalAnalysisAuthorizationCanBeExercised": true,
+    "cannotBeWaivedAfterFirstFormalObservation": true,
+    "failureDisposition": "FAIL_CLOSED_PRESERVE_EVIDENCE_NO_ANALYSIS_NO_CLAIM_NO_TOPUP_NO_MERGE"
+  },
+  "storageArchitecture": {
+    "immutableMeasuredRootPattern": "Research/FormalRuns/Gate14Re-ME/<phaseId>/<attemptId>",
+    "derivedDeliveryRootPattern": "Research/Exports/Gate14Re-ME/<phaseId>/<attemptId>/v1",
+    "separationRequired": true,
+    "measuredRootIsSourceOfTruth": true,
+    "deliveryRootIsReproducibleDerivedExport": true,
+    "deliveryExportMayNeverReplaceOrMutateMeasuredRaw": true,
+    "formalMeasuredRootExistsAtThisFreeze": false,
+    "formalDeliveryRootExistsAtThisFreeze": false
+  },
+  "identityKeys": {
+    "requiredOnEveryApplicableRecord": [
+      "studyId",
+      "phaseId",
+      "attemptId",
+      "designId",
+      "structuralCellId",
+      "superblockId",
+      "inputBundleId",
+      "laneId",
+      "algorithmId",
+      "executionOrderSequenceId",
+      "executionPosition",
+      "processId",
+      "recordId"
+    ],
+    "additionalKeysByGranularity": [
+      "eventCycleId",
+      "eventGroupId",
+      "eventId",
+      "atomicPartitionId",
+      "queryId",
+      "agentId",
+      "measurementPointId",
+      "metricId"
+    ],
+    "algorithmLabelsMustRemainNamed": true,
+    "legacyAnonymousFieldNamesMayNotBeUsedToImplyLabelBlinding": true
+  },
+  "immutableMeasuredTree": {
+    "requiredTopLevelDirectories": [
+      "_control",
+      "_inputs",
+      "_superblocks",
+      "_replacements",
+      "_commit"
+    ],
+    "requiredControlArtifacts": [
+      "_control/launch-receipt.v1.json",
+      "_control/execution-status.json",
+      "_control/output-schema.v1.json",
+      "_control/data-dictionary.v1.json",
+      "_control/source-bindings.v1.json",
+      "_control/failure-receipt.v1.json when a terminal failure occurs",
+      "_control/acquisition-complete.v1.json when acquisition completes"
+    ],
+    "perInputBundleArtifacts": [
+      "_inputs/<superblockId>/input-bundle.v1.json",
+      "_inputs/<superblockId>/input-bundle.sha256"
+    ],
+    "perSuperblockArtifacts": [
+      "_superblocks/<superblockId>/superblock-manifest.v1.json",
+      "_superblocks/<superblockId>/superblock-receipt.v1.json",
+      "_superblocks/<superblockId>/lanes/<executionPosition>-<algorithmId>/process-receipt.v1.json",
+      "_superblocks/<superblockId>/lanes/<executionPosition>-<algorithmId>/sample-output.v1.json",
+      "_superblocks/<superblockId>/lanes/<executionPosition>-<algorithmId>/event-groups.v1.jsonl",
+      "_superblocks/<superblockId>/lanes/<executionPosition>-<algorithmId>/operations.v1.jsonl",
+      "_superblocks/<superblockId>/lanes/<executionPosition>-<algorithmId>/persistent-state.v1.jsonl",
+      "_superblocks/<superblockId>/lanes/<executionPosition>-<algorithmId>/stdout.log",
+      "_superblocks/<superblockId>/lanes/<executionPosition>-<algorithmId>/stderr.log"
+    ],
+    "replacementArtifacts": [
+      "_replacements/whole-superblock-replacement-ledger.v1.jsonl",
+      "original failed or voided lane artifacts retained in place with eligibility labels"
+    ],
+    "commitArtifacts": [
+      "_commit/raw-complete-receipt.v1.json",
+      "_commit/canonical-tree.v1.jsonl",
+      "_commit/sha256-manifest.v1.jsonl",
+      "_commit/data-delivery-validation-receipt.v1.json"
+    ]
+  },
+  "deliveryGranularity": {
+    "level1SampleRun": {
+      "unit": "one named algorithm lane in one superblock",
+      "required": true,
+      "content": "all lane-level raw fields, eligibility, failure state, execution identity, input binding, process binding, block summaries, and source path/hash",
+      "independentStatisticalN": false,
+      "pairedCluster": "superblock"
+    },
+    "level2MetricLong": {
+      "unit": "one atomic recorded metric value at one declared measurement point",
+      "required": true,
+      "content": "metricId, raw value, unit, numeric type, measurement boundary, numerator/denominator/components where applicable, presence flag, missing-reason code, source path/hash"
+    },
+    "level3EventGroup": {
+      "unit": "one complete same-tick event group in one algorithm lane",
+      "required": true,
+      "content": "all ApplyChanges records, all mandatory post-event Plan query records for all N agents, elapsed time, grid-read components, allocation bytes, status/version/correctness fields, and source binding",
+      "technicalRepeatOnly": true
+    },
+    "level4OperationEventQuery": {
+      "unit": "one input change operation, one event, or one post-event query",
+      "required": true,
+      "content": "ordered lossless trace with operation/event/query identity, coordinates or bundle reference, timestamps or deterministic sequence counters, agent identity, result status, raw instrumentation values, native diagnostics with semantics ID, and source binding",
+      "independentStatisticalN": false
+    },
+    "level5StateMeasurement": {
+      "unit": "one frozen persistent-state measurement point",
+      "required": true,
+      "content": "primitive-array bytes, per-container capacity records, total logical persistent bytes, audited formula version, and source binding"
+    },
+    "level6FailureReplacement": {
+      "unit": "one lane failure, infrastructure failure, or whole-superblock replacement decision",
+      "required": true,
+      "content": "original attempt, categorization, eligibility, reason, replacement linkage, timestamps, process identity, evidence paths and hashes"
+    }
+  },
+  "rawFieldRetention": {
+    "aggregationOnlyStorageForbidden": true,
+    "summariesMayNotSubstituteForConstituentRows": true,
+    "D1": [
+      "every eventGroupElapsedMilliseconds value",
+      "block geometric mean and nearest-rank P95 retained as derivable summaries"
+    ],
+    "D2": [
+      "gridContainsCalls",
+      "gridIsWalkableCalls",
+      "gridGetTraversalCostCalls",
+      "gridAccessorCallsTotal"
+    ],
+    "D3": [
+      "every eventGroupManagedAllocatedBytes value",
+      "blockTotalManagedAllocatedBytes"
+    ],
+    "D4": [
+      "persistentPrimitiveArrayBytes",
+      "every named container capacity and per-unit formula component",
+      "persistentContainerCapacityBytes",
+      "persistentStateBytesTotal at every required measurement point"
+    ],
+    "D5ThroughD7": "retain all D1 constituent observations and all frozen complexity-axis values; slope estimates alone are not raw data",
+    "secondaryEndpoints": "retain every recorded initialization, cold-query, native diagnostic, reliability, correctness, oracle, and retained movement-transfer observation",
+    "ratiosAndPercentages": "retain numerator, denominator, and eligibility population; a percentage alone is insufficient",
+    "nonFiniteValues": "never silently coerce, drop, or replace; preserve token, field, reason and eligibility disposition"
+  },
+  "expectedStructuralCardinality": {
+    "acceptedSuperblocks": "48 * finalB",
+    "acceptedAlgorithmLanes": "48 * finalB * 6",
+    "acceptedFreshProcesses": "48 * finalB * 6",
+    "eventGroupsPerAcceptedLane": 24,
+    "eventCyclesPerAcceptedLane": 6,
+    "postEventQueriesPerAcceptedEventGroup": "N for the structural cell",
+    "persistentStateMeasurementPointsPerAcceptedLane": 26,
+    "algorithmRowsPerAcceptedSuperblock": 6,
+    "exactOperationCardinality": "must reconcile to the frozen input bundle, F, atomic partition schedule, 24 event groups, and N post-event queries",
+    "wholeSuperblockReplacementLimit": 1,
+    "algorithmSpecificRetryLimit": 0
+  },
+  "requiredDerivedDeliveryPackage": {
+    "rootPattern": "Research/Exports/Gate14Re-ME/<phaseId>/<attemptId>/v1",
+    "files": [
+      {
+        "path": "gate14re-me-sample-wide.csv",
+        "role": "one row per named algorithm lane with complete lane-level raw and eligibility fields",
+        "required": true
+      },
+      {
+        "path": "gate14re-me-metric-long.csv.zst",
+        "role": "lossless portable long table containing every atomic metric observation",
+        "required": true
+      },
+      {
+        "path": "gate14re-me-metric-long.parquet",
+        "role": "typed machine-efficient equivalent of the metric-long table",
+        "required": true
+      },
+      {
+        "path": "gate14re-me-eventgroup-long.csv.zst",
+        "role": "lossless portable event-group table",
+        "required": true
+      },
+      {
+        "path": "gate14re-me-eventgroup-long.parquet",
+        "role": "typed machine-efficient equivalent of the event-group table",
+        "required": true
+      },
+      {
+        "path": "gate14re-me-operations.v1.jsonl.zst",
+        "role": "ordered operation, event, and post-event query trace",
+        "required": true
+      },
+      {
+        "path": "gate14re-me-persistent-state-long.csv.zst",
+        "role": "all state measurement points and per-container components",
+        "required": true
+      },
+      {
+        "path": "gate14re-me-failures-replacements.csv",
+        "role": "complete failure, eligibility, voiding, and replacement ledger",
+        "required": true
+      },
+      {
+        "path": "data-dictionary.v1.json",
+        "role": "field semantics, units, types, allowed missing reasons, metric boundaries, and native diagnostic semantics",
+        "required": true
+      },
+      {
+        "path": "source-provenance.v1.json",
+        "role": "study, design, input, build, executable, source, schema, exporter, validator, and measured-root bindings",
+        "required": true
+      },
+      {
+        "path": "export-manifest.v1.jsonl",
+        "role": "path, byte size, record count, schema version, and SHA-256 for every export artifact",
+        "required": true
+      },
+      {
+        "path": "export-canonical-tree.v1.jsonl",
+        "role": "deterministic canonical inventory of the delivery package",
+        "required": true
+      },
+      {
+        "path": "delivery-receipt.v1.json",
+        "role": "machine-readable completeness and reproducibility verdict",
+        "required": true
+      }
+    ],
+    "formatRules": {
+      "csv": "UTF-8, RFC 4180 compatible, invariant-culture numeric serialization, explicit NA reason fields",
+      "parquet": "lossless typed mirror of the corresponding long table with declared schema fingerprint",
+      "jsonl": "UTF-8, one complete JSON object per line, deterministic record ordering",
+      "compression": "Zstandard with compression metadata recorded; decompressed SHA-256 and record count also recorded",
+      "spreadsheetOnlyDeliveryForbidden": true,
+      "proprietaryOnlyDeliveryForbidden": true
+    }
+  },
+  "completenessAndReproducibilityChecks": {
+    "allSixAlgorithmsPresentForEveryAcceptedSuperblock": true,
+    "allExpectedEventGroupsPresent": true,
+    "allExpectedPostEventQueriesPresent": true,
+    "allInputOperationsReconciled": true,
+    "allPersistentStateMeasurementPointsPresent": true,
+    "allFailuresAndReplacementsIncluded": true,
+    "allMissingValuesHaveEnumeratedReasons": true,
+    "allRawRecordsTraceToMeasuredSourcePathAndSha256": true,
+    "allExportRecordsTraceToRawRecordId": true,
+    "csvAndParquetLongTablesSemanticallyEquivalent": true,
+    "exportCanBeRegeneratedFromImmutableMeasuredRootWithFrozenExporter": true,
+    "canonicalOrderingAndLocaleIndependentSerialization": true,
+    "schemaCardinalityPathsAndHashesValidated": true,
+    "rawValuesMayBeValidatedForTypeAndFinitenessButNotAggregatedOrInterpretedDuringStructuralCommit": true
+  },
+  "missingnessAndEligibility": {
+    "silentRowDeletionForbidden": true,
+    "requiredFields": [
+      "valuePresent",
+      "missingReasonCode",
+      "eligibilityStatus",
+      "eligibilityReasonCode",
+      "isReplacement",
+      "replacesSuperblockAttemptId"
+    ],
+    "allowedMissingReasonCodesMustBeFrozenBeforeCollection": true,
+    "algorithmSpecificFailureRetainedAsOutcome": true,
+    "infrastructureFailureRetainedAsEvidence": true,
+    "replacedAttemptNeverOverwritten": true
+  },
+  "freezeBeforeCollectionRequirements": {
+    "outputSchemaHashFrozen": true,
+    "dataDictionaryHashFrozen": true,
+    "exporterSourceHashFrozen": true,
+    "structuralValidatorHashFrozen": true,
+    "syntheticKnownAnswerDeliveryTestRequired": true,
+    "roundTripRecordCountAndValueEqualityTestRequired": true,
+    "tamperNegativeTestRequired": true,
+    "missingRowNegativeTestRequired": true,
+    "duplicateRecordNegativeTestRequired": true,
+    "crossAlgorithmLabelSwapNegativeTestRequired": true,
+    "precollectionReadinessMayPassWithoutThese": false
+  },
+  "formalRawCommitGate": {
+    "requiredReceiptStatus": "PASS_COMPLETE_PER_OBSERVATION_RAW_DATA_DELIVERABLE",
+    "requiredStateFlags": [
+      "RAW_IMMUTABLE",
+      "COMPLETE_PER_OBSERVATION_DELIVERABLE",
+      "ANALYSIS_PENDING"
+    ],
+    "analysisPerformedByStructuralCommit": false,
+    "rankingPerformedByStructuralCommit": false,
+    "winnerAdjudicationPerformedByStructuralCommit": false,
+    "aggregateOrDirectionalEffectsComputedByStructuralCommit": false,
+    "ifGateFails": "preserve measured root and failure evidence; do not analyze, top up, merge, restart, or create a replacement attempt without new user authorization"
+  },
+  "prohibitions": [
+    "no aggregation-only deliverable",
+    "no deletion of failed, voided, excluded, or replacement-source observations",
+    "no unlabeled merging across study, phase, attempt, algorithm, cell, superblock, lane, event group, query, or measurement point",
+    "no treating operations, agents, events, event groups, frames, ticks, cells, or lanes as independent statistical n",
+    "no transformation that prevents reconstruction of the original raw value",
+    "no outcome-based export filtering",
+    "no analysis result required to understand or retrieve a raw record",
+    "no overwriting prior Gate14Re, Gate14Re-TB, Gate14Re-TB2, Gate13R, or Gate13R-AX2 artifacts"
+  ],
+  "authorizationBoundary": {
+    "thisContractFreezeAuthorized": true,
+    "implementationAuthorized": false,
+    "formalRootCreationAuthorized": false,
+    "collectionAuthorized": false,
+    "formalExportExecutionAuthorized": false,
+    "analysisAuthorized": false
+  }
+}

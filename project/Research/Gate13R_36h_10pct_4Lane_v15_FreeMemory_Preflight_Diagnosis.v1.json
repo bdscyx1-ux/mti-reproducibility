@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "diagnosisKind": "gate13r-36h-v15-final-audit-free-memory-diagnosis-v1",
+  "createdAtUtc": "2026-10-08T05:54:00Z",
+  "status": "TRANSIENT-ENVIRONMENT-GATE-FAILED",
+  "attempt": 15,
+  "failedStage": "validation-only-pre-pilot-audit",
+  "pilotStarted": false,
+  "formalCampaign": false,
+  "audit": {
+    "assertionCount": 156,
+    "passedAssertionCount": 155,
+    "failedAssertionCount": 1,
+    "failedAssertion": "free-physical-memory",
+    "observedFreePhysicalMemoryBytes": 15333617664,
+    "requiredFreePhysicalMemoryBytes": 17179869184,
+    "thresholdChanged": false
+  },
+  "passedResearchGates": {
+    "serialLaneBootstrap": true,
+    "fourLaneTelemetry": true,
+    "bootstrapTelemetryEightDistinctProcesses": true,
+    "fourConcurrentPositiveBlocks": true,
+    "coldStructuralComparisonCount": 24,
+    "coldStructuralMismatchCount": 0,
+    "negativeFailClosed": true,
+    "independentProcessRepeatability": true,
+    "retainedRegressionAssertions": 63,
+    "retainedRegressionPassed": true,
+    "protectedInputPreservation": true,
+    "playableAndProvenanceBindings": true
+  },
+  "evidence": {
+    "executionReceiptSha256": "2fef417ac7de6ab61d0fd4135644fffc4301c9d298292f722b2f296030f24cb2",
+    "verificationCheckpointSha256": "7efc67a9c12e28dfd0545d1b83d1253805fe6412cd85556253e253d31b1e4dfd",
+    "failureReceiptSha256": "22b73e29f1336732e441268195cde43af521a05b29384f6fb2ad84fa7e3ce6ad",
+    "partialOutputManifestSha256": "b372b4223a7ef70249027ec26623a1bc13ac9337c50505cce8fb2527aa12635b",
+    "auditSummarySha256": "799c0608617c2df05ee5cd2c789143264d16d3eb21d90054cc730f62259e0fb9",
+    "blockVerificationSummarySha256": "3d70fa96ce8fb34ebbced54ac98ab7a37cc13d037b367faeaa18b38b5d8dfcd4",
+    "retainedRegressionSummarySha256": "45492289b10da7c45a74a4da09747705d132737c85249067cf08f4ed46773a1f"
+  },
+  "repairBoundary": {
+    "nextAttempt": 16,
+    "boundedEnvironmentStabilizationWaitSeconds": 600,
+    "sampleIntervalSeconds": 5,
+    "requiredConsecutivePassingSamples": 3,
+    "thresholdBytes": 17179869184,
+    "processTerminationAllowed": false,
+    "workingSetTrimmingAllowed": false,
+    "standbyListOrCacheFlushAllowed": false,
+    "thresholdRelaxationAllowed": false,
+    "fullFreshVerificationRequired": true,
+    "v15MutationOrResumeAllowed": false
+  },
+  "passed": true
+}

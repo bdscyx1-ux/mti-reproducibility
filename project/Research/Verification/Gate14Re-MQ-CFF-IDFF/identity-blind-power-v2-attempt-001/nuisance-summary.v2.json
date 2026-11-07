@@ -1,0 +1,45 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-nuisance-summary-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "attemptId": "identity-blind-power-v2-attempt-001",
+  "status": "PASS_IDENTITY_BLIND_NUISANCE_ESTIMATION",
+  "structure": {
+    "laneRows": 384,
+    "batchRows": 24,
+    "opaqueSlots": 2,
+    "conditionsPerOpaqueSlot": 12,
+    "sourceUnits": 8,
+    "replicasPerSource": 2
+  },
+  "nuisance": {
+    "bootstrapDraws": 100000,
+    "bootstrapSeed": 141420271,
+    "sourceUnits": 8,
+    "replicasPerSource": 2,
+    "pseudoBlockLanes": 16,
+    "minimumLogJitterSigma": 0.03,
+    "pooledIdentityBlindJitterSigmaUsed": 0.03490122032628677,
+    "smallSourceDegreesOfFreedom": 7,
+    "chiSquareLowerTailProbability": 0.05,
+    "chiSquareLowerQuantileMethod": "Wilson-Hilferty approximation",
+    "chiSquareLowerQuantile": 2.154584859252844,
+    "smallSourceVarianceInflation": 3.2488857284680934,
+    "modelRiskVarianceMultiplier": 2.0,
+    "totalVarianceInflation": 6.497771456936187,
+    "psdFloor": 5.2007353660555935e-11,
+    "eigenvaluesRaisedToFloor": 0,
+    "covarianceDimension": 6,
+    "covarianceSha256LittleEndianFloat64": "ae9dd48d6d2ab3aa22b8c5f7097e67bd884881e7818ac5780ee85ca1a4e932fa",
+    "qualificationMeansSerialized": false,
+    "observedEffectsSerialized": false
+  },
+  "outputSuppression": {
+    "algorithmIdentityMapOpened": false,
+    "algorithmIdAccessed": false,
+    "conditionIdAccessed": false,
+    "inputIdAccessed": false,
+    "qualificationMeansSerialized": false,
+    "observedEffectsDirectionsRanksWeightsOrWinnerSerialized": false
+  }
+}

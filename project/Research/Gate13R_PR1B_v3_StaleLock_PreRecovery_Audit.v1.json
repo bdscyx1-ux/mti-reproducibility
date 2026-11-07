@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13r-pr1b-v3-stale-lock-pre-recovery-audit-v1",
+  "createdAtUtc": "2026-10-08T12:51:41.9164999Z",
+  "createdAtAsiaShanghai": "2026-10-08T20:51:41.9182624+08:00",
+  "authorizationSource": "Research/Gate13R_PR1B_v3_PathSafe_Next_Authorization_Prompt.md",
+  "status": "PASSED-AUTHORIZED-EXACT-LOCK-DELETION-PENDING",
+  "project": {
+    "resolvedAbsolutePath": "H:/DDM_Final_Project",
+    "unityProcessCount": 0,
+    "reservedFormalRootPresent": false
+  },
+  "lock": {
+    "expectedAbsolutePath": "H:/DDM_Final_Project/Temp/UnityLockfile",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Temp/UnityLockfile",
+    "pathMatchesV6QuiescenceFailureReceipt": true,
+    "exists": true,
+    "isLeafFile": true,
+    "isReparsePoint": false,
+    "attributes": "Archive, NotContentIndexed",
+    "rawBytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "creationTimeUtc": "2026-10-08T12:43:54.1684056Z",
+    "lastWriteTimeUtc": "2026-10-08T12:43:54.1684056Z",
+    "exclusiveReadWriteAvailable": true
+  },
+  "tempDirectoryNonLockIdentityBefore": {
+    "fileCount": 2,
+    "rawBytes": 1059,
+    "treeSha256": "395f10876669523fba1b264d11e09bbcf5b31c9ae58623f136907e0d97085cee",
+    "directoryCount": 0
+  },
+  "v6TerminalEvidence": [
+    {"relativePath":"Research/Gate13R_PR1B_v2_Pilot_Attempt2_Terminal_Preservation.v1.json","rawBytes":3849,"sha256":"ba403fbf604b2e4c5474b703e325722ca1b9853559fffdc8beb0c50e68846d3f"},
+    {"relativePath":"Research/Gate13R_PR1B_v2_Pilot_Attempt2_Failure_Diagnosis.v1.md","rawBytes":3223,"sha256":"bbcc55ed803d19c8f990793b91f8b7d021bf69bb21631751493b0675d7340c48"},
+    {"relativePath":"Research/Gate13R_PR1B_v2_Failure_Checkpoint.v1.json","rawBytes":993,"sha256":"8481027dadbb020750190cfab270fe61dd0a7dfd45e1eb8ef7efa8e5e0cf1e1c"},
+    {"relativePath":"Research/Gate13R_PR1B_v2_Terminal_Evidence_Manifest.v1.json","rawBytes":2295,"sha256":"f04afe3c979b4fe09bed5826b53c1b49636113eec3548737548e4e76f9baf487"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/failure-receipt.json","rawBytes":658,"sha256":"c6b81c9af3c69683c92d718f63e6064fcdc722e01bb9bb0f743c921fef244ffd"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/pilot-checkpoint.json","rawBytes":3229,"sha256":"2bf4646b9cc2f1e8a2b5854009dd2d1c1182f524d8a0bd10b55da7a3af94851a"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/partial-output-manifest.json","rawBytes":20024,"sha256":"3d72f76c65be61554d2730a4dffc77504442e4fa5f7dd0a15acfe65293f7d844"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/warmup/wave-033/slot-01-core-r01-s1-hetero/pair-b033/ab-s1/p02-grouped-field/block-failure.json","rawBytes":5255,"sha256":"73f8586c8114569044c45e79be3841de76da9caea7c052865ed924ff52f7c82f"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/warmup/wave-033/slot-01-core-r01-s1-hetero/pair-b033/ab-s1/p02-grouped-field.lock-hygiene/g13r-pr1b-w-b033-ab-s1-core-r01-s1-hetero-grouped-field-b033.quiescence-failure.json","rawBytes":1310,"sha256":"bbad6f1ec06de7df7fdeb82076b9e5beb8961da425ed8034c82e5d70e17aff70"}
+  ],
+  "frozenRootIdentities": [
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2","fileCount":49,"rawBytes":1955414,"treeSha256":"85a3fba48ae687acaa04b7b1f91afe0dc115f6efdde5bcaa4bbffa50e9139557"},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v9-gate13r-pr1b-order-effect-memory-v2","fileCount":20,"rawBytes":176860,"treeSha256":"5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74"},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v10-gate13r-pr1b-order-effect-memory-v2","fileCount":39,"rawBytes":275071,"treeSha256":"5d20fbea2e6e734c9feddc2ed199a365bc307caac1a4b2cef3bb680cfebb2d44"},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2","fileCount":244,"rawBytes":6057665,"treeSha256":"d819eb685a119175a5b1e362e7ac14997ff27b6f6696d109a6dd0202546b8d5b"}
+  ],
+  "authorizedDeletion": {
+    "exactPathOnly": "H:/DDM_Final_Project/Temp/UnityLockfile",
+    "deleteTempDirectory": false,
+    "deleteOtherFiles": false,
+    "conditionsSatisfied": true
+  },
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

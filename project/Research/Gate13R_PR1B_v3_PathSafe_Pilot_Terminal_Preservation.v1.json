@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "preservationId": "gate13r-pr1b-v3-pathsafe-pilot-terminal-preservation-v1",
+  "createdAtUtc": "2026-10-08T15:26:57.2473618Z",
+  "createdAtAsiaShanghai": "2026-10-08T23:26:57.2473618+08:00",
+  "status": "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+  "classification": [
+    "NON-FORMAL",
+    "COMPLETE-RAW-EXECUTION",
+    "POST-EXECUTION-ANALYZER-FAILED",
+    "EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "EXCLUDED-FROM-ORDER-EFFECT-INFERENCE-UNTIL-SEPARATELY-AUTHORIZED-ANALYSIS-RECOVERY"
+  ],
+  "pilotRoot": {
+    "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "fileCountIncludingTerminalPartialManifest": 9118,
+    "rawBytesIncludingTerminalPartialManifest": 253513394,
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed",
+    "lastWriteUtc": "2026-10-08T15:25:23.3758716Z",
+    "treeIdentityAlgorithm": "sorted relativePath<TAB>rawBytes<TAB>lowercaseSha256 joined with LF, then SHA-256 over UTF-8"
+  },
+  "orchestratorPartialManifest": {
+    "status": "failed-no-retry-no-resume-no-merge",
+    "fileCountBeforeManifestSelfInclusion": 9117,
+    "rawBytesBeforeManifestSelfInclusion": 249666771,
+    "savedAtUtc": "2026-10-08T15:25:23.2353914Z"
+  },
+  "terminalEvidence": [
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/failure-receipt.json",
+      "rawBytes": 650,
+      "sha256": "c9f8a96aa1ff953e84bcdcc5a7b70be2a635f764e4970824b1891473046d2680"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/pilot-checkpoint.json",
+      "rawBytes": 927234,
+      "sha256": "b98888e7c89537f9f533712422c646289a08b6999de287fd1c8597301cfdd60c"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/pilot-execution-manifest.json",
+      "rawBytes": 927228,
+      "sha256": "df33956d5622d03f5965dabc2c43d96e0314fa65aec04da9e6b536d1d5b6f688"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/partial-output-manifest.json",
+      "rawBytes": 3846623,
+      "sha256": "d31c9f9e08eb93b4775d83ff43c94c3b5345ba3c02ab5f519cba619e6319cd00"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/execution-receipt.json",
+      "rawBytes": 1052,
+      "sha256": "531feb3d87dfbc15bc341896973a29df3a47f45bde3572f15317de639e3deea2"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/environment-start.json",
+      "rawBytes": 1626,
+      "sha256": "033afb15ad8dc3a737a5311f08809a534ad3a4f27e2bae1e55ebfd4d8faf6177"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/environment-post-warmup.json",
+      "rawBytes": 1627,
+      "sha256": "9e31b6d0ce73d7b8b9e3191124f1b6143ff0bc0fb471830b9463282398a6ded4"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/environment-end.json",
+      "rawBytes": 1628,
+      "sha256": "0f12e15df1af7933d6643f98dcdb9a3e9ff826054bdad64a1e00678d7288cca4"
+    }
+  ],
+  "executionCounts": {
+    "completedWarmupBlockProcesses": 12,
+    "excludedWarmupSamples": 24,
+    "completedMeasuredMirroredPairs": 96,
+    "completedMeasuredMatchedSuperblocks": 192,
+    "completedMeasuredBlockProcesses": 384,
+    "completedMeasuredSamples": 768,
+    "completedTotalBlockProcesses": 396,
+    "completedTotalSamples": 792,
+    "incompleteBlockProcesses": 0,
+    "incompleteSamples": 0,
+    "measuredStageStarted": true,
+    "rawExecutionCompleted": true,
+    "orderEffectAnalyzerCompleted": false
+  },
+  "failureIdentity": {
+    "failedAtUtc": "2026-10-08T15:25:14.1707869Z",
+    "reasonCode": "GLOBAL-PID-UNIQUENESS-REJECTED-LEGAL-WINDOWS-PID-REUSE",
+    "exceptionMessage": "Gate13R PR1B v2 analysis failed: duplicate Unity process identity: 27512",
+    "failureStage": "POST-EXECUTION-FROZEN-ORDER-EFFECT-ANALYZER",
+    "plannerCorrectnessFailure": false,
+    "scenarioFailure": false,
+    "memoryThresholdFailure": false,
+    "blockExecutionFailure": false,
+    "partialBlockFailure": false
+  },
+  "processIdentityAudit": {
+    "totalCompletedProcessRecords": 396,
+    "distinctPidValues": 375,
+    "pidReuseGroupCount": 19,
+    "largestPidReuseMultiplicity": 3,
+    "uniqueCompositeIdentityCount": 396,
+    "compositeIdentity": [
+      "processId",
+      "processStartTimeUtc",
+      "blockId"
+    ],
+    "samePidLifetimeOverlapCount": 0,
+    "exampleReusedPid": {
+      "processId": 27512,
+      "firstBlockId": "g13r-pr1b-m-b004-ab-s2-goal-count-g32-hetero-grouped-field-b004",
+      "firstProcessStartTimeUtc": "2026-10-08T13:42:57.2674176Z",
+      "secondBlockId": "g13r-pr1b-m-b010-ab-s2-core-r01-s1-hetero-per-agent-b010",
+      "secondProcessStartTimeUtc": "2026-10-08T14:01:32.1002827Z"
+    },
+    "verdict": "OS-PID-REUSE-WITH-NONOVERLAPPING-LIFETIMES; CURRENT-ANALYZER-IDENTITY-CONTRACT-IS-TOO-STRICT"
+  },
+  "dataIntegrityAudit": {
+    "blockManifestFiles": 396,
+    "sampleSummaryFiles": 792,
+    "workloadResultFiles": 792,
+    "memoryGateEvaluationFiles": 792,
+    "hardMemoryFailureBlockCount": 0,
+    "memoryAlertSampleCount": 0,
+    "maximumSampleRetainedManagedGrowthBytes": 70815744,
+    "maximumBlockRetainedManagedGrowthBytes": 128217088,
+    "maximumBlockWorkingSetGrowthBytes": 373817344,
+    "maximumBlockPrivateMemoryGrowthBytes": 421298176,
+    "allCompositeProcessIdentitiesUnique": true,
+    "allSamePidLifetimesNonOverlapping": true
+  },
+  "frozenInputAudit": {
+    "provenanceRelativePath": "Research/Gate13R_PR1B_OrderEffect_Provenance.v10.json",
+    "provenanceSha256": "993f554a03bc52493c3fea116f1206f14746db89e4c14c59d8e4e15befbef320",
+    "boundFileCount": 77,
+    "mismatchCount": 0,
+    "passed": true
+  },
+  "frozenRootAudit": [
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2","treeSha256":"85a3fba48ae687acaa04b7b1f91afe0dc115f6efdde5bcaa4bbffa50e9139557","passed":true},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v9-gate13r-pr1b-order-effect-memory-v2","treeSha256":"5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74","passed":true},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v10-gate13r-pr1b-order-effect-memory-v2","treeSha256":"5d20fbea2e6e734c9feddc2ed199a365bc307caac1a4b2cef3bb680cfebb2d44","passed":true},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2","treeSha256":"d819eb685a119175a5b1e362e7ac14997ff27b6f6696d109a6dd0202546b8d5b","passed":true},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v12-gate13r-pr1b-order-effect-pathsafe-v3","treeSha256":"4ae0c0ea30e65b0cf5e15bbdffeffd8155e7e5de341c262f4ad3d2e00c4f12fe","passed":true},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v13-gate13r-pr1b-order-effect-pathsafe-v4","treeSha256":"34ba634c4cff9d90a4f52b01ceca0372cadb7607dec91cc8bf0d1734dc82cce0","passed":true},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v14-gate13r-pr1b-order-effect-pathsafe-v4","treeSha256":"c9998236dae887c8451f76650422dd6ac7205e6cf82298b454a5b79f9dc75bc9","passed":true},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5","treeSha256":"c9aa248972b2f7b5d5dbfdf4ad0be707d276778f4f04a6485edc0145983e0802","passed":true},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v16-gate13r-pr1b-order-effect-pathsafe-v6","treeSha256":"86e5a49e17070e4cf3003529f364474c30e619b72fff8363090c3b09559e7ebf","passed":true}
+  ],
+  "terminalEnvironment": {
+    "unityProcessCount": 0,
+    "unityLockfilePresent": false,
+    "reservedFormalRootPresent": false
+  },
+  "automaticRetryAuthorized": false,
+  "automaticResumeAuthorized": false,
+  "topUpAuthorized": false,
+  "partialAttemptMergeAuthorized": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

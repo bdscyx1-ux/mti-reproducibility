@@ -1,0 +1,121 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-recovery-authorization-v2",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "authorizationId": "gate14re-me-formal-st-attempt-003-recovery-v2-aa4d6223-f6f2-4a4e-b7f1-7e391cd93045",
+  "authorizationNonce": "dfbfb2a2-d83e-4bb7-8d87-4ad001a84d4a",
+  "status": "AUTHORIZED_ATTEMPT_003_RECOVERY_V2_PREPARATION_AND_COMMAND_GATED_CONTINUATION",
+  "sourceUserAuthorization": {
+    "channel": "current-user-message",
+    "text": "授权当前 attempt-003 自行修复并续跑，从头来时间成本不可接受",
+    "textUtf8Sha256": "c6d4cef14ab9b0f028bf3b0f5d9973bd3d558e4aec136c3994a3653a84712dae",
+    "interpretedScope": "Repair attempt-003 control-plane failures without restarting completed work and continue collection from the first never-started process ordinal; no formal analysis or raw observation inspection."
+  },
+  "priorExactCommandConfirmation": {
+    "text": "确认执行 attempt-003 上述恢复命令",
+    "textUtf8Sha256": "0cee0b757b95506825aac0fae16f2339a8a445be3bca3c23485abe8d57765822",
+    "receiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/recovery-exact-command-confirmation-receipt.v1.json",
+    "receiptSha256": "4e58d33e9a29978a32c2bca8820fc02873fa3f265fb782b8e8f6b4e50d2ee6f9",
+    "appliesOnlyToRecoveryV1Command": true
+  },
+  "commandGate": {
+    "recoveryV2ExactCommandConfirmationRequired": true,
+    "automaticRetryAfterRecoveryV1FailureAuthorized": false,
+    "recoveryV2LaunchPermittedBeforeExactCommandConfirmation": false
+  },
+  "measuredRootRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "evidenceRootRelativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003",
+  "originalAuthorization": {
+    "authorizationId": "gate14re-me-formal-st-local-attempt-003-4e2ed5bc-57ca-43ea-b143-81c942344904",
+    "authorizationNonce": "f858378c-c0ed-4664-b59b-94bb86cfe07a",
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/formal-st-execution-authorization.v5.json",
+    "sha256": "7f37051f0a70594aafde5e58800e1f7e0687c83c4c78d714404163e6348bd1f2"
+  },
+  "frozenBindings": {
+    "implementationManifestSha256": "86b1c84b099849e052f3d9bea7e95da91ec492b98b058b25b284b20ab279ac82",
+    "acquisitionContractSha256": "b668fee1f1d245a3a898f958ea4b81af2fa328e2139d57ceebc162a3fb26a55b",
+    "inputFreezeManifestSha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "operationalResourceBudgetSha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2",
+    "fairnessBindingSha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+    "trustedIdentityRuleSha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+    "timestampComparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMEFormalSTRunnerV5_1.Run",
+    "originalSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_3/Run-Gate14ReMEFormalST.v5_3.ps1",
+    "originalSupervisorSha256": "fcfbc5c080e714c3c3e079797195b455d9a32db29e937ccb37768a34a3cbdda1"
+  },
+  "recoverySupervisor": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/Run-Gate14ReMEFormalST.Attempt003Recovery.v2.ps1",
+    "sha256": "932e2419d499978187f43bde5ef996b2e2e28d54cd8f42c4c745b92f7534fdbe",
+    "importsProcessLifecycleAndIdentityFunctionsFromFrozenOriginalSupervisor": true,
+    "dotSourcesFrozenTimestampComparatorBeforeContinuation": true,
+    "modifiesUnityRunner": false,
+    "modifiesInputsOrSchedule": false
+  },
+  "priorRecoveryState": {
+    "launchReceiptSha256": "d695d44b6b3593923ffc482d120a00c96e04249b2a3fdb7480f7bb3224d1b959",
+    "processLedgerRowsAtV2Boundary": 7519,
+    "processLedgerLastOrdinalAtV2Boundary": 7518,
+    "processLedgerSha256AtV2Boundary": "2374fd4db626878875a7a06310b29630eeba638f6e76133501931d81dab75ce6",
+    "failureLedgerRowsAtV2Boundary": 2,
+    "failureLedgerSha256AtV2Boundary": "fc36def2d515396256767a4105112bc3ac51e56b85d981a08e04bab610d5bd3b",
+    "replacementLedgerRows": 0,
+    "replacementLedgerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "originalFailureReceiptSha256": "de84a01e02805f62f7ac574bd8c62b130b79b5db8c75a7136dba638cbdabbb70",
+    "recoveredIdentityReceiptSha256": "2777453420b5f8cbd3b76b6a5fc10fac94b774fbb78763d6c26349a6c7741aa0",
+    "recoveredAcceptedSuperblockReceiptSha256": "ad4f88cef70076171abf3c42bb853574a64a86fb34ad923ce67846476a2cabad",
+    "recoveryV1AuthorizationSha256": "b59777b49d23cfffe35e76a251975654442b04ae31f78ce862cafa2bc0d7fccf",
+    "recoveryV1SupervisorSha256": "0a7103c0d712f1c2d5420ce5e52c5d35d5852acd44369c785f176853a6d50780",
+    "recoveryV1PreflightReceiptSha256": "299201b1357cdf5c67ded9790ca491297513f0342e0e40d4e2c7038871f6ba7b",
+    "recoveryV1LaunchContractSha256": "3431baaee94d15f7913fe3d58d577f9fe078237015e9e3e82b96c8fdd5e60768",
+    "recoveryV1ExactCommandConfirmationReceiptSha256": "4e58d33e9a29978a32c2bca8820fc02873fa3f265fb782b8e8f6b4e50d2ee6f9",
+    "recoveryV1StartReceiptSha256": "cdb1bcdb6dce5de8244800e156217f827a508edbd089cb0b00646a7a98569cff",
+    "recoveryV1FailureReceiptSha256": "67a19472d7605d9aec2c6b4f538becce0b2dc2da37dad76be47315840e61a878",
+    "recoveryV1ResolutionReceiptSha256": "475e15fa285a3d383a26e7e25b283655341eab0c7ce76776ce6274c274e576e4",
+    "recoveryV1FailureClass": "RECOVERY_SUPERVISOR_TIMESTAMP_COMPARATOR_NOT_LOADED_BEFORE_PRELAUNCH_FINGERPRINT",
+    "firstNeverStartedOrdinal": 7519,
+    "firstNeverStartedOrdinalIdentityLifecycleOrUnityLogExists": false,
+    "preservedEmptySuperblockRoot": {
+      "superblockId": "formal-sb-1242",
+      "relativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003/raw/superblocks/formal-sb-1242",
+      "entryCount": 0,
+      "isReparsePoint": false,
+      "creationTimeUtc": "2026-10-30T03:07:26.7661822Z",
+      "lastWriteTimeUtc": "2026-10-30T03:07:26.7661822Z"
+    }
+  },
+  "recoveryPlan": {
+    "processLedgerRowsAtV2Boundary": 7519,
+    "preserveBothTechnicalFailureRows": true,
+    "deleteOrRewriteFailureRows": false,
+    "preserveV1RecoveryEvidence": true,
+    "resumeFirstNewOrdinal": 7519,
+    "resumeFirstNewSuperblockOrdinal": 1242,
+    "reusePreservedEmptySuperblockRootOrdinal1242": true,
+    "remainingNewUnityProcesses": 324,
+    "rerunExistingAlgorithmLane": false,
+    "replacementPerformed": false,
+    "topUpBeyondFrozenSchedule": false,
+    "mergeAcrossAttempts": false,
+    "skipOrReorderFrozenSchedule": false,
+    "maximumConcurrentUnityProcesses": 1,
+    "automaticRetryAfterAnyNewFailure": false,
+    "terminalDisposition": "ACQUISITION_ONLY_WITH_TWO_AUTHORIZED_CONTROL_PLANE_RECOVERIES_RAW_FROZEN_ACCEPTANCE_PENDING"
+  },
+  "authorizationBoundary": {
+    "formalCollectionContinuationAuthorized": true,
+    "controlPlaneRecoveryAuthorized": true,
+    "operationalContractAmendmentAuthorized": true,
+    "scientificDesignChangeAuthorized": false,
+    "formalAcceptanceExecutionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "rankingOrWinnerAuthorized": false,
+    "rawAlgorithmObservationInspectionAuthorized": false,
+    "independentReadOnlyOfflineAcceptanceRequired": true
+  },
+  "createdAtUtc": "2026-10-30T03:12:46.7671868Z"
+}

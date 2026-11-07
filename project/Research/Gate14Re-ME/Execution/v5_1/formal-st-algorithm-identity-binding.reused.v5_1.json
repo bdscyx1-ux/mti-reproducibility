@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-formal-st-algorithm-identity-binding-reuse-v5",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "AUTHORIZED_REUSE_OF_QUALIFIED_SIX_ALGORITHM_BIJECTION_FOR_FORMAL_ST",
+  "authorizationId": "gate14re-me-formal-st-local-identity-reuse-cdd14912-337d-434d-87f7-994d4fc73abc",
+  "authorizationSource": {
+    "userVerbatim": "我不需要再制作迁移包了，根据迁移机上给的这个Unity超时问题进行修复，之后授权在本机启动formal ST",
+    "userVerbatimSha256": "d46d8337c9506cd228526f6f33ebd7d9abdddf4ede05ce22beaf56af466b283c"
+  },
+  "source": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/identity/anonymous-identity-binding.sealed.v4.json",
+    "sha256": "77b88a23a559642d455edf0d4caad9a1f9c06b7ddf33703b8fd100f4a1878bd2",
+    "identityBindingId": "gate14re-me-qualification-anonymous-six-lane-v4",
+    "reusedWithoutPermutationChange": true
+  },
+  "namedAlgorithms": [
+    "A*-R",
+    "BiA*-R",
+    "D*L",
+    "LPA*",
+    "C-FF",
+    "IDFF"
+  ],
+  "anonymousLaneIds": [
+    "ALG-A",
+    "ALG-B",
+    "ALG-C",
+    "ALG-D",
+    "ALG-E",
+    "ALG-F"
+  ],
+  "bijection": [
+    {"algorithmId": "A*-R", "anonymousLaneId": "ALG-D"},
+    {"algorithmId": "BiA*-R", "anonymousLaneId": "ALG-A"},
+    {"algorithmId": "D*L", "anonymousLaneId": "ALG-C"},
+    {"algorithmId": "LPA*", "anonymousLaneId": "ALG-F"},
+    {"algorithmId": "C-FF", "anonymousLaneId": "ALG-E"},
+    {"algorithmId": "IDFF", "anonymousLaneId": "ALG-B"}
+  ],
+  "authorizationBoundary": {
+    "formalInputScheduleBindingAuthorized": true,
+    "formalCollectionAuthorizedByThisFile": false,
+    "formalAnalysisAuthorizedByThisFile": false,
+    "algorithmRankingAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "migrationPackageModified": false
+  }
+}

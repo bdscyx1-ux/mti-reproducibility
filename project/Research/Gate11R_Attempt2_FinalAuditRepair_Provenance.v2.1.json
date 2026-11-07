@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "provenanceId": "gate11r-attempt2-final-audit-csv-header-repair-v2.1",
+  "createdAtUtc": "2026-10-07T03:13:50.6138612Z",
+  "failureReceipt": {
+    "path": "Research/Verification/Gate11R_5pct/v2/FinalAudit/FinalAuditAttempt1_Failure_Receipt.v2.1.json",
+    "sha256": "4b813036e0dd7f6a27d1efdeefcaeaf9c89a1d684132aeb37d665778503c334b"
+  },
+  "failedScript": {
+    "path": "Research/Verification/Run-Gate11RFinalAuditV2.ps1",
+    "sha256": "698f1ba10d419561fd50d7224c93c4a8bea4c3938167d94b66776910a961e255"
+  },
+  "repairedScript": {
+    "path": "Research/Verification/Run-Gate11RFinalAuditV2_1.ps1",
+    "rawBytes": 25983,
+    "sha256": "0b25b3281cac34a2e78023cc77f853fc138802341280839cca6c1a70e2da2359"
+  },
+  "mechanicalChanges": [
+    "kind -> scope",
+    "path -> relative_path",
+    "raw_bytes -> bytes"
+  ],
+  "changedLineCount": 4,
+  "parserErrors": 0,
+  "bundleOrResearchSemanticsChanged": false,
+  "gate12RAuthorized": false,
+  "gate13RAuthorized": false
+}

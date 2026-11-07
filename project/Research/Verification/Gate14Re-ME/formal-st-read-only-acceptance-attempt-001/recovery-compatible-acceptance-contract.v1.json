@@ -1,0 +1,170 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-recovery-compatible-acceptance-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_ATTEMPT_003_RECOVERY_COMPATIBLE_READ_ONLY_ACCEPTANCE",
+  "sourceMeasuredRootRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "outputRootRelativePath": "Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-001",
+  "adapterRelativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/gate14re_me_formal_st_acceptance_attempt003_adapter_v1.py",
+  "adapterSha256": "b4a5774bcbbdc7b3b76bb5fc2050f61c8b90ecfb0ef9c3bac01d1a1501e79da9",
+  "baseAcceptanceToolSha256": "18e876973c8e68a9c836a207adc5fda3ffdbe7158fd5c5102fbcf59dcf80ac82",
+  "projectFileBindings": [
+    {
+      "role": "frozen base acceptance tool",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_formal_st_acceptance_v5.py",
+      "sha256": "18e876973c8e68a9c836a207adc5fda3ffdbe7158fd5c5102fbcf59dcf80ac82"
+    },
+    {
+      "role": "frozen base acceptance contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-independent-acceptance-contract.v5_0.json",
+      "sha256": "c807266e6ed8d9cd3c3a57e3aa72bfe6e82a5f42db06f10762a9a713bd72f366"
+    },
+    {
+      "role": "formal acceptance schema",
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/Schemas/formal-st-acceptance-schema.v5_0.json",
+      "sha256": "f86fd2507e3bacfbb8b2141af1aced276d6f7f1639e83c1cd55ff7c585015af6"
+    },
+    {
+      "role": "raw output contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-raw-output-contract.v5_0.json",
+      "sha256": "a4585821cca40cf1ebb28626de60c95f213faacabfe7dfbcd002b9cf9586d2f5"
+    },
+    {
+      "role": "v5.3 acquisition contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_3/formal-st-acquisition-contract.v5_3.json",
+      "sha256": "b668fee1f1d245a3a898f958ea4b81af2fa328e2139d57ceebc162a3fb26a55b"
+    },
+    {
+      "role": "v5.3 implementation manifest",
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_3/formal-st-implementation-manifest.v5_3.json",
+      "sha256": "86b1c84b099849e052f3d9bea7e95da91ec492b98b058b25b284b20ab279ac82"
+    },
+    {
+      "role": "formal schedule",
+      "relativePath": "Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/schedule/formal-st-williams-schedule.v5.jsonl",
+      "sha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3"
+    },
+    {
+      "role": "formal input freeze manifest",
+      "relativePath": "Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/formal-input-freeze-manifest.v5.json",
+      "sha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe"
+    },
+    {
+      "role": "typed Parquet runtime manifest",
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    {
+      "role": "frozen Python executable",
+      "relativePath": "Research/PackageStaging/Gate14Re-ME/formal-st/v5/attempt-005/Gate14ReME-FormalST-v5-end-to-end-attempt-005/MigrationRuntime/Python/python.exe",
+      "sha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+    },
+    {
+      "role": "original execution authorization",
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/formal-st-execution-authorization.v5.json",
+      "sha256": "7f37051f0a70594aafde5e58800e1f7e0687c83c4c78d714404163e6348bd1f2"
+    },
+    {
+      "role": "recovery authorization v1",
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/attempt-003-recovery-authorization.v1.json",
+      "sha256": "b59777b49d23cfffe35e76a251975654442b04ae31f78ce862cafa2bc0d7fccf"
+    },
+    {
+      "role": "recovery authorization v2",
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/attempt-003-recovery-authorization.v2.json",
+      "sha256": "de1f538b20b96243522d247df2d35f5627c856522342723bfdabdef0e82986a4"
+    },
+    {
+      "role": "collection terminal evidence seal",
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/collection-terminal-evidence-seal.v1.json",
+      "sha256": "486ca3743d630ba632d83b282d80146856d60bfb024a7931ba2c2e0c339a7997"
+    }
+  ],
+  "sourceControlBindings": [
+    {
+      "role": "launch receipt",
+      "relativePath": "_control/launch-receipt.v2.json",
+      "sha256": "d695d44b6b3593923ffc482d120a00c96e04249b2a3fdb7480f7bb3224d1b959"
+    },
+    {
+      "role": "acquisition complete",
+      "relativePath": "_control/acquisition-complete.v5.json",
+      "sha256": "c7964a01ed25f1b5c50b50f91a772946de8e34d5c313e1586d28df7f780343bc"
+    },
+    {
+      "role": "acceptance pending",
+      "relativePath": "_control/acceptance-pending.v5.json",
+      "sha256": "17c1eaab202f3c3d1ca732fbb6e648ae3023812df4f00f92a81481511cb4704d"
+    },
+    {
+      "role": "acquisition terminal",
+      "relativePath": "_control/acquisition-terminal-receipt.v5.json",
+      "sha256": "87ee435e9e0aaa564ed8c2f989b65588d66198b492a315625a8d2f6a5b818d07"
+    },
+    {
+      "role": "acquisition freeze manifest",
+      "relativePath": "_control/acquisition-freeze-manifest.v5.json",
+      "sha256": "6ff425c9fbd2c8a8c8d7d9855283aede09f61fb090e56ca7e89e406572f7459c"
+    },
+    {
+      "role": "preserved failure receipt",
+      "relativePath": "_control/failure-receipt.v2.json",
+      "sha256": "de84a01e02805f62f7ac574bd8c62b130b79b5db8c75a7136dba638cbdabbb70"
+    },
+    {
+      "role": "preserved failure ledger",
+      "relativePath": "_control/failures-and-voids.raw.v5.jsonl",
+      "sha256": "fc36def2d515396256767a4105112bc3ac51e56b85d981a08e04bab610d5bd3b"
+    },
+    {
+      "role": "replacement ledger",
+      "relativePath": "_control/replacement-ledger.raw.v5.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "role": "recovery start v1",
+      "relativePath": "_control/recovery-start-receipt.v1.json",
+      "sha256": "cdb1bcdb6dce5de8244800e156217f827a508edbd089cb0b00646a7a98569cff"
+    },
+    {
+      "role": "failure resolution v1",
+      "relativePath": "_control/failure-resolution.v1.json",
+      "sha256": "475e15fa285a3d383a26e7e25b283655341eab0c7ce76776ce6274c274e576e4"
+    },
+    {
+      "role": "recovery start v2",
+      "relativePath": "_control/recovery-start-receipt.v2.json",
+      "sha256": "89800f1da671abc0a1fe9e03081b620121a7afc5a7adc975cf1fa0c2f5a71a5d"
+    },
+    {
+      "role": "failure resolution v2",
+      "relativePath": "_control/failure-resolution.v2.json",
+      "sha256": "c6c66860450293af6b9889963de9cb48cfbecaa049e5bae0b0eb239e81b74b47"
+    }
+  ],
+  "authorizedCompatibilityDeltas": {
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMEFormalSTRunnerV5_1.Run",
+    "acquisitionTerminalStatus": "PASS_ACQUISITION_ONLY_WITH_AUTHORIZED_CONTROL_PLANE_RECOVERY_RAW_FROZEN_ACCEPTANCE_PENDING",
+    "preservedTechnicalFailureRows": 2,
+    "resolvedControlPlaneFailures": 2,
+    "reconstructedLedgerRows": 1,
+    "resumedNewUnityProcesses": 324,
+    "replayedAlgorithmLanes": 0,
+    "replacementRows": 0
+  },
+  "unchangedScientificAcceptance": {
+    "scheduleRows": 1296,
+    "acceptedSuperblocks": 1296,
+    "namedAlgorithmLanes": 7776,
+    "eventGroupRows": 186624,
+    "completeSealedInventoryReplayRequired": true,
+    "completeRawDeliveryRequired": true,
+    "typedParquetFullValueTypeOrderRoundTripRequired": true,
+    "sourceTreeMetadataDigestBeforeAndAfterMustMatch": true,
+    "sourceMeasuredRootWriteBack": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "mqOrMtPerformed": false
+  },
+  "createdAtUtc": "2026-10-30T10:19:31.5850833Z"
+}

@@ -1,0 +1,58 @@
+{
+    "schemaVersion":  2,
+    "planId":  "g12r-v-shared-core-r01-s1-shared-shared-b001-plan",
+    "designId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "blockId":  "g12r-v-shared-core-r01-s1-shared-shared-b001",
+    "campaignId":  "g12r-v-shared-core-r01-s1-shared-shared",
+    "scenarioRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios/core-r01-s1-shared.scenario.json",
+    "scenarioSourceSha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+    "comparisonCohortId":  "four-algorithm-shared-goal-v1",
+    "block":  1,
+    "formalCampaign":  false,
+    "analysisRole":  "excluded-verification",
+    "verificationInjectedFailurePosition":  0,
+    "pilotPlanRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Plan.v2.json",
+    "pilotPlanSha256":  "c76a0a1dc2ecc4efbc4f5419bee9890cf275c9b1fec7e4c64b22d8e2688849cf",
+    "specificationRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Specification.v1.md",
+    "specificationSha256":  "a889ee642d6c468c32aff9296a94afc23164232bcd8e3e6ec4729d427723fc76",
+    "testDesignRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Test_Design.v1.md",
+    "testDesignSha256":  "2d275beffa40e6ce66d16551f9313227e486d230772de32eb5affbae97595930",
+    "amendmentRelativePath":  "Research/Gate12R_Execution_Authorization.v1.json",
+    "amendmentSha256":  "ae437dddc19576cfcb37d1dbfb48905a0ea3cc9014328c4237d081cb0464cce0",
+    "commandRelativePath":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV2.cs",
+    "commandSha256":  "2c1fdd6d8ad4edd8ac36f8d9fb3962e909673cf0eb0a14d85814f975f01b9b06",
+    "provenanceRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Provenance.v6.json",
+    "provenanceSha256":  "bb8839056e4ad7d570958a0682fba2b2f37e6214efbaf47b7508230289e5dce9",
+    "telemetryProbeResultRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v4/TelemetryProbe/v1/telemetry-probe-result.json",
+    "telemetryProbeResultSha256":  "31b4536d57a52de5e9c7979bad4ad8042c09b5a5c78f1aa4f11a8f2fdcfb96c7",
+    "entries":  [
+                    {
+                        "position":  1,
+                        "algorithmId":  "A*-R",
+                        "predecessorAlgorithmId":  "NONE",
+                        "runId":  "g12r-v-shared-core-r01-s1-shared-shared-b001-p01-astar-r",
+                        "directory":  "runs/p01-astar-r"
+                    },
+                    {
+                        "position":  2,
+                        "algorithmId":  "D*L",
+                        "predecessorAlgorithmId":  "A*-R",
+                        "runId":  "g12r-v-shared-core-r01-s1-shared-shared-b001-p02-dstar-l",
+                        "directory":  "runs/p02-dstar-l"
+                    },
+                    {
+                        "position":  3,
+                        "algorithmId":  "IDFF",
+                        "predecessorAlgorithmId":  "D*L",
+                        "runId":  "g12r-v-shared-core-r01-s1-shared-shared-b001-p03-idff",
+                        "directory":  "runs/p03-idff"
+                    },
+                    {
+                        "position":  4,
+                        "algorithmId":  "C-FF",
+                        "predecessorAlgorithmId":  "IDFF",
+                        "runId":  "g12r-v-shared-core-r01-s1-shared-shared-b001-p04-cff",
+                        "directory":  "runs/p04-cff"
+                    }
+                ]
+}

@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "checkpointKind": "gate13r-pr2-attempt2-failure-diagnosis-checkpoint-v1",
+  "savedAtUtc": "2026-10-09T02:50:00Z",
+  "savedAtAsiaShanghai": "2026-10-09T10:50:00+08:00",
+  "terminalStatus": "ATTEMPT2-EVIDENCE-FROZEN / PRIMARY-MEMORY-FAILURE-DIAGNOSED / SECONDARY-QUIESCENCE-FAILURE-DIAGNOSED / MEMORY-POLICY-UNFROZEN / FORMAL-ATTEMPT3-NOT-AUTHORIZED / FORMAL-ANALYSIS-NOT-AUTHORIZED / GATE14R-NOT-AUTHORIZED",
+  "additionalVerdict": "TARGETED-NON-FORMAL-MEMORY-PILOT-REQUIRED",
+  "authorizationScopeCompleted": true,
+  "failedAttempt": {
+    "absoluteRoot": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+    "status": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "excludedFromFormalAnalysis": true,
+    "rawDataComplete": false,
+    "rawDataCommitState": "NOT-COMMITTED / ANALYSIS-PHASE-NOT-REACHED",
+    "completeProcesses": 933,
+    "plannedProcesses": 3552,
+    "completeSamples": 3732,
+    "plannedSamples": 10176,
+    "representedProcessesIncludingFailedPartial": 934,
+    "failedGlobalProcessOrdinal": 934,
+    "failedCampaignId": "grid-scale-g256-shared--shared",
+    "failedBlockId": "g13rpr2-c52-b0022",
+    "fileCount": 28020,
+    "rawBytes": 8536611302,
+    "canonicalOrdinalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "allFilesReadOnly": true
+  },
+  "telemetryAudit": {
+    "memoryEvaluationCount": 3736,
+    "validMemoryEvaluationCount": 3736,
+    "invalidMemoryEvaluationCount": 0,
+    "completeBlockManifestCount": 933,
+    "blockPlanCount": 934,
+    "sampleSummaryCount": 3735,
+    "verdictCounts": {
+      "PASS": 3732,
+      "MEMORY-ALERT-128MIB": 3,
+      "HARD-FAIL": 1
+    },
+    "blockMaximums": {
+      "managedGrowthBytes": {
+        "maximum": 190205952,
+        "currentHardLimitBytes": 268435456,
+        "exceededCount": 0
+      },
+      "workingSetGrowthBytes": {
+        "maximum": 614977536,
+        "currentHardLimitBytes": 536870912,
+        "exceededBlockCount": 1,
+        "atOrAbove90PercentCount": 1
+      },
+      "privateMemoryGrowthBytes": {
+        "maximum": 646492160,
+        "currentHardLimitBytes": 536870912,
+        "exceededBlockCount": 1,
+        "atOrAbove90PercentCount": 6
+      }
+    }
+  },
+  "primaryFailure": {
+    "kind": "BLOCK-NATIVE-MEMORY-ELIGIBILITY-HARD-FAIL",
+    "durableReasonCode": "HARD-FAIL-BLOCK-WORKING-SET-512MIB+HARD-FAIL-BLOCK-PRIVATE-MEMORY-512MIB",
+    "firstObservedThresholdCrossing": {
+      "position": 1,
+      "algorithmId": "A*-R",
+      "predecessorAlgorithmId": "NONE",
+      "workingSetGrowthBytes": 603987968,
+      "privateMemoryGrowthBytes": 646492160,
+      "recordedVerdict": "PASS-BECAUSE-NONFINAL-ENFORCEMENT-DEFERRED"
+    },
+    "finalEnforcementPoint": {
+      "position": 4,
+      "algorithmId": "C-FF",
+      "predecessorAlgorithmId": "IDFF",
+      "workingSetGrowthBytes": 614866944,
+      "privateMemoryGrowthBytes": 641327104,
+      "retainedManagedGrowthBytes": 89227264,
+      "recordedVerdict": "HARD-FAIL"
+    },
+    "causalInterpretation": {
+      "cffCausedGrowth": "NOT-IDENTIFIABLE",
+      "astarCausedGrowth": "NOT-IDENTIFIABLE",
+      "algorithmEffect": "NOT-IDENTIFIABLE",
+      "positionEffect": "NOT-IDENTIFIABLE",
+      "predecessorEffect": "NOT-IDENTIFIABLE",
+      "nativeLeak": "NOT-ESTABLISHED",
+      "scenarioResidency": "PLAUSIBLE-BUT-NOT-PROVEN"
+    }
+  },
+  "secondaryFailure": {
+    "kind": "POST-EXIT-QUIESCENCE-FAILURE",
+    "cause": "Persistent zero-byte UnityLockfile after Unity and the owned process had exited",
+    "maskedPrimaryInOuterStatus": true,
+    "primaryToSecondarySeconds": 60.731095,
+    "cleanupAuthorizedAndCompleted": true,
+    "cleanupReceiptRelativePath": "Research/Gate13R_PR2_Attempt2_Stale_Lock_Cleanup_Receipt.v1.json",
+    "cleanupReceiptSha256": "f960bef811a05878dd1ea1430ed11ad16b311c2be22cafa774223f69a6d7017b",
+    "lockCurrentlyAbsent": true,
+    "cleanupChangedAttemptDisposition": false
+  },
+  "candidateMemoryPolicies": [
+    {
+      "nativeDeltaMiB": 512,
+      "observedEitherExceededBlockCount": 1,
+      "observedNearMissWorkingSetAtOrAbove90PercentCount": 1,
+      "observedNearMissPrivateAtOrAbove90PercentCount": 6,
+      "status": "UNFROZEN"
+    },
+    {
+      "nativeDeltaMiB": 640,
+      "observedEitherExceededBlockCount": 0,
+      "observedNearMissWorkingSetAtOrAbove90PercentCount": 1,
+      "observedNearMissPrivateAtOrAbove90PercentCount": 1,
+      "status": "UNFROZEN"
+    },
+    {
+      "nativeDeltaMiB": 768,
+      "observedEitherExceededBlockCount": 0,
+      "observedNearMissWorkingSetAtOrAbove90PercentCount": 0,
+      "observedNearMissPrivateAtOrAbove90PercentCount": 0,
+      "status": "UNFROZEN"
+    },
+    {
+      "nativeDeltaMiB": 1024,
+      "observedEitherExceededBlockCount": 0,
+      "observedNearMissWorkingSetAtOrAbove90PercentCount": 0,
+      "observedNearMissPrivateAtOrAbove90PercentCount": 0,
+      "status": "UNFROZEN"
+    }
+  ],
+  "candidatePolicyDecision": {
+    "selectedPolicy": null,
+    "status": "MEMORY-POLICY-UNFROZEN / USER-DECISION-REQUIRED",
+    "selectionBecauseAttempt2WouldPassProhibited": true,
+    "selectionUsingAlgorithmPerformanceDirectionProhibited": true,
+    "prospectiveBalancedPilotRequired": true
+  },
+  "candidateFailurePrecedenceRevision": {
+    "status": "VALIDATED-CANDIDATE / NOT-ACTIVE",
+    "primaryRule": "Preserve durable Unity/block failure as primary",
+    "secondaryRule": "Append post-exit quiescence failure as secondary",
+    "failClosedUnchanged": true,
+    "currentWrapperModified": false
+  },
+  "validation": {
+    "syntheticTests": "23/23 passed",
+    "canonicalOrderRepairTests": "4/4 passed",
+    "enforcementBoundaryTests": "11/11 passed",
+    "enforcementBoundaryRepairTests": "6/6 passed",
+    "failurePrecedenceTestsCurrentPowerShell": "10/10 passed",
+    "failurePrecedenceTestsWindowsPowerShell51": "10/10 passed",
+    "deterministicRegeneration": "5/5 files byte-identical",
+    "finalValidationOnlyAudit": "21/21 passed",
+    "frozenInputHashEquality": true,
+    "unityProcessCount": 0,
+    "unityInvokedByFd1": false,
+    "attempt3RootExists": false,
+    "attempt3ReceiptExists": false
+  },
+  "provenance": {
+    "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Provenance.v1.json",
+    "sha256": "f192265e12155d0e56e1aa94e18cea1305b66e2fbc0eeb0eeb6ad9618aeb3c3a"
+  },
+  "nextAuthorizedAction": null,
+  "recommendedNextAction": "Authorize one versioned targeted NON-FORMAL balanced memory pilot with stage-separated telemetry; do not authorize formal attempt 3 yet."
+}

@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "scope": "Comparable axes edges and equal-span widths; not a font or collision audit",
+  "tolerance_pt": 1.5,
+  "panels": [
+    {
+      "axis": 0,
+      "row": [
+        0,
+        1
+      ],
+      "column": [
+        0,
+        1
+      ],
+      "rectangle_pt": [
+        135.792,
+        334.34083018867926,
+        328.3137391304348,
+        476.928
+      ]
+    },
+    {
+      "axis": 1,
+      "row": [
+        0,
+        1
+      ],
+      "column": [
+        1,
+        2
+      ],
+      "rectangle_pt": [
+        386.0702608695652,
+        334.34083018867926,
+        578.592,
+        476.928
+      ]
+    },
+    {
+      "axis": 2,
+      "row": [
+        1,
+        2
+      ],
+      "column": [
+        0,
+        2
+      ],
+      "rectangle_pt": [
+        135.792,
+        51.83999999999999,
+        578.592,
+        230.0739622641509
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "axes": [
+        0,
+        1
+      ],
+      "check": "row_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        0,
+        1
+      ],
+      "check": "equal_span_width",
+      "error_pt": 2.842170943040401e-14
+    }
+  ],
+  "failures": []
+}

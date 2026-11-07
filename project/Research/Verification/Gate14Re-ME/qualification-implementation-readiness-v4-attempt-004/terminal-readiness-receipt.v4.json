@@ -1,0 +1,63 @@
+{
+  "schema": "gate14re-me-qualification-readiness-terminal-receipt-v4",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-implementation-readiness-v4-attempt-004",
+  "completedAtUtc": "2026-10-19T12:28:55.8664348Z",
+  "status": "VOID_DRAFT_NOT_TERMINAL_SUPERSEDED_PENDING_ORACLE_SIMPLIFICATION",
+  "auditResult": {
+    "relativePath": "readiness-audit-result.v4.json",
+    "sha256": "6976e79fb90365679df1fbda0c71a5a582d2fe5d51d9cb149c9a42dbec4814c4",
+    "checksPassed": 11,
+    "checksFailed": 0
+  },
+  "freezeManifest": {
+    "relativePath": "readiness-freeze-manifest.v4.json",
+    "bytes": 3621,
+    "sha256": "6288d161b298ea58bbe2ebc378e66d91b73eb499c395648d10d3340450c3834f"
+  },
+  "design": {
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81],
+    "coreCells": 36,
+    "coreSuperblocks": 108,
+    "stressSuperblocks": 18,
+    "totalSuperblocks": 126,
+    "algorithmLanes": 756,
+    "totalFreshProcesses": 895,
+    "replacementMaximum": 0
+  },
+  "formalB": {
+    "finalB": null,
+    "provisionalMinimumB": 36,
+    "candidateGridRule": "positive multiples of 36",
+    "requiresBoundedQualificationPassAndAnonymousPowerRefreeze": true
+  },
+  "attempt009": {
+    "state": "PAUSED_AND_SEALED_QUALIFICATION_NOT_PASS",
+    "terminalSealReceiptSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705",
+    "measuredFileManifestSha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f",
+    "sourceRootsModified": false
+  },
+  "acceptance": {
+    "attempt009StreamingFeasibilityStatus": "PASS_FEASIBILITY_STREAMING_ESSENTIAL_ACCEPTANCE_FROZEN",
+    "attempt009StreamingFeasibilityTerminalSha256": "8e23efa3dda65b437eb096c48740c68df7f0271859c7fabf28e40e664e03ef9e",
+    "reusableV41AcceptanceStaticReadiness": "PASS",
+    "futureV4DataRunPerformed": false
+  },
+  "executionBoundary": {
+    "userRequestedFreezeHold": true,
+    "authoritativeFinalReadinessReceipt": false,
+    "qualificationExecutionAuthorized": false,
+    "qualificationExecutionStarted": false,
+    "activeQualificationUnityRunnerCount": 0,
+    "newMeasuredRootCreated": false,
+    "newDeliveryRootCreated": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmObservationsRead": false,
+    "rankingOrWinnerComputed": false,
+    "migrationPackageBuilt": false
+  },
+  "meaning": "Non-authoritative draft preserved for audit history. The user placed freezing on hold before this draft became terminal because oracle-stage simplification had not yet been deployed. This receipt is not readiness PASS, qualification PASS, or a final B decision."
+}

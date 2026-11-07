@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-discrepancy-audit-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-discrepancy-audit-attempt-003",
+  "status": "FAILED_CLOSED_UNITY_EXECUTABLE_IDENTITY_DISCREPANCY_AUDIT",
+  "failedAtUtc": "2026-10-17T09:47:43.5378170Z",
+  "classification": "NOT_ADJUDICATED",
+  "exceptionType": "System.InvalidOperationException",
+  "exactFailure": "Unity identity probe exited nonzero: 1",
+  "stackTrace": "at Require-Condition, H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Tools\\Invoke-Gate14ReMEUnityExecutableIdentityAuditV3.ps1: line 39\r\nat <ScriptBlock>, H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Tools\\Invoke-Gate14ReMEUnityExecutableIdentityAuditV3.ps1: line 574\r\nat <ScriptBlock>, <No file>: line 2",
+  "unityInvocationCount": 1,
+  "retryPerformed": false,
+  "signalOrForcedTerminationSent": false,
+  "priorAttemptEvidence": {
+    "beforeInventoryDigestSha256": "08a33603608d5f34ef0100424a5ff5269147d2945a90abd3395039af590eede8",
+    "afterInventoryDigestSha256": "08a33603608d5f34ef0100424a5ff5269147d2945a90abd3395039af590eede8",
+    "unchanged": true
+  },
+  "boundary": {
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "transientUnityCacheCleanup": []
+  }
+}

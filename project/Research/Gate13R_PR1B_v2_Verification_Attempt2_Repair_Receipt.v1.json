@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr1b-v2-verification-attempt2-operational-repair-v1",
+  "createdAtUtc": "2026-10-08T12:29:21.2384582Z",
+  "createdAtAsiaShanghai": "2026-10-08T20:29:21.2384582+08:00",
+  "authorizationBasis": "The user authorized versioned automatic repair and validation before measured execution under Gate 13R-PR1B v2; measured pilot retry, resume, top-up, or merge remain prohibited after measured execution begins.",
+  "diagnosisRelativePath": "Research/Gate13R_PR1B_v2_Verification_Attempt1_Failure_Diagnosis.v1.json",
+  "allowedChanges": [
+    "Use the frozen lock-hygiene module's positive role for the successful Unity memory-policy self-test.",
+    "Dispose the completed Start-Process object before post-exit quiescence so redirected handles are released deterministically.",
+    "Use bounded shared-read hashing on the pre-pilot failure path and record an explicit hash-unavailable status instead of masking the original exception.",
+    "Route the next verification attempt to a fresh v10 verification root."
+  ],
+  "prohibitedChanges": [
+    "No memory threshold change.",
+    "No schedule, AB/BA, scenario, contrast, endpoint, bootstrap, or sample-cardinality change.",
+    "No modification of v9 or any frozen upstream evidence.",
+    "No creation of formal output or formal execution receipt.",
+    "No Gate 14R work."
+  ],
+  "scientificContractChanged": false,
+  "pilotRootRemains": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2",
+  "newVerificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v10-gate13r-pr1b-order-effect-memory-v2",
+  "formalCampaign": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "gate14re-me-formal-st-anonymous-power-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-anonymous-power-attempt-001",
+  "recordedAtUtc": "2026-10-20T02:35:40.6966007Z",
+  "source": "direct user message in the controlling Codex thread",
+  "sourceTextExact": "我授权统一 10% MIPE 规则：D1 几何均值和 P95、D2、D3、D4 的改善阈值均为 ratio≤0.90；D5、D6、D7 的每个 log2 轴单位斜率差阈值均为≤ln(0.90)=-0.1053605。省略 S5 movement-transfer sentinel，但保留全部 correctness/oracle 硬门。授权只使用 identity-blind nuisance inputs 计算功效，并在 B=36、72、108、144 中选择满足功效≥0.90的最小 B；如果该 B 的保守规划预算达到或超过168小时，则停止冻结并先提交简化 ST 方案。",
+  "normalizedAuthorization": {
+    "lowerIsBetter": true,
+    "ratioMipe": 0.9,
+    "logMipeExact": -0.10536051565782628,
+    "domains": {
+      "D1_DYNAMIC_LATENCY": ["geometric mean ratio <= 0.90", "P95 ratio <= 0.90"],
+      "D2_GRID_READ_WORK": "ratio <= 0.90",
+      "D3_DYNAMIC_ALLOCATION": "ratio <= 0.90",
+      "D4_PERSISTENT_STATE_BYTES": "ratio <= 0.90",
+      "D5_AGENT_COUNT_SCALING": "slope difference per frozen log2 axis unit <= ln(0.90)",
+      "D6_CHANGE_FOOTPRINT_SCALING": "slope difference per frozen log2 axis unit <= ln(0.90)",
+      "D7_GRID_SIZE_SCALING": "slope difference per frozen log2 grid-cell-count unit <= ln(0.90)"
+    },
+    "movementTransferSentinel": "OMITTED",
+    "correctnessAndOracleHardGatesRetained": true,
+    "powerInputs": "identity-blind nuisance inputs only",
+    "candidateB": [36, 72, 108, 144],
+    "targetPowerAtLeast": 0.9,
+    "selectionRule": "smallest candidate B meeting the frozen power criterion",
+    "sevenDayStopRuleHours": 168
+  },
+  "authorizationBoundary": {
+    "formalSTCollectionAuthorized": false,
+    "MQOrMTAuthorized": false,
+    "algorithmEffectInterpretationRankingOrWinnerAuthorized": false,
+    "migrationPackageBuildAuthorized": false,
+    "packageStagingInstallerCredentialCopyOrZipAuthorized": false
+  }
+}

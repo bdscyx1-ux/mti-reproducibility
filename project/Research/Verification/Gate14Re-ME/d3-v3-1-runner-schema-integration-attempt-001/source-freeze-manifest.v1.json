@@ -1,0 +1,100 @@
+{
+  "schema": "gate14re-me-d3-v3-1-runner-schema-integration-source-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-runner-schema-integration-attempt-001",
+  "status": "FROZEN_D3_V3_1_RUNNER_SCHEMA_INTEGRATION_ARTIFACTS",
+  "frozenAtUtc": "2026-10-17T08:14:27.3664256Z",
+  "artifacts": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_1_Runner_Schema_Integration_Authorization.v1.json",
+      "lengthBytes": 3090,
+      "sha256": "f58a70591bf24d1c9e7800cfc27134a582cd9ab1c89197e2b2f44e950c36f2a2"
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_1_Runner_Schema_Integration_Plan.v1.md",
+      "lengthBytes": 3038,
+      "sha256": "e7dfb8ead352c132e152315c4abf7a1bd63688be59fb8c0907030232cdb52e0c"
+    },
+    {
+      "role": "managed-d3-window-contracts",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+      "lengthBytes": 14453,
+      "sha256": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902"
+    },
+    {
+      "role": "managed-d3-window-contracts-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta",
+      "lengthBytes": 243,
+      "sha256": "01437ac0e00e8d95d06fec5873aa087bb9292d30d2d54ac3b233d17308b83aff"
+    },
+    {
+      "role": "qualification-runner-v2",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "lengthBytes": 77345,
+      "sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    },
+    {
+      "role": "qualification-runner-v2-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta",
+      "lengthBytes": 243,
+      "sha256": "35fb83fbbf5b516d392f42a41e3938e83c92707d13140cbb086c5637da0b3a41"
+    },
+    {
+      "role": "algorithm-free-integration-self-check",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V31RunnerSchemaIntegrationSelfCheckV1.cs",
+      "lengthBytes": 28417,
+      "sha256": "b09edd09a6f675a8bc28358b1dbb1cbb5910548968dab419ea512cfd0b78df94"
+    },
+    {
+      "role": "algorithm-free-integration-self-check-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V31RunnerSchemaIntegrationSelfCheckV1.cs.meta",
+      "lengthBytes": 243,
+      "sha256": "ff9759ab59d702e080fedfa02f322b52a0f0bb79818c1f4b16a27cabd1d115da"
+    },
+    {
+      "role": "output-schema-v2",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+      "lengthBytes": 10470,
+      "sha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb"
+    },
+    {
+      "role": "integrated-instrument-contract-v3",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "lengthBytes": 4771,
+      "sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"
+    }
+  ],
+  "parentBindings": [
+    {
+      "role": "d3-v3-1-instrument-freeze-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/freeze-receipt.v1.json",
+      "sha256": "23df3757a0cac246b5d120c9ef025a2861b2cc062e4b920c42fbb0b450147bc8"
+    },
+    {
+      "role": "qualified-d3-v3-1-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    {
+      "role": "protected-runner-v1",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV1.cs",
+      "sha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033"
+    },
+    {
+      "role": "protected-output-schema-v1",
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-output-schema.v1.json",
+      "sha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c"
+    }
+  ],
+  "boundary": {
+    "scheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "analysisRankingOrWinner": false
+  }
+}

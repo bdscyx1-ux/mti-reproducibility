@@ -1,0 +1,268 @@
+{
+  "schema": "gate14re-mq-formal-implementation-manifest-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "FROZEN_IMPLEMENTATION_AND_SCHEDULE_READY_FOR_SEPARATE_LAUNCH_AUTHORIZATION",
+  "artifactCount": 42,
+  "artifacts": [
+    {
+      "role": "formal-runner-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQFormalRunnerV2.cs",
+      "bytes": 73797,
+      "sha256": "108c73d716dddea3fff48e69a8381d3e802bcde3d3d28572b2626611dc1305ca"
+    },
+    {
+      "role": "formal-runner-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQFormalRunnerV2.cs.meta",
+      "bytes": 243,
+      "sha256": "9190eaf22a95b298c0b5a5a3e3d9a9244cdbc40bb753444999557c74846ec8c4"
+    },
+    {
+      "role": "formal-readiness-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQFormalReadinessV2.cs",
+      "bytes": 15974,
+      "sha256": "e42d2987146e7d037c72ca5e843c7df4b84ac6bbdd6ede87345dbe783378337b"
+    },
+    {
+      "role": "formal-readiness-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQFormalReadinessV2.cs.meta",
+      "bytes": 243,
+      "sha256": "3e28edc8c285817c0bc7d196d6a9664cd1412aeaa91e055a94e1ed5f4212e29e"
+    },
+    {
+      "role": "algorithm-free-compile-guard",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQCompileExitV2.cs",
+      "bytes": 4722,
+      "sha256": "277172899981a171f8ef153ef6ad5d2af17252f3cb76bd4ffa1f065f6e1193e6"
+    },
+    {
+      "role": "algorithm-free-compile-guard-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQCompileExitV2.cs.meta",
+      "bytes": 243,
+      "sha256": "39436f975c93b64e5f58e367195540350ddd642baca420eb56f697125212b910"
+    },
+    {
+      "role": "formal-performance-kernel-source",
+      "relativePath": "Assets/_Scripts/Research/MQ/v2/Gate14ReMQFormalPerformanceKernelV2.cs",
+      "bytes": 20444,
+      "sha256": "c4006de15a6303b9568b0095bfdfdc7f1735df45d790c16d4bca755e40eb67a2"
+    },
+    {
+      "role": "formal-performance-kernel-meta",
+      "relativePath": "Assets/_Scripts/Research/MQ/v2/Gate14ReMQFormalPerformanceKernelV2.cs.meta",
+      "bytes": 243,
+      "sha256": "30703fe2cc987fab687afb23a73c26f8e5c05252af4d4b0410b668c3f0c10685"
+    },
+    {
+      "role": "collection-supervisor",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/Run-Gate14ReMQFormalCollection.v2_0.ps1",
+      "bytes": 26833,
+      "sha256": "029e08ce96e83da7447a5959d4e281484b1a94f91861f86c57ffb887abca40b5"
+    },
+    {
+      "role": "schedule-generator",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Tools/v2/generate_formal_schedule_v2.py",
+      "bytes": 29670,
+      "sha256": "5450746a4089798370dd62ae48138493e4c773943dc978f2e7f6336092e2ec34"
+    },
+    {
+      "role": "implementation-freezer",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Tools/v2/freeze_formal_implementation_v2.py",
+      "bytes": 7986,
+      "sha256": "b664ebd5f81bc82a3e1fc95f7bb6e1aa6f501c13001d826018581e195b9ec4e8"
+    },
+    {
+      "role": "independent-freeze-validator",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Tools/v2/validate_formal_freeze_v2.py",
+      "bytes": 22698,
+      "sha256": "4e87e4bcd48454c512bddef871c700f12b7125b9134418bfe532565b952f1703"
+    },
+    {
+      "role": "formal-schedule",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/formal-process-schedule.v2.jsonl",
+      "bytes": 416794,
+      "sha256": "70121c16dd42472610ddeddb3848dcd25d279390930def5b66d29049316c44a5"
+    },
+    {
+      "role": "formal-schedule-summary",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/formal-process-schedule-summary.v2.json",
+      "bytes": 2371,
+      "sha256": "4ce55420680e1ce82d210c83c50d7ec78e056e76ca9fc3d042f315eb32fc79ba"
+    },
+    {
+      "role": "formal-block-input-assignments",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/FormalInputs/v2/formal-block-input-assignments.v2.jsonl",
+      "bytes": 914462,
+      "sha256": "bf4d9cf0cf6bd808c02c24b95035cb4e887b883c5399ea8be7f47e4514d465db"
+    },
+    {
+      "role": "formal-input-source-manifest",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/FormalInputs/v2/formal-input-source-manifest.v2.json",
+      "bytes": 172977,
+      "sha256": "35b6c28e7c05d9dea8de8711a99057eb877227a504a5c2e3b36dc9411c805302"
+    },
+    {
+      "role": "opaque-algorithm-identity-map",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/opaque-algorithm-identity-map.v2.json",
+      "bytes": 1267,
+      "sha256": "aac226811f2e6ce2acf15f3fe3c5b0ad3861569992aef3cc5822d7188dbb8059"
+    },
+    {
+      "role": "scientific-and-analysis-contract",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-scientific-and-analysis-contract.v2.json",
+      "bytes": 3748,
+      "sha256": "794f3958de4eecad67fbeefa1353b6f0a07aeb5d60882495a4b6a021d4af434a"
+    },
+    {
+      "role": "execution-contract",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-execution-contract.v2.json",
+      "bytes": 2975,
+      "sha256": "d4406a0af544185993450205df358dc7e92abcd5fe0d051f4721cb9300277266"
+    },
+    {
+      "role": "fairness-and-topology-binding",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/fairness-and-topology-binding.v2.json",
+      "bytes": 12852,
+      "sha256": "941f2f62464105d5c5e09e16126a1dff6cc4b74ab7a565ec8942b03342c466bb"
+    },
+    {
+      "role": "resource-budget",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-resource-budget.v2.json",
+      "bytes": 1195,
+      "sha256": "9459b06376cbfceb8f0c1659e642d3355a0560ce76d47bb0693020a0f033f2aa"
+    },
+    {
+      "role": "authorized-design-rules",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-rule-freeze-v2-attempt-001/formal-mq-authorized-design.v2.json",
+      "bytes": 6308,
+      "sha256": "79b4cbf309f278c2611955419ddb0d524915e4ddc6ae1596746cff1ec7bfa18a"
+    },
+    {
+      "role": "authorized-design-terminal",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-rule-freeze-v2-attempt-001/terminal-receipt.v2.json",
+      "bytes": 1246,
+      "sha256": "4f4a3fcae168b0e3aaab9176d7611c9913882389e4f22566b62a4b6ff18a1efd"
+    },
+    {
+      "role": "power-result",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v2-attempt-001/power-result.v2.json",
+      "bytes": 9760,
+      "sha256": "75d52ba9f029920e711029cea02b7e98703290de75cf9413aa653a64eb802a3a"
+    },
+    {
+      "role": "power-selection-seal",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v2-attempt-001/power-selection-seal-receipt.v2.json",
+      "bytes": 1403,
+      "sha256": "5297b9ea3b60251b46ef21ba0878b26085a01b0c46f39c29e8562544f57638b0"
+    },
+    {
+      "role": "power-terminal",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v2-attempt-001/terminal-receipt.v2.json",
+      "bytes": 1126,
+      "sha256": "af1a0bd576589a88ffad68e98dc21ea79745b667560ae9c14af997f06a962359"
+    },
+    {
+      "role": "runtime-diagnostics",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-runtime-analysis-v2/engineering-runtime-diagnostics.v2.json",
+      "bytes": 12913,
+      "sha256": "2a2b2b9a89bf6c9282debe7ee44c983dd6b054692e7c6b80dd8886838ab147ac"
+    },
+    {
+      "role": "engineering-affinity-plans",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/affinity-plans.v1.json",
+      "bytes": 29705,
+      "sha256": "7f45ab8e5042081d489b19b0640c5c688e1288b746a877cfe31b1e81745262a8"
+    },
+    {
+      "role": "engineering-topology-snapshot",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/topology-snapshot.v1.json",
+      "bytes": 15941,
+      "sha256": "0dbcb5d141ec3fe5545997b1591140d26625748315ed90bd022222a179193a72"
+    },
+    {
+      "role": "engineering-semantic-terminal",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/terminal-receipt.v1.json",
+      "bytes": 1917,
+      "sha256": "c3eb67b53c28ed9a1d7a1d340f7f49230789af46c8fba8c445d9088ca60dec6e"
+    },
+    {
+      "role": "engineering-semantic-external-freeze",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/external-freeze-receipt.v1.json",
+      "bytes": 1235,
+      "sha256": "6b67f820b5c841d99ec915a2966a24bb48535047753fa95fe828cc0343718814"
+    },
+    {
+      "role": "engineering-performance-terminal",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/terminal-receipt.v1.json",
+      "bytes": 1599,
+      "sha256": "d5429793cc940ad2e0a1c51fea760d2cbd43766849fb0d1f80f4752ba4c5d09e"
+    },
+    {
+      "role": "engineering-performance-external-freeze",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/external-freeze-receipt.v1.json",
+      "bytes": 2406,
+      "sha256": "c2bc8217e48bdb3248e97353538207f9386c2c866fd80e713fabadaf195df33b"
+    },
+    {
+      "role": "managed-multi-query-executor",
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/ManagedMultiQueryExecutorV1.cs",
+      "bytes": 31705,
+      "sha256": "69066fa0b6dfd9844af8c99ed52c4b50d267a7cd96773de03b76f7b7b4af02bf"
+    },
+    {
+      "role": "qualified-performance-kernel",
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/Gate14ReMQPerformanceKernelV1.cs",
+      "bytes": 16239,
+      "sha256": "63963a88be905e1e3afe7e10470012c374e3b675372f388c42803e1d70ef5067"
+    },
+    {
+      "role": "qualified-semantic-kernel",
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/Gate14ReMQInputKernelV1.cs",
+      "bytes": 28940,
+      "sha256": "7e50ce763bc21afd0e108298b4432fda4cf18dc620d139f61087df546cc5f774"
+    },
+    {
+      "role": "corrected-full-recompute-flow-field",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "bytes": 34279,
+      "sha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"
+    },
+    {
+      "role": "incremental-dynamic-flow-field",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "bytes": 46884,
+      "sha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"
+    },
+    {
+      "role": "research-navigation-grid",
+      "relativePath": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "bytes": 10018,
+      "sha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"
+    },
+    {
+      "role": "navigation-contracts",
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "bytes": 5661,
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    {
+      "role": "qualification-contracts",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "bytes": 17536,
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    {
+      "role": "algorithm-neutral-reference-oracle",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "bytes": 30510,
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    }
+  ],
+  "executionBoundary": {
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "separateLaunchAuthorizationRequired": true,
+    "readinessIsAlgorithmFree": true
+  },
+  "createdAtUtc": "2026-10-21T07:51:30Z"
+}

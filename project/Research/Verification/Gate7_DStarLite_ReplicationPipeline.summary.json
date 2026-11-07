@@ -1,0 +1,77 @@
+﻿{
+    "savedAt":  "2026-10-05T16:47:06.6763099+08:00",
+    "fixtureDirectory":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate7_DStarLite_ReplicationFixture_Final",
+    "scenarioPath":  "H:\\DDM_Final_Project\\Research\\Scenarios\\dynamic_corridors_sparse_v1.scenario.json",
+    "groupManifestPath":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate7_DStarLite_ReplicationFixture_Final\\replication-manifest.json",
+    "groupManifestSha256":  "24fca9a22a24e2f7c18003162790a9bc775c6aaf4a9e4ca95ff4261dc589e4fc",
+    "aggregateSha256":  "40be411b5b6f59def94a0c013831389a26b380f47ff61f1fd9c674fcc4fd40dd",
+    "currentCodeRevalidatedAggregateSha256":  "40be411b5b6f59def94a0c013831389a26b380f47ff61f1fd9c674fcc4fd40dd",
+    "missingFiles":  [
+
+                     ],
+    "childErrors":  [
+
+                    ],
+    "metricErrors":  [
+
+                     ],
+    "aggregationCompilerErrorMatches":  [
+
+                                        ],
+    "revalidationCompilerErrorMatches":  [
+
+                                         ],
+    "childRunCount":  3,
+    "totalJsonlRecords":  51,
+    "totalPlannerRecords":  39,
+    "totalLifecycleRecords":  9,
+    "totalWorkloadRecords":  3,
+    "overwriteGuardExitCode":  1,
+    "overwriteGuardOutput":  [
+                                 "Output directory is not empty; refusing to overwrite: H:\\DDM_Final_Project\\Research\\Verification\\Gate7_DStarLite_Replic",
+                                 "ationFixture_Final",
+                                 "At H:\\DDM_Final_Project\\Research\\Run-PlanningReplication.ps1:40 char:78",
+                                 "+ ... nt -gt 0) { throw \"Output directory is not empty; refusing to overwri ...",
+                                 "+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+                                 "    + CategoryInfo          : OperationStopped: (Output director...onFixture_Final:String) [], RuntimeException",
+                                 "    + FullyQualifiedErrorId : Output directory is not empty; refusing to overwrite: H:\\DDM_Final_Project\\Research\\Veri ",
+                                 "   fication\\Gate7_DStarLite_ReplicationFixture_Final",
+                                 " "
+                             ],
+    "unauthorizedAlgorithmExitCode":  1,
+    "unauthorizedAlgorithmOutput":  [
+                                        "H:\\DDM_Final_Project\\Research\\Run-PlanningReplication.ps1 : Cannot validate argument on parameter \u0027Algorithm\u0027. The argu",
+                                        "ment \"UNSUPPORTED\" does not belong to the set \"A*-R,D*L,C-FF,IDFF\" specified by the ValidateSet attribute. Supply an ar",
+                                        "gument that is in the set and then try the command again.",
+                                        "    + CategoryInfo          : InvalidData: (:) [Run-PlanningReplication.ps1], ParentContainsErrorRecordException",
+                                        "    + FullyQualifiedErrorId : ParameterArgumentValidationError,Run-PlanningReplication.ps1",
+                                        " "
+                                    ],
+    "checks":  {
+                   "requiredGroupFilesPresent":  true,
+                   "retainedManifestMatches":  true,
+                   "retainedAggregateMatches":  true,
+                   "manifestIdentityValid":  true,
+                   "scenarioSourceHashMatches":  true,
+                   "groupArtifactHashesMatch":  true,
+                   "wrapperSummaryValid":  true,
+                   "requestIdentityAndPathsValid":  true,
+                   "childRunCountAndUniquenessValid":  true,
+                   "childArtifactsAndLogsValid":  true,
+                   "expectedJsonlCounts":  true,
+                   "aggregationLogValid":  true,
+                   "aggregateIdentityValid":  true,
+                   "aggregateTotalsValid":  true,
+                   "aggregateRunFlagsValid":  true,
+                   "deterministicWorkCountsValid":  true,
+                   "statisticalSummariesValid":  true,
+                   "outcomeRatesValid":  true,
+                   "currentCodeRevalidationMatches":  true,
+                   "overwriteGuardVerified":  true,
+                   "unauthorizedAlgorithmGuardVerified":  true
+               },
+    "failedChecks":  [
+
+                     ],
+    "passed":  true
+}

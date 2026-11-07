@@ -1,0 +1,377 @@
+{
+  "schema": "gate14re-me-qualification-planning-design-freeze-v2",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-planning-freeze-v2-attempt-001",
+  "status": "FROZEN_NONEXECUTING_QUALIFICATION_DESIGN_READY_FOR_SEPARATE_ASSET_GENERATION_AUTHORIZATION",
+  "frozenAtUtc": "2026-10-17T13:30:15.0000000Z",
+  "inputContract": {
+    "validationSchemaRelativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+    "validationSchemaSha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+    "planningBindingRelativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+    "planningBindingSha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+    "runtimeBundleSchemaIdentity": "gate14re-me-qualification-input-bundle-v1",
+    "eventGroupTopologyDeclaredAndRequired": true,
+    "legacyV1ValidationSchemaAllowedForFuturePlanning": false
+  },
+  "algorithmCohort": {
+    "namedAlgorithms": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "algorithmCount": 6,
+    "qualificationAnonymousLaneIds": [
+      "ALG-A",
+      "ALG-B",
+      "ALG-C",
+      "ALG-D",
+      "ALG-E",
+      "ALG-F"
+    ],
+    "sealedBijectionRequiredForFutureQualification": true,
+    "identityMappingGeneratedByThisFreeze": false,
+    "identityRemainsSealedUntilQualificationDecisionFrozen": true,
+    "sameByteIdenticalInputAcrossSixLanes": true,
+    "freshProcessPerAlgorithmLane": true,
+    "strictSerialExecutionWithinSuperblock": true
+  },
+  "loadLevels": {
+    "coreFactorial": {
+      "gridEdgeLevels": [64, 128, 256],
+      "agentCountLevels": [8, 32, 128, 512],
+      "changedCellLevels": [1, 9, 81, 225],
+      "structuralCellCount": 48,
+      "independentPilotSeedsPerStructuralCell": 3,
+      "corePilotSuperblocks": 144
+    },
+    "contextStrata": {
+      "changeTopologyLevels": ["compact", "dispersed", "bottleneck"],
+      "graphProfileLevels": ["four_way_weighted_dense", "eight_way_uniform_sparse"],
+      "sameTickAtomicPartitionLevels": [1, 4, 16],
+      "fullCartesianStratumCount": 18,
+      "exactOccurrencesPerStratumAcrossCore": 8
+    },
+    "highCornerStress": {
+      "gridEdge": 256,
+      "agentCount": 512,
+      "changedCells": 225,
+      "independentPilotSeedsPerContextStratum": 1,
+      "stressPilotSuperblocks": 18
+    },
+    "totalPilotSuperblocks": 162,
+    "uniquePilotSeeds": 162,
+    "pilotSeedsMustBeDisjointFromAllFormalSeeds": true,
+    "eventGroupsPerLane": 24,
+    "eventCyclesPerLane": 6,
+    "algorithmLanesPerSuperblock": 6,
+    "freshAlgorithmProcesses": 972,
+    "expectedEventGroupRows": 23328
+  },
+  "experimentalUnitAndRepeatedMeasures": {
+    "independentQualificationUnit": "one immutable pilot input superblock with six paired anonymous fresh-process lanes",
+    "algorithmLaneIsIndependentN": false,
+    "eventGroupIsIndependentN": false,
+    "agentIsIndependentN": false,
+    "queryOperationTickGridCellOrMeasurementPointIsIndependentN": false,
+    "coreIndependentReplicatesPerStructuralCell": 3,
+    "stressIndependentReplicatesPerContextStratum": 1,
+    "withinLaneEventGroupsAreTechnicalRepeatedMeasures": true,
+    "qualificationInputsOrObservationsMayEnterFormalEstimation": false
+  },
+  "blockingAndOrderBalance": {
+    "primaryBlock": "pilot input superblock",
+    "pairedWithinBlockFactor": "six anonymous algorithm lanes sharing one byte-identical input bundle",
+    "structuralBlockingFactors": ["gridEdge", "agentCount", "changedCellCount"],
+    "contextBlockingFactors": ["changeTopology", "graphProfile", "sameTickAtomicPartitions"],
+    "algorithmExecutionOrder": "six-sequence Williams-balanced order",
+    "williamsSequenceCount": 6,
+    "exactRepetitionsPerWilliamsSequence": 27,
+    "eachAnonymousLaneOccurrencesPerExecutionPosition": 27,
+    "scheduleRowsExpected": 162,
+    "scheduleGeneratedByThisFreeze": false,
+    "outcomeDependentReorderAllowed": false
+  },
+  "emptyBoundaryReference": {
+    "plannerInvocations": 0,
+    "freshProcesses": 12,
+    "iterationsPerProcess": 1000,
+    "totalRawIterations": 12000,
+    "sameBuildHostClockInstrumentationAndProcessPolicyRequired": true,
+    "floorReferenceFormula": "max(100 * stopwatchTickMilliseconds, emptyBoundaryP99ElapsedMilliseconds)"
+  },
+  "metricDirections": {
+    "formalDirectionIsBindingButNotEvaluatedInQualification": true,
+    "D1": {
+      "name": "complete dynamic handling latency",
+      "rawUnit": "milliseconds",
+      "formalDirection": "lower_is_better",
+      "qualificationUse": ["measurement floor", "within-lane low-to-high anchor dynamic range"]
+    },
+    "D2": {
+      "name": "common grid accessor work",
+      "rawUnit": "calls",
+      "formalDirection": "lower_is_better",
+      "qualificationUse": ["positive active-work coverage", "within-lane low-to-high anchor dynamic range"]
+    },
+    "D3": {
+      "name": "owner-thread cumulative managed allocation",
+      "semanticVersion": "3.1",
+      "primaryRawUnit": "bytes",
+      "derivedRateUnit": "bytes_per_second",
+      "formalPrimaryDirection": "lower_cumulative_bytes_is_better",
+      "derivedRateRole": "retained diagnostic and formula-check field; not a separate confirmatory endpoint and no independent direction is asserted",
+      "qualificationUse": ["qualified counter validity", "complete bytes and rate provenance"],
+      "validZeroBytesRetained": true,
+      "zeroRateValidity": false
+    },
+    "D4": {
+      "name": "audited logical persistent planner state capacity",
+      "rawUnit": "bytes",
+      "formalDirection": "lower_is_better",
+      "qualificationUse": ["qualified per-container sizing", "complete component provenance"],
+      "validNonnegativeValuesRetained": true
+    },
+    "D5": {
+      "name": "dynamic latency scaling with agent count",
+      "axis": "log2(N)",
+      "formalDirectionForIDFFMinusComparatorSlope": "lower_is_better",
+      "evaluatedDuringQualification": false
+    },
+    "D6": {
+      "name": "dynamic latency scaling with changed-cell footprint",
+      "axis": "log2(F)",
+      "formalDirectionForIDFFMinusComparatorSlope": "lower_is_better",
+      "evaluatedDuringQualification": false
+    },
+    "D7": {
+      "name": "dynamic latency scaling with grid cell count",
+      "axis": "log2(G_squared)",
+      "formalDirectionForIDFFMinusComparatorSlope": "lower_is_better",
+      "evaluatedDuringQualification": false
+    },
+    "qualificationMayCompareAlgorithmsForAdvantage": false,
+    "rankingWeightedCompositeOrWinnerAllowed": false
+  },
+  "algorithmNeutralGeometryGate": {
+    "oracle": "frozen algorithm-neutral Dijkstra oracle",
+    "mustPassBeforeAnyFutureAlgorithmProcessForThatInput": true,
+    "goalWalkable": true,
+    "startsDistinctWalkableAndBaselineReachable": true,
+    "minimumBaselinePathSteps": 4,
+    "minimumFractionPathStepsAtLeastCeilGOver4": 0.9,
+    "medianPathStepsAtLeastCeilGOver2": true,
+    "uniqueChangedCellsExactlyFPerGroup": true,
+    "changedCellsMayIncludeStartOrGoal": false,
+    "minimumAffectedAgentsEveryGroupFormula": "max(1, ceil(0.05 * N))",
+    "minimumMedianAffectedAgentFractionAcrossLane": 0.1,
+    "minimumAffectedFractionForBottleneckBlockOrIncrease": 0.5,
+    "restoreGridBytesAndOracleStatusesCostsExactly": true,
+    "passRequiresAll162Inputs": true,
+    "algorithmOutputMayDetermineGeometryEligibility": false
+  },
+  "qualificationDecisionRules": {
+    "instrumentGate": {
+      "D2KnownAnswerAndSemanticInvarianceRequired": true,
+      "D3V31KnownAnswerMarkerMetadataThreadAttributionZeroResponseAndScaleRequired": true,
+      "D4PerContainerSyntheticFixtureRequired": true,
+      "clockMonotonicityRequired": true,
+      "rawToExportRoundTripAndNegativeTestsRequired": true,
+      "overflowSaturationOrNonfiniteCountRequired": 0
+    },
+    "measurementFloorGatePerAnonymousLane": {
+      "upperLoadRegion": {"minimumGridEdge": 128, "minimumAgentCount": 128, "minimumChangedCells": 81},
+      "allPresentD1FiniteAndPositive": true,
+      "upperRegionMedianD1MinimumFloorMultiple": 20,
+      "upperRegionMinimumFractionD1AtLeastFiveFloorReferences": 0.9,
+      "coreMinimumFractionD1AtLeastFiveFloorReferences": 0.8,
+      "minimumDistinctPositiveD1ValuesAcrossCore": 10,
+      "minimumEligibleD2PositiveFraction": 0.99,
+      "D3OrD4ArtificialPositiveFloorForbidden": true
+    },
+    "coverageGatePerAnonymousLane": {
+      "coreEligibleEventGroupFractionMinimum": 0.95,
+      "perGridLevelEligibleFractionMinimum": 0.9,
+      "perAgentLevelEligibleFractionMinimum": 0.9,
+      "perChangedCellLevelEligibleFractionMinimum": 0.9,
+      "failedOrMissingRowsRemainInDenominator": true
+    },
+    "withinLaneDynamicRangeGate": {
+      "lowAnchor": {"gridEdge": 64, "agentCount": 8, "changedCells": 1},
+      "highAnchor": {"gridEdge": 256, "agentCount": 512, "changedCells": 225},
+      "D1Statistic": "geometric mean of eligible positive event-group elapsed milliseconds",
+      "D2Statistic": "median eligible event-group gridAccessorCallsTotal",
+      "passFormula": "max(highD1 / lowD1, highD2 / lowD2) >= 4.0",
+      "minimumSpanRatio": 4.0,
+      "monotonicityRequired": false,
+      "crossAlgorithmComparison": false
+    },
+    "resourceCeilingGate": {
+      "eventGroupHardTimeoutMilliseconds": 300000,
+      "laneWallClockHardTimeoutMilliseconds": 5400000,
+      "laneAssignedCommittedMemoryBytes": 17179869184,
+      "qualificationReservedStorageBytes": 51539607552,
+      "formalRawAndDeliveryReservedStorageBytes": 103079215104,
+      "maximumConcurrentUnityProcesses": 1,
+      "outOfMemoryCountRequired": 0,
+      "unexpectedProcessCrashCountRequired": 0,
+      "instrumentInvalidLaneCountRequired": 0,
+      "coreBudgetExceededFractionMaximum": 0.05,
+      "stressBudgetExceededFractionMaximum": 0.1,
+      "completedEventGroupP99MaximumFractionOfHardTimeout": 0.5,
+      "peakCommittedBytesMaximumFractionOfAssignedLimit": 0.5,
+      "observedAndProjectedStorageMaximumFractionOfReservation": 0.5,
+      "minimumHeadroomFactor": 2.0
+    },
+    "overallVerdict": {
+      "passRequiresEveryGateForAllSixAnonymousLanes": true,
+      "passStatus": "PASS_LOAD_QUALIFICATION",
+      "failStatus": "FAIL_CLOSED_LOAD_QUALIFICATION",
+      "algorithmNamesDirectionsMeansContrastsPValuesRanksAndWinnerForbiddenInQualificationReport": true,
+      "IDFFSpecificQualificationDecisionForbidden": true
+    }
+  },
+  "technicalFailureAndReplacement": {
+    "algorithmSpecificFailure": "retain as outcome; no retry and no per-lane replacement",
+    "algorithmSpecificFailureIncludedInCoverageAndCeilingDenominators": true,
+    "infrastructureFailure": "void all six lanes in the superblock; supervisor may perform at most one whole-superblock technical replacement",
+    "maximumWholeSuperblockReplacementsPerSource": 1,
+    "maximumInfrastructureReplacementFraction": 0.02,
+    "originalFailureVoidAndReplacementArtifactsRetained": true,
+    "bidirectionalReplacementLinkRequired": true,
+    "outOfMemoryOrResourceCeilingFailureMayBeErasedByReplacement": false,
+    "perAlgorithmRetryResumeTopUpMergeSkipOrReorderAllowed": false
+  },
+  "stopRules": {
+    "beforeAssetGeneration": [
+      "any frozen hash drift",
+      "missing or inconsistent PASS evidence",
+      "schema-v2 or runtime-contract incompatibility",
+      "algorithm implementation or specification drift",
+      "nonunique or unsealed future identity mapping",
+      "prospective cardinality, context or Williams imbalance",
+      "existing or unauthorized measured root",
+      "insufficient storage reservations",
+      "active unexpected Gate14Re-ME process"
+    ],
+    "duringFutureQualification": [
+      "any oracle or instrument gate failure before lanes",
+      "unmatched authorization, schedule, input, path or hash",
+      "attempted concurrency greater than one",
+      "unapproved retry, resume, top-up, merge, skip or reorder",
+      "failure receipt",
+      "counter overflow, saturation or nonfinite observation",
+      "prohibited named comparison or identity unsealing"
+    ],
+    "afterQualificationFailure": "preserve evidence; do not draw formal inputs, create a formal root, relax thresholds, reuse qualification observations, or proceed without a new scientific refreeze",
+    "afterQualificationPass": "stop and request a separate precollection parameter-amendment authorization; PASS does not authorize formal collection"
+  },
+  "completePerObservationProvenance": {
+    "aggregationOnlyRetentionForbidden": true,
+    "rawTables": [
+      "oracle-agent-checks.raw.v1.jsonl",
+      "oracle-event-checks.raw.v1.jsonl",
+      "operations.raw.v1.jsonl",
+      "event-groups.raw.v2.jsonl",
+      "d3-windows.raw.v1.jsonl",
+      "persistent-state.raw.v1.jsonl",
+      "process-resources.raw.v1.jsonl",
+      "empty-boundary.raw.v2.jsonl",
+      "replacement-ledger.raw.v1.jsonl",
+      "failures-and-voids.raw.v1.jsonl"
+    ],
+    "requiredIdentityAndTraceability": [
+      "studyId",
+      "protocolId",
+      "designId",
+      "inputId",
+      "superblockId",
+      "anonymousLaneId where applicable",
+      "identityBindingSha256 where applicable",
+      "process identity where applicable",
+      "recordId",
+      "measurement or operation identity",
+      "eligibility and missing reason",
+      "sourceRelativePath",
+      "sourceSha256"
+    ],
+    "D3RequiredRawFields": [
+      "managedAllocationBytes",
+      "managedAllocationEventCount",
+      "foreignThreadAllocationBytes",
+      "foreignThreadAllocationEventCount",
+      "invalidMetadataEventCount",
+      "counterOverflowCount",
+      "ownerNativeThreadId",
+      "observerNativeThreadId",
+      "windowStartStopwatchTicks",
+      "windowEndStopwatchTicks",
+      "windowElapsedStopwatchTicks",
+      "stopwatchFrequency",
+      "managedAllocationRateBytesPerSecond",
+      "managedAllocationRateValid"
+    ],
+    "deliveryFormats": ["canonical JSONL", "RFC 4180 CSV", "deterministic compressed JSONL", "typed Parquet"],
+    "rawToExportOneToOneTraceabilityRequired": true,
+    "tamperMissingDuplicateTypeRateFormulaRetiredFieldLabelSwapAndProductIntegrityNegativeTestsRequired": true
+  },
+  "futurePlanningAssetGenerationContract": {
+    "authorizedByThisFreeze": false,
+    "separateAuthorizationRequired": true,
+    "filesystemRootMustBeExplicitlyAuthorizedAndAbsentBeforeGeneration": true,
+    "requiredOutputsWhenSeparatelyAuthorized": {
+      "sealedAnonymousIdentityBindingCount": 1,
+      "qualificationInputBundleCount": 162,
+      "qualificationScheduleRowCount": 162,
+      "scheduleFormat": "JSON Lines validated by load-qualification-schedule-schema.v1.json",
+      "coreInputBundleCount": 144,
+      "stressInputBundleCount": 18
+    },
+    "generationOrder": [
+      "revalidate every frozen hash and PASS evidence",
+      "create and seal one six-name to six-anonymous-lane bijection",
+      "generate 144 core bundles and 18 stress bundles under input schema v2",
+      "run algorithm-neutral geometry/oracle validation without an algorithm planner",
+      "generate the 162-row Williams-balanced schedule binding every input and identity hash",
+      "validate schemas, uniqueness, cardinality, balance, paths and hashes",
+      "freeze assets and a terminal receipt"
+    ],
+    "determinismAndIntegrity": {
+      "globallyUniqueInputIds": true,
+      "globallyUniquePilotSeeds": true,
+      "byteStableInputBundles": true,
+      "oneCommonIdentityBindingSha256AcrossAllScheduleLanes": true,
+      "primaryAndReplacementIdsAndPathsDisjoint": true,
+      "partialPlanningAssetsMayBeAdopted": false
+    },
+    "stillProhibitedInFutureAssetGenerationStageUnlessSeparatelyAuthorized": [
+      "measured root creation",
+      "Unity launch",
+      "planner construction or invocation",
+      "algorithm lane execution",
+      "qualification observation creation",
+      "formal collection",
+      "formal analysis",
+      "ranking",
+      "winner adjudication"
+    ]
+  },
+  "currentStageBoundary": {
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "unityInvocations": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  }
+}

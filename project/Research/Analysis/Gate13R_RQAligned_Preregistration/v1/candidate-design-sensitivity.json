@@ -1,0 +1,1781 @@
+{
+  "analysisKind": "gate13r-rq-aligned-candidate-design-sensitivity-v1",
+  "candidateRows": [
+    {
+      "candidateId": "S32/H32",
+      "heterogeneousMatchedSuperblocksPerScenario": 32,
+      "heterogeneousSecondaryNote": "H controls descriptive matched-superblock stability; it is not pure-algorithm confirmatory power.",
+      "heterogeneousSecondaryProjection": [
+        {
+          "contrastId": "C1",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.21644297389815192,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.3984739572300553,
+          "projectedStandardErrorUsingSigmaUpper": 0.05394730410883519,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.21146954623269326
+        },
+        {
+          "contrastId": "C2",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.3008273319483794,
+          "pilotDescriptiveSigmaUpper90LogRatio": 2.2113745353734218,
+          "projectedStandardErrorUsingSigmaUpper": 0.08530562470724587,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.3343919042097841
+        },
+        {
+          "contrastId": "C3",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.1507045905874711,
+          "pilotDescriptiveSigmaUpper90LogRatio": 0.8648977017606141,
+          "projectedStandardErrorUsingSigmaUpper": 0.03336415318904426,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13078507725040783
+        },
+        {
+          "contrastId": "C4",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.23508894863769836,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.6105527918898748,
+          "projectedStandardErrorUsingSigmaUpper": 0.06212842276985188,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.24353894209037577
+        }
+      ],
+      "holmWorstThresholdPowerSensitivity": [
+        {
+          "contrastId": "C1",
+          "effectScenarios": [
+            {
+              "bias": -5.188305688857281e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.11825,
+              "powerMcse": 0.0022832754706780347,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 9.38274514612758e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.51115,
+              "powerMcse": 0.003534654703786496,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 2.7677643590184875e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.90385,
+              "powerMcse": 0.0020845284538715224,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.000513386171485497,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99555,
+              "powerMcse": 0.00047064835599415164,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.3353224959800516,
+          "pilotResidualSigmaUpper90LogRatio": 1.4319255732296994,
+          "projectedStandardErrorUsingSigmaUpper": 0.044747674163428106,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.17540765950450513
+        },
+        {
+          "contrastId": "C2",
+          "effectScenarios": [
+            {
+              "bias": 3.3685008283546036e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.0642,
+              "powerMcse": 0.0017331814677061371,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.00023390263834630054,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.26185,
+              "powerMcse": 0.003108734288259452,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.0007000844755605806,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.61705,
+              "powerMcse": 0.003437290339060697,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.000997982228250427,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.8922,
+              "powerMcse": 0.0021929336515271046,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.856549468472113,
+          "pilotResidualSigmaUpper90LogRatio": 1.9908603875650863,
+          "projectedStandardErrorUsingSigmaUpper": 0.06221438711140895,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.24387591611718887
+        },
+        {
+          "contrastId": "C3",
+          "effectScenarios": [
+            {
+              "bias": -0.00025492037814638796,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.14,
+              "powerMcse": 0.0024535688292770595,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": -7.685022421004273e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.59435,
+              "powerMcse": 0.0034720172630619216,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 0.0007314805556701554,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.94655,
+              "powerMcse": 0.0015904888792443663,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.00018148253607913611,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9991,
+              "powerMcse": 0.00021203655345246628,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2266619011185853,
+          "pilotResidualSigmaUpper90LogRatio": 1.3154039950694452,
+          "projectedStandardErrorUsingSigmaUpper": 0.04110637484592016,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.16113402846601343
+        },
+        {
+          "contrastId": "C4",
+          "effectScenarios": [
+            {
+              "bias": 5.554879582282679e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.14065,
+              "powerMcse": 0.0024583284717466054,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": -2.4193413444284495e-06,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.6017,
+              "powerMcse": 0.003461626135214489,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.0005620340387720024,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9537,
+              "powerMcse": 0.0014858719662205085,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -0.0002823771456569868,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99905,
+              "powerMcse": 0.00021784139872852524,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2142701810242913,
+          "pilotResidualSigmaUpper90LogRatio": 1.3021158036754248,
+          "projectedStandardErrorUsingSigmaUpper": 0.040691118864857025,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.15950625493151624
+        },
+        {
+          "contrastId": "C5",
+          "effectScenarios": [
+            {
+              "bias": 6.873459172294233e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.12375,
+              "powerMcse": 0.002328475225335241,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 5.83139618644396e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.6362,
+              "powerMcse": 0.0034018345050869244,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 0.00044868518237486943,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9717,
+              "powerMcse": 0.0011725849649385752,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.0001491279945984303,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9999,
+              "powerMcse": 7.070714249635216e-05,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.0757658702992579,
+          "pilotResidualSigmaUpper90LogRatio": 1.1535914845489306,
+          "projectedStandardErrorUsingSigmaUpper": 0.03604973389215408,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.14131236016174986
+        }
+      ],
+      "sharedBlocksPerCampaign": 32,
+      "sharedPrimarySimulation": {
+        "biasByContrast": {
+          "C1": 0.0003300976955350778,
+          "C2": 0.0006551302232077151,
+          "C3": 0.00017036564893576535,
+          "C4": 0.000495398195120969,
+          "C5": -0.000159732075659272
+        },
+        "covarianceJitter": 1e-16,
+        "holmFamilyWiseTypeIError": 0.03205,
+        "holmFamilyWiseTypeIErrorMcse": 0.001245447660481965,
+        "modelStable": true,
+        "replications": 20000,
+        "seed": 13122058,
+        "unadjusted95CiCoverageByContrast": {
+          "C1": 0.9499,
+          "C2": 0.95055,
+          "C3": 0.9494,
+          "C4": 0.94875,
+          "C5": 0.95025
+        }
+      }
+    },
+    {
+      "candidateId": "S40/H32",
+      "heterogeneousMatchedSuperblocksPerScenario": 32,
+      "heterogeneousSecondaryNote": "H controls descriptive matched-superblock stability; it is not pure-algorithm confirmatory power.",
+      "heterogeneousSecondaryProjection": [
+        {
+          "contrastId": "C1",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.21644297389815192,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.3984739572300553,
+          "projectedStandardErrorUsingSigmaUpper": 0.05394730410883519,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.21146954623269326
+        },
+        {
+          "contrastId": "C2",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.3008273319483794,
+          "pilotDescriptiveSigmaUpper90LogRatio": 2.2113745353734218,
+          "projectedStandardErrorUsingSigmaUpper": 0.08530562470724587,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.3343919042097841
+        },
+        {
+          "contrastId": "C3",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.1507045905874711,
+          "pilotDescriptiveSigmaUpper90LogRatio": 0.8648977017606141,
+          "projectedStandardErrorUsingSigmaUpper": 0.03336415318904426,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13078507725040783
+        },
+        {
+          "contrastId": "C4",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.23508894863769836,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.6105527918898748,
+          "projectedStandardErrorUsingSigmaUpper": 0.06212842276985188,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.24353894209037577
+        }
+      ],
+      "holmWorstThresholdPowerSensitivity": [
+        {
+          "contrastId": "C1",
+          "effectScenarios": [
+            {
+              "bias": 0.0006768086849059315,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.1443,
+              "powerMcse": 0.0024847284559887024,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.00040494822877029657,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.61405,
+              "powerMcse": 0.003442329135193205,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -4.9681772994886186e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.95875,
+              "powerMcse": 0.001406208332716031,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -2.6640239705832958e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99955,
+              "powerMcse": 0.0001499662462022622,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.3353224959800516,
+          "pilotResidualSigmaUpper90LogRatio": 1.4319255732296994,
+          "projectedStandardErrorUsingSigmaUpper": 0.04002353650577451,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.1568893801704842
+        },
+        {
+          "contrastId": "C2",
+          "effectScenarios": [
+            {
+              "bias": 0.0005128481705119897,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.07965,
+              "powerMcse": 0.0019144957234217058,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": -0.0005017033545512833,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.33765,
+              "powerMcse": 0.0033439682825947975,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.00032993127708524916,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7256,
+              "powerMcse": 0.003155191277878411,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -0.00033337882142300823,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.95165,
+              "powerMcse": 0.001516777463901676,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.856549468472113,
+          "pilotResidualSigmaUpper90LogRatio": 1.9908603875650863,
+          "projectedStandardErrorUsingSigmaUpper": 0.055646239503838874,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.21812925060522834
+        },
+        {
+          "contrastId": "C3",
+          "effectScenarios": [
+            {
+              "bias": 0.00014095017391328735,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.1737,
+              "powerMcse": 0.002678883256134914,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.00012068987847536905,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7065,
+              "powerMcse": 0.003219920418271234,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 0.00023135702622306686,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9817,
+              "powerMcse": 0.0009477634198469569,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.0006271013764745093,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99985,
+              "powerMcse": 8.65960449443228e-05,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2266619011185853,
+          "pilotResidualSigmaUpper90LogRatio": 1.3154039950694452,
+          "projectedStandardErrorUsingSigmaUpper": 0.03676665938562597,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.14412265645535688
+        },
+        {
+          "contrastId": "C4",
+          "effectScenarios": [
+            {
+              "bias": 0.00010948192445733168,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.1823,
+              "powerMcse": 0.0027300797607396014,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 7.451305702939337e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.71025,
+              "powerMcse": 0.0032077635316525434,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.000153073176397317,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9845,
+              "powerMcse": 0.0008734915569139738,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.0003387811404358121,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99995,
+              "powerMcse": 4.999874998437186e-05,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2142701810242913,
+          "pilotResidualSigmaUpper90LogRatio": 1.3021158036754248,
+          "projectedStandardErrorUsingSigmaUpper": 0.03639524314493775,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.14266673154531254
+        },
+        {
+          "contrastId": "C5",
+          "effectScenarios": [
+            {
+              "bias": 3.132980705747995e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.16,
+              "powerMcse": 0.0025922962793631437,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.0002293514848353967,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.75335,
+              "powerMcse": 0.0030480631350088537,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.000214110943843826,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9933,
+              "powerMcse": 0.0005768496337868318,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -7.361735686731152e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.0757658702992579,
+          "pilotResidualSigmaUpper90LogRatio": 1.1535914845489306,
+          "projectedStandardErrorUsingSigmaUpper": 0.03224386222145384,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.12639361735304233
+        }
+      ],
+      "sharedBlocksPerCampaign": 40,
+      "sharedPrimarySimulation": {
+        "biasByContrast": {
+          "C1": -0.00013120275715091593,
+          "C2": 2.899764772200547e-05,
+          "C3": -0.00018550866921920701,
+          "C4": -2.530830958955146e-05,
+          "C5": -5.430607323446835e-05
+        },
+        "covarianceJitter": 1e-16,
+        "holmFamilyWiseTypeIError": 0.03115,
+        "holmFamilyWiseTypeIErrorMcse": 0.0012284070477655198,
+        "modelStable": true,
+        "replications": 20000,
+        "seed": 13122066,
+        "unadjusted95CiCoverageByContrast": {
+          "C1": 0.94975,
+          "C2": 0.95135,
+          "C3": 0.95035,
+          "C4": 0.9506,
+          "C5": 0.9496
+        }
+      }
+    },
+    {
+      "candidateId": "S48/H32",
+      "heterogeneousMatchedSuperblocksPerScenario": 32,
+      "heterogeneousSecondaryNote": "H controls descriptive matched-superblock stability; it is not pure-algorithm confirmatory power.",
+      "heterogeneousSecondaryProjection": [
+        {
+          "contrastId": "C1",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.21644297389815192,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.3984739572300553,
+          "projectedStandardErrorUsingSigmaUpper": 0.05394730410883519,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.21146954623269326
+        },
+        {
+          "contrastId": "C2",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.3008273319483794,
+          "pilotDescriptiveSigmaUpper90LogRatio": 2.2113745353734218,
+          "projectedStandardErrorUsingSigmaUpper": 0.08530562470724587,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.3343919042097841
+        },
+        {
+          "contrastId": "C3",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.1507045905874711,
+          "pilotDescriptiveSigmaUpper90LogRatio": 0.8648977017606141,
+          "projectedStandardErrorUsingSigmaUpper": 0.03336415318904426,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13078507725040783
+        },
+        {
+          "contrastId": "C4",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.23508894863769836,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.6105527918898748,
+          "projectedStandardErrorUsingSigmaUpper": 0.06212842276985188,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.24353894209037577
+        }
+      ],
+      "holmWorstThresholdPowerSensitivity": [
+        {
+          "contrastId": "C1",
+          "effectScenarios": [
+            {
+              "bias": -0.0003059908890843746,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.17705,
+              "powerMcse": 0.002699104457963789,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 5.6895656066521805e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7092,
+              "powerMcse": 0.003211194170398296,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.0002871786651008623,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.98335,
+              "powerMcse": 0.0009047866461216162,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -5.40999670789466e-06,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99995,
+              "powerMcse": 4.999874998437186e-05,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.3353224959800516,
+          "pilotResidualSigmaUpper90LogRatio": 1.4319255732296994,
+          "projectedStandardErrorUsingSigmaUpper": 0.03653632295890699,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.1432197542539632
+        },
+        {
+          "contrastId": "C2",
+          "effectScenarios": [
+            {
+              "bias": 0.00020267247521935788,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.09115,
+              "powerMcse": 0.0020352110148581645,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": -0.000534451905185751,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.40555,
+              "powerMcse": 0.0034718813163758925,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 8.152454363624662e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.8071,
+              "powerMcse": 0.002790068009923772,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -0.0004420480048946407,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9818,
+              "powerMcse": 0.0009452184932596271,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.856549468472113,
+          "pilotResidualSigmaUpper90LogRatio": 1.9908603875650863,
+          "projectedStandardErrorUsingSigmaUpper": 0.05079783436097939,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.19912385168030164
+        },
+        {
+          "contrastId": "C3",
+          "effectScenarios": [
+            {
+              "bias": 0.00044315926625851376,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.20945,
+              "powerMcse": 0.0028773312070389115,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 9.011681258783155e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7925,
+              "powerMcse": 0.0028674357011099654,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 0.00023256523488363046,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9947,
+              "powerMcse": 0.0005134155237232301,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.00011611440270042905,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2266619011185853,
+          "pilotResidualSigmaUpper90LogRatio": 1.3154039950694452,
+          "projectedStandardErrorUsingSigmaUpper": 0.0335632145160273,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13156538331361087
+        },
+        {
+          "contrastId": "C4",
+          "effectScenarios": [
+            {
+              "bias": -0.00034285072825179785,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.2211,
+              "powerMcse": 0.002934406157981543,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 7.854581183672216e-06,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.79915,
+              "powerMcse": 0.0028329249681204056,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.00015258781476962247,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9942,
+              "powerMcse": 0.0005369525118667398,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.00013467489285826084,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2142701810242913,
+          "pilotResidualSigmaUpper90LogRatio": 1.3021158036754248,
+          "projectedStandardErrorUsingSigmaUpper": 0.03322415942727946,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13023631178816927
+        },
+        {
+          "contrastId": "C5",
+          "effectScenarios": [
+            {
+              "bias": -0.00014563349847000057,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.20015,
+              "powerMcse": 0.0028292223092220943,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.00032263678654181893,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.8419,
+              "powerMcse": 0.002579771210785949,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.0003259264384649352,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9986,
+              "powerMcse": 0.000264389863648359,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.0004994972741618753,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.0757658702992579,
+          "pilotResidualSigmaUpper90LogRatio": 1.1535914845489306,
+          "projectedStandardErrorUsingSigmaUpper": 0.029434484466298174,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.11538105891489617
+        }
+      ],
+      "sharedBlocksPerCampaign": 48,
+      "sharedPrimarySimulation": {
+        "biasByContrast": {
+          "C1": 0.0002277692060537466,
+          "C2": -0.00011845665275576896,
+          "C3": 0.0005214773062006883,
+          "C4": 0.00017525169503238068,
+          "C5": 0.0002937082055875453
+        },
+        "covarianceJitter": 1e-16,
+        "holmFamilyWiseTypeIError": 0.0309,
+        "holmFamilyWiseTypeIErrorMcse": 0.0012236255554702999,
+        "modelStable": true,
+        "replications": 20000,
+        "seed": 13122074,
+        "unadjusted95CiCoverageByContrast": {
+          "C1": 0.952,
+          "C2": 0.9501,
+          "C3": 0.9526,
+          "C4": 0.94925,
+          "C5": 0.94935
+        }
+      }
+    },
+    {
+      "candidateId": "S40/H40",
+      "heterogeneousMatchedSuperblocksPerScenario": 40,
+      "heterogeneousSecondaryNote": "H controls descriptive matched-superblock stability; it is not pure-algorithm confirmatory power.",
+      "heterogeneousSecondaryProjection": [
+        {
+          "contrastId": "C1",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.21644297389815192,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.3984739572300553,
+          "projectedStandardErrorUsingSigmaUpper": 0.048251935676083685,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.18914411221893468
+        },
+        {
+          "contrastId": "C2",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.3008273319483794,
+          "pilotDescriptiveSigmaUpper90LogRatio": 2.2113745353734218,
+          "projectedStandardErrorUsingSigmaUpper": 0.07629967028339495,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.2990892115754702
+        },
+        {
+          "contrastId": "C3",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.1507045905874711,
+          "pilotDescriptiveSigmaUpper90LogRatio": 0.8648977017606141,
+          "projectedStandardErrorUsingSigmaUpper": 0.029841805816967742,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.11697772926978929
+        },
+        {
+          "contrastId": "C4",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.23508894863769836,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.6105527918898748,
+          "projectedStandardErrorUsingSigmaUpper": 0.05556935065929383,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.21782785187298598
+        }
+      ],
+      "holmWorstThresholdPowerSensitivity": [
+        {
+          "contrastId": "C1",
+          "effectScenarios": [
+            {
+              "bias": 0.0006768086849059315,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.1443,
+              "powerMcse": 0.0024847284559887024,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.00040494822877029657,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.61405,
+              "powerMcse": 0.003442329135193205,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -4.9681772994886186e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.95875,
+              "powerMcse": 0.001406208332716031,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -2.6640239705832958e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99955,
+              "powerMcse": 0.0001499662462022622,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.3353224959800516,
+          "pilotResidualSigmaUpper90LogRatio": 1.4319255732296994,
+          "projectedStandardErrorUsingSigmaUpper": 0.04002353650577451,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.1568893801704842
+        },
+        {
+          "contrastId": "C2",
+          "effectScenarios": [
+            {
+              "bias": 0.0005128481705119897,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.07965,
+              "powerMcse": 0.0019144957234217058,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": -0.0005017033545512833,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.33765,
+              "powerMcse": 0.0033439682825947975,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.00032993127708524916,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7256,
+              "powerMcse": 0.003155191277878411,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -0.00033337882142300823,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.95165,
+              "powerMcse": 0.001516777463901676,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.856549468472113,
+          "pilotResidualSigmaUpper90LogRatio": 1.9908603875650863,
+          "projectedStandardErrorUsingSigmaUpper": 0.055646239503838874,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.21812925060522834
+        },
+        {
+          "contrastId": "C3",
+          "effectScenarios": [
+            {
+              "bias": 0.00014095017391328735,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.1737,
+              "powerMcse": 0.002678883256134914,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.00012068987847536905,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7065,
+              "powerMcse": 0.003219920418271234,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 0.00023135702622306686,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9817,
+              "powerMcse": 0.0009477634198469569,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.0006271013764745093,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99985,
+              "powerMcse": 8.65960449443228e-05,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2266619011185853,
+          "pilotResidualSigmaUpper90LogRatio": 1.3154039950694452,
+          "projectedStandardErrorUsingSigmaUpper": 0.03676665938562597,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.14412265645535688
+        },
+        {
+          "contrastId": "C4",
+          "effectScenarios": [
+            {
+              "bias": 0.00010948192445733168,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.1823,
+              "powerMcse": 0.0027300797607396014,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 7.451305702939337e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.71025,
+              "powerMcse": 0.0032077635316525434,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.000153073176397317,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9845,
+              "powerMcse": 0.0008734915569139738,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.0003387811404358121,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99995,
+              "powerMcse": 4.999874998437186e-05,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2142701810242913,
+          "pilotResidualSigmaUpper90LogRatio": 1.3021158036754248,
+          "projectedStandardErrorUsingSigmaUpper": 0.03639524314493775,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.14266673154531254
+        },
+        {
+          "contrastId": "C5",
+          "effectScenarios": [
+            {
+              "bias": 3.132980705747995e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.16,
+              "powerMcse": 0.0025922962793631437,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.0002293514848353967,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.75335,
+              "powerMcse": 0.0030480631350088537,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.000214110943843826,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9933,
+              "powerMcse": 0.0005768496337868318,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -7.361735686731152e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.0757658702992579,
+          "pilotResidualSigmaUpper90LogRatio": 1.1535914845489306,
+          "projectedStandardErrorUsingSigmaUpper": 0.03224386222145384,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.12639361735304233
+        }
+      ],
+      "sharedBlocksPerCampaign": 40,
+      "sharedPrimarySimulation": {
+        "biasByContrast": {
+          "C1": -0.00013120275715091593,
+          "C2": 2.899764772200547e-05,
+          "C3": -0.00018550866921920701,
+          "C4": -2.530830958955146e-05,
+          "C5": -5.430607323446835e-05
+        },
+        "covarianceJitter": 1e-16,
+        "holmFamilyWiseTypeIError": 0.03115,
+        "holmFamilyWiseTypeIErrorMcse": 0.0012284070477655198,
+        "modelStable": true,
+        "replications": 20000,
+        "seed": 13122066,
+        "unadjusted95CiCoverageByContrast": {
+          "C1": 0.94975,
+          "C2": 0.95135,
+          "C3": 0.95035,
+          "C4": 0.9506,
+          "C5": 0.9496
+        }
+      }
+    },
+    {
+      "candidateId": "S48/H40",
+      "heterogeneousMatchedSuperblocksPerScenario": 40,
+      "heterogeneousSecondaryNote": "H controls descriptive matched-superblock stability; it is not pure-algorithm confirmatory power.",
+      "heterogeneousSecondaryProjection": [
+        {
+          "contrastId": "C1",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.21644297389815192,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.3984739572300553,
+          "projectedStandardErrorUsingSigmaUpper": 0.048251935676083685,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.18914411221893468
+        },
+        {
+          "contrastId": "C2",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.3008273319483794,
+          "pilotDescriptiveSigmaUpper90LogRatio": 2.2113745353734218,
+          "projectedStandardErrorUsingSigmaUpper": 0.07629967028339495,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.2990892115754702
+        },
+        {
+          "contrastId": "C3",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.1507045905874711,
+          "pilotDescriptiveSigmaUpper90LogRatio": 0.8648977017606141,
+          "projectedStandardErrorUsingSigmaUpper": 0.029841805816967742,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.11697772926978929
+        },
+        {
+          "contrastId": "C4",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.23508894863769836,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.6105527918898748,
+          "projectedStandardErrorUsingSigmaUpper": 0.05556935065929383,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.21782785187298598
+        }
+      ],
+      "holmWorstThresholdPowerSensitivity": [
+        {
+          "contrastId": "C1",
+          "effectScenarios": [
+            {
+              "bias": -0.0003059908890843746,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.17705,
+              "powerMcse": 0.002699104457963789,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 5.6895656066521805e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7092,
+              "powerMcse": 0.003211194170398296,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.0002871786651008623,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.98335,
+              "powerMcse": 0.0009047866461216162,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -5.40999670789466e-06,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99995,
+              "powerMcse": 4.999874998437186e-05,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.3353224959800516,
+          "pilotResidualSigmaUpper90LogRatio": 1.4319255732296994,
+          "projectedStandardErrorUsingSigmaUpper": 0.03653632295890699,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.1432197542539632
+        },
+        {
+          "contrastId": "C2",
+          "effectScenarios": [
+            {
+              "bias": 0.00020267247521935788,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.09115,
+              "powerMcse": 0.0020352110148581645,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": -0.000534451905185751,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.40555,
+              "powerMcse": 0.0034718813163758925,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 8.152454363624662e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.8071,
+              "powerMcse": 0.002790068009923772,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -0.0004420480048946407,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9818,
+              "powerMcse": 0.0009452184932596271,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.856549468472113,
+          "pilotResidualSigmaUpper90LogRatio": 1.9908603875650863,
+          "projectedStandardErrorUsingSigmaUpper": 0.05079783436097939,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.19912385168030164
+        },
+        {
+          "contrastId": "C3",
+          "effectScenarios": [
+            {
+              "bias": 0.00044315926625851376,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.20945,
+              "powerMcse": 0.0028773312070389115,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 9.011681258783155e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7925,
+              "powerMcse": 0.0028674357011099654,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 0.00023256523488363046,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9947,
+              "powerMcse": 0.0005134155237232301,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.00011611440270042905,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2266619011185853,
+          "pilotResidualSigmaUpper90LogRatio": 1.3154039950694452,
+          "projectedStandardErrorUsingSigmaUpper": 0.0335632145160273,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13156538331361087
+        },
+        {
+          "contrastId": "C4",
+          "effectScenarios": [
+            {
+              "bias": -0.00034285072825179785,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.2211,
+              "powerMcse": 0.002934406157981543,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 7.854581183672216e-06,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.79915,
+              "powerMcse": 0.0028329249681204056,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.00015258781476962247,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9942,
+              "powerMcse": 0.0005369525118667398,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.00013467489285826084,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2142701810242913,
+          "pilotResidualSigmaUpper90LogRatio": 1.3021158036754248,
+          "projectedStandardErrorUsingSigmaUpper": 0.03322415942727946,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13023631178816927
+        },
+        {
+          "contrastId": "C5",
+          "effectScenarios": [
+            {
+              "bias": -0.00014563349847000057,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.20015,
+              "powerMcse": 0.0028292223092220943,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.00032263678654181893,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.8419,
+              "powerMcse": 0.002579771210785949,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.0003259264384649352,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9986,
+              "powerMcse": 0.000264389863648359,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.0004994972741618753,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.0757658702992579,
+          "pilotResidualSigmaUpper90LogRatio": 1.1535914845489306,
+          "projectedStandardErrorUsingSigmaUpper": 0.029434484466298174,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.11538105891489617
+        }
+      ],
+      "sharedBlocksPerCampaign": 48,
+      "sharedPrimarySimulation": {
+        "biasByContrast": {
+          "C1": 0.0002277692060537466,
+          "C2": -0.00011845665275576896,
+          "C3": 0.0005214773062006883,
+          "C4": 0.00017525169503238068,
+          "C5": 0.0002937082055875453
+        },
+        "covarianceJitter": 1e-16,
+        "holmFamilyWiseTypeIError": 0.0309,
+        "holmFamilyWiseTypeIErrorMcse": 0.0012236255554702999,
+        "modelStable": true,
+        "replications": 20000,
+        "seed": 13122074,
+        "unadjusted95CiCoverageByContrast": {
+          "C1": 0.952,
+          "C2": 0.9501,
+          "C3": 0.9526,
+          "C4": 0.94925,
+          "C5": 0.94935
+        }
+      }
+    },
+    {
+      "candidateId": "S48/H48",
+      "heterogeneousMatchedSuperblocksPerScenario": 48,
+      "heterogeneousSecondaryNote": "H controls descriptive matched-superblock stability; it is not pure-algorithm confirmatory power.",
+      "heterogeneousSecondaryProjection": [
+        {
+          "contrastId": "C1",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.21644297389815192,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.3984739572300553,
+          "projectedStandardErrorUsingSigmaUpper": 0.0440477893551322,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.17266416146933172
+        },
+        {
+          "contrastId": "C2",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.3008273319483794,
+          "pilotDescriptiveSigmaUpper90LogRatio": 2.2113745353734218,
+          "projectedStandardErrorUsingSigmaUpper": 0.06965175090737,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.2730298464772004
+        },
+        {
+          "contrastId": "C3",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.1507045905874711,
+          "pilotDescriptiveSigmaUpper90LogRatio": 0.8648977017606141,
+          "projectedStandardErrorUsingSigmaUpper": 0.02724171700440352,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.10678556841132653
+        },
+        {
+          "contrastId": "C4",
+          "interpretation": "SECONDARY-SYSTEM-TREATMENT/DESCRIPTIVE-PROJECTION/ORDER-IMBALANCED-PILOT",
+          "orderStratumMeanDifferenceLog": 0.23508894863769836,
+          "pilotDescriptiveSigmaUpper90LogRatio": 1.6105527918898748,
+          "projectedStandardErrorUsingSigmaUpper": 0.050727644770016345,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.19884871353954728
+        }
+      ],
+      "holmWorstThresholdPowerSensitivity": [
+        {
+          "contrastId": "C1",
+          "effectScenarios": [
+            {
+              "bias": -0.0003059908890843746,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.17705,
+              "powerMcse": 0.002699104457963789,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 5.6895656066521805e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7092,
+              "powerMcse": 0.003211194170398296,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.0002871786651008623,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.98335,
+              "powerMcse": 0.0009047866461216162,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -5.40999670789466e-06,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.99995,
+              "powerMcse": 4.999874998437186e-05,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.3353224959800516,
+          "pilotResidualSigmaUpper90LogRatio": 1.4319255732296994,
+          "projectedStandardErrorUsingSigmaUpper": 0.03653632295890699,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.1432197542539632
+        },
+        {
+          "contrastId": "C2",
+          "effectScenarios": [
+            {
+              "bias": 0.00020267247521935788,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.09115,
+              "powerMcse": 0.0020352110148581645,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": -0.000534451905185751,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.40555,
+              "powerMcse": 0.0034718813163758925,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 8.152454363624662e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.8071,
+              "powerMcse": 0.002790068009923772,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": -0.0004420480048946407,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9818,
+              "powerMcse": 0.0009452184932596271,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.856549468472113,
+          "pilotResidualSigmaUpper90LogRatio": 1.9908603875650863,
+          "projectedStandardErrorUsingSigmaUpper": 0.05079783436097939,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.19912385168030164
+        },
+        {
+          "contrastId": "C3",
+          "effectScenarios": [
+            {
+              "bias": 0.00044315926625851376,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.20945,
+              "powerMcse": 0.0028773312070389115,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 9.011681258783155e-05,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.7925,
+              "powerMcse": 0.0028674357011099654,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": 0.00023256523488363046,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9947,
+              "powerMcse": 0.0005134155237232301,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.00011611440270042905,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2266619011185853,
+          "pilotResidualSigmaUpper90LogRatio": 1.3154039950694452,
+          "projectedStandardErrorUsingSigmaUpper": 0.0335632145160273,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13156538331361087
+        },
+        {
+          "contrastId": "C4",
+          "effectScenarios": [
+            {
+              "bias": -0.00034285072825179785,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.2211,
+              "powerMcse": 0.002934406157981543,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 7.854581183672216e-06,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.79915,
+              "powerMcse": 0.0028329249681204056,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.00015258781476962247,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9942,
+              "powerMcse": 0.0005369525118667398,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.00013467489285826084,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.2142701810242913,
+          "pilotResidualSigmaUpper90LogRatio": 1.3021158036754248,
+          "projectedStandardErrorUsingSigmaUpper": 0.03322415942727946,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.13023631178816927
+        },
+        {
+          "contrastId": "C5",
+          "effectScenarios": [
+            {
+              "bias": -0.00014563349847000057,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.20015,
+              "powerMcse": 0.0028292223092220943,
+              "relativeEffectScenario": 0.05,
+              "trueLogRatio": -0.05129329438755058
+            },
+            {
+              "bias": 0.00032263678654181893,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.8419,
+              "powerMcse": 0.002579771210785949,
+              "relativeEffectScenario": 0.1,
+              "trueLogRatio": -0.10536051565782628
+            },
+            {
+              "bias": -0.0003259264384649352,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 0.9986,
+              "powerMcse": 0.000264389863648359,
+              "relativeEffectScenario": 0.15,
+              "trueLogRatio": -0.16251892949777494
+            },
+            {
+              "bias": 0.0004994972741618753,
+              "holmWorstThresholdAlpha": 0.01,
+              "interpretation": "PLANNING-SCENARIO-NOT-FROZEN-PRACTICAL-MARGIN",
+              "power": 1.0,
+              "powerMcse": 0.0,
+              "relativeEffectScenario": 0.2,
+              "trueLogRatio": -0.2231435513142097
+            }
+          ],
+          "pilotResidualSdLogRatio": 1.0757658702992579,
+          "pilotResidualSigmaUpper90LogRatio": 1.1535914845489306,
+          "projectedStandardErrorUsingSigmaUpper": 0.029434484466298174,
+          "projectedUnadjusted95CiWidthLogUsingSigmaUpper": 0.11538105891489617
+        }
+      ],
+      "sharedBlocksPerCampaign": 48,
+      "sharedPrimarySimulation": {
+        "biasByContrast": {
+          "C1": 0.0002277692060537466,
+          "C2": -0.00011845665275576896,
+          "C3": 0.0005214773062006883,
+          "C4": 0.00017525169503238068,
+          "C5": 0.0002937082055875453
+        },
+        "covarianceJitter": 1e-16,
+        "holmFamilyWiseTypeIError": 0.0309,
+        "holmFamilyWiseTypeIErrorMcse": 0.0012236255554702999,
+        "modelStable": true,
+        "replications": 20000,
+        "seed": 13122074,
+        "unadjusted95CiCoverageByContrast": {
+          "C1": 0.952,
+          "C2": 0.9501,
+          "C3": 0.9526,
+          "C4": 0.94925,
+          "C5": 0.94935
+        }
+      }
+    }
+  ],
+  "covarianceMethod": "WITHIN-PILOT-CAMPAIGN-CENTERED-P1-FIVE-CONTRAST-COVARIANCE",
+  "coverageTarget": 0.95,
+  "familyWiseAlpha": 0.05,
+  "finalSampleDesign": "UNFROZEN",
+  "generatedAtUtc": "2026-10-08T10:40:36.7028036Z",
+  "practicalEffectMarginDecisionTable": [
+    {
+      "relativeEffect": 0.05,
+      "scientificInterpretation": "A 5% lower P1 ratio for the numerator algorithm.",
+      "status": "PLANNING-SCENARIO/UNFROZEN"
+    },
+    {
+      "relativeEffect": 0.1,
+      "scientificInterpretation": "A 10% lower P1 ratio for the numerator algorithm.",
+      "status": "PLANNING-SCENARIO/UNFROZEN"
+    },
+    {
+      "relativeEffect": 0.15,
+      "scientificInterpretation": "A 15% lower P1 ratio for the numerator algorithm.",
+      "status": "PLANNING-SCENARIO/UNFROZEN"
+    },
+    {
+      "relativeEffect": 0.2,
+      "scientificInterpretation": "A 20% lower P1 ratio for the numerator algorithm.",
+      "status": "PLANNING-SCENARIO/UNFROZEN"
+    }
+  ],
+  "recommendedButUnfrozen": {
+    "candidateId": "S48/H32",
+    "importantLimitation": "No S32-S48 candidate reaches 80% Holm-worst-threshold power for every contrast under the 10% effect planning scenario; C2 is the limiting contrast. This is not a launch recommendation.",
+    "rationale": [
+      "Preserves the complete 74-campaign matrix and multiples-of-four Williams balance.",
+      "Uses the largest preregistered shared-primary block count while retaining the minimum preregistered H32 for secondary descriptive heterogeneity.",
+      "Its conservative summed-p95 projection remains below the earlier 36-hour planning boundary.",
+      "Does not rely on favorable observed pilot effect direction.",
+      "Requires the user to choose a practical-effect margin and decide whether a balanced supplemental heterogeneous pilot is needed."
+    ],
+    "status": "RECOMMENDED-FOR-USER-DECISION/UNFROZEN"
+  },
+  "schemaVersion": 1,
+  "simulationReplications": 20000,
+  "simulationSeed": 13122026
+}

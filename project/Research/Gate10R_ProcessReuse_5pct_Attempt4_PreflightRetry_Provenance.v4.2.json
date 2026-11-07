@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "provenanceId": "gate10r-attempt4-outside-preflight-retry2-provenance-v4.2",
+  "createdAtUtc": "2026-10-06T15:10:00.0000000Z",
+  "status": "FROZEN-READY-FOR-OUTSIDE-PREFLIGHT-V3",
+  "attempt": 4,
+  "preflightExecutionOrdinal": 3,
+  "changeClass": "PREEXISTING-PROTECTED-OUTPUT-INVARIANT-PREDICATE-ONLY",
+  "formalCampaign": false,
+  "baseProvenance": {
+    "relativePath": "Research/Gate10R_ProcessReuse_5pct_Attempt4_Provenance.v4.json",
+    "bytes": 13701,
+    "sha256": "6ea15fbd9e9c9755c6d69c56e7db15fa55de0239fdba7d4a14d352035f72f482"
+  },
+  "priorRetryProvenance": {
+    "relativePath": "Research/Gate10R_ProcessReuse_5pct_Attempt4_PreflightRetry_Provenance.v4.1.json",
+    "bytes": 2882,
+    "sha256": "9b83441c5ae8e9719d40711b555498aaef6006f14247d817daca0483c71a06cc"
+  },
+  "failedPreflight": {
+    "root": "Research/Verification/Gate10R_Attempt4_Preflight/v2",
+    "resumeAllowed": false,
+    "overwriteAllowed": false,
+    "failureReceiptSha256": "020a7beef7dfd60102b0a9780aed9fd40c1cd892d5c998013e903e637536872a",
+    "partialManifestSha256": "6b18d0d7341a111d50b49973b0cd3f86755a1cc62c5ee8575f9ab37428b6b19d",
+    "checkpointSha256": "7a590019feaf691d3c8aaa66a08973355888377d977628e9af4bff918d0b22e6"
+  },
+  "retryPreflightRoot": "Research/Verification/Gate10R_Attempt4_Preflight/v3",
+  "repairBoundary": {
+    "allowed": "for the pre-existing frozen original summary require nonzero child exit plus unchanged SHA-256; retain absence for new forbidden targets",
+    "retainedHarnessChanged": false,
+    "researchSemanticsChanged": false,
+    "officialV4RootCreated": false,
+    "unityStarted": false
+  },
+  "boundFiles": [
+    {"relativePath": "Research/Verification/Run-Gate10RAttempt4OutsideRootPreflightV4R2.ps1", "bytes": 18792, "sha256": "1cb103f91fb16434ce1ea3562d9296e2d5492f1c344056392f83c9103c7d5fdc"},
+    {"relativePath": "Research/Verification/Run-Gate10RAttempt4OfficialPreflightV4R2.ps1", "bytes": 10849, "sha256": "20a754d5d3bb2978f0e1366065c4811a609bc120dc270c7f638cce8e765f296a"},
+    {"relativePath": "Research/Verification/Run-Gate10RFinalAuditV4R2.ps1", "bytes": 20894, "sha256": "89c131bddae1976cfb98604f6e1a4842a2a54715a34edae45db84d61bb2e2673"},
+    {"relativePath": "Research/Verification/Gate10R_Attempt4_Preflight/v2/Gate10R_Attempt4_OutsideRoot_Preflight_Failure_Receipt.v2.json", "bytes": 1366, "sha256": "020a7beef7dfd60102b0a9780aed9fd40c1cd892d5c998013e903e637536872a"},
+    {"relativePath": "Research/Verification/Gate10R_Attempt4_Preflight/v2/Gate10R_Attempt4_OutsideRoot_Preflight_Partial_Manifest.v2.json", "bytes": 3737, "sha256": "6b18d0d7341a111d50b49973b0cd3f86755a1cc62c5ee8575f9ab37428b6b19d"},
+    {"relativePath": "Research/Verification/Gate10R_Attempt4_Preflight/v2/gate10r-attempt4-outside-root-preflight-checkpoint.v2.json", "bytes": 660, "sha256": "7a590019feaf691d3c8aaa66a08973355888377d977628e9af4bff918d0b22e6"}
+  ],
+  "downstreamAuthorization": {"gate11R": false, "gate12R": false, "gate13R": false}
+}

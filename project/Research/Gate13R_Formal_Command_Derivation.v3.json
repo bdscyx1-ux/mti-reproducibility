@@ -1,0 +1,104 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-formal-command-mechanical-derivation-v3",
+    "sourceRelativePath":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs",
+    "sourceSha256":  "eeca58f7e1121d0a297e8796430a90ae32f8492c32fc5fb676ae102b5f4a0c97",
+    "destinationRelativePath":  "Assets/_Scripts/Research/Editor/Gate13RProcessReuseFormalBatchCommandV1.cs",
+    "destinationSha256":  "4ddf154a4ac27d58f3c873d5d983b7ca6abdf2db9b51969ad48b9347cda938d1",
+    "replacements":  [
+                         {
+                             "from":  "Gate12RProcessReuseBatchCommandV3",
+                             "to":  "Gate13RProcessReuseFormalBatchCommandV1",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "-ddmGate10R",
+                             "to":  "-ddmGate13R",
+                             "replacementCount":  4
+                         },
+                         {
+                             "from":  "pilotPlanRelativePath",
+                             "to":  "formalConfigRelativePath",
+                             "replacementCount":  2
+                         },
+                         {
+                             "from":  "pilotPlanSha256",
+                             "to":  "formalConfigSha256",
+                             "replacementCount":  2
+                         },
+                         {
+                             "from":  "telemetryProbeResultRelativePath",
+                             "to":  "executionReceiptRelativePath",
+                             "replacementCount":  2
+                         },
+                         {
+                             "from":  "telemetryProbeResultSha256",
+                             "to":  "executionReceiptSha256",
+                             "replacementCount":  5
+                         },
+                         {
+                             "from":  "if (plan.formalCampaign) throw new InvalidOperationException(\"This command invocation is not authorized to produce formal samples.\");",
+                             "to":  "if (!plan.formalCampaign) throw new InvalidOperationException(\"Gate 13R formal command requires a formally authorized block plan.\");",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "if (plan.verificationInjectedFailurePosition \u003c 0 || plan.verificationInjectedFailurePosition \u003e plan.entries.Length) throw new InvalidOperationException(\"Injected verification failure position is outside the block.\");",
+                             "to":  "if (plan.verificationInjectedFailurePosition != 0) throw new InvalidOperationException(\"Gate 13R formal plans cannot inject verification failures.\");\r\n            if (!string.Equals(plan.analysisRole, \"formal-timing\", StringComparison.Ordinal)) throw new InvalidOperationException(\"Gate 13R formal analysis role mismatch.\");",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "if (plan.verificationInjectedFailurePosition \u003e 0 \u0026\u0026 !string.Equals(plan.analysisRole, \"excluded-negative-fail-closed-verification\", StringComparison.Ordinal)) throw new InvalidOperationException(\"Injected failure is permitted only for the excluded negative verification fixture.\");",
+                             "to":  "// Formal timing never permits an injected verification failure.",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "ValidateBoundFile(projectRoot, plan.formalConfigRelativePath, plan.formalConfigSha256, \"Gate 10R config\");",
+                             "to":  "ValidateBoundFile(projectRoot, plan.formalConfigRelativePath, plan.formalConfigSha256, \"Gate 13R formal config\");",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "ValidateBoundFile(projectRoot, plan.executionReceiptRelativePath, plan.executionReceiptSha256, \"successful telemetry probe result\");",
+                             "to":  "ValidateBoundFile(projectRoot, plan.executionReceiptRelativePath, plan.executionReceiptSha256, \"Gate 13R formal execution receipt\");",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "Unsupported Gate 10R process-reuse block-plan schema.",
+                             "to":  "Unsupported Gate 13R formal block-plan schema.",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "Gate 10R process-reuse design identity mismatch.",
+                             "to":  "Gate 13R process-reuse design identity mismatch.",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "gate12r-process-reuse-5pct-process-reuse-block-manifest-v2",
+                             "to":  "gate13r-process-reuse-5pct-formal-block-manifest-v1",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "gate10r-process-reuse-5pct-process-reuse-sample-summary-v1",
+                             "to":  "gate13r-process-reuse-5pct-formal-sample-summary-v1",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "gate10r-process-reuse-5pct-process-reuse-block-checkpoint-v1",
+                             "to":  "gate13r-process-reuse-5pct-formal-block-checkpoint-v1",
+                             "replacementCount":  1
+                         },
+                         {
+                             "from":  "gate10r-process-reuse-5pct-process-reuse-block-failure-v1",
+                             "to":  "gate13r-process-reuse-5pct-formal-block-failure-v1",
+                             "replacementCount":  1
+                         }
+                     ],
+    "algorithmSemanticsChanged":  false,
+    "scenarioSemanticsChanged":  false,
+    "resetTelemetryMemorySemanticsChanged":  false,
+    "formalIdentityAndAuthorizationSemanticsChanged":  true,
+    "priorFailureRelativePaths":  [
+                                      "Research/Gate13R_Command_Derivation_Attempt1_Failure.v1.json",
+                                      "Research/Gate13R_Command_Derivation_Attempt2_Failure.v1.json"
+                                  ],
+    "formalCampaignExecuted":  false
+}

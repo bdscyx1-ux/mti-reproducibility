@@ -1,0 +1,67 @@
+{
+  "schema": "gate14re-me-oracle-stage-simplification-plan-v4.1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "oracle-stage-simplification-v4_1-attempt-001",
+  "createdAtUtc": "2026-10-19T12:34:06.4640705Z",
+  "status": "PROVISIONAL_IMPLEMENTATION_PLAN_LOCKED_FOR_AUDIT_NOT_A_DESIGN_FREEZE",
+  "problem": {
+    "currentOracleProcesses": 126,
+    "currentAlgorithmLanes": 756,
+    "duplicateReferenceOracleEvaluationsPerLane": "baseline plus one post-event evaluation for each of 24 event groups",
+    "currentMeasurementContamination": "reference-oracle Dijkstra evaluation occurs inside the event stopwatch and D3 allocation window",
+    "attempt009StructuralEvidence": {
+      "oracleProcesses": 162,
+      "summedOracleProcessWallSeconds": 9069.47,
+      "summedOracleProcessWallHours": 2.519,
+      "averageOracleProcessWallSeconds": 55.984,
+      "minimumOracleProcessWallSeconds": 16.166,
+      "maximumOracleProcessWallSeconds": 234.38,
+      "boundary": "process-ledger structural timestamps only; no algorithm observation or outcome metric was read"
+    }
+  },
+  "prospectiveChange": {
+    "oracleBatchCount": 6,
+    "assignmentRule": "balanced v4.1 formula: for core ordinal 0..107 use (G-index + N-index + F-index + 2*replicate-index) mod 6; for stress ordinal 108..125 use (ordinal-108) mod 6",
+    "assignmentBalance": "each batch contains 21 inputs: 18 core plus 3 stress; within core, each G and each N contributes 6 inputs and each F contributes 4 or 5 inputs",
+    "executionRule": "six strictly serial fresh Unity oracle-batch processes before any algorithm lane",
+    "cacheRule": "one immutable algorithm-neutral oracle cache per input, containing the existing oracle agent/event tables plus a v4.1 cache-binding receipt with hashes and row counts",
+    "laneRule": "each of the six paired lanes validates and loads the same input-bound cache; no lane invokes Gate14ReMEReferenceOracleV1.Evaluate",
+    "measurementRule": "algorithm event timing and D3 windows retain repair and query treatment work but exclude reference-oracle Dijkstra construction",
+    "acceptanceRule": "offline acceptance validates all six batch receipts, all 126 cache-binding receipts, source hashes, per-input row coverage, and every lane's cache hash linkage",
+    "plannedFreshProcesses": {
+      "instrumentSelfTest": 1,
+      "oracleBatch": 6,
+      "emptyBoundary": 12,
+      "algorithmLane": 756,
+      "total": 775
+    },
+    "removedFreshUnityLaunchesComparedWithV4_0": 120,
+    "removedRepeatedFullGridDijkstraBuildsInsideLanes": 18900,
+    "removedRepeatedPerStartResultExtractionsInsideLanes": 1555200
+  },
+  "scientificInvariants": [
+    "G remains {64,96,128}",
+    "N remains {32,64,128}",
+    "F remains {1,9,25,81}",
+    "126 independent qualification superblocks remain unchanged",
+    "the same six algorithms and paired Williams schedule remain unchanged",
+    "every algorithm lane remains a fresh Unity process",
+    "the exact same input and exact same algorithm-neutral oracle cache are shared by all six lanes within a superblock",
+    "correctness remains fail closed against reference-oracle reachability and path cost",
+    "zero retry, resume, top-up, replacement, merge, skip, reorder, and parallel execution remain in force"
+  ],
+  "safety": {
+    "batchFailure": "any batch failure or timeout fails the one-shot qualification attempt; partial cache files are retained and never resumed",
+    "cacheMismatch": "any missing, duplicate, extra, malformed, or hash-mismatched cache row fails before the associated lane runs",
+    "memory": "the batch processes validate and write one input at a time; a lane loads only its own input cache",
+    "executionAuthorization": false,
+    "newMeasuredRootCreationAuthorizedByThisPlan": false
+  },
+  "prohibited": [
+    "changing an algorithm implementation",
+    "changing G, N, F, seeds, event groups, fairness, metrics, or lane order",
+    "using algorithm output to create or alter the oracle cache",
+    "starting qualification during implementation/readiness",
+    "freezing the overall v4.1 design before user review"
+  ]
+}

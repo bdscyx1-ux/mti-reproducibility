@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "amendmentKind": "gate13r-36h-prepilot-bootstrap-log-finalization-amendment-v14",
+  "createdAtUtc": "2026-10-08T05:40:00Z",
+  "status": "AUTHORIZED-VERSIONED-PRE-PILOT-DEFECT-REPAIR",
+  "authorizationScope": "Existing user authorization permits versioned repair of pre-pilot implementation and verification defects before the single measured non-formal pilot is consumed.",
+  "upstreamDiagnosis": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_v13_Bootstrap_Log_Finalization_Diagnosis.v1.json",
+    "sha256": "3ef0f1c18cd2291261e3fc5bf45d043a155c3bb758737c337f6611fe4ecfe306"
+  },
+  "repair": {
+    "attempt": 14,
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v14",
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v14",
+    "pilotRoot": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v14",
+    "waitForProcessExitFinalization": true,
+    "boundedLogReadabilityWaitSeconds": 60,
+    "retryReadOnlyHashOnly": true,
+    "logHashFailureRecordedInSummary": true,
+    "logDeletionOrMutationAllowed": false,
+    "controlledLockCleanupAllowed": false
+  },
+  "unchangedFrozenSemantics": {
+    "formalCampaignCount": 74,
+    "relative95CiHalfWidth": 0.10,
+    "hardCap": null,
+    "isolatedUnityEditorLanes": 4,
+    "freshUnityProcessPerWilliamsBlock": true,
+    "laneBootstrapPolicyId": "serial-nonmeasured-fresh-lane-bootstrap-before-concurrent-gates-v1",
+    "measuredPilotCampaigns": 12,
+    "measuredBlocksPerCampaign": 32,
+    "measuredBlockProcesses": 384,
+    "measuredSamples": 1152,
+    "pilotUnityProcesses": 392,
+    "readinessP95HoursMaximum": 27,
+    "formalEndToEndHoursMaximum": 36,
+    "sampleRetainedManagedMemoryLimitBytes": 134217728,
+    "blockRetainedManagedMemoryLimitBytesPerSample": 134217728,
+    "williamsOrderChanged": false,
+    "resetSemanticsChanged": false,
+    "telemetryThresholdsChanged": false,
+    "algorithmSemanticsChanged": false,
+    "playableMappingsChanged": false
+  },
+  "executionBoundary": {
+    "pilotExecutionAuthorizedCount": 1,
+    "pilotExecutionConsumedBeforeAttempt14": 0,
+    "measuredPilotRetryAllowed": false,
+    "sameAttemptResumeAllowed": false,
+    "formalCampaignAuthorized": false,
+    "formalRootCreationAllowed": false
+  }
+}

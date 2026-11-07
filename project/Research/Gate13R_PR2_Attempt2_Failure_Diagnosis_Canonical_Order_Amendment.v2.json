@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "amendmentKind": "gate13r-pr2-fd1-canonical-order-correction-v2",
+  "recordedAtUtc": "2026-10-09T02:34:18.7056658Z",
+  "status": "VERSIONED-CORRECTION-BEFORE-EVIDENCE-MANIFEST-COMMIT",
+  "supersededClaim": {
+    "artifact": "Research/Gate13R_PR2_Attempt2_Failure_PreWrite_Audit.v1.json",
+    "reportedFormula": "ordinal-relative-forward-slash + TAB + byteLength + TAB + lowercase-sha256 + LF; UTF-8 no BOM",
+    "actualOrdering": "PowerShell Sort-Object -CaseSensitive under the active culture",
+    "treeSha256": "be2623906d741b39e87f7c1d033d21443d2776f62ed709b4c4ef296220ce5f04",
+    "disposition": "PRESERVED-AS-FAILED-CANONICAL-LABEL; count, bytes, stability, per-file hashing and safety facts remain evidence"
+  },
+  "correctedCanonicalRule": {
+    "ordering": "Unicode code-point ordinal order, equivalent to System.StringComparer.Ordinal and Python string ordering for these paths",
+    "pathNormalization": "relative path with forward slashes",
+    "lineFormula": "relativePath + TAB + byteLength + TAB + lowercaseSha256 + LF",
+    "encoding": "UTF-8 without BOM",
+    "fileCount": 28020,
+    "rawBytes": 8536611302,
+    "treeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "independentImplementationsAgree": true,
+    "powerShellImplementation": "System.StringComparer.Ordinal",
+    "pythonImplementation": "sorted relative POSIX paths"
+  },
+  "orderingDifferenceCount": 2801,
+  "rootBytesChanged": false,
+  "failedRootModified": false,
+  "unityInvoked": false,
+  "formalAnalysisAuthorized": false,
+  "attempt3Authorized": false,
+  "gate14RAuthorized": false
+}

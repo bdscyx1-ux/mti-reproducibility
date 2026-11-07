@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-exact-version-route-repair-v4",
+  "createdAtUtc": "2026-10-08T04:46:37.0752358Z",
+  "status": "AUTHORIZED-NON-FORMAL-PREIMPLEMENTATION-REPAIR-ONLY",
+  "authorizationBasis": "The user authorized versioned redesign, tests, isolated project copies, and one NON-FORMAL concurrent pilot; Gate 13R formal execution remains unauthorized.",
+  "confirmedDefects": [
+    "The v2 static/unit and pilot entry points contain stale plan-v1 identity literals.",
+    "The attempt-3 generator used a generic metadata suffix route whose target overlapped the plan identity repair, making the reverse proof ambiguous."
+  ],
+  "requiredRepair": {
+    "strategy": "derive active v4 artifacts directly from frozen v2 inputs with exact, non-overlapping string routes",
+    "planId": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v4",
+    "forbidGenericSuffixReplacement": true,
+    "requirePerFileWindowsPowerShell51Parse": true,
+    "requireReverseTransformHashForEveryDerivedScript": true,
+    "requireFrozenV1V2V3EvidenceHashRecheck": true
+  },
+  "frozenFailureEvidence": [
+    {
+      "relativePath": "Research/Verification/Gate13R_36h_10pct_4Lane_PreImplementation/v7/StaticUnitV2/summary.json",
+      "sha256": "f47d42f9a2bedfd97e79a8466d1258e941ff4c71741e0353223aaee44127897b"
+    },
+    {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Attempt3_Derivation_Attempt1_Failure.v1.json",
+      "sha256": "945170b4f6ac4f8337538c68e1e49b9ad4f4187224973be4a37571ebc983dc3f"
+    },
+    {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Attempt3_Derivation_Attempt2_Failure.v1.json",
+      "sha256": "2bd8c542edf3ced8a957cecfb65ea0b98caf103ac13b25188a5b59922819da92"
+    },
+    {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Attempt3_Derivation_Attempt2_Partial_Manifest.v1.json",
+      "sha256": "c3ab94803ddb2d05e2ead82487af407f3200946648dba3968254bfbc98d59c8c"
+    }
+  ],
+  "unchangedScientificDesign": {
+    "campaignCount": 74,
+    "precisionRelative95CiHalfWidth": 0.10,
+    "hardCap": null,
+    "laneCount": 4,
+    "unityProcessUnit": "one fresh Unity Editor process per Williams block",
+    "readinessP95MaximumHours": 27,
+    "formalHardWallClockHours": 36,
+    "pilotCampaignCount": 12,
+    "pilotMeasuredBlockCount": 384,
+    "pilotMeasuredSampleCount": 1152
+  },
+  "activeAttempt4Roots": {
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v4",
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v4",
+    "pilotRoot": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v4",
+    "reservedFormalRoot": "Research/FormalRuns/Gate13R_36h_10pct_4Lane/v1"
+  },
+  "forbiddenChanges": [
+    "algorithm, Unity command, scenario, seed, Williams order, reset, telemetry, managed-memory, thermal, storage, or failure-policy changes",
+    "precision, cap, lane count, readiness p95, or formal wall-clock gate changes",
+    "modification, deletion, resume, merge, or reinterpretation of v1, v2, or partial v3 evidence",
+    "formal output root, formal execution receipt, formal campaign, Gate 14 analysis, pilot retry, or measured-pilot resume"
+  ],
+  "pilotAuthorization": {
+    "authorizedCount": 1,
+    "consumedCountBeforeAttempt4": 0,
+    "formalCampaignAuthorized": false,
+    "automaticRetryAuthorized": false,
+    "sameAttemptResumeAuthorized": false
+  }
+}

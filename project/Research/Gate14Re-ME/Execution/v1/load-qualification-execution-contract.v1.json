@@ -1,0 +1,83 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_IMPLEMENTATION_SOURCE_ONLY_EXECUTION_UNAUTHORIZED",
+  "version": 1,
+  "reservedQualificationRoot": "Research/PilotRuns/Gate14Re-ME/load-qualification",
+  "prohibitedRootsDuringCurrentStage": [
+    "Research/PilotRuns/Gate14Re-ME",
+    "Research/FormalRuns/Gate14Re-ME",
+    "Research/Analysis/Gate14Re-ME",
+    "Research/Exports/Gate14Re-ME"
+  ],
+  "futureExecutionPreconditions": [
+    "a separate exact-hash execution authorization with status AUTHORIZED_LOAD_QUALIFICATION_EXECUTION",
+    "authorization binds the exact measuredRootRelativePath Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001 and explicitly permits qualification input generation, qualification root creation, compile/Unity execution and qualification execution while leaving formal collection and formal analysis false",
+    "Unity compilation succeeds against the frozen implementation manifest",
+    "the frozen typed-Parquet dependency is present and passes the exporter self-test",
+    "a 162-row schedule and all 162 byte-stable input bundles exist and are hash-bound",
+    "the schedule validates against load-qualification-schedule-schema.v1.json and binds globally unique inputIds, canonical unique primary and replacement input paths, hashes, matching superblockIds and six-lane identity tuples",
+    "all 162 algorithm-neutral oracle receipts pass before any algorithm lane is launched",
+    "all C# and export instrument qualification tests pass",
+    "the current host satisfies both storage reservations and the serial-process rule"
+  ],
+  "futureProcessModes": {
+    "oracle": "validate one input without constructing an algorithm planner; write every agent/event oracle row and a pass receipt",
+    "instrument-self-test": "run D2/D3/D4/clock C# known-answer controls",
+    "empty-boundary": "run exactly 1000 empty-boundary iterations in one of 12 fresh processes",
+    "lane": "run exactly one algorithm lane for one already oracle-qualified input in one fresh Unity process"
+  },
+  "executionOrder": {
+    "maximumConcurrentUnityProcesses": 1,
+    "instrumentQualificationBeforeAnyLane": true,
+    "allInputOracleQualificationBeforeAnyLane": true,
+    "twelveEmptyBoundaryProcessesBeforeAlgorithmLanes": true,
+    "withinSuperblockStrictSerialSixLaneOrderFromFrozenSchedule": true,
+    "freshUnityProcessPerLane": true,
+    "maximumOneWholeSuperblockTechnicalReplacement": true,
+    "perAlgorithmRetryResumeTopUpMergeSkipOrReorderProhibited": true
+  },
+  "expectedCardinalities": {
+    "coreSuperblocks": 144,
+    "stressSuperblocks": 18,
+    "totalSuperblocks": 162,
+    "algorithmLanesPerSuperblock": 6,
+    "freshAlgorithmProcesses": 972,
+    "eventGroupsPerLane": 24,
+    "eventGroupRows": 23328,
+    "resourceMeasurementPointsPerLane": 26,
+    "processResourceRows": 25272,
+    "emptyBoundaryProcesses": 12,
+    "emptyBoundaryIterationsPerProcess": 1000,
+    "emptyBoundaryRows": 12000
+  },
+  "failClosedRules": [
+    "No output directory is created before authorization, manifest, schedule, budget and fairness hashes validate.",
+    "Every Unity process independently validates the authorization-bound 162-row schedule and refuses any input or algorithm/lane/identity tuple absent from that schedule.",
+    "Every Unity process refuses any output directory that does not exactly match the authorization-bound measured root and the scheduled oracle, lane, empty-boundary or instrument identity.",
+    "Any source/specification/hash drift stops before Unity measurement.",
+    "Any oracle or instrument qualification failure blocks all algorithm lanes.",
+    "A lane failure voids the complete superblock; the supervisor alone may perform the single whole-superblock technical replacement.",
+    "Every accepted-superblock receipt retains both the original plannedSuperblockId and the actual primary-or-replacement instanceId; the replacement and void ledgers use unique recordId values.",
+    "No qualification observation is admitted to formal estimation.",
+    "No algorithm identity, cross-lane comparison, rank, winner, p-value or directional advantage may be reported from qualification."
+  ],
+  "currentAuthorization": {
+    "qualificationImplementationAuthorized": true,
+    "resourceCeilingFreezeAuthorized": true,
+    "qualificationInputGenerationAuthorized": false,
+    "qualificationRootCreationAuthorized": false,
+    "compileOrUnityExecutionAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "formalInputGenerationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  },
+  "currentEvidence": {
+    "UnityProcessesLaunched": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "qualificationRootExists": false
+  }
+}

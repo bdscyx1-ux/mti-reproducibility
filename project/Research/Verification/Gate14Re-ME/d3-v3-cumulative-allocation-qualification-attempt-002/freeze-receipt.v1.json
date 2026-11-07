@@ -1,0 +1,98 @@
+{
+  "schema": "gate14re-me-d3-v3-failed-qualification-attempt-002-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-002",
+  "status": "FROZEN_FAILED_CLOSED_SDK_INSTALLER_COMMAND_REJECTED",
+  "version": 1,
+  "frozenAtUtc": "2026-10-17T06:33:00.6841371Z",
+  "outcome": {
+    "attempt001RetainedImmutable": true,
+    "d3V2RetiredProspectivelyAsFormalD3": true,
+    "allD3V2EvidenceRetained": true,
+    "selectedSdkComponentInstalled": false,
+    "hostToolchainModified": false,
+    "sdkVersionPathsAndCriticalHashesFrozen": false,
+    "utf8AndWarningsAsErrorsPolicyProspectivelyRecorded": true,
+    "attempt002NativeBuildRun": false,
+    "attempt002NativeBinaryBuilt": false,
+    "attempt002UnityKnownAnswerRun": false,
+    "d3V3Qualified": false,
+    "formalD3EndpointAvailable": false,
+    "exactFailure": "Visual Studio Installer 4.10.30.62513 rejected the unsupported --wait option with exit code 87 during command-line parsing, before installation or instance modification.",
+    "automaticRetryPerformed": false,
+    "fallbackMetricUsed": false
+  },
+  "frozenBindings": [
+    {
+      "role": "attempt-002-authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Attempt_002_Authorization.v1.json",
+      "sha256": "a804b1d4fd523b1319aca66f9ec1764133dcaa99850eeccd3dfe7b8f9556e087"
+    },
+    {
+      "role": "attempt-002-prospective-plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Attempt_002_Plan.v1.md",
+      "sha256": "839c972f78924aeb2a159a27e9b182f8876531f4b07f79cc5d0ab2a9389d4780"
+    },
+    {
+      "role": "preinstallation-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002/preinstallation-receipt.v1.json",
+      "sha256": "54de9b022d3b8bfe9dc48402cca8b402b5732feb67c7eff89be9290231654445"
+    },
+    {
+      "role": "visual-studio-installer-log",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002/vs-installer-attempt.log",
+      "sha256": "6d1b2291589704c02f3fae257da59fb394770501ac6fb90aa7bae3bbec10c790"
+    },
+    {
+      "role": "failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002/failure-receipt.v1.json",
+      "sha256": "0b592fadcf976828a3fadd04f782eb25715f598a3826c8c8d40e27e60214a168"
+    },
+    {
+      "role": "validation-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002/validation-receipt.v1.json",
+      "sha256": "96fa707285568a7556c8f7781d26a9840002989543d0b5788a4c7a76d3c8ec00"
+    },
+    {
+      "role": "attempt-001-failure-receipt-retained",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/failure-receipt.v1.json",
+      "sha256": "3ad510a4ec142f8ac58dfc497eb6e48ee2de03cf8579463662252ca23816ba85"
+    },
+    {
+      "role": "attempt-001-freeze-receipt-retained",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/freeze-receipt.v1.json",
+      "sha256": "5f52e2b6e7cb71624febe231b4ef56515a1f4d44c39048e20cd108df81bcd250"
+    }
+  ],
+  "validation": {
+    "status": "PASS_FAILURE_EVIDENCE_CONSISTENCY_SDK_UNCHANGED_D3_V3_NOT_QUALIFIED",
+    "checksPassed": 25,
+    "checksFailed": 0,
+    "sdkInstallationAttempts": 1,
+    "sdkInstallationRetries": 0,
+    "nativeBuildAttempts": 0,
+    "unityKnownAnswerRuns": 0,
+    "algorithmLaneRuns": 0,
+    "formalRuns": 0,
+    "windowsKitsRootAbsent": true,
+    "nativeBinaryAbsent": true,
+    "attempt002HarnessAbsent": true,
+    "knownAnswerOutputAbsent": true
+  },
+  "scientificBoundary": {
+    "currentQualificationRunnerModified": false,
+    "currentOutputSchemaModified": false,
+    "algorithmSourcesModified": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "fallbackMetricUsed": false
+  },
+  "nextRequiredAction": "Attempt-002 is closed and must not be retried or overwritten. Separately authorize attempt-003 to use the installer-supported modify syntax without --wait, monitor the installer and VS instance to a verified terminal state, freeze the installed SDK, and only then perform one native build and the conditional one algorithm-free known-answer run. All broader stages remain unauthorized."
+}

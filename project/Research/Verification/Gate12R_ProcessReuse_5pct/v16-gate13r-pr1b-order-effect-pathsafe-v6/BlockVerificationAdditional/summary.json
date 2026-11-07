@@ -1,0 +1,96 @@
+{
+    "schemaVersion":  2,
+    "summaryKind":  "gate13r-pr1b-v3-repeatability-cold-structural-retained-regression-summary-v1",
+    "savedAtUtc":  "2026-10-08T13:24:21.2043313Z",
+    "positiveMirroredChildPassed":  true,
+    "positiveMirroredProcessCount":  4,
+    "negativeFailClosedPassed":  true,
+    "additionalProcessCount":  5,
+    "uniqueProcessCount":  9,
+    "processRecords":  [
+                           {
+                               "kind":  "independent-repeat",
+                               "processId":  14800,
+                               "summarySha256":  "9a825db564731a3364a66e26047354255cf80df473e665d205f60296233de5a4"
+                           },
+                           {
+                               "kind":  "cold-control",
+                               "algorithmId":  "A*-R",
+                               "processId":  19556,
+                               "summarySha256":  "476d33b970cac709291b0d4f8d9d1c771ef3049012b538c59370a80b55af631e"
+                           },
+                           {
+                               "kind":  "cold-control",
+                               "algorithmId":  "D*L",
+                               "processId":  30832,
+                               "summarySha256":  "5e89651a1500aba72b7aad8068d60875628e6dbfe3f7fd76ab672fd83a0b6187"
+                           },
+                           {
+                               "kind":  "cold-control",
+                               "algorithmId":  "C-FF",
+                               "processId":  35652,
+                               "summarySha256":  "1ba09b5fbcb5f9a5ce072d02ce9a2e2a85877a163ea4693c69c80590e774dfd9"
+                           },
+                           {
+                               "kind":  "cold-control",
+                               "algorithmId":  "IDFF",
+                               "processId":  38892,
+                               "summarySha256":  "656c9d0616f845f338a323ec8cb754e3f4299176f9dfe6c286aee4f8b64d2bba"
+                           }
+                       ],
+    "structuralComparisonCount":  6,
+    "structuralComparisons":  [
+                                  {
+                                      "kind":  "independent-process-repeatability",
+                                      "label":  "core-r01-b001-per-agent",
+                                      "algorithmId":  "A*-R",
+                                      "referenceProjectionSha256":  "351bf96cbfd92a8dd927a94b2f9d3cbe673146d840aa4e934937100e873287e4",
+                                      "candidateProjectionSha256":  "351bf96cbfd92a8dd927a94b2f9d3cbe673146d840aa4e934937100e873287e4",
+                                      "passed":  true
+                                  },
+                                  {
+                                      "kind":  "independent-process-repeatability",
+                                      "label":  "core-r01-b001-per-agent",
+                                      "algorithmId":  "D*L",
+                                      "referenceProjectionSha256":  "8b84d73d05ab13432ed8d183ade8d91e3b80cf084293e4cd56161dc67ec5d498",
+                                      "candidateProjectionSha256":  "8b84d73d05ab13432ed8d183ade8d91e3b80cf084293e4cd56161dc67ec5d498",
+                                      "passed":  true
+                                  },
+                                  {
+                                      "kind":  "cold-structural-control",
+                                      "cohort":  "per-agent",
+                                      "algorithmId":  "A*-R",
+                                      "referenceProjectionSha256":  "351bf96cbfd92a8dd927a94b2f9d3cbe673146d840aa4e934937100e873287e4",
+                                      "candidateProjectionSha256":  "351bf96cbfd92a8dd927a94b2f9d3cbe673146d840aa4e934937100e873287e4",
+                                      "passed":  true
+                                  },
+                                  {
+                                      "kind":  "cold-structural-control",
+                                      "cohort":  "per-agent",
+                                      "algorithmId":  "D*L",
+                                      "referenceProjectionSha256":  "8b84d73d05ab13432ed8d183ade8d91e3b80cf084293e4cd56161dc67ec5d498",
+                                      "candidateProjectionSha256":  "8b84d73d05ab13432ed8d183ade8d91e3b80cf084293e4cd56161dc67ec5d498",
+                                      "passed":  true
+                                  },
+                                  {
+                                      "kind":  "cold-structural-control",
+                                      "cohort":  "grouped-field",
+                                      "algorithmId":  "C-FF",
+                                      "referenceProjectionSha256":  "355891df893a2f483ff3d47ed39cc33b3e52997be7ec1b4facf779cb69c19c2b",
+                                      "candidateProjectionSha256":  "355891df893a2f483ff3d47ed39cc33b3e52997be7ec1b4facf779cb69c19c2b",
+                                      "passed":  true
+                                  },
+                                  {
+                                      "kind":  "cold-structural-control",
+                                      "cohort":  "grouped-field",
+                                      "algorithmId":  "IDFF",
+                                      "referenceProjectionSha256":  "0a4d6374027ea15b5cf5cae8373ce5fbe67edb9cba34956e8f92ab858d2f155d",
+                                      "candidateProjectionSha256":  "0a4d6374027ea15b5cf5cae8373ce5fbe67edb9cba34956e8f92ab858d2f155d",
+                                      "passed":  true
+                                  }
+                              ],
+    "retainedRegressionAssertionCount":  63,
+    "retainedRegressionPassed":  true,
+    "formalCampaign":  false,
+    "passed":  true
+}

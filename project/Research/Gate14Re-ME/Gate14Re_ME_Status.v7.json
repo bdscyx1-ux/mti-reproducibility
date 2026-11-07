@@ -1,0 +1,93 @@
+{
+  "schema": "gate14re-me-status-v7",
+  "studyId": "Gate14Re-ME",
+  "status": "D3_V3_QUALIFICATION_FAILED_CLOSED_NATIVE_TOOLCHAIN_WINDOWS_SDK_ABSENT",
+  "version": 7,
+  "updatedAtUtc": "2026-10-17T06:24:44.9458251Z",
+  "previousStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v6.json",
+    "sha256": "06043046e01640f0f8c7b54cd7095a4cf704bece676c952c65a653b17e9c3bc1",
+    "retained": true
+  },
+  "d3V2Disposition": {
+    "status": "RETIRED_PROSPECTIVELY_AS_FORMAL_D3_EVIDENCE_RETAINED",
+    "standaloneKnownAnswerEvidenceStillRetained": true,
+    "contractRelativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-instrument-contract.v2.json",
+    "contractSha256": "e402dfc90362a3ac07f5342d218f19c67d31d46f82bec584d5d817fbccb9f0bf",
+    "sourceRelativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs",
+    "sourceSha256": "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca",
+    "mayBeUsedAsFormalD3WithoutNewAuthorization": false
+  },
+  "d3V3QualificationAttempt": {
+    "attempt": "d3-v3-cumulative-allocation-qualification-attempt-001",
+    "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-001",
+    "endpointId": "D3",
+    "semanticVersion": 3,
+    "endpointName": "owner-thread cumulative managed allocation bytes",
+    "eventSource": "GC.Alloc allocation-size Int64 metadata",
+    "nativeSourceImplemented": true,
+    "nativeBinaryBuilt": false,
+    "unityKnownAnswerRun": false,
+    "qualified": false,
+    "exactFailure": "Windows SDK include root is absent from the current VS 2022 x64 environment; Windows.h was not found.",
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/failure-receipt.v1.json",
+    "failureReceiptSha256": "3ad510a4ec142f8ac58dfc497eb6e48ee2de03cf8579463662252ca23816ba85",
+    "sourceFreezeManifestRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/source-freeze-manifest.v1.json",
+    "sourceFreezeManifestSha256": "3e7d89cc9688772f2faa7491c5119d5cd824231e38bb997b15b887af305a1a54",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "5f52e2b6e7cb71624febe231b4ef56515a1f4d44c39048e20cd108df81bcd250"
+  },
+  "currentD3State": {
+    "formalD3Endpoint": null,
+    "d3V3CumulativeAllocationCounterQualified": false,
+    "safeToIntegrateQualificationRunner": false,
+    "safeToVersionOutputSchema": false,
+    "algorithmLaneExecutionEligible": false
+  },
+  "currentQualifiedCapabilities": {
+    "typedParquetRuntimeFrozen": true,
+    "unityCompilationPassedForPreexistingProjectSources": true,
+    "d2GridReadProxyPassed": true,
+    "d2SemanticInvariancePassed": true,
+    "d3V2HistoricalStandaloneEvidenceRetained": true,
+    "d3V3NativePluginBuilt": false,
+    "d3V3KnownAnswerPassed": false,
+    "d4PersistentStateSizerPassed": true,
+    "clockMonotonicityPassed": true,
+    "exportKnownAnswerStatus": "NOT_RUN_IN_THIS_AUTHORIZATION"
+  },
+  "scientificBoundary": {
+    "failureEvidenceFrozen": true,
+    "currentQualificationRunnerModified": false,
+    "currentOutputSchemaModified": false,
+    "algorithmSourcesModified": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "fallbackMetricUsed": false
+  },
+  "authorizationState": {
+    "retryAttempt001Authorized": false,
+    "installWindowsSdkAuthorized": false,
+    "createD3V3Attempt002Authorized": false,
+    "integrateQualificationRunnerAuthorized": false,
+    "versionOutputSchemaAuthorized": false,
+    "qualificationScheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize a toolchain-remediation stage to install and freeze a compatible Windows SDK and freeze UTF-8 source handling, followed by a new D3-v3 qualification attempt. The failed attempt-001 is immutable and must not be resumed."
+}

@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "amendmentKind": "gate13r-strict-serial-10pct-readiness-amendment-v1",
+  "amendmentId": "gate13r-strict-serial-10pct-no-concurrency-readiness-v1",
+  "effectiveDate": "2026-10-08",
+  "prospectiveOnly": true,
+  "activeTopology": {
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "freshUnityEditorPerWilliamsBlock": true,
+    "maximumBlocksPerProcess": 1,
+    "parallelExecutionAllowed": false,
+    "fallbackTopologyAllowed": false
+  },
+  "precision": {
+    "policyId": "two-sided-95pct-ci-relative-half-width-10pct-uncapped-v1",
+    "confidenceLevel": 0.95,
+    "criticalValue": 1.96,
+    "relativeHalfWidth": 0.1,
+    "logHalfWidth": 0.09531017980432493,
+    "minimumBlocks": 32,
+    "cycleMultiple": 4,
+    "hardCap": null,
+    "earlyStoppingAllowed": false
+  },
+  "candidateNFormal": {
+    "four-algorithm-shared-goal-v1": 144,
+    "per-agent-heterogeneous-goal-v1": 204,
+    "grouped-field-heterogeneous-goal-v1": 108
+  },
+  "totals": {
+    "campaignCount": 74,
+    "blockProcessCount": 11160,
+    "sampleCount": 31536
+  },
+  "runtimeProjection": {
+    "serialP50Hours": 64.830802096,
+    "serialP95Hours": 83.904223147,
+    "estimateOnly": true,
+    "previous36HourGateFeasible": false,
+    "replacementHardWallClockLimit": null,
+    "recommendedMaintenanceWindowHours": 96
+  },
+  "storage": {
+    "projectedRawBytesWithSafety": 43885575792,
+    "reserveBytes": 42949672960,
+    "minimumLaunchFreeBytes": 86835248752,
+    "originalByteComparisonRequired": true,
+    "freshLaunchRecheckRequired": true,
+    "readinessSnapshotCanAuthorizeLaunch": false
+  },
+  "pilotEvidencePolicy": {
+    "sameTopologyEvidenceRoot": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+    "newEquivalentPilotRequired": false,
+    "justification": "Gate12R v4 already used one fresh Unity Editor per complete Williams block with zero interval overlap and the frozen reset/telemetry/Williams semantics.",
+    "fourLaneEvidenceEligible": false,
+    "threeLaneEvidenceEligible": false
+  },
+  "formalOutput": {
+    "reservedRelativePath": "Research/FormalRuns/Gate13R_Serial_10pct/v1",
+    "mustRemainAbsentUntilSeparateAuthorization": true
+  },
+  "authorization": {
+    "formalCampaignAuthorized": false,
+    "formalRootCreationAuthorized": false,
+    "formalExecutionReceiptAuthorized": false,
+    "formalTimingAuthorized": false,
+    "automaticRetryAuthorized": false,
+    "automaticResumeAuthorized": false
+  }
+}

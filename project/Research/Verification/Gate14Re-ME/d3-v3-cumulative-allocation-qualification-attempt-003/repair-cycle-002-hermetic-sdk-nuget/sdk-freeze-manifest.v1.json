@@ -1,0 +1,111 @@
+{
+  "schema": "gate14re-me-d3-v3-hermetic-windows-sdk-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "status": "HERMETIC_WINDOWS_SDK_FROZEN",
+  "frozenAtUtc": "2026-10-17T06:49:47.6790651Z",
+  "acquisitionChannel": {
+    "kind": "official-nuget-windows-sdk",
+    "officialDocumentation": "https://learn.microsoft.com/en-us/windows/apps/windows-sdk/downloads",
+    "officialReleaseNotes": "https://learn.microsoft.com/en-us/windows/apps/windows-sdk/release-notes",
+    "reason": "Microsoft documents NuGet as a supported Windows SDK acquisition method; this path avoids unsupported UAC automation while preserving exact package identity."
+  },
+  "sdk": {
+    "family": "Windows 11 SDK",
+    "servicingVersion": "10.0.26100.7705",
+    "targetPlatformVersion": "10.0.26100.0",
+    "targetArchitecture": "x64",
+    "installMode": "hermetic-extracted-nuget",
+    "root": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk"
+  },
+  "packages": [
+    {
+      "id": "Microsoft.Windows.SDK.CPP",
+      "version": "10.0.26100.7705",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/packages/microsoft.windows.sdk.cpp.10.0.26100.7705.nupkg",
+      "lengthBytes": 160402494,
+      "sha256": "ff455660bee071a744715a9665666fa29c07681579d3d815959a9eec5a556424",
+      "extractedFileCount": 5968,
+      "extractedBytes": 685227341,
+      "signature": {
+        "entrySha256": "c21eef58dba7c33ec9d59128a79d31e4746088eefb80de5b66c83f609683a46d",
+        "cryptographicSignatureValid": true,
+        "certificateChainValid": true,
+        "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "thumbprint": "F25C45D17C53D4E0D1DC9FB9DFD0731FCF904B77"
+      }
+    },
+    {
+      "id": "Microsoft.Windows.SDK.CPP.x64",
+      "version": "10.0.26100.7705",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/packages/microsoft.windows.sdk.cpp.x64.10.0.26100.7705.nupkg",
+      "lengthBytes": 52949537,
+      "sha256": "ad6ce90ff94010699d29548b3c2b1e52c89eb81143e2199155d9a5c38001b52b",
+      "extractedFileCount": 496,
+      "extractedBytes": 200962781,
+      "signature": {
+        "entrySha256": "46f07ef756781ed1b86047ed2f0a4ba970be602e12046a64117b157ba1b88372",
+        "cryptographicSignatureValid": true,
+        "certificateChainValid": true,
+        "subject": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US",
+        "thumbprint": "F25C45D17C53D4E0D1DC9FB9DFD0731FCF904B77"
+      }
+    }
+  ],
+  "explicitCompilerPaths": {
+    "include": [
+      "sdk/base/c/Include/10.0.26100.0/ucrt",
+      "sdk/base/c/Include/10.0.26100.0/shared",
+      "sdk/base/c/Include/10.0.26100.0/um"
+    ],
+    "library": [
+      "sdk/x64/c/ucrt/x64",
+      "sdk/x64/c/um/x64"
+    ]
+  },
+  "criticalFiles": [
+    {
+      "role": "windows-h",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk/base/c/Include/10.0.26100.0/um/Windows.h",
+      "lengthBytes": 7511,
+      "sha256": "b337d661d03a4abefb7b86a2742ce1ad5d19b57cd8b858bd13e7bbcc1dbeeaaa"
+    },
+    {
+      "role": "winnt-h",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk/base/c/Include/10.0.26100.0/um/winnt.h",
+      "lengthBytes": 876232,
+      "sha256": "8693f0ad4ada355c912d40ca41ce929b480e92291bda2f9227acf56736bffbff"
+    },
+    {
+      "role": "sdkddkver-h",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk/base/c/Include/10.0.26100.0/shared/sdkddkver.h",
+      "lengthBytes": 11565,
+      "sha256": "2472140e0a4d56595743bb74002a51aee9b58667bd178fc43742e19debfeb774"
+    },
+    {
+      "role": "ucrt-stdlib-h",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk/base/c/Include/10.0.26100.0/ucrt/stdlib.h",
+      "lengthBytes": 43968,
+      "sha256": "1576fdb40eb225dff53489db2fd52e41c7bb24f1e621e4a95c2c7f4a7216949c"
+    },
+    {
+      "role": "kernel32-x64-lib",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk/x64/c/um/x64/kernel32.Lib",
+      "lengthBytes": 311908,
+      "sha256": "341c7d56125a03b458e4d5093e4c79b33123ccfdfd610fe236937b8e6f3134bb"
+    },
+    {
+      "role": "ucrt-x64-lib",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk/x64/c/ucrt/x64/ucrt.lib",
+      "lengthBytes": 285588,
+      "sha256": "7ef4eac926bf597d2f243f16cdfed7e0db22cb3ca34a1d7e088a84c994a03d66"
+    },
+    {
+      "role": "uuid-x64-lib",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk/x64/c/um/x64/Uuid.Lib",
+      "lengthBytes": 8936424,
+      "sha256": "d077ffb106503e057428dc7bb4c5daac019c269ffc714edb18ca028723cc840a"
+    }
+  ],
+  "integrityConclusion": "The exact Microsoft-signed 10.0.26100.7705 C++ base and x64 Windows SDK packages are present, cryptographically valid, version-matched, hash-frozen, and expose the required Windows/UCRT headers and x64 import libraries through explicit hermetic paths."
+}

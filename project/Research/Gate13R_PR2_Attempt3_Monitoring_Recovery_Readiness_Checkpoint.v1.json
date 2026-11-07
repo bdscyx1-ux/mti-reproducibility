@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "gate13r-pr2-attempt3-monitoring-recovery-nonexecuting-readiness-v1",
+  "savedAtUtc": "2026-10-09T07:12:00Z",
+  "savedAtAsiaShanghai": "2026-10-09T15:12:00+08:00",
+  "passed": true,
+  "statusTokens": [
+    "MONITORING-RECOVERY-AMENDMENT-VALIDATED",
+    "FIVE-MINUTE-SILENT-WATCHER",
+    "SIXTY-MINUTE-USER-REPORT",
+    "PRELAUNCH-VERSIONED-REPAIR-BOUNDED",
+    "ACQUISITION-DIAGNOSTICS-ONLY",
+    "NO-MEASURED-RETRY-RESUME-TOPUP-MERGE",
+    "POST-ACQUISITION-NON-UNITY-COMMIT-RECOVERY-BOUNDED",
+    "TWO-STAGE-COMMIT-PRESERVED",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "FORMAL-ROOT-ABSENT",
+    "FORMAL-RECEIPT-ABSENT",
+    "FORMAL-STATUS-ABSENT",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "activeUpstream": {
+    "mp2ReadinessSha256": "88333a15f3e5deb0eb7998bf15a5f1976df5de9a0382350016aa8623ad4680f8",
+    "candidateConfigV4Sha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+    "candidateAdapterV4Sha256": "2cad63b1c89608b2053552ef8c1261603f81231365689ba232d950fc279c4f62",
+    "candidateProvenanceV4Sha256": "0f2c666ac4dc324687073fcdd913833e4d7d72dc8ad88bfaa5b1184bcfb7c37f",
+    "scheduleV2Sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+  },
+  "monitoringArtifacts": {
+    "specification": {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Specification.v1.md", "sha256": "7760fe037563425ea29239eca9aa123919e9082f0762d3901bfd5a8f77cd1ccc"},
+    "config": {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Config.v1.json", "sha256": "135087a2de92e91ea5139ceff320363edefe7226420f1c0e14abf50a244c1f2f"},
+    "stateMachine": {"relativePath": "Research/Gate13R_PR2_Attempt3_Recovery_State_Machine.v1.json", "sha256": "2aa5d0e5a11a1e38a05d9e3e82a65dc227e98b953cc4e2678e73eaa96aec1a3d"},
+    "operationalStatusSchema": {"relativePath": "Research/Gate13R_PR2_Attempt3_Operational_Status_Schema.v1.json", "sha256": "3aff68ac8e041838283f8e28b72b388ab4de50abe3b357f59bb3e3597f74d89b"},
+    "progressSnapshotSchema": {"relativePath": "Research/Gate13R_PR2_Attempt3_Progress_Snapshot_Schema.v1.json", "sha256": "5131b2f172f57377e184f164587e59cff73cb40228bdfb3ba60716704e3295df"},
+    "monitor": {"relativePath": "Research/Gate13RPR2Attempt3MonitoringRecoveryV1.py", "sha256": "e09eee5be46e3db8f79044d9711d5bf444a513977f0c31c600d551b0c9ade077"},
+    "wrapper": {"relativePath": "Research/Get-Gate13RPR2Attempt3OperationalProgressV1.ps1", "sha256": "234ef08b17d8830e8d7358b1729e41cdaffc73bfcad91ff692d3eecd2bac81d4"},
+    "evidenceManifest": {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v1.json", "sha256": "6ca1b08a4016c11637436fdd1dec1c0c8f431ad81f06d947504226329b67695a"},
+    "postValidationAudit": {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_PostValidation_Preservation_Audit.v1.json", "sha256": "5c5966b080e7e6b36f4e61b2e741d9038375a8c2d90b32ce43c241bbe5aada02"}
+  },
+  "validation": {
+    "attempt1": "FAILED-PRESERVED-53-OF-54-TEST-ASSERTION-ONLY",
+    "attempt2": "PASSED-54-OF-54",
+    "pythonParserCli": "PASSED",
+    "powerShell7ParserBinding": "PASSED",
+    "windowsPowerShell51ParserBinding": "PASSED",
+    "noLaunchDryRun": "PASSED",
+    "blinding": "PASSED",
+    "formalPathWriteRejection": "PASSED",
+    "frozenInputPostHash": "PASSED",
+    "unityInvocations": 0
+  },
+  "monitoringContract": {
+    "silentWatcherCadenceMinutes": 5,
+    "scheduledReportCadenceMinutes": 60,
+    "catchUpReports": false,
+    "quietBeforeStart": true,
+    "eventReports": ["START", "FAILURE", "COMPLETION", "ACTION-REQUIRED", "NEW-STALL-ESCALATION"],
+    "interimResearchEndpointsExposed": false,
+    "formalRootReadOnlyForMonitor": true
+  },
+  "recoveryContract": {
+    "prelaunch": {
+      "maximumVersionedRepairCycles": 3,
+      "stopAfterSameSignatureCount": 2,
+      "requiresFormalTargetsAbsent": true,
+      "requiresMeasuredCountsZero": true
+    },
+    "acquisition": {
+      "readOnlyDiagnosticsAllowed": true,
+      "measuredRetryAllowed": false,
+      "resumeAllowed": false,
+      "topUpAllowed": false,
+      "partialMergeAllowed": false,
+      "skipOrReplaceBlockAllowed": false,
+      "nextBlockAfterHardFailureAllowed": false
+    },
+    "postAcquisitionCommit": {
+      "maximumNonUnityRecoveryAttempts": 3,
+      "stopAfterSameSignatureCount": 2,
+      "requiresProcesses": 3552,
+      "requiresSamples": 10176,
+      "requiresStableRawIdentityAcrossTwoReads": true,
+      "unityAcquisitionAllowed": false,
+      "successState": "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE"
+    }
+  },
+  "formalAttempt3Targets": {
+    "formalRoot": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3",
+    "formalRootExists": false,
+    "formalReceiptExists": false,
+    "formalStatusExists": false
+  },
+  "nextStep": "WAIT-FOR-SEPARATE-GATE13R-PR2-FORMAL-ATTEMPT3-AUTHORIZATION"
+}

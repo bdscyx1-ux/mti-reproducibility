@@ -1,0 +1,39 @@
+{
+  "lastHourLaneCompletions": 13,
+  "loadAssociations": {
+    "FvsLogLaneBodyPearson": 0.34192,
+    "GvsLogLaneBodyPearson": 0.461979,
+    "NvsLogLaneBodyPearson": 0.81963,
+    "boundary": "Descriptive associations only; G, N, F, algorithm identity, context and execution order are not mutually randomized for causal attribution in this diagnostic.",
+    "logOperationRowsVsLogLaneBodyPearson": 0.875055
+  },
+  "notSupportedAsCauses": [
+    "thermal throttling",
+    "antivirus",
+    "cache state",
+    "disk pressure",
+    "host memory pressure"
+  ],
+  "processWallP95TailOverlapWithLaneBodyP95Tail": 0.979592,
+  "processWallVsLaneBodyPearson": 0.999769,
+  "schema": "gate14re-me-load-runtime-cause-summary-v1",
+  "scientificBoundary": "Not a formal effect comparison, ranking, weighting, or winner adjudication.",
+  "status": "POST_VALIDATION_DESCRIPTIVE_ENGINEERING_DIAGNOSTIC_COMPLETE",
+  "supportedConclusions": [
+    "The final throughput collapse coincides with structurally heavy G/N/F composition and long inclusive lane-body durations.",
+    "Inter-process gaps are directly measured and can be compared with lane/process tails.",
+    "The old validator was slow because of per-row source hashing, whole-dataset row retention, and then offline-v1 per-row path canonicalization."
+  ],
+  "tailAssessment": "LPA*",
+  "tailDescriptorMaxima": {
+    "maximumToP50": "LPA*",
+    "p95ToP50": "BiA*-R",
+    "p99ToP50": "D*L",
+    "shareAbovePooledP95": "LPA*"
+  },
+  "unidentifiable": [
+    "pure algorithm compute",
+    "Unity startup",
+    "exit/finalization"
+  ]
+}

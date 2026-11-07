@@ -1,0 +1,7 @@
+﻿Outcome,Accepted measurements and lane aggregation,Model input
+D1 GM (ms),Geometric mean of 24 eventGroupElapsedMilliseconds values,ln(lane GM)
+D1 P95 (ms),23rd ordered eventGroupElapsedMilliseconds value among 24,ln(lane P95)
+D2 (calls),Sum over 24 groups of Contains + IsWalkable + GetTraversalCost calls,ln(total calls)
+D3 (bytes),Sum of managedAllocationBytes in 24 event-group windows,ln(1 + total bytes)
+D4 (bytes),Maximum persistentStateBytesTotal across 26 measurement points,ln(1 + maximum bytes)
+D5–D7,"The D1 GM outcome at N, F, and G² design levels",D1 GM model; algorithm × centered log2 axis

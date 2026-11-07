@@ -1,0 +1,89 @@
+{
+  "schema": "gate14re-me-trusted-timestamp-comparator-corrigendum-attempt-007-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-auto-attempts-until-pass",
+  "attemptId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007",
+  "mode": "OFFLINE_NO_UNITY",
+  "purpose": "Correct attempt-006's eager empty failed-case property expansion without changing the timestamp comparator, then execute the 16-case offline known-answer exactly once.",
+  "correctedDefect": {
+    "eagerEmptyFailedCaseExpansion": {
+      "cause": "PowerShell evaluated the Require-Condition message argument before the helper was entered; under StrictMode, failedCases.caseId threw when failedCases was an empty array even though all 16 cases had passed.",
+      "correction": "Enter an explicit non-empty failure branch before enumerating failed case identifiers."
+    }
+  },
+  "timestampIngestionContract": {
+    "parser": "System.Text.Json.JsonDocument",
+    "dateTypeInferenceAllowed": false,
+    "timestampPropertiesMustBeJsonStrings": true,
+    "originalStringValueMustBePreserved": true,
+    "rawJsonTokenMustBeRecorded": true
+  },
+  "comparisonContract": {
+    "acceptedSyntax": "STRICT_ISO8601_WITH_EXPLICIT_OFFSET_AND_OPTIONAL_1_TO_7_FRACTIONAL_DIGITS",
+    "comparisonBasis": "UTC_TICKS",
+    "requiredEquivalentPair": [
+      "2024-06-11T11:26:54Z",
+      "2024-06-11T11:26:54.0000000Z"
+    ],
+    "realTimeDifferenceDisposition": "FAIL_CLOSED",
+    "invalidTextDisposition": "FAIL_CLOSED",
+    "missingValueDisposition": "FAIL_CLOSED",
+    "nonUniqueParseDisposition": "FAIL_CLOSED",
+    "expectedCaseCount": 16,
+    "requiredPassCount": 16
+  },
+  "preservationContract": {
+    "retainedAttempts": [
+      {
+        "attempt": "qualification-input-schema-compatibility-corrigendum-attempt-003",
+        "fileCount": 15,
+        "digestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef"
+      },
+      {
+        "attempt": "unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004",
+        "fileCount": 8,
+        "digestSha256": "83b30dc296f8acc92e95bcd55a64b0635cd65b1192bfe511795ca3bf125c69f6"
+      },
+      {
+        "attempt": "unity-trusted-identity-timestamp-comparator-corrigendum-attempt-005",
+        "fileCount": 9,
+        "digestSha256": "111efac5220e65df22c092547387c24b168701cf4c52a2e41944b2b647e9b88a"
+      },
+      {
+        "attempt": "unity-trusted-identity-timestamp-comparator-corrigendum-attempt-006",
+        "fileCount": 10,
+        "digestSha256": "1e8b18cbc9fb1ccb782f3a63c190d2266d069dbbe301f4614a50cc949823b991"
+      }
+    ],
+    "priorEvidenceMustRemainReadOnly": true,
+    "priorEvidenceReclassificationAllowed": false,
+    "trustedRuleExpectedSha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+  },
+  "preservedNonTimestampRequirements": {
+    "sha256": true,
+    "chunkDigests": true,
+    "executablePath": true,
+    "ntfsFileIdentity": true,
+    "peIdentity": true,
+    "authenticode": true,
+    "fileLength": true,
+    "processCompositeIdentity": true
+  },
+  "executionBoundary": {
+    "sameAttemptInvocationMaximum": 1,
+    "sameAttemptRetryAuthorized": false,
+    "subsequentIndependentAttemptsAuthorizedUntilPass": true,
+    "unityInvocationMaximum": 0,
+    "schemaCompatibilitySelfCheckAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

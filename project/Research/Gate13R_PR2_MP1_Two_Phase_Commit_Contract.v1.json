@@ -1,0 +1,31 @@
+{
+  "contractId": "gate13r-pr2-mp1-raw-analysis-two-stage-commit-v1",
+  "schemaVersion": 1,
+  "phaseA": {
+    "name": "raw-acquisition-commit",
+    "requiredMeasuredBlocks": 96,
+    "requiredMeasuredSamples": 384,
+    "requiredWarmupProcesses": 0,
+    "requiredStatusTokens": ["PILOT-RAW-DATA-COMPLETE", "ANALYSIS-PENDING", "IMMUTABLE"],
+    "requiredChecks": [
+      "block-and-sample-completeness", "per-file-sha256", "canonical-tree-sha256",
+      "schedule-identity", "williams-quota", "environment-end-snapshot", "all-raw-files-read-only"
+    ],
+    "ordinaryAnalysisFailureCanInvalidateRawCommit": false
+  },
+  "phaseB": {
+    "name": "read-only-analysis-commit",
+    "rawAccess": "READ-ONLY",
+    "freshVersionedAttemptDirectoryRequired": true,
+    "analysisRetryMayRerunUnity": false,
+    "analysisRetryMayModifyRawData": false,
+    "newExperimentRequiredOnlyForRawContractFailure": true
+  },
+  "measuredAcquisition": {
+    "automaticRetry": false,
+    "automaticResume": false,
+    "automaticTopUp": false,
+    "partialAttemptMerge": false
+  },
+  "status": "FROZEN-BEFORE-PILOT"
+}

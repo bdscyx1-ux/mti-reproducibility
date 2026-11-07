@@ -1,0 +1,51 @@
+{
+  "schema": "gate14re-me-d3-v3-failed-attempt-validation-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-001",
+  "status": "PASS_FAILURE_EVIDENCE_CONSISTENCY_D3_V3_NOT_QUALIFIED",
+  "validatedAtUtc": "2026-10-17T06:24:13.9838944Z",
+  "checksPassed": 18,
+  "checksFailed": 0,
+  "checks": {
+    "authorizationJsonValid": true,
+    "prospectiveContractJsonValid": true,
+    "preexecutionManifestJsonValid": true,
+    "failureReceiptJsonValid": true,
+    "sourceFreezeManifestJsonValid": true,
+    "currentQualificationRunnerHashUnchanged": true,
+    "currentOutputSchemaHashUnchanged": true,
+    "sixAlgorithmBindingHashUnchanged": true,
+    "d3V2ContractHashUnchanged": true,
+    "d3V2SourceHashUnchanged": true,
+    "priorEvidenceRetained": true,
+    "nativeBinaryAbsent": true,
+    "nativeObjectAbsent": true,
+    "knownAnswerOutputAbsent": true,
+    "unityKnownAnswerNeverStarted": true,
+    "currentUnityProcessCountZero": true,
+    "currentCompilerProcessCountZero": true,
+    "noFallbackMetricArtifactCreated": true
+  },
+  "observedHashes": {
+    "currentQualificationRunnerSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+    "currentOutputSchemaSha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c",
+    "sixAlgorithmBindingSha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71",
+    "d3V2ContractSha256": "e402dfc90362a3ac07f5342d218f19c67d31d46f82bec584d5d817fbccb9f0bf",
+    "d3V2SourceSha256": "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca",
+    "sourceFreezeManifestSha256": "3e7d89cc9688772f2faa7491c5119d5cd824231e38bb997b15b887af305a1a54"
+  },
+  "executionCounts": {
+    "nativeBuildAttempts": 1,
+    "unityKnownAnswerRuns": 0,
+    "algorithmLaneRuns": 0,
+    "formalRuns": 0,
+    "automaticRetries": 0
+  },
+  "qualificationConclusion": {
+    "failureEvidenceInternallyConsistent": true,
+    "d3V3NativeBinaryQualified": false,
+    "d3V3MarkerAndMetadataQualified": false,
+    "d3V3ScientificQualificationPassed": false,
+    "safeToIntegrateRunnerOrSchema": false
+  }
+}

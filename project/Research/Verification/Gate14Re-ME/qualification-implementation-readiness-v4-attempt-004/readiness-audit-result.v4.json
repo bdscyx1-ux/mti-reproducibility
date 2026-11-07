@@ -1,0 +1,106 @@
+{
+  "schema": "gate14re-me-qualification-readiness-audit-result-v4",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-implementation-readiness-v4-attempt-004",
+  "checkedAtUtc": "2026-10-19T12:27:26.2049983Z",
+  "status": "SUPERSEDED_DRAFT_PENDING_ORACLE_STAGE_SIMPLIFICATION",
+  "checksPassed": 11,
+  "checksFailed": 0,
+  "evidence": {
+    "implementationManifest": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-current-implementation-manifest.v4_0.json",
+      "sha256": "5536e0f5ba5ee6b695ada076c00e2d3334fdc1371bdda7a07076d0c0a89c6ccf",
+      "artifactCount": 28,
+      "artifactMismatches": 0
+    },
+    "contractBindings": {
+      "checked": 21,
+      "mismatches": 0,
+      "acquisitionContractSha256": "26ce7b7ef99b89ce095dfa5f146891ec6fa5cdf308c00b6c10da443f90d846b1",
+      "acceptanceContractSha256": "57385f1e832b6a477af26155da1ca6fa079c57f394c502ad6c0d29d2b5448f21"
+    },
+    "syntax": {
+      "boundJsonParsed": 18,
+      "boundJsonParseFailures": 0,
+      "powershellEntryPointsParsed": 2,
+      "powershellParseErrors": 0,
+      "acceptancePythonAst": "PASS",
+      "pythonSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+    },
+    "scheduleAndInputs": {
+      "scheduleSha256": "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb",
+      "scheduleRows": 126,
+      "uniqueSuperblocks": 126,
+      "ordinalCoverage": "0..125",
+      "replacementRows": 0,
+      "inputHashOrBindingFailures": 0,
+      "coreSuperblocks": 108,
+      "stressSuperblocks": 18,
+      "coreCells": 36,
+      "coreReplicatesPerCell": 3,
+      "stressCell": {
+        "G": 128,
+        "N": 128,
+        "F": 81,
+        "replicates": 18
+      },
+      "levels": {
+        "G": [64, 96, 128],
+        "N": [32, 64, 128],
+        "F": [1, 9, 25, 81]
+      },
+      "algorithmsPerSuperblock": 6,
+      "algorithmOccurrencesEach": 126,
+      "lanePositionOccurrencesEachAlgorithm": 21,
+      "orderedPredecessorPairOccurrencesEach": 21,
+      "eventGroupsPerInput": 24
+    },
+    "plannedAcquisition": {
+      "instrumentSelfTest": 1,
+      "oracle": 126,
+      "emptyBoundary": 12,
+      "algorithmLanes": 756,
+      "totalFreshProcesses": 895,
+      "replacementMaximum": 0,
+      "retryOrResumeAuthorized": false
+    },
+    "formalB": {
+      "status": "PENDING_NEW_QUALIFICATION_AND_ANONYMOUS_POWER_REFREEZE",
+      "unit": "independent six-algorithm paired superblocks per GxNxF cell",
+      "finalB": null,
+      "provisionalMinimumB": 36,
+      "candidateGridRule": "positive multiples of 36",
+      "candidateB": [36, 72, 108, 144]
+    },
+    "compileReadiness": {
+      "receiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-readiness-v4-attempt-003/compile-readiness-receipt.v4_2.json",
+      "receiptSha256": "e148401debcce58f91166ff0f9cbcb29840d258f331d25f5536bc2250f6eb63c",
+      "status": "PASS_V4_COMPILED_ALGORITHM_FREE_BURST_GUARDED_NATURAL_EXIT_ZERO",
+      "unityExitCode": 0,
+      "naturalExit": true,
+      "forcedTermination": false,
+      "priorFailedReadinessAttemptsPreserved": 2
+    },
+    "attempt009Seal": {
+      "terminalReceiptSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705",
+      "measuredFileManifestSha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f",
+      "hashesMatchFrozenValues": true
+    },
+    "executionState": {
+      "activeQualificationUnityRunnerCount": 0,
+      "freshMeasuredAttempt008Exists": false
+    }
+  },
+  "boundary": {
+    "userRequestedFreezeHold": true,
+    "authoritativeFinalReadinessReceipt": false,
+    "qualificationExecutionStarted": false,
+    "measuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "algorithmObservationsRead": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "migrationPackageBuilt": false
+  },
+  "terminalPassMeaning": "Historical static audit result only. The user placed freezing on hold before this draft was made authoritative because oracle-stage simplification had not yet been deployed. No qualification execution is authorized or implied, and final formal B remains unset."
+}

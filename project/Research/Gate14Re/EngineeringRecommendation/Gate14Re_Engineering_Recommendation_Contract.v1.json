@@ -1,0 +1,225 @@
+{
+  "schema": "gate14re-engineering-recommendation-contract-v1",
+  "studyId": "Gate14Re",
+  "version": 1,
+  "createdLocalDate": "2026-10-16",
+  "status": "FROZEN_BEFORE_DERIVED_OUTCOME_ACCESS",
+  "classification": "POST_HOC_READ_ONLY_COMPOSITE_ENGINEERING_RECOMMENDATION",
+  "narrativePlan": {
+    "path": "Research/Gate14Re/EngineeringRecommendation/Gate14Re_Engineering_Recommendation_Plan.v1.md",
+    "sha256": "622f15fddeab5f816164923125d74e169839791a2b2ca1aa23630ace97781cdc",
+    "bytes": 5094
+  },
+  "formalConclusionBoundary": {
+    "originalPhaseBStatus": "FORMAL-PHASE-B-ANALYSIS-COMPLETE",
+    "originalWinnerAdjudication": "NO_UNIQUE_WINNER",
+    "originalRawMayBeModified": false,
+    "originalPhaseBMayBeModified": false,
+    "confirmatoryStatisticalWinnerMayBeClaimed": false,
+    "newUnityAcquisitionAuthorized": false
+  },
+  "authorizationScope": {
+    "exactUserAuthorization": "那按照建议推进吧",
+    "freezeAndValidateRulesAuthorized": true,
+    "createEncryptedLabelCustodyAuthorized": true,
+    "anonymousReadOnlyAnalysisAuthorized": true,
+    "anonymousEngineeringPreAdjudicationAuthorized": true,
+    "unblindingAuthorized": false,
+    "finalProductionRecommendationAuthorized": false,
+    "gate15Authorized": false
+  },
+  "analyzer": {
+    "path": "Research/Analyze-Gate14ReEngineeringRecommendationV1.py",
+    "sha256": "7a4fd2cf00f1bdec5870aaf5952ea73942f626a5effa281a671ada51de770022",
+    "bytes": 55354
+  },
+  "analyzerSha256": "7a4fd2cf00f1bdec5870aaf5952ea73942f626a5effa281a671ada51de770022",
+  "analysisRoot": "Research/Analysis/Gate14Re/EngineeringRecommendation/attempt-001",
+  "frozenInputBindings": {
+    "rawComplete": {
+      "path": "Research/FormalRuns/Gate14Re/PhaseA/attempt-001/raw-data-complete.json",
+      "sha256": "0fa68436e37333c5ccbc3360a3fd49460b9a338add16f95dc4f307de33e696fa"
+    },
+    "rawManifest": {
+      "path": "Research/FormalRuns/Gate14Re/PhaseA/attempt-001/_control/raw-commit-manifest.v1.json",
+      "sha256": "9758f4c42fec3afd941e2b453552d77d405482ea7c5944ed1bf1619aee7e48c8"
+    },
+    "rawCanonicalTree": {
+      "path": "Research/FormalRuns/Gate14Re/PhaseA/attempt-001/_control/raw-commit-canonical-tree.v1.jsonl",
+      "sha256": "0c1e0bc2c8b286aa866901fdb26fbafc87bb5490f4578250eb2f4e2401df72dc",
+      "records": 4612,
+      "rawBytes": 288232353
+    },
+    "phaseBAnalyzer": {
+      "path": "Research/Analyze-Gate14ReFormalPhaseBV1.py",
+      "sha256": "9c5bbbadfa06afc3ad715c5ceb579f4f10e8f022b694e50c37c0caeb4c217401"
+    },
+    "phaseBReceipt": {
+      "path": "Research/Analysis/Gate14Re/PhaseB/attempt-001/analysis-receipt.v1.json",
+      "sha256": "1c1a45784d858fe2953a76c604bb4649515d216321c4acb9bd9e4c0a4482801d"
+    },
+    "phaseBCanonicalTree": {
+      "path": "Research/Analysis/Gate14Re/PhaseB/attempt-001/analysis-canonical-tree.v1.jsonl",
+      "sha256": "5754a2027fb77839bb736e44c5c6e21faddd2c7b652d5a9fb6a02b2e643a933d"
+    },
+    "phaseBEligibility": {
+      "path": "Research/Analysis/Gate14Re/PhaseB/attempt-001/eligibility.json",
+      "sha256": "b05f50cb2d132b9ba382bda11d88042e23c35e4077237667664e631d1a3aa7a0"
+    },
+    "phaseBWinnerAdjudication": {
+      "path": "Research/Analysis/Gate14Re/PhaseB/attempt-001/winner-adjudication.json",
+      "sha256": "a7190f125c6db101f661da0f75551dc7ea1af64c905efc6b62bc8a2e4a0a13c0"
+    },
+    "gate14ReStatusV6": {
+      "path": "Research/Gate14Re/Gate14Re_Status.v6.json",
+      "sha256": "bbef921ac304f40d30ddc69ff374fb552a5f3aa572b03e5e8834250bc5961588"
+    }
+  },
+  "labelCustody": {
+    "custodyId": "gate14re-engineering-recommendation-v1-d1a037fa-4734-4bef-a3ce-511723435801",
+    "commitmentPath": "Research/Gate14Re/EngineeringRecommendation/Blinding/v1/label-custody-commitment.v1.json",
+    "commitmentSha256": "996b1d519e61d2f1a05b80fa941dc1a7f62ad677eb291f3fdf8f2f132bdd6757",
+    "mappingCommitmentSha256": "0e7c13458452771b8087826acaa1398d765a50d7d7b8813194e6080ec955e084",
+    "payloadPath": "Research/Gate14Re/EngineeringRecommendation/Blinding/v1/label-custody.payload.dpapi.bin",
+    "payloadSha256": "cbcbce1d90b2fe6c72215abb63a594922e755c443d138ffcca6c7970bbed36b6",
+    "entropyPath": "Research/Gate14Re/EngineeringRecommendation/Blinding/v1/label-custody.entropy.v1.bin",
+    "entropySha256": "dd62b189db96ca65b5cd45e55d9703bdbfc4ac1bc168a8b7e6cd5c91621849b8",
+    "anonymousLabels": ["U17", "U29", "U43", "U61"],
+    "plaintextMappingPersisted": false,
+    "mappingReleased": false
+  },
+  "independentUnit": {
+    "unit": "complete input block produced in one fresh Unity process",
+    "pairedWithinBlock": true,
+    "fixedBPerDesignCell": 48,
+    "agentsAreIndependentReplicates": false,
+    "framesAreIndependentReplicates": false,
+    "ticksAreIndependentReplicates": false
+  },
+  "movementResolution": {
+    "scope": "module A movement lane, C01-C08, N=128",
+    "censoringTick": 9000,
+    "tickSeconds": 0.02,
+    "nonArrivalAssignmentTicks": 9000,
+    "primaryDerivedEndpoint": "RMAT180Seconds = 0.02 * arithmetic mean of censored per-agent arrival ticks within a block",
+    "descriptiveTieBreakOrder": ["RMAT180Seconds", "T95Seconds", "T99Seconds", "T100MinusT50Seconds", "originalM1Seconds"],
+    "RMATPairwise": {
+      "effect": "first minus second in seconds; lower is better",
+      "conditionWeighting": "equal across C01-C08",
+      "pairedWithinBlock": true,
+      "testFamily": "six unordered algorithm pairs",
+      "pValueAdjustment": "Holm step-down",
+      "ordinaryIntervals": "two-sided 95 percent t intervals",
+      "simultaneousIntervals": "Bonferroni simultaneous two-sided 95 percent intervals across six pairs",
+      "claimClassification": "post-hoc exploratory only"
+    },
+    "uncertaintyLanguage": {
+      "pointEstimateNonzeroButSimultaneousIntervalIncludesZero": "estimated direction present but uncertain",
+      "mustNotCallTie": true,
+      "mustNotClaimEquivalence": true,
+      "mustNotClaimConfirmatorySuperiority": true
+    }
+  },
+  "eligibility": {
+    "source": "exact frozen Gate14Re Phase B M3/M4/M5 rules recomputed from immutable raw",
+    "eligible": "M3_pass AND M4_pass AND M5_pass",
+    "ineligibleAlgorithmsExcludedFromRecommendationRanking": true
+  },
+  "M2": {
+    "scope": "module A movement lane, C01-C08, N=128",
+    "input": "block-common-mask mean path length",
+    "sharedCommonMaskRequired": true,
+    "conditionWeighting": "equal",
+    "aggregate": "equal-condition geometric mean",
+    "direction": "lower is better"
+  },
+  "quantityScaling": {
+    "anchors": ["C01", "C07"],
+    "unitCounts": [1, 8, 32, 128, 512],
+    "model": "outcome ~ intercept + anchor_C07 + log2_N_centered_at_128 + algorithm + algorithm_by_log2_N",
+    "cluster": "complete block",
+    "submetrics": ["log_RMAT180", "log_M2_when_available", "log_M4_block_P95"],
+    "requiredSubmetrics": ["log_RMAT180", "log_M4_block_P95"],
+    "dimensionScore": "arithmetic mean of available submetric ranks, then rerank",
+    "direction": "lower per-doubling ratio is better",
+    "selectionRole": "engineering scaling dimension only"
+  },
+  "renderPerformance": {
+    "scope": "module A M4 lane, C01-C08, N=128",
+    "metric": "equal-condition geometric mean of block nearest-rank P95 frame time",
+    "direction": "lower is better"
+  },
+  "decisionRule": {
+    "eligibleAlgorithmsOnly": true,
+    "formula": "DecisionScore = 2*R_movement + R_path + R_scaling + R_render",
+    "rankDirection": "1 is best; lower score is better",
+    "weights": {
+      "movement": 2,
+      "path": 1,
+      "scaling": 1,
+      "render": 1
+    },
+    "scoreTieBreakOrder": ["RMAT180", "T95", "T99", "T100MinusT50", "originalM1", "M2", "quantityScalingMeanRank", "M4P95", "staticEngineeringBurden"],
+    "arbitraryIdentityLabelRandomOrHashTieBreakForbidden": true,
+    "exactEvidenceAndStaticProxyEquality": "EXACT_EVIDENCE_AND_STATIC_PROXY_EQUALITY_REQUIRES_USER_POLICY"
+  },
+  "staticEngineeringTiebreak": {
+    "role": "last-resort lexical source-maintainability proxy only",
+    "metricOrderLowerIsBetter": ["logicalSourceLines", "branchTokens", "allocationSites", "publicSurfaceTokens", "sourceBytes"],
+    "sourceBindings": [
+      {
+        "sourceLabel": "A",
+        "path": "Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+        "sha256": "a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778"
+      },
+      {
+        "sourceLabel": "B",
+        "path": "Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+        "sha256": "ae9f1bdc2a30f924239145d8a165ed31d68f05b595916dbed21414fd1c69427f"
+      },
+      {
+        "sourceLabel": "C",
+        "path": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+        "sha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"
+      },
+      {
+        "sourceLabel": "D",
+        "path": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+        "sha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"
+      }
+    ],
+    "limitation": "transparent lexical proxies, not direct measurements of long-term maintenance cost"
+  },
+  "software": {
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonExecutableSha256": "b847bb9f4e48c19f585c8bf7d8b355f3f8c6d2125717ece9c9d7e16fb9f09de8",
+    "syntheticValidationReceipt": {
+      "path": "Research/Verification/Gate14Re/engineering-recommendation-readiness-attempt-001/synthetic-validation-receipt.v2.json",
+      "sha256": "58c91761172605f2ef4f0f8500509de2edd23576141dea28c1c12df1010ebe82"
+    }
+  },
+  "executionPolicy": {
+    "oneAnonymousAnalysisExecution": true,
+    "atomicCreateNoOverwrite": true,
+    "verifyFullRawCanonicalTreeBeforeParsing": true,
+    "formalRawReadOnly": true,
+    "originalPhaseBReadOnly": true,
+    "historicalOrPilotDataAdmissible": false,
+    "outcomeDrivenExclusionRuleChangeOrWeightChange": false,
+    "postHocSampleExpansion": false,
+    "newUnityProcess": false
+  },
+  "stageStop": {
+    "successStatus": "ANONYMOUS_PRE-ADJUDICATION_COMPLETE_UNBLINDING_PENDING",
+    "releaseProductionIdentity": false,
+    "requestSeparateUnblindingAndFinalRecommendationAuthorization": true,
+    "phaseBReanalysisReplacement": false,
+    "gate15Start": false
+  },
+  "preparationBoundary": {
+    "formalBlockOutputOpenedOrParsedBeforeContractFreeze": false,
+    "derivedRMATOrM2M4ValueUsedToChooseRulesWeightsOrTieBreaks": false,
+    "labelMappingReleased": false,
+    "scientificChoicesPending": []
+  }
+}

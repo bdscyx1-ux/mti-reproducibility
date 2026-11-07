@@ -1,0 +1,65 @@
+﻿{
+    "savedAt":  "2026-10-05T16:47:05.8568503+08:00",
+    "fixtureDirectory":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate7_DStarLite_BatchFixture_Final",
+    "manifestPath":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate7_DStarLite_BatchFixture_Final\\manifest.json",
+    "retainedManifestSha256":  "c2c160d0c1aec00a59e7d2d02ebfee776a4ce1272b23fc2929e8d568c09cd427",
+    "unityLogPath":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate7_DStarLite_BatchFixture_Final.Unity.log",
+    "missingFiles":  [
+
+                     ],
+    "jsonlParseErrors":  [
+
+                         ],
+    "compilerErrorMatches":  [
+
+                             ],
+    "recordCount":  17,
+    "plannerOperationCount":  13,
+    "lifecycleCount":  3,
+    "workloadRecordCount":  1,
+    "positiveAllocationOperationCount":  11,
+    "overwriteGuardExitCode":  1,
+    "overwriteGuardOutput":  [
+                                 "Output directory is not empty; refusing to overwrite: H:\\DDM_Final_Project\\Research\\Verification\\Gate7_DStarLite_BatchF",
+                                 "ixture_Final",
+                                 "At H:\\DDM_Final_Project\\Research\\Run-PlanningWorkload.ps1:35 char:78",
+                                 "+ ... nt -gt 0) { throw \"Output directory is not empty; refusing to overwri ...",
+                                 "+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+                                 "    + CategoryInfo          : OperationStopped: (Output director...chFixture_Final:String) [], RuntimeException",
+                                 "    + FullyQualifiedErrorId : Output directory is not empty; refusing to overwrite: H:\\DDM_Final_Project\\Research\\Veri ",
+                                 "   fication\\Gate7_DStarLite_BatchFixture_Final",
+                                 " "
+                             ],
+    "unauthorizedAlgorithmExitCode":  1,
+    "unauthorizedAlgorithmOutput":  [
+                                        "H:\\DDM_Final_Project\\Research\\Run-PlanningWorkload.ps1 : Cannot validate argument on parameter \u0027Algorithm\u0027. The argumen",
+                                        "t \"UNSUPPORTED\" does not belong to the set \"A*-R,D*L,C-FF,IDFF\" specified by the ValidateSet attribute. Supply an argum",
+                                        "ent that is in the set and then try the command again.",
+                                        "    + CategoryInfo          : InvalidData: (:) [Run-PlanningWorkload.ps1], ParentContainsErrorRecordException",
+                                        "    + FullyQualifiedErrorId : ParameterArgumentValidationError,Run-PlanningWorkload.ps1",
+                                        " "
+                                    ],
+    "checks":  {
+                   "requiredFilesPresent":  true,
+                   "retainedManifestMatches":  true,
+                   "manifestIdentityValid":  true,
+                   "scenarioIdentityValid":  true,
+                   "artifactHashesMatch":  true,
+                   "manifestCountsValid":  true,
+                   "resultIdentityValid":  true,
+                   "resultCountsValid":  true,
+                   "resultOutcomesValid":  true,
+                   "allocationMetricObserved":  true,
+                   "jsonlParsed":  true,
+                   "jsonlStructureValid":  true,
+                   "jsonlTypeCountsValid":  true,
+                   "compilerErrorFree":  true,
+                   "completionMarkerPresent":  true,
+                   "overwriteGuardVerified":  true,
+                   "unauthorizedAlgorithmGuardVerified":  true
+               },
+    "failedChecks":  [
+
+                     ],
+    "passed":  true
+}

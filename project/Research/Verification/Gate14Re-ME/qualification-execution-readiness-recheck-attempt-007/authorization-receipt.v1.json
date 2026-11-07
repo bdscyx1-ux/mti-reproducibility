@@ -1,0 +1,26 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-007-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-007",
+  "status": "AUTHORIZED_READ_ONLY_NO_UNITY_POST_CORRIGENDUM_EXECUTION_READINESS_RECHECK",
+  "authorizedAtUtc": "2026-10-17T17:49:20.4187303Z",
+  "sourceAuthorizationReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/authorization-receipt.v1.json",
+  "sourceAuthorizationReceiptSha256": "150c0df7d5c72934436063c1747d7c5fa06237645ff9a0c3577f7d4c1c566c4f",
+  "authorizationClause": "通过后再更新新执行所需的 measured/delivery root 绑定并执行一次只读 execution-readiness recheck。",
+  "authorized": {
+    "prospectiveAttempt002MeasuredAndDeliveryRootBinding": true,
+    "readOnlyStaticAndFrozenEvidenceRecheck": true,
+    "hostAndProcessMetadataInspection": true,
+    "freezeReadinessReceiptAndNextStatus": true
+  },
+  "prohibited": {
+    "unityInvocation": true,
+    "createMeasuredOrDeliveryRoot": true,
+    "retryResumeOrReuseFailedAttempt001Root": true,
+    "instrumentOracleEmptyBoundaryOrAlgorithmLane": true,
+    "qualificationOrFormalObservation": true,
+    "formalCollectionOrAnalysis": true,
+    "rankingWeightingOrWinnerAdjudication": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "gate14re-me-scientific-freeze-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-nonexecuting-scientific-freeze-attempt-001",
+  "version": 1,
+  "authorizedLocalDate": "2026-10-17",
+  "status": "AUTHORIZED_NONEXECUTING_SCIENTIFIC_FREEZE_ONLY",
+  "userAuthorizationText": "授权把‘完整逐条原始数据可交付’设为 Gate14Re-ME 的硬性冻结条件，采用建议保存结构，采用建议交付粒度；进行下一次科学冻结",
+  "authorizedDecisions": {
+    "performNextScientificFreeze": true,
+    "completePerObservationRawDataDeliverabilityIsHardCondition": true,
+    "adoptRecommendedSeparationOfImmutableRawAndDerivedDeliveryRoots": true,
+    "adoptRecommendedSampleRunAndOperationEventDeliveryGranularity": true,
+    "adoptMachineReadableLongAndWideExports": true,
+    "requireDataDictionaryProvenanceManifestAndChecksums": true,
+    "retainAllSixNamedAlgorithms": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ]
+  },
+  "freezeInterpretation": {
+    "type": "nonexecuting prospective scientific protocol freeze",
+    "freezesCurrentScientificFramework": true,
+    "freezesRawDataDeliveryContract": true,
+    "doesNotInventUnspecifiedMinimumPracticallyImportantEffects": true,
+    "doesNotInventFinalB": true,
+    "requiresSeparatePrecollectionParameterAmendmentBeforeFormalObservation": true
+  },
+  "notAuthorized": {
+    "productionAlgorithmModification": true,
+    "formalInputGeneration": true,
+    "runnerOrInstrumentImplementation": true,
+    "compileOrUnityExecution": true,
+    "formalMeasuredRootCreation": true,
+    "formalCollection": true,
+    "formalAnalysis": true,
+    "ranking": true,
+    "winnerAdjudication": true,
+    "weightedComposite": true,
+    "laterExperiment": true
+  },
+  "dataBoundary": {
+    "priorGate14ReObservationsReadOrReusedForThisFreeze": false,
+    "excludedGate14ReTB2ObservationsReadOrReusedForThisFreeze": false,
+    "Gate14ReMEFormalObservationsCreated": 0,
+    "Gate14ReMEUnityProcessesLaunched": 0
+  }
+}

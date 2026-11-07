@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-mq-formal-final-freeze-invalidation-receipt-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "ATTEMPT_001_NOT_LAUNCHABLE_PRESERVED_SUPERSEDED_BY_REQUIRED_FORWARD_FIX",
+  "observedAtUtc": "2026-10-21T08:00:44.8368949Z",
+  "invalidatedAttempt": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-freeze-v2-attempt-001",
+    "terminalReceiptSha256": "7c8f1c416988059a5a2ece55f6cf4f04bab12b2bd7d911d899561a660d32fbc6",
+    "finalFreezeManifestSha256": "fbfce8bb4cc1ea8ebc28fa63bba58f80d275f9693d49b0a34ba21ace41ecb03c"
+  },
+  "exactDefect": {
+    "runnerRequiredOutputShape": "<measuredRoot>/raw/blocks/<blockId>/process-<ordinal:D4>",
+    "attempt001SupervisorOutputShape": "<measuredRoot>/processes/P<ordinal:D4>",
+    "effectIfLaunched": "the first formal Unity process would fail closed before creating its process output directory",
+    "formalDataAffected": false,
+    "collectionWasStarted": false
+  },
+  "scope": {
+    "scientificDesignChanged": false,
+    "selectedBChanged": false,
+    "powerResultChanged": false,
+    "scheduleChanged": false,
+    "inputAssignmentsChanged": false,
+    "algorithmImplementationChanged": false,
+    "requiredForwardFix": "align the supervisor output directory with the already frozen runner contract, then regenerate the implementation manifest and repeat static validation and algorithm-free readiness in fresh roots"
+  },
+  "originalAttemptPreserved": true,
+  "sameAttemptRepairForbidden": true,
+  "formalCollectionAuthorized": false,
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false
+}

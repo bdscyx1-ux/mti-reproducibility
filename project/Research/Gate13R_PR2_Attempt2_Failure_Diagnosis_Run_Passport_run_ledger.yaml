@@ -1,0 +1,137 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-09T02:26:51Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-09T02:26:51Z'
+  user_words: 授权 Gate 13R-PR2-FD1「attempt 2 失败证据冻结、内存门禁与 lock-hygiene 非执行诊断、候选修订设计和
+    validation-only 验证」，严格按 `Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Next_Authorization_Prompt.md`
+    中的完整授权文本执行。本次授权不授权 Gate 13R-PR2 attempt 2 的 retry、resume、top-up 或 partial merge；不授权
+    attempt 3，不授权任何新的 Unity Editor 运行、正式统计分析或 Gate 14R。
+  prev_hash: null
+  hash: 8a662a05af699b970b1b627d524f63eeb5aa0009b93c55d42dde748300e9e184
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-09T02:27:08Z'
+  step: Gate 13R-PR2-FD1 full-tree pre-write preservation audit
+  command: Read-only stable enumeration and SHA-256 of every attempt-2 root file;
+    process, receipt, failed-evaluation and stale-lock checks
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - 28020-FILES-8536611302-BYTES-STABLE
+  - CANONICAL-TREE-be2623906d741b39e87f7c1d033d21443d2776f62ed709b4c4ef296220ce5f04
+  - PARTIAL-MANIFEST-28019-PLUS-SELF-RECONCILED
+  - UNITY-ZERO
+  - ORCHESTRATOR-EXITED
+  - STALE-LOCK-EXCLUSIVE-OPEN-PASSED
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - ATTEMPT3-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Attempt2_Failure_PreWrite_Audit.v1.json: 4b84184604b35c45e80826ffd343ac90a6dc03770b8eedbdd1c92cb3b880fc6a
+    Gate13R_PR2_Formal_Execution_Receipt.v2.json: a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e
+    ? FormalRuns/Gate13R_RQAligned_S48H48/v2/campaigns/c52-grid-scale-g256-shared--shared/blocks/b0022/runs/p04-cff/memory-gate-evaluation.json
+    : 7e91da24abee3ae3b440391457b9dac7ede0228718f2aeeb5ff55804425dc6a3
+  prev_hash: 8a662a05af699b970b1b627d524f63eeb5aa0009b93c55d42dde748300e9e184
+  hash: 3e375555220e08186d1e49f4fd42e664a0d8e6a18ffabf783110f4d1235d22a4
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-09T02:38:35Z'
+  step: Gate 13R-PR2 attempt 2 full evidence freeze and exact stale-lock cleanup
+  command: Generate full per-file manifest; set 28,020 failed-root files read-only;
+    verify ordinal tree hash; validate and remove only exact stale UnityLockfile under
+    native Windows PowerShell 5.1
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - MANIFEST-ATTEMPT1-CANONICAL-ORDER-MISMATCH-PRESERVED
+  - V2-ORDINAL-CORRECTION-INDEPENDENTLY-VERIFIED
+  - 28020-FILES-READ-ONLY
+  - 8536611302-BYTES-UNCHANGED
+  - CANONICAL-TREE-aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e
+  - EXACT-ZERO-BYTE-STALE-LOCK-REMOVED
+  - UNITY-ZERO-BEFORE-AFTER
+  - NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - ATTEMPT3-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Attempt2_Partial_Output_Evidence_Manifest.v1.json: 11cf507ad3daee5c4d17adf3d7349e50b73a925f58fdb175e2b68315240eff5b
+    Gate13R_PR2_Attempt2_Failure_Preservation_Receipt.v1.json: 25bd349efdc9e4527ed46bf9f0b9131fa419f5851e25ed6c32875d59b522e92d
+    Gate13R_PR2_Attempt2_Stale_Lock_PreCleanup_Evidence.v1.json: 6d4317c90fb09532de173ba46771078e684c861972d92b545195a108342f49cb
+    Remove-Gate13RPR2Attempt2StaleLockV1.ps1: c8b4410f7ab5c2de1651dd3387be7f3a118e138160cf8cf9bf1fadebbc0206a2
+  prev_hash: 3e375555220e08186d1e49f4fd42e664a0d8e6a18ffabf783110f4d1235d22a4
+  hash: 4fe8a0ec66cdfa865a258483c48326976e9c6872700293061d213ef52830a274
+- seq: 4
+  kind: tool_receipt
+  at: '2026-10-09T02:55:37Z'
+  step: Gate 13R-PR2 attempt 2 memory telemetry, enforcement-boundary and failure-precedence
+    diagnosis
+  command: Read-only analyze 3,736 memory evaluations; preserve V3 source-evidence
+    failure; apply V4 versioned repair; deterministic regenerate v2 outputs; validate
+    candidate primary/secondary failure precedence under PowerShell 7 and Windows
+    PowerShell 5.1
+  status: passed
+  exit_status: 0
+  retries_used: 2
+  gate_tokens:
+  - 3736-OF-3736-MEMORY-EVALUATIONS-VALID
+  - 933-COMPLETE-BLOCKS-PLUS-ONE-PARTIAL-REPRESENTED
+  - FIRST-NATIVE-CROSSING-POSITION1-ASTAR
+  - FINAL-ENFORCEMENT-POSITION4-CFF
+  - ALGORITHM-POSITION-PREDECESSOR-CAUSE-NOT-IDENTIFIABLE
+  - V3-FALSE-FIXTURE-ASSUMPTION-PRESERVED
+  - V4-SOURCE-EVIDENCE-REPAIR-PASSED
+  - DETERMINISTIC-REGENERATION-5-OF-5
+  - FAILURE-PRECEDENCE-PS7-10-OF-10
+  - FAILURE-PRECEDENCE-PS51-10-OF-10
+  - MEMORY-POLICY-UNFROZEN
+  - TARGETED-NONFORMAL-MEMORY-PILOT-REQUIRED
+  - UNITY-NOT-INVOKED
+  - FORMAL-ANALYSIS-NOT-PERFORMED
+  - ATTEMPT3-NOT-AUTHORIZED
+  input_sha256:
+    Analysis/Gate13R_PR2_Attempt2_Failure_Diagnosis/v1/evidence-manifest.json: 73e34e3910a38462d8dc3a125eaf88e2c800b8f1808206db054fbe50e4f24c46
+    Analysis/Gate13R_PR2_Attempt2_Failure_Diagnosis/v2/evidence-manifest.json: 847e93f13fe7e46eea154741d3e93421ff7c4df389b1a7a2e10cb1b676e4eb3b
+    Analyze-Gate13RPR2Attempt2FailureV4.py: 910ef7414dafce25d75779e45fc012088764f93875b2b93344e1ea1a31d365b1
+    Gate13RPR2FailurePrecedenceCandidateV1.psm1: 2943a6a83a9c3ecb01e1dd9cbc4ed6dd6c3aa41a3c51d1d68bd44c27ec2d183e
+    Verification/Gate13R_PR2_Attempt2_Failure_Diagnosis/v1/enforcement-boundary-deterministic-regeneration-summary.json: a9041fecd5c586a93b3bdc1f22360f2c592aeb6778d3ec3e6256781d8f168f14
+  prev_hash: 4fe8a0ec66cdfa865a258483c48326976e9c6872700293061d213ef52830a274
+  hash: 972eea3e7465c8d72acc13d585b9dede570c4ddef646ee60eabfdbff69a89d12
+- seq: 5
+  kind: tool_receipt
+  at: '2026-10-09T02:57:11Z'
+  step: Gate 13R-PR2-FD1 final validation, checkpoint and project-plan handoff
+  command: Rehash the complete read-only failed root; run 21-check final validation-only
+    audit; seal provenance/checkpoint; update Overall Project Plan and Next Session
+    Checkpoint; create the next targeted non-formal memory-pilot authorization prompt
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - FINAL-AUDIT-21-OF-21
+  - FAILED-ROOT-28020-FILES-8536611302-BYTES
+  - FAILED-ROOT-CANONICAL-TREE-aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e
+  - ALL-FAILED-ROOT-FILES-READ-ONLY
+  - FROZEN-INPUT-HASHES-UNCHANGED
+  - UNITY-ZERO
+  - STALE-LOCK-ABSENT
+  - ATTEMPT3-ROOT-ABSENT
+  - ATTEMPT3-RECEIPT-ABSENT
+  - ATTEMPT2-EVIDENCE-FROZEN
+  - PRIMARY-MEMORY-FAILURE-DIAGNOSED
+  - SECONDARY-QUIESCENCE-FAILURE-DIAGNOSED
+  - MEMORY-POLICY-UNFROZEN
+  - TARGETED-NONFORMAL-MEMORY-PILOT-REQUIRED
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Attempt2_Failure_Diagnosis_Checkpoint.v1.json: 388b7a1921fe07daf97827353f402c365b0f208a9dc62cbbff2d4b5ea2829b7d
+    Gate13R_PR2_Attempt2_Failure_Diagnosis_Provenance.v1.json: f192265e12155d0e56e1aa94e18cea1305b66e2fbc0eeb0eeb6ad9618aeb3c3a
+    Verification/Gate13R_PR2_Attempt2_Failure_Diagnosis/v1/final-validation-only-audit-summary.json: 892bb2659619b63fba78b18b1a3db5fadd23b4483c1b0aca3ba25934e6e90daa
+    Gate13R_PR2_MemoryPolicy_Targeted_Pilot_Next_Authorization_Prompt.md: 5dd3e77e984e2b44e9b866b735b6f644173f096cea484d2dfedcbe7ae0fc81a5
+    Overall_Project_Plan.md: f76433f7790ceff86d9ab4c9f015c54b09bfa155e6e1ba7ca62bda38cc5fb24d
+    Next_Session_Checkpoint.md: 074292c2ee34e7b385e493fffe87a50307fe3a8eeb3a573ca29c1dece7edd646
+  prev_hash: 972eea3e7465c8d72acc13d585b9dede570c4ddef646ee60eabfdbff69a89d12
+  hash: 5562ce8776e340ae84338b99f31580dffa5e5e96494fcc33988acd6dad223b5f

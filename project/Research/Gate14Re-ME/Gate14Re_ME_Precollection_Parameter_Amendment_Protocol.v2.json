@@ -1,0 +1,87 @@
+{
+  "schema": "gate14re-me-precollection-parameter-amendment-protocol-v2",
+  "studyId": "Gate14Re-ME",
+  "version": 2,
+  "createdLocalDate": "2026-10-17",
+  "status": "FROZEN_NONEXECUTING_LOAD_QUALIFICATION_PASS_REQUIRED_BEFORE_PARAMETER_AUTHORIZATION",
+  "inherits": {
+    "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v1.json",
+    "sha256": "66eb4bc493236394784d146c6e82c2f4cdd1b4bfaf684a2b202b7f7b939503b9",
+    "allV1ConstraintsRemainNormative": true
+  },
+  "newPrerequisite": {
+    "binding": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Protocol.v1.json",
+    "requiredReceiptStatus": "PASS_LOAD_QUALIFICATION",
+    "requiredBeforeMinimumPracticalEffectsAndFinalBAreAuthorized": true,
+    "requiredBeforeFormalInputDrawMeasuredRootOrObservation": true,
+    "qualificationAnonymousIdentityMappingMustRemainSealedDuringParameterSelection": true,
+    "qualificationObservationsMayEnterFormalEffectEstimation": false
+  },
+  "currentlyUnresolved": {
+    "minimumPracticallyImportantEffectsByDomain": null,
+    "finalBPerStructuralCell": null,
+    "finalPlannedSuperblocks": null,
+    "finalPlannedFreshUnityProcesses": null,
+    "eventGroupHardTimeoutMilliseconds": null,
+    "laneWallClockHardTimeoutMilliseconds": null,
+    "laneAssignedCommittedMemoryBytes": null,
+    "qualificationReservedStorageBytes": null,
+    "formalRawAndDeliveryReservedStorageBytes": null,
+    "movementTransferSentinelSubsetOrOmission": null
+  },
+  "fixedConstraints": {
+    "targetPowerAtLeast": 0.9,
+    "familywiseAlpha": 0.05,
+    "confirmatoryContrastCount": 35,
+    "multiplicityMethod": "Holm strong FWER",
+    "BMustBePositiveMultipleOf": 36,
+    "primaryStructuralCells": 48,
+    "algorithmLanesPerSuperblock": 6,
+    "processFormula": "48 * finalB * 6",
+    "formalAdaptiveExpansion": false,
+    "postOutcomeTopUp": false,
+    "effectThresholdSelectionAfterOutcomeInspection": false,
+    "loadQualificationThresholdRelaxationAfterExecution": false
+  },
+  "permittedQualificationEvidenceForParameterAmendment": {
+    "sealedIdentityNuisanceCovariance": true,
+    "sealedIdentityMissingnessAndEligibility": true,
+    "sealedIdentityWithinLaneFloorCoverageDynamicRangeAndResourceMargins": true,
+    "runtimeMemoryAndStorageForecasts": true,
+    "completeRawDeliveryExpansionFactor": true,
+    "namedAlgorithmMeans": false,
+    "namedAlgorithmDirections": false,
+    "pairwiseEffects": false,
+    "algorithmRanks": false,
+    "winner": false,
+    "IDFFIdentityOrProductionIdentityRecovery": false,
+    "qualificationDataAsFormalObservations": false,
+    "priorGate14ReOrExcludedGate14ReTB2Observations": false
+  },
+  "requiredFutureAmendmentContents": [
+    "PASS_LOAD_QUALIFICATION receipt and exact artifact hashes",
+    "domain-specific minimum practically important effects with units and direction",
+    "power calculation assumptions and sealed-identity nuisance inputs",
+    "selected finalB and proof it is a positive multiple of 36",
+    "planned superblock and fresh-process cardinalities",
+    "exact event-group and lane hard timeouts",
+    "exact per-lane committed-memory ceiling",
+    "exact qualification and formal raw-plus-delivery storage reservations",
+    "resource feasibility proof retaining at least two-fold headroom",
+    "movement-transfer sentinel exact subset or explicit omission",
+    "explicit user authorization and immutable receipt"
+  ],
+  "changeControl": {
+    "loadQualificationFailure": "formal study remains blocked; redesign and new scientific refreeze required",
+    "changingAlgorithmsEndpointsMajorityRuleRawDeliveryOrLoadGate": "new full scientific freeze required",
+    "settingPrespecifiedEffectThresholdsFinalBAndExactBudgetsWithinThisProtocol": "separately authorized precollection parameter amendment receipt required",
+    "resourceInfeasibility": "redesign and refreeze; never launch an underloaded, overloaded, underpowered, or incomplete-delivery formal study"
+  },
+  "authorizationBoundary": {
+    "protocolV2FreezeAuthorized": true,
+    "qualificationExecutionAuthorized": false,
+    "parameterValuesAuthorized": false,
+    "formalInputGenerationAuthorized": false,
+    "formalCollectionAuthorized": false
+  }
+}

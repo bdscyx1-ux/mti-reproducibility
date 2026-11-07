@@ -1,0 +1,60 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-003-prelaunch-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-003-54167a1a-6695-4e19-8d8c-a03bb92370f2",
+  "attemptId": "load-qualification-execution-attempt-003",
+  "status": "PASS_EXACT_HASH_PREFLIGHT_ROOT_CREATION_AND_UNITY_LAUNCH_PERMITTED",
+  "passed": true,
+  "checkedAtUtc": "2026-10-17T17:37:29.9830476Z",
+  "coreBindings": {
+    "statusV35Sha256": "1c99e488834cb64452c14e21787fd4a6f8ac0086f53cf9ab165c8ac67f73f7f5",
+    "readinessAttempt006TerminalReceiptSha256": "abb23c5503fe5bd15ac38ee95fdaa0c65326785013ec5852b4246ec38c783bbc",
+    "executionContractV33Sha256": "6e35abb3f36f956f0f685f816e2b2a7c1ce2aa513a86bd16d575964bd619802a",
+    "implementationManifestV33Sha256": "a85968ee3c759c5f0c3c3bf3a5d9c3bda7c3cfca7628f3e983cb64142bfe4579",
+    "supervisorV31Sha256": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc",
+    "guardAttempt002TerminalSha256": "499f23b98f6e6e75053451d583acb6205020ec34978e6f0f8454b32a25a03ac8",
+    "guardAttempt002KnownAnswerSha256": "870b2fc9dfb18202b422a60ba50d738c011e0767c9031d4c85d51aa4a1c19397",
+    "powerShellHostSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "allMatched": true,
+    "checkedBindingCount": 21
+  },
+  "executionAuthorizationSha256": "f3a339e2583d91cc2beeb8f49a4a035f32a26b1347678d15f0561b371429fa0f",
+  "stageContractSha256": "66d9eae8d3cacb0eaec003074f5cb0284b48a9dd1104a0d8ff93a21dc31318f3",
+  "hostRuntime": {
+    "path": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "version": "7.6.5",
+    "hashMatched": true
+  },
+  "rootAndProcessBoundary": {
+    "measuredRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+    "measuredRootAbsent": true,
+    "deliveryRoot": "H:/DDM_Final_Project/Research/Exports/Gate14Re-ME/load-qualification/attempt-001",
+    "deliveryRootAbsent": true,
+    "unityProcessCount": 0,
+    "exactSupervisorProcessCount": 0
+  },
+  "schedule": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+    "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+    "rows": 162
+  },
+  "storage": {
+    "freeBytes": 215973449728,
+    "requiredReservationBytes": 154618822656,
+    "passed": true
+  },
+  "scope": {
+    "qualificationExecutionAuthorized": true,
+    "strictSerialFreshUnityProcesses": 1147,
+    "zeroReplacementFailStop": true,
+    "retryResumeTopUpMergeSkipReorderOrParallelAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "crossAlgorithmEffectsAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

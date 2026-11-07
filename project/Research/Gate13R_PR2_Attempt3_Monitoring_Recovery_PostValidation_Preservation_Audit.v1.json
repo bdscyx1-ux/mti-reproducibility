@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13r-pr2-attempt3-monitoring-recovery-postvalidation-preservation-audit-v1",
+  "capturedAtUtc": "2026-10-09T07:10:27.2655570Z",
+  "capturedAtAsiaShanghai": "2026-10-09T15:10:27.2673914+08:00",
+  "passed": true,
+  "statusTokens": [
+    "NON-EXECUTING",
+    "VALIDATION-ONLY",
+    "UPSTREAM-BYTE-IDENTICAL",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "FORMAL-ROOT-ABSENT",
+    "FORMAL-RECEIPT-ABSENT",
+    "FORMAL-STATUS-ABSENT",
+    "UNITY-NOT-RUNNING",
+    "UNITY-LOCK-ABSENT"
+  ],
+  "preWriteAudit": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_PreWrite_Preservation_Audit.v1.json",
+    "sha256": "7d1a549f425c51c340e9851bd9fa50a2274d13571ffd39c3c8a0444545ffe423"
+  },
+  "upstreamHashAudit": {
+    "checkedFileCount": 18,
+    "passedFileCount": 18,
+    "failedFileCount": 0,
+    "files": [
+      {"relativePath": "Research/Gate13R_PR2_MP2_NonExecuting_Readiness_Checkpoint.v1.json", "sha256": "88333a15f3e5deb0eb7998bf15a5f1976df5de9a0382350016aa8623ad4680f8"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Final_Validation_Audit.v1.json", "sha256": "bbf41f14682a85e061799a5cb9daed2122d6f8631a878b22bb714ede161bbe9e"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Config.v4.json", "sha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Adapter.v4.json", "sha256": "2cad63b1c89608b2053552ef8c1261603f81231365689ba232d950fc279c4f62"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Provenance.v4.json", "sha256": "0f2c666ac4dc324687073fcdd913833e4d7d72dc8ad88bfaa5b1184bcfb7c37f"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Memory_Policy_Registry.v2.json", "sha256": "1070821ef6264510eb2e7427d7887aaca08bb5d2e7854d48f61a6c8e1285490f"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Scenario_Policy_Mapping.v2.json", "sha256": "5dd5daf640831ea49d5fa9e0bb1a318e71669ee9e426bf346f7eebc36f0c5055"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Schedule_Policy_Overlay.v2.jsonl", "sha256": "c87cc7eab158dc7a111867364b9c06c2314f44c644ef2a4b8e33348bd1876d13"},
+      {"relativePath": "Research/Run-Gate13RPR2MP2FormalBlockV3.ps1", "sha256": "fc0c42b858afb8e8d80c6f10544a0d7fb75694ae8c57910d205cea721731ff13"},
+      {"relativePath": "Research/New-Gate13RPR2MP2BlockPlanV4.py", "sha256": "11365fb3c694ae2fab6c9d3c3cb3c93f3cbe3e6f2f7a30373730f5a236ce8785"},
+      {"relativePath": "Research/Gate13RPR2MP2MemoryPolicyV2.psm1", "sha256": "7f9e7252fc4a158573ca67f54baa7fa4a0d0c981f3240aa706d46a96d283ffc4"},
+      {"relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV5.cs", "sha256": "21f86b21a49c936edd5e65fde750d269a54be984186d9c802cbc2804b2691c75"},
+      {"relativePath": "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json", "sha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"},
+      {"relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl", "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"},
+      {"relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json", "sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"},
+      {"relativePath": "Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.md", "sha256": "5450ae3c10be99c6febc1ddd5a6fbb8e07e2673da9f39af4d356676e070b7438"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Evidence_Manifest.v2.json", "sha256": "48f8760e93b42a72ebc396dc6fa31e20ea01ead8df7c89c91c80a87515471dbb"},
+      {"relativePath": "Research/Gate13R_PR2_MP2_Terminal_Consistency_Audit.v3.json", "sha256": "b999b6b8c46325184699bb1f1bff843746effcda7920551f281d80e2c48e066a"}
+    ]
+  },
+  "validation": {
+    "attempt1": {
+      "root": "Research/Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-1",
+      "status": "FAILED-PRESERVED",
+      "testCount": 54,
+      "passedTestCount": 53,
+      "failedTestId": "T12-missed-slots-no-catchup-flood",
+      "validationSummarySha256": "fc8364827927126905631f055dcb7727fe4fe0544f3f48780582e825bfd4821d",
+      "failureReceiptSha256": "6adf12f107a01b833204732258ccc2aec9f2484448843e000899644efbd2d486",
+      "partialOutputManifestSha256": "4d43729404f842ee59f746d85bbdb4e0bc8c9fa528b8a6cf6abffff180420f56"
+    },
+    "attempt2": {
+      "root": "Research/Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-2",
+      "status": "PASSED",
+      "testCount": 54,
+      "passedTestCount": 54,
+      "validationSummarySha256": "7c856d8698c0160c7e6ede08f1f057110be2bc2a8bc9da331e53152df650d1aa",
+      "passReceiptSha256": "6201ea32af4bfc6b3e2ca413237ea7486df95a055a288bda8586b66ea33b3b89",
+      "partialOutputManifestSha256": "4bfd37568d265a84484232df40bab295f9c8b2878c0ff220b9476e0980d00817"
+    },
+    "repair": {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Validation_Attempt1_Repair_Receipt.v1.json",
+      "sha256": "40546c1e92036e02fa3afc547a947229ccac8eb2d4b17914020edd117c6f46ec",
+      "monitorSemanticsChanged": false,
+      "testAssertionOnly": true
+    }
+  },
+  "runtimeState": {
+    "formalRoot": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3",
+    "formalRootExists": false,
+    "formalReceiptExists": false,
+    "formalStatusExists": false,
+    "unityEditorProcessCount": 0,
+    "unityProjectLockExists": false,
+    "formalMeasuredProcessesStarted": 0,
+    "formalMeasuredSamplesStarted": 0
+  },
+  "validatedBoundary": {
+    "silentWatcherCadenceMinutes": 5,
+    "scheduledUserReportCadenceMinutes": 60,
+    "prelaunchVersionedRepairMaximumCycles": 3,
+    "prelaunchSameSignatureStopCount": 2,
+    "acquisitionAutomaticMeasuredRetryAllowed": false,
+    "acquisitionAutomaticResumeAllowed": false,
+    "acquisitionAutomaticTopUpAllowed": false,
+    "acquisitionPartialMergeAllowed": false,
+    "postAcquisitionNonUnityCommitRecoveryMaximumAttempts": 3,
+    "rawDataSuccessState": "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE",
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  }
+}

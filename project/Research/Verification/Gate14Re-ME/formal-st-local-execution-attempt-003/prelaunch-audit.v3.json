@@ -1,0 +1,235 @@
+{
+  "schema": "gate14re-me-formal-st-local-prelaunch-audit-v3",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "attemptOrdinal": 3,
+  "authorizationId": "gate14re-me-formal-st-local-attempt-003-4e2ed5bc-57ca-43ea-b143-81c942344904",
+  "authorizationNonce": "f858378c-c0ed-4664-b59b-94bb86cfe07a",
+  "implementationRevision": "v5.3-authorization-contract-parity-fix",
+  "status": "PASS_READY_PENDING_EXACT_COMMAND_CONFIRMATION",
+  "auditedAtUtc": "2026-10-26T12:23:05.1008011Z",
+  "projectRoot": "H:/DDM_Final_Project",
+  "evidenceRoot": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003",
+  "measuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "scope": {
+    "formalSTCollection": true,
+    "formalSTLaunchDuringThisAuthorizedWork": false,
+    "formalAnalysis": false,
+    "mq": false,
+    "mt": false,
+    "scientificDesignChange": false,
+    "migrationPackageWork": false
+  },
+  "fixedDesign": {
+    "algorithmCount": 6,
+    "matchedBlockCount": 36,
+    "structuralCellCount": 36,
+    "superblockCount": 1296,
+    "laneCount": 7776,
+    "eventGroupCountPerLane": 24,
+    "plannedProcessCount": 7843,
+    "oracleBatchCount": 54,
+    "scheduleRowCount": 1296,
+    "strictSerialFreshUnityProcesses": true,
+    "maximumConcurrentUnityProcesses": 1,
+    "zeroReplacement": true
+  },
+  "readOnlyPreflight": {
+    "status": "PASS_READ_ONLY_PREFLIGHT_NO_MEASURED_ROOT_CREATED",
+    "supervisorExitCode": 0,
+    "authorizationContractParityPassed": true,
+    "scheduleRows": 1296,
+    "inputBundlesValidated": 1296,
+    "measuredRootExistsAfterPreflight": false,
+    "unityProcessCountAfterPreflight": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "receiptRelativePath": "read-only-preflight-receipt.v5_3.json",
+    "receiptSha256": "158f7ef538211cb1d0da133c4bea28819c5fd9dcc23ca1764e6db1cc7b376006",
+    "externalObservationRelativePath": "external-preflight-observation.v1.json",
+    "externalObservationSha256": "59579db3c3876d3270756fc952d7fce789ae4dcb3f195e0b015f57fc1d20197a"
+  },
+  "hashAudit": {
+    "bindingCount": 22,
+    "allPassed": true,
+    "bindings": [
+      {
+        "label": "supervisor",
+        "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_3/Run-Gate14ReMEFormalST.v5_3.ps1",
+        "sha256": "fcfbc5c080e714c3c3e079797195b455d9a32db29e937ccb37768a34a3cbdda1",
+        "passed": true
+      },
+      {
+        "label": "implementationManifest",
+        "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_3/formal-st-implementation-manifest.v5_3.json",
+        "sha256": "86b1c84b099849e052f3d9bea7e95da91ec492b98b058b25b284b20ab279ac82",
+        "passed": true
+      },
+      {
+        "label": "acquisitionContract",
+        "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_3/formal-st-acquisition-contract.v5_3.json",
+        "sha256": "b668fee1f1d245a3a898f958ea4b81af2fa328e2139d57ceebc162a3fb26a55b",
+        "passed": true
+      },
+      {
+        "label": "authorizationCorrigendum",
+        "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_3/formal-st-authorization-contract-corrigendum.v5_3.json",
+        "sha256": "a85ec987496381b16adccc95b8eabd7375cbea68447b5baae417813e8b047c65",
+        "passed": true
+      },
+      {
+        "label": "implementationReadme",
+        "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_3/README.md",
+        "sha256": "08baf31d4f9b4b3b52e9a5df77b4d8fd1f97eff774ff795b26631d5e23e7c553",
+        "passed": true
+      },
+      {
+        "label": "executionAuthorization",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/formal-st-execution-authorization.v5.json",
+        "sha256": "7f37051f0a70594aafde5e58800e1f7e0687c83c4c78d714404163e6348bd1f2",
+        "passed": true
+      },
+      {
+        "label": "launchContract",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/formal-st-launch-contract.v3.json",
+        "sha256": "894ec4b0924f0efb15743c7d6aa94485504dfcdaa6d6334ee97f46cab83c2889",
+        "passed": true
+      },
+      {
+        "label": "prelaunchUserAuthorization",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/prelaunch-user-authorization-receipt.v1.json",
+        "sha256": "d972201705fd62182a8aa018fed353776f4a3ff78f55d2f903fa621be543c101",
+        "passed": true
+      },
+      {
+        "label": "preflightReceipt",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/read-only-preflight-receipt.v5_3.json",
+        "sha256": "158f7ef538211cb1d0da133c4bea28819c5fd9dcc23ca1764e6db1cc7b376006",
+        "passed": true
+      },
+      {
+        "label": "externalPreflightObservation",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/external-preflight-observation.v1.json",
+        "sha256": "59579db3c3876d3270756fc952d7fce789ae4dcb3f195e0b015f57fc1d20197a",
+        "passed": true
+      },
+      {
+        "label": "inputFreezeManifest",
+        "path": "H:/DDM_Final_Project/Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/formal-input-freeze-manifest.v5.json",
+        "sha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe",
+        "passed": true
+      },
+      {
+        "label": "schedule",
+        "path": "H:/DDM_Final_Project/Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/schedule/formal-st-williams-schedule.v5.jsonl",
+        "sha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+        "passed": true
+      },
+      {
+        "label": "resourceBudget",
+        "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_1/formal-st-operational-resource-budget.v5_1.json",
+        "sha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2",
+        "passed": true
+      },
+      {
+        "label": "fairnessBinding",
+        "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json",
+        "sha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+        "passed": true
+      },
+      {
+        "label": "trustedIdentityRule",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+        "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+        "passed": true
+      },
+      {
+        "label": "timestampComparator",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+        "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+        "passed": true
+      },
+      {
+        "label": "unityExecutable",
+        "path": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+        "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+        "passed": true
+      },
+      {
+        "label": "readinessTerminal",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/terminal-readiness-receipt.v1.json",
+        "sha256": "144da1e966b14f010440e15a6f9865b4b0424128b35a03127e04ec5a769eead2",
+        "passed": true
+      },
+      {
+        "label": "independentStaticValidation",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/independent-static-validation.v1.json",
+        "sha256": "b86bb17b64da0cca08ec1ffdf2864899e59a969a471eb17eb9da99821be4c7cb",
+        "passed": true
+      },
+      {
+        "label": "finalFreezeTerminal",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/final-freeze-terminal.v1.json",
+        "sha256": "1cf75ee03efdb827deab5b14c73b10f0713c666871f6fa7b1068c02b4eba523e",
+        "passed": true
+      },
+      {
+        "label": "finalFreezeManifest",
+        "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/final-freeze-manifest.v1.json",
+        "sha256": "1de55577d60f2991235a1f4ea6778fdc3cb851b36aeab1a0592e9e4fdc7c1629",
+        "passed": true
+      },
+      {
+        "label": "launcherExecutable",
+        "path": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+        "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+        "passed": true
+      }
+    ]
+  },
+  "launchContractAudit": {
+    "schema": "gate14re-me-formal-st-local-launch-contract-v3",
+    "status": "FROZEN_PENDING_NEW_EXACT_COMMAND_CONFIRMATION",
+    "argumentCountDeclared": 51,
+    "argumentCountActual": 51,
+    "renderedCommandExactlyReconstructedFromLauncherAndArguments": true,
+    "preflightOnlySwitchPresent": false,
+    "commandLineQuitPresent": false,
+    "exactCommandConfirmationRequired": true,
+    "exactCommandConfirmationPresent": false
+  },
+  "processAudit": {
+    "supervisorCount": 0,
+    "formalRunnerCount": 0,
+    "allUnityProcessCount": 0,
+    "measuredRootAbsent": true,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false
+  },
+  "storageAudit": {
+    "drive": "H:",
+    "freeBytes": 156565909504,
+    "requiredFreeBytes": 64310367960,
+    "passed": true
+  },
+  "attemptIsolation": {
+    "attempt001Reused": false,
+    "attempt002Reused": false,
+    "sameAttemptRetry": false,
+    "resume": false,
+    "topUp": false,
+    "replacement": false,
+    "merge": false,
+    "skip": false,
+    "reorder": false
+  },
+  "launchGate": {
+    "readyForFreshExactCommandConfirmation": true,
+    "userExactCommandConfirmationPresent": false,
+    "launchAuthorizedByThisAudit": false,
+    "launchPerformed": false,
+    "requiredConfirmationText": "确认执行 attempt-003 上述命令"
+  },
+  "conclusion": "All frozen bindings, v5.3 readiness evidence, authorization-contract parity, read-only preflight, process isolation, schedule cardinality, and storage checks passed. Attempt-003 remains unlaunched and its measured root remains absent. Formal ST may proceed only after a new exact-command confirmation."
+}

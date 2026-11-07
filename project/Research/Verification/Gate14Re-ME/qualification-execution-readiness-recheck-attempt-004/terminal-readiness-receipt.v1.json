@@ -1,0 +1,95 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-004-terminal-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-attempt-004",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-004",
+  "status": "PASS_QUALIFICATION_EXECUTION_READINESS_RECHECK_V4_HOST_BOUND_EXECUTION_UNAUTHORIZED",
+  "passed": true,
+  "terminal": true,
+  "completedAtUtc": "2026-10-17T16:51:08.914283Z",
+  "authoritativeBindings": {
+    "statusV31": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v31.json",
+      "sha256": "27e766ac61ce77321a6e01ed772398d19135e5dc57e70419bf849292b2ad5529"
+    },
+    "executionContractV32": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json",
+      "sha256": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0"
+    },
+    "implementationManifestV32": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_2.json",
+      "sha256": "83ef4c7081a77f7093e9f37f53b786f628459c404ca9e89b78d6e93ce64d2514"
+    },
+    "powerShellHostRuntime": {
+      "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+      "version": "7.6.5"
+    },
+    "hostBindingAttempt003Terminal": {
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-003/terminal-pass-receipt.v1.json",
+      "sha256": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418"
+    },
+    "hostBindingAttempt004ReadOnlyClosure": {
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-004/readonly-freeze-closure-receipt.v1.json",
+      "sha256": "77c5bedd45260efa90325763ccb8ef2371c85a53bf3c60ad0139465ae816bc6a"
+    }
+  },
+  "readinessAudit": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-004/readiness-recheck-audit.v4.json",
+    "sha256": "6818b49c722ee28981e2a39ceb7fcfa02431e1ceecb133ea5811542a7ecb4dbb",
+    "totalChecks": 49,
+    "passedChecks": 49,
+    "failedChecks": 0
+  },
+  "resolvedRetainedAttempt002Blockers": [
+    "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+    "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE"
+  ],
+  "verifiedProspectiveClosure": {
+    "qualificationSuperblocks": 162,
+    "algorithmLaneProcesses": 972,
+    "oracleProcesses": 162,
+    "emptyBoundaryProcesses": 12,
+    "instrumentProcesses": 1,
+    "totalSerialFreshUnityProcesses": 1147,
+    "eventGroupRows": 23328,
+    "laneD3WindowRows": 24300,
+    "emptyBoundaryD3WindowRows": 12000,
+    "instrumentD3WindowRows": 1,
+    "processResourceRows": 25272,
+    "persistentStateMeasurementPointsPerLane": 26,
+    "acceptedSuperblockReceipts": 162,
+    "processLedgerRows": 1147,
+    "processIdentityReceipts": 1147,
+    "supervisorFinalProcessOrdinal": 1147
+  },
+  "verificationMeaning": "Static frozen-chain and existing offline known-answer readiness only; no qualification process ledger or observation exists yet.",
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "activation": {
+    "newQualificationExecutionAttemptAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "unityInvocationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "deliveryRootCreationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false,
+    "separateExecutionAuthorizationRequired": true
+  }
+}

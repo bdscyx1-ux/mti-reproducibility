@@ -1,0 +1,30 @@
+{
+  "schema": "gate14re-me-formal-st-external-launch-observation-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "status": "OBSERVED_SINGLE_LAUNCH_THEN_PREMUTATION_EXIT",
+  "authorizationId": "gate14re-me-formal-st-local-collection-c511936f-ef17-4f66-856f-6dbfe11d020f",
+  "process": {
+    "pid": 30176,
+    "creationTimeUtc": "2026-10-26T11:36:48.8910260Z",
+    "firstObservedAtUtc": "2026-10-26T11:36:49.7465950Z",
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "executableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "exactCommandLine": "\"C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_1/Run-Gate14ReMEFormalST.v5_1.ps1 -ProjectRoot H:/DDM_Final_Project -MeasuredRoot H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-001 -ExecutionAuthorization H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-001/formal-st-execution-authorization.v5.json -ExecutionAuthorizationSha256 cd7650e270818989fe0eb59d3fa88b63b07af61474745e2a271334ae7f0ceaee -ImplementationManifest H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_1/formal-st-implementation-manifest.v5_1.json -ImplementationManifestSha256 5ade759471ee2849ae2c9b31408e92b2625afc6c75500ff52abaccec64b096a8 -ExecutionContract H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_1/formal-st-acquisition-contract.v5_1.json -ExecutionContractSha256 9535be91c3796d76af1473903f9dff806c5f2ea9c4b6ad49e016c8b2c23e1604 -InputFreezeManifest H:/DDM_Final_Project/Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/formal-input-freeze-manifest.v5.json -InputFreezeManifestSha256 aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe -ResourceBudget H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_1/formal-st-operational-resource-budget.v5_1.json -ResourceBudgetSha256 973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2 -FairnessBinding H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json -FairnessBindingSha256 5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca -Schedule H:/DDM_Final_Project/Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/schedule/formal-st-williams-schedule.v5.jsonl -ScheduleSha256 45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3 -TrustedIdentityRule H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json -TrustedIdentityRuleSha256 f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06 -TimestampComparator H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1 -TimestampComparatorSha256 d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27 -UnityExecutable H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe -UnityExecutableSha256 0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "terminalObservation": {
+    "observedAbsentAtUtc": "2026-10-26T11:37:00.7287565Z",
+    "processStillPresent": false,
+    "activeUnityProcessCount": 0,
+    "measuredRootExists": false,
+    "measuredLaunchReceiptExists": false,
+    "algorithmProcessesStarted": 0,
+    "algorithmObservationsProduced": 0
+  },
+  "bindings": {
+    "launchContractSha256": "22f5906aaeda8f86f7a8b9a2ad6d849cfb745f2d3c231d65f6de76ba8b15b13b",
+    "executionAuthorizationSha256": "cd7650e270818989fe0eb59d3fa88b63b07af61474745e2a271334ae7f0ceaee",
+    "exactCommandConfirmationSha256": "c3bd141467f67e6dbd1b11bc001882c47a482c51a71ea9a574d64bed2398e3f9"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-pr1b-v6-byte-bound-pilot-launch-routing-v1",
+  "status": "FROZEN-BEFORE-V16-VERIFICATION",
+  "parentAmendment": {
+    "relativePath": "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v5.json",
+    "sha256": "3be8369f809db8c7e90a06127bab58029cf7b7eae2292da12318c73d1d176129"
+  },
+  "repair": {
+    "analyzerRoute": "Research/Analyze-Gate13RPR1BOrderEffectPilotV4.py",
+    "analyzerMustBeProvenanceBound": true,
+    "pilotLaunchHarnessRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v17-gate13r-pr1b-pilot-launch-harness-v1",
+    "pilotLaunchHarnessMustBeAbsentBeforeLaunch": true,
+    "passedPrePilotRootMutationAllowed": false
+  },
+  "newVerificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v16-gate13r-pr1b-order-effect-pathsafe-v6",
+  "pilotRoot": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+  "scientificContractChanged": false,
+  "memoryThresholdsChanged": false,
+  "scheduleChanged": false,
+  "statisticalContractChanged": false,
+  "pilotAttemptConsumed": false,
+  "formalCampaign": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "gate14re-me-formal-st-reporting-addendum-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "AUTHORIZED_REPORTING_ONLY_RAW_SCALE_AND_RATIO_PROVENANCE",
+  "userDirective": {
+    "verbatim": "除了比率也要展示原始数据，这个比率从什么数据得到的要明确展示",
+    "verbatimSha256": "046468b7ef62467111a2f3cf3fdf1fc1da666223f8cd7c9c4ff488c05d59105c"
+  },
+  "sourceAnalysisAttempt": "attempt-004",
+  "sourceAnalysisRoot": "H:/DDM_Final_Project/Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-004",
+  "outputRoot": "H:/DDM_Final_Project/Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-004-reporting-addendum-001",
+  "tool": {
+    "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_formal_st_raw_scale_provenance_v1_0.py",
+    "sha256": "0768668b85f4e70f9b8d0be56a62d351e28b183344d0f3fd5dbd01cead45fb2b"
+  },
+  "sourceBindings": {
+    "analysis-terminal-receipt.v1.json": "2b68880754b3a58a142e3454462b7fb0f78433e8819baa115072b51dd350d14d",
+    "confirmatory-results.v1.json": "fb42788c2397b6878ae8077d221935e48facc068282fa938e32fb2c4f7ae5d58",
+    "descriptive-summaries.v1.json": "2870e5d7a931b697375508c856595f7965ab87e7284c57fab99373fe62db5f43",
+    "model-fit-diagnostics.v1.json": "068477c3b86b4cd5acde1e972dfac84d52fd3626b01440bc4701e0a648757ed3",
+    "lane-estimands.v1.jsonl": "8f7ccd129c32aa5779143d5b96d1605018092f02528ae6b47e8fc82200cec206",
+    "hard-gates.v1.json": "821a8ad4df8af9816e5e6afcbba52a27abf2354c540aeac1ed70280bef025740"
+  },
+  "requiredReporting": {
+    "rawScalePerAlgorithmSummaries": true,
+    "rawScalePerAxisSummariesForD5ToD7": true,
+    "ratioNumeratorAndDenominator": true,
+    "sourceFieldAndAggregationDefinition": true,
+    "formalTransformAndBackTransform": true,
+    "modelReferenceDesign": true,
+    "distinguishRawDescriptiveFromAdjustedFormalContrast": true
+  },
+  "boundaries": {
+    "reportingOnly": true,
+    "formalModelRefit": false,
+    "formalInferenceModification": false,
+    "domainPassModification": false,
+    "sourceAnalysisModification": false,
+    "rankingOrWinner": false,
+    "mq": false,
+    "mt": false
+  },
+  "createdAtUtc": "2026-10-30T13:13:52.242Z"
+}

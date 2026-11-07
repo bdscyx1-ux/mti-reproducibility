@@ -1,0 +1,53 @@
+{
+  "schema": "gate14re-formal-phase-b-analysis-implementation-manifest-v1",
+  "studyId": "Gate14Re",
+  "status": "PASS_IMPLEMENTED_AND_SYNTHETICALLY_VALIDATED",
+  "createdLocalDate": "2026-10-15",
+  "analysisContract": {
+    "path": "Research/Gate14Re/Analysis/Gate14Re_Formal_PhaseB_Analysis_Contract.v1.json",
+    "bytes": 7921,
+    "sha256": "208a9a4393d5a610c065a64f3dbb52747c0597d391a452b426d09e7d314272f2",
+    "readOnly": true
+  },
+  "analyzer": {
+    "path": "Research/Analyze-Gate14ReFormalPhaseBV1.py",
+    "bytes": 84443,
+    "sha256": "9c5bbbadfa06afc3ad715c5ceb579f4f10e8f022b694e50c37c0caeb4c217401"
+  },
+  "syntheticValidation": {
+    "path": "Research/Verification/Gate14Re/formal-phase-b-analysis-implementation-attempt-001/synthetic-validation-only-attempt-005/validation-receipt.v1.json",
+    "bytes": 1678,
+    "sha256": "38223c2436f1f1bee565a4642ca07946cad9e9cbb352473f52203fdd9c76bb56",
+    "status": "PASS",
+    "checks": 10,
+    "formalRawOpened": false,
+    "formalAnalysisRootCreated": false
+  },
+  "implemented": [
+    "full immutable raw-tree SHA-256 and ReadOnly verification",
+    "complete-block independent-unit enforcement",
+    "M3 M4 M5 engineering eligibility gates",
+    "condition-equal paired log M1 and M2 ratio estimands",
+    "Holm-adjusted six-pair p-value families",
+    "conservative Bonferroni simultaneous decision intervals",
+    "no-forced-winner adjudication",
+    "quantity-effect CR1 complete-block cluster models",
+    "Wilson completion intervals",
+    "11-of-11 statistical fallacy scan",
+    "atomic no-overwrite analysis-root commit and ReadOnly freeze",
+    "deterministic post-commit byte-exact recomputation mode"
+  ],
+  "preOutcomeIntegrity": {
+    "formalOutcomeValuesUsedToChooseRules": false,
+    "formalBlockSchemaKeysInspectedAfterContractFreeze": true,
+    "historicalOrPilotObservationsUsed": false,
+    "postHocExpansionAllowed": false,
+    "forcedWinner": false
+  },
+  "authorizationBoundary": {
+    "formalPhaseBExecutionAuthorizedByThisManifest": false,
+    "requiresSeparateUserAuthorizationReceipt": true,
+    "newUnityAcquisitionAuthorized": false,
+    "gate15Authorized": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-005-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-005",
+  "status": "FROZEN_PREEXECUTION_OFFLINE_READ_ONLY_STAGE_CONTRACT",
+  "frozenAtUtc": "2026-10-17T12:45:12.4353224Z",
+  "projectRoot": "H:/DDM_Final_Project",
+  "sourceAttempt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-004",
+    "status": "FAILED_CLOSED_RETAINED_UNCHANGED_NOT_RECLASSIFIED",
+    "fileCount": 55,
+    "contentDigestSha256": "70d266bed18b2069106e6356eb405c1e725d81b3cede8772b5092e721c1b783c"
+  },
+  "parentStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v24.json",
+    "sha256": "103a6c916eb7657d00836a9f276ea57833aae2cf9251f612eecd6e3e94a0628d",
+    "retained": true,
+    "reclassified": false
+  },
+  "trustedTimestampComparator": {
+    "sourceAttempt": "attempt-007",
+    "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+    "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "knownAnswerReceiptSha256": "ad64fb2bce32f2e6206f6f1f80baa30f273be212075603ee631f61b560cc1b63",
+    "comparisonBasis": "STRICT_DATETIMEOFFSET_ROUND_TRIP_TO_UTC_TICKS",
+    "originalTextMustBePreserved": true
+  },
+  "executionBoundary": {
+    "offlineAdjudicatorInvocationMaximum": 1,
+    "unityInvocationMaximum": 0,
+    "automaticRetryAuthorized": false,
+    "attempt004DeletionAuthorized": false,
+    "attempt004ModificationAuthorized": false,
+    "attempt004ReclassificationAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "terminalPassRequires": [
+    "all attempt-005 source bindings match",
+    "attempt-004 retains its FAILED_CLOSED status, Status v24, every evidence byte, directory residue and read-only state",
+    "attempt-004 authorization, stage contract, source freeze and terminal failure receipt are internally consistent",
+    "prelaunch, live-concurrent and post-exit trusted identity checks pass with exact external SHA-256, chunks, path, NTFS identity, PE identity, signer, metadata and attempt-007 UTC-tick comparisons",
+    "process launch, in-process ready and terminal schema receipts bind the same PID, creation time, executable, command line, execute method and isolated project",
+    "all schema compatibility assertions are true and all negative controls fail for the frozen reason",
+    "Unity natural exit code is zero and no Unity process exists during offline adjudication",
+    "the sole attempt-004 failure is the post-result empty-directory cache-size Sum access at frozen lines 386 and 705",
+    "all retained evidence inventories and prohibited-activity counters remain unchanged and clean"
+  ],
+  "successDisposition": "FREEZE_TERMINAL_PASS_STATUS_V25_AND_ADOPT_INPUT_SCHEMA_V2_AND_PLANNING_SCHEMA_BINDING_V2",
+  "failureDisposition": "FAIL_CLOSED_FREEZE_ATTEMPT_005_FAILURE_EVIDENCE_NO_RETRY_NO_ADOPTION"
+}

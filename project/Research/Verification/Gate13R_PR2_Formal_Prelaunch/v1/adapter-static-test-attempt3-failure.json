@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-formal-adapter-static-test-failure-v1",
+  "failedAtUtc": "2026-10-08T17:03:54.0043074Z",
+  "testRelativePath": "Research/Test-Gate13RPR2FormalExecutionAdapterV3.py",
+  "testSha256": "c391848e09d754808dfe0fab70a109b9e682b65d0c4570b59bbe8d53412acb27",
+  "summaryRelativePath": "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/adapter-static-schedule-summary.v3.json",
+  "failureClass": "FORMAL-ADAPTER-WILLIAMS-ROW-MAPPING-DEFECT",
+  "message": "The active schedule rotates the starting Williams row by campaign. Adapter v1 inferred the row only from campaignBlockOrdinal and would reject valid records beginning at global process ordinal 49.",
+  "frozenScheduleValid": true,
+  "repair": "Create additive adapter/module/wrapper/orchestrator v2 and carry the schedule-owned williamsRowIndex explicitly while retaining campaignBlockOrdinal as block identity.",
+  "scientificContractChanged": false,
+  "formalRootCreated": false,
+  "formalExecutionReceiptCreated": false,
+  "unityLaunched": false,
+  "formalAttemptConsumed": false,
+  "passed": false
+}

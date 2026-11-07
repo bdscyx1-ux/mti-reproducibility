@@ -1,0 +1,20 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-48h-feasibility-readonly-analysis",
+  "command": "Read-only feasibility analysis of the frozen Gate 12R pilot and Gate 13R config. Recomputed sample sizes for 5%, 7.5%, 10%, 15% and 32-block profiles using the frozen sigma-upper formula; computed serial and ideal multi-lane p95 projections, storage projections, editor-startup overhead and peak per-process memory. No config, schedule, formal root, receipt, timing sample or frozen evidence was modified or created.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "input_sha256": {
+    "PilotRuns/Gate12R_ProcessReuse_5pct/v4/candidate-n-formal.json": "5e77d9b69c4c0e45dec204ca1943867453d29dcbdf1ebd24f0809af6d649c387",
+    "PilotRuns/Gate12R_ProcessReuse_5pct/v4/budget-storage-projection.json": "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f",
+    "Gate13R_Formal_Campaign_Config.v1.json": "af5a164cdabeeff08cd6cd00b21ecd732fcbdc7f51be3454f99aaf65b2ef5109"
+  },
+  "output_sha256": "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f",
+  "gate_tokens": [
+    "CURRENT-5PCT-P95-317.07H-INFEASIBLE",
+    "CURRENT-CONFIG-MUST-NOT-LAUNCH",
+    "48H-REQUIRES-PROSPECTIVE-AMENDMENT",
+    "NO-FORMAL-EXECUTION"
+  ]
+}

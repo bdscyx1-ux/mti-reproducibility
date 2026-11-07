@@ -1,0 +1,67 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-external-terminal-observation-v1",
+  "studyId": "Gate14Re-ME",
+  "attempt": "formal-st-analysis-attempt-002",
+  "status": "PASS_FORMAL_ST_CONFIRMATORY_ANALYSIS_OBSERVED",
+  "execution": {
+    "exactConfirmedCommandUtf8Sha256": "bd4348f8450c7c9b723fbf8857367f36bc299ddd8ced9b6729bcdf047b34e161",
+    "launcherSha256": "d162fb5ba76e3c018d54a0b7b7121dd21ec86c92dd0a4f1310d31f5211d4bd93",
+    "toolSha256": "fb10ed4d52a9aad557a041a4909c21f561e176979e7668fcd06b9048f84379c9",
+    "pythonVersion": "3.12.14",
+    "pythonExecutableSha256": "ceabb31054d429f57cb3825775677eeaf0db35fdabbc5ff6aef661c037154b00",
+    "frozenPyArrowVersion": "25.0.1",
+    "startedAtUtc": "2026-10-30T12:28:55.960Z",
+    "completedAtUtc": "2026-10-30T12:29:13.720Z",
+    "elapsedSeconds": 17.708,
+    "processExitCode": 0,
+    "automaticRetryPerformed": false
+  },
+  "outputs": {
+    "outputRoot": "H:/DDM_Final_Project/Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-002",
+    "analysisTerminalReceiptSha256": "a2169ce7c9a92f809b57796b787ef59b2a53461bf6c9ac55f8b8642086c764ce",
+    "analysisManifestSha256": "b31f94743484c578fa7b7f654ee8ea3288d970ccd07e560be181509e7d80d77e",
+    "fileManifestSha256": "f9d09a851471916c4406a2cabd0517c48674a296f8a358e3613293fc19a14a46",
+    "fileManifestRows": 10,
+    "fileManifestAllRowsVerified": true,
+    "confirmatoryResultsSha256": "fcc03aa5c5ba6bdae5516fdd3d1f9e5585c05ea544741f770a6315d86a9882c1",
+    "hardGatesSha256": "821a8ad4df8af9816e5e6afcbba52a27abf2354c540aeac1ed70280bef025740",
+    "reportSha256": "41b627fde0887013badb5a403d3f2650ca99137f7d0e682b0559ef27eee963e5",
+    "failureReceiptPresent": false
+  },
+  "analysisReadout": {
+    "independentUnit": "superblock",
+    "independentN": 1296,
+    "algorithmLanes": 7776,
+    "confirmatoryHypotheses": 35,
+    "confirmatoryPrimitiveContrasts": 40,
+    "allHardGatesPass": true,
+    "modelFallbackCount": 0,
+    "primaryClaim": {
+      "claimId": "MAJORITY_OF_PRESPECIFIED_ENDPOINT_DOMAINS_SUPPORT_IDFF",
+      "requiredDomains": 4,
+      "denominatorDomains": 7,
+      "supportedDomains": 2,
+      "pass": false,
+      "rankingOrWinnerClaim": false
+    },
+    "domainClassifications": {
+      "IDFF_ADVANTAGE": 2,
+      "COMPARATOR_ADVANTAGE": 2,
+      "UNRESOLVED": 3
+    }
+  },
+  "boundaries": {
+    "sourceRootsModified": false,
+    "scientificDesignModified": false,
+    "rankingOrWinnerComputed": false,
+    "aggregateScoreComputed": false,
+    "mqPerformed": false,
+    "mtPerformed": false
+  },
+  "sourceHashRecheck": {
+    "acceptanceTerminalFinalSha256": "2f12db25a27c023ef786251f7400546417883af639b3d405cc31ee5f5c681823",
+    "acceptanceFileManifestSha256": "02eefd2cffe1f611f0523cbb7f94c1e15ab60f4bfd86488cdcf4e2cabf348329",
+    "allPass": true
+  },
+  "observedAtUtc": "2026-10-30T12:30:19.937Z"
+}

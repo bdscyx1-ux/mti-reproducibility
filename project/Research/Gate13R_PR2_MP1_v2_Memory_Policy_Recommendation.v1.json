@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "recommendationKind": "gate13r-pr2-mp1-v2-forward-layered-memory-policy-recommendation-v1",
+  "generatedAtUtc": "2026-10-09T05:21:36.5166945Z",
+  "generatedAtAsiaShanghai": "2026-10-09T13:21:36.5189185+08:00",
+  "status": "RECOMMENDED-BUT-UNFROZEN / REQUIRES-SEPARATE-MP2-NONEXECUTING-AUTHORIZATION",
+  "labels": [
+    "NON-FORMAL",
+    "PILOT-INFORMED",
+    "MEMORY-DIAGNOSTIC-ONLY",
+    "EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "NOT-ALGORITHM-SUPERIORITY-EVIDENCE"
+  ],
+  "evidenceIdentity": {
+    "pilotRoot": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v2",
+    "rawFileCount": 3360,
+    "rawBytes": 2607785161,
+    "rawCanonicalTreeSha256": "13dd5c30cd016d42e80f472c962d09f89f4d0fb6714d68228e2c657f6c80da93",
+    "measuredBlockCount": 96,
+    "measuredSampleCount": 384,
+    "analysisRoot": "H:\\DDM_Final_Project\\Research\\Analysis\\Gate13R_PR2_MP1\\v2\\attempt-1",
+    "stageSeparatedAnalysisSha256": "9676878b0cc88fa4b7230016c55e63ec2c42940a214c8c3eff245ce16d78f119",
+    "decisionMatrixSha256": "05bcfa7324ba7afcef8cfba081f8407431144d932007bdfeb09a2b0bd2cc2441",
+    "analysisEvidenceManifestSha256": "29de1d6df9b12f8ede92f56914cb6cabc9f7a6cc246389d78de097c0bed990eb",
+    "postPilotIntegrityAuditSha256": "40566cbc17d3b66160957ff72e488fa17c4ffaecbc163cc1feff39f1e52eb69e"
+  },
+  "observedEvidence": {
+    "runawayGrowthEvidence": false,
+    "failedHostSafetyStageFlagCount": 0,
+    "maximumObservedAbsoluteNativeBytes": 2128375808,
+    "maximumObservedCleanupNativeDeltaBytes": 556359680,
+    "minimumObservedAvailablePhysicalMemoryBytes": 16199168000,
+    "absolute4GiBMarginBytes": 2166591488,
+    "relative2GiBMarginBytes": 1591123968,
+    "available8GiBFloorMarginBytes": 7609233408,
+    "maximumObservedRetainedManagedCleanupDeltaBytes": 84762624,
+    "psapiCimPairCount": 96,
+    "psapiCimWorkingSetAbsoluteDifferenceP95Bytes": 782336,
+    "psapiCimPrivateMemoryAbsoluteDifferenceP95Bytes": 208896,
+    "scaleDiagnostics": [
+      {
+        "scaleId": "g032",
+        "blockCount": 16,
+        "nativeCleanupDeltaMedianBytes": 202219520,
+        "nativeCleanupDeltaP95Bytes": 254880768,
+        "nativeCleanupDeltaMaximumBytes": 255049728,
+        "blocksExceeding512MiB": 0,
+        "blocksAtOrAbove90PercentOf512MiB": 0
+      },
+      {
+        "scaleId": "g064",
+        "blockCount": 16,
+        "nativeCleanupDeltaMedianBytes": 201578496,
+        "nativeCleanupDeltaP95Bytes": 271067136,
+        "nativeCleanupDeltaMaximumBytes": 271171584,
+        "blocksExceeding512MiB": 0,
+        "blocksAtOrAbove90PercentOf512MiB": 0
+      },
+      {
+        "scaleId": "g128",
+        "blockCount": 16,
+        "nativeCleanupDeltaMedianBytes": 287500288,
+        "nativeCleanupDeltaP95Bytes": 348386304,
+        "nativeCleanupDeltaMaximumBytes": 380977152,
+        "blocksExceeding512MiB": 0,
+        "blocksAtOrAbove90PercentOf512MiB": 0
+      },
+      {
+        "scaleId": "g256",
+        "blockCount": 48,
+        "nativeCleanupDeltaMedianBytes": 463882240,
+        "nativeCleanupDeltaP95Bytes": 524253184,
+        "nativeCleanupDeltaMaximumBytes": 556359680,
+        "blocksExceeding512MiB": 1,
+        "blocksAtOrAbove90PercentOf512MiB": 13,
+        "blocksExceeding640MiB": 0,
+        "blocksExceeding768MiB": 0,
+        "blocksExceeding1024MiB": 0
+      }
+    ]
+  },
+  "candidatePolicy": {
+    "policyId": "gate13r-pr2-layered-scenario-aware-memory-policy-candidate-v1",
+    "selectionStatus": "RECOMMENDED-BUT-UNFROZEN",
+    "measurementBoundary": "sample-after-cleanup and post-block-pre-exit for residency; raw-after-workload remains diagnostic unless an independent host-emergency gate fails",
+    "nativeResidencyMetric": "max(workingSetDeltaFromBlockBaselineBytes, privateMemoryDeltaFromBlockBaselineBytes)",
+    "scenarioClassifier": {
+      "field": "canonical max grid dimension",
+      "allowedValues": [32, 64, 128, 256],
+      "unknownValueRule": "FAIL-CONFIGURATION-BEFORE-MEASURED-LAUNCH"
+    },
+    "nativeAdvisoryEnvelope": [
+      {
+        "condition": "maxGridDimension <= 128",
+        "thresholdMiB": 512,
+        "thresholdBytes": 536870912
+      },
+      {
+        "condition": "maxGridDimension == 256",
+        "thresholdMiB": 640,
+        "thresholdBytes": 671088640
+      }
+    ],
+    "nativeHardEligibilityCeiling": [
+      {
+        "condition": "maxGridDimension <= 128",
+        "thresholdMiB": 640,
+        "thresholdBytes": 671088640
+      },
+      {
+        "condition": "maxGridDimension == 256",
+        "thresholdMiB": 768,
+        "thresholdBytes": 805306368
+      }
+    ],
+    "nativeDecisionSemantics": {
+      "advisoryCrossing": "record and retain in output; do not stop the block or campaign",
+      "hardCeilingCrossing": "durably record the boundary and fail closed before the next block",
+      "attribution": "whole-block/process eligibility event; never attribute the crossing to the algorithm occupying the final position without separate causal evidence",
+      "adaptiveRelaxation": false
+    },
+    "retainedManagedPolicy": {
+      "sampleAlertMiB": 128,
+      "sampleAlertBytes": 134217728,
+      "sampleEmergencyMiB": 256,
+      "sampleEmergencyBytes": 268435456,
+      "blockEmergencyMiB": 256,
+      "blockEmergencyBytes": 268435456,
+      "boundary": "after forced cleanup",
+      "status": "RETAIN-UNCHANGED"
+    },
+    "hostSafetyPolicy": {
+      "absoluteWorkingSetOrPrivateMemoryEmergencyGiB": 4,
+      "relativeWorkingSetOrPrivateGrowthEmergencyGiB": 2,
+      "availablePhysicalMemoryFloorGiB": 8,
+      "telemetryOverflowOrUnverifiableSustainedGrowth": "FAIL-CLOSED",
+      "status": "RETAIN-UNCHANGED"
+    },
+    "failurePrecedence": "Durable Unity/block cause precedes timeout, non-zero exit, and secondary quiescence evidence; lock cleanup never authorizes continuation.",
+    "twoStageCommit": "RETAIN-UNCHANGED"
+  },
+  "candidateComparison": [
+    {
+      "candidate": "fixed-512-MiB-native-hard-gate",
+      "verdict": "NOT-RECOMMENDED",
+      "reason": "It conflates normal g256 residency with runaway growth: 1/48 g256 blocks exceeded it and 13/48 were within its upper 10 percent, while no host-safety emergency occurred."
+    },
+    {
+      "candidate": "fixed-640-MiB-native-hard-gate",
+      "verdict": "VIABLE-BUT-NOT-PREFERRED",
+      "reason": "No pilot block exceeded it, but one absolute threshold ignores the strong scenario-size trend and provides less high-scale headroom than the recommended two-tier policy."
+    },
+    {
+      "candidate": "fixed-768-MiB-native-hard-gate",
+      "verdict": "VIABLE-BUT-LESS-DIAGNOSTIC",
+      "reason": "No pilot block approached it, but it is unnecessarily permissive for g032-g128 and discards useful scale-aware warnings."
+    },
+    {
+      "candidate": "fixed-1024-MiB-native-hard-gate",
+      "verdict": "NOT-PREFERRED",
+      "reason": "It maximizes false-failure protection but is too insensitive as the only native eligibility rule; host-safety gates already provide independent emergency protection."
+    },
+    {
+      "candidate": "layered-scenario-aware-512-or-640-advisory-plus-640-or-768-hard",
+      "verdict": "RECOMMENDED-BUT-UNFROZEN",
+      "reason": "It follows the observed scale trend, separates diagnostic residency from emergency safety, preserves a non-adaptive hard ceiling, and avoids reintroducing the attempt-2 fixed-512 false-positive mechanism."
+    }
+  ],
+  "scientificBoundary": {
+    "algorithmSuperiorityInference": false,
+    "formalEffectInference": false,
+    "formalSampleSizeInference": false,
+    "gate14RInference": false,
+    "pilotObservedEffectsMergedIntoFormalData": false
+  },
+  "authorizationBoundary": {
+    "policyFrozenForFormalUse": false,
+    "formalConfigModified": false,
+    "formalScheduleModified": false,
+    "formalAttempt3RootCreated": false,
+    "formalAttempt3ReceiptCreated": false,
+    "formalAttempt3Started": false,
+    "requiredNextAuthorization": "Gate 13R-PR2-MP2 non-executing forward memory-policy amendment and formal-preparation validation"
+  }
+}

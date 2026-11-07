@@ -1,0 +1,63 @@
+{
+  "schema": "gate14re-me-gnf-discrimination-window-analysis-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+  "status": "FROZEN_BEFORE_READING_EVENT_GROUP_OBSERVATION_VALUES",
+  "frozenAtUtc": "2026-10-19T11:15:48.4641564Z",
+  "source": {
+    "attemptId": "load-qualification-execution-attempt-009",
+    "measuredRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-007",
+    "state": "SEALED_READ_ONLY_QUALIFICATION_NOT_TERMINAL_PASS",
+    "offlineNecessaryRawValidationRequired": "PASS_OFFLINE_NECESSARY_RAW_VALIDATION"
+  },
+  "preservedDesignStructure": {
+    "factorialLevelCounts": {"G": 3, "N": 4, "F": 4},
+    "coreCells": 48,
+    "pairedAnonymousLanes": 6,
+    "independentCoreSuperblocksPerCell": 3,
+    "stressContextStrata": 18,
+    "strictSerialFreshProcesses": true,
+    "newQualificationProcessCountIfLaterAuthorized": 1147
+  },
+  "laneSeedSummaries": {
+    "D1": "geometric mean of eligible finite-positive eventGroupElapsedMilliseconds within one anonymous lane x core superblock",
+    "D2": "median of eligible gridAccessorCallsTotal within one anonymous lane x core superblock",
+    "minimumEligibleRows": 23,
+    "expectedRows": 24,
+    "missingRule": "no imputation; fail closed if a core cell lacks six lanes x three superblocks"
+  },
+  "anonymousPairSeparation": {
+    "pairCount": 15,
+    "thresholds": [0.05, 0.10, 0.20],
+    "perMetricRule": "Across the three paired core superblocks, all three signed log-ratios must have the same nonzero direction, at least two of three absolute log-ratios must be at least log(1+threshold), and the median absolute log-ratio must be at least log(1+threshold).",
+    "pairRule": "An anonymous pair is operationally separated if either D1 or D2 passes the per-metric rule.",
+    "cellOutputs": [
+      "separated pair count and fraction at 5, 10, and 20 percent",
+      "all15PairsSeparated flag at each threshold",
+      "minimum and median pairwise separation margin without directions or identities"
+    ],
+    "statisticalBoundary": "n=3 independent superblocks per cell is descriptive pilot evidence, not a confirmatory significance test."
+  },
+  "runtimeBoundary": {
+    "cellTypical": "median of the six algorithm-specific process-wall P50 values",
+    "cellWorstObserved": "maximum of the six algorithm-specific three-replicate process-wall maxima",
+    "preferredCeilingSeconds": 180,
+    "hardPlanningCeilingSeconds": 300,
+    "reason": "180 seconds implies at least about 20 fresh lanes/hour before small gaps; 300 seconds is the largest acceptable planning band and excludes the old multi-minute tail region."
+  },
+  "decisionUse": [
+    "describe where anonymous separation first becomes stable as load rises",
+    "describe where runtime crosses 180 and 300 seconds",
+    "construct a new 3 x 4 x 4 bounded window whose minimum is above the non-discriminating region and whose maximum is below the long-tail region",
+    "do not select exact new unobserved levels solely by interpolated outcome differences; final candidate must be requalified from ordinal 0"
+  ],
+  "outputs": [
+    "input-file-inventory.v1.jsonl",
+    "cell-discrimination-runtime.v1.csv",
+    "cell-discrimination-runtime.v1.json",
+    "factor-level-boundaries.v1.json",
+    "design-window-report.v1.md",
+    "file-manifest.v1.jsonl",
+    "terminal-receipt.v1.json"
+  ]
+}

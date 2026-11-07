@@ -1,0 +1,18 @@
+{
+  "schema": "gate14re-me-streaming-essential-acceptance-user-authorization-v4",
+  "version": 4,
+  "status": "USER_AUTHORIZED_READ_ONLY_OFFLINE_REVALIDATION_AND_V4_REUSE_IF_FEASIBLE",
+  "studyId": "Gate14Re-ME",
+  "createdAtUtc": "2026-10-19T11:42:00.000Z",
+  "userInstructions": [
+    "目前先授权另行建立只读离线再验协议，对已封存数据重新验收，但要求大幅度缩短时长，只保留必要验收",
+    "新创建的验收部分也可以直接复用到新版本中继续采用，attempt-009验收的后续部分可以跑一遍验证可行性，如果可行，则复用，并查看是否有优化空间并应用优化"
+  ],
+  "authorizedScope": "One independent, read-only feasibility execution against the paused attempt-009 seal, writing only to this new versioned acceptance root; successful reusable mechanisms may be copied and renamed into v4.",
+  "notAuthorized": [
+    "resume or modify attempt-009",
+    "claim attempt-009 qualification terminal PASS",
+    "read or analyze algorithm effects",
+    "start a new qualification or formal experiment"
+  ]
+}

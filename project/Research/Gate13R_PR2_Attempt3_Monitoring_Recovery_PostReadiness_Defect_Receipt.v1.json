@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-attempt3-monitoring-recovery-postreadiness-defect-v1",
+  "detectedAtUtc": "2026-10-09T07:23:00Z",
+  "detectedAtAsiaShanghai": "2026-10-09T15:23:00+08:00",
+  "status": "V1-PRESERVED-SUPERSEDED-PENDING-VERSIONED-REPAIR",
+  "failureSignature": "SCHEDULED-REPORT-STATE-OMITS-RAW-COMMIT-RECOVERY",
+  "diagnosis": "The v1 notification function scheduled hourly reports only when status equaled ACQUISITION-RUNNING. The frozen specification also requires scheduled reports while ACQUISITION-COMPLETE-COMMIT-PENDING or RAW-COMMIT-RECOVERY is active.",
+  "impact": {
+    "formalDataAffected": false,
+    "unityStarted": false,
+    "formalTargetsCreated": false,
+    "experimentalDesignChanged": false,
+    "measuredRetryBoundaryChanged": false,
+    "possibleFutureEffectIfUnrepaired": "A long Phase-A raw-commit recovery could remain silent between its entry and terminal completion/failure event."
+  },
+  "supersededArtifacts": [
+    {"relativePath": "Research/Gate13RPR2Attempt3MonitoringRecoveryV1.py", "sha256": "e09eee5be46e3db8f79044d9711d5bf444a513977f0c31c600d551b0c9ade077"},
+    {"relativePath": "Research/Get-Gate13RPR2Attempt3OperationalProgressV1.ps1", "sha256": "234ef08b17d8830e8d7358b1729e41cdaffc73bfcad91ff692d3eecd2bac81d4"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json", "sha256": "6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v1.json", "sha256": "9f011ba057df79535c3ebbede12df9a75b5e4f0c3aed5586bdf3961a181bcf49"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v2.md", "sha256": "54a6e4b1db4006ba2c03cdc7395bd109e1e07dc3a6e212f5dc5252bb5e541fb6"}
+  ],
+  "permittedRepair": "Create v2 monitor/config/wrapper and a new validation attempt that adds raw-commit hourly cadence and active-status stale checks without modifying any v1 file or any frozen experiment input.",
+  "repairCycleOrdinal": 1,
+  "formalCampaignAuthorized": false,
+  "formalStatisticalAnalysisAuthorized": false,
+  "gate14RAuthorized": false
+}

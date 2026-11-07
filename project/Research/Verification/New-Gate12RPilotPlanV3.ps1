@@ -1,0 +1,14 @@
+[CmdletBinding()]
+param(
+    [Parameter(Mandatory=$true)][string]$ProjectPath,
+    [string]$SourceRelativePath='Research/Gate12R_5pct_ProcessReuse_Pilot_Plan.v2.json',
+    [string]$OutputRelativePath='Research/Gate12R_5pct_ProcessReuse_Pilot_Plan.v3.json'
+)
+
+$ErrorActionPreference='Stop';Set-StrictMode -Version Latest
+$ProjectPath=[IO.Path]::GetFullPath($ProjectPath);$source=Join-Path $ProjectPath $SourceRelativePath.Replace('/','\');$output=Join-Path $ProjectPath $OutputRelativePath.Replace('/','\')
+$expected='c76a0a1dc2ecc4efbc4f5419bee9890cf275c9b1fec7e4c64b22d8e2688849cf';$actual=(Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash.ToLowerInvariant();if($actual-ne$expected){throw "Frozen pilot plan v2 changed: $actual"};if(Test-Path -LiteralPath $output){throw "Create-new pilot plan v3 exists: $output"}
+$plan=Get-Content -LiteralPath $source -Raw -Encoding UTF8|ConvertFrom-Json;$plan.attempt=3;$plan.paths.pilotRootRelativePath='Research/PilotRuns/Gate12R_ProcessReuse_5pct/v3';$plan.paths.verificationRootRelativePath='Research/Verification/Gate12R_ProcessReuse_5pct/v5'
+$plan|Add-Member -NotePropertyName canonicalInputStorage -NotePropertyValue ([pscustomobject][ordered]@{amendmentId='gate12r-canonical-input-upstream-reference-v1';storageKind='frozen-gate11r-upstream-reference-v1';frozenScenarioRootRelativePath='Research/FormalScenarios/Gate11R_5pct/v1/Scenarios';bundleManifestSha256='5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc';exactByteIdentityRequired=$true;localCanonicalCopiesRetained=$false;compressionUsed=$false;lossyTransformationUsed=$false})
+$json=($plan|ConvertTo-Json -Depth 40).Replace("`r`n","`n").Replace("`r","`n")+"`n";[IO.File]::WriteAllText($output,$json,(New-Object Text.UTF8Encoding($false,$true)))
+$receipt=[ordered]@{schemaVersion=1;receiptKind='gate12r-pilot-plan-v3-storage-reference-derivation-v1';createdAtUtc=[DateTime]::UtcNow.ToString('o');sourceRelativePath=$SourceRelativePath;sourceSha256=$actual;outputRelativePath=$OutputRelativePath;outputSha256=(Get-FileHash -LiteralPath $output -Algorithm SHA256).Hash.ToLowerInvariant();attemptFrom=2;attemptTo=3;pilotRootFrom='Research/PilotRuns/Gate12R_ProcessReuse_5pct/v2';pilotRootTo='Research/PilotRuns/Gate12R_ProcessReuse_5pct/v3';verificationRootTo='Research/Verification/Gate12R_ProcessReuse_5pct/v5';storageAmendmentId='gate12r-canonical-input-upstream-reference-v1';thresholdsChanged=$false;matrixChanged=$false;williamsChanged=$false;precisionChanged=$false;hardCap=$null;gate13rAuthorized=$false};$receiptPath=Join-Path $ProjectPath 'Research\Gate12R_PilotPlanV3_Derivation.v1.json';if(Test-Path $receiptPath){throw "Create-new derivation receipt exists: $receiptPath"};$receiptJson=($receipt|ConvertTo-Json -Depth 20).Replace("`r`n","`n").Replace("`r","`n")+"`n";[IO.File]::WriteAllText($receiptPath,$receiptJson,(New-Object Text.UTF8Encoding($false,$true)));$receipt|ConvertTo-Json -Depth 20

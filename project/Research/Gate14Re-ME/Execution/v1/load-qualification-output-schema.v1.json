@@ -1,0 +1,118 @@
+{
+  "schema": "gate14re-me-load-qualification-output-schema-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_COMPLETE_PER_OBSERVATION_OUTPUT",
+  "version": 1,
+  "retentionRule": "Every raw observation is retained. An aggregate-only package is invalid.",
+  "identityRule": "Qualification reports use ALG-A through ALG-F; the encrypted or hash-sealed identity binding is retained separately and must not be opened to select endpoints, scenarios or thresholds.",
+  "rawTables": [
+    {
+      "tableId": "oracle-agent-checks",
+      "fileName": "oracle-agent-checks.raw.v1.jsonl",
+      "grain": "one input x baseline-or-event x agent",
+      "requiredFields": ["recordId", "inputId", "superblockId", "eventGroupIndex", "comparisonSide", "agentIndex", "startX", "startY", "goalX", "goalY", "reachable", "shortestPathCost", "shortestPathSteps", "affected", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "oracle-event-checks",
+      "fileName": "oracle-event-checks.raw.v1.jsonl",
+      "grain": "one input x event group",
+      "expectedRowsPerInput": 24,
+      "requiredFields": ["recordId", "inputId", "superblockId", "eventGroupId", "eventGroupIndex", "cycleIndex", "phase", "topology", "uniqueChangedCellCount", "affectedAgentCount", "affectedAgentFraction", "minimumAffectedAgentsPassed", "bottleneckHalfAgentsRuleApplicable", "bottleneckHalfAgentsPassed", "restoreGridBytesPassed", "restoreOraclePassed", "beforeGridSha256", "afterGridSha256", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "operations",
+      "fileName": "operations.raw.v1.jsonl",
+      "grain": "one planner initialization, repair, or path-query operation",
+      "requiredFields": ["recordId", "inputId", "superblockId", "anonymousLaneId", "identityBindingSha256", "operationType", "operationId", "eventGroupIndex", "partitionIndex", "agentIndex", "gridVersion", "status", "failureReasonCode", "budgetExceeded", "elapsedCpuMilliseconds", "processedNodesOrCells", "expandedNodes", "relaxedEdges", "repairedCells", "managedAllocatedBytes", "oracleReachable", "oraclePathCost", "reportedPathCost", "oraclePathCostMatch", "nativeMetricsSemanticsId", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "event-groups",
+      "fileName": "event-groups.raw.v1.jsonl",
+      "grain": "one input x anonymous algorithm lane x event group",
+      "expectedRowsPerLane": 24,
+      "requiredFields": ["recordId", "inputId", "superblockId", "designRegion", "anonymousLaneId", "identityBindingSha256", "gridEdge", "agentCount", "changedCellCount", "changeTopology", "graphProfile", "sameTickAtomicPartitions", "contextStratumId", "eventGroupId", "eventGroupIndex", "cycleIndex", "phase", "eventGroupElapsedMilliseconds", "allocationCounterStart", "allocationCounterEnd", "eventGroupManagedAllocatedBytes", "allocationCounterId", "gridContainsCalls", "gridIsWalkableCalls", "gridGetTraversalCostCalls", "gridAccessorCallsTotal", "repairOperationCount", "planOperationCount", "succeededPlanCount", "noPathPlanCount", "budgetExceededOperationCount", "eligible", "missingOrIneligibleReasonCode", "finitePositiveElapsed", "counterValid", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "persistent-state",
+      "fileName": "persistent-state.raw.v1.jsonl",
+      "grain": "one lane x measurement point x persistent-state component",
+      "measurementPointsPerLane": 26,
+      "requiredFields": ["recordId", "inputId", "superblockId", "anonymousLaneId", "identityBindingSha256", "measurementPointId", "eventGroupIndex", "persistentContainerName", "containerKind", "persistentContainerCapacity", "persistentContainerBytesPerElement", "persistentContainerCapacityBytes", "persistentPrimitiveArrayBytes", "persistentStateBytesTotal", "sizingFormulaId", "valid", "invalidReasonCode", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "process-resources",
+      "fileName": "process-resources.raw.v1.jsonl",
+      "grain": "one lane x measurement point",
+      "expectedRowsPerLane": 26,
+      "requiredFields": ["recordId", "inputId", "superblockId", "anonymousLaneId", "identityBindingSha256", "measurementPointId", "eventGroupIndex", "processId", "privateMemoryBytes", "workingSetBytes", "managedMemoryBytes", "peakWorkingSetBytes", "capturedAtUtc", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "empty-boundary",
+      "fileName": "empty-boundary.raw.v1.jsonl",
+      "grain": "one independent empty-boundary iteration",
+      "expectedProcesses": 12,
+      "expectedRowsPerProcess": 1000,
+      "expectedTotalRows": 12000,
+      "requiredFields": ["recordId", "processOrdinal", "iterationIndex", "stopwatchStartTicks", "stopwatchEndTicks", "elapsedMilliseconds", "allocationCounterStart", "allocationCounterEnd", "allocatedBytes", "plannerInvoked", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "replacement-ledger",
+      "fileName": "replacement-ledger.raw.v1.jsonl",
+      "grain": "one whole-superblock technical replacement decision",
+      "requiredFields": ["recordId", "plannedSuperblockId", "replacementSuperblockId", "replacementOrdinal", "reason", "createdAtUtc"],
+      "requiredEvenWhenEmpty": true,
+      "maximumRowsPerPlannedSuperblock": 1
+    },
+    {
+      "tableId": "failures-and-voids",
+      "fileName": "failures-and-voids.raw.v1.jsonl",
+      "grain": "one process or whole-superblock failure/void declaration",
+      "requiredFields": ["recordId", "plannedSuperblockId", "instanceId", "isReplacement", "status", "reason", "createdAtUtc"],
+      "requiredEvenWhenEmpty": true
+    }
+  ],
+  "receipts": [
+    "_control/launch-receipt.v1.json",
+    "oracle-pass-receipt.v1.json",
+    "lane-receipt.v1.json",
+    "accepted-superblock-receipt.v1.json",
+    "empty-boundary-receipt.v1.json",
+    "instrument-csharp-receipt.v1.json",
+    "instrument-export-receipt.v1.json",
+    "_control/acquisition-complete.v1.json",
+    "delivery-manifest.v1.json"
+  ],
+  "deliveryViews": {
+    "losslessCanonical": "UTF-8 JSON Lines retaining every raw row",
+    "humanPortable": "RFC 4180 CSV retaining every raw row and a fixed column order",
+    "compressedPortable": "gzip-compressed UTF-8 JSON Lines retaining every raw row",
+    "typedAnalytical": "Parquet retaining every raw row and explicit integer/float/boolean/string types",
+    "aggregateOnlyAllowed": false,
+    "rowIdentityPreservedAcrossViews": true,
+    "rowOrderManifested": true,
+    "sha256ManifestRequired": true
+  },
+  "requiredRoundTripChecks": [
+    "row counts equal across canonical JSONL, CSV, JSONL.GZ and Parquet",
+    "recordId sets are identical",
+    "all required fields survive",
+    "typed values survive without string coercion in Parquet",
+    "file SHA-256 values match the delivery manifest",
+    "tamper, missing row/file, duplicate recordId and anonymous-label-swap fixtures all fail closed"
+  ],
+  "currentStageEvidence": {
+    "sourceImplemented": true,
+    "rawRowsCreated": 0,
+    "deliveryCreated": false,
+    "typedParquetEngineAvailable": false,
+    "roundTripExecuted": false
+  }
+}

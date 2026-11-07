@@ -1,0 +1,34 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-process-reuse-block-runner-v4-derivation-v1",
+    "createdAtUtc":  "2026-10-07T14:52:21.4972107Z",
+    "sourceRelativePath":  "Research/Run-Gate12RProcessReuseBlockV3.ps1",
+    "sourceSha256":  "028ac186d087929adddad27d621ce499da08a40b2038bf97e0144a1fa930288e",
+    "outputRelativePath":  "Research/Run-Gate12RProcessReuseBlockV4.ps1",
+    "outputSha256":  "52795dd3d91b05ab0b23568d7ae787ed3cbc886c85c5d235c264304a2bd85d00",
+    "moduleV2Sha256":  "d64e48c8bf99233ae44e918e720b5022ae5acfeff96b98eb8b01c30a8274c936",
+    "routes":  [
+                   {
+                       "from":  "Gate12RCanonicalInputReference.psm1",
+                       "to":  "Gate12RCanonicalInputReferenceV2.psm1",
+                       "count":  1
+                   },
+                   {
+                       "from":  "Run-Gate12RProcessReuseBlockV3",
+                       "to":  "Run-Gate12RProcessReuseBlockV4",
+                       "count":  1
+                   },
+                   {
+                       "from":  "[IO.File]::Replace($tmp,$summaryPath,$null)",
+                       "to":  "$backup=$summaryPath+\u0027.replace-backup-\u0027+[Guid]::NewGuid().ToString(\u0027N\u0027);[IO.File]::Replace($tmp,$summaryPath,$backup);if(Test-Path -LiteralPath $backup){[IO.File]::Delete($backup)}",
+                       "count":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate12r-canonical-input-reference-failure-v1\u0027",
+                       "to":  "receiptKind=\u0027gate12r-canonical-input-reference-failure-v2\u0027",
+                       "count":  1
+                   }
+               ],
+    "thresholdsChanged":  false,
+    "experimentalSemanticsChanged":  false
+}

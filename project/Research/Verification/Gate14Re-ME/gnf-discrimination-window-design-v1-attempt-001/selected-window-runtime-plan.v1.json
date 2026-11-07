@@ -1,0 +1,23 @@
+{
+  "schema": "gate14re-me-selected-window-runtime-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+  "status": "REFROZEN_AFTER_NONSEMANTIC_TIMESTAMP_CORRECTION_BEFORE_FINAL_RUNTIME_REPLAY",
+  "frozenAtUtc": "2026-10-19T11:23:15Z",
+  "method": {
+    "inputCoordinates": "log2(G), log2(N), log2(F)",
+    "outputCoordinate": "natural log process-wall duration",
+    "interpolation": "multilinear interpolation inside the old observed factorial envelope",
+    "pointStatistic": "algorithm-cell process-wall P50",
+    "conservativeStatistic": "algorithm-cell observed maximum",
+    "gapStatistics": ["P50 for point", "P99 for conservative"],
+    "planningHeadroomMultiplier": 1.2,
+    "formalReference": "B=36, 48 cells x 36 independent superblocks x 6 lanes",
+    "qualificationReference": "3 core superblocks per cell plus 18 high-corner stress superblocks, 972 lanes, plus the observed non-lane wall-clock remainder"
+  },
+  "boundary": [
+    "Runtime interpolation is a planning surrogate, not validation of the new levels.",
+    "Algorithm names are discarded before output; no effect result, rank, or winner is produced.",
+    "A fresh qualification from ordinal 0 is required before any formal execution."
+  ]
+}

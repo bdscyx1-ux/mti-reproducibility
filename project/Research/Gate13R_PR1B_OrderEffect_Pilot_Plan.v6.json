@@ -1,0 +1,193 @@
+{
+    "schemaVersion":  2,
+    "planId":  "gate13r-pr1b-balanced-mirrored-order-effect-pathsafe-v4-pilot-v1",
+    "specificationId":  "gate13r-pr1b-v4-winps51-atomic-replace-specification-v1",
+    "testDesignId":  "gate13r-pr1b-v4-winps51-atomic-replace-test-design-v1",
+    "amendmentId":  "gate13r-pr1b-v4-winps51-atomic-replace-backup-leaf-compatibility-v1",
+    "executionDesignId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "formalCampaign":  false,
+    "nonFormal":  true,
+    "excludedFromFormalAnalysis":  true,
+    "attemptNumber":  4,
+    "operationalVerificationRevision":  6,
+    "paths":  {
+                  "pilotRootRelativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+                  "verificationRootRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v13-gate13r-pr1b-order-effect-pathsafe-v4",
+                  "reservedFormalRootRelativePath":  "Research/FormalRuns/Gate13R_RQAligned/v1",
+                  "attempt1PilotRootRelativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect",
+                  "attempt1TerminalPreservationRelativePath":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Attempt1_Terminal_Preservation.v1.json",
+                  "verificationAttempt1RootRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v9-gate13r-pr1b-order-effect-memory-v2",
+                  "verificationAttempt1DiagnosisRelativePath":  "Research/Gate13R_PR1B_v2_Verification_Attempt1_Failure_Diagnosis.v1.json",
+                  "verificationAttempt2RootRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v10-gate13r-pr1b-order-effect-memory-v2",
+                  "verificationAttempt2DiagnosisRelativePath":  "Research/Gate13R_PR1B_v2_Verification_Attempt2_Failure_Diagnosis.v1.json",
+                  "gate11MatrixRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json",
+                  "gate11BundleManifestRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+                  "upstreamPr1CheckpointRelativePath":  "Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.json",
+                  "attempt2PilotRootRelativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2",
+                  "attempt2TerminalPreservationRelativePath":  "Research/Gate13R_PR1B_v2_Pilot_Attempt2_Terminal_Preservation.v1.json",
+                  "verificationAttempt3RootRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2",
+                  "verificationAttempt4RootRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v12-gate13r-pr1b-order-effect-pathsafe-v3",
+                  "verificationAttempt4TerminalPreservationRelativePath":  "Research/Gate13R_PR1B_v3_PrePilot_v12_Terminal_Preservation.v1.json"
+              },
+    "upstreamHashes":  {
+                           "gate11Matrix":  "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3",
+                           "gate11BundleManifest":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+                           "upstreamPr1Checkpoint":  "d1d2c8f2aa5b7b075ec74f18911cb15bb47076840ec456d3eee6d58030c722ee",
+                           "gate12rV4PilotManifest":  "5b0678518423816212ea27f6cbb0bea18c1d11110ed10aefa1a238c17e0a53b6",
+                           "gate12rV4ExecutionManifest":  "fce4c7f9c7fe7df5f424c8a8ae888133942ed49dbede71d4499e502ba812ebd6",
+                           "attempt1TerminalPreservation":  "3b8192b5c8b6ca1defa495bce36698ccd8d9f04125df75bd118255374db15c38",
+                           "frozenUnityCommandV3":  "eeca58f7e1121d0a297e8796430a90ae32f8492c32fc5fb676ae102b5f4a0c97",
+                           "frozenPreparationModuleV1":  "74cf0104b5b54617d4aa8364de19dc7dd522ea538e20a1fb7d53022a437bbeee",
+                           "gate10rPreparationModule":  "3ad9ed7ef07aeb7bf670f911da322e5e3ca4b3100b67dd322d916bca06d70108",
+                           "attempt2TerminalPreservation":  "ba403fbf604b2e4c5474b703e325722ca1b9853559fffdc8beb0c50e68846d3f"
+                       },
+    "scenarioIds":  [
+                        "core-r01-s1-hetero",
+                        "core-r07-s2-hetero",
+                        "goal-count-g32-hetero"
+                    ],
+    "campaignIds":  [
+                        "core-r01-s1-hetero--per-agent",
+                        "core-r01-s1-hetero--grouped-field",
+                        "core-r07-s2-hetero--per-agent",
+                        "core-r07-s2-hetero--grouped-field",
+                        "goal-count-g32-hetero--per-agent",
+                        "goal-count-g32-hetero--grouped-field"
+                    ],
+    "schedule":  {
+                     "measuredBlockOrdinalsInclusive":  [
+                                                            1,
+                                                            32
+                                                        ],
+                     "mirroredPairsPerScenario":  32,
+                     "scenarioRotationStep":  1,
+                     "oddBlockSuperblockOrder":  [
+                                                     "AB",
+                                                     "BA"
+                                                 ],
+                     "evenBlockSuperblockOrder":  [
+                                                      "BA",
+                                                      "AB"
+                                                  ],
+                     "AB":  [
+                                "per-agent-heterogeneous-goal-v1",
+                                "grouped-field-heterogeneous-goal-v1"
+                            ],
+                     "BA":  [
+                                "grouped-field-heterogeneous-goal-v1",
+                                "per-agent-heterogeneous-goal-v1"
+                            ],
+                     "pairProcessesMustBeContiguous":  true,
+                     "withinPairSameScenarioAndBlockRequired":  true,
+                     "maximumConcurrentUnityProcesses":  1
+                 },
+    "warmup":  {
+                   "blockOrdinal":  33,
+                   "mirroredPairsPerScenario":  1,
+                   "quietStabilizationSeconds":  10,
+                   "analysisRole":  "excluded-warmup"
+               },
+    "totals":  {
+                   "warmupMirroredPairs":  3,
+                   "warmupBlockProcesses":  12,
+                   "warmupSamples":  24,
+                   "measuredMirroredPairs":  96,
+                   "measuredMatchedSuperblocks":  192,
+                   "measuredABSuperblocks":  96,
+                   "measuredBASuperblocks":  96,
+                   "measuredBlockProcesses":  384,
+                   "measuredSamples":  768,
+                   "pilotBlockProcesses":  396,
+                   "pilotSamples":  792
+               },
+    "environment":  {
+                        "requiredPowerSchemeGuid":  "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+                        "requireAcOnline":  true,
+                        "minimumFreePhysicalMemoryBytes":  4294967296,
+                        "maximumMeanCpuLoadPercent":  50,
+                        "cpuLoadSampleCount":  5,
+                        "cpuLoadSampleIntervalSeconds":  1,
+                        "minimumPilotDriveFreeBytes":  21474836480,
+                        "temperatureUnavailablePolicy":  "record-unavailable-controlled-warmup-balanced-mirrored-order-v1"
+                    },
+    "orderEffectAnalysis":  {
+                                "decisionMetricId":  "P1",
+                                "supportiveMetricIds":  [
+                                                            "P2",
+                                                            "P3",
+                                                            "P4",
+                                                            "P5"
+                                                        ],
+                                "contrastIds":  [
+                                                    "C1",
+                                                    "C2",
+                                                    "C3",
+                                                    "C4"
+                                                ],
+                                "transform":  "natural-log-ratio",
+                                "difference":  "AB-minus-BA",
+                                "confidenceLevel":  0.95,
+                                "scenarioT31Critical":  2.039513446,
+                                "pooledT95Critical":  1.985251004,
+                                "orderBiasMultiplicativeBound":  1.1,
+                                "orderBiasAbsoluteLogBound":  0.09531017980432493,
+                                "bootstrapReplicates":  20000,
+                                "bootstrapSeed":  13012026,
+                                "bootstrapUnit":  "complete-mirrored-order-pair",
+                                "pooledWeighting":  "equal-scenario",
+                                "primaryAnalysisSet":  "all-complete-eligible-pairs-including-memory-alerts",
+                                "noAlertSensitivityRole":  "SENSITIVITY-ONLY-NOT-PRIMARY"
+                            },
+    "memoryEligibility":  {
+                              "policyId":  "gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1",
+                              "sampleAlertThresholdBytes":  134217728,
+                              "sampleEmergencyStopBytes":  268435456,
+                              "twoSampleBlockManagedGrowthHardLimitBytes":  268435456,
+                              "blockWorkingSetGrowthHardLimitBytes":  536870912,
+                              "blockPrivateMemoryGrowthHardLimitBytes":  536870912,
+                              "exactThresholdPasses":  true,
+                              "alertSamplesRetained":  true,
+                              "durableEvaluationBeforeDecisionRequired":  true
+                          },
+    "telemetry":  {
+                      "inProcessSourceId":  "windows-psapi-getprocessmemoryinfo-process_memory_counters_ex-v1",
+                      "externalSourceId":  "cim-win32_process-v1",
+                      "memoryGateEvaluationKind":  "gate13r-pr1b-v2-memory-gate-evaluation-v1"
+                  },
+    "unity":  {
+                  "executablePath":  "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+                  "productVersion":  "2022.3.30f1c1_a6dc00fbe362",
+                  "executableSha256":  "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+              },
+    "failurePolicy":  {
+                          "failClosed":  true,
+                          "preMeasurementVersionedRepairAllowed":  true,
+                          "measuredAttemptRetryAllowed":  false,
+                          "sameAttemptResumeAllowed":  false,
+                          "partialAttemptMergeAllowed":  false,
+                          "optionalStoppingAllowed":  false,
+                          "prePilotVersionedRepairRetryAllowed":  true,
+                          "pilotRetryAfterRootCreationAllowed":  false
+                      },
+    "gate13rFormalAuthorized":  false,
+    "gate14rAuthorized":  false,
+    "pathSafeAtomicPersistence":  {
+                                      "helperId":  "gate13r-pr1b-v4-winps51-same-directory-short-temp-backup-atomic-json-v1",
+                                      "temporaryLeafPattern":  ".g13tmp-\u003c32-lowercase-hex-guid\u003e",
+                                      "temporaryLeafLengthCharacters":  40,
+                                      "legacyCffTemporaryPathLengthCharacters":  259,
+                                      "legacyIdffFailureTemporaryPathLengthCharacters":  260,
+                                      "requireExistingParent":  true,
+                                      "requireAllowedRootContainment":  true,
+                                      "rejectReparsePointChain":  true,
+                                      "createTemporaryWithCreateNew":  true,
+                                      "immutableEvidenceOverwriteAllowed":  false,
+                                      "mutableCheckpointReplaceAllowed":  true,
+                                      "cleanupOnlyInvocationOwnedTemporary":  true,
+                                      "revalidateBeforeCommit":  true,
+                                      "durableEvaluationBeforeThresholdDecisionRequired":  true,
+                                      "backupLeafPattern":  ".g13bak-\u003c32-lowercase-hex-guid\u003e",
+                                      "backupLeafLengthCharacters":  40,
+                                      "windowsPowerShell51NullBackupPathForbidden":  true
+                                  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-prelaunch-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "READY_AWAITING_EXACT_COMMAND_CONFIRMATION",
+  "tool": {
+    "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_formal_st_analysis_v1.py",
+    "sha256": "5d33f87ba51b67ea2b6bf72bc32c5a7845f14b549d3c30f58b7fb085468c9c9d",
+    "pythonSyntaxPass": true,
+    "syntheticSelfTestStatus": "PASS_SYNTHETIC_STATISTICAL_SELF_TEST",
+    "syntheticSelfTestFormalObservationsRead": false
+  },
+  "launcher": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-analysis-attempt-001/Run-Gate14ReMEFormalSTAnalysisAttempt001.ps1",
+    "sha256": "2d7795abefd264ecd0019d80b54ecf85144624d86804f14df9d9b6ac64308465",
+    "powershellParserErrors": 0,
+    "automaticRetry": false
+  },
+  "executionContractSha256": "9ce7ce0ebd9dafb4adeeef0cf6b4093f39c0c4089e5e5ac09b59f00e94472de4",
+  "authorizationReceiptSha256": "fdf0e4219508dd4d461d2ce5315f726af8c2ba894b075914f3d164f6a6c94a50",
+  "exactLaunchCommand": "& 'C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe' -NoProfile -File 'H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\formal-st-analysis-attempt-001\\Run-Gate14ReMEFormalSTAnalysisAttempt001.ps1'",
+  "exactLaunchCommandUtf8Sha256": "5870604312f2368ebd761fe9d20e6c6aa89bf818cef32d180136dda7515bc411",
+  "freshOutputRoot": "H:/DDM_Final_Project/Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-001",
+  "freshOutputRootExists": false,
+  "formalObservationsRead": false,
+  "rankingOrWinnerComputed": false,
+  "mqPerformed": false,
+  "mtPerformed": false,
+  "nextAction": "WAIT_FOR_USER_CONFIRMATION_OF_EXACT_LAUNCH_COMMAND",
+  "createdAtUtc": "2026-10-30T11:57:50.359Z"
+}

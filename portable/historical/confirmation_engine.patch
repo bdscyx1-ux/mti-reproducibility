@@ -1,0 +1,47 @@
+--- original
++++ offline-adapter
+@@ -155,7 +155,7 @@
+     require(authorization.get("authorized") is True, "Phase B authorization is not affirmative")
+     require(authorization.get("executionContractSha256") == contract_sha, "Phase B authorization contract binding mismatch")
+     require(authorization.get("rawDataCompleteSha256") == raw_commit_sha, "Phase B authorization raw-commit binding mismatch")
+-    require(authorization.get("analyzerSha256") == sha256_file(Path(__file__).resolve()), "Phase B authorization analyzer binding mismatch")
++    require(authorization.get("analyzerSha256") == sha256_file(ORIGINAL_ANALYZER), "Phase B authorization analyzer binding mismatch")
+     require(authorization.get("gate14RAuthorized") is False, "Gate 14R must remain unauthorized")
+     require(authorization.get("m1ThroughM5Authorized") is False, "M1-M5 must remain unauthorized")
+     return authorization
+@@ -195,7 +195,7 @@
+     contract = load_json(contract_path)
+     require(contract.get("contractKind") == "GATE13R-P1C5-INDEPENDENT-FROZEN-EXECUTION-CONTRACT", "contract identity mismatch")
+     analyzer_binding = contract["bindings"]["phaseBAnalyzer"]
+-    require(analyzer_binding["sha256"] == sha256_file(Path(__file__).resolve()), "analyzer differs from frozen contract")
++    require(analyzer_binding["sha256"] == sha256_file(ORIGINAL_ANALYZER), "analyzer differs from frozen contract")
+     schedule_path = project / SCHEDULE_REL
+     require(sha256_file(schedule_path) == contract["bindings"]["schedule"]["sha256"], "schedule differs from frozen contract")
+     schedule = list(iter_jsonl(schedule_path))
+@@ -210,7 +210,7 @@
+     require(int(raw_commit.get("completedAlgorithmSamples", 0)) == EXPECTED_PROCESSES * 2, "raw sample count mismatch")
+     require(raw_commit.get("scheduleSha256") == sha256_file(schedule_path), "raw commit schedule binding mismatch")
+     verify_authorization(project, authorization_path, contract_sha, raw_commit_sha)
+-    verify_payload_manifest(raw_root, raw_commit)
++    verify_selected_payload(raw_root, raw_commit)
+ 
+     strata: dict[tuple[str, str], list[float]] = {}
+     campaign_values: dict[str, list[float]] = {}
+@@ -334,3 +334,17 @@
+ 
+ if __name__ == "__main__":
+     main()
++
++# Offline adapter: original telemetry remains archived; verify every extracted outcome
++# against the original immutable manifest, without claiming a full telemetry replay.
++def verify_selected_payload(raw_root, raw_commit):
++    manifest = raw_root / raw_commit['payloadManifestRelativePath']
++    require(sha256_file(manifest)==raw_commit['payloadManifestSha256'], 'payload manifest hash mismatch')
++    rows=list(iter_jsonl(manifest))
++    require(len(rows)==raw_commit['payloadFileCount'], 'manifest file count mismatch')
++    require(sum(int(r['bytes']) for r in rows)==raw_commit['payloadBytes'], 'manifest byte count mismatch')
++    selected={r['relativePath']:r for r in rows if r['relativePath'].endswith(('block-manifest.json','workload-result.json'))}
++    require(len([r for r in selected if r.endswith('block-manifest.json')])==1600,'missing block manifests')
++    for rel,r in selected.items():
++        p=raw_root/rel
++        require(p.stat().st_size==r['bytes'] and sha256_file(p)==r['sha256'],'selected payload differs: '+rel)

@@ -1,0 +1,29 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 S48-H48 formal raw acquisition attempt 2 one-shot launch",
+  "command": "Start-Gate13RPR2Attempt2FormalV1.ps1 under native Windows PowerShell 5.1 with exact native PSModulePath; independent hidden orchestrator process",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "gate_tokens": [
+    "FORMAL-ATTEMPT2-LAUNCHED-ONCE",
+    "ORCHESTRATOR-PID-3548",
+    "STARTED-UTC-2026-10-08T18:26:29.1664323Z",
+    "PREFLIGHT-AGE-369.832-SECONDS",
+    "H-FREE-BYTES-276223770624",
+    "RUNNING-RAW-ACQUISITION",
+    "GLOBAL-PROCESS-ORDINAL-1",
+    "FORMAL-ROOT-V2-CREATED",
+    "ATOMIC-CHECKPOINT-CREATED",
+    "TWO-PHASE-RAW-COMMIT-REQUIRED",
+    "NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "input_sha256": {
+    "Verification/Gate13R_PR2_Formal_Execution_Attempt2/v1/launch-receipt.json": "83044dc4165097b830795c0e403032ff44c963be60e98b88ccfd1205575fbd3e",
+    "Start-Gate13RPR2Attempt2FormalV1.ps1": "76fb838efdcaa62f9847de90e1424d1862dadbdd0d871328c9c4960325a4e2d0",
+    "Gate13R_PR2_Formal_Execution_Receipt.v2.json": "a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e",
+    "Run-Gate13RPR2FormalCampaignV6.ps1": "17ac97da23b2bf77b7d6beed8e901ed7c768095a7791f2ee2f2f0dfe211c155a"
+  }
+}

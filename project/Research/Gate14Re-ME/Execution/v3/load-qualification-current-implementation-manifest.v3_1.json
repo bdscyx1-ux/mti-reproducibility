@@ -1,0 +1,394 @@
+{
+  "schema": "gate14re-me-qualification-implementation-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-002",
+  "status": "FROZEN_IMPLEMENTATION_SOURCE_ONLY_UNCOMPILED",
+  "version": 1,
+  "manifestGeneration": 3,
+  "executionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_AND_TERMINAL_CHAIN_CORRECTED_OFFLINE",
+  "createdLocalDate": "2026-10-17",
+  "legacyRunnerCompatibility": {
+    "schemaAndStatusAreCompatibilityFieldsConsumedByRunnerV2": true,
+    "legacyStatusIsNotTheAuthoritativeExecutionReadinessState": true,
+    "authoritativeStateField": "executionReadinessStatus",
+    "runnerV2SourceRemainsByteIdentical": true,
+    "compiledAssembliesRemainByteIdentical": true,
+    "terminalChainOnlyChangedOutsideRunnerAndAssemblies": true
+  },
+  "retainedFailures": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/failure-receipt.v1.json",
+      "sha256": "feea3650801239a1e92ced9031b137f9c22f7e9a9a483d05a6456353f1827b57",
+      "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_IMPLEMENTATION_BINDING_MISMATCH",
+      "modifiedOrReclassified": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-001/failure-receipt.v1.json",
+      "sha256": "e5842af9ec3a6205aa9e9014ad1fddd6fab2f99696995577575c4ae4607d4c3e",
+      "status": "FAILED_CLOSED_EXECUTION_BINDING_SUPERVISOR_V2_REPAIR",
+      "unityInvocationCount": 0,
+      "modifiedOrReclassified": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/failure-receipt.v1.json",
+      "sha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+      "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE",
+      "passedChecks": 35,
+      "failedChecks": 2,
+      "modifiedOrReclassified": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-001/failure-receipt.v1.json",
+      "sha256": "b195c99e01bc20900762b3752ff6172a64fac4bb914609bf1ba83d832ed99340",
+      "status": "FAILED_CLOSED_TERMINAL_CHAIN_CORRIGENDUM",
+      "exactFailure": "copied frozen synthetic fixture retained Windows read-only attributes",
+      "unityInvocationCount": 0,
+      "modifiedOrReclassified": false
+    }
+  ],
+  "artifacts": [
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+      "bytes": 77345
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta",
+      "sha256": "35fb83fbbf5b516d392f42a41e3938e83c92707d13140cbb086c5637da0b3a41",
+      "bytes": 243
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4",
+      "bytes": 17536
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEInstrumentationV1.cs",
+      "sha256": "e3b52047276a3ae6961914881ba6aaf78bb6a913ca70e4edebb974b2b6deacdb",
+      "bytes": 17944
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25",
+      "bytes": 30510
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs",
+      "sha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007",
+      "bytes": 6168
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta",
+      "sha256": "211d45395c902d2e32131a836227ca88e98e564f15287b196fd1df2b2b740528",
+      "bytes": 243
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+      "sha256": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902",
+      "bytes": 14453
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta",
+      "sha256": "01437ac0e00e8d95d06fec5873aa087bb9292d30d2d54ac3b233d17308b83aff",
+      "bytes": 243
+    },
+    {
+      "role": "native-source",
+      "relativePath": "Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp",
+      "sha256": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2",
+      "bytes": 11808
+    },
+    {
+      "role": "native-binary",
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+      "sha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63",
+      "bytes": 110592
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta",
+      "sha256": "0da140fbc3f6a112402e27f4bbfb77f27953b99b4b0554ebcc4cd3b00642e8a4",
+      "bytes": 526
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+      "sha256": "a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778",
+      "bytes": 25807
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/AStar_Repeated_Specification.md",
+      "sha256": "0fe75b470bb0b1f256278ddf8089b86660a80a5c20c99006a140ff7c3ec8c5eb",
+      "bytes": 5064
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "sha256": "82316036aba90be69ca746288798bac1789cdb09afa65cf9ad4180975d1f947e",
+      "bytes": 34160
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "sha256": "593e21946de91c8ddab59f70be44084aeb8afe7ae72d52e490589f6e77f16ead",
+      "bytes": 755
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+      "sha256": "ae9f1bdc2a30f924239145d8a165ed31d68f05b595916dbed21414fd1c69427f",
+      "bytes": 39778
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/DStar_Lite_Specification.md",
+      "sha256": "65f03f4827c0bd2edceb967311451cace2a34642235457277cbbaaba222b01c3",
+      "bytes": 10784
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "sha256": "10686f9bf5b36ec06e8d5e98a7c54f8bdcc5a1c0d0664cb9a3eed6a806bc52c8",
+      "bytes": 39828
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "sha256": "703e72a92207ceb05f0e63c35322f2a8e727b5e8be6e1dc699cd287ce254d4a9",
+      "bytes": 767
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "sha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1",
+      "bytes": 34279
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "sha256": "6f29c7545c2f9d68ad0bfd2b707cb7f7798fd80b39816eb22010f278a6978223",
+      "bytes": 10875
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "sha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638",
+      "bytes": 46884
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "sha256": "8a7895c0daa38810a5b1087348be11b427cfeb1f6f0ed2f27730578ac84e70ef",
+      "bytes": 14050
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa",
+      "bytes": 5661
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "sha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582",
+      "bytes": 10018
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+      "bytes": 4664
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+      "bytes": 4360
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312",
+      "bytes": 4771
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+      "bytes": 6971
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json",
+      "sha256": "bef0f0c143f325eb7b3ad9e5401cc89bc7d6ff3938287a9b049e985aac04e887",
+      "bytes": 3809
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json",
+      "sha256": "8a96a5a53d22617ef90134ac1a57e3b7115e5ea7ce03a6739c632fd52119f8a5",
+      "bytes": 2910
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "sha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71",
+      "bytes": 5257
+    },
+    {
+      "role": "runtime-manifest",
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+      "bytes": 179214
+    },
+    {
+      "role": "delivery-contract",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd",
+      "bytes": 14693
+    },
+    {
+      "role": "trusted-unity-identity-rule",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+      "bytes": 5960
+    },
+    {
+      "role": "timestamp-comparator",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+      "bytes": 5350
+    },
+    {
+      "role": "planning-assets-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json",
+      "sha256": "7e0cbe77cb8bb8f84642856c6356d318f708e168b52a92e6e348cdf948169aca",
+      "bytes": 59200
+    },
+    {
+      "role": "qualification-schedule",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+      "bytes": 199834
+    },
+    {
+      "role": "sealed-identity-binding",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+      "sha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+      "bytes": 1512
+    },
+    {
+      "role": "compile-identity-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json",
+      "sha256": "07118a3b4be7e9cd0b044d073426d8db24ba116498d548c3bbfa42df2cdf9937",
+      "bytes": 2758
+    },
+    {
+      "role": "compiled-editor-assembly",
+      "relativePath": "Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+      "sha256": "abef0c3232d02818e60a5603600fbc8899dba2fbe383e73b255a04eab01b5e88",
+      "bytes": 937472
+    },
+    {
+      "role": "compiled-runtime-assembly",
+      "relativePath": "Library/ScriptAssemblies/Assembly-CSharp.dll",
+      "sha256": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1",
+      "bytes": 466432
+    },
+    {
+      "role": "powershell-supervisor",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+      "sha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+      "bytes": 52880
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json",
+      "sha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c",
+      "bytes": 13293
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_1.json",
+      "sha256": "f1fa4b7c10ebdbfacc6a4f82a68d4ae1ca0a94fa18af929d6a74eb0ad39cf801",
+      "bytes": 11487
+    },
+    {
+      "role": "python-tool",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py",
+      "sha256": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e",
+      "bytes": 57834
+    },
+    {
+      "role": "python-tool",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py",
+      "sha256": "197b14309670fc38e26b421c458fbd4fc05abe8ba61f7f715497bbcffb19eb98",
+      "bytes": 33757
+    }
+  ],
+  "runtimeBindings": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityVersion": "2022.3.30f1c1",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "powershellExecutable": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "powershellExecutableSha256": "8bb6fa8c283b4d92120b1ef249a9b311b0f804d4cabbe9981159976c8be76a5e"
+  },
+  "compileIdentityProof": {
+    "receiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json",
+    "receiptSha256": "07118a3b4be7e9cd0b044d073426d8db24ba116498d548c3bbfa42df2cdf9937",
+    "status": "PASS_CURRENT_PROJECT_COMPILED_ALGORITHM_FREE_TRUSTED_IDENTITY",
+    "unityInvocationCount": 1,
+    "executeMethod": null,
+    "naturalExit": true,
+    "exitCode": 0,
+    "threePhaseIdentityPassed": true,
+    "compositeProcessIdentityPassed": true
+  },
+  "replacementPolicy": {
+    "replacementAssetsGenerated": 0,
+    "replacementAssetsConsumed": 0,
+    "currentOperationalPolicy": "ZERO_REPLACEMENT_FAIL_STOP",
+    "scheduleReplacementFieldsAllNull": true
+  },
+  "evidenceBoundary": {
+    "unityCompilationPerformed": true,
+    "algorithmFreeUnityProcessesLaunched": 1,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "additionalUnityProcessesLaunchedByTerminalCorrigendum": 0
+  },
+  "manifestSchemaV3": "gate14re-me-qualification-current-implementation-manifest-v3",
+  "terminalChainCorrigendum": {
+    "authorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-002",
+    "outputReceiptPathsCorrectedToRuntimeV2": true,
+    "structuralV3ClosesProcessResourcesPersistentPointsAcceptedReceiptsLedgerAndIdentities": true,
+    "supervisorV3ExplicitFinalProcessOrdinal1147": true,
+    "deliveryV21PreservesV2DeliveryFormat": false,
+    "runnerV2Changed": false,
+    "compiledAssembliesChanged": false,
+    "unityInvocationCount": 0,
+    "deliveryV22PreservesV2DeliveryFormat": true,
+    "attempt001PreservedFailed": true,
+    "syntheticFixtureReadOnlyAttributeNormalizationOnly": true
+  }
+}

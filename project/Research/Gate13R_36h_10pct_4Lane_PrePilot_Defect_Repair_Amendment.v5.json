@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-expected-negative-lock-hygiene-repair-v5",
+  "createdAtUtc": "2026-10-08T04:56:00.0000000Z",
+  "status": "AUTHORIZED-NON-FORMAL-VERIFICATION-WRAPPER-REPAIR-ONLY",
+  "diagnosisRelativePath": "Research/Gate13R_36h_10pct_4Lane_v4_Lock_Failure_Diagnosis.v1.json",
+  "failedAttempt": {
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v4",
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v4",
+    "pilotRootCreated": false,
+    "formalRootCreated": false,
+    "disposition": "PRESERVE-READ-ONLY-NO-RESUME-NO-RETRY-NO-MERGE"
+  },
+  "normativeLockPolicy": {
+    "specificationRelativePath": "Research/Gate10R_Attempt3_Lock_Hygiene_Specification.v1.md",
+    "specificationSha256": "dcd67695fcd9a9b5398666f24e3c414a164aea889d959169dad4cc70541f4c1d",
+    "moduleRelativePath": "Research/Gate10RLockHygieneV3.psm1",
+    "moduleSha256": "9eba2284dc90fcf6dbbc59080301c1ac6db14c5029f8adab69db234c94f879d6"
+  },
+  "allowedChanges": [
+    "Create versioned v5 plan, schedule, provenance, wrappers, tests, verifier, analyzer, and new v5 verification/clone/pilot routes.",
+    "In the v5 block wrapper only, invoke the frozen Gate10R lock-hygiene module for the exact expected-negative verification role after the full natural-quiescence window.",
+    "Record the controlled-cleanup result and its capture/completion receipt hashes in the wrapper summary.",
+    "Add no-Unity synthetic lock-hygiene unit vectors and bind their versioned runner in provenance.",
+    "Preserve and hash-check all v1-v4 evidence before and after derivation."
+  ],
+  "forbiddenChanges": [
+    "delete or modify the v4 stale lock or any v1-v4 evidence",
+    "permit cleanup for positive, telemetry, compile, warm-up, measured pilot, or formal roles",
+    "wildcard, recursive, directory, reparse-point, nonzero-byte, non-empty-hash, shared-open, out-of-window, live-PID, or nonzero-Unity cleanup",
+    "algorithm, Unity C# command, scenario, seed, Williams order, reset, telemetry, memory threshold, precision, cap, lane, readiness, wall-clock, or Playable changes",
+    "formal root, formal receipt, formal campaign, Gate 14 analysis, pilot retry, or measured-pilot resume"
+  ],
+  "activeAttempt5Roots": {
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v5",
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v5",
+    "pilotRoot": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v5",
+    "reservedFormalRoot": "Research/FormalRuns/Gate13R_36h_10pct_4Lane/v1"
+  },
+  "pilotAuthorization": {
+    "authorizedCount": 1,
+    "consumedCountBeforeAttempt5": 0,
+    "formalCampaignAuthorized": false,
+    "automaticRetryAuthorized": false,
+    "sameAttemptResumeAuthorized": false
+  }
+}

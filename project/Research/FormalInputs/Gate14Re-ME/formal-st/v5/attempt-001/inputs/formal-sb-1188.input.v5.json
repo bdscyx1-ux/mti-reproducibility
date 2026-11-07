@@ -1,0 +1,3704 @@
+{
+  "schema": "gate14re-me-formal-st-input-bundle-v5",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "inputId": "G14REME-V5-FI-1188",
+  "superblockId": "formal-sb-1188",
+  "designRegion": "core",
+  "seed": 3551553290311240508,
+  "gridEdge": 128,
+  "agentCount": 128,
+  "changedCellCount": 9,
+  "changeTopology": "compact",
+  "graphProfile": "four_way_weighted_dense",
+  "sameTickAtomicPartitions": 1,
+  "contextStratumId": "CTX-CMP-4WD-P01",
+  "connectivity": 4,
+  "allowDiagonalCornerCutting": false,
+  "defaultTraversalCost": 1.0,
+  "initialCellOverrides": [
+    {
+      "x": 63,
+      "y": 0,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 0,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 1,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 1,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 2,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 2,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 3,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 3,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 4,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 4,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 5,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 5,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 6,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 6,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 7,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 7,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 8,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 8,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 9,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 9,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 10,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 10,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 11,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 11,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 12,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 12,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 13,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 13,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 14,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 14,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 15,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 15,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 16,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 16,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 17,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 17,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 18,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 18,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 19,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 19,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 20,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 20,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 21,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 21,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 22,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 22,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 23,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 23,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 24,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 24,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 25,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 25,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 26,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 26,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 27,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 27,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 28,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 28,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 29,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 29,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 30,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 30,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 31,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 31,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 32,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 32,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 33,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 33,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 34,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 34,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 35,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 35,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 36,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 36,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 37,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 37,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 38,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 38,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 39,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 39,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 40,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 40,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 41,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 41,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 42,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 42,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 43,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 43,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 44,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 44,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 45,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 45,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 46,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 46,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 47,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 47,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 48,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 48,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 49,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 49,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 50,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 50,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 51,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 51,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 52,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 52,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 53,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 53,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 54,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 54,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 55,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 55,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 56,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 56,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 57,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 57,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 58,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 58,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 59,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 59,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 60,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 60,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 61,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 61,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 62,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 62,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 63,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 63,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 64,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 63,
+      "y": 65,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 65,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 66,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 66,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 67,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 67,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 68,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 68,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 69,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 69,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 70,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 70,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 71,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 71,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 72,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 72,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 73,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 73,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 74,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 74,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 75,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 75,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 76,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 76,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 77,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 77,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 78,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 78,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 79,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 79,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 80,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 80,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 81,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 81,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 82,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 82,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 83,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 83,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 84,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 84,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 85,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 85,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 86,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 86,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 87,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 87,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 88,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 88,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 89,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 89,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 90,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 90,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 91,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 91,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 92,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 92,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 93,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 93,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 94,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 94,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 95,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 95,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 96,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 96,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 97,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 97,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 98,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 98,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 99,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 99,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 100,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 100,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 101,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 101,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 102,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 102,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 103,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 103,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 104,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 104,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 105,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 105,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 106,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 106,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 107,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 107,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 108,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 108,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 109,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 109,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 110,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 110,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 111,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 111,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 112,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 112,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 113,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 113,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 114,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 114,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 115,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 115,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 116,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 116,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 117,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 117,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 118,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 118,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 119,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 119,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 120,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 120,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 121,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 121,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 122,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 122,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 123,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 123,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 124,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 124,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 125,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 125,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 126,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 126,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 63,
+      "y": 127,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 64,
+      "y": 127,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    }
+  ],
+  "goal": {
+    "x": 126,
+    "y": 64
+  },
+  "starts": [
+    {
+      "x": 18,
+      "y": 113
+    },
+    {
+      "x": 17,
+      "y": 53
+    },
+    {
+      "x": 7,
+      "y": 46
+    },
+    {
+      "x": 31,
+      "y": 71
+    },
+    {
+      "x": 27,
+      "y": 82
+    },
+    {
+      "x": 7,
+      "y": 35
+    },
+    {
+      "x": 23,
+      "y": 94
+    },
+    {
+      "x": 6,
+      "y": 24
+    },
+    {
+      "x": 20,
+      "y": 47
+    },
+    {
+      "x": 26,
+      "y": 120
+    },
+    {
+      "x": 4,
+      "y": 119
+    },
+    {
+      "x": 30,
+      "y": 116
+    },
+    {
+      "x": 4,
+      "y": 31
+    },
+    {
+      "x": 12,
+      "y": 104
+    },
+    {
+      "x": 23,
+      "y": 97
+    },
+    {
+      "x": 8,
+      "y": 6
+    },
+    {
+      "x": 14,
+      "y": 87
+    },
+    {
+      "x": 11,
+      "y": 72
+    },
+    {
+      "x": 6,
+      "y": 54
+    },
+    {
+      "x": 20,
+      "y": 63
+    },
+    {
+      "x": 14,
+      "y": 28
+    },
+    {
+      "x": 30,
+      "y": 15
+    },
+    {
+      "x": 17,
+      "y": 81
+    },
+    {
+      "x": 15,
+      "y": 61
+    },
+    {
+      "x": 26,
+      "y": 125
+    },
+    {
+      "x": 17,
+      "y": 5
+    },
+    {
+      "x": 1,
+      "y": 99
+    },
+    {
+      "x": 22,
+      "y": 80
+    },
+    {
+      "x": 31,
+      "y": 89
+    },
+    {
+      "x": 9,
+      "y": 54
+    },
+    {
+      "x": 30,
+      "y": 113
+    },
+    {
+      "x": 29,
+      "y": 90
+    },
+    {
+      "x": 10,
+      "y": 107
+    },
+    {
+      "x": 32,
+      "y": 42
+    },
+    {
+      "x": 15,
+      "y": 71
+    },
+    {
+      "x": 12,
+      "y": 56
+    },
+    {
+      "x": 3,
+      "y": 45
+    },
+    {
+      "x": 28,
+      "y": 48
+    },
+    {
+      "x": 2,
+      "y": 26
+    },
+    {
+      "x": 27,
+      "y": 83
+    },
+    {
+      "x": 24,
+      "y": 56
+    },
+    {
+      "x": 31,
+      "y": 22
+    },
+    {
+      "x": 16,
+      "y": 84
+    },
+    {
+      "x": 17,
+      "y": 67
+    },
+    {
+      "x": 26,
+      "y": 18
+    },
+    {
+      "x": 7,
+      "y": 20
+    },
+    {
+      "x": 7,
+      "y": 79
+    },
+    {
+      "x": 24,
+      "y": 30
+    },
+    {
+      "x": 29,
+      "y": 54
+    },
+    {
+      "x": 12,
+      "y": 87
+    },
+    {
+      "x": 32,
+      "y": 24
+    },
+    {
+      "x": 29,
+      "y": 72
+    },
+    {
+      "x": 31,
+      "y": 124
+    },
+    {
+      "x": 7,
+      "y": 96
+    },
+    {
+      "x": 2,
+      "y": 69
+    },
+    {
+      "x": 15,
+      "y": 102
+    },
+    {
+      "x": 13,
+      "y": 7
+    },
+    {
+      "x": 16,
+      "y": 14
+    },
+    {
+      "x": 15,
+      "y": 121
+    },
+    {
+      "x": 32,
+      "y": 76
+    },
+    {
+      "x": 14,
+      "y": 56
+    },
+    {
+      "x": 12,
+      "y": 37
+    },
+    {
+      "x": 27,
+      "y": 122
+    },
+    {
+      "x": 13,
+      "y": 62
+    },
+    {
+      "x": 24,
+      "y": 94
+    },
+    {
+      "x": 21,
+      "y": 33
+    },
+    {
+      "x": 5,
+      "y": 22
+    },
+    {
+      "x": 2,
+      "y": 56
+    },
+    {
+      "x": 21,
+      "y": 67
+    },
+    {
+      "x": 25,
+      "y": 18
+    },
+    {
+      "x": 17,
+      "y": 57
+    },
+    {
+      "x": 19,
+      "y": 32
+    },
+    {
+      "x": 6,
+      "y": 38
+    },
+    {
+      "x": 32,
+      "y": 92
+    },
+    {
+      "x": 31,
+      "y": 109
+    },
+    {
+      "x": 14,
+      "y": 71
+    },
+    {
+      "x": 7,
+      "y": 9
+    },
+    {
+      "x": 13,
+      "y": 113
+    },
+    {
+      "x": 17,
+      "y": 56
+    },
+    {
+      "x": 2,
+      "y": 123
+    },
+    {
+      "x": 26,
+      "y": 5
+    },
+    {
+      "x": 14,
+      "y": 27
+    },
+    {
+      "x": 10,
+      "y": 8
+    },
+    {
+      "x": 22,
+      "y": 97
+    },
+    {
+      "x": 15,
+      "y": 103
+    },
+    {
+      "x": 10,
+      "y": 62
+    },
+    {
+      "x": 23,
+      "y": 45
+    },
+    {
+      "x": 3,
+      "y": 20
+    },
+    {
+      "x": 15,
+      "y": 43
+    },
+    {
+      "x": 27,
+      "y": 26
+    },
+    {
+      "x": 25,
+      "y": 55
+    },
+    {
+      "x": 14,
+      "y": 36
+    },
+    {
+      "x": 7,
+      "y": 18
+    },
+    {
+      "x": 27,
+      "y": 121
+    },
+    {
+      "x": 27,
+      "y": 56
+    },
+    {
+      "x": 8,
+      "y": 14
+    },
+    {
+      "x": 9,
+      "y": 81
+    },
+    {
+      "x": 26,
+      "y": 59
+    },
+    {
+      "x": 23,
+      "y": 31
+    },
+    {
+      "x": 31,
+      "y": 4
+    },
+    {
+      "x": 6,
+      "y": 74
+    },
+    {
+      "x": 6,
+      "y": 23
+    },
+    {
+      "x": 3,
+      "y": 56
+    },
+    {
+      "x": 31,
+      "y": 14
+    },
+    {
+      "x": 7,
+      "y": 44
+    },
+    {
+      "x": 32,
+      "y": 50
+    },
+    {
+      "x": 23,
+      "y": 107
+    },
+    {
+      "x": 22,
+      "y": 15
+    },
+    {
+      "x": 10,
+      "y": 75
+    },
+    {
+      "x": 9,
+      "y": 55
+    },
+    {
+      "x": 9,
+      "y": 106
+    },
+    {
+      "x": 5,
+      "y": 89
+    },
+    {
+      "x": 10,
+      "y": 87
+    },
+    {
+      "x": 28,
+      "y": 86
+    },
+    {
+      "x": 31,
+      "y": 16
+    },
+    {
+      "x": 16,
+      "y": 111
+    },
+    {
+      "x": 3,
+      "y": 113
+    },
+    {
+      "x": 10,
+      "y": 2
+    },
+    {
+      "x": 14,
+      "y": 109
+    },
+    {
+      "x": 4,
+      "y": 54
+    },
+    {
+      "x": 25,
+      "y": 3
+    },
+    {
+      "x": 31,
+      "y": 113
+    },
+    {
+      "x": 23,
+      "y": 23
+    },
+    {
+      "x": 6,
+      "y": 71
+    },
+    {
+      "x": 5,
+      "y": 69
+    },
+    {
+      "x": 16,
+      "y": 121
+    },
+    {
+      "x": 28,
+      "y": 108
+    },
+    {
+      "x": 31,
+      "y": 69
+    }
+  ],
+  "eventGroups": [
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG00",
+      "eventGroupIndex": 0,
+      "cycleIndex": 0,
+      "phase": "block",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG01",
+      "eventGroupIndex": 1,
+      "cycleIndex": 0,
+      "phase": "unblock_or_restore",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG02",
+      "eventGroupIndex": 2,
+      "cycleIndex": 0,
+      "phase": "increase_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG03",
+      "eventGroupIndex": 3,
+      "cycleIndex": 0,
+      "phase": "decrease_or_restore_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG04",
+      "eventGroupIndex": 4,
+      "cycleIndex": 1,
+      "phase": "block",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG05",
+      "eventGroupIndex": 5,
+      "cycleIndex": 1,
+      "phase": "unblock_or_restore",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG06",
+      "eventGroupIndex": 6,
+      "cycleIndex": 1,
+      "phase": "increase_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG07",
+      "eventGroupIndex": 7,
+      "cycleIndex": 1,
+      "phase": "decrease_or_restore_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG08",
+      "eventGroupIndex": 8,
+      "cycleIndex": 2,
+      "phase": "block",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG09",
+      "eventGroupIndex": 9,
+      "cycleIndex": 2,
+      "phase": "unblock_or_restore",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG10",
+      "eventGroupIndex": 10,
+      "cycleIndex": 2,
+      "phase": "increase_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG11",
+      "eventGroupIndex": 11,
+      "cycleIndex": 2,
+      "phase": "decrease_or_restore_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG12",
+      "eventGroupIndex": 12,
+      "cycleIndex": 3,
+      "phase": "block",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG13",
+      "eventGroupIndex": 13,
+      "cycleIndex": 3,
+      "phase": "unblock_or_restore",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG14",
+      "eventGroupIndex": 14,
+      "cycleIndex": 3,
+      "phase": "increase_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG15",
+      "eventGroupIndex": 15,
+      "cycleIndex": 3,
+      "phase": "decrease_or_restore_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG16",
+      "eventGroupIndex": 16,
+      "cycleIndex": 4,
+      "phase": "block",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG17",
+      "eventGroupIndex": 17,
+      "cycleIndex": 4,
+      "phase": "unblock_or_restore",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG18",
+      "eventGroupIndex": 18,
+      "cycleIndex": 4,
+      "phase": "increase_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG19",
+      "eventGroupIndex": 19,
+      "cycleIndex": 4,
+      "phase": "decrease_or_restore_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG20",
+      "eventGroupIndex": 20,
+      "cycleIndex": 5,
+      "phase": "block",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG21",
+      "eventGroupIndex": 21,
+      "cycleIndex": 5,
+      "phase": "unblock_or_restore",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG22",
+      "eventGroupIndex": 22,
+      "cycleIndex": 5,
+      "phase": "increase_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 11.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14REME-V5-FI-1188:EG23",
+      "eventGroupIndex": 23,
+      "cycleIndex": 5,
+      "phase": "decrease_or_restore_cost",
+      "topology": "compact",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 64,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 63,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 64,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 64,
+              "y": 65,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 63,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            },
+            {
+              "x": 63,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.25
+            },
+            {
+              "x": 65,
+              "y": 65,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5"
+}

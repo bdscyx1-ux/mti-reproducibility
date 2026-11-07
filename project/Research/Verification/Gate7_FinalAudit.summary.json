@@ -1,0 +1,99 @@
+﻿{
+    "savedAt":  "2026-10-05T16:47:16.9519608+08:00",
+    "projectPath":  "H:\\DDM_Final_Project",
+    "baselineChecked":  24,
+    "baselineMismatches":  [
+
+                           ],
+    "requiredGateSummaryCount":  11,
+    "summaryErrors":  [
+
+                      ],
+    "missingGate7Files":  [
+
+                          ],
+    "powerShellScriptCount":  32,
+    "powerShellParseErrors":  [
+
+                              ],
+    "jsonFileCount":  277,
+    "jsonParseErrors":  [
+
+                        ],
+    "jsonlFileCount":  33,
+    "jsonlParseErrors":  [
+
+                         ],
+    "algorithmFiles":  [
+                           "AStarRepeatedPlanner.cs",
+                           "CorrectedFullRecomputeFlowFieldPlanner.cs",
+                           "DStarLitePlanner.cs",
+                           "IncrementalDynamicFlowFieldPlanner.cs"
+                       ],
+    "plannerImplementationMatches":  [
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\AStarRepeatedPlanner.cs",
+                                             "line":  13,
+                                             "text":  "public sealed class AStarRepeatedPlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\CorrectedFullRecomputeFlowFieldPlanner.cs",
+                                             "line":  45,
+                                             "text":  "public sealed class CorrectedFullRecomputeFlowFieldPlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\DStarLitePlanner.cs",
+                                             "line":  13,
+                                             "text":  "public sealed class DStarLitePlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\IncrementalDynamicFlowFieldPlanner.cs",
+                                             "line":  45,
+                                             "text":  "public sealed class IncrementalDynamicFlowFieldPlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\Gate10FairnessVerification.cs",
+                                             "line":  352,
+                                             "text":  "private sealed class ScriptedMetricsPlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\Gate2SmokeVerification.cs",
+                                             "line":  227,
+                                             "text":  "private sealed class RecordingPlanner : INavigationPlanner"
+                                         }
+                                     ],
+    "uniqueCompilerWarnings":  [
+                                   "Assets\\_Scripts\\FlowFieldScripts_Attempt 2\\Unit.cs(33,19): warning CS0414: The field \u0027Unit.gravityMultiplier\u0027 is assigned but its value is never used"
+                               ],
+    "evidenceHashes":  {
+                           "gate5BatchManifest":  "b74eb4f7a2722610c370a196e130449b971dc8733d7424b45a74e152ce6e0313",
+                           "gate6ReplicationManifest":  "f7d20028012c631f455cff67a2612e9c8d9333d1f189a9e7d0c5b57f1a79ce52",
+                           "gate6Aggregate":  "41879b0c14747e0cf926527f43819d827cf03561bdbfc58f364b8924375f1b95",
+                           "gate6RevalidatedAggregate":  "41879b0c14747e0cf926527f43819d827cf03561bdbfc58f364b8924375f1b95",
+                           "gate7BatchManifest":  "c2c160d0c1aec00a59e7d2d02ebfee776a4ce1272b23fc2929e8d568c09cd427",
+                           "gate7ReplicationManifest":  "24fca9a22a24e2f7c18003162790a9bc775c6aaf4a9e4ca95ff4261dc589e4fc",
+                           "gate7Aggregate":  "40be411b5b6f59def94a0c013831389a26b380f47ff61f1fd9c674fcc4fd40dd",
+                           "gate7RevalidatedAggregate":  "40be411b5b6f59def94a0c013831389a26b380f47ff61f1fd9c674fcc4fd40dd"
+                       },
+    "unityProcessIds":  [
+
+                        ],
+    "unityLockfilePresent":  false,
+    "checks":  {
+                   "frozenBaselineMatches":  true,
+                   "latestGateSummariesPass":  true,
+                   "gate7FilesPresent":  true,
+                   "powerShellParses":  true,
+                   "jsonParses":  true,
+                   "jsonlParses":  true,
+                   "authorizedAlgorithmScopeExact":  true,
+                   "compilerWarningsExpected":  true,
+                   "retainedEvidenceHashesMatch":  true,
+                   "noUnityProcess":  true,
+                   "noUnityLockfile":  true
+               },
+    "failedChecks":  [
+
+                     ],
+    "passed":  true
+}

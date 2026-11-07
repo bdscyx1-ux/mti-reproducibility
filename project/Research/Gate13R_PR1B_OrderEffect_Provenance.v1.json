@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "provenanceId": "gate13r-pr1b-balanced-mirrored-order-effect-pilot-provenance-v1",
+  "createdAtUtc": "2026-10-08T11:25:16.3055889Z",
+  "createdAtAsiaShanghai": "2026-10-08T19:25:16.3083963+08:00",
+  "status": "FROZEN-BEFORE-UNITY-VERIFICATION-AND-PILOT",
+  "authorizationBasis": "User selected the recommended stronger pilot-level order-effect identifiability path with the instruction 按照建议推进.",
+  "executionDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "config": {
+    "id": "gate13rPr1bPilotPlanV1",
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v1.json",
+    "rawBytes": 5377,
+    "sha256": "8ec3d90c8a09fa88db2d58c8b4bf9b8ce830e236e41b669671317d6c778e3dc7"
+  },
+  "specification": {
+    "id": "gate13rPr1bOrderEffectSpecificationV1",
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Specification.v1.md",
+    "rawBytes": 7420,
+    "sha256": "d9c2cef83e18d2fc2735202d34255d2658ad5b13cd00f8573fb30fcbf09cb29a"
+  },
+  "statisticalAnalysisPlan": {
+    "id": "gate13rPr1bOrderEffectSapV1",
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Statistical_Analysis_Plan.v1.md",
+    "rawBytes": 4714,
+    "sha256": "3f38fc60aa98df0231d572945d7402ef315525cf367c194dc5d43d67f2a08ba4"
+  },
+  "testDesign": {
+    "id": "gate13rPr1bOrderEffectTestDesignV1",
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Test_Design.v1.md",
+    "rawBytes": 3062,
+    "sha256": "52680ef838585ccd35a3f2268cb88db7cded7683f41c54cf01bcb226f3ff517d"
+  },
+  "executionAuthorization": {
+    "id": "gate13rPr1bOrderEffectAuthorizationV1",
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Authorization.v1.json",
+    "rawBytes": 1419,
+    "sha256": "3540fa326d6a46fda97c1461d42433ec7cdf2e94d92d0495c327a0e6d0c797f7"
+  },
+  "unityCommand": {
+    "id": "gate12rProcessReuseBatchCommandV3Frozen",
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs",
+    "rawBytes": 65635,
+    "sha256": "eeca58f7e1121d0a297e8796430a90ae32f8492c32fc5fb676ae102b5f4a0c97"
+  },
+  "boundFiles": [
+    {"relativePath":"Research/Gate13R_PR1B_OrderEffect_Authorization.v1.json","rawBytes":1419,"sha256":"3540fa326d6a46fda97c1461d42433ec7cdf2e94d92d0495c327a0e6d0c797f7"},
+    {"relativePath":"Research/Gate13R_PR1B_OrderEffect_PreWrite_Preservation_Audit.v1.json","rawBytes":3067,"sha256":"e19b86ed4aa7b7f4edcf0ce88d0d20a616393eee89b9b2bb363a217e739b9445"},
+    {"relativePath":"Research/Gate13R_PR1B_OrderEffect_Specification.v1.md","rawBytes":7420,"sha256":"d9c2cef83e18d2fc2735202d34255d2658ad5b13cd00f8573fb30fcbf09cb29a"},
+    {"relativePath":"Research/Gate13R_PR1B_OrderEffect_Statistical_Analysis_Plan.v1.md","rawBytes":4714,"sha256":"3f38fc60aa98df0231d572945d7402ef315525cf367c194dc5d43d67f2a08ba4"},
+    {"relativePath":"Research/Gate13R_PR1B_OrderEffect_Test_Design.v1.md","rawBytes":3062,"sha256":"52680ef838585ccd35a3f2268cb88db7cded7683f41c54cf01bcb226f3ff517d"},
+    {"relativePath":"Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v1.json","rawBytes":5377,"sha256":"8ec3d90c8a09fa88db2d58c8b4bf9b8ce830e236e41b669671317d6c778e3dc7"},
+    {"relativePath":"Research/Gate13RPR1BOrderEffectPreparationV1.psm1","rawBytes":15028,"sha256":"74cf0104b5b54617d4aa8364de19dc7dd522ea538e20a1fb7d53022a437bbeee"},
+    {"relativePath":"Research/Analyze-Gate13RPR1BOrderEffectPilotV1.py","rawBytes":30974,"sha256":"bb805a147882336965d8e42f7dc688e6e43291a969cebebb3db1ad5abb3ef528"},
+    {"relativePath":"Research/Run-Gate13RPR1BOrderEffectPilotV1.ps1","rawBytes":20640,"sha256":"9f6ed211daddf5624f6b16eaf41ae82f53de6c5e08129e432ddc8323e6ca564c"},
+    {"relativePath":"Research/Verification/Run-Gate13RPR1BStaticUnitV1.ps1","rawBytes":7111,"sha256":"95d8305532ea25aa4868ac5e638b93580ed6eae49577bd01830e4ac542deb8e0"},
+    {"relativePath":"Research/Verification/Run-Gate13RPR1BBlockVerificationV1.ps1","rawBytes":6933,"sha256":"fab1b2e25c3e2492c45e4e700590727b1f289831dd410724bd2670437f85a691"},
+    {"relativePath":"Research/Verification/Run-Gate13RPR1BValidationOnlyPrePilotAuditV1.ps1","rawBytes":4836,"sha256":"e7cfa9fcf44a460730f2946fcd14bc7699f20f4e7fe9dccacb5b3a20c6d34e11"},
+    {"relativePath":"Research/Verification/Run-Gate13RPR1BPrePilotV1.ps1","rawBytes":7375,"sha256":"ebd9fce425e05dc90e188ede01da86e04364d3de4f4c1fb2757f33387680d641"},
+    {"relativePath":"Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.json","rawBytes":5839,"sha256":"d1d2c8f2aa5b7b075ec74f18911cb15bb47076840ec456d3eee6d58030c722ee"},
+    {"relativePath":"Research/Analysis/Gate13R_RQAligned_Preregistration/v1/heterogeneous-order-audit.json","rawBytes":37251,"sha256":"396c9610a9cf2db2139b8b62565a68f7e344550f5e2b70b5e72e8209cbdf5c83"},
+    {"relativePath":"Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json","rawBytes":207760,"sha256":"5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc"},
+    {"relativePath":"Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json","rawBytes":426698,"sha256":"cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3"},
+    {"relativePath":"Research/Gate12R_Passed_Checkpoint.md","rawBytes":7653,"sha256":"c89ef5dbbf7a2de1f4975a8893764229f355583df324bf17abd5e95af4f2415a"},
+    {"relativePath":"Research/Gate12R_Readiness_Checkpoint.v1.json","rawBytes":6480,"sha256":"93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-manifest.json","rawBytes":3448,"sha256":"5b0678518423816212ea27f6cbb0bea18c1d11110ed10aefa1a238c17e0a53b6"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-execution-manifest.json","rawBytes":717452,"sha256":"fce4c7f9c7fe7df5f424c8a8ae888133942ed49dbede71d4499e502ba812ebd6"},
+    {"relativePath":"Research/Gate12RProcessReusePreparationV2.psm1","rawBytes":15319,"sha256":"77f17781625071cb85c16e63d49edaf6ef86ca4cf063bf615acafb7700e2dd8b"},
+    {"relativePath":"Research/Gate10RProcessReusePreparation.psm1","rawBytes":19872,"sha256":"3ad9ed7ef07aeb7bf670f911da322e5e3ca4b3100b67dd322d916bca06d70108"},
+    {"relativePath":"Research/Run-Gate12RProcessReuseBlockV5.ps1","rawBytes":5754,"sha256":"d5181027e392167421bd59c6d0849f41efd9544e22185b9a0454f97289fa398b"},
+    {"relativePath":"Research/Run-Gate12RProcessReuseBlockV3.ps1","rawBytes":13113,"sha256":"b5ac864438c3f98684cc62a988f742ef9500434feb41504b5e4742af14d7ef8a"},
+    {"relativePath":"Research/Run-Gate12RTelemetryProbeV3.ps1","rawBytes":4588,"sha256":"f0737126c0a59004c5c6ca8b7be83ff8747e53fe4f2699e916ec722a2e7c3f10"},
+    {"relativePath":"Research/Verification/Run-Gate12RCompileV4.ps1","rawBytes":4415,"sha256":"79b607c26bd7e43664ec56e44d079e934da4cd2a1d151f25025734da21de27a5"},
+    {"relativePath":"Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs","rawBytes":65635,"sha256":"eeca58f7e1121d0a297e8796430a90ae32f8492c32fc5fb676ae102b5f4a0c97"}
+  ],
+  "environment": {
+    "windowsPowerShellVersion": "5.1.26100.9444",
+    "dotNetFrameworkClrVersion": "4.0.30319.42000",
+    "pythonVersion": "3.14.7",
+    "unityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "bootstrapSeed": 13012026,
+  "bootstrapReplicates": 20000,
+  "processUnit": "one-fresh-unity-editor-process-per-complete-williams-block",
+  "diagnosticUnit": "one-four-process-mirrored-ab-ba-order-pair",
+  "measuredMirroredPairs": 96,
+  "measuredUnityProcesses": 384,
+  "measuredAlgorithmSamples": 768,
+  "formalCampaign": false,
+  "pilotExcludedFromFormalAnalysis": true,
+  "measuredAttemptRetryAuthorized": false,
+  "sameAttemptResumeAuthorized": false,
+  "partialAttemptMergeAuthorized": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

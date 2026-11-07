@@ -1,0 +1,157 @@
+{
+  "schema": "gate14re-formal-phase-b-analysis-contract-v1",
+  "studyId": "Gate14Re",
+  "version": 1,
+  "createdLocalDate": "2026-10-15",
+  "status": "FROZEN_BEFORE_FORMAL_OUTCOME_ACCESS",
+  "authorization": {
+    "exactUserAuthorization": "授权正式结果分析、赢家裁决、Phase B",
+    "formalResultAnalysisAuthorized": true,
+    "winnerAdjudicationAuthorized": true,
+    "phaseBFormalAnalysisAuthorized": true,
+    "newUnityAcquisitionAuthorized": false,
+    "gate15Authorized": false
+  },
+  "scientificBindings": {
+    "planV2": {
+      "path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v2.md",
+      "sha256": "cbeca6d175500770357d1a610149abda58c816547d2c19cfa2e8ce9bebf5771f"
+    },
+    "planV3": {
+      "path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v3.md",
+      "sha256": "3ea4bcf824b5e83c1be3d98ae96590c58dc444555388b301675a3e91d27bedcc"
+    },
+    "designContractV2": {
+      "path": "Research/Gate14Re/Gate14Re_Design_Contract.v2.json",
+      "sha256": "8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f"
+    },
+    "designContractV3": {
+      "path": "Research/Gate14Re/Gate14Re_Design_Contract.v3.json",
+      "sha256": "88c3119e0b6dbbe4d1a3a2a95bd04d619e3d68edbd38b0903c6d4037a4d0e1f3"
+    }
+  },
+  "rawBindings": {
+    "formalRoot": "Research/FormalRuns/Gate14Re/PhaseA/attempt-001",
+    "rawComplete": {
+      "path": "Research/FormalRuns/Gate14Re/PhaseA/attempt-001/raw-data-complete.json",
+      "sha256": "0fa68436e37333c5ccbc3360a3fd49460b9a338add16f95dc4f307de33e696fa"
+    },
+    "canonicalTree": {
+      "path": "Research/FormalRuns/Gate14Re/PhaseA/attempt-001/_control/raw-commit-canonical-tree.v1.jsonl",
+      "sha256": "0c1e0bc2c8b286aa866901fdb26fbafc87bb5490f4578250eb2f4e2401df72dc",
+      "records": 4612,
+      "rawBytes": 288232353
+    },
+    "rawCommitManifestSha256": "9758f4c42fec3afd941e2b453552d77d405482ea7c5944ed1bf1619aee7e48c8",
+    "structuralAuditReceiptSha256": "8b85741cab21eca28588c5b21d4a556c5fd1203a80aba58ec540e5a421b96d89",
+    "acceptedBlocks": 1536,
+    "algorithmLaneSamples": 6144,
+    "readOnlyRequiredThroughout": true,
+    "writeToRawRootForbidden": true
+  },
+  "analysisRoot": "Research/Analysis/Gate14Re/PhaseB/attempt-001",
+  "executionPolicy": {
+    "oneFormalExecution": true,
+    "atomicCreateNoOverwrite": true,
+    "formalRawReadOnly": true,
+    "historicalOrPilotObservationsAdmissible": false,
+    "outcomeDrivenExclusionOrRuleChange": false,
+    "postHocSampleExpansion": false,
+    "newUnityProcess": false
+  },
+  "independentUnit": {
+    "unit": "complete_input_block_in_one_fresh_unity_process",
+    "pairedWithinBlock": true,
+    "agentsFramesTicksAndAlgorithmRowsAreNotIndependentReplicates": true,
+    "fixedBPerDesignCell": 48
+  },
+  "eligibility": {
+    "order": ["M3", "M4", "M5", "M1", "M2"],
+    "M3": {
+      "scope": "eight main movement conditions at N=128",
+      "passPerCondition": "allUnitsArrived in at least 45 of 48 complete blocks"
+    },
+    "M4": {
+      "scope": "eight main M4 conditions at N=128",
+      "passPerCondition": "median of 48 block P95 frame times <= 0.033333 seconds and at most 3 of 48 block P95 values > 0.050 seconds"
+    },
+    "M5": {
+      "scope": "all eight main movement conditions at N=128",
+      "pass": "sum of critical violations equals zero"
+    },
+    "eligible": "M3_pass AND M4_pass AND M5_pass"
+  },
+  "primaryM1": {
+    "scope": "module A movement lane, C01-C08, N=128",
+    "transform": "natural_log",
+    "effect": "geometric_mean_ratio_first_algorithm_over_second_algorithm",
+    "conditionWeighting": "equal; each condition contributes the mean of its 48 paired log ratios",
+    "standardError": "fixed-stratum independent-block variance of the equally weighted condition means",
+    "degreesOfFreedom": "Welch-Satterthwaite across the eight fixed condition strata",
+    "marginalTests": "two-sided paired t tests on condition-stratified log ratios",
+    "pairFamily": ["A/B", "A/C", "A/D", "B/C", "B/D", "C/D"],
+    "multiplicityTests": "Holm step-down adjusted p-values across the six unordered pairs",
+    "ordinaryIntervals": "two-sided 95 percent t intervals",
+    "decisionIntervals": {
+      "kind": "Bonferroni simultaneous two-sided intervals across six pairwise effects",
+      "familywiseConfidence": 0.95,
+      "reason": "A unique rectangular set of marginal Holm confidence intervals is not determined by ordinary Holm-adjusted p-values. The Bonferroni companion intervals provide auditable strong simultaneous coverage and are conservative relative to the frozen no-forced-winner objective.",
+      "claimExactHolmIntervals": false,
+      "preOutcomeOperationalization": true
+    },
+    "minimumImportantDifferenceRatio": 0.95,
+    "uniqueWinner": "candidate decision-interval upper ratio < 0.95 versus every other eligible algorithm"
+  },
+  "M2": {
+    "scope": "module A movement lane, C01-C08, N=128",
+    "input": "block common-mask mean path length",
+    "transform": "natural_log",
+    "sharedMissingness": "include a block only when its common mask is sufficient and all four algorithm means are finite and positive",
+    "minimumPerConditionForInference": 2,
+    "estimationAndMultiplicity": "same condition-stratified paired method, Holm p-values and Bonferroni simultaneous decision intervals as M1",
+    "guard": "candidate upper ratio <= 1.10 versus every other eligible algorithm",
+    "secondaryTieOperationalization": "all eligible pairwise M1 decision intervals must lie wholly within [0.95, 1.05]",
+    "secondaryWinner": "when the tie operationalization holds, candidate M2 upper ratio < 1.00 versus every other eligible algorithm"
+  },
+  "winnerAdjudication": {
+    "zeroEligible": "NO_ELIGIBLE_ALGORITHM",
+    "oneEligible": "SOLE_ELIGIBLE_RECOMMENDATION_WITHOUT_M1_SUPERIORITY_CLAIM",
+    "twoOrMoreEligible": [
+      "apply unique M1 winner rule",
+      "apply M2 guard",
+      "if no unique M1 winner, apply the frozen M1 practical tie and M2 secondary rule",
+      "otherwise report NO_UNIQUE_WINNER and retain all eligible candidates"
+    ],
+    "forcedWinner": false
+  },
+  "quantityEffects": {
+    "anchors": ["C01", "C07"],
+    "unitCounts": [1, 8, 32, 128, 512],
+    "N128Source": "module A observations reused once and not duplicated",
+    "primaryOutcomes": ["log_M1", "log_M4_block_median", "log_M4_block_P95"],
+    "supportiveOutcomes": ["log_M2_when_common_mask_sufficient", "M3_completion", "M5_critical_violations"],
+    "linearModel": "outcome ~ intercept + anchor_C07 + log2_N_centered_at_128 + algorithm + algorithm_by_log2_N",
+    "covariance": "CR1 cluster-robust sandwich with complete block as cluster",
+    "degreesOfFreedom": "number_of_independent_blocks_minus_one",
+    "reportedEffects": "per-doubling ratio for each algorithm and algorithm-by-log2(N) interaction ratios with ordinary 95 percent intervals",
+    "selectionRole": "descriptive applicability and scaling; winner remains determined at N=128"
+  },
+  "descriptiveUncertainty": {
+    "M3Completion": "Wilson 95 percent binomial intervals per algorithm and design cell",
+    "M5CriticalViolation": "counts and affected-block counts; no claim of population-zero risk",
+    "M4Eligibility": "observed 48-block median/count gate plus descriptive block summaries"
+  },
+  "software": {
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonVersion": "3.12.14",
+    "pythonExecutableSha256": "b847bb9f4e48c19f585c8bf7d8b355f3f8c6d2125717ece9c9d7e16fb9f09de8",
+    "numpyVersion": "2.3.5",
+    "thirdPartyStatisticalPackage": false,
+    "studentTImplementation": "regularized incomplete beta plus deterministic bisection, validated against frozen known-answer values"
+  },
+  "preparationBoundary": {
+    "formalBlockOutputOpenedOrParsedBeforeThisContractWasWritten": false,
+    "M1ThroughM5ValueUsedToChooseAnyRule": false,
+    "scientificChoicesPending": []
+  }
+}

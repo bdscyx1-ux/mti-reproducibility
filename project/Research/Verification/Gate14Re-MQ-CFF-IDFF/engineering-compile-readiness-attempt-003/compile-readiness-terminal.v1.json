@@ -1,0 +1,38 @@
+{
+  "schema": "gate14re-mq-engineering-compile-readiness-terminal-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attempt": "engineering-compile-readiness-attempt-003",
+  "status": "PASS_MANAGED_ONLY_ENGINEERING_COMPILE_READINESS",
+  "startedAtUtc": "2026-10-21T05:02:55.0467674Z",
+  "endedAtUtc": "2026-10-21T05:03:05.5377512Z",
+  "durationSeconds": 10.491,
+  "unityExitCode": 0,
+  "csharpCompilerErrorCount": 0,
+  "fatalErrorObserved": false,
+  "successMarkerObserved": true,
+  "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+  "unitySha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+  "commandLineArguments": [
+    "-batchmode",
+    "-nographics",
+    "-quit",
+    "--burst-disable-compilation",
+    "-projectPath",
+    "H:/DDM_Final_Project",
+    "-logFile",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-compile-readiness-attempt-003/unity-compile.log"
+  ],
+  "burstDisposition": {
+    "mode": "DISABLED_FOR_MANAGED_ONLY_MQ_PATH",
+    "rationale": "The supplement explicitly evaluates a managed fixed worker pool. Disabling editor Burst compilation prevents the independently evidenced Burst/Mono shutdown failure without changing C# compilation, MQ topology, workload, algorithms, or scientific conditions.",
+    "packageVersion": "1.8.13",
+    "packageOption": "--burst-disable-compilation",
+    "packageOptionSourceSha256": "c5d4ac39a0ff930118f82ee5e957b98d9f771ffd7413fe29627a8ba1a4c9fda0"
+  },
+  "unityLogSha256": "3cb283e4243b0a87a8747525f705479904a0a9b573cbcbfc0e2763f413e1c14f",
+  "predecessorFailureReceiptSha256": "8bf1c0b912ba9f03740949d92d6f480058fbdcaec32841f2a41e34bc0dac8cf3",
+  "formalMqCollectionExecuted": false,
+  "formalAnalysisExecuted": false,
+  "formalStOrMtTouched": false,
+  "createdAtUtc": "2026-10-21T05:04:17.6758296Z"
+}

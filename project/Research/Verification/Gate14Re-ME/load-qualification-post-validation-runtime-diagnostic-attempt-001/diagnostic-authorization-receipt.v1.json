@@ -1,0 +1,26 @@
+{
+  "schema": "gate14re-me-post-offline-validation-runtime-diagnostic-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "AUTHORIZED_POST_VALIDATION_ENGINEERING_RUNTIME_DIAGNOSTIC",
+  "authorizationSource": "direct-user-instruction-in-current-thread",
+  "userInstruction": "atempt-009暴露的问题有：1. 数据获取时间太久，尾部每个lane将实验时长无限地延长，一个小时才跑12-13个lane；2. 目前实验要求的负载有时会过高，导致ST处理过久；3. 全量验收中逐行重复核验来源文件哈希和所有原始行都保留在内存中导致验收时间太久；目前先授权另行建立只读离线再验协议，对已封存数据重新验收，但要求大幅度缩短时长，只保留必要验收；上述问题待验收完后分析是什么原因造成的",
+  "activationSatisfiedBy": {
+    "offlineValidationStatus": "PASS_OFFLINE_NECESSARY_RAW_VALIDATION",
+    "offlineValidationResultSha256": "2afcc259c47e390ff07c2c1cc2d295fe45d3aff249666174e93d862d0f4b9270"
+  },
+  "allowed": [
+    "anonymous and named process/lane runtime distributions",
+    "G x N x F runtime and structural-load stratification",
+    "execution-order, recent-window, and inter-process-gap diagnostics",
+    "bounded CPU, memory, disk, process, and host structural metadata",
+    "static diagnosis of the old validator",
+    "parameterized formal-ST runtime budgeting"
+  ],
+  "prohibited": [
+    "algorithm quality, correctness-effect, or scientific-effect comparison",
+    "ranking, weighting, or winner adjudication",
+    "using qualification data as formal scientific samples",
+    "automatic scientific design modification",
+    "automatic ST, MQ, or MT launch"
+  ]
+}

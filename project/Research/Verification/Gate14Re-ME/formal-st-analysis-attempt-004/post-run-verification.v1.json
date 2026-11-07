@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-post-run-verification-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_ATTEMPT_004_ANY_FOUR_OF_FIVE_POST_RUN_VERIFICATION",
+  "analysisAttempt": "attempt-004",
+  "terminalStatus": "PASS_FORMAL_ST_ANY_FOUR_OF_FIVE_DOMAIN_RULE_ANALYSIS",
+  "primaryClaim": {
+    "pass": true,
+    "supportedDomains": 4,
+    "requiredDomains": 4,
+    "denominatorDomains": 7
+  },
+  "domainResults": [
+    {"domainId": "D1_DYNAMIC_LATENCY", "domainPass": 1, "comparatorsPassing": 4, "failedComparators": ["C-FF"]},
+    {"domainId": "D2_GRID_READ_WORK", "domainPass": 1, "comparatorsPassing": 5, "failedComparators": []},
+    {"domainId": "D3_DYNAMIC_ALLOCATION", "domainPass": 1, "comparatorsPassing": 5, "failedComparators": []},
+    {"domainId": "D4_PERSISTENT_STATE_BYTES", "domainPass": 0, "comparatorsPassing": 2, "failedComparators": ["A*-R", "BiA*-R", "C-FF"]},
+    {"domainId": "D5_AGENT_COUNT_SCALING", "domainPass": 1, "comparatorsPassing": 4, "failedComparators": ["C-FF"]},
+    {"domainId": "D6_CHANGE_FOOTPRINT_SCALING", "domainPass": 0, "comparatorsPassing": 0, "failedComparators": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF"]},
+    {"domainId": "D7_GRID_SIZE_SCALING", "domainPass": 0, "comparatorsPassing": 0, "failedComparators": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF"]}
+  ],
+  "checks": {
+    "hypotheses": 35,
+    "primitiveContrasts": 40,
+    "independentUnit": "superblock",
+    "independentN": 1296,
+    "failedHypotheses": 15,
+    "failedHypothesesWithEffectIntervalAdjustedPAndExplanation": 15,
+    "attempt002ToAttempt004HypothesisNumericDifferences": 0,
+    "attempt003ToAttempt004HypothesisNumericDifferences": 0,
+    "outputFileManifestRows": 10,
+    "outputFileManifestMismatches": 0,
+    "attempt003PreservedUnchanged": true,
+    "sourceRootsModified": false,
+    "rankingOrWinnerComputed": false,
+    "mqPerformed": false,
+    "mtPerformed": false
+  },
+  "outputBindings": {
+    "analysisTerminalReceiptSha256": "2b68880754b3a58a142e3454462b7fb0f78433e8819baa115072b51dd350d14d",
+    "analysisManifestSha256": "b23d9f217fca68a6a188a7edb2d43ace79d42967ab186b361d28766e52cfcd2f",
+    "confirmatoryResultsSha256": "fb42788c2397b6878ae8077d221935e48facc068282fa938e32fb2c4f7ae5d58",
+    "analysisReportSha256": "c5679bf28b533ebed73b4ca1dab90a3eecd44e72911980ba05d53e86caf6114f",
+    "fileManifestSha256": "bbf6799d49dd5d5e07982244d4675be21cebfb8946279ddacad30bbb2dbcd35b"
+  },
+  "completedAtUtc": "2026-10-30T13:09:20.057Z"
+}

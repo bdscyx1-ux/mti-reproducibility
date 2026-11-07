@@ -1,0 +1,36 @@
+{
+  "schema": "gate14re-me-offline-revalidation-field-boundary-v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "validationPhase": {
+    "allowed": [
+      "file paths, sizes, hashes, schemas, required-field membership and scalar types",
+      "recordId, ordinal, process identity, anonymous lane, input and superblock structural identifiers",
+      "source-path/hash bindings and receipt/cardinality fields",
+      "D3 validity and arithmetic fields required by the frozen structural contract",
+      "eligibility, budget-exceeded, validity, missing-reason, and operation-semantics fields required for fail-closed acceptance"
+    ],
+    "prohibited": [
+      "unsealing real algorithm names",
+      "aggregating or interpreting algorithm quality or scientific-effect observations",
+      "ranking, weighting, or winner adjudication",
+      "formal inference"
+    ]
+  },
+  "postValidationDiagnosticPhase": {
+    "activation": "only after terminal offline-validation result exists",
+    "allowed": [
+      "process creation/exit timestamps and inter-process gaps",
+      "lane receipt wall-clock duration and operation count",
+      "frozen schedule mapping to algorithm, G, N, F, superblock, seed, and execution order",
+      "explicit workload start/end markers if present and semantically bound",
+      "CPU, memory, disk, process, and host structural metadata",
+      "static inspection of the original validator implementation"
+    ],
+    "prohibited": [
+      "algorithm output quality/effect metrics",
+      "formal treatment comparison",
+      "ranking or winner claims",
+      "automatic design change"
+    ]
+  }
+}

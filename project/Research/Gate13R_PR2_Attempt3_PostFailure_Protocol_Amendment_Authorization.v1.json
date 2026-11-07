@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "gate13r-pr2-attempt3-postfailure-protocol-amendment-nonexecuting-v1",
+  "authorizationId": "gate13r-pr2-attempt3-postfailure-administrative-continuation-contract-only-v1",
+  "recordedAtUtc": "2026-10-10T03:46:39.0898831Z",
+  "recordedAtAsiaShanghai": "2026-10-10T11:46:39.0892210+08:00",
+  "userAuthorization": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_PostFailure_Protocol_Amendment_User_Authorization.v1.txt",
+    "sha256": "a8e64a2d3be23034fffe97296fd829d8184b0298a54fbd8e8771fcfaf3aec471",
+    "exactText": "修改现行合同和冻结协议，使前3469块可以被计入，继承“一次性完整正式尝试”标签，因为数据本身没有问题"
+  },
+  "boundedInterpretation": {
+    "createVersionedPostFailureContractAmendmentAuthorized": true,
+    "createVersionedRecoveryStateMachineAuthorized": true,
+    "createVersionedTwoPhaseCommitSpecificationAuthorized": true,
+    "createFutureAuthorizationPromptAuthorized": true,
+    "modifyOrOverwriteHistoricalFrozenArtifactsAuthorized": false,
+    "modifyFormalRawRootAuthorized": false,
+    "forensicRecoveryReadinessAuditAuthorized": false,
+    "recoveryImplementationRepairAuthorized": false,
+    "unityAdministrativeContinuationLaunchAuthorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "researchIntegrityDisposition": {
+    "requestedConcept": "retain one complete formal attempt identity while preserving the first 3469 committed processes",
+    "incidentalAutomatedAgentOutcomeFieldExposureRecorded": true,
+    "formalOutcomeAnalysisPerformed": false,
+    "independentOutcomeBlindReadinessValidationRequired": true,
+    "currentUnqualifiedCompleteLabelAllowed": false,
+    "reason": "the original acquisition stopped before 3552 processes and ordinal 3469 is one half of a heterogeneous matched superblock",
+    "currentLabel": "ONE-FORMAL-ATTEMPT-INCOMPLETE-ADMINISTRATIVE-INTERRUPTION-RECOVERY-NOT-YET-AUTHORIZED",
+    "conditionalFinalLabel": "ONE-COMPLETE-FORMAL-ATTEMPT-SAME-ROOT-ADMINISTRATIVELY-INTERRUPTED-POSTFAILURE-AMENDED",
+    "conditionalFinalLabelChinese": "一次性完整正式尝试（同一 frozen schedule/root；曾发生行政中断；依据版本化事后修正案继续完成）",
+    "conditionalRequirements": [
+      "ordinal-3470-forensic-promotion-passed",
+      "continuation-executed-exactly-from-3471-through-3552",
+      "unique-process-count-equals-3552",
+      "unique-sample-count-equals-10176",
+      "complete-matched-superblock-count-equals-1008",
+      "zero-duplicate-or-replaced-observations",
+      "final-raw-commit-audit-passed",
+      "postfailure-amendment-disclosed"
+    ]
+  },
+  "activeAmendmentArtifacts": [
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_PostFailure_Protocol_Amendment.v1.md",
+      "sha256": "287d323bc72981fd3a686d6fdfc4dbcae889c331a258dd0006330c049d66aef8"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Recovery_State_Machine.v2.json",
+      "sha256": "bd2fe1ccd98d744b0fa6d2d93b9b3c54463467de5ec751c8130d00baf8f6633b"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v2.md",
+      "sha256": "026eb1f119d619c85dccb66d4f37e36328c0b9b3c710d23a38326361c424d07d"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Administrative_Continuation_Next_Authorization_Prompt.v1.md",
+      "sha256": "244fdbdf44c0b3e88e99f9e55ff5479316b0457639fcead8e0dab56b61b03a8e"
+    }
+  ],
+  "historicalBindings": {
+    "originalExecutionAuthorizationSha256": "b32e6f3887f86c88909b2f2b77d8d36a9c9e4c6bf985b4c075ab53b5a67033de",
+    "originalRecoveryStateMachineSha256": "2aa5d0e5a11a1e38a05d9e3e82a65dc227e98b953cc4e2678e73eaa96aec1a3d",
+    "originalTwoPhaseSpecificationSha256": "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5",
+    "originalTwoPhaseAmendmentSha256": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+    "originalAuthorizationPromptV4Sha256": "35652dfb462191c10abca3c426fb3e9aeefe8f37beaee28358704568ca133bc5",
+    "originalTerminalStatusSha256": "3aa224e3a21329c508df1d6e74e7b2052beefe5212405a880e24b66c33fcfaca",
+    "originalFailureCheckpointSha256": "2afa262d4fa37dae129f17566d122f80cdcb1a83f2ae9ef8d482caae735dfad9"
+  },
+  "currentDisposition": "PROTOCOL-AMENDED-NONEXECUTING-FORENSIC-READINESS-AND-LAUNCH-NOT-AUTHORIZED",
+  "immutable": true
+}

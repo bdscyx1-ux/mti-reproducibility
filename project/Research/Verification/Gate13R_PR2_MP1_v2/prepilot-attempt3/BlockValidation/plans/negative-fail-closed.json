@@ -1,0 +1,63 @@
+{
+    "schemaVersion":  2,
+    "planId":  "gate13r-pr2-mp1-block-plan-v1",
+    "designId":  "gate13r-pr2-mp1-stage-separated-memory-targeted-pilot-v1",
+    "globalProcessOrdinal":  2,
+    "blockId":  "mp1-validation-negative-fail-closed",
+    "campaignId":  "mp1-validation-negative-fail-closed",
+    "scenarioId":  "grid-scale-g032-shared",
+    "scenarioRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios/grid-scale-g032-shared.scenario.json",
+    "scenarioSourceSha256":  "d0f93e804fdf944877cdbbdd1485e37fa5ef274d0c853e9b649fa2e80395c9aa",
+    "comparisonCohortId":  "four-algorithm-shared-goal-v1",
+    "block":  2,
+    "williamsRowIndex":  1,
+    "formalCampaign":  false,
+    "validationOnly":  true,
+    "excludedFromFormalAnalysis":  true,
+    "analysisRole":  "memory-diagnostic-only",
+    "verificationInjectedFailurePosition":  2,
+    "formalConfigRelativePath":  "Research/Gate13R_PR2_MP1_Pilot_Config.v2.json",
+    "formalConfigSha256":  "4377354c7f0faeef805771f33aa7f24f06e807a168f203a414a4f4bcddaca38d",
+    "specificationRelativePath":  "Research/Gate13R_PR2_MP1_Specification.v1.md",
+    "specificationSha256":  "5e6b24dae7c1f1b7ccd637d8e41588a29a5e9e8cb2735e652df51c9f7452e6d8",
+    "testDesignRelativePath":  "Research/Gate13R_PR2_MP1_v2_Test_Design.v1.md",
+    "testDesignSha256":  "339096eb689eb4524e8eed8a1fe2b9e8c59169d57c4b9f6e6564968dce71698a",
+    "amendmentRelativePath":  "Research/Gate13R_PR2_MP1_Two_Phase_Commit_Contract.v1.json",
+    "amendmentSha256":  "8c4d33396696ef6abe3b63afde68a2f4f247966b09073374527dde4ba98ad323",
+    "commandRelativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR2MemoryPolicyPilotBatchCommandV1.cs",
+    "commandSha256":  "ee3e85e23f6d89d1ded7a76d235ab95f967c4c3cbc3cd9353c40b84123fc172d",
+    "provenanceRelativePath":  "Research/Gate13R_PR2_MP1_Provenance.v2_1.json",
+    "provenanceSha256":  "c9d40884d6bbcd3b04cc7c1ae3c63d9cb6103f707f7845f75f77963694b64e6d",
+    "executionReceiptRelativePath":  "Research/Verification/Gate13R_PR2_MP1_v2/prepilot-attempt3/BlockValidation/validation-execution-receipt.json",
+    "executionReceiptSha256":  "e8f002dc680d04cc35f339bfffc8f06a8158d6e5e344f88c904a9e519b1fb833",
+    "entries":  [
+                    {
+                        "algorithmId":  "D*L",
+                        "directory":  "runs/p01-dstar-l",
+                        "position":  1,
+                        "predecessorAlgorithmId":  "NONE",
+                        "runId":  "g13rpr2-mp1-g032-b0002-p01-dstar-l"
+                    },
+                    {
+                        "algorithmId":  "C-FF",
+                        "directory":  "runs/p02-cff",
+                        "position":  2,
+                        "predecessorAlgorithmId":  "D*L",
+                        "runId":  "g13rpr2-mp1-g032-b0002-p02-cff"
+                    },
+                    {
+                        "algorithmId":  "A*-R",
+                        "directory":  "runs/p03-astar-r",
+                        "position":  3,
+                        "predecessorAlgorithmId":  "C-FF",
+                        "runId":  "g13rpr2-mp1-g032-b0002-p03-astar-r"
+                    },
+                    {
+                        "algorithmId":  "IDFF",
+                        "directory":  "runs/p04-idff",
+                        "position":  4,
+                        "predecessorAlgorithmId":  "A*-R",
+                        "runId":  "g13rpr2-mp1-g032-b0002-p04-idff"
+                    }
+                ]
+}

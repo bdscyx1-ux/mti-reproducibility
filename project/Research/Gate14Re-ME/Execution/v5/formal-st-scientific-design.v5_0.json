@@ -1,0 +1,91 @@
+{
+  "schema": "gate14re-me-formal-st-scientific-design-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "version": "5.0",
+  "status": "FROZEN_NONEXECUTING_READY_FOR_PACKAGE_BUILD_NOT_COLLECTION",
+  "inherits": [
+    {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v1.json",
+      "sha256": "02b8c5edc1d6c8604dbd1816d99ee4616ac2814d6198e0cee273d031fee60e7f",
+      "rule": "All clauses remain normative except the old G/N/F levels, 48-cell cardinality, pending B, pending MIPE, and pending S5 choice explicitly replaced here."
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v2.json",
+      "sha256": "73d81fe3be7c0e8f1ba6bbf25e584d86137a2e196d89ec03de7e8d59bf6412f5",
+      "rule": "The load-qualification prerequisite remains normative and is now satisfied by the bound terminal PASS receipt."
+    }
+  ],
+  "qualificationPrerequisite": {
+    "terminalPassRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-read-only-acceptance-attempt-001/qualification-terminal-pass-receipt.v1.json",
+    "terminalPassSha256": "9ffc2c83896f1516eea969619ccc8c07f6be1bdab85cecead7224fc8f9cbeafa",
+    "sourceAcquisition": "load-qualification-execution-attempt-011",
+    "qualificationObservationsMayEnterFormalEstimation": false
+  },
+  "algorithms": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF", "IDFF"],
+  "independentUnit": "one newly generated immutable six-algorithm paired input superblock",
+  "notIndependent": ["algorithm lane", "event group", "agent", "query", "operation", "frame", "tick", "cell"],
+  "design": {
+    "GGridEdgeLevels": [64, 96, 128],
+    "NAgentCountLevels": [32, 64, 128],
+    "FChangedCellLevels": [1, 9, 25, 81],
+    "structuralCells": 36,
+    "withinCellContextFactors": {
+      "changeTopology": ["compact", "dispersed", "bottleneck"],
+      "graphProfile": ["four_way_weighted_dense", "eight_way_uniform_sparse"],
+      "sameTickAtomicPartitions": [1, 4, 16],
+      "jointContextStrata": 18
+    },
+    "BPerStructuralCell": 36,
+    "superblocksPerContextStratumPerCell": 2,
+    "plannedIndependentSuperblocks": 1296,
+    "algorithmLanesPerSuperblock": 6,
+    "plannedMeasuredAlgorithmLanes": 7776,
+    "eventGroupsPerLane": 24,
+    "plannedPrimaryEventGroupRows": 186624,
+    "oneFreshUnityProcessPerMeasuredLane": true,
+    "strictSerialMeasuredProcesses": true
+  },
+  "primaryDomains": [
+    "D1_DYNAMIC_LATENCY",
+    "D2_GRID_READ_WORK",
+    "D3_DYNAMIC_ALLOCATION",
+    "D4_PERSISTENT_STATE_BYTES",
+    "D5_AGENT_COUNT_SCALING",
+    "D6_CHANGE_FOOTPRINT_SCALING",
+    "D7_GRID_SIZE_SCALING"
+  ],
+  "primaryClaim": {
+    "minimumSupportedDomains": 4,
+    "totalDomains": 7,
+    "eachSupportedDomainMustBeFavorableAgainstAllFiveComparators": true,
+    "correctnessAndMeasurementGatesRequired": true,
+    "invalidDomainRemovedFromDenominator": false,
+    "ranking": false,
+    "weightedComposite": false,
+    "winnerAdjudication": false
+  },
+  "movementTransferSentinel": {
+    "S5": "OMITTED",
+    "omissionChangesPrimaryDomains": false,
+    "omissionRelaxesCorrectnessOrOracleGates": false
+  },
+  "integrity": {
+    "positiveIDFFResultGuaranteed": false,
+    "allNullAdverseAndComparatorFavorableResultsMustBeReported": true,
+    "formalAdaptiveExpansion": false,
+    "postOutcomeTopUp": false,
+    "endpointScenarioOrThresholdSelectionAfterOutcomeInspection": false,
+    "qualificationDataUsedAsFormalObservations": false
+  },
+  "authorizationBoundary": {
+    "designFreezeAuthorized": true,
+    "packageBuildAuthorized": false,
+    "formalInputGenerationAuthorized": false,
+    "formalRootsCreationAuthorized": false,
+    "compileOrUnityExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "MQOrMTAuthorized": false
+  }
+}

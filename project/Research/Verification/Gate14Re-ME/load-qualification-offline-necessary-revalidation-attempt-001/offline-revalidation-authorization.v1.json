@@ -1,0 +1,27 @@
+{
+  "schema": "gate14re-me-offline-revalidation-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "AUTHORIZED_ONE_SHOT_READ_ONLY_OFFLINE_NECESSARY_REVALIDATION",
+  "authorizationSource": "direct-user-instruction-in-current-thread",
+  "userInstruction": "atempt-009暴露的问题有：1. 数据获取时间太久，尾部每个lane将实验时长无限地延长，一个小时才跑12-13个lane；2. 目前实验要求的负载有时会过高，导致ST处理过久；3. 全量验收中逐行重复核验来源文件哈希和所有原始行都保留在内存中导致验收时间太久；目前先授权另行建立只读离线再验协议，对已封存数据重新验收，但要求大幅度缩短时长，只保留必要验收；上述问题待验收完后分析是什么原因造成的",
+  "authorizedScope": [
+    "create an independent versioned verification root",
+    "freeze a minimized raw-data acceptance protocol before execution",
+    "read and structurally validate the sealed attempt-009 acquisition without modifying it",
+    "replace per-row source-file hashing with exact per-file cached hashing",
+    "replace whole-dataset in-memory retention with streaming per-file validation and bounded indexes",
+    "after offline validation terminates, diagnose acquisition tail, excessive ST workload, and old-validator slowness"
+  ],
+  "notAuthorized": [
+    "resume or retry attempt-009",
+    "modify, delete, move, repair, or merge sealed raw data",
+    "claim original qualification terminal PASS",
+    "formal collection or formal statistical analysis",
+    "algorithm quality/effect comparison, ranking, weighting, or winner adjudication",
+    "automatic scientific design change or automatic launch of ST, MQ, or MT"
+  ],
+  "sourceAttemptId": "load-qualification-execution-attempt-009",
+  "sourceMeasuredRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-007",
+  "sourceExecutionEvidenceRoot": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-009",
+  "sealedByTerminalReceiptSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705"
+}

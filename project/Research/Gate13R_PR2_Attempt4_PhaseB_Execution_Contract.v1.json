@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "contractKind": "GATE13R-PR2-ATTEMPT4-PHASEB-FROZEN-EXECUTION-CONTRACT",
+  "contractId": "gate13r-pr2-attempt4-phaseb-formal-analysis-v1",
+  "createdAtUtc": "2026-10-11T01:22:27.5452372Z",
+  "createdAtAsiaShanghai": "2026-10-11T09:22:27.5482665+08:00",
+  "contractStatus": "FROZEN-AWAITING-SEPARATE-EXECUTION-AUTHORIZATION",
+  "scope": {
+    "gate": "Gate 13R-PR2",
+    "formalAttemptOrdinal": 4,
+    "phase": "B",
+    "purpose": "READ-ONLY-FORMAL-STATISTICAL-ANALYSIS-OF-FROZEN-ATTEMPT4-P1-THROUGH-P5",
+    "currentTurnPurpose": "PREPARATION-FREEZE-AND-STRUCTURAL-PREFLIGHT-ONLY"
+  },
+  "preparationAuthorizationBinding": {
+    "relativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Preparation_Authorization.v1.json",
+    "sha256": "03d3e9f6f8915c7fd6411f8e8e267e84cdb280a115529f7475578977a7fdc983"
+  },
+  "authorizationBoundary": {
+    "phaseBExecutionAuthorizedByThisContract": false,
+    "formalOutcomeDataLoadingAuthorized": false,
+    "formalEffectEstimationAuthorized": false,
+    "formalInferenceAuthorized": false,
+    "formalAnalysisOutputCommitAuthorized": false,
+    "rawRootMutationAuthorized": false,
+    "unityLaunchOrControlAuthorized": false,
+    "experimentLaunchStopSignalResumeRetryTopUpMergeSkipReplaceOrReorderAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "separateExecutionAuthorization": {
+    "required": true,
+    "expectedRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Authorization.v1.json",
+    "requiredAuthorizationKind": "GATE13R-PR2-ATTEMPT4-PHASEB-FORMAL-ANALYSIS-EXECUTION",
+    "mustBeAbsentDuringPreparationAndPreflight": true,
+    "mustBindThisContractRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Contract.v1.json",
+    "mustBindExactSha256OfThisFrozenContract": true,
+    "mustContainExactUserExecutionAuthorization": true,
+    "requiredTrueFields": [
+      "phaseBFormalStatisticalAnalysisAuthorized",
+      "formalOutcomeDataLoadingAuthorized"
+    ],
+    "requiredFalseFields": [
+      "gate14RAuthorized",
+      "rawRootMutationAuthorized",
+      "unityLaunchOrControlAuthorized"
+    ],
+    "mustFreezeOutputTimestampUtc": true,
+    "currentState": "ABSENT-NOT-AUTHORIZED"
+  },
+  "rawInput": {
+    "rootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+    "mode": "READ-ONLY",
+    "canonicalRawTreeSha256": "02cbeed034d6a7211e2d6b7e2b3832a0485d25fb703a2b0f561bf50f7a838c1b",
+    "expectedOutputFileCount": 89472,
+    "expectedRawBytes": 26429810187,
+    "formalExecutionMustVerifyEveryPayloadFileSha256BeforeOutcomeLoading": true,
+    "formalExecutionMustCompareRawMetadataIdentityBeforeAndAfterAnalysis": true,
+    "writesInsideRawRootForbidden": true
+  },
+  "frozenInputBindings": {
+    "attempt4AcquisitionContract": {
+      "relativePath": "Research/Gate13R_PR2_Attempt4_Execution_Contract.v1.json",
+      "sha256": "a9c7a81e3c1a59aea37be1124a1237dabd6118e9f397050122bd76c308a16570"
+    },
+    "attempt4TerminalStatus": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Status.v4.json",
+      "sha256": "58fc2d29af66bb54819c320ed63b79935f27b7780cc60f46892d27f65cb0545c"
+    },
+    "attempt4ExecutionReceipt": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v4.json",
+      "sha256": "61773c854aaee1a2237d3b7c15d21725a5edad204b94d232f3df0655a98bad27"
+    },
+    "rawCommitPassReceipt": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/_control/raw-commit-attempts/attempt-1/pass-receipt.json",
+      "sha256": "fde727a217319f10d991ebbe890e04c0e934e3f6670b5e6be934be4e78625f1d"
+    },
+    "rawDataFreezeReceipt": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/raw-data-freeze-receipt.json",
+      "sha256": "4fa1304e12a7150058c6c7550d72ea712ab39c0372ece9e1d2dfdfe1489bf7a8"
+    },
+    "formalRawReadyAudit": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/formal-raw-ready-for-separate-analysis-authorization-audit.json",
+      "sha256": "d305e2908a0b7ef91d155ddc4dfec98dea3eb50b6e420b5f73c59b4348b14f95"
+    },
+    "rawExecutionManifest": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/raw-execution-manifest.json",
+      "sha256": "be11d30195c2038b777f5c998ad144dc8cdbdbb39bea31a7aaadea5c687f1be5"
+    },
+    "blockFormalEligibilityManifest": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/block-formal-eligibility-manifest.json",
+      "sha256": "80e97c25c2c522d7f935a599bac28b8df71cdc015aa59c0de2ab836482bad0ab"
+    },
+    "rawBlockEvidenceManifest": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/raw-block-evidence-manifest.json",
+      "sha256": "54fcb6683453e5a3d22a75d4bcc59b680d44fca8e4dd45d932c7801ff4b72e12"
+    },
+    "rawPayloadFileManifest": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/raw-payload-file-manifest.jsonl",
+      "sha256": "ddd438471c0736ddc6f3445fb118712c2ac0371e919eee80e3af79212d25ee5a"
+    },
+    "formalSchedule": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    "formalCampaignConfig": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+      "sha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"
+    },
+    "statisticalAnalysisPlan": {
+      "relativePath": "Research/Gate13R_RQAligned_Statistical_Analysis_Plan.v1.md",
+      "sha256": "ba4ddac6258cb952902e3383fa8bd405c2ce8d5c84b9b5c667fcd88c1d476884"
+    },
+    "rawAnalysisTwoPhaseSpecification": {
+      "relativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v3.md",
+      "sha256": "9d86a949b9c56e8dd419d57bc8e604de952446d32a4091bb2b7798f665977113"
+    },
+    "metricRegistry": {
+      "relativePath": "Research/Gate13R_RQAligned_Metric_Registry.v1.json",
+      "sha256": "ca990d308f180452e7cd0a9a152c9e6c852bac9cf611e5aa2b9e686821b79b93"
+    },
+    "contrastRegistry": {
+      "relativePath": "Research/Gate13R_RQAligned_Contrast_Registry.v1.json",
+      "sha256": "fba8fbe41ecfbdb4f4d7fa5b4aad74be00b874e41c3b83c562fc1f2d250fcc47"
+    }
+  },
+  "implementationBindings": {
+    "analyzer": {
+      "relativePath": "Research/Analyze-Gate13RPR2Attempt4PhaseBV1.py",
+      "sha256": "abf424437912640c0cc3e898eb3c89d83df841a7c19e1ec555113ebc0fa76f84"
+    },
+    "executionWrapper": {
+      "relativePath": "Research/Run-Gate13RPR2Attempt4PhaseBV1.ps1",
+      "sha256": "afa97849b33ecd2ac972bb2415b233c909730a241e4e2fe51e7f1f08d2d0c0f2"
+    },
+    "preflight": {
+      "relativePath": "Research/Test-Gate13RPR2Attempt4PhaseBPreflightV1.py",
+      "sha256": "b83c9d189a83b30a9ac69b2fade61cedeb2ba748c440e62074064fba4e660319"
+    },
+    "outputSchema": {
+      "relativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Output_Schema.v1.json",
+      "sha256": "85974e223dbc1a135fe9ff91f62c3618b9cd21ecd3d4f58b2aee79f6917b70b0"
+    }
+  },
+  "design": {
+    "expectedProcessCount": 3552,
+    "expectedSampleCount": 10176,
+    "automaticResumeCount": 0,
+    "shared": {
+      "campaignCount": 32,
+      "blocksPerCampaign": 48,
+      "processCount": 1536,
+      "samplesPerProcess": 4,
+      "sampleCount": 6144,
+      "algorithms": ["A*-R", "D*L", "IDFF", "C-FF"],
+      "williamsRows": 4,
+      "processCountPerWilliamsRow": 384,
+      "matrixWeighting": "EQUAL-WEIGHT-ACROSS-32-FROZEN-CAMPAIGNS"
+    },
+    "heterogeneous": {
+      "scenarioCount": 21,
+      "matchedSuperblockCount": 1008,
+      "matchedSuperblocksPerScenario": 48,
+      "processesPerMatchedSuperblock": 2,
+      "perAgentProcessCount": 1008,
+      "groupedFieldProcessCount": 1008,
+      "sampleCount": 4032,
+      "uniqueOrderCounts": {"AB": 504, "BA": 504},
+      "matrixWeighting": "EQUAL-WEIGHT-ACROSS-21-FROZEN-HETEROGENEOUS-SCENARIOS"
+    }
+  },
+  "statisticalContract": {
+    "metricScope": ["P1", "P2", "P3-PER-AGENT", "P3-SCALING-SLOPE", "P4", "P5"],
+    "continuousEffectScale": "LN-NUMERATOR-MINUS-LN-DENOMINATOR",
+    "strictlyPositiveFinitePairsRequired": true,
+    "pseudocountForbidden": true,
+    "contrasts": [
+      {"id": "C1", "numerator": "C-FF", "denominator": "A*-R", "p1Sidedness": "ONE-SIDED-LOWER-IS-BETTER"},
+      {"id": "C2", "numerator": "C-FF", "denominator": "D*L", "p1Sidedness": "ONE-SIDED-LOWER-IS-BETTER"},
+      {"id": "C3", "numerator": "IDFF", "denominator": "A*-R", "p1Sidedness": "ONE-SIDED-LOWER-IS-BETTER"},
+      {"id": "C4", "numerator": "IDFF", "denominator": "D*L", "p1Sidedness": "ONE-SIDED-LOWER-IS-BETTER"},
+      {"id": "C5", "numerator": "IDFF", "denominator": "C-FF", "p1Sidedness": "TWO-SIDED-NO-POSTHOC-WINNER"}
+    ],
+    "p1Confirmatory": {
+      "familyWiseAlpha": 0.05,
+      "multiplicityMethod": "HOLM",
+      "pointAndIntervalApproximation": "NORMAL-APPROXIMATION-AS-FROZEN-IN-PREREGISTRATION-ANALYZER",
+      "unadjustedInterval": "TWO-SIDED-95-PERCENT",
+      "simultaneousInterval": "BONFERRONI-COMPATIBLE-TWO-SIDED-99-PERCENT-FOR-FIVE-CONTRASTS",
+      "sigmaUpper": "ONE-SIDED-90-PERCENT-CHI-SQUARE",
+      "c1ThroughC4SuperiorityRequires": [
+        "CORRECTNESS-AND-STRUCTURAL-GATES-PASS",
+        "POINT-ESTIMATE-IS-FAVORABLE",
+        "HOLM-ADJUSTED-PVALUE-LESS-THAN-0.05",
+        "SIMULTANEOUS-UPPER-RATIO-BOUND-LESS-THAN-1"
+      ]
+    },
+    "p2ThroughP5": {
+      "role": "SUPPORTIVE-NOT-IN-P1-CONFIRMATORY-FAMILY",
+      "globalWinnerOrMajorityVoteForbidden": true,
+      "outcomeConditionedAdviceForbidden": true
+    },
+    "p3ScalingSlope": {
+      "role": "SUPPORTIVE-DISTINCT-ESTIMAND",
+      "scenarioIdRegex": "^agent-scale-a(001|008|032|128|512)-shared$",
+      "frozenAgentCountLevels": [1, 8, 32, 128, 512],
+      "x": "LN-AGENT-COUNT",
+      "y": "LN-TOTAL-PLANNER-ELAPSED-MILLISECONDS-PER-AGENT",
+      "levelWeighting": "EQUAL",
+      "replicateUnit": "CAMPAIGN-BLOCK-ORDINAL-MATCHED-ACROSS-ALL-FIVE-LEVELS",
+      "crossFamilySubstitutionForbidden": true
+    },
+    "p5": {
+      "strata": ["OVERALL", "PLAN", "REPAIR"],
+      "retainNumeratorsAndDenominators": true,
+      "zeroEventCellsRetained": true,
+      "allZeroOneSided95UpperFormula": "1 - 0.05^(1/N)",
+      "continuousLogRatioInferenceForbidden": true,
+      "allZeroSuperiorityConclusionForbidden": true
+    },
+    "heterogeneous": {
+      "role": "SECONDARY-SYSTEM-TREATMENT",
+      "independentUnit": "MATCHED-SUPERBLOCK",
+      "crossFamilyContrasts": ["C1", "C2", "C3", "C4"],
+      "withinGroupedFieldContrast": "C5",
+      "withinPerAgentDiagnostic": "D*L/A*-R",
+      "orderStratifiedReportingRequired": true,
+      "confirmatoryPromotionForbidden": true
+    }
+  },
+  "executionSequenceAfterFutureAuthorization": [
+    "VERIFY-SEPARATE-EXECUTION-AUTHORIZATION-AND-EXACT-CONTRACT-SHA256",
+    "VERIFY-ALL-FROZEN-INPUT-AND-IMPLEMENTATION-HASHES",
+    "VERIFY-EVERY-RAW-PAYLOAD-FILE-SHA256-SIZE-AND-COUNT",
+    "LOAD-AND-VERIFY-SCHEDULE-ELIGIBILITY-EVIDENCE-BLOCK-AND-WORKLOAD-IDENTITIES",
+    "RETAIN-ALL-ELIGIBILITY-MISSINGNESS-AND-FAILURE-REASONS",
+    "COMPUTE-P1-CONFIRMATORY-AND-P2-THROUGH-P5-SUPPORTIVE-OUTPUTS",
+    "COMPARE-RAW-ROOT-METADATA-IDENTITY-BEFORE-AND-AFTER",
+    "WRITE-ONLY-TO-SIBLING-STAGING-DIRECTORY",
+    "COMMIT-OUTPUT-BY-SINGLE-NONOVERWRITING-DIRECTORY-RENAME"
+  ],
+  "output": {
+    "rootRelativePath": "Research/Analysis/Gate13R_PR2_Attempt4_PhaseB/v1",
+    "mustBeAbsentBeforeExecution": true,
+    "overwriteForbidden": true,
+    "stagingMustBeSiblingOfOutputRoot": true,
+    "requiredArtifactRelativePaths": [
+      "analysis-input-audit.json",
+      "schedule-coverage-and-missingness.json",
+      "shared-primary-p1-analysis.json",
+      "shared-supportive-p2-p5-analysis.json",
+      "heterogeneous-secondary-analysis.json",
+      "phase-b-analysis-manifest.json",
+      "phase-b-execution-receipt.json"
+    ]
+  },
+  "preflight": {
+    "mode": "STRUCTURAL-ONLY",
+    "reportRelativePath": "Research/Verification/Gate13R_PR2_Attempt4_PhaseB/v1/structural-preflight-report.v1.json",
+    "mayRead": [
+      "FROZEN-TOP-LEVEL-JSON-AND-JSONL-MANIFESTS",
+      "FILE-HASHES-SIZES-COUNTS-AND-SCHEMAS",
+      "SCHEDULE-BALANCE-AND-MATCHING-STRUCTURE",
+      "IMPLEMENTATION-SOURCE-FOR-STATIC-SAFETY-CHECKS",
+      "SYNTHETIC-ONLY-SELF-TEST-DATA"
+    ],
+    "mustNotRead": [
+      "BLOCK-WORKLOAD-RESULT-VALUES",
+      "P1-THROUGH-P5-OUTCOME-VALUES",
+      "M1-THROUGH-M5",
+      "FORMAL-EFFECTS-INTERVALS-PVALUES-OR-CONCLUSIONS"
+    ],
+    "formalAnalysisExecutionAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "freezeTargets": [
+    "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Contract.v1.json",
+    "Research/Gate13R_PR2_Attempt4_PhaseB_Preparation_Authorization.v1.json",
+    "Research/Analyze-Gate13RPR2Attempt4PhaseBV1.py",
+    "Research/Run-Gate13RPR2Attempt4PhaseBV1.ps1",
+    "Research/Test-Gate13RPR2Attempt4PhaseBPreflightV1.py",
+    "Research/Gate13R_PR2_Attempt4_PhaseB_Output_Schema.v1.json"
+  ],
+  "failClosedRules": [
+    "ANY-AUTHORIZATION-MISMATCH-REFUSES-BEFORE-OUTCOME-LOADING",
+    "ANY-BOUND-HASH-MISMATCH-REFUSES",
+    "ANY-RAW-PAYLOAD-HASH-SIZE-OR-COUNT-MISMATCH-REFUSES",
+    "ANY-SCHEDULE-ELIGIBILITY-IDENTITY-OR-COMPLETENESS-MISMATCH-REFUSES",
+    "ANY-EXISTING-OUTPUT-ROOT-REFUSES",
+    "ANY-RAW-METADATA-CHANGE-DURING-ANALYSIS-REFUSES-AND-DISCARDS-OWN-STAGING",
+    "ANY-GATE14R-AUTHORIZATION-OR-METRIC-PATH-REFUSES"
+  ],
+  "explicitExclusions": {
+    "gate14RAuthorized": false,
+    "gate14RExecutionAuthorized": false,
+    "movementMetricIds": ["M1", "M2", "M3", "M4", "M5"],
+    "movementMetricLoadingDerivationVariancePowerOrSampleSizeAllowed": false,
+    "playableOrObsTimingAllowed": false,
+    "formalExperimentRetryTopUpOrReplacementAllowed": false,
+    "outcomeConditionedAdviceAllowed": false
+  },
+  "preparedTerminalState": "READY-FOR-SEPARATE-PHASEB-EXECUTION-AUTHORIZATION-ANALYSIS-NOT-EXECUTED-GATE14R-NOT-AUTHORIZED"
+}

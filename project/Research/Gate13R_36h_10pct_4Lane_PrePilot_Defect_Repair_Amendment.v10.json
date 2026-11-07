@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-defect-repair-v10",
+  "createdAtUtc": "2026-10-08T05:24:00Z",
+  "status": "AUTHORIZED-NONEXECUTING-REPAIR",
+  "formalCampaignAuthorized": false,
+  "pilotAuthorizationCount": 1,
+  "pilotAuthorizationConsumed": false,
+  "sourceAttempt": 9,
+  "targetAttempt": 10,
+  "confirmedDefect": "Current-attempt version routing touched immutable versioned preimplementation evidence directories.",
+  "authorizedRepair": "Pin historical attempt-2 static evidence to v7, attempt-4 static evidence to v8, and lock-hygiene unit evidence to v9 after routing current outputs to attempt 10; fail before writes if any frozen path is absent.",
+  "unchangedSemantics": {
+    "campaignMatrixCount": 74,
+    "relative95CiHalfWidthTarget": 0.10,
+    "hardSampleCap": null,
+    "isolatedLaneCount": 4,
+    "unityProcessUnit": "one fresh Unity Editor process per Williams block",
+    "readinessP95MaximumHours": 27,
+    "formalWallClockMaximumHours": 36,
+    "pilotMeasuredBlockCount": 384,
+    "pilotMeasuredSampleCount": 1152,
+    "pilotWarmupBlockCount": 8,
+    "retainedManagedMemoryRuleMiBPerSample": 128
+  },
+  "immutableAttempt9Evidence": {
+    "partialManifestSha256": "55d732a1554fd82f614102f6eccac6cdad5ab4aba53d0c0afff5805887c6a1c5",
+    "failureReceiptSha256": "b44ecce0d27b85b7a2e725345b8ae83f900c180f7e83f175f02022d492063492",
+    "checkpointSha256": "e631f965a84b96538d70cde0271a47b88556aa3336a27fce462dcfccda077784"
+  },
+  "prohibitions": [
+    "do not modify or resume attempts 1 through 9",
+    "do not change experimental semantics or thresholds",
+    "do not create a formal root or start a formal campaign",
+    "do not consume more than the single authorized NON-FORMAL pilot"
+  ]
+}

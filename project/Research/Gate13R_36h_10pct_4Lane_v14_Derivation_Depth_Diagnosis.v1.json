@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "diagnosisKind": "gate13r-36h-v14-derivation-json-depth-diagnosis-v1",
+  "createdAtUtc": "2026-10-08T05:43:00Z",
+  "status": "CONFIRMED-NONEXECUTING-DERIVATION-DEFECT",
+  "attempt": 14,
+  "failedStage": "provenance-serialization",
+  "rootCause": "The versioned derivation requested ConvertTo-Json depth 110, while Windows PowerShell 5.1 permits a maximum depth of 100.",
+  "verificationRootCreated": false,
+  "cloneRootCreated": false,
+  "pilotRootCreated": false,
+  "pilotStarted": false,
+  "formalRootCreated": false,
+  "unityStarted": false,
+  "failureReceiptSha256": "394aee468e1873fc5e6c1e2755c20a4a8c51c3e70c7fd627a7a27e8d220319d2",
+  "partialManifestSha256": "638f0742784630343e5a0d3b686478afcdd886aeeeb23028052b6387b495942a",
+  "checkpointSha256": "0dab65c731e0b122bf1bbfcde0a999a4c889d3d813f4d9050190f9582faecc14",
+  "partialFileCount": 16,
+  "repairBoundary": {
+    "nextAttempt": 15,
+    "maximumJsonDepth": 100,
+    "sourceForActiveScriptsAndPlan": "frozen-v14-partial-artifacts",
+    "sourceForPriorCompleteProvenance": "Research/Gate13R_36h_10pct_4Lane_Provenance.v13.json",
+    "scientificOrExecutionSemanticsChanged": false,
+    "thresholdRelaxationAllowed": false,
+    "v14MutationAllowed": false
+  },
+  "passed": true
+}

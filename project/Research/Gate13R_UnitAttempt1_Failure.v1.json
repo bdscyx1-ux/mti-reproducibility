@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-nonexecuting-unit-attempt1-failure-v1",
+  "status": "FAILED-NO-UNITY-NO-FORMAL-ROOT-NO-AUTO-RESUME",
+  "failedAtLocalDate": "2026-10-08",
+  "verificationRoot": "Research/Verification/Gate13R_NonExecuting_Preparation/v1",
+  "diagnosticRoot": "Research/Verification/Gate13R_NonExecuting_Preparation/diagnostic-v1",
+  "unitEntryRelativePath": "Research/Run-Gate13RNonExecutingPreparationUnitTestsV1.ps1",
+  "unitEntrySha256": "5cc824fbc8a1ab4cf107e1b20b2ed4027b470d5497f3aa9b71486402eaa046dc",
+  "failureLine": 163,
+  "failure": "Under Windows PowerShell 5.1 StrictMode, an empty Get-ChildItem result is null and therefore has no Count property. The assertion must array-wrap the command result.",
+  "partialArtifactCountPerRoot": 1,
+  "partialArtifactSha256": "58f07b13e6fb9acd39b3d235ce3247da1f7588323bbe6afd6082bb5e79df3cad",
+  "unityStarted": false,
+  "formalRootCreated": false,
+  "formalExecutionReceiptCreated": false,
+  "automaticRetryAttempted": false,
+  "automaticResumeAttempted": false,
+  "researchSemanticsChanged": false,
+  "allowedRepair": "Create a v2 unit entry and v2 verification root; only array-wrap the empty enumeration and update version labels."
+}

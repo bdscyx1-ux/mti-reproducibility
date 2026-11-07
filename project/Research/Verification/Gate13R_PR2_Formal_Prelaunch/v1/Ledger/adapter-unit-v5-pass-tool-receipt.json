@@ -1,0 +1,18 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 post-authorization-patch unit and two-phase fixture revalidation",
+  "command": "Test-Gate13RPR2FormalExecutionV4.ps1 to independent AdapterUnitV5 root under native Windows PowerShell 5.1",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "gate_tokens": [
+    "UNIT-35-OF-35",
+    "TWO-PHASE-FIXTURES-PASSED",
+    "RAW-HASH-FREEZE-FIXTURES-PASSED",
+    "FORMAL-ROOT-ABSENT",
+    "UNITY-NOT-LAUNCHED"
+  ],
+  "input_sha256": {
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/AdapterUnitV5/summary.json": "59f9d702c4900918647ec7efbdca299716bbe097bee37283b66a55f0072aa821"
+  }
+}

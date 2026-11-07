@@ -1,0 +1,20 @@
+{
+  "schemaId": "gate13r-pr2-mp1-output-schema-v1",
+  "schemaVersion": 1,
+  "pilotLabels": ["NON-FORMAL", "MEMORY-DIAGNOSTIC-ONLY", "EXCLUDED-FROM-FORMAL-ANALYSIS", "NOT-ALGORITHM-SUPERIORITY-EVIDENCE"],
+  "blockRequiredFiles": [
+    "block-plan.json", "block-checkpoint.json", "block-stage-telemetry.json", "block-manifest.json",
+    "external-stage-telemetry.json", "wrapper-summary.json", "Unity.log"
+  ],
+  "sampleRequiredFiles": [
+    "scenario.canonical.json", "operations.jsonl", "workload-result.json", "memory-policy-evaluation.json",
+    "manifest.json", "sample-summary.json"
+  ],
+  "failureAlternatives": ["block-failure.json", "wrapper-failure-resolution.json", "partial-output-manifest.json"],
+  "phaseARawCommitFiles": [
+    "pilot-raw-execution-manifest.json", "pilot-raw-tree-manifest.json", "pilot-environment-end-snapshot.json",
+    "pilot-raw-freeze-receipt.json", "pilot-checkpoint.json"
+  ],
+  "phaseAStatusTokens": ["PILOT-RAW-DATA-COMPLETE", "ANALYSIS-PENDING", "IMMUTABLE"],
+  "analysisOutputOutsideRawRootRequired": true
+}

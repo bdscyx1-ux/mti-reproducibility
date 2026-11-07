@@ -1,0 +1,34 @@
+{
+  "analysisAttempt": "attempt-004",
+  "analysisManifestRelativePath": "analysis-manifest.v1.json",
+  "analysisManifestSha256": "b23d9f217fca68a6a188a7edb2d43ace79d42967ab186b361d28766e52cfcd2f",
+  "completedAtUtc": "2026-10-30T13:08:16.114Z",
+  "fileManifestRelativePath": "file-manifest.v1.jsonl",
+  "fileManifestRows": 10,
+  "fileManifestSha256": "bbf6799d49dd5d5e07982244d4675be21cebfb8946279ddacad30bbb2dbcd35b",
+  "mqPerformed": false,
+  "mtPerformed": false,
+  "primaryClaim": {
+    "claimId": "MAJORITY_OF_ENDPOINT_DOMAINS_PASS_UNDER_ANY_FOUR_OF_FIVE_COMPARATOR_RULE",
+    "comparators": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF"
+    ],
+    "denominatorDomains": 7,
+    "minimumComparatorHypothesesRequiredForDomainPass": 4,
+    "pass": true,
+    "rankingOrWinnerClaim": false,
+    "requiredDomains": 4,
+    "supportedDomains": 4
+  },
+  "rankingOrWinnerComputed": false,
+  "schema": "gate14re-me-formal-st-analysis-terminal-receipt-v1",
+  "sourceAcceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "sourceRootsModified": false,
+  "status": "PASS_FORMAL_ST_ANY_FOUR_OF_FIVE_DOMAIN_RULE_ANALYSIS",
+  "studyId": "Gate14Re-ME"
+}

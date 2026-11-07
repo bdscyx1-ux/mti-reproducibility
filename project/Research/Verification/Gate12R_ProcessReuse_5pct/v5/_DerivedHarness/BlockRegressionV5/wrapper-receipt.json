@@ -1,0 +1,32 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-block-regression-canonical-reference-route-wrapper-v5",
+    "createdAtUtc":  "2026-10-07T15:06:41.6935604Z",
+    "sourceSha256":  "fa2385bc102b93bc90608d3901634d6b51e996429238a9875f0d7c024426511a",
+    "derivedSha256":  "ab4fa5446182c866b2e276c211f31bbcac536d0ec8418a7b3ecf38157ef948ce",
+    "routes":  [
+                   {
+                       "from":  "Research\\Run-Gate12RProcessReuseBlock.ps1",
+                       "to":  "Research\\Run-Gate12RProcessReuseBlockV4.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Run-Gate12RColdReference.ps1",
+                       "to":  "Research\\Run-Gate12RColdReferenceV3.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Gate12R_5pct_ProcessReuse_Pilot_Plan.v1.json",
+                       "to":  "Research\\Gate12R_5pct_ProcessReuse_Pilot_Plan.v3.json",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "summaryKind=\u0027gate12r-block-cold-repeatability-retained-regression-gates-v1\u0027",
+                       "to":  "summaryKind=\u0027gate12r-block-cold-repeatability-retained-regression-gates-v3-upstream-canonical-reference\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "thresholdsChanged":  false,
+    "williamsOrderChanged":  false,
+    "algorithmSemanticsChanged":  false
+}

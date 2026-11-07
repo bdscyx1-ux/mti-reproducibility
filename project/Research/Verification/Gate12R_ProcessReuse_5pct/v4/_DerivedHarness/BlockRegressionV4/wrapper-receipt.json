@@ -1,0 +1,32 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-block-regression-reset-contract-route-wrapper-v4",
+    "createdAtUtc":  "2026-10-07T11:59:49.0615366Z",
+    "sourceSha256":  "fa2385bc102b93bc90608d3901634d6b51e996429238a9875f0d7c024426511a",
+    "derivedSha256":  "6111034a1b15d2db95ee2177aa8a4ae66e6efd7da203b7151f7625bb23cbf5c8",
+    "routes":  [
+                   {
+                       "from":  "Research\\Run-Gate12RProcessReuseBlock.ps1",
+                       "to":  "Research\\Run-Gate12RProcessReuseBlockV2.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Run-Gate12RColdReference.ps1",
+                       "to":  "Research\\Run-Gate12RColdReferenceV3.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Gate12R_5pct_ProcessReuse_Pilot_Plan.v1.json",
+                       "to":  "Research\\Gate12R_5pct_ProcessReuse_Pilot_Plan.v2.json",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "summaryKind=\u0027gate12r-block-cold-repeatability-retained-regression-gates-v1\u0027",
+                       "to":  "summaryKind=\u0027gate12r-block-cold-repeatability-retained-regression-gates-v2-reset-contract\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "thresholdsChanged":  false,
+    "williamsOrderChanged":  false,
+    "algorithmSemanticsChanged":  false
+}

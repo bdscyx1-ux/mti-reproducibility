@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": "Condition-stratified and aggregate directions were checked; no complete all-condition reversal was detected.",
+      "fallacy": "Simpson's paradox",
+      "severity": "NONE_DETECTED"
+    },
+    {
+      "detail": "Inference is explicitly restricted to repeated complete blocks in the eight fixed conditions; agent- or frame-level records are not treated as independent n.",
+      "fallacy": "Ecological fallacy",
+      "severity": "NONE_DETECTED"
+    },
+    {
+      "detail": "All 1,536 preregistered valid blocks were committed; there was no outcome-based block selection and no whole-block replacement.",
+      "fallacy": "Berkson's paradox",
+      "severity": "NONE_DETECTED"
+    },
+    {
+      "detail": "The primary paired analysis does not condition on post-treatment performance variables; M2 missingness uses one shared four-algorithm mask rule.",
+      "fallacy": "Collider bias",
+      "severity": "NONE_DETECTED"
+    },
+    {
+      "detail": "The study is not a diagnostic-classification analysis. Reliability counts and denominators are reported directly.",
+      "fallacy": "Base-rate neglect",
+      "severity": "NOT_APPLICABLE"
+    },
+    {
+      "detail": "Conditions and blocks were not selected from extreme observed Gate 14Re outcomes, and prior-study effects were inadmissible.",
+      "fallacy": "Regression to the mean",
+      "severity": "NONE_DETECTED"
+    },
+    {
+      "detail": "Algorithm noncompletion remains an outcome through the M1 cap and M3 terminal states; all complete formal blocks are retained.",
+      "fallacy": "Survivorship bias",
+      "severity": "NONE_DETECTED"
+    },
+    {
+      "detail": "The primary M1 family contains the six preregistered unordered algorithm pairs and uses Holm-adjusted p-values; no result-driven endpoint search was performed.",
+      "fallacy": "Look-elsewhere effect",
+      "severity": "NONE_DETECTED"
+    },
+    {
+      "detail": "The Phase B contract, estimands, exclusions, multiplicity family, decision margins, and conservative simultaneous intervals were frozen before formal block outcomes were opened.",
+      "fallacy": "Garden of forking paths",
+      "severity": "NONE_DETECTED"
+    },
+    {
+      "detail": "Algorithm comparisons are controlled within-block interventions in fixed scenarios, but conclusions are not generalized to untested scenarios, hardware, or workloads.",
+      "fallacy": "Correlation is not causation",
+      "severity": "SCOPE_NOTE"
+    },
+    {
+      "detail": "Algorithm identity is assigned by the frozen Williams order and precedes the measured run; outcomes cannot determine algorithm identity.",
+      "fallacy": "Reverse causality",
+      "severity": "NOT_APPLICABLE"
+    }
+  ],
+  "coverage": "11/11",
+  "materialPassport": {
+    "originMode": "validate",
+    "originSkill": "experiment-agent + nature-statistics",
+    "verificationStatus": "ANALYZED",
+    "versionLabel": "gate14re_phase_b_validation_v1"
+  },
+  "overallConfidence": "SOLID",
+  "reproducibility": {
+    "method": "deterministic synthetic known-answer tests plus post-commit in-memory recomputation available",
+    "verdict": "ANALYZED_NOT_INDEPENDENTLY_REPLICATED"
+  },
+  "schema": "gate14re-phase-b-statistical-validation-v1",
+  "statisticalUnitAudit": {
+    "independentUnit": "complete block",
+    "missingDataRulePrespecified": true,
+    "multiplicityFamilyDefined": true,
+    "pairedStructureUsed": true,
+    "technicalSubsamples": [
+      "agents",
+      "rendered frames",
+      "ticks",
+      "four within-block algorithm measurements"
+    ]
+  }
+}

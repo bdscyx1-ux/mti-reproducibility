@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "provenanceKind": "gate13r-strict-serial-10pct-nonexecuting-readiness-provenance-v1",
+  "provenanceId": "gate13r-strict-serial-10pct-readiness-v1",
+  "recordedDate": "2026-10-08",
+  "timezone": "Asia/Shanghai",
+  "status": "READINESS-VALIDATION-PASSED-FORMAL-NOT-AUTHORIZED",
+  "decision": {
+    "relativePath": "Research/Gate13R_Serial_10pct_Selection.v1.json",
+    "sha256": "69dd7f80a5bf415ae4d666fbd8e50fce134bc08150e674fcd16c0ca1917f553c"
+  },
+  "artifacts": [
+    {
+      "role": "specification",
+      "relativePath": "Research/Gate13R_Serial_10pct_Redesign_Specification.v1.md",
+      "sha256": "63a417587f05b254f2e42bc8f51b350d920f132795949d95cb7152190b44a940"
+    },
+    {
+      "role": "test-design",
+      "relativePath": "Research/Gate13R_Serial_10pct_Test_Design.v1.md",
+      "sha256": "39cd0a124a6e7f2fca056fd5b887206d8a180e05a493bf552da18fd4bda3ccf3"
+    },
+    {
+      "role": "readiness-amendment",
+      "relativePath": "Research/Gate13R_Serial_10pct_Readiness_Amendment.v1.json",
+      "sha256": "f0a23f29a7b75afb2ebd981bb341d5c3ef2f4bb875b5cd0faf0ead62fe5c4359"
+    },
+    {
+      "role": "formal-plan",
+      "relativePath": "Research/Gate13R_Serial_10pct_Formal_Plan.v1.json",
+      "sha256": "73bb2ca8ac4862f1addd227e52ec79d01f69f9c2f26910dc85004bc6e09b99ce"
+    },
+    {
+      "role": "validator",
+      "relativePath": "Research/Test-Gate13RSerial10pctReadinessV1.ps1",
+      "sha256": "6b05a4625c73c0838bffa027c180a98955a29d1039a17ed4131eed4beffe56bc"
+    },
+    {
+      "role": "passed-evidence-audit",
+      "relativePath": "Research/Gate13R_Serial_10pct_Gate12R_v4_Evidence_Audit.v1.json",
+      "sha256": "84d47ac735a341ae55d8320e83c40833708409c90da47dd40d77cb4b5e14db5f"
+    },
+    {
+      "role": "passed-validation-summary",
+      "relativePath": "Research/Verification/Gate13R_Serial_10pct/v1/ReadinessValidation.summary.json",
+      "sha256": "adcf7605891608cb31e5489a9314a5c4b11b9d51a637921f3292ee23465bfbf5"
+    }
+  ],
+  "preservedValidatorFailure": {
+    "classification": "nonexecuting-validator-sort-projection-failure",
+    "unityLaunched": false,
+    "researchDataAffected": false,
+    "failedAuditRelativePath": "Research/Gate13R_Serial_10pct_Gate12R_v4_Evidence_Audit_Attempt1_Failed.v1.json",
+    "failedAuditSha256": "8e26b5da7e553208207a4d2544956811b3c9fa0d8873a7091e1a2906bb0a89b8",
+    "failedSummaryRelativePath": "Research/Verification/Gate13R_Serial_10pct/v1/ReadinessValidation.attempt1.failed.summary.json",
+    "failedSummarySha256": "8b906c248719d1753342058f174f3ed8085e3862235d42a5bf624f4a933529d0",
+    "diagnosisRelativePath": "Research/Gate13R_Serial_10pct_Readiness_Validation_Attempt1_Diagnosis.v1.json",
+    "diagnosisSha256": "1b9759b9ee9f299770ed53686cddac2cf88563a3e2e629b305b1444c8a1a6dae"
+  },
+  "frozenUpstream": {
+    "gate11RBundleManifestSha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+    "gate12RExecutionManifestSha256": "fce4c7f9c7fe7df5f424c8a8ae888133942ed49dbede71d4499e502ba812ebd6",
+    "gate12RCheckpointSha256": "ab2cd3a7d97e2097f4ed3dbc3a90607cb44390a0d2df40ffc83251ac0fb23e0f",
+    "gate12RCandidateNFormalSha256": "5e77d9b69c4c0e45dec204ca1943867453d29dcbdf1ebd24f0809af6d649c387",
+    "gate12RBudgetStorageSha256": "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f",
+    "gate12RTelemetryResultSha256": "d8b9a29f81cd147b8bfb6a94dde46eef1a8b7bca83248729a8f2b8e27824d31e"
+  },
+  "validatedFacts": {
+    "assertionCount": 114,
+    "gate12BlockAndControlProcessCount": 428,
+    "gate12TelemetryProcessCount": 1,
+    "strictSerialOverlapCount": 0,
+    "minimumInterprocessGapSeconds": 0.6759199,
+    "serialAssignmentCount": 428,
+    "terminalLicenseErrorCount": 0,
+    "uniqueProcessIdentityCount": 428,
+    "formalBlockProcessCount": 11160,
+    "formalSampleCount": 31536,
+    "serialP50Hours": 64.830802096,
+    "serialP95Hours": 83.904223147,
+    "minimumLaunchFreeBytes": 86835248752
+  },
+  "authorizationBoundary": {
+    "unityProcessesLaunchedByThisReadinessWork": 0,
+    "formalCampaignAuthorized": false,
+    "formalRootCreated": false,
+    "formalExecutionReceiptCreated": false,
+    "formalTimingSamplesCreated": false,
+    "automaticRetryAuthorized": false,
+    "automaticResumeAuthorized": false
+  }
+}

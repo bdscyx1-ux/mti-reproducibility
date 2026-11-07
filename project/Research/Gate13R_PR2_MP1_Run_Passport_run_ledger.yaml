@@ -1,0 +1,64 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-09T03:07:41Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-09T03:07:41Z'
+  user_words: 授权 Gate 13R-PR2-MP1「stage-separated memory instrumentation、failure-precedence
+    wrapper 修复、validation 和一次全新的 NON-FORMAL balanced targeted memory pilot」，严格按 `Research/Gate13R_PR2_MemoryPolicy_Targeted_Pilot_Next_Authorization_Prompt.md`
+    中的完整授权文本执行；不授权 Gate 13R-PR2 formal attempt 3，不授权 attempt 2 retry/resume/top-up/merge，不授权正式统计分析或
+    Gate 14R。
+  prev_hash: null
+  hash: 2f25990c8ce92bf47a4c9854a8c8ff95f7ed08be85cb24223220fce15589d710
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-09T03:39:32Z'
+  step: mp1-prepilot-validation
+  command: Versioned MP1 static/unit/parser/binding/Unity compile/self-test/telemetry/positive-negative
+    block/failure-precedence validation, followed by a read-only 28020-file attempt-2
+    preservation audit and final environment audit.
+  status: passed
+  exit_status: 0
+  retries_used: 2
+  output_sha256: 0c38ac7b981ee16f93b11cb00c278f86953766be51680a490cec9b05d22503d0
+  gate_tokens:
+  - PRE-PILOT-VALIDATED
+  - MEASURED-PILOT-AUTHORIZED-BUT-NOT-STARTED
+  - FORMAL-ATTEMPT3-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_MP1_PrePilot_Final_Audit.v1.json: 7d06eae1e44f23b53b72119f77dbe9f187d8404f7785bb13f92d84f3c773426d
+    Gate13R_PR2_MP1_PrePilot_Readiness_Checkpoint.v1.json: 0c38ac7b981ee16f93b11cb00c278f86953766be51680a490cec9b05d22503d0
+    Gate13R_PR2_MP1_Provenance.v1.json: 1b60cf8066b61eba44cbc22d235461b13d7519a571bcd995b580da9f787578a9
+    Gate13R_PR2_MP1_Pilot_Config.v1.json: e3b50d2a62a43e1eef7bdf65af95f1d8596d28dee83b287e2f3cc589e78029ce
+    Gate13R_PR2_MP1_Pilot_Schedule.v1.jsonl: 826c7b85da6e3fcbe982a6e3becf21318216d5579dc198f2d47f5de0dc600136
+    Gate13R_PR2_MP1_Pilot_Schedule_Manifest.v1.json: 1ad38d5c78df69d4d94374dee1f95bbb0375c2df90aa2ceab978dd0d4e221c46
+  prev_hash: 2f25990c8ce92bf47a4c9854a8c8ff95f7ed08be85cb24223220fce15589d710
+  hash: fcdd8e1689861adbb6e00f1182725c2312fa6f0d43d8fcfa4d8984c1b81f3929
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-09T03:46:10Z'
+  step: mp1-pilot-v1-acquisition
+  command: One authorized MP1 v1 measured launch created the pilot execution receipt/checkpoint,
+    then failed closed at the checkpoint start transition before any Unity process,
+    measured block, sample, or raw file. The failed root was preserved read-only;
+    no retry, resume, top-up, or merge was attempted.
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  output_sha256: 7f58a2ea114ddb86caae94ed52c18f84460229afb5082c8da6332997f20c9d14
+  gate_tokens:
+  - FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - ZERO-MEASURED-BLOCKS
+  - VERSIONED-V2-AUTHORIZATION-REQUIRED
+  input_sha256:
+    Gate13R_PR2_MP1_Pilot_v1_Failure_Checkpoint.v1.json: 7f58a2ea114ddb86caae94ed52c18f84460229afb5082c8da6332997f20c9d14
+    Gate13R_PR2_MP1_Pilot_v1_Failure_Preservation_Receipt.v1.json: 6d129e01b678871754413ca853051f7f8b921dad3ee572d35e96775fde57087e
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v1/pilot-execution-receipt.json: a7b8b63842704302be546aaa51d992264c854fc5961605a3bed209a7be160ae3
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v1/pilot-checkpoint.json: f884c02d80ed4f35fdc69437eeee6a650767b3ee64959774e436482e147dd550
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v1/pilot-failure-receipt.json: 7eaee708fc0dd23e6f391ea2e4e3450d0313b2f0f91a59d2eb71e5b30cc3d214
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v1/pilot-partial-output-manifest.json: 30a7cc396d02aeab273a73e6356401455da38352af290c83decf29afc18250e2
+    Gate13R_PR2_MP1_Attempt2_Next_Authorization_Prompt.md: 8881d622cf4ccb1fc8b0a6bc82894fac799a178e647b2973938acbc707b09f14
+    Overall_Project_Plan.md: 5c6fd5b5a8f1388f26b7d5df44dacc09ece0c1150d2294d52d0566534d76908f
+    Next_Session_Checkpoint.md: 24900286c6a33e2e43421a6094b67a2869132076691f6f7e68dba4e9017cf680
+  prev_hash: fcdd8e1689861adbb6e00f1182725c2312fa6f0d43d8fcfa4d8984c1b81f3929
+  hash: 177655b198d6981860296fd975a3fbc5a3388a0e3943b41568827378d0f5adc3

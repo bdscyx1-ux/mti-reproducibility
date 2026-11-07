@@ -1,0 +1,162 @@
+{
+    "schemaVersion":  1,
+    "planId":  "gate12r-fresh-process-reuse-5pct-pilot-plan-v1",
+    "specificationId":  "gate12r-fresh-process-reuse-5pct-pilot-spec-v1",
+    "testDesignId":  "gate12r-fresh-process-reuse-5pct-pilot-tests-v1",
+    "executionDesignId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "formalCampaign":  false,
+    "excludedFromFormalAnalysis":  true,
+    "attempt":  3,
+    "paths":  {
+                  "pilotRootRelativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v3",
+                  "verificationRootRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v5",
+                  "reservedFormalRootRelativePath":  "Research/FormalRuns/Gate13R_ProcessReuse_5pct/v1",
+                  "gate11BundleManifestRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+                  "gate11MatrixRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json",
+                  "gate11PreregistrationRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/preregistered-analysis.json",
+                  "campaignCatalogRelativePath":  "Research/PlayableExperiments/Gate11R_5pct/v1/campaign-profile-catalog.json",
+                  "presetCatalogRelativePath":  "Research/PlayableExperiments/Gate11R_5pct/v1/algorithm-preset-catalog.json",
+                  "sceneCatalogRelativePath":  "Research/PlayableExperiments/Gate11R_5pct/v1/playable-scene-catalog.json",
+                  "coverageManifestRelativePath":  "Research/PlayableExperiments/Gate11R_5pct/v1/coverage-manifest.json"
+              },
+    "upstreamHashes":  {
+                           "gate11BundleManifest":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+                           "gate11Matrix":  "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3",
+                           "gate11Preregistration":  "d1c81a83d85377f37adc6b234e7523e8b2189632bf55416734bcbbd92bf7db47",
+                           "campaignCatalog":  "f3fd6e390b57f2f230ba62a05a2471f38065d30ec6e8839be6b55b6511f961bd",
+                           "presetCatalog":  "c0aad543e8dfe8ab8f5245b6d579a459b586f030d18e3cb360917fbce6393253",
+                           "sceneCatalog":  "9b1265c2a19430016ab4365bdb895ea03f30916355ffa73782e56ab1f6d2b8b8",
+                           "coverageManifest":  "615c81b99fc31b65b56390017eeed34deaae8c4f8177b74631abd619f63d22d4"
+                       },
+    "campaignIds":  [
+                        "core-r01-s1-shared--shared",
+                        "core-r07-s2-shared--shared",
+                        "grid-scale-g256-shared--shared",
+                        "agent-scale-a512-shared--shared",
+                        "dynamic-footprint-f225-shared--shared",
+                        "reachability-c8-strict-shared--shared",
+                        "core-r01-s1-hetero--per-agent",
+                        "core-r01-s1-hetero--grouped-field",
+                        "core-r07-s2-hetero--per-agent",
+                        "core-r07-s2-hetero--grouped-field",
+                        "goal-count-g32-hetero--per-agent",
+                        "goal-count-g32-hetero--grouped-field"
+                    ],
+    "measuredBlocksPerCampaign":  32,
+    "campaignWaveStep":  5,
+    "warmup":  {
+                   "quietStabilizationSeconds":  10,
+                   "blocks":  [
+                                  {
+                                      "campaignId":  "core-r01-s1-shared--shared",
+                                      "block":  1
+                                  },
+                                  {
+                                      "campaignId":  "core-r01-s1-shared--shared",
+                                      "block":  2
+                                  },
+                                  {
+                                      "campaignId":  "core-r01-s1-shared--shared",
+                                      "block":  3
+                                  },
+                                  {
+                                      "campaignId":  "core-r01-s1-shared--shared",
+                                      "block":  4
+                                  },
+                                  {
+                                      "campaignId":  "core-r01-s1-hetero--per-agent",
+                                      "block":  1
+                                  },
+                                  {
+                                      "campaignId":  "core-r01-s1-hetero--per-agent",
+                                      "block":  2
+                                  },
+                                  {
+                                      "campaignId":  "core-r01-s1-hetero--grouped-field",
+                                      "block":  1
+                                  },
+                                  {
+                                      "campaignId":  "core-r01-s1-hetero--grouped-field",
+                                      "block":  2
+                                  }
+                              ]
+               },
+    "totals":  {
+                   "telemetryProbeProcesses":  1,
+                   "warmupProcesses":  8,
+                   "warmupSamples":  24,
+                   "coldControlProcesses":  36,
+                   "coldControlSamples":  36,
+                   "measuredBlockProcesses":  384,
+                   "measuredSamples":  1152,
+                   "totalUnityProcesses":  429,
+                   "totalSamples":  1212
+               },
+    "environment":  {
+                        "requiredPowerSchemeGuid":  "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+                        "requireAcOnline":  true,
+                        "minimumFreePhysicalMemoryBytes":  4294967296,
+                        "maximumMeanCpuLoadPercent":  50.0,
+                        "cpuLoadSampleCount":  5,
+                        "cpuLoadSampleIntervalSeconds":  1,
+                        "minimumPilotDriveFreeBytes":  21474836480,
+                        "temperatureUnavailablePolicy":  "record-unavailable-controlled-warmup-balanced-order-v1"
+                    },
+    "telemetry":  {
+                      "inProcessSourceId":  "windows-psapi-getprocessmemoryinfo-process_memory_counters_ex-v1",
+                      "externalSourceId":  "cim-win32_process-v1",
+                      "absoluteToleranceBytes":  67108864,
+                      "relativeTolerance":  0.25,
+                      "creationTimeToleranceSeconds":  2,
+                      "maximumSampleRetainedManagedGrowthBytes":  134217728,
+                      "maximumBlockRetainedManagedGrowthBytes":  134217728,
+                      "maximumBlockWorkingSetGrowthBytes":  536870912,
+                      "maximumBlockPrivateMemoryGrowthBytes":  536870912
+                  },
+    "precision":  {
+                      "endpoint":  "dynamicHandlingMillisecondsPerScheduledEvent",
+                      "transform":  "natural-log-v1",
+                      "confidenceLevel":  0.95,
+                      "criticalValue":  1.96,
+                      "relativeHalfWidth":  0.05,
+                      "logHalfWidth":  0.048790164169432,
+                      "sigmaUpperConfidence":  0.90,
+                      "sigmaUpperChiSquareLowerTail":  0.10,
+                      "minimumBlocks":  32,
+                      "cycleMultiple":  4,
+                      "hardCap":  null
+                  },
+    "formalProjectionCampaignCounts":  {
+                                           "four-algorithm-shared-goal-v1":  32,
+                                           "per-agent-heterogeneous-goal-v1":  21,
+                                           "grouped-field-heterogeneous-goal-v1":  21
+                                       },
+    "storageFeasibility":  {
+                               "p95SafetyMultiplier":  1.5,
+                               "freeSpaceReserveBytes":  21474836480
+                           },
+    "unity":  {
+                  "executablePath":  "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+                  "productVersion":  "2022.3.30f1c1_a6dc00fbe362",
+                  "executableSha256":  "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+              },
+    "failurePolicy":  {
+                          "failClosed":  true,
+                          "sameAttemptResumeAllowed":  false,
+                          "sameRootOverwriteAllowed":  false,
+                          "partialAttemptMergeAllowed":  false,
+                          "versionedRepairRetryAuthorized":  true,
+                          "stopOnFirstPass":  true
+                      },
+    "gate13rAuthorized":  false,
+    "canonicalInputStorage":  {
+                                  "amendmentId":  "gate12r-canonical-input-upstream-reference-v1",
+                                  "storageKind":  "frozen-gate11r-upstream-reference-v1",
+                                  "frozenScenarioRootRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios",
+                                  "bundleManifestSha256":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+                                  "exactByteIdentityRequired":  true,
+                                  "localCanonicalCopiesRetained":  false,
+                                  "compressionUsed":  false,
+                                  "lossyTransformationUsed":  false
+                              }
+}

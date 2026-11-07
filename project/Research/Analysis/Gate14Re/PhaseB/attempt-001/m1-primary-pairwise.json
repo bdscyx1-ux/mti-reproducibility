@@ -1,0 +1,415 @@
+{
+  "conditionsEquallyWeighted": true,
+  "effectOrientation": "first algorithm divided by second algorithm; lower is better",
+  "includedBlocksByCondition": {
+    "C01": 48,
+    "C02": 48,
+    "C03": 48,
+    "C04": 48,
+    "C05": 48,
+    "C06": 48,
+    "C07": 48,
+    "C08": 48
+  },
+  "independentUnit": "complete block",
+  "metric": "M1",
+  "multiplicity": {
+    "decisionIntervals": "Bonferroni simultaneous 95% intervals across the same six pairs",
+    "exactHolmRectangularIntervalsClaimed": false,
+    "tests": "Holm step-down adjusted p-values across six unordered algorithm pairs"
+  },
+  "pairedWithinBlock": true,
+  "pairs": [
+    {
+      "degreesOfFreedom": null,
+      "estimateLog": -1.7436905763859893,
+      "firstAlgorithm": "A",
+      "firstProductionAlgorithm": "A*-R",
+      "holmAdjustedTwoSidedP": 0.0,
+      "ordinary95LogCI": [
+        -1.7436905763859893,
+        -1.7436905763859893
+      ],
+      "ordinary95RatioCI": [
+        0.17487382302709736,
+        0.17487382302709736
+      ],
+      "pair": "A/B",
+      "ratioEstimate": 0.17487382302709736,
+      "secondAlgorithm": "B",
+      "secondProductionAlgorithm": "D*L",
+      "simultaneous95LogCI": [
+        -1.7436905763859893,
+        -1.7436905763859893
+      ],
+      "simultaneous95RatioCI": [
+        0.17487382302709736,
+        0.17487382302709736
+      ],
+      "standardErrorLog": 0.0,
+      "strata": {
+        "C01": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C02": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C03": {
+          "meanLogEffect": -3.7819698771799484,
+          "n": 48
+        },
+        "C04": {
+          "meanLogEffect": -3.7068171548006035,
+          "n": 48
+        },
+        "C05": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C06": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C07": {
+          "meanLogEffect": -3.205082502735865,
+          "n": 48
+        },
+        "C08": {
+          "meanLogEffect": -3.255655076371498,
+          "n": 48
+        }
+      },
+      "tStatistic": null,
+      "totalIndependentBlocks": 384,
+      "unadjustedTwoSidedP": 0.0
+    },
+    {
+      "degreesOfFreedom": null,
+      "estimateLog": 0.0,
+      "firstAlgorithm": "A",
+      "firstProductionAlgorithm": "A*-R",
+      "holmAdjustedTwoSidedP": 1.0,
+      "ordinary95LogCI": [
+        0.0,
+        0.0
+      ],
+      "ordinary95RatioCI": [
+        1.0,
+        1.0
+      ],
+      "pair": "A/C",
+      "ratioEstimate": 1.0,
+      "secondAlgorithm": "C",
+      "secondProductionAlgorithm": "C-FF",
+      "simultaneous95LogCI": [
+        0.0,
+        0.0
+      ],
+      "simultaneous95RatioCI": [
+        1.0,
+        1.0
+      ],
+      "standardErrorLog": 0.0,
+      "strata": {
+        "C01": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C02": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C03": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C04": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C05": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C06": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C07": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C08": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        }
+      },
+      "tStatistic": 0.0,
+      "totalIndependentBlocks": 384,
+      "unadjustedTwoSidedP": 1.0
+    },
+    {
+      "degreesOfFreedom": null,
+      "estimateLog": 0.0,
+      "firstAlgorithm": "A",
+      "firstProductionAlgorithm": "A*-R",
+      "holmAdjustedTwoSidedP": 1.0,
+      "ordinary95LogCI": [
+        0.0,
+        0.0
+      ],
+      "ordinary95RatioCI": [
+        1.0,
+        1.0
+      ],
+      "pair": "A/D",
+      "ratioEstimate": 1.0,
+      "secondAlgorithm": "D",
+      "secondProductionAlgorithm": "IDFF",
+      "simultaneous95LogCI": [
+        0.0,
+        0.0
+      ],
+      "simultaneous95RatioCI": [
+        1.0,
+        1.0
+      ],
+      "standardErrorLog": 0.0,
+      "strata": {
+        "C01": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C02": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C03": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C04": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C05": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C06": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C07": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C08": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        }
+      },
+      "tStatistic": 0.0,
+      "totalIndependentBlocks": 384,
+      "unadjustedTwoSidedP": 1.0
+    },
+    {
+      "degreesOfFreedom": null,
+      "estimateLog": 1.7436905763859893,
+      "firstAlgorithm": "B",
+      "firstProductionAlgorithm": "D*L",
+      "holmAdjustedTwoSidedP": 0.0,
+      "ordinary95LogCI": [
+        1.7436905763859893,
+        1.7436905763859893
+      ],
+      "ordinary95RatioCI": [
+        5.718408751463312,
+        5.718408751463312
+      ],
+      "pair": "B/C",
+      "ratioEstimate": 5.718408751463312,
+      "secondAlgorithm": "C",
+      "secondProductionAlgorithm": "C-FF",
+      "simultaneous95LogCI": [
+        1.7436905763859893,
+        1.7436905763859893
+      ],
+      "simultaneous95RatioCI": [
+        5.718408751463312,
+        5.718408751463312
+      ],
+      "standardErrorLog": 0.0,
+      "strata": {
+        "C01": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C02": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C03": {
+          "meanLogEffect": 3.7819698771799484,
+          "n": 48
+        },
+        "C04": {
+          "meanLogEffect": 3.7068171548006035,
+          "n": 48
+        },
+        "C05": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C06": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C07": {
+          "meanLogEffect": 3.205082502735865,
+          "n": 48
+        },
+        "C08": {
+          "meanLogEffect": 3.255655076371498,
+          "n": 48
+        }
+      },
+      "tStatistic": null,
+      "totalIndependentBlocks": 384,
+      "unadjustedTwoSidedP": 0.0
+    },
+    {
+      "degreesOfFreedom": null,
+      "estimateLog": 1.7436905763859893,
+      "firstAlgorithm": "B",
+      "firstProductionAlgorithm": "D*L",
+      "holmAdjustedTwoSidedP": 0.0,
+      "ordinary95LogCI": [
+        1.7436905763859893,
+        1.7436905763859893
+      ],
+      "ordinary95RatioCI": [
+        5.718408751463312,
+        5.718408751463312
+      ],
+      "pair": "B/D",
+      "ratioEstimate": 5.718408751463312,
+      "secondAlgorithm": "D",
+      "secondProductionAlgorithm": "IDFF",
+      "simultaneous95LogCI": [
+        1.7436905763859893,
+        1.7436905763859893
+      ],
+      "simultaneous95RatioCI": [
+        5.718408751463312,
+        5.718408751463312
+      ],
+      "standardErrorLog": 0.0,
+      "strata": {
+        "C01": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C02": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C03": {
+          "meanLogEffect": 3.7819698771799484,
+          "n": 48
+        },
+        "C04": {
+          "meanLogEffect": 3.7068171548006035,
+          "n": 48
+        },
+        "C05": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C06": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C07": {
+          "meanLogEffect": 3.205082502735865,
+          "n": 48
+        },
+        "C08": {
+          "meanLogEffect": 3.255655076371498,
+          "n": 48
+        }
+      },
+      "tStatistic": null,
+      "totalIndependentBlocks": 384,
+      "unadjustedTwoSidedP": 0.0
+    },
+    {
+      "degreesOfFreedom": null,
+      "estimateLog": 0.0,
+      "firstAlgorithm": "C",
+      "firstProductionAlgorithm": "C-FF",
+      "holmAdjustedTwoSidedP": 1.0,
+      "ordinary95LogCI": [
+        0.0,
+        0.0
+      ],
+      "ordinary95RatioCI": [
+        1.0,
+        1.0
+      ],
+      "pair": "C/D",
+      "ratioEstimate": 1.0,
+      "secondAlgorithm": "D",
+      "secondProductionAlgorithm": "IDFF",
+      "simultaneous95LogCI": [
+        0.0,
+        0.0
+      ],
+      "simultaneous95RatioCI": [
+        1.0,
+        1.0
+      ],
+      "standardErrorLog": 0.0,
+      "strata": {
+        "C01": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C02": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C03": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C04": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C05": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C06": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C07": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        },
+        "C08": {
+          "meanLogEffect": 0.0,
+          "n": 48
+        }
+      },
+      "tStatistic": 0.0,
+      "totalIndependentBlocks": 384,
+      "unadjustedTwoSidedP": 1.0
+    }
+  ],
+  "schema": "gate14re-phase-b-m1-pairwise-v1"
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate13r-pr1b-v4-composite-process-identity-analysis-recovery-authorization-v1",
+  "authorizedAtUtc": "2026-10-08T15:37:58.1651728Z",
+  "authorizedAtAsiaShanghai": "2026-10-08T23:37:58.1651728+08:00",
+  "authorizationSource": "User message authorizing the complete text of Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Next_Authorization_Prompt.md",
+  "authorizationPromptRelativePath": "Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Next_Authorization_Prompt.md",
+  "authorizationPromptSha256": "bdcee00366e12c679aa19a32e3b08780ebb9e50a49e844be7db5eef071a15e77",
+  "authorized": {
+    "versionedNonExecutingAnalyzerRepair": true,
+    "validationOnlyRepairAndRetryBeforeRecovery": true,
+    "oneReadOnlyAnalysisRecovery": true,
+    "independentAnalysisOutputRoot": true
+  },
+  "notAuthorized": {
+    "unityEditorInvocation": true,
+    "pilotRetry": true,
+    "pilotResume": true,
+    "pilotTopUp": true,
+    "pilotMerge": true,
+    "gate13rFormalCampaign": true,
+    "gate14r": true,
+    "formalRootCreation": true,
+    "formalExecutionReceipt": true,
+    "obsData": true
+  },
+  "frozenPilot": {
+    "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed",
+    "status": "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / NON-FORMAL / COMPLETE-RAW-EXECUTION / POST-EXECUTION-ANALYZER-FAILED / EXCLUDED-FROM-FORMAL-ANALYSIS"
+  },
+  "recoveryPolicy": {
+    "maximumRecoveryExecutions": 1,
+    "automaticRecoveryRetryAllowed": false,
+    "recoveryReadsFrozenPilotOnly": true,
+    "recoveryWritesFrozenPilot": false,
+    "formalInference": false
+  }
+}

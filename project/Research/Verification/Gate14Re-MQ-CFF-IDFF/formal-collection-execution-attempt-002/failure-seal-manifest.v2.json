@@ -1,0 +1,81 @@
+{
+  "schema": "gate14re-mq-formal-collection-failure-seal-manifest-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "authorizationId": "gate14re-mq-formal-collection-attempt-002-f90d7adb-594e-4356-97dd-66ec22861117",
+  "status": "SEALED_FAILED_ATTEMPT_NO_RETRY_OR_RESUME",
+  "sealedAtUtc": "2026-10-21T17:23:06.2808097+00:00",
+  "evidenceRoot": "H:/DDM_Final_Project/Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-002",
+  "measuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-002",
+  "artifactCount": 12,
+  "evidenceArtifacts": [
+    {
+      "relativePath": "execution-authorization.v2.json",
+      "bytes": 2961,
+      "sha256": "38fe3f41ac563426c79e10d81fdba432a4c0a82f61d2a276199b6797b3b7818d"
+    },
+    {
+      "relativePath": "prelaunch-audit.v2.json",
+      "bytes": 6001,
+      "sha256": "be74003b5df0954f86301700366940311be01451ac608cf6b53ba3f318e91b7d"
+    },
+    {
+      "relativePath": "launch-contract.v2.json",
+      "bytes": 6004,
+      "sha256": "c9b47c1b5aea845583ebc76cb95a0492c3ef4496fc54c72d7a6bbccb7267b281"
+    },
+    {
+      "relativePath": "external-launch-observation.v2.json",
+      "bytes": 3696,
+      "sha256": "b4d22f0b0de7fb103be5275b3aa6c3b5cf9e8c3bdea7b814fe6951577bf012f1"
+    },
+    {
+      "relativePath": "failure-receipt.v2.json",
+      "bytes": 2566,
+      "sha256": "f984df0930d7251f0f98a99f160ef5f9f86382f26e3d7dd3596dc01f630d3c2d"
+    },
+    {
+      "relativePath": "supervisor.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "supervisor.stderr.log",
+      "bytes": 416,
+      "sha256": "fff348f0555e478f8e955770e22b01cf5d07c5f035bcde0e8d891e161debf122"
+    }
+  ],
+  "measuredArtifacts": [
+    {
+      "relativePath": "_control/acquisition-failure-receipt.v2.json",
+      "bytes": 533,
+      "sha256": "c130b2323d6665a65a2561b3ee7a89ef9ff6c7f9e166f9995ba0c62f6a4314ce"
+    },
+    {
+      "relativePath": "_control/failures-and-voids.raw.v2.jsonl",
+      "bytes": 347,
+      "sha256": "7f085d1f0025de8d2e83337bbe155ba9f95f180592d006b251182934c365bafe"
+    },
+    {
+      "relativePath": "_control/launch-receipt.v2.json",
+      "bytes": 1469,
+      "sha256": "84399b576689309bf912238a94cf6178dc00cf0db250090b309e3213807bacc6"
+    },
+    {
+      "relativePath": "_control/process-ledger.raw.v2.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "_control/replacement-ledger.raw.v2.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "measuredRootCreated": true,
+  "measuredUnityProcessesLaunched": 1,
+  "completedMeasuredUnityProcesses": 0,
+  "formalObservationsCreated": 0,
+  "formalAnalysisStarted": false,
+  "sameAttemptMayBeReused": false
+}

@@ -1,0 +1,77 @@
+{
+    "schemaVersion":  1,
+    "receiptId":  "gate10r-attempt3-retained-regression-failure-v3",
+    "createdAtUtc":  "2026-10-06T14:18:11.8094223Z",
+    "status":  "GATE10R-ATTEMPT3-FAILED-NO-AUTO-RETRY",
+    "attempt":  3,
+    "officialExecutionCount":  1,
+    "failedStage":  "retained-regression",
+    "failureClass":  "VERSIONED-ORCHESTRATION-WRAPPER-SCOPE-DEFECT",
+    "failureSummary":  "The frozen tests reported no failures but the versioned wrapper invocation produced assertionCount=0 instead of the required 63; the hard gate stopped before final audit.",
+    "diagnosticInference":  "Executing the frozen source as a child ScriptBlock separates its local $assertions from the $script:assertions incremented by assertion helpers under Windows PowerShell 5.1.",
+    "diagnosticScopeProbe":  {
+                                 "localAssertions":  0,
+                                 "scriptAssertions":  1,
+                                 "exitCode":  0,
+                                 "writeOperations":  false
+                             },
+    "passedStages":  [
+                         "no-unity-preflight-67-of-67",
+                         "unit-tests-59-of-59",
+                         "unity-compile-natural-lock-release",
+                         "telemetry-probe-natural-lock-release",
+                         "block-verification-4-invocations-6-cold-10-comparisons-zero-mismatch"
+                     ],
+    "retainedRegression":  {
+                               "wrapperExitCode":  1,
+                               "summaryRelativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/RetainedRegression/RetainedRegression63.summary.json",
+                               "summarySha256":  "d008ab6d94e5d62e0f1773fef5eb92632c7352da04f75045b5e96c3231141dcb",
+                               "stdoutSha256":  "1d9aca22d6743f91bb000d61dd2d808e678948b28a4fcb92b05c1bf710868bf4",
+                               "stderrSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                               "reportedPassed":  true,
+                               "reportedFailureCount":  0,
+                               "reportedAssertionCount":  0,
+                               "requiredAssertionCount":  63
+                           },
+    "originalEvidence":  {
+                             "frozenTestRelativePath":  "Research/Verification/Run-Gate12AnalysisUnitTests.ps1",
+                             "frozenTestSha256":  "e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1",
+                             "originalSummaryRelativePath":  "Research/Verification/Gate12_AnalysisUnitTests.summary.json",
+                             "originalSummarySha256":  "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d",
+                             "unchanged":  true
+                         },
+    "diagnosis":  {
+                      "relativePath":  "Research/Gate10R_Attempt3_RetainedRegression_Failure_Diagnosis.v1.md",
+                      "sha256":  "cf70bfa21b3f47e5e0eca63d0ae5bcfefca6eda93b82461a115424fc12707fb4"
+                  },
+    "partialOutputManifest":  {
+                                  "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Gate10R_Attempt3_Partial_Output_Manifest.v3.json",
+                                  "sha256":  "1c0a4aa737e217cd93bb35d5cfa8cc3286bb8954b8df56320c88c03c5632979c",
+                                  "artifactCount":  162,
+                                  "rawBytes":  14598617
+                              },
+    "historicalBoundaries":  {
+                                 "attempt1":  {
+                                                  "fileCount":  4,
+                                                  "rawBytes":  9577,
+                                                  "treeSha256":  "2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d"
+                                              },
+                                 "attempt2":  {
+                                                  "fileCount":  101,
+                                                  "rawBytes":  9375526,
+                                                  "treeSha256":  "da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce"
+                                              }
+                             },
+    "unityProcessCountAtClosure":  0,
+    "projectLockExistsAtClosure":  false,
+    "finalAuditStarted":  false,
+    "automaticRetryAttempted":  false,
+    "automaticResumeAttempted":  false,
+    "gate11RAuthorized":  false,
+    "gate11RStarted":  false,
+    "gate12RAuthorized":  false,
+    "gate12RStarted":  false,
+    "gate13RAuthorized":  false,
+    "gate13RStarted":  false,
+    "formalCampaign":  false
+}

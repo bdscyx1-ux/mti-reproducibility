@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-qualification-resource-budget-v4.1",
+  "studyId": "Gate14Re-ME",
+  "status": "FROZEN_V4_1_ORACLE_CACHE_BOUNDED_LOAD_PREEXECUTION_BUDGETS",
+  "eventGroupHardTimeoutMilliseconds": 300000,
+  "laneWallClockHardTimeoutMilliseconds": 600000,
+  "oracleBatchHardTimeoutMilliseconds": 3600000,
+  "instrumentProcessHardTimeoutMilliseconds": 600000,
+  "emptyBoundaryProcessHardTimeoutMilliseconds": 300000,
+  "plannerOperationBudgetMilliseconds": 240000.0,
+  "repairOperationBudgetMilliseconds": 240000.0,
+  "initializationOperationBudgetMilliseconds": 600000.0,
+  "laneAssignedCommittedMemoryBytes": 17179869184,
+  "qualificationReservedStorageBytes": 34359738368,
+  "formalRawAndDeliveryReservedStorageBytes": 0,
+  "maximumConcurrentUnityProcesses": 1,
+  "maximumWholeSuperblockTechnicalReplacements": 0,
+  "minimumHeadroomFactor": 1.5,
+  "v4EngineeringGates": {
+    "freshProcessOrder": "STRICT_SERIAL",
+    "retryResumeTopUpMergeSkipReorderReplacement": "PROHIBITED",
+    "targetLaneP99SecondsAtReadiness": 180,
+    "targetAnyLaneSecondsAtReadiness": 300,
+    "hardLaneFailStopSeconds": 600,
+    "purpose": "The hard stop prevents an individual tail lane from extending acquisition without bound; it is not a performance target and a timeout fails the entire attempt closed."
+  },
+  "oracleCacheV41": {
+    "batchCount": 6,
+    "inputsPerBatch": 21,
+    "assignmentRule": "balanced-g-n-f-replicate-v4.1-formula",
+    "algorithmNeutralImmutablePerInputCache": true,
+    "laneReferenceOracleEvaluations": 0,
+    "strictSerialFreshUnityBatchProcesses": true,
+    "retryResumeTopUpMergeSkipReorderReplacement": "PROHIBITED",
+    "purpose": "Compute each input's reference oracle once, hash-bind it, and reuse it read-only across the six paired lanes without changing any algorithm treatment or scientific factor."
+  },
+  "scope": {
+    "qualificationDesignFrozen": true,
+    "overallFormalDesignFrozen": false,
+    "formalSampleSizeFinalized": false,
+    "qualificationExecutionAuthorized": false,
+    "qualificationOnly": true,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "acceptanceRunsInsideAcquisitionSupervisor": false
+  }
+}

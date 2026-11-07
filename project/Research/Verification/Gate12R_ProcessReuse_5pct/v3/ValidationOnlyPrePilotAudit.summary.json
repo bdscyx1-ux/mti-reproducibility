@@ -1,0 +1,625 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate12r-validation-only-pre-pilot-audit-v1",
+    "auditMode":  "validation-only-no-pilot-root",
+    "savedAtUtc":  "2026-10-07T10:04:11.4776213Z",
+    "pilotPlanSha256":  "68f32ee7acdeaa4c43a4f4932825e40e552bb5df473a96c66a9dcffef45d8ff3",
+    "provenanceSha256":  "637155dadfee477c0b2682937b1e3f190fe947dda9d916356cbe48fea2682638",
+    "telemetryResultSha256":  "3c2c6ba8f3bd385942d66b05d7fd05ae14e106db538dc7627435c70535c4c4cf",
+    "checkCount":  121,
+    "checks":  [
+                   {
+                       "id":  "plan-hash",
+                       "passed":  true,
+                       "evidence":  "frozen Gate12R plan bytes"
+                   },
+                   {
+                       "id":  "bundle-hash",
+                       "passed":  true,
+                       "evidence":  "authorized Gate11R bundle bytes"
+                   },
+                   {
+                       "id":  "binding-pilotPlan",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Plan.v1.json"
+                   },
+                   {
+                       "id":  "binding-specification",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Specification.v1.md"
+                   },
+                   {
+                       "id":  "binding-testDesign",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Test_Design.v1.md"
+                   },
+                   {
+                       "id":  "binding-executionAuthorization",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_Execution_Authorization.v1.json"
+                   },
+                   {
+                       "id":  "binding-preservationBaselineV1",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_PreWrite_Preservation_Baseline.v1.json"
+                   },
+                   {
+                       "id":  "binding-preservationBaselineV2",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_PreWrite_Preservation_Baseline.v2.json"
+                   },
+                   {
+                       "id":  "binding-compatibilityDiagnosis",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_Development_Static_Smoke_Failure_Diagnosis.v1.md"
+                   },
+                   {
+                       "id":  "binding-provenanceV1",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Provenance.v1.json"
+                   },
+                   {
+                       "id":  "binding-developmentFailureReceipt",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/development-static-smoke-v1/failure-receipt.json"
+                   },
+                   {
+                       "id":  "binding-developmentFailureManifest",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/development-static-smoke-v1/partial-output-manifest.json"
+                   },
+                   {
+                       "id":  "binding-developmentFailureCheckpoint",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/development-static-smoke-v1/checkpoint.json"
+                   },
+                   {
+                       "id":  "binding-gate10PassedCheckpoint",
+                       "passed":  true,
+                       "evidence":  "Research/Gate10R_Attempt4_Passed_Checkpoint.md"
+                   },
+                   {
+                       "id":  "binding-gate11PassedCheckpoint",
+                       "passed":  true,
+                       "evidence":  "Research/Gate11R_Attempt2_Passed_Checkpoint.md"
+                   },
+                   {
+                       "id":  "binding-gate11CanonicalBaseline",
+                       "passed":  true,
+                       "evidence":  "Research/Gate11R_Attempt2_Canonical_Preservation_Baseline.v2.json"
+                   },
+                   {
+                       "id":  "binding-gate11CanonicalPs51",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate11R_5pct_PreImplementation/v2/canonical-tree-identity.powershell51.v2.json"
+                   },
+                   {
+                       "id":  "binding-gate11CanonicalPs7",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate11R_5pct_PreImplementation/v2/canonical-tree-identity.powershell7.v2.json"
+                   },
+                   {
+                       "id":  "binding-gate11BundleManifest",
+                       "passed":  true,
+                       "evidence":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json"
+                   },
+                   {
+                       "id":  "binding-gate11Matrix",
+                       "passed":  true,
+                       "evidence":  "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json"
+                   },
+                   {
+                       "id":  "binding-gate11Preregistration",
+                       "passed":  true,
+                       "evidence":  "Research/FormalScenarios/Gate11R_5pct/v1/preregistered-analysis.json"
+                   },
+                   {
+                       "id":  "binding-campaignCatalog",
+                       "passed":  true,
+                       "evidence":  "Research/PlayableExperiments/Gate11R_5pct/v1/campaign-profile-catalog.json"
+                   },
+                   {
+                       "id":  "binding-presetCatalog",
+                       "passed":  true,
+                       "evidence":  "Research/PlayableExperiments/Gate11R_5pct/v1/algorithm-preset-catalog.json"
+                   },
+                   {
+                       "id":  "binding-sceneCatalog",
+                       "passed":  true,
+                       "evidence":  "Research/PlayableExperiments/Gate11R_5pct/v1/playable-scene-catalog.json"
+                   },
+                   {
+                       "id":  "binding-coverageManifest",
+                       "passed":  true,
+                       "evidence":  "Research/PlayableExperiments/Gate11R_5pct/v1/coverage-manifest.json"
+                   },
+                   {
+                       "id":  "binding-gate10Module",
+                       "passed":  true,
+                       "evidence":  "Research/Gate10RProcessReusePreparation.psm1"
+                   },
+                   {
+                       "id":  "binding-lockHygieneModule",
+                       "passed":  true,
+                       "evidence":  "Research/Gate10RLockHygieneV3.psm1"
+                   },
+                   {
+                       "id":  "binding-unityCommand",
+                       "passed":  true,
+                       "evidence":  "Assets/_Scripts/Research/Editor/Gate10RProcessReuseBatchCommand.cs"
+                   },
+                   {
+                       "id":  "binding-retainedHarness",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate10RAttempt4RetainedHarnessV4.ps1"
+                   },
+                   {
+                       "id":  "binding-retainedFrozenSource",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12AnalysisUnitTests.ps1"
+                   },
+                   {
+                       "id":  "binding-retainedFrozenSummary",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12_AnalysisUnitTests.summary.json"
+                   },
+                   {
+                       "id":  "binding-gate12Module",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12RProcessReusePreparation.psm1"
+                   },
+                   {
+                       "id":  "binding-blockRunner",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RProcessReuseBlock.ps1"
+                   },
+                   {
+                       "id":  "binding-telemetryRunner",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RTelemetryProbe.ps1"
+                   },
+                   {
+                       "id":  "binding-coldRunner",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RColdReference.ps1"
+                   },
+                   {
+                       "id":  "binding-analyzer",
+                       "passed":  true,
+                       "evidence":  "Research/Analyze-Gate12RPilot.ps1"
+                   },
+                   {
+                       "id":  "binding-pilotRunner",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RPilot.ps1"
+                   },
+                   {
+                       "id":  "binding-compileGate",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RCompile.ps1"
+                   },
+                   {
+                       "id":  "binding-staticUnitGateV1",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RStaticUnitAudit.ps1"
+                   },
+                   {
+                       "id":  "binding-staticUnitGateV2",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RStaticUnitAuditV2.ps1"
+                   },
+                   {
+                       "id":  "binding-blockRegressionGate",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RBlockAndRegressionGates.ps1"
+                   },
+                   {
+                       "id":  "binding-validationOnlyAudit",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RValidationOnlyPrePilotAudit.ps1"
+                   },
+                   {
+                       "id":  "binding-postPilotAudit",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RPostPilotReadinessAudit.ps1"
+                   },
+                   {
+                       "id":  "binding-prePilotAttemptV1",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RPrePilotAttempt.ps1"
+                   },
+                   {
+                       "id":  "binding-prePilotAttemptV2",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RPrePilotAttemptV2.ps1"
+                   },
+                   {
+                       "id":  "binding-provenanceGeneratorV1",
+                       "passed":  true,
+                       "evidence":  "Research/New-Gate12RProvenance.ps1"
+                   },
+                   {
+                       "id":  "binding-provenanceGeneratorV2",
+                       "passed":  true,
+                       "evidence":  "Research/New-Gate12RProvenanceV2.ps1"
+                   },
+                   {
+                       "id":  "binding-provenanceV2",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Provenance.v2.json"
+                   },
+                   {
+                       "id":  "binding-attempt1FailureDiagnosis",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_Attempt1_Compile_Count_Failure_Diagnosis.v1.md"
+                   },
+                   {
+                       "id":  "binding-compileGateV2",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RCompileV2.ps1"
+                   },
+                   {
+                       "id":  "binding-telemetryRunnerV2",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RTelemetryProbeV2.ps1"
+                   },
+                   {
+                       "id":  "binding-coldRunnerV2",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RColdReferenceV2.ps1"
+                   },
+                   {
+                       "id":  "binding-blockRegressionGateV2",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RBlockAndRegressionGatesV2.ps1"
+                   },
+                   {
+                       "id":  "binding-pilotRunnerV2",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RPilotV2.ps1"
+                   },
+                   {
+                       "id":  "binding-prePilotAttemptV3",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RPrePilotAttemptV3.ps1"
+                   },
+                   {
+                       "id":  "binding-provenanceGeneratorV3",
+                       "passed":  true,
+                       "evidence":  "Research/New-Gate12RProvenanceV3.ps1"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0001",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/_DerivedHarness/Run-Gate12RStaticUnitAuditV2.derived.ps1"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0002",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/_DerivedHarness/StaticUnitV2.child.stderr.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0003",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/_DerivedHarness/StaticUnitV2.child.stdout.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0004",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/_DerivedHarness/StaticUnitV2.wrapper.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0005",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/Compile/Gate12R.Unity.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0006",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/Compile/LockHygiene/gate12r-compile.quiescence.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0007",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/execution-receipt.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0008",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/failure-receipt.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0009",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/gate12r-checkpoint.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0010",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/Orchestration/01-static.stderr.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0011",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/Orchestration/01-static.stdout.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0012",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/Orchestration/02-compile.stderr.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0013",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/Orchestration/02-compile.stdout.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0014",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/partial-output-manifest.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0015",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/StaticUnit/playable-mapping-validation.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt1File0016",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v1/StaticUnit/summary.json"
+                   },
+                   {
+                       "id":  "binding-provenanceV3",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Provenance.v3.json"
+                   },
+                   {
+                       "id":  "binding-attempt2FailureDiagnosis",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_Attempt2_Derived_PSScriptRoot_Failure_Diagnosis.v1.md"
+                   },
+                   {
+                       "id":  "binding-telemetryRunnerV3",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RTelemetryProbeV3.ps1"
+                   },
+                   {
+                       "id":  "binding-coldRunnerV3",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RColdReferenceV3.ps1"
+                   },
+                   {
+                       "id":  "binding-blockRegressionGateV3",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RBlockAndRegressionGatesV3.ps1"
+                   },
+                   {
+                       "id":  "binding-pilotRunnerV3",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RPilotV3.ps1"
+                   },
+                   {
+                       "id":  "binding-prePilotAttemptV4",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RPrePilotAttemptV4.ps1"
+                   },
+                   {
+                       "id":  "binding-provenanceGeneratorV4",
+                       "passed":  true,
+                       "evidence":  "Research/New-Gate12RProvenanceV4.ps1"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0001",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/_DerivedHarness/CompileV2/Run-Gate12RCompileV2.derived.ps1"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0002",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/_DerivedHarness/CompileV2/wrapper-receipt.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0003",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/_DerivedHarness/Run-Gate12RStaticUnitAuditV2.derived.ps1"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0004",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/_DerivedHarness/StaticUnitV2.child.stderr.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0005",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/_DerivedHarness/StaticUnitV2.child.stdout.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0006",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/_DerivedHarness/StaticUnitV2.wrapper.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0007",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Compile/Gate12R.Unity.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0008",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Compile/LockHygiene/gate12r-compile.quiescence.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0009",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Compile/summary.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0010",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/execution-receipt.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0011",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/failure-receipt.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0012",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/gate12r-checkpoint.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0013",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Orchestration/01-static.stderr.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0014",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Orchestration/01-static.stdout.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0015",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Orchestration/02-compile.stderr.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0016",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Orchestration/02-compile.stdout.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0017",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Orchestration/03-telemetry.stderr.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0018",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/Orchestration/03-telemetry.stdout.log"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0019",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/partial-output-manifest.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0020",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/StaticUnit/playable-mapping-validation.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0021",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/StaticUnit/summary.json"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0022",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/TelemetryProbe/v1.DerivedHarnessV2/Run-Gate12RTelemetryProbeV2.derived.ps1"
+                   },
+                   {
+                       "id":  "binding-officialAttempt2File0023",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/v2/TelemetryProbe/v1.DerivedHarnessV2/wrapper-receipt.json"
+                   },
+                   {
+                       "id":  "static-unit",
+                       "passed":  true,
+                       "evidence":  "assertions=370"
+                   },
+                   {
+                       "id":  "playable-mapping",
+                       "passed":  true,
+                       "evidence":  "12 pilot campaigns mapped to visualization-only assets"
+                   },
+                   {
+                       "id":  "unity-compile",
+                       "passed":  true,
+                       "evidence":  "61260438055e8214b53ee1171b71f0419091c99466a0ae1866414e57f7d4cf86"
+                   },
+                   {
+                       "id":  "psapi-cim-telemetry",
+                       "passed":  true,
+                       "evidence":  "3c2c6ba8f3bd385942d66b05d7fd05ae14e106db538dc7627435c70535c4c4cf"
+                   },
+                   {
+                       "id":  "positive-negative-repeatability-cold",
+                       "passed":  true,
+                       "evidence":  "entries=14"
+                   },
+                   {
+                       "id":  "retained-regression",
+                       "passed":  true,
+                       "evidence":  "63/63 file-scope regression"
+                   },
+                   {
+                       "id":  "pilot-root-absent",
+                       "passed":  true,
+                       "evidence":  "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate12R_ProcessReuse_5pct\\v1"
+                   },
+                   {
+                       "id":  "formal-root-absent",
+                       "passed":  true,
+                       "evidence":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_ProcessReuse_5pct\\v1"
+                   },
+                   {
+                       "id":  "unity-closed",
+                       "passed":  true,
+                       "evidence":  "no Unity processes"
+                   },
+                   {
+                       "id":  "lock-absent",
+                       "passed":  true,
+                       "evidence":  "project lock absent"
+                   },
+                   {
+                       "id":  "power-scheme",
+                       "passed":  true,
+                       "evidence":  "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)"
+                   },
+                   {
+                       "id":  "ac-online",
+                       "passed":  true,
+                       "evidence":  "statusAvailable=True ac=1"
+                   },
+                   {
+                       "id":  "free-memory",
+                       "passed":  true,
+                       "evidence":  "freeBytes=21870596096"
+                   },
+                   {
+                       "id":  "mean-cpu-load",
+                       "passed":  true,
+                       "evidence":  "mean=5.4 samples=10,12,0,4,1"
+                   },
+                   {
+                       "id":  "pilot-storage-minimum",
+                       "passed":  true,
+                       "evidence":  "freeBytes=161793728512"
+                   },
+                   {
+                       "id":  "thermal-policy",
+                       "passed":  true,
+                       "evidence":  "unavailable: 不支持 "
+                   },
+                   {
+                       "id":  "precision-policy",
+                       "passed":  true,
+                       "evidence":  "5% minimum-32 multiple-4 no-cap"
+                   },
+                   {
+                       "id":  "non-formal-boundary",
+                       "passed":  true,
+                       "evidence":  "Gate13R remains unauthorized"
+                   }
+               ],
+    "failureCount":  0,
+    "failures":  [
+
+                 ],
+    "pilotExecutionAuthorizedByAudit":  true,
+    "formalCampaign":  false,
+    "gate13rAuthorized":  false,
+    "passed":  true
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "checkpoint_opened",
+  "name": "raw-analysis-two-phase-commit-frozen",
+  "user_words": "从现在起冻结数据采集提交与分析提交相互独立的两阶段规则：Unity 全部完成并通过原始数据完整性提交后，原始数据标记 RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE；普通 raw-commit auditor 或后续分析器 bug 不得触发 Unity measured blocks 重跑。每个分析 attempt 写入独立目录、只读访问同一冻结 raw root、保留失败 attempt，并以版本化修复后的分析器重新分析。只有证明原始数据本身不符合采集合同，才停止并要求新的用户决策。当前授权仍不包含 Gate 14R 或正式统计分析。",
+  "status": "frozen-before-formal-data",
+  "amendment_id": "gate13r-pr2-raw-analysis-two-phase-commit-v1",
+  "scientific_contract_changed": false,
+  "unity_process_or_sample_count_changed": false,
+  "formal_analysis_authorized": false,
+  "gate14r_authorized": false
+}

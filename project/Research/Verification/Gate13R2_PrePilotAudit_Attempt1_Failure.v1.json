@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "failureId": "gate13-r2-pre-pilot-audit-attempt1-command-length-failure-v1",
+  "failedAt": "2026-10-06T14:05:28.7932378+08:00",
+  "phase": "retained-regression-child-launch-before-negative-fixture-and-before-pilot",
+  "classification": "pre-pilot-audit-implementation-failure",
+  "message": "Windows PowerShell rejected the in-memory retained-regression child launch because the -EncodedCommand command line exceeded the platform length limit.",
+  "provenanceV1": {
+    "relativePath": "Research/Gate13_ProcessReuse_Provenance.v1.json",
+    "sha256": "00ea49c8c2b2ffefdf8c9f7b74ed78cfa43ee18d997ec8079e6d858f058dc8f1"
+  },
+  "evidenceState": {
+    "prePilotAuditSummaryCreated": false,
+    "retainedRegressionSummaryCreated": false,
+    "negativeFixturePlanCreated": false,
+    "negativeFixtureRootCreated": false,
+    "processReusePilotRootCreated": false,
+    "processReuseFormalRootCreated": false,
+    "unityProcessCountAfterFailure": 0,
+    "unityLockfilePresentAfterFailure": false
+  },
+  "automaticRetryAttempted": false,
+  "automaticResumeAttempted": false,
+  "formalCampaign": false,
+  "formalExecutionAuthorized": false,
+  "disposition": "SUPERSEDED-BEFORE-PILOT-BY-V2-PROVENANCE-AFTER-AUDIT-LAUNCH-FIX"
+}

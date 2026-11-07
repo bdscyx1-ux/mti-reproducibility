@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-36h-attempt6-generator-derivation-v1",
+  "createdAtUtc": "2026-10-08T05:06:23.2858539Z",
+  "sourceRelativePath": "Research/Verification/New-Gate13R36hAttempt5ArtifactsV1.ps1",
+  "sourceSha256": "05f7208b942a5ffd9c2f055645243e8c68578dba82fbbdce0580e98c8fed5481",
+  "destinationRelativePath": "Research/Verification/New-Gate13R36hAttempt6ArtifactsV1.ps1",
+  "destinationSha256": "2c1a2e5d37b2b344a56472b2009d4434f2557c78b8bce1c34b0f4ea976cf7a08",
+  "amendmentRelativePath": "Research/Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v6.json",
+  "amendmentSha256": "251b2a54af81d19dc98967c93c175264e14aa88df3ec90d4efda1ab7ddb5f402",
+  "attempt5FailureReceiptSha256": "b0e21fec82dc717c2089a8d110050971b635cb8fd4ce876d7fc70b39f961861d",
+  "attempt5PartialManifestSha256": "f62366baa7d0147d85563039605c5cae15fde20d491bffe295c6e94d061dcd6c",
+  "routes": [
+    {
+      "from": "Attempt5",
+      "to": "Attempt6",
+      "count": 7
+    },
+    {
+      "from": "attempt5",
+      "to": "attempt6",
+      "count": 5
+    },
+    {
+      "from": "V5",
+      "to": "V6",
+      "count": 65
+    },
+    {
+      "from": "v5",
+      "to": "v6",
+      "count": 68
+    },
+    {
+      "from": "$plan.pilotAttempt=5",
+      "to": "$plan.pilotAttempt=6",
+      "count": 1
+    },
+    {
+      "from": "Research\\Verification\\Run-Gate13R36hLockHygieneUnitV6.ps1",
+      "to": "Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1",
+      "count": 4
+    },
+    {
+      "from": "Research\\Gate13R_36h_10pct_4Lane_ExpectedNegative_LockHygiene_Test_Design.v6.md",
+      "to": "Research\\Gate13R_36h_10pct_4Lane_ExpectedNegative_LockHygiene_Test_Design.v5.md",
+      "count": 1
+    },
+    {
+      "from": "Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v9\\LockHygieneUnitV6\\summary.json",
+      "to": "Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v9\\LockHygieneUnitV5\\summary.json",
+      "count": 1
+    },
+    {
+      "from": "Research\\Verification\\Gate13R36hAttempt6AuthorizedOverlayTemplateV1.ps1.txt",
+      "to": "Research\\Verification\\Gate13R36hAttempt5AuthorizedOverlayTemplateV1.ps1.txt",
+      "count": 2
+    },
+    {
+      "from": "attempt6OverlayTemplate=Bound",
+      "to": "attempt5OverlayTemplate=Bound",
+      "count": 1
+    },
+    {
+      "from": "$staticSmokeTo=$staticSmokeFrom+\"`n      \"+\"@{name='lock-hygiene-unit';script='Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1';arguments=@('-ProjectPath',$ProjectPath,'-OutputDirectory',(Join-Path $preImplementationRoot 'BindingSmokeLockHygiene'),'-BindingSmokeOnly')},\"",
+      "to": "$staticSmokeTo=$staticSmokeFrom+\"`n      \"+\"@{name='lock-hygiene-unit';script='Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1';arguments=@('-ProjectPath',`$ProjectPath,'-OutputDirectory',(Join-Path `$preImplementationRoot 'BindingSmokeLockHygiene'),'-BindingSmokeOnly')},\"",
+      "count": 1
+    },
+    {
+      "from": "    'Research\\Verification\\Gate13R36hAttempt5AuthorizedOverlayTemplateV1.ps1.txt',",
+      "to": "    'Research\\Verification\\Gate13R36hAttempt5AuthorizedOverlayTemplateV1.ps1.txt',\n    'Research\\Gate13R_36h_10pct_4Lane_ExpectedNegative_LockHygiene_Test_Design.v5.md',\n    'Research\\Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v5.json',\n    'Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1',\n    'Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v9\\LockHygieneUnitV5\\summary.json',\n    'Research\\Verification\\New-Gate13R36hAttempt5GeneratorV1.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Generator_Derivation_Receipt.v1.json',\n    'Research\\Verification\\New-Gate13R36hAttempt5ArtifactsV1.ps1',\n    'Research\\Verification\\Write-Gate13R36hAttempt5DerivationFailureV1.ps1',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Partial_Manifest.v1.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Failure.v1.json',\n    'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Checkpoint.v1.json',\n    'Research\\Gate13R36hConcurrencyPreparationV5.psm1',\n    'Research\\Initialize-Gate13R36hLaneCopiesV5.ps1',\n    'Research\\Run-Gate13R36hTelemetryProbeV5.ps1',\n    'Research\\Run-Gate13R36hConcurrencyPilotV5.ps1',\n    'Research\\Analyze-Gate13R36hConcurrencyPilotV5.ps1',\n    'Research\\Run-Gate13R36hBlockV5.ps1',\n    'Research\\Verification\\New-Gate13R36hPilotScheduleV5.ps1',\n    'Research\\Verification\\Run-Gate13R36hStaticUnitV5.ps1',\n    'Research\\Verification\\Run-Gate13R36hRetainedRegressionV5.ps1',\n    'Research\\Verification\\Run-Gate13R36hVerificationV5.ps1',\n    'Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV5.ps1',",
+      "count": 1
+    },
+    {
+      "from": "$plan.upstreamHashes|Add-Member -NotePropertyName attempt4LockDiagnosis -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_v4_Lock_Failure_Diagnosis.v1.json'))",
+      "to": "$plan.upstreamHashes|Add-Member -NotePropertyName attempt4LockDiagnosis -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_v4_Lock_Failure_Diagnosis.v1.json'))\n$plan.upstreamHashes|Add-Member -NotePropertyName attempt5DerivationFailure -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Failure.v1.json'))\n$plan.upstreamHashes|Add-Member -NotePropertyName attempt5DerivationManifest -NotePropertyValue (Get-Hash (Join-Path $ProjectPath 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Partial_Manifest.v1.json'))",
+      "count": 1
+    },
+    {
+      "from": "attempt4LockDiagnosis=Bound 'Research\\Gate13R_36h_10pct_4Lane_v4_Lock_Failure_Diagnosis.v1.json';expectedNegativeLockTestDesign=",
+      "to": "attempt4LockDiagnosis=Bound 'Research\\Gate13R_36h_10pct_4Lane_v4_Lock_Failure_Diagnosis.v1.json';attempt5Amendment=Bound 'Research\\Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v5.json';attempt5GeneratorBuilder=Bound 'Research\\Verification\\New-Gate13R36hAttempt5GeneratorV1.ps1';attempt5GeneratorReceipt=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Generator_Derivation_Receipt.v1.json';attempt5DerivationGenerator=Bound 'Research\\Verification\\New-Gate13R36hAttempt5ArtifactsV1.ps1';attempt5PartialManifest=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Partial_Manifest.v1.json';attempt5FailureReceipt=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Failure.v1.json';attempt5Checkpoint=Bound 'Research\\Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Checkpoint.v1.json';expectedNegativeLockTestDesign=",
+      "count": 1
+    },
+    {
+      "from": "attempt2EvidencePreserved=$true;attempt4EvidencePreserved=$true;pilotRootCreated=$false",
+      "to": "attempt2EvidencePreserved=$true;attempt4EvidencePreserved=$true;attempt5EvidencePreserved=$true;pilotRootCreated=$false",
+      "count": 1
+    },
+    {
+      "from": "Frozen v1/v2 evidence changed during v6 derivation",
+      "to": "Frozen v1-v5 evidence changed during v6 derivation",
+      "count": 1
+    }
+  ],
+  "windowsPowerShell51ParsePassed": true,
+  "verificationRootCreated": false,
+  "pilotRootCreated": false,
+  "formalCampaign": false,
+  "pilotStarted": false,
+  "passed": true
+}

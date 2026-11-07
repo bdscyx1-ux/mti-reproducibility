@@ -1,0 +1,48 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-001-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-001-921b3fd4-9f0d-4c0b-b6ad-caed4aea83d2",
+  "attemptId": "load-qualification-execution-attempt-001",
+  "status": "FAILED_CLOSED_PRELAUNCH_FROZEN_POWERSHELL_RUNTIME_INCOMPATIBLE",
+  "passed": false,
+  "terminal": true,
+  "failedAtUtc": "2026-10-17T16:09:45.0083296Z",
+  "exactStructuralReason": "The PowerShell executable frozen by implementation manifest v3.1 is Windows PowerShell 5.1.26100.9444 and its ConvertFrom-Json command exposes neither Depth nor DateKind. Frozen supervisor v3 requires both parameters at lines 103, 484 and 586. Running the supervisor with that runtime is therefore structurally impossible; substituting the available PowerShell 7.6.5 runtime would violate the exact frozen runtime binding.",
+  "failureClass": "FROZEN_EXECUTION_TOOLCHAIN_BINDING_DEFECT",
+  "authorizationReceipt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/authorization-receipt.v1.json",
+    "sha256": "b11046e20e0988c078d757a931b4a3a4f9d210ad8d94e5b831dbf79856dfe622"
+  },
+  "stageContract": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/stage-contract.v1.json",
+    "sha256": "8c21d225c67c702ef0c4b67fdc23805d5776ed9161aff6c2e4a6f7899dffa8eb"
+  },
+  "prelaunchAudit": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/prelaunch-runtime-compatibility-audit.v1.json",
+    "sha256": "8259ad9c4c09a6b1e8e6e43cc3d5e38cb27afb6c8401c28bae600d9bfdac097d"
+  },
+  "authoritativeReadinessRetained": {
+    "statusV29RelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v29.json",
+    "statusV29Sha256": "e439e2a2c83e87510a783b8b13026838e77d9ab3d3560ec7caef6908172063a2",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-003/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "fb94db25887dc30a8765980bb4c6d735388266da9285e82c0a441f1dcd9bb653",
+    "modifiedOrReclassified": false
+  },
+  "disposition": {
+    "supervisorLaunchAttempted": false,
+    "unityInvocationCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "retryPerformed": false,
+    "repairPerformed": false,
+    "newAttemptCreated": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "nextActionRequiresSeparateRepairAuthorization": true
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "auditId": "gate13r-pr2-mp2-prewrite-preservation-audit-v1",
+  "auditKind": "read-only-before-first-mp2-write",
+  "capturedAtAsiaShanghai": "2026-10-09T13:41:37.9745416+08:00",
+  "capturedAtUtc": "2026-10-09T05:41:37.9696416Z",
+  "checks": {
+    "activeUpstreamHashesMatch": true,
+    "formalAttempt3ExecutionReceiptAbsent": true,
+    "formalAttempt3OutputRootAbsent": true,
+    "formalAttempt2AllFilesReadOnly": true,
+    "formalAttempt2IdentityMatches": true,
+    "mp1V2AnalysisManifestConsistent": true,
+    "mp1V2RawAllFilesReadOnly": true,
+    "mp1V2RawIdentityMatches": true,
+    "passed": true,
+    "pilotV1AllFilesReadOnly": true,
+    "pilotV1IdentityMatches": true,
+    "unityProjectLockAbsent": true
+  },
+  "formalAttempt2": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+    "allFilesReadOnly": true,
+    "canonicalTreeContractId": "gate13r-pr2-attempt2-ordinal-tab-final-lf-v2",
+    "canonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "fileCount": 28020,
+    "rawBytes": 8536611302
+  },
+  "formalAttempt3": {
+    "executionReceiptAbsolutePath": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+    "executionReceiptExists": false,
+    "outputRootAbsolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3",
+    "outputRootExists": false
+  },
+  "keyFiles": [
+    {
+      "bytes": 3302,
+      "relativePath": "Research/Gate13R_PR2_MP1_v2_Readiness_Checkpoint.v1.json",
+      "sha256": "7d6e028197c45d0e989a34268961a97a97e9ea50bd96008fd31b556eca0601cf"
+    },
+    {
+      "bytes": 8010,
+      "relativePath": "Research/Gate13R_PR2_MP1_v2_Memory_Policy_Recommendation.v1.json",
+      "sha256": "90661dc14db20bf233c50395fa1bc41ae653bc673034b6e62c6e226963217e7a"
+    },
+    {
+      "bytes": 4527,
+      "relativePath": "Research/Gate13R_PR2_MP1_v2_Final_Audit.v1.json",
+      "sha256": "daacd179b13958a296a12bf4b85022b7fc24fbe1d88ff71edc8bbec8a4129706"
+    },
+    {
+      "bytes": 5036,
+      "relativePath": "Research/Gate13R_PR2_MP1_v2_Evidence_Manifest.v1.json",
+      "sha256": "b89de6f5f768fe9d07931ba46af29aec301d92095c64c28f827bea923ab5e1ad"
+    },
+    {
+      "bytes": 288367,
+      "relativePath": "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+      "sha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"
+    },
+    {
+      "bytes": 11220567,
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    {
+      "bytes": 32861,
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+      "sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"
+    },
+    {
+      "bytes": 5352,
+      "relativePath": "Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json",
+      "sha256": "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56"
+    },
+    {
+      "bytes": 3611,
+      "relativePath": "Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json",
+      "sha256": "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e"
+    },
+    {
+      "bytes": 6315,
+      "relativePath": "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+      "sha256": "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc"
+    }
+  ],
+  "mp1V2Analysis": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\Analysis\\Gate13R_PR2_MP1\\v2\\attempt-1",
+    "decisionMatrixSha256": "05bcfa7324ba7afcef8cfba081f8407431144d932007bdfeb09a2b0bd2cc2441",
+    "evidenceManifestSha256": "29de1d6df9b12f8ede92f56914cb6cabc9f7a6cc246389d78de097c0bed990eb",
+    "readOnly": true,
+    "stageSeparatedAnalysisSha256": "9676878b0cc88fa4b7230016c55e63ec2c42940a214c8c3eff245ce16d78f119"
+  },
+  "mp1V2Raw": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v2",
+    "allFilesReadOnly": true,
+    "canonicalTreeSha256": "13dd5c30cd016d42e80f472c962d09f89f4d0fb6714d68228e2c657f6c80da93",
+    "fileCount": 3360,
+    "rawBytes": 2607785161
+  },
+  "pilotV1": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v1",
+    "allFilesReadOnly": true,
+    "canonicalTreeContractId": "mp1-pilot-v1-pipe-delimited-no-final-lf-v1",
+    "canonicalTreeSha256": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+    "fileCount": 5,
+    "rawBytes": 5247
+  },
+  "platform": {
+    "dotNetRuntime": "10.0.11",
+    "powerShell": "7.6.5"
+  },
+  "schemaVersion": 1,
+  "status": "PASSED-BEFORE-FIRST-MP2-WRITE"
+}

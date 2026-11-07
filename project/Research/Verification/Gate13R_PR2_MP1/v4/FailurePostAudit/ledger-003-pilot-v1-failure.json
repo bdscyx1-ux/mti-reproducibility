@@ -1,0 +1,25 @@
+{
+  "kind": "tool_receipt",
+  "step": "mp1-pilot-v1-acquisition",
+  "command": "One authorized MP1 v1 measured launch created the pilot execution receipt/checkpoint, then failed closed at the checkpoint start transition before any Unity process, measured block, sample, or raw file. The failed root was preserved read-only; no retry, resume, top-up, or merge was attempted.",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "input_paths": [
+    "Gate13R_PR2_MP1_Pilot_v1_Failure_Checkpoint.v1.json",
+    "Gate13R_PR2_MP1_Pilot_v1_Failure_Preservation_Receipt.v1.json",
+    "PilotRuns/Gate13R_PR2_MemoryPolicy/v1/pilot-execution-receipt.json",
+    "PilotRuns/Gate13R_PR2_MemoryPolicy/v1/pilot-checkpoint.json",
+    "PilotRuns/Gate13R_PR2_MemoryPolicy/v1/pilot-failure-receipt.json",
+    "PilotRuns/Gate13R_PR2_MemoryPolicy/v1/pilot-partial-output-manifest.json",
+    "Gate13R_PR2_MP1_Attempt2_Next_Authorization_Prompt.md",
+    "Overall_Project_Plan.md",
+    "Next_Session_Checkpoint.md"
+  ],
+  "output_sha256": "7f58a2ea114ddb86caae94ed52c18f84460229afb5082c8da6332997f20c9d14",
+  "gate_tokens": [
+    "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "ZERO-MEASURED-BLOCKS",
+    "VERSIONED-V2-AUTHORIZATION-REQUIRED"
+  ]
+}

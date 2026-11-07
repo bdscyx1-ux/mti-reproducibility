@@ -1,0 +1,53 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-pr1b-v4-winps51-atomic-helper-smoke-v1",
+    "savedAtUtc":  "2026-10-08T13:06:22.4490893Z",
+    "windowsPowerShellVersion":  "5.1.26100.9444",
+    "moduleSha256":  "60edf2e30df8ee12cd342873e7a0c2b012fd3cc8bcb5c21855d008b3ba37798b",
+    "checkCount":  7,
+    "passedCheckCount":  7,
+    "checks":  [
+                   {
+                       "id":  "create-new-same-directory-move",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR1B_v4_AtomicHelperSmoke\\v1\\mutable.json"
+                   },
+                   {
+                       "id":  "replace-existing-with-short-backup-leaf",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR1B_v4_AtomicHelperSmoke\\v1\\mutable.json"
+                   },
+                   {
+                       "id":  "directory-target-rejected",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR1B_v4_AtomicHelperSmoke\\v1\\directory-target"
+                   },
+                   {
+                       "id":  "missing-parent-rejected",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR1B_v4_AtomicHelperSmoke\\v1\\missing-parent\\value.json"
+                   },
+                   {
+                       "id":  "reparse-parent-rejected",
+                       "passed":  true,
+                       "detail":  "Atomic JSON parent is a reparse point: H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR1B_v4_AtomicHelperSmoke\\v1\\junction-parent"
+                   },
+                   {
+                       "id":  "replace-failure-preserves-target",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR1B_v4_AtomicHelperSmoke\\v1\\locked-mutable.json"
+                   },
+                   {
+                       "id":  "zero-owned-helper-residues",
+                       "passed":  true,
+                       "detail":  ""
+                   }
+               ],
+    "errors":  [
+
+               ],
+    "unityInvoked":  false,
+    "pilotRootCreated":  false,
+    "formalCampaign":  false,
+    "passed":  true
+}

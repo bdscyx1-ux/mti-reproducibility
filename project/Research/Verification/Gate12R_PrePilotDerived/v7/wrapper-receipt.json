@@ -1,0 +1,89 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-pre-pilot-memory-aggregation-route-wrapper-v7",
+    "createdAtUtc":  "2026-10-07T17:57:49.9782908Z",
+    "sourceSha256":  "ca7fb7566aae8382793adbc16cdc60dd3010f0157803f3bd275973cc4f4441d3",
+    "derivedSha256":  "5975f604431f2becd031317c4752e5a9918314218d1c0f8c27f237f804682fa4",
+    "routes":  [
+                   {
+                       "from":  "Run-Gate12RProcessReuseBlock.ps1",
+                       "to":  "Run-Gate12RProcessReuseBlockV5.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RStaticUnitAudit.ps1",
+                       "to":  "Run-Gate12RStaticUnitAuditV5.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RCompile.ps1",
+                       "to":  "Run-Gate12RCompileV4.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RTelemetryProbe.ps1",
+                       "to":  "Run-Gate12RTelemetryProbeV3.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RColdReference.ps1",
+                       "to":  "Run-Gate12RColdReferenceV3.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RPilot.ps1",
+                       "to":  "Run-Gate12RPilotV6.ps1",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "Run-Gate12RBlockAndRegressionGates.ps1",
+                       "to":  "Run-Gate12RBlockAndRegressionGatesV6.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "Run-Gate12RValidationOnlyPrePilotAudit.ps1",
+                       "to":  "Run-Gate12RValidationOnlyPrePilotAuditV4.ps1",
+                       "replacementCount":  3
+                   },
+                   {
+                       "from":  "attempt=[int]$plan.attempt",
+                       "to":  "attempt=[int]$provenance.attempt",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate12r-pre-pilot-gates-execution-receipt-v1\u0027",
+                       "to":  "receiptKind=\u0027gate12r-pre-pilot-gates-execution-receipt-v7-memory-aggregation\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "checkpointKind=\u0027gate12r-pre-pilot-verification-checkpoint-v1\u0027",
+                       "to":  "checkpointKind=\u0027gate12r-pre-pilot-verification-checkpoint-v7-memory-aggregation\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "manifestKind=\u0027gate12r-pre-pilot-partial-output-manifest-v1\u0027",
+                       "to":  "manifestKind=\u0027gate12r-pre-pilot-partial-output-manifest-v7-memory-aggregation\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate12r-pre-pilot-gates-failure-receipt-v1\u0027",
+                       "to":  "receiptKind=\u0027gate12r-pre-pilot-gates-failure-receipt-v7-memory-aggregation\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "failedPilotAttempts":  [
+                                1,
+                                2,
+                                3
+                            ],
+    "failedPilotPreservationReauditSha256":  "79f9d91fccdd7be4e602a1bd42af93048fa4741df2d652d34a44619c445aafc8",
+    "failedPilotRootsModified":  false,
+    "failedPilotResumeAttempted":  false,
+    "researchAlgorithmSemanticsChanged":  false,
+    "thresholdsChanged":  true,
+    "sampleThresholdChanged":  false,
+    "blockAggregationRuleChanged":  true,
+    "memoryGatePolicyId":  "gate12r-sample-128mib-block-128mib-per-sample-v1",
+    "pilotRootCreatedBeforeChild":  false,
+    "formalRootCreatedBeforeChild":  false
+}

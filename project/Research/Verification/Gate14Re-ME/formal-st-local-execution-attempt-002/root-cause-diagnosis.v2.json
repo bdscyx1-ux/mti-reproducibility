@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-formal-st-launch-root-cause-diagnosis-v2",
+  "studyId": "Gate14Re-ME",
+  "status": "ROOT_CAUSE_CONFIRMED_MINIMAL_FORWARD_FIX_AVAILABLE",
+  "diagnosedAtUtc": "2026-10-26T11:56:47.4730528Z",
+  "failedImplementationRevision": "v5.2-supervisor-preflight-binding-fix",
+  "failedSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_2/Run-Gate14ReMEFormalST.v5_2.ps1",
+  "failedSupervisorSha256": "cbcdc4030eac2e4d79ae1fbafa5c1a2fe1a3ee7e25c00044575974bf78fb9889",
+  "rootCause": {
+    "classification": "EXECUTION_AUTHORIZATION_STRUCTURAL_UNDERBINDING_NOT_CAUGHT_BY_SUPERVISOR_PREFLIGHT",
+    "mechanism": "The attempt-002 authorization contained the high-level scope booleans and hashes but omitted typed fields consumed by Gate14ReMEFormalSTExecutionAuthorizationV5. The runner's first combined boundary check failed because authorizationNonce was absent; later path checks would also have lacked implementationManifestRelativePath and scheduleRelativePath. The v5.2 supervisor preflight did not enforce parity with the runner's complete authorization contract.",
+    "runnerSourceRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEFormalSTRunnerV5_1.cs",
+    "runnerFailureLine": 802,
+    "authorizationContractSourceRelativePath": "Assets/_Scripts/Research/Gate14ReME/v5/Gate14ReMEFormalSTContractsV5.cs",
+    "missingRequiredFields": [
+      "implementationManifestRelativePath",
+      "executionContractRelativePath",
+      "inputFreezeManifestRelativePath",
+      "scheduleRelativePath",
+      "authorizationNonce"
+    ]
+  },
+  "evidence": {
+    "unityReachedRunner": true,
+    "runnerRejectedAuthorizationBeforeInstrumentExecution": true,
+    "instrumentReceiptCreated": false,
+    "processLedgerRows": 0,
+    "algorithmLaneExecutions": 0,
+    "formalEffectOutputsProduced": false
+  },
+  "minimalForwardFix": {
+    "createFreshSuccessorAuthorizationWithCompleteTypedContract": true,
+    "addSupervisorPreflightParityChecksForEveryRunnerConsumedAuthorizationField": true,
+    "addIndependentAuthorizationContractParityValidation": true,
+    "runAlgorithmFreeSuccessorStyleInstrumentReadinessBeforeFormalLaunch": true,
+    "changeScientificDesign": false,
+    "changeFormalInputs": false,
+    "changeSchedule": false,
+    "changeAlgorithms": false,
+    "changeMetrics": false,
+    "changeSampleRules": false,
+    "changeTimeouts": false
+  },
+  "boundary": {
+    "failedAttemptWillNotBeModifiedOrReused": true,
+    "successorRequiresNewImplementationFreeze": true,
+    "successorRequiresNewAuthorizationAndMeasuredRoot": true,
+    "formalAnalysisAuthorized": false
+  }
+}

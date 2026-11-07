@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr2-validation-attempt3-failure-v1",
+  "attempt": 3,
+  "failedAtUtc": "2026-10-08T16:16:48.9301317+00:00",
+  "status": "FAILED-VALIDATION-ONLY / CORE-62-OF-63 / VERSIONED-REPAIR-ALLOWED",
+  "failureGate": "schema-manifest",
+  "failureReasonCode": "NEW-SCHEMA-MANIFEST-PROPERTY-NAME-MISMATCH",
+  "diagnosis": "The new schema v1 required matchedSuperblockCount, while the generated manifest consistently uses heterogeneousMatchedSuperblockCount. All other 62 core checks passed, including all process/sample counts, Williams and position balance, AB/BA order-row orthogonality, hashes, deterministic regeneration, storage projection, non-execution, and frozen-tree preservation.",
+  "validationRoot": {
+    "relativePath": "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v3",
+    "fileCount": 14,
+    "rawBytes": 11646896,
+    "canonicalOrdinalTreeSha256": "482e3a92fafec64866f4cf445d8f3052e638c1aa4c05b0009f277a31c63cfab3"
+  },
+  "coreSummary": {
+    "relativePath": "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v3/core/core-validation-summary.json",
+    "rawBytes": 70875,
+    "sha256": "9fe5ee6dd74f8a34731f694430071860ed665af90ee769d415251a6381956a10",
+    "passedChecks": 62,
+    "failedChecks": 1
+  },
+  "safetyState": {
+    "unityEditorLaunched": false,
+    "formalRootCreated": false,
+    "formalExecutionReceiptCreated": false,
+    "formalCampaignStarted": false,
+    "gate14RStarted": false,
+    "frozenInputsModified": false,
+    "preAndPostPreservationPassed": true
+  },
+  "repairBoundary": "Create schema v2 with the manifest property name corrected, then generate a complete v2 formal-preparation artifact set and validate it in a new v4 root. Do not overwrite v1 artifacts."
+}

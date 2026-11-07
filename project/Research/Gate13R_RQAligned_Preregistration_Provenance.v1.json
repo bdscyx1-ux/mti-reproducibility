@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "provenanceId": "gate13r-rq-aligned-preregistration-provenance-v1",
+  "recordedAtUtc": "2026-10-08T10:40:36.7028036Z",
+  "recordedAtAsiaShanghai": "2026-10-08T18:40:36.7028036+08:00",
+  "projectRoot": "H:/DDM_Final_Project",
+  "environment": {
+    "operatingSystem": "Microsoft Windows NT 10.0.26300.0",
+    "powerShell": "7.6.5",
+    "dotNet": "10.0.11",
+    "pythonLauncher": "py -3",
+    "pythonVersion": "3.14.7",
+    "unityStarted": false
+  },
+  "activeUpstream": [
+    "Gate 10R attempt 4 passed evidence",
+    "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "Gate 11R attempt 2 retained bundle",
+    "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json@5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+    "Research/Gate12R_Passed_Checkpoint.md",
+    "Research/Gate12R_Readiness_Checkpoint.v1.json",
+    "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+    "Gate13R strict-serial 10% v2 files as pre-amendment comparison baseline only"
+  ],
+  "knownPilotInformationBeforeAmendment": {
+    "measuredWilliamsBlocks": 384,
+    "algorithmSamples": 1152,
+    "pilotCampaigns": 12,
+    "oldPairedContrasts": ["D*L-minus-A*-R", "IDFF-minus-C-FF"],
+    "heterogeneousPreliminaryOrderCounts": {"PER_AGENT_THEN_GROUPED": 89, "GROUPED_THEN_PER_AGENT": 7},
+    "oldSerialP50Hours": 64.830802096,
+    "oldSerialConservativeP95Hours": 83.904223147
+  },
+  "transparencyStatement": "This amendment is pilot-informed and was authored after review of Gate12R variance, runtime, and preliminary heterogeneous ordering evidence, but before any Gate13R formal data existed.",
+  "randomSeeds": {
+    "bootstrap": 13012026,
+    "designSensitivity": 13122026,
+    "deterministicFixture": 13129991
+  },
+  "formalCampaignAuthorized": false,
+  "newUnityDataGenerated": false
+}

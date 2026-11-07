@@ -1,0 +1,19 @@
+{
+  "schema": "gate14re-me-gnf-load-redesign-field-boundary-v1",
+  "studyId": "Gate14Re-ME",
+  "redesignAttemptId": "gnf-load-redesign-v1-attempt-001",
+  "permittedInputs": [
+    "frozen G, N, and F levels and structural cardinalities",
+    "named algorithm identifiers solely to retain the six paired timing strata",
+    "process-wall P50 and maximum for each algorithm x core G x N x F cell",
+    "pooled strict-serial inter-process-gap P50 and P99",
+    "prior parameterized formal-ST runtime formula and seven-day decision gate"
+  ],
+  "forbiddenInputs": [
+    "algorithm output observations",
+    "quality or effect metrics D1 through D7",
+    "effect directions, p-values, ranks, weights, or winner claims",
+    "qualification observations as formal scientific samples"
+  ],
+  "interpretationBoundary": "Runtime interpolation is a planning surrogate inside the already observed load envelope. It is not a scientific effect comparison and cannot establish the new dynamic-range, geometry, resource, or measurement-floor gates; those require a new qualification after a separate refreeze and execution authorization."
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "gate14re-me-formal-st-external-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "status": "FAILED_CLOSED_BEFORE_MEASURED_ROOT_CREATION",
+  "authorizationId": "gate14re-me-formal-st-local-collection-c511936f-ef17-4f66-856f-6dbfe11d020f",
+  "failedAtOrBeforeUtc": "2026-10-26T11:37:00.7287565Z",
+  "failure": {
+    "phase": "READ_ONLY_PREFLIGHT",
+    "exactExternalError": "Run-Gate14ReMEFormalST.v5_1.ps1: The property 'schema' cannot be found on this object. Verify that the property exists.",
+    "externalStdoutRelativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-001/external-supervisor.stdout.log",
+    "externalStdoutBytes": 0,
+    "externalStdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "externalStderrRelativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-001/external-supervisor.stderr.log",
+    "externalStderrBytes": 121,
+    "externalStderrSha256": "24477bc715095de05c641a3df3b5f3e911cc19c2d4eaab6b2a82e9987f39c4c9"
+  },
+  "failClosedState": {
+    "supervisorPresent": false,
+    "activeUnityProcessCount": 0,
+    "measuredRootCreated": false,
+    "measuredLaunchReceiptCreated": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "algorithmLaneExecutions": 0,
+    "retryPerformed": false,
+    "resumePerformed": false,
+    "topUpPerformed": false,
+    "replacementPerformed": false,
+    "mergePerformed": false,
+    "skipPerformed": false,
+    "reorderPerformed": false,
+    "forcedTerminationSent": false
+  },
+  "terminalPolicy": {
+    "attempt001ReservedAndNotReusable": true,
+    "freshSuccessorAttemptRequired": true,
+    "scientificDesignChangeRequired": false
+  }
+}

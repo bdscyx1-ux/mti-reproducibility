@@ -1,0 +1,65 @@
+{
+  "schema": "gate14re-me-precollection-parameter-amendment-protocol-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "FROZEN_NONEXECUTING_REQUIRED_BEFORE_FORMAL_OBSERVATION",
+  "purpose": "Permit the scientific framework and raw-delivery hard gate to be frozen now without inventing domain-specific minimum practically important effects or a final per-cell B.",
+  "currentlyUnresolved": {
+    "minimumPracticallyImportantEffectsByDomain": null,
+    "finalBPerStructuralCell": null,
+    "finalPlannedSuperblocks": null,
+    "finalPlannedFreshUnityProcesses": null
+  },
+  "fixedConstraints": {
+    "targetPowerAtLeast": 0.9,
+    "familywiseAlpha": 0.05,
+    "confirmatoryContrastCount": 35,
+    "multiplicityMethod": "Holm strong FWER",
+    "BMustBePositiveMultipleOf": 36,
+    "primaryStructuralCells": 48,
+    "algorithmLanesPerSuperblock": 6,
+    "processFormula": "48 * finalB * 6",
+    "formalAdaptiveExpansion": false,
+    "postOutcomeTopUp": false,
+    "effectThresholdSelectionAfterOutcomeInspection": false
+  },
+  "permittedPlanningEvidence": {
+    "identityBlindNuisanceCovariance": true,
+    "identityBlindMissingness": true,
+    "runtimeAndStorageResourceMeasurementsFromSyntheticOrExplicitlyAuthorizedPilotOnly": true,
+    "algorithmMeans": false,
+    "algorithmDirections": false,
+    "algorithmRanks": false,
+    "winner": false,
+    "productionIdentityRecovery": false,
+    "priorGate14ReOrExcludedGate14ReTB2Observations": false
+  },
+  "requiredAmendmentContents": [
+    "domain-specific minimum practically important effects with units and direction",
+    "power calculation assumptions and nuisance inputs",
+    "selected finalB and proof it is a positive multiple of 36",
+    "planned superblock and process cardinalities",
+    "resource feasibility evidence including complete raw-delivery storage budget",
+    "explicit user authorization",
+    "new immutable receipt binding all values and artifact hashes"
+  ],
+  "timing": {
+    "mustCompleteBeforeFormalInputDraw": true,
+    "mustCompleteBeforeFormalMeasuredRootCreation": true,
+    "mustCompleteBeforeAnyFormalObservation": true,
+    "cannotUseFormalOutcomes": true
+  },
+  "changeControl": {
+    "changingAlgorithmsEndpointsMajorityRuleOrRawDeliveryHardGate": "requires a new full scientific freeze",
+    "settingPrespecifiedEffectThresholdsAndFinalBWithinThisProtocol": "requires one separately authorized precollection parameter amendment receipt",
+    "resourceInfeasibility": "redesign and refreeze before collection; never launch an underpowered or incomplete-delivery study"
+  },
+  "authorizationBoundary": {
+    "protocolFreezeAuthorized": true,
+    "planningDiagnosticExecutionAuthorized": false,
+    "pilotExecutionAuthorized": false,
+    "parameterValuesAuthorized": false,
+    "formalCollectionAuthorized": false
+  }
+}

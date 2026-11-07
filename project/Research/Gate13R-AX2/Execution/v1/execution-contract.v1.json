@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 1,
+  "artifactKind": "GATE13R-AX2-EXECUTION-CONTRACT",
+  "designId": "gate13r-ax2-shared32-b48-four-treatment-v1",
+  "status": "FROZEN-NONEXECUTING",
+  "frozenAtUtc": "2026-10-16T14:50:42.200292Z",
+  "design": {
+    "campaignCount": 32,
+    "blocksPerCampaign": 48,
+    "completeBlockCount": 1536,
+    "samplesPerBlock": 4,
+    "anonymousSampleCount": 6144,
+    "algorithms": [
+      "BiA*-R",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "freshUnityProcessPerCompleteBlock": true,
+    "strictSerialFourTreatmentWilliamsSchedule": true,
+    "maximumWholeBlockTechnicalReplacements": 1,
+    "perAlgorithmRetryResumeTopUpMergeSkipReorder": false
+  },
+  "executionEntrypoints": {
+    "runner": "DDM.Research.Editor.Gate13RAX2BlockRunnerV1.Run",
+    "supervisor": "Research/Gate13R-AX2/Execution/v1/Run-Gate13RAX2Collection.v1.ps1",
+    "structuralValidator": "Research/Gate13R-AX2/Tools/gate13r_ax2_structural_v1.py",
+    "rawCommit": "Research/Gate13R-AX2/Tools/gate13r_ax2_raw_commit_v1.py",
+    "p1Analysis": "Research/Gate13R-AX2/Analysis/analyze_p1_v1.py"
+  },
+  "frozenPackageFiles": [
+    {
+      "path": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa",
+      "bytes": 5661
+    },
+    {
+      "path": "Assets/_Scripts/Research/Experiments/PlanningFairnessContracts.cs",
+      "sha256": "c7fe23c4adc7196a3a00825d1b737c4b1de87e6b313067e2eb259fc8b4d12f74",
+      "bytes": 17402
+    },
+    {
+      "path": "Assets/_Scripts/Research/Experiments/DeterministicPlanningWorkloadRunner.cs",
+      "sha256": "19b2686c6b8f322a7b11e9274ac1c15ec02a2b0a00ebc61ad8efdca983f4e97e",
+      "bytes": 20831
+    },
+    {
+      "path": "Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "sha256": "82316036aba90be69ca746288798bac1789cdb09afa65cf9ad4180975d1f947e",
+      "bytes": 34160
+    },
+    {
+      "path": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "sha256": "10686f9bf5b36ec06e8d5e98a7c54f8bdcc5a1c0d0664cb9a3eed6a806bc52c8",
+      "bytes": 39828
+    },
+    {
+      "path": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "sha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1",
+      "bytes": 34279
+    },
+    {
+      "path": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "sha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638",
+      "bytes": 46884
+    },
+    {
+      "path": "Assets/_Scripts/Research/Editor/Gate13RAX2BlockRunnerV1.cs",
+      "sha256": "11d2087032b5e09c7761a69f6a8ce963dbea5a19ebc9b09012a483c510b40e62",
+      "bytes": 32617
+    },
+    {
+      "path": "Assets/_Scripts/Research/Editor/Gate13RAX2BlockRunnerV1.cs.meta",
+      "sha256": "70aa22e5662d7427b99cbebdc745714d29521b4c66286c359098edfb3f687a5f",
+      "bytes": 240
+    },
+    {
+      "path": "Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "sha256": "6f29c7545c2f9d68ad0bfd2b707cb7f7798fd80b39816eb22010f278a6978223",
+      "bytes": 10875
+    },
+    {
+      "path": "Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "sha256": "8a7895c0daa38810a5b1087348be11b427cfeb1f6f0ed2f27730578ac84e70ef",
+      "bytes": 14050
+    },
+    {
+      "path": "Research/Gate13R-AX2/README.v1.md",
+      "sha256": "ab0cb6df4413cbdf1d504a1c483a29d981e07c37d236fa3934f176803a8f5766",
+      "bytes": 1751
+    },
+    {
+      "path": "Research/Gate13R-AX2/experiment-plan.v1.md",
+      "sha256": "1a325a18770f3c5e33d1b76a4c1919d1a3e3a5cdc012f8d3e7d0e3d7782743a7",
+      "bytes": 4493
+    },
+    {
+      "path": "Research/Gate13R-AX2/Contracts/scientific-contract.v1.md",
+      "sha256": "20cb750d13fda39d5067581887c078808d87de036b43cccd101f8f37894d668d",
+      "bytes": 3598
+    },
+    {
+      "path": "Research/Gate13R-AX2/Contracts/four-algorithm-extension-fairness.v1.md",
+      "sha256": "0ca6fa5c3e5600c86fdb9c1a309bd04362097d325a133c372f7b80ecc08d5ec2",
+      "bytes": 2083
+    },
+    {
+      "path": "Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "sha256": "593e21946de91c8ddab59f70be44084aeb8afe7ae72d52e490589f6e77f16ead",
+      "bytes": 755
+    },
+    {
+      "path": "Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "sha256": "703e72a92207ceb05f0e63c35322f2a8e727b5e8be6e1dc699cd287ce254d4a9",
+      "bytes": 767
+    },
+    {
+      "path": "Research/Gate13R-AX2/Analysis/p1-analysis-plan.v1.md",
+      "sha256": "a838bfe4d8732ae731c48da0696a6685b2a0b86b6fbcd610b6b2fa952ccd52c7",
+      "bytes": 1949
+    },
+    {
+      "path": "Research/Gate13R-AX2/Analysis/analyze_p1_v1.py",
+      "sha256": "ab69d02ec61d348ed176b8616390968704ed4be72a53432d26ff463fe4c24e89",
+      "bytes": 19478
+    },
+    {
+      "path": "Research/Gate13R-AX2/Execution/v1/formal-williams-schedule.v1.jsonl",
+      "sha256": "3ea4198796bc5024194fb52f5e1c43ccbb51bf557186993b3703c19c2787838b",
+      "bytes": 3435636
+    },
+    {
+      "path": "Research/Gate13R-AX2/Execution/v1/formal-williams-schedule-manifest.v1.json",
+      "sha256": "8b27be1b225ed2c2eb7a55d3cb9819a5ad80e471cfc243611358f93d1a3a3b8b",
+      "bytes": 3387
+    },
+    {
+      "path": "Research/Gate13R-AX2/Execution/v1/output-schema.v1.json",
+      "sha256": "de90d9bbfd72104e3176dd223e565a032ad6c0b21d098af2fbe7388ad2378a70",
+      "bytes": 2457
+    },
+    {
+      "path": "Research/Gate13R-AX2/Execution/v1/Run-Gate13RAX2Collection.v1.ps1",
+      "sha256": "8ef21474380aad6fd1b76fc543db9c48bf903b241ead45adcef3f478b5579567",
+      "bytes": 27117
+    },
+    {
+      "path": "Research/Gate13R-AX2/Tools/gate13r_ax2_structural_v1.py",
+      "sha256": "af0298440e786af07425cb42c6f03c9c3e11812dd0eeb981fceb503eea4cb8c3",
+      "bytes": 27813
+    },
+    {
+      "path": "Research/Gate13R-AX2/Tools/gate13r_ax2_raw_commit_v1.py",
+      "sha256": "38a47fb6f831350c66f85346f4f4b378ecb87dfd681e3d86ae9840c488790663",
+      "bytes": 17272
+    }
+  ],
+  "verificationReceipts": [
+    {
+      "path": "Research/Verification/Gate13R-AX2/core-readiness-v1/core-readiness.v1.json",
+      "sha256": "8707c2b76a55ff1cf61a122de9cc65939842d9ddbf41f407ceb45c500c9d1111",
+      "bytes": 6034
+    },
+    {
+      "path": "Research/Verification/Gate13R-AX2/algorithm-correctness-v1/algorithm-correctness.v1.json",
+      "sha256": "46790d4a40e962e7a19f4ce5668ec101b543ebc32862aed578604f93032e49c3",
+      "bytes": 213
+    },
+    {
+      "path": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R-AX2\\precollection-readiness-v1\\compile\\compile-receipt.v1.json",
+      "sha256": "231cc477988439d771f41b73df7546af60e2e2f3eee3788a4a223b3619abd5dd",
+      "bytes": 1188
+    }
+  ],
+  "compiledAssemblies": {
+    "runtime": {
+      "path": "H:\\DDM_Final_Project\\Library\\ScriptAssemblies\\Assembly-CSharp.dll",
+      "sha256": "656ff839dfcc528d44815fc7be74c2a56eaa8af7ad2b1c5db8c28797f529bd67",
+      "bytes": 420864
+    },
+    "editor": {
+      "path": "H:\\DDM_Final_Project\\Library\\ScriptAssemblies\\Assembly-CSharp-Editor.dll",
+      "sha256": "7c3efd1a0f9b7cddffc1e1a88ada025db72ce484a03752a8d954d77eb580e128",
+      "bytes": 738304
+    }
+  },
+  "toolchain": {
+    "unity": {
+      "path": "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe",
+      "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+      "bytes": 35821616
+    },
+    "python": {
+      "path": "C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "sha256": "b847bb9f4e48c19f585c8bf7d8b355f3f8c6d2125717ece9c9d7e16fb9f09de8",
+      "bytes": 107312
+    },
+    "powershell": {
+      "path": "C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+      "bytes": 301368
+    }
+  },
+  "outputBoundary": {
+    "formalRootPattern": "Research/FormalRuns/Gate13R-AX2/PhaseA/attempt-NNN",
+    "verificationRootPrefix": "Research/Verification/Gate13R-AX2/",
+    "originalGate13RRawOrAnalysisMustNotBeReadOrModified": true
+  },
+  "formalCollectionAuthorized": false,
+  "formalCollectionStarted": false
+}

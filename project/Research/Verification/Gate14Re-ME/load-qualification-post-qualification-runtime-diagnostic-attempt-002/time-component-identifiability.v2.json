@@ -1,0 +1,99 @@
+{
+  "directlyMeasured": {
+    "inclusiveLaneBody": {
+      "maximumMilliseconds": 99610.9039,
+      "minimumMilliseconds": 4206.8814,
+      "n": 756,
+      "p50Milliseconds": 14112.5131,
+      "p90Milliseconds": 30034.35645,
+      "p95Milliseconds": 36559.25805,
+      "p99Milliseconds": 54353.75626,
+      "totalHours": 3.47868
+    },
+    "inclusiveLaneBodyToProcessWallRatio": {
+      "maximum": 0.88089,
+      "minimum": 0.173045,
+      "n": 756,
+      "p50": 0.488093,
+      "p90": 0.67817,
+      "p95": 0.714812,
+      "p99": 0.791764
+    },
+    "interProcessGapBeforeLane": {
+      "maximumMilliseconds": 1273.141,
+      "minimumMilliseconds": 795.38,
+      "n": 756,
+      "p50Milliseconds": 825.343,
+      "p90Milliseconds": 951.143,
+      "p95Milliseconds": 964.84575,
+      "p99Milliseconds": 981.84065,
+      "totalHours": 0.177994
+    },
+    "processWall": {
+      "maximumMilliseconds": 113157.241,
+      "minimumMilliseconds": 19173.252,
+      "n": 756,
+      "p50Milliseconds": 28496.706,
+      "p90Milliseconds": 43791.4585,
+      "p95Milliseconds": 52529.2155,
+      "p99Milliseconds": 69203.98755,
+      "totalHours": 6.578588
+    },
+    "processWallP95TailOverlapWithInclusiveLaneBodyP95Tail": 0.973684,
+    "processWallVsInclusiveLaneBodyPearson": 0.992141
+  },
+  "driverEvidenceBoundary": {
+    "antivirusActivity": "not directly measured; candidate explanation only",
+    "cacheState": "not directly measured; candidate explanation only",
+    "diskPressureTimeSeries": "not directly measured; candidate explanation only",
+    "hostMemoryPressure": "only bounded process structural samples are available; causal attribution is unsupported",
+    "thermalThrottling": "not directly measured; candidate explanation only"
+  },
+  "inclusiveLaneBodySemanticBoundary": "RunnerV4_2 starts the stopwatch at RunAlgorithmLane entry, before runner-hash verification, grid construction and planner creation, and stops it after initialization, queries, event groups, instrumentation/resource sampling and raw writes. It is an inclusive lane-body measure, not pure algorithm compute.",
+  "interpretation": "Process-wall/lane-body concordance can localize a tail to the inclusive lane body rather than the inter-process gap, but it cannot isolate pure algorithm compute from the other in-lane components.",
+  "notSeparatelyIdentifiable": {
+    "exitFinalization": "No trustworthy explicit workloadEndUtc exists.",
+    "pureAlgorithmCompute": "No trustworthy absolute algorithm/workload start and end timestamps exist; inclusive lane body also contains setup, oracle/cache use, instrumentation, serialization and raw I/O.",
+    "unityStartup": "No trustworthy explicit workloadStartUtc exists."
+  },
+  "resourceMetadata": {
+    "managedMemoryMaxBytes": {
+      "maximum": 972877824.0,
+      "minimum": 702099456.0,
+      "n": 756,
+      "p50": 873310208.0,
+      "p90": 913481728.0,
+      "p95": 923648000.0,
+      "p99": 936247500.8
+    },
+    "peakWorkingSetMaxBytes": {
+      "maximum": 0.0,
+      "minimum": 0.0,
+      "n": 756,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "privateMemoryMaxBytes": {
+      "maximum": 0.0,
+      "minimum": 0.0,
+      "n": 756,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "workingSetMaxBytes": {
+      "maximum": 0.0,
+      "minimum": 0.0,
+      "n": 756,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    }
+  },
+  "runnerSourceSha256": "622d97031efe51a1ea89fc2da95e5b473c170b817d452e76d3b25d81b228140d",
+  "schema": "gate14re-me-runtime-component-identifiability-v2"
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "gate14re-me-status-v5",
+  "studyId": "Gate14Re-ME",
+  "status": "D3_RUNTIME_COMPATIBILITY_AMENDMENT_ATTEMPT_001_FAILED_CLOSED_COMPILE_API_UNAVAILABLE",
+  "version": 5,
+  "updatedAtUtc": "2026-10-17T05:32:01.7095964Z",
+  "priorRuntimeQualification": {
+    "status": "RUNTIME_QUALIFICATION_FAILED_CLOSED_D3_COUNTER_UNUSABLE",
+    "attempt": "runtime-qualification-attempt-001",
+    "freezeReceiptSha256": "042f3ca2d07b4b78db04a7b272929f6052cc51739c0aeeaa4e6998b75f5554c8"
+  },
+  "d3CompatibilityAmendment": {
+    "authorizationId": "gate14re-me-d3-runtime-compatibility-amendment-attempt-001",
+    "candidateCounterId": "GC.GetTotalAllocatedBytes(precise:true)-process-wide-v2",
+    "compilePassed": false,
+    "failureCode": "CS0117",
+    "runtimeKnownAnswerStarted": false,
+    "positiveControlsExecuted": 0,
+    "negativeControlIntervalsExecuted": 0,
+    "automaticRetryPerformed": false,
+    "candidateRemovedFromActiveAssetsAndPreservedAsFailureEvidence": true,
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failure-receipt.v1.json"
+  },
+  "currentQualifiedCapabilities": {
+    "typedParquetRuntimeFrozen": true,
+    "priorUnityCompilationPassedBeforeCandidateAmendment": true,
+    "d2GridReadProxyPassed": true,
+    "d2SemanticInvariancePassed": true,
+    "d3AllocationCounterQualified": false,
+    "d4PersistentStateSizerPassed": true,
+    "clockMonotonicityPassed": true,
+    "exportKnownAnswerStatus": "NOT_RUN_DUE_D3_BLOCKER"
+  },
+  "scientificBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "authorizationState": {
+    "retryD3CompatibilityAmendmentAttempt001Authorized": false,
+    "alternativeD3MechanismInvestigationAuthorized": false,
+    "runtimeQualificationAttempt002Authorized": false,
+    "dataExporterKnownAnswerAuthorizedNow": false,
+    "qualificationScheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize a second, strictly D3-only compatibility investigation for a different Unity-compatible mechanism or an explicitly redefined allocation-related endpoint."
+}

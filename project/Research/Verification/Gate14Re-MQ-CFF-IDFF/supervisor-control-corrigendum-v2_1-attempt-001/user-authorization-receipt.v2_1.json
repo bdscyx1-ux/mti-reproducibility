@@ -1,0 +1,32 @@
+{
+  "schema": "gate14re-mq-formal-supervisor-repair-user-authorization-v2_1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "AUTHORIZED_MINIMAL_PROSPECTIVE_SUPERVISOR_EMPTY_SET_COUNT_FIX_AND_REFREEZE_ONLY",
+  "authorizedAtUtc": "2026-10-21T17:01:33.6661185Z",
+  "authorizationText": "授权实施 MQ supervisor 空集合计数的最小前瞻性修复，创建新版本并重新完成 implementation freeze、静态验证、compile/readiness 和最终冻结；全部 PASS 后先报告并等待我单独授权全新的 formal collection attempt-002。",
+  "authorizedScope": {
+    "createNewSupervisorVersion": true,
+    "minimalEmptySetCountRepairOnly": true,
+    "repeatImplementationFreeze": true,
+    "repeatIndependentStaticValidation": true,
+    "repeatAlgorithmFreeCompileReadiness": true,
+    "repeatAlgorithmFreePrelaunchReadiness": true,
+    "repeatFinalFreeze": true
+  },
+  "failedAttempt001Terminal": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-001/terminal-receipt.v2.json",
+    "sha256": "6538952c0c56e9dd4d9ee4ec76f5cf38c23c40c2eb739354256d5f6a56a76352"
+  },
+  "boundaries": {
+    "scientificDesignChangeAuthorized": false,
+    "scheduleChangeAuthorized": false,
+    "formalCollectionAttempt002Authorized": false,
+    "formalAnalysisAuthorized": false,
+    "stAuthorized": false,
+    "mtAuthorized": false,
+    "requiredNextGateAfterPass": "separate explicit user authorization for a wholly new formal collection attempt-002"
+  },
+  "formalCollectionAttempt002Authorized": false,
+  "formalAnalysisAuthorized": false
+}

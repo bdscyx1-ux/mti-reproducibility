@@ -1,0 +1,30 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-canonical-reference-module-v2-derivation-v1",
+    "createdAtUtc":  "2026-10-07T14:51:03.9206917Z",
+    "sourceRelativePath":  "Research/Gate12RCanonicalInputReference.psm1",
+    "sourceSha256":  "00fecf57702d761ed23fc3db25d64497689bbd86a472271b995eb56014bcbe50",
+    "outputRelativePath":  "Research/Gate12RCanonicalInputReferenceV2.psm1",
+    "outputSha256":  "d64e48c8bf99233ae44e918e720b5022ae5acfeff96b98eb8b01c30a8274c936",
+    "confirmedDefect":  "Windows PowerShell 5.1 File.Replace null backup-path overload binding",
+    "repair":  "explicit unique backup path with recovery and cleanup",
+    "routes":  [
+                   {
+                       "from":  "[System.IO.File]::Replace([string]$record.stagedManifest, [string]$record.targetManifest, $null)",
+                       "to":  "Invoke-Gate12RCanonicalAtomicReplace -Source ([string]$record.stagedManifest) -Destination ([string]$record.targetManifest)",
+                       "count":  1
+                   },
+                   {
+                       "from":  "[System.IO.File]::Replace([string]$record.stagedSummary, [string]$record.targetSummary, $null)",
+                       "to":  "Invoke-Gate12RCanonicalAtomicReplace -Source ([string]$record.stagedSummary) -Destination ([string]$record.targetSummary)",
+                       "count":  1
+                   },
+                   {
+                       "from":  "[System.IO.File]::Replace($stagedBlockManifest, $blockManifestPath, $null)",
+                       "to":  "Invoke-Gate12RCanonicalAtomicReplace -Source $stagedBlockManifest -Destination $blockManifestPath",
+                       "count":  1
+                   }
+               ],
+    "thresholdsChanged":  false,
+    "experimentalSemanticsChanged":  false
+}

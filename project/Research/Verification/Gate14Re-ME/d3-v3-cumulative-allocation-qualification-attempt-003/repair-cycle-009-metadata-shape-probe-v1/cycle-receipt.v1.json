@@ -1,0 +1,37 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 9,
+  "status": "FAILED_PRESERVED_CONTINUE_AUTHORIZED_REPAIR",
+  "completedAtUtc": "2026-10-17T07:15:14.1847404Z",
+  "phase": "native-gc-alloc-metadata-shape-probe-build",
+  "compilerExitCode": 2,
+  "exactDiagnostic": "warning C4003 promoted by /WX and errors C2589/C2059 at std::numeric_limits<int>::min(): Windows.h min macro collision",
+  "evidence": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-009-metadata-shape-probe-v1/cycle-plan.v1.json",
+      "lengthBytes": 1106,
+      "sha256": "f1bc1c66d4796b776dc98cab28113291281be280b06258c304f8cb66f217b308"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-009-metadata-shape-probe-v1/compile.log",
+      "lengthBytes": 1338,
+      "sha256": "7c55baf90e19b798345a237b48c44657435270657bdb8976e75f0debba3731a7"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationMetadataProbeV1.cpp",
+      "lengthBytes": 9200,
+      "sha256": "f66001204394c0e2b1f0e7193e4516426d0f1fc49bb5bee617847a16703fe6bc"
+    }
+  ],
+  "diagnosis": "The probe source was stopped by the warning-as-error policy before object generation because Windows.h defines min as a macro. This is a compile-environment collision, not a probe logic, SDK ABI, or D3 scientific failure.",
+  "repairDisposition": {
+    "sourceChanged": false,
+    "criteriaRelaxed": false,
+    "warningsAsErrorsRetained": true,
+    "utf8Retained": true,
+    "nextRepair": "Compile the exact same source hash in a new cycle with the standard NOMINMAX preprocessor definition."
+  }
+}

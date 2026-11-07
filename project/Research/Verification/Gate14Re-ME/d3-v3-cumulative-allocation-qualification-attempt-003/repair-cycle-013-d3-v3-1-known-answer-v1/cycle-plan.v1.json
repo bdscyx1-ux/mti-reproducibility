@@ -1,0 +1,51 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 13,
+  "status": "AUTHORIZED_IN_PROGRESS",
+  "createdAtUtc": "2026-10-17T07:44:20.0664224Z",
+  "phase": "algorithm-free-d3-v3-1-known-answer-v1",
+  "commandPolicy": [
+    "Unity 2022.3.30f1c1",
+    "-batchmode",
+    "-nographics",
+    "--burst-disable-compilation",
+    "no-command-line--quit",
+    "harness-owned-EditorApplication.Exit",
+    "single-known-answer-run-after-successful-native-build"
+  ],
+  "executeMethod": "DDM.Research.Editor.Attempt003V31.Gate14ReMED3V31KnownAnswerRunnerV1.Run",
+  "expectedOutputRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-013-d3-v3-1-known-answer-v1/known-answer-output",
+  "bindings": {
+    "amendmentAuthorizationSha256": "ef7bd18de40303e14b849a81e7c9fe85d5e2d56420836e5255375d332674d0a8",
+    "simplifiedPlanSha256": "df2558447342b8185e294f99baf4571c8128c877916d0cf43b61093a38d6b179",
+    "prospectiveContractSha256": "d253566d4acafad0ca6f1fdaad839f17e7dbc461b53e253e9c1192f1a04abc98",
+    "nativeSourceSha256": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2",
+    "nativeBinarySha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63",
+    "nativeBinaryMetaSha256": "0da140fbc3f6a112402e27f4bbfb77f27953b99b4b0554ebcc4cd3b00642e8a4",
+    "managedWrapperSha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007",
+    "managedWrapperMetaSha256": "211d45395c902d2e32131a836227ca88e98e564f15287b196fd1df2b2b740528",
+    "knownAnswerHarnessSha256": "37ae24d4bd036a4dc5f68cfc80389c62230335ee8fc1ba018b3111ee931527a1",
+    "knownAnswerHarnessMetaSha256": "2539196cd7dbc570d798d7955315f4c9b24243c15ffd6e2e06887a8c94cdee11",
+    "nativeBuildCycleReceiptSha256": "6282ef30ae15b65707ae6cd662e362d0bee849509674f127f13d6511f3e4ee43",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "simplifications": {
+    "priorArrayDiagnosticRerun": false,
+    "priorMetadataProbeRerun": false,
+    "separateRatePayloadWindow": false,
+    "oneMiBArrayRecordReusedForSameThreadAndRate": true,
+    "oneTerminalPassOrFailReceiptWithPartialRawRecords": true
+  },
+  "prohibitions": {
+    "qualificationRunnerOrOutputSchemaIntegration": true,
+    "scheduleInputsOrIdentityMapping": true,
+    "qualificationMeasuredRoot": true,
+    "algorithmLane": true,
+    "formalCollectionAnalysisRankingOrWinner": true,
+    "fallbackMetric": true
+  }
+}

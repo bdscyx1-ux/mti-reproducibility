@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate11r-preimplementation-hard-gate-failure-v1",
+  "createdAtUtc": "2026-10-07T02:22:50.7370512Z",
+  "status": "GATE11R-FAILED-NO-AUTO-RETRY-NO-RESUME",
+  "stage": "outside-root-preimplementation-audit",
+  "failedCheck": "protected-tree-Research-PilotRuns-Gate13_ProcessReuse-v1",
+  "failureClass": "CROSS-RUNTIME-NONCANONICAL-TREE-ORDERING",
+  "activeUpstreamDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "authorization": {
+    "path": "Research/Gate11R_Execution_Authorization.v1.json",
+    "sha256": "4d652688fefdd319b0316fd4c0390c894fcff2fe55dfbb83809e82a027248bfa"
+  },
+  "auditSummary": {
+    "path": "Research/Verification/Gate11R_5pct_PreImplementation/v1/Gate11R_PreImplementation_Audit.summary.v1.json",
+    "sha256": "282eaf0dc786e51946a12fb3a5a1c35cc177e6d8e90bb0ecdd011384f3b356fe",
+    "checks": 74,
+    "passed": 73,
+    "failed": 1
+  },
+  "diagnostic": {
+    "path": "Research/Verification/Gate11R_5pct_PreImplementation/v1/Gate11R_PreImplementation_Failure.diagnostic.log",
+    "sha256": "1bf5b1f9b9d4ab1c8a60b99c7e0512d25284c8222a9348fd11226fe92750db22"
+  },
+  "observedTree": {
+    "path": "Research/PilotRuns/Gate13_ProcessReuse/v1",
+    "fileCount": 838,
+    "rawBytes": 91219643,
+    "powershell7TreeSha256": "652c0cc0a66b62d1adfb8d4f71e0edc27e5804caaf18be49c5c30a4633b210ca",
+    "windowsPowershell51TreeSha256": "20f151c53bbc979a0e14f988edd6ae717e0e8c128b33b492b4dfb922fc3924cc"
+  },
+  "unityStarted": false,
+  "officialGate11RRootCreated": false,
+  "gate11RProductionOutputsCreated": false,
+  "gate12RStarted": false,
+  "gate13RStarted": false,
+  "automaticRetryAllowed": false,
+  "automaticResumeAllowed": false,
+  "requiredNextAuthority": "A separate user authorization for a versioned canonical ordinal relative-path tree audit and Gate 11R retry."
+}

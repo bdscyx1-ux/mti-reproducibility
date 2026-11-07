@@ -1,0 +1,80 @@
+{
+  "schema": "gate14re-me-qualification-planning-asset-generation-v4-attempt-002-stage-contract-v4",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-bounded-gnf-discrimination-window-v4",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v4-attempt-002",
+  "createdAtUtc": "2026-10-19T11:57:01.766345Z",
+  "mode": "OFFLINE_NONEXECUTING_PLANNING_ASSET_GENERATION",
+  "attemptRootRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002",
+  "uniqueContracts": {
+    "qualificationDesign": {
+      "relativePath": "Research/Verification/Gate14Re-ME/gnf-discrimination-window-design-v2-attempt-001/selected-gnf-design.v2.json",
+      "sha256": "aec051d91accd2af8e51baa3a7f8cfd41458065a8551f11a2dec9981bc2cacfd"
+    },
+    "qualificationDesignTerminal": {
+      "relativePath": "Research/Verification/Gate14Re-ME/gnf-discrimination-window-design-v2-attempt-001/terminal-receipt.v2.json",
+      "sha256": "6bb7302ba03f02b2b9e7b3e673bfddb93b055d8a3f1e6391111f2a62480abb9f"
+    },
+    "streamingAcceptanceFeasibility": {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-acceptance-v4-feasibility-attempt-001/delivery/terminal-final.v4.json",
+      "sha256": "8e23efa3dda65b437eb096c48740c68df7f0271859c7fabf28e40e664e03ef9e"
+    },
+    "inputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-input-schema.v4_0.json",
+      "sha256": "bc891db7548443ee5b3e4b4e1a6173dd264c8e7cd96d92fb6bbe51c9b1ddbdaa"
+    },
+    "scheduleSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-schedule-schema.v4_0.json",
+      "sha256": "32a1c01abfae216aaa3bc091e704b2d0eb39a43d0fe84028c49782dc22db578e"
+    },
+    "outputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-output-schema.v4_0.json",
+      "sha256": "bbf73acaa031331e99db93bfe58affa1f998871eee45040a2bf80c3dc7b0028e"
+    },
+    "sixAlgorithmFairnessBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1_2.json",
+      "sha256": "ed7d45a47ee5cc1882e0cfe57daf0735be73f0ee84f50f45e4724726d96e5291"
+    },
+    "referenceOracleSource": {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    }
+  },
+  "tooling": {
+    "generator": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/generate_and_validate_planning_assets_v4_1.py",
+      "sha256": "a4b70d5908dfb90291747b7cdba9f5f172a10c036d4ad1f543cd16ad007e83f4"
+    },
+    "jsonSchemaDriver": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/validate_json_schemas_v4_1.ps1",
+      "sha256": "6947d8b209c7a618daad89e8936ddc9cd66a2aa4edce502e92a3c35aa6bf5df8"
+    }
+  },
+  "requiredOutputs": {
+    "sealedIdentityBindingCount": 1,
+    "coreInputBundleCount": 108,
+    "stressInputBundleCount": 18,
+    "totalInputBundleCount": 126,
+    "scheduleRowCount": 126,
+    "williamsSequenceCount": 6,
+    "repetitionsPerWilliamsSequence": 21,
+    "candidateBGridRule": "positive multiples of 36",
+    "provisionalMinimumB": 36,
+    "finalB": null,
+    "finalBStatus": "PENDING_POWER_REFREEZE"
+  },
+  "executionBoundary": {
+    "measuredRootCreated": false,
+    "unityInvocationsMaximum": 0,
+    "plannerInvocationsMaximum": 0,
+    "algorithmLaneExecutionsMaximum": 0,
+    "qualificationObservationsMaximum": 0,
+    "formalObservationsMaximum": 0,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "failureDisposition": "preserve all evidence and partial assets; do not adopt them; fail closed"
+}

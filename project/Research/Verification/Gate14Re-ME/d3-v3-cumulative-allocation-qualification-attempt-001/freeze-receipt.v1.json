@@ -1,0 +1,106 @@
+{
+  "schema": "gate14re-me-d3-v3-failed-qualification-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-001",
+  "status": "FROZEN_FAILED_CLOSED_NATIVE_BUILD_ENVIRONMENT",
+  "version": 1,
+  "frozenAtUtc": "2026-10-17T06:24:44.9458251Z",
+  "outcome": {
+    "d3V2RetiredProspectivelyAsFormalD3": true,
+    "allD3V2EvidenceRetained": true,
+    "d3V3NativeSourceImplemented": true,
+    "d3V3NativeBinaryBuilt": false,
+    "d3V3UnityCompilationRun": false,
+    "d3V3KnownAnswerRun": false,
+    "d3V3Qualified": false,
+    "formalD3EndpointAvailable": false,
+    "exactFailure": "The current Visual Studio 2022 x64 environment has no Windows SDK include root; compilation stopped at Windows.h with C1083 before any DLL, Unity process, or known-answer measurement existed.",
+    "secondaryBuildIssue": "PluginAPI headers emitted C4819 under code page 936 and /WX promoted the warning to C2220.",
+    "automaticRetryPerformed": false,
+    "fallbackMetricUsed": false
+  },
+  "frozenBindings": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Authorization.v1.json",
+      "sha256": "77c1754ef52821c46be752e47675db6483836c2f75b55238f9c7a9eaecf0dec9"
+    },
+    {
+      "role": "prospective-plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Plan.v1.md",
+      "sha256": "907c60a5ca2695850190c27bc688ea5053aa7da1f533aea748f492b86b4c313b"
+    },
+    {
+      "role": "prospective-unqualified-instrument-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.prospective.v1.json",
+      "sha256": "a72d97113a4089f5d9532c6ac6d4bb817341339e5192afdaad6729a142cd5ff1"
+    },
+    {
+      "role": "native-source-uncompiled",
+      "relativePath": "Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV3.cpp",
+      "sha256": "12c41acc7dc106d314bd71d3bdc1d95e0346cc8467e0a1a1e1b3109093ef2a0d"
+    },
+    {
+      "role": "managed-wrapper-uncompiled-by-unity",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV1.cs",
+      "sha256": "0fcac01678ec387aa2659543a2b84cba67b58ec97bdbfbc1e84aa77f5f0c3f9c"
+    },
+    {
+      "role": "algorithm-free-harness-not-run",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V3KnownAnswerRunnerV1.cs",
+      "sha256": "78cfc48b00fa2890f4b17ea6e6de6e7719bab8c57870e5126a40b72d6e71c3f3"
+    },
+    {
+      "role": "native-plugin-import-metadata",
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV3.dll.meta",
+      "sha256": "84702a5d6098fd43c6e1fc2acf2ab6f9a65ee3566d846ee7937f4278b25c47ae"
+    },
+    {
+      "role": "preexecution-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/preexecution-manifest.v1.json",
+      "sha256": "8903e1c91b792c707e04890d34e2a99dee427dc3392ec5bed04f3684af1f8970"
+    },
+    {
+      "role": "failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/failure-receipt.v1.json",
+      "sha256": "3ad510a4ec142f8ac58dfc497eb6e48ee2de03cf8579463662252ca23816ba85"
+    },
+    {
+      "role": "source-freeze-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/source-freeze-manifest.v1.json",
+      "sha256": "3e7d89cc9688772f2faa7491c5119d5cd824231e38bb997b15b887af305a1a54"
+    },
+    {
+      "role": "validation-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-001/validation-receipt.v1.json",
+      "sha256": "568fc82e5cbf13637b4aab564671b33dd8d89295289fe8474ac71f07676e13e1"
+    }
+  ],
+  "validation": {
+    "status": "PASS_FAILURE_EVIDENCE_CONSISTENCY_D3_V3_NOT_QUALIFIED",
+    "checksPassed": 18,
+    "checksFailed": 0,
+    "nativeBuildAttempts": 1,
+    "unityKnownAnswerRuns": 0,
+    "algorithmLaneRuns": 0,
+    "formalRuns": 0,
+    "nativeBinaryAbsent": true,
+    "knownAnswerOutputAbsent": true
+  },
+  "scientificBoundary": {
+    "currentQualificationRunnerModified": false,
+    "currentOutputSchemaModified": false,
+    "algorithmSourcesModified": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "fallbackMetricUsed": false
+  },
+  "nextRequiredAction": "This attempt is closed and must not be retried or overwritten. A separate authorization is required to install and freeze a compatible Windows SDK, freeze a UTF-8 compiler source policy for the Unity PluginAPI headers, and create a new D3-v3 qualification attempt. Runner/schema integration, schedules, inputs, identities, measured roots, algorithm lanes, formal collection, analysis, ranking, and winner adjudication remain unauthorized."
+}

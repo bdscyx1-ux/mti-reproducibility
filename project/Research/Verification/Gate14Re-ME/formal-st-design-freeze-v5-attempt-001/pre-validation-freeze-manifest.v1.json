@@ -1,0 +1,104 @@
+{
+  "schema": "gate14re-me-formal-st-pre-validation-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-design-freeze-v5-attempt-001",
+  "createdAtUtc": "2026-10-20T02:58:16.6647359Z",
+  "purpose": "Freeze every non-output input to the formal ST v5 non-executing validation before the validator reads decisive evidence or emits terminal evidence.",
+  "files": [
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-analysis-contract.v5_0.json",
+      "bytes": 3194,
+      "sha256": "ed884beebaabb05cc039c6e401169cb80659386558e6af95f3eaec9bfec519cd"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-data-delivery-binding.v5_0.json",
+      "bytes": 1574,
+      "sha256": "a06ca8ed0e1e055b27a3b60791985a39ac06d8b5804acef69ad637386fe9f9f2"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-endpoint-mipe-contract.v5_0.json",
+      "bytes": 3191,
+      "sha256": "6b38e152c8a17c0bedcd2e700aa8274167e2e0831b33c13cdfbb5227b1354132"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-execution-contract.v5_0.json",
+      "bytes": 2515,
+      "sha256": "a2fe5232b87e68047f3e1df7a2da11718fa756451a8813fd07119a011329eac2"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-fairness-runtime-binding.v5_0.json",
+      "bytes": 4319,
+      "sha256": "fb0aff4f17618022ad4818b0f3afbf9ce44b804f97bfd2f9027e7bd3d9a8a06f"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-freeze-index.v5_0.json",
+      "bytes": 4213,
+      "sha256": "35c3b98e42cc21b200308460c6b93fb48961b4a450522acc23958c76b70b00dd"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-implementation-build-input-binding.v5_0.json",
+      "bytes": 4147,
+      "sha256": "6882706a9b8bdde9790ad3ebdb9b6fa456ac1f925f18afb834c6c420fcb7fc5d"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-parameter-amendment.v5_0.json",
+      "bytes": 2113,
+      "sha256": "f50c2cc150dac4f56f24d67cc3eff8d662bd2a69338486c2f62d5528209d5bca"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-resource-budget.v5_0.json",
+      "bytes": 2262,
+      "sha256": "31a9bc6b085add9652fdf9c845361e0498591a75885b47dbc3c1db640e236401"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-sample-size-decision.v5_0.json",
+      "bytes": 1751,
+      "sha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-schedule-contract.v5_0.json",
+      "bytes": 2377,
+      "sha256": "d480b1a1fda1dda0737015e66064e58aa5f84d87fa5d594d3bab65d9b7712cbc"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-scientific-design.v5_0.json",
+      "bytes": 3855,
+      "sha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-stopping-and-replacement-contract.v5_0.json",
+      "bytes": 2415,
+      "sha256": "39a1b52c19b1103a4bf2a97a6d61ff5c6d59c0eeef5f931d22ff3b69bd3dbe1c"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-design-freeze-v5-attempt-001/user-authorization-receipt.v1.json",
+      "bytes": 2101,
+      "sha256": "2f51cc755a544810fd9abe16de3964187ffbfbdcdcf98ece25c5c7c367349a3a"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-design-freeze-v5-attempt-001/freeze-plan.v1.json",
+      "bytes": 1779,
+      "sha256": "926c54f9e23cd852ea50e5eeeee3bf25f4ecac6dfd18018853d62d9fb611b669"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-design-freeze-v5-attempt-001/validate_formal_st_freeze_v5.py",
+      "bytes": 18520,
+      "sha256": "4dbb07eeb5f174903cd773f72f2cd31b08c84e13987d4c0ca105b13769422382"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-design-freeze-v5-attempt-001/Run-FormalSTFreezeValidation.v1.ps1",
+      "bytes": 1601,
+      "sha256": "177adab2057e6446047697c59d60fc0c735f4dc17e5596b174fe0b46b9dbe812"
+    }
+  ],
+  "outputFilesExcludedBecauseTheyMustNotExistBeforeExecution": [
+    "validation-result.v1.json",
+    "freeze-manifest.v1.json",
+    "terminal-receipt.v1.json",
+    "final-evidence-freeze-manifest.v1.json",
+    "execution.stdout.log",
+    "execution.stderr.log"
+  ],
+  "formalCollectionStarted": false,
+  "migrationPackageBuilt": false
+}

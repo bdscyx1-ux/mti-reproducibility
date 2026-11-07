@@ -1,0 +1,46 @@
+{
+  "schema": "gate14re-me-trusted-timestamp-comparator-auto-attempts-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-auto-attempts-until-pass",
+  "attemptId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-005",
+  "authorizedAtUtc": "2026-10-17T12:01:49.8654383Z",
+  "userAuthorizationVerbatim": "授权所有后续attempt，等到attempt通过后再向我索要后续授权",
+  "interpretation": {
+    "authorizedSeries": "Gate14Re-ME trusted identity timestamp comparator corrigendum",
+    "subsequentIndependentAttemptsAuthorizedUntilFirstPass": true,
+    "sameAttemptRetryAuthorized": false,
+    "automaticStructuralRepairBetweenIndependentAttemptsAuthorized": true,
+    "stopCondition": "FIRST_TERMINAL_OFFLINE_KNOWN_ANSWER_PASS",
+    "requestNextAuthorizationOnlyAfterPass": true,
+    "scopeExpansionBeyondCurrentTimestampComparatorStage": false
+  },
+  "retentionRequirements": {
+    "preserveAttempt003FailureStateAndEvidence": true,
+    "preserveAttempt004FailureStateAndEvidence": true,
+    "preserveStatusV19": true,
+    "preserveStatusV20": true,
+    "preserveTrustedLaunchIdentityRuleV1": true,
+    "deleteModifyOrReclassifyPriorEvidenceAuthorized": false
+  },
+  "attempt005AuthorizedChange": {
+    "description": "Replace PowerShell ConvertFrom-Json DateTime coercion in the offline orchestrator with System.Text.Json string-preserving extraction for the frozen trusted rule timestamp fields, then execute the original 16-case offline known-answer exactly once.",
+    "comparatorSemanticsChanged": false,
+    "trustedIdentityRuleChanged": false,
+    "nonTimestampIdentityRequirementsWeakened": false
+  },
+  "executionBoundary": {
+    "offlineKnownAnswerInvocationMaximumPerAttempt": 1,
+    "unityInvocationMaximum": 0,
+    "schemaCompatibilitySelfCheckAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

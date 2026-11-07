@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "provenanceKind": "gate13r-pr2-attempt2-failure-diagnosis-provenance-v1",
+  "createdAtUtc": "2026-10-09T02:49:00Z",
+  "createdAtAsiaShanghai": "2026-10-09T10:49:00+08:00",
+  "statusTokens": [
+    "NON-EXECUTING",
+    "FAILURE-DIAGNOSTIC-ONLY",
+    "PARTIAL-FORMAL-ATTEMPT-EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "environment": {
+    "currentPowerShell": "7.6.5",
+    "currentPowerShellEdition": "Core",
+    "windowsPowerShell51": "5.1.26100.9444",
+    "dotNetRuntime": ".NET 10.0.11",
+    "operatingSystem": "Microsoft Windows 10.0.26300",
+    "python": "3.14.7",
+    "timezone": "Asia/Shanghai",
+    "randomSeed": null,
+    "randomizedComputationUsed": false
+  },
+  "authorization": {
+    "promptRelativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Next_Authorization_Prompt.md",
+    "promptSha256": "a23106b665d78c807d2e6751579cfe39c5964f2afa973e138afc98c88152bc3a",
+    "userAuthorizationRelativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_User_Authorization.v1.txt",
+    "userAuthorizationSha256": "63d783bcc5a15a4d10fe1d0f4138d602e0d043cb1963ac0f830bb372011d1f3f",
+    "authorizationRecordRelativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Authorization.v1.json",
+    "authorizationRecordSha256": "dd702cb528f47379d29debcabb2c8fd6eca082cfbd9439b8be4fb2748706386c"
+  },
+  "failedFormalAttempt": {
+    "absoluteRoot": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+    "executionReceiptSha256": "a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e",
+    "executionStatusSha256": "0066772d7610b4788c404cf7e320fe9983835c17325d94bcd70ebd5c6742a12e",
+    "fileCount": 28020,
+    "rawBytes": 8536611302,
+    "canonicalOrdinalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "allFilesReadOnly": true,
+    "rawDataComplete": false,
+    "disposition": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / EXCLUDED-FROM-FORMAL-ANALYSIS"
+  },
+  "implementationHistory": [
+    {
+      "attempt": "manifest-v1",
+      "status": "FAILED-PRESERVED",
+      "implementationRelativePath": "Research/Analyze-Gate13RPR2Attempt2FailureV1.py",
+      "implementationSha256": "24366bbfce687f29f415198c3be65d25451ea9316daf4de9ad969d6e325a73e5",
+      "reason": "Pre-write PowerShell culture sorting had been incorrectly labeled ordinal; Python correctly failed closed on the hash mismatch."
+    },
+    {
+      "attempt": "manifest-v2",
+      "status": "PASSED",
+      "implementationRelativePath": "Research/Analyze-Gate13RPR2Attempt2FailureV2.py",
+      "implementationSha256": "89c33eaf38e428676c149b830072994bc69df982591d45205d7931ec2e432c98",
+      "reason": "Corrected expected identity to independently verified Unicode/System.StringComparer.Ordinal ordering without changing the V1 core."
+    },
+    {
+      "attempt": "enforcement-boundary-v3",
+      "status": "FAILED-PRESERVED-NO-OUTPUT-CREATED",
+      "implementationRelativePath": "Research/Analyze-Gate13RPR2Attempt2FailureV3.py",
+      "implementationSha256": "8f84de107e87d51682574c3b38d00f96305674473408a36f909e1d7fd4c4f44d",
+      "reason": "The source-evidence predicate incorrectly required explicit non-final native fixture names."
+    },
+    {
+      "attempt": "enforcement-boundary-v4",
+      "status": "PASSED",
+      "implementationRelativePath": "Research/Analyze-Gate13RPR2Attempt2FailureV4.py",
+      "implementationSha256": "910ef7414dafce25d75779e45fc012088764f93875b2b93344e1ea1a31d365b1",
+      "reason": "The repaired predicate proves deferral from explicit finalSampleInBlock production conditions and frozen fixtures."
+    },
+    {
+      "attempt": "failure-precedence-native-parser-invocation-1",
+      "status": "FAILED-PRESERVED-HARNESS-INVOCATION",
+      "reason": "Outer-shell quoting altered the parser command; the module was not modified."
+    },
+    {
+      "attempt": "failure-precedence-native-parser-and-execution-2",
+      "status": "PASSED",
+      "reason": "Native Windows PowerShell 5.1 parser and -File execution both passed."
+    }
+  ],
+  "frozenSourceBindings": [
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV4.cs",
+      "sha256": "ef12eb01b903318c5ce9455d5872cff5e7f505f3d1496ffc860d512173be5467"
+    },
+    {
+      "relativePath": "Research/Run-Gate13RPR2FormalBlockV6.ps1",
+      "sha256": "06e2a51c1fe2f23e8189310d4708cd2a21f36bfd205bfbddf8df002ad0ac8e2a"
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Partial_Output_Evidence_Manifest.v1.json",
+      "sha256": "11cf507ad3daee5c4d17adf3d7349e50b73a925f58fdb175e2b68315240eff5b",
+      "bytes": 8702928
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Preservation_Receipt.v1.json",
+      "sha256": "25bd349efdc9e4527ed46bf9f0b9131fa419f5851e25ed6c32875d59b522e92d"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Frozen_Input_Manifest.v1.json",
+      "sha256": "e0bda309e99efefc1bf2b61ef9f3329f56de9d977d94f9c409bcb754ff2eeabf"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Stale_Lock_Cleanup_Receipt.v1.json",
+      "sha256": "f960bef811a05878dd1ea1430ed11ad16b311c2be22cafa774223f69a6d7017b"
+    },
+    {
+      "relativePath": "Research/Analysis/Gate13R_PR2_Attempt2_Failure_Diagnosis/v1/evidence-manifest.json",
+      "sha256": "73e34e3910a38462d8dc3a125eaf88e2c800b8f1808206db054fbe50e4f24c46"
+    },
+    {
+      "relativePath": "Research/Analysis/Gate13R_PR2_Attempt2_Failure_Diagnosis/v2/evidence-manifest.json",
+      "sha256": "847e93f13fe7e46eea154741d3e93421ff7c4df389b1a7a2e10cb1b676e4eb3b"
+    },
+    {
+      "relativePath": "Research/Verification/Gate13R_PR2_Attempt2_Failure_Diagnosis/v1/final-validation-only-audit-summary.json",
+      "sha256": "892bb2659619b63fba78b18b1a3db5fadd23b4483c1b0aca3ba25934e6e90daa"
+    }
+  ],
+  "validation": {
+    "syntheticV1PassedCount": 23,
+    "canonicalOrderV2PassedCount": 4,
+    "enforcementBoundaryV3PassedCount": 11,
+    "enforcementBoundaryRepairV4PassedCount": 6,
+    "failurePrecedenceCurrentPowerShellPassedCount": 10,
+    "failurePrecedenceWindowsPowerShell51PassedCount": 10,
+    "deterministicRegenerationFileCount": 5,
+    "finalAuditPassedCount": 21,
+    "unityInvoked": false,
+    "formalPerformanceAnalysisPerformed": false,
+    "attempt3Created": false,
+    "gate14RStarted": false
+  },
+  "diagnosticVerdict": "TARGETED-NON-FORMAL-MEMORY-PILOT-REQUIRED",
+  "memoryPolicyStatus": "UNFROZEN / USER-DECISION-REQUIRED"
+}

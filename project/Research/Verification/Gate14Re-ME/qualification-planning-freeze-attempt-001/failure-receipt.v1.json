@@ -1,0 +1,55 @@
+{
+  "schema": "gate14re-me-qualification-planning-freeze-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-planning-freeze-attempt-001",
+  "status": "FAILED_CLOSED_INPUT_SCHEMA_RUNTIME_CONTRACT_CONTRADICTION",
+  "failedAtUtc": "2026-10-17T08:43:20.3227735Z",
+  "phase": "pre-generation-frozen-contract-compatibility-audit",
+  "exactPrimaryDiagnostic": "Frozen event-group JSON Schema prohibits the topology property via additionalProperties=false, while the frozen C# DTO declares eventGroup.topology and the frozen Unity oracle requires group.topology == input.changeTopology for every event group.",
+  "logicalProof": {
+    "schemaValidBranch": "Omit eventGroups[*].topology. The JSON Schema can accept the event-group property set, but Unity deserializes topology as unset and the oracle equality check fails because input.changeTopology must be compact, dispersed, or bottleneck.",
+    "runtimeValidBranch": "Include eventGroups[*].topology equal to input.changeTopology. The runtime condition can be met, but the JSON Schema rejects topology as an undeclared additional property.",
+    "conclusion": "The intersection of schema-valid and runtime-valid qualification input bundles is empty under the frozen bindings."
+  },
+  "preflightAuditBinding": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-attempt-001/preflight-compatibility-audit.v1.json",
+    "lengthBytes": 4458,
+    "sha256": "68fa5cb6c4a3a9c87d29f06acb69dd93f2081f060f69e192478fdedf2231afcf"
+  },
+  "authorizationBinding": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Planning_Freeze_Authorization.v1.json",
+    "sha256": "d19fe98380c3c2eda3897ad89e48efe2a9cf08e6a4f959680a38b270755bee62"
+  },
+  "planBinding": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Planning_Freeze_Plan.v1.md",
+    "sha256": "82fa3ba2512edbef497c708c29394d0b8788186e63b8b246859231224159fd18"
+  },
+  "failClosedDisposition": {
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "partialPlanningArtifactsAdopted": false,
+    "qualificationMeasuredRootCreated": false,
+    "unityCompiledOrLaunched": false,
+    "algorithmPlannerConstructedOrInvoked": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "priorEvidenceDeletedOrModified": false,
+    "frozenSchemaRunnerOracleOrContractModified": false
+  },
+  "retainedEvidence": {
+    "authorizationAndPlanRetained": true,
+    "preflightAuditRetained": true,
+    "failedAttemptMayBeResumed": false,
+    "planningOutputsMayBeRecoveredFromThisAttempt": false
+  },
+  "nextMinimumAuthorizationRequired": {
+    "stage": "algorithm-free qualification-input schema compatibility corrigendum",
+    "minimumAllowedWork": "Create a new versioned validation-schema revision that declares and requires eventGroups[*].topology while preserving the existing runtime bundle identity when possible; version only dependent planning bindings that must select the corrected schema; run a schema-valid versus schema-invalid in-memory known-answer and one algorithm-free Unity JsonUtility/oracle-header round trip; freeze hashes and a terminal receipt.",
+    "mustRetain": "The frozen v1 schema, this failed attempt, and every prior receipt remain immutable and present.",
+    "stillProhibited": "Do not generate the 162-row schedule, qualification inputs, or identity map; do not create a measured root; do not execute an algorithm lane or formal collection; do not analyze, rank, or adjudicate a winner."
+  }
+}

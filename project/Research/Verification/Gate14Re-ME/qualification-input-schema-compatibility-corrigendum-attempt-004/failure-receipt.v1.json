@@ -1,0 +1,275 @@
+{
+  "schema": "gate14re-me-input-schema-compatibility-attempt-004-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-004",
+  "status": "FAILED_CLOSED_INPUT_SCHEMA_COMPATIBILITY_ATTEMPT_004",
+  "failedAtUtc": "2026-10-17T12:36:28.4387659Z",
+  "exceptionType": "System.Management.Automation.PropertyNotFoundException",
+  "exactFailure": "The property 'Sum' cannot be found on this object. Verify that the property exists.",
+  "stackTrace": "at Remove-IsolatedUnityTransientCaches, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-input-schema-compatibility-corrigendum-attempt-004\\Invoke-Gate14ReMEInputSchemaCompatibilityAttempt004.ps1: line 386\r\nat <ScriptBlock>, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-input-schema-compatibility-corrigendum-attempt-004\\Invoke-Gate14ReMEInputSchemaCompatibilityAttempt004.ps1: line 705\r\nat <ScriptBlock>, <No file>: line 2",
+  "unityInvocationCount": 1,
+  "unityExitCode": 0,
+  "retryPerformed": false,
+  "signalOrForcedTerminationSent": false,
+  "attempt001Evidence": {
+    "beforeContentDigestSha256": "f8401239543226c4b96d89b08db2150e7e578b55afc53e7f80aaa7062fd03fb3",
+    "afterContentDigestSha256": "f8401239543226c4b96d89b08db2150e7e578b55afc53e7f80aaa7062fd03fb3",
+    "unchanged": true,
+    "reclassified": false
+  },
+  "attempt002Evidence": {
+    "beforeContentDigestSha256": "6feaa2fa863bf1546e5e7d7fe6367ad4da605b7318936e4c0189baa7ab33f9fc",
+    "afterContentDigestSha256": "6feaa2fa863bf1546e5e7d7fe6367ad4da605b7318936e4c0189baa7ab33f9fc",
+    "unchanged": true,
+    "reclassified": false
+  },
+  "attempt003Evidence": {
+    "beforeContentDigestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef",
+    "afterContentDigestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef",
+    "unchanged": true,
+    "reclassified": false
+  },
+  "timestampComparatorAttempt007Evidence": {
+    "beforeContentDigestSha256": "cfe7185263dcc343bbf143291246d1ca2e68b050f328d271d8770e2e215bf9f5",
+    "afterContentDigestSha256": "cfe7185263dcc343bbf143291246d1ca2e68b050f328d271d8770e2e215bf9f5",
+    "unchanged": true,
+    "comparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "modified": false
+  },
+  "timestampComparatorObservations": {
+    "prelaunchAgainstTrustedRule": {
+      "passed": true,
+      "nonTimestampChecksPassed": true,
+      "creationTimeUtc": {
+        "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "trusted": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "observed": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "bothParsedUniquely": true,
+        "sameUtcInstant": true,
+        "comparisonAccepted": true,
+        "failClosed": false,
+        "failureCode": null,
+        "comparisonBasis": "UTC_TICKS"
+      },
+      "lastWriteTimeUtc": {
+        "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "trusted": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "observed": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "bothParsedUniquely": true,
+        "sameUtcInstant": true,
+        "comparisonAccepted": true,
+        "failClosed": false,
+        "failureCode": null,
+        "comparisonBasis": "UTC_TICKS"
+      },
+      "comparatorRelativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "comparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+      "comparisonBasis": "STRICT_DATETIMEOFFSET_ROUND_TRIP_TO_UTC_TICKS",
+      "trustedRawTextPreserved": true
+    },
+    "liveAgainstTrustedRule": {
+      "passed": true,
+      "nonTimestampChecksPassed": true,
+      "creationTimeUtc": {
+        "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "trusted": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "observed": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "bothParsedUniquely": true,
+        "sameUtcInstant": true,
+        "comparisonAccepted": true,
+        "failClosed": false,
+        "failureCode": null,
+        "comparisonBasis": "UTC_TICKS"
+      },
+      "lastWriteTimeUtc": {
+        "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "trusted": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "observed": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "bothParsedUniquely": true,
+        "sameUtcInstant": true,
+        "comparisonAccepted": true,
+        "failClosed": false,
+        "failureCode": null,
+        "comparisonBasis": "UTC_TICKS"
+      },
+      "comparatorRelativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "comparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+      "comparisonBasis": "STRICT_DATETIMEOFFSET_ROUND_TRIP_TO_UTC_TICKS",
+      "trustedRawTextPreserved": true
+    },
+    "postExitAgainstTrustedRule": {
+      "passed": true,
+      "nonTimestampChecksPassed": true,
+      "creationTimeUtc": {
+        "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "trusted": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "observed": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "bothParsedUniquely": true,
+        "sameUtcInstant": true,
+        "comparisonAccepted": true,
+        "failClosed": false,
+        "failureCode": null,
+        "comparisonBasis": "UTC_TICKS"
+      },
+      "lastWriteTimeUtc": {
+        "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+        "trusted": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "observed": {
+          "originalText": "2024-06-11T11:26:54.0000000Z",
+          "parsed": true,
+          "uniqueParse": true,
+          "successfulFormatCount": 1,
+          "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+          "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+          "utcTicks": 638537020140000000,
+          "sourceOffset": "00:00:00",
+          "failureCode": null
+        },
+        "bothParsedUniquely": true,
+        "sameUtcInstant": true,
+        "comparisonAccepted": true,
+        "failClosed": false,
+        "failureCode": null,
+        "comparisonBasis": "UTC_TICKS"
+      },
+      "comparatorRelativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "comparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+      "comparisonBasis": "STRICT_DATETIMEOFFSET_ROUND_TRIP_TO_UTC_TICKS",
+      "trustedRawTextPreserved": true
+    }
+  },
+  "candidateAdoption": {
+    "inputSchemaV2Adopted": false,
+    "planningSchemaBindingV2Adopted": false
+  },
+  "scientificBoundary": {
+    "schemaCompatibilitySelfCheckInvocations": 1,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "transientIsolatedUnityCachesRemoved": []
+  }
+}

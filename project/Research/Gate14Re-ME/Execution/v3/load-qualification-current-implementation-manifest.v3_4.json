@@ -1,0 +1,530 @@
+{
+  "schema": "gate14re-me-qualification-implementation-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "status": "FROZEN_IMPLEMENTATION_SOURCE_ONLY_UNCOMPILED",
+  "version": 1,
+  "manifestGeneration": 4,
+  "executionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE",
+  "createdLocalDate": "2026-10-18",
+  "legacyRunnerCompatibility": {
+    "schemaAndStatusAreCompatibilityFieldsConsumedByRunnerV2": true,
+    "legacyStatusIsNotTheAuthoritativeExecutionReadinessState": true,
+    "authoritativeStateField": "executionReadinessStatus",
+    "runnerV2SourceRemainsByteIdentical": false,
+    "compiledAssembliesRemainByteIdentical": false,
+    "terminalChainOnlyChangedOutsideRunnerAndAssemblies": false,
+    "compatibilityHeaderPreservedForSupervisorAcceptance": true,
+    "authoritativeForwardOnlyChange": "RUNNERV2_SCHEDULE_NULL_REPLACEMENT_DESERIALIZATION_AND_ATTEMPT_002_ROOT_BINDING"
+  },
+  "retainedFailures": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/failure-receipt.v1.json",
+      "sha256": "feea3650801239a1e92ced9031b137f9c22f7e9a9a483d05a6456353f1827b57",
+      "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_IMPLEMENTATION_BINDING_MISMATCH",
+      "modifiedOrReclassified": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-001/failure-receipt.v1.json",
+      "sha256": "e5842af9ec3a6205aa9e9014ad1fddd6fab2f99696995577575c4ae4607d4c3e",
+      "status": "FAILED_CLOSED_EXECUTION_BINDING_SUPERVISOR_V2_REPAIR",
+      "unityInvocationCount": 0,
+      "modifiedOrReclassified": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/failure-receipt.v1.json",
+      "sha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+      "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE",
+      "passedChecks": 35,
+      "failedChecks": 2,
+      "modifiedOrReclassified": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-001/failure-receipt.v1.json",
+      "sha256": "b195c99e01bc20900762b3752ff6172a64fac4bb914609bf1ba83d832ed99340",
+      "status": "FAILED_CLOSED_TERMINAL_CHAIN_CORRIGENDUM",
+      "exactFailure": "copied frozen synthetic fixture retained Windows read-only attributes",
+      "unityInvocationCount": 0,
+      "modifiedOrReclassified": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/failure-receipt.v1.json",
+      "sha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+      "status": "FAILED_CLOSED_PRELAUNCH_FROZEN_POWERSHELL_RUNTIME_INCOMPATIBLE",
+      "statusV30RelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v30.json",
+      "statusV30Sha256": "aae1979990bd9b7e2bfce320f1a301abba8eeb5c0efc62bebd41ef5a42d5ed3b",
+      "modifiedOrReclassified": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002/failure-receipt.v1.json",
+      "sha256": "83882d9bcfba2cc08c86c87da9e8ae2fb920b32814b7b1fee165e59025323c10",
+      "status": "FAILED_CLOSED_PREFLIGHT_SUPERVISOR_MANIFEST_STATE_GUARD_MISMATCH",
+      "statusV33RelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v33.json",
+      "statusV33Sha256": "f2e3f84699914aed337b0c5058038976e1eae272e7b9ca0421208b837b845c1d",
+      "modifiedOrReclassified": false
+    }
+  ],
+  "artifacts": [
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "sha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+      "bytes": 90914
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs.meta",
+      "sha256": "35fb83fbbf5b516d392f42a41e3938e83c92707d13140cbb086c5637da0b3a41",
+      "bytes": 243
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4",
+      "bytes": 17536
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEInstrumentationV1.cs",
+      "sha256": "e3b52047276a3ae6961914881ba6aaf78bb6a913ca70e4edebb974b2b6deacdb",
+      "bytes": 17944
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25",
+      "bytes": 30510
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs",
+      "sha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007",
+      "bytes": 6168
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta",
+      "sha256": "211d45395c902d2e32131a836227ca88e98e564f15287b196fd1df2b2b740528",
+      "bytes": 243
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+      "sha256": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902",
+      "bytes": 14453
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs.meta",
+      "sha256": "01437ac0e00e8d95d06fec5873aa087bb9292d30d2d54ac3b233d17308b83aff",
+      "bytes": 243
+    },
+    {
+      "role": "native-source",
+      "relativePath": "Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp",
+      "sha256": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2",
+      "bytes": 11808
+    },
+    {
+      "role": "native-binary",
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+      "sha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63",
+      "bytes": 110592
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta",
+      "sha256": "0da140fbc3f6a112402e27f4bbfb77f27953b99b4b0554ebcc4cd3b00642e8a4",
+      "bytes": 526
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+      "sha256": "a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778",
+      "bytes": 25807
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/AStar_Repeated_Specification.md",
+      "sha256": "0fe75b470bb0b1f256278ddf8089b86660a80a5c20c99006a140ff7c3ec8c5eb",
+      "bytes": 5064
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "sha256": "82316036aba90be69ca746288798bac1789cdb09afa65cf9ad4180975d1f947e",
+      "bytes": 34160
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "sha256": "593e21946de91c8ddab59f70be44084aeb8afe7ae72d52e490589f6e77f16ead",
+      "bytes": 755
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+      "sha256": "ae9f1bdc2a30f924239145d8a165ed31d68f05b595916dbed21414fd1c69427f",
+      "bytes": 39778
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/DStar_Lite_Specification.md",
+      "sha256": "65f03f4827c0bd2edceb967311451cace2a34642235457277cbbaaba222b01c3",
+      "bytes": 10784
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "sha256": "10686f9bf5b36ec06e8d5e98a7c54f8bdcc5a1c0d0664cb9a3eed6a806bc52c8",
+      "bytes": 39828
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "sha256": "703e72a92207ceb05f0e63c35322f2a8e727b5e8be6e1dc699cd287ce254d4a9",
+      "bytes": 767
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "sha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1",
+      "bytes": 34279
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "sha256": "6f29c7545c2f9d68ad0bfd2b707cb7f7798fd80b39816eb22010f278a6978223",
+      "bytes": 10875
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "sha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638",
+      "bytes": 46884
+    },
+    {
+      "role": "algorithm-specification",
+      "relativePath": "Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "sha256": "8a7895c0daa38810a5b1087348be11b427cfeb1f6f0ed2f27730578ac84e70ef",
+      "bytes": 14050
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa",
+      "bytes": 5661
+    },
+    {
+      "role": "csharp-source",
+      "relativePath": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "sha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582",
+      "bytes": 10018
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+      "bytes": 4664
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+      "bytes": 4360
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312",
+      "bytes": 4771
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+      "bytes": 6971
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json",
+      "sha256": "bef0f0c143f325eb7b3ad9e5401cc89bc7d6ff3938287a9b049e985aac04e887",
+      "bytes": 3809
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json",
+      "sha256": "8a96a5a53d22617ef90134ac1a57e3b7115e5ea7ce03a6739c632fd52119f8a5",
+      "bytes": 2910
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "sha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71",
+      "bytes": 5257
+    },
+    {
+      "role": "runtime-manifest",
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+      "bytes": 179214
+    },
+    {
+      "role": "delivery-contract",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd",
+      "bytes": 14693
+    },
+    {
+      "role": "trusted-unity-identity-rule",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+      "bytes": 5960
+    },
+    {
+      "role": "timestamp-comparator",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+      "bytes": 5350
+    },
+    {
+      "role": "planning-assets-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json",
+      "sha256": "7e0cbe77cb8bb8f84642856c6356d318f708e168b52a92e6e348cdf948169aca",
+      "bytes": 59200
+    },
+    {
+      "role": "qualification-schedule",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+      "bytes": 199834
+    },
+    {
+      "role": "sealed-identity-binding",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+      "sha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+      "bytes": 1512
+    },
+    {
+      "role": "compile-identity-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json",
+      "sha256": "07118a3b4be7e9cd0b044d073426d8db24ba116498d548c3bbfa42df2cdf9937",
+      "bytes": 2758
+    },
+    {
+      "role": "compiled-editor-assembly",
+      "relativePath": "Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+      "sha256": "3d1165d306227a6ec27b1b7472342d04dd3f52770852f522f7c9db4297440b18",
+      "bytes": 992256
+    },
+    {
+      "role": "compiled-runtime-assembly",
+      "relativePath": "Library/ScriptAssemblies/Assembly-CSharp.dll",
+      "sha256": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1",
+      "bytes": 466432
+    },
+    {
+      "role": "powershell-supervisor",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+      "sha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+      "bytes": 52880
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json",
+      "sha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c",
+      "bytes": 13293
+    },
+    {
+      "role": "machine-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json",
+      "sha256": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0",
+      "bytes": 14281
+    },
+    {
+      "role": "python-tool",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py",
+      "sha256": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e",
+      "bytes": 57834
+    },
+    {
+      "role": "python-tool",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py",
+      "sha256": "197b14309670fc38e26b421c458fbd4fc05abe8ba61f7f715497bbcffb19eb98",
+      "bytes": 33757
+    },
+    {
+      "role": "powershell-supervisor-corrigendum",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_2.ps1",
+      "sha256": "a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409",
+      "bytes": 52904
+    },
+    {
+      "role": "machine-contract-corrigendum",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_4.json",
+      "sha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85",
+      "bytes": 19266
+    },
+    {
+      "role": "algorithm-free-unity-known-answer-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEScheduleNullReplacementKnownAnswerV1.cs",
+      "sha256": "abad9cf6fdae640384c821e6ce555d2b5bcad88cb9ffa2aa50fecb0a95176448",
+      "bytes": 18100
+    },
+    {
+      "role": "unity-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEScheduleNullReplacementKnownAnswerV1.cs.meta",
+      "sha256": "ffa880566fbff3fa2b81f7f410bb2514d73209af35e565bd23ecfe5fec28da8c",
+      "bytes": 243
+    },
+    {
+      "role": "schedule-null-replacement-corrigendum-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+      "sha256": "4c56ddecf1fb191dca2188c68b30aa56691f5cc498d5d92879ffd125efc14df2",
+      "bytes": 4825
+    }
+  ],
+  "runtimeBindings": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityVersion": "2022.3.30f1c1",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "powershellExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "powershellExecutableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "powershellVersion": "7.6.5",
+    "powershellSupervisorCommandPrefix": [
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-File"
+    ]
+  },
+  "compileIdentityProof": {
+    "receiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/unity-known-answer-adjudication.v1.json",
+    "receiptSha256": "8b5c7591f5b7be4fa656436e214dfd012bd127158ced0825391bfc82f753fc52",
+    "status": "PASS_ONE_ALGORITHM_FREE_UNITY_KNOWN_ANSWER_TRUSTED_IDENTITY_NATURAL_EXIT",
+    "unityInvocationCount": 1,
+    "executeMethod": "DDM.Research.Editor.Gate14ReMEScheduleNullReplacementKnownAnswerV1.Run",
+    "naturalExit": true,
+    "exitCode": 0,
+    "threePhaseIdentityPassed": true,
+    "compositeProcessIdentityPassed": true
+  },
+  "replacementPolicy": {
+    "replacementAssetsGenerated": 0,
+    "replacementAssetsConsumed": 0,
+    "currentOperationalPolicy": "ZERO_REPLACEMENT_FAIL_STOP",
+    "scheduleReplacementFieldsAllNull": true,
+    "jsonNullOrMissingMemberMeansNoReplacement": true,
+    "completeReplacementObjectUsesExistingDownstreamValidation": true,
+    "emptyPartialDuplicateMalformedOrUnsupportedReplacementFailsClosed": true,
+    "corrigendumReceiptSha256": "4c56ddecf1fb191dca2188c68b30aa56691f5cc498d5d92879ffd125efc14df2"
+  },
+  "evidenceBoundary": {
+    "unityCompilationPerformed": true,
+    "algorithmFreeUnityProcessesLaunched": 1,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "additionalUnityProcessesLaunchedByTerminalCorrigendum": 0,
+    "additionalPowerShellKnownAnswerProcessesLaunchedByHostBindingCorrigendum": 1,
+    "additionalPowerShellKnownAnswerProcessesLaunchedBySupervisorManifestGuardCorrigendum": 1,
+    "additionalAlgorithmFreeUnityKnownAnswerProcessesLaunchedByScheduleNullCorrigendum": 1,
+    "scheduleNullCorrigendumInstrumentOracleEmptyBoundaryOrAlgorithmProcesses": 0
+  },
+  "manifestSchemaV3": "gate14re-me-qualification-current-implementation-manifest-v3",
+  "terminalChainCorrigendum": {
+    "authorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-002",
+    "outputReceiptPathsCorrectedToRuntimeV2": true,
+    "structuralV3ClosesProcessResourcesPersistentPointsAcceptedReceiptsLedgerAndIdentities": true,
+    "supervisorV3ExplicitFinalProcessOrdinal1147": true,
+    "deliveryV21PreservesV2DeliveryFormat": false,
+    "runnerV2Changed": false,
+    "compiledAssembliesChanged": false,
+    "unityInvocationCount": 0,
+    "deliveryV22PreservesV2DeliveryFormat": true,
+    "attempt001PreservedFailed": true,
+    "syntheticFixtureReadOnlyAttributeNormalizationOnly": true
+  },
+  "manifestRevision": "3.4",
+  "supervisorPowerShellHostBindingCorrigendum": {
+    "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-003",
+    "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-003",
+    "exactExecutablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "exactExecutableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "exactPowerShellVersion": "7.6.5",
+    "convertFromJsonDepthPresent": true,
+    "convertFromJsonDateKindPresent": true,
+    "jsonKnownAnswerPassed": true,
+    "jsonlKnownAnswerPassed": true,
+    "dateTimeOffsetStringPreservationPassed": true,
+    "exceptionFailClosedPassed": true,
+    "supervisorParameterBindingPassed": true,
+    "supervisorV3Changed": false,
+    "runnerV2Changed": false,
+    "compiledAssembliesChanged": false,
+    "scientificAssetsChanged": false,
+    "unityInvocationCount": 0,
+    "qualificationExecutionAuthorized": false
+  },
+  "supervisorManifestAcceptanceGuardCorrigendum": {
+    "authorizationId": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-auto-repair-until-pass-263a2c10-45da-4ede-ae8e-684baf3e9057",
+    "attemptId": "supervisor-manifest-acceptance-guard-corrigendum-attempt-001",
+    "retainedFailureRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002/failure-receipt.v1.json",
+    "retainedFailureSha256": "83882d9bcfba2cc08c86c87da9e8ae2fb920b32814b7b1fee165e59025323c10",
+    "sourceSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+    "sourceSupervisorSha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+    "correctedSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_1.ps1",
+    "correctedSupervisorSha256": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc",
+    "changedPredicateCount": 1,
+    "acceptedManifestGeneration": 4,
+    "acceptedManifestSchemaV3": "gate14re-me-qualification-current-implementation-manifest-v3",
+    "acceptedExecutionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE",
+    "exactPredicateOfflineKnownAnswerRequired": true,
+    "scientificDesignChanged": false,
+    "runnerV2Changed": false,
+    "compiledAssembliesChanged": false,
+    "scientificAssetsChanged": false,
+    "unityInvocationCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "readinessRecheckAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "scheduleNullReplacementDeserializationCorrigendum": {
+    "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+    "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+    "corrigendumPassReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+    "corrigendumPassReceiptSha256": "4c56ddecf1fb191dca2188c68b30aa56691f5cc498d5d92879ffd125efc14df2",
+    "runnerV2Sha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+    "compiledEditorAssemblySha256": "3d1165d306227a6ec27b1b7472342d04dd3f52770852f522f7c9db4297440b18",
+    "compiledRuntimeAssemblySha256": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1",
+    "supervisorV32Sha256": "a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409",
+    "prospectiveMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "prospectiveDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-002",
+    "failedAttempt001MeasuredRootRetained": true,
+    "newRootsCreated": false,
+    "scientificDesignChanged": false,
+    "algorithmImplementationsChanged": false,
+    "scheduleChanged": false,
+    "qualificationExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

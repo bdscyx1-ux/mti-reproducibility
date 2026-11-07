@@ -1,0 +1,1089 @@
+{
+    "status": "PASS",
+    "unityVersion": "2022.3.30f1c1",
+    "scope": "Six frozen backends; two connectivities; weighted grid; block, disconnect, reconnect and cost updates. Functional check only.",
+    "error": "",
+    "checkCount": 120,
+    "checks": [
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 15.0,
+            "actualCost": 15.0
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 10.0,
+            "actualCost": 10.0
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 18.75,
+            "actualCost": 18.75
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 18.25,
+            "actualCost": 18.25
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 11.992640687119286,
+            "actualCost": 11.992640687119286
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.164213562373096,
+            "actualCost": 9.164213562373096
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 9.13908729652601,
+            "actualCost": 9.13908729652601
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.785533905932738,
+            "actualCost": 8.785533905932738
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 17.63908729652601,
+            "actualCost": 17.63908729652601
+        },
+        {
+            "algorithm": "A*-R",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 17.285533905932739,
+            "actualCost": 17.285533905932739
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 15.0,
+            "actualCost": 15.0
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 10.0,
+            "actualCost": 10.0
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 18.75,
+            "actualCost": 18.75
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 18.25,
+            "actualCost": 18.25
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 11.992640687119286,
+            "actualCost": 11.992640687119286
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.164213562373096,
+            "actualCost": 9.164213562373096
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 9.13908729652601,
+            "actualCost": 9.13908729652601
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.785533905932738,
+            "actualCost": 8.785533905932738
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 17.63908729652601,
+            "actualCost": 17.63908729652601
+        },
+        {
+            "algorithm": "BiA*-R",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 17.285533905932739,
+            "actualCost": 17.285533905932739
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 15.0,
+            "actualCost": 15.0
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 10.0,
+            "actualCost": 10.0
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 18.75,
+            "actualCost": 18.75
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 18.25,
+            "actualCost": 18.25
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 11.992640687119286,
+            "actualCost": 11.992640687119286
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.164213562373096,
+            "actualCost": 9.164213562373096
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 9.13908729652601,
+            "actualCost": 9.13908729652601
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.785533905932738,
+            "actualCost": 8.785533905932738
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 17.63908729652601,
+            "actualCost": 17.63908729652601
+        },
+        {
+            "algorithm": "D*L",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 17.285533905932739,
+            "actualCost": 17.285533905932739
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 15.0,
+            "actualCost": 15.0
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 10.0,
+            "actualCost": 10.0
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 18.75,
+            "actualCost": 18.75
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 18.25,
+            "actualCost": 18.25
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 11.992640687119286,
+            "actualCost": 11.992640687119286
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.164213562373096,
+            "actualCost": 9.164213562373096
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 9.13908729652601,
+            "actualCost": 9.13908729652601
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.785533905932738,
+            "actualCost": 8.785533905932738
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 17.63908729652601,
+            "actualCost": 17.63908729652601
+        },
+        {
+            "algorithm": "LPA*",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 17.285533905932739,
+            "actualCost": 17.285533905932739
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 15.0,
+            "actualCost": 15.0
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 10.0,
+            "actualCost": 10.0
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 18.75,
+            "actualCost": 18.75
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 18.25,
+            "actualCost": 18.25
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 11.992640687119286,
+            "actualCost": 11.992640687119286
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.164213562373096,
+            "actualCost": 9.164213562373096
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 9.13908729652601,
+            "actualCost": 9.13908729652601
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.785533905932738,
+            "actualCost": 8.785533905932738
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 17.63908729652601,
+            "actualCost": 17.63908729652601
+        },
+        {
+            "algorithm": "C-FF",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 17.285533905932739,
+            "actualCost": 17.285533905932739
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 15.0,
+            "actualCost": 15.0
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 10.0,
+            "actualCost": 10.0
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 10.25,
+            "actualCost": 10.25
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.75,
+            "actualCost": 9.75
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 18.75,
+            "actualCost": 18.75
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "four",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 18.25,
+            "actualCost": 18.25
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "0",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.07842712474619,
+            "actualCost": 8.07842712474619
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 11.992640687119286,
+            "actualCost": 11.992640687119286
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "1",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 9.164213562373096,
+            "actualCost": 9.164213562373096
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 0,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "2",
+            "status": "NoPath",
+            "agent": 1,
+            "expectedCost": -1.0,
+            "actualCost": -1.0
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 9.13908729652601,
+            "actualCost": 9.13908729652601
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "3",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 8.785533905932738,
+            "actualCost": 8.785533905932738
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 0,
+            "expectedCost": 17.63908729652601,
+            "actualCost": 17.63908729652601
+        },
+        {
+            "algorithm": "IDFF",
+            "connectivity": "eight-strict",
+            "stage": "4",
+            "status": "Succeeded",
+            "agent": 1,
+            "expectedCost": 17.285533905932739,
+            "actualCost": 17.285533905932739
+        }
+    ]
+}

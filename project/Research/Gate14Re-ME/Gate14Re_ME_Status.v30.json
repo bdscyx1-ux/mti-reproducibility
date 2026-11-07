@@ -1,0 +1,48 @@
+{
+  "schema": "gate14re-me-status-v30",
+  "studyId": "Gate14Re-ME",
+  "status": "LOAD_QUALIFICATION_EXECUTION_ATTEMPT_001_FAILED_CLOSED_PREFLIGHT_POWERSHELL_RUNTIME_INCOMPATIBLE",
+  "version": 30,
+  "updatedAtUtc": "2026-10-17T16:10:11.0371673Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v29.json",
+    "sha256": "e439e2a2c83e87510a783b8b13026838e77d9ab3d3560ec7caef6908172063a2",
+    "retained": true,
+    "modifiedOrReclassified": false
+  },
+  "loadQualificationExecutionAttempt001": {
+    "authorizationId": "gate14re-me-load-qualification-execution-attempt-001-921b3fd4-9f0d-4c0b-b6ad-caed4aea83d2",
+    "failedClosed": true,
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/failure-receipt.v1.json",
+    "failureReceiptSha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+    "exactFailure": "Frozen Windows PowerShell 5.1 lacks ConvertFrom-Json Depth and DateKind parameters required by frozen supervisor v3.",
+    "failureClass": "FROZEN_EXECUTION_TOOLCHAIN_BINDING_DEFECT",
+    "supervisorLaunchAttempted": false,
+    "unityInvocationCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservations": 0,
+    "formalObservations": 0
+  },
+  "retainedReadiness": {
+    "statusV29Passed": true,
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-003/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "fb94db25887dc30a8765980bb4c6d735388266da9285e82c0a441f1dcd9bb653",
+    "readinessScientificFindingsChanged": false,
+    "readinessAttemptModifiedOrReclassified": false
+  },
+  "authorizationState": {
+    "loadQualificationExecutionAttempt001ConsumedByPrelaunchFailure": true,
+    "repairAuthorized": false,
+    "retryAuthorized": false,
+    "newAttemptAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "deliveryRootCreationAuthorized": false,
+    "unityInvocationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Obtain a separate minimal toolchain-corrigendum authorization to bind a PowerShell 7 runtime or make supervisor v3 Windows PowerShell 5.1 compatible, then repeat an offline execution-readiness check before any new qualification execution attempt can be authorized."
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "repairId": "gate13r-pr2-validation-attempt3-cross-runtime-tree-identity-repair-v1",
+  "status": "FROZEN-BEFORE-ATTEMPT3",
+  "failureSource": {
+    "relativePath": "Research/Gate13R_PR2_Validation_Attempt2_Failure_Receipt.v1.json",
+    "sha256": "db542ca3d64fb49453d56fbc68ccc6d9cdc4b1b5c0581bdec7e7355409239012"
+  },
+  "repairedIdentityAudit": {
+    "relativePath": "Research/Gate13R_PR2_PreWrite_Preservation_Audit.v2.json",
+    "rawBytes": 5182,
+    "sha256": "d02d49773e6404e036e1d5c3d7c8851f5a39e8d9ba129091ad27552a9779d2eb",
+    "treeIdentityAlgorithm": "relative-path-UTF8-size-fileSHA256-lines-sorted-StringComparer.Ordinal-v1"
+  },
+  "activeValidationSources": [
+    {
+      "relativePath": "Research/Test-Gate13RPR2FormalPreparationV3.py",
+      "rawBytes": 31352,
+      "sha256": "c8dde3ee9514ea5393f81b4917eeb8aede9b2c459e0a110f36d21e47a0bad942"
+    },
+    {
+      "relativePath": "Research/Verification/Run-Gate13RPR2NonExecutingValidationV3.ps1",
+      "rawBytes": 10563,
+      "sha256": "4ce60732b983891920865a58e59c92f448cb0ef8d3361ea40a9f84818cebe49f"
+    }
+  ],
+  "preflight": {
+    "pythonAstParsePassed": true,
+    "powerShell7ParserPassed": true,
+    "windowsPowerShell51ParserPassed": true,
+    "attempt1RootPreserved": true,
+    "attempt2RootPreserved": true,
+    "attempt3RootAbsent": true,
+    "formalRootAbsent": true,
+    "unityEditorProcessCount": 0
+  },
+  "changeClassification": "IDENTITY-SERIALIZATION-ONLY",
+  "scientificContractChanged": false,
+  "formalConfigOrScheduleChanged": false,
+  "hardGateRelaxed": false
+}

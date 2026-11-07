@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-me-qualification-implementation-readiness-plan-v4.5",
+  "studyId": "Gate14Re-ME",
+  "status": "PROVISIONAL_EXACT_SOURCE_COMPILE_CHECK_NOT_DESIGN_FREEZE_NOT_EXECUTION_AUTHORIZATION",
+  "purpose": "Compile-check the exact v4.1 algorithm-neutral oracle-cache source after the separately preserved precompile licensing-IPC failure in readiness attempt-006. This executes no qualification, oracle acquisition, algorithm lane, acceptance, or formal collection.",
+  "executeMethod": "DDM.Research.Editor.Gate14ReMEReadinessCompileExitV4.Run",
+  "expected": {
+    "unityNaturalExitCode": 0,
+    "compilerErrors": 0,
+    "burstCurrentCompilationDone": true,
+    "qualificationExecuted": false,
+    "oracleAcquisitionExecuted": false,
+    "algorithmLaneExecuted": false,
+    "measuredRootCreated": false
+  },
+  "candidateAssets": [
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_1.cs",
+      "sha256": "a3013097068325f314e6842dd9f9bdc2cedbc5d6773a51032200925228690a9f"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_1.cs.meta",
+      "sha256": "6c5b7cdac5391397219e80a414f10ce5c78a3914571e38ab3419a65d0cf72175"
+    }
+  ],
+  "priorFailedAttempt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-readiness-v4-attempt-006/compile-readiness-failure-receipt.v4_4.json",
+    "failureClass": "PRECOMPILE_UNITY_LICENSING_IPC_TIMEOUT",
+    "sameAttemptRetry": false
+  },
+  "overallDesignFrozen": false,
+  "executionAuthorized": false,
+  "createdAtUtc": "2026-10-19T13:07:42.6568663Z"
+}

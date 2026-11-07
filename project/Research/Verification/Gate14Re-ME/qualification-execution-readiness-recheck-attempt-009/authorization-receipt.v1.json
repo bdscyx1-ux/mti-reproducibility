@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-009-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-until-pass-3bb50249-7ac1-49e5-af37-839465bc47bd",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-009",
+  "status": "AUTHORIZED_FRESH_READ_ONLY_NO_UNITY_RECHECK_AFTER_FROZEN_ATTEMPT_008_TOOL_FAILURE",
+  "authorizedAtUtc": "2026-10-17T17:31:15.541668Z",
+  "userAuthorizationTextExact": "授权`qualification execution-readiness recheck`  阶段直至attempt通过",
+  "untilPassAuthorizationReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-006/authorization-receipt.v1.json",
+  "untilPassAuthorizationReceiptSha256": "7c9bf64d410ba24e149f2e5dc1a7c8cef9364da903aaf668f72790e81cf321de",
+  "retainedAttempt008": {
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-008/failure-receipt.v1.json",
+    "failureReceiptSha256": "7289444e069b77e3558159f20dee906082e4f6e42dd72fd2235a54dcac4076f4",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-008/freeze-manifest.v1.json",
+    "freezeManifestSha256": "b6548bd55ecad099d1aa4d038e4b918254fc4dfa8b7cb9125a8666d784a575bb",
+    "modifiedOrReclassified": false
+  },
+  "repairBoundary": {
+    "onlyAuditToolResourceBudgetFieldMappingChanged": true,
+    "fromField": "qualificationAssignedMemoryBytes",
+    "toFrozenAuthoritativeField": "laneAssignedCommittedMemoryBytes",
+    "scientificAssetsChanged": false,
+    "executionBindingsChangedAfterAttempt008": false,
+    "unityInvocationAuthorized": false,
+    "rootCreationAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "formalCollectionAnalysisRankingWeightingOrWinnerAuthorized": false
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "auditKind": "gate13r-pr1b-v5-nonformal-pilot-launch-audit-v1",
+  "savedAtUtc": "2026-10-08T13:18:10.1145231Z",
+  "savedAtAsiaShanghai": "2026-10-08T21:18:10.1160539+08:00",
+  "status": "PASSED-ONE-FRESH-NONFORMAL-PILOT-AUTHORIZED",
+  "authorizationBoundary": {
+    "nonFormalPilotAuthorized": true,
+    "maximumFreshPilotAttempts": 1,
+    "retryAfterPilotRootCreationAllowed": false,
+    "resumeAllowed": false,
+    "topUpAllowed": false,
+    "mergeAllowed": false,
+    "gate13rFormalAuthorized": false,
+    "gate14rAuthorized": false
+  },
+  "selectedInputs": {
+    "pilotPlan": {
+      "relativePath": "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v8.json",
+      "rawBytes": 13572,
+      "sha256": "64f147a9e53b500ddde9d2afffacf619f950cd495d9ccb2380fe42ec76ceb0c9"
+    },
+    "provenance": {
+      "relativePath": "Research/Gate13R_PR1B_OrderEffect_Provenance.v9.json",
+      "rawBytes": 29100,
+      "sha256": "26a97a4e686e49004aba78be0dff86f9b40f15698a49c92a3b93ac72224ab6df",
+      "boundFileCount": 68,
+      "boundFileMismatchCount": 0
+    },
+    "validationOnlyAudit": {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5/ValidationOnlyPrePilotAudit.summary.json",
+      "rawBytes": 29727,
+      "sha256": "4351f060856ce18cb85821bb756128a7e2c64ff349ead61b9bbb833715fe7040",
+      "checkCount": 102,
+      "passedCheckCount": 102,
+      "pilotExecutionAuthorized": true
+    },
+    "telemetryResult": {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5/TelemetryProbe/v3/telemetry-probe-result.json",
+      "rawBytes": 2514,
+      "sha256": "7bd9b0e0fd907385e2f948d1a92eb1136542d623c0c60b7dcb958ddabe4f7ece",
+      "passed": true
+    },
+    "prePilotCheckpoint": {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5/checkpoint.json",
+      "rawBytes": 478,
+      "sha256": "b4990ac7014f55dfcd95bd72ab8a0affaf8ce900522264e75420344c362ad490",
+      "status": "PREPILOT-PASSED-PILOT-AUTHORIZED"
+    }
+  },
+  "verification": {
+    "staticUnit": "113/113",
+    "pathSafeUnitySelfTest": "14/14-with-zero-owned-temporary-residues",
+    "memoryPolicyUnitySelfTest": "12/12",
+    "positiveMirroredProcesses": 4,
+    "positiveMirroredSamples": 8,
+    "negativeFailClosed": true,
+    "independentRepeatAndColdStructuralComparisons": 6,
+    "retainedRegression": "63/63",
+    "finalAudit": "102/102"
+  },
+  "frozenVerificationTrees": [
+    {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v12-gate13r-pr1b-order-effect-pathsafe-v3",
+      "fileCount": 7,
+      "rawBytes": 25700,
+      "treeIdentitySha256": "4ae0c0ea30e65b0cf5e15bbdffeffd8155e7e5de341c262f4ad3d2e00c4f12fe"
+    },
+    {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v13-gate13r-pr1b-order-effect-pathsafe-v4",
+      "fileCount": 54,
+      "rawBytes": 381042,
+      "treeIdentitySha256": "34ba634c4cff9d90a4f52b01ceca0372cadb7607dec91cc8bf0d1734dc82cce0"
+    },
+    {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v14-gate13r-pr1b-order-effect-pathsafe-v4",
+      "fileCount": 78,
+      "rawBytes": 624428,
+      "treeIdentitySha256": "c9998236dae887c8451f76650422dd6ac7205e6cf82298b454a5b79f9dc75bc9"
+    },
+    {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5",
+      "fileCount": 246,
+      "rawBytes": 6114470,
+      "treeIdentitySha256": "c9aa248972b2f7b5d5dbfdf4ad0be707d276778f4f04a6485edc0145983e0802"
+    }
+  ],
+  "environmentSnapshot": {
+    "powerSchemeGuid": "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+    "powerSchemeName": "High performance",
+    "cpuLoadPercentSnapshot": 8.0,
+    "freePhysicalMemoryBytes": 16657666048,
+    "totalPhysicalMemoryBytes": 33396609024,
+    "pilotDriveFreeBytes": 276575211520,
+    "temperatureSensorsAvailable": false,
+    "temperatureUnavailablePolicy": "record-unavailable-controlled-warmup-balanced-mirrored-order-v1",
+    "unityProcessCount": 0,
+    "unityLockExists": false
+  },
+  "targetPilot": {
+    "relativeRoot": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "rootAbsentAtAudit": true,
+    "warmupBlockProcesses": 12,
+    "warmupSamples": 24,
+    "measuredBlockProcesses": 384,
+    "measuredSamples": 768,
+    "strictSerial": true,
+    "maximumConcurrentUnityProcesses": 1,
+    "nonFormal": true,
+    "excludedFromFormalAnalysis": true
+  },
+  "reservedFormalRootAbsent": true,
+  "passed": true
+}

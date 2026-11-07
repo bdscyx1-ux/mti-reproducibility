@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "auditKind": "gate13r-pr2-mp1-v2-terminal-final-audit-v1",
+  "completedAtUtc": "2026-10-09T05:30:15.2298467Z",
+  "completedAtAsiaShanghai": "2026-10-09T13:30:15.2298467+08:00",
+  "status": "PASSED",
+  "statusTokens": [
+    "MP1-V2-PILOT-PASSED",
+    "96-OF-96-BLOCKS",
+    "384-OF-384-SAMPLES",
+    "RAW-DATA-COMPLETE",
+    "RAW-IMMUTABLE",
+    "DIAGNOSTIC-ANALYSIS-PASSED",
+    "POLICY-RECOMMENDED-BUT-UNFROZEN",
+    "MP2-AUTHORIZATION-REQUIRED",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "validation": {
+    "summaryRelativePath": "Research/Verification/Gate13R_PR2_MP1_v2/postpilot-final-attempt1/summary.json",
+    "summarySha256": "e4a3c271f969887850fd80193bb17c92712b72d440c3e329373c3a8c81bf18a3",
+    "assertionCount": 50,
+    "passedAssertionCount": 50,
+    "failedAssertionCount": 0,
+    "unityInvoked": false
+  },
+  "acquisition": {
+    "attemptCount": 1,
+    "blockCount": 96,
+    "sampleCount": 384,
+    "rawFileCount": 3360,
+    "rawBytes": 2607785161,
+    "rawCanonicalTreeSha256": "13dd5c30cd016d42e80f472c962d09f89f4d0fb6714d68228e2c657f6c80da93",
+    "allRawFilesReadOnly": true,
+    "automaticRetryAttempted": false,
+    "automaticResumeAttempted": false,
+    "topUpAttempted": false,
+    "partialMergeAttempted": false
+  },
+  "twoStageCommit": {
+    "phaseAState": "RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE",
+    "phaseBAnalysisAttempt": 1,
+    "phaseBRawAccess": "READ-ONLY",
+    "phaseBPassed": true,
+    "phaseBBlockCount": 96,
+    "phaseBSampleCount": 384,
+    "phaseBStageRecordCount": 1824,
+    "ordinaryAnalysisFailureCausedUnityRerun": false
+  },
+  "memoryEvidence": {
+    "runawayGrowthEvidence": false,
+    "failedHostSafetyStageFlagCount": 0,
+    "maximumObservedAbsoluteNativeBytes": 2128375808,
+    "maximumObservedCleanupNativeDeltaBytes": 556359680,
+    "minimumObservedAvailablePhysicalMemoryBytes": 16199168000,
+    "maximumObservedRetainedManagedCleanupDeltaBytes": 84762624,
+    "psapiCimPairCount": 96,
+    "psapiCimWorkingSetAbsoluteDifferenceP95Bytes": 782336,
+    "psapiCimPrivateMemoryAbsoluteDifferenceP95Bytes": 208896
+  },
+  "policyRecommendation": {
+    "relativePath": "Research/Gate13R_PR2_MP1_v2_Memory_Policy_Recommendation.v1.json",
+    "sha256": "90661dc14db20bf233c50395fa1bc41ae653bc673034b6e62c6e226963217e7a",
+    "status": "RECOMMENDED-BUT-UNFROZEN",
+    "nativeAdvisoryMiB": {
+      "maxGridDimensionLessThanOrEqual128": 512,
+      "maxGridDimension256": 640
+    },
+    "nativeHardCeilingMiB": {
+      "maxGridDimensionLessThanOrEqual128": 640,
+      "maxGridDimension256": 768
+    },
+    "retainedManagedAlertMiB": 128,
+    "retainedManagedEmergencyMiB": 256,
+    "policyFrozenForFormalUse": false
+  },
+  "preservation": {
+    "fullPostPilotRehashPassed": true,
+    "postPilotIntegrityAuditRelativePath": "Research/Gate13R_PR2_MP1_v2_PostPilot_Frozen_Root_Audit.v2.json",
+    "postPilotIntegrityAuditSha256": "40566cbc17d3b66160957ff72e488fa17c4ffaecbc163cc1feff39f1e52eb69e",
+    "independentTerminalRecheckPassed": true,
+    "pilotV1CanonicalTreeSha256": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+    "formalAttempt2CanonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "pilotV1UnchangedAndReadOnly": true,
+    "formalAttempt2UnchangedAndReadOnly": true
+  },
+  "documentation": {
+    "overallProjectPlanSha256": "8899afddf4c1f3d803d6b43602285490cdf4af0e2019a183eb4e9bfe3a87a028",
+    "nextSessionCheckpointSha256": "b4312808c45931c5800e5ba4b22d4790287dc4b331dd251022b6d11f3342c742",
+    "readinessJsonSha256": "7d6e028197c45d0e989a34268961a97a97e9ea50bd96008fd31b556eca0601cf",
+    "readinessMarkdownSha256": "c421c9b75b0bdfdf7c6a707909493c14029d840579486646acf0f300ec1cf878",
+    "nextAuthorizationPromptSha256": "063476899e32f439b0936c4da100219f86b24b17e42df09a0ab4c2cb12ef8215",
+    "provenanceSha256": "0822c72e3e4211ec3da1ea0fafebb458c0f18b0e19ae339f3357db6f88cdd9a1"
+  },
+  "terminalBoundary": {
+    "unityProcessCount": 0,
+    "unityLockAbsent": true,
+    "formalAttempt3RootAbsent": true,
+    "formalAttempt3ReceiptAbsent": true,
+    "formalAttempt3Authorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "formalStatisticalAnalysisPerformed": false,
+    "gate14RAuthorized": false,
+    "gate14RPerformed": false,
+    "requiredNextAuthorization": "Gate 13R-PR2-MP2 non-executing forward memory-policy amendment and formal-preparation validation"
+  },
+  "passed": true
+}

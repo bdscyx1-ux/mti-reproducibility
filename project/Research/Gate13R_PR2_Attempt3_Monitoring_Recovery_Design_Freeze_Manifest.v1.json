@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "gate13r-pr2-attempt3-monitoring-recovery-design-freeze-v1",
+  "frozenAtUtc": "2026-10-09T06:54:00Z",
+  "frozenAtAsiaShanghai": "2026-10-09T14:54:00+08:00",
+  "status": "FROZEN-BEFORE-IMPLEMENTATION-RESULTS",
+  "files": [
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_User_Authorization.v1.txt",
+      "rawBytes": 963,
+      "sha256": "df3be309e561ed1e65d68bb9082cc95079ad830a193c50b2933715f452ae7da8"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Authorization.v1.json",
+      "rawBytes": 1296,
+      "sha256": "2f349ad45d7d67a950da80fd16c347d3cd97206875dbf8c7656542f05c89758b"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_PreWrite_Preservation_Audit.v1.json",
+      "rawBytes": 5658,
+      "sha256": "7d1a549f425c51c340e9851bd9fa50a2274d13571ffd39c3c8a0444545ffe423"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Specification.v1.md",
+      "rawBytes": 9853,
+      "sha256": "7760fe037563425ea29239eca9aa123919e9082f0762d3901bfd5a8f77cd1ccc"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Test_Design.v1.md",
+      "rawBytes": 5374,
+      "sha256": "2d3a32c628873af27886655c71e9236c8debc464da4976c3a52582c8a0955cc5"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Config.v1.json",
+      "rawBytes": 2311,
+      "sha256": "135087a2de92e91ea5139ceff320363edefe7226420f1c0e14abf50a244c1f2f"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Recovery_State_Machine.v1.json",
+      "rawBytes": 2231,
+      "sha256": "2aa5d0e5a11a1e38a05d9e3e82a65dc227e98b953cc4e2678e73eaa96aec1a3d"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Operational_Status_Schema.v1.json",
+      "rawBytes": 3762,
+      "sha256": "3aff68ac8e041838283f8e28b72b388ab4de50abe3b357f59bb3e3597f74d89b"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Progress_Snapshot_Schema.v1.json",
+      "rawBytes": 1307,
+      "sha256": "5131b2f172f57377e184f164587e59cff73cb40228bdfb3ba60716704e3295df"
+    }
+  ],
+  "prohibitedAdaptiveChanges": [
+    "REPORT-CADENCE",
+    "BLINDING-FIELDS",
+    "MEASURED-RETRY-BOUNDARY",
+    "PRELAUNCH-ELIGIBILITY",
+    "COMMIT-RECOVERY-ELIGIBILITY",
+    "SCHEDULE",
+    "SAMPLE-SIZE",
+    "MEMORY-POLICY",
+    "STATISTICAL-CONTRACT"
+  ]
+}

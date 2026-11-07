@@ -1,0 +1,89 @@
+{
+  "schema": "gate14re-scientific-freeze-receipt-v2",
+  "studyId": "Gate14Re",
+  "receiptVersion": 2,
+  "createdLocalDate": "2026-10-15",
+  "status": "PASS_SCIENTIFIC_DESIGN_FROZEN_B48_DYNAMIC_EVENT_TIMING_CORRECTED_NON_EXECUTING",
+  "changeClassification": "PRE_DATA_NON_OUTCOME_DRIVEN_EVENT_TIMING_CORRECTION",
+  "frozenArtifacts": [
+    {
+      "path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v3.md",
+      "bytes": 4437,
+      "sha256": "3ea4bcf824b5e83c1be3d98ae96590c58dc444555388b301675a3e91d27bedcc"
+    },
+    {
+      "path": "Research/Gate14Re/Gate14Re_Design_Contract.v3.json",
+      "bytes": 4117,
+      "sha256": "88c3119e0b6dbbe4d1a3a2a95bd04d619e3d68edbd38b0903c6d4037a4d0e1f3"
+    },
+    {
+      "path": "Research/Gate14Re/Gate14Re_Status.v3.json",
+      "bytes": 1318,
+      "sha256": "a079b4689ef19369832d35dbe70130455cc77947c7f8fd450d93c2cae7dc4ff3"
+    }
+  ],
+  "baseBindings": [
+    {
+      "path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v2.md",
+      "bytes": 13845,
+      "sha256": "cbeca6d175500770357d1a610149abda58c816547d2c19cfa2e8ce9bebf5771f",
+      "readOnly": true
+    },
+    {
+      "path": "Research/Gate14Re/Gate14Re_Design_Contract.v2.json",
+      "bytes": 17035,
+      "sha256": "8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f",
+      "readOnly": true
+    }
+  ],
+  "sourceScenarioChecks": [
+    {"conditionId":"C01","sha256":"7612d4a77374c8920cfd493f19cb07b8ba48065dff89187cefd635eee41dfb94","eventChangeCounts":[81,81,81,81,324]},
+    {"conditionId":"C02","sha256":"8cb48030e5c75ef5b4477852188dc1930bff5fba32644335af4edadf81d7f32d","eventChangeCounts":[81,81,81,81,324]},
+    {"conditionId":"C03","sha256":"a2272840c88fd70d40b2508dd00d75156c86c37ecb813c04651f09fdeb4223a2","eventChangeCounts":[9,9,9,9,36]},
+    {"conditionId":"C04","sha256":"c2eaee5d3c241fe2304c3ad794c77fe02efa1c659e32bbc3caeb8b10344d1bc8","eventChangeCounts":[9,9,9,9,36]},
+    {"conditionId":"C05","sha256":"ff4c38d9761b46cefb584f47b8861e6f50fb0de4155e8bae38654d81baf342fc","eventChangeCounts":[9,9,9,9,36]},
+    {"conditionId":"C06","sha256":"3c4650745359e1a60a71d3a6db32890ffb91482c947657bab9f3de322b510126","eventChangeCounts":[9,9,9,9,36]},
+    {"conditionId":"C07","sha256":"34f206248d0c563c4a2bc8bf7d0cb9a1a86b1e53d345a19968776911b5a07692","eventChangeCounts":[81,81,81,81,324]},
+    {"conditionId":"C08","sha256":"a1227c2b468e7ec06836198257a25efd67ac6e0cc4ff622403b582ee58899f2a","eventChangeCounts":[81,81,81,81,324]}
+  ],
+  "sourceEventBinding": {
+    "eventIds": ["block-footprint","unblock-footprint","increase-cost-footprint","decrease-cost-footprint","restore-initial-state"],
+    "sourceTicks": [10,10,50000,75000,99999],
+    "orders": [0,1,0,0,0],
+    "repairBudgetMilliseconds": 10000.0,
+    "allEightScenariosPass": true,
+    "tick10CoordinateSetsDisjointInEveryScenario": true
+  },
+  "correctedEventBinding": {
+    "fixedStepSeconds": 0.02,
+    "movementCapSeconds": 180,
+    "ticks": [10,10,1500,4500,7500],
+    "seconds": [0.2,0.2,30,90,150],
+    "allStrictlyInsideCap": true,
+    "sourceScenarioBytesModified": false,
+    "retimingInMemoryOnly": true
+  },
+  "designArithmetic": {
+    "B": 48,
+    "mainModuleProcesses": 768,
+    "quantityExtensionProcesses": 768,
+    "plannedFreshProcesses": 1536,
+    "plannedAlgorithmLaneSamples": 6144,
+    "pass": true
+  },
+  "preDataChecks": {
+    "formalMeasuredRootExists": false,
+    "formalAnalysisRootExists": false,
+    "gate14ReObservationsProduced": 0,
+    "outcomeDataReadOrUsedForCorrection": false
+  },
+  "authorizationBoundary": {
+    "researchOnlyImplementationCompileSyntheticAndShortPreflight": true,
+    "formalPhaseA": false,
+    "formalMeasuredRootCreation": false,
+    "formalAnalysis": false,
+    "phaseB": false,
+    "gate15": false
+  },
+  "result": "PASS"
+}

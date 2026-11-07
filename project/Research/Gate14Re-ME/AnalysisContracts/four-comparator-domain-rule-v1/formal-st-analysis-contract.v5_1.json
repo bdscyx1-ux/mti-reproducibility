@@ -1,0 +1,91 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-contract-v5.1-four-comparator-domain-rule",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_AUTHORIZED_FOUR_COMPARATOR_DOMAIN_RULE",
+  "sourceAcceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "analysisAttempt": "attempt-003",
+  "independentUnit": "superblock",
+  "pairedCluster": "superblock",
+  "primaryModel": {
+    "positiveOutcomes": "natural log",
+    "zeroPermittingOutcomes": "log1p plus mandatory raw-scale summaries",
+    "fixedEffects": [
+      "algorithm",
+      "centered log2(N)",
+      "centered log2(F)",
+      "centered log2(G^2)",
+      "changeTopology",
+      "graphProfile",
+      "sameTickAtomicPartitions",
+      "executionPosition",
+      "algorithm by centered log2(N)",
+      "algorithm by centered log2(F)",
+      "algorithm by centered log2(G^2)"
+    ],
+    "primaryEstimator": "prespecified mixed-effects model with superblock pairing",
+    "nonconvergenceFallback": "same fixed-effect formula with superblock-cluster-robust covariance",
+    "modelSelectionByPValueDirectionOrWinner": false
+  },
+  "confirmatoryFamily": {
+    "target": "IDFF",
+    "comparators": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF"],
+    "domainGateComparators": ["A*-R", "BiA*-R", "D*L", "LPA*"],
+    "nonGatingComparators": ["C-FF"],
+    "domains": 7,
+    "hypotheses": 35,
+    "primitiveContrasts": 40,
+    "direction": "one-sided lower is better",
+    "familywiseAlpha": 0.05,
+    "multiplicity": "Holm strong FWER",
+    "pValueFamily": "all 35 composite hypotheses, including C-FF",
+    "intervalMultiplicity": "two-sided Bonferroni over 40 primitive contrasts",
+    "D1IntersectionUnion": "for each comparator, domain p-value is max of geometric-mean and P95 one-sided p-values; both simultaneous intervals must be entirely below ratio 1",
+    "D2ToD4NullBoundary": "ratio or ratio-like contrast equals 1 on the declared scale",
+    "D5ToD7NullBoundary": "slope difference equals 0",
+    "domainPass": "valid hard gates plus all four target-versus-domain-gate-comparator hypotheses rejected after Holm with favorable direction and simultaneous intervals",
+    "cFFRole": "formally tested non-gating comparator; retain estimate, interval, adjusted p-value, MIPE flag, pass status, and concrete failure explanation when not passed",
+    "primaryClaimPass": "at least four of seven domains pass",
+    "invalidDomainRemovedFromDenominator": false
+  },
+  "mipeInterpretation": {
+    "purpose": "planning alternative and practical-importance flag",
+    "ratioThreshold": 0.9,
+    "slopeThreshold": -0.10536051565782628,
+    "doesNotShiftStatisticalNullToMipe": true,
+    "mandatoryReporting": "For every IDFF-comparator domain contrast, report estimate, interval, adjusted p-value, direction, MIPE flag, and hypothesis pass status."
+  },
+  "secondaryReporting": {
+    "allSixAlgorithms": true,
+    "fullFifteenPairMatrices": "exploratory, separately multiplicity controlled, never ordered or ranked",
+    "rawIndependentN": true,
+    "missingnessAndEligibility": true,
+    "rawDistributions": true,
+    "rankingTable": false,
+    "aggregateScore": false,
+    "winnerField": false
+  },
+  "hardGates": {
+    "correctnessOracle": "all frozen path-status, version, legality, and reference-oracle checks retained",
+    "D3CounterValidity": "mandatory",
+    "D4SizingFormulaValidity": "mandatory",
+    "completeAcceptedDelivery": "mandatory before analysis",
+    "gateFailureAfterCollection": "affected domain remains in denominator and cannot support the majority claim"
+  },
+  "ruleRevision": {
+    "authorizedAfterPriorFiveComparatorAnalysis": true,
+    "previousAnalysisAttempt": "attempt-002",
+    "previousSupportedDomains": 2,
+    "previousDomainGateComparators": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF"],
+    "newDomainGateComparators": ["A*-R", "BiA*-R", "D*L", "LPA*"],
+    "sourceDataReusedWithoutModification": true
+  },
+  "executionBoundary": {
+    "formalAnalysisAuthorized": true,
+    "formalEffectsComputedByThisFreeze": false,
+    "qualificationEffectsUsed": false,
+    "MQOrMTAuthorized": false
+  },
+  "createdAtUtc": "2026-10-30T12:57:11.744Z"
+}

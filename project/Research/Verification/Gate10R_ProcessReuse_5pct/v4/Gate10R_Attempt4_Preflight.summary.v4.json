@@ -1,0 +1,96 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate10r-attempt4-official-preflight-v4",
+    "savedAtUtc":  "2026-10-06T15:12:49.1125486Z",
+    "attempt":  4,
+    "assertionCount":  16,
+    "passedCount":  16,
+    "failedCount":  0,
+    "checks":  [
+                   {
+                       "name":  "outside-root-preflight-passed",
+                       "passed":  true,
+                       "detail":  "gate10r-attempt4-outside-v4-root-preflight-v4-retry2"
+                   },
+                   {
+                       "name":  "config-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-process-reuse-5pct-attempt4-filescope-retained-regression-config-v4"
+                   },
+                   {
+                       "name":  "authorization-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-attempt4-filescope-retained-regression-series-authorization-v1"
+                   },
+                   {
+                       "name":  "provenance-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-process-reuse-5pct-attempt4-filescope-retained-regression-provenance-v4"
+                   },
+                   {
+                       "name":  "retry-provenance-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-attempt4-outside-preflight-retry2-provenance-v4.2"
+                   },
+                   {
+                       "name":  "frozen-source-byte-identical",
+                       "passed":  true,
+                       "detail":  "e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1"
+                   },
+                   {
+                       "name":  "frozen-summary-byte-identical",
+                       "passed":  true,
+                       "detail":  "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d"
+                   },
+                   {
+                       "name":  "attempt1-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":4,\"rawBytes\":9577,\"treeSha256\":\"2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d\"}"
+                   },
+                   {
+                       "name":  "attempt2-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":101,\"rawBytes\":9375526,\"treeSha256\":\"da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce\"}"
+                   },
+                   {
+                       "name":  "attempt3-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":165,\"rawBytes\":14661809,\"treeSha256\":\"29f5aa8f0461abb120792dea0f2806e46e4dc9836aa843ce747f2436c1645a23\"}"
+                   },
+                   {
+                       "name":  "unity-zero",
+                       "passed":  true,
+                       "detail":  "0"
+                   },
+                   {
+                       "name":  "project-lock-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "gate11r-root-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "gate12r-root-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "gate13r-root-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "provenance-file-bindings",
+                       "passed":  true,
+                       "detail":  ""
+                   }
+               ],
+    "unityStarted":  false,
+    "officialRootCreated":  true,
+    "executionReceiptRelativePath":  "Gate10R_Attempt4_Execution_Receipt.v4.json",
+    "executionReceiptSha256":  "7941737dd6d07e1802e56aa38ff497a5928673854b19c0841264c202b97c9f6f",
+    "passed":  true
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "gate14re-me-formal-st-reporting-addendum-post-run-verification-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_RAW_SCALE_AND_RATIO_PROVENANCE_POST_RUN_VERIFICATION",
+  "sourceAnalysisAttempt": "attempt-004",
+  "reportingAddendum": "attempt-004-reporting-addendum-001",
+  "checks": {
+    "sourceAnalysisTerminalStatus": "PASS_FORMAL_ST_ANY_FOUR_OF_FIVE_DOMAIN_RULE_ANALYSIS",
+    "independentUnit": "superblock",
+    "independentN": 1296,
+    "pairedAlgorithmsPerSuperblock": 6,
+    "rawScaleByAlgorithmRows": 48,
+    "rawScaleByAxisRows": 60,
+    "formalRatioRows": 25,
+    "formalRatiosReproduced": 25,
+    "maximumFormalRatioAbsoluteReproductionError": 8.881784197001252e-16,
+    "formalSlopeRows": 15,
+    "formalSlopeContrastsReproduced": 15,
+    "frozenDescriptiveSummariesReproduced": true,
+    "outputFileManifestRows": 6,
+    "outputFileManifestMismatches": 0,
+    "sourceAnalysisModified": false,
+    "formalInferenceModified": false,
+    "domainPassModified": false,
+    "rankingOrWinnerComputed": false
+  },
+  "modelReferenceDesign": {
+    "agentCountEquivalent": 64.0,
+    "changedCellCountEquivalent": 11.618950038622247,
+    "gridAreaEquivalent": 8520.023339220596,
+    "gridEdgeEquivalent": 92.30397249967412,
+    "changeTopology": "compact",
+    "graphProfile": "four_way_weighted_dense",
+    "sameTickAtomicPartitions": 1,
+    "executionPosition": 0,
+    "randomIntercept": 0.0
+  },
+  "outputBindings": {
+    "fileManifestSha256": "5b23a2fcaa76dd39d1b28d06f0904a8b61f086971fa6a5a627035ce717a0b405",
+    "formalRatioProvenanceCsvSha256": "8553ea71a21bf65fa3f02a6df7e7a12e23211ac074f067600351fe4a621fead8",
+    "formalSlopeProvenanceCsvSha256": "2528a9ccba47fa22d9fc6e26cc9b3def542239b9dc48c3fe3ffef9016ab01e4a",
+    "reportSha256": "dccba45286cd55bfe0b2d5124e4f677b1b5ce75948551b7892291227bd9dafeb",
+    "provenanceJsonSha256": "e44b3fe92bfb9b9a49c7a503fd29f45eccf0492c17cbf8247f52a5be21fb81c8",
+    "rawScaleByAlgorithmCsvSha256": "8ba1ff595fbeb4f9e32b31d4b8853c07d0c0b8cc4f1e75858c936971c567c11d",
+    "rawScaleByAxisCsvSha256": "d69d775746fe8b8463b0e3f3b6f1fc5a6901ae774ecef52b9892783d7ea3a383",
+    "terminalReceiptSha256": "11de0fb8d1020a450f3b93678b20cc01178d34518daac1c646a3a455a8e6ff59"
+  },
+  "completedAtUtc": "2026-10-30T13:20:09.311Z"
+}

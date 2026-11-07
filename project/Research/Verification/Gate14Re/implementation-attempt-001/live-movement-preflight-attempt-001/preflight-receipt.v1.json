@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-live-movement-preflight-receipt-v1",
+  "studyId": "Gate14Re",
+  "attempt": "live-movement-preflight-attempt-001",
+  "status": "PASS",
+  "completedAtLocal": "2026-10-15T02:15:13.0806251+08:00",
+  "scope": "short_nonformal_structural_preflight_only",
+  "scenario": {
+    "conditionId": "C03",
+    "scenarioId": "core-r03-s1-shared",
+    "path": "Research/FormalScenarios/v1/Scenarios/core-r03-s1-shared.scenario.json",
+    "sha256": "a2272840c88fd70d40b2508dd00d75156c86c37ecb813c04651f09fdeb4223a2",
+    "unitCount": 8
+  },
+  "gates": {
+    "freshPlayerProcesses": 4,
+    "productionAlgorithmsStructurallyExercised": 4,
+    "allProcessesExitCodeZero": true,
+    "allUnitsHaveEnabledRenderer": true,
+    "gridPlannerVisualRevisionMatched": true,
+    "firstSameTickEventPairAppliedInOrder": true,
+    "m1ThroughM5SummaryProduced": false,
+    "frameTimeOrFpsSummaryProduced": false,
+    "rankingWinnerOrSuperiorityProduced": false,
+    "formalObservationProduced": false,
+    "formalPhaseAStarted": false
+  },
+  "artifacts": [
+    {"slot": "A", "markerSha256": "72f60546f256368bee7065500d81969873c28ded53c4957200e62c863f2f089c", "playerLogSha256": "4d476341656faf5ecf602d5c1804377b0693207a72d4229dfee24d005bb8370b"},
+    {"slot": "B", "markerSha256": "44a22d497cc9bb0b785d8f38492c609cd1ffd8afec0b5ab5a595cd30fc2604d6", "playerLogSha256": "3bf21111bb0a558188e0dcdb0c843d7e945c01704b6149cebddc5a1ca25a53ee"},
+    {"slot": "C", "markerSha256": "e71045d7c72bdc3e6a3491dcdf0bb57a4155850cf55bd5b877be1c6f52214300", "playerLogSha256": "1090d5f096f741c3d5d1a09512d3d08fbdd62e0aedfa4654e01cfb4ace72ac4e"},
+    {"slot": "D", "markerSha256": "2c7e544d993017b27ec027357126af0b135d1039ce8444a6ebb2a2b23a8333b1", "playerLogSha256": "81f7cc87acf3b8119169a5cd791c4984b36c3b7872d78c8b86bffb75e9e69117"}
+  ]
+}

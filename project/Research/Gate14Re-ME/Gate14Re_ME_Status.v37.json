@@ -1,0 +1,68 @@
+{
+  "schema": "gate14re-me-status-v37",
+  "studyId": "Gate14Re-ME",
+  "status": "LOAD_QUALIFICATION_EXECUTION_ATTEMPT_003_FAILED_CLOSED_REPAIR_AUTHORIZATION_PENDING",
+  "version": 37,
+  "updatedAtUtc": "2026-10-17T17:43:31.7951843Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v36.json",
+    "sha256": "2aaab7665a3804f73da983288f0a4f408b2a6ae1b81d2ecd2fba8d7004bd502d",
+    "retained": true,
+    "reclassified": false
+  },
+  "executionAttempt003": {
+    "authorizationId": "gate14re-me-load-qualification-execution-attempt-003-54167a1a-6695-4e19-8d8c-a03bb92370f2",
+    "attemptId": "load-qualification-execution-attempt-003",
+    "passed": false,
+    "terminal": true,
+    "terminalFailureReceiptRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/terminal-failure-receipt.v1.json",
+    "terminalFailureReceiptSha256": "ec78b55c4f7be0d00433958806a26b7ef1e1a3dd75ce140a9013079cadf13df9",
+    "technicalFailureAdjudicationRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/technical-failure-adjudication.v1.json",
+    "technicalFailureAdjudicationSha256": "0de24cf90557e0e4dcdfa26f299d152f6883af85b3cce4e9ec8a887f693d23ca",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/freeze-manifest.v1.json",
+    "freezeManifestSha256": "10764c3f357eeec90eb138701d4c29a3d16a6e1047dbbc48a4a26be551fee249",
+    "supervisorPid": 85392,
+    "supervisorNaturalExitObserved": true,
+    "signalOrForcedTerminationSent": false,
+    "failedMode": "instrument-self-test",
+    "unityInvocationCount": 1,
+    "algorithmLaneExecutionCount": 0,
+    "processLedgerRows": 0,
+    "qualificationObservationCount": 0,
+    "deliveryRootCreated": false
+  },
+  "exactFailure": {
+    "failureClass": "FROZEN_RUNTIME_SCHEDULE_DTO_COMPATIBILITY_DEFECT",
+    "summary": "The authoritative schedule row encodes replacement as JSON null, while the active Unity JsonUtility/RunnerV2 path observed a non-null empty replacement DTO and rejected its missing superblockId before instrument execution.",
+    "scheduleSha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+    "runnerV2Sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "algorithmImplementationImplicated": false,
+    "instrumentMetricImplementationImplicated": false,
+    "scientificLoadResultProduced": false
+  },
+  "scientificBoundary": {
+    "qualificationMeasuredRootCreated": true,
+    "qualificationMeasuredRootFrozenAsFailedEvidence": true,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "authorizationState": {
+    "repairAuthorized": false,
+    "newQualificationExecutionAttemptAuthorized": false,
+    "retryAuthorized": false,
+    "resumeAuthorized": false,
+    "topUpMergeSkipReorderOrParallelAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Obtain a separate authorization for a minimal qualification schedule null-replacement deserialization corrigendum. Preserve attempt-003 and its measured root unchanged; add an isolated Unity known-answer for replacement:null, omitted replacement, a valid replacement, and malformed partial replacement; change only the frozen RunnerV2 schedule interpretation or an equivalently narrow serialization contract; recompile and re-freeze dependent hashes; then perform a new no-observation execution-readiness recheck. A new qualification execution attempt remains separately unauthorized."
+}

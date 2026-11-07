@@ -1,0 +1,90 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-003-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-003-54167a1a-6695-4e19-8d8c-a03bb92370f2",
+  "attemptId": "load-qualification-execution-attempt-003",
+  "status": "FROZEN_FAILED_CLOSED_NO_RETRY_NO_REPLACEMENT",
+  "createdAtUtc": "2026-10-17T17:42:57.0237884Z",
+  "terminalFailureReceiptSha256": "ec78b55c4f7be0d00433958806a26b7ef1e1a3dd75ce140a9013079cadf13df9",
+  "evidenceFiles": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/execution-authorization.v1.json",
+      "sha256": "f3a339e2583d91cc2beeb8f49a4a035f32a26b1347678d15f0561b371429fa0f"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/stage-contract.v1.json",
+      "sha256": "66d9eae8d3cacb0eaec003074f5cb0284b48a9dd1104a0d8ff93a21dc31318f3"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/prelaunch-audit.v1.json",
+      "sha256": "f724b9945a13f4c82082f9598d0a200d1b62adf56d1f29bde420bad6e6a46f1b"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/launch-contract.v1.json",
+      "sha256": "9fa6ec39f1506172257a5d63e3c034b777d9f2bff0983aafe2c7d9e007c57344"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/external-launch-receipt.v1.json",
+      "sha256": "88c48ce7474f25b9ef41cc448f1ade1b0f55841f1e374805da1c2008ea8ee114"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/supervisor.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/supervisor.stderr.log",
+      "sha256": "754ecd57089e3e4c7a40018914026f018ad66bd1d2040f193a6e59ff04511d57"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/technical-failure-adjudication.v1.json",
+      "sha256": "0de24cf90557e0e4dcdfa26f299d152f6883af85b3cce4e9ec8a887f693d23ca"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/terminal-failure-receipt.v1.json",
+      "sha256": "ec78b55c4f7be0d00433958806a26b7ef1e1a3dd75ce140a9013079cadf13df9"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v36.json",
+      "sha256": "2aaab7665a3804f73da983288f0a4f408b2a6ae1b81d2ecd2fba8d7004bd502d"
+    }
+  ],
+  "measuredRootEvidence": [
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001/_control/launch-receipt.v2.json",
+      "sha256": "a0884833571c4bdd37e715b842b3de8bff4c3f41faa66d668baba78bcdbf2cbb"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001/_control/failure-receipt.v2.json",
+      "sha256": "e1d0737869fa49fd6f3df063c3cf2ba51d2ff8d519d08f460607b29ea488fdcf"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001/_control/process-ledger.raw.v2.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001/_control/failures-and-voids.raw.v1.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001/_control/replacement-ledger.raw.v1.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001/_control/unity-logs/process-0000.unity.log",
+      "sha256": "8a5af2ca6adf6bd0e429adf860abae8cd52b846febb34bee49b12b0b894929de"
+    }
+  ],
+  "scientificBoundary": {
+    "unityInvocationCount": 1,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "deliveryRootCreated": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "immutabilityIntent": "All listed stable evidence files are set read-only after hash verification. Empty working directories are retained and no prior evidence is deleted or reclassified."
+}

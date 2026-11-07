@@ -1,0 +1,62 @@
+{
+  "schema": "gate14re-me-migration-package-reactivation-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "migration-package-reactivation-attempt-001",
+  "frozenAtUtc": "2026-10-20T03:02:00Z",
+  "status": "PASS_MIGRATION_PACKAGE_STAGE_REACTIVATED_WITHOUT_BUILD",
+  "files": [
+    {
+      "role": "user authorization boundary",
+      "relativePath": "Research/Verification/Gate14Re-ME/migration-package-reactivation-attempt-001/user-authorization-receipt.v1.json",
+      "bytes": 1626,
+      "sha256": "8446335c7d296f2c5e9ade1c349cc01e450f5f007073216279dc9e58c85893c2"
+    },
+    {
+      "role": "migration package reactivation state",
+      "relativePath": "Research/Verification/Gate14Re-ME/migration-package-reactivation-attempt-001/state-receipt.v1.json",
+      "bytes": 3546,
+      "sha256": "10ddafab5e0a23bbb38c73b8202495c5d9d74fbfafb4ba74afd14b0b568d00a9"
+    }
+  ],
+  "decisiveEvidence": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-read-only-acceptance-attempt-001/qualification-terminal-pass-receipt.v1.json",
+      "sha256": "9ffc2c83896f1516eea969619ccc8c07f6be1bdab85cecead7224fc8f9cbeafa"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/terminal-receipt.v2.json",
+      "sha256": "92e2cd918f55bae33c38bd8a71b915b5ab7b5f96e8a31ccbeb06d9533b980e6e"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/final-evidence-freeze-manifest.v1.json",
+      "sha256": "aa4402dca4c327895e45292e66ed60d0d5162e5a5eaa8bcdb1712a2349479477"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-freeze-index.v5_0.json",
+      "sha256": "35c3b98e42cc21b200308460c6b93fb48961b4a450522acc23958c76b70b00dd"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-design-freeze-v5-attempt-001/final-evidence-freeze-manifest.v1.json",
+      "sha256": "a216705b8770429b9ae8579c95a91955f1257a4fbcbe149b43e81f21f70998af"
+    }
+  ],
+  "absenceAudit": {
+    "Research/FormalRuns/Gate14Re-ME/formal-st/v5": "ABSENT",
+    "Research/Exports/Gate14Re-ME/formal-st/v5": "ABSENT",
+    "Research/Packages/Gate14Re-ME/formal-st/v5": "ABSENT",
+    "Research/PackageStaging/Gate14Re-ME/formal-st/v5": "ABSENT",
+    "Research/PackageTests/Gate14Re-ME/formal-st/v5": "ABSENT"
+  },
+  "artifactCountsCreatedByReactivation": {
+    "packageFiles": 0,
+    "installerCopies": 0,
+    "credentialCopies": 0,
+    "zipFiles": 0,
+    "formalInputRows": 0,
+    "formalScheduleRows": 0
+  },
+  "currentState": "REACTIVATED_READY_FOR_BUILD_NOT_BUILT",
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false,
+  "MQOrMTStarted": false
+}

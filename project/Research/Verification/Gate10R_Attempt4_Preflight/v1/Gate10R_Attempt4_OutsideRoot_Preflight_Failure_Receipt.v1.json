@@ -1,0 +1,23 @@
+{
+    "schemaVersion":  1,
+    "receiptId":  "gate10r-attempt4-outside-root-preflight-v1-failure",
+    "createdAtUtc":  "2026-10-06T15:03:27.9009936Z",
+    "status":  "FAILED-ATOMICALLY-CLOSED-RETRY-AUTHORIZED",
+    "attempt":  4,
+    "stage":  "outside-v4-root-no-unity-preflight",
+    "failureClass":  "EXPECTED-NEGATIVE-CHILD-STDERR-PROMOTED-BY-PARENT-ERRORACTIONPREFERENCE",
+    "failedAtCase":  "output-isolation-reject-original-summary",
+    "diagnosis":  "The harness correctly rejected the frozen original summary. The parent Windows PowerShell 5.1 preflight promoted the expected child stderr NativeCommandError to a terminating error before recording the nonzero exit code.",
+    "repairBoundary":  "Only capture expected-negative child stdout/stderr through Start-Process redirection and evaluate ExitCode; harness and all research semantics remain frozen.",
+    "partialManifestSha256":  "e9684290a408ab5b15bc36a9e03052c5e5884fd086e2a44e8269750fc723b584",
+    "officialV4RootCreated":  false,
+    "unityStarted":  false,
+    "projectLockPresent":  false,
+    "automaticRetryAuthorized":  true,
+    "resumeThisRootAllowed":  false,
+    "overwriteAllowed":  false,
+    "nextPreflightRoot":  "Research/Verification/Gate10R_Attempt4_Preflight/v2",
+    "gate11RAuthorized":  false,
+    "gate12RAuthorized":  false,
+    "gate13RAuthorized":  false
+}

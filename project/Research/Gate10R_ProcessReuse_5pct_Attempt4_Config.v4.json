@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 4,
+  "configId": "gate10r-process-reuse-5pct-attempt4-filescope-retained-regression-config-v4",
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "lineageId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "attempt": 4,
+  "status": "FROZEN-BEFORE-ATTEMPT4-OUTSIDE-ROOT-PREFLIGHT",
+  "changeClass": "ORCHESTRATION-RETAINED-REGRESSION-FILE-SCOPE-ONLY",
+  "formalCampaign": false,
+  "projectRoot": "H:/DDM_Final_Project",
+  "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+  "outsidePreflightRoot": "Research/Verification/Gate10R_Attempt4_Preflight/v1",
+  "verificationRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+  "frozenBase": {
+    "specification": {"relativePath": "Research/Gate10R_ProcessReuse_5pct_Specification.md", "sha256": "609f2a9a149908d92c3630e008f5d4dbf29d9d704dda5adacf80dd61da795039"},
+    "testDesign": {"relativePath": "Research/Gate10R_ProcessReuse_5pct_Test_Design.md", "sha256": "187d651dd8030c366544fd229f3d64cce326d94b8c9b415b484a1a21f462ff7c"},
+    "baseConfig": {"relativePath": "Research/Gate10R_ProcessReuse_5pct_Config.v1.json", "sha256": "2df51209310f8ec638464e95bc3ef99106337399b047e93540e005895de7984b"},
+    "unityCommand": {"relativePath": "Assets/_Scripts/Research/Editor/Gate10RProcessReuseBatchCommand.cs", "sha256": "9218c72b7e4d1d289feef9a367e376a497b06f048099572ac73042f28d482407"},
+    "preparationModule": {"relativePath": "Research/Gate10RProcessReusePreparation.psm1", "sha256": "3ad9ed7ef07aeb7bf670f911da322e5e3ca4b3100b67dd322d916bca06d70108"},
+    "lockHygieneModule": {"relativePath": "Research/Gate10RLockHygieneV3.psm1", "sha256": "9eba2284dc90fcf6dbbc59080301c1ac6db14c5029f8adab69db234c94f879d6"}
+  },
+  "attempt4Amendments": {
+    "specification": "Research/Gate10R_Attempt4_RetainedRegression_FileScope_Specification.v1.md",
+    "testDesign": "Research/Gate10R_Attempt4_RetainedRegression_Test_Design.v1.md",
+    "authorization": "Research/Gate10R_Attempt4_Execution_Authorization.v1.json",
+    "preWritePreservationAudit": "Research/Gate10R_Attempt4_PreWrite_Preservation_Audit.v1.json"
+  },
+  "sourcePaths": {
+    "blockRunner": "Research/Run-Gate10RProcessReuseBlockV4.ps1",
+    "telemetryProbe": "Research/Run-Gate10RTelemetryProbeV4.ps1",
+    "coldReferenceRunner": "Research/Run-Gate10RColdReferenceV4.ps1",
+    "outsideRootPreflightRunner": "Research/Verification/Run-Gate10RAttempt4OutsideRootPreflightV4.ps1",
+    "officialPreflightRunner": "Research/Verification/Run-Gate10RAttempt4OfficialPreflightV4.ps1",
+    "unitTestRunner": "Research/Verification/Run-Gate10RUnitTestsV4.ps1",
+    "compileRunner": "Research/Verification/Run-Gate10RCompileV4.ps1",
+    "blockVerificationRunner": "Research/Verification/Run-Gate10RBlockVerificationV4.ps1",
+    "retainedHarness": "Research/Verification/Gate10RAttempt4RetainedHarnessV4.ps1",
+    "retainedRegressionRunner": "Research/Verification/Run-Gate10RRetainedRegressionV4.ps1",
+    "finalAuditRunner": "Research/Verification/Run-Gate10RFinalAuditV4.ps1"
+  },
+  "lockHygiene": {
+    "absoluteLockPath": "H:/DDM_Final_Project/Temp/UnityLockfile",
+    "emptyFileSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "naturalQuiescenceSeconds": 60,
+    "pollMilliseconds": 250,
+    "ownerTimestampToleranceSeconds": 2,
+    "exclusiveFileShare": "None",
+    "positiveCleanupAllowed": false,
+    "compileCleanupAllowed": false,
+    "telemetryCleanupAllowed": false,
+    "coldReferenceCleanupAllowed": false,
+    "expectedNegativeCleanupAllowed": true,
+    "recursiveDeleteAllowed": false,
+    "wildcardDeleteAllowed": false
+  },
+  "cohorts": {
+    "shared": {"id": "four-algorithm-shared-goal-v1", "algorithms": ["A*-R", "D*L", "C-FF", "IDFF"], "blockSize": 4},
+    "perAgent": {"id": "per-agent-heterogeneous-goal-v1", "algorithms": ["A*-R", "D*L"], "blockSize": 2},
+    "groupedField": {"id": "grouped-field-heterogeneous-goal-v1", "algorithms": ["C-FF", "IDFF"], "blockSize": 2}
+  },
+  "thresholds": {
+    "sampleRetainedManagedGrowthBytes": 134217728,
+    "blockRetainedManagedGrowthBytes": 134217728,
+    "blockWorkingSetGrowthBytes": 536870912,
+    "blockPrivateMemoryGrowthBytes": 536870912,
+    "telemetryAbsoluteToleranceBytes": 67108864,
+    "telemetryRelativeTolerance": 0.25,
+    "telemetryTimeoutSeconds": 60,
+    "creationTimeToleranceSeconds": 2
+  },
+  "precisionPolicy": {
+    "targetRelativeCiHalfWidth": 0.05,
+    "logHalfWidth": 0.048790164169432,
+    "confidenceLevel": 0.95,
+    "criticalValue": 1.96,
+    "minimumBlocks": 32,
+    "cycleMultiple": 4,
+    "hardCap": null,
+    "usedForGate10RFixtureSizing": false
+  },
+  "failurePolicy": {
+    "failClosed": true,
+    "maximumOfficialExecutionsPerReceipt": 1,
+    "automaticRetrySeriesAuthorized": true,
+    "automaticResumeSeriesAuthorized": true,
+    "retryRequiresNewVersionedRootAndReceipt": true,
+    "overwriteFailedRootAllowed": false,
+    "partialBlockAdmissible": false,
+    "stopOnFirstPass": true
+  },
+  "downstreamAuthorization": {
+    "gate11R": false,
+    "gate12R": false,
+    "gate13R": false,
+    "successCheckpoint": "GATE10R-PASSED-WAITING-FOR-USER-AUTHORIZATION"
+  },
+  "protectedRoots": [
+    "Research/Verification/Gate10R_ProcessReuse_5pct/v1",
+    "Research/Verification/Gate10R_ProcessReuse_5pct/v2",
+    "Research/Verification/Gate10R_ProcessReuse_5pct/v3",
+    "Research/FormalRuns/Gate13/v1",
+    "Research/PilotRuns/Gate13_ProcessReuse/v1",
+    "Research/PilotRuns/Gate13_ProcessReuse/v2",
+    "Research/FormalScenarios/v1",
+    "Research/PilotRuns/Gate12/v1"
+  ],
+  "forbiddenRoots": [
+    "Research/FormalScenarios/Gate11R_5pct/v1",
+    "Research/PlayableExperiments/Gate11R_5pct/v1",
+    "Assets/_Scenes/Research/Playable/Gate11R_5pct/v1",
+    "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v1",
+    "Research/FormalRuns/Gate13R_ProcessReuse_5pct/v1"
+  ]
+}

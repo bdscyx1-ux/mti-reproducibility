@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-corrigendum-authorization-v2",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-002",
+  "status": "AUTHORIZED_ONE_ISOLATED_ALGORITHM_FREE_UNITY_SCHEMA_COMPATIBILITY_SELF_CHECK",
+  "authorizedAtUtc": "2026-10-17T11:08:29.4357579Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME qualification input schema compatibility corrigendum attempt‑002：完整保留 schema compatibility corrigendum attempt‑001 的失败状态和全部证据，不删除、不修改、不改判既有目录；仅允许创建独立 attempt‑002 证据目录，绑定当前冻结的 input schema v2、planning schema binding v2、当前 runtime DTO/oracle/geometry validator 源码及 Gate14Re‑ME Unity trusted launch identity rule v1，编译并执行一次隔离的无算法 Unity schema compatibility 自检。自检必须验证 `eventGroups[*].topology` 经 JsonUtility 序列化与反序列化保持完整，实际调用 `Gate14ReMEInputGeometryValidatorV1.ValidateGroupHeader`，确认 topology 匹配正例通过、缺失和不匹配负例按冻结原因失败，并按 trusted launch identity rule 完成启动前、运行中、自然退出后身份核验。只有全部检查通过时才允许冻结 terminal PASS receipt，并正式采用 input schema v2 与 planning schema binding v2；任一证据缺失、身份不符、序列化丢失或断言不满足均立即 fail closed，不自动扩大范围。不得生成资格调度、输入 bundles 或匿名身份映射，不得创建 measured root，不得运行 planner、任何算法 lane、正式采集、正式分析、排名或赢家裁决。",
+  "scope": {
+    "maximumUnityInvocations": 1,
+    "maximumExecuteMethodInvocations": 1,
+    "automaticRetryAuthorized": false,
+    "isolatedAlgorithmFreeSelfCheckOnly": true,
+    "candidateSchemaAdoptionOnlyAfterTerminalPass": true,
+    "candidatePlanningBindingAdoptionOnlyAfterTerminalPass": true
+  },
+  "prohibited": {
+    "modifyDeleteOrReclassifyAttempt001": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputBundles": true,
+    "generateAnonymousIdentityMapping": true,
+    "createMeasuredRoot": true,
+    "runPlanner": true,
+    "runAlgorithmLane": true,
+    "formalCollection": true,
+    "formalAnalysis": true,
+    "algorithmRanking": true,
+    "winnerAdjudication": true
+  }
+}

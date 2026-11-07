@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-me-qualification-planning-asset-generation-v4-attempt-002-authorization-receipt-v4",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v4-attempt-002",
+  "authorizedAtUtc": "2026-10-19T11:57:01.766345Z",
+  "status": "AUTHORIZED_LIMITED_OFFLINE_PLANNING_ASSET_GENERATION",
+  "userAuthorization": "用户要求保留现有六算法配对结构，将 G 改为 64/96/128、N 改为 32/64/128、F 保持四组并改为 1/9/25/81，降低全部最大负载；将 attempt-009 其余可用简化全部应用到新版本，已有资源只能复制并按新版本重新命名；新建的精简只读验收经可行性验证后复用。此阶段仅生成 v4 planning assets，不启动 qualification。",
+  "authorizedOutputs": {
+    "sealedAnonymousIdentityBindings": 1,
+    "coreInputBundles": 108,
+    "stressInputBundles": 18,
+    "scheduleRows": 126,
+    "offlineGeometryOracleValidation": true,
+    "freezeManifest": true,
+    "terminalReceipt": true
+  },
+  "prohibited": [
+    "measured-root creation",
+    "Unity launch",
+    "planner construction or invocation",
+    "algorithm-lane execution",
+    "qualification observations",
+    "formal observations",
+    "formal collection",
+    "formal analysis",
+    "ranking",
+    "winner adjudication"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-canonical-reference-unit-v3-route-receipt",
+    "createdAtUtc":  "2026-10-07T14:51:43.6866344Z",
+    "sourceSha256":  "3c034a6423eaaa58d9cfc7f81da1431302b99f4b84c9222a911d20fc4318b185",
+    "derivedSha256":  "4f17722efc511497001508a1727490bcd248209a8e84c92ad117f464571b7d64",
+    "routes":  [
+                   {
+                       "from":  "\u0027Research/Verification/Gate12R_CanonicalInputReference/v1\u0027",
+                       "to":  "\u0027Research/Verification/Gate12R_CanonicalInputReference/v3\u0027",
+                       "count":  1
+                   },
+                   {
+                       "from":  "\u0027Research\\Gate12RCanonicalInputReference.psm1\u0027",
+                       "to":  "\u0027Research\\Gate12RCanonicalInputReferenceV2.psm1\u0027",
+                       "count":  1
+                   },
+                   {
+                       "from":  "summaryKind=\u0027gate12r-canonical-input-upstream-reference-unit-tests-v1\u0027",
+                       "to":  "summaryKind=\u0027gate12r-canonical-input-upstream-reference-unit-tests-v3-explicit-backup-atomic-replace\u0027",
+                       "count":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate12r-canonical-reference-unit-failure-v1\u0027",
+                       "to":  "receiptKind=\u0027gate12r-canonical-reference-unit-failure-v3\u0027",
+                       "count":  1
+                   }
+               ],
+    "failedV1RootPreserved":  true,
+    "failedV2WrapperProducedNoTestRoot":  true
+}

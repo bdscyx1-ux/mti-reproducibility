@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "repairId": "gate13r-pr2-validation-attempt2-ordinal-tree-order-repair-v1",
+  "status": "FROZEN-BEFORE-ATTEMPT2",
+  "failureSource": {
+    "relativePath": "Research/Gate13R_PR2_Validation_Attempt1_Failure_Receipt.v1.json",
+    "sha256": "4778ef92090c2fdaefe97bde71bbc5505287de660bbdff23bded7b295bd1cc6b"
+  },
+  "repairScope": [
+    "Replace runtime/culture-dependent Sort-Object FullName in the new validation orchestrator with StringComparer.Ordinal over canonical relative-path rows.",
+    "Route attempt 2 to a new v2 validation root.",
+    "Bind the core validator's static source scan to the active v2 orchestrator.",
+    "Increment only validation evidence IDs from v1 to v2."
+  ],
+  "sourceDerivation": {
+    "validatorV1": {
+      "relativePath": "Research/Test-Gate13RPR2FormalPreparationV1.py",
+      "rawBytes": 31349,
+      "sha256": "ead7b0ab608540d6fafeac121f77dd1257af6a476739a4435b763bfbc17d5545"
+    },
+    "validatorV2": {
+      "relativePath": "Research/Test-Gate13RPR2FormalPreparationV2.py",
+      "rawBytes": 31352,
+      "sha256": "4d5f65d390282e9b2baa52d4caad511558747fa8658236982a0cfa4d64650e3d"
+    },
+    "orchestratorV1": {
+      "relativePath": "Research/Verification/Run-Gate13RPR2NonExecutingValidationV1.ps1",
+      "rawBytes": 10458,
+      "sha256": "4f9142f93f4fe356be6c9b9b8dbc93adfb51e693d612b06529ed25ebc2b53572"
+    },
+    "orchestratorV2": {
+      "relativePath": "Research/Verification/Run-Gate13RPR2NonExecutingValidationV2.ps1",
+      "rawBytes": 10563,
+      "sha256": "0c95cc0ae64e47a1263133e1b2db635603cb70b6b99ff1ab4964248a2639980b"
+    }
+  },
+  "preflight": {
+    "pythonAstParsePassed": true,
+    "powerShell7ParserPassed": true,
+    "windowsPowerShell51ParserPassed": true,
+    "attempt1RootPreserved": true,
+    "attempt2RootAbsent": true,
+    "formalRootAbsent": true,
+    "unityEditorProcessCount": 0
+  },
+  "unchangedSemantics": [
+    "S48/H48",
+    "74-campaign matrix",
+    "3552 process records",
+    "10176 sample identities",
+    "Williams and AB/BA balance",
+    "scientific endpoint and contrast hierarchy",
+    "memory and telemetry policy",
+    "resource projection",
+    "formal non-authorization boundary"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+    "schemaVersion":  2,
+    "planId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent-b001-plan",
+    "designId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "blockId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent-b001",
+    "campaignId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent",
+    "scenarioRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios/core-r01-s1-hetero.scenario.json",
+    "scenarioSourceSha256":  "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+    "comparisonCohortId":  "per-agent-heterogeneous-goal-v1",
+    "block":  1,
+    "formalCampaign":  false,
+    "analysisRole":  "excluded-verification",
+    "verificationInjectedFailurePosition":  0,
+    "pilotPlanRelativePath":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v9.json",
+    "pilotPlanSha256":  "40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784",
+    "specificationRelativePath":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Specification.v4.md",
+    "specificationSha256":  "55a6f09fb9e8e6f236cd856f59ecfa9566d8832bcb383e4e7bb5fdc1d35e1754",
+    "testDesignRelativePath":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Test_Design.v4.md",
+    "testDesignSha256":  "f2ed403b73a0832a3077045b00eda11b62b96eb1e58d220e80fa21a37c7b9bf8",
+    "amendmentRelativePath":  "Research/Gate13R_PR1B_v3_Authorization.v1.json",
+    "amendmentSha256":  "03119942fdb7794f8a5fb294494eea2f254b63ea53a0d96957016ae5680272f7",
+    "commandRelativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3.cs",
+    "commandSha256":  "a47a731c979d58304230a150947ca1bb50207d13d1214b7d4de6e683bba6b5d6",
+    "provenanceRelativePath":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v10.json",
+    "provenanceSha256":  "993f554a03bc52493c3fea116f1206f14746db89e4c14c59d8e4e15befbef320",
+    "telemetryProbeResultRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v16-gate13r-pr1b-order-effect-pathsafe-v6/TelemetryProbe/v3/telemetry-probe-result.json",
+    "telemetryProbeResultSha256":  "863cdd6ad531ae81a8401f90d4c4c41367e779686be1424f75786d02d99af242",
+    "entries":  [
+                    {
+                        "position":  1,
+                        "algorithmId":  "A*-R",
+                        "predecessorAlgorithmId":  "NONE",
+                        "runId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent-b001-p01-astar-r",
+                        "directory":  "runs/p01-astar-r"
+                    },
+                    {
+                        "position":  2,
+                        "algorithmId":  "D*L",
+                        "predecessorAlgorithmId":  "A*-R",
+                        "runId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent-b001-p02-dstar-l",
+                        "directory":  "runs/p02-dstar-l"
+                    }
+                ]
+}

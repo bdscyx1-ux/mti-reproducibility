@@ -1,0 +1,124 @@
+{
+    "schemaVersion":  2,
+    "auditId":  "gate11r-attempt2-terminal-integrity-audit-v2",
+    "savedAtUtc":  "2026-10-07T03:26:06.8437546Z",
+    "status":  "GATE11R-TERMINAL-INTEGRITY-FAILED",
+    "assertionCount":  17,
+    "passedCount":  16,
+    "failedCount":  1,
+    "checks":  [
+                   {
+                       "name":  "terminal-checkpoint-hash-and-status",
+                       "passed":  true,
+                       "detail":  "bb65e9324cfbf6faf3352659d67905ee2a1df8d54d2ad7561af2714208859393"
+                   },
+                   {
+                       "name":  "terminal-checkpoint-boundary",
+                       "passed":  true,
+                       "detail":  "Gate12R=false;Gate13R=false;timing=false"
+                   },
+                   {
+                       "name":  "final-audit",
+                       "passed":  true,
+                       "detail":  "58d9a41c8d84da8438a61a13abfa255242a84dd8cdec425630651c4c89eed68a"
+                   },
+                   {
+                       "name":  "evidence-manifest-and-artifacts",
+                       "passed":  true,
+                       "detail":  "manifest=25ade263b1101d368df4da41ba6476b53dda3639ead4afc9ad68184bf76a2d93;mismatches=0"
+                   },
+                   {
+                       "name":  "production-root-Research/FormalScenarios/Gate11R_5pct/v1",
+                       "passed":  true,
+                       "detail":  "57/125218919/0f41d8db5c01e9a1f1c14c7ee295151150d2efd91f6fc597fdb0b71b4f7eabe5"
+                   },
+                   {
+                       "name":  "production-root-Research/PlayableExperiments/Gate11R_5pct/v1",
+                       "passed":  true,
+                       "detail":  "4/427601/4d269ff4ada239aa2e636169b590b65c23262d351f1d785087a0a9464fbc06f2"
+                   },
+                   {
+                       "name":  "production-root-Assets/_Scenes/Research/Playable/Gate11R_5pct/v1",
+                       "passed":  true,
+                       "detail":  "684/952341/0ab0a465ce560fa7296a537d5fc969d364a6737d586ad8976215da156da4fd53"
+                   },
+                   {
+                       "name":  "bundle-and-coverage-identity",
+                       "passed":  true,
+                       "detail":  "7298c124ec6ba2036c639f7b4720bf3634f47afb3f62516d1c9c5e58ac902c0e"
+                   },
+                   {
+                       "name":  "document-Research/Gate11R_Attempt2_Passed_Checkpoint.md",
+                       "passed":  true,
+                       "detail":  "82fe31348a672ede3b17484d9c179621b054747c0b89421bda2dc80b389c44d7"
+                   },
+                   {
+                       "name":  "document-Research/Gate10R_Onward_ProcessReuse_5pct_Status_Addendum.v2.md",
+                       "passed":  true,
+                       "detail":  "77e95756334984533cc63b89c55c947609f6c2bd02567443a42e7a7061bfe02e"
+                   },
+                   {
+                       "name":  "document-Research/Next_Session_Checkpoint.md",
+                       "passed":  true,
+                       "detail":  "a879293041feb323c734a360e24cb1cc68fdd3cfabe167bfe30f1989de46c534"
+                   },
+                   {
+                       "name":  "document-Research/Next_Session_Checkpoint.Gate10R_Attempt4_Passed.v1.md",
+                       "passed":  true,
+                       "detail":  "79d46d86adebe5fb9783309f1e6f431a0ea1ce8146dcdd65fda0fa09176292e4"
+                   },
+                   {
+                       "name":  "document-Research/Overall_Project_Plan.md",
+                       "passed":  true,
+                       "detail":  "8eab8b7428785eb3bf4224ce5e94b8ed79590d4d82e24dc46a5738859b6fbb9b"
+                   },
+                   {
+                       "name":  "document-Research/Gate10R_Onward_ProcessReuse_5pct_Experiment_Plan.md",
+                       "passed":  true,
+                       "detail":  "0cababa30b17fd23cb713b3774622205971cde338f179356d5e7ac06acc04c67"
+                   },
+                   {
+                       "name":  "overall-plan-current-state",
+                       "passed":  false,
+                       "detail":  "version=3.5;Gate11R terminal token;Gate12R authorization boundary"
+                   },
+                   {
+                       "name":  "staging-and-downstream-roots-absent",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "runtime-clean",
+                       "passed":  true,
+                       "detail":  "Unity=0;Crash=0;lock=False"
+                   }
+               ],
+    "checkpointSha256":  "bb65e9324cfbf6faf3352659d67905ee2a1df8d54d2ad7561af2714208859393",
+    "finalAuditSha256":  "58d9a41c8d84da8438a61a13abfa255242a84dd8cdec425630651c4c89eed68a",
+    "evidenceManifestSha256":  "25ade263b1101d368df4da41ba6476b53dda3639ead4afc9ad68184bf76a2d93",
+    "productionRoots":  [
+                            {
+                                "path":  "Research/FormalScenarios/Gate11R_5pct/v1",
+                                "files":  57,
+                                "bytes":  125218919,
+                                "hash":  "0f41d8db5c01e9a1f1c14c7ee295151150d2efd91f6fc597fdb0b71b4f7eabe5"
+                            },
+                            {
+                                "path":  "Research/PlayableExperiments/Gate11R_5pct/v1",
+                                "files":  4,
+                                "bytes":  427601,
+                                "hash":  "4d269ff4ada239aa2e636169b590b65c23262d351f1d785087a0a9464fbc06f2"
+                            },
+                            {
+                                "path":  "Assets/_Scenes/Research/Playable/Gate11R_5pct/v1",
+                                "files":  684,
+                                "bytes":  952341,
+                                "hash":  "0ab0a465ce560fa7296a537d5fc969d364a6737d586ad8976215da156da4fd53"
+                            }
+                        ],
+    "gate12RAuthorized":  false,
+    "gate12RStarted":  false,
+    "gate13RAuthorized":  false,
+    "gate13RStarted":  false,
+    "passed":  false
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-attempt-001-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-auto-repair-until-pass-263a2c10-45da-4ede-ae8e-684baf3e9057",
+  "attemptId": "supervisor-manifest-acceptance-guard-corrigendum-attempt-001",
+  "status": "FROZEN_FAILED_CLOSED_OFFLINE_KNOWN_ANSWER_HARNESS_BOOLEAN_LITERAL",
+  "frozenAtUtc": "2026-10-17T17:15:45.1333532+00:00",
+  "exactFailure": "The terminal PASS receipt constructor used terminal = true rather than terminal = $true; PowerShell treated true as a command after all 304 structural and predicate checks had passed.",
+  "scientificOrRuntimeBindingFailure": false,
+  "artifacts": [
+    {
+      "role": "authorization-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001/authorization-receipt.v1.json",
+      "sha256": "9f6588bff3d32b26c6e5db3b68d6b10441cdbe42b1ac7c7eb3f1e1f2f11aea21",
+      "bytes": 1694
+    },
+    {
+      "role": "stage-contract",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001/stage-contract.v1.json",
+      "sha256": "c64c757c67e2f46771dbdefc6b14d1fa25d3dd27e12e38f46113f8a41e299a4c",
+      "bytes": 3662
+    },
+    {
+      "role": "failed-known-answer-harness",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001/Invoke-Gate14ReMESupervisorManifestAcceptanceGuardCorrigendumAttempt001.ps1",
+      "sha256": "3c3b42159d1ab4cff11e89f4a7f73a9abdb522912f322fbbbbbbf170f1e22f74",
+      "bytes": 26917
+    },
+    {
+      "role": "failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001/failure-receipt.v1.json",
+      "sha256": "1cb8861ca48098cff1556f9a83c501b5700aaade337980c6b9a0865753583412",
+      "bytes": 75575
+    },
+    {
+      "role": "versioned-supervisor-corrigendum-source",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_1.ps1",
+      "sha256": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc",
+      "bytes": 52904
+    },
+    {
+      "role": "versioned-execution-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_3.json",
+      "sha256": "6e35abb3f36f956f0f685f816e2b2a7c1ce2aa513a86bd16d575964bd619802a",
+      "bytes": 16811
+    },
+    {
+      "role": "versioned-implementation-manifest",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_3.json",
+      "sha256": "a85968ee3c759c5f0c3c3bf3a5d9c3bda7c3cfca7628f3e983cb64142bfe4579",
+      "bytes": 22935
+    }
+  ],
+  "checksPassedBeforeHarnessReceiptFailure": 304,
+  "sourcePredicateRejectedManifestV32": true,
+  "correctedPredicateAcceptedManifestV32": true,
+  "correctedPredicateAcceptedManifestV33": true,
+  "negativeCasesRejectedBeforeFailure": 6,
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "disposition": "PRESERVE_UNCHANGED_AND_CONTINUE_ONLY_IN_ATTEMPT_002_UNDER_EXISTING_AUTO_REPAIR_AUTHORIZATION"
+}

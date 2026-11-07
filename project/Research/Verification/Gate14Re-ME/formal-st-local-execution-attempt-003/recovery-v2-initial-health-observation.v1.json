@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-recovery-v2-initial-health-observation-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_RECOVERY_V2_CONTINUATION_HEALTHY_AFTER_NEW_TRUSTED_EXITS",
+  "externalLaunchObservationRelativePath": "external-recovery-v2-launch-observation.v1.json",
+  "externalLaunchObservationSha256": "9926f96f688d770c5c44fc846d5a66095293cce5841ef71185ef59e585377275",
+  "supervisor": {
+    "processId": 89972,
+    "creationTimeUtc": "2026-10-30T03:25:08.4813660Z",
+    "compositeIdentity": "PASS",
+    "aliveAtObservation": true
+  },
+  "processLedger": {
+    "rows": 7521,
+    "lastOrdinal": 7520,
+    "lastState": "EXITED_ZERO_TRUSTED_IDENTITY",
+    "lastExitCode": 0,
+    "newTrustedNaturalZeroExitsSinceRecoveryV2Launch": 2
+  },
+  "currentRunner": {
+    "processId": 94812,
+    "mode": "lane",
+    "ordinal": 7521,
+    "countedAsCompleted": false,
+    "runnerCount": 1
+  },
+  "failureLedgerRows": 2,
+  "replacementLedgerRows": 0,
+  "recoveryV2FailureReceiptExists": false,
+  "formalAnalysisPerformed": false,
+  "rawAlgorithmObservationsInterpreted": false,
+  "observedAtUtc": "2026-10-30T03:27:29.7887497Z"
+}

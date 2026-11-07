@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "validationKind": "gate13r-pr2-formal-attempt3-prelaunch-repair-cycle3-targeted-launcher-validation-v1",
+  "validatedAtUtc": "2026-10-09T08:25:42.4887624Z",
+  "repairScope": "Resolve native Windows PowerShell to one scalar absolute path before argument-array construction.",
+  "parser": {
+    "powershell7ErrorCount": 0,
+    "windowsPowerShell51ErrorCount": 0
+  },
+  "bindingSmoke": "BINDING-SMOKE-PASSED|Run-Gate13RPR2FormalAttempt3V2|FormalAttempt3|H:\\DDM_Final_Project",
+  "argumentCapture": {
+    "argumentCount": 12,
+    "powershellPathOptionCount": 1,
+    "powershellPathValueCount": 1,
+    "powershellPathValue": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "orphanPowershellExeTokenCount": 0,
+    "formalTargetsCreated": false,
+    "unityInvoked": false
+  },
+  "implementation": {
+    "launcherRelativePath": "Research/Run-Gate13RPR2FormalAttempt3V2.ps1",
+    "launcherSha256": "2c8803d90677f097fd718865b5ae5d904dcaf39dc08ab1a8d6e47f4290a519fe",
+    "orchestratorRelativePath": "Research/Gate13RPR2Attempt3ExecutionV1.py",
+    "orchestratorSha256": "03bc5e8e73f6e74cd164f7d045dff028b670d3a4b967940a68dc41e1d0fa5a3c",
+    "provenanceRelativePath": "Research/Gate13R_PR2_Attempt3_Formal_Execution_Adapter_Provenance.v2.json"
+  },
+  "measuredProcessCount": 0,
+  "measuredSampleCount": 0,
+  "passed": true
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "gate14re-me-formal-st-read-only-acceptance-failure-observation-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "FAIL_CLOSED_ACCEPTANCE_TOOL_CONTROL_LEDGER_SOURCE_COMPATIBILITY_GAP",
+  "acceptanceAttempt": "attempt-001",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "startedAtUtc": "2026-10-30T10:38:29.280Z",
+  "failedAtUtc": "2026-10-30T10:59:19.594Z",
+  "observedAtUtc": "2026-10-30T10:59:56.680Z",
+  "elapsedSeconds": 1250.314,
+  "process": {
+    "pid": 96372,
+    "naturalExitObserved": true,
+    "exitCode": 1,
+    "processStillPresentAfterExit": false
+  },
+  "failure": {
+    "errorType": "DeliveryError",
+    "error": "no raw source files for replacement-ledger: replacement-ledger.raw.v1.jsonl",
+    "frozenBaseToolStatus": "FAIL_CLOSED_INDEPENDENT_STREAMING_ESSENTIAL_ACCEPTANCE",
+    "sameAttemptRetryPermitted": false,
+    "classification": "acceptance-tool control-ledger filename/location compatibility gap",
+    "scientificAcquisitionFailure": false,
+    "algorithmObservationFailure": false
+  },
+  "compatibilityFinding": {
+    "frozenContractExpectedFileName": "replacement-ledger.raw.v1.jsonl",
+    "frozenContractExpectedSourceCount": 1,
+    "frozenContractExpectedRowCount": 0,
+    "actualSealedControlLedgerRelativePath": "_control/replacement-ledger.raw.v5.jsonl",
+    "actualSealedControlLedgerExists": true,
+    "actualSealedControlLedgerBytes": 0,
+    "actualSealedControlLedgerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "legacyRawPathExists": false,
+    "replacementRowsObserved": 0,
+    "nextLegacyControlTableWouldAlsoRequireExplicitMapping": "_control/failures-and-voids.raw.v5.jsonl",
+    "preservedResolvedTechnicalFailureRowsExpected": 2
+  },
+  "outputEvidence": {
+    "failureReceiptRelativePath": "Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-001/failure-receipt.v5.json",
+    "failureReceiptSha256": "f8d68768ff10fd391a26ac3bc2aa9888ead0d1a65fee62dee9de80e31e462aee",
+    "compatibilityValidationRelativePath": "Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-001/recovery-compatibility-validation.v1.json",
+    "compatibilityValidationSha256": "652782ba3c0dcd7d55ade5fd3b629eff942cfe20cdc13a78f03a71bb595ee14f",
+    "typedParquetCreated": false,
+    "terminalAcceptanceReceiptCreated": false
+  },
+  "sourceIntegrity": {
+    "sourceRootsModifiedByAcceptanceTool": false,
+    "acquisitionFreezeManifestSha256AfterFailure": "6ff425c9fbd2c8a8c8d7d9855283aede09f61fb090e56ca7e89e406572f7459c",
+    "acquisitionTerminalReceiptSha256AfterFailure": "87ee435e9e0aaa564ed8c2f989b65588d66198b492a315625a8d2f6a5b818d07",
+    "sourceWriteBackAuthorized": false,
+    "sourceWriteBackPerformed": false
+  },
+  "scopeBoundary": {
+    "formalAnalysisAuthorized": false,
+    "formalAnalysisPerformed": false,
+    "effectInterpretationPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "mqPerformed": false,
+    "mtPerformed": false,
+    "rawAlgorithmObservationsInterpreted": false,
+    "automaticRetryPerformed": false
+  },
+  "requiredNextAction": "Freeze this failed acceptance attempt. A new explicit authorization is required for a new acceptance attempt whose adapter maps both legacy control-table specifications to the sealed v5 control ledgers while retaining zero replacement rows and exactly two resolved technical failure rows."
+}

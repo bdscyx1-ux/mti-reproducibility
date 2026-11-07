@@ -1,0 +1,43 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-pilot-plan-v6-module-v2-route-wrapper-v7",
+    "createdAtUtc":  "2026-10-07T18:16:34.5498492Z",
+    "sourceSha256":  "7788e459b2fcb7b63f33a3cf16e8fcc8f81723381c73ed3b3e3c65df4e9305d8",
+    "derivedSha256":  "f0bcf3d1e737de3a1249d9d817d9d3ead8b8112bb0d60a6282023f3054467117",
+    "routes":  [
+                   {
+                       "from":  "Research\\Run-Gate12RProcessReuseBlock.ps1",
+                       "to":  "Research\\Run-Gate12RProcessReuseBlockV5.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Run-Gate12RColdReference.ps1",
+                       "to":  "Research\\Run-Gate12RColdReferenceV3.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Gate12RProcessReusePreparation.psm1",
+                       "to":  "Research\\Gate12RProcessReusePreparationV2.psm1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Analyze-Gate12RPilot.ps1",
+                       "to":  "Research\\Analyze-Gate12RPilotV2.ps1",
+                       "replacementCount":  1
+                   }
+               ],
+    "planModuleCompatibilityChanged":  true,
+    "failedPilotAttempts":  [
+                                1,
+                                2,
+                                3
+                            ],
+    "failedPilotResumeAllowed":  false,
+    "partialAttemptMergeAllowed":  false,
+    "thresholdsChanged":  true,
+    "sampleThresholdChanged":  false,
+    "blockAggregationRuleChanged":  true,
+    "memoryGatePolicyId":  "gate12r-sample-128mib-block-128mib-per-sample-v1",
+    "formalRootCreated":  false,
+    "gate13rAuthorized":  false
+}

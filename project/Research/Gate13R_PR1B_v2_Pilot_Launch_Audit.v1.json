@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13r-pr1b-v2-non-formal-balanced-mirrored-pilot-launch-audit-v1",
+  "completedAtUtc": "2026-10-08T12:43:02.6970263Z",
+  "completedAtAsiaShanghai": "2026-10-08T20:43:02.6970263+08:00",
+  "status": "PASSED-ONE-NONFORMAL-PILOT-MAY-START",
+  "verificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2",
+  "verificationInventoryBeforeLaunchWrapperEvidence": {
+    "fileCount": 240,
+    "rawBytes": 6033286,
+    "canonicalTreeSha256": "e34902e197afed977802504b084a01985602753ad727dcd04f034374f515efc8"
+  },
+  "validationOnlyAudit": {
+    "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2/ValidationOnlyPrePilotAudit.summary.json",
+    "sha256": "8a9786a5c567976645ad941d43498d260c82c4ca1d3a200ebff50fd10d8e9fe7",
+    "passed": true,
+    "pilotExecutionAuthorized": true
+  },
+  "telemetryResult": {
+    "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2/TelemetryProbe/v2/telemetry-probe-result.json",
+    "sha256": "b6ffcc4eb2ecefa8a13fddc88d813906850df67a5f6f400e3e16a45460132e8d"
+  },
+  "pilotOrchestratorMechanicalAudit": {
+    "frozenSourceSha256": "9f6ed211daddf5624f6b16eaf41ae82f53de6c5e08129e432ddc8323e6ca564c",
+    "globalFunctionTokenCount": 52,
+    "requiredMinimum": 20,
+    "routeCount": 9,
+    "eachRouteCount": 1,
+    "derivedParserErrors": 0,
+    "measuredRetryAuthorized": false,
+    "measuredResumeAuthorized": false
+  },
+  "schedule": {
+    "warmupProcesses": 12,
+    "warmupSamples": 24,
+    "measuredProcesses": 384,
+    "measuredSamples": 768,
+    "measuredMirroredPairs": 96,
+    "maximumConcurrentUnityProcesses": 1
+  },
+  "preLaunchState": {
+    "unityProcessCount": 0,
+    "unityProjectLockPresent": false,
+    "pilotV6RootPresent": false,
+    "reservedFormalRootPresent": false
+  },
+  "pilotClassification": [
+    "NON-FORMAL",
+    "EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "NO-RETRY",
+    "NO-RESUME",
+    "NO-TOP-UP",
+    "NO-MERGE"
+  ],
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

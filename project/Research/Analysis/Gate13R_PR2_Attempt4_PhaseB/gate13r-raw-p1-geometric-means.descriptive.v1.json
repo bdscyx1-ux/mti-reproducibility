@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "artifactKind": "GATE13R-PR2-ATTEMPT4-RAW-P1-GEOMETRIC-MEANS-DESCRIPTIVE",
+  "status": "DESCRIPTIVE-ARTIFACT-COMPLETE",
+  "generatedAtUtc": "2026-10-17T02:23:01.5960491Z",
+  "scope": {
+    "study": "Gate 13R PR2 Attempt4",
+    "cohort": "four-algorithm-shared-goal-v1",
+    "campaignCount": 32,
+    "blocksPerCampaign": 48,
+    "blockCount": 1536,
+    "algorithmCount": 4,
+    "observationsPerAlgorithm": 1536,
+    "totalObservationCount": 6144,
+    "algorithms": [
+      "A*-R",
+      "D*L",
+      "C-FF",
+      "IDFF"
+    ]
+  },
+  "metric": {
+    "metricId": "P1",
+    "label": "dynamic handling milliseconds per scheduled event",
+    "unit": "milliseconds per scheduled event",
+    "direction": "LOWER-IS-BETTER",
+    "sampleValueFormula": "dynamicHandlingTotalMilliseconds / scheduledEventCount",
+    "matrixSummaryFormula": "exp(mean(log(P1)))",
+    "pseudocountApplied": false
+  },
+  "rawP1GeometricMeanMillisecondsPerScheduledEvent": {
+    "A*-R": 52.48004782942601,
+    "D*L": 59.552298374928405,
+    "C-FF": 11.137088962386809,
+    "IDFF": 8.894537185598555
+  },
+  "descriptiveAscendingOrder": [
+    "IDFF",
+    "C-FF",
+    "A*-R",
+    "D*L"
+  ],
+  "verificationAgainstFrozenFormalRatios": {
+    "method": "Ratios reconstructed from the absolute geometric means were compared with all five ratios in the frozen shared-primary P1 analysis.",
+    "comparisons": [
+      {
+        "contrastId": "C1",
+        "ratio": "C-FF/A*-R",
+        "reconstructedRatio": 0.21221567858675136,
+        "frozenFormalRatio": 0.2122156785867492
+      },
+      {
+        "contrastId": "C2",
+        "ratio": "C-FF/D*L",
+        "reconstructedRatio": 0.1870135874902779,
+        "frozenFormalRatio": 0.1870135874902769
+      },
+      {
+        "contrastId": "C3",
+        "ratio": "IDFF/A*-R",
+        "reconstructedRatio": 0.16948416690678608,
+        "frozenFormalRatio": 0.16948416690678486
+      },
+      {
+        "contrastId": "C4",
+        "ratio": "IDFF/D*L",
+        "reconstructedRatio": 0.14935674068531277,
+        "frozenFormalRatio": 0.1493567406853124
+      },
+      {
+        "contrastId": "C5",
+        "ratio": "IDFF/C-FF",
+        "reconstructedRatio": 0.7986411184859882,
+        "frozenFormalRatio": 0.7986411184859905
+      }
+    ],
+    "maximumAbsoluteRatioDelta": 2.3314683517128287e-15,
+    "crossCheckTolerance": 1e-12,
+    "crossCheckPassed": true
+  },
+  "provenance": {
+    "rawRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+    "rawDataFreezeReceipt": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4/raw-data-freeze-receipt.json",
+      "sha256": "4fa1304e12a7150058c6c7550d72ea712ab39c0372ece9e1d2dfdfe1489bf7a8"
+    },
+    "formalSchedule": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    "phaseBExecutionContract": {
+      "relativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Contract.v2.json",
+      "sha256": "54d013bd81cb6dda2c9e2e72512236884b521ec511152237846b1e9fca2c1328"
+    },
+    "frozenSharedPrimaryAnalysis": {
+      "relativePath": "Research/Analysis/Gate13R_PR2_Attempt4_PhaseB/v1/shared-primary-p1-analysis.json",
+      "sha256": "2afb47e9c4aac2ce94feba1da80341d3f937d7bf2206e80060db4bb51ebc2b54"
+    },
+    "phaseBAnalysisManifest": {
+      "relativePath": "Research/Analysis/Gate13R_PR2_Attempt4_PhaseB/v1/phase-b-analysis-manifest.json",
+      "sha256": "6666d946fd4620fb2aed9a10251b842305fe97aa286c330b8a6239a9bfee6740"
+    },
+    "phaseBExecutionReceipt": {
+      "relativePath": "Research/Analysis/Gate13R_PR2_Attempt4_PhaseB/v1/phase-b-execution-receipt.json",
+      "sha256": "a251886f7f13c420818b8bc88fbe1cc006696da0ed7caa152a51450ba119ba40"
+    },
+    "referenceAnalyzerSource": {
+      "relativePath": "Research/Analyze-Gate13RPR2Attempt4PhaseBV2.py",
+      "sha256": "e124c6364e08e818d94a29b65ec3bc0ea44bcc898b7f5fe97febfb2a5bf53a88"
+    }
+  },
+  "analysisBoundary": {
+    "derivationType": "READ-ONLY-POSTHOC-DESCRIPTIVE-ABSOLUTE-SCALE-RECONSTRUCTION",
+    "newConfirmatoryTestPerformed": false,
+    "rawDataModified": false,
+    "frozenFormalAnalysisModified": false,
+    "winnerDeclarationAdded": false,
+    "interpretation": "The values are absolute descriptive geometric means on the original P1 scale. Confirmatory conclusions remain governed by the frozen formal analysis artifacts."
+  }
+}

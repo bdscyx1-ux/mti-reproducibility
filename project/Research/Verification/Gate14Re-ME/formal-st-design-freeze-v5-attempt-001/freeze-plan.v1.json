@@ -1,0 +1,21 @@
+{
+  "schema": "gate14re-me-formal-st-design-freeze-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-design-freeze-v5-attempt-001",
+  "status": "PREVALIDATION_PLAN",
+  "purpose": "Validate and freeze the complete nonexecuting v5 formal-ST contract set after B=36 passed the prospective identity-blind power rule and stayed below the seven-day gate.",
+  "requiredChecks": [
+    "all v5 contract files parse and match the exact-hash freeze index",
+    "qualification terminal PASS and post-qualification diagnostic receipts match",
+    "anonymous power result selected B=36 using only identity-blind nuisance inputs",
+    "G/N/F has 36 cells and B=36 yields 1296 independent superblocks and 7776 measured lanes",
+    "the schedule rule gives every context twice per cell, every Williams order six times per cell, and exact position/predecessor balance",
+    "MIPE is exactly 0.90 and ln(0.90), S5 is omitted, and correctness/oracle gates remain retained",
+    "Holm 35-hypothesis family, 4-of-7 rule, no adaptive expansion and no post-outcome top-up remain frozen",
+    "algorithm, shared-source, runtime, instrument and D3 hashes match current files",
+    "83.493 planning hours is below 168 and storage reservation is at least twice the scaled qualification footprint",
+    "no formal input, schedule rows, formal roots, package roots, installer/credential copy or ZIP exists"
+  ],
+  "failurePolicy": "Any mismatch fails closed. Do not patch a successful freeze in place; preserve evidence and create a new versioned attempt after a prospective repair.",
+  "executionBoundary": "Validation may read contracts, hashes and structural metadata only. It may not generate formal inputs, formal observations, effects, ranks, weights, a winner, package files or a ZIP."
+}

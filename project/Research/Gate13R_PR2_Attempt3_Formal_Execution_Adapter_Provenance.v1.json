@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "provenanceKind": "gate13r-pr2-formal-attempt3-phase-a-execution-adapter-provenance-v1",
+  "recordedAtUtc": "2026-10-09T08:10:35.4092457Z",
+  "recordedAtAsiaShanghai": "2026-10-09T16:10:35.4092457+08:00",
+  "authorization": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Execution_Authorization.v1.json",
+    "sha256": "b32e6f3887f86c88909b2f2b77d8d36a9c9e4c6bf985b4c075ab53b5a67033de"
+  },
+  "implementation": {
+    "orchestrator": {
+      "relativePath": "Research/Gate13RPR2Attempt3ExecutionV1.py",
+      "sha256": "879df23c687fbb69f94d01e52447bdef1d642f990ce6127be6a242172670501a"
+    },
+    "launcher": {
+      "relativePath": "Research/Run-Gate13RPR2FormalAttempt3V1.ps1",
+      "sha256": "305152d708e289a4a002e81de5556d85ee71ff118ae51f7a555f7d7b4bb98424"
+    },
+    "prelaunchTestHarness": {
+      "relativePath": "Research/Test-Gate13RPR2FormalAttempt3PrelaunchV1.py",
+      "sha256": "0ccc43c89dafde97db7835ec830d955c7e73b84f5cbe4b5c37c047715a462cd4"
+    }
+  },
+  "frozenExecutionBindings": {
+    "candidateConfigV4Sha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+    "scheduleV2Sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "scheduleManifestV2Sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+    "policyOverlayV2Sha256": "c87cc7eab158dc7a111867364b9c06c2314f44c644ef2a4b8e33348bd1876d13",
+    "blockWrapperV3Sha256": "fc0c42b858afb8e8d80c6f10544a0d7fb75694ae8c57910d205cea721731ff13",
+    "blockPlanBuilderV4Sha256": "11365fb3c694ae2fab6c9d3c3cb3c93f3cbe3e6f2f7a30373730f5a236ce8785",
+    "unityCommandV5Sha256": "21f86b21a49c936edd5e65fde750d269a54be984186d9c802cbc2804b2691c75",
+    "statusSchemaV1Sha256": "3aff68ac8e041838283f8e28b72b388ab4de50abe3b357f59bb3e3597f74d89b",
+    "monitorV2Sha256": "6d1cd6b1f0542c2985fb0c11d3da6caee6c0413f0c5fe13f335897fef8f4c162",
+    "monitorWrapperV2Sha256": "8b9c3733aae86b4adbe03c9bc7806931947746d864854d438bf2a67d09f537c5"
+  },
+  "executionContract": {
+    "formalAttemptOrdinal": 3,
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "freshUnityProcessPerCompleteWilliamsBlock": true,
+    "campaignCount": 74,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "matchedSuperblockCount": 1008,
+    "measuredRetryResumeTopUpMergeAuthorized": false,
+    "phaseBFormalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false,
+    "twoStageRawCommitRequired": true
+  },
+  "implementationNotes": [
+    "The Python orchestrator maps the frozen v2 schedule directly to plans that are byte-identical to the frozen V4 plan builder for tested sentinel ordinals.",
+    "The orchestrator invokes the frozen V3 block wrapper synchronously, preventing more than one Unity Editor process from being scheduled by this attempt.",
+    "The operational status publisher is embedded in the orchestrator and validates every atomic status write against the frozen status schema.",
+    "After all measured blocks complete, the orchestrator closes Unity acquisition before bounded non-Unity raw commit recovery; ordinary analysis or commit defects cannot trigger measured reruns.",
+    "No Phase-B analyzer or Gate 14R entry point exists in this adapter."
+  ],
+  "formalTargetsPresentWhenRecorded": false,
+  "immutable": true
+}

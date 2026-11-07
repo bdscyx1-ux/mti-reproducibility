@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-36h-attempt6-derivation-failure-v1",
+  "createdAtUtc": "2026-10-08T05:07:17.4125378Z",
+  "status": "FAILED-PRE-ROOT",
+  "phase": "static-smoke-overlay-source-match",
+  "errorType": "PrematureGeneratorScopeInterpolation",
+  "errorMessage": "The staticSmokeFrom search text expanded $ProjectPath in the attempt-6 generator scope and therefore could not match the frozen derived script text, which correctly contains the literal $ProjectPath variable.",
+  "allowedRepair": "Create a new versioned attempt that keeps both $ProjectPath and $preImplementationRoot literal in generated-script search and replacement strings.",
+  "partialManifestRelativePath": "Research/Gate13R_36h_10pct_4Lane_Attempt6_Derivation_Partial_Manifest.v1.json",
+  "partialManifestSha256": "3debc65a44cc349045f56af539dedb7a85e65afba930084bb7e3e88505fba47e",
+  "verificationRootCreated": false,
+  "pilotRootCreated": false,
+  "cloneRootCreated": false,
+  "formalRootCreated": false,
+  "unityProcessCount": 0,
+  "automaticRetry": false,
+  "automaticResume": false,
+  "pilotStarted": false,
+  "formalCampaign": false,
+  "passed": false
+}

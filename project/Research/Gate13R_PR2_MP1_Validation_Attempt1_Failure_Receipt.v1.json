@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-mp1-prepilot-validation-attempt1-failure-v1",
+  "failedAtUtc": "2026-10-09T03:22:00Z",
+  "stage": "python-source-compile-smoke",
+  "failedTarget": "Research/New-Gate13RPR2MemoryPolicyPilotV1.py",
+  "reasonCode": "WINDOWS-PATH-BACKSLASH-INTERPOLATION-IN-TEST-HARNESS",
+  "diagnosis": "The source file imported and executed in the 345-check static suite, but the compile-smoke command embedded the absolute path in a second non-raw Python display string; the H:\\...\\New path introduced a \\N escape and caused the harness command to fail before compiling that one target.",
+  "sourceImplementationFailure": false,
+  "unityInvoked": false,
+  "measuredPilotRootCreated": false,
+  "formalAttempt3Created": false,
+  "automaticMeasuredRetry": false,
+  "status": "FAILED-PRESERVED / VALIDATION-HARNESS-ONLY"
+}

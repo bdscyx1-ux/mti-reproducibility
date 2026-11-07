@@ -1,0 +1,73 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-contract-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_PRECOLLECTION_ANALYSIS_NOT_AUTHORIZED_OR_RUN",
+  "independentUnit": "superblock",
+  "pairedCluster": "superblock",
+  "primaryModel": {
+    "positiveOutcomes": "natural log",
+    "zeroPermittingOutcomes": "log1p plus mandatory raw-scale summaries",
+    "fixedEffects": [
+      "algorithm",
+      "centered log2(N)",
+      "centered log2(F)",
+      "centered log2(G^2)",
+      "changeTopology",
+      "graphProfile",
+      "sameTickAtomicPartitions",
+      "executionPosition",
+      "algorithm by centered log2(N)",
+      "algorithm by centered log2(F)",
+      "algorithm by centered log2(G^2)"
+    ],
+    "primaryEstimator": "prespecified mixed-effects model with superblock pairing",
+    "nonconvergenceFallback": "same fixed-effect formula with superblock-cluster-robust covariance",
+    "modelSelectionByPValueDirectionOrWinner": false
+  },
+  "confirmatoryFamily": {
+    "target": "IDFF",
+    "comparators": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF"],
+    "domains": 7,
+    "hypotheses": 35,
+    "direction": "one-sided lower is better",
+    "familywiseAlpha": 0.05,
+    "multiplicity": "Holm strong FWER",
+    "D1IntersectionUnion": "for each comparator, domain p-value is max of geometric-mean and P95 one-sided p-values; both simultaneous intervals must be entirely below ratio 1",
+    "D2ToD4NullBoundary": "ratio or ratio-like contrast equals 1 on the declared scale",
+    "D5ToD7NullBoundary": "slope difference equals 0",
+    "domainPass": "all five target-versus-comparator hypotheses for that domain are rejected after Holm and the direction is favorable",
+    "primaryClaimPass": "at least four of seven domains pass",
+    "invalidDomainRemovedFromDenominator": false
+  },
+  "mipeInterpretation": {
+    "purpose": "planning alternative and practical-importance flag",
+    "ratioThreshold": 0.9,
+    "slopeThreshold": -0.10536051565782628,
+    "doesNotShiftStatisticalNullToMipe": true,
+    "mandatoryReporting": "For every IDFF-comparator domain contrast, report estimate, interval, adjusted p-value, whether the direction is favorable, and whether the estimate reaches the prespecified 10% MIPE."
+  },
+  "secondaryReporting": {
+    "allSixAlgorithms": true,
+    "fullFifteenPairMatrices": "exploratory, separately multiplicity controlled, never ordered or ranked",
+    "rawIndependentN": true,
+    "missingnessAndEligibility": true,
+    "rawDistributions": true,
+    "rankingTable": false,
+    "aggregateScore": false,
+    "winnerField": false
+  },
+  "hardGates": {
+    "correctnessOracle": "all frozen path-status, version, legality, and reference-oracle checks retained",
+    "D3CounterValidity": "mandatory",
+    "D4SizingFormulaValidity": "mandatory",
+    "completeRawDelivery": "mandatory before analysis",
+    "gateFailureAfterCollection": "affected domain remains in denominator and cannot support the majority claim"
+  },
+  "executionBoundary": {
+    "formalAnalysisAuthorized": false,
+    "formalEffectsComputedByThisFreeze": false,
+    "qualificationEffectsUsed": false,
+    "MQOrMTAuthorized": false
+  }
+}

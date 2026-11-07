@@ -1,0 +1,35 @@
+{
+  "schema": "gate14re-me-qualification-implementation-readiness-plan-v4.1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-implementation-readiness-v4-attempt-002",
+  "status": "FROZEN_BEFORE_COMPILE",
+  "predecessorFailure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-readiness-v4-attempt-001/failure-receipt.v4.json",
+    "reason": "Burst compiler thread teardown after source-triggered batchmode compile without lifecycle wait"
+  },
+  "forwardRepair": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEReadinessCompileExitV4.cs",
+    "sha256": "6454afe65a9fb349fd002d04d987d12bbe088047767a8462b7faf1bbc7050121",
+    "executeMethod": "DDM.Research.Editor.Gate14ReMEReadinessCompileExitV4.Run",
+    "behavior": "algorithm-free; waits for Burst IsCurrentCompilationDone to remain true for the qualified stable observation count, writes one readiness receipt, then exits"
+  },
+  "runner": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4.cs",
+    "sha256": "46f749de672600c287feb9aa37917b047c43526d15109a75bc652e1600e32ee3"
+  },
+  "unity": {
+    "path": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "rules": {
+    "measuredRootCreation": false,
+    "deliveryRootCreation": false,
+    "qualificationProcesses": 0,
+    "algorithmLaneExecution": false,
+    "formalCollection": false,
+    "formalAnalysis": false,
+    "rankingOrWinner": false,
+    "sameAttemptRetry": false
+  },
+  "createdAtUtc": "2026-10-19T12:15:00Z"
+}

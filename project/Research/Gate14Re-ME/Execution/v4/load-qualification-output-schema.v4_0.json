@@ -1,0 +1,219 @@
+{
+  "schema": "gate14re-me-load-qualification-output-schema-v4",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_BOUNDED_WINDOW_STREAMING_ESSENTIAL_ACCEPTANCE_V4",
+  "version": 4,
+  "supersedes": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json",
+    "sha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c",
+    "modifiedOrReclassified": true,
+    "reason": "new bounded GNF design and independently rerunnable streaming essential acceptance"
+  },
+  "v4Change": {
+    "authorizationBasis": "user-authorized bounded GNF redesign and necessary-only offline acceptance reuse",
+    "rawTableDefinitionsChanged": false,
+    "metricSemanticsChanged": false,
+    "scientificThresholdsChanged": false,
+    "qualificationCardinalityChanged": true,
+    "deliveryViewsReducedWithoutDroppingRawRows": true
+  },
+  "retentionRule": "Every raw observation is retained. An aggregate-only package is invalid.",
+  "identityRule": "Qualification reports use ALG-A through ALG-F; the encrypted or hash-sealed identity binding is retained separately and must not be opened to select endpoints, scenarios or thresholds.",
+  "d3Binding": {
+    "endpointId": "D3",
+    "semanticVersion": "3.1",
+    "counterId": "GC.Alloc-Begin-owner-thread-window-v3.1",
+    "contractRelativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+    "contractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "primaryRawTable": "d3-windows",
+    "primaryRawField": "managedAllocationBytes",
+    "rateRawInputs": ["managedAllocationBytes", "windowElapsedStopwatchTicks", "stopwatchFrequency"],
+    "rateDerivedField": "managedAllocationRateBytesPerSecond",
+    "oldSnapshotDifferenceFieldsProhibited": ["allocationCounterStart", "allocationCounterEnd", "eventGroupManagedAllocatedBytes", "allocatedBytes"]
+  },
+  "rawTables": [
+    {
+      "tableId": "oracle-agent-checks",
+      "fileName": "oracle-agent-checks.raw.v1.jsonl",
+      "grain": "one input x baseline-or-event x agent",
+      "requiredFields": ["recordId", "inputId", "superblockId", "eventGroupIndex", "comparisonSide", "agentIndex", "startX", "startY", "goalX", "goalY", "reachable", "shortestPathCost", "shortestPathSteps", "affected", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "oracle-event-checks",
+      "fileName": "oracle-event-checks.raw.v1.jsonl",
+      "grain": "one input x event group",
+      "expectedRowsPerInput": 24,
+      "requiredFields": ["recordId", "inputId", "superblockId", "eventGroupId", "eventGroupIndex", "cycleIndex", "phase", "topology", "uniqueChangedCellCount", "affectedAgentCount", "affectedAgentFraction", "minimumAffectedAgentsPassed", "bottleneckHalfAgentsRuleApplicable", "bottleneckHalfAgentsPassed", "restoreGridBytesPassed", "restoreOraclePassed", "beforeGridSha256", "afterGridSha256", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "operations",
+      "fileName": "operations.raw.v1.jsonl",
+      "grain": "one planner initialization, repair, or path-query operation",
+      "requiredFields": ["recordId", "inputId", "superblockId", "anonymousLaneId", "identityBindingSha256", "operationType", "operationId", "eventGroupIndex", "partitionIndex", "agentIndex", "gridVersion", "status", "failureReasonCode", "budgetExceeded", "elapsedCpuMilliseconds", "processedNodesOrCells", "expandedNodes", "relaxedEdges", "repairedCells", "managedAllocatedBytes", "oracleReachable", "oraclePathCost", "reportedPathCost", "oraclePathCostMatch", "nativeMetricsSemanticsId", "sourceRelativePath", "sourceSha256"],
+      "fieldSemantics": {
+        "managedAllocatedBytes": "Algorithm-reported NavigationOperationMetrics diagnostic retained verbatim; this field is not D3 and must not be substituted for d3-windows.managedAllocationBytes."
+      },
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "event-groups",
+      "fileName": "event-groups.raw.v2.jsonl",
+      "grain": "one input x anonymous algorithm lane x event group",
+      "expectedRowsPerLane": 24,
+      "requiredFields": ["recordId", "inputId", "superblockId", "designRegion", "anonymousLaneId", "identityBindingSha256", "gridEdge", "agentCount", "changedCellCount", "changeTopology", "graphProfile", "sameTickAtomicPartitions", "contextStratumId", "eventGroupId", "eventGroupIndex", "cycleIndex", "phase", "eventGroupElapsedMilliseconds", "d3WindowRecordId", "d3CounterId", "d3CounterValid", "gridContainsCalls", "gridIsWalkableCalls", "gridGetTraversalCostCalls", "gridAccessorCallsTotal", "repairOperationCount", "planOperationCount", "succeededPlanCount", "noPathPlanCount", "budgetExceededOperationCount", "eligible", "missingOrIneligibleReasonCode", "finitePositiveElapsed", "counterValid", "sourceRelativePath", "sourceSha256"],
+      "d3Join": "d3WindowRecordId must resolve to exactly one d3-windows row with measurementScope=event-group and matching lane/eventGroupIndex.",
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "d3-windows",
+      "fileName": "d3-windows.raw.v1.jsonl",
+      "grain": "one explicitly bounded D3-v3.1 native measurement window",
+      "measurementScopes": ["planner-initialization", "event-group", "empty-boundary", "instrument-self-test-positive-control"],
+      "expectedRowsPerLane": 25,
+      "expectedRowsPerEmptyBoundaryProcess": 1000,
+      "requiredFields": ["recordId", "inputId", "superblockId", "anonymousLaneId", "identityBindingSha256", "measurementScope", "eventGroupIndex", "processOrdinal", "iterationIndex", "d3CounterId", "d3SemanticVersion", "managedAllocationBytes", "managedAllocationEventCount", "foreignThreadAllocationBytes", "foreignThreadAllocationEventCount", "invalidMetadataEventCount", "counterOverflowCount", "ownerNativeThreadId", "observerNativeThreadId", "windowStartStopwatchTicks", "windowEndStopwatchTicks", "windowElapsedStopwatchTicks", "stopwatchFrequency", "managedAllocationRateBytesPerSecond", "managedAllocationRateValid", "beginReturnCode", "endReturnCode", "pluginReady", "markerSeen", "metadataAbiValid", "ownerThreadMatched", "counterValid", "invalidReasonCode", "d3ContractRelativePath", "d3ContractSha256", "sourceRelativePath", "sourceSha256"],
+      "zeroPolicy": "A structurally valid zero-byte window is retained exactly; its managedAllocationRateBytesPerSecond is 0.0 and managedAllocationRateValid is false.",
+      "positiveRateValidity": "managedAllocationBytes > 0, stopwatchFrequency > 0, windowElapsedStopwatchTicks > 0, and the derived rate is finite and positive.",
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "persistent-state",
+      "fileName": "persistent-state.raw.v1.jsonl",
+      "grain": "one lane x measurement point x persistent-state component",
+      "measurementPointsPerLane": 26,
+      "requiredFields": ["recordId", "inputId", "superblockId", "anonymousLaneId", "identityBindingSha256", "measurementPointId", "eventGroupIndex", "persistentContainerName", "containerKind", "persistentContainerCapacity", "persistentContainerBytesPerElement", "persistentContainerCapacityBytes", "persistentPrimitiveArrayBytes", "persistentStateBytesTotal", "sizingFormulaId", "valid", "invalidReasonCode", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "process-resources",
+      "fileName": "process-resources.raw.v1.jsonl",
+      "grain": "one lane x measurement point",
+      "expectedRowsPerLane": 26,
+      "requiredFields": ["recordId", "inputId", "superblockId", "anonymousLaneId", "identityBindingSha256", "measurementPointId", "eventGroupIndex", "processId", "privateMemoryBytes", "workingSetBytes", "managedMemoryBytes", "peakWorkingSetBytes", "capturedAtUtc", "sourceRelativePath", "sourceSha256"],
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "empty-boundary",
+      "fileName": "empty-boundary.raw.v2.jsonl",
+      "grain": "one independent empty-boundary iteration",
+      "expectedProcesses": 12,
+      "expectedRowsPerProcess": 1000,
+      "expectedTotalRows": 12000,
+      "requiredFields": ["recordId", "processOrdinal", "iterationIndex", "stopwatchStartTicks", "stopwatchEndTicks", "elapsedMilliseconds", "d3WindowRecordId", "d3CounterId", "d3CounterValid", "plannerInvoked", "sourceRelativePath", "sourceSha256"],
+      "d3Join": "d3WindowRecordId must resolve to exactly one d3-windows row with measurementScope=empty-boundary and matching processOrdinal/iterationIndex.",
+      "sourcePathAndShaRequired": true
+    },
+    {
+      "tableId": "replacement-ledger",
+      "fileName": "replacement-ledger.raw.v1.jsonl",
+      "grain": "one whole-superblock technical replacement decision",
+      "requiredFields": ["recordId", "plannedSuperblockId", "replacementSuperblockId", "replacementOrdinal", "reason", "createdAtUtc"],
+      "requiredEvenWhenEmpty": true,
+      "maximumRowsPerPlannedSuperblock": 0
+    },
+    {
+      "tableId": "failures-and-voids",
+      "fileName": "failures-and-voids.raw.v1.jsonl",
+      "grain": "one process or whole-superblock failure/void declaration",
+      "requiredFields": ["recordId", "plannedSuperblockId", "instanceId", "isReplacement", "status", "reason", "createdAtUtc"],
+      "requiredEvenWhenEmpty": true
+    }
+  ],
+  "receipts": [
+    "_control/launch-receipt.v2.json",
+    "oracle-pass-receipt.v1.json",
+    "lane-receipt.v2.json",
+    "accepted-superblock-receipt.v1.json",
+    "empty-boundary-receipt.v2.json",
+    "instrument-csharp-receipt.v2.json",
+    "instrument-export-receipt.v2.json",
+    "_control/acquisition-complete.v4.json",
+    "_control/acceptance-pending.v4.json",
+    "_control/acquisition-freeze-manifest.v4.json",
+    "_control/acquisition-terminal-receipt.v4.json",
+    "delivery-manifest.v4.json",
+    "terminal-final.v4.json"
+  ],
+  "terminalControlPlane": {
+    "acceptedSuperblockReceipts": {
+      "glob": "raw/superblocks/*/accepted-superblock-receipt.v1.json",
+      "schema": "gate14re-me-accepted-superblock-receipt-v1",
+      "status": "ACCEPTED_COMPLETE_SIX_LANE_SUPERBLOCK",
+      "expectedQualificationFull": 126,
+      "expectedSyntheticKnownAnswer": 1,
+      "expectedAnonymousLanesPerQualificationSuperblock": 6
+    },
+    "processLedger": {
+      "relativePath": "_control/process-ledger.raw.v2.jsonl",
+      "schema": "gate14re-me-process-ledger-row-v2",
+      "expectedQualificationFullRows": 895,
+      "expectedSyntheticKnownAnswerRows": 4,
+      "qualificationModeCounts": {
+        "instrument-self-test": 1,
+        "oracle": 126,
+        "empty-boundary": 12,
+        "lane": 756
+      },
+      "strictZeroBasedOrdinalCoverage": true,
+      "identityReceiptHashLinkRequired": true
+    },
+    "processIdentityReceipts": {
+      "glob": "_control/process-identities/process-*.identity.v2.json",
+      "schema": "gate14re-me-qualified-unity-process-identity-receipt-v2",
+      "status": "PASS_TRUSTED_THREE_PHASE_COMPOSITE_IDENTITY_NATURAL_EXIT",
+      "expectedQualificationFull": 895,
+      "expectedSyntheticKnownAnswer": 4,
+      "naturalExitRequired": true,
+      "zeroExitRequired": true,
+      "signalOrForcedTerminationProhibited": true,
+      "retryProhibited": true
+    },
+    "fullQualificationClosure": {
+      "laneReceipts": 756,
+      "emptyBoundaryReceipts": 12,
+      "acceptedSuperblockReceipts": 126,
+      "eventGroupRows": 18144,
+      "laneD3WindowRows": 18900,
+      "instrumentD3WindowRows": 1,
+      "emptyBoundaryD3WindowRows": 12000,
+      "processResourceRows": 19656,
+      "processResourceRowsPerLane": 26,
+      "persistentStateMeasurementPointsPerLane": 26,
+      "processLedgerRows": 895,
+      "processIdentityReceipts": 895,
+      "supervisorFinalProcessOrdinal": 895
+    }
+  },
+  "deliveryViews": {
+    "losslessCanonical": "The sealed acquisition UTF-8 JSON Lines are the single canonical complete record and retain every raw row.",
+    "typedAnalytical": "Streaming-built Parquet retains every raw row, original order, provenance, and explicit integer/float/boolean/string types.",
+    "nonGatingCompatibilityViews": ["CSV", "duplicate canonical JSONL", "gzip JSONL"],
+    "aggregateOnlyAllowed": false,
+    "rowIdentityPreservedAcrossViews": true,
+    "rowOrderManifested": true,
+    "sha256ManifestRequired": true
+  },
+  "requiredRoundTripChecks": [
+    "row counts equal between sealed raw JSONL and typed Parquet",
+    "ordered recordId SHA-256 digests are identical",
+    "all required fields survive",
+    "all d3WindowRecordId joins are one-to-one and complete",
+    "all scalar values, explicit types and row order survive without coercion in Parquet",
+    "file SHA-256 values match the delivery manifest",
+    "tamper, missing row/file, duplicate recordId and anonymous-label-swap fixtures all fail closed"
+  ],
+  "currentStageEvidence": {
+    "versionedRunnerSourceIntegrated": true,
+    "runnerV4SourceCreatedUnderANewVersionedName": true,
+    "existingAlgorithmImplementationsRemainByteIdentical": true,
+    "acceptanceIsIndependentReadOnlyAndOffline": true,
+    "rawRowsCreated": 0,
+    "deliveryCreated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false
+  }
+}

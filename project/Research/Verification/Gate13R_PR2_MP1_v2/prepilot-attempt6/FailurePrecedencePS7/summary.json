@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "summaryKind": "gate13r-pr2-mp1-failure-precedence-fixtures-v1",
+  "runtime": "7.6.5",
+  "testCount": 6,
+  "passedTestCount": 6,
+  "tests": [
+    {
+      "id": "durable-plus-quiescence",
+      "primary": "DURABLE-UNITY-BLOCK-FAILURE",
+      "secondaryCount": 1,
+      "failed": true,
+      "passed": true
+    },
+    {
+      "id": "timeout-plus-quiescence",
+      "primary": "HARD-TIMEOUT",
+      "secondaryCount": 1,
+      "failed": true,
+      "passed": true
+    },
+    {
+      "id": "exit-plus-quiescence",
+      "primary": "NONZERO-UNITY-EXIT",
+      "secondaryCount": 1,
+      "failed": true,
+      "passed": true
+    },
+    {
+      "id": "quiescence-only",
+      "primary": "POST-EXIT-QUIESCENCE-FAILURE",
+      "secondaryCount": 0,
+      "failed": true,
+      "passed": true
+    },
+    {
+      "id": "safety-plus-exit",
+      "primary": "EMERGENCY-SAFETY-STOP",
+      "secondaryCount": 0,
+      "failed": true,
+      "passed": true
+    },
+    {
+      "id": "success",
+      "primary": null,
+      "secondaryCount": 0,
+      "failed": false,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

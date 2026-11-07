@@ -1,0 +1,28 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-004-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-attempt-004",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-004",
+  "status": "AUTHORIZED_READ_ONLY_NO_UNITY_READINESS_RECHECK",
+  "authorizedAtUtc": "2026-10-17T16:51:00.961171Z",
+  "authorizationSource": "direct user request",
+  "userAuthorizationTextExact": "以只读、无 Unity 方式执行一次新的 execution-readiness recheck，绑定 execution contract v3.2、implementation manifest v3.2 和冻结的 PowerShell 7.6.5 host runtime；只有该 readiness recheck 通过后，才能另行授权新的 qualification execution attempt。",
+  "allowed": [
+    "create and freeze this independent attempt-004 evidence directory",
+    "read and hash the explicitly bound frozen source, contract, status, planning, runtime, identity and prior-attempt evidence",
+    "parse Python/PowerShell/JSON/JSONL statically without executing the qualification supervisor or algorithm code",
+    "inspect read-only host/process/storage metadata",
+    "freeze a terminal readiness PASS receipt and Status v32 only if every check passes"
+  ],
+  "prohibited": [
+    "starting Unity",
+    "creating qualification measured, delivery, or formal roots",
+    "running any planner or algorithm lane",
+    "producing qualification or formal observations",
+    "formal collection or formal analysis",
+    "cross-algorithm effects, ranking, weighting, or winner adjudication",
+    "opening or disclosing the sealed identity mapping",
+    "deleting, modifying, or reclassifying prior attempts"
+  ]
+}

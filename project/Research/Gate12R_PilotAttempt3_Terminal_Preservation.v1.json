@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "recordId": "gate12r-pilot-attempt3-terminal-preservation-v1",
+  "pilotRootRelativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v3",
+  "terminalStatus": "FAILED-NO-RESUME-NO-MERGE",
+  "formalCampaign": false,
+  "excludedFromFormalAnalysis": true,
+  "notForGate14Inference": true,
+  "automaticResumeAuthorized": false,
+  "partialAttemptMergeAuthorized": false,
+  "failureClass": "FROZEN-BLOCK-MANAGED-MEMORY-GATE-AND-POST-EXIT-STALE-LOCK",
+  "completed": {
+    "warmupBlocks": 8,
+    "coldStructuralControls": 36,
+    "measuredBlocks": 328,
+    "checkpointEntries": 372,
+    "failedMeasuredBlock": "g12r-measured-c08-core-r01-s1-hetero-grouped-field-b028",
+    "failedBlockCompletedSamples": 2,
+    "failedBlockPublished": false,
+    "laterPositionsExecuted": false
+  },
+  "failureEvidence": {
+    "failedBlockManagedGrowthBytes": 139771904,
+    "failedBlockManagedGrowthMiB": 133.296875,
+    "oldBlockLimitBytes": 134217728,
+    "excessBytes": 5554176,
+    "sample1RetainedManagedGrowthBytes": 63397888,
+    "sample2RetainedManagedGrowthBytes": 71917568,
+    "bothSamplesPassedSampleLimit": true,
+    "unityProcessExited": true,
+    "staleLockBytes": 0,
+    "staleLockSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "staleLockExclusiveOpenAvailable": true
+  },
+  "partialOutputManifestAudit": {
+    "manifestFileCount": 7554,
+    "manifestRawBytes": 493784387,
+    "independentlyRehashedFiles": 7554,
+    "independentlyRehashedBytes": 493784387,
+    "mismatchCount": 0
+  },
+  "sha256": {
+    "executionReceipt": "3c71438bfdd858f16dafae0170a006e4e7780256845eebda7f2674d3587bb6f9",
+    "failureReceipt": "9118dd4a383526a5361169e8d2bd896c15986e0b4e5158b8f7dd294b1309f509",
+    "checkpoint": "ad2d2152780b60f6bed68f19ea5df68d14ce9f265b1b89b15c28f7e11d24d5a0",
+    "partialOutputManifest": "d42366ef313834ade6ae4c3cdcfe356eb9b58a8155808a56e7bebf83862b2039",
+    "failedBlockReceipt": "7a8195c071e14c0ea4140c609213e773fe67636d5ec964ec7c7fc1ac5656b0a4",
+    "quiescenceFailureReceipt": "b6fdf3a9da31d90338db2cc6c684fc784baae31f01b4203e473bf39368d2db6a"
+  },
+  "downstreamRule": "The v3 root is immutable historical evidence. It must not be resumed, completed, merged, or used to estimate Gate 13R formal sample size. A fresh versioned pilot is required."
+}

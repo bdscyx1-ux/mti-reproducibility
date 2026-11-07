@@ -1,0 +1,529 @@
+<!doctype html><meta charset="utf-8"><title>MTI tables and provenance</title><style>body{font:15px Arial;max-width:1400px;margin:32px auto;padding:20px}table{border-collapse:collapse;margin:14px 0 32px;width:100%}td,th{border:1px solid #ccc;padding:7px;white-space:pre-line;text-align:left}th{background:#edf3f7}.note{color:#805000}h2{margin-top:40px}</style><h1>MTI tables and provenance</h1><p>Numerical tables are generated from recomputed results. Static design text is preserved. AX2 rows and Table S3 have the explicit exceptions below. Original DOCX transcriptions are in original-transcription/.</p>
+<h2>Table 1. Evaluation modules and experimental units.</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Question and module</th><th>Design</th><th>Analysis unit and principal outcome</th></tr>
+<tr><td>RQ1 Dynamic planning</td><td>Original: 32 shared-goal campaigns × 48 four-backend blocks; two heterogeneous-goal cohorts, each with 21 campaigns × 48 two-backend blocks. Expanded: 32 × 48. Field confirmation: 32 × 50. Supplemental corrected-D*L comparison: 32 × 48.</td><td>Campaign means for the original, expanded and supplemental comparisons; fixed campaign-by-order strata for confirmation. P1 handling time.</td></tr>
+<tr><td>RQ2 Matched costs and scaling</td><td>Six algorithms × 36 structural cells × 36 matched repetitions; 24 event groups per lane.</td><td>1,296 matched superblocks. D1 latency; D2 grid accesses; D3 allocation; D4 retained state; D5–D7 scaling.</td></tr>
+<tr><td>RQ3 Movement</td><td>Historical main and quantity study: eight main conditions and two quantity anchors. Supplemental acquisition repeats eight main conditions at N = 128, with 48 blocks per movement/callback lane.</td><td>Complete block. Simulated completion, distance, reliability and movement validity.</td></tr>
+<tr><td>RQ4 Workload concurrency</td><td>36 blocks; 16 private lanes per batch; two field backends under 12 execution conditions.</td><td>36 matched blocks. Batch wall-time ratio per worker doubling and balanced W16/W8.</td></tr>
+</table>
+<h2>Table 2. Navigation backends and retained state.</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Backend</th><th>Route computation</th><th>Retained state and response to change</th></tr>
+<tr><td>A*-R</td><td>New A* search for each request.</td><td>Request-local frontier; repeats search after changes.</td></tr>
+<tr><td>BiA*-R</td><td>New forward and reverse search for each request.</td><td>Request-local frontiers; accepts the best connection under the stated stopping rule.</td></tr>
+<tr><td>D*L</td><td>Incremental heuristic search per agent.</td><td>Per-agent g/rhs and queue state; repairs changed dependencies and updates moving-start keys.</td></tr>
+<tr><td>LPA*</td><td>Goal-rooted incremental search per agent.</td><td>Per-agent g/rhs and queue state for the fixed-start workload.</td></tr>
+<tr><td>C-FF</td><td>Reverse shortest-path field shared across agents.</td><td>Rebuilds integration, ownership and direction arrays after a change.</td></tr>
+<tr><td>IDFF</td><td>Incrementally repaired shared field.</td><td>Retains integration, ownership, queue and direction state; repairs inconsistencies before release.</td></tr>
+</table>
+<h2>Table 3. Dynamic handling time in the shared-goal acquisitions.</h2>
+<p class="note">MIXED_RECOMPUTED_AND_AX2_SUMMARY | Table_S1 and supplemental A/sample-results.csv</p>
+<table>
+<tr><th>Acquisition</th><th>Backend</th><th>Samples per backend</th><th>P1 GM ms/event</th><th>Provenance</th></tr>
+<tr><td>Four-method / shared</td><td>A*-R</td><td>1536</td><td>52.4800</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / shared</td><td>D*L</td><td>1536</td><td>59.5523</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / shared</td><td>C-FF</td><td>1536</td><td>11.1371</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / shared</td><td>IDFF</td><td>1536</td><td>8.8945</td><td>RECOMPUTED</td></tr>
+<tr><td>Expanded search / shared</td><td>BiA*-R</td><td>1,536</td><td>100.0484</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>LPA*</td><td>1,536</td><td>58.7535</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>C-FF</td><td>1,536</td><td>10.9823</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>IDFF</td><td>1,536</td><td>8.8222</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Confirmation / shared</td><td>C-FF</td><td>1600</td><td>11.5352</td><td>RECOMPUTED</td></tr>
+<tr><td>Confirmation / shared</td><td>IDFF</td><td>1600</td><td>9.1713</td><td>RECOMPUTED</td></tr>
+<tr><td>Supplemental corrected D*L</td><td>A*-R</td><td>1536</td><td>51.5919</td><td>RECOMPUTED_SUPPLEMENT_A</td></tr>
+<tr><td>Supplemental corrected D*L</td><td>D*L</td><td>1536</td><td>57.8581</td><td>RECOMPUTED_SUPPLEMENT_A</td></tr>
+<tr><td>Supplemental corrected D*L</td><td>C-FF</td><td>1536</td><td>10.7828</td><td>RECOMPUTED_SUPPLEMENT_A</td></tr>
+<tr><td>Supplemental corrected D*L</td><td>IDFF</td><td>1536</td><td>8.7185</td><td>RECOMPUTED_SUPPLEMENT_A</td></tr>
+</table>
+<h2>Table 4. Adjusted IDFF versus C-FF effects in the matched benchmark.</h2>
+<p class="note">RECOMPUTED | smsb-reporting/formal-ratio-provenance.v1.csv; smsb/confirmatory-results.v1.json</p>
+<table>
+<tr><th>Outcome</th><th>IDFF adjusted reference</th><th>C-FF adjusted reference</th><th>Formal ratio</th><th>Simultaneous interval</th></tr>
+<tr><td>D1 GM (ms)</td><td>19.752366</td><td>26.037045</td><td>0.758625</td><td>0.715234–0.804650</td></tr>
+<tr><td>D1 P95 (ms)</td><td>34.752539</td><td>31.061113</td><td>1.118844</td><td>1.048014–1.194461</td></tr>
+<tr><td>D2 grid calls</td><td>23451138.396759</td><td>30934243.455153</td><td>0.758096</td><td>0.713996–0.804921</td></tr>
+<tr><td>D3 allocation bytes</td><td>6381914.731349</td><td>29666416.415023</td><td>0.215123</td><td>0.205855–0.224808</td></tr>
+<tr><td>D4 retained bytes</td><td>547739.788411</td><td>226677.341792</td><td>2.416379</td><td>2.402445–2.430394</td></tr>
+</table>
+<h2>Table 5. Supplemental movement outcomes at 128 agents with corrected D*L.</h2>
+<p class="note">RECOMPUTED | Supplemental B/condition-summary.csv</p>
+<table>
+<tr><th>Case</th><th>Completion time (s), all algorithms</th><th>Path A*-R</th><th>Path D*L</th><th>Path C-FF / IDFF</th><th>Completed blocks, all algorithms</th></tr>
+<tr><td>C01</td><td>6.18</td><td>59.49866</td><td>59.58136</td><td>59.58136</td><td>48/48</td></tr>
+<tr><td>C02</td><td>5.24</td><td>53.72980</td><td>53.72980</td><td>53.72980</td><td>48/48</td></tr>
+<tr><td>C03</td><td>4.10</td><td>40.47683</td><td>40.46722</td><td>40.46722</td><td>48/48</td></tr>
+<tr><td>C04</td><td>4.42</td><td>43.49985</td><td>43.49787</td><td>43.49787</td><td>48/48</td></tr>
+<tr><td>C05</td><td>11.84</td><td>117.20312</td><td>116.98437</td><td>116.98437</td><td>48/48</td></tr>
+<tr><td>C06</td><td>11.78</td><td>121.11719</td><td>121.33594</td><td>121.33594</td><td>48/48</td></tr>
+<tr><td>C07</td><td>7.30</td><td>72.94998</td><td>72.89068</td><td>72.89068</td><td>48/48</td></tr>
+<tr><td>C08</td><td>6.94</td><td>69.21693</td><td>69.19701</td><td>69.19701</td><td>48/48</td></tr>
+</table>
+<h2>Table 6. Within-backend effects of increasing managed workers.</h2>
+<p class="note">RECOMPUTED | mq/confirmatory-and-secondary-results.v1.json</p>
+<table>
+<tr><th>Algorithm</th><th>Placement / contrast</th><th>n</th><th>Geometric ratio</th><th>Ordinary 95% interval</th><th>Reduction %</th><th>Holm one-sided p</th><th>Simultaneous upper ratio</th></tr>
+<tr><td>C-FF</td><td>LARGE_L3_CCD / single-CCD log2-worker slope</td><td>36</td><td>0.6597</td><td>0.6394–0.6807</td><td>34.03</td><td>&lt;1e-15</td><td>0.6840</td></tr>
+<tr><td>C-FF</td><td>HIGH_FREQUENCY_CCD / single-CCD log2-worker slope</td><td>36</td><td>0.6642</td><td>0.6439–0.6851</td><td>33.58</td><td>&lt;1e-15</td><td>0.6884</td></tr>
+<tr><td>IDFF</td><td>LARGE_L3_CCD / single-CCD log2-worker slope</td><td>36</td><td>0.6715</td><td>0.6510–0.6925</td><td>32.85</td><td>&lt;1e-15</td><td>0.6958</td></tr>
+<tr><td>IDFF</td><td>HIGH_FREQUENCY_CCD / single-CCD log2-worker slope</td><td>36</td><td>0.6775</td><td>0.6574–0.6983</td><td>32.25</td><td>&lt;1e-15</td><td>0.7015</td></tr>
+<tr><td>C-FF</td><td>DUAL_CCD_BALANCED / W16-versus-W8 paired log ratio</td><td>36</td><td>0.8038</td><td>0.7553–0.8554</td><td>19.62</td><td>1.59173e-08</td><td>0.8554</td></tr>
+<tr><td>IDFF</td><td>DUAL_CCD_BALANCED / W16-versus-W8 paired log ratio</td><td>36</td><td>0.8397</td><td>0.7998–0.8815</td><td>16.03</td><td>1.59173e-08</td><td>0.8815</td></tr>
+</table>
+<h2>Table 7. Navigation-service design implications of the measured outcomes.</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Application priority</th><th>Evidence from this study</th><th>Design implication</th></tr>
+<tr><td>Many agents share a destination</td><td>Both fields reduce P1 relative to the tested per-agent methods in the common-goal acquisitions.</td><td>Evaluate a shared destination representation before increasing per-agent search capacity.</td></tr>
+<tr><td>Recurring update and query cost</td><td>IDFF lowers adjusted geometric mean latency, grid accesses and event-window allocation.</td><td>Consider incremental repair for workloads resembling the tested update sequences.</td></tr>
+<tr><td>Sampled upper-tail latency or retained state</td><td>C-FF has lower adjusted within-lane P95 and lower retained state than IDFF.</td><td>Include full recomputation when selecting for latency consistency or state capacity.</td></tr>
+<tr><td>Concurrent independent regions or tasks</td><td>Managed workers reduce the time of private 16-lane batches.</td><td>Schedule independent workloads concurrently when that parallelism is available.</td></tr>
+<tr><td>Movement completion and deployment testing</td><td>All four backends, including corrected D*L, share simulated completion times in the eight supplemental main conditions.</td><td>Combine navigation-cost results with task-specific input, movement-onset and display timing in deployment tests.</td></tr>
+</table>
+<h2>Algorithm S1. Full-Recompute Flow Field (C-FF)</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Algorithm S1. Full-Recompute Flow Field (C-FF)</th></tr>
+<tr><td>Input: grid G, canonical goal set T, legal-move relation N(.)
+Output: integration J, owner O, and next-cell direction D
+1   Allocate fresh arrays; set J[v] &lt;- INF, O[v] &lt;- NIL, and D[v] &lt;- NIL for every v in V
+2   Q &lt;- empty deterministic min-heap
+3   for each walkable goal t in T, in canonical order do
+4       J[t] &lt;- 0; O[t] &lt;- t; push the current record for t into Q
+5   while Q is not empty do
+6       u &lt;- pop a record from Q; if stale, continue
+7       for each legal predecessor p of u do
+8           candidate &lt;- c(p, u) + J[u]
+9           if (candidate, O[u]) improves (J[p], O[p]) then
+10              J[p] &lt;- min(J[p], candidate); O[p] &lt;- O[u]; push the revised p into Q
+11  for each walkable, reachable, non-goal cell v do
+12      S &lt;- {s in N(v) : c(v, s) + J[s] equals J[v]}
+13      D[v] &lt;- deterministic minimum of S by (total, owner, remainder, coordinate)
+14      assert O[v] equals O[D[v]]
+15  return (J, O, D)
+On every accepted grid change, build a fresh field by lines 1-15, then replace the old field.
+A plan query follows D until the declared owner goal and requires J to decrease at each step.</td></tr>
+</table>
+<h2>Algorithm S2. Incremental Dynamic Flow Field (IDFF)</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Algorithm S2. Incremental Dynamic Flow Field (IDFF)</th></tr>
+<tr><td>Input: updated grid G; change set C; persistent field, Q, revisions, dirty set, cursor
+Output: a queryable field or a resumable PENDING state
+1   For a new change set, mark repair pending and make the field non-queryable
+2   A &lt;- changed cells and their clipped 3 x 3 dependency neighborhoods
+3   for each v in A, mark its direction dirty; UPDATE-VERTEX(v)
+4   while the queue phase is unfinished do
+5       if the budget expired then preserve state and return PENDING
+6       u &lt;- pop the next non-stale inconsistent vertex, if any
+7       if none remains then sort dirty cells, set cursor to 0, and end this phase
+8       else if (rhs[u], rhsOwner[u]) precedes (g[u], gOwner[u]) then
+9           (g[u], gOwner[u]) &lt;- (rhs[u], rhsOwner[u]); invalidate u&#x27;s queue revision
+10      else (g[u], gOwner[u]) &lt;- (INF, NIL); UPDATE-VERTEX(u)
+11      if u was processed, UPDATE-VERTEX each predecessor
+12      if u was processed, mark its changed direction dependencies dirty
+13  while dirty cells remain from the saved cursor do
+14      if the budget expired then preserve state and return PENDING
+15      v &lt;- next dirty cell; advance cursor; clear D[v]
+16      if v is walkable, reachable, and not a goal then
+17          D[v] &lt;- deterministic successor s with c(v, s) + g[s] equal to g[v]
+18  clear pending and dirty state; expose the field; return COMPLETE
+UPDATE-VERTEX(v):
+19  if v is a walkable goal then (rhs[v], rhsOwner[v]) &lt;- (0, v)
+20  else use the best legal successor via g; blocked/no successor gives (INF, NIL)
+21  increment v&#x27;s revision, invalidating its older queue entries
+22  if g and rhs cost/owner pairs differ, enqueue v with the revised key
+A resume skips lines 1-3 and retains its queue phase and direction cursor.
+A plan call resumes pending repair before following the consistent direction field.</td></tr>
+</table>
+<h2>Table S1. Original-scale P1–P4 geometric means by acquisition and cohort</h2>
+<p class="note">MIXED_RECOMPUTED_AND_AX2_SUMMARY | four-method/sample-metrics.json; confirmation/sample-metrics.json; AX2 rows retained from source manuscript</p>
+<table>
+<tr><th>Acquisition / cohort</th><th>Algorithm</th><th>n</th><th>P1 ms/event</th><th>P2 GM of P95 ms</th><th>P3 ms/agent</th><th>P4 diagnostic bytes/event</th><th>Provenance</th></tr>
+<tr><td>Four-method / shared</td><td>A*-R</td><td>1536</td><td>52.4800</td><td>69.8998</td><td>7.1833</td><td>7136552</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / shared</td><td>D*L</td><td>1536</td><td>59.5523</td><td>131.3757</td><td>14.3483</td><td>583573</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / shared</td><td>C-FF</td><td>1536</td><td>11.1371</td><td>21.1129</td><td>1.5206</td><td>554126</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / shared</td><td>IDFF</td><td>1536</td><td>8.8945</td><td>19.1488</td><td>2.0522</td><td>138432</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / heterogeneous</td><td>A*-R</td><td>1008</td><td>59.3623</td><td>78.6918</td><td>6.4744</td><td>9407114</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / heterogeneous</td><td>D*L</td><td>1008</td><td>69.0824</td><td>145.6408</td><td>12.4811</td><td>828905</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / heterogeneous</td><td>C-FF</td><td>1008</td><td>11.1993</td><td>22.3043</td><td>1.2032</td><td>637594</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / heterogeneous</td><td>IDFF</td><td>1008</td><td>4.6743</td><td>10.5956</td><td>1.1928</td><td>75505</td><td>RECOMPUTED</td></tr>
+<tr><td>Confirmation / shared</td><td>C-FF</td><td>1600</td><td>11.5352</td><td>21.7630</td><td>1.5770</td><td>815495</td><td>RECOMPUTED</td></tr>
+<tr><td>Confirmation / shared</td><td>IDFF</td><td>1600</td><td>9.1713</td><td>19.7384</td><td>2.1021</td><td>249389</td><td>RECOMPUTED</td></tr>
+<tr><td>Expanded search / shared</td><td>BiA*-R</td><td>1,536</td><td>100.0484</td><td>136.6949</td><td>13.6655</td><td>14,141,361</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>LPA*</td><td>1,536</td><td>58.7535</td><td>129.8672</td><td>14.1385</td><td>603,935</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>C-FF</td><td>1,536</td><td>10.9823</td><td>20.7709</td><td>1.5026</td><td>570,671</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>IDFF</td><td>1,536</td><td>8.8222</td><td>18.9473</td><td>2.0299</td><td>145,860</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+</table>
+<h2>Table S2. Descriptive shared-goal telemetry with acquisition labels</h2>
+<p class="note">MIXED_RECOMPUTED_AND_AX2_SUMMARY | Table_S1 / same acquisition labels</p>
+<table>
+<tr><th>Acquisition / cohort</th><th>Algorithm</th><th>n</th><th>P1 ms/event</th><th>P2 GM of P95 ms</th><th>P3 ms/agent</th><th>P4 diagnostic bytes/event</th><th>Provenance</th></tr>
+<tr><td>Four-method / shared</td><td>A*-R</td><td>1536</td><td>52.4800</td><td>69.8998</td><td>7.1833</td><td>7136552</td><td>RECOMPUTED</td></tr>
+<tr><td>Four-method / shared</td><td>D*L</td><td>1536</td><td>59.5523</td><td>131.3757</td><td>14.3483</td><td>583573</td><td>RECOMPUTED</td></tr>
+<tr><td>Expanded search / shared</td><td>BiA*-R</td><td>1,536</td><td>100.0484</td><td>136.6949</td><td>13.6655</td><td>14,141,361</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>LPA*</td><td>1,536</td><td>58.7535</td><td>129.8672</td><td>14.1385</td><td>603,935</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>C-FF</td><td>1,536</td><td>10.9823</td><td>20.7709</td><td>1.5026</td><td>570,671</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+<tr><td>Expanded search / shared</td><td>IDFF</td><td>1,536</td><td>8.8222</td><td>18.9473</td><td>2.0299</td><td>145,860</td><td>ARCHIVED_SUMMARY_ONLY_AX2_RAW_MISSING</td></tr>
+</table>
+<h2>Table S3. Plan and repair utilization of the operation termination budget</h2>
+<p class="note">MIXED_RECOMPUTED_AND_AX2_SUMMARY | operation-budget/operation-budget.json; AX2 rows retained from original manuscript</p>
+<table>
+<tr><th>Algorithm</th><th>Plan
+p95 ms</th><th>Plan
+max ms</th><th>Plan remaining
+ms (% budget)</th><th>Repair
+p95 ms</th><th>Repair
+max ms</th><th>Repair remaining
+ms (% budget)</th><th>Provenance</th></tr>
+<tr><td>A*-R</td><td>6.7425</td><td>28.4654</td><td>9971.5346 (99.7153%)</td><td>0.0020</td><td>0.0072</td><td>9999.9928 (99.9999%)</td><td>RECOMPUTED_FROM_OPERATIONS</td></tr>
+<tr><td>D*L</td><td>11.2868</td><td>204.8538</td><td>9795.1462 (97.9515%)</td><td>1157.5955</td><td>3647.0733</td><td>6352.9267 (63.5293%)</td><td>RECOMPUTED_FROM_OPERATIONS</td></tr>
+<tr><td>BiA*-R</td><td>15.0641</td><td>75.4602</td><td>9,924.5398
+(99.2454%)</td><td>0.0021</td><td>0.0083</td><td>9,999.9917
+(99.9999%)</td><td>AX2_RAW_MISSING_MANUSCRIPT_SUMMARY_ONLY</td></tr>
+<tr><td>LPA*</td><td>11.0974</td><td>206.2685</td><td>9,793.7315
+(97.9373%)</td><td>1,147.8642</td><td>3,584.1128</td><td>6,415.8872
+(64.1589%)</td><td>AX2_RAW_MISSING_MANUSCRIPT_SUMMARY_ONLY</td></tr>
+<tr><td>C-FF</td><td>0.0193</td><td>7.8167</td><td>9,992.1833
+(99.9218%)</td><td>24.3299</td><td>96.7939</td><td>9,903.2061
+(99.0321%)</td><td>AX2_RAW_MISSING_MANUSCRIPT_SUMMARY_ONLY</td></tr>
+<tr><td>IDFF</td><td>0.0196</td><td>14.8485</td><td>9,985.1515
+(99.8515%)</td><td>88.2344</td><td>304.1409</td><td>9,695.8591
+(96.9586%)</td><td>AX2_RAW_MISSING_MANUSCRIPT_SUMMARY_ONLY</td></tr>
+</table>
+<h2>Algorithm S3. Managed multi-query execution with private lane state</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Algorithm S3. Managed multi-query execution with private lane state</th></tr>
+<tr><td>Input: algorithm A in {C-FF, IDFF}, 16 frozen lane inputs B, worker count W, CPU plan P
+Output: complete-batch time T and validated results R[0..15], or batch failure
+1   Load and verify B and cached oracle outcomes before batch timing
+2   Create W fixed workers; worker j binds to P[j], signals READY, and waits
+3   Coordinator waits for every READY signal; start clock; release workers
+4   In parallel, each worker j executes lanes i = j, j + W, ... &lt; 16:
+5       if batch failure is already flagged: skip each unstarted lane
+6       otherwise verify the worker CPU binding and enter the lane
+7       Deserialize private B[i]; build private grid G; create planner A
+8       try:
+9           Initialize A; require valid status, budget, and grid version
+10          Run all initial queries; validate paths and record outcomes
+11          for each of the 24 event groups in frozen order:
+12              for each atomic partition in its prescribed order:
+13                  Require no pending repair; apply the changes to G
+14                  Call A.ApplyChanges using the technical budget
+15                  Require completed repair, valid budget, matching versions
+16              Run all fixed-start queries; validate paths; record outcomes
+17          Require the full query and repair counts; store result R[i]
+18       finally: reset the lane planner
+19       On a lane error: flag batch failure; stop admitting unstarted lanes
+20       Fingerprint successful results; verify the ending CPU binding
+21       On a binding error: flag batch failure
+22   Each worker clears its binding and signals DONE after its lane loop
+23   Coordinator waits for all DONE signals; stop clock at T; join workers
+24   Require 16 completed lanes, no failed/skipped lanes, and valid bindings
+25   Compare every recorded query with its cached oracle after timing
+26   If any check fails: reject the complete batch; do not retry or replace
+27   Return T and results in ascending lane order
+Within a lane, C-FF and IDFF execute the serial procedures of Algorithms S1 and S2.</td></tr>
+</table>
+<h2>Table S4. Complete managed-worker scaling effects</h2>
+<p class="note">RECOMPUTED | mq/confirmatory-and-secondary-results.v1.json</p>
+<table>
+<tr><th>Algorithm</th><th>Placement / contrast</th><th>n</th><th>Geometric ratio</th><th>Ordinary 95% interval</th><th>Reduction %</th><th>Holm one-sided p</th><th>Simultaneous upper ratio</th></tr>
+<tr><td>C-FF</td><td>LARGE_L3_CCD / single-CCD log2-worker slope</td><td>36</td><td>0.6597</td><td>0.6394–0.6807</td><td>34.03</td><td>&lt;1e-15</td><td>0.6840</td></tr>
+<tr><td>C-FF</td><td>HIGH_FREQUENCY_CCD / single-CCD log2-worker slope</td><td>36</td><td>0.6642</td><td>0.6439–0.6851</td><td>33.58</td><td>&lt;1e-15</td><td>0.6884</td></tr>
+<tr><td>IDFF</td><td>LARGE_L3_CCD / single-CCD log2-worker slope</td><td>36</td><td>0.6715</td><td>0.6510–0.6925</td><td>32.85</td><td>&lt;1e-15</td><td>0.6958</td></tr>
+<tr><td>IDFF</td><td>HIGH_FREQUENCY_CCD / single-CCD log2-worker slope</td><td>36</td><td>0.6775</td><td>0.6574–0.6983</td><td>32.25</td><td>&lt;1e-15</td><td>0.7015</td></tr>
+<tr><td>C-FF</td><td>DUAL_CCD_BALANCED / W16-versus-W8 paired log ratio</td><td>36</td><td>0.8038</td><td>0.7553–0.8554</td><td>19.62</td><td>1.59173e-08</td><td>0.8554</td></tr>
+<tr><td>IDFF</td><td>DUAL_CCD_BALANCED / W16-versus-W8 paired log ratio</td><td>36</td><td>0.8397</td><td>0.7998–0.8815</td><td>16.03</td><td>1.59173e-08</td><td>0.8815</td></tr>
+</table>
+<h2>Table S5. Endpoint construction from accepted records</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Outcome</th><th>Accepted measurements and lane aggregation</th><th>Model input</th></tr>
+<tr><td>D1 GM (ms)</td><td>Geometric mean of 24 eventGroupElapsedMilliseconds values</td><td>ln(lane GM)</td></tr>
+<tr><td>D1 P95 (ms)</td><td>23rd ordered eventGroupElapsedMilliseconds value among 24</td><td>ln(lane P95)</td></tr>
+<tr><td>D2 (calls)</td><td>Sum over 24 groups of Contains + IsWalkable + GetTraversalCost calls</td><td>ln(total calls)</td></tr>
+<tr><td>D3 (bytes)</td><td>Sum of managedAllocationBytes in 24 event-group windows</td><td>ln(1 + total bytes)</td></tr>
+<tr><td>D4 (bytes)</td><td>Maximum persistentStateBytesTotal across 26 measurement points</td><td>ln(1 + maximum bytes)</td></tr>
+<tr><td>D5–D7</td><td>The D1 GM outcome at N, F, and G² design levels</td><td>D1 GM model; algorithm × centered log2 axis</td></tr>
+</table>
+<h2>Table S6. Original-unit lane outcomes for all six algorithms</h2>
+<p class="note">RECOMPUTED | smsb-reporting/raw-scale-by-algorithm.v1.csv</p>
+<table>
+<tr><th>Outcome</th><th>Algorithm</th><th>Arithmetic mean</th><th>Median</th><th>Interquartile range</th></tr>
+<tr><td>D1 GM (ms)</td><td>A*-R</td><td>122.724</td><td>89.9724</td><td>48.781–170.798</td></tr>
+<tr><td>D1 GM (ms)</td><td>BiA*-R</td><td>239.089</td><td>172.004</td><td>90.7916–334.329</td></tr>
+<tr><td>D1 GM (ms)</td><td>D*L</td><td>273.137</td><td>168.029</td><td>93.5698–329.814</td></tr>
+<tr><td>D1 GM (ms)</td><td>LPA*</td><td>273.144</td><td>168.02</td><td>93.0416–329.837</td></tr>
+<tr><td>D1 GM (ms)</td><td>C-FF</td><td>77.8588</td><td>39.495</td><td>13.9936–96.2977</td></tr>
+<tr><td>D1 GM (ms)</td><td>IDFF</td><td>40.4637</td><td>26.7314</td><td>15.8269–47.1245</td></tr>
+<tr><td>D1 P95 (ms)</td><td>A*-R</td><td>306.425</td><td>218.692</td><td>132.36–344.385</td></tr>
+<tr><td>D1 P95 (ms)</td><td>BiA*-R</td><td>644.14</td><td>456.967</td><td>277.41–713.889</td></tr>
+<tr><td>D1 P95 (ms)</td><td>D*L</td><td>526.479</td><td>274.478</td><td>154.711–554.256</td></tr>
+<tr><td>D1 P95 (ms)</td><td>LPA*</td><td>526.478</td><td>273.99</td><td>152.929–554.139</td></tr>
+<tr><td>D1 P95 (ms)</td><td>C-FF</td><td>95.7569</td><td>53.7826</td><td>17.1644–116.919</td></tr>
+<tr><td>D1 P95 (ms)</td><td>IDFF</td><td>85.4623</td><td>44.9046</td><td>26.271–113.772</td></tr>
+<tr><td>D2 grid calls</td><td>A*-R</td><td>1.13262e+08</td><td>8.38885e+07</td><td>5.17655e+07–1.30981e+08</td></tr>
+<tr><td>D2 grid calls</td><td>BiA*-R</td><td>2.39503e+08</td><td>1.80998e+08</td><td>1.08856e+08–2.82844e+08</td></tr>
+<tr><td>D2 grid calls</td><td>D*L</td><td>3.76056e+08</td><td>2.6393e+08</td><td>1.38262e+08–5.1322e+08</td></tr>
+<tr><td>D2 grid calls</td><td>LPA*</td><td>3.76056e+08</td><td>2.6393e+08</td><td>1.38262e+08–5.1322e+08</td></tr>
+<tr><td>D2 grid calls</td><td>C-FF</td><td>1.15472e+08</td><td>5.05365e+07</td><td>1.76859e+07–1.51495e+08</td></tr>
+<tr><td>D2 grid calls</td><td>IDFF</td><td>6.49408e+07</td><td>3.1891e+07</td><td>1.82125e+07–7.39346e+07</td></tr>
+<tr><td>D3 allocation bytes</td><td>A*-R</td><td>4.29135e+08</td><td>3.19746e+08</td><td>1.65837e+08–6.47783e+08</td></tr>
+<tr><td>D3 allocation bytes</td><td>BiA*-R</td><td>8.94235e+08</td><td>6.53522e+08</td><td>3.38355e+08–1.33358e+09</td></tr>
+<tr><td>D3 allocation bytes</td><td>D*L</td><td>2.37048e+07</td><td>1.9078e+07</td><td>1.10381e+07–3.18413e+07</td></tr>
+<tr><td>D3 allocation bytes</td><td>LPA*</td><td>2.37048e+07</td><td>1.9078e+07</td><td>1.10381e+07–3.18413e+07</td></tr>
+<tr><td>D3 allocation bytes</td><td>C-FF</td><td>6.03071e+07</td><td>3.41916e+07</td><td>1.59845e+07–6.19179e+07</td></tr>
+<tr><td>D3 allocation bytes</td><td>IDFF</td><td>9.13497e+06</td><td>7.9439e+06</td><td>5.15373e+06–1.22175e+07</td></tr>
+<tr><td>D4 retained bytes</td><td>A*-R</td><td>8</td><td>8</td><td>8–8</td></tr>
+<tr><td>D4 retained bytes</td><td>BiA*-R</td><td>8</td><td>8</td><td>8–8</td></tr>
+<tr><td>D4 retained bytes</td><td>D*L</td><td>2.93443e+07</td><td>2.17747e+07</td><td>1.16e+07–4.0993e+07</td></tr>
+<tr><td>D4 retained bytes</td><td>LPA*</td><td>2.93443e+07</td><td>2.17747e+07</td><td>1.16e+07–4.0993e+07</td></tr>
+<tr><td>D4 retained bytes</td><td>C-FF</td><td>267280</td><td>248848</td><td>110608–442384</td></tr>
+<tr><td>D4 retained bytes</td><td>IDFF</td><td>636053</td><td>611344</td><td>290832–991248</td></tr>
+</table>
+<h2>Table S7a. D1 geometric mean reference values and formal ratios</h2>
+<p class="note">RECOMPUTED | smsb-reporting/formal-ratio-provenance.v1.csv; smsb/confirmatory-results.v1.json</p>
+<table>
+<tr><th>Comparator</th><th>eta IDFF</th><th>eta comparator</th><th>Adjusted IDFF</th><th>Adjusted comparator</th><th>Formal numerator</th><th>Formal denominator</th><th>Formal ratio</th><th>Simultaneous interval</th><th>Holm p</th></tr>
+<tr><td>A*-R</td><td>2.983273</td><td>4.131217</td><td>19.752</td><td>62.254</td><td>19.752</td><td>62.254</td><td>0.317289</td><td>0.299140–0.336538</td><td>&lt;1e-15</td></tr>
+<tr><td>BiA*-R</td><td>2.983273</td><td>4.787188</td><td>19.752</td><td>119.964</td><td>19.752</td><td>119.964</td><td>0.164653</td><td>0.155235–0.174642</td><td>&lt;1e-15</td></tr>
+<tr><td>D*L</td><td>2.983273</td><td>4.861707</td><td>19.752</td><td>129.245</td><td>19.752</td><td>129.245</td><td>0.152829</td><td>0.144088–0.162101</td><td>&lt;1e-15</td></tr>
+<tr><td>LPA*</td><td>2.983273</td><td>4.861057</td><td>19.752</td><td>129.161</td><td>19.752</td><td>129.161</td><td>0.152929</td><td>0.144181–0.162207</td><td>&lt;1e-15</td></tr>
+<tr><td>C-FF</td><td>2.983273</td><td>3.259520</td><td>19.752</td><td>26.037</td><td>19.752</td><td>26.037</td><td>0.758625</td><td>0.715234–0.804650</td><td>1</td></tr>
+</table>
+<h2>Table S7b. D1 P95 reference values and formal ratios</h2>
+<p class="note">RECOMPUTED | smsb-reporting/formal-ratio-provenance.v1.csv; smsb/confirmatory-results.v1.json</p>
+<table>
+<tr><th>Comparator</th><th>eta IDFF</th><th>eta comparator</th><th>Adjusted IDFF</th><th>Adjusted comparator</th><th>Formal numerator</th><th>Formal denominator</th><th>Formal ratio</th><th>Simultaneous interval</th><th>Holm p</th></tr>
+<tr><td>A*-R</td><td>3.548253</td><td>4.957167</td><td>34.753</td><td>142.190</td><td>34.753</td><td>142.190</td><td>0.244408</td><td>0.228936–0.260927</td><td>&lt;1e-15</td></tr>
+<tr><td>BiA*-R</td><td>3.548253</td><td>5.695226</td><td>34.753</td><td>297.444</td><td>34.753</td><td>297.444</td><td>0.116837</td><td>0.109441–0.124734</td><td>&lt;1e-15</td></tr>
+<tr><td>D*L</td><td>3.548253</td><td>5.369476</td><td>34.753</td><td>214.750</td><td>34.753</td><td>214.750</td><td>0.161828</td><td>0.151583–0.172765</td><td>&lt;1e-15</td></tr>
+<tr><td>LPA*</td><td>3.548253</td><td>5.368876</td><td>34.753</td><td>214.622</td><td>34.753</td><td>214.622</td><td>0.161925</td><td>0.151674–0.172868</td><td>&lt;1e-15</td></tr>
+<tr><td>C-FF</td><td>3.548253</td><td>3.435957</td><td>34.753</td><td>31.061</td><td>34.753</td><td>31.061</td><td>1.118844</td><td>1.048014–1.194461</td><td>1</td></tr>
+</table>
+<h2>Table S7c. D2 grid-access reference values and formal ratios</h2>
+<p class="note">RECOMPUTED | smsb-reporting/formal-ratio-provenance.v1.csv; smsb/confirmatory-results.v1.json</p>
+<table>
+<tr><th>Comparator</th><th>eta IDFF</th><th>eta comparator</th><th>Adjusted IDFF</th><th>Adjusted comparator</th><th>Formal numerator</th><th>Formal denominator</th><th>Formal ratio</th><th>Simultaneous interval</th><th>Holm p</th></tr>
+<tr><td>A*-R</td><td>16.970430</td><td>17.671250</td><td>23451138.397</td><td>47263543.297</td><td>23451138.397</td><td>47263543.297</td><td>0.496178</td><td>0.467314–0.526825</td><td>&lt;1e-15</td></tr>
+<tr><td>BiA*-R</td><td>16.970430</td><td>18.402099</td><td>23451138.397</td><td>98159017.881</td><td>23451138.397</td><td>98159017.881</td><td>0.238910</td><td>0.225012–0.253666</td><td>&lt;1e-15</td></tr>
+<tr><td>D*L</td><td>16.970430</td><td>18.785447</td><td>23451138.397</td><td>144017740.126</td><td>23451138.397</td><td>144017740.126</td><td>0.162835</td><td>0.153363–0.172893</td><td>&lt;1e-15</td></tr>
+<tr><td>LPA*</td><td>16.970430</td><td>18.785447</td><td>23451138.397</td><td>144017740.126</td><td>23451138.397</td><td>144017740.126</td><td>0.162835</td><td>0.153363–0.172893</td><td>&lt;1e-15</td></tr>
+<tr><td>C-FF</td><td>16.970430</td><td>17.247374</td><td>23451138.397</td><td>30934243.455</td><td>23451138.397</td><td>30934243.455</td><td>0.758096</td><td>0.713996–0.804921</td><td>&lt;1e-15</td></tr>
+</table>
+<h2>Table S7d. D3 allocation reference values and formal ratios</h2>
+<p class="note">RECOMPUTED | smsb-reporting/formal-ratio-provenance.v1.csv; smsb/confirmatory-results.v1.json</p>
+<table>
+<tr><th>Comparator</th><th>eta IDFF</th><th>eta comparator</th><th>Adjusted IDFF</th><th>Adjusted comparator</th><th>Formal numerator</th><th>Formal denominator</th><th>Formal ratio</th><th>Simultaneous interval</th><th>Holm p</th></tr>
+<tr><td>A*-R</td><td>15.668979</td><td>19.383151</td><td>6381914.731</td><td>261815631.599</td><td>6381915.731</td><td>261815632.599</td><td>0.024376</td><td>0.023325–0.025473</td><td>&lt;1e-15</td></tr>
+<tr><td>BiA*-R</td><td>15.668979</td><td>20.113914</td><td>6381914.731</td><td>543703100.276</td><td>6381915.731</td><td>543703101.276</td><td>0.011738</td><td>0.011232–0.012266</td><td>&lt;1e-15</td></tr>
+<tr><td>D*L</td><td>15.668979</td><td>16.546778</td><td>6381914.731</td><td>15352330.426</td><td>6381915.731</td><td>15352331.426</td><td>0.415697</td><td>0.397788–0.434412</td><td>&lt;1e-15</td></tr>
+<tr><td>LPA*</td><td>15.668979</td><td>16.546778</td><td>6381914.731</td><td>15352330.426</td><td>6381915.731</td><td>15352331.426</td><td>0.415697</td><td>0.397788–0.434412</td><td>&lt;1e-15</td></tr>
+<tr><td>C-FF</td><td>15.668979</td><td>17.205526</td><td>6381914.731</td><td>29666416.415</td><td>6381915.731</td><td>29666417.415</td><td>0.215123</td><td>0.205855–0.224808</td><td>&lt;1e-15</td></tr>
+</table>
+<h2>Table S7e. D4 retained-state reference values and formal ratios</h2>
+<p class="note">RECOMPUTED | smsb-reporting/formal-ratio-provenance.v1.csv; smsb/confirmatory-results.v1.json</p>
+<table>
+<tr><th>Comparator</th><th>eta IDFF</th><th>eta comparator</th><th>Adjusted IDFF</th><th>Adjusted comparator</th><th>Formal numerator</th><th>Formal denominator</th><th>Formal ratio</th><th>Simultaneous interval</th><th>Holm p</th></tr>
+<tr><td>A*-R</td><td>13.213557</td><td>2.182414</td><td>547739.788</td><td>7.868</td><td>547740.788</td><td>8.868</td><td>61768.179146</td><td>61411.982446–62126.441829</td><td>1</td></tr>
+<tr><td>BiA*-R</td><td>13.213557</td><td>2.182414</td><td>547739.788</td><td>7.868</td><td>547740.788</td><td>8.868</td><td>61768.179146</td><td>61411.982446–62126.441829</td><td>1</td></tr>
+<tr><td>D*L</td><td>13.213557</td><td>16.892819</td><td>547739.788</td><td>21699926.228</td><td>547740.788</td><td>21699927.228</td><td>0.025242</td><td>0.025096–0.025388</td><td>&lt;1e-15</td></tr>
+<tr><td>LPA*</td><td>13.213557</td><td>16.892819</td><td>547739.788</td><td>21699926.228</td><td>547740.788</td><td>21699927.228</td><td>0.025242</td><td>0.025096–0.025388</td><td>&lt;1e-15</td></tr>
+<tr><td>C-FF</td><td>13.213557</td><td>12.331287</td><td>547739.788</td><td>226677.342</td><td>547740.788</td><td>226678.342</td><td>2.416379</td><td>2.402445–2.430394</td><td>1</td></tr>
+</table>
+<h2>Table S8. Model slopes and all formal scaling contrasts</h2>
+<p class="note">RECOMPUTED | smsb-reporting/formal-slope-provenance.v1.csv</p>
+<table>
+<tr><th>Domain</th><th>Comparator</th><th>IDFF slope</th><th>Comparator slope</th><th>Difference</th><th>Simultaneous interval</th><th>Holm p</th><th>Pass</th></tr>
+<tr><td>D5</td><td>A*-R</td><td>0.031043</td><td>0.696738</td><td>-0.665695</td><td>-0.737832–-0.593559</td><td>&lt;1e-15</td><td>1</td></tr>
+<tr><td>D5</td><td>BiA*-R</td><td>0.031043</td><td>0.699350</td><td>-0.668307</td><td>-0.740443–-0.596171</td><td>&lt;1e-15</td><td>1</td></tr>
+<tr><td>D5</td><td>D*L</td><td>0.031043</td><td>0.696263</td><td>-0.665220</td><td>-0.737356–-0.593084</td><td>&lt;1e-15</td><td>1</td></tr>
+<tr><td>D5</td><td>LPA*</td><td>0.031043</td><td>0.696997</td><td>-0.665954</td><td>-0.738090–-0.593818</td><td>&lt;1e-15</td><td>1</td></tr>
+<tr><td>D5</td><td>C-FF</td><td>0.031043</td><td>0.028535</td><td>0.002508</td><td>-0.069628–0.074644</td><td>1</td><td>0</td></tr>
+<tr><td>D6</td><td>A*-R</td><td>0.051500</td><td>0.012052</td><td>0.039449</td><td>0.014176–0.064721</td><td>1</td><td>0</td></tr>
+<tr><td>D6</td><td>BiA*-R</td><td>0.051500</td><td>0.013168</td><td>0.038332</td><td>0.013060–0.063604</td><td>1</td><td>0</td></tr>
+<tr><td>D6</td><td>D*L</td><td>0.051500</td><td>0.073288</td><td>-0.021788</td><td>-0.047060–0.003484</td><td>0.0404857</td><td>0</td></tr>
+<tr><td>D6</td><td>LPA*</td><td>0.051500</td><td>0.073255</td><td>-0.021755</td><td>-0.047027–0.003518</td><td>0.0404857</td><td>0</td></tr>
+<tr><td>D6</td><td>C-FF</td><td>0.051500</td><td>-0.003578</td><td>0.055078</td><td>0.029806–0.080350</td><td>1</td><td>0</td></tr>
+<tr><td>D7</td><td>A*-R</td><td>0.649907</td><td>0.676562</td><td>-0.026655</td><td>-0.098446–0.045136</td><td>1</td><td>0</td></tr>
+<tr><td>D7</td><td>BiA*-R</td><td>0.649907</td><td>0.698782</td><td>-0.048875</td><td>-0.120667–0.022916</td><td>0.182101</td><td>0</td></tr>
+<tr><td>D7</td><td>D*L</td><td>0.649907</td><td>0.615584</td><td>0.034323</td><td>-0.037469–0.106114</td><td>1</td><td>0</td></tr>
+<tr><td>D7</td><td>LPA*</td><td>0.649907</td><td>0.615855</td><td>0.034051</td><td>-0.037740–0.105843</td><td>1</td><td>0</td></tr>
+<tr><td>D7</td><td>C-FF</td><td>0.649907</td><td>0.690961</td><td>-0.041054</td><td>-0.112845–0.030738</td><td>0.389814</td><td>0</td></tr>
+</table>
+<h2>Table S9. Effects and criteria for all non-passing hypotheses</h2>
+<p class="note">RECOMPUTED | smsb/confirmatory-results.v1.json</p>
+<table>
+<tr><th>Domain</th><th>Comparator</th><th>Endpoint</th><th>Estimate</th><th>Simultaneous interval</th><th>Holm p</th><th>Direction favorable</th><th>Interval favorable</th><th>MIPE reached</th></tr>
+<tr><td>D1_DYNAMIC_LATENCY</td><td>C-FF</td><td>equalDesignGeometricMeanRatio</td><td>0.758625</td><td>0.715234–0.804650</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D1_DYNAMIC_LATENCY</td><td>C-FF</td><td>equalDesignNearestRankP95Ratio</td><td>1.118844</td><td>1.048014–1.194461</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D4_PERSISTENT_STATE_BYTES</td><td>A*-R</td><td>component</td><td>61768.179146</td><td>61411.982446–62126.441829</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D4_PERSISTENT_STATE_BYTES</td><td>BiA*-R</td><td>component</td><td>61768.179146</td><td>61411.982446–62126.441829</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D4_PERSISTENT_STATE_BYTES</td><td>C-FF</td><td>component</td><td>2.416379</td><td>2.402445–2.430394</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D5_AGENT_COUNT_SCALING</td><td>C-FF</td><td>component</td><td>0.002508</td><td>-0.069628–0.074644</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D6_CHANGE_FOOTPRINT_SCALING</td><td>A*-R</td><td>component</td><td>0.039449</td><td>0.014176–0.064721</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D6_CHANGE_FOOTPRINT_SCALING</td><td>BiA*-R</td><td>component</td><td>0.038332</td><td>0.013060–0.063604</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D6_CHANGE_FOOTPRINT_SCALING</td><td>D*L</td><td>component</td><td>-0.021788</td><td>-0.047060–0.003484</td><td>0.0404857</td><td>True</td><td>False</td><td>False</td></tr>
+<tr><td>D6_CHANGE_FOOTPRINT_SCALING</td><td>LPA*</td><td>component</td><td>-0.021755</td><td>-0.047027–0.003518</td><td>0.0404857</td><td>True</td><td>False</td><td>False</td></tr>
+<tr><td>D6_CHANGE_FOOTPRINT_SCALING</td><td>C-FF</td><td>component</td><td>0.055078</td><td>0.029806–0.080350</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D7_GRID_SIZE_SCALING</td><td>A*-R</td><td>component</td><td>-0.026655</td><td>-0.098446–0.045136</td><td>1</td><td>True</td><td>False</td><td>False</td></tr>
+<tr><td>D7_GRID_SIZE_SCALING</td><td>BiA*-R</td><td>component</td><td>-0.048875</td><td>-0.120667–0.022916</td><td>0.182101</td><td>True</td><td>False</td><td>False</td></tr>
+<tr><td>D7_GRID_SIZE_SCALING</td><td>D*L</td><td>component</td><td>0.034323</td><td>-0.037469–0.106114</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D7_GRID_SIZE_SCALING</td><td>LPA*</td><td>component</td><td>0.034051</td><td>-0.037740–0.105843</td><td>1</td><td>False</td><td>False</td><td>False</td></tr>
+<tr><td>D7_GRID_SIZE_SCALING</td><td>C-FF</td><td>component</td><td>-0.041054</td><td>-0.112845–0.030738</td><td>0.389814</td><td>True</td><td>False</td><td>False</td></tr>
+</table>
+<h2>Table S10. Exploratory domain decisions</h2>
+<p class="note">RECOMPUTED | smsb/confirmatory-results.v1.json</p>
+<table>
+<tr><th>Domain</th><th>Hard gates valid</th><th>Passing comparisons</th><th>Domain pass</th><th>Non-passing comparators</th></tr>
+<tr><td>D1_DYNAMIC_LATENCY</td><td>True</td><td>4/5</td><td>1</td><td>C-FF</td></tr>
+<tr><td>D2_GRID_READ_WORK</td><td>True</td><td>5/5</td><td>1</td><td></td></tr>
+<tr><td>D3_DYNAMIC_ALLOCATION</td><td>True</td><td>5/5</td><td>1</td><td></td></tr>
+<tr><td>D4_PERSISTENT_STATE_BYTES</td><td>True</td><td>2/5</td><td>0</td><td>A*-R; BiA*-R; C-FF</td></tr>
+<tr><td>D5_AGENT_COUNT_SCALING</td><td>True</td><td>4/5</td><td>1</td><td>C-FF</td></tr>
+<tr><td>D6_CHANGE_FOOTPRINT_SCALING</td><td>True</td><td>0/5</td><td>0</td><td>A*-R; BiA*-R; D*L; LPA*; C-FF</td></tr>
+<tr><td>D7_GRID_SIZE_SCALING</td><td>True</td><td>0/5</td><td>0</td><td>A*-R; BiA*-R; D*L; LPA*; C-FF</td></tr>
+</table>
+<h2>Table S11. Movement rank components and total</h2>
+<p class="note">RECOMPUTED | movement-preference/anonymous-decision-workbook.json; released label mapping</p>
+<table>
+<tr><th>Algorithm</th><th>Movement ×2</th><th>Path ×1</th><th>Scaling ×1</th><th>Callback ×1</th><th>Static tie-break</th><th>Total</th></tr>
+<tr><td>IDFF</td><td>1</td><td>1</td><td>1</td><td>2</td><td>3</td><td>6</td></tr>
+<tr><td>C-FF</td><td>1</td><td>1</td><td>2</td><td>3</td><td>2</td><td>8</td></tr>
+<tr><td>A*-R</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1</td><td>13</td></tr>
+</table>
+<h2>Table S12. Weighted scores and simultaneous bounds</h2>
+<p class="note">RECOMPUTED | ranking/ranking-results.v1.json</p>
+<table>
+<tr><th>Rank</th><th>Algorithm</th><th>Score / 100</th><th>Conservative simultaneous bounds</th></tr>
+<tr><td>1</td><td>IDFF</td><td>83.00</td><td>75.50–87.50</td></tr>
+<tr><td>2</td><td>C-FF</td><td>74.50</td><td>68.50–80.50</td></tr>
+<tr><td>3</td><td>A*-R</td><td>54.75</td><td>46.50–63.00</td></tr>
+<tr><td>4</td><td>LPA*</td><td>32.75</td><td>14.00–43.00</td></tr>
+<tr><td>5</td><td>D*L</td><td>28.75</td><td>14.00–43.00</td></tr>
+<tr><td>6</td><td>BiA*-R</td><td>26.25</td><td>25.50–39.00</td></tr>
+</table>
+<h2>Table S13. Domain utilities and weighted total</h2>
+<p class="note">RECOMPUTED | ranking/ranking-results.v1.json</p>
+<table>
+<tr><th>Algorithm</th><th>D1 utility</th><th>D2 utility</th><th>D3 utility</th><th>D4 utility</th><th>D5 utility</th><th>D6 utility</th><th>D7 utility</th><th>Total</th></tr>
+<tr><td>IDFF</td><td>90</td><td>100</td><td>100</td><td>40</td><td>80</td><td>40</td><td>60</td><td>83.00</td></tr>
+<tr><td>C-FF</td><td>90</td><td>80</td><td>40</td><td>60</td><td>100</td><td>100</td><td>20</td><td>74.50</td></tr>
+<tr><td>A*-R</td><td>60</td><td>60</td><td>20</td><td>90</td><td>40</td><td>80</td><td>40</td><td>54.75</td></tr>
+<tr><td>LPA*</td><td>30</td><td>10</td><td>70</td><td>10</td><td>20</td><td>20</td><td>80</td><td>32.75</td></tr>
+<tr><td>D*L</td><td>10</td><td>10</td><td>70</td><td>10</td><td>60</td><td>0</td><td>100</td><td>28.75</td></tr>
+<tr><td>BiA*-R</td><td>20</td><td>40</td><td>0</td><td>90</td><td>0</td><td>60</td><td>0</td><td>26.25</td></tr>
+</table>
+<h2>Table S14. Core structural rows with two seeds and both goal structures</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Row</th><th>Grid edge</th><th>Agents</th><th>Changed cells</th><th>Neighbors</th><th>Cost</th><th>Obstacle %</th><th>Hetero goals</th></tr>
+<tr><td>01</td><td>64</td><td>16</td><td>9</td><td>4</td><td>U</td><td>10</td><td>4</td></tr>
+<tr><td>02</td><td>64</td><td>128</td><td>81</td><td>4</td><td>W</td><td>25</td><td>16</td></tr>
+<tr><td>03</td><td>64</td><td>128</td><td>9</td><td>8</td><td>U</td><td>25</td><td>16</td></tr>
+<tr><td>04</td><td>64</td><td>16</td><td>81</td><td>8</td><td>W</td><td>10</td><td>4</td></tr>
+<tr><td>05</td><td>128</td><td>16</td><td>81</td><td>4</td><td>U</td><td>25</td><td>4</td></tr>
+<tr><td>06</td><td>128</td><td>128</td><td>9</td><td>4</td><td>W</td><td>10</td><td>16</td></tr>
+<tr><td>07</td><td>128</td><td>128</td><td>81</td><td>8</td><td>U</td><td>10</td><td>16</td></tr>
+<tr><td>08</td><td>128</td><td>16</td><td>9</td><td>8</td><td>W</td><td>25</td><td>4</td></tr>
+</table>
+<h2>Table S15. Additional matrix families and level-to-seed rules</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Family / scope</th><th>Varied levels</th><th>Fixed settings</th><th>Seed / ID rule</th></tr>
+<tr><td>Grid / 4 shared</td><td>G = 32, 64, 128, 256</td><td>N = 64; F = 25; 8 neighbors; W; 18% obstacles</td><td>120000 + G; grid-scale-g{GGG}-shared</td></tr>
+<tr><td>Agent / 5 shared</td><td>N = 1, 8, 32, 128, 512</td><td>G = 128; F = 25; 4 neighbors; W; 18% obstacles</td><td>130000 + N; agent-scale-a{NNN}-shared</td></tr>
+<tr><td>Footprint / 5 shared</td><td>F = 1, 9, 25, 81, 225</td><td>G = 128; N = 64; 8 neighbors; W; 18% obstacles</td><td>140000 + F; dynamic-footprint-f{FFF}-shared</td></tr>
+<tr><td>Reachability / 2 shared</td><td>4 or 8 neighbors</td><td>G = 64; N = 32; F = 1; U; 62 blocked cells</td><td>160004 / 160008; reachability-c4-shared / reachability-c8-strict-shared</td></tr>
+<tr><td>Goal count / 5 heterogeneous</td><td>H = 2, 4, 8, 16, 32</td><td>G = 128; N = 128; F = 25; 8 neighbors; W; 18% obstacles</td><td>150000 + H; goal-count-g{HH}-hetero</td></tr>
+</table>
+<h2>Table S16. Main movement conditions at 128 agents</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Condition</th><th>Core row / seed</th><th>Grid edge</th><th>Neighbors</th><th>Cost</th><th>Obstacle %</th><th>Changed cells</th></tr>
+<tr><td>C01 *</td><td>r02-s1</td><td>64</td><td>4</td><td>W</td><td>25</td><td>81</td></tr>
+<tr><td>C02</td><td>r02-s2</td><td>64</td><td>4</td><td>W</td><td>25</td><td>81</td></tr>
+<tr><td>C03</td><td>r03-s1</td><td>64</td><td>8</td><td>U</td><td>25</td><td>9</td></tr>
+<tr><td>C04</td><td>r03-s2</td><td>64</td><td>8</td><td>U</td><td>25</td><td>9</td></tr>
+<tr><td>C05</td><td>r06-s1</td><td>128</td><td>4</td><td>W</td><td>10</td><td>9</td></tr>
+<tr><td>C06</td><td>r06-s2</td><td>128</td><td>4</td><td>W</td><td>10</td><td>9</td></tr>
+<tr><td>C07 *</td><td>r07-s1</td><td>128</td><td>8</td><td>U</td><td>10</td><td>81</td></tr>
+<tr><td>C08</td><td>r07-s2</td><td>128</td><td>8</td><td>U</td><td>10</td><td>81</td></tr>
+</table>
+<h2>Table S17. Operational scope of the matched cost measurements</h2>
+<p class="note">DESIGN_OR_DEFINITION_TRANSCRIPTION | Source manuscript: design/definition prose</p>
+<table>
+<tr><th>Endpoint</th><th>Included in the recorded window</th><th>Boundary and exclusions</th></tr>
+<tr><td>D1</td><td>Event-group partition conversion, canonical grid mutation, repair/query calls, request and operation-record creation, path-cost calculation, and cached-oracle comparison.</td><td>Stopwatch around this event runner. Planner-accessor counting and owner-thread GC.Alloc callbacks are active. Excludes initial setup/queries, post-window file output, and post-operation state snapshots.</td></tr>
+<tr><td>D2</td><td>Contains, IsWalkable, and GetTraversalCost calls through the counting grid passed to the planner.</td><td>Counters span the event window, but direct runner accesses to the underlying grid are outside the proxy count. A call is work evidence, not a unique cell visit.</td></tr>
+<tr><td>D3</td><td>Owner-thread allocation bytes reported by the native GC.Alloc callback during the event-group allocation window, including runner work within it.</td><td>Window begins immediately before the D1 timer and closes after it stops. Initialization and control windows are excluded. This is a different instrument from historical P4.</td></tr>
+<tr><td>D4</td><td>Logical retained-state capacities after initialization, initial queries, and each of 24 groups; maximum of these 26 points.</td><td>Excludes temporary rebuild overlap, process-wide resident memory, and unretained runner buffers. It is neither peak live heap nor whole-application memory.</td></tr>
+</table>
+<h2>Table S18. Sensitivity summaries for managed-worker contrasts</h2>
+<p class="note">RECOMPUTED | mq/sensitivity-analysis.v1.json</p>
+<table>
+<tr><th>Contrast</th><th>Studentized bootstrap 95% ratio interval</th><th>Exact signed-rank p</th><th>Leave-one-block-out ratio range</th></tr>
+<tr><td>P1</td><td>0.6409–0.6831</td><td>1.455e-11</td><td>0.6559–0.6623</td></tr>
+<tr><td>P2</td><td>0.6455–0.6875</td><td>1.455e-11</td><td>0.6604–0.6669</td></tr>
+<tr><td>P3</td><td>0.6506–0.6923</td><td>1.455e-11</td><td>0.6676–0.6747</td></tr>
+<tr><td>P4</td><td>0.6570–0.6980</td><td>1.455e-11</td><td>0.6738–0.6809</td></tr>
+<tr><td>S1</td><td>0.7491–0.8506</td><td>1.455e-11</td><td>0.7991–0.8136</td></tr>
+<tr><td>S2</td><td>0.7936–0.8775</td><td>4.366e-11</td><td>0.8351–0.8475</td></tr>
+</table>
+<h2>Table S19. Numerical inputs for the movement preference score</h2>
+<p class="note">RECOMPUTED | movement-preference outputs; historical source hashes checked</p>
+<table>
+<tr><th>Input</th><th>IDFF</th><th>C-FF</th><th>A*-R</th></tr>
+<tr><td>RMAT180 (s)</td><td>3.777910156</td><td>3.777910156</td><td>3.777949219</td></tr>
+<tr><td>T95 (s)</td><td>6.475000000</td><td>6.475000000</td><td>6.487500000</td></tr>
+<tr><td>T99 (s)</td><td>7.085000000</td><td>7.085000000</td><td>7.085000000</td></tr>
+<tr><td>T100 minus T50 (s)</td><td>3.380000000</td><td>3.380000000</td><td>3.370000000</td></tr>
+<tr><td>M1 (s)</td><td>7.225000000</td><td>7.225000000</td><td>7.225000000</td></tr>
+<tr><td>M2 equal-condition GM (scene units)</td><td>66.285837316</td><td>66.285837316</td><td>66.287503359</td></tr>
+<tr><td>Callback P95 equal-condition GM (ms)</td><td>0.044275629</td><td>0.044324343</td><td>0.043744405</td></tr>
+<tr><td>RMAT180 ratio per doubling of N</td><td>0.996561209</td><td>0.996561209</td><td>0.996605124</td></tr>
+<tr><td>M2 ratio per doubling of N</td><td>0.984336916</td><td>0.984336916</td><td>0.984381374</td></tr>
+<tr><td>M4P95 ratio per doubling of N</td><td>0.994735510</td><td>0.996270473</td><td>0.998818429</td></tr>
+<tr><td>Mean scaling submetric rank</td><td>1.000000</td><td>1.333333</td><td>3.000000</td></tr>
+<tr><td>logicalSourceLines</td><td>931</td><td>653</td><td>492</td></tr>
+<tr><td>branchTokens</td><td>192</td><td>132</td><td>89</td></tr>
+<tr><td>allocationSites</td><td>75</td><td>68</td><td>53</td></tr>
+<tr><td>publicSurfaceTokens</td><td>47</td><td>51</td><td>26</td></tr>
+<tr><td>sourceBytes</td><td>46884</td><td>34279</td><td>25807</td></tr>
+</table>
+<h2>Table S20. Supplemental A paired P1 contrasts</h2>
+<p class="note">RECOMPUTED | Supplemental A/paired-contrasts.csv</p>
+<table>
+<tr><th>Contrast</th><th>Ratio</th><th>99% individual CI</th><th>Holm p</th></tr>
+<tr><td>C-FF/A*-R</td><td>0.209002</td><td>0.117784–0.370862</td><td>4.0988e-12</td></tr>
+<tr><td>C-FF/D*L</td><td>0.186366</td><td>0.079632–0.436160</td><td>3.592e-07</td></tr>
+<tr><td>IDFF/A*-R</td><td>0.168990</td><td>0.086517–0.330081</td><td>1.1851e-11</td></tr>
+<tr><td>IDFF/D*L</td><td>0.150687</td><td>0.093904–0.241807</td><td>1.6256e-24</td></tr>
+<tr><td>IDFF/C-FF</td><td>0.808556</td><td>0.466977–1.399988</td><td>0.31872</td></tr>
+</table>
+<h2>Table S21. Supplemental B eligibility and completion</h2>
+<p class="note">RECOMPUTED | Supplemental B/condition-summary.csv and eligibility</p>
+<table>
+<tr><th>Backend</th><th>Completed movement blocks</th><th>M3 / M4 / M5</th></tr>
+<tr><td>A*-R</td><td>384/384</td><td>Pass / Pass / Pass</td></tr>
+<tr><td>D*L</td><td>384/384</td><td>Pass / Pass / Pass</td></tr>
+<tr><td>C-FF</td><td>384/384</td><td>Pass / Pass / Pass</td></tr>
+<tr><td>IDFF</td><td>384/384</td><td>Pass / Pass / Pass</td></tr>
+</table>
+<h2>Table S22. Historical main movement outcomes before the D*L correction</h2>
+<p class="note">RECOMPUTED | movement/main-descriptive-summaries.json; movement/eligibility.json</p>
+<table>
+<tr><th>Case</th><th>M1 A*-R/C-FF/IDFF (s)</th><th>M1 D*L (s)</th><th>M2 A*-R</th><th>M2 D*L</th><th>M2 C-FF/IDFF</th><th>D*L completion</th></tr>
+<tr><td>C01</td><td>6.18</td><td>6.18</td><td>59.49866</td><td>59.58136</td><td>59.58136</td><td>48/48</td></tr>
+<tr><td>C02</td><td>5.24</td><td>5.24</td><td>53.72980</td><td>53.72980</td><td>53.72980</td><td>48/48</td></tr>
+<tr><td>C03</td><td>4.10</td><td>180.00</td><td>40.18128</td><td>40.17620</td><td>40.17159</td><td>0/48</td></tr>
+<tr><td>C04</td><td>4.42</td><td>180.00</td><td>43.35362</td><td>43.35162</td><td>43.35162</td><td>0/48</td></tr>
+<tr><td>C05</td><td>11.84</td><td>11.84</td><td>117.20312</td><td>116.98437</td><td>116.98437</td><td>48/48</td></tr>
+<tr><td>C06</td><td>11.78</td><td>11.78</td><td>121.11719</td><td>121.33594</td><td>121.33594</td><td>48/48</td></tr>
+<tr><td>C07</td><td>7.30</td><td>180.00</td><td>69.61847</td><td>69.58733</td><td>69.54963</td><td>0/48</td></tr>
+<tr><td>C08</td><td>6.94</td><td>180.00</td><td>67.73488</td><td>67.76945</td><td>67.71795</td><td>0/48</td></tr>
+</table>

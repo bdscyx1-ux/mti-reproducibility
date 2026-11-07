@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "diagnosisId": "gate13r-36h-10pct-four-lane-v16-wave80-unity-licensing-failure-v1",
+  "recordedAtUtc": "2026-10-08T07:11:53.1710287Z",
+  "status": "TERMINAL-NONFORMAL-PILOT-FAILED-CLOSED",
+  "classification": "unity-licensing-entitlement-assignment-race-during-concurrent-wave-start",
+  "pilot": {
+    "root": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v16",
+    "analysisRole": "NON-FORMAL / EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "executionReceiptCreatedAtUtc": "2026-10-08T06:17:45.7473897Z",
+    "failedAtUtc": "2026-10-08T07:09:18.1307173Z",
+    "expectedWarmupBlocks": 8,
+    "completedWarmupBlocks": 8,
+    "expectedMeasuredWaves": 96,
+    "atomicallyCompletedMeasuredWaves": 79,
+    "expectedMeasuredBlocks": 384,
+    "atomicallyCompletedMeasuredBlocks": 316,
+    "expectedMeasuredSamples": 1152,
+    "atomicallyCompletedMeasuredSamples": 948,
+    "failedWave": 80,
+    "partialWaveSuccessfulBlocks": 2,
+    "partialWaveSuccessfulSamples": 8,
+    "partialWaveFailedBlocks": 2,
+    "partialWaveIncludedInAnalysis": false,
+    "automaticRetryAttempted": false,
+    "automaticResumeAttempted": false,
+    "formalCampaign": false
+  },
+  "failure": {
+    "failedLanes": [1, 3],
+    "failedBlockIds": [
+      "g13r36-core-r01-s1-shared-shared-b027",
+      "g13r36-core-r07-s2-hetero-grouped-field-b027"
+    ],
+    "wrapperWallSeconds": [3.6208153, 3.6032525],
+    "unityExitCodes": [1, 1],
+    "timedOut": false,
+    "laneLocksAbsentAfterFailure": true,
+    "laneProcessesAbsentAfterFailure": true,
+    "logSignature": [
+      "No valid Unity Editor license found. Please activate your license.",
+      "License is not active (com.unity.editor.headless). HasEntitlements will fail.",
+      "Access token is unavailable; failed to update"
+    ]
+  },
+  "crossRunAudit": {
+    "unityLogCount": 328,
+    "logsWithSerialAssignment": 326,
+    "logsWithoutSerialAssignment": 2,
+    "logsWithNoValidLicenseTerminalError": 2,
+    "terminalLicenseErrorsConfinedToFailedWave80Lanes1And3": true,
+    "signatureValidationWarningsAcrossSuccessfulAndFailedLogs": true,
+    "interpretation": "The generic LicensingClient signature warning is not sufficient to explain failure because it also occurs in successful processes. The discriminating evidence is that exactly the two failed processes never received a serial assignment and terminated with the no-valid-license error, while wave-80 lanes 2 and 4 received a serial assignment and completed."
+  },
+  "rootCauseAssessment": {
+    "algorithmFailure": false,
+    "scenarioFailure": false,
+    "memoryGateFailure": false,
+    "timeoutFailure": false,
+    "lockLeakFailure": false,
+    "evidenceSupports": "A transient Unity Licensing Client channel/entitlement assignment race during simultaneous four-lane process startup.",
+    "confidence": "high"
+  },
+  "partialEvidence": {
+    "fileCount": 6581,
+    "rawBytes": 3582281468,
+    "eligibleForFormalAnalysis": false,
+    "eligibleForReadinessInference": false,
+    "eligibleForCandidateNFormal": false
+  },
+  "bindings": {
+    "plan": {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Pilot_Plan.v16.json",
+      "sha256": "3bb22cdaeb2409f4928bbac5302c479fcb86b22832dfa04887ba6f50d478c7e5"
+    },
+    "schedule": {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Pilot_Schedule.v16.json",
+      "sha256": "8f6bec2b3f0d58cda0592f471c7d1ad7d94aec374890a3f7992c198a1c3eed77"
+    },
+    "provenance": {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Provenance.v16.json",
+      "sha256": "c7a672755c8353e7c8619df3ce5f43e22c474462d8b215b223de56bae17425af"
+    },
+    "prePilotAudit": {
+      "relativePath": "Research/Verification/Gate13R_36h_10pct_4Lane/v16/ValidationOnlyPrePilotAudit.summary.json",
+      "sha256": "a61cd65f423f46ebe0bf64183768b853d13c4c4aac49f8372c53ffe64373fd92"
+    },
+    "executionReceipt": {
+      "relativePath": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v16/execution-receipt.json",
+      "sha256": "01fdcd6dbe3bf898af542eaefed69d25c55b52034167cc420a12f068672721f0"
+    },
+    "pilotCheckpoint": {
+      "relativePath": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v16/pilot-checkpoint.json",
+      "sha256": "53ab2d73fb61be5d552610293aab5f181e812d66a93dd45547aef7b72901de90"
+    },
+    "failureReceipt": {
+      "relativePath": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v16/failure-receipt.json",
+      "sha256": "d843920cf4fcf8fbdb862fb451d261a623828dd4d3dfc0d0df0677bc875650a0"
+    },
+    "partialOutputManifest": {
+      "relativePath": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v16/partial-output-manifest.json",
+      "sha256": "1196977f954a03622692d345ac743ff16ecb38afb1b1fa5de0fd1c963fd93911"
+    },
+    "lane1WrapperSummarySha256": "d00ec6e7384112c5cca479102579247b17c8a74da336647e981ac0dc15bcce70",
+    "lane1UnityLogSha256": "a62dd897339bc2c440511e8b2a152b03f3b10faf2e9cb145d9e44f13c0a3cd07",
+    "lane3WrapperSummarySha256": "676cb124b2d2ecbd441c70bfd62d69a669cca904724cea573dcb3b0f89fb409b",
+    "lane3UnityLogSha256": "b1ab42b7502ac7eae3f7f1cfdc45b1a717133c62785e93e2253a109fa40cfd34"
+  },
+  "terminalPolicy": {
+    "retryAuthorized": false,
+    "resumeAuthorized": false,
+    "partialMergeAuthorized": false,
+    "formalCampaignAuthorized": false,
+    "requiredNextStep": "Preserve v16 unchanged. A fresh versioned pilot with a pre-registered Unity licensing stability mitigation and new output root requires separate user authorization."
+  }
+}

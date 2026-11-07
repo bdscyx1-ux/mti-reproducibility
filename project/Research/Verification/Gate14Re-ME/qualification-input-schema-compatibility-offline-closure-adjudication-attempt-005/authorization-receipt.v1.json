@@ -1,0 +1,42 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-005",
+  "status": "AUTHORIZED_OFFLINE_READ_ONLY_CLOSURE_ADJUDICATION_NO_UNITY",
+  "authorizedAtUtc": "2026-10-17T12:45:12.4353224Z",
+  "authorizationText": "单独授权 Gate14Re‑ME qualification input schema compatibility offline closure adjudication attempt‑005：完整保留 attempt‑004 的失败状态、Status v24、全部证据和残留隔离缓存，不删除、不修改、不改判 attempt‑004；禁止重新启动 Unity。仅允许创建并冻结独立只读离线裁决器，重新核对 attempt‑004 的 authorization/stage/source freeze、prelaunch/live/post-exit 外部指纹、attempt‑007 时间戳比较结果、process launch receipt、in-process ready snapshot、Unity terminal schema receipt、自然退出码、源码与既有证据目录摘要，以及全部禁止行为计数。仅当证据证明 schema compatibility 全部断言通过、三阶段 trusted identity 全部通过、Unity 自然退出为零、失败仅发生于科学结果完成后的空目录缓存大小统计，并且不存在调度、输入、身份映射、measured root、planner 或算法 lane 活动时，才允许以 attempt‑005 身份冻结 terminal PASS receipt、Status v25，并正式采用 input schema v2 与 planning schema binding v2；不得修改或重新分类 attempt‑004。任一证据缺失或不一致均立即 fail closed。仍禁止生成调度、输入 bundles 或匿名身份映射，禁止创建 measured root，禁止 planner、算法 lane、正式采集、正式分析、排名和赢家裁决。",
+  "authorizedActions": [
+    "create one independent attempt-005 evidence directory",
+    "create and execute one offline read-only adjudicator",
+    "read and revalidate the frozen attempt-004 evidence and retained evidence bindings",
+    "invoke the frozen attempt-007 timestamp comparator only on already-frozen timestamp strings",
+    "freeze a terminal PASS receipt and Status v25 only if every authorized structural predicate passes",
+    "adopt input schema v2 and planning schema binding v2 only after terminal PASS"
+  ],
+  "requiredChecks": [
+    "attempt-004 authorization, stage contract and source freeze are intact",
+    "prelaunch, live-concurrent and post-exit external fingerprints all satisfy trusted identity rule v1",
+    "attempt-007 comparator source, known-answer receipt and stored UTC-tick comparisons are intact",
+    "process launch receipt, in-process ready snapshot and terminal Unity schema receipt form one composite process identity",
+    "all schema compatibility assertions passed and Unity exited naturally with code zero",
+    "the terminal attempt-004 failure occurred only after scientific completion at the empty transient-cache size statistic",
+    "attempt-004, Status v24 and retained evidence remain byte-identical and are not reclassified",
+    "all prohibited scientific-activity counters remain zero or false"
+  ],
+  "prohibitedActions": [
+    "launch or restart Unity",
+    "delete, modify, clean, overwrite or reclassify attempt-004 or Status v24",
+    "automatic retry",
+    "schedule generation",
+    "qualification input bundle generation",
+    "anonymous identity mapping generation",
+    "measured root creation",
+    "planner execution",
+    "algorithm lane execution",
+    "formal collection",
+    "formal analysis",
+    "algorithm ranking",
+    "winner adjudication"
+  ],
+  "failureDisposition": "FAIL_CLOSED_FREEZE_ATTEMPT_005_FAILURE_EVIDENCE_NO_RETRY_NO_ADOPTION"
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 formal prelaunch Unity self-tests attempt 1",
+  "command": "Run-Gate13RPR2FormalUnitySelfTestsV1.ps1 under native Windows PowerShell 5.1 with no formal root or measured samples",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "gate_tokens": [
+    "PRELAUNCH-IMPLEMENTATION-DEFECT",
+    "UNITY-LOG-SHARING-VIOLATION",
+    "MEMORY-FIXTURES-12-OF-12-PASSED",
+    "TELEMETRY-FIXTURES-8-OF-8-PASSED",
+    "FORMAL-ROOT-NOT-CREATED",
+    "MEASURED-SAMPLES-NOT-STARTED"
+  ],
+  "input_paths": [
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV1/failure-receipt.json",
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV1/failure-checkpoint.json",
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV1/partial-output-manifest.json"
+  ]
+}

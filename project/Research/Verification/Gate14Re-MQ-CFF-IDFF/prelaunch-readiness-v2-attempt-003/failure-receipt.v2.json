@@ -1,0 +1,22 @@
+{
+  "schema": "gate14re-mq-formal-prelaunch-readiness-failure-receipt-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "FAILED_BEFORE_READINESS_METHOD_ARGUMENT_VECTOR_CONSTRUCTION",
+  "failedAtUtc": "2026-10-21T08:14:25.0195897Z",
+  "technicalCause": "The orchestration shell attempted to append base Unity arguments through PowerShell's reserved automatic $args variable, whose collection was fixed-size. The base batch/project/execute-method/readiness-output arguments were therefore absent.",
+  "observedUnityExitCode": 0,
+  "readinessMethodInvoked": false,
+  "readinessTerminalReceiptCreated": false,
+  "algorithmsInstantiated": 0,
+  "measuredProcessesStarted": 0,
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false,
+  "formalMeasuredRootCreated": false,
+  "sameAttemptRetryPermitted": false,
+  "nextAction": "Use a fresh attempt root with a non-reserved mutable argument-list variable.",
+  "unityLog": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/prelaunch-readiness-v2-attempt-003/unity-readiness.log",
+    "sha256": "bcea8b743302a5d75441898ad32a7e303b6df5e6e539883aed94663d33d116dc"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "diagnosisId": "gate13r-pr1b-v2-verification-attempt2-failure-diagnosis-v1",
+  "createdAtUtc": "2026-10-08T12:35:15.3976164Z",
+  "createdAtAsiaShanghai": "2026-10-08T20:35:15.3976164+08:00",
+  "status": "VERIFICATION-ATTEMPT-2-FROZEN-FAILED-BEFORE-PILOT",
+  "verificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v10-gate13r-pr1b-order-effect-memory-v2",
+  "verificationRootInventory": {
+    "fileCount": 39,
+    "rawBytes": 275071,
+    "canonicalTreeSha256": "5d20fbea2e6e734c9feddc2ed199a365bc307caac1a4b2cef3bb680cfebb2d44",
+    "lastWriteUtc": "2026-10-08T12:34:11.0875955Z"
+  },
+  "passedGates": [
+    "STATIC-UNIT",
+    "UNITY-COMPILE",
+    "MEMORY-POLICY-12-OF-12",
+    "TELEMETRY-VALIDATION-8-OF-8",
+    "PSAPI-CIM-TELEMETRY-CROSSCHECK"
+  ],
+  "memorySelfTest": {
+    "passed": true,
+    "thresholdFixtureCount": 12,
+    "thresholdFixturePassedCount": 12,
+    "telemetryValidationFixtureCount": 8,
+    "telemetryValidationFixturePassedCount": 8,
+    "lockHygieneRole": "positive",
+    "lockHygieneMode": "natural-lock-absence"
+  },
+  "failure": {
+    "class": "MECHANICAL-DERIVATION-TOKEN-COUNT-PRECONDITION-DEFECT",
+    "location": "Research/Verification/Run-Gate13RPR1BBlockVerificationV2.ps1",
+    "frozenSource": "Research/Verification/Run-Gate13RPR1BBlockVerificationV1.ps1",
+    "frozenSourceSha256": "fab1b2e25c3e2492c45e4e700590727b1f289831dd410724bd2670437f85a691",
+    "actualGlobalTokenCount": 13,
+    "incorrectWrapperPredicate": "tokenCount must be at least 15",
+    "validatedReplacementRoutes": 4,
+    "eachValidatedRouteCount": 1,
+    "mechanicallyDerivedParserErrors": 0,
+    "scientificContractAffected": false,
+    "unityBlockStarted": false,
+    "measuredPilotStarted": false
+  },
+  "failureEvidenceDurability": {
+    "partialOutputManifestPresent": true,
+    "partialOutputManifestHashUnavailableCount": 0,
+    "originalExceptionPreserved": true
+  },
+  "terminalEnvironment": {
+    "unityProcessCount": 0,
+    "unityProjectLockPresent": false,
+    "pilotV6RootPresent": false,
+    "reservedFormalRootPresent": false
+  },
+  "disposition": [
+    "PRESERVE-V10-BYTE-FOR-BYTE",
+    "NO-RESUME",
+    "NO-MERGE",
+    "NO-PILOT-DATA-PRODUCED",
+    "VERSIONED-PREMEASUREMENT-REPAIR-AUTHORIZED"
+  ],
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

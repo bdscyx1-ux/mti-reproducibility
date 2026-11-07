@@ -1,0 +1,32 @@
+{
+  "schema": "gate14re-me-formal-st-v5-migration-package-build-failure-v1",
+  "studyId": "Gate14Re-ME",
+  "attempt": 2,
+  "status": "FAIL_CLOSED_UNITY_READINESS_DID_NOT_NATURALLY_EXIT",
+  "failedStage": "algorithm-free Unity staging readiness",
+  "technicalEvidence": {
+    "knownAnswerTerminalSha256": "600fc9c5563d008078d68a65ebccb6c1f6372078039d4e95710688d3ff30eb9a",
+    "unityReadinessReceiptSha256": "e29301bbb6ed1ce3e5a053d723c7f54568f049fef602f3bc72939816793e9c3f",
+    "unityLogSha256": "6d818c0be729ef074bd0e524847663a9c8de5f26099132e6df2afb621320be05",
+    "unityLogReportedReadinessPass": true,
+    "unityNaturalExitObserved": false,
+    "hungProcessId": 138716,
+    "hungProcessTerminatedForTestClosure": true
+  },
+  "cause": "The readiness execute-method called EditorApplication.Exit(0) during the first-import callback. Unity completed compilation and wrote a PASS receipt, then stalled after disconnecting the licensing channels instead of naturally exiting.",
+  "preservation": {
+    "stagingRootPreserved": "Research/PackageStaging/Gate14Re-ME/formal-st/v5/attempt-002",
+    "testRootPreserved": "Research/PackageTests/Gate14Re-ME/formal-st/v5/attempt-002",
+    "packageManifestSha256": "185929613bcbb423f5bfbdbd0d42752320327fc198ca9cfadd845598a13491ba",
+    "zipCreated": false,
+    "formalInputsCreated": 0,
+    "formalScheduleRowsCreated": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "mqStarted": false,
+    "mtStarted": false,
+    "credentialsCopied": false
+  },
+  "sameAttemptRepairPerformed": false,
+  "forwardFix": "A fresh package attempt will pass -quit to Unity; the readiness method will return normally on success and invoke EditorApplication.Exit only for nonzero failure."
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-006-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-until-pass-3bb50249-7ac1-49e5-af37-839465bc47bd",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-006",
+  "status": "FROZEN_READ_ONLY_NO_UNITY_RECHECK_CONTRACT",
+  "createdAtUtc": "2026-10-17T17:31:15.541668Z",
+  "authoritativeInputStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v34.json",
+    "sha256": "305af9bba1a078eebe9e6219289b51edbb130b7576b58cd6c2f76692e049abcf"
+  },
+  "authoritativeSupervisor": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_1.ps1",
+    "sha256": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc"
+  },
+  "authoritativeExecutionContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_3.json",
+    "sha256": "6e35abb3f36f956f0f685f816e2b2a7c1ce2aa513a86bd16d575964bd619802a"
+  },
+  "authoritativeImplementationManifest": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_3.json",
+    "sha256": "a85968ee3c759c5f0c3c3bf3a5d9c3bda7c3cfca7628f3e983cb64142bfe4579"
+  },
+  "authoritativeGuardCorrigendumTerminalReceipt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-002/terminal-pass-receipt.v1.json",
+    "sha256": "499f23b98f6e6e75053451d583acb6205020ec34978e6f0f8454b32a25a03ac8"
+  },
+  "authoritativeGuardPredicateKnownAnswer": {
+    "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-002/exact-predicate-known-answer-receipt.v1.json",
+    "sha256": "870b2fc9dfb18202b422a60ba50d738c011e0767c9031d4c85d51aa4a1c19397",
+    "checksPassed": 304
+  },
+  "authoritativePowerShellHostRuntime": {
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "version": "7.6.5"
+  },
+  "retainedAttempts": {
+    "readinessAttempt002": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002",
+      "receipt": "failure-receipt.v1.json",
+      "receiptSha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+      "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE"
+    },
+    "terminalCorrigendumAttempt001": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-001",
+      "receipt": "failure-receipt.v1.json",
+      "receiptSha256": "b195c99e01bc20900762b3752ff6172a64fac4bb914609bf1ba83d832ed99340",
+      "status": "FAILED_CLOSED_TERMINAL_CHAIN_CORRIGENDUM"
+    },
+    "terminalCorrigendumAttempt002": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-002",
+      "receipt": "terminal-pass-receipt.v1.json",
+      "receiptSha256": "bf7e157f6f25ea19d6cd898745476cd6c88569fbc99c1d614abd76945ca33cad",
+      "status": "PASS_TERMINAL_CHAIN_CORRIGENDUM_OFFLINE_ONLY"
+    },
+    "readinessRecheckAttempt003": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-003",
+      "receipt": "terminal-readiness-receipt.v1.json",
+      "receiptSha256": "fb94db25887dc30a8765980bb4c6d735388266da9285e82c0a441f1dcd9bb653",
+      "status": "PASS_QUALIFICATION_EXECUTION_READINESS_RECHECK_V3_FROZEN_EXECUTION_UNAUTHORIZED"
+    },
+    "loadQualificationExecutionAttempt001": {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001",
+      "receipt": "failure-receipt.v1.json",
+      "receiptSha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+      "status": "FAILED_CLOSED_PRELAUNCH_FROZEN_POWERSHELL_RUNTIME_INCOMPATIBLE"
+    },
+    "powerShellHostBindingAttempt003": {
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-003",
+      "receipt": "terminal-pass-receipt.v1.json",
+      "receiptSha256": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418",
+      "status": "PASS_FROZEN_POWERSHELL_7_6_5_SUPERVISOR_HOST_BINDING"
+    },
+    "powerShellHostBindingAttempt004": {
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-004",
+      "receipt": "terminal-pass-receipt.v1.json",
+      "receiptSha256": "7389f1151a7bfc4d7ce8adb27450210f7f3dfa051d4e44538256da4f9b5270dd",
+      "status": "PASS_FROZEN_POWERSHELL_HOST_BINDING_READONLY_CLOSURE"
+    },
+    "readinessRecheckAttempt004": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-004",
+      "receipt": "terminal-readiness-receipt.v1.json",
+      "receiptSha256": "4edafd87ffe927ccf8d9c38c73c486141ee311e291f1d20f5bb82b358f6cc56b",
+      "status": "PASS_QUALIFICATION_EXECUTION_READINESS_RECHECK_V4_HOST_BOUND_EXECUTION_UNAUTHORIZED"
+    },
+    "loadQualificationExecutionAttempt002": {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002",
+      "receipt": "failure-receipt.v1.json",
+      "receiptSha256": "83882d9bcfba2cc08c86c87da9e8ae2fb920b32814b7b1fee165e59025323c10",
+      "status": "FAILED_CLOSED_PREFLIGHT_SUPERVISOR_MANIFEST_STATE_GUARD_MISMATCH"
+    },
+    "supervisorManifestGuardAttempt001": {
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001",
+      "receipt": "failure-receipt.v1.json",
+      "receiptSha256": "1cb8861ca48098cff1556f9a83c501b5700aaade337980c6b9a0865753583412",
+      "status": "FAILED_CLOSED_SUPERVISOR_MANIFEST_ACCEPTANCE_GUARD_CORRIGENDUM"
+    },
+    "supervisorManifestGuardAttempt002": {
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-002",
+      "receipt": "terminal-pass-receipt.v1.json",
+      "receiptSha256": "499f23b98f6e6e75053451d583acb6205020ec34978e6f0f8454b32a25a03ac8",
+      "status": "PASS_FROZEN_SUPERVISOR_MANIFEST_ACCEPTANCE_GUARD_CORRIGENDUM"
+    },
+    "readinessRecheckAttempt005": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-005",
+      "receipt": "failure-receipt.v1.json",
+      "receiptSha256": "620cf74aa24d0c20aedfa81655164d1e43ab0d01d6db0a7f4c48c393af1ef473",
+      "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_RECHECK_V5_GUARD_CORRECTED_HOST_BOUND"
+    }
+  },
+  "auditMode": "READ_ONLY_STATIC_AND_EXISTING_OFFLINE_KNOWN_ANSWER",
+  "passRule": "Every recorded check must pass; otherwise freeze this attempt, do not create Status v35, and use a new sequential attempt under the same authorization until the first PASS.",
+  "claimBoundary": "PASS establishes prospective execution readiness of the frozen chain only. It does not assert that any of the 1,147 qualification processes or any qualification observation has run.",
+  "mutationBoundary": [
+    "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-006",
+    "Research/Gate14Re-ME/Gate14Re_ME_Status.v35.json on PASS only"
+  ],
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "sealedIdentityMappingOpened": false
+  }
+}

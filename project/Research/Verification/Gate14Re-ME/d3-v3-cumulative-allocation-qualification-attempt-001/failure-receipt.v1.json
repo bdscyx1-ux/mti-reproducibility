@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-d3-v3-qualification-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-001",
+  "status": "FAILED_CLOSED_NATIVE_BUILD_ENVIRONMENT_WINDOWS_SDK_ABSENT",
+  "failedAtUtc": "2026-10-17T06:22:13.4139283Z",
+  "phase": "native-plugin-build",
+  "nativeBuildAttemptCount": 1,
+  "exactBuildCommand": "call \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Auxiliary\\Build\\vcvars64.bat\" && cl.exe /nologo /std:c++17 /O2 /LD /EHsc /W4 /WX /permissive- /Brepro /I\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\PluginAPI\" /Fo\"H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\d3-v3-cumulative-allocation-qualification-attempt-001\\native-build\\Gate14ReMED3AllocationCounterV3.obj\" /Fd\"H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\d3-v3-cumulative-allocation-qualification-attempt-001\\native-build\\Gate14ReMED3AllocationCounterV3.pdb\" \"H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Native\\v3\\Gate14ReMED3AllocationCounterV3.cpp\" /Fe:\"H:\\DDM_Final_Project\\Assets\\Plugins\\x86_64\\Gate14ReMED3AllocationCounterV3.dll\" /link /Brepro /PDB:\"H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\d3-v3-cumulative-allocation-qualification-attempt-001\\native-build\\Gate14ReMED3AllocationCounterV3.pdb\" /IMPLIB:\"H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\d3-v3-cumulative-allocation-qualification-attempt-001\\native-build\\Gate14ReMED3AllocationCounterV3.lib\"",
+  "compilerExitCode": 2,
+  "exactPrimaryDiagnostic": "Gate14ReMED3AllocationCounterV3.cpp(5): fatal error C1083: cannot open include file 'Windows.h': No such file or directory",
+  "exactSecondaryDiagnostic": "PluginAPI headers emitted warning C4819 under active code page 936; /WX promoted warnings to error C2220.",
+  "environmentDiagnosis": {
+    "vcvars64InitializedTarget": "x64",
+    "includeEnvironment": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/include;C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/VS/include",
+    "windowsSdkDirDefined": false,
+    "windowsKits10IncludeRootExists": false,
+    "diagnosis": "The installed VS 2022 C++ toolchain does not expose an installed Windows SDK include root, so the authorized Windows x86-64 plugin cannot compile against Windows.h in the current environment. The code-page warning would separately require an explicit UTF-8 compiler policy or non-fatal warning policy in a future authorization."
+  },
+  "outputs": {
+    "nativeBinaryCreated": false,
+    "objectFileCreated": false,
+    "programDatabaseCreated": false,
+    "importLibraryCreated": false,
+    "unityKnownAnswerStarted": false,
+    "unityProcessCountAfterFailure": 0,
+    "knownAnswerReceiptCreated": false
+  },
+  "failClosedDisposition": {
+    "automaticBuildRetryPerformed": false,
+    "unityRetryPerformed": false,
+    "fallbackMetricUsed": false,
+    "d3V2EvidenceDeletedOrModified": false,
+    "currentQualificationRunnerModified": false,
+    "currentOutputSchemaModified": false,
+    "qualificationScheduleGenerated": false,
+    "qualificationInputsGenerated": false,
+    "anonymousIdentityMappingsGenerated": false,
+    "qualificationMeasuredRootCreated": false,
+    "plannerConstructed": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "requiredForAnyFutureAttempt": "A separate authorization is required to install/freeze a compatible Windows SDK and explicitly freeze the compiler source-encoding/warning policy, then create a new D3-v3 qualification attempt. This failed attempt must not be overwritten or resumed."
+}

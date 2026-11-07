@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "auditKind": "gate13r-pr2-attempt-2-pre-write-preservation-audit-v1",
+  "capturedAtUtc": "2026-10-08T17:53:26.7384497Z",
+  "capturedAtAsiaShanghai": "2026-10-09T01:53:26.7384497+08:00",
+  "passed": true,
+  "attempt1": {
+    "formalRootResolved": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1",
+    "fileCount": 31,
+    "rawBytes": 3338221,
+    "canonicalTreeSha256": "026b9830f220b06af3f0a106f638b3d918d115ba08f5f06c13d9d76542ba4f56",
+    "readOnlyFileCount": 31,
+    "expectedIdentityPassed": true,
+    "terminalStatus": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "excludedFromFormalAnalysis": true,
+    "resumeAllowed": false,
+    "topUpAllowed": false,
+    "mergeAllowed": false
+  },
+  "keyFiles": {
+    "attempt1ExecutionReceipt": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v1.json",
+      "sha256": "2cd30b4d605f231bca64250e91a4e7df7548a10681853f84ad31620b970972bc"
+    },
+    "attempt1Status": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Status.v1.json",
+      "sha256": "a7dd97d766a23fc001ac2e8adca5f34206932906a8d6452de55fa43d28d544be"
+    },
+    "attempt1FailureCheckpoint": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Attempt1_Failure_Checkpoint.md",
+      "sha256": "cff8ea826786d0c3bf904ce58b5352c9e880dd058bebe2c9cee07f5e83c42b64"
+    },
+    "attempt1EvidenceManifest": {
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-evidence-manifest.json",
+      "sha256": "0f3a2612abc799f04f6e828ee747efdb8b8dda594c35c84fbccad27a734d5fc5"
+    },
+    "authorizationPrompt": {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Next_Authorization_Prompt.md",
+      "sha256": "5dd1b5859045bb14db374edc3aa6b28539af125abfcbb54b66a91f0a716a6927"
+    },
+    "activeConfig": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+      "sha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"
+    },
+    "activeSchedule": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    "activeScheduleManifest": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+      "sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"
+    },
+    "activeReadiness": {
+      "relativePath": "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+      "sha256": "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc"
+    },
+    "frozenCommandV2": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV2.cs",
+      "sha256": "af9156588bc259dfa8cafeec4adb82c93a2b07f5e2ae772b4b0fd4115dce28a8"
+    },
+    "frozenWrapperV4": {
+      "relativePath": "Research/Run-Gate13RPR2FormalBlockV4.ps1",
+      "sha256": "30bf36239aaf321a4d454bf71f777a668476b1b962021d30ec3bb4d6abe25f54"
+    },
+    "frozenCampaignV4": {
+      "relativePath": "Research/Run-Gate13RPR2FormalCampaignV4.ps1",
+      "sha256": "66821f7642a260a80a5ea30f3e45a4e93e4dbc0c78095a3bcf2800d86bf65b53"
+    },
+    "frozenModuleV3": {
+      "relativePath": "Research/Gate13RPR2FormalExecutionV3.psm1",
+      "sha256": "5eaf15a3f1891d17849cf5c417aabaa03bcac7d25771e83ab905060b2db74b74"
+    }
+  },
+  "attempt2Preconditions": {
+    "formalRootResolved": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v2",
+    "formalRootAbsent": true,
+    "statusSidecarAbsent": true,
+    "executionReceiptAbsent": true,
+    "unityProcessCount": 0,
+    "unityLockAbsent": true
+  },
+  "authorizationBoundary": {
+    "versionedRepairAllowed": true,
+    "validationOnlyUnityRehearsalAllowed": true,
+    "oneFreshFormalAttempt2AllowedAfterAllPrelaunchGates": true,
+    "attempt1MutationAllowed": false,
+    "attempt1ResumeAllowed": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  }
+}

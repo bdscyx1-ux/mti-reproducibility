@@ -1,0 +1,89 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-rule-repair-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-repair-attempt-004",
+  "status": "AUTHORIZED_ALGORITHM_FREE_UNITY_EXECUTABLE_IDENTITY_RULE_REPAIR",
+  "authorizedAtUtc": "2026-10-17T10:14:36.6779858Z",
+  "userAuthorizationTextExact": "按照推荐方案继续工作",
+  "scopeResolution": {
+    "resolvedAgainstImmediatelyPrecedingRecommendation": true,
+    "authorizedStoppingPoint": "Preserve all attempt-001, attempt-002 and attempt-003 evidence; create versioned attempt-004 sources; make three-phase external executable fingerprints and a composite live-process identity authoritative; retain every in-process executable byte-read measurement, including File.ReadAllBytes, as diagnostic-only evidence; run at most one isolated algorithm-free Unity identity probe; freeze either a trusted launch identity rule and terminal pass or exact fail-closed evidence.",
+    "d3V3_1ImplementationMayChange": false,
+    "identityRuleMayChangeOnlyAsSpecified": true,
+    "automaticRetryAuthorized": false,
+    "schemaCompatibilitySelfCheckRetryAuthorized": false,
+    "qualificationPlanningAuthorized": false,
+    "algorithmExecutionAuthorized": false
+  },
+  "authorizedActions": {
+    "retainAttempts001Through003Evidence": true,
+    "createVersionedAttempt004SourceCopies": true,
+    "freezeAttempt004AuthorizationPlanSourcesAndHashes": true,
+    "useExternalPrelaunchConcurrentAndPostExitSha256AsAuthoritative": true,
+    "useExternal64KiBChunksFileIdPeIdentityAuthenticodeAndMetadataAsAuthoritative": true,
+    "useLivePidCreationTimeExecutablePathExactCommandLineAndExecuteMethodAsAuthoritative": true,
+    "requireEditorApplicationMainModuleAndQueryFullProcessImageNamePathAgreement": true,
+    "requireInProcessStructuralFileIdentityStability": true,
+    "retainAllInProcessHashAndChunkObservationsAsDiagnosticOnly": true,
+    "retainFileReadAllBytesAsDiagnosticOnly": true,
+    "launchAtMostOneIsolatedAlgorithmFreeUnityIdentityProbe": true,
+    "freezeAttempt004EvidenceRuleAndTerminalStatus": true
+  },
+  "executionLimits": {
+    "maximumUnityBatchmodeInvocations": 1,
+    "maximumUnityExecuteMethodInvocations": 1,
+    "permittedExecuteMethod": "DDM.Research.Editor.UnityExecutableIdentityAuditAttempt001.Gate14ReMEUnityExecutableIdentityAuditV1.Run",
+    "permittedVerificationRootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004",
+    "permittedUnityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "permittedUnityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "inProcessObservationHoldSeconds": 30,
+    "maximumProcessStartTimeDifferenceMilliseconds": 1000,
+    "automaticUnityRetryAuthorized": false,
+    "processSignalOrForcedTerminationAuthorized": false
+  },
+  "authoritativeIdentityRule": {
+    "externalPhases": [
+      "prelaunch",
+      "while the authorized PID is alive",
+      "post-exit"
+    ],
+    "externalRequiredEqualities": [
+      "two independent full-file SHA-256 methods agree at each phase and equal the frozen expected SHA-256",
+      "all 64 KiB chunk digests agree across all phases",
+      "normalized path, NTFS file ID, length, creation time, last-write time and PE identity remain stable",
+      "Authenticode remains valid with the same signer thumbprint"
+    ],
+    "liveProcessRequiredIdentity": [
+      "PID",
+      "creation time",
+      "Win32_Process executable path",
+      "exact command line containing only the authorized execute method and isolated project",
+      "EditorApplication.applicationPath, Process.MainModule.FileName and QueryFullProcessImageNameW path agreement",
+      "in-process structural file ID and PE identity stability across the observation hold"
+    ],
+    "diagnosticOnly": [
+      "in-process File.OpenRead SHA-256",
+      "in-process shared FileStream SHA-256",
+      "in-process File.ReadAllBytes SHA-256",
+      "in-process chunk digests and their agreement with external reads"
+    ]
+  },
+  "prohibitedActions": {
+    "modifyOrDeletePriorAttemptEvidence": true,
+    "modifyD3V3_1SourceBinaryContractOrReceipts": true,
+    "treatAnyInProcessByteReadHashAsIdentityAuthority": true,
+    "automaticallyRetryUnityIdentityProbe": true,
+    "invokeInputSchemaCompatibilitySelfCheckV1": true,
+    "invokeAnyGate14ReMEPlanner": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputs": true,
+    "generateAnonymousIdentityMapping": true,
+    "createAnyMeasuredRoot": true,
+    "executeAnyAlgorithmLane": true,
+    "performFormalCollection": true,
+    "performFormalAnalysis": true,
+    "rankAlgorithms": true,
+    "adjudicateWinner": true
+  },
+  "terminalRule": "Pass only if all three external fingerprints and the composite live-process identity satisfy the frozen rule, in-process structural identity remains stable, exactly one isolated algorithm-free Unity probe occurs, all prior evidence remains unchanged, and no prohibited action occurs. File.ReadAllBytes or any other in-process byte-read hash may differ without causing identity failure because it is diagnostic only. Any authoritative-identity mismatch, structural-identity mismatch, compile failure or process failure consumes attempt-004 and fails closed without retry."
+}

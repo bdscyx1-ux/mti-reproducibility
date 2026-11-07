@@ -1,0 +1,129 @@
+﻿{
+    "savedAt":  "2026-10-05T16:47:54.1332878+08:00",
+    "projectPath":  "H:\\DDM_Final_Project",
+    "baselineChecked":  24,
+    "baselineMismatches":  [
+
+                           ],
+    "requiredGateSummaryCount":  25,
+    "summaryErrors":  [
+
+                      ],
+    "missingGate10Files":  [
+
+                           ],
+    "powerShellScriptCount":  32,
+    "powerShellParseErrors":  [
+
+                              ],
+    "jsonFileCount":  277,
+    "jsonParseErrors":  [
+
+                        ],
+    "jsonlFileCount":  33,
+    "jsonlParseErrors":  [
+
+                         ],
+    "algorithmFiles":  [
+                           "AStarRepeatedPlanner.cs",
+                           "CorrectedFullRecomputeFlowFieldPlanner.cs",
+                           "DStarLitePlanner.cs",
+                           "IncrementalDynamicFlowFieldPlanner.cs"
+                       ],
+    "plannerImplementationMatches":  [
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\AStarRepeatedPlanner.cs",
+                                             "line":  13,
+                                             "text":  "public sealed class AStarRepeatedPlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\CorrectedFullRecomputeFlowFieldPlanner.cs",
+                                             "line":  45,
+                                             "text":  "public sealed class CorrectedFullRecomputeFlowFieldPlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\DStarLitePlanner.cs",
+                                             "line":  13,
+                                             "text":  "public sealed class DStarLitePlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Algorithms\\IncrementalDynamicFlowFieldPlanner.cs",
+                                             "line":  45,
+                                             "text":  "public sealed class IncrementalDynamicFlowFieldPlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\Gate10FairnessVerification.cs",
+                                             "line":  352,
+                                             "text":  "private sealed class ScriptedMetricsPlanner : INavigationPlanner"
+                                         },
+                                         {
+                                             "file":  "H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\Gate2SmokeVerification.cs",
+                                             "line":  227,
+                                             "text":  "private sealed class RecordingPlanner : INavigationPlanner"
+                                         }
+                                     ],
+    "uniqueCompilerWarnings":  [
+                                   "Assets\\_Scripts\\FlowFieldScripts_Attempt 2\\Unit.cs(33,19): warning CS0414: The field \u0027Unit.gravityMultiplier\u0027 is assigned but its value is never used"
+                               ],
+    "compilerErrorMatches":  [
+                                 {
+                                     "log":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10_Fairness_InitialCompile.log",
+                                     "line":  701,
+                                     "text":  "Assets\\_Scripts\\Research\\Experiments\\DeterministicPlanningWorkloadRunner.cs(112,13): error CS0246: The type or namespace name \u0027PlanningRunProvenance\u0027 could not be found (are you missing a using directive or an assembly reference?)"
+                                 },
+                                 {
+                                     "log":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10_Fairness_InitialCompile.log",
+                                     "line":  703,
+                                     "text":  "Assets\\_Scripts\\Research\\Experiments\\DeterministicPlanningWorkloadRunner.cs(294,17): error CS0246: The type or namespace name \u0027PlanningRunProvenance\u0027 could not be found (are you missing a using directive or an assembly reference?)"
+                                 },
+                                 {
+                                     "log":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10_Fairness_InitialCompile.log",
+                                     "line":  705,
+                                     "text":  "Assets\\_Scripts\\Research\\Experiments\\DeterministicPlanningWorkloadRunner.cs(295,17): error CS0246: The type or namespace name \u0027PlanningFairnessClassification\u0027 could not be found (are you missing a using directive or an assembly reference?)"
+                                 }
+                             ],
+    "evidenceHashes":  {
+                           "fairnessSpecification":  "42a4a8439c3d7b46b7644bed14b8f91d87bae4c6f8b2183a73609ee5461e82dd",
+                           "fairnessTestDesign":  "6ab9b5b47783f727a48d55a9dc3b8ef3a360438da874e6233aa2f0af4d646d38",
+                           "fairnessContractSource":  "42e1865294439986e808547115b22ccaaff53f3293790a8c4a135fb529ef3a60",
+                           "campaignLauncher":  "176f82fed18beee2fc7e2c8cb37ce988f7c7f4740cdeec3c5510b677843615c3",
+                           "fairnessResult":  "e1dd0202f0aebd21010f69a7a5e76347f10751865f66e658afd38535b7b4888f",
+                           "sharedGoalScenario":  "98981cd9504d1132099f1812209125c4110b2d3987c581e6ff1696c22d5985a3",
+                           "campaignManifest":  "4d9d61b15f2e375909c541f6070bd405624e90ae516e6ecb7d7b4ebb7585e987",
+                           "legacyGate6":  "41879b0c14747e0cf926527f43819d827cf03561bdbfc58f364b8924375f1b95",
+                           "legacyGate7":  "40be411b5b6f59def94a0c013831389a26b380f47ff61f1fd9c674fcc4fd40dd",
+                           "legacyGate8":  "b1783ae22c6d6224bdb9c38d1e79f9a105caf8a2eb50b0220a5aa517e1bdd620",
+                           "legacyGate9":  "a8cddf0494d70d93ca43d1ae5107d2ee83b39aa665cece64469c8ce8c5a30eac"
+                       },
+    "campaignTotals":  {
+                           "samples":  16,
+                           "jsonlRecords":  272,
+                           "plans":  128,
+                           "repairs":  64,
+                           "succeededPlans":  128,
+                           "budgetExceededOperations":  0
+                       },
+    "unityProcessIds":  [
+
+                        ],
+    "unityLockfilePresent":  false,
+    "checks":  {
+                   "frozenBaselineMatches":  true,
+                   "latestGateSummariesPass":  true,
+                   "gate10FilesPresent":  true,
+                   "powerShellParses":  true,
+                   "jsonParses":  true,
+                   "jsonlParses":  true,
+                   "authorizedAlgorithmScopeExact":  true,
+                   "compilerWarningsExpected":  true,
+                   "supersededInitialCompileAndCleanFinalCompiles":  true,
+                   "retainedEvidenceHashesMatch":  true,
+                   "campaignEvidenceComplete":  true,
+                   "noUnityProcess":  true,
+                   "noUnityLockfile":  true
+               },
+    "failedChecks":  [
+
+                     ],
+    "passed":  true
+}

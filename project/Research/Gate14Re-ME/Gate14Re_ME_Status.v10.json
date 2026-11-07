@@ -1,0 +1,106 @@
+{
+  "schema": "gate14re-me-status-v10",
+  "studyId": "Gate14Re-ME",
+  "status": "SCHEMA_V2_TOOLING_BRIDGE_FROZEN_PASS",
+  "version": 10,
+  "updatedAtUtc": "2026-10-17T08:34:13.2071515Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v9.json",
+    "lengthBytes": 4609,
+    "sha256": "6785a099bcce12058aabcbbdb183df69a4696a7111b6048f2aa3f5af7756e641",
+    "retained": true
+  },
+  "parentRunnerSchemaIntegration": {
+    "status": "FROZEN_PASS_D3_V3_1_RUNNER_SCHEMA_INTEGRATION",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "b244af408606e0758841f1ad44af5af0d565e12d83da3cfddf918b2412dbaa24",
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "runnerSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "outputSchemaRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+    "outputSchemaSha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb"
+  },
+  "currentToolingBridge": {
+    "status": "FROZEN_PASS_SCHEMA_V2_TOOLING_BRIDGE",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptLengthBytes": 6426,
+    "freezeReceiptSha256": "cd3fee2954eb4f0c0e1fe126c16342cbee3de34bac1a3b7fbec747cd22c3b79b",
+    "structuralValidatorV2RelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v2.py",
+    "structuralValidatorV2Sha256": "daa1fc48077cc0cb8c62221956355a35c74e8b946660b683f7178e2072e9bc0e",
+    "deliveryValidatorExporterV2RelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2.py",
+    "deliveryValidatorExporterV2Sha256": "5e9f8d8c3403321fb9e1b2b3f67fef00a963bf85f25c66d98bc2c41971434ec4",
+    "syntheticKnownAnswerPassed": true,
+    "negativeControlsPassed": 9,
+    "completePerObservationDeliveryPassed": true,
+    "typedParquetRoundTripPassed": true
+  },
+  "repairHistory": {
+    "initialFailureEvidenceRetained": true,
+    "initialFailureStatus": "FAILED_CLOSED_SYNTHETIC_NEGATIVE_FIXTURE_PATH_POLICY_MISMATCH",
+    "repairCycle": "repair-cycle-001",
+    "repairChangedScientificEndpoint": false,
+    "repairChangedFrozenRunnerSchemaOrContract": false
+  },
+  "rawDataGuarantee": {
+    "completePerObservationDeliveryRequired": true,
+    "rawTables": 10,
+    "deliveryFormats": [
+      "canonical JSONL",
+      "RFC 4180 CSV with canonical-JSON scalar cells",
+      "deterministic JSONL.GZ",
+      "typed Parquet"
+    ],
+    "d3RawFile": "d3-windows.raw.v1.jsonl",
+    "d3PrimaryValue": "managedAllocationBytes",
+    "d3RateValue": "managedAllocationRateBytesPerSecond",
+    "rawFormulaInputsRetained": true,
+    "foreignThreadDiagnosticsRetained": true,
+    "invalidMetadataAndOverflowDiagnosticsRetained": true,
+    "eventGroupAndEmptyBoundaryJoinKeysRetained": true,
+    "fullValueTypeOrderRoundTripRequired": true,
+    "aggregateOnlyPackageAllowed": false
+  },
+  "currentQualifiedCapabilities": {
+    "typedParquetRuntimeFrozen": true,
+    "d2GridReadProxyPreviouslyQualified": true,
+    "d3V31TrueCumulativeCounterQualified": true,
+    "d3V31RunnerSourceIntegrated": true,
+    "d3V31OutputSchemaIntegrated": true,
+    "d4PersistentStateSizerPreviouslyQualified": true,
+    "clockMonotonicityPreviouslyQualified": true,
+    "schemaV2StructuralValidatorFrozen": true,
+    "schemaV2LosslessDeliveryToolFrozen": true,
+    "syntheticSchemaV2KnownAnswerPassed": true,
+    "fullRuntimeLoadQualificationPassed": false
+  },
+  "scientificBoundary": {
+    "priorFailedAndPassingEvidenceRetained": true,
+    "oldV1ToolsModified": false,
+    "runnerOrOutputSchemaModifiedByToolingStage": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "fallbackMetricUsed": false
+  },
+  "authorizationState": {
+    "schemaV2ToolingBridgeAuthorizationConsumed": true,
+    "qualificationScheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "runtimeQualificationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize the next minimum prospective qualification-planning freeze: generate and freeze only the balanced six-algorithm qualification schedule, qualification inputs, and anonymous identity binding, with no qualification measured-root creation, Unity execution, algorithm lane, formal collection, analysis, ranking, or winner adjudication."
+}

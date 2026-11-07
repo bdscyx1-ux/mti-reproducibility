@@ -1,0 +1,205 @@
+#!/usr/bin/env python3
+"""Estimate the selected bounded G/N/F window without emitting algorithm identities."""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import json
+import math
+from pathlib import Path
+
+
+OLD = {"G": [64, 128, 256], "N": [8, 32, 128, 512], "F": [1, 9, 81, 225]}
+ALGORITHM_COUNT = 6
+CORE_CELLS = 48
+LANES_PER_B = ALGORITHM_COUNT * CORE_CELLS
+B = 36
+CORE_QUALIFICATION_B = 3
+STRESS_SUPERBLOCKS = 18
+QUALIFICATION_LANES = 972
+HEADROOM = 1.20
+
+
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise RuntimeError(message)
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def load_json(path: Path):
+    with path.open("r", encoding="utf-8-sig") as stream:
+        return json.load(stream)
+
+
+def dump_json(path: Path, value) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        json.dump(value, stream, ensure_ascii=False, indent=2, sort_keys=True)
+        stream.write("\n")
+
+
+def axis_weights(target: int, observed: list[int]) -> list[tuple[int, float]]:
+    if target in observed:
+        return [(target, 1.0)]
+    for lower, upper in zip(observed, observed[1:]):
+        if lower < target < upper:
+            x, lo, hi = math.log2(target), math.log2(lower), math.log2(upper)
+            upper_weight = (x - lo) / (hi - lo)
+            return [(lower, 1.0 - upper_weight), (upper, upper_weight)]
+    raise RuntimeError(f"target {target} outside interpolation envelope {observed}")
+
+
+def interpolate(lookup, anonymous_algorithm, g, n, f, field):
+    total = 0.0
+    total_weight = 0.0
+    for source_g, wg in axis_weights(g, OLD["G"]):
+        for source_n, wn in axis_weights(n, OLD["N"]):
+            for source_f, wf in axis_weights(f, OLD["F"]):
+                weight = wg * wn * wf
+                value = lookup[(anonymous_algorithm, source_g, source_n, source_f)][field]
+                require(math.isfinite(value) and value > 0.0, "invalid timing value")
+                total += weight * math.log(value)
+                total_weight += weight
+    require(abs(total_weight - 1.0) < 1e-12, "interpolation weights do not sum to one")
+    return math.exp(total)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root", required=True, type=Path)
+    args = parser.parse_args()
+    root = args.root.resolve()
+    freeze = load_json(root / "selected-window-runtime-freeze-manifest.v1.json")
+    require(freeze["schema"] == "gate14re-me-selected-window-runtime-freeze-manifest-v1", "freeze schema mismatch")
+    for item in freeze["files"]:
+        path = Path(item["absolutePath"])
+        require(path.is_file(), f"missing frozen input: {path}")
+        require(path.stat().st_size == int(item["bytes"]), f"size mismatch: {path}")
+        require(sha256(path) == item["sha256"], f"hash mismatch: {path}")
+    by_role = {item["role"]: Path(item["absolutePath"]) for item in freeze["files"]}
+
+    candidate = load_json(by_role["selected-gnf-design"])
+    levels = candidate["levels"]
+    require(levels == {"G": [64, 96, 128], "N": [32, 48, 80, 128], "F": [1, 9, 25, 81]}, "candidate mismatch")
+
+    named_rows = []
+    with by_role["algorithm-gnf-runtime-cells"].open("r", encoding="utf-8-sig", newline="") as stream:
+        for row in csv.DictReader(stream):
+            if row["designRegion"] == "core":
+                named_rows.append(row)
+    names = sorted({row["algorithmId"] for row in named_rows})
+    require(len(names) == ALGORITHM_COUNT, "algorithm cardinality mismatch")
+    anonymous = {name: f"A{index + 1}" for index, name in enumerate(names)}
+    lookup = {}
+    for row in named_rows:
+        key = (anonymous[row["algorithmId"]], int(row["G"]), int(row["N"]), int(row["F"]))
+        require(key not in lookup and int(row["n"]) == 3, "timing cell mismatch")
+        lookup[key] = {
+            "p50": float(row["processWallP50Milliseconds"]),
+            "maximum": float(row["processWallMaximumMilliseconds"]),
+        }
+    require(len(lookup) == ALGORITHM_COUNT * CORE_CELLS, "timing lookup cardinality mismatch")
+
+    gap = load_json(by_role["time-component-identifiability"])["directlyMeasured"]["interProcessGapBeforeLane"]
+    gap_p50 = float(gap["p50Milliseconds"])
+    gap_p99 = float(gap["p99Milliseconds"])
+    require(int(gap["n"]) == QUALIFICATION_LANES, "gap cardinality mismatch")
+
+    point_per_b = 0.0
+    conservative_per_b = 0.0
+    high_point = []
+    high_conservative = []
+    anonymous_algorithms = sorted(set(anonymous.values()))
+    for algorithm in anonymous_algorithms:
+        for g in levels["G"]:
+            for n in levels["N"]:
+                for f in levels["F"]:
+                    p50 = interpolate(lookup, algorithm, g, n, f, "p50")
+                    maximum = interpolate(lookup, algorithm, g, n, f, "maximum")
+                    point_per_b += p50
+                    conservative_per_b += maximum
+                    if (g, n, f) == (max(levels["G"]), max(levels["N"]), max(levels["F"])):
+                        high_point.append(p50)
+                        high_conservative.append(maximum)
+
+    point_hours_per_b = (point_per_b + LANES_PER_B * gap_p50) / 3_600_000.0
+    conservative_hours_per_b = (conservative_per_b + LANES_PER_B * gap_p99) / 3_600_000.0
+    formal_point = point_hours_per_b * B
+    formal_conservative = conservative_hours_per_b * B
+    formal_planning = formal_conservative * HEADROOM
+
+    old_runtime = load_json(by_role["anonymous-runtime-prediction"])
+    throughput = old_runtime["throughput"]
+    fixed_non_lane_hours = float(throughput["fullElapsedHours"]) - float(throughput["lanePhaseElapsedHours"])
+    require(fixed_non_lane_hours > 0.0, "non-lane wall-clock remainder invalid")
+    stress_point = STRESS_SUPERBLOCKS * sum(high_point)
+    stress_conservative = STRESS_SUPERBLOCKS * sum(high_conservative)
+    qualification_point_lane_hours = (
+        CORE_QUALIFICATION_B * point_per_b + stress_point + QUALIFICATION_LANES * gap_p50
+    ) / 3_600_000.0
+    qualification_conservative_lane_hours = (
+        CORE_QUALIFICATION_B * conservative_per_b + stress_conservative + QUALIFICATION_LANES * gap_p99
+    ) / 3_600_000.0
+    qualification_point = fixed_non_lane_hours + qualification_point_lane_hours
+    qualification_conservative = fixed_non_lane_hours + qualification_conservative_lane_hours
+    qualification_planning = qualification_conservative * HEADROOM
+
+    result = {
+        "schema": "gate14re-me-selected-window-runtime-estimate-v1",
+        "studyId": "Gate14Re-ME",
+        "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+        "status": "PASS_PLANNING_SURROGATE_NEW_LEVELS_NOT_YET_QUALIFIED",
+        "levels": levels,
+        "method": {
+            "inputCoordinates": "log2(G), log2(N), log2(F)",
+            "outputCoordinate": "natural log process-wall duration",
+            "algorithmIdentitiesEmitted": False,
+            "gapP50Milliseconds": gap_p50,
+            "gapP99Milliseconds": gap_p99,
+            "planningHeadroomMultiplier": HEADROOM,
+            "fixedNonLaneWallClockRemainderHoursFromOldQualification": round(fixed_non_lane_hours, 6),
+        },
+        "highCorner": {
+            "G": max(levels["G"]),
+            "N": max(levels["N"]),
+            "F": max(levels["F"]),
+            "maximumAcrossAnonymousAlgorithmsEstimatedP50Seconds": round(max(high_point) / 1000.0, 6),
+            "maximumAcrossAnonymousAlgorithmsEstimatedConservativeSeconds": round(max(high_conservative) / 1000.0, 6),
+            "observedCellWorstProcessWallSecondsFromDiscriminationArtifact": 117.611215,
+        },
+        "newQualification": {
+            "plannedProcesses": 1147,
+            "algorithmLanes": QUALIFICATION_LANES,
+            "pointHours": round(qualification_point, 3),
+            "conservativeHours": round(qualification_conservative, 3),
+            "planningWith20PercentHeadroomHours": round(qualification_planning, 3),
+        },
+        "formalSTB36": {
+            "freshAlgorithmProcesses": B * LANES_PER_B,
+            "pointHours": round(formal_point, 3),
+            "conservativeHours": round(formal_conservative, 3),
+            "planningWith20PercentHeadroomHours": round(formal_planning, 3),
+            "planningDays": round(formal_planning / 24.0, 3),
+            "belowSevenDayDecisionGate": formal_planning < 168.0,
+        },
+        "boundary": [
+            "Interpolation is a planning surrogate for unobserved levels, not qualification evidence.",
+            "The old fixed non-lane remainder is retained rather than credited with a speedup, making the qualification estimate conservative with respect to those phases.",
+            "A new qualification must begin from ordinal 0 in fresh roots after explicit approval and refreeze."
+        ],
+        "rankingOrWinnerProduced": False,
+    }
+    dump_json(root / "selected-window-runtime-estimate.v1.json", result)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

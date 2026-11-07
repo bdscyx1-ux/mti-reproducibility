@@ -1,0 +1,103 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 12,
+  "status": "PASS_D3_V3_1_NATIVE_PLUGIN_BUILD_AND_STATIC_EXPORT_CHECK",
+  "completedAtUtc": "2026-10-17T07:43:42.5090392Z",
+  "phase": "d3-v3-1-versioned-abi-amendment-and-native-build",
+  "compilerExitCode": 0,
+  "warnings": 0,
+  "compilerPolicy": [
+    "/nologo",
+    "/std:c++17",
+    "/O2",
+    "/LD",
+    "/EHsc",
+    "/W4",
+    "/WX",
+    "/utf-8",
+    "/permissive-",
+    "/Brepro",
+    "/DNOMINMAX"
+  ],
+  "staticChecks": {
+    "peMachine": "x86-64",
+    "dependentModules": ["KERNEL32.dll"],
+    "requiredExportCount": 12,
+    "missingExports": [],
+    "allRequiredExportsPresent": true,
+    "localBinaryAuthenticodeStatus": "NotSigned",
+    "localBinarySigningRequiredForQualification": false
+  },
+  "validationCommandCorrection": {
+    "firstStaticParserExitCode": 31,
+    "binaryOrSourceFailure": false,
+    "cause": "The first PowerShell parser compared an array-valued dumpbin result with -notmatch inside Where-Object and therefore reported every present export as missing.",
+    "preservedEvidence": "The original dumpbin outputs were retained unchanged.",
+    "correction": "The same dumpbin output was read once as a single raw string and all 12 exports were then found; the native build was not repeated."
+  },
+  "artifacts": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/cycle-plan.v1.json",
+      "lengthBytes": 2601,
+      "sha256": "98a77402acf703151482a5cb6d8c84de654886c0b560f1d60839a7befa5aa09f"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/compile-link.log",
+      "lengthBytes": 459,
+      "sha256": "7958107058171eb99a80555e043bc68e530b042cebe7872cbd8ff09974a944db"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/dumpbin-headers.txt",
+      "lengthBytes": 5902,
+      "sha256": "acca81ae303134d14e734d491bda8042bdca0ec095f9c50ce49a821355e6ed3f"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/dumpbin-dependents.txt",
+      "lengthBytes": 548,
+      "sha256": "3ea55cbdee790cf7b724f60e3c53ed077cc31d1cc2795b4e5067d3f2c6762780"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/dumpbin-exports.txt",
+      "lengthBytes": 1509,
+      "sha256": "172bf0de330fdc08ea2d3d70fb8d95462172d49528f23015c79bfb22b4c8352c"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/build/Gate14ReMED3AllocationCounterV31.dll",
+      "lengthBytes": 110592,
+      "sha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/build/Gate14ReMED3AllocationCounterV31.obj",
+      "lengthBytes": 28678,
+      "sha256": "946ac9586f7a8ab3ffc8e5c9caaf90d00bf5740f8cf5360f5d638c7e76bdb048"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/build/Gate14ReMED3AllocationCounterV31.lib",
+      "lengthBytes": 5678,
+      "sha256": "0d849d60de45b5d11dcc8f7533a7f493ea032efbe4e255629a1a4eca5b780360"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/build/Gate14ReMED3AllocationCounterV31.exp",
+      "lengthBytes": 2869,
+      "sha256": "2eb2d57b18c692ddacda63f29f0683ab28d2da7df5da23f74f9d623ac4df8df6"
+    },
+    {
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+      "lengthBytes": 110592,
+      "sha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63"
+    }
+  ],
+  "scientificBoundary": {
+    "priorEvidenceModifiedOrDeleted": false,
+    "priorDiagnosticsRerun": false,
+    "unityProcessStarted": false,
+    "qualificationRunnerOrSchemaIntegrated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalAnalysisRankingOrWinner": false
+  }
+}

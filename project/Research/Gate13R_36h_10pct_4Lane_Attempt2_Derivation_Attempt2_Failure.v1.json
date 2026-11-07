@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "failureKind": "gate13r-36h-attempt2-artifact-derivation-prewrite-failure-v2",
+  "failedAtUtc": "2026-10-08T04:39:16.0077236Z",
+  "status": "FAILED-BEFORE-ANY-V2-OUTPUT-WRITE",
+  "cause": "The built-in case-insensitive alias r for Invoke-History took precedence over the temporary replacement-record helper function R.",
+  "generatorFailedSha256": "32a3acd41a81e67212e6021c45183d9b02dc06b5e2d77732c2622a4479271717",
+  "generatorRepairedSha256": "30a39e47c8b8b216b1b503a541903dff7a861d54a2dfa38e2643a4703c8b215a",
+  "repair": "Remove only the process-local Alias:R before evaluating the deterministic replacement table.",
+  "v2OutputFileCount": 0,
+  "planV2Created": false,
+  "cloneV2Created": false,
+  "verificationV2Created": false,
+  "pilotV2Created": false,
+  "unityStarted": false,
+  "formalCampaign": false,
+  "automaticRetryAttempted": false
+}

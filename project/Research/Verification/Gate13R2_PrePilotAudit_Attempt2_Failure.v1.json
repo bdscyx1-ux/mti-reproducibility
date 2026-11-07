@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "failureId": "gate13-r2-pre-pilot-audit-attempt2-wrapper-syntax-failure-v1",
+  "failedAt": "2026-10-06T14:08:23.7226064+08:00",
+  "phase": "after-retained-regression-before-negative-fixture-and-before-pilot",
+  "classification": "pre-pilot-audit-implementation-failure",
+  "message": "The retained regression completed 63/63, but the audit wrapper then failed because standard-input command parsing separated an else clause and a Test-Path boolean expression lacked per-call parentheses.",
+  "provenanceV2": {
+    "relativePath": "Research/Gate13_ProcessReuse_Provenance.v2.json",
+    "sha256": "9830ca79d19469c7d8b584454a344605f847cfad14eff195a140027e5e70059f"
+  },
+  "retainedRegression": {
+    "relativePath": "Research/Verification/Gate13R2_RetainedRegression63.summary.json",
+    "sha256": "dffdfb2fe1d5ca6de8df40ea2af9f178d828ab7dcf1d700cf952cc11d03b6396",
+    "assertionCount": 63,
+    "passed": true,
+    "originalGate12SummarySha256AfterRun": "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d"
+  },
+  "evidenceState": {
+    "prePilotAuditSummaryCreated": false,
+    "negativeFixturePlanCreated": false,
+    "negativeFixtureRootCreated": false,
+    "processReusePilotRootCreated": false,
+    "processReuseFormalRootCreated": false,
+    "unityProcessCountAfterFailure": 0,
+    "unityLockfilePresentAfterFailure": false
+  },
+  "automaticRetryAttempted": false,
+  "automaticResumeAttempted": false,
+  "formalCampaign": false,
+  "formalExecutionAuthorized": false,
+  "disposition": "SUPERSEDED-BEFORE-PILOT-BY-V3-PROVENANCE-AFTER-AUDIT-WRAPPER-FIX"
+}

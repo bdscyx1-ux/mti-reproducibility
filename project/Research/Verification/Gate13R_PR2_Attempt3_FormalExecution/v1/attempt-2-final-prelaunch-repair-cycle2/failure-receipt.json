@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-formal-attempt3-prelaunch-repair-cycle2-failure-receipt-v1",
+  "savedAtUtc": "2026-10-09T08:20:35.5289944Z",
+  "savedAtAsiaShanghai": "2026-10-09T16:20:35.5317208+08:00",
+  "prelaunchRepairCycleOrdinal": 2,
+  "prelaunchRepairCycleLimit": 3,
+  "previousMonitoringRepairCyclesConsumed": 1,
+  "failureSignature": "FINAL-PRELAUNCH/PARAMETER-BINDING-SMOKE/STRING-ARRAY-POSITIONAL-BINDING",
+  "failedCheck": "parameter-binding-smoke-pass",
+  "failureCause": "PowerShell array splatting binds string-array elements positionally; textual parameter-name tokens were therefore passed as values.",
+  "failedAudit": {
+    "relativePath": "Research/Verification/Gate13R_PR2_Attempt3_FormalExecution/v1/attempt-1/final-prelaunch-audit.json",
+    "sha256": "b37c52d231caf8b212105f791ce1b7f907ac1d29d44eb286de46ad7b6bb8e665",
+    "checkCount": 32,
+    "passedCheckCount": 31,
+    "failedCheckCount": 1
+  },
+  "failedImplementation": {
+    "relativePath": "Research/Test-Gate13RPR2Attempt3FinalPrelaunchV1.ps1",
+    "sha256": "665bd4f6145d4ca028dd0e0bf4303c1eaf6ad6f9ed910ff9829baed07d2ef312",
+    "rawBytes": 27275
+  },
+  "formalRootCreated": false,
+  "formalExecutionReceiptCreated": false,
+  "formalStatusCreated": false,
+  "measuredUnityProcessStarted": false,
+  "measuredProcessCount": 0,
+  "measuredSampleCount": 0,
+  "automaticMeasuredRetryAuthorized": false,
+  "authorizedRepairScope": "Replace only the validation-only binding-smoke argument carrier with named hashtable splatting, then run targeted binding tests before one versioned final-audit retry.",
+  "remainingPrelaunchRepairCyclesAfterThisFailure": 1,
+  "immutable": true,
+  "passed": false
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004",
+  "status": "FROZEN_PREEXECUTION_SCOPE",
+  "executionMode": "OFFLINE_NO_UNITY",
+  "timestampContract": {
+    "acceptedShape": "Strict ISO-8601 timestamp with seconds, optional 1-7 fractional-second digits, and an explicit Z or numeric offset",
+    "parserType": "System.DateTimeOffset",
+    "culture": "InvariantCulture",
+    "styles": "None",
+    "comparisonBasis": "UtcDateTime.Ticks",
+    "originalTextPreserved": true,
+    "zeroMatchesRequired": "FAIL_CLOSED",
+    "multipleMatchesRequired": "FAIL_CLOSED",
+    "differentUtcTicksRequired": "FAIL_CLOSED"
+  },
+  "requiredKnownAnswers": [
+    "2024-06-11T11:26:54Z equals 2024-06-11T11:26:54.0000000Z",
+    "equivalent explicit offsets normalize to the same UTC ticks",
+    "one-tick and one-second differences fail closed",
+    "same wall-clock text with a different offset fails closed",
+    "invalid, missing, empty, timezone-free, excessive-fraction and invalid-offset values fail closed",
+    "a deliberately non-unique parser-format set fails closed",
+    "both original input texts are retained in every comparison receipt"
+  ],
+  "preservedRequirements": [
+    "trusted launch identity rule v1 is unchanged",
+    "SHA-256 requirements are unchanged",
+    "64 KiB chunk-digest requirements are unchanged",
+    "path and NTFS file-identity requirements are unchanged",
+    "PE and Authenticode requirements are unchanged",
+    "file-length requirement is unchanged",
+    "process composite identity requirements are unchanged"
+  ],
+  "executionBoundary": {
+    "offlineKnownAnswerInvocationMaximum": 1,
+    "automaticRetryAuthorized": false,
+    "unityInvocationMaximum": 0,
+    "schemaCompatibilitySelfCheckAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "terminalRule": "Freeze a PASS receipt and new status only when every offline known-answer, preservation check, source binding and boundary assertion passes. Otherwise freeze failure evidence and fail closed without retry or scope expansion."
+}

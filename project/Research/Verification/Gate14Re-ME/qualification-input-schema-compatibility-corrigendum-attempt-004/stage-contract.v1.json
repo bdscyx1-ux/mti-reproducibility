@@ -1,0 +1,54 @@
+{
+  "schema": "gate14re-me-input-schema-compatibility-attempt-004-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-004",
+  "status": "FROZEN_PREEXECUTION_STAGE_CONTRACT",
+  "frozenAtUtc": "2026-10-17T12:32:39.1068621Z",
+  "executeMethod": "DDM.Research.Editor.InputSchemaCorrigendumAttempt004.Gate14ReMEInputSchemaCompatibilitySelfCheckV2.Run",
+  "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+  "unityExpectedSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+  "parentStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v23.json",
+    "sha256": "d3702df64532afbc14d1e494591dd63cc8d26d68662c8b57250c48420f229537"
+  },
+  "trustedLaunchIdentityRule": {
+    "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+    "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+    "modified": false
+  },
+  "trustedTimestampComparator": {
+    "sourceAttempt": "attempt-007",
+    "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+    "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "knownAnswerReceiptSha256": "ad64fb2bce32f2e6206f6f1f80baa30f273be212075603ee631f61b560cc1b63",
+    "comparisonBasis": "STRICT_DATETIMEOFFSET_ROUND_TRIP_TO_UTC_TICKS",
+    "originalTextMustBePreserved": true
+  },
+  "executionBoundary": {
+    "unityInvocationMaximum": 1,
+    "schemaCompatibilitySelfCheckInvocationMaximum": 1,
+    "automaticRetryAuthorized": false,
+    "naturalExitRequired": true,
+    "signalOrForcedTerminationAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "terminalPassRequires": [
+    "all frozen source, schema, rule, comparator and retained-evidence bindings match",
+    "the one Unity process exits naturally with exit code zero",
+    "trusted identity passes at prelaunch, live-concurrent and post-exit phases",
+    "all trusted timestamp comparisons accept by UTC ticks while retaining original text",
+    "topology serialization, round trip, matching positive control and both negative controls pass",
+    "all prohibited activity counters remain zero or false",
+    "all retained evidence inventories are unchanged"
+  ],
+  "failureDisposition": "FREEZE_TERMINAL_FAILURE_EVIDENCE_AND_STATUS_V24_WITHOUT_RETRY_OR_ADOPTION"
+}

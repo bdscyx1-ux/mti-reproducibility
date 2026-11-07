@@ -1,0 +1,165 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-08T16:09:30Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-08T16:09:30Z'
+  user_words: 授权 Gate 13R-PR2 非执行 formal-preparation redesign，严格按 `Research/Gate13R_PR1B_v4_Next_Authorization_Prompt.md`
+    中的完整授权文本执行；不授权 Gate 13R 正式 campaign，不授权 Gate 14R。
+  prev_hash: null
+  hash: 8d7a8d856610be431058a6a2bbd871195e8bb7dcf3bdd35a17d055386e621543
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-08T16:14:24Z'
+  step: Gate 13R-PR2 validation-only attempt 1 pre-preservation gate
+  command: Run-Gate13RPR2NonExecutingValidationV1.ps1 under Windows PowerShell 5.1
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - PRE-PRESERVATION-FAILED
+  - POWERSHELL-RUNTIME-COLLATION-DIVERGENCE
+  - CORE-VALIDATOR-NOT-STARTED
+  - FROZEN-BYTES-PRE-POST-IDENTICAL
+  - ZERO-UNITY
+  - FORMAL-ROOT-ABSENT
+  - FORMAL-EXECUTION-RECEIPT-ABSENT
+  - VERSIONED-NONEXECUTING-REPAIR-ALLOWED
+  input_sha256:
+    Gate13R_PR2_Validation_Attempt1_Failure_Receipt.v1.json: 4778ef92090c2fdaefe97bde71bbc5505287de660bbdff23bded7b295bd1cc6b
+    Gate13R_PR2_Validation_Attempt1_Terminal_Preservation.v1.json: a50f408fde76af7d6b06a5dc939a0351690d133a0ab0d01b498e7274ec5b20d8
+  prev_hash: 8d7a8d856610be431058a6a2bbd871195e8bb7dcf3bdd35a17d055386e621543
+  hash: a19670dfa5bc04107da26a3adad28b8ba00153bfcbe3bffb3c840e1f72a75df8
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-08T16:16:14Z'
+  step: Gate 13R-PR2 validation-only attempt 2 failure and attempt 3 identity repair
+    freeze
+  command: Preserve v2 root; freeze pre-write audit v2 and v3 validators with StringComparer.Ordinal
+    identity
+  status: failed
+  exit_status: 1
+  retries_used: 1
+  gate_tokens:
+  - ATTEMPT2-PRE-PRESERVATION-FAILED
+  - CORE-VALIDATOR-NOT-STARTED
+  - OLD-PREWRITE-HASH-RUNTIME-CULTURE-SORTED
+  - SIX-TREES-FILE-AND-BYTE-COUNTS-UNCHANGED
+  - SIX-TREES-PRE-POST-IDENTICAL
+  - ATTEMPTS1-AND-2-FROZEN
+  - ORDINAL-IDENTITY-AUDIT-V2-FROZEN
+  - V3-PARSERS-PASS
+  - ZERO-UNITY
+  - FORMAL-ROOT-ABSENT
+  - FORMAL-EXECUTION-RECEIPT-ABSENT
+  input_sha256:
+    Gate13R_PR2_Validation_Attempt2_Failure_Receipt.v1.json: db542ca3d64fb49453d56fbc68ccc6d9cdc4b1b5c0581bdec7e7355409239012
+    Gate13R_PR2_Validation_Attempt2_Terminal_Preservation.v1.json: 09d0196f7c20a296c1fdbaace19c5eb8960d844bf94ccc63cc559e8b6e0fc554
+    Gate13R_PR2_PreWrite_Preservation_Audit.v2.json: d02d49773e6404e036e1d5c3d7c8851f5a39e8d9ba129091ad27552a9779d2eb
+    Test-Gate13RPR2FormalPreparationV3.py: c8dde3ee9514ea5393f81b4917eeb8aede9b2c459e0a110f36d21e47a0bad942
+    Verification/Run-Gate13RPR2NonExecutingValidationV3.ps1: 4ce60732b983891920865a58e59c92f448cb0ef8d3361ea40a9f84818cebe49f
+  prev_hash: a19670dfa5bc04107da26a3adad28b8ba00153bfcbe3bffb3c840e1f72a75df8
+  hash: 97cd1f2f2cc40ccd3e1dca9b9c292f6f06a5188ca94b4ed34c6d460dcaace886
+- seq: 4
+  kind: tool_receipt
+  at: '2026-10-08T16:17:49Z'
+  step: Gate 13R-PR2 validation attempt 3 schema failure and v2 artifact-set repair
+    freeze
+  command: Preserve v3 root; freeze schema v2, generator v2, validator v4, and orchestrator
+    v4
+  status: failed
+  exit_status: 1
+  retries_used: 2
+  gate_tokens:
+  - CORE-VALIDATION-62-OF-63
+  - ONLY-SCHEMA-MANIFEST-FAILED
+  - COUNTS-AND-BALANCE-PASSED
+  - DETERMINISTIC-REGENERATION-PASSED
+  - PRE-POST-FROZEN-TREES-PASSED
+  - ATTEMPTS1-THROUGH-3-FROZEN
+  - SCHEMA-V2-FROZEN
+  - FULL-V2-ARTIFACT-SET-REQUIRED
+  - V4-PARSERS-PASS
+  - ZERO-UNITY
+  - FORMAL-ROOT-ABSENT
+  input_sha256:
+    Gate13R_PR2_Validation_Attempt3_Failure_Receipt.v1.json: d574ac17c270c3c153a980a4fa0eb1ee284a5c7851f947d4358a0aa7fb6b3c2f
+    Gate13R_PR2_Validation_Attempt3_Terminal_Preservation.v1.json: ecfb65a7552a954315f835cc45293b2e04c529a22ff371577d20cd2ada217e02
+    Gate13R_PR2_Formal_Preparation_Schema.v2.json: 940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e
+    New-Gate13RPR2FormalPreparationV2.py: e1954e2e9133d29fe93fc73c0edf718958960eed423210d4f1b750eff0374feb
+    Test-Gate13RPR2FormalPreparationV4.py: 903225555b0953508c38b26572b37a3ad5b84dd0d91f92d635908a32e7433ce1
+    Verification/Run-Gate13RPR2NonExecutingValidationV4.ps1: a68aeef7f0a51903c67c89478ea331e7fe9e9e866000c80d6784429bb46743db
+  prev_hash: 97cd1f2f2cc40ccd3e1dca9b9c292f6f06a5188ca94b4ed34c6d460dcaace886
+  hash: 66ff1ab082436570b27c19f3e3c5005881da35b29c4e76cc700367d6082e981a
+- seq: 5
+  kind: tool_receipt
+  at: '2026-10-08T16:25:33Z'
+  step: Gate 13R-PR2 validation-only attempt 4 passed and active v2 artifact set frozen
+  command: Run-Gate13RPR2NonExecutingValidationV4.ps1 under Windows PowerShell 5.1
+  status: passed
+  exit_status: 0
+  retries_used: 3
+  gate_tokens:
+  - CORE-VALIDATION-63-OF-63
+  - SCHEMA-V2-PASSED
+  - ALL-74-CAMPAIGNS-PRESENT
+  - S48-H48-COUNTS-EXACT
+  - AB-BA-24-24-PER-HETEROGENEOUS-SCENARIO
+  - DETERMINISTIC-REGENERATION-6-OF-6-BYTE-IDENTICAL
+  - PRE-POST-FROZEN-TREES-PASSED
+  - ATTEMPTS1-THROUGH-3-FROZEN
+  - VALIDATION-V4-TREE-FROZEN
+  - ZERO-UNITY
+  - FORMAL-ROOT-ABSENT
+  - FORMAL-EXECUTION-RECEIPT-ABSENT
+  - GATE13R-FORMAL-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Formal_Campaign_Config.v2.json: 87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e
+    Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl: df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae
+    Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json: b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724
+    Gate13R_PR2_Formal_Preparation_Provenance.v2.json: 9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56
+    Gate13R_PR2_Storage_WallClock_Preflight.v2.json: c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435
+    Verification/Gate13R_PR2_NonExecuting_Preparation/v4/core/core-validation-summary.json: 39e972dd28d4e4017539fa4e6c2acadfcd589d72a7a21adcc1878d5b5bb32e3a
+    Verification/Gate13R_PR2_NonExecuting_Preparation/v4/validation-only-final-audit.json: 0d635da5c2fba649c91de129c4b36e2c884dbdea6e2a68fdaed9953dd0c10f41
+  prev_hash: 66ff1ab082436570b27c19f3e3c5005881da35b29c4e76cc700367d6082e981a
+  hash: 0f7469da8c0750cd7e6f94ad4a6d7af14b71e1f8c259e9f5f2c5cb47f957f49a
+- seq: 6
+  kind: tool_receipt
+  at: '2026-10-08T16:25:33Z'
+  step: Gate 13R-PR2 readiness, plan update, versioned closeout repair, and final
+    non-executing audit
+  command: Preserve failed closeout v1; rerun final audit v2 with explicit UTF-8 JSON
+    decoding under Windows PowerShell 5.1
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - CLOSEOUT-V1-FAILED-RETAINED-46-OF-47
+  - CLOSEOUT-V1-FAILURE-POWERSHELL51-DEFAULT-ENCODING-ONLY
+  - CLOSEOUT-V2-PASSED-49-OF-49
+  - ALL-SIX-FROZEN-UPSTREAM-TREES-EXACT
+  - ALL-FOUR-VALIDATION-ROOTS-EXACT
+  - ACTIVE-V2-CONFIG-SCHEDULE-MANIFEST-EXACT
+  - READINESS-CHECKPOINT-FROZEN
+  - OVERALL-PROJECT-PLAN-V4-5
+  - NEXT-SESSION-CHECKPOINT-UPDATED
+  - S48-H48-FROZEN
+  - TOTAL-PROCESSES-3552
+  - TOTAL-SAMPLES-10176
+  - ZERO-UNITY
+  - FORMAL-ROOT-ABSENT
+  - FORMAL-EXECUTION-RECEIPT-ABSENT
+  - GATE13R-FORMAL-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_NonExecuting_Final_Audit.v1.json: 3c467a79360cb2632d318853108e1c0c56c52ef1dda6f140e30298618f365860
+    Gate13R_PR2_NonExecuting_Evidence_Manifest.v1.json: d091d35dea1368d5aae44459dfa98fa3a5a2f1605a2fcaf1fca979073da22a4a
+    Gate13R_PR2_NonExecuting_Final_Audit.v2.json: 46bc6d321c80e13cac5df2365ee39012f0e96eefdb818a4d42c31c550f655b05
+    Gate13R_PR2_NonExecuting_Evidence_Manifest.v2.json: e3665c42acd3b724fe3dcae03e06d5f429c0cb8b04a0dadb277f945a68422b0a
+    Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json: 669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc
+    Gate13R_PR2_Formal_Campaign_Next_Authorization_Prompt.md: 0cdfa4dfe87ce5642be675a16653d9b8cb5cb29721bdda742a3cfd97ae566661
+    Overall_Project_Plan.md: cf1dcc66eabe433f7bfdee3763f58310fb78e073ee4fe8127e26ca8ac491708a
+    Next_Session_Checkpoint.md: 20bad61307073c761d8d08a01f79589b3ffd79aa1bc1e7065ae86d3bb12d28e6
+  prev_hash: 0f7469da8c0750cd7e6f94ad4a6d7af14b71e1f8c259e9f5f2c5cb47f957f49a
+  hash: 99203b5e1ed17c274c8d56bb0c5171a096b0a1e70d2bf6b1512634f83048042e

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "provenanceId": "gate11r-attempt2-compile-repair-v2.1",
+  "failureReceipt": {
+    "path": "Research/Verification/Gate11R_5pct/v2/Compile/CompileAttempt1_Failure_Receipt.v2.1.json",
+    "sha256": "31f9d310779827526c6260003ff0f111a599c7b8e7b0d0e8baea2d67f6f803a2"
+  },
+  "repair": {
+    "path": "Assets/_Scripts/Research/Visualization/Gate11RPlayableLauncher.cs",
+    "beforeSha256": "47ded310b8cd89ed528f455cc78b540a6f0d424c721a7cfd28183a3e708babf1",
+    "afterSha256": "9202e9a2c0549c4ebea788e454ed1990b4f1f2895ae564db1b091bf7098650e8",
+    "change": "Added using DDM.Research.Scenarios; no executable research or visualization semantics changed."
+  },
+  "staleLockCleanup": {
+    "path": "H:\\DDM_Final_Project\\Temp\\UnityLockfile",
+    "preconditionUnityProcessCount": 0,
+    "preconditionRawBytes": 0,
+    "removed": true,
+    "postconditionLockPresent": false
+  },
+  "productionRootsStillAbsent": true,
+  "gate12RStarted": false,
+  "gate13RStarted": false
+}

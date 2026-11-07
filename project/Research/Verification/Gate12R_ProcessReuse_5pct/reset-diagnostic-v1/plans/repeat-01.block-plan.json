@@ -1,0 +1,44 @@
+{
+    "schemaVersion":  2,
+    "planId":  "g12r-resetdiag-r01-core-r01-s1-hetero-per-agent-b017-plan",
+    "designId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "blockId":  "g12r-resetdiag-r01-core-r01-s1-hetero-per-agent-b017",
+    "campaignId":  "g12r-resetdiag-r01-core-r01-s1-hetero-per-agent",
+    "scenarioRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios/core-r01-s1-hetero.scenario.json",
+    "scenarioSourceSha256":  "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+    "comparisonCohortId":  "per-agent-heterogeneous-goal-v1",
+    "block":  17,
+    "formalCampaign":  false,
+    "analysisRole":  "excluded-verification",
+    "verificationInjectedFailurePosition":  0,
+    "pilotPlanRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Plan.v2.json",
+    "pilotPlanSha256":  "c76a0a1dc2ecc4efbc4f5419bee9890cf275c9b1fec7e4c64b22d8e2688849cf",
+    "specificationRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Specification.v1.md",
+    "specificationSha256":  "a889ee642d6c468c32aff9296a94afc23164232bcd8e3e6ec4729d427723fc76",
+    "testDesignRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Test_Design.v1.md",
+    "testDesignSha256":  "2d275beffa40e6ce66d16551f9313227e486d230772de32eb5affbae97595930",
+    "amendmentRelativePath":  "Research/Gate12R_Execution_Authorization.v1.json",
+    "amendmentSha256":  "ae437dddc19576cfcb37d1dbfb48905a0ea3cc9014328c4237d081cb0464cce0",
+    "commandRelativePath":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV2.cs",
+    "commandSha256":  "2c1fdd6d8ad4edd8ac36f8d9fb3962e909673cf0eb0a14d85814f975f01b9b06",
+    "provenanceRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Provenance.v5.json",
+    "provenanceSha256":  "df5b1990112d8da2f92e1bcb49933967f5abce1c8bea7dba971c2b74fa740de9",
+    "telemetryProbeResultRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v3/TelemetryProbe/v1/telemetry-probe-result.json",
+    "telemetryProbeResultSha256":  "3c2c6ba8f3bd385942d66b05d7fd05ae14e106db538dc7627435c70535c4c4cf",
+    "entries":  [
+                    {
+                        "position":  1,
+                        "algorithmId":  "A*-R",
+                        "predecessorAlgorithmId":  "NONE",
+                        "runId":  "g12r-resetdiag-r01-core-r01-s1-hetero-per-agent-b017-p01-astar-r",
+                        "directory":  "runs/p01-astar-r"
+                    },
+                    {
+                        "position":  2,
+                        "algorithmId":  "D*L",
+                        "predecessorAlgorithmId":  "A*-R",
+                        "runId":  "g12r-resetdiag-r01-core-r01-s1-hetero-per-agent-b017-p02-dstar-l",
+                        "directory":  "runs/p02-dstar-l"
+                    }
+                ]
+}

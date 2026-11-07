@@ -1,0 +1,76 @@
+{
+  "schema": "gate14re-me-qualification-planning-asset-generation-v4-attempt-002-terminal-receipt-v4",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-bounded-gnf-discrimination-window-v4",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v4-attempt-002",
+  "status": "PASS_QUALIFICATION_PLANNING_ASSETS_FROZEN_V4_NO_EXECUTION_STARTED",
+  "state": [
+    "SEALED_ANONYMOUS_IDENTITY_BINDING_FROZEN",
+    "INPUT_SCHEMA_V4_BOUNDED_GNF_BUNDLES_FROZEN",
+    "ALGORITHM_NEUTRAL_GEOMETRY_ORACLE_PASS",
+    "WILLIAMS_BALANCED_SCHEDULE_FROZEN",
+    "MEASURED_ROOT_NOT_CREATED",
+    "QUALIFICATION_EXECUTION_NOT_AUTHORIZED"
+  ],
+  "completedAtUtc": "2026-10-19T11:57:36.702504Z",
+  "passed": true,
+  "terminal": true,
+  "frozenOutputs": {
+    "identityBinding": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/identity/anonymous-identity-binding.sealed.v4.json",
+      "sha256": "77b88a23a559642d455edf0d4caad9a1f9c06b7ddf33703b8fd100f4a1878bd2"
+    },
+    "schedule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/schedule/bounded-qualification-williams-schedule.v4.jsonl",
+      "sha256": "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb"
+    },
+    "offlineGeometryOracleValidation": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/validation/offline-geometry-oracle-validation.v4.jsonl",
+      "sha256": "1f062b01b67378c2c0a9f1f2e60cd2aff3da4322864e41f1d9fd8b5dc3852759"
+    },
+    "jsonSchemaValidationReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/validation/json-schema-validation-receipt.v4.json",
+      "sha256": "e7ef7648ee7c4a8124a5d12705938211fafc7859086d351d5300b0ed68787827"
+    },
+    "finalValidationReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/final-validation-receipt.v4.json",
+      "sha256": "fce3dccea3fbddb33f8539e870424f6aeb4b3dbee8e6536ef06655d5fd09be08"
+    },
+    "freezeManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets-freeze-manifest.v4.json",
+      "sha256": "8624880f6fbe0b709dd6d2127b5861d62d862d592dcd2b0e311c579afffbeee3"
+    }
+  },
+  "cardinality": {
+    "sealedAnonymousIdentityBindings": 1,
+    "coreInputBundles": 108,
+    "stressInputBundles": 18,
+    "totalInputBundles": 126,
+    "scheduleRows": 126,
+    "freshAlgorithmProcessesProspectiveOnly": 756,
+    "qualificationTotalFreshProcessesProspectiveOnly": 895,
+    "qualificationObservationsGenerated": 0
+  },
+  "formalSampleSize": {
+    "unit": "independent superblocks per GxNxF cell",
+    "candidateGridRule": "positive multiples of 36",
+    "provisionalMinimumB": 36,
+    "finalB": null,
+    "status": "PENDING_NEW_QUALIFICATION_AND_ANONYMOUS_POWER_REFREEZE",
+    "attempt009ObservationsMayBecomeFormalSamples": false
+  },
+  "scopeAudit": {
+    "measuredRootCreated": false,
+    "unityInvocations": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "nextAuthorizationRequired": "A separate authorization is required before creating a qualification measured root or running the qualification preflight/execution. This PASS does not authorize Unity, any planner, any algorithm lane, qualification observations, formal collection, formal analysis, ranking, or winner adjudication."
+}

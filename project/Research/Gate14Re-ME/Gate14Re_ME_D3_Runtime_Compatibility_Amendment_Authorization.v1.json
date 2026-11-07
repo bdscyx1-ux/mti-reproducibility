@@ -1,0 +1,87 @@
+{
+  "schema": "gate14re-me-d3-runtime-compatibility-amendment-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-runtime-compatibility-amendment-attempt-001",
+  "status": "AUTHORIZED_D3_RUNTIME_COMPATIBILITY_AMENDMENT_ONLY",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T05:25:53.2689498Z",
+  "userAuthorizationTextExact": "进行下一项最小授权",
+  "resolvedContext": "The immediately preceding recommended next-minimum authorization: diagnose and adapt only the D3 managed-allocation measurement for the observed Unity runtime, add prospective positive and negative known-answer controls, and create a new source-only scientific freeze. This does not authorize a new full runtime-qualification attempt.",
+  "priorFailedRuntimeQualification": {
+    "authorizationId": "gate14re-me-runtime-qualification-attempt-001",
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/failure-receipt.v1.json",
+    "failureReceiptSha256": "8a508261f9c779ff3d3e3481d5eaf28ebc9d4c513cb69fdc8d30456b3ad9b49a",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "042f3ca2d07b4b78db04a7b272929f6052cc51739c0aeeaa4e6998b75f5554c8",
+    "statusRelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v4.json",
+    "statusSha256": "cad8a34346450b9ca286fcbf277a8b5e673198a256e91848903d0b56fc959b37",
+    "exactD3Failure": "GC.GetAllocatedBytesForCurrentThread returned a zero difference across a retained 1048576-byte allocation."
+  },
+  "priorSourceFreeze": {
+    "implementationManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/implementation-manifest.v1.json",
+    "implementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "43c9dba8b49a1efe0802f6046170be57506c027af9ac764138843c60eef669f7"
+  },
+  "authorizedScope": {
+    "diagnoseD3RuntimeCompatibility": true,
+    "createVersionedD3CounterSource": true,
+    "createD3OnlyKnownAnswerHarness": true,
+    "runOneD3OnlyUnityKnownAnswer": true,
+    "addProspectivePositiveControls": true,
+    "addProspectiveNegativeControls": true,
+    "createVersionedD3InstrumentContract": true,
+    "createSourceOnlyScientificRefreeze": true
+  },
+  "prohibitedScope": {
+    "retryRuntimeQualificationAttempt001": false,
+    "runFullRuntimeQualificationAttempt002": false,
+    "runDataExporterKnownAnswer": false,
+    "qualificationScheduleGeneration": false,
+    "qualificationInputGeneration": false,
+    "anonymousIdentityMapGeneration": false,
+    "qualificationMeasuredRootCreation": false,
+    "algorithmLaneExecution": false,
+    "formalInputGeneration": false,
+    "formalMeasuredRootCreation": false,
+    "formalCollection": false,
+    "formalAnalysis": false,
+    "algorithmRanking": false,
+    "winnerAdjudication": false
+  },
+  "candidateCounter": {
+    "api": "System.GC.GetTotalAllocatedBytes(precise: true)",
+    "scope": "process-wide managed allocations during the synchronous measured boundary",
+    "nativeAllocationsIncluded": false,
+    "selectionRule": "The candidate may be frozen only if the one-shot D3-only Unity control passes every prospective positive, negative, monotonicity, and scale-separation criterion."
+  },
+  "knownAnswerDesign": {
+    "negativeControlIntervals": 64,
+    "negativeControlMaximumBytesPerEmptyInterval": 65536,
+    "positiveControlBytes": [1048576, 4194304],
+    "positiveControlMinimumDifferenceRule": "Each observed difference must be at least its requested retained byte-array length.",
+    "scaleSeparationRule": "The 4194304-byte result minus the 1048576-byte result must be at least 3145728 bytes."
+  },
+  "reservedPaths": {
+    "verificationRootRelativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001",
+    "d3KnownAnswerOutputRelativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/d3-known-answer"
+  },
+  "runtimeBindings": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "unityVersion": "2022.3.30f1c1",
+    "maximumConcurrentUnityProcesses": 1,
+    "d3OnlyRunTimeoutMilliseconds": 600000,
+    "automaticRetryAuthorized": false
+  },
+  "evidenceBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

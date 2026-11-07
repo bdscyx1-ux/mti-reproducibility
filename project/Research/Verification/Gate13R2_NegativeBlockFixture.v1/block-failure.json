@@ -1,0 +1,17 @@
+{
+    "schemaVersion": 1,
+    "failureKind": "gate13-r2-process-reuse-block-failure-v1",
+    "failedAtUtc": "2026-10-06T06:10:57.2099369Z",
+    "blockId": "g13r2-negative-partial-block-v1-b001",
+    "processId": 25108,
+    "completedSampleCount": 1,
+    "failedPosition": 2,
+    "failedRunId": "g13r2-negative-partial-block-v1-b001-p02-dstar-l",
+    "exceptionType": "System.IO.IOException",
+    "message": "Output directory is not empty; refusing to mix or overwrite runs: H:\\DDM_Final_Project\\Research\\Verification\\Gate13R2_NegativeBlockFixture.v1\\runs\\p01-astar-r",
+    "stackTrace": "System.IO.IOException: Output directory is not empty; refusing to mix or overwrite runs: H:\\DDM_Final_Project\\Research\\Verification\\Gate13R2_NegativeBlockFixture.v1\\runs\\p01-astar-r\r\n  at DDM.Research.Editor.ResearchPlanningProcessReuseBatchCommand.EnsureFreshOutputDirectory (System.String outputDirectory) [0x0003b] in H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\ResearchPlanningProcessReuseBatchCommand.cs:739 \r\n  at DDM.Research.Editor.ResearchPlanningProcessReuseBatchCommand.RunSample (System.String projectRoot, System.String outputRoot, System.String scenarioPath, DDM.Research.Editor.ResearchPlanningProcessReuseBatchCommand+BlockPlan plan, DDM.Research.Editor.ResearchPlanningProcessReuseBatchCommand+BlockEntry entry, System.String blockPlanSha256, DDM.Research.Editor.ResearchPlanningProcessReuseBatchCommand+ProcessTelemetry before, System.Diagnostics.Process process) [0x0000e] in H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\ResearchPlanningProcessReuseBatchCommand.cs:388 \r\n  at DDM.Research.Editor.ResearchPlanningProcessReuseBatchCommand.Run () [0x0017d] in H:\\DDM_Final_Project\\Assets\\_Scripts\\Research\\Editor\\ResearchPlanningProcessReuseBatchCommand.cs:311 ",
+    "laterPositionsExecuted": false,
+    "automaticRetryAttempted": false,
+    "automaticResumeAttempted": false,
+    "formalCampaign": false
+}

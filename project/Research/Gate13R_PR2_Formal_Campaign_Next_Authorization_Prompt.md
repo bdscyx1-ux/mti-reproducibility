@@ -1,0 +1,78 @@
+# Copyable next authorization — Gate 13R research-question-aligned S48/H48 formal campaign
+
+下列授权词用于下一阶段。它会授权一次 Gate 13R 正式 timing campaign，但仍不授权 Gate 14R、Playable/OBS timing 混入、自动 retry、自动 resume、top-up 或 partial-attempt merge。
+
+```text
+授权 Gate 13R-PR2 S48/H48 正式 campaign 的一次受控执行；不授权 Gate 14R。
+
+一、唯一活动配置与冻结输入
+
+1. 以 `Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json`（SHA-256 `669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc`）为唯一 PR2 readiness checkpoint。
+
+2. 只允许使用以下 active formal-preparation v2 artifacts：
+   - `Research/Gate13R_PR2_Formal_Campaign_Config.v2.json`，SHA-256 `87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e`；
+   - `Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl`，SHA-256 `df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae`；
+   - `Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json`，SHA-256 `b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724`；
+   - `Research/Gate13R_PR2_Storage_WallClock_Preflight.v2.json`，SHA-256 `c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435`；
+   - `Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json`，SHA-256 `9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56`；
+   - `Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json`，SHA-256 `940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e`；
+   - `Research/Gate13R_PR2_Formal_Preparation_Amendment.v1.json`；
+   - Gate 13R-PR1 metric/contrast registries、Gate 10R attempt 4、Gate 11R attempt 2 retained bundle、Gate 12R v4，以及 PR1B v4 recovery 中被上述 config/provenance 精确绑定的输入。
+
+3. PR2 official v1 artifact set 和 validation attempts 1–3 只作为失败/修复历史保留，禁止用于正式启动。旧 cold-process、parallel、36h/48h、strict-serial 10% v2、PR1B pilots 及其他历史 config/schedule/prompt 均不得启动或与本次数据合并。
+
+4. 完整保留并保持字节不变：Gate 10R/11R/12R/PR1/PR1B 全部冻结证据、PR1B v7 failed pilot、v4 recovery、PR2 v1/v2 artifacts、PR2 validation attempts 1–4、原始游戏脚本、原始场景和原始项目归档。
+
+二、正式设计
+
+5. 正式设计固定为完整 74-campaign `S48/H48`：
+   - 32 个 shared-goal campaigns，每 campaign 48 个完整四算法 Williams blocks；
+   - 21 个 heterogeneous scenarios，每 scenario 48 个 matched superblocks；
+   - 每个 matched superblock 含一个 fresh per-agent process 和一个 fresh grouped-field process；
+   - 每个 heterogeneous scenario 的 AB/BA 为 24/24；
+   - shared 共 1,536 processes / 6,144 samples；
+   - heterogeneous 共 1,008 matched superblocks / 2,016 processes / 4,032 samples；
+   - 总计 3,552 fresh Unity block processes / 10,176 algorithm samples。
+
+6. 严格串行，最大并发 Unity Editor 数为 1。一个 fresh Unity Editor process 最多执行一个完整 Williams block；每个算法在 block 内最多一次；每样本完整 reset；禁止跨 block、matched superblock 或 campaign process reuse。
+
+7. P1 仍是唯一 confirmatory primary endpoint；shared C1–C5 是 Holm FWER 0.05 confirmatory family；heterogeneous C1–C4 是 secondary system/treatment contrasts；P2–P5 supportive；M1–M5 留给 Gate 14R。15% 只是 power-planning effect anchor，不是 practical-superiority margin。不得修改 ratio-to-1/CI/Holm 规则，不得做 adaptive stopping，不得把 pooled 结果解释为每个 campaign 均优越。
+
+8. correctness、oracle、structural exact-match、deterministic identity、reset、telemetry、managed-memory、hash/provenance、failure/timeout denominator 和排除规则保持冻结。Playable Scene 与 OBS 只能用于未来独立可视化，禁止进入正式 timing 进程或正式 timing inference。
+
+三、正式启动前的非执行实现与硬门禁
+
+9. 允许为 active v2 config/schedule 新建一个 versioned formal execution adapter/orchestrator、authorization record、prelaunch test design、atomic checkpoint 和 provenance；只能把 v2 schedule 映射到已经冻结的 block runner，不得修改算法、场景、Williams/matched-superblock 顺序、reset、telemetry、memory 或统计语义。
+
+10. 在创建正式输出根前，必须完成并通过：
+    - Windows PowerShell 5.1 与活动 PowerShell runtime parser/binding 检查；
+    - config/schema/schedule/manifest 全量解析、SHA-256 和 deterministic reconstruction；
+    - 3,552 process / 10,176 sample、74×48、1,008 matched-superblock、AB/BA 24/24、order×row 12/cell 和唯一 run/output identity 复核；
+    - execution adapter 的静态、单元、synthetic fixture、negative no-receipt/fail-closed 和 validation-only dry-run；
+    - frozen upstream tree/key-file 不变性；
+    - Unity lock hygiene、零非本任务 Unity process、license/entitlement、网络、原生 Windows PowerShell 5.1 `PSModulePath`、高性能电源、禁用休眠、环境/热状态与存储检查；
+    - H: 可用空间不得低于 `57,397,541,440` bytes，并重新计算原始字节预算；
+    - 精确 formal root 和同版本 formal execution receipt 在授权启动前均不存在。
+
+11. 允许对第 9–10 条中本阶段新建且尚未创建 formal root、尚未启动任何 measured block 的 adapter/schema/validation-only 实现缺陷进行版本化修复和重试；每次失败必须独立保存 receipt、日志、manifest、checkpoint 与哈希。不得通过放宽门禁、修改 frozen config/schedule 或改变研究语义取得通过。
+
+四、一次正式执行
+
+12. 只有全部启动前硬门禁通过后，才创建精确正式根：
+    `H:\DDM_Final_Project\Research\FormalRuns\Gate13R_RQAligned_S48H48\v1`
+    并创建与 authorization、active config、schedule、manifest、readiness、adapter、resolved root 和全部 preflight 结果精确绑定的 versioned formal execution receipt。
+
+13. formal root 和 receipt 创建后，只允许启动一次完整正式 attempt，按 schedule 的 global process ordinal 严格串行执行。不得改变顺序、跳过 block、并行化、复用进程、提前停止、补齐、择优保留或动态改变样本量。
+
+14. 任一 measured sample、block、matched superblock、hash、telemetry、correctness、memory、license、环境或持久化硬门禁失败时立即 fail closed：
+    - 不启动下一个 block；
+    - 原子保存 formal failure checkpoint、execution receipt 状态、部分输出 manifest、日志、当前 global ordinal、campaign/superblock/block/run identity、文件数、原始字节数和最后写入时间；
+    - 标记 `FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE`；
+    - 停止并向我报告，不得自动开始新的正式 attempt。
+
+15. 禁止自动 retry、自动 resume、top-up、partial-attempt merge、把失败 attempt 改写为通过、把 pilot/历史 observations 混入正式数据，或在本授权下启动 Gate 14R。
+
+16. 完成 3,552 processes / 10,176 samples 后，只运行冻结的完整性、hash/provenance、block/matched-superblock completeness 和 formal-readiness-for-analysis 审计；不得在没有后续授权时启动 Gate 14R。成功后停止并向我请求 Gate 14R/正式分析阶段的单独授权。
+
+17. 时间与存储仅为规划包络：serial p50 `20.808185450666667 h`，conservative summed-p95 `26.45538207066667 h`，projected p95 raw bytes `9,631,912,320`，1.5× safety bytes `14,447,868,480`。这些数值不是放宽门禁或保证完成时间的依据。
+```

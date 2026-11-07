@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "preservationId": "gate13r-pr1b-v2-pilot-attempt2-terminal-preservation-v1",
+  "createdAtUtc": "2026-10-08T12:46:35.3519611Z",
+  "createdAtAsiaShanghai": "2026-10-08T20:46:35.3519611+08:00",
+  "status": "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+  "classification": [
+    "NON-FORMAL",
+    "EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "EXCLUDED-FROM-ORDER-EFFECT-INFERENCE",
+    "WARMUP-ONLY",
+    "NO-MEASURED-OBSERVATIONS"
+  ],
+  "pilotRoot": {
+    "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2",
+    "fileCountIncludingPartialManifest": 49,
+    "rawBytesIncludingPartialManifest": 1955414,
+    "canonicalTreeSha256": "85a3fba48ae687acaa04b7b1f91afe0dc115f6efdde5bcaa4bbffa50e9139557",
+    "lastWriteUtc": "2026-10-08T12:45:04.2247357Z"
+  },
+  "terminalEvidence": [
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/failure-receipt.json","rawBytes":658,"sha256":"c6b81c9af3c69683c92d718f63e6064fcdc722e01bb9bb0f743c921fef244ffd"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/pilot-checkpoint.json","rawBytes":3229,"sha256":"2bf4646b9cc2f1e8a2b5854009dd2d1c1182f524d8a0bd10b55da7a3af94851a"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/partial-output-manifest.json","rawBytes":20024,"sha256":"3d72f76c65be61554d2730a4dffc77504442e4fa5f7dd0a15acfe65293f7d844"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/warmup/wave-033/slot-01-core-r01-s1-hetero/pair-b033/ab-s1/p02-grouped-field/block-failure.json","rawBytes":5255,"sha256":"73f8586c8114569044c45e79be3841de76da9caea7c052865ed924ff52f7c82f"},
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2/warmup/wave-033/slot-01-core-r01-s1-hetero/pair-b033/ab-s1/p02-grouped-field.lock-hygiene/g13r-pr1b-w-b033-ab-s1-core-r01-s1-hetero-grouped-field-b033.quiescence-failure.json","rawBytes":1310,"sha256":"bbad6f1ec06de7df7fdeb82076b9e5beb8961da425ed8034c82e5d70e17aff70"}
+  ],
+  "executionCounts": {
+    "completedWarmupBlockProcesses": 1,
+    "partiallyExecutedWarmupBlockProcesses": 1,
+    "completedMeasuredBlockProcesses": 0,
+    "completedMeasuredSamples": 0,
+    "measuredStageStarted": false,
+    "orderEffectAnalyzerRun": false
+  },
+  "failureIdentity": {
+    "failedWarmupOrdinal": 2,
+    "scenarioId": "core-r01-s1-hetero",
+    "block": 33,
+    "superblockOrder": "AB",
+    "comparisonCohortId": "grouped-field-heterogeneous-goal-v1",
+    "failedPosition": 2,
+    "failedAlgorithmId": "IDFF",
+    "exceptionType": "System.IO.DirectoryNotFoundException",
+    "atomicTemporaryPathLengthCharacters": 260,
+    "correspondingSuccessfulCffTemporaryPathLengthCharacters": 259,
+    "reasonCode": "WINDOWS-MONO-MAX-PATH-AT-ATOMIC-TEMP-FILE"
+  },
+  "staleLockTerminalState": {
+    "relativePath": "Temp/UnityLockfile",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "unityProcessCount": 0,
+    "exclusiveReadWriteAvailable": true,
+    "deleted": false,
+    "deletionAuthorizedInThisTerminalStep": false
+  },
+  "verificationEvidence": {
+    "v9TreeSha256": "5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74",
+    "v10TreeSha256": "5d20fbea2e6e734c9feddc2ed199a365bc307caac1a4b2cef3bb680cfebb2d44",
+    "v11TreeSha256AfterPilotLaunchWrapperEvidence": "d819eb685a119175a5b1e362e7ac14997ff27b6f6696d109a6dd0202546b8d5b"
+  },
+  "reservedFormalRootPresent": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

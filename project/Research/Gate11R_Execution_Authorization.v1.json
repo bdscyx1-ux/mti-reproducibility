@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate11r-scenario-playable-bundle-authorization-v1",
+  "authorizedAtUtc": "2026-10-07T02:18:07.0852248Z",
+  "authorizationSourcePath": "Research/Gate10R_to_Gate12R_LedgerEntries/063-user-gate11r-authorization-source.txt",
+  "authorizationSourceSha256": "49485321501bc10220279c61a6d4d5530b7d50110c83ee59f72e867ee4b798be",
+  "activeUpstreamDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "activeUpstreamEvidenceRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+  "activeUpstreamTreeSha256": "ac7f70b2098f6fc28eaa48116faabe1a527f34168d1c851f5a5d7e8cbbbc53b2",
+  "authorizedScope": [
+    "freeze_and_test_gate11r_specification",
+    "freeze_and_test_gate11r_test_design",
+    "generate_and_verify_53_canonical_scenarios",
+    "generate_and_verify_74_campaign_profiles",
+    "generate_and_verify_212_algorithm_presets",
+    "generate_and_verify_53_playable_unity_scenes",
+    "generate_and_verify_gate11r_catalogs_manifests_and_checkpoint"
+  ],
+  "notAuthorized": [
+    "gate12r_pilot",
+    "gate13r_preparation",
+    "gate13r_formal_campaign",
+    "modification_of_protected_historical_roots",
+    "modification_of_original_scripts_or_scenes"
+  ],
+  "failurePolicy": "FAIL-CLOSED-AT-FIRST-HARD-GATE-NO-AUTO-RETRY-NO-AUTO-RESUME",
+  "status": "AUTHORIZED"
+}

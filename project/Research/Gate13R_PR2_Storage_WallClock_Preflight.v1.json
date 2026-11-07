@@ -1,0 +1,57 @@
+{
+  "candidateDecisionTableRecord": {
+    "abQuotaPerHeterogeneousScenario": 24,
+    "baQuotaPerHeterogeneousScenario": 24,
+    "candidateId": "S48/H48",
+    "conservativeSummedP95Hours": 26.45538207066667,
+    "failureLossExposure": "ONE-INCOMPLETE-BLOCK-OR-SUPERBLOCK; NO-AUTO-RESUME",
+    "heterogeneousMatchedSuperblocks": 1008,
+    "heterogeneousMatchedSuperblocksPerScenario": 48,
+    "heterogeneousProcesses": 2016,
+    "heterogeneousSamples": 4032,
+    "minimumFreeBytes": 57397541440,
+    "projectedP95RawBytes": 9631912320,
+    "projectedRawBytesWith1p5Safety": 14447868480,
+    "serialP50Hours": 20.808185450666667,
+    "sharedBlocksPerCampaign": 48,
+    "sharedProcesses": 1536,
+    "sharedSamples": 6144,
+    "status": "CANDIDATE/UNFROZEN/NOT-AUTHORIZED-FOR-LAUNCH",
+    "storageReserveBytes": 42949672960,
+    "totalAlgorithmSamples": 10176,
+    "totalUnityProcesses": 3552
+  },
+  "formalLaunchAuthorized": false,
+  "formalLaunchRecheckRequired": true,
+  "preflightKind": "gate13r-pr2-preparation-storage-wallclock-preflight-v1",
+  "preparationObservation": {
+    "activePowerSchemeGuid": "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+    "formalExecutionReceiptAbsent": true,
+    "formalRootAbsent": true,
+    "freeBytesAtPreparation": 276294029312,
+    "freeSpaceGatePassedAtPreparation": true,
+    "observedAtUtc": "2026-10-08T16:08:24.434691+00:00",
+    "unityEditorProcessCount": 0
+  },
+  "projection": {
+    "conservativeSummedP95Hours": 26.45538207066667,
+    "minimumLaunchFreeBytes": 57397541440,
+    "projectedP95RawBytes": 9631912320,
+    "projectedSafetyBytes": 14447868480,
+    "reserveBytes": 42949672960,
+    "safetyMultiplier": 1.5,
+    "serialP50Hours": 20.808185450666667
+  },
+  "recheckBeforeFormalRootCreation": [
+    "frozen-input-hashes",
+    "environment-and-os",
+    "power-and-thermal-state",
+    "license-and-network-reachability",
+    "unity-lock-hygiene",
+    "raw-byte-storage-and-free-space",
+    "formal-root-absence",
+    "formal-execution-receipt-absence"
+  ],
+  "schemaVersion": 1,
+  "status": "PREPARATION-PASS-NOT-LAUNCH-AUTHORIZATION"
+}

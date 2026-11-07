@@ -1,0 +1,47 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-pr1b-v3-pathsafe-telemetry-derived-wrapper-receipt-v1",
+    "createdAtUtc":  "2026-10-08T13:07:57.6988929Z",
+    "sourceSha256":  "dad26465e5c0fc349806b98fea965f46abf670ef2b5b720cee36665839a3b3b3",
+    "derivedSha256":  "9180ea8edb599bb04fd802f6a10068e9e844487911c972fa3087482dda24ae9a",
+    "routes":  [
+                   {
+                       "from":  "$compiler=if(Test-Path -LiteralPath $unityLog){@(Select-String -LiteralPath $unityLog -Pattern \u0027error CS\\d+|Compilation failed|Scripts have compiler errors|executeMethod.+could not be found\u0027 -CaseSensitive:$false)}else{@()}",
+                       "to":  "$compiler=@();if(Test-Path -LiteralPath $unityLog){$compiler=@(Select-String -LiteralPath $unityLog -Pattern \u0027error CS\\d+|Compilation failed|Scripts have compiler errors|executeMethod.+could not be found\u0027 -CaseSensitive:$false)}",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Import-Module (Join-Path $PSScriptRoot \u0027Gate12RProcessReusePreparation.psm1\u0027) -Force",
+                       "to":  "Import-Module (Join-Path $ProjectPath \u0027Research\\Gate12RProcessReusePreparation.psm1\u0027) -Force",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Import-Module (Join-Path $PSScriptRoot \u0027Gate10RLockHygieneV3.psm1\u0027) -Force",
+                       "to":  "Import-Module (Join-Path $ProjectPath \u0027Research\\Gate10RLockHygieneV3.psm1\u0027) -Force",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "DDM.Research.Editor.Gate10RProcessReuseBatchCommand.ProbeTelemetry",
+                       "to":  "DDM.Research.Editor.Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3.ProbeTelemetry",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\FormalRuns\\Gate13R_ProcessReuse_5pct\\v1",
+                       "to":  "Research\\FormalRuns\\Gate13R_RQAligned\\v1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "\u0027gate12r-telemetry-probe\u0027",
+                       "to":  "\u0027gate13r-pr1b-v3-telemetry-probe\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "summaryKind=\u0027gate12r-telemetry-probe-wrapper-v1\u0027",
+                       "to":  "summaryKind=\u0027gate13r-pr1b-v3-pathsafe-telemetry-probe-wrapper-v1\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "researchSemanticsChanged":  false,
+    "memoryObservabilityCommandChanged":  true,
+    "formalCampaign":  false
+}

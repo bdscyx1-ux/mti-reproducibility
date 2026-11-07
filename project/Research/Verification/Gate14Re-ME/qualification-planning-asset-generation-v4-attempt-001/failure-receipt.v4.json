@@ -1,0 +1,19 @@
+{
+  "schema": "gate14re-me-qualification-planning-asset-generation-v4-failure-receipt-v4",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v4-attempt-001",
+  "status": "FAIL_CLOSED_PLANNING_ASSET_GENERATION",
+  "failedAtUtc": "2026-10-19T11:55:26.326979Z",
+  "mode": "generate",
+  "errorType": "NameError",
+  "exactReason": "name 'null' is not defined",
+  "traceback": "Traceback (most recent call last):\n  File \"H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-planning-asset-generation-v4-attempt-001\\generate_and_validate_planning_assets_v4_0.py\", line 1355, in main\n    generate(project_root, attempt_root)\n  File \"H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-planning-asset-generation-v4-attempt-001\\generate_and_validate_planning_assets_v4_0.py\", line 939, in generate\n    write_json(attempt_root / \"stage-contract.v4.json\", stage_contract(project_root, attempt_root, created_at))\n                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-planning-asset-generation-v4-attempt-001\\generate_and_validate_planning_assets_v4_0.py\", line 911, in stage_contract\n    \"finalB\": null,\n              ^^^^\nNameError: name 'null' is not defined\n",
+  "partialAssetsMayBeAdopted": false,
+  "automaticRetryPerformed": false,
+  "measuredRootCreated": false,
+  "unityInvocations": 0,
+  "plannerInvocations": 0,
+  "algorithmLaneExecutions": 0,
+  "qualificationObservations": 0,
+  "formalObservations": 0
+}

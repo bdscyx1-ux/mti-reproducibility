@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "gate13-nonexecuting-preparation-manifest-v1",
+  "classification": "implementation-and-validation-only-no-formal-execution",
+  "savedAt": "2026-10-06T11:40:30+08:00",
+  "materialPassport": {
+    "originSkill": "experiment-agent",
+    "originMode": "execute",
+    "verificationStatus": "VALIDATION-PASSED-FINAL-AUDIT-PENDING",
+    "versionLabel": "gate13_nonexecuting_preparation_v1"
+  },
+  "authorizationBoundary": {
+    "nonExecutingPreparationAuthorized": true,
+    "authorizationSource": "user-message-2026-10-06-gate13-nonexecuting-preparation",
+    "gate13ExecutionAuthorized": false,
+    "formalCampaignStartAllowed": false,
+    "executionAuthorizationReceiptCreated": false,
+    "formalOutputRootCreationAllowedInThisStage": false,
+    "timingCampaignAllowedInThisStage": false,
+    "nextRequiredAuthorization": "explicit-gate13-formal-execution-authorization"
+  },
+  "upstreamDecision": {
+    "relativePath": "Research/Gate13_Readiness_Amendment.v1.json",
+    "sha256": "1ccf5c6e1e2c646d160e7b597381c797cc14e6123134a28b429fcb773515e8b2",
+    "amendmentId": "gate13-readiness-amendment-v1",
+    "amendmentKeptByteIdentical": true,
+    "precisionRelativeHalfWidthTarget": 0.1,
+    "maximumPerAlgorithmPerCell": 148,
+    "gate11MatrixPolicy": "retain-byte-identical-v1"
+  },
+  "preparationDocuments": {
+    "specification": {
+      "relativePath": "Research/Gate13_NonExecuting_Preparation_Specification.md",
+      "sha256": "469901d6dcbf724ed5d9ab3f03054143494d344cf9736fac1f48501fa7388be5"
+    },
+    "testDesign": {
+      "relativePath": "Research/Gate13_NonExecuting_Preparation_Test_Design.md",
+      "sha256": "05207a2ad20c2cb76f65413fe781568864285279788e29b82760c9d5d32af26f"
+    }
+  },
+  "configuration": {
+    "relativePath": "Research/Gate13_Formal_Campaign_Config.v1.json",
+    "sha256": "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874",
+    "configId": "gate13-formal-campaign-config-v1",
+    "campaignCount": 74,
+    "expectedUnityProcessCount": 15056,
+    "maximumBlocksSupported": 148,
+    "gate13ExecutionAuthorized": false,
+    "formalCampaignStartAllowed": false
+  },
+  "implementationFiles": [
+    {
+      "id": "gate13-preparation-module",
+      "relativePath": "Research/Gate13FormalPreparation.psm1",
+      "sha256": "123a5a9ab1719aef75d6f9e7fe58494bc6e383dea595bab295350e4fc2efe6e9"
+    },
+    {
+      "id": "deterministic-config-generator",
+      "relativePath": "Research/New-Gate13FormalCampaignConfig.ps1",
+      "sha256": "1bed7867248cb0970eddf784377a47579a5969470eef4553e54f87dfe7c297bd"
+    },
+    {
+      "id": "cap148-scenario-campaign-runner",
+      "relativePath": "Research/Run-Gate13FormalScenarioCampaign.ps1",
+      "sha256": "2ff813c53ed5b950033374361d448ca0a5bf3abcf4c97d5a5c361f6b3bbb2fbf"
+    },
+    {
+      "id": "formal-orchestrator",
+      "relativePath": "Research/Run-Gate13FormalCampaign.ps1",
+      "sha256": "ce94b32e3f79a1ae2f64c3800c32d0875b47d99906b5e89b5ce723966791180b"
+    }
+  ],
+  "verificationEvidence": [
+    {
+      "id": "gate13-preparation-unit-tests-60-of-60",
+      "scriptRelativePath": "Research/Verification/Run-Gate13PreparationUnitTests.ps1",
+      "scriptSha256": "04f0032f47a71f8581b60c2c2018923699376143259662ab66a1fce4f556fed3",
+      "summaryRelativePath": "Research/Verification/Gate13_Preparation_UnitTests.summary.json",
+      "summarySha256": "535820d3da557d8098bbfe81078bae6b1446fbd865de67d78c8fdd4c6ce21db5",
+      "passed": true
+    },
+    {
+      "id": "gate13-preparation-validation",
+      "scriptRelativePath": "Research/Verification/Run-Gate13PreparationValidation.ps1",
+      "scriptSha256": "725c7bc63cd6e89d541f46432cb49a842997141d4d68fd58e545714b6c0f8f6c",
+      "summaryRelativePath": "Research/Verification/Gate13_Preparation_Validation.summary.json",
+      "summarySha256": "91d6eb80ba9ad2ac528bd4c0b8f8666db734cb616c69cd681e1a1b4b482338b1",
+      "passed": true
+    },
+    {
+      "id": "gate13-readiness-amendment-audit",
+      "scriptRelativePath": "Research/Verification/Run-Gate13ReadinessAmendmentAudit.ps1",
+      "scriptSha256": "f1ec188c8a4c7ddea4010beee581914610dcfc2488aadff4f876fcf5d8fa9a90",
+      "summaryRelativePath": "Research/Verification/Gate13_Readiness_Amendment_Audit.summary.json",
+      "summarySha256": "8d1b34a7f6ec28d01b09466b7b6ee609c5bc5a0fc53d97ea025c36b04725cda2",
+      "passed": true
+    },
+    {
+      "id": "gate12-analysis-regression-63-of-63",
+      "scriptRelativePath": "Research/Verification/Run-Gate12AnalysisUnitTests.ps1",
+      "scriptSha256": "e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1",
+      "summaryRelativePath": "Research/Verification/Gate12_AnalysisUnitTests.summary.json",
+      "summarySha256": "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d",
+      "passed": true
+    }
+  ],
+  "protectedEvidence": {
+    "gate11BundleManifestSha256": "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+    "gate11OrderedAggregateSha256": "91d9e3c66327185e48f68cafb05c674cc49e929adb576973098d0bfebd2e9a88",
+    "gate11FileCount": 57,
+    "gate11ArtifactCount": 56,
+    "gate12SuccessfulV1FileCount": 1694,
+    "gate12PilotManifestSha256": "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a",
+    "gate12FinalAuditSha256": "87a5d93dead6dc367ab0716ad2e4e2239570fc42577be978d0f0378ca14f78c8",
+    "originalBaselineChecked": 24,
+    "originalBaselineMismatches": 0,
+    "gate10FairnessSpecificationSha256": "42a4a8439c3d7b46b7644bed14b8f91d87bae4c6f8b2183a73609ee5461e82dd",
+    "gate10RunnerSha256": "176f82fed18beee2fc7e2c8cb37ce988f7c7f4740cdeec3c5510b677843615c3",
+    "workloadRunnerSha256": "c75bed92db9b6df5d1123198acb5358fd58297aa770e78acd0c4530cf9fbbbfb"
+  },
+  "schedule": {
+    "cohortBlocks": {
+      "four-algorithm-shared-goal-v1": 52,
+      "per-agent-heterogeneous-goal-v1": 148,
+      "grouped-field-heterogeneous-goal-v1": 52
+    },
+    "cohortUnityProcessCounts": {
+      "four-algorithm-shared-goal-v1": 6656,
+      "per-agent-heterogeneous-goal-v1": 6216,
+      "grouped-field-heterogeneous-goal-v1": 2184
+    },
+    "completeWilliamsCyclesRequired": true,
+    "eachSampleUsesIndependentUnityProcess": true
+  },
+  "launchStoragePreflight": {
+    "p95ProjectedOutputBytes": 52942494009,
+    "minimumPostCampaignFreeBytes": 21474836480,
+    "minimumLaunchFreeBytes": 74417330489,
+    "comparisonUsesRawInt64Bytes": true,
+    "mustRunAfterFormalAuthorizationAndImmediatelyBeforeRootCreation": true,
+    "validationSnapshotFreeBytes": 162195468288,
+    "validationSnapshotMarginBytes": 87778137800,
+    "validationSnapshotPassed": true,
+    "validationSnapshotIsLaunchAuthorization": false
+  },
+  "checkpointAndFailurePolicy": {
+    "atomicCheckpoint": true,
+    "checkpointBeforeAndAfterEveryCampaign": true,
+    "outputStallIsAdvisoryOnly": true,
+    "hardTimeoutSecondsPerCampaign": 10800,
+    "hardTimeoutMayTerminateOwnedProcessTree": true,
+    "automaticRetryAllowed": false,
+    "automaticResumeAllowed": false,
+    "partialFailureArtifactsRetained": true
+  },
+  "finalState": {
+    "nonExecutingPreparationImplementationComplete": true,
+    "specificationAndTestDesignPassed": true,
+    "unitTestsPassed": true,
+    "regressionTestsPassed": true,
+    "validationOnlyPassed": true,
+    "formalOutputRootCreated": false,
+    "unityProcessStartedByGate13Preparation": false,
+    "timingCampaignStarted": false,
+    "gate13FormalExecutionStatus": "not-started-not-authorized"
+  }
+}

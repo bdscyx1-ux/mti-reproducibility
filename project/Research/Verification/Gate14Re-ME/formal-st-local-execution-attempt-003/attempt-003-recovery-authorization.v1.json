@@ -1,0 +1,92 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-recovery-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "authorizationId": "gate14re-me-formal-st-attempt-003-recovery-afca0184-5392-45a1-83e2-4222ee4e374f",
+  "authorizationNonce": "d25763a6-5286-412b-99fd-c9f68398766f",
+  "status": "AUTHORIZED_ATTEMPT_003_CONTROL_PLANE_RECOVERY_AND_CONTINUATION",
+  "sourceUserAuthorization": {
+    "channel": "current-user-message",
+    "text": "授权当前 attempt-003 自行修复并续跑，从头来时间成本不可接受",
+    "textUtf8Sha256": "c6d4cef14ab9b0f028bf3b0f5d9973bd3d558e4aec136c3994a3653a84712dae",
+    "interpretedScope": "Repair the attempt-003 control-plane append failure without restarting completed work, then continue collection from the first not-yet-created process ordinal."
+  },
+  "measuredRootRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "evidenceRootRelativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003",
+  "originalAuthorization": {
+    "authorizationId": "gate14re-me-formal-st-local-attempt-003-4e2ed5bc-57ca-43ea-b143-81c942344904",
+    "authorizationNonce": "f858378c-c0ed-4664-b59b-94bb86cfe07a",
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/formal-st-execution-authorization.v5.json",
+    "sha256": "7f37051f0a70594aafde5e58800e1f7e0687c83c4c78d714404163e6348bd1f2"
+  },
+  "frozenBindings": {
+    "implementationManifestSha256": "86b1c84b099849e052f3d9bea7e95da91ec492b98b058b25b284b20ab279ac82",
+    "acquisitionContractSha256": "b668fee1f1d245a3a898f958ea4b81af2fa328e2139d57ceebc162a3fb26a55b",
+    "inputFreezeManifestSha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "operationalResourceBudgetSha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2",
+    "fairnessBindingSha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+    "trustedIdentityRuleSha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+    "timestampComparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMEFormalSTRunnerV5_1.Run",
+    "originalSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_3/Run-Gate14ReMEFormalST.v5_3.ps1",
+    "originalSupervisorSha256": "fcfbc5c080e714c3c3e079797195b455d9a32db29e937ccb37768a34a3cbdda1"
+  },
+  "recoverySupervisor": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/Run-Gate14ReMEFormalST.Attempt003Recovery.v1.ps1",
+    "sha256": "0a7103c0d712f1c2d5420ce5e52c5d35d5852acd44369c785f176853a6d50780",
+    "importsProcessLifecycleAndIdentityFunctionsFromFrozenOriginalSupervisor": true,
+    "modifiesUnityRunner": false,
+    "modifiesInputsOrSchedule": false
+  },
+  "failedState": {
+    "launchReceiptSha256": "d695d44b6b3593923ffc482d120a00c96e04249b2a3fdb7480f7bb3224d1b959",
+    "processLedgerRowsBeforeRecovery": 7518,
+    "processLedgerSha256BeforeRecovery": "ea254a5e1c8a2c95c75fc55c56e8c69797438c01e8f66ef198ee4a172ad9dc22",
+    "failureReceiptSha256": "de84a01e02805f62f7ac574bd8c62b130b79b5db8c75a7136dba638cbdabbb70",
+    "failureLedgerRows": 1,
+    "failureLedgerSha256": "6836c4e448115d56c8efd18bfb35821ba17010dc36b46e22a6dcd02be03ad7f0",
+    "replacementLedgerRows": 0,
+    "replacementLedgerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "recoveredIdentityReceiptOrdinal": 7518,
+    "recoveredIdentityReceiptSha256": "2777453420b5f8cbd3b76b6a5fc10fac94b774fbb78763d6c26349a6c7741aa0",
+    "recoveredIdentityStatus": "PASS_TRUSTED_THREE_PHASE_COMPOSITE_IDENTITY_NATURAL_EXIT",
+    "recoveredIdentityExitCode": 0,
+    "recoveredSuperblockId": "formal-sb-1241",
+    "exactFailureClass": "CONTROL_PLANE_PROCESS_LEDGER_APPEND_SHARING_VIOLATION_AFTER_TRUSTED_NATURAL_ZERO_EXIT"
+  },
+  "recoveryPlan": {
+    "preserveOriginalFailureAndVoidEvidence": true,
+    "deleteOrRewriteFailureRow": false,
+    "reconstructMissingLedgerRowOrdinal": 7518,
+    "reconstructOnlyFromFrozenTrustedIdentityReceipt": true,
+    "acceptRecoveredCompleteSuperblockOrdinal": 1241,
+    "resumeFirstNewOrdinal": 7519,
+    "resumeFirstNewSuperblockOrdinal": 1242,
+    "remainingNewUnityProcesses": 324,
+    "rerunExistingAlgorithmLane": false,
+    "replacementPerformed": false,
+    "topUpBeyondFrozenSchedule": false,
+    "mergeAcrossAttempts": false,
+    "skipOrReorderFrozenSchedule": false,
+    "maximumConcurrentUnityProcesses": 1,
+    "automaticRetryAfterAnyNewFailure": false,
+    "terminalDisposition": "ACQUISITION_ONLY_WITH_AUTHORIZED_CONTROL_PLANE_RECOVERY_RAW_FROZEN_ACCEPTANCE_PENDING"
+  },
+  "authorizationBoundary": {
+    "formalCollectionContinuationAuthorized": true,
+    "controlPlaneRecoveryAuthorized": true,
+    "operationalContractAmendmentAuthorized": true,
+    "scientificDesignChangeAuthorized": false,
+    "formalAcceptanceExecutionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "rankingOrWinnerAuthorized": false,
+    "rawAlgorithmObservationInspectionAuthorized": false,
+    "independentReadOnlyOfflineAcceptanceRequired": true
+  },
+  "createdAtUtc": "2026-10-30T02:54:31.6258390Z"
+}

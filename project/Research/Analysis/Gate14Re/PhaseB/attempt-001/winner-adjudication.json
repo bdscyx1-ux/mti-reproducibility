@@ -1,0 +1,138 @@
+{
+  "basis": "The preregistered M1/M2 evidence did not uniquely select one eligible algorithm without forcing a ranking.",
+  "eligibleAlgorithms": [
+    "A",
+    "C",
+    "D"
+  ],
+  "eligibleProductionAlgorithms": [
+    "A*-R",
+    "C-FF",
+    "IDFF"
+  ],
+  "evidence": {
+    "A": {
+      "M1UniqueRule": {
+        "C": {
+          "passesUpperBelow0_95": false,
+          "ratioEstimate": 1.0,
+          "simultaneousUpper": 1.0
+        },
+        "D": {
+          "passesUpperBelow0_95": false,
+          "ratioEstimate": 1.0,
+          "simultaneousUpper": 1.0
+        }
+      },
+      "M2SecondaryRule": {
+        "C": {
+          "passesUpperBelow1_00": false,
+          "ratioEstimate": 1.000025134227658,
+          "simultaneousUpper": 1.000025134227658
+        },
+        "D": {
+          "passesUpperBelow1_00": false,
+          "ratioEstimate": 1.000025134227658,
+          "simultaneousUpper": 1.000025134227658
+        }
+      }
+    },
+    "C": {
+      "M1UniqueRule": {
+        "A": {
+          "passesUpperBelow0_95": false,
+          "ratioEstimate": 1.0,
+          "simultaneousUpper": 1.0
+        },
+        "D": {
+          "passesUpperBelow0_95": false,
+          "ratioEstimate": 1.0,
+          "simultaneousUpper": 1.0
+        }
+      },
+      "M2SecondaryRule": {
+        "A": {
+          "passesUpperBelow1_00": true,
+          "ratioEstimate": 0.9999748664040555,
+          "simultaneousUpper": 0.9999748664040555
+        },
+        "D": {
+          "passesUpperBelow1_00": false,
+          "ratioEstimate": 1.0,
+          "simultaneousUpper": 1.0
+        }
+      }
+    },
+    "D": {
+      "M1UniqueRule": {
+        "A": {
+          "passesUpperBelow0_95": false,
+          "ratioEstimate": 1.0,
+          "simultaneousUpper": 1.0
+        },
+        "C": {
+          "passesUpperBelow0_95": false,
+          "ratioEstimate": 1.0,
+          "simultaneousUpper": 1.0
+        }
+      },
+      "M2SecondaryRule": {
+        "A": {
+          "passesUpperBelow1_00": true,
+          "ratioEstimate": 0.9999748664040555,
+          "simultaneousUpper": 0.9999748664040555
+        },
+        "C": {
+          "passesUpperBelow1_00": false,
+          "ratioEstimate": 1.0,
+          "simultaneousUpper": 1.0
+        }
+      }
+    },
+    "M1TieBand": {
+      "allEligiblePairsWhollyWithin0_95To1_05": true,
+      "pairs": [
+        {
+          "pair": "A/C",
+          "simultaneous95RatioCI": [
+            1.0,
+            1.0
+          ],
+          "whollyWithinTieBand": true
+        },
+        {
+          "pair": "A/D",
+          "simultaneous95RatioCI": [
+            1.0,
+            1.0
+          ],
+          "whollyWithinTieBand": true
+        },
+        {
+          "pair": "C/D",
+          "simultaneous95RatioCI": [
+            1.0,
+            1.0
+          ],
+          "whollyWithinTieBand": true
+        }
+      ]
+    }
+  },
+  "forcedWinner": false,
+  "postHocExpansionPerformed": false,
+  "retainedCandidateAlgorithms": [
+    "A",
+    "C",
+    "D"
+  ],
+  "retainedCandidateProductionAlgorithms": [
+    "A*-R",
+    "C-FF",
+    "IDFF"
+  ],
+  "schema": "gate14re-phase-b-winner-adjudication-v1",
+  "status": "NO_UNIQUE_WINNER",
+  "winnerAlgorithmLabel": null,
+  "winnerProductionAlgorithmId": null
+}

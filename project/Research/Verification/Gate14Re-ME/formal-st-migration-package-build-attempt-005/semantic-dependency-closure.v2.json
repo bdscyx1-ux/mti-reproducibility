@@ -1,0 +1,108 @@
+{
+  "schema": "gate14re-me-formal-st-semantic-dependency-closure-v2",
+  "status": "PASS_SIX_ALGORITHM_SPECIFICATION_AND_IMPLEMENTATION_CLOSURE",
+  "fairnessBindingSha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+  "boundFileCount": 14,
+  "algorithmSpecificationFiles": 6,
+  "algorithmImplementationFiles": 6,
+  "navigationDependencyFiles": 2,
+  "files": [
+    {
+      "algorithmId": "A*-R",
+      "role": "implementation",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+      "bytes": 25807,
+      "sha256": "a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778"
+    },
+    {
+      "algorithmId": "A*-R",
+      "role": "specification",
+      "relativePath": "Research/AStar_Repeated_Specification.md",
+      "bytes": 5064,
+      "sha256": "0fe75b470bb0b1f256278ddf8089b86660a80a5c20c99006a140ff7c3ec8c5eb"
+    },
+    {
+      "algorithmId": "BiA*-R",
+      "role": "implementation",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "bytes": 34160,
+      "sha256": "82316036aba90be69ca746288798bac1789cdb09afa65cf9ad4180975d1f947e"
+    },
+    {
+      "algorithmId": "BiA*-R",
+      "role": "specification",
+      "relativePath": "Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "bytes": 755,
+      "sha256": "593e21946de91c8ddab59f70be44084aeb8afe7ae72d52e490589f6e77f16ead"
+    },
+    {
+      "algorithmId": "D*L",
+      "role": "implementation",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+      "bytes": 40229,
+      "sha256": "b6938a3389de4764a26ed15c59582dd31017e8b44c38fa004be356989ca8d199"
+    },
+    {
+      "algorithmId": "D*L",
+      "role": "specification",
+      "relativePath": "Research/DStar_Lite_Specification.md",
+      "bytes": 11085,
+      "sha256": "d25ea4cadf6e08b802c51d8b2a3245da8b436d4b1029973bed576d89de34d732"
+    },
+    {
+      "algorithmId": "LPA*",
+      "role": "implementation",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "bytes": 40279,
+      "sha256": "948bdc4019e96776c8d382f381c159041038ac191f4b6000debd94f7daf8a82a"
+    },
+    {
+      "algorithmId": "LPA*",
+      "role": "specification",
+      "relativePath": "Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "bytes": 767,
+      "sha256": "703e72a92207ceb05f0e63c35322f2a8e727b5e8be6e1dc699cd287ce254d4a9"
+    },
+    {
+      "algorithmId": "C-FF",
+      "role": "implementation",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "bytes": 34279,
+      "sha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"
+    },
+    {
+      "algorithmId": "C-FF",
+      "role": "specification",
+      "relativePath": "Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "bytes": 10875,
+      "sha256": "6f29c7545c2f9d68ad0bfd2b707cb7f7798fd80b39816eb22010f278a6978223"
+    },
+    {
+      "algorithmId": "IDFF",
+      "role": "implementation",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "bytes": 46884,
+      "sha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"
+    },
+    {
+      "algorithmId": "IDFF",
+      "role": "specification",
+      "relativePath": "Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "bytes": 14050,
+      "sha256": "8a7895c0daa38810a5b1087348be11b427cfeb1f6f0ed2f27730578ac84e70ef"
+    },
+    {
+      "role": "navigation-contract",
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "bytes": 5661,
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    {
+      "role": "navigation-grid",
+      "relativePath": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "bytes": 10018,
+      "sha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"
+    }
+  ],
+  "testedAtUtc": "2026-10-23T03:36:50.991279Z"
+}

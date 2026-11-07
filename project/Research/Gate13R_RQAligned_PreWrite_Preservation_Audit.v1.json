@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13r-pr1-prewrite-preservation-audit-v1",
+  "capturedAtUtc": "2026-10-08T10:40:36.7028036Z",
+  "capturedAtAsiaShanghai": "2026-10-08T18:40:36.7028036+08:00",
+  "projectRoot": "H:/DDM_Final_Project",
+  "identityAlgorithm": {
+    "id": "sorted-relative-path-byte-count-file-sha256-lf-utf8-v1",
+    "description": "For every recursively enumerated file, sort absolute paths using the host OS culture collation used by PowerShell Sort-Object, form relative/path|byteCount|lowercaseSha256, join with LF, hash UTF-8 bytes with SHA-256.",
+    "note": "This identity is self-contained and is not asserted to equal older manifests that used another aggregate algorithm."
+  },
+  "protectedRoots": [
+    {
+      "role": "GATE10R-ATTEMPT4-PASSED-EVIDENCE",
+      "path": "H:/DDM_Final_Project/Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+      "fileCount": 169,
+      "byteCount": 14661848,
+      "treeSha256": "bf92abc329290db6c5bebeacb332f83d3fb53ffaabca2b12dce3cb400ecade13"
+    },
+    {
+      "role": "GATE11R-RETAINED-BUNDLE",
+      "path": "H:/DDM_Final_Project/Research/FormalScenarios/Gate11R_5pct/v1",
+      "fileCount": 57,
+      "byteCount": 125218919,
+      "treeSha256": "f7effb9cdfa742efbb5f20a1f9129c9bffb5e9e65387b19f1a34b3487c970d3b"
+    },
+    {
+      "role": "GATE12R-V4-PILOT-READ-ONLY",
+      "path": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+      "fileCount": 8714,
+      "byteCount": 554204972,
+      "treeSha256": "e11be5a3c95bf76941ddb83c2314b5ed6ccfe1a2143e6990154a2565a7f18379"
+    }
+  ],
+  "protectedFiles": [
+    {"path":"Research/Gate13R_Serial_10pct_Selection.v1.json","byteCount":1880,"sha256":"69dd7f80a5bf415ae4d666fbd8e50fce134bc08150e674fcd16c0ca1917f553c"},
+    {"path":"Research/Gate13R_Serial_10pct_Readiness_Amendment.v1.json","byteCount":2426,"sha256":"f0a23f29a7b75afb2ebd981bb341d5c3ef2f4bb875b5cd0faf0ead62fe5c4359"},
+    {"path":"Research/Gate13R_Serial_10pct_Formal_Plan.v1.json","byteCount":3433,"sha256":"73bb2ca8ac4862f1addd227e52ec79d01f69f9c2f26910dc85004bc6e09b99ce"},
+    {"path":"Research/Gate13R_Serial_10pct_Formal_Campaign_Config.v2.json","byteCount":422141,"sha256":"faaec5613a2625aee462038305310e229c7cf8fdf67edb800a0b3eb256f1a300"},
+    {"path":"Research/Gate13R_Serial_10pct_Formal_Williams_Block_Schedule.v2.jsonl","byteCount":20279232,"sha256":"d9300cce732e12a7b90ec43ad9d5f8fe52cbad58da713c25879754eb31ea0ead"},
+    {"path":"Research/Gate13R_Serial_10pct_Formal_Williams_Block_Schedule_Manifest.v2.json","byteCount":7896,"sha256":"8bf87ae8c206355930dd6b720756216ef74052ce9d0551680e3a91933a970dc9"},
+    {"path":"Research/Gate13R_Serial_10pct_Readiness_Checkpoint.v2.json","byteCount":4843,"sha256":"ac234a0a7977c639cf190c2213f99a5c8a36b55f1de0368ff2b29e89d347c89c"},
+    {"path":"Research/Gate13R_Serial_10pct_Readiness_Checkpoint.v2.md","byteCount":4905,"sha256":"c7e7ee2158cf969b37b6abefc72caab49cd4c9958fa6b7a2917b4d9bbbe11d6f"},
+    {"path":"Research/Gate13R_Serial_10pct_Provenance.v1.json","byteCount":4270,"sha256":"3c86b284010e2f3eea997a1773e85560e971ceafccb8e0652fa6048301d7b388"},
+    {"path":"Research/Gate13R_Serial_10pct_Formal_Preparation_Provenance.v2.json","byteCount":16397,"sha256":"409b79506b006378c79a0cb777909e0157b9917a2e439c90d59d0679b2340f7b"},
+    {"path":"Research/Gate13R_Serial_10pct_Formal_Campaign_Authorization_Prompt.v2.md","byteCount":4735,"sha256":"41c364184792d85252b1e67e4f901a1377ad3a3e5fc0995500300fa7410ddd08"},
+    {"path":"Research/Gate12R_Readiness_Checkpoint.v1.json","byteCount":6480,"sha256":"93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d"},
+    {"path":"Research/Gate12R_Passed_Checkpoint.md","byteCount":7653,"sha256":"c89ef5dbbf7a2de1f4975a8893764229f355583df324bf17abd5e95af4f2415a"},
+    {"path":"Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json","byteCount":207760,"sha256":"5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc"},
+    {"path":"Research/FormalScenarios/Gate11R_5pct/v1/preregistered-analysis.json","byteCount":2348,"sha256":"d1c81a83d85377f37adc6b234e7523e8b2189632bf55416734bcbbd92bf7db47"}
+  ],
+  "pathResolutionNotes": [
+    "The authorization referred generically to a v2 provenance and execution-authorization prompt; the actual retained files are Gate13R_Serial_10pct_Formal_Preparation_Provenance.v2.json and Gate13R_Serial_10pct_Formal_Campaign_Authorization_Prompt.v2.md.",
+    "Research/Gate13R_Serial_10pct_Provenance.v2.json and Research/Gate13R_Serial_10pct_Formal_Execution_Authorization_Prompt.v2.md do not exist and were not fabricated."
+  ],
+  "formalRoot": {
+    "path": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_Serial_10pct/v2",
+    "exists": false
+  },
+  "status": "PREWRITE-BASELINE-CAPTURED"
+}

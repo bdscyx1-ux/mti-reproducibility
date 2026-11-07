@@ -1,0 +1,90 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-execution-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "FROZEN_AUTHORIZED_FORMAL_ST_ANALYSIS_ATTEMPT_002",
+  "sourceAcceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "predecessorAnalysisAttempt": "attempt-001",
+  "packageRoot": "H:/DDM_Final_Project/Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-002",
+  "outputRoot": "H:/DDM_Final_Project/Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-002",
+  "toolRelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_formal_st_analysis_v1_1.py",
+  "toolSha256": "fb10ed4d52a9aad557a041a4909c21f561e176979e7668fcd06b9048f84379c9",
+  "toolBindingDeltaRelativePath": "Research/Verification/Gate14Re-ME/formal-st-analysis-attempt-002/tool-binding-delta.v1.json",
+  "toolBindingDeltaSha256": "245842848332b9064f1d474c7bafe38c4230de69749acbeb1423b5fe638d993a",
+  "authorizationReceiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-analysis-attempt-002/formal-analysis-authorization.v1.json",
+  "authorizationReceiptSha256": "594aecffc5276fe39e613e2afba67527deb20e6cd2a266f4c46bb1e957fb3700",
+  "runtimeInterpreter": {
+    "executable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "version": "3.12.14",
+    "sha256": "ceabb31054d429f57cb3825775677eeaf0db35fdabbc5ff6aef661c037154b00",
+    "requiredAbi": "cp312"
+  },
+  "commandHost": {
+    "executable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139"
+  },
+  "runtimeCorrection": {
+    "attempt001PythonVersion": "3.14.7",
+    "attempt002PythonVersion": "3.12.14",
+    "frozenPyArrowVersion": "25.0.1",
+    "frozenPyArrowPythonAbi": "cp312",
+    "compatibleImportPreflightRequired": true,
+    "statisticalMethodModified": false
+  },
+  "frozenBindings": {
+    "analysisContractSha256": "ed884beebaabb05cc039c6e401169cb80659386558e6af95f3eaec9bfec519cd",
+    "endpointMipeContractSha256": "6b38e152c8a17c0bedcd2e700aa8274167e2e0831b33c13cdfbb5227b1354132",
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "identityBindingSha256": "c3d8623560f9162de858ac01b2e861395b92953896e922413fababd0298db5b3",
+    "typedParquetRuntimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "acceptanceTerminalFinalSha256": "2f12db25a27c023ef786251f7400546417883af639b3d405cc31ee5f5c681823",
+    "acceptanceTerminalReceiptSha256": "35397eee59ec151faf6988babe2aa83676a3c03ed226e299e2a85c10e6081b7f",
+    "acceptanceManifestSha256": "9f6470e399fd00469a444959753e4fd07670c193cd0cd76331d88965dfa832f0",
+    "acceptanceFileManifestSha256": "02eefd2cffe1f611f0523cbb7f94c1e15ab60f4bfd86488cdcf4e2cabf348329"
+  },
+  "statisticalOperationalization": {
+    "independentUnit": "superblock",
+    "independentN": 1296,
+    "pairedLanesPerSuperblock": 6,
+    "positiveOutcomeTransform": "natural log",
+    "zeroPermittingOutcomeTransform": "log1p plus raw-scale summaries",
+    "executionPositionCoding": "categorical with position 0 reference",
+    "axisCentering": "unweighted mean of frozen log2 levels",
+    "primaryEstimator": "random-intercept REML mixed-effects model paired by superblock",
+    "nonconvergenceFallback": "same fixed-effect OLS formula with superblock-cluster-robust CR1 covariance and t(1295) inference",
+    "modelSelectionByOutcomeDirectionOrPValue": false,
+    "confirmatoryCompositeHypotheses": 35,
+    "confirmatoryPrimitiveContrasts": 40,
+    "confirmatoryPValueAdjustment": "Holm strong FWER at alpha 0.05 over 35 composite hypotheses",
+    "D1IntersectionUnionPValue": "maximum of geometric-mean and nearest-rank-P95 one-sided p-values",
+    "simultaneousIntervals": "two-sided Bonferroni intervals at familywise alpha 0.05 over 40 primitive contrasts",
+    "domainPass": "valid hard gates plus all five Holm-adjusted target-versus-comparator hypotheses and simultaneous intervals favorable",
+    "primaryClaim": "at least four of seven domains pass; invalid domains remain in denominator",
+    "mipeRole": "reporting flag only; statistical null remains ratio 1 or slope difference 0",
+    "exploratoryPairs": "15 unordered pairs in fixed cohort order, separate Holm family per domain",
+    "rankingOrWinner": false
+  },
+  "hardGates": {
+    "completeFrozenAcceptance": true,
+    "correctnessOracle": true,
+    "D3CounterValidity": true,
+    "D4SizingFormulaValidity": true,
+    "preservedResolvedTechnicalFailures": 2,
+    "replacementRows": 0,
+    "failClosedNoAutomaticRetry": true
+  },
+  "boundaries": {
+    "sourceRootsReadOnly": true,
+    "sourceDataModification": false,
+    "scientificDesignModification": false,
+    "rankingOrWinner": false,
+    "aggregateScore": false,
+    "mq": false,
+    "mt": false
+  },
+  "formalObservationsReadByThisFreeze": false,
+  "exactLaunchCommandConfirmationRequired": true,
+  "exactLaunchCommandConfirmed": false,
+  "createdAtUtc": "2026-10-30T12:23:36.170Z"
+}

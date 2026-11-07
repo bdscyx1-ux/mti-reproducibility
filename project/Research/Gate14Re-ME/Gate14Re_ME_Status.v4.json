@@ -1,0 +1,48 @@
+{
+  "schema": "gate14re-me-status-v4",
+  "studyId": "Gate14Re-ME",
+  "status": "RUNTIME_QUALIFICATION_FAILED_CLOSED_D3_COUNTER_UNUSABLE",
+  "version": 4,
+  "updatedAtUtc": "2026-10-17T05:03:26.0279266Z",
+  "sourceImplementationFreeze": {
+    "status": "PASS_SOURCE_ONLY_IMPLEMENTATION_FREEZE",
+    "checksPassed": 240,
+    "checksFailed": 0,
+    "implementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4"
+  },
+  "runtimeQualificationAttempt": {
+    "authorizationId": "gate14re-me-runtime-qualification-attempt-001",
+    "typedParquetRuntimeFrozen": true,
+    "unityCompilationPassed": true,
+    "d2GridReadProxyPassed": true,
+    "d2SemanticInvariancePassed": true,
+    "d3AllocationCounterPositiveControlPassed": false,
+    "d4PersistentStateSizerPassed": true,
+    "clockMonotonicityPassed": true,
+    "exportKnownAnswerStatus": "NOT_RUN_DUE_PRECEDING_D3_FAILURE",
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/failure-receipt.v1.json"
+  },
+  "scientificBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "authorizationState": {
+    "qualificationScheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize a D3 runtime-compatibility amendment, a new source freeze, and then a new runtime-qualification attempt."
+}

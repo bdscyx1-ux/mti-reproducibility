@@ -1,0 +1,328 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate10r-attempt2-windows-powershell51-preflight-v2",
+    "savedAtUtc":  "2026-10-06T13:04:51.0501796Z",
+    "attempt":  2,
+    "designId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "entryPointCount":  9,
+    "assertionCount":  62,
+    "passedCount":  62,
+    "failedCount":  0,
+    "checks":  [
+                   {
+                       "name":  "project-path-explicit-absolute",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project"
+                   },
+                   {
+                       "name":  "v2-root-absent-before-smoke",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "unity-zero-before-smoke",
+                       "passed":  true,
+                       "detail":  "0"
+                   },
+                   {
+                       "name":  "project-lock-absent-before-smoke",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Temp\\UnityLockfile"
+                   },
+                   {
+                       "name":  "formal-root-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_ProcessReuse_5pct\\v1"
+                   },
+                   {
+                       "name":  "windows-powershell-5.1-exists",
+                       "passed":  true,
+                       "detail":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RAttempt2PreflightV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RAttempt2PreflightV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RUnitTestsV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RUnitTestsV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RCompileV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RCompileV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RBlockVerificationV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RBlockVerificationV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RRetainedRegressionV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RRetainedRegressionV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RFinalAuditV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RFinalAuditV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RTelemetryProbeV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RTelemetryProbeV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RProcessReuseBlockV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RProcessReuseBlockV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "parser-Run-Gate10RColdReferenceV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-psscriptroot-param-default-Run-Gate10RColdReferenceV2.ps1",
+                       "passed":  true,
+                       "detail":  "none"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RAttempt2PreflightV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RAttempt2PreflightV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RUnitTestsV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RUnitTestsV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RCompileV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RCompileV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RBlockVerificationV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RBlockVerificationV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RRetainedRegressionV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RRetainedRegressionV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RFinalAuditV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RFinalAuditV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RTelemetryProbeV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RTelemetryProbeV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RProcessReuseBlockV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RProcessReuseBlockV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "binding-smoke-Run-Gate10RColdReferenceV2.ps1",
+                       "passed":  true,
+                       "detail":  "exit=0;marker=True"
+                   },
+                   {
+                       "name":  "v2-root-absent-after-smoke-Run-Gate10RColdReferenceV2.ps1",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "output-isolation-Run-Gate10RProcessReuseBlockV2.ps1",
+                       "passed":  true,
+                       "detail":  "Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2\\Fixtures"
+                   },
+                   {
+                       "name":  "output-isolation-Run-Gate10RTelemetryProbeV2.ps1",
+                       "passed":  true,
+                       "detail":  "Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "output-isolation-Run-Gate10RColdReferenceV2.ps1",
+                       "passed":  true,
+                       "detail":  "Research\\Verification\\Gate10R_ProcessReuse_5pct\\v2\\Fixtures"
+                   },
+                   {
+                       "name":  "output-isolation-Run-Gate10RUnitTestsV2.ps1",
+                       "passed":  true,
+                       "detail":  "Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "output-isolation-Run-Gate10RCompileV2.ps1",
+                       "passed":  true,
+                       "detail":  "Gate10R_ProcessReuse_5pct\\v2\\Compile"
+                   },
+                   {
+                       "name":  "output-isolation-Run-Gate10RBlockVerificationV2.ps1",
+                       "passed":  true,
+                       "detail":  "Gate10R_ProcessReuse_5pct\\v2\\Fixtures"
+                   },
+                   {
+                       "name":  "output-isolation-Run-Gate10RRetainedRegressionV2.ps1",
+                       "passed":  true,
+                       "detail":  "Gate10R_ProcessReuse_5pct\\v2\\RetainedRegression"
+                   },
+                   {
+                       "name":  "output-isolation-Run-Gate10RFinalAuditV2.ps1",
+                       "passed":  true,
+                       "detail":  "Gate10R_ProcessReuse_5pct\\v2"
+                   },
+                   {
+                       "name":  "attempt1-manifest-artifacts-byte-identical",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "attempt1-root-byte-identical",
+                       "passed":  true,
+                       "detail":  "four frozen evidence files"
+                   },
+                   {
+                       "name":  "attempt2-config-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-process-reuse-5pct-attempt2-orchestration-config-v2"
+                   },
+                   {
+                       "name":  "attempt2-provenance-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-process-reuse-5pct-attempt2-provenance-v2"
+                   },
+                   {
+                       "name":  "attempt2-authorization-identity",
+                       "passed":  true,
+                       "detail":  "gate10r-attempt2-controlled-retry-v1"
+                   },
+                   {
+                       "name":  "attempt2-provenance-file-bindings",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "unity-binary-bound",
+                       "passed":  true,
+                       "detail":  "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+                   },
+                   {
+                       "name":  "unity-zero-after-smoke",
+                       "passed":  true,
+                       "detail":  "0"
+                   },
+                   {
+                       "name":  "project-lock-absent-after-smoke",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Temp\\UnityLockfile"
+                   },
+                   {
+                       "name":  "gate11-root-still-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "gate12-root-still-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "gate13-root-still-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   }
+               ],
+    "unityStarted":  false,
+    "formalCampaign":  false,
+    "automaticRetryAttempted":  false,
+    "automaticResumeAttempted":  false,
+    "passed":  true
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-external-terminal-observation-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "attemptOrdinal": 3,
+  "authorizationId": "gate14re-me-formal-st-local-attempt-003-4e2ed5bc-57ca-43ea-b143-81c942344904",
+  "status": "PASS_ACQUISITION_ONLY_SUPERVISOR_NATURAL_EXIT_TERMINAL_RECEIPTS_COMPLETE",
+  "supervisor": {
+    "processId": 89972,
+    "creationTimeUtc": "2026-10-30T03:25:08.4813660Z",
+    "executableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "commandLineUtf8Sha256": "49fdbb5fa9ee1545403d3a236d9b51fe1a638175bdd71b5cdb095ec1e5c799b9",
+    "compositeIdentity": "PASS",
+    "runningAtTerminalObservation": false,
+    "naturalExitConfirmedBySuccessfulTerminalReceipts": true,
+    "exitCodeDirectlyObserved": false,
+    "signalOrForcedTerminationSent": false
+  },
+  "currentRunnerCount": 0,
+  "processLedger": {
+    "rowCount": 7843,
+    "firstOrdinal": 0,
+    "lastOrdinal": 7842,
+    "schemaValidation": "PASS",
+    "stateValidation": "PASS",
+    "exitCodeValidation": "PASS",
+    "ordinalContinuityValidation": "PASS",
+    "sha256": "f8b3dfcfefd65ec277e6c7ddd0e1da30d5d76b71c3439ec572b40eb217aa8ec0",
+    "lengthBytes": 3834660
+  },
+  "failureEvidence": {
+    "preservedRowCount": 2,
+    "sha256": "fc36def2d515396256767a4105112bc3ac51e56b85d981a08e04bab610d5bd3b",
+    "resolutionV1Sha256": "475e15fa285a3d383a26e7e25b283655341eab0c7ce76776ce6274c274e576e4",
+    "resolutionV2Sha256": "c6c66860450293af6b9889963de9cb48cfbecaa049e5bae0b0eb239e81b74b47",
+    "replacementRowCount": 0,
+    "replacementLedgerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "terminalControlFiles": [
+    {
+      "name": "acquisition-complete.v5.json",
+      "sha256": "c7964a01ed25f1b5c50b50f91a772946de8e34d5c313e1586d28df7f780343bc",
+      "lengthBytes": 1082
+    },
+    {
+      "name": "acceptance-pending.v5.json",
+      "sha256": "17c1eaab202f3c3d1ca732fbb6e648ae3023812df4f00f92a81481511cb4704d",
+      "lengthBytes": 608
+    },
+    {
+      "name": "acquisition-freeze-manifest.v5.json",
+      "sha256": "6ff425c9fbd2c8a8c8d7d9855283aede09f61fb090e56ca7e89e406572f7459c",
+      "lengthBytes": 23257227,
+      "artifactCount": 108007,
+      "structuralValidation": "PASS"
+    },
+    {
+      "name": "acquisition-terminal-receipt.v5.json",
+      "sha256": "87ee435e9e0aaa564ed8c2f989b65588d66198b492a315625a8d2f6a5b818d07",
+      "lengthBytes": 866
+    }
+  ],
+  "boundary": {
+    "formalCollectionPerformed": true,
+    "formalAnalysisAuthorized": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "rawAlgorithmObservationsReadOrInterpretedByExternalMonitor": false,
+    "independentReadOnlyOfflineAcceptancePending": true
+  },
+  "acquisitionCompletedAtUtc": "2026-10-30T08:41:04.1927638Z",
+  "observedAtUtc": "2026-10-30T09:29:53.7433379Z"
+}

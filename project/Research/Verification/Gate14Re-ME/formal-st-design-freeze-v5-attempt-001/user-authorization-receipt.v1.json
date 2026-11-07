@@ -1,0 +1,32 @@
+{
+  "schema": "gate14re-me-formal-st-design-freeze-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-design-freeze-v5-attempt-001",
+  "recordedAtUtc": "2026-10-20T02:52:10.6076829Z",
+  "sequenceAuthorization": {
+    "sourceTextExact": "授权推荐顺序中直至第九项",
+    "scopeRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-011/user-authorization-scope.v1.json",
+    "scopeSha256": "9ae988fd60866f9aeea852b1e659127bf8674d919978002438761f21a56e1678"
+  },
+  "parameterAuthorization": {
+    "sourceTextExact": "我授权统一 10% MIPE 规则：D1 几何均值和 P95、D2、D3、D4 的改善阈值均为 ratio≤0.90；D5、D6、D7 的每个 log2 轴单位斜率差阈值均为≤ln(0.90)=-0.1053605。省略 S5 movement-transfer sentinel，但保留全部 correctness/oracle 硬门。授权只使用 identity-blind nuisance inputs 计算功效，并在 B=36、72、108、144 中选择满足功效≥0.90的最小 B；如果该 B 的保守规划预算达到或超过168小时，则停止冻结并先提交简化 ST 方案。",
+    "sourceReceiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/user-authorization-receipt.v1.json",
+    "sourceReceiptSha256": "a89ea69729fa1c0752716ea604e0e0e209813bcea65fa92a9c31604f38fc283a"
+  },
+  "authorizedNow": [
+    "final B decision from the frozen identity-blind power result",
+    "formal ST design, schedule rule, endpoint/MIPE, analysis, sample-size, stopping, execution, fairness, runtime, implementation-build-input and delivery-requirement freeze",
+    "migration-package state reactivation through REACTIVATED_READY_FOR_BUILD_NOT_BUILT"
+  ],
+  "notAuthorized": [
+    "migration-package staging, build or test root",
+    "Unity installer or credential copy",
+    "ZIP generation",
+    "formal input generation or formal schedule row generation",
+    "formal measured/delivery root creation",
+    "compile or Unity execution",
+    "formal collection or analysis",
+    "MQ or MT",
+    "ranking, weighting or winner adjudication"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate13r-pr1-rq-aligned-nonexecuting-v1",
+  "authorizedAtUtc": "2026-10-08T10:40:36.7028036Z",
+  "localTimeZone": "Asia/Shanghai",
+  "authorizationScope": [
+    "NON-EXECUTING",
+    "PILOT-INFORMED",
+    "PROSPECTIVE-BEFORE-FORMAL-DATA",
+    "GATE12R-V4-READ-ONLY-REANALYSIS",
+    "VALIDATION-ONLY",
+    "PLAN-UPDATE-AFTER-PASS"
+  ],
+  "authorizedAutomaticRetryScope": "VERSIONED-NONEXECUTING-IMPLEMENTATION-ONLY",
+  "forbidden": [
+    "UNITY-EDITOR-START",
+    "NEW-EXPERIMENTAL-SAMPLE",
+    "SUPPLEMENTAL-PILOT",
+    "FORMAL-ROOT-CREATION",
+    "FORMAL-EXECUTION-RECEIPT",
+    "GATE13R-FORMAL-CAMPAIGN",
+    "GATE14R-EXECUTION",
+    "HISTORICAL-OUTPUT-MERGE",
+    "FROZEN-UPSTREAM-MODIFICATION"
+  ],
+  "researchContract": {
+    "matrixCampaignCount": 74,
+    "primaryComparisonScope": "SHARED-GOAL-FOUR-ALGORITHM-COMPLETE-WILLIAMS-BLOCK",
+    "heterogeneousScope": "SECONDARY-SYSTEM-TREATMENT",
+    "confirmatoryPrimaryEndpoint": "P1",
+    "supportiveEndpoints": ["P2", "P3", "P4", "P5"],
+    "prospectiveGate14REndpoints": ["M1", "M2", "M3", "M4", "M5"],
+    "familyWiseAlpha": 0.05,
+    "multiplicity": "HOLM",
+    "precisionTargetInterpretation": "CI-PRECISION-NOT-PRACTICAL-EFFECT",
+    "finalSampleDesign": "UNFROZEN",
+    "processTopology": "ONE-FRESH-UNITY-EDITOR-PROCESS-PER-COMPLETE-WILLIAMS-BLOCK",
+    "maximumConcurrentUnityEditors": 1
+  },
+  "formalCampaignAuthorized": false,
+  "gate14RAuthorized": false
+}

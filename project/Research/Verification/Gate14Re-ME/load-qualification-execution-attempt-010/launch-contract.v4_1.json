@@ -1,0 +1,104 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-010-launch-contract-v4.1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-010-37d80e56-786a-40ac-87bc-5ff9eb1f98a5",
+  "attemptId": "load-qualification-execution-attempt-010",
+  "status": "FROZEN_EXTERNAL_LAUNCH_CONTRACT",
+  "createdAtUtc": "2026-10-19T14:05:47.1479377Z",
+  "executable": {
+    "path": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "version": "7.6.5"
+  },
+  "argumentVectorCanonicalSerialization": "POWERSHELL_CONVERTTOJSON_COMPRESS_UTF8_NO_BOM",
+  "argumentVectorSha256": "95d780b02466050393c8b16e80f35a939e6b4e3adb725ec7a483830b81a547ed",
+  "argumentVector": [
+    "-NoLogo",
+    "-NoProfile",
+    "-NonInteractive",
+    "-File",
+    "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/Run-Gate14ReMELoadQualification.v4_1.ps1",
+    "-ProjectRoot",
+    "H:/DDM_Final_Project",
+    "-MeasuredRoot",
+    "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-008",
+    "-ExecutionAuthorization",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-010/execution-authorization.v1.json",
+    "-ExecutionAuthorizationSha256",
+    "5569a34abbc81fc2c18a70292153cd722d66191129015cef44513bec829b7e5c",
+    "-ImplementationManifest",
+    "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/load-qualification-current-implementation-manifest.v4_1.json",
+    "-ImplementationManifestSha256",
+    "380939df90716130031dc086086607fa1286e8d6f7cf3d1cadae104e5c798658",
+    "-ExecutionContract",
+    "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/load-qualification-acquisition-contract.v4_1.json",
+    "-ExecutionContractSha256",
+    "1ccf472feecd2c811f4f6547b0424126f74bfa1ac0758885ff9db216cc2834f7",
+    "-PlanningAssetsManifest",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets-freeze-manifest.v4.json",
+    "-PlanningAssetsManifestSha256",
+    "8624880f6fbe0b709dd6d2127b5861d62d862d592dcd2b0e311c579afffbeee3",
+    "-ResourceBudget",
+    "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/load-qualification-resource-budget.v4_1.json",
+    "-ResourceBudgetSha256",
+    "b6938a75285167045fb9736e6c5a765dba1e54eb037edabec91d82e56d5ccc4e",
+    "-FairnessBinding",
+    "H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json",
+    "-FairnessBindingSha256",
+    "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+    "-Schedule",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/schedule/bounded-qualification-williams-schedule.v4.jsonl",
+    "-ScheduleSha256",
+    "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb",
+    "-TrustedIdentityRule",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+    "-TrustedIdentityRuleSha256",
+    "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+    "-TimestampComparator",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+    "-TimestampComparatorSha256",
+    "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "-UnityExecutable",
+    "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "-UnityExecutableSha256",
+    "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  ],
+  "argumentCount": 49,
+  "projectRoot": "H:/DDM_Final_Project",
+  "measuredRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-008",
+  "executionAuthorization": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-010/execution-authorization.v1.json",
+    "sha256": "5569a34abbc81fc2c18a70292153cd722d66191129015cef44513bec829b7e5c"
+  },
+  "userAuthorizationScope": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-010/user-authorization-scope.v1.json",
+    "sha256": "dbfbab78847fb1e3d65c9f6842f3c9e63d970798dc8aa19e2122eb711318d231"
+  },
+  "executionPlan": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-010/execution-plan.v4_1.json",
+    "sha256": "609f2d5c38f1f609551763eb610e7ccf21c891558b774a6edacd9f80d1ec04d6"
+  },
+  "prelaunchAudit": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-010/prelaunch-audit.v4_1.json",
+    "sha256": "c652815e4a8c9a870015c5867e829bdcd02512f3b972ceb505170a2ab99b950b"
+  },
+  "implementationManifest": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-current-implementation-manifest.v4_1.json",
+    "sha256": "380939df90716130031dc086086607fa1286e8d6f7cf3d1cadae104e5c798658"
+  },
+  "executionContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acquisition-contract.v4_1.json",
+    "sha256": "1ccf472feecd2c811f4f6547b0424126f74bfa1ac0758885ff9db216cc2834f7"
+  },
+  "launcher": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-010/Invoke-Gate14ReMELoadQualificationAttempt010.ps1",
+    "sha256": "34d870cb4360c5e36719c7d685fa1ce1711ef62f29ce8d1b7d8158f3397f897a"
+  },
+  "stdoutRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-010/supervisor.stdout.log",
+  "stderrRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-010/supervisor.stderr.log",
+  "workingDirectory": "H:/DDM_Final_Project",
+  "windowStyle": "Hidden",
+  "waitForCompletionAtBootstrap": false,
+  "signalOrForcedTerminationAuthorized": false,
+  "migrationPackageBuildAuthorized": false
+}

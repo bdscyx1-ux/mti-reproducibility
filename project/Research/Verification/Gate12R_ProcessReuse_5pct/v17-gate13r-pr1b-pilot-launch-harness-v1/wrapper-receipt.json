@@ -1,0 +1,58 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-pr1b-v3-pathsafe-pilot-derived-orchestrator-receipt-v1",
+    "createdAtUtc":  "2026-10-08T13:24:57.8993196Z",
+    "sourceSha256":  "9f6ed211daddf5624f6b16eaf41ae82f53de6c5e08129e432ddc8323e6ca564c",
+    "derivedSha256":  "263687deb39ef2e819aa34238e2cb49c15bea7df41e5ba01d4b72799c619c9d6",
+    "globalFunctionTokenReplacementCount":  52,
+    "routes":  [
+                   {
+                       "from":  "Research\\Gate13RPR1BV3OrderEffectPreparationV1.psm1",
+                       "to":  "Research\\Gate13RPR1BOrderEffectPreparationV4.psm1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Run-Gate12RProcessReuseBlockV5.ps1",
+                       "to":  "Research\\Run-Gate13RPR1BMemoryAwareBlockV5.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Analyze-Gate13RPR1BV3OrderEffectPilotV1.py",
+                       "to":  "Research\\Analyze-Gate13RPR1BOrderEffectPilotV4.py",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "schemaVersion=1;snapshotKind=\u0027gate13r-pr1b-environment-power-thermal-storage-preflight-v1\u0027",
+                       "to":  "schemaVersion=3;snapshotKind=\u0027gate13r-pr1b-v3-pathsafe-environment-power-thermal-storage-preflight-v1\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "schemaVersion=1;checkpointKind=\u0027gate13r-pr1b-order-effect-pilot-checkpoint-v1\u0027",
+                       "to":  "schemaVersion=3;checkpointKind=\u0027gate13r-pr1b-v3-pathsafe-order-effect-pilot-checkpoint-v1\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "schemaVersion=1;manifestKind=\u0027gate13r-pr1b-pilot-partial-output-manifest-v1\u0027",
+                       "to":  "schemaVersion=3;manifestKind=\u0027gate13r-pr1b-v3-pathsafe-pilot-partial-output-manifest-v1\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "schemaVersion=1;receiptKind=\u0027gate13r-pr1b-non-formal-order-effect-pilot-execution-receipt-v1\u0027",
+                       "to":  "schemaVersion=3;receiptKind=\u0027gate13r-pr1b-v3-pathsafe-non-formal-order-effect-pilot-execution-receipt-v1\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "schemaVersion=1;manifestKind=\u0027gate13r-pr1b-order-effect-pilot-execution-manifest-v1\u0027",
+                       "to":  "schemaVersion=3;manifestKind=\u0027gate13r-pr1b-v3-pathsafe-order-effect-pilot-execution-manifest-v1\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "schemaVersion=1;receiptKind=\u0027gate13r-pr1b-pilot-failure-receipt-v1\u0027",
+                       "to":  "schemaVersion=3;receiptKind=\u0027gate13r-pr1b-v3-pathsafe-pilot-failure-receipt-v1\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "measuredRetryAuthorized":  false,
+    "measuredResumeAuthorized":  false,
+    "formalCampaign":  false
+}

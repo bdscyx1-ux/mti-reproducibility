@@ -1,0 +1,28 @@
+{
+  "schema": "gate14re-me-gnf-discrimination-window-field-boundary-v1",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+  "permittedObservationFields": [
+    "anonymousLaneId",
+    "superblockId",
+    "designRegion",
+    "G/gridEdge",
+    "N/agentCount",
+    "F/changedCellCount",
+    "eligible",
+    "finitePositiveElapsed",
+    "eventGroupElapsedMilliseconds",
+    "gridAccessorCallsTotal"
+  ],
+  "permittedEngineeringTimingFields": [
+    "algorithm-stratified process-wall P50 and maximum used only after discarding algorithm names",
+    "G, N, F, region, and replicate count"
+  ],
+  "forbidden": [
+    "identity mapping or real algorithm names in discrimination outputs",
+    "D3 or D4 values for load selection",
+    "formal effects, hypothesis tests, p-values, scientific rankings, weights, or winner claims",
+    "operations, oracle-agent rows, or any field unnecessary for the bounded-window decision"
+  ],
+  "reasonForD1D2Only": "D1 latency and D2 grid-accessor work are the frozen algorithm-neutral load/dynamic-range signals. Restricting selection to them reduces scope and avoids choosing loads to favor an algorithm's memory signature."
+}

@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 2,
+  "summaryKind": "gate13r-pr1b-v4-composite-process-identity-validation-summary-v2",
+  "startedAtUtc": "2026-10-08T15:46:37.9958532+00:00",
+  "completedAtUtc": "2026-10-08T15:46:53.2930127+00:00",
+  "status": "PASSED / VALIDATION-ONLY / RECOVERY-ELIGIBLE",
+  "passed": true,
+  "checkCount": 23,
+  "passedCheckCount": 23,
+  "failedCheckCount": 0,
+  "sourceTreeBefore": {
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "fileCount": 9118,
+    "rawBytes": 253513394,
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+  },
+  "sourceTreeAfter": {
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "fileCount": 9118,
+    "rawBytes": 253513394,
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+  },
+  "failedV1TreeBefore": {
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+    "fileCount": 8,
+    "rawBytes": 327250,
+    "canonicalTreeSha256": "1e66f43d80887cd30dc5b33652b599763fad25c15e84d1c329504430f6d0f4e3"
+  },
+  "failedV1TreeAfter": {
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+    "fileCount": 8,
+    "rawBytes": 327250,
+    "canonicalTreeSha256": "1e66f43d80887cd30dc5b33652b599763fad25c15e84d1c329504430f6d0f4e3"
+  },
+  "stageProvenanceSha256": "22b15753f3a2b2781e90bdb3907d855753a1b197e64a23a4a2119ed5e1fe2822",
+  "unityInvoked": false,
+  "newSamplesGenerated": 0,
+  "recoveryExecuted": false,
+  "checks": [
+    {
+      "id": "source-tree-before",
+      "passed": true,
+      "detail": {
+        "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+        "fileCount": 9118,
+        "rawBytes": 253513394,
+        "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+      }
+    },
+    {
+      "id": "failed-validation-v1-preserved-before",
+      "passed": true,
+      "detail": {
+        "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+        "fileCount": 8,
+        "rawBytes": 327250,
+        "canonicalTreeSha256": "1e66f43d80887cd30dc5b33652b599763fad25c15e84d1c329504430f6d0f4e3"
+      }
+    },
+    {
+      "id": "recovery-root-absent",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\Analysis\\Gate13R_PR1B_CompositeProcessIdentity_Recovery\\v1"
+    },
+    {
+      "id": "formal-root-absent",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned\\v1"
+    },
+    {
+      "id": "unity-lockfile-absent",
+      "passed": true,
+      "detail": "Temp/UnityLockfile"
+    },
+    {
+      "id": "no-active-unity-before",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "stage-provenance-15-of-15",
+      "passed": true,
+      "detail": {
+        "count": 15,
+        "mismatches": []
+      }
+    },
+    {
+      "id": "zero-unity-launch-static-proof",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "python-ast",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "schema-parse",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "synthetic-17-of-17",
+      "passed": true,
+      "detail": {
+        "count": 17,
+        "passed": 17
+      }
+    },
+    {
+      "id": "bootstrap-20000-deterministic",
+      "passed": true,
+      "detail": {
+        "byteIdentical": true,
+        "first95Ci": [
+          -0.0036875,
+          0.00271875
+        ],
+        "replicates": 20000,
+        "second95Ci": [
+          -0.0036875,
+          0.00271875
+        ],
+        "seed": 13012026
+      }
+    },
+    {
+      "id": "structural-audit-passed",
+      "passed": true,
+      "detail": "PASSED / VALIDATION-ONLY / NO-WORKLOAD-METRIC-ANALYSIS"
+    },
+    {
+      "id": "identity-cardinality",
+      "passed": true,
+      "detail": {
+        "distinctNumericPidCount": 375,
+        "largestNumericPidMultiplicity": 3,
+        "numericPidReuseGroupCount": 19,
+        "samePidLifetimeOverlapCount": 0,
+        "totalProcessRecords": 396,
+        "uniqueBlockEvidenceIdentityCount": 396,
+        "uniqueBlockIdCount": 396,
+        "uniqueOsProcessIdentityCount": 396,
+        "uniqueRunIdCount": 792,
+        "uniqueScheduleKeyCount": 396,
+        "verdict": "COMPOSITE-PROCESS-IDENTITY-VALID"
+      }
+    },
+    {
+      "id": "run-cardinality",
+      "passed": true,
+      "detail": {
+        "measuredBlockProcesses": 384,
+        "measuredMatchedSuperblocks": 192,
+        "measuredMirroredPairs": 96,
+        "measuredSamples": 768,
+        "totalBlockProcesses": 396,
+        "totalSamples": 792,
+        "warmupBlockProcesses": 12,
+        "warmupSamples": 24
+      }
+    },
+    {
+      "id": "pid-reuse-nonoverlap",
+      "passed": true,
+      "detail": {
+        "distinctPidValues": 375,
+        "largestMultiplicity": 3,
+        "reuseGroupCount": 19,
+        "samePidLifetimeOverlapCount": 0
+      }
+    },
+    {
+      "id": "source-provenance-77-of-77",
+      "passed": true,
+      "detail": {
+        "count": 77,
+        "mismatches": 0
+      }
+    },
+    {
+      "id": "source-tree-after",
+      "passed": true,
+      "detail": {
+        "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+        "fileCount": 9118,
+        "rawBytes": 253513394,
+        "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+      }
+    },
+    {
+      "id": "failed-validation-v1-preserved-after",
+      "passed": true,
+      "detail": {
+        "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+        "fileCount": 8,
+        "rawBytes": 327250,
+        "canonicalTreeSha256": "1e66f43d80887cd30dc5b33652b599763fad25c15e84d1c329504430f6d0f4e3"
+      }
+    },
+    {
+      "id": "no-active-unity-after",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "formal-root-still-absent",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned\\v1"
+    },
+    {
+      "id": "recovery-root-still-absent",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\Analysis\\Gate13R_PR1B_CompositeProcessIdentity_Recovery\\v1"
+    },
+    {
+      "id": "atomic-json-roundtrip",
+      "passed": true,
+      "detail": "valid-json-with-real-lf"
+    }
+  ]
+}

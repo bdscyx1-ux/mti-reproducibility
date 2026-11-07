@@ -1,0 +1,31 @@
+{
+  "decisions": [
+    {
+      "checkpoint_id": "gate13r-36h-redesign-selection",
+      "answer": "recommended-10pct-per-campaign-four-isolated-editor-lanes-readiness-p95-le-27h"
+    },
+    {
+      "checkpoint_id": "gate13r-36h-redesign-nonformal-pilot-authorization",
+      "answer": "authorized-nonformal-redesign-tests-clones-one-pilot-only"
+    }
+  ],
+  "steps": [
+    {
+      "step": "gate13r-36h-v16-readiness-verification",
+      "status": "passed"
+    },
+    {
+      "step": "gate13r-old-isolated-clone-cleanup",
+      "status": "passed"
+    },
+    {
+      "step": "gate13r-36h-v16-nonformal-pilot",
+      "status": "failed"
+    }
+  ],
+  "expected_steps": [
+    "gate13r-36h-v16-readiness-verification",
+    "gate13r-old-isolated-clone-cleanup",
+    "gate13r-36h-v16-nonformal-pilot"
+  ]
+}

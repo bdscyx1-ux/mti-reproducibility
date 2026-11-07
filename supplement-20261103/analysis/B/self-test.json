@@ -1,0 +1,66 @@
+{
+  "schema": "gate14re-phase-b-analyzer-synthetic-validation-receipt-v1",
+  "status": "PASS",
+  "analyzerSchema": "gate14re-formal-phase-b-analyzer-v1",
+  "analyzerSha256": "9c5bbbadfa06afc3ad715c5ceb579f4f10e8f022b694e50c37c0caeb4c217401",
+  "analysisContractSha256": "208a9a4393d5a610c065a64f3dbb52747c0597d391a452b426d09e7d314272f2",
+  "pythonVersion": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpyVersion": "2.3.5",
+  "checks": [
+    {
+      "name": "t-cdf-zero",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "t-ppf-known-answer",
+      "status": "PASS",
+      "detail": "2.228138851986272"
+    },
+    {
+      "name": "t-cdf-roundtrip",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "holm-known-answer",
+      "status": "PASS",
+      "detail": "[0.04, 0.09, 0.09, 0.2]"
+    },
+    {
+      "name": "wilson-bounds",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "stratified-ratio-known-answer",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "simultaneous-wider-than-ordinary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "synthetic-clear-winner",
+      "status": "PASS",
+      "detail": "UNIQUE_M1_WINNER_WITH_M2_GUARD_PASS"
+    },
+    {
+      "name": "synthetic-no-forced-winner",
+      "status": "PASS",
+      "detail": "NO_UNIQUE_WINNER"
+    },
+    {
+      "name": "cluster-model-known-coefficients",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "checkCount": 10,
+  "formalRawOpened": false,
+  "formalAnalysisRootCreated": false,
+  "gate15Started": false,
+  "completedUtc": "2026-11-03T22:02:24.751816Z"
+}

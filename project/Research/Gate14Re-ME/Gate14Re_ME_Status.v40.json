@@ -1,0 +1,59 @@
+{
+  "schema": "gate14re-me-status-v40",
+  "studyId": "Gate14Re-ME",
+  "status": "ROOT_BINDING_CORRIGENDUM_AND_EXECUTION_READINESS_PASS_QUALIFICATION_EXECUTION_AUTHORIZED",
+  "version": 40,
+  "updatedAtUtc": "2026-10-17T18:41:38.4575237Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v39.json",
+    "sha256": "8c9f329c9106b31c768198833f49c004b87c6cc00c89cb9a9795e93b4d45f0b6",
+    "retained": true,
+    "reclassified": false
+  },
+  "retainedFailedExecution": {
+    "attemptId": "load-qualification-execution-attempt-004",
+    "terminalFailureReceiptRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/terminal-failure-receipt.v1.json",
+    "terminalFailureReceiptSha256": "89ae588df381230399790bff540913294fab98532c276ff3048d7d21290b5ff8",
+    "failedMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "modifiedOrReclassified": false
+  },
+  "rootBindingCorrigendum": {
+    "attemptId": "qualification-measured-root-binding-corrigendum-attempt-001",
+    "runnerSha256": "21b677cbf277309a69fa51001d6f34e6e496f8e9abaae8c3bae19c85bf6c4952",
+    "supervisorSha256": "060d075103d6a7c654a3943863f1a173021a848cd9297dd9ec5860f0a138f1e4",
+    "executionContractRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_5.json",
+    "executionContractSha256": "83586aa1eaffc73b26ae1d59670ff4984df07aa02a30f857969e6ca14c2a869e",
+    "implementationManifestRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_5.json",
+    "implementationManifestSha256": "7ac832ef41f69137e763244b97c210dd0a57458c56622019b51384fd401ff742",
+    "compileReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-measured-root-binding-corrigendum-attempt-001/unity-compile-identity-receipt.v1.json",
+    "compileReceiptSha256": "15bd29862847788a8537a1d1c8ee37a3bc4af1d48e13da45537695f375693726",
+    "passed": true
+  },
+  "executionReadiness": {
+    "attemptId": "qualification-execution-readiness-recheck-attempt-010",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-010/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "593d34d011409541cb1915ff846b032e1a96c5f6ed7a5b9146b58ae1e71734f8",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-010/freeze-manifest.v1.json",
+    "freezeManifestSha256": "f6525264b1eab6656fc44e023562fa46ae3fe1a784195d8aae31ea030679e360",
+    "passed": true
+  },
+  "nextExecution": {
+    "evidenceAttemptId": "load-qualification-execution-attempt-005",
+    "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-003",
+    "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-003",
+    "expectedFreshUnityProcesses": 1147,
+    "strictSerial": true,
+    "zeroReplacementFailStop": true,
+    "withinAttemptRetryResumeTopUpMergeSkipReorderOrParallelAuthorized": false
+  },
+  "authorizationState": {
+    "technicalRepairAndFreshAttemptLoopAuthorizedUntilQualificationExecutionPass": true,
+    "qualificationExecutionAuthorized": true,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Create one exact-hash execution authorization for the fresh attempt-003 measured/delivery roots and run the frozen qualification supervisor. Freeze any technical failure before the shortest prospective repair and a later fresh attempt; stop the loop only at qualification execution terminal PASS."
+}

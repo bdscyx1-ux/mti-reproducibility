@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 2,
+  "configId": "gate13r-pr2-mp1-targeted-memory-pilot-config-v2",
+  "scientificDesignId": "gate13r-pr2-mp1-stage-separated-memory-targeted-pilot-v1",
+  "executionAttemptId": "gate13r-pr2-mp1-attempt2-v2",
+  "createdAtUtc": "2026-10-09T04:01:42.9543478Z",
+  "labels": [
+    "NON-FORMAL",
+    "MEMORY-DIAGNOSTIC-ONLY",
+    "EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "NOT-ALGORITHM-SUPERIORITY-EVIDENCE"
+  ],
+  "formalCampaign": false,
+  "matrix": {
+    "scenarioBlockCounts": {
+      "grid-scale-g032-shared": 16,
+      "grid-scale-g064-shared": 16,
+      "grid-scale-g128-shared": 16,
+      "grid-scale-g256-shared": 48
+    },
+    "measuredProcesses": 96,
+    "measuredSamples": 384,
+    "warmupProcesses": 0,
+    "authorizedWarmupCeiling": 8
+  },
+  "execution": {
+    "pilotRoot": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v2",
+    "topology": "strict-serial",
+    "maximumUnityConcurrency": 1,
+    "oneFreshUnityProcessPerCompleteWilliamsBlock": true,
+    "oneOccurrencePerAlgorithmPerBlock": true,
+    "perSampleCompleteReset": true,
+    "automaticMeasuredRetry": false,
+    "automaticMeasuredResume": false,
+    "automaticMeasuredTopUp": false,
+    "partialAttemptMerge": false
+  },
+  "schedule": {
+    "relativePath": "Research/Gate13R_PR2_MP1_Pilot_Schedule.v1.jsonl",
+    "sha256": "826c7b85da6e3fcbe982a6e3becf21318216d5579dc198f2d47f5de0dc600136",
+    "manifestRelativePath": "Research/Gate13R_PR2_MP1_Pilot_Schedule_Manifest.v1.json",
+    "manifestSha256": "1ad38d5c78df69d4d94374dee1f95bbb0375c2df90aa2ceab978dd0d4e221c46",
+    "deterministicIdentity": "BYTE-IDENTICAL-TO-MP1-V1-SCHEDULE"
+  },
+  "checkpointPersistence": {
+    "schemaRelativePath": "Research/Gate13R_PR2_MP1_v2_Checkpoint_Schema.v1.json",
+    "schemaSha256": "decc46767d8595a35fd6b424b11f6de4a04825de997fe72e911aa0e99e14bb14",
+    "moduleRelativePath": "Research/Gate13RPR2MemoryPolicyPilotV2.psm1",
+    "moduleSha256": "879936df022509a0e5c2a47a9e3a9bbf210a44dc5b5dc13328ad7eddcd58f668",
+    "amendmentRelativePath": "Research/Gate13R_PR2_MP1_v2_Checkpoint_StateMachine_Amendment.v1.md",
+    "amendmentSha256": "5cc7c85d76f4ff542cccb4265491b68dd159a1f13bf3ff89b21e34b8cd22db62",
+    "completeOrderedCheckpointPerTransition": true,
+    "nonEmptySameDirectoryReplaceBackup": true,
+    "sha256AndSchemaReadBack": true
+  },
+  "scientificInputs": {
+    "specificationRelativePath": "Research/Gate13R_PR2_MP1_Specification.v1.md",
+    "specificationSha256": "5e6b24dae7c1f1b7ccd637d8e41588a29a5e9e8cb2735e652df51c9f7452e6d8",
+    "instrumentationContractRelativePath": "Research/Gate13R_PR2_MP1_Instrumentation_Contract.v1.json",
+    "instrumentationContractSha256": "415d0d4c817d636d92c6ec8e8be0a574b13d08baab01891e19212c18554b064a",
+    "candidateRegistryRelativePath": "Research/Gate13R_PR2_MP1_Memory_Policy_Candidate_Registry.v1.json",
+    "candidateRegistrySha256": "9807e40573f1d6dc1aa1d6c34f94f70db41342a736cb1cc2e698d792b45f34bc",
+    "batchCommandRelativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2MemoryPolicyPilotBatchCommandV1.cs",
+    "batchCommandSha256": "ee3e85e23f6d89d1ded7a76d235ab95f967c4c3cbc3cd9353c40b84123fc172d"
+  },
+  "testDesign": {
+    "relativePath": "Research/Gate13R_PR2_MP1_v2_Test_Design.v1.md",
+    "sha256": "339096eb689eb4524e8eed8a1fe2b9e8c59169d57c4b9f6e6564968dce71698a"
+  },
+  "twoStageCommit": {
+    "contractRelativePath": "Research/Gate13R_PR2_MP1_Two_Phase_Commit_Contract.v1.json",
+    "contractSha256": "8c4d33396696ef6abe3b63afde68a2f4f247966b09073374527dde4ba98ad323",
+    "phaseARawImmutable": true,
+    "phaseBReadOnlyVersionedAnalysis": true,
+    "ordinaryAnalysisBugMayRerunUnity": false
+  },
+  "pilotV1FrozenIdentity": {
+    "fileCount": 5,
+    "rawBytes": 5247,
+    "canonicalTreeSha256": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+    "status": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / ZERO-MEASURED-BLOCKS / IMMUTABLE"
+  },
+  "authorizationBoundary": {
+    "pilotV1RetryResumeTopUpMergeAuthorized": false,
+    "measuredPilotV2Attempts": 1,
+    "formalAttempt3Authorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  }
+}

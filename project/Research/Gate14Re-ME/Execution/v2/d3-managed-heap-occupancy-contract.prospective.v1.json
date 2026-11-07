@@ -1,0 +1,62 @@
+{
+  "schema": "gate14re-me-d3-managed-heap-occupancy-prospective-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-endpoint-replacement-attempt-002",
+  "status": "PROSPECTIVE_UNQUALIFIED_D3_ENDPOINT_REPLACEMENT",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T05:43:10.7205979Z",
+  "endpoint": {
+    "endpointId": "D3",
+    "semanticVersion": 2,
+    "name": "event-boundary managed-heap occupancy",
+    "unit": "bytes",
+    "counterId": "GC.GetTotalMemory(false)-managed-heap-occupancy-v1",
+    "api": "System.GC.GetTotalMemory(false)",
+    "scope": "current Unity process managed heap",
+    "nativeAllocationsIncluded": false,
+    "primaryRawField": "eventGroupManagedHeapBytesEnd",
+    "rawFields": [
+      "eventGroupManagedHeapBytesStart",
+      "eventGroupManagedHeapBytesEnd",
+      "eventGroupManagedHeapSignedDeltaBytes"
+    ],
+    "signedDeltaFormula": "end - start",
+    "negativeSignedDeltaAllowed": true,
+    "clampOrCensorAllowed": false,
+    "boundary": "capture immediately before and immediately after one complete event group; no forced collection inside the event-group boundary",
+    "interpretation": "estimated live managed-heap occupancy at the event boundary",
+    "nonInterpretation": "not cumulative allocated bytes, not allocation throughput, not native memory, not RSS, and not a peak-memory measurement"
+  },
+  "retiredEndpoint": {
+    "endpointId": "D3",
+    "semanticVersion": 1,
+    "name": "managed allocations on the measured Unity thread",
+    "counterId": "GC.GetAllocatedBytesForCurrentThread-v1",
+    "disposition": "RETIRED_PROSPECTIVELY_UNQUALIFIED",
+    "reason": "The bound Unity runtime returned zero across a retained 1 MiB allocation. A later process-wide cumulative counter candidate was unavailable at compile time."
+  },
+  "prospectiveKnownAnswer": {
+    "negativeControlPairs": 64,
+    "negativeControlMaximumAbsoluteDeltaBytes": 65536,
+    "positiveControls": [
+      {"requestedBytes": 8388608, "minimumObservedDeltaBytes": 7549748},
+      {"requestedBytes": 33554432, "minimumObservedDeltaBytes": 30198989}
+    ],
+    "scaleSeparationMinimumBytes": 22649242,
+    "reclamationControl": {
+      "requestedBytes": 16777216,
+      "minimumAllocationDeltaBytes": 15099495,
+      "minimumRecoveredBytes": 13421773,
+      "postReclamationBaselineAllowanceBytes": 2097152
+    },
+    "thresholdsMayBeRelaxedAfterExecution": false
+  },
+  "downstreamBoundary": {
+    "currentLoadQualificationRunnerUpdated": false,
+    "runtimeQualificationAttempt002Authorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingOrWinnerAuthorized": false
+  }
+}

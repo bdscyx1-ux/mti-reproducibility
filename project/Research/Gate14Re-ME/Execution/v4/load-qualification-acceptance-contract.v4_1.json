@@ -1,0 +1,82 @@
+{
+  "schema": "gate14re-me-load-qualification-independent-acceptance-contract-v4.1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-bounded-gnf-discrimination-window-v4",
+  "status": "SUPERSEDED_PROVISIONAL_DRAFT_NOT_DESIGN_FREEZE_NOT_EXECUTION_AUTHORIZATION",
+  "supersededBy": "Research/Gate14Re-ME/Execution/v4/load-qualification-acceptance-contract.v4_2.json",
+  "entryPoint": {
+    "launcherRelativePath": "Research/Gate14Re-ME/Execution/v4/Run-Gate14ReMEReadOnlyAcceptance.v4_1.ps1",
+    "launcherSha256": "03377c46619531dddda06fca4cdaacbfc69175a92627b6317b9ef39568a5c369",
+    "toolRelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_acceptance_v4_1.py",
+    "toolSha256": "2d6584b6a2e20a56bc671319a7346338b71b337f29d3e1eec553c95e6c0b8683"
+  },
+  "sourceContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acquisition-contract.v4_0.json",
+    "sha256": "26ce7b7ef99b89ce095dfa5f146891ec6fa5cdf308c00b6c10da443f90d846b1",
+    "requiredAcquisitionStatus": "PASS_ACQUISITION_ONLY_RAW_FROZEN_ACCEPTANCE_PENDING"
+  },
+  "frozenBindings": {
+    "outputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-output-schema.v4_0.json",
+      "sha256": "ffcc625bc5ddd92e073688d22c908f2922f973ac81b7f9c6e55d386fd25ad9dc"
+    },
+    "schedule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/schedule/bounded-qualification-williams-schedule.v4.jsonl",
+      "sha256": "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb"
+    },
+    "typedParquetRuntime": {
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+  },
+  "necessaryChecks": [
+    "replay every acquisition-freeze manifest byte and SHA-256 exactly once",
+    "validate 895 strictly ordered trusted natural-exit process ledger rows and identity hash links",
+    "validate 126 accepted superblocks, 126 oracle receipts, 756 lane receipts and 12 empty-boundary receipts",
+    "require empty failure and replacement ledgers and absence of an acquisition failure receipt",
+    "stream every raw row, required field and scalar type without retaining the whole dataset",
+    "hash every distinct row-bound source file once and reject conflicting path/hash bindings",
+    "prove event-group and empty-boundary D3 links are unique and complete",
+    "build typed Parquet in bounded batches and stream it back to compare every scalar value, explicit type and row order",
+    "freeze table receipts, output manifest, file manifest and terminal receipt"
+  ],
+  "deliberatelyNonGatingRedundantViews": [
+    "duplicate canonical JSONL",
+    "CSV",
+    "gzip JSONL"
+  ],
+  "memoryAndHashingRules": {
+    "wholeDatasetRowsRetainedInMemory": false,
+    "recordIdArraysEmbeddedInManifest": false,
+    "perRowSourceFileRehash": false,
+    "parquetBatchRows": 4096,
+    "canonicalRecord": "SEALED_ACQUISITION_RAW_JSONL"
+  },
+  "failureRules": {
+    "sourceMutation": false,
+    "sameAcceptanceRootRetry": false,
+    "overwrite": false,
+    "repairSuccessIntoFailedRoot": false,
+    "newVersionedAcceptanceRootAfterRepair": true
+  },
+  "feasibilityEvidence": {
+    "sourceAttempt": "attempt-009 sealed raw only",
+    "terminalRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-acceptance-v4-feasibility-attempt-001/delivery/terminal-final.v4.json",
+    "terminalSha256": "8e23efa3dda65b437eb096c48740c68df7f0271859c7fabf28e40e664e03ef9e",
+    "rows": 7126405,
+    "tables": 10,
+    "necessaryRawSeconds": 106.432,
+    "typedParquetSeconds": 364.519,
+    "combinedObservedSeconds": 470.951,
+    "peakWorkingSetBytes": 351465472,
+    "interpretation": "Feasibility evidence validates the reused streaming architecture on the much larger sealed attempt-009 corpus; v4.1 adds the new control-plane/cardinality gates and must still pass independently on the future bounded-load acquisition."
+  },
+  "terminalPassMeaning": {
+    "qualificationMayBeDeclaredTerminalPass": true,
+    "algorithmEffectComparisonPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "formalSampleCreated": false,
+    "formalAnalysisPerformed": false
+  }
+}

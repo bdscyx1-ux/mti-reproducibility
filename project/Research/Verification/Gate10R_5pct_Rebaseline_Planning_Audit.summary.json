@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "summaryKind": "gate10r-5pct-rebaseline-planning-audit-v1",
+  "savedAtUtc": "2026-10-06T07:52:15.2401419Z",
+  "designId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "assertionCount": 21,
+  "passedAssertionCount": 21,
+  "failedAssertionCount": 0,
+  "assertions": [
+    { "name": "audit-json-valid", "passed": true },
+    { "name": "decision-json-valid", "passed": true },
+    { "name": "precision-5pct", "passed": true },
+    { "name": "one-process-per-block", "passed": true },
+    { "name": "matrix-53-74-212", "passed": true },
+    { "name": "playable-53-74-212", "passed": true },
+    { "name": "pilot-12x32", "passed": true },
+    { "name": "pilot-1152-samples", "passed": true },
+    { "name": "pilot-total-arithmetic", "passed": true },
+    { "name": "plan-material-passport", "passed": true },
+    { "name": "plan-playable-coverage", "passed": true },
+    { "name": "plan-pilot-counts", "passed": true },
+    { "name": "overall-v3", "passed": true },
+    { "name": "overall-active-section", "passed": true },
+    { "name": "checkpoint-active", "passed": true },
+    { "name": "formal-not-authorized", "passed": true },
+    { "name": "planned-roots-absent", "passed": true },
+    { "name": "unity-absent", "passed": true },
+    { "name": "project-lock-absent", "passed": true },
+    { "name": "historical-counts-preserved", "passed": true },
+    { "name": "historical-readonly", "passed": true }
+  ],
+  "artifactHashes": {
+    "passport": {
+      "relativePath": "Research/Gate10R_5pct_Rebaseline_Run_Passport.md",
+      "sha256": "17a109cff06c60c0bd1f215ce0818ba06ab4015f610b254711572e8d3cd6850f"
+    },
+    "evidenceAudit": {
+      "relativePath": "Research/Gate10R_5pct_Rebaseline_Evidence_Audit.v1.json",
+      "sha256": "e428c3b7a3667f52d6eb4c306bb4eaa070616ed7d3710fd3020b20a182751799"
+    },
+    "decision": {
+      "relativePath": "Research/Gate10R_5pct_Rebaseline_Decision.v1.json",
+      "sha256": "45f5225f22c737704194303c81ddfcf70898b386955cb844193c8ac8a8312409"
+    },
+    "experimentPlan": {
+      "relativePath": "Research/Gate10R_Onward_ProcessReuse_5pct_Experiment_Plan.md",
+      "sha256": "e91660310eccb9082393fe21cb5bf2c957b77b9a780e03eaa97b462fb6174953"
+    },
+    "overallProjectPlan": {
+      "relativePath": "Research/Overall_Project_Plan.md",
+      "sha256": "60a423a7403e06ace833b0fff6913d59c25135538b1f57505d57cda456a26478"
+    },
+    "nextSessionCheckpoint": {
+      "relativePath": "Research/Next_Session_Checkpoint.md",
+      "sha256": "21f99fe2e9376d1ab0d39c92851c7ef4b703669e36e2f508f51524f32f9685e0"
+    }
+  },
+  "historicalPreservation": {
+    "coldProcessFormalV1FileCount": 891,
+    "coldProcessFormalV1NonReadOnlyFileCount": 0,
+    "processReusePilotV1FileCount": 838,
+    "processReusePilotV1NonReadOnlyFileCount": 0,
+    "processReusePilotV2FileCount": 4,
+    "processReusePilotV2NonReadOnlyFileCount": 0
+  },
+  "executionState": {
+    "unityProcessCount": 0,
+    "projectLockExists": false,
+    "newGate10RExecutionStarted": false,
+    "newScenarioOrPlayableRootCreated": false,
+    "newPilotRootCreated": false,
+    "newFormalRootCreated": false
+  },
+  "formalCampaign": false,
+  "passed": true
+}

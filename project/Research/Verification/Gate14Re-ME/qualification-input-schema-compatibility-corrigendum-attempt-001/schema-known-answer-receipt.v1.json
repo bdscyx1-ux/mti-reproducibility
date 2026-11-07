@@ -1,0 +1,146 @@
+{
+  "schema": "gate14re-me-input-schema-compatibility-known-answer-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-001",
+  "status": "PASS_INPUT_SCHEMA_COMPATIBILITY_KNOWN_ANSWER",
+  "createdAtUtc": "2026-10-17T08:54:00.0902794Z",
+  "completedAtUtc": "2026-10-17T08:54:00.3383499Z",
+  "passed": true,
+  "terminal": true,
+  "validationEngine": {
+    "host": "PowerShell Test-Json",
+    "powershellVersion": "7.6.5",
+    "dependencyInstalledForStage": false
+  },
+  "tool": {
+    "relativePath": "Research/Gate14Re-ME/Tools/Test-Gate14ReMEInputSchemaCompatibilityV1.ps1",
+    "sha256": "b7931734393352dca71397f293428bb18685c912bb41709e04a88db0a16c20c3"
+  },
+  "bindings": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Input_Schema_Compatibility_Corrigendum_Authorization.v1.json",
+      "lengthBytes": 5847,
+      "expectedSha256": "dc8a9e5563e0b428f895f7de56265e78d51b3c57b59295fc9ad4f0bf86c7d6b6",
+      "actualSha256": "dc8a9e5563e0b428f895f7de56265e78d51b3c57b59295fc9ad4f0bf86c7d6b6",
+      "matched": true
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Input_Schema_Compatibility_Corrigendum_Plan.v1.md",
+      "lengthBytes": 3721,
+      "expectedSha256": "6d93d2542baaccd82375ad364ad1ebfa2dc45c7e55bb4b52c917afc7b27fccbb",
+      "actualSha256": "6d93d2542baaccd82375ad364ad1ebfa2dc45c7e55bb4b52c917afc7b27fccbb",
+      "matched": true
+    },
+    {
+      "role": "parent-status-v11",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v11.json",
+      "lengthBytes": 5056,
+      "expectedSha256": "4bd0f8b512fec16daf3e5dd793caf8420fafd3f80b4f95cd3aca4981f469e47e",
+      "actualSha256": "4bd0f8b512fec16daf3e5dd793caf8420fafd3f80b4f95cd3aca4981f469e47e",
+      "matched": true
+    },
+    {
+      "role": "retained-planning-failure",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-attempt-001/failure-receipt.v1.json",
+      "lengthBytes": 3737,
+      "expectedSha256": "f3ebfb70faba9d48d39d12eeff5fe64cfc2776ac73c0b672e1ecf04273b4b2c6",
+      "actualSha256": "f3ebfb70faba9d48d39d12eeff5fe64cfc2776ac73c0b672e1ecf04273b4b2c6",
+      "matched": true
+    },
+    {
+      "role": "retained-preflight-audit",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-attempt-001/preflight-compatibility-audit.v1.json",
+      "lengthBytes": 4458,
+      "expectedSha256": "68fa5cb6c4a3a9c87d29f06acb69dd93f2081f060f69e192478fdedf2231afcf",
+      "actualSha256": "68fa5cb6c4a3a9c87d29f06acb69dd93f2081f060f69e192478fdedf2231afcf",
+      "matched": true
+    },
+    {
+      "role": "legacy-input-schema-v1",
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-input-schema.v1.json",
+      "lengthBytes": 4244,
+      "expectedSha256": "12105816916eaadc6575ed28dc96a6bb4a9863d2dbbe70cc034ebcfbf1de2c6b",
+      "actualSha256": "12105816916eaadc6575ed28dc96a6bb4a9863d2dbbe70cc034ebcfbf1de2c6b",
+      "matched": true
+    },
+    {
+      "role": "corrected-input-schema-v2",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "lengthBytes": 4664,
+      "expectedSha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+      "actualSha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+      "matched": true
+    },
+    {
+      "role": "planning-schema-binding-v2",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "lengthBytes": 4360,
+      "expectedSha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+      "actualSha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+      "matched": true
+    },
+    {
+      "role": "qualification-contracts-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "lengthBytes": 17536,
+      "expectedSha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4",
+      "actualSha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4",
+      "matched": true
+    },
+    {
+      "role": "reference-oracle-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "lengthBytes": 30510,
+      "expectedSha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25",
+      "actualSha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25",
+      "matched": true
+    },
+    {
+      "role": "qualification-runner-v2-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "lengthBytes": 77345,
+      "expectedSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+      "actualSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+      "matched": true
+    }
+  ],
+  "tests": {
+    "runtimeBundleIdentityPreserved": true,
+    "topLevelRequiredUnchanged": true,
+    "topLevelPropertiesUnchanged": true,
+    "coordinateDefinitionUnchanged": true,
+    "cellStateDefinitionUnchanged": true,
+    "atomicPartitionDefinitionUnchanged": true,
+    "onlyTopologyPropertyAdded": true,
+    "onlyTopologyRequirementAdded": true,
+    "topologyLevelsEqualInputLevels": true,
+    "eventGroupLegacyConstraintsUnchanged": true,
+    "oldSemanticChecksRetained": true,
+    "crossFieldTopologyEqualityDeclaredForOracle": true,
+    "positiveTopologyBundlePassesV2": true,
+    "positiveTopologyBundleFailsV1": true,
+    "missingTopologyBundlePassesV1": true,
+    "missingTopologyBundleFailsV2": true,
+    "invalidTopologyLevelFailsV2": true,
+    "unknownEventGroupPropertyFailsV2": true,
+    "missingRequiredTopLevelFieldFailsV2": true
+  },
+  "boundary": {
+    "syntheticBundleMaterializedToDisk": false,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "qualificationMeasuredRootCreated": false,
+    "plannerConstructedOrInvoked": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "exceptionType": null,
+  "exactFailure": null,
+  "stackTrace": null
+}

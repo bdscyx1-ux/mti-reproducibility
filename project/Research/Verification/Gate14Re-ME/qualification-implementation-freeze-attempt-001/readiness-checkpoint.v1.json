@@ -1,0 +1,38 @@
+{
+  "schema": "gate14re-me-qualification-implementation-readiness-checkpoint-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "SOURCE_IMPLEMENTATION_FROZEN_NOT_EXECUTION_READY",
+  "implementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+  "sourceFreezeValidationPassed": true,
+  "sourceOnlyCapabilities": {
+    "algorithmNeutralOracle": true,
+    "D1D2D3D4Instrumentation": true,
+    "freshProcessLaneRunner": true,
+    "serialSupervisor": true,
+    "structuralValidator": true,
+    "completePerObservationDelivery": true,
+    "sixAlgorithmFairnessBinding": true,
+    "absoluteResourceBudgets": true,
+    "scheduleSchemaWithoutGeneratedSchedule": true
+  },
+  "executionReadiness": {
+    "unityCompilationPassed": false,
+    "runtimeInstrumentQualificationPassed": false,
+    "typedParquetDependencyAvailableAndFrozen": false,
+    "qualificationScheduleFrozen": false,
+    "qualificationInputsFrozen": false,
+    "anonymousIdentityBindingFrozen": false,
+    "qualificationExecutionAuthorized": false,
+    "qualificationMeasuredRootCreated": false
+  },
+  "blockingFacts": [
+    "Unity compilation and runtime tests were outside this authorization.",
+    "The current Python runtime lacks a supported typed-Parquet engine and the exporter correctly fails closed.",
+    "Qualification schedule, inputs, identity binding, root creation and execution remain separately unauthorized."
+  ],
+  "nextAuthorizationMustRemainQualificationOnly": true,
+  "formalCollectionAuthorized": false,
+  "formalAnalysisAuthorized": false,
+  "rankingOrWinnerAuthorized": false,
+  "qualificationObservationCount": 0
+}

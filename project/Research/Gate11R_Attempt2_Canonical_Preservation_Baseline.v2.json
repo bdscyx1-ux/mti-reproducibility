@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 2,
+  "baselineId": "gate11r-attempt2-canonical-ordinal-relative-path-preservation-v2",
+  "createdAtUtc": "2026-10-07T02:35:49.1961421Z",
+  "derivation": {
+    "prewriteBaselinePath": "Research/Gate11R_PreWrite_Preservation_Audit.v1.json",
+    "prewriteBaselineSha256": "f5c868597cf4b49e677411bf8f05c2b045882d5fa36eb152f120f0fb972017c9",
+    "rule": "Normalize each relative path to forward slashes, form relativePath<TAB>rawBytes<TAB>lowercaseSha256, sort with StringComparer.Ordinal, then SHA-256 the UTF-8 no-BOM rows joined by LF.",
+    "historicalMutationAllowed": false
+  },
+  "protectedTrees": [
+    { "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v1", "fileCount": 4, "rawBytes": 9577, "ordinalTreeSha256": "2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d" },
+    { "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v2", "fileCount": 101, "rawBytes": 9375526, "ordinalTreeSha256": "7f3ab3b9741c65e716c930b81bc5ce3b6a98609fd00aa979fd5946ae2ad9c5bd" },
+    { "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v3", "fileCount": 165, "rawBytes": 14661809, "ordinalTreeSha256": "30fd38e547b73e4cf0494d34b5b01028e0b756484d58e8822fefb1ee354c87a0" },
+    { "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v4", "fileCount": 169, "rawBytes": 14661848, "ordinalTreeSha256": "a62fcb5c0104e1ce493d8ca006f753cbd20341839c588c6ffd856cbe438beb6a" },
+    { "path": "Research/FormalScenarios/v1", "fileCount": 57, "rawBytes": 124776145, "ordinalTreeSha256": "fead19f8431adb741646fa044496206be40f2243ad8cd721a9bf01821fc716d7" },
+    { "path": "Research/PilotRuns/Gate12/v1", "fileCount": 1694, "rawBytes": 577893148, "ordinalTreeSha256": "dce8998bd0aebeee1ff88481b758fc4caf0548095caa0434d1710ceda67ac146" },
+    { "path": "Research/PilotRuns/Gate12/v1-failed-pre-sample-attempt1", "fileCount": 1, "rawBytes": 20841, "ordinalTreeSha256": "64aa59ed9cd425d59079fff4dea4b48be1b0e8b3b6fc60e7d10d8a0ac7a5ceac" },
+    { "path": "Research/PilotRuns/Gate12/v1-failed-warmup-attempt2", "fileCount": 103, "rawBytes": 14187382, "ordinalTreeSha256": "889c4b3b26421daafa4170d26ce38597673f8719de9663c23bee41cbfa421c2b" },
+    { "path": "Research/FormalRuns/Gate13/v1", "fileCount": 891, "rawBytes": 129667391, "ordinalTreeSha256": "035a3e3f267c71a7e5c04f1b3c5179f8276df36b0aa68d5395c68142f4307042" },
+    { "path": "Research/PilotRuns/Gate13_ProcessReuse/v1", "fileCount": 838, "rawBytes": 91219643, "ordinalTreeSha256": "2e1d9a15e6bfb89428de9d5690c2de869cb99aff651e65b4bb807e10835b8843" },
+    { "path": "Research/PilotRuns/Gate13_ProcessReuse/v2", "fileCount": 4, "rawBytes": 8899, "ordinalTreeSha256": "21f59a6b6f7617bb0a745408543aa67d371c41cef356649b442185f0584edbc7" }
+  ],
+  "attempt1FailureEvidence": {
+    "path": "Research/Verification/Gate11R_5pct_PreImplementation/v1",
+    "fileCount": 5,
+    "requiredFiles": [
+      "Gate11R_PreImplementation_Audit.summary.v1.json",
+      "Gate11R_PreImplementation_Failure_Receipt.v1.json",
+      "Gate11R_PreImplementation_Failure.diagnostic.log",
+      "Gate11R_PreImplementation_Partial_Manifest.v1.json",
+      "gate11r-preimplementation-failure.checkpoint.v1.json"
+    ]
+  }
+}

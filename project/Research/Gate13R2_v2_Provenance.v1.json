@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "provenanceId": "gate13-r2-v2-provenance-v1",
+  "recordedAt": "2026-10-06T15:35:00+08:00",
+  "designId": "one-fresh-unity-process-per-williams-block-v2-native-telemetry",
+  "materialPassport": {
+    "originSkill": "experiment-agent",
+    "originMode": "run",
+    "verificationStatus": "IMPLEMENTATION-HASHED-PRE-UNITY-VERIFICATION",
+    "versionLabel": "gate13_r2_v2_provenance_v1"
+  },
+  "authorizationReference": "user-message-2026-10-06-gate13-r2-v2-telemetry-readiness-and-one-fresh-nonformal-pilot",
+  "formalExecutionAuthorized": false,
+  "formalRootCreationAuthorized": false,
+  "automaticRetryAuthorized": false,
+  "automaticResumeAuthorized": false,
+  "v1RetryResumeOverwriteOrContinuedAnalysisAuthorized": false,
+  "specification": {
+    "relativePath": "Research/Gate13R2_v2_Telemetry_Readiness_Specification.md",
+    "sha256": "07850616e2592f63802c6f19edd7485ae2e16a70b78c86139da1f85a2e419258",
+    "byteCount": 15063
+  },
+  "testDesign": {
+    "relativePath": "Research/Gate13R2_v2_Telemetry_Readiness_Test_Design.md",
+    "sha256": "19e951a95ba7e2fb6ff9a68d99eff153fc0bb990f0c9a2dbf1c7261817466ae0",
+    "byteCount": 11629
+  },
+  "amendment": {
+    "relativePath": "Research/Gate13R2_v2_Telemetry_Readiness_Amendment.v1.json",
+    "sha256": "4453d3abcead2acce7744801d2bcc35559ba68fe0d4e911e1cfa0e4e1333b302",
+    "byteCount": 5571
+  },
+  "pilotPlan": {
+    "relativePath": "Research/Gate13R2_v2_Pilot_Plan.v1.json",
+    "sha256": "e076c8c46a11a995e6e74a665af0c6a44d08e29ee8484c3c460b75bc1ecebb59",
+    "byteCount": 13127
+  },
+  "preservationAudit": {
+    "relativePath": "Research/Verification/Gate13R2_v2_PreservationAudit.summary.json",
+    "sha256": "f5c70c7813033d48a1253eee09f0e090659daa86569ed4a10b784000f1300be0",
+    "byteCount": 5298
+  },
+  "processReuseBatchCommand": {
+    "relativePath": "Assets/_Scripts/Research/Editor/ResearchPlanningProcessReuseBatchCommandV2.cs",
+    "sha256": "54811fdb7868f7509cd48281397018a29f5814911cfc83d96d63473dd6f50379",
+    "byteCount": 64518
+  },
+  "processReuseBatchCommandMeta": {
+    "relativePath": "Assets/_Scripts/Research/Editor/ResearchPlanningProcessReuseBatchCommandV2.cs.meta",
+    "sha256": "53305634070deadc4d410ba1d74e867dd0f88228a8f47bef4e188abfa29d7f57",
+    "byteCount": 240
+  },
+  "preparationModule": {
+    "relativePath": "Research/Gate13R2V2Preparation.psm1",
+    "sha256": "e21aedf5412180beb5c2c301e8a6b1d126923102601cb1ecbfa2b44763923669",
+    "byteCount": 20142
+  },
+  "telemetryProbeRunner": {
+    "relativePath": "Research/Run-Gate13R2V2TelemetryProbe.ps1",
+    "sha256": "80e6097432aacf3f98da679cbf88df02954fe9f61ae405f3f5f0a71540ef60ef",
+    "byteCount": 8101
+  },
+  "blockRunner": {
+    "relativePath": "Research/Run-PlanningProcessReuseBlockV2.ps1",
+    "sha256": "fbe9e36ea7d9feac56dabaf1dc28f72be3b1be25bdb06663e6401bd65e598d49",
+    "byteCount": 13046
+  },
+  "coldReferenceRunner": {
+    "relativePath": "Research/Run-Gate13R2V2ColdReference.ps1",
+    "sha256": "1022c631d180d55faaf9fabc667f74bd47cb00a5cbd30da00619562946c8b5f0",
+    "byteCount": 6386
+  },
+  "pilotRootInitializer": {
+    "relativePath": "Research/Initialize-Gate13R2V2PilotRoot.ps1",
+    "sha256": "e6eb1e3787ca5dac562cd7c143bbbac73717041f04dbe2a8d40afc187afe7154",
+    "byteCount": 5286
+  },
+  "pilotAnalyzer": {
+    "relativePath": "Research/Analyze-Gate13R2V2Pilot.ps1",
+    "sha256": "9edd2abe18648e16742e1a02990d60c56bef19602d960a09469abaf644399270",
+    "byteCount": 34774
+  },
+  "pilotRunner": {
+    "relativePath": "Research/Run-Gate13R2V2Pilot.ps1",
+    "sha256": "fd88b1f3c451d5078dd022851b2254ee1e8e508226b7ee08bd4924fcb833db2e",
+    "byteCount": 24422
+  },
+  "unitTestRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R2V2UnitTests.ps1",
+    "sha256": "b4b742a51f9b1f6d64aaa29f6823670ba30e3aa926c02de3ebb9aad7416aec0e",
+    "byteCount": 9512
+  },
+  "compileRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R2V2Compile.ps1",
+    "sha256": "591544ee32eaa13dd564d9326366f21394b6672ce508c1e325dca666ba5be0b5",
+    "byteCount": 3387
+  },
+  "blockVerificationRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R2V2BlockVerification.ps1",
+    "sha256": "3bbe78fbf686d03790168fd7e1669911c22e9327edc3e1f59f0333b8f19b7f60",
+    "byteCount": 11163
+  },
+  "retainedRegressionRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R2V2RetainedRegression.ps1",
+    "sha256": "6e26806daafd8d292ab4e1743c90ca038a19fc634ae6dc75f259a9ad540b4831",
+    "byteCount": 2387
+  },
+  "prePilotAuditRunner": {
+    "relativePath": "Research/Verification/Run-Gate13R2V2PrePilotAudit.ps1",
+    "sha256": "7b4b16dec2ca6c4e420760fc5bd3cbf8d31df83a7d7a4f27370795f2c7713295",
+    "byteCount": 12483
+  },
+  "legacyStructuralComparatorModule": {
+    "relativePath": "Research/Gate13ProcessReusePreparation.psm1",
+    "sha256": "b96093362ab40c48f12fb44e6d3ab515322f6d48448fcf71225d9e3b690e7508",
+    "byteCount": 43182
+  },
+  "coldBatchCommand": {
+    "relativePath": "Assets/_Scripts/Research/Editor/ResearchPlanningBatchCommand.cs",
+    "sha256": "10f9b1b921a87e60753e4eb9be53c43ce89d524ce2e8044274ae332715b74ced",
+    "byteCount": 15539
+  },
+  "coldWorkloadWrapper": {
+    "relativePath": "Research/Run-PlanningWorkload.ps1",
+    "sha256": "c75bed92db9b6df5d1123198acb5358fd58297aa770e78acd0c4530cf9fbbbfb",
+    "byteCount": 4975
+  },
+  "gate11BundleManifest": {
+    "relativePath": "Research/FormalScenarios/v1/bundle-manifest.json",
+    "sha256": "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e"
+  },
+  "gate12SuccessfulPilotManifest": {
+    "relativePath": "Research/PilotRuns/Gate12/v1/pilot-manifest.json",
+    "sha256": "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a"
+  },
+  "v1FailureReceipt": {
+    "relativePath": "Research/Gate13_ProcessReuse_Pilot_v1_Failure_Receipt.v1.json",
+    "sha256": "11f2331d55bb163a1254e7c2e1263f9cbc7c2e162f8bb5db20be5814d898c304"
+  },
+  "v1FailureOutputManifest": {
+    "relativePath": "Research/Gate13_ProcessReuse_Pilot_v1_Failure_Output_Manifest.json",
+    "sha256": "eb55ae56d047b44e4a6a7d0713b09437f4435162c19037e37aa5306ebf34c65d"
+  },
+  "unity": {
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "productVersion": "2022.3.30f1c1_a6dc00fbe362",
+    "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "byteCount": 35821616
+  },
+  "telemetryContract": {
+    "inProcessSource": "windows-psapi-getprocessmemoryinfo-process_memory_counters_ex-v1",
+    "externalSource": "cim-win32_process-v1",
+    "workingSetFields": [
+      "PROCESS_MEMORY_COUNTERS_EX.WorkingSetSize",
+      "Win32_Process.WorkingSetSize"
+    ],
+    "privateMemoryFields": [
+      "PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+      "Win32_Process.PrivatePageCount"
+    ],
+    "crossCheckAbsoluteToleranceBytes": 67108864,
+    "crossCheckRelativeToleranceFraction": 0.25,
+    "managedMemoryRetainedGrowthLimitBytes": 134217728,
+    "workingSetGrowthLimitBytes": 536870912,
+    "privateMemoryGrowthLimitBytes": 536870912,
+    "thresholdsFrozenBeforeProbe": true
+  },
+  "staticVerification": {
+    "powerShellFileCount": 12,
+    "powerShellParseErrorCount": 0,
+    "sourceUsesNoInliningCleanupBoundary": true,
+    "sourceUsesAuthoritativeSystemDiagnosticsMemoryProperties": false,
+    "pilotRootCreated": false,
+    "formalRootCreated": false,
+    "unityInvoked": false
+  }
+}

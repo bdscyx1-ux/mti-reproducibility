@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "gate11r-attempt2-final-audit-attempt2-failure-v2.2",
+  "createdAtUtc": "2026-10-07T03:16:32.8335591Z",
+  "status": "FAILED-88-OF-89-AUTO-REPAIR-AUTHORIZED",
+  "failureClass": "WINDOWS-POWERSHELL-5.1-DEFAULT-UTF8-NOBOM-DECODE",
+  "failedCheck": "playable-catalog-contract",
+  "passedCount": 88,
+  "failedCount": 1,
+  "failedSummary": {
+    "path": "Research/Verification/Gate11R_5pct/v2/Gate11R_FinalAudit.summary.v2.json",
+    "rawBytes": 27747,
+    "sha256": "d3fe91ad8f4c89b82a3750b023d4fcf5ea24df9da63c502397e55a39040a725b"
+  },
+  "failedScript": {
+    "path": "Research/Verification/Run-Gate11RFinalAuditV2_1.ps1",
+    "rawBytes": 25983,
+    "sha256": "0b25b3281cac34a2e78023cc77f853fc138802341280839cca6c1a70e2da2359"
+  },
+  "allowedRepair": "Read the frozen playable scene catalog with explicit UTF-8 decoding; do not change expected watermark or bundle bytes.",
+  "bundleManifestSha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+  "gate12RStarted": false,
+  "gate13RStarted": false
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "gate14re-me-d3-v3-sdk-preinstallation-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-002",
+  "status": "SDK_INSTALLATION_AUTHORIZED_NOT_YET_STARTED",
+  "observedAtUtc": "2026-10-17T06:30:22.3386439Z",
+  "hostOperatingSystem": {
+    "caption": "Microsoft Windows 11 专业版",
+    "version": "10.0.26300",
+    "buildNumber": "26300",
+    "architecture": "64 位"
+  },
+  "visualStudio": {
+    "instanceId": "75d0d27c",
+    "installationPath": "C:/Program Files/Microsoft Visual Studio/2022/Community",
+    "installationVersion": "17.14.37710.0",
+    "displayVersion": "17.14.41 (September 2026)",
+    "isComplete": true,
+    "isLaunchable": true,
+    "isRebootRequired": false
+  },
+  "preinstallationState": {
+    "windowsKitsInstalledRootsRegistryPresent": false,
+    "windowsKits10RootPresent": false,
+    "windowsKits10IncludeRootPresent": false,
+    "windowsKits10LibraryRootPresent": false,
+    "windowsKits10BinaryRootPresent": false,
+    "windowsSdkDirAvailableFromVcvars64": false,
+    "attempt001Diagnostic": "fatal error C1083: cannot open include file 'Windows.h': No such file or directory"
+  },
+  "selectedComponent": {
+    "componentId": "Microsoft.VisualStudio.Component.Windows11SDK.26100",
+    "componentCatalogVersion": "17.14.37011.9",
+    "catalogDisplayTitle": "Windows 11 SDK (10.0.26100.7705)",
+    "componentDependency": "Win11SDK_10.0.26100 [10.0.0,11.0)",
+    "visualStudioCatalogPath": "C:/ProgramData/Microsoft/VisualStudio/Packages/_Instances/75d0d27c/catalog.json",
+    "visualStudioCatalogSha256": "f0a50ea157222c29abd5ea6ff01bfc3c33b04e011c5e45ee2ca38ef0778e5643"
+  },
+  "plannedInstallationCommand": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe\" modify --installPath \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\" --add Microsoft.VisualStudio.Component.Windows11SDK.26100 --quiet --wait --norestart",
+  "toolHashes": {
+    "setupExe": {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/Installer/setup.exe",
+      "version": "4.10.30.62513",
+      "sha256": "f63840dda38637614aa982b94b1d544f0b54026f465c22f78d30765a130a2b73"
+    },
+    "vsInstallerExe": {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vs_installer.exe",
+      "version": "4.10.30.62513",
+      "sha256": "4ad67b2ffe8f902e4a072fc5332ee2ba5ecbe8a35b0a05b8bda5d03c9cc06ba4"
+    },
+    "vswhereExe": {
+      "path": "C:/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe",
+      "version": "3.1.7.39155",
+      "sha256": "c54f3b7c9164ea9a0db8641e81ecdda80c2664ef5a47c4191406f848cc07c662"
+    },
+    "vcvars64BatSha256": "6b516d8fcf543c14b2d861e1f45661e0029230fe0dc48e86ce78522801822209",
+    "clExeSha256": "fe251ef50a1545b1b0835ee17b1e785459712b38d79e45b5c1d3d28970a36619",
+    "linkExeSha256": "a364af801a8539e4324d9489313dbf001d959128451fc99a27b24676bbac058f"
+  },
+  "authorizationDocument": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Attempt_002_Authorization.v1.json",
+    "sha256": "a804b1d4fd523b1319aca66f9ec1764133dcaa99850eeccd3dfe7b8f9556e087"
+  },
+  "planDocument": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Attempt_002_Plan.v1.md",
+    "sha256": "839c972f78924aeb2a159a27e9b182f8876531f4b07f79cc5d0ab2a9389d4780"
+  },
+  "scopeBoundary": {
+    "qualificationMeasuredRootCreated": false,
+    "runnerOrSchemaIntegrationAuthorized": false,
+    "scheduleInputsOrIdentityMappingsAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionOrAnalysisAuthorized": false,
+    "rankingOrWinnerAuthorized": false
+  }
+}

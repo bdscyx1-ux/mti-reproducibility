@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "diagnosisKind": "gate13r-36h-v13-bootstrap-log-finalization-diagnosis-v1",
+  "createdAtUtc": "2026-10-08T05:39:00Z",
+  "status": "CONFIRMED-PRE-PILOT-IMPLEMENTATION-DEFECT",
+  "attempt": 13,
+  "failedStage": "serial-lane-bootstrap-compile",
+  "pilotStarted": false,
+  "formalCampaign": false,
+  "rootCause": {
+    "classification": "post-exit-log-handle-finalization-race",
+    "lane": 1,
+    "description": "The lane-01 bootstrap Unity process completed successfully and naturally removed its Unity lock, but the wrapper attempted to hash BootstrapCompile.Unity.log before the log became readable. Get-FileHash raised FileReadError before the atomic bootstrap summary was written. The parent then observed a successful child exit but no summary.",
+    "unityCompilationPassed": true,
+    "unityLogReportedReturnCode": 0,
+    "unityLogExitLine": 1931,
+    "sourceOrAlgorithmFailure": false,
+    "thresholdFailure": false,
+    "measuredObservation": false
+  },
+  "evidence": {
+    "executionReceiptSha256": "64ef6eb692849eaf17871ccbf92b6285fd548e60f962d6125c7cb9226621c661",
+    "verificationCheckpointSha256": "29f2b227116efb32634212f1d02611769312162dd97e01f54a6ca68fb90c57d1",
+    "failureReceiptSha256": "5f4146513efcaec8fd5aa60de7eab0cb6a4c69c7f9d78ab2e03937b628b697ff",
+    "partialOutputManifestSha256": "bbf92ab1b4ea04ccd5010b5127a2fec987392b67e8e7044d595cdfee12391e2b",
+    "bootstrapOrchestrationStderrSha256": "bb66a0e54131f4c817f29153dfc56a883e907f8ca7bc55ac49e03850df27d762",
+    "bootstrapUnityLogSha256AfterFinalization": "9e4bba9a0e0fc7518e7fec5b1ce06c7ae117d708281532d56ff1332f8078693e",
+    "bootstrapUnityLogBytes": 208441,
+    "laneLockAbsentAfterFailure": true,
+    "unityProcessCountAfterFailure": 0,
+    "bootstrapSummaryAbsent": true
+  },
+  "repairBoundary": {
+    "nextAttempt": 14,
+    "newCloneRootRequired": true,
+    "newVerificationRootRequired": true,
+    "waitForProcessExitFinalization": true,
+    "boundedLogReadabilityWaitSeconds": 60,
+    "logHashFailureMustBeRecordedInAtomicSummary": true,
+    "logDeletionOrMutationAllowed": false,
+    "controlledLockCleanupAllowed": false,
+    "bootstrapSemanticsChanged": false,
+    "pilotDesignChanged": false,
+    "thresholdRelaxationAllowed": false,
+    "v13MutationAllowed": false
+  },
+  "preservationPolicy": "PRESERVE-V13-ROOT-AND-CLONES-IN-PLACE; DO-NOT-RETRY; DO-NOT-RESUME; DO-NOT-MERGE",
+  "passed": true
+}

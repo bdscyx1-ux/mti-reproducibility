@@ -1,0 +1,171 @@
+{
+  "schema": "gate14re-engineering-recommendation-unblinding-contract-v1",
+  "studyId": "Gate14Re",
+  "attemptId": "attempt-001",
+  "contractId": "gate14re-engineering-recommendation-unblinding-attempt-001-c7c57a2a-89ff-4dee-87c4-64c770993e95",
+  "createdUtc": "2026-10-15T18:15:53.9274750Z",
+  "status": "FROZEN_PRE_UNBLINDING",
+  "purpose": "Release the already committed anonymous label mapping exactly once and map the frozen anonymous pre-adjudication to production identities without recomputation.",
+  "authorizedPrompt": {
+    "relativePath": "Research/Gate14Re/EngineeringRecommendation/next-unblinding-and-final-recommendation-authorization-prompt.v1.md",
+    "sha256": "4ed33b7f481985bc8f421a254b508e71a661636fb046181f2589bd1ba7a46c6e"
+  },
+  "tool": {
+    "relativePath": "Research/Unblind-Gate14ReEngineeringRecommendationV1.py",
+    "sha256": "bd4dc74c956c95469e55701afa13b30a22d5902ea5ebf3ff9c24ff9747f08764"
+  },
+  "selfTest": {
+    "relativePath": "Research/Verification/Gate14Re/engineering-recommendation-unblinding-attempt-001/self-test-receipt.v1.json",
+    "sha256": "849511d7d8b9b3a1f88e3a4b896f054f5660526a7a1d855167f7ffaf804608da",
+    "status": "PASS",
+    "actualCustodyOpened": false,
+    "dpapiDecryptionPerformed": false
+  },
+  "outputRoot": "Research/Analysis/Gate14Re/EngineeringRecommendation/final-attempt-001",
+  "labelCustody": {
+    "custodyId": "gate14re-engineering-recommendation-v1-d1a037fa-4734-4bef-a3ce-511723435801",
+    "commitmentFileSha256": "996b1d519e61d2f1a05b80fa941dc1a7f62ad677eb291f3fdf8f2f132bdd6757",
+    "payloadSha256": "cbcbce1d90b2fe6c72215abb63a594922e755c443d138ffcca6c7970bbed36b6",
+    "entropySha256": "dd62b189db96ca65b5cd45e55d9703bdbfc4ac1bc168a8b7e6cd5c91621849b8",
+    "mappingCommitmentSha256": "0e7c13458452771b8087826acaa1398d765a50d7d7b8813194e6080ec955e084",
+    "authorizedDpapiDecryptOperations": 1
+  },
+  "anonymousPreadjudication": {
+    "analysisReceiptSha256": "1519482402aef7c71e5945bb2e53edc3d8cf939ae65ff1111480d8d6c9d7fdd2",
+    "analysisManifestSha256": "6459674f89fc304fa1fa46c2cb68e00e11b89ff1a1ebb7917f5591433a19eac2",
+    "analysisCanonicalTreeSha256": "0a9f66e3982816e9f8af62bac052f0b1c3faf9c74c9bddd0619e5441e299d1d6",
+    "decisionWorkbookSha256": "2c6e9a4caa66ad6a304436f86eba6196430b90d0e1acef4c8ce0e39b75f7c8b9",
+    "eligibilitySha256": "0bd2199dffe140d5d58d079f55cf87d538d657dd3c1c20351729983504fd1889",
+    "provisionalRecommendedAnonymousLabel": "U43",
+    "recommendationBasis": "UNIQUE_MINIMUM_FROZEN_DECISION_SCORE"
+  },
+  "originalFormalConclusion": {
+    "phaseBStatus": "FORMAL-PHASE-B-ANALYSIS-COMPLETE",
+    "winnerAdjudicationStatus": "NO_UNIQUE_WINNER",
+    "winnerProductionAlgorithmId": null,
+    "mustRemainUnchanged": true
+  },
+  "productionIdentityBinding": {
+    "designContractSha256": "8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f",
+    "sourceToProduction": {
+      "A": "A*-R",
+      "B": "D*L",
+      "C": "C-FF",
+      "D": "IDFF"
+    }
+  },
+  "frozenInputBindings": [
+    {
+      "name": "authorized-prompt",
+      "relativePath": "Research/Gate14Re/EngineeringRecommendation/next-unblinding-and-final-recommendation-authorization-prompt.v1.md",
+      "sha256": "4ed33b7f481985bc8f421a254b508e71a661636fb046181f2589bd1ba7a46c6e"
+    },
+    {
+      "name": "custody-commitment",
+      "relativePath": "Research/Gate14Re/EngineeringRecommendation/Blinding/v1/label-custody-commitment.v1.json",
+      "sha256": "996b1d519e61d2f1a05b80fa941dc1a7f62ad677eb291f3fdf8f2f132bdd6757"
+    },
+    {
+      "name": "custody-payload",
+      "relativePath": "Research/Gate14Re/EngineeringRecommendation/Blinding/v1/label-custody.payload.dpapi.bin",
+      "sha256": "cbcbce1d90b2fe6c72215abb63a594922e755c443d138ffcca6c7970bbed36b6"
+    },
+    {
+      "name": "custody-entropy",
+      "relativePath": "Research/Gate14Re/EngineeringRecommendation/Blinding/v1/label-custody.entropy.v1.bin",
+      "sha256": "dd62b189db96ca65b5cd45e55d9703bdbfc4ac1bc168a8b7e6cd5c91621849b8"
+    },
+    {
+      "name": "anonymous-analysis-receipt",
+      "relativePath": "Research/Analysis/Gate14Re/EngineeringRecommendation/attempt-001/analysis-receipt.v1.json",
+      "sha256": "1519482402aef7c71e5945bb2e53edc3d8cf939ae65ff1111480d8d6c9d7fdd2"
+    },
+    {
+      "name": "anonymous-analysis-manifest",
+      "relativePath": "Research/Analysis/Gate14Re/EngineeringRecommendation/attempt-001/analysis-manifest.v1.json",
+      "sha256": "6459674f89fc304fa1fa46c2cb68e00e11b89ff1a1ebb7917f5591433a19eac2"
+    },
+    {
+      "name": "anonymous-analysis-tree",
+      "relativePath": "Research/Analysis/Gate14Re/EngineeringRecommendation/attempt-001/analysis-canonical-tree.v1.jsonl",
+      "sha256": "0a9f66e3982816e9f8af62bac052f0b1c3faf9c74c9bddd0619e5441e299d1d6"
+    },
+    {
+      "name": "anonymous-decision-workbook",
+      "relativePath": "Research/Analysis/Gate14Re/EngineeringRecommendation/attempt-001/anonymous-decision-workbook.json",
+      "sha256": "2c6e9a4caa66ad6a304436f86eba6196430b90d0e1acef4c8ce0e39b75f7c8b9"
+    },
+    {
+      "name": "anonymous-eligibility",
+      "relativePath": "Research/Analysis/Gate14Re/EngineeringRecommendation/attempt-001/anonymous-eligibility.json",
+      "sha256": "0bd2199dffe140d5d58d079f55cf87d538d657dd3c1c20351729983504fd1889"
+    },
+    {
+      "name": "phaseb-analysis-receipt",
+      "relativePath": "Research/Analysis/Gate14Re/PhaseB/attempt-001/analysis-receipt.v1.json",
+      "sha256": "1c1a45784d858fe2953a76c604bb4649515d216321c4acb9bd9e4c0a4482801d"
+    },
+    {
+      "name": "phaseb-analysis-tree",
+      "relativePath": "Research/Analysis/Gate14Re/PhaseB/attempt-001/analysis-canonical-tree.v1.jsonl",
+      "sha256": "5754a2027fb77839bb736e44c5c6e21faddd2c7b652d5a9fb6a02b2e643a933d"
+    },
+    {
+      "name": "gate14re-status-v6",
+      "relativePath": "Research/Gate14Re/Gate14Re_Status.v6.json",
+      "sha256": "bbef921ac304f40d30ddc69ff374fb552a5f3aa572b03e5e8834250bc5961588"
+    },
+    {
+      "name": "design-contract-v2",
+      "relativePath": "Research/Gate14Re/Gate14Re_Design_Contract.v2.json",
+      "sha256": "8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f"
+    },
+    {
+      "name": "anonymous-recommendation-contract",
+      "relativePath": "Research/Gate14Re/EngineeringRecommendation/Gate14Re_Engineering_Recommendation_Contract.v1.json",
+      "sha256": "82ff94207c66264b5eaa8e720bed3d112f72f99b899e7de5dcf5f4c638d18de8"
+    },
+    {
+      "name": "anonymous-recommendation-authorization",
+      "relativePath": "Research/Gate14Re/EngineeringRecommendation/Gate14Re_Engineering_Recommendation_Authorization.v1.json",
+      "sha256": "40788317fc99975c9a2a00a8b13f22ea4a7ed4b11cfefa389b6f6b87f55f5ddd"
+    },
+    {
+      "name": "unblinding-self-test",
+      "relativePath": "Research/Verification/Gate14Re/engineering-recommendation-unblinding-attempt-001/self-test-receipt.v1.json",
+      "sha256": "849511d7d8b9b3a1f88e3a4b896f054f5660526a7a1d855167f7ffaf804608da"
+    }
+  ],
+  "frozenDecisionRules": {
+    "weights": {
+      "movementRank": 2,
+      "pathRank": 1,
+      "renderRank": 1,
+      "scalingRank": 1
+    },
+    "scoreDirection": "lower is better",
+    "recommendationBasis": "UNIQUE_MINIMUM_FROZEN_DECISION_SCORE",
+    "rulesOrWeightsMayChange": false,
+    "anonymousResultsMayChange": false
+  },
+  "allowedActions": [
+    "verify every frozen input hash and read-only attribute",
+    "perform one DPAPI CurrentUser decryption of the existing custody payload",
+    "verify the plaintext mapping commitment",
+    "map the existing anonymous pre-adjudication to production identities",
+    "write a new versioned read-only mapping release, final recommendation, manifest, canonical tree and receipt"
+  ],
+  "forbiddenActions": [
+    "open or parse formal block outputs",
+    "modify formal raw",
+    "modify original Phase B",
+    "modify the anonymous pre-adjudication",
+    "recompute metrics, ranks, scores or statistical analyses",
+    "change rules, weights or tie-break order",
+    "collect, retry, resume, top-up, merge, skip or reorder data",
+    "claim a confirmatory statistical winner",
+    "start Gate 15V-R/OBS"
+  ],
+  "requiredFinalClassification": "POST_HOC_COMPOSITE_ENGINEERING_RECOMMENDATION",
+  "requiredOriginalFormalConclusion": "NO_UNIQUE_WINNER"
+}

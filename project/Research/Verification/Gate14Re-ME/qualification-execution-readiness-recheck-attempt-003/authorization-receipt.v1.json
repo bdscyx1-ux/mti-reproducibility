@@ -1,0 +1,28 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-003-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-attempt-003",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-003",
+  "status": "AUTHORIZED_READ_ONLY_NO_UNITY_READINESS_RECHECK",
+  "authorizedAtUtc": "2026-10-17T16:02:03.444602Z",
+  "authorizationSource": "user-selected response annotation",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME qualification execution readiness recheck attempt‑003：完整保留 qualification execution readiness freeze attempt‑002、terminal-chain corrigendum attempt‑001 与 attempt‑002 的全部状态和证据，不删除、不修改、不改判；仅允许以只读、无 Unity 的方式，依据 Status v28 核对 output schema v3、structural‑v3.1、delivery‑v2.2、supervisor‑v3、execution contract v3.1、implementation manifest v3.1、RunnerV2、compiled assemblies、input schema v2、planning schema binding v2、planning assets、162 行 Williams schedule、sealed identity、D2、D3‑v3.1、D4、clock、typed‑Parquet runtime、trusted Unity identity rule、attempt‑007 timestamp comparator、运行预算、零 replacement fail‑stop、预期 1,147 个串行 fresh Unity processes，以及完整逐条 structural/delivery 终局。只有所有路径、哈希、cardinality、receipt 版本、进程账本、进程身份和最终 ordinal 检查全部通过时，才允许冻结独立 terminal readiness PASS receipt。不得启动 Unity，不得创建 qualification measured root 或正式 delivery root，不得运行 planner、算法 lane、资格或正式采集、正式分析、排名或赢家裁决；失败时保留全部证据并 fail closed。",
+  "allowed": [
+    "create and freeze this independent attempt-003 evidence directory",
+    "read and hash the explicitly bound frozen source, contract, status, planning, runtime, identity and prior-attempt evidence",
+    "parse Python/PowerShell/JSON/JSONL statically without executing the qualification supervisor or algorithm code",
+    "inspect read-only host/process/storage metadata",
+    "freeze a terminal readiness PASS receipt and Status v29 only if every check passes"
+  ],
+  "prohibited": [
+    "starting Unity",
+    "creating qualification measured, delivery, or formal roots",
+    "running any planner or algorithm lane",
+    "producing qualification or formal observations",
+    "formal collection or formal analysis",
+    "cross-algorithm effects, ranking, weighting, or winner adjudication",
+    "opening or disclosing the sealed identity mapping",
+    "deleting, modifying, or reclassifying prior attempts"
+  ]
+}

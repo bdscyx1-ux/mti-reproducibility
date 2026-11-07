@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "GATE13R-PR2-ATTEMPT3-STORAGE-RECLAMATION-FINAL-RECEIPT",
+  "receiptStatus": "COMPLETE-EXACT-TARGET-DELETED-ALL-PRESERVATION-CHECKS-PASS",
+  "generatedAtUtc": "2026-10-11T13:15:34.1322361Z",
+  "generatedAtAsiaShanghai": "2026-10-11T21:15:34.1322361+08:00",
+  "authorization": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Storage_Reclamation_Authorization.v1.json",
+    "sha256": "768f43820078347ca8942cc02622c5612302b7c283429c6f220e8e5d3b113299"
+  },
+  "preDeleteReceipt": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Storage_Reclamation_PreDelete_Receipt.v1.json",
+    "sha256": "ef68f2216cd6b8e7f5ca41f75dffbdc565197c548679e70d32059da62ea20983"
+  },
+  "preDeleteSnapshot": {
+    "relativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/pre-delete-snapshot.json",
+    "sha256": "fb7062c68b228c67bef85872367802994e981c2bf674ca6c519431b69dca8084"
+  },
+  "deletion": {
+    "exactDeletedRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/campaigns",
+    "exactDeletedAbsolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3\\campaigns",
+    "deleteStartedAtUtc": "2026-10-11T13:13:25.7175809Z",
+    "deleteCompletedAtUtc": "2026-10-11T13:13:36.4377729Z",
+    "deletedFileCount": 87832,
+    "deletedLogicalBytes": 25876073527,
+    "deletedLogicalGiB": 24.098971,
+    "scopeExpansion": false,
+    "targetAbsentAfterDeletion": true,
+    "irreversibleWithinProject": true,
+    "recoveryQualification": "The deleted file contents are not present in the audit manifests; recovery would require an independent external backup or filesystem snapshot."
+  },
+  "deletedTreeEvidence": {
+    "canonicalManifestRelativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/campaigns-canonical-file-manifest.jsonl",
+    "canonicalManifestRawBytes": 16973770,
+    "canonicalManifestSha256": "c17db7cd92f721b4426f7c18fca0590af3c308a8f35115913445cf5b2826e024",
+    "canonicalTreeSha256": "c17db7cd92f721b4426f7c18fca0590af3c308a8f35115913445cf5b2826e024",
+    "recordCount": 87832,
+    "recordedRawBytes": 25876073527
+  },
+  "attempt3IsolationFinding": {
+    "attempt3ObservationReuseAuthorized": false,
+    "crossAttemptMergeAuthorized": false,
+    "attempt3ObservationsConfirmedNotReusedOrMergedIntoAttempt4": true,
+    "attempt3Disposition": "FAILED-EXCLUDED-STORAGE-RECLAIMED",
+    "evidenceContractRelativePath": "Research/Gate13R_PR2_Attempt4_Execution_Contract.v1.json",
+    "evidenceContractSha256": "a9c7a81e3c1a59aea37be1124a1237dabd6118e9f397050122bd76c308a16570"
+  },
+  "preservedAttempt3Artifacts": {
+    "preservedScopes": [
+      "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_control/**",
+      "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_plans/**",
+      "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/partial-output-manifest.json",
+      "Research/Gate13R_PR2_Formal_Execution_Status.v3.json",
+      "Research/Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+      "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_control/formal-failure-checkpoint.json"
+    ],
+    "preservedFileCount": 13884,
+    "preservedRawBytes": 15540363,
+    "preDeleteCanonicalTreeSha256": "d5a8dfd82145d3883c6c0c1e20b7693c507ae3d8ba6fb894be8c01e09f3b056b",
+    "postDeleteCanonicalTreeSha256": "d5a8dfd82145d3883c6c0c1e20b7693c507ae3d8ba6fb894be8c01e09f3b056b",
+    "canonicalTreesMatch": true,
+    "historicalPreservationBaselineRelativePath": "Research/Gate13R_PR2_Attempt4_Historical_Preservation_Baseline.v1.json",
+    "historicalPreservationBaselineSha256": "6cbc7bfa3a5b2e1026d9af1b5b37458a98966724db5f6f85f3e37cf051c0abd0"
+  },
+  "attempt4PreservationVerification": {
+    "acquisitionFrozenBindingsVerified": 39,
+    "acquisitionFrozenBindingsExpected": 39,
+    "phaseBV2BindingsVerified": 25,
+    "phaseBV2BindingsExpected": 25,
+    "phaseBAnalysisDirectoryFilesVerified": 7,
+    "phaseBAnalysisDirectoryFilesExpected": 7,
+    "phaseBV2ContractSha256": "54d013bd81cb6dda2c9e2e72512236884b521ec511152237846b1e9fca2c1328",
+    "rawRootFileCountBeforeAndAfter": 110795,
+    "rawRootRawBytesBeforeAndAfter": 26474012996,
+    "rawPayloadFileCountBeforeAndAfter": 89472,
+    "rawPayloadRawBytesBeforeAndAfter": 26429810187,
+    "rawPayloadManifestSha256": "ddd438471c0736ddc6f3445fb118712c2ac0371e919eee80e3af79212d25ee5a",
+    "rawPayloadCanonicalTreeSha256": "02cbeed034d6a7211e2d6b7e2b3832a0485d25fb703a2b0f561bf50f7a838c1b",
+    "nonpayloadPreDeleteCanonicalTreeSha256": "85b64e2cd36bf1584a81c854d96f3cb40aa6fe488103762bfd8c33d43d30d8ab",
+    "nonpayloadPostDeleteCanonicalTreeSha256": "85b64e2cd36bf1584a81c854d96f3cb40aa6fe488103762bfd8c33d43d30d8ab",
+    "rawAndAnalysisArtifactsUnchanged": true
+  },
+  "gate14RPreservationVerification": {
+    "verifiedFileCount": 10,
+    "expectedFileCount": 10,
+    "allHashesMatch": true,
+    "readinessCheckpointSha256": "1ce79aeb37210312b9b6d53d48e69a0156ba3704e88f20842a68dcf95e98410f",
+    "finalAuditSha256": "bd0af2e337e2eaaa29ff4ff2c1b1cb1086d41d0a14c6d27e237a504c2e560282"
+  },
+  "storage": {
+    "volume": "H:",
+    "freeBytesAtDeletionStart": 213559332864,
+    "freeBytesImmediatelyAfterDeletion": 239712657408,
+    "observedImmediateFreeSpaceDeltaBytes": 26153324544,
+    "observedImmediateFreeSpaceDeltaGiB": 24.357182,
+    "deletedLogicalBytes": 25876073527,
+    "allocationAndMetadataDeltaBeyondLogicalBytes": 277251017,
+    "freeBytesAfterPostDeleteEvidenceWrites": 239710457856
+  },
+  "postDeleteVerification": {
+    "relativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/post-delete-verification.json",
+    "sha256": "eeef0b73c12f05d58ae0c33c7b72d0230f128dcedc30b7437ffda4fdcb39269b",
+    "status": "PASS-EXACT-TARGET-ABSENT-ALL-PRESERVATION-CHECKS-MATCH"
+  },
+  "deletionEvent": {
+    "relativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/deletion-event.json",
+    "sha256": "35d74ae1af1a988f1493849769cd32d2bb9f29a6a9ffd5c631d733d740e587e3"
+  },
+  "evidenceManifest": {
+    "relativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/evidence-manifest.v1.json",
+    "sha256": "34210c290de865ac2ce82bc0be72f3d40d1cbed70a2ea8628e5cc92d718c3019",
+    "listedEvidenceFileCount": 17
+  },
+  "auditExceptions": [
+    {
+      "event": "campaigns manifest generation attempt 1 failed before first record because of a JSON serializer overload mismatch",
+      "sourceDataModified": false,
+      "deletionHadStarted": false,
+      "failureRecordRelativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/manifest-generation-attempt-1-failure.json"
+    },
+    {
+      "event": "preserved-v3 manifest generation attempt 1 failed before first record because of a JSON serializer overload mismatch",
+      "sourceDataModified": false,
+      "deletionHadStarted": false,
+      "failureRecordRelativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/preserved-v3-manifest-generation-attempt-1-failure.json"
+    }
+  ],
+  "explicitNonActions": {
+    "otherGate13RFilesDeletedOrModified": false,
+    "gate14RFilesDeletedOrModified": false,
+    "unityStarted": false,
+    "experimentStarted": false,
+    "statisticalAnalysisStarted": false,
+    "gate15VRStarted": false,
+    "automaticDeletionScopeExpansion": false
+  }
+}

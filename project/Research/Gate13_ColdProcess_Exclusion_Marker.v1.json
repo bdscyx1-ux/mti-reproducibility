@@ -1,0 +1,24 @@
+{
+    "schemaVersion":  1,
+    "markerId":  "gate13-cold-process-exclusion-marker-v1",
+    "savedAt":  "2026-10-06T13:19:41.5298291+08:00",
+    "formalRoot":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1",
+    "status":  "USER-TERMINATED-DESIGN-CHANGE",
+    "analysisDisposition":  "EXCLUDED_FROM_ANALYSIS",
+    "retryPolicy":  "NO-AUTO-RETRY",
+    "resumePolicy":  "NO-RESUME",
+    "supersededBy":  "GATE13-R2-PROCESS-REUSE-DESIGN",
+    "allowedUses":  [
+                        "historical-audit",
+                        "termination-evidence",
+                        "non-inferential-diagnostic-reference"
+                    ],
+    "prohibitedUses":  [
+                           "formal-inference",
+                           "formal-sample-size-estimation",
+                           "gate14-formal-analysis",
+                           "merge-with-process-reuse-results"
+                       ],
+    "coldProcessOutputMayBeModified":  false,
+    "processReuseFormalCampaignAuthorized":  false
+}

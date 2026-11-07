@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "gate13r-pr2-attempt3-monitoring-recovery-terminal-evidence-v4",
+  "createdAtUtc": "2026-10-09T07:32:00Z",
+  "createdAtAsiaShanghai": "2026-10-09T15:32:00+08:00",
+  "status": "ACTIVE-V2-MONITORING-RECOVERY-TERMINAL-PACKAGE-PASSED",
+  "executionClass": "NON-EXECUTING-VALIDATION-ONLY",
+  "parentImplementationEvidence": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v3.json",
+    "rawBytes": 2910,
+    "sha256": "24f697d7914b00af0fcd6a0b3260cab18bb8164c00a9d3ae712864977d44fa24"
+  },
+  "terminalBindings": [
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v2.json",
+      "rawBytes": 6647,
+      "sha256": "8cb90b20072f0abf1855a2d082a3d08e7865b995b0fac61341ae61a924e81789"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.json",
+      "rawBytes": 5739,
+      "sha256": "526a7fc6ff67e3c2ac0201f1f88dcc08b9af155e0a25d0332fd4aab189aa809c"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.md",
+      "rawBytes": 2653,
+      "sha256": "0f9bd5b9c14d8407a2a6f4750832d2b4daf25cac7a2d645da2a6e6556fe77df0"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_PostValidation_Preservation_Audit.v2.json",
+      "rawBytes": 4064,
+      "sha256": "73ecca00922274fc0f9a5ec0498a9983e0502897955ae7775af3d2fe6b40a441"
+    },
+    {
+      "relativePath": "Research/Overall_Project_Plan.md",
+      "rawBytes": 116383,
+      "sha256": "ea5ea5e3820b76d492ed5a012b8d24b464d8c852ae494164c980cbad557a1ca5"
+    },
+    {
+      "relativePath": "Research/Next_Session_Checkpoint.md",
+      "rawBytes": 7263,
+      "sha256": "b98a299bc560d7006513ddb7592f0d1449121182f38ddaa38e1bcf51b1590650"
+    }
+  ],
+  "externalAutomation": {
+    "id": "gate13r-attempt3-hourly-progress",
+    "absolutePath": "C:\\Users\\bdscy\\.codex\\automations\\gate13r-attempt3-hourly-progress\\automation.toml",
+    "rawBytes": 2979,
+    "sha256": "c66d41527f075137b2829a291fb303e1d81af940925e739fa3c898cb8f52b0e4",
+    "status": "ACTIVE",
+    "rrule": "FREQ=MINUTELY;INTERVAL=5",
+    "activeWrapperSha256": "8b9c3733aae86b4adbe03c9bc7806931947746d864854d438bf2a67d09f537c5"
+  },
+  "validatedState": {
+    "validationAttempt3": "PASSED-56-OF-56",
+    "upstreamHashMatch": "18-OF-18",
+    "rawCommitHourlyCoverage": true,
+    "formalTargetsAbsent": true,
+    "unityInvocations": 0,
+    "unityEditorProcesses": 0,
+    "unityProjectLockExists": false,
+    "prelaunchRepairCyclesCompleted": 1,
+    "prelaunchRepairCyclesRemainingMaximum": 2,
+    "measuredAcquisitionRetryAllowed": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "supersededLaunchInputs": [
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json",
+      "sha256": "6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v2.md",
+      "sha256": "54a6e4b1db4006ba2c03cdc7395bd109e1e07dc3a6e212f5dc5252bb5e541fb6"
+    }
+  ],
+  "nextArtifact": "Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v3.md",
+  "authorizationBoundary": {
+    "formalAttempt3LaunchAuthorized": false,
+    "formalRootCreationAuthorized": false,
+    "formalReceiptCreationAuthorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  }
+}

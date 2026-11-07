@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-runtime-qualification-attempt-001-validation-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-runtime-qualification-attempt-001",
+  "status": "PASS_FAILURE_EVIDENCE_FROZEN",
+  "version": 1,
+  "validatedAtUtc": "2026-10-17T05:03:26.0279266Z",
+  "validatorRelativePath": "Research/Validate-Gate14ReMERuntimeQualificationAttempt001V1.py",
+  "validatorSha256": "9958a24896f704be3b5519d6d0a7a4ed01fc46b2778e84ff1b2b226ec584ce55",
+  "checksPassed": 3237,
+  "checksFailed": 0,
+  "sourceFreezeValidation": {
+    "status": "PASS_SOURCE_ONLY_IMPLEMENTATION_FREEZE",
+    "checksPassed": 240,
+    "checksFailed": 0,
+    "artifactCount": 24
+  },
+  "runtimeValidation": {
+    "typedParquetWheelArtifactCount": 1,
+    "typedParquetInstalledFileCount": 762,
+    "currentUnityProcessCount": 0,
+    "unityCompilationPassed": true,
+    "d2GridReadProxyPassed": true,
+    "d2SemanticInvariancePassed": true,
+    "d3AllocationCounterPositiveControlPassed": false,
+    "d3AllocationCounterDifferenceBytes": 0,
+    "d3AllocationPositiveControlBytes": 1048576,
+    "d4PersistentStateSizerPassed": true,
+    "clockMonotonicityPassed": true,
+    "exportKnownAnswerRun": false
+  },
+  "failureAdjudication": {
+    "attemptStatus": "FAIL_CLOSED_D3_ALLOCATION_COUNTER_POSITIVE_CONTROL",
+    "failureEvidenceInternallyConsistent": true,
+    "automaticRetryPerformed": false,
+    "frozenImplementationModified": false,
+    "continuationAfterMandatoryControlFailure": false
+  },
+  "evidenceBoundary": {
+    "prohibitedMeasuredAnalysisExportRootsAbsent": true,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

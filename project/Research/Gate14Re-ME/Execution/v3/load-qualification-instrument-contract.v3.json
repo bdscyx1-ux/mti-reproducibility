@@ -1,0 +1,101 @@
+{
+  "schema": "gate14re-me-load-qualification-instrument-contract-v3",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_SOURCE_INTEGRATED_D3_V3_1_RUNTIME_QUALIFICATION_PENDING",
+  "version": 3,
+  "baseContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-instrument-contract.v1.json",
+    "sha256": "7515851e9b447c0e17c580e0cbad86186d156f606cb8828616cd7f4f50ea4503",
+    "unchangedEndpointsInherited": ["D1", "D2", "D4"],
+    "unchangedProcessResourceContractInherited": true
+  },
+  "endpointReplacement": {
+    "endpointId": "D3",
+    "semanticVersion": "3.1",
+    "name": "owner-thread cumulative managed allocation bytes",
+    "unit": "bytes",
+    "counterId": "GC.Alloc-Begin-owner-thread-window-v3.1",
+    "qualifiedContractRelativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+    "qualifiedContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "eventSource": "exact GC.Alloc Begin-event allocation-size metadata UInt32/4, losslessly widened and accumulated by the native Windows x86-64 plugin",
+    "threadAttribution": "only the native thread that successfully opens BeginWindow contributes to managedAllocationBytes and managedAllocationEventCount",
+    "primaryRawTable": "d3-windows.raw.v1.jsonl",
+    "primaryRawField": "managedAllocationBytes",
+    "rawFields": [
+      "managedAllocationBytes",
+      "managedAllocationEventCount",
+      "foreignThreadAllocationBytes",
+      "foreignThreadAllocationEventCount",
+      "invalidMetadataEventCount",
+      "counterOverflowCount",
+      "ownerNativeThreadId",
+      "observerNativeThreadId",
+      "windowStartStopwatchTicks",
+      "windowEndStopwatchTicks",
+      "windowElapsedStopwatchTicks",
+      "stopwatchFrequency"
+    ],
+    "derivedFields": {
+      "managedAllocationRateBytesPerSecond": "managedAllocationBytes * stopwatchFrequency / windowElapsedStopwatchTicks",
+      "managedAllocationRateValid": "managedAllocationBytes > 0 and stopwatchFrequency > 0 and windowElapsedStopwatchTicks > 0 and the result is finite and positive"
+    },
+    "validZeroPolicy": "Retain a structurally valid zero-byte window exactly; serialize rate as 0.0 and rate validity as false.",
+    "formalBoundaries": [
+      "one planner initialization",
+      "one complete event group comprising all atomic repairs followed by all path queries",
+      "one empty-boundary iteration"
+    ],
+    "diagnosticExclusions": [
+      "foreign-thread allocation from the primary D3 total",
+      "operations.managedAllocatedBytes algorithm-reported diagnostic from the formal D3 endpoint",
+      "live managed-heap occupancy",
+      "native allocations",
+      "RSS or committed process memory",
+      "frame-level GC.Alloc aggregates"
+    ]
+  },
+  "integratedArtifacts": {
+    "runner": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    },
+    "managedContracts": {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+      "sha256": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902"
+    },
+    "outputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+      "sha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb"
+    }
+  },
+  "integrationSemantics": {
+    "dedicatedD3WindowTable": true,
+    "syntheticStartEndSnapshotsCreated": false,
+    "eventGroupsUseOneToOneD3WindowJoin": true,
+    "emptyBoundariesUseOneToOneD3WindowJoin": true,
+    "plannerInitializationWindowRetained": true,
+    "allRawD3FormulaInputsRetained": true
+  },
+  "currentStageEvidence": {
+    "versionedRunnerCreated": true,
+    "versionedOutputSchemaCreated": true,
+    "unityCompilationPending": true,
+    "algorithmFreeIntegrationSelfCheckPending": true,
+    "runtimeInstrumentQualificationInheritedFromStandaloneD3V31": true,
+    "fullLoadQualificationRuntimeExecuted": false
+  },
+  "scientificBoundary": {
+    "priorEvidenceRetained": true,
+    "oldRunnerOrSchemaModified": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "requiredNextAuthorizationAfterIntegrationPass": "A separate authorization is required to create a qualification schedule/inputs/identity mapping/measured root or execute any runtime qualification algorithm lane."
+}

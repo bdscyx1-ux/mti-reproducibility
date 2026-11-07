@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-d3-endpoint-replacement-validation-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-endpoint-replacement-attempt-002",
+  "status": "PASS_D3_V2_SOURCE_FREEZE",
+  "version": 1,
+  "validatedAtUtc": "2026-10-17T05:52:27.7252909Z",
+  "validator": {
+    "relativePath": "Research/Validate-Gate14ReMED3EndpointReplacementAttempt002V1.py",
+    "sha256": "c0024ec66af4ed6f0986e6eceb49b660eec272afd40752f116de2f9dfd07e50f",
+    "bytes": 22158
+  },
+  "result": {
+    "checksPassed": 234,
+    "checksFailed": 0,
+    "failures": [],
+    "currentUnityProcessCount": 0,
+    "d3V2StandaloneKnownAnswerPassed": true,
+    "d3V2IntegratedIntoQualificationRunner": false,
+    "algorithmLaneExecuted": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "validatorHistory": {
+    "validatorRuns": 2,
+    "unityKnownAnswerRuns": 1,
+    "firstValidatorRunStatus": "FAIL_VALIDATOR_LOG_LOCATOR_ONLY",
+    "firstValidatorRunChecksPassed": 233,
+    "firstValidatorRunChecksFailed": 1,
+    "firstValidatorRunFailure": "compile-sequence order invalid because the validator selected the first pre-compilation Mono reload token instead of the reload after final build success",
+    "validatorCorrection": "Changed only the read-only validator to locate import and reload tokens from the final Tundra-build-success position.",
+    "scientificArtifactsChangedBetweenValidatorRuns": false,
+    "thresholdsChangedBetweenValidatorRuns": false,
+    "sourceChangedBetweenValidatorRuns": false,
+    "knownAnswerRerun": false
+  },
+  "boundEvidence": {
+    "knownAnswerReceiptSha256": "e8b16d76e339c87fe5485edcd68c8a6518ce40a5e49acf15b6e8cc6dadfc65aa",
+    "unityLogSha256": "7a52346f7fc09a9ee12869cb5b4d445b1b8d9e7d0f30b7ecb17fade00b834d7b",
+    "processReceiptSha256": "3565571501f9b9a6afbb6fb78b4c0b54ce54bc91595de4d82238b9be7cd4d311",
+    "finalInstrumentContractSha256": "e402dfc90362a3ac07f5342d218f19c67d31d46f82bec584d5d817fbccb9f0bf",
+    "sourceFreezeManifestSha256": "4ed57ddfbfb2d0b6b73e2b8c0480c0d2fce575505c580afe0efc1af622ddea0a",
+    "statusV6Sha256": "06043046e01640f0f8c7b54cd7095a4cf704bece676c952c65a653b17e9c3bc1"
+  }
+}

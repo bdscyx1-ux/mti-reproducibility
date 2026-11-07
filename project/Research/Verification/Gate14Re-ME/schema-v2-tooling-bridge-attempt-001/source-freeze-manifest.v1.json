@@ -1,0 +1,134 @@
+{
+  "schema": "gate14re-me-schema-v2-tooling-bridge-source-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-schema-v2-tooling-bridge-attempt-001",
+  "status": "FROZEN_SCHEMA_V2_TOOLING_BRIDGE_ARTIFACTS",
+  "frozenAtUtc": "2026-10-17T08:33:31.2432514Z",
+  "artifacts": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Schema_V2_Tooling_Bridge_Authorization.v1.json",
+      "lengthBytes": 4099,
+      "sha256": "496e6be6cd03745347a6e634be411d963b5edc0ea0698dafeec6de2b5681cd6d"
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Schema_V2_Tooling_Bridge_Plan.v1.md",
+      "lengthBytes": 3407,
+      "sha256": "43929b8bddf4d718c68bb3a1bb7cdf39907d8e4e06790aad7f7ac82a6213f262"
+    },
+    {
+      "role": "schema-v2-structural-validator",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v2.py",
+      "lengthBytes": 36753,
+      "sha256": "daa1fc48077cc0cb8c62221956355a35c74e8b946660b683f7178e2072e9bc0e"
+    },
+    {
+      "role": "schema-v2-lossless-delivery-validator-exporter",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2.py",
+      "lengthBytes": 33670,
+      "sha256": "5e9f8d8c3403321fb9e1b2b3f67fef00a963bf85f25c66d98bc2c41971434ec4"
+    },
+    {
+      "role": "algorithm-free-synthetic-known-answer-harness",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_schema_v2_tooling_known_answer_v1.py",
+      "lengthBytes": 26579,
+      "sha256": "8539b80e0c63624ac84ae5eb4477bad9328cfb0a8b7a5f22abcb958e89956555"
+    }
+  ],
+  "parentBindings": [
+    {
+      "role": "runner-schema-integration-freeze-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/freeze-receipt.v1.json",
+      "lengthBytes": 4426,
+      "sha256": "b244af408606e0758841f1ad44af5af0d565e12d83da3cfddf918b2412dbaa24"
+    },
+    {
+      "role": "status-v9",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v9.json",
+      "lengthBytes": 4609,
+      "sha256": "6785a099bcce12058aabcbbdb183df69a4696a7111b6048f2aa3f5af7756e641"
+    },
+    {
+      "role": "output-schema-v2",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+      "lengthBytes": 10470,
+      "sha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb"
+    },
+    {
+      "role": "qualified-d3-v3-1-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "lengthBytes": 6971,
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    {
+      "role": "typed-parquet-runtime-manifest",
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "lengthBytes": 179214,
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    {
+      "role": "qualification-runner-v2",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "lengthBytes": 77345,
+      "sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    }
+  ],
+  "protectedPreexistingArtifacts": [
+    {
+      "role": "structural-validator-v1",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v1.py",
+      "lengthBytes": 37672,
+      "sha256": "4cc4369c50b7b0b89bc7ec657b2384b93ff48905205046c93d25584ca3e5852f"
+    },
+    {
+      "role": "delivery-validator-v1",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v1.py",
+      "lengthBytes": 19560,
+      "sha256": "3a5c58cbb4f4db93ebedd563175fa916f9a9443925a1c8955bb107cb3dbb4905"
+    }
+  ],
+  "evidenceBindings": [
+    {
+      "role": "retained-initial-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/failure-receipt.v1.json",
+      "lengthBytes": 3164,
+      "sha256": "1aa5ebd573331392e60ac2948f2e9947675a5e796f0fd79323c52abf71b1d0f2"
+    },
+    {
+      "role": "repair-cycle-known-answer-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/repair-cycle-001/known-answer-receipt.v1.json",
+      "lengthBytes": 7130,
+      "sha256": "52d1ebeab4a858cc3cbb4fdf4aa4796974a8f64e3e10538b6aaee48bab6f547f"
+    },
+    {
+      "role": "repair-cycle-scope-audit",
+      "relativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/repair-cycle-001/scope-audit.v1.json",
+      "lengthBytes": 847,
+      "sha256": "66be2f8b6d470bebd70eab8bf1b20405732a8f42d19aabed80deccdf2463c3d6"
+    },
+    {
+      "role": "synthetic-delivery-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/repair-cycle-001/synthetic-delivery/delivery-manifest.v2.json",
+      "lengthBytes": 103721,
+      "sha256": "1cb1d490d2397e6295a4883e23090349d550ca042a39bd97673ec8748e4a2070"
+    },
+    {
+      "role": "synthetic-delivery-export-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/repair-cycle-001/synthetic-delivery/instrument-export-receipt.v2.json",
+      "lengthBytes": 603,
+      "sha256": "4f379a337534a31e866aee4ee1853bf8db98a0ae2055127c780385dfad2cb471"
+    }
+  ],
+  "boundary": {
+    "syntheticOnly": true,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmPlannerConstructedOrInvoked": false,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisRankingOrWinner": false
+  }
+}

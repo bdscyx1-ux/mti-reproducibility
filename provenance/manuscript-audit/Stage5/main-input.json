@@ -1,0 +1,642 @@
+[
+  {
+    "index": 0,
+    "text": "Shared Flow Fields for Dynamic Navigation in Interactive Strategy Environments"
+  },
+  {
+    "index": 1,
+    "text": "[Full author names and affiliation superscripts]"
+  },
+  {
+    "index": 2,
+    "text": "[Affiliations with postal addresses and countries; corresponding author email]"
+  },
+  {
+    "index": 3,
+    "text": "Abstract"
+  },
+  {
+    "index": 4,
+    "text": "Interactive strategy environments require navigation services that respond to terrain changes while providing routes for many virtual agents. This study evaluates computational sharing across agents, reuse across environmental updates, and concurrency across independent workloads in six Unity navigation implementations. The evaluation combines dynamic planning, a matched cost and scaling benchmark, simulated movement, and managed worker scaling. In the original shared-goal planning acquisition, full-recompute and incremental flow fields achieved geometric mean handling times of 11.14 and 8.89 ms per scheduled event, compared with 52.48 ms for repeated A* and 59.55 ms for the frozen D* Lite implementation. A separate acquisition estimated 20.5% lower handling time for incremental repair across the fixed scenario matrix. In the matched experiment, incremental repair reduced adjusted geometric mean latency while increasing adjusted within-lane 95th-percentile latency by 11.9% and requiring approximately 2.42 times the model-adjusted retained planner state of full recomputation. Repeated A* and both flow fields completed all eight main movement conditions. Increasing from one to eight workers reduced private-batch time by 32.2–34.0% per doubling. These results identify complementary roles for shared computation, incremental repair, and workload concurrency, and guide navigation-backend selection according to goal structure, update demand, latency priorities, and memory capacity."
+  },
+  {
+    "index": 5,
+    "text": "Keywords: interactive environments; real-time strategy; dynamic navigation; flow fields; incremental search; performance evaluation; concurrent workloads"
+  },
+  {
+    "index": 6,
+    "text": "1 Introduction"
+  },
+  {
+    "index": 7,
+    "text": "Navigation is a computational component of interactive environments in which users direct groups of virtual agents, modify terrain, or coordinate activities across several regions. A destination command must be translated into routes that remain consistent with the current world state. As the number of agents and the frequency of changes increase, route computation competes with simulation, rendering, and input processing for finite resources. The resulting design problem concerns both the cost of producing routes and the way that cost is distributed across requests, updates, and stored state."
+  },
+  {
+    "index": 8,
+    "text": "Multimodal interaction provides several ways to express a spatial intention. Speech and pointing can jointly identify an action and its destination, while wearable controls extend the input options available to game interfaces [1, 2, 3]. In navigation-enabled applications, interpreted spatial commands can provide destinations to a common navigation service, while environmental events update its traversability state. Recent studies have examined technical input latency in Unity games and compared path planners in a Unity-based virtual collaborative task [3, 4]. Together, these studies motivate evaluating the software components that support interaction using measures tied to their actual execution boundaries."
+  },
+  {
+    "index": 9,
+    "text": "For multi-agent strategy environments, computational reuse is a natural design choice. A shared flow field lets many agents reuse destination-related work. An incremental planner reuses information from a preceding world state. A worker pool can execute several independent navigation workloads concurrently. These mechanisms act at different levels: sharing changes how work depends on agent count, repair changes how it depends on environmental updates, and concurrency changes the time required to complete a batch. Their benefits therefore need to be assessed alongside the additional state, bookkeeping, and synchronization they require."
+  },
+  {
+    "index": 10,
+    "text": "Existing search methods and game-navigation techniques provide the building blocks for these choices [5, 6, 7, 8]. The practical question is how their implementations behave under the same goal assignments, legal moves, changes, and query demand. In particular, an implementation with a lower average update cost can still have a higher upper-tail latency or a larger retained-state footprint. These distinctions matter when a system must choose between throughput, latency consistency, and memory use."
+  },
+  {
+    "index": 11,
+    "text": "We compare repeated A* (A*-R), repeated bidirectional A* (BiA*-R), per-agent D* Lite (D*L), Lifelong Planning A* (LPA*), a full-recompute shared flow field (C-FF), and an incremental dynamic shared flow field (IDFF). The Unity framework provides common grids, planner operations, event schedules, and validation records. Four evaluation modules examine dynamic planning, matched computational costs, movement execution, and independent-workload concurrency. The dynamic-planning module contains three separately acquired studies, including a new-sample comparison of the two flow-field implementations."
+  },
+  {
+    "index": 12,
+    "text": "The study contributes an integrated evaluation of navigation services for interactive strategy environments. It first quantifies the advantage of sharing destination-related computation under common-goal workloads. It then characterizes the latency and state trade-off between full recomputation and incremental repair using matched measurements from all six backends. Finally, it connects those component costs to movement completion and to the capacity gained by scheduling independent workloads on managed workers. The resulting evidence supports backend selection at the navigation-service layer and identifies the operating conditions that deserve application-level testing."
+  },
+  {
+    "index": 13,
+    "text": "Four research questions organize the evaluation. RQ1 asks how sharing and incremental reuse affect dynamic handling time, and whether the field comparison is reproduced in a separate acquisition. RQ2 asks how the six backends differ in latency, grid access, allocation, retained state, and scaling. RQ3 asks which backends complete the specified movement tasks and how completion and path length compare. RQ4 asks how additional workers change the wall time of batches of independent field workloads. Table 1 summarizes the experimental units and corresponding outcomes."
+  },
+  {
+    "index": 14,
+    "text": "Table 1. Evaluation modules and experimental units."
+  },
+  {
+    "index": 15,
+    "text": "Each acquisition retains its own observations, experimental units, and comparison family. Detailed inputs and protocols are provided in the Supplementary Materials."
+  },
+  {
+    "index": 16,
+    "text": "2 Related Work"
+  },
+  {
+    "index": 17,
+    "text": "2.1 Search reuse and shared navigation"
+  },
+  {
+    "index": 18,
+    "text": "Dijkstra's algorithm and A* establish the shortest-path foundations used by weighted-grid navigation [5, 9]. Repeated A* solves each request with a new search, while incremental heuristic search retains useful state across related problems. LPA* maintains consistency after graph changes, and D* Lite adapts incremental search to navigation with changing information and a moving start [6, 7]. Work on incremental search in games also shows the practical importance of priority-queue and implementation choices [10]. Bidirectional search uses frontiers from both ends of a problem; its stopping and connection rules are central to correctness and performance [11]. Later methods such as MM establish additional search-order guarantees through their particular expansion rules [12]. These methods differ in search direction, retained state, and intended request patterns; their evaluation should reflect those differences."
+  },
+  {
+    "index": 19,
+    "text": "Shared fields organize navigation around destinations instead of maintaining a separate search for every agent. Continuum Crowds models collective movement through a dynamic potential field, while flow-field tiles provide a practical game-engine architecture for integration fields, direction lookup, caching, and updates [8, 13]. Our comparison uses discrete weighted grids. C-FF rebuilds the shared field after a change; IDFF maintains integration and ownership consistency and then refreshes affected directions. The comparison focuses on the computational consequences of these implementation choices."
+  },
+  {
+    "index": 20,
+    "text": "Navigation fields also connect authoring decisions to crowd behavior. Patil and colleagues combine user-specified guidance with goal-directed fields to support interactive crowd authoring [14]. Their work demonstrates how a shared representation can mediate between user-authored guidance and the motion of many agents. This motivates examining field maintenance as a reusable service whose cost depends on both the number of agents and changes to the environment."
+  },
+  {
+    "index": 21,
+    "text": "Navigation representations also affect the balance between preprocessing, query cost, and path quality. Hierarchical pathfinding reduces large searches through abstraction, and navigation meshes represent walkable space with connected regions [15, 16]. Jump Point Search reduces symmetric grid-search work under its uniform-cost movement assumptions [17]. Unity's navigation system combines pathfinding, following, and local avoidance within its own navigation representation [18]. These alternatives provide useful context for a grid-based backend study, particularly when transferring the framework to designer-created environments or comparing complete engine navigation stacks."
+  },
+  {
+    "index": 22,
+    "text": "Global route computation and local collision avoidance address complementary requirements. ORCA assigns collision-avoiding local velocities, while joint multi-agent pathfinding explicitly defines inter-agent conflicts and joint objectives [19, 20]. Menge provides a modular architecture in which crowd-simulation components can be combined and evaluated independently [21]. The backends evaluated here produce routes or direction fields. Their shared destination information can be combined with a local avoidance layer in an application, while the present movement checks evaluate route legality, arrival, and consistency with the navigation grid."
+  },
+  {
+    "index": 23,
+    "text": "2.2 Navigation performance in interactive environments"
+  },
+  {
+    "index": 24,
+    "text": "The relationship between navigation computation and interaction depends on the task. Aguilar and Rengifo compare path planners in an immersive collaborative environment using feasibility, motion quality, and computation time [4]. Rubio Naranjo and colleagues evaluate the communication latency of a smartwatch–smartphone input framework through Unity minigames [3]. These examples show the value of identifying which part of an interactive system is timed and of relating technical measurements to concrete execution conditions."
+  },
+  {
+    "index": 25,
+    "text": "Objective delay and perceived responsiveness are also distinct outcomes. Research on network latency in real-time strategy games shows that performance sensitivity depends on the player's action and task [22]. Nguyen and Kara show that labels can influence the perception of command execution delay in gaming [23]. Navigation backend measurements therefore provide evidence about computational resources and readiness to execute a route; user-facing response additionally includes input handling, simulation scheduling, and display presentation. This study characterizes the navigation component and movement execution, providing the measurements needed to select candidate backends for those subsequent application tests."
+  },
+  {
+    "index": 26,
+    "text": "2.3 Reproducible navigation benchmarks"
+  },
+  {
+    "index": 27,
+    "text": "Public benchmarks make map structure and task definitions central to evaluating pathfinding [24]. The Guards benchmark extends this concern to weighted grids [25]. Recent algorithm-selection work also demonstrates that map features influence comparative search performance [26]. Goal semantics are particularly relevant for shared fields. A shared field assigns each start to a cheapest reachable goal, which may differ from the requested destination. Whether such a request is rerouted or rejected determines the task actually measured."
+  },
+  {
+    "index": 28,
+    "text": "Performance methodology distinguishes repeated measurements, process executions, and variation across configurations [27, 28]. We follow this distinction by pairing algorithms within declared experimental units, balancing execution order, and keeping the independently acquired studies separate. Dynamic handling time, movement outcomes, resource measurements, and complete-batch wall time are reported with their own units and analysis models. Detailed workload definitions and numerical outputs accompany the manuscript in the Supplementary Materials."
+  },
+  {
+    "index": 29,
+    "text": "3 Materials and Methods"
+  },
+  {
+    "index": 30,
+    "text": "3.1 Navigation architecture and execution environment"
+  },
+  {
+    "index": 31,
+    "text": "The framework separates a canonical navigation grid, a planner interface, change application, workload execution, measurement, and structured logging. The planner interface exposes initialization, route queries, and change application. Each change advances a grid version, and each queryable planner state is associated with that version. A movement adapter consumes either an explicit route or a shared direction field. This organization applies common operations within each goal cohort while preserving each backend's state representation."
+  },
+  {
+    "index": 32,
+    "text": "The earlier flow-field and NavMesh project [29] provides background context. The present study evaluates planners and experimental runners implemented in dedicated research components. Canonical scenario files specify walkability, traversal costs, connectivity, starts, goals, changes, and deterministic identifiers. The archive records scenario and implementation hashes together with per-run outcomes, failure categories, and completion receipts."
+  },
+  {
+    "index": 33,
+    "text": "Experiments used Unity 2022.3.30f1c1 on a Windows 11 Pro build 26300 host with an AMD Ryzen 9 7950X3D processor, 31.1 GiB of reported RAM, and an NVIDIA GeForce RTX 4070 Ti SUPER. The dynamic-planning acquisitions, SMSB, and MQ used Unity editor batch execution with graphics disabled. Movement and callback measurements used a separately frozen standalone Mono player in batch mode with Direct3D 11. Movement used a 0.02 s fixed step and a top-down orthographic camera. Supplementary Section S1 distinguishes module-specific settings and implementation identities."
+  },
+  {
+    "index": 34,
+    "text": "3.2 Backends and state ownership"
+  },
+  {
+    "index": 35,
+    "text": "All backends operate on the same directed entry-cost convention. A legal move from cell u to v has the positive traversal cost of v, multiplied by one for an orthogonal move or by the square root of two for a diagonal move. The early scenario matrix forbids diagonal corner cutting. A*-R and BiA*-R use Manhattan distance on four-neighbor grids and octile distance on eight-neighbor grids, scaled by the minimum walkable traversal cost. Their search state is recreated for each request. D*L and LPA* retain one state instance per agent, whereas the flow fields retain destination information shared by all agents. Table 2 summarizes the resulting state and update patterns."
+  },
+  {
+    "index": 36,
+    "text": "Table 2. Navigation backends and retained state."
+  },
+  {
+    "index": 37,
+    "text": "C-FF and IDFF are implementation labels in this study. Goal ownership resolves ties deterministically. Algorithms S1–S3 specify the field operations and private-workload executor."
+  },
+  {
+    "index": 38,
+    "text": "C-FF computes integration values through reverse shortest-path expansion from the canonical goal set and then constructs goal ownership and next-cell directions. Equal-cost ownership is ordered by goal coordinates, and direction selection uses a deterministic sequence of cost and coordinate comparisons. IDFF maintains g and rhs cost/owner pairs, invalidates obsolete queue entries with revision tags, propagates inconsistencies through predecessors, and refreshes dirty directions after repair. A repair can retain its queue and direction cursor when the operation budget expires; the field becomes queryable when the repair completes. Algorithms S1–S3 provide the field procedures and the managed-worker wrapper."
+  },
+  {
+    "index": 39,
+    "text": "C-FF allocates field arrays during each rebuild, while IDFF retains its principal arrays and allocates two grid-length Boolean scratch arrays for each new repair. These choices are part of the implementations being compared. The shared-field contrast therefore evaluates both the update strategy and its associated memory management. D*L updates its key offset when a requested start moves; LPA* uses goal-rooted state with a fixed start. The fixed-start timing workloads emphasize reuse after environmental changes."
+  },
+  {
+    "index": 40,
+    "text": "Validation compared C-FF with an independent array-scan shortest-path reference across 24 static and 72 dynamic fields, and compared IDFF cell by cell with rebuilt C-FF across 24 initial and 96 dynamic fields. The cases cover reachability, ownership, legal directions, entry costs, multi-goal ties, corner policies, blocking and restoration, cost changes, and interrupted repair. Execution checks also verify event order, input hashes, state reset, and agreement between grid and planner versions. Supplementary Section S1 describes the validation records and technical failure handling."
+  },
+  {
+    "index": 41,
+    "text": "3.3 Experimental modules"
+  },
+  {
+    "index": 42,
+    "text": "The dynamic-planning module contains three acquisitions. The four-method study evaluates A*-R, D*L, C-FF, and IDFF over 32 shared-goal campaigns with 48 paired blocks per campaign. Two additional heterogeneous-goal cohorts each contain 21 campaigns with 48 blocks: all queries retain assigned destinations, while the grouped-field implementations reject a query when its assigned goal differs from the field owner at its start. The expanded study measures BiA*-R, LPA*, C-FF, and IDFF together over the same 32 shared-goal scenarios in a new acquisition. The field-confirmation study acquires 50 new paired C-FF/IDFF blocks per scenario, balanced equally between execution orders. These acquisitions provide 10,176, 6,144, and 3,200 algorithm samples, respectively."
+  },
+  {
+    "index": 43,
+    "text": "Early four-algorithm comparisons use Williams blocks in fresh Unity processes, with each backend executing once after mutable state has been reconstructed. Two-algorithm comparisons use balanced AB/BA order. Each tick containing scheduled changes applies those changes in order and then queries all agents from their fixed scenario starts. The 53 canonical scenarios cover grid size, agent count, change footprint, reachability, and goal count. Their complete identities and seed rules are provided in Supplementary Section S7."
+  },
+  {
+    "index": 44,
+    "text": "The matched six-algorithm cost and scaling benchmark, identified as SMSB in the archive, crosses agent count N = 32, 64, 128, changed-cell count F = 1, 9, 25, 81, and grid edge G = 64, 96, 128. The resulting 36 structural cells each have 36 matched repetitions, giving 1,296 superblocks and 7,776 algorithm lanes. Each lane executes in a fresh Unity process and contains 24 event groups. Inputs are identical across the six algorithm lanes within a superblock. This design supplies simultaneous evidence on latency, grid access, allocation, retained state, and scaling."
+  },
+  {
+    "index": 45,
+    "text": "The movement module uses eight shared-goal conditions at N = 128 and two quantity anchors with N = 1, 8, 32, 128, and 512. Conditions vary grid size, connectivity, traversal costs, obstacle proportion, and change footprint. Each condition contains 48 complete four-algorithm blocks. Movement and callback measurements use separate lanes; the full design includes 1,536 blocks and 6,144 algorithm-lane samples. At lower quantities, starts are prefixes of the canonical start list; the 512-agent level adds deterministic initially reachable starts while retaining the original 128."
+  },
+  {
+    "index": 46,
+    "text": "The movement schedule applies an ordered block/unblock pair within tick 10 (0.20 s), increases traversal costs at 30 s, decreases them at 90 s, and restores the initial state at 150 s. Both initial changes are applied before movement resumes at that tick. Successful runs finish by 11.84 s and therefore cover the initial pair, with the block and unblock operations acting on disjoint footprints and both preceding the next movement step; they do not exercise the later cost changes. Arrival is latched when an agent remains within 0.75 cell size of the shared goal center, in the goal cell, for ten consecutive fixed ticks. At each event, the grid, planner, and rendered-world versions must agree."
+  },
+  {
+    "index": 47,
+    "text": "The managed multi-query module (MQ) evaluates C-FF and IDFF on batches of 16 independent private workloads. Each of 36 matched blocks reuses its lane set across two algorithms and 12 execution conditions, producing 864 fresh processes and 13,824 lane executions. A frozen pool of 108 inputs supplies three workloads per SMSB structural cell; all 36 cells appear equally often across the block assignments. Every lane owns a private grid and planner. Managed conditions use one, two, four, or eight workers on each of two single-chiplet placements and balanced eight- or sixteen-worker execution across both chiplets. Two direct serial conditions serve as controls. CPU-set binding uses one logical sibling per physical core."
+  },
+  {
+    "index": 48,
+    "text": "3.4 Outcomes and measurement boundaries"
+  },
+  {
+    "index": 49,
+    "text": "The primary dynamic-planning endpoint P1 is the sum of planner-reported repair and subsequent query times divided by the number of scheduled change events. Changes grouped at one tick contribute their combined elapsed time once and each scheduled event to the denominator. P1 therefore measures normalized dynamic handling time per scheduled event. Initialization and initial queries are recorded separately. Supporting historical telemetry comprises within-sample phase P95 (P2), reported operation time per agent (P3), a memory diagnostic (P4), and operation-budget overruns (P5); their complete definitions and values appear in Supplementary Section S2."
+  },
+  {
+    "index": 50,
+    "text": "SMSB uses a common instrumented event window. D1 reports the geometric mean and nearest-rank P95 of the 24 event-group times in each lane. D2 counts calls through the planner's grid-access proxy. D3 sums owner-thread managed allocations in the event-group measurement windows. D4 is the maximum logical-capacity retained-state total at 26 post-operation measurement points. D5–D7 describe the D1 geometric mean response to changes in N, F, and G². The D1 window includes grid mutation, planner calls, request and record construction, path-cost calculation, and cached-oracle comparison; the allocation callback and grid counter remain active. D4 excludes transient overlap between old and new fields and measures retained planner containers. Supplementary Table S17 lists the operational boundaries."
+  },
+  {
+    "index": 51,
+    "text": "Movement completion time M1 is elapsed simulation time, calculated from the final tick count; wall-clock waiting for planner computation is outside this measure. A run that fails to complete retains its terminal category and the 180 s failure code. M2 is mean cumulative horizontal distance to first arrival, measured in scene units over a common unit mask. The mask includes agents with valid traces and arrival under all four backends and must contain at least ceil(0.8N) of the N registered agents. Eligibility requires all-agent completion in at least 45 of 48 blocks in every condition (M3) and zero critical movement violations (M5). The archived decision also includes a separate main-loop callback diagnostic M4, whose timing and thresholds are documented in Supplementary Section S3. M4 measures batch-mode callback intervals; displayed-frame and input-to-visible-response timings require separate acquisition."
+  },
+  {
+    "index": 52,
+    "text": "MQ measures complete-batch wall time. Worker creation and binding finish before timing; the interval begins at worker release and ends when all workers report completion. It includes private input and planner construction, initialization, changes, queries, validity checks, and outcome recording. The frozen-oracle comparison follows the timed interval. Each field build and repair remains serial within its lane, so additional workers increase capacity by processing independent workloads concurrently."
+  },
+  {
+    "index": 53,
+    "text": "3.5 Statistical analysis"
+  },
+  {
+    "index": 54,
+    "text": "Analyses used archived Python scripts with custom statistical routines. Movement and MQ analysis records specify Python 3.12.14 and NumPy 2.3.5; SMSB used PyArrow 25.0.1 for accepted-table access. Supplementary Sections S1 and S5 identify the scripts, recorded software versions, and numerical verification."
+  },
+  {
+    "index": 55,
+    "text": "Dynamic-planning comparisons use paired log ratios and equal campaign weights. For positive P1 values Y, campaign c, paired block r, and algorithms a and b, the campaign-balanced estimator is"
+  },
+  {
+    "index": 56,
+    "text": ""
+  },
+  {
+    "index": 57,
+    "text": ""
+  },
+  {
+    "index": 58,
+    "text": "In the four-method study, the 32 campaign means supply the standard error; a normal approximation, Holm-adjusted tests [30], and Bonferroni intervals cover the five prespecified contrasts. The expanded study uses a t reference with 31 degrees of freedom for its four contrasts. Field confirmation equally weights 64 fixed campaign-by-order strata, each containing 25 blocks, and uses a Welch–Satterthwaite variance approximation (337.65 degrees of freedom) for its single contrast. Its interval quantifies repeat-run uncertainty for the fixed scenario matrix. Each acquisition is analyzed separately."
+  },
+  {
+    "index": 59,
+    "text": "SMSB fits five random-intercept models by restricted maximum likelihood. Outcomes use natural log for D1 geometric mean, D1 P95, and D2, and log(1 + y) for D3 and D4. The fixed-effect design has 34 columns and includes algorithm, centered log2(N), log2(F), log2(G²), change topology, graph profile, atomic partition count, execution position, and algorithm interactions with the three continuous axes. Adjusted values are predictions at a common reference configuration. Ratios for D3 and D4 divide adjusted bytes plus one, preserving the transformation. The reported model uses a common transformed residual variance and a shared superblock random intercept; four of the five fitted random-intercept variances are zero. Full model specifications and original-unit summaries appear in Supplementary Section S5."
+  },
+  {
+    "index": 60,
+    "text": "The SMSB comparison family contains 35 IDFF-versus-comparator hypotheses across seven domains. Dynamic latency jointly requires improvement in geometric mean and P95, using the larger of their one-sided p values. Holm adjustment applies to the 35 composite hypotheses, while two-sided Bonferroni intervals provide family-wise 95% coverage across 40 primitive contrasts. The main paper reports selected contrasts from this full family; their intervals retain that adjustment. The exploratory domain aggregation and weighted scores are documented in Supplementary Section S6."
+  },
+  {
+    "index": 61,
+    "text": "After eligibility screening, a primary winner requires an upper simultaneous M1 ratio below 0.95 and an upper M2 ratio no greater than 1.10 against every eligible alternative. If all eligible M1 decision intervals lie within the 0.95–1.05 practical tie band, a secondary winner requires an upper M2 ratio below one against every eligible alternative. Equal deterministic outcomes are represented by point estimates with the archive's zero-variance decision convention. Quantity trends use log2(N), algorithm, anchor condition, and interactions with block-clustered covariance. Supplementary Section S3 provides the complete selection rule and mathematical definitions."
+  },
+  {
+    "index": 62,
+    "text": "For MQ, each block supplies a slope of log(batch time) on log2(worker count) across managed W1–W8; exponentiation gives the wall-time ratio per worker doubling. Four one-sided t tests with Holm adjustment form the primary family. A supported effect requires Holm-adjusted p < 0.05, a simultaneous upper ratio below one, and a point ratio no greater than 0.90. After all four primary Holm-adjusted tests reject, two balanced dual-chiplet W16/W8 contrasts enter a separate secondary family. Matched-block bootstrap, conditional signed-rank, and leave-one-block-out analyses assess sensitivity. The complete block is the independent unit, with n = 36."
+  },
+  {
+    "index": 63,
+    "text": "4 Results"
+  },
+  {
+    "index": 64,
+    "text": "4.1 Dynamic handling and repeat acquisition"
+  },
+  {
+    "index": 65,
+    "text": "The three dynamic-planning acquisitions completed their planned samples. In the shared-goal four-method study, geometric mean P1 was 52.4800 ms per scheduled event for A*-R, 59.5523 for D*L, 11.1371 for C-FF, and 8.8945 for IDFF (Table 3). The simultaneous C-FF/A*-R ratio was 0.2122 (99% individual confidence interval 0.1199–0.3757; Holm-adjusted p = 5.47 × 10−12), and C-FF/D*L was 0.1870 (0.0807–0.4333; p = 2.75 × 10−7). IDFF/A*-R was 0.1695 (0.0867–0.3315; p = 1.40 × 10−11), and IDFF/D*L was 0.1494 (0.0924–0.2413; p = 4.54 × 10−24). Both shared-field implementations recorded lower dynamic handling times than the two per-agent backends in this acquisition; the D*L measurements include unsuccessful queries (Supplementary Section S2.5)."
+  },
+  {
+    "index": 66,
+    "text": "Table 3. Dynamic handling time in the shared-goal acquisitions."
+  },
+  {
+    "index": 67,
+    "text": "P1 uses scheduled-event normalization. The first two acquisitions estimate uncertainty across 32 campaign means; confirmation estimates repeat-run uncertainty within 64 fixed campaign-by-order strata. Each acquisition is analyzed separately. Complete historical telemetry and heterogeneous-goal results appear in Supplementary Tables S1–S3."
+  },
+  {
+    "index": 68,
+    "text": "The IDFF/C-FF ratio in the initial study was 0.7986, with a wider campaign-based interval of 0.4623–1.3797 and Holm-adjusted p = 0.289. The expanded study reproduced the lower field costs when BiA*-R and LPA* were measured with the fields within the same acquisition. P1 values were 100.0484, 58.7535, 10.9823, and 8.8222 ms per scheduled event for BiA*-R, LPA*, C-FF, and IDFF, respectively. The four search-to-field ratios ranged from 5.3498 to 11.3405; all corresponding Bonferroni intervals excluded one and all Holm-adjusted p values were below 0.001."
+  },
+  {
+    "index": 69,
+    "text": "The separate field-confirmation acquisition produced C-FF and IDFF geometric means of 11.5352 and 9.1713 ms per scheduled event. Its prespecified ratio was 0.7951 (95% confidence interval 0.7884–0.8018; two-sided p = 4.45 × 10−167), corresponding to a 20.49% reduction in P1 across the fixed scenario matrix. The initial and confirmation point estimates are closely aligned. Their intervals characterize different variation: the first uses the dispersion of campaign means, and the second uses repeat-run variation within fixed campaign-by-order strata."
+  },
+  {
+    "index": 70,
+    "text": "The heterogeneous-goal measurements include request rejection. C-FF and IDFF each rejected 379,104 of 430,080 queries because their interfaces require the requested goal to match field ownership. Their P1 ratio of 0.4174 (99% individual interval 0.2204–0.7903) therefore describes update and request-handling cost, not equivalent successful assigned-goal routing. Supplementary Section S2 retains all secondary contrasts and status counts. No sampled plan or repair exceeded its termination budget, but budget compliance does not establish planning success."
+  },
+  {
+    "index": 71,
+    "text": "4.2 Matched latency and resource costs"
+  },
+  {
+    "index": 72,
+    "text": "SMSB completed all 1,296 matched superblocks and 7,776 lanes, providing 186,624 event-group records. All accepted lanes passed the recorded correctness and measurement-validity checks. Figure 1 shows the original-unit lane distributions. The IDFF and C-FF arithmetic means of lane geometric mean latency were 40.4637 and 77.8588 ms, with medians of 26.7314 and 39.4950 ms. Their mean lane P95 values were 85.4623 and 95.7569 ms. Mean grid-access counts were approximately 64.94 million for IDFF and 115.47 million for C-FF; mean event-window allocations were 9.13 and 60.31 million bytes. Mean maximum sampled retained state was 636,053 and 267,280 bytes, respectively."
+  },
+  {
+    "index": 73,
+    "text": "The adjusted results identify a clear cost trade-off between the two fields (Table 4). Reference geometric mean latencies of 19.752366 and 26.037045 ms give an IDFF/C-FF ratio of 0.758625 (simultaneous interval 0.715234–0.804650). For P95, the adjusted values are 34.752539 and 31.061113 ms, yielding a ratio of 1.118844 (1.048014–1.194461). Thus IDFF reduces the adjusted geometric mean while C-FF has the lower adjusted within-lane P95. Because the D1 directional hypothesis requires improvement in both components, the joint C-FF comparison has Holm-adjusted p = 1."
+  },
+  {
+    "index": 74,
+    "text": "Table 4. Adjusted IDFF versus C-FF effects in the matched benchmark."
+  },
+  {
+    "index": 75,
+    "text": "Reference values are inverse-transformed model predictions at the common reference design. D3/D4 ratios use (IDFF bytes + 1)/(C-FF bytes + 1). All intervals retain the original two-sided 40-primitive Bonferroni family with at least 95% simultaneous coverage. D1 tests geometric mean and P95 jointly; its C-FF composite Holm p is 1. D2/D3 Holm p values are below 10−15. D4 measures sampled logical retained capacity."
+  },
+  {
+    "index": 76,
+    "text": "IDFF also reduces grid-access work and event-window allocation relative to every comparator. Against C-FF, the adjusted ratios are 0.758096 for grid accesses and 0.215123 for allocation, both with Holm-adjusted p < 10−15. The retained-state ratio is 2.416379 (simultaneous interval 2.402445–2.430394), favoring C-FF. The allocation and state contrasts use the adjusted byte values plus one. A*-R and BiA*-R retain only eight bytes within the defined persistent-state accounting boundary; their corresponding state ratios reflect that boundary."
+  },
+  {
+    "index": 77,
+    "text": "The raw arithmetic and adjusted P95 summaries have different orderings. Arithmetic means average lane endpoints in milliseconds; the model compares predictions after log transformation. The geometric means of the unadjusted lane P95 endpoints are 52.2314 ms for IDFF and 46.6834 ms for C-FF, already giving the same ordering as the adjusted ratio of 1.118844. Thus the reversal is present in the arithmetic-versus-geometric aggregation, rather than requiring covariate adjustment to arise. Supplementary Section S5 retains both summaries and every adjusted numerator and denominator. The exploratory preference scores in Section S6 summarize selected priorities; their leading score intervals overlap, so the main interpretation uses individual outcomes."
+  },
+  {
+    "index": 78,
+    "text": ""
+  },
+  {
+    "index": 79,
+    "text": "Figure 1. Original-unit outcomes in the matched six-algorithm benchmark. Panels a–e summarize 1,296 lanes per algorithm with a median symbol, thick interquartile range, and thin 5th–95th percentile range. Axes use logarithmic scales while retaining the stated units. D1 includes the instrumented event runner, D2 counts planner-proxy calls, D3 covers event-window allocation, and D4 covers logical retained-state capacity. Each lane P95 is calculated from 24 event groups. Panel f compares the raw-mean P95 ratio with the adjusted contrast from the log-scale model. The ranges in a–e describe observations; model-based comparison intervals appear in Figure 2."
+  },
+  {
+    "index": 80,
+    "text": "The scaling results further distinguish the update strategies. The IDFF-minus-C-FF slope difference is 0.002508 for agent count (simultaneous interval −0.069628 to 0.074644), 0.055078 for change footprint (0.029806–0.080350), and −0.041054 for grid area (−0.112845 to 0.030738). The footprint contrast indicates a steeper increase for IDFF over the sampled footprint levels. The agent-count and grid-area intervals include zero. These results complement the lower average update cost by showing where the advantage changes with workload demand."
+  },
+  {
+    "index": 81,
+    "text": ""
+  },
+  {
+    "index": 82,
+    "text": "Figure 2. Adjusted comparisons between IDFF and the five other backends. Panels a–e show ratios for D1 geometric mean, D1 P95, grid accesses, allocation, and retained state. Allocation and retained-state ratios use adjusted bytes plus one. Panels f–h show IDFF-minus-comparator log-latency slope differences per doubling of agent count N, change footprint F, or grid area G². Bars are two-sided Bonferroni simultaneous intervals across the original 40 primitive contrasts at family-wise alpha = 0.05. Values below one for ratios or below zero for slope differences favor IDFF. Filled symbols identify passing composite hypotheses; the C-FF geometric mean symbol remains open because its paired P95 comparison prevents the joint D1 hypothesis from passing. Complete numerical outputs are retained in Supplementary Tables S7–S9."
+  },
+  {
+    "index": 83,
+    "text": "4.3 Movement completion and path length"
+  },
+  {
+    "index": 84,
+    "text": "A*-R, C-FF, and IDFF completed all agents in all 48 blocks of every main movement condition, with zero critical movement violations. Their simulated completion times were identical within each condition and ranged from 4.10 to 11.84 s (Table 5). D*L completed all agents in the four four-neighbor conditions, but failed all-agent completion in the four eight-neighbor conditions, covering 192 blocks. Those blocks contained 1,680 illegal_or_invalid_plan records, which combine unsuccessful planner status and adapter legality rejection.  Source-level replay reproduced the failed-agent identities and attributed the reproduced failures to premature termination of D*L repair under exact key comparison. The later tolerance-aware revision removed these failures in functional replay (Supplementary Section S3); the reported performance measurements remain those of the original build."
+  },
+  {
+    "index": 85,
+    "text": "Table 5. Main movement outcomes at 128 agents."
+  },
+  {
+    "index": 86,
+    "text": "Each condition contains 48 paired blocks. M1 is simulation time in seconds; the 180 s D*L values are failure codes. M2 is cumulative distance in scene units over the common valid-arrival mask. All blocks met the minimum mask size of 103 of 128 agents. Values repeated identically within conditions at stored precision. Successful runs completed before the later 30 s cost change."
+  },
+  {
+    "index": 87,
+    "text": "The eligible A*-R, C-FF, and IDFF implementations had M1 ratios of 1.000000. The M2 ratio was 1.00002513 for A*-R against either field, while the C-FF/IDFF ratio was 1.00000000. Consequently, the movement rule selected no unique winner. The result shows that the measured planning-cost differences coexist with nearly identical path lengths and the same simulated completion times for these conditions. The 180 s D*L entries encode incomplete runs and are reported with their completion status."
+  },
+  {
+    "index": 88,
+    "text": "At the two quantity anchors, A*-R, C-FF, and IDFF had a fitted M1 ratio of 1.2325 per doubling of agent count (model-based 95% interval 1.1957–1.2705). D*L's corresponding ratio was 1.5275 (1.4988–1.5568), including its failure-coded runs. The main-loop callback summaries and full quantity results are available in Supplementary Section S3. Successful movement runs exercised the initial 0.20 s block/unblock sequence; later cost changes belong to the configured schedule beyond their completion times."
+  },
+  {
+    "index": 89,
+    "text": "4.4 Capacity from independent-workload concurrency"
+  },
+  {
+    "index": 90,
+    "text": "All 36 MQ blocks completed their 16 private workloads under every condition, and the recorded oracle and CPU-affinity checks passed. With one to eight workers on the large-L3 chiplet, C-FF geometric mean batch time fell from 30.6826 to 8.8593 s; on the high-frequency chiplet, it fell from 28.4789 to 8.3958 s. IDFF times fell from 23.7852 to 7.2134 s and from 21.8426 to 6.8107 s, respectively. Figure 3 displays the complete condition profiles and prespecified contrasts."
+  },
+  {
+    "index": 91,
+    "text": ""
+  },
+  {
+    "index": 92,
+    "text": "Figure 3. Managed worker scaling for batches of 16 independent navigation workloads. Panels a and b show C-FF and IDFF batch wall time across one, two, four, and eight workers on each single-chiplet placement. Small points represent the 36 matched blocks, connected symbols show geometric means, and bars show ordinary two-sided 95% t intervals on the log scale. Panel c shows the four per-doubling effects and the two balanced dual-chiplet W16/W8 effects. The red dashed line marks the 0.90 minimum-important-effect threshold; the grey line marks one. Each field operation remains serial within a lane."
+  },
+  {
+    "index": 93,
+    "text": "The fitted ratios per worker doubling ranged from 0.6597 to 0.6775, corresponding to reductions of 32.25–34.03% (Table 6). All four primary Holm-adjusted p values were at most 1.35 × 10−24, and their simultaneous upper ratios were at most 0.7015. Under balanced dual-chiplet execution, increasing from eight to sixteen workers reduced batch time by a further 19.62% for C-FF and 16.03% for IDFF. All six effects exceeded the prespecified 10% point-reduction criterion."
+  },
+  {
+    "index": 94,
+    "text": "Table 6. Within-backend effects of increasing managed workers."
+  },
+  {
+    "index": 95,
+    "text": "All contrasts use 36 matched blocks. Per-doubling effects are fitted over W1–W8. The final column gives the one-sided family-wise 95% upper ratio. The four primary Holm-adjusted p values are at most 1.35 × 10−24; the two secondary p values are 1.59 × 10−8. Full outputs and sensitivity checks appear in Supplementary Tables S4 and S18."
+  },
+  {
+    "index": 96,
+    "text": "The sensitivity analyses retained the same direction. All six studentized-bootstrap intervals were below one, the exact conditional signed-rank p values were at most 4.37 × 10−11, and every leave-one-block-out estimate retained at least a 10% reduction. These results support parallel scheduling of independent navigation workloads on the tested host. Supplementary Table S18 reports the complete sensitivity estimates."
+  },
+  {
+    "index": 97,
+    "text": "5 Discussion"
+  },
+  {
+    "index": 98,
+    "text": "5.1 Selecting a navigation representation"
+  },
+  {
+    "index": 99,
+    "text": "Shared destinations make field computation attractive because destination-related work can be reused across many agents. The dynamic-planning studies consistently place both shared fields below the measured per-agent implementations in handling time. The separate acquisition reproduces an IDFF/C-FF ratio close to 0.80 for the fixed matrix, strengthening the evidence for a lower average handling cost with incremental repair under those workloads."
+  },
+  {
+    "index": 100,
+    "text": "The matched experiment gives the practical choice more detail. IDFF reduces adjusted geometric mean latency, grid accesses, and event-window allocation, while C-FF has lower adjusted P95 and retained state. An application with common-goal query and update workloads resembling those evaluated here may prioritize IDFF's lower mean handling cost. A system with a tighter retained-state allowance or greater emphasis on the sampled upper-tail measure may favor C-FF. The positive change-footprint slope contrast also suggests testing the size and shape of updates before choosing a repair policy. Table 7 translates these observations into engineering decisions."
+  },
+  {
+    "index": 101,
+    "text": "Table 7. Navigation-service design implications of the measured outcomes."
+  },
+  {
+    "index": 102,
+    "text": "State ownership helps explain the measured profiles. Shared fields replace repeated destination work with retained grid-sized structures; incremental repair adds consistency information and update bookkeeping to that shared representation. Per-agent incremental search retains separate structures whose value depends on the sequence of requests and changes. The fixed-start workloads used here emphasize repeated update handling, while moving-start or heterogeneous assigned-goal tasks can change the balance. The complete task definition therefore belongs alongside any performance estimate used to choose a backend."
+  },
+  {
+    "index": 103,
+    "text": "5.2 Implications for interactive and multimodal systems"
+  },
+  {
+    "index": 104,
+    "text": "The navigation service sits between a spatial command and its execution by the simulated agents. Coordinated inputs can specify an action and spatial target [1, 2]. A navigation-enabled application can pass the resolved destination to the service, which plans against the current traversability state. The versioned grid and planner interface used here provide a concrete integration point: route output becomes available only after the relevant change has been incorporated. This separation lets interface design and navigation implementation evolve independently while preserving a consistent world state."
+  },
+  {
+    "index": 105,
+    "text": "The results indicate three useful scheduling choices. Shared fields reduce duplicated work for groups moving toward a common destination. The tested IDFF implementation trades additional retained state and higher adjusted within-lane P95 latency for lower recurring geometric mean cost. Managed concurrency shortens batches when independent regions, goal sets, or simulation instances can be processed separately. These choices concern different stages of the computational workload, so an application can combine them according to its request structure."
+  },
+  {
+    "index": 106,
+    "text": "A deployment evaluation should then connect these component measurements to the interaction task. Useful timestamps include command acceptance, navigation readiness, movement onset, and first visible response. Logging them under the same world revisions and event schedule would identify which stage limits responsiveness. This approach complements the technical latency evaluation used by Smart² and the task-specific planning criteria used in immersive collaboration [3, 4]. Where perceived responsiveness or user preference is an outcome, the evaluation should also account for the distinction between objective delay and perception documented by Nguyen and Kara [23]."
+  },
+  {
+    "index": 107,
+    "text": "5.3 Study scope and further evaluation"
+  },
+  {
+    "index": 108,
+    "text": "The evaluation covers one hardware configuration, the specified Unity execution modes, and fixed workload matrices. Early P1 values use planner-reported timing, while SMSB times an instrumented event runner. C-FF and IDFF also use different buffer-management policies. A buffer-reusing C-FF variant and a common uninstrumented timing lane would help distinguish the contribution of repair from allocation and measurement overhead. The historical P3 and P4 diagnostics remain in the supplement because their initialization and memory-counter boundaries differ across implementations. Early agent-count and footprint curves also vary seed-dependent maps, starts, goals, and events, so they describe workload-instance trends rather than isolated size effects."
+  },
+  {
+    "index": 109,
+    "text": "Movement evaluation covers short trajectories after same-tick blocking and unblocking on disjoint footprints; successful runs end before the later cost changes. The D*L results remain specific to the frozen implementation. Source-level diagnostic replay supports the key-comparison correction, but does not replace the original application timing experiment. The callback lane is a main-loop diagnostic. Application-level display timing and longer-running dynamic movement remain extensions."
+  },
+  {
+    "index": 110,
+    "text": "The statistical models provide uncertainty for their declared experimental units. Confirmation estimates are conditional on the fixed scenario matrix, and SMSB uses a common residual variance after transformation. Additional independent map realizations, weighted-grid benchmarks, and designer-created maps would broaden the operating envelope [24, 25]. For scaling studies, retaining the same base maps and nested start sets across quantity levels would strengthen attribution to the factor being varied."
+  },
+  {
+    "index": 111,
+    "text": "6 Conclusions"
+  },
+  {
+    "index": 112,
+    "text": "This study evaluates six navigation backends through dynamic planning, matched resource measurements, simulated movement, and independent-workload concurrency. Shared flow fields substantially reduce recorded dynamic handling time in the common-goal experiments. A separate acquisition estimates approximately 20.5% lower handling time for incremental repair relative to full recomputation across the fixed scenario matrix. The matched benchmark identifies the accompanying design trade-off: IDFF lowers adjusted geometric mean latency, grid access, and event-window allocation, while C-FF lowers adjusted P95 and retained state. A*-R and both fields complete all main movement conditions with identical simulated completion times. Managed workers reduce private-batch time by 32.2–34.0% per doubling, with further gains from eight to sixteen workers. Together, the results provide a quantitative basis for choosing navigation services according to shared-goal demand, update structure, latency priorities, and retained-state capacity in interactive strategy environments."
+  },
+  {
+    "index": 113,
+    "text": "Supplementary Materials"
+  },
+  {
+    "index": 114,
+    "text": "The accompanying document provides the navigation algorithms, detailed acquisition and analysis procedures, complete workload matrices, supporting telemetry, model outputs, and exploratory preference scores. The supplementary document and the reproducibility package are available at [persistent repository or reviewer-access URL], release [version or DOI]."
+  },
+  {
+    "index": 115,
+    "text": "Author Contributions"
+  },
+  {
+    "index": 116,
+    "text": "[Specify the agreed CRediT roles for each author, including conceptualization, methodology, software, validation, formal analysis, investigation, data curation, writing, visualization, supervision, project administration, and funding acquisition as applicable.] All authors have read and agreed to the published version of the manuscript."
+  },
+  {
+    "index": 117,
+    "text": "Funding"
+  },
+  {
+    "index": 118,
+    "text": "[Insert verified funder names and grant identifiers, or the agreed statement that this research received no external funding.]"
+  },
+  {
+    "index": 119,
+    "text": "Institutional Review Board Statement"
+  },
+  {
+    "index": 120,
+    "text": "Not applicable. The reported experiments use computational simulations and contain no human-participant or animal data."
+  },
+  {
+    "index": 121,
+    "text": "Informed Consent Statement"
+  },
+  {
+    "index": 122,
+    "text": "Not applicable."
+  },
+  {
+    "index": 123,
+    "text": "Data Availability Statement"
+  },
+  {
+    "index": 124,
+    "text": "The source code, canonical scenarios, measurement records, analysis scripts, and figure data supporting this study are available at [repository URL or DOI], release [identifier], under [code and data licenses]. [State any restrictions on third-party assets and how reviewers can access the necessary materials.]"
+  },
+  {
+    "index": 125,
+    "text": "Acknowledgments"
+  },
+  {
+    "index": 126,
+    "text": "[Add any non-author contributions that should be acknowledged.] During manuscript revision in November 2026, the authors used ChatGPT (OpenAI; [model or version]) to assist with language editing, literature identification, and manuscript organization. The authors reviewed the output, verified the cited sources, and take responsibility for the final content."
+  },
+  {
+    "index": 127,
+    "text": "Conflicts of Interest"
+  },
+  {
+    "index": 128,
+    "text": "[Insert the agreed conflict-of-interest declaration for all authors and any relevant funder role.]"
+  },
+  {
+    "index": 129,
+    "text": "References"
+  },
+  {
+    "index": 130,
+    "text": "1. Bolt, R.A. \"Put-that-there\": Voice and gesture at the graphics interface. In Proceedings of the 7th Annual Conference on Computer Graphics and Interactive Techniques (SIGGRAPH '80); ACM: New York, NY, USA, 1980; pp. 262–270. https://doi.org/10.1145/800250.807503."
+  },
+  {
+    "index": 131,
+    "text": "2. Oviatt, S. Ten myths of multimodal interaction. Communications of the ACM 1999, 42(11), 74–81. https://doi.org/10.1145/319382.319398."
+  },
+  {
+    "index": 132,
+    "text": "3. Rubio Naranjo, C.; Gallardo, I.; Besoain, F. Presenting and Evaluating Smart²: A Bidirectional Real-Time Input Framework for Smartphone–Smartwatch Videogames. Multimodal Technologies and Interaction 2026, 10(8), 86. https://doi.org/10.3390/mti10080086."
+  },
+  {
+    "index": 133,
+    "text": "4. Aguilar, J.D.; Rengifo, C.F. Comparison of Path Planning Algorithms for Manipulator Robots in Collaborative Manufacturing Environments: An Immersive Virtual Reality-Based Approach. Multimodal Technologies and Interaction 2026, 10(5), 51. https://doi.org/10.3390/mti10050051."
+  },
+  {
+    "index": 134,
+    "text": "5. Hart, P.E.; Nilsson, N.J.; Raphael, B. A Formal Basis for the Heuristic Determination of Minimum Cost Paths. IEEE Transactions on Systems Science and Cybernetics 1968, 4(2), 100–107. https://doi.org/10.1109/TSSC.1968.300136."
+  },
+  {
+    "index": 135,
+    "text": "6. Koenig, S.; Likhachev, M.; Furcy, D. Lifelong Planning A*. Artificial Intelligence 2004, 155(1–2), 93–146. https://doi.org/10.1016/j.artint.2003.12.001."
+  },
+  {
+    "index": 136,
+    "text": "7. Koenig, S.; Likhachev, M. D* Lite. In Proceedings of the Eighteenth National Conference on Artificial Intelligence; AAAI Press, 2002; pp. 476–483. https://idm-lab.org/bib/abstracts/Koen02e.html (author record and erratum; accessed 3 November 2026)."
+  },
+  {
+    "index": 137,
+    "text": "8. Emerson, E. Crowd Pathfinding and Steering Using Flow Field Tiles. In Game AI Pro: Collected Wisdom of Game AI Professionals; Rabin, S., Ed.; CRC Press, 2013; Chapter 23, pp. 307–316. https://www.gameaipro.com/GameAIPro/GameAIPro_Chapter23_Crowd_Pathfinding_and_Steering_Using_Flow_Field_Tiles.pdf."
+  },
+  {
+    "index": 138,
+    "text": "9. Dijkstra, E.W. A note on two problems in connexion with graphs. Numerische Mathematik 1959, 1, 269–271. https://doi.org/10.1007/BF01386390."
+  },
+  {
+    "index": 139,
+    "text": "10. Likhachev, M.; Koenig, S. Incremental Heuristic Search in Games: The Quest for Speed. Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment 2006, 2(1), 118–120. https://doi.org/10.1609/aiide.v2i1.18758."
+  },
+  {
+    "index": 140,
+    "text": "11. Kaindl, H.; Kainz, G. Bidirectional Heuristic Search Reconsidered. Journal of Artificial Intelligence Research 1997, 7, 283–317. https://doi.org/10.1613/jair.460."
+  },
+  {
+    "index": 141,
+    "text": "12. Holte, R.C.; Felner, A.; Sharon, G.; Sturtevant, N.R.; Chen, J. MM: A bidirectional search algorithm that is guaranteed to meet in the middle. Artificial Intelligence 2017, 252, 232–266. https://doi.org/10.1016/j.artint.2017.05.004."
+  },
+  {
+    "index": 142,
+    "text": "13. Treuille, A.; Cooper, S.; Popović, Z. Continuum Crowds. ACM Transactions on Graphics 2006, 25(3), 1160–1168. https://doi.org/10.1145/1141911.1142008."
+  },
+  {
+    "index": 143,
+    "text": "14. Patil, S.; van den Berg, J.; Curtis, S.; Lin, M.C.; Manocha, D. Directing Crowd Simulations Using Navigation Fields. IEEE Transactions on Visualization and Computer Graphics 2011, 17(2), 244–254. https://doi.org/10.1109/TVCG.2010.33."
+  },
+  {
+    "index": 144,
+    "text": "15. Botea, A.; Müller, M.; Schaeffer, J. Near Optimal Hierarchical Path-Finding. Journal of Game Development 2004, 1(1), 7–28. Available online: https://webdocs.cs.ualberta.ca/~mmueller/ps/2004/hpastar.pdf (accessed 3 November 2026)."
+  },
+  {
+    "index": 145,
+    "text": "16. van Toll, W.; Triesscheijn, R.; Kallmann, M.; Oliva, R.; Pelechano, N.; Pettré, J.; Geraerts, R. Comparing navigation meshes: Theoretical analysis and practical metrics. Computers & Graphics 2020, 91, 52–82. https://doi.org/10.1016/j.cag.2020.06.006."
+  },
+  {
+    "index": 146,
+    "text": "17. Harabor, D.; Grastien, A. Online Graph Pruning for Pathfinding On Grid Maps. Proceedings of the AAAI Conference on Artificial Intelligence 2011, 25(1), 1114–1119. https://doi.org/10.1609/aaai.v25i1.7994."
+  },
+  {
+    "index": 147,
+    "text": "18. Unity Technologies. Inner Workings of the Navigation System. AI Navigation 1.1.7 documentation. https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavInnerWorkings.html (accessed 3 November 2026)."
+  },
+  {
+    "index": 148,
+    "text": "19. van den Berg, J.; Guy, S.J.; Lin, M.; Manocha, D. Reciprocal n-Body Collision Avoidance. In Robotics Research; Pradalier, C.; Siegwart, R.; Hirzinger, G., Eds.; Springer Tracts in Advanced Robotics, Vol. 70; Springer, 2011; pp. 3–19. https://doi.org/10.1007/978-3-642-19457-3_1."
+  },
+  {
+    "index": 149,
+    "text": "20. Stern, R.; Sturtevant, N.R.; Felner, A.; Koenig, S.; Ma, H.; Walker, T.T.; Li, J.; Atzmon, D.; Cohen, L.; Kumar, T.K.S.; Boyarski, E.; Barták, R. Multi-Agent Pathfinding: Definitions, Variants, and Benchmarks. Proceedings of the International Symposium on Combinatorial Search 2019, 10(1), 151–158. https://doi.org/10.1609/socs.v10i1.18510."
+  },
+  {
+    "index": 150,
+    "text": "21. Curtis, S.; Best, A.; Manocha, D. Menge: A Modular Framework for Simulating Crowd Movement. Collective Dynamics 2016, 1, 1–40. https://doi.org/10.17815/CD.2016.1."
+  },
+  {
+    "index": 151,
+    "text": "22. Claypool, M. The effect of latency on user performance in Real-Time Strategy games. Computer Networks 2005, 49(1), 52–70. https://doi.org/10.1016/j.comnet.2005.04.008."
+  },
+  {
+    "index": 152,
+    "text": "23. Nguyen, D.H.; Kara, P.A. The Influence of the Labeling Effect on the Perception of Command Execution Delay in Gaming. Multimodal Technologies and Interaction 2025, 9(5), 47. https://doi.org/10.3390/mti9050047."
+  },
+  {
+    "index": 153,
+    "text": "24. Sturtevant, N.R. Benchmarks for Grid-Based Pathfinding. IEEE Transactions on Computational Intelligence and AI in Games 2012, 4(2), 144–148. https://doi.org/10.1109/TCIAIG.2012.2197681."
+  },
+  {
+    "index": 154,
+    "text": "25. Moghadam, S.K.; Ebrahimi, M.; Harabor, D.D. Guards: Benchmarks for weighted grid-based pathfinding. Expert Systems with Applications 2024, 249, 123719. https://doi.org/10.1016/j.eswa.2024.123719."
+  },
+  {
+    "index": 155,
+    "text": "26. Kherrour, A.; Robol, M.; Roveri, M.; Giorgini, P. A multi-algorithm pathfinding method: Exploiting performance variations for enhanced efficiency. Annals of Mathematics and Artificial Intelligence 2025, 93, 569–588. https://doi.org/10.1007/s10472-024-09957-3."
+  },
+  {
+    "index": 156,
+    "text": "27. Kalibera, T.; Jones, R. Rigorous Benchmarking in Reasonable Time. In Proceedings of the 2013 ACM SIGPLAN International Symposium on Memory Management; ACM, 2013; pp. 63–74. https://doi.org/10.1145/2464157.2464160."
+  },
+  {
+    "index": 157,
+    "text": "28. Georges, A.; Buytaert, D.; Eeckhout, L. Statistically Rigorous Java Performance Evaluation. ACM SIGPLAN Notices 2007, 42(10), 57–76. https://doi.org/10.1145/1297105.1297033."
+  },
+  {
+    "index": 158,
+    "text": "29. Chang, Y. Unity Pathfinding Techniques: A Comparative Study of Flow Field and NavMesh. Master's dissertation, MSc Design and Digital Media, University of Edinburgh, Edinburgh, UK, 2024."
+  },
+  {
+    "index": 159,
+    "text": "30. Holm, S. A Simple Sequentially Rejective Multiple Test Procedure. Scandinavian Journal of Statistics 1979, 6(2), 65–70. https://www.jstor.org/stable/4615733."
+  }
+]

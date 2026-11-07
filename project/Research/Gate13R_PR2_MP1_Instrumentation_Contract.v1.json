@@ -1,0 +1,42 @@
+{
+  "contractId": "gate13r-pr2-mp1-stage-separated-memory-instrumentation-v1",
+  "schemaVersion": 1,
+  "bindingKey": ["processId", "processStartTimeUtc", "blockId"],
+  "units": "raw-bytes",
+  "requiredStages": [
+    "external-first-valid-psapi-after-process-create",
+    "unity-command-entry-project-loaded",
+    "before-scenario-load",
+    "after-scenario-load-before-first-sample",
+    "sample-before",
+    "sample-raw-after-workload",
+    "sample-after-cleanup",
+    "post-block-pre-exit",
+    "process-exit",
+    "post-exit-quiescence"
+  ],
+  "requiredInProcessFields": [
+    "capturedAtUtc", "sourceId", "processId", "processStartTimeUtc", "processAgeMilliseconds",
+    "blockId", "stageId", "position", "algorithmId", "workingSetBytes", "privateMemoryBytes",
+    "managedMemoryBytes", "gcCollectionCount0", "gcCollectionCount1", "gcCollectionCount2",
+    "workingSetDeltaFromProcessStartBytes", "privateMemoryDeltaFromProcessStartBytes", "managedMemoryDeltaFromProcessStartBytes",
+    "workingSetDeltaFromProjectLoadedBytes", "privateMemoryDeltaFromProjectLoadedBytes", "managedMemoryDeltaFromProjectLoadedBytes",
+    "workingSetDeltaFromScenarioLoadedBytes", "privateMemoryDeltaFromScenarioLoadedBytes", "managedMemoryDeltaFromScenarioLoadedBytes",
+    "workingSetDeltaFromBlockBaselineBytes", "privateMemoryDeltaFromBlockBaselineBytes", "managedMemoryDeltaFromBlockBaselineBytes"
+  ],
+  "externalPrimarySourceId": "system-diagnostics-process-psapi-backed-v1",
+  "externalCrossCheckSourceId": "cim-win32-process-v1",
+  "availableMemorySourceId": "kernel32-globalmemorystatusex-v1",
+  "negativeDeltasRetained": true,
+  "failClosedConditions": [
+    "missing-required-stage", "missing-required-field", "non-finite-number", "checked-overflow",
+    "non-positive-required-absolute-memory", "mixed-process-id", "mixed-process-start-time",
+    "mixed-block-id", "timestamp-reversal", "process-age-reversal", "psapi-cim-identity-mismatch"
+  ],
+  "psapiCimCrossCheck": {
+    "requiredWhenCimAvailable": true,
+    "absoluteToleranceBytes": 67108864,
+    "relativeTolerance": 0.25
+  },
+  "status": "FROZEN-BEFORE-PILOT"
+}

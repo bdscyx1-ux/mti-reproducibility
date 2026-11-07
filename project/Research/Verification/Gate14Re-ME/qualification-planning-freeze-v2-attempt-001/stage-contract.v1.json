@@ -1,0 +1,146 @@
+{
+  "schema": "gate14re-me-qualification-planning-freeze-v2-attempt-001-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-planning-freeze-v2-attempt-001",
+  "mode": "OFFLINE_NONEXECUTING_PLANNING_FREEZE",
+  "purpose": "Freeze a complete, outcome-independent qualification design and a contract for later generation of planning assets, without generating any schedule, input bundle, anonymous identity mapping, measured root, or observation.",
+  "uniqueInputContract": {
+    "inputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    "planningSchemaBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    },
+    "schemaAdoptionReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006/terminal-receipt.v1.json",
+      "sha256": "55b183148cb9d3dd4f6d35345b25c964c4c7cbf840730c96d440bae54da2e7c0"
+    },
+    "legacyInputSchemaSelected": false,
+    "otherInputContractPermitted": false
+  },
+  "mandatoryEvidenceBindings": {
+    "statusV26": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v26.json",
+      "sha256": "5fe7400ca466119a15c593c74ac0e1eb0c56bceb4eb5fb00a8fb9bf8a35c1b26"
+    },
+    "loadQualificationProtocol": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Protocol.v1.json",
+      "sha256": "93f176513ba09f07abe2cb3182a5e7c20662495773d810c54caa7d9589dfa364"
+    },
+    "endpointDictionary": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+      "sha256": "9736b16601cc8c89166d65a78ff466114ad6affb57f8be2c9df59a5ddfce22f8"
+    },
+    "completeRawDeliveryContract": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    "sixAlgorithmFairnessBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "sha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71"
+    },
+    "qualificationExecutionContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-execution-contract.v1.json",
+      "sha256": "6fd3b87e5a7fba5398335bd77d8620c65a5e28576636ae47cf157a6df06c7654"
+    },
+    "scheduleSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json",
+      "sha256": "8a96a5a53d22617ef90134ac1a57e3b7115e5ea7ce03a6739c632fd52119f8a5"
+    },
+    "qualificationResourceBudget": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-resource-budget.v1.json",
+      "sha256": "bef0f0c143f325eb7b3ad9e5401cc89bc7d6ff3938287a9b049e985aac04e887"
+    },
+    "instrumentContractV3": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"
+    },
+    "outputSchemaV2": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+      "sha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb"
+    },
+    "trustedUnityLaunchIdentityRule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    "trustedTimestampComparatorQualification": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/known-answer-receipt.v1.json",
+      "sha256": "ad64fb2bce32f2e6206f6f1f80baa30f273be212075603ee631f61b560cc1b63"
+    }
+  },
+  "instrumentQualificationBindings": {
+    "D2": {
+      "evidenceRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/csharp-instruments/instrument-runtime-receipt.v1.json",
+      "evidenceSha256": "be76050b64107f57b5b1086b3fcd318aa3d964c23f5f8dd9935798ff51f5b231",
+      "requiredFields": {
+        "gridReadProxyKnownAnswerPassed": true,
+        "gridReadProxySemanticInvariancePassed": true
+      },
+      "historicalOverallAttemptReclassified": false
+    },
+    "D3": {
+      "semanticVersion": "3.1",
+      "qualifiedContractRelativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "qualifiedContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+      "validationReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/validation-receipt.v1.json",
+      "validationReceiptSha256": "c7221d70918b14cfd0097cbe696898151a8dff3d37275387fe79966e4d1a4cb2",
+      "runnerSchemaIntegrationReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/validation-receipt.v1.json",
+      "runnerSchemaIntegrationReceiptSha256": "245aef0cab407a0681b2d33beaf2b146039a9b1c7692b3e342ccc0a81443cdee",
+      "legacyD3FailureRetained": true
+    },
+    "D4": {
+      "evidenceRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/csharp-instruments/instrument-runtime-receipt.v1.json",
+      "evidenceSha256": "be76050b64107f57b5b1086b3fcd318aa3d964c23f5f8dd9935798ff51f5b231",
+      "requiredField": "persistentStateSizerSyntheticFixturePassed",
+      "requiredValue": true,
+      "historicalOverallAttemptReclassified": false
+    },
+    "clock": {
+      "evidenceRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/csharp-instruments/instrument-runtime-receipt.v1.json",
+      "evidenceSha256": "be76050b64107f57b5b1086b3fcd318aa3d964c23f5f8dd9935798ff51f5b231",
+      "requiredField": "clockMonotonicityPassed",
+      "requiredValue": true,
+      "requiredSamples": 10000,
+      "historicalOverallAttemptReclassified": false
+    }
+  },
+  "authorizedOutputs": [
+    "authorization receipt",
+    "stage contract",
+    "machine-readable qualification design freeze",
+    "human-readable qualification planning freeze",
+    "read-only preflight validation receipt",
+    "source-and-evidence freeze manifest",
+    "terminal receipt",
+    "Status v27"
+  ],
+  "passCriteria": [
+    "all bound files exist and match exact SHA-256",
+    "Status v26 and the schema-v2 adoption receipt have their required PASS states",
+    "D2 known-answer and semantic invariance evidence are true",
+    "D3-v3.1 qualification and runner/schema integration evidence are PASS",
+    "D4 synthetic fixture and clock monotonicity evidence are true",
+    "all six algorithm implementation and specification hashes match the fairness binding",
+    "the complete per-observation delivery tooling evidence is PASS and not aggregation-only",
+    "the historical same-name attempt remains failed, immutable, and unmodified",
+    "all prohibited measured, analysis, export, qualification and formal roots remain absent",
+    "no Gate14Re-ME Unity process is running",
+    "no schedule, input bundle or anonymous identity mapping is generated by this stage"
+  ],
+  "failClosedDisposition": "Write no PASS terminal receipt or adopted status if any criterion fails; preserve all evidence and require a new separate authorization.",
+  "executionBoundary": {
+    "unityInvocationMaximum": 0,
+    "plannerInvocationMaximum": 0,
+    "algorithmLaneExecutionMaximum": 0,
+    "scheduleRowsGeneratedMaximum": 0,
+    "qualificationInputsGeneratedMaximum": 0,
+    "anonymousIdentityMappingsGeneratedMaximum": 0,
+    "measuredRootCreationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

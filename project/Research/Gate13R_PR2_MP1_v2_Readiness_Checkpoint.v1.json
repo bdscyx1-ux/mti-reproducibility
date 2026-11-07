@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "checkpointKind": "gate13r-pr2-mp1-v2-success-readiness-checkpoint-v1",
+  "savedAtUtc": "2026-10-09T05:21:36.5166945Z",
+  "savedAtAsiaShanghai": "2026-10-09T13:21:36.5189185+08:00",
+  "statusTokens": [
+    "MP1-V2-PILOT-PASSED",
+    "96-OF-96-BLOCKS",
+    "384-OF-384-SAMPLES",
+    "RAW-DATA-COMPLETE",
+    "RAW-IMMUTABLE",
+    "DIAGNOSTIC-ANALYSIS-ATTEMPT1-PASSED",
+    "FORWARD-MEMORY-POLICY-RECOMMENDED-BUT-UNFROZEN",
+    "MP2-NONEXECUTING-AUTHORIZATION-REQUIRED",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "passed": true,
+  "pilot": {
+    "root": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v2",
+    "checkpointSha256": "c0a4ae0fa9bdeea82892aa0c2f1985959d77b46d988786a860d1b42612057ecd",
+    "executionReceiptSha256": "afcf84f30f32691047b5ec1ff9bec78fb98802d02de090305437e9154cb78a69",
+    "rawFreezeReceiptSha256": "f5851d2b47a7a77323dba6388df0c06bbbeb9db5b6dfc6f67a92dc79acd0c050",
+    "rawTreeManifestSha256": "3f9ae6c969c8ff6e92a0c3c694613beb95b4bde99541a666d83837d301437ddf",
+    "rawExecutionManifestSha256": "b54766969f374346d774ba06735d3ab6627642f43deb81dc76ec7f54f4088980",
+    "rawCanonicalTreeSha256": "13dd5c30cd016d42e80f472c962d09f89f4d0fb6714d68228e2c657f6c80da93",
+    "rawFileCount": 3360,
+    "rawBytes": 2607785161,
+    "completedBlockCount": 96,
+    "completedSampleCount": 384,
+    "automaticRetryAttempted": false,
+    "automaticResumeAttempted": false,
+    "topUpAttempted": false,
+    "partialMergeAttempted": false
+  },
+  "analysis": {
+    "root": "H:\\DDM_Final_Project\\Research\\Analysis\\Gate13R_PR2_MP1\\v2\\attempt-1",
+    "rawAccess": "READ-ONLY",
+    "stageRecordCount": 1824,
+    "stageSeparatedAnalysisSha256": "9676878b0cc88fa4b7230016c55e63ec2c42940a214c8c3eff245ce16d78f119",
+    "decisionMatrixSha256": "05bcfa7324ba7afcef8cfba081f8407431144d932007bdfeb09a2b0bd2cc2441",
+    "evidenceManifestSha256": "29de1d6df9b12f8ede92f56914cb6cabc9f7a6cc246389d78de097c0bed990eb",
+    "postPilotIntegrityAuditSha256": "40566cbc17d3b66160957ff72e488fa17c4ffaecbc163cc1feff39f1e52eb69e",
+    "ordinaryAnalysisFailureCausedUnityRerun": false
+  },
+  "recommendation": {
+    "relativePath": "Research/Gate13R_PR2_MP1_v2_Memory_Policy_Recommendation.v1.json",
+    "policyId": "gate13r-pr2-layered-scenario-aware-memory-policy-candidate-v1",
+    "status": "RECOMMENDED-BUT-UNFROZEN",
+    "summary": "Use scale-aware native advisory envelopes of 512/640 MiB and hard ceilings of 640/768 MiB for <=128/256 grid dimensions, while retaining the 128/256 MiB managed and 4 GiB/2 GiB/8 GiB host-safety rules."
+  },
+  "preservation": {
+    "pilotV1CanonicalTreeSha256": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+    "formalAttempt2CanonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "pilotV1Unchanged": true,
+    "formalAttempt2Unchanged": true
+  },
+  "authorizationBoundary": {
+    "pilotV1RetryResumeTopUpMergeAuthorized": false,
+    "newUnityPilotAuthorized": false,
+    "formalAttempt3Authorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "nextAuthorizationPrompt": "Research/Gate13R_PR2_MP2_NonExecuting_Next_Authorization_Prompt.md"
+}

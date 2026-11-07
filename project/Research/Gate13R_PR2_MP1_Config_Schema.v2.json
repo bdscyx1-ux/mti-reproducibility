@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate13r-pr2-mp1-targeted-memory-pilot-config-schema-v2",
+  "type": "object",
+  "required": ["schemaVersion", "configId", "scientificDesignId", "executionAttemptId", "labels", "matrix", "execution", "schedule", "checkpointPersistence", "twoStageCommit", "authorizationBoundary"],
+  "properties": {
+    "schemaVersion": {"const": 2},
+    "configId": {"const": "gate13r-pr2-mp1-targeted-memory-pilot-config-v2"},
+    "scientificDesignId": {"const": "gate13r-pr2-mp1-stage-separated-memory-targeted-pilot-v1"},
+    "executionAttemptId": {"const": "gate13r-pr2-mp1-attempt2-v2"},
+    "formalCampaign": {"const": false},
+    "matrix": {
+      "type": "object",
+      "required": ["measuredProcesses", "measuredSamples", "warmupProcesses", "scenarioBlockCounts"],
+      "properties": {
+        "measuredProcesses": {"const": 96},
+        "measuredSamples": {"const": 384},
+        "warmupProcesses": {"const": 0}
+      }
+    },
+    "execution": {
+      "type": "object",
+      "required": ["pilotRoot", "topology", "maximumUnityConcurrency", "oneFreshUnityProcessPerCompleteWilliamsBlock", "perSampleCompleteReset", "automaticMeasuredRetry", "automaticMeasuredResume", "automaticMeasuredTopUp", "partialAttemptMerge"],
+      "properties": {
+        "pilotRoot": {"const": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v2"},
+        "topology": {"const": "strict-serial"},
+        "maximumUnityConcurrency": {"const": 1},
+        "oneFreshUnityProcessPerCompleteWilliamsBlock": {"const": true},
+        "perSampleCompleteReset": {"const": true},
+        "automaticMeasuredRetry": {"const": false},
+        "automaticMeasuredResume": {"const": false},
+        "automaticMeasuredTopUp": {"const": false},
+        "partialAttemptMerge": {"const": false}
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-rq-aligned-preregistration-amendment-v1",
+  "status": [
+    "PILOT-INFORMED",
+    "PROSPECTIVE-BEFORE-FORMAL-DATA",
+    "NON-EXECUTING",
+    "FORMAL-CAMPAIGN-NOT-AUTHORIZED"
+  ],
+  "appliesOnlyTo": "FUTURE-GATE13R-FORMAL-DATA-NOT-YET-PRODUCED",
+  "retainedMatrix": {
+    "scenarioCount": 53,
+    "campaignCount": 74,
+    "profileCount": 74,
+    "presetCount": 212,
+    "playableSceneCount": 53,
+    "bundleManifestSha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc"
+  },
+  "primaryResearchQuestion": "In shared-goal canonical scenarios, conditional on correctness and structural eligibility, are C-FF and IDFF superior to A*-R and D*L on mean dynamic-event handling time, and how do C-FF and IDFF differ?",
+  "primaryComparisonScope": "SHARED-GOAL-FOUR-ALGORITHM-COMPLETE-WILLIAMS-BLOCK",
+  "secondaryResearchQuestion": "In canonical heterogeneous-goal scenarios and controlled execution waves, how do grouped-field C-FF/IDFF systems compare with per-agent A*-R/D*L systems on P1-P5, and how do differences vary with factors and goal count?",
+  "heterogeneousInterpretation": "SECONDARY-SYSTEM-TREATMENT-NOT-PURE-ALGORITHM-CAUSAL-EFFECT",
+  "endpointHierarchy": {
+    "confirmatoryPrimary": ["P1"],
+    "planningResourceSupportive": ["P2", "P3", "P4", "P5"],
+    "prospectiveGate14R": ["M1", "M2", "M3", "M4", "M5"]
+  },
+  "confirmatoryContrastFamily": ["C1", "C2", "C3", "C4", "C5"],
+  "familyWiseAlpha": 0.05,
+  "multiplicityMethod": "HOLM",
+  "c5Sidedness": "TWO-SIDED",
+  "precisionPolicy": {
+    "historicalGate11RPolicy": "5%-PER-CAMPAIGN-RELATIVE-CI-HALF-WIDTH-NO-CAP",
+    "preAmendmentComparisonBaseline": "10%-PER-CAMPAIGN-RELATIVE-CI-HALF-WIDTH-STRICT-SERIAL",
+    "futureFormalPolicy": "UNFROZEN",
+    "practicalEffectMargin": "UNFROZEN",
+    "warning": "A 10% CI precision target is not a 10% practical-superiority margin."
+  },
+  "executionSemanticsRetained": [
+    "ONE-FRESH-UNITY-PROCESS-PER-COMPLETE-WILLIAMS-BLOCK",
+    "ONE-BLOCK-MAXIMUM-PER-PROCESS",
+    "ONE-OCCURRENCE-PER-ELIGIBLE-ALGORITHM-PER-BLOCK",
+    "COMPLETE-PER-SAMPLE-RESET",
+    "FROZEN-WILLIAMS-ORDER",
+    "TELEMETRY-AND-STRUCTURAL-CONTROLS",
+    "FAIL-CLOSED",
+    "PLAYABLE-AND-TIMING-ISOLATED",
+    "STRICT-SERIAL-MAX-UNITY-CONCURRENCY-1"
+  ],
+  "supersedesProspectively": [
+    "OLD-CONTRAST-SCOPE-AS-FORMAL-PRIMARY",
+    "OLD-PER-CAMPAIGN-SAMPLE-SIZE-LAUNCH-DECISION",
+    "OLD-144-204-108-SCHEDULE-AS-AUTHORIZED-LAUNCH-CANDIDATE"
+  ],
+  "doesNotModify": [
+    "GATE10R-ATTEMPT4",
+    "GATE11R-RETAINED-BUNDLE",
+    "GATE12R-V4-PILOT",
+    "HISTORICAL-GATE13R-DESIGNS-OR-FAILURES",
+    "ORIGINAL-GAME-SCRIPTS",
+    "ORIGINAL-SCENES"
+  ],
+  "oldSerialPlanStatus": "PRE-AMENDMENT-COMPARISON-BASELINE/SUPERSEDED-PENDING-RQ-ALIGNED-SAMPLE-DESIGN-DECISION/NOT-AUTHORIZED-FOR-LAUNCH",
+  "finalSampleDesign": "UNFROZEN",
+  "formalCampaignAuthorized": false
+}

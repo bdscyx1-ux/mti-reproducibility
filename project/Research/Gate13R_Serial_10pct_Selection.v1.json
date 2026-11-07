@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "decisionKind": "gate13r-strict-serial-topology-selection-v1",
+  "decisionId": "gate13r-strict-serial-10pct-no-concurrency-v1",
+  "recordedDate": "2026-10-08",
+  "timezone": "Asia/Shanghai",
+  "userDirectiveExact": "不再并行，直接串行实验",
+  "activeTopology": {
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "oneFreshUnityEditorProcessPerCompleteWilliamsBlock": true,
+    "maximumWilliamsBlocksPerUnityEditorProcess": 1,
+    "crossBlockProcessReuseAllowed": false,
+    "crossCampaignProcessReuseAllowed": false,
+    "laneCount": 1,
+    "parallelLaneFallbackAllowed": false,
+    "mixedTopologyAllowed": false
+  },
+  "retainedDesign": {
+    "campaignCount": 74,
+    "precisionTargetRelativeHalfWidth": 0.1,
+    "confidenceLevel": 0.95,
+    "hardCap": null,
+    "williamsOrderUnchanged": true,
+    "gate11RMatrixUnchanged": true,
+    "perSampleResetUnchanged": true,
+    "telemetryUnchanged": true,
+    "playableBundleUnchanged": true
+  },
+  "supersedesForFutureExecution": [
+    "gate13r-36h-10pct-four-lane-redesign-v1",
+    "gate13r-48h-10pct-three-lane-redesign-v1",
+    "all-proposed-two-lane-or-three-lane-fallbacks"
+  ],
+  "preservation": {
+    "gate13R36hFourLaneEvidenceImmutable": true,
+    "gate13R48hThreeLaneEvidenceImmutable": true,
+    "gate12RSuccessfulV4Immutable": true,
+    "historicalEvidenceMayBeUsedAsFormalTimingData": false
+  },
+  "wallClockPolicy": {
+    "previous36HourConstraintIsNotFeasibleUnderSelectedTopology": true,
+    "newHardLimitInventedByThisDecision": false,
+    "formalLaunchRequiresExplicitAcceptanceOfSerialProjection": true
+  },
+  "authorizationBoundary": {
+    "nonExecutingSerialReadinessDocumentationAllowed": true,
+    "formalCampaignAuthorized": false,
+    "formalRootCreationAuthorized": false,
+    "formalExecutionReceiptAuthorized": false,
+    "formalTimingSamplesAuthorized": false
+  }
+}

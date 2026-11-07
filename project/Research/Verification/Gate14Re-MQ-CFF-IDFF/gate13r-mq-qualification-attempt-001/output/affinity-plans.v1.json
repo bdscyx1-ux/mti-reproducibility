@@ -1,0 +1,754 @@
+{
+    "schema": "gate13r-mq-affinity-plan-set-v1",
+    "status": "FROZEN_PHYSICAL_CORE_ONLY_NO_SMT",
+    "plans": [
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "LARGE_L3_CCD-W1",
+            "topologyRole": "LARGE_L3_CCD",
+            "workerCount": 1,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": false,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "LARGE_L3_CCD-W1",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 256,
+                    "group": 0,
+                    "logicalProcessorIndex": 0,
+                    "coreIndex": 0,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "HIGH_FREQUENCY_CCD-W1",
+            "topologyRole": "HIGH_FREQUENCY_CCD",
+            "workerCount": 1,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": false,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "HIGH_FREQUENCY_CCD-W1",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 272,
+                    "group": 0,
+                    "logicalProcessorIndex": 16,
+                    "coreIndex": 16,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "LARGE_L3_CCD-W2",
+            "topologyRole": "LARGE_L3_CCD",
+            "workerCount": 2,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": false,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "LARGE_L3_CCD-W2",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 256,
+                    "group": 0,
+                    "logicalProcessorIndex": 0,
+                    "coreIndex": 0,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 1,
+                    "planId": "LARGE_L3_CCD-W2",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 258,
+                    "group": 0,
+                    "logicalProcessorIndex": 2,
+                    "coreIndex": 2,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "HIGH_FREQUENCY_CCD-W2",
+            "topologyRole": "HIGH_FREQUENCY_CCD",
+            "workerCount": 2,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": false,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "HIGH_FREQUENCY_CCD-W2",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 272,
+                    "group": 0,
+                    "logicalProcessorIndex": 16,
+                    "coreIndex": 16,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 1,
+                    "planId": "HIGH_FREQUENCY_CCD-W2",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 274,
+                    "group": 0,
+                    "logicalProcessorIndex": 18,
+                    "coreIndex": 18,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "LARGE_L3_CCD-W4",
+            "topologyRole": "LARGE_L3_CCD",
+            "workerCount": 4,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": false,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "LARGE_L3_CCD-W4",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 256,
+                    "group": 0,
+                    "logicalProcessorIndex": 0,
+                    "coreIndex": 0,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 1,
+                    "planId": "LARGE_L3_CCD-W4",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 258,
+                    "group": 0,
+                    "logicalProcessorIndex": 2,
+                    "coreIndex": 2,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 2,
+                    "planId": "LARGE_L3_CCD-W4",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 260,
+                    "group": 0,
+                    "logicalProcessorIndex": 4,
+                    "coreIndex": 4,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 3,
+                    "planId": "LARGE_L3_CCD-W4",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 262,
+                    "group": 0,
+                    "logicalProcessorIndex": 6,
+                    "coreIndex": 6,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "HIGH_FREQUENCY_CCD-W4",
+            "topologyRole": "HIGH_FREQUENCY_CCD",
+            "workerCount": 4,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": false,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "HIGH_FREQUENCY_CCD-W4",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 272,
+                    "group": 0,
+                    "logicalProcessorIndex": 16,
+                    "coreIndex": 16,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 1,
+                    "planId": "HIGH_FREQUENCY_CCD-W4",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 274,
+                    "group": 0,
+                    "logicalProcessorIndex": 18,
+                    "coreIndex": 18,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 2,
+                    "planId": "HIGH_FREQUENCY_CCD-W4",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 276,
+                    "group": 0,
+                    "logicalProcessorIndex": 20,
+                    "coreIndex": 20,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 3,
+                    "planId": "HIGH_FREQUENCY_CCD-W4",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 278,
+                    "group": 0,
+                    "logicalProcessorIndex": 22,
+                    "coreIndex": 22,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "LARGE_L3_CCD-W8",
+            "topologyRole": "LARGE_L3_CCD",
+            "workerCount": 8,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": false,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "LARGE_L3_CCD-W8",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 256,
+                    "group": 0,
+                    "logicalProcessorIndex": 0,
+                    "coreIndex": 0,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 1,
+                    "planId": "LARGE_L3_CCD-W8",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 258,
+                    "group": 0,
+                    "logicalProcessorIndex": 2,
+                    "coreIndex": 2,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 2,
+                    "planId": "LARGE_L3_CCD-W8",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 260,
+                    "group": 0,
+                    "logicalProcessorIndex": 4,
+                    "coreIndex": 4,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 3,
+                    "planId": "LARGE_L3_CCD-W8",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 262,
+                    "group": 0,
+                    "logicalProcessorIndex": 6,
+                    "coreIndex": 6,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 4,
+                    "planId": "LARGE_L3_CCD-W8",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 264,
+                    "group": 0,
+                    "logicalProcessorIndex": 8,
+                    "coreIndex": 8,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 5,
+                    "planId": "LARGE_L3_CCD-W8",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 266,
+                    "group": 0,
+                    "logicalProcessorIndex": 10,
+                    "coreIndex": 10,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 6,
+                    "planId": "LARGE_L3_CCD-W8",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 268,
+                    "group": 0,
+                    "logicalProcessorIndex": 12,
+                    "coreIndex": 12,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 7,
+                    "planId": "LARGE_L3_CCD-W8",
+                    "topologyRole": "LARGE_L3_CCD",
+                    "cpuSetId": 270,
+                    "group": 0,
+                    "logicalProcessorIndex": 14,
+                    "coreIndex": 14,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "HIGH_FREQUENCY_CCD-W8",
+            "topologyRole": "HIGH_FREQUENCY_CCD",
+            "workerCount": 8,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": false,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "HIGH_FREQUENCY_CCD-W8",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 272,
+                    "group": 0,
+                    "logicalProcessorIndex": 16,
+                    "coreIndex": 16,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 1,
+                    "planId": "HIGH_FREQUENCY_CCD-W8",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 274,
+                    "group": 0,
+                    "logicalProcessorIndex": 18,
+                    "coreIndex": 18,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 2,
+                    "planId": "HIGH_FREQUENCY_CCD-W8",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 276,
+                    "group": 0,
+                    "logicalProcessorIndex": 20,
+                    "coreIndex": 20,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 3,
+                    "planId": "HIGH_FREQUENCY_CCD-W8",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 278,
+                    "group": 0,
+                    "logicalProcessorIndex": 22,
+                    "coreIndex": 22,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 4,
+                    "planId": "HIGH_FREQUENCY_CCD-W8",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 280,
+                    "group": 0,
+                    "logicalProcessorIndex": 24,
+                    "coreIndex": 24,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 5,
+                    "planId": "HIGH_FREQUENCY_CCD-W8",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 282,
+                    "group": 0,
+                    "logicalProcessorIndex": 26,
+                    "coreIndex": 26,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 6,
+                    "planId": "HIGH_FREQUENCY_CCD-W8",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 284,
+                    "group": 0,
+                    "logicalProcessorIndex": 28,
+                    "coreIndex": 28,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 7,
+                    "planId": "HIGH_FREQUENCY_CCD-W8",
+                    "topologyRole": "HIGH_FREQUENCY_CCD",
+                    "cpuSetId": 286,
+                    "group": 0,
+                    "logicalProcessorIndex": 30,
+                    "coreIndex": 30,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "DUAL_CCD_BALANCED-W8",
+            "topologyRole": "DUAL_CCD_BALANCED",
+            "workerCount": 8,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": true,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "DUAL_CCD_BALANCED-W8",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 256,
+                    "group": 0,
+                    "logicalProcessorIndex": 0,
+                    "coreIndex": 0,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 1,
+                    "planId": "DUAL_CCD_BALANCED-W8",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 272,
+                    "group": 0,
+                    "logicalProcessorIndex": 16,
+                    "coreIndex": 16,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 2,
+                    "planId": "DUAL_CCD_BALANCED-W8",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 258,
+                    "group": 0,
+                    "logicalProcessorIndex": 2,
+                    "coreIndex": 2,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 3,
+                    "planId": "DUAL_CCD_BALANCED-W8",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 274,
+                    "group": 0,
+                    "logicalProcessorIndex": 18,
+                    "coreIndex": 18,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 4,
+                    "planId": "DUAL_CCD_BALANCED-W8",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 260,
+                    "group": 0,
+                    "logicalProcessorIndex": 4,
+                    "coreIndex": 4,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 5,
+                    "planId": "DUAL_CCD_BALANCED-W8",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 276,
+                    "group": 0,
+                    "logicalProcessorIndex": 20,
+                    "coreIndex": 20,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 6,
+                    "planId": "DUAL_CCD_BALANCED-W8",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 262,
+                    "group": 0,
+                    "logicalProcessorIndex": 6,
+                    "coreIndex": 6,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 7,
+                    "planId": "DUAL_CCD_BALANCED-W8",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 278,
+                    "group": 0,
+                    "logicalProcessorIndex": 22,
+                    "coreIndex": 22,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                }
+            ]
+        },
+        {
+            "schema": "gate14re-mq-cpu-affinity-plan-v1",
+            "planId": "DUAL_CCD_BALANCED-W16",
+            "topologyRole": "DUAL_CCD_BALANCED",
+            "workerCount": 16,
+            "usesSmtSibling": false,
+            "spansMultipleL3Domains": true,
+            "workers": [
+                {
+                    "workerIndex": 0,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 256,
+                    "group": 0,
+                    "logicalProcessorIndex": 0,
+                    "coreIndex": 0,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 1,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 272,
+                    "group": 0,
+                    "logicalProcessorIndex": 16,
+                    "coreIndex": 16,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 2,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 258,
+                    "group": 0,
+                    "logicalProcessorIndex": 2,
+                    "coreIndex": 2,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 3,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 274,
+                    "group": 0,
+                    "logicalProcessorIndex": 18,
+                    "coreIndex": 18,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 4,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 260,
+                    "group": 0,
+                    "logicalProcessorIndex": 4,
+                    "coreIndex": 4,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 5,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 276,
+                    "group": 0,
+                    "logicalProcessorIndex": 20,
+                    "coreIndex": 20,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 6,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 262,
+                    "group": 0,
+                    "logicalProcessorIndex": 6,
+                    "coreIndex": 6,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 7,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 278,
+                    "group": 0,
+                    "logicalProcessorIndex": 22,
+                    "coreIndex": 22,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 8,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 264,
+                    "group": 0,
+                    "logicalProcessorIndex": 8,
+                    "coreIndex": 8,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 9,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 280,
+                    "group": 0,
+                    "logicalProcessorIndex": 24,
+                    "coreIndex": 24,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 10,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 266,
+                    "group": 0,
+                    "logicalProcessorIndex": 10,
+                    "coreIndex": 10,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 11,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 282,
+                    "group": 0,
+                    "logicalProcessorIndex": 26,
+                    "coreIndex": 26,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 12,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 268,
+                    "group": 0,
+                    "logicalProcessorIndex": 12,
+                    "coreIndex": 12,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 13,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 284,
+                    "group": 0,
+                    "logicalProcessorIndex": 28,
+                    "coreIndex": 28,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                },
+                {
+                    "workerIndex": 14,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 270,
+                    "group": 0,
+                    "logicalProcessorIndex": 14,
+                    "coreIndex": 14,
+                    "lastLevelCacheIndex": 0,
+                    "l3DomainId": "G0-M000000000000ffff",
+                    "l3CacheBytes": 100663296
+                },
+                {
+                    "workerIndex": 15,
+                    "planId": "DUAL_CCD_BALANCED-W16",
+                    "topologyRole": "DUAL_CCD_BALANCED",
+                    "cpuSetId": 286,
+                    "group": 0,
+                    "logicalProcessorIndex": 30,
+                    "coreIndex": 30,
+                    "lastLevelCacheIndex": 16,
+                    "l3DomainId": "G0-M00000000ffff0000",
+                    "l3CacheBytes": 33554432
+                }
+            ]
+        }
+    ]
+}

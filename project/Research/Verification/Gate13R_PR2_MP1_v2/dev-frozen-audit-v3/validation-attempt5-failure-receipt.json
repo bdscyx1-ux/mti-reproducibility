@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-mp1-v2-validation-attempt5-failure-receipt-v1",
+  "capturedAtUtc": "2026-10-09T04:29:18.5390794Z",
+  "capturedAtAsiaShanghai": "2026-10-09T12:29:18.5432757+08:00",
+  "status": "FAILED-CLOSED-VALIDATION-ONLY",
+  "validationAttempt": 5,
+  "failureStage": "FROZEN-ROOTS-IDENTITY-AUDIT",
+  "failureCode": "ROOT-SPECIFIC-CANONICAL-TREE-FORMULA-NOT-APPLIED",
+  "failureMessage": "The v3 audit applied the pilot-v1 pipe-delimited tree formula to formal attempt 2, whose frozen historical contract is ordinal TAB-delimited canonical lines with a trailing LF per file.",
+  "evidence": {
+    "auditRelativePath": "frozen-roots-audit.json",
+    "auditSha256": "db684571d16769ad8bf37a13b8123f213c7508483789c5fc2389b63b3d323ad6",
+    "incorrectFormalTreeSha256": "d3e51fbba63b1abaaa047aea81687fffffad074b1217f57ebf8eccb645fe474b",
+    "expectedFormalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "formalFileCount": 28020,
+    "formalRawBytes": 8536611302,
+    "formalAllFilesReadOnly": true
+  },
+  "frozenRootMutationObserved": false,
+  "unityInvoked": false,
+  "measuredBlockCount": 0,
+  "pilotV2RootCreated": false,
+  "formalAttempt3Created": false,
+  "automaticPilotRetryAttempted": false,
+  "formalAnalysisPerformed": false,
+  "gate14RStarted": false
+}

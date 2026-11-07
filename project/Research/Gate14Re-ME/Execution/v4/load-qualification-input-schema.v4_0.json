@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-qualification-input-validation-schema-v4-0",
+  "title": "Gate14Re-ME bounded-window load-qualification input validation schema v4.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "studyId",
+    "protocolId",
+    "inputId",
+    "superblockId",
+    "designRegion",
+    "seed",
+    "gridEdge",
+    "agentCount",
+    "changedCellCount",
+    "changeTopology",
+    "graphProfile",
+    "sameTickAtomicPartitions",
+    "contextStratumId",
+    "connectivity",
+    "allowDiagonalCornerCutting",
+    "defaultTraversalCost",
+    "initialCellOverrides",
+    "goal",
+    "starts",
+    "eventGroups"
+  ],
+  "properties": {
+    "schema": {"const": "gate14re-me-qualification-input-bundle-v1"},
+    "studyId": {"const": "Gate14Re-ME"},
+    "protocolId": {"const": "gate14re-me-load-qualification-v1"},
+    "inputId": {"type": "string", "minLength": 1},
+    "superblockId": {"type": "string", "minLength": 1},
+    "designRegion": {"enum": ["core", "stress"]},
+    "seed": {"type": "integer"},
+    "gridEdge": {"enum": [64, 96, 128]},
+    "agentCount": {"enum": [32, 64, 128]},
+    "changedCellCount": {"enum": [1, 9, 25, 81]},
+    "changeTopology": {"enum": ["compact", "dispersed", "bottleneck"]},
+    "graphProfile": {"enum": ["four_way_weighted_dense", "eight_way_uniform_sparse"]},
+    "sameTickAtomicPartitions": {"enum": [1, 4, 16]},
+    "contextStratumId": {"type": "string", "minLength": 1},
+    "connectivity": {"enum": [4, 8]},
+    "allowDiagonalCornerCutting": {"type": "boolean"},
+    "defaultTraversalCost": {"type": "number", "exclusiveMinimum": 0},
+    "initialCellOverrides": {"type": "array", "items": {"$ref": "#/$defs/cellState"}},
+    "goal": {"$ref": "#/$defs/coordinate"},
+    "starts": {"type": "array", "minItems": 32, "maxItems": 128, "items": {"$ref": "#/$defs/coordinate"}},
+    "eventGroups": {"type": "array", "minItems": 24, "maxItems": 24, "items": {"$ref": "#/$defs/eventGroup"}}
+  },
+  "$defs": {
+    "coordinate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {"x": {"type": "integer"}, "y": {"type": "integer"}}
+    },
+    "cellState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "isWalkable", "traversalCost"],
+      "properties": {
+        "x": {"type": "integer"},
+        "y": {"type": "integer"},
+        "isWalkable": {"type": "boolean"},
+        "traversalCost": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "atomicPartition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["partitionIndex", "changes"],
+      "properties": {
+        "partitionIndex": {"type": "integer", "minimum": 0, "maximum": 15},
+        "changes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/cellState"}}
+      }
+    },
+    "eventGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eventGroupId", "eventGroupIndex", "cycleIndex", "phase", "topology", "atomicPartitions"],
+      "properties": {
+        "eventGroupId": {"type": "string", "minLength": 1},
+        "eventGroupIndex": {"type": "integer", "minimum": 0, "maximum": 23},
+        "cycleIndex": {"type": "integer", "minimum": 0, "maximum": 5},
+        "phase": {"enum": ["block", "unblock_or_restore", "increase_cost", "decrease_or_restore_cost"]},
+        "topology": {"enum": ["compact", "dispersed", "bottleneck"]},
+        "atomicPartitions": {"type": "array", "minItems": 1, "maxItems": 16, "items": {"$ref": "#/$defs/atomicPartition"}}
+      }
+    }
+  },
+  "semanticChecksOutsideJsonSchema": [
+    "starts length equals agentCount and all starts are unique, walkable and distinct from goal",
+    "every event group has exactly changedCellCount unique changed cells and exactly sameTickAtomicPartitions partitions",
+    "event index, cycle and four-phase order are exact",
+    "every event-group topology exactly equals the input-level changeTopology",
+    "block/increase groups and their restore groups are byte-semantic inverses",
+    "algorithm-neutral Dijkstra oracle establishes the frozen affected-agent geometry gates",
+    "all 126 input bundles must pass before any algorithm lane may run",
+    "the 108 core bundles cover 36 G x N x F cells exactly three times and the 18 high-corner context bundles cover every frozen context stratum exactly once"
+  ],
+  "authorizationBoundary": {
+    "schemaFrozen": true,
+    "validationSchemaVersion": "4.0",
+    "runtimeBundleSchemaIdentity": "gate14re-me-qualification-input-bundle-v1",
+    "designScope": "bounded 3 x 3 x 4 discrimination window G={64,96,128}, N={32,64,128}, F={1,9,25,81}; 108 core plus 18 high-corner context bundles",
+    "inputBundlesGenerated": 0,
+    "inputGenerationAuthorized": false
+  }
+}

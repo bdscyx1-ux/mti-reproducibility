@@ -1,0 +1,147 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-pr2-formal-execution-adapter-unit-and-two-phase-fixture-v2",
+    "completedAtUtc":  "2026-10-08T17:05:17.7509534Z",
+    "checkCount":  26,
+    "passedCheckCount":  26,
+    "failedCheckCount":  0,
+    "failedCheckNames":  [
+
+                         ],
+    "checks":  [
+                   {
+                       "name":  "selected-records-found",
+                       "passed":  true,
+                       "detail":  "found=5"
+                   },
+                   {
+                       "name":  "plan-1-williams-row",
+                       "passed":  true,
+                       "detail":  "plan=0 schedule=0"
+                   },
+                   {
+                       "name":  "plan-1-block-identity",
+                       "passed":  true,
+                       "detail":  "plan=1 schedule=1"
+                   },
+                   {
+                       "name":  "plan-1-order",
+                       "passed":  true,
+                       "detail":  "A*-R,D*L,IDFF,C-FF"
+                   },
+                   {
+                       "name":  "plan-49-williams-row",
+                       "passed":  true,
+                       "detail":  "plan=1 schedule=1"
+                   },
+                   {
+                       "name":  "plan-49-block-identity",
+                       "passed":  true,
+                       "detail":  "plan=1 schedule=1"
+                   },
+                   {
+                       "name":  "plan-49-order",
+                       "passed":  true,
+                       "detail":  "D*L,C-FF,A*-R,IDFF"
+                   },
+                   {
+                       "name":  "plan-1537-williams-row",
+                       "passed":  true,
+                       "detail":  "plan=0 schedule=0"
+                   },
+                   {
+                       "name":  "plan-1537-block-identity",
+                       "passed":  true,
+                       "detail":  "plan=1 schedule=1"
+                   },
+                   {
+                       "name":  "plan-1537-order",
+                       "passed":  true,
+                       "detail":  "A*-R,D*L"
+                   },
+                   {
+                       "name":  "plan-1538-williams-row",
+                       "passed":  true,
+                       "detail":  "plan=0 schedule=0"
+                   },
+                   {
+                       "name":  "plan-1538-block-identity",
+                       "passed":  true,
+                       "detail":  "plan=1 schedule=1"
+                   },
+                   {
+                       "name":  "plan-1538-order",
+                       "passed":  true,
+                       "detail":  "C-FF,IDFF"
+                   },
+                   {
+                       "name":  "plan-3552-williams-row",
+                       "passed":  true,
+                       "detail":  "plan=1 schedule=1"
+                   },
+                   {
+                       "name":  "plan-3552-block-identity",
+                       "passed":  true,
+                       "detail":  "plan=48 schedule=48"
+                   },
+                   {
+                       "name":  "plan-3552-order",
+                       "passed":  true,
+                       "detail":  "D*L,A*-R"
+                   },
+                   {
+                       "name":  "valid-receipt-accepted",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "unauthorized-receipt-rejected",
+                       "passed":  true,
+                       "detail":  "authorization-boundary"
+                   },
+                   {
+                       "name":  "wrong-binding-rejected",
+                       "passed":  true,
+                       "detail":  "binding-scheduleSha256"
+                   },
+                   {
+                       "name":  "raw-snapshot-deterministic",
+                       "passed":  true,
+                       "detail":  "8ea605d6e472a7df1085347b05c85f6481161d415b1acad031bcf8faa57d35f3"
+                   },
+                   {
+                       "name":  "raw-snapshot-excludes-control",
+                       "passed":  true,
+                       "detail":  "files=2"
+                   },
+                   {
+                       "name":  "raw-payload-read-only",
+                       "passed":  true,
+                       "detail":  "files=2"
+                   },
+                   {
+                       "name":  "read-only-does-not-change-tree",
+                       "passed":  true,
+                       "detail":  "8ea605d6e472a7df1085347b05c85f6481161d415b1acad031bcf8faa57d35f3"
+                   },
+                   {
+                       "name":  "formal-root-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v1"
+                   },
+                   {
+                       "name":  "formal-receipt-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Receipt.v1.json"
+                   },
+                   {
+                       "name":  "unity-zero",
+                       "passed":  true,
+                       "detail":  "No Unity invocation is permitted in this unit test."
+                   }
+               ],
+    "formalRootAbsent":  true,
+    "formalExecutionReceiptAbsent":  true,
+    "unityLaunched":  false,
+    "passed":  true
+}

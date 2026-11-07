@@ -1,0 +1,67 @@
+{
+    "schema": "gate14re-me-schedule-null-replacement-deserialization-known-answer-receipt-v1",
+    "studyId": "Gate14Re-ME",
+    "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+    "status": "PASS_SCHEDULE_NULL_REPLACEMENT_DESERIALIZATION_KNOWN_ANSWER",
+    "passed": true,
+    "completedAtUtc": "2026-10-17T17:55:36.4387683Z",
+    "unityVersion": "2022.3.30f1c1",
+    "editorApplicationPath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "processMainModulePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "queryFullProcessImageNamePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "processId": 88420,
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "runnerSha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+    "harnessRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEScheduleNullReplacementKnownAnswerV1.cs",
+    "harnessSha256": "abad9cf6fdae640384c821e6ce555d2b5bcad88cb9ffa2aa50fecb0a95176448",
+    "parserContract": "TOP_LEVEL_RAW_TOKEN_AUTHORITATIVE_NULL_OR_MISSING_NORMALIZED_TO_ABSENT_OBJECT_PRESERVED_ONLY_IF_COMPLETE_OTHERWISE_FAIL_CLOSED",
+    "cases": [
+        {
+            "caseId": "replacement-null",
+            "expectedDisposition": "NORMALIZED_TO_NO_REPLACEMENT",
+            "observedDisposition": "NORMALIZED_TO_NO_REPLACEMENT",
+            "passed": true,
+            "detail": "JSON null must override JsonUtility's empty nested DTO behavior."
+        },
+        {
+            "caseId": "replacement-member-omitted",
+            "expectedDisposition": "NORMALIZED_TO_NO_REPLACEMENT",
+            "observedDisposition": "NORMALIZED_TO_NO_REPLACEMENT",
+            "passed": true,
+            "detail": "An omitted replacement member must mean no replacement."
+        },
+        {
+            "caseId": "complete-valid-replacement-object",
+            "expectedDisposition": "PRESERVED_FOR_EXISTING_DOWNSTREAM_VALIDATION",
+            "observedDisposition": "PRESERVED_FOR_EXISTING_DOWNSTREAM_VALIDATION",
+            "passed": true,
+            "detail": "A complete replacement object must remain non-null and retain all frozen fields."
+        },
+        {
+            "caseId": "empty-replacement-object",
+            "expectedDisposition": "FAIL_CLOSED_EMPTY_OR_INCOMPLETE_REPLACEMENT",
+            "observedDisposition": "FAIL_CLOSED_EMPTY_OR_INCOMPLETE_REPLACEMENT",
+            "passed": true,
+            "detail": "Schedule replacement object is empty or incomplete: known-answer:empty-replacement-object"
+        },
+        {
+            "caseId": "partial-replacement-object",
+            "expectedDisposition": "FAIL_CLOSED_EMPTY_OR_INCOMPLETE_REPLACEMENT",
+            "observedDisposition": "FAIL_CLOSED_EMPTY_OR_INCOMPLETE_REPLACEMENT",
+            "passed": true,
+            "detail": "Schedule replacement object is empty or incomplete: known-answer:partial-replacement-object"
+        }
+    ],
+    "activityBoundary": {
+        "algorithmCodeInvoked": false,
+        "instrumentInvoked": false,
+        "oracleInvoked": false,
+        "emptyBoundaryInvoked": false,
+        "qualificationMeasuredRootCreated": false,
+        "qualificationDeliveryRootCreated": false,
+        "qualificationObservationProduced": false,
+        "formalObservationProduced": false,
+        "analysisRankingWeightingOrWinnerAdjudicationPerformed": false
+    },
+    "exactFailure": ""
+}

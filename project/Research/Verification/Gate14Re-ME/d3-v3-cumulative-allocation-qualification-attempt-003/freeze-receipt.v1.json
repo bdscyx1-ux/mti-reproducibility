@@ -1,0 +1,90 @@
+{
+  "schema": "gate14re-me-d3-v3-1-instrument-qualification-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "status": "FROZEN_PASS_D3_V3_1_INSTRUMENT_QUALIFICATION",
+  "state": [
+    "QUALIFIED",
+    "IMMUTABLE_SOURCE_BINARY_HASH_FREEZE",
+    "D3_V2_PROSPECTIVELY_DISABLED_EVIDENCE_RETAINED",
+    "READY_FOR_SEPARATELY_AUTHORIZED_RUNNER_SCHEMA_INTEGRATION"
+  ],
+  "frozenAtUtc": "2026-10-17T07:56:14.8134261Z",
+  "qualifiedInstrument": {
+    "endpointId": "D3",
+    "semanticVersion": "3.1",
+    "name": "owner-thread cumulative managed allocation bytes",
+    "unit": "bytes",
+    "eventBinding": "GC.Alloc Begin, allocation-size metadata UInt32/4, owner native thread",
+    "knownAnswerStatus": "PASS_D3_V3_1_TRUE_CUMULATIVE_MANAGED_ALLOCATION_QUALIFICATION",
+    "strictJsonReceipt": true,
+    "nonFiniteJsonTokenCount": 0
+  },
+  "frozenBindings": {
+    "qualifiedContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "lengthBytes": 6971,
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    "sourceFreezeManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/source-freeze-manifest.v1.json",
+      "lengthBytes": 7639,
+      "sha256": "b3c2d0132ee9dad7d2860775fddfb826111d02e45efd3b8912bfa7d2412bb5c8"
+    },
+    "validationReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/validation-receipt.v1.json",
+      "lengthBytes": 4666,
+      "sha256": "c7221d70918b14cfd0097cbe696898151a8dff3d37275387fe79966e4d1a4cb2"
+    },
+    "nativeSource": {
+      "relativePath": "Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp",
+      "lengthBytes": 11808,
+      "sha256": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2"
+    },
+    "nativeBinary": {
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+      "lengthBytes": 110592,
+      "sha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63"
+    },
+    "managedWrapper": {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs",
+      "lengthBytes": 6168,
+      "sha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007"
+    },
+    "knownAnswerHarness": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V31KnownAnswerRunnerV2.cs",
+      "lengthBytes": 55822,
+      "sha256": "89724c1106600dbd7e9cc21059942e28480e063f6e41cacbf2ef1ac3902c1ce6"
+    },
+    "knownAnswerRawReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/known-answer-output/d3-v3-1-known-answer-receipt.v2.json",
+      "lengthBytes": 70901,
+      "sha256": "f2ec81f73a8e77c05f84b95a8e44aa5565e07628418f20d28e09f882ede53139"
+    },
+    "knownAnswerCycleReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/cycle-receipt.v1.json",
+      "lengthBytes": 4926,
+      "sha256": "743c45ef3e7664be4c095a5f6c56c9cf76ccc38dc01c2ddf44dfad19eedfcdac"
+    },
+    "preservedV1FailureCycleReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-013-d3-v3-1-known-answer-v1/cycle-receipt.v1.json",
+      "lengthBytes": 3685,
+      "sha256": "f945915e707fd4dd3354e8cd97a7dd70b02e926e258cdbda2d9f5c5601a04d6e"
+    }
+  },
+  "scientificBoundary": {
+    "qualificationRunnerOrOutputSchemaIntegrated": false,
+    "scheduleGenerated": false,
+    "inputsGenerated": false,
+    "identityMappingGenerated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "nextActionAuthorized": false,
+    "requiredNextAuthorization": "A separate authorization is required to integrate D3-v3.1 into the Gate14Re-ME qualification runner and output schema."
+  }
+}

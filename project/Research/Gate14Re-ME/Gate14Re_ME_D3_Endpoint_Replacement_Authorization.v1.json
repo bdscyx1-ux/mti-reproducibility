@@ -1,0 +1,113 @@
+{
+  "schema": "gate14re-me-d3-endpoint-replacement-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-endpoint-replacement-attempt-002",
+  "status": "AUTHORIZED_D3_ENDPOINT_REPLACEMENT_ONLY",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T05:43:10.7205979Z",
+  "userAuthorizationTextExact": "那就把D3换成一个可用的有效分配指标即可，不再修补。按照下一项最小授权推进",
+  "resolvedContext": "Retire the unusable cumulative-allocation interpretation of D3 and prospectively replace it with a Unity-compatible allocation-related endpoint. This minimum stage may define and implement only the replacement endpoint, execute one D3-only positive/negative/reclamation known-answer run, and create a source-only scientific freeze if every prospective criterion passes.",
+  "priorFailedD3Amendment": {
+    "authorizationId": "gate14re-me-d3-runtime-compatibility-amendment-attempt-001",
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/failure-receipt.v1.json",
+    "failureReceiptSha256": "abffc0f216a18666ffb046ab0d7ebe9058e54a15cb07d3ecadd5715352c91ee1",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "4c2671b3158e9aaa1276e133778850adf44c5ccde8734110e734548abbb21074",
+    "statusRelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v5.json",
+    "statusSha256": "66b6a3adbd2c889d19994fa4f3b2a1e5f69cbe60bddb81040b713e3013c3dc80",
+    "exactFailure": "System.GC.GetTotalAllocatedBytes was absent from the bound Unity compile surface (CS0117); no runtime controls executed."
+  },
+  "priorFailedRuntimeQualification": {
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/failure-receipt.v1.json",
+    "failureReceiptSha256": "8a508261f9c779ff3d3e3481d5eaf28ebc9d4c513cb69fdc8d30456b3ad9b49a",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "042f3ca2d07b4b78db04a7b272929f6052cc51739c0aeeaa4e6998b75f5554c8"
+  },
+  "priorSourceFreeze": {
+    "implementationManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/implementation-manifest.v1.json",
+    "implementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "43c9dba8b49a1efe0802f6046170be57506c027af9ac764138843c60eef669f7"
+  },
+  "authorizedScope": {
+    "retireOriginalD3DefinitionProspectively": true,
+    "defineManagedHeapOccupancyEndpoint": true,
+    "createVersionedD3EndpointSource": true,
+    "createD3OnlyKnownAnswerHarness": true,
+    "runOneD3OnlyUnityKnownAnswer": true,
+    "runPositiveNegativeAndReclamationControls": true,
+    "createVersionedD3InstrumentContractAfterPass": true,
+    "createSourceOnlyScientificFreezeAfterPass": true
+  },
+  "prohibitedScope": {
+    "modifyPriorFrozenEvidence": false,
+    "retryPriorD3Attempts": false,
+    "runFullRuntimeQualificationAttempt002": false,
+    "runDataExporterKnownAnswer": false,
+    "modifyAlgorithmImplementations": false,
+    "qualificationScheduleGeneration": false,
+    "qualificationInputGeneration": false,
+    "anonymousIdentityMapGeneration": false,
+    "qualificationMeasuredRootCreation": false,
+    "algorithmLaneExecution": false,
+    "formalInputGeneration": false,
+    "formalMeasuredRootCreation": false,
+    "formalCollection": false,
+    "formalAnalysis": false,
+    "algorithmRanking": false,
+    "winnerAdjudication": false
+  },
+  "replacementEndpoint": {
+    "endpointId": "D3",
+    "semanticVersion": 2,
+    "name": "event-boundary managed-heap occupancy",
+    "api": "System.GC.GetTotalMemory(forceFullCollection: false)",
+    "unit": "bytes",
+    "scope": "current Unity process managed heap; native allocations excluded",
+    "primaryRawField": "eventGroupManagedHeapBytesEnd",
+    "rawFields": [
+      "eventGroupManagedHeapBytesStart",
+      "eventGroupManagedHeapBytesEnd",
+      "eventGroupManagedHeapSignedDeltaBytes"
+    ],
+    "formula": "signedDelta = end - start",
+    "negativeDeltaPolicy": "retain as observed; never clamp, censor, replace, or reinterpret as cumulative allocation",
+    "semanticLimit": "This endpoint estimates current managed-heap occupancy at an event boundary. It is allocation-related but is not a cumulative allocation-throughput counter and does not include native memory."
+  },
+  "knownAnswerDesign": {
+    "negativeControlPairs": 64,
+    "negativeControlMaximumAbsoluteDeltaBytes": 65536,
+    "positiveControlBytes": [8388608, 33554432],
+    "positiveControlMinimumObservedFractionNumerator": 9,
+    "positiveControlMinimumObservedFractionDenominator": 10,
+    "scaleSeparationMinimumBytes": 22649242,
+    "reclamationControlBytes": 16777216,
+    "reclamationMinimumAllocationDeltaBytes": 15099495,
+    "reclamationMinimumRecoveredBytes": 13421773,
+    "postReclamationBaselineAllowanceBytes": 2097152,
+    "thresholdsMayBeRelaxedAfterExecution": false
+  },
+  "reservedPaths": {
+    "verificationRootRelativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002",
+    "d3KnownAnswerOutputRelativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/d3-known-answer"
+  },
+  "runtimeBindings": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "unityVersion": "2022.3.30f1c1",
+    "maximumConcurrentUnityProcesses": 1,
+    "d3OnlyRunTimeoutMilliseconds": 600000,
+    "automaticRetryAuthorized": false
+  },
+  "evidenceBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "dataExporterKnownAnswerRun": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

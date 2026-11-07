@@ -1,0 +1,302 @@
+{
+  "schema": "gate14re-me-endpoint-dictionary-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "FROZEN_NONEXECUTING_PRECOLLECTION_PARAMETERS_PENDING",
+  "algorithmCohort": [
+    "A*-R",
+    "BiA*-R",
+    "D*L",
+    "LPA*",
+    "C-FF",
+    "IDFF"
+  ],
+  "idffComparators": [
+    "A*-R",
+    "BiA*-R",
+    "D*L",
+    "LPA*",
+    "C-FF"
+  ],
+  "globalDirection": "lower_is_better_for_all_ratio_endpoints_and_all_slope_differences",
+  "dynamicBoundary": "sum of every ApplyChanges operation in a same-tick event group plus every mandatory post-event Plan query for all N registered agents after the complete group",
+  "rawDataDeliveryBinding": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+  "rawObservationLayers": [
+    {
+      "layerId": "LANE",
+      "unit": "one named algorithm lane within one superblock",
+      "independentN": false,
+      "requiredExport": "gate14re-me-sample-wide.csv"
+    },
+    {
+      "layerId": "METRIC",
+      "unit": "one raw metric value at one frozen measurement point",
+      "independentN": false,
+      "requiredExports": [
+        "gate14re-me-metric-long.csv.zst",
+        "gate14re-me-metric-long.parquet"
+      ]
+    },
+    {
+      "layerId": "EVENT_GROUP",
+      "unit": "one complete same-tick event group within one lane",
+      "independentN": false,
+      "requiredExports": [
+        "gate14re-me-eventgroup-long.csv.zst",
+        "gate14re-me-eventgroup-long.parquet"
+      ]
+    },
+    {
+      "layerId": "OPERATION_EVENT_QUERY",
+      "unit": "one change operation, event, or post-event query",
+      "independentN": false,
+      "requiredExport": "gate14re-me-operations.v1.jsonl.zst"
+    },
+    {
+      "layerId": "PERSISTENT_STATE",
+      "unit": "one state measurement point and one named state component",
+      "independentN": false,
+      "requiredExport": "gate14re-me-persistent-state-long.csv.zst"
+    }
+  ],
+  "primaryDomains": [
+    {
+      "domainId": "D1_DYNAMIC_LATENCY",
+      "name": "complete dynamic handling latency",
+      "role": "primary_counts_toward_4_of_7",
+      "atomicRawFields": [
+        "eventGroupElapsedMilliseconds"
+      ],
+      "requiredDerivedSummaries": [
+        "blockGeometricMeanEventGroupElapsedMilliseconds",
+        "blockNearestRankP95EventGroupElapsedMilliseconds"
+      ],
+      "measurementBoundary": "dynamicBoundary",
+      "transform": "natural_log_for_positive_values",
+      "estimands": [
+        "equal-design-distribution geometric mean ratio IDFF/comparator",
+        "equal-design-distribution block-P95 ratio IDFF/comparator"
+      ],
+      "domainRule": "conjunctive intersection-union: for each comparator the domain-level p-value is max(one-sided p for geometric mean, one-sided p for P95), and both simultaneous intervals must be entirely below 1; the domain must satisfy this against all five named comparators",
+      "correlatedSubmetricsCountAsSeparateDomains": false,
+      "rawDeliverability": "all 24 eventGroupElapsedMilliseconds observations per eligible lane must remain available; summaries alone are insufficient"
+    },
+    {
+      "domainId": "D2_GRID_READ_WORK",
+      "name": "common grid accessor work",
+      "role": "primary_counts_toward_4_of_7",
+      "atomicRawFields": [
+        "gridContainsCalls",
+        "gridIsWalkableCalls",
+        "gridGetTraversalCostCalls",
+        "gridAccessorCallsTotal"
+      ],
+      "measurementBoundary": "dynamicBoundary",
+      "instrument": "shared read-only counting proxy outside all six algorithms",
+      "primaryValue": "unweighted total number of public grid accessor calls",
+      "componentCountsAlwaysReported": true,
+      "transform": "natural_log_for_positive_values",
+      "estimand": "geometric mean ratio IDFF/comparator",
+      "domainRule": "adjusted interval entirely below 1 against all five named comparators",
+      "nativeProcessedNodesOrCellsSubstitutable": false,
+      "rawDeliverability": "total and each component count must be delivered for every event group; a total-only or percentage-only file fails the gate"
+    },
+    {
+      "domainId": "D3_DYNAMIC_ALLOCATION",
+      "name": "managed allocation during complete dynamic handling",
+      "role": "primary_counts_toward_4_of_7",
+      "atomicRawFields": [
+        "eventGroupManagedAllocatedBytes"
+      ],
+      "requiredDerivedSummaries": [
+        "blockTotalManagedAllocatedBytes"
+      ],
+      "measurementBoundary": "dynamicBoundary",
+      "instrumentQualification": {
+        "preferred": "GC.GetAllocatedBytesForCurrentThread after monotonic non-zero sensitivity validation",
+        "precollectionFallback": "validated Unity ProfilerRecorder GC allocation counter frozen before formal collection",
+        "postCollectionFallbackOrInstrumentSwitch": false,
+        "neitherInstrumentValid": "REDESIGN_BEFORE_COLLECTION"
+      },
+      "transform": "log1p",
+      "estimand": "adjusted ratio-like contrast on log1p scale with raw-byte summaries",
+      "domainRule": "adjusted interval entirely favorable against all five named comparators",
+      "rawDeliverability": "every event-group byte count, counter identity, counter start/end values, and validity state must be retained"
+    },
+    {
+      "domainId": "D4_PERSISTENT_STATE_BYTES",
+      "name": "audited logical persistent planner state capacity",
+      "role": "primary_counts_toward_4_of_7_and_explicit_tradeoff_domain",
+      "atomicRawFields": [
+        "persistentPrimitiveArrayBytes",
+        "persistentContainerName",
+        "persistentContainerCapacity",
+        "persistentContainerBytesPerElement",
+        "persistentContainerCapacityBytes",
+        "persistentStateBytesTotal"
+      ],
+      "measurementPoints": [
+        "after initialization",
+        "after initial N queries",
+        "after each of 24 completed dynamic event groups"
+      ],
+      "measurementPointCountPerEligibleLane": 26,
+      "primaryValue": "maximum persistentStateBytesTotal within lane",
+      "meaning": "logical owned state capacity under a frozen audited formula; not process RSS and not total managed heap",
+      "transform": "log1p",
+      "estimand": "adjusted ratio-like contrast on log1p scale with raw-byte summaries",
+      "domainRule": "adjusted interval entirely favorable against all five named comparators",
+      "rawDeliverability": "each named component at every measurement point must be delivered; maximum-only storage fails the gate"
+    },
+    {
+      "domainId": "D5_AGENT_COUNT_SCALING",
+      "name": "dynamic latency scaling with agent count",
+      "role": "primary_counts_toward_4_of_7",
+      "rawOutcome": "D1 event-group observations and their block geometric mean",
+      "complexityAxis": "log2(N)",
+      "levels": [
+        8,
+        32,
+        128,
+        512
+      ],
+      "estimand": "algorithm-by-log2(N) slope difference IDFF minus comparator",
+      "domainRule": "adjusted slope-difference interval entirely below 0 against all five named comparators",
+      "rawDeliverability": "all D1 constituent values and the exact N attached to every record are required; slope estimates are derived, not raw"
+    },
+    {
+      "domainId": "D6_CHANGE_FOOTPRINT_SCALING",
+      "name": "dynamic latency scaling with changed-cell footprint",
+      "role": "primary_counts_toward_4_of_7_and_explicit_tradeoff_domain",
+      "rawOutcome": "D1 event-group observations and their block geometric mean",
+      "complexityAxis": "log2(F)",
+      "levels": [
+        1,
+        9,
+        81,
+        225
+      ],
+      "estimand": "algorithm-by-log2(F) slope difference IDFF minus comparator",
+      "domainRule": "adjusted slope-difference interval entirely below 0 against all five named comparators",
+      "note": "C-FF may legitimately have a flatter footprint slope because it always rebuilds the full field; absolute latency remains a separate domain",
+      "rawDeliverability": "all D1 constituent values, exact F, input operation identities, and atomic partition schedule are required"
+    },
+    {
+      "domainId": "D7_GRID_SIZE_SCALING",
+      "name": "dynamic latency scaling with grid cell count",
+      "role": "primary_counts_toward_4_of_7",
+      "rawOutcome": "D1 event-group observations and their block geometric mean",
+      "complexityAxis": "log2(G_squared)",
+      "levelsGridEdge": [
+        64,
+        128,
+        256
+      ],
+      "estimand": "algorithm-by-log2(grid cell count) slope difference IDFF minus comparator",
+      "domainRule": "adjusted slope-difference interval entirely below 0 against all five named comparators",
+      "rawDeliverability": "all D1 constituent values and exact grid dimensions attached to every record are required"
+    }
+  ],
+  "secondaryTradeoffEndpoints": [
+    {
+      "endpointId": "S1_INITIALIZATION",
+      "fields": [
+        "initializationElapsedMilliseconds",
+        "initializationGridAccessorCalls",
+        "initializationManagedAllocatedBytes"
+      ],
+      "countsTowardMajority": false,
+      "everyRawObservationDeliverable": true
+    },
+    {
+      "endpointId": "S2_COLD_STATIC_QUERY",
+      "fields": [
+        "N8ColdQueryElapsedMilliseconds",
+        "N8ColdQueryGridAccessorCalls",
+        "N8ColdQueryManagedAllocatedBytes"
+      ],
+      "countsTowardMajority": false,
+      "everyRawObservationDeliverable": true
+    },
+    {
+      "endpointId": "S3_ALGORITHM_NATIVE_DIAGNOSTICS",
+      "fields": [
+        "expandedNodes",
+        "relaxedEdges",
+        "repairedCells",
+        "processedNodesOrCells",
+        "nativeSemanticsId"
+      ],
+      "crossAlgorithmCompositeForbidden": true,
+      "countsTowardMajority": false,
+      "everyRawObservationDeliverable": true
+    },
+    {
+      "endpointId": "S4_RELIABILITY",
+      "fields": [
+        "planSuccess",
+        "budgetExceeded",
+        "categorizedFailure",
+        "failureReasonCode"
+      ],
+      "countsTowardMajority": false,
+      "numeratorAndDenominatorAlwaysDelivered": true,
+      "everyRawObservationDeliverable": true
+    },
+    {
+      "endpointId": "S5_CORRECTNESS_AND_MOVEMENT_TRANSFER",
+      "fields": [
+        "oraclePathCostMatch",
+        "oraclePathCost",
+        "reportedPathCost",
+        "movementCompletion",
+        "trajectoryCost",
+        "criticalViolation"
+      ],
+      "countsTowardMajority": false,
+      "sentinelSubsetStatus": "exact subset must be fixed by a separately authorized precollection amendment if retained",
+      "everyCollectedRawObservationDeliverable": true
+    }
+  ],
+  "classification": {
+    "IDFF_ADVANTAGE": "all required Holm-adjusted simultaneous intervals for the domain are favorable versus all five comparators",
+    "UNRESOLVED": "the domain is valid but the required intervals do not resolve one direction",
+    "COMPARATOR_ADVANTAGE": "a symmetric adjusted interval is entirely favorable to one or more named comparators",
+    "MEASUREMENT_INVALID": "the frozen instrument or endpoint contract failed; the domain remains in the denominator and blocks a majority-support claim"
+  },
+  "multiplicity": {
+    "confirmatoryContrasts": 35,
+    "family": "7 endpoint domains times IDFF versus 5 named comparators",
+    "D1ContrastConstruction": "five domain-level intersection-union contrasts, not ten separate opportunities",
+    "method": "Holm strong family-wise error control at alpha 0.05",
+    "intervals": "two-sided simultaneous confidence intervals consistent with the adjusted tests",
+    "allFifteenPairMatrices": "all 15 unordered pairs in the 6-by-6 matrix are reported as a separately labelled exploratory Holm family per endpoint domain",
+    "rankingOrWeightedScore": false
+  },
+  "majorityRule": {
+    "requiredAdvantageDomains": 4,
+    "totalDomains": 7,
+    "requiresAllFiveComparatorsPerAdvantageDomain": true,
+    "requiresAllCorrectnessAndMeasurementGates": true,
+    "measurementInvalidDomainRemovedFromDenominator": false,
+    "claim": "MAJORITY_OF_PRESPECIFIED_ENDPOINT_DOMAINS_SUPPORT_IDFF",
+    "winnerOrRankingClaim": false
+  },
+  "deliveryRules": {
+    "completePerObservationRawDataDeliverable": true,
+    "rawRowsIncludeNamedAlgorithm": true,
+    "rawRowsIncludeEligibilityAndMissingReason": true,
+    "rawRowsIncludeSourcePathAndSha256": true,
+    "rawRowsIncludeUnitsAndSemanticsVersion": true,
+    "rawAndDerivedFieldsDistinguished": true,
+    "allAttemptedAndReplacedObservationsRetained": true,
+    "aggregationOnlyDeliveryFailsScientificContract": true
+  },
+  "practicalEffectAndSampleSize": {
+    "minimumPracticallyImportantEffects": null,
+    "finalB": null,
+    "resolutionProtocol": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v1.json",
+    "mustResolveBeforeFormalObservation": true
+  }
+}

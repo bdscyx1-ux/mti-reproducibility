@@ -1,0 +1,125 @@
+{
+  "schema": "gate14re-me-six-algorithm-fairness-binding-v1",
+  "studyId": "Gate14Re-ME",
+  "cohortId": "gate14re-me-six-algorithm-shared-goal-v1",
+  "status": "FROZEN_SIX_ALGORITHM_BINDING",
+  "version": 3,
+  "revision": "1.2",
+  "v4_1VersionOwnership": {
+    "qualificationDesignFreeze": true,
+    "overallFormalDesignFreeze": false,
+    "formalSampleSizeFinalized": false,
+    "executionAuthorized": false,
+    "algorithmBindingReusedWithoutSourceChanges": true,
+    "algorithmNeutralOracleCacheSharedByAllSixPairedLanes": true,
+    "referenceOracleEvaluationsInsideAlgorithmLane": 0
+  },
+  "algorithms": [
+    {
+      "algorithmId": "A*-R",
+      "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+      "implementationSha256": "a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778",
+      "specificationRelativePath": "Research/AStar_Repeated_Specification.md",
+      "specificationSha256": "0fe75b470bb0b1f256278ddf8089b86660a80a5c20c99006a140ff7c3ec8c5eb",
+      "stateModelId": "per-request-repeated-search-no-persistent-search-state-v1",
+      "nativeMetricsSemanticsId": "navigation-operation-metrics-native-counters-v1"
+    },
+    {
+      "algorithmId": "BiA*-R",
+      "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "implementationSha256": "82316036aba90be69ca746288798bac1789cdb09afa65cf9ad4180975d1f947e",
+      "specificationRelativePath": "Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "specificationSha256": "593e21946de91c8ddab59f70be44084aeb8afe7ae72d52e490589f6e77f16ead",
+      "stateModelId": "per-request-bidirectional-repeated-search-no-persistent-search-state-v1",
+      "nativeMetricsSemanticsId": "navigation-operation-metrics-native-counters-v1"
+    },
+    {
+      "algorithmId": "D*L",
+      "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+      "implementationSha256": "b6938a3389de4764a26ed15c59582dd31017e8b44c38fa004be356989ca8d199",
+      "specificationRelativePath": "Research/DStar_Lite_Specification.md",
+      "specificationSha256": "d25ea4cadf6e08b802c51d8b2a3245da8b436d4b1029973bed576d89de34d732",
+      "stateModelId": "per-agent-goal-rooted-g-rhs-queue-v1",
+      "nativeMetricsSemanticsId": "navigation-operation-metrics-native-counters-v1"
+    },
+    {
+      "algorithmId": "LPA*",
+      "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "implementationSha256": "948bdc4019e96776c8d382f381c159041038ac191f4b6000debd94f7daf8a82a",
+      "specificationRelativePath": "Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "specificationSha256": "703e72a92207ceb05f0e63c35322f2a8e727b5e8be6e1dc699cd287ce254d4a9",
+      "stateModelId": "per-agent-fixed-start-goal-rooted-g-rhs-queue-v1",
+      "nativeMetricsSemanticsId": "navigation-operation-metrics-native-counters-v1"
+    },
+    {
+      "algorithmId": "C-FF",
+      "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "implementationSha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1",
+      "specificationRelativePath": "Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "specificationSha256": "6f29c7545c2f9d68ad0bfd2b707cb7f7798fd80b39816eb22010f278a6978223",
+      "stateModelId": "shared-goal-full-recompute-integration-field-v1",
+      "nativeMetricsSemanticsId": "navigation-operation-metrics-native-counters-v1"
+    },
+    {
+      "algorithmId": "IDFF",
+      "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "implementationSha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638",
+      "specificationRelativePath": "Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "specificationSha256": "8a7895c0daa38810a5b1087348be11b427cfeb1f6f0ed2f27730578ac84e70ef",
+      "stateModelId": "shared-goal-incremental-g-rhs-integration-field-v1",
+      "nativeMetricsSemanticsId": "navigation-operation-metrics-native-counters-v1"
+    }
+  ],
+  "navigationContractsRelativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+  "navigationContractsSha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa",
+  "navigationGridRelativePath": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+  "navigationGridSha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582",
+  "sameByteIdenticalInputBundle": true,
+  "oneFreshProcessPerAlgorithmLane": true,
+  "sameDynamicBoundary": true,
+  "sameOracle": true,
+  "algorithmSpecificWarmupGcExtraQueryAllowed": false,
+  "fairnessRules": {
+    "oneSharedGoalPerInput": true,
+    "sameStartsAndEventGroupsWithinSuperblock": true,
+    "strictSerialExecutionWithinSuperblock": true,
+    "algorithmOrderUsesFrozenBalancedSchedule": true,
+    "noPerAlgorithmRetryResumeTopUpMergeSkipOrReorder": true,
+    "maximumWholeSuperblockTechnicalReplacements": 0,
+    "qualificationReportingUsesAnonymousLanesOnly": true,
+    "identityBindingSealedUntilQualificationDecisionFrozen": true,
+    "qualificationCannotCompareAlgorithmsForAdvantage": true,
+    "qualificationCannotSelectEndpointScenarioThresholdOrWinner": true
+  },
+  "bindingCorrigendum": {
+    "status": "FORWARD_BINDING_UPDATE_AFTER_LPA_STAR_ORACLE_CORRECTNESS_REPAIR",
+    "supersededRelativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1_1.json",
+    "supersededSha256": "9e406f3ca05f9946e3b94be8af1b85c4a4406ed1d23b9ea4f8b73cd93fcdd468",
+    "retainedFailedExecutionAttempt": "load-qualification-execution-attempt-008",
+    "retainedFailureFreezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-008/failure-freeze-receipt.v1.json",
+    "retainedFailureFreezeReceiptSha256": "7a8a0d0dd3e836dd05f65809119f7be0c1b26d47f916d4df155e025488523ef2",
+    "corrigendumPassReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-lpa-star-oracle-correctness-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+    "corrigendumPassReceiptSha256": "ba030e681a7e21207c1369bff5964fa6ee31cc0c16f15ddd78afd88c75cfd932",
+    "changedAlgorithmBinding": "LPA*",
+    "changedFields": [
+      "implementationSha256"
+    ],
+    "algorithmCohortChanged": false,
+    "stateModelChanged": false,
+    "nativeMetricSemanticsChanged": false,
+    "fairnessRulesChanged": false,
+    "scientificDesignChanged": false,
+    "scheduleChanged": false,
+    "loadGateChanged": false,
+    "metricDefinitionsChanged": false,
+    "deliveryContractChanged": false
+  },
+  "authorizationBoundary": {
+    "algorithmSourcesModifiedByThisStage": false,
+    "specificationsModifiedByThisStage": false,
+    "compilePerformed": true,
+    "compileScope": "algorithm-free v4.1 runner compile/readiness only",
+    "unityExecuted": false,
+    "qualificationObservationsCreated": 0
+  }
+}

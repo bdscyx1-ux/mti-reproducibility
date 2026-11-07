@@ -1,0 +1,114 @@
+{
+  "schema": "gate14re-me-status-v28",
+  "studyId": "Gate14Re-ME",
+  "status": "QUALIFICATION_EXECUTION_TERMINAL_CHAIN_CORRIGENDUM_PASS_READINESS_RECHECK_PENDING",
+  "version": 28,
+  "updatedAtUtc": "2026-10-17T15:37:05.9471376Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v27.json",
+    "sha256": "17c9e19bd5a27b6c6db7e8b50894cb87cad24e11fe9ab61d687bb07f10ea82c0",
+    "retained": true,
+    "reclassified": false
+  },
+  "retainedReadinessFailure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/failure-receipt.v1.json",
+    "sha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+    "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE",
+    "modifiedOrReclassified": false
+  },
+  "terminalChainCorrigendumAttempt001": {
+    "passed": false,
+    "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-001/failure-receipt.v1.json",
+    "failureReceiptSha256": "b195c99e01bc20900762b3752ff6172a64fac4bb914609bf1ba83d832ed99340",
+    "exactFailure": "Copied frozen synthetic fixture retained Windows read-only attributes.",
+    "unityInvocationCount": 0,
+    "modifiedOrReclassified": false
+  },
+  "terminalChainCorrigendumAttempt002": {
+    "authorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-002",
+    "passed": true,
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-002/terminal-pass-receipt.v1.json",
+    "terminalReceiptSha256": "bf7e157f6f25ea19d6cd898745476cd6c88569fbc99c1d614abd76945ca33cad",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-002/freeze-manifest.v1.json",
+    "freezeManifestSha256": "e8e768b0f7a619059eea7259b23714af954b667d6853eda1c704a9d1c3b8be74",
+    "resolvedPriorBlockers": [
+      "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+      "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE"
+    ],
+    "structuralPositivePassed": true,
+    "structuralNegativeFixturesPassed": 6,
+    "deliveryTables": 10,
+    "deliveryProducts": 40,
+    "deliveryBuildAndVerifyPassed": true
+  },
+  "adoptedTerminalChainAssets": {
+    "outputSchemaV3": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json",
+      "sha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c"
+    },
+    "structuralV31": {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py",
+      "sha256": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e"
+    },
+    "deliveryV22": {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py",
+      "sha256": "197b14309670fc38e26b421c458fbd4fc05abe8ba61f7f715497bbcffb19eb98"
+    },
+    "supervisorV3": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+      "sha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+      "explicitFinalProcessOrdinal": 1147
+    },
+    "executionContractV31": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_1.json",
+      "sha256": "f1fa4b7c10ebdbfacc6a4f82a68d4ae1ca0a94fa18af929d6a74eb0ad39cf801"
+    },
+    "implementationManifestV31": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_1.json",
+      "sha256": "af0b370258c2bce8b51cd6215c5c790dda6727a3a3eb581fa21713950d53bdf6"
+    }
+  },
+  "terminalClosure": {
+    "qualificationSuperblocks": 162,
+    "algorithmLaneProcesses": 972,
+    "oracleProcesses": 162,
+    "emptyBoundaryProcesses": 12,
+    "instrumentProcesses": 1,
+    "totalSerialFreshUnityProcesses": 1147,
+    "eventGroupRows": 23328,
+    "laneD3WindowRows": 24300,
+    "emptyBoundaryD3WindowRows": 12000,
+    "instrumentD3WindowRows": 1,
+    "processResourceRows": 25272,
+    "persistentStateMeasurementPointsPerLane": 26,
+    "acceptedSuperblockReceipts": 162,
+    "processLedgerRows": 1147,
+    "processIdentityReceipts": 1147
+  },
+  "unchangedScientificAssets": {
+    "runnerV2SourceSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "compiledEditorAssemblySha256": "abef0c3232d02818e60a5603600fbc8899dba2fbe383e73b255a04eab01b5e88",
+    "compiledRuntimeAssemblySha256": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1",
+    "inputSchemaPlanningAssetsScheduleIdentityD2D3D4ClockAndThresholdsChanged": false
+  },
+  "scientificBoundary": {
+    "unityInvocations": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationMeasuredRootCreated": false,
+    "formalDeliveryRootCreated": false,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "sealedIdentityMappingDisclosed": false
+  },
+  "authorizationState": {
+    "qualificationExecutionAuthorized": false,
+    "measuredOrFormalDeliveryRootCreationAuthorized": false,
+    "formalCollectionAnalysisRankingOrWinnerAuthorized": false
+  },
+  "nextRequiredAction": "Obtain a separate authorization for one read-only, no-Unity qualification execution readiness recheck against the adopted v3/v3.1/v2.2 terminal chain. Qualification measured-root creation, Unity, planner and algorithm-lane execution remain unauthorized until that recheck reaches terminal PASS and a later execution authorization is granted."
+}

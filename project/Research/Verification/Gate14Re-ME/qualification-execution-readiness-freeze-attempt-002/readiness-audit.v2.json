@@ -1,0 +1,748 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-audit-v2",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-freeze-attempt-002",
+  "attemptId": "qualification-execution-readiness-freeze-attempt-002",
+  "startedAtUtc": "2026-10-17T15:12:19.259953Z",
+  "completedAtUtc": "2026-10-17T15:12:24.039299Z",
+  "mode": "READ_ONLY_OFFLINE_NO_UNITY",
+  "status": "FAIL_CLOSED_QUALIFICATION_EXECUTION_READINESS_V2",
+  "passed": false,
+  "summary": {
+    "totalChecks": 37,
+    "passedChecks": 35,
+    "failedChecks": 2,
+    "hardStopReasons": 2,
+    "expectedSerialFreshUnityProcessesForLaterAuthorizedRun": 1147,
+    "unityInvocationsByThisAudit": 0
+  },
+  "checks": [
+    {
+      "checkId": "BOUNDARY::UNITY_ABSENT_AT_START",
+      "domain": "boundary",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "checkId": "BOUNDARY::PROHIBITED_ROOTS_ABSENT_AT_START",
+      "domain": "boundary",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "checkId": "RETENTION::readinessAttempt001::FILE_COUNT",
+      "domain": "retained-evidence",
+      "passed": true,
+      "observed": 7,
+      "expected": 7
+    },
+    {
+      "checkId": "RETENTION::readinessAttempt001::READ_ONLY",
+      "domain": "retained-evidence",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "checkId": "RETENTION::repairAttempt001::FILE_COUNT",
+      "domain": "retained-evidence",
+      "passed": true,
+      "observed": 8,
+      "expected": 8
+    },
+    {
+      "checkId": "RETENTION::repairAttempt001::READ_ONLY",
+      "domain": "retained-evidence",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "checkId": "RETENTION::repairAttempt002::FILE_COUNT",
+      "domain": "retained-evidence",
+      "passed": true,
+      "observed": 17,
+      "expected": 17
+    },
+    {
+      "checkId": "RETENTION::repairAttempt002::READ_ONLY",
+      "domain": "retained-evidence",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "checkId": "HASHES::ALL_CORE_BINDINGS",
+      "domain": "hashes",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "checkId": "HASHES::FROZEN_EXECUTABLES",
+      "domain": "hashes",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    },
+    {
+      "checkId": "CONTRACT::HEADER_AND_INERT_STATE",
+      "domain": "execution-contract",
+      "passed": true,
+      "observed": {
+        "schema": "gate14re-me-load-qualification-execution-contract-v2",
+        "status": "FROZEN_EXECUTION_BINDING_V2_QUALIFICATION_EXECUTION_UNAUTHORIZED",
+        "activationRule": "This contract and supervisor remain inert until a later separate exact-hash execution authorization satisfies every v2 precondition."
+      },
+      "expected": "frozen v2 and execution unauthorized pending a separate exact-hash authorization"
+    },
+    {
+      "checkId": "MANIFEST::V2_AUTHORITATIVE_STATE_WITH_RUNNERV2_COMPATIBILITY",
+      "domain": "implementation-manifest",
+      "passed": true,
+      "observed": {
+        "compatibilitySchema": "gate14re-me-qualification-implementation-manifest-v1",
+        "compatibilityStatus": "FROZEN_IMPLEMENTATION_SOURCE_ONLY_UNCOMPILED",
+        "manifestGeneration": 2,
+        "authoritativeState": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_AND_ALGORITHM_FREE_IDENTITY_PROBED"
+      },
+      "expected": "RunnerV2 compatibility fields plus authoritative compiled generation-2 state"
+    },
+    {
+      "checkId": "MANIFEST::FORTY_EIGHT_ARTIFACTS_EXACT",
+      "domain": "implementation-manifest",
+      "passed": true,
+      "observed": {
+        "declaredFiles": 48,
+        "uniquePaths": 48,
+        "allPathsUnique": true,
+        "totalBytesObserved": 2614628,
+        "mismatchCount": 0,
+        "mismatches": []
+      },
+      "expected": {
+        "declaredFiles": 48,
+        "allPathsUnique": true,
+        "mismatchCount": 0
+      }
+    },
+    {
+      "checkId": "CONTRACT::FOURTEEN_FROZEN_BINDINGS_EXACT_AND_MANIFESTED",
+      "domain": "execution-contract",
+      "passed": true,
+      "observed": {
+        "bindings": 14,
+        "mismatches": []
+      },
+      "expected": {
+        "bindings": 14,
+        "uniquePaths": 14,
+        "mismatches": []
+      }
+    },
+    {
+      "checkId": "EXECUTION::ENTRY_POINT_EXACT",
+      "domain": "execution-binding",
+      "passed": true,
+      "observed": {
+        "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v2/Run-Gate14ReMELoadQualification.v2.ps1",
+        "supervisorSha256": "a7e997f7b9d1c48753294b437566d40cf448106ef140e16a2780ce79b7059771",
+        "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+        "runnerSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+        "runnerExecuteMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV2.Run",
+        "receiptGeneration": 2
+      },
+      "expected": "exact supervisor v2, RunnerV2, execute method, and receipt generation 2"
+    },
+    {
+      "checkId": "COMPILE_IDENTITY::ALGORITHM_FREE_NATURAL_EXIT_PASS",
+      "domain": "compile-identity",
+      "passed": true,
+      "observed": {
+        "status": "PASS_CURRENT_PROJECT_COMPILED_ALGORITHM_FREE_TRUSTED_IDENTITY",
+        "unityInvocationCount": 1,
+        "executeMethod": null,
+        "currentProjectCompiled": true,
+        "compilerFailureMarkersFound": 0,
+        "naturalExit": true,
+        "exitCode": 0,
+        "signalOrForcedTerminationSent": false,
+        "retryPerformed": false,
+        "measuredRootCreated": false,
+        "deliveryRootCreated": false,
+        "plannerInvocations": 0,
+        "algorithmLaneExecutions": 0,
+        "qualificationObservations": 0,
+        "formalObservations": 0,
+        "formalAnalysisPerformed": false,
+        "rankingOrWinnerComputed": false
+      },
+      "expected": "one algorithm-free compile/identity invocation, natural exit zero, and no scientific execution"
+    },
+    {
+      "checkId": "COMPILE_IDENTITY::ASSEMBLIES_EXACT_AND_MANIFESTED",
+      "domain": "compile-identity",
+      "passed": true,
+      "observed": [
+        {
+          "role": "editorAssembly",
+          "relativePath": "Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+          "bytes": 937472,
+          "sha256": "abef0c3232d02818e60a5603600fbc8899dba2fbe383e73b255a04eab01b5e88",
+          "matchesReceipt": true,
+          "matchesManifest": true
+        },
+        {
+          "role": "runtimeAssembly",
+          "relativePath": "Library/ScriptAssemblies/Assembly-CSharp.dll",
+          "bytes": 466432,
+          "sha256": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1",
+          "matchesReceipt": true,
+          "matchesManifest": true
+        }
+      ],
+      "expected": "both compiled assemblies match receipt and manifest"
+    },
+    {
+      "checkId": "COMPILE_IDENTITY::THREE_PHASE_EXTERNAL_FINGERPRINT",
+      "domain": "compile-identity",
+      "passed": true,
+      "observed": {
+        "phases": [
+          "EXTERNAL_PRELAUNCH",
+          "EXTERNAL_LIVE_CONCURRENT",
+          "EXTERNAL_POST_EXIT"
+        ],
+        "stableAuthoritativeFields": true,
+        "independentHashesAgreeAndMatch": true,
+        "timestampInstantsEqual": true,
+        "chunkCount": 547
+      },
+      "expected": "stable prelaunch/live/post-exit authoritative Unity identity"
+    },
+    {
+      "checkId": "COMPILE_IDENTITY::PROCESS_COMPOSITE",
+      "domain": "compile-identity",
+      "passed": true,
+      "observed": {
+        "status": "CAPTURED_EXACT_COMPOSITE_PROCESS_IDENTITY",
+        "processIdMatches": true,
+        "creationInstantMatches": true,
+        "pathMatches": true,
+        "executeMethod": null
+      },
+      "expected": "PID, creation instant, path, exact command line, project path, and null executeMethod bound"
+    },
+    {
+      "checkId": "IDENTITY::TRUSTED_RULE_AND_TIMESTAMP_COMPARATOR",
+      "domain": "trusted-identity",
+      "passed": true,
+      "observed": {
+        "ruleStatus": "FROZEN_TRUSTED_IDENTITY_RULE_FROM_OFFLINE_ADJUDICATION",
+        "requirements": {
+          "externalThreePhaseExpectedSha256AndIndependentMethodAgreement": true,
+          "external64KiBChunksPathFileIdPeSignerAndMetadataStable": true,
+          "pidCreationTimePathCommandLineAndExecuteMethodBound": true,
+          "inProcessPathSourcesAndStructuralIdentityStable": true,
+          "knownAnswersPassed": true,
+          "normalExitAndPostExitReconfirmationRequired": true
+        },
+        "fileReadAllBytesRole": "DIAGNOSTIC_ONLY",
+        "mismatchDisposition": "FAIL_CLOSED_NO_ADOPTION"
+      },
+      "expected": "qualified fail-closed trusted identity rule and attempt-007 instant comparator"
+    },
+    {
+      "checkId": "SUPERVISOR::STATIC_V2_STATE_MACHINE",
+      "domain": "supervisor",
+      "passed": true,
+      "observed": {
+        "runnerV2Only": true,
+        "receiptV2RunnerSet": true,
+        "oldRunnerReceiptTokensAbsent": true,
+        "threePhaseIdentity": true,
+        "compositeIdentity": true,
+        "dateKindString": true,
+        "naturalExit": true,
+        "forcedStopAbsent": true,
+        "retryAbsent": true,
+        "zeroReplacement": true,
+        "structuralTerminal": true,
+        "deliveryBuildTerminal": true,
+        "deliveryVerifyTerminal": true
+      },
+      "expected": {
+        "runnerV2Only": true,
+        "receiptV2RunnerSet": true,
+        "oldRunnerReceiptTokensAbsent": true,
+        "threePhaseIdentity": true,
+        "compositeIdentity": true,
+        "dateKindString": true,
+        "naturalExit": true,
+        "forcedStopAbsent": true,
+        "retryAbsent": true,
+        "zeroReplacement": true,
+        "structuralTerminal": true,
+        "deliveryBuildTerminal": true,
+        "deliveryVerifyTerminal": true
+      }
+    },
+    {
+      "checkId": "PLANNING::ONE_HUNDRED_SEVENTY_THREE_ARTIFACTS_EXACT",
+      "domain": "planning-assets",
+      "passed": true,
+      "observed": {
+        "status": "FROZEN_PLANNING_ASSETS_PASS",
+        "declaredFiles": 173,
+        "uniquePaths": 173,
+        "allPathsUnique": true,
+        "totalBytesObserved": 64814390,
+        "mismatchCount": 0,
+        "mismatches": [],
+        "identityBindingRemainsSealed": true
+      },
+      "expected": {
+        "status": "FROZEN_PLANNING_ASSETS_PASS",
+        "declaredFiles": 173,
+        "allPathsUnique": true,
+        "mismatchCount": 0,
+        "identityBindingRemainsSealed": true
+      }
+    },
+    {
+      "checkId": "PLANNING::SIX_ALGORITHM_WILLIAMS_BALANCE_AND_UNIQUENESS",
+      "domain": "planning-assets",
+      "passed": true,
+      "observed": {
+        "rows": 162,
+        "coreRows": 144,
+        "stressRows": 18,
+        "uniqueSuperblocks": 162,
+        "uniqueInputPaths": 162,
+        "uniqueInputIds": 162,
+        "uniqueSeeds": 162,
+        "nullReplacements": 162,
+        "identityBindingUniqueHashes": 1,
+        "identityMappingFingerprints": 1,
+        "contextStrata": 18,
+        "contextStratumFrequencies": [
+          9
+        ],
+        "algorithmWilliamsSequences": 6,
+        "algorithmSequenceFrequencies": [
+          27
+        ],
+        "anonymousWilliamsSequences": 6,
+        "anonymousSequenceFrequencies": [
+          27
+        ],
+        "algorithmPositionFrequencies": [
+          27
+        ],
+        "anonymousPositionFrequencies": [
+          27
+        ],
+        "algorithmDirectedTransitionPairs": 30,
+        "algorithmDirectedTransitionFrequencies": [
+          27
+        ],
+        "anonymousDirectedTransitionPairs": 30,
+        "anonymousDirectedTransitionFrequencies": [
+          27
+        ],
+        "errors": [],
+        "sealedNamedToAnonymousMappingDisclosedByAudit": false
+      },
+      "expected": {
+        "rows": 162,
+        "coreRows": 144,
+        "stressRows": 18,
+        "allIdentifiersPathsAndSeedsUnique": true,
+        "contexts": "18 strata x 9",
+        "Williams": "6 sequences x 27; every treatment x position and every ordered adjacent pair occurs 27 times",
+        "nullReplacements": 162,
+        "oneSealedIdentityHashAndMapping": true
+      }
+    },
+    {
+      "checkId": "PLANNING::SEALED_IDENTITY_REMAINS_SEALED",
+      "domain": "planning-assets",
+      "passed": true,
+      "observed": {
+        "status": "SEALED_UNTIL_QUALIFICATION_DECISION_FROZEN",
+        "sha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+        "mappingDisclosedByAudit": false
+      },
+      "expected": "sealed status and exact hash; mapping not disclosed"
+    },
+    {
+      "checkId": "CARDINALITY::CONTRACT_FORMULAS",
+      "domain": "cardinality",
+      "passed": true,
+      "observed": {
+        "recomputed": {
+          "totalSuperblocks": 162,
+          "freshAlgorithmProcesses": 972,
+          "expectedTotalUnityProcessesWithoutFailure": 1147,
+          "eventGroupRows": 23328,
+          "laneD3WindowRows": 24300,
+          "processResourceRows": 25272,
+          "emptyBoundaryRows": 12000
+        },
+        "contract": {
+          "coreSuperblocks": 144,
+          "stressSuperblocks": 18,
+          "totalSuperblocks": 162,
+          "algorithmLanesPerSuperblock": 6,
+          "freshAlgorithmProcesses": 972,
+          "oracleProcesses": 162,
+          "emptyBoundaryProcesses": 12,
+          "instrumentSelfTestProcesses": 1,
+          "expectedTotalUnityProcessesWithoutFailure": 1147,
+          "eventGroupsPerLane": 24,
+          "eventGroupRows": 23328,
+          "d3WindowsPerLane": 25,
+          "processResourceRows": 25272,
+          "emptyBoundaryRows": 12000
+        }
+      },
+      "expected": {
+        "totalSuperblocks": 162,
+        "freshAlgorithmProcesses": 972,
+        "expectedTotalUnityProcessesWithoutFailure": 1147,
+        "eventGroupRows": 23328,
+        "laneD3WindowRows": 24300,
+        "processResourceRows": 25272,
+        "emptyBoundaryRows": 12000
+      }
+    },
+    {
+      "checkId": "PROCESSES::EXPECTED_1147_STRICTLY_SERIAL_FRESH",
+      "domain": "process-model",
+      "passed": true,
+      "observed": {
+        "contractOrder": {
+          "maximumConcurrentUnityProcesses": 1,
+          "instrumentSelfTestBeforeAnyOracleOrLane": true,
+          "all162AlgorithmNeutralOracleProcessesBeforeAnyLane": true,
+          "twelveFreshEmptyBoundaryProcessesBeforeAnyLane": true,
+          "strictWilliamsSixLaneOrderWithinEachSuperblock": true,
+          "oneFreshUnityProcessPerAlgorithmLane": true,
+          "zeroReplacementPolicy": "ZERO_REPLACEMENT_FAIL_STOP",
+          "wholeSuperblockReplacementAssetsGeneratedOrConsumed": false,
+          "perAlgorithmRetryResumeTopUpMergeSkipOrReorderProhibited": true
+        },
+        "sourceEvidence": {
+          "oneInstrumentBeforeOracle": true,
+          "allOracleBeforeEmpty": true,
+          "allEmptyBeforeLane": true,
+          "oneFreshProcessFunction": true,
+          "waitsForNaturalExitBeforeReturn": true,
+          "otherUnityMustBeAbsent": true
+        },
+        "expectedProcesses": 1147
+      },
+      "expected": "1 instrument + 162 oracle + 12 empty-boundary + 972 lane = 1147 fresh Unity processes, concurrency exactly 1"
+    },
+    {
+      "checkId": "REPLACEMENT::ZERO_REPLACEMENT_FAIL_STOP",
+      "domain": "replacement-policy",
+      "passed": true,
+      "observed": {
+        "scheduleRows": 162,
+        "scheduleReplacementFieldsAllNull": true,
+        "contractPolicy": "ZERO_REPLACEMENT_FAIL_STOP",
+        "contractGeneratedOrConsumed": false,
+        "manifestPolicy": "ZERO_REPLACEMENT_FAIL_STOP",
+        "manifestGenerated": 0,
+        "manifestConsumed": 0,
+        "supervisorThrowsOnWholeSuperblockFailure": true,
+        "supervisorRequiresEmptyReplacementLedger": true,
+        "historicalBudgetCeiling": 1
+      },
+      "expected": "current v2 operational contract supersedes the historical ceiling of one with zero replacement and immediate fail-stop"
+    },
+    {
+      "checkId": "BUDGET::CURRENT_HOST_QUALIFIES",
+      "domain": "runtime-budget",
+      "passed": true,
+      "observed": {
+        "status": "FROZEN_PREEXECUTION_BUDGETS",
+        "maximumConcurrentUnityProcesses": 1,
+        "laneAssignedCommittedMemoryBytes": 17179869184,
+        "currentTotalVisibleMemoryBytes": 33396609024,
+        "totalFrozenReservationsBytes": 154618822656,
+        "currentDriveHFreeBytes": 215987687424,
+        "currentFreeBytesAfterBothReservations": 61368864768,
+        "logicalProcessors": 32,
+        "operatingSystemVersion": "10.0.26300",
+        "baseBoard": "Micro-Star International Co., Ltd. MAG B650M MORTAR WIFI (MS-7D76)",
+        "positiveTimeoutFields": true
+      },
+      "expected": "frozen positive time/memory budgets, concurrency 1, same host class, and free H: space at least both frozen reservations"
+    },
+    {
+      "checkId": "RUNTIME::TYPED_PARQUET_763_FILES_EXACT",
+      "domain": "typed-parquet-runtime",
+      "passed": true,
+      "observed": {
+        "status": "FROZEN_TYPED_PARQUET_RUNTIME",
+        "distribution": {
+          "name": "pyarrow",
+          "platform": "win_amd64",
+          "pythonAbi": "cp312",
+          "version": "25.0.1"
+        },
+        "declaredFiles": 763,
+        "uniquePaths": 763,
+        "allPathsUnique": true,
+        "totalBytesObserved": 114472394,
+        "mismatchCount": 0,
+        "mismatches": []
+      },
+      "expected": {
+        "installedFiles": 762,
+        "wheelArtifacts": 1,
+        "distribution": "pyarrow 25.0.1 cp312 win_amd64",
+        "mismatchCount": 0
+      }
+    },
+    {
+      "checkId": "D3::V3_1_TRUE_CUMULATIVE_ALLOCATION_QUALIFIED",
+      "domain": "D3-v3.1",
+      "passed": true,
+      "observed": {
+        "status": "QUALIFIED_FROZEN_D3_V3_1",
+        "semanticVersion": "3.1",
+        "allCriteriaPassed": true,
+        "bindingMismatches": [],
+        "knownAnswerStatus": "PASS_D3_V3_1_TRUE_CUMULATIVE_MANAGED_ALLOCATION_QUALIFICATION",
+        "cycleStatus": "PASS_D3_V3_1_STRICT_JSON_KNOWN_ANSWER"
+      },
+      "expected": "qualified D3-v3.1 exact source/binary/wrapper/harness and terminal known-answer evidence"
+    },
+    {
+      "checkId": "DELIVERY::COMPLETE_PER_OBSERVATION_HARD_GATE_AND_BRIDGE",
+      "domain": "structural-delivery",
+      "passed": true,
+      "observed": {
+        "outputStatus": "FROZEN_COMPLETE_PER_OBSERVATION_D3_V3_1_INTEGRATED",
+        "rawTables": [
+          "oracle-agent-checks",
+          "oracle-event-checks",
+          "operations",
+          "event-groups",
+          "d3-windows",
+          "persistent-state",
+          "process-resources",
+          "empty-boundary",
+          "replacement-ledger",
+          "failures-and-voids"
+        ],
+        "deliveryViews": {
+          "losslessCanonical": "UTF-8 JSON Lines retaining every raw row",
+          "humanPortable": "RFC 4180 CSV retaining every raw row and a fixed column order",
+          "compressedPortable": "gzip-compressed UTF-8 JSON Lines retaining every raw row",
+          "typedAnalytical": "Parquet retaining every raw row and explicit integer/float/boolean/string types",
+          "aggregateOnlyAllowed": false,
+          "rowIdentityPreservedAcrossViews": true,
+          "rowOrderManifested": true,
+          "sha256ManifestRequired": true
+        },
+        "bridgeStatus": "PASS_SCHEMA_V2_TOOLING_BRIDGE_VALIDATION",
+        "bridgeDelivery": {
+          "buildStatus": "PASS_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+          "verifyStatus": "PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+          "independentCliRecheckPassed": true,
+          "tables": 10,
+          "formatsPerTable": 4,
+          "products": 40,
+          "formats": [
+            "canonical JSONL",
+            "RFC 4180 CSV with canonical-JSON scalar cells",
+            "deterministic JSONL.GZ",
+            "typed Parquet"
+          ],
+          "completeValueTypeOrderRoundTripPassed": true,
+          "typedParquetRoundTripPassed": true,
+          "d3JoinsOneToOneAndComplete": true,
+          "aggregateOnlyPackage": false,
+          "deliveryManifestSha256": "1cb1d490d2397e6295a4883e23090349d550ca042a39bd97673ec8748e4a2070"
+        },
+        "hardCondition": {
+          "completePerObservationRawDataDeliverable": true,
+          "mandatoryForPrecollectionReadiness": true,
+          "mandatoryForFormalRawCommit": true,
+          "mandatoryBeforeAnyFormalAnalysisAuthorizationCanBeExercised": true,
+          "cannotBeWaivedAfterFirstFormalObservation": true,
+          "failureDisposition": "FAIL_CLOSED_PRESERVE_EVIDENCE_NO_ANALYSIS_NO_CLAIM_NO_TOPUP_NO_MERGE"
+        }
+      },
+      "expected": "10 raw tables; complete JSONL/CSV/gzip/typed-Parquet row-preserving bridge; aggregation-only forbidden; delivery hard gate retained"
+    },
+    {
+      "checkId": "TERMINAL::STRUCTURAL_AND_DELIVERY_SOURCES_PARSE_AND_BIND",
+      "domain": "structural-delivery",
+      "passed": true,
+      "observed": {
+        "structuralQualificationProfile": true,
+        "structuralPass": true,
+        "deliveryBuildPass": true,
+        "deliveryVerifyPass": true,
+        "typedParquetRuntimeHash": true,
+        "outputSchemaHash": true,
+        "d3ContractHash": true
+      },
+      "expected": {
+        "structuralQualificationProfile": true,
+        "structuralPass": true,
+        "deliveryBuildPass": true,
+        "deliveryVerifyPass": true,
+        "typedParquetRuntimeHash": true,
+        "outputSchemaHash": true,
+        "d3ContractHash": true
+      }
+    },
+    {
+      "checkId": "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+      "domain": "structural-delivery",
+      "passed": false,
+      "observed": {
+        "schemaReceiptCount": 9,
+        "runtimeReceiptCount": 9,
+        "runtimeReceiptsMissingFromSchema": [
+          "_control/acquisition-complete.v2.json",
+          "_control/launch-receipt.v2.json",
+          "delivery-manifest.v2.json",
+          "instrument-export-receipt.v2.json"
+        ],
+        "staleSchemaReceiptsNotProducedByV2Chain": [
+          "_control/acquisition-complete.v1.json",
+          "_control/launch-receipt.v1.json",
+          "delivery-manifest.v1.json",
+          "instrument-export-receipt.v1.json"
+        ]
+      },
+      "expected": {
+        "runtimeReceiptsMissingFromSchema": [],
+        "staleSchemaReceiptsNotProducedByV2Chain": []
+      }
+    },
+    {
+      "checkId": "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE",
+      "domain": "structural-delivery",
+      "passed": false,
+      "observed": {
+        "validatesLaneReceipts972": true,
+        "validatesEmptyReceipts12": true,
+        "validatesEventRows23328": true,
+        "validatesEmptyBoundaryRows12000": true,
+        "validatesProcessResourceRows25272": false,
+        "validatesPersistentStateMeasurementCoverage": false,
+        "validatesAcceptedSuperblockReceipts162": false,
+        "validatesProcessLedger1147": false,
+        "validatesProcessIdentityReceipts1147": false,
+        "supervisorExplicitlyAssertsFinalProcessOrdinal1147": false
+      },
+      "expected": {
+        "validatesLaneReceipts972": true,
+        "validatesEmptyReceipts12": true,
+        "validatesEventRows23328": true,
+        "validatesEmptyBoundaryRows12000": true,
+        "validatesProcessResourceRows25272": true,
+        "validatesPersistentStateMeasurementCoverage": true,
+        "validatesAcceptedSuperblockReceipts162": true,
+        "validatesProcessLedger1147": true,
+        "validatesProcessIdentityReceipts1147": true,
+        "supervisorExplicitlyAssertsFinalProcessOrdinal1147": true
+      }
+    },
+    {
+      "checkId": "RETENTION::ALL_THREE_PRIOR_ATTEMPTS_BYTE_IDENTICAL",
+      "domain": "retained-evidence",
+      "passed": true,
+      "observed": {
+        "readinessAttempt001": {
+          "before": "183f39aaad42cb867c561129b5ad836eb2deca461beeddc6e5ee8bd1309f9ebc",
+          "after": "183f39aaad42cb867c561129b5ad836eb2deca461beeddc6e5ee8bd1309f9ebc"
+        },
+        "repairAttempt001": {
+          "before": "4d244f419543c93257a24a29bf63e631ca8ef3b41a181763f44b4caa34c90a55",
+          "after": "4d244f419543c93257a24a29bf63e631ca8ef3b41a181763f44b4caa34c90a55"
+        },
+        "repairAttempt002": {
+          "before": "1dfcb653f6a251bca9c6884d957a793522b41866f0569f0cb7b453d80dd8a8ba",
+          "after": "1dfcb653f6a251bca9c6884d957a793522b41866f0569f0cb7b453d80dd8a8ba"
+        }
+      },
+      "expected": "all before/after digests equal"
+    },
+    {
+      "checkId": "BOUNDARY::UNITY_ABSENT_AT_END",
+      "domain": "boundary",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "checkId": "BOUNDARY::PROHIBITED_ROOTS_ABSENT_AT_END",
+      "domain": "boundary",
+      "passed": true,
+      "observed": [],
+      "expected": []
+    }
+  ],
+  "hardStopReasons": [
+    {
+      "blockerId": "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+      "reason": "Frozen output schema v2 still declares v1 launch, acquisition-complete, instrument-export, and delivery-manifest paths, while supervisor/delivery v2 produce the corresponding v2 paths. The terminal package is therefore not path/version-consistent with its frozen output schema.",
+      "disposition": "FAIL_CLOSED_NO_QUALIFICATION_EXECUTION"
+    },
+    {
+      "blockerId": "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE",
+      "reason": "The terminal structural-v2 receipt does not re-establish the complete frozen cardinality/provenance chain: it omits the 25,272 process-resource rows, persistent-state measurement-point coverage, 162 accepted-superblock receipts, the 1,147-row process ledger and 1,147 process-identity receipts; supervisor v2 also writes processOrdinal without an explicit final equality assertion to 1,147.",
+      "disposition": "FAIL_CLOSED_NO_QUALIFICATION_EXECUTION"
+    }
+  ],
+  "retainedEvidence": {
+    "readinessAttempt001": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001",
+      "files": 7,
+      "beforeDigest": "183f39aaad42cb867c561129b5ad836eb2deca461beeddc6e5ee8bd1309f9ebc",
+      "afterDigest": "183f39aaad42cb867c561129b5ad836eb2deca461beeddc6e5ee8bd1309f9ebc",
+      "unchanged": true
+    },
+    "repairAttempt001": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-001",
+      "files": 8,
+      "beforeDigest": "4d244f419543c93257a24a29bf63e631ca8ef3b41a181763f44b4caa34c90a55",
+      "afterDigest": "4d244f419543c93257a24a29bf63e631ca8ef3b41a181763f44b4caa34c90a55",
+      "unchanged": true
+    },
+    "repairAttempt002": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002",
+      "files": 17,
+      "beforeDigest": "1dfcb653f6a251bca9c6884d957a793522b41866f0569f0cb7b453d80dd8a8ba",
+      "afterDigest": "1dfcb653f6a251bca9c6884d957a793522b41866f0569f0cb7b453d80dd8a8ba",
+      "unchanged": true
+    }
+  },
+  "scientificBoundary": {
+    "measuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "sealedIdentityMappingDisclosed": false
+  }
+}

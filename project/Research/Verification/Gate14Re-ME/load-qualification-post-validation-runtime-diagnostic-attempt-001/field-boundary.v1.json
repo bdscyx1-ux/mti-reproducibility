@@ -1,0 +1,20 @@
+{
+  "schema": "gate14re-me-post-offline-validation-runtime-diagnostic-field-boundary-v1",
+  "status": "FROZEN_BEFORE_DIAGNOSTIC_COMPUTATION",
+  "allowedFields": [
+    "process ledger ordinal, mode, processId, creationTimeUtc, exitedAtUtc, exitCode and identity receipt binding",
+    "lane receipt inputId, superblockId, anonymousLaneId, row counts, laneWallClockMilliseconds and createdAtUtc",
+    "input bundle designRegion, seed, gridEdge G, agentCount N, changedCellCount F, topology, graph profile, atomic partitions and context stratum",
+    "schedule ordinal and anonymous-lane order; named algorithm identity only after anonymous output is frozen",
+    "process-resource structural memory fields",
+    "prelaunch disk reservation/free-space metadata",
+    "validator source structure and execution resource observations"
+  ],
+  "prohibitedFields": [
+    "event-group elapsed endpoint values",
+    "operation elapsed endpoint values",
+    "grid-read, allocation, persistent-state effect comparisons",
+    "path quality, effect direction, p-values, formal contrasts, ranking, weighting or winner"
+  ],
+  "timeDecompositionBoundary": "Only process wall, inter-process gap, and directly measured inclusive lane-body duration are identifiable. Pure algorithm compute, Unity startup, and exit/finalization are not separately identifiable and no residual may be relabeled as one of them."
+}

@@ -1,0 +1,91 @@
+{
+  "auditKind": "gate13r-pr2-mp1-v2-frozen-roots-postvalidation-audit-v1",
+  "capturedAtUtc": "2026-10-09T04:31:13.572816Z",
+  "checks": [
+    {
+      "actual": 5,
+      "expected": 5,
+      "id": "pilotV1-fileCount",
+      "passed": true
+    },
+    {
+      "actual": 5247,
+      "expected": 5247,
+      "id": "pilotV1-rawBytes",
+      "passed": true
+    },
+    {
+      "actual": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+      "expected": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+      "id": "pilotV1-canonicalTreeSha256",
+      "passed": true
+    },
+    {
+      "actual": "mp1-pilot-v1-pipe-delimited-no-final-lf-v1",
+      "expected": "mp1-pilot-v1-pipe-delimited-no-final-lf-v1",
+      "id": "pilotV1-canonicalTreeContractId",
+      "passed": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "id": "pilotV1-all-read-only",
+      "passed": true
+    },
+    {
+      "actual": 28020,
+      "expected": 28020,
+      "id": "formalAttempt2-fileCount",
+      "passed": true
+    },
+    {
+      "actual": 8536611302,
+      "expected": 8536611302,
+      "id": "formalAttempt2-rawBytes",
+      "passed": true
+    },
+    {
+      "actual": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+      "expected": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+      "id": "formalAttempt2-canonicalTreeSha256",
+      "passed": true
+    },
+    {
+      "actual": "gate13r-pr2-attempt2-ordinal-tab-final-lf-v2",
+      "expected": "gate13r-pr2-attempt2-ordinal-tab-final-lf-v2",
+      "id": "formalAttempt2-canonicalTreeContractId",
+      "passed": true
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "id": "formalAttempt2-all-read-only",
+      "passed": true
+    }
+  ],
+  "formalAttempt3ReceiptExists": false,
+  "formalAttempt3RootExists": false,
+  "passed": true,
+  "pilotV2RootExists": false,
+  "roots": {
+    "formalAttempt2": {
+      "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+      "allFilesReadOnly": true,
+      "canonicalTreeContractId": "gate13r-pr2-attempt2-ordinal-tab-final-lf-v2",
+      "canonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+      "fileCount": 28020,
+      "rawBytes": 8536611302,
+      "readOnlyFileCount": 28020
+    },
+    "pilotV1": {
+      "absolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v1",
+      "allFilesReadOnly": true,
+      "canonicalTreeContractId": "mp1-pilot-v1-pipe-delimited-no-final-lf-v1",
+      "canonicalTreeSha256": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+      "fileCount": 5,
+      "rawBytes": 5247,
+      "readOnlyFileCount": 5
+    }
+  },
+  "schemaVersion": 1
+}

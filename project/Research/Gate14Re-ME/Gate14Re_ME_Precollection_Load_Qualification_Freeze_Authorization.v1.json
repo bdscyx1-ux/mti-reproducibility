@@ -1,0 +1,56 @@
+{
+  "schema": "gate14re-me-precollection-load-qualification-freeze-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-freeze-attempt-001",
+  "version": 1,
+  "authorizedLocalDate": "2026-10-17",
+  "status": "AUTHORIZED_NONEXECUTING_LOAD_QUALIFICATION_GATE_FREEZE_ONLY",
+  "userAuthorizationText": "采用建议，增加的正式采集前‘负载资格门’",
+  "authorizedDecisions": {
+    "addFormalPrecollectionLoadQualificationGate": true,
+    "freezeAlgorithmNeutralGeometryQualification": true,
+    "freezeMeasurementFloorAndResourceCeilingQualification": true,
+    "freezeAnonymousPerLaneDynamicRangeQualification": true,
+    "freezeCompletePerObservationQualificationDataRetention": true,
+    "makePassReceiptMandatoryBeforeFormalInputDrawMeasuredRootOrObservation": true,
+    "retainExistingSixAlgorithmCohort": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "retainNoRankingNoWinnerNoWeightedComposite": true
+  },
+  "freezeInterpretation": {
+    "type": "prospective nonexecuting scientific amendment",
+    "inheritsAndDoesNotModifyV1Freeze": true,
+    "qualificationIsMeasurementAndResourceReadinessOnly": true,
+    "qualificationMayNotCompareAlgorithmsForAdvantage": true,
+    "qualificationMayNotSelectEndpointsScenariosOrThresholdsFromAlgorithmIdentityOrDirection": true,
+    "qualificationDataPermanentlyExcludedFromFormalEffectEstimation": true
+  },
+  "notAuthorized": {
+    "productionAlgorithmModification": true,
+    "qualificationImplementation": true,
+    "qualificationInputGeneration": true,
+    "qualificationRootCreation": true,
+    "compileOrUnityExecution": true,
+    "pilotOrQualificationExecution": true,
+    "formalInputGeneration": true,
+    "formalMeasuredRootCreation": true,
+    "formalCollection": true,
+    "formalAnalysis": true,
+    "ranking": true,
+    "winnerAdjudication": true,
+    "weightedComposite": true
+  },
+  "dataBoundary": {
+    "priorGate14ReObservationsReadOrReusedForThisAmendment": false,
+    "excludedGate14ReTB2ObservationsReadOrReusedForThisAmendment": false,
+    "Gate14ReMEQualificationObservationsCreated": 0,
+    "Gate14ReMEFormalObservationsCreated": 0,
+    "UnityProcessesLaunched": 0
+  }
+}

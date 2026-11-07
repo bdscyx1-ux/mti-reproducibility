@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "selectionId": "gate13r-stability-first-three-lane-selection-v1",
+  "createdAtLocal": "2026-10-08T16:00:00+08:00",
+  "status": "USER-STEERING-IMPLEMENTED / FORMAL-CAMPAIGN-NOT-AUTHORIZED",
+  "userSteering": "将4 lane并行改为3 lane甚至2 lane，稳定性优先，时间上稍微放宽",
+  "selectedDesign": {
+    "laneCount": 3,
+    "hardFormalEndToEndHours": 48,
+    "maximumReadinessP95Hours": 42,
+    "readinessReserveHours": 6,
+    "relativeCiHalfWidth": 0.1,
+    "hardSampleCap": null,
+    "campaignCount": 74,
+    "freshUnityProcessPerWilliamsBlock": true,
+    "serialLicenseAdmission": true,
+    "synchronizedWorkloadBarrier": true
+  },
+  "selectionRationale": {
+    "gate12rTenPercentCandidateBlocksPerCampaign": {
+      "four-algorithm-shared-goal-v1": 144,
+      "per-agent-heterogeneous-goal-v1": 204,
+      "grouped-field-heterogeneous-goal-v1": 108
+    },
+    "gate12rWeightedSerialP95Hours": 83.9,
+    "threeLaneProjectionAtConservativeEfficiency070Hours": 40.45,
+    "twoLaneProjectionAtConservativeEfficiency085Hours": 49.85,
+    "decision": "Three lanes are the only lower-lane option consistent with stability-first execution and a modest relaxation from 36 hours."
+  },
+  "diagnosticOnlyV16Observation": {
+    "warning": "The failed v16 pilot remains excluded from readiness and formal analysis; these values are retained only as design diagnostics.",
+    "completedMeasuredWaves": 79,
+    "completedMeasuredBlocks": 316,
+    "observedFourLaneEfficiency": 0.7367000290795493,
+    "licenseFailures": 2
+  },
+  "twoLanePolicy": "NO-AUTOMATIC-FALLBACK. A two-lane design requires a new versioned specification, time decision, tests and authorization after a three-lane hard-gate failure.",
+  "supersedesBeforeImplementation": [
+    "Research/Gate13R_36h_10pct_4Lane_v17_Licensing_Repair_Authorization_Prompt.md"
+  ],
+  "formalExecutionAuthorized": false
+}

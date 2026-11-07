@@ -1,0 +1,66 @@
+{
+  "schema": "gate14re-me-status-v42",
+  "studyId": "Gate14Re-ME",
+  "status": "ATTEMPT_006_FAIRNESS_BINDING_DSTAR_HASH_DRIFT_FROZEN_FAIRNESS_CORRIGENDUM_AND_READINESS_PASS_QUALIFICATION_EXECUTION_AUTHORIZED",
+  "version": 42,
+  "updatedAtUtc": "2026-10-17T23:12:10.0000000Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v41.json",
+    "sha256": "fe28a4bb8e15bb65c023ed37c315c1163d6eef68c546e10a1c590bcb31a7d829",
+    "retained": true,
+    "reclassified": false
+  },
+  "retainedFailedExecution": {
+    "attemptId": "load-qualification-execution-attempt-006",
+    "failureFreezeRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-006/failure-freeze-receipt.v1.json",
+    "failureFreezeSha256": "cfdb8b5b05960e679cd330a6efd6a850c44df466c795d6ffe041a3c9da6b22b8",
+    "failureReceiptRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-004/_control/failure-receipt.v2.json",
+    "failureReceiptSha256": "2274ab3f9e4f6987f0ca41153f8b306c4e6d31af909cc6691c93c7b374ead246",
+    "failedMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-004",
+    "failedDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-004",
+    "failedMode": "instrument-self-test",
+    "processLedgerRows": 0,
+    "qualificationObservations": 0,
+    "modifiedOrReclassified": false,
+    "reused": false
+  },
+  "fairnessBindingDstarCorrigendum": {
+    "attemptId": "qualification-fairness-binding-dstar-corrigendum-attempt-001",
+    "corrigendumPassReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-fairness-binding-dstar-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+    "corrigendumPassReceiptSha256": "3839043abec1c58c4c3275d3b23a8d9fe44a7de59a58ac461b0dd6b22a972969",
+    "fairnessBindingRelativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1_1.json",
+    "fairnessBindingSha256": "9e406f3ca05f9946e3b94be8af1b85c4a4406ed1d23b9ea4f8b73cd93fcdd468",
+    "supervisorV35Sha256": "66c989d80b1ce82b28de333da077aa82ca6e7aff91dcfae62593881752ba1c0a",
+    "executionContractV37Sha256": "2ebe6bbeac910b8cb7de66a494eb7b3c2b0d480380d2f1b6948215211aded778",
+    "implementationManifestV37Sha256": "44777405b27a10e3de38cc4f320d55b513d93921d4c4fa80270a0dec6e0c42e3",
+    "passed": true
+  },
+  "executionReadiness": {
+    "attemptId": "qualification-execution-readiness-recheck-attempt-012",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-012/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "1b58d85413a59214ee45888bbe48dd821946849747618c289d235e17bb46624e",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-012/freeze-manifest.v1.json",
+    "freezeManifestSha256": "f8541fae5245b860a0cb81bb5dddede85f86f857d80e43cd8c6de27951f280d1",
+    "passed": true
+  },
+  "nextExecution": {
+    "evidenceAttemptId": "load-qualification-execution-attempt-007",
+    "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-005",
+    "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-005",
+    "expectedFreshUnityProcesses": 1147,
+    "strictSerial": true,
+    "zeroReplacementFailStop": true,
+    "withinAttemptRetryResumeTopUpMergeSkipReorderOrParallelAuthorized": false
+  },
+  "authorizationState": {
+    "technicalRepairAndFreshAttemptLoopAuthorizedUntilQualificationExecutionPass": true,
+    "qualificationExecutionAuthorized": true,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "crossAlgorithmEffectInterpretationAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Create one exact-hash execution authorization for execution attempt-007 bound to the fresh attempt-005 measured and delivery roots, then launch supervisor v3.5 exactly once with PowerShell 7.6.5 and the corrected fairness binding v1.1. Preserve any technical failure before a later forward-only repair and fresh attempt; stop only at qualification execution terminal PASS."
+}

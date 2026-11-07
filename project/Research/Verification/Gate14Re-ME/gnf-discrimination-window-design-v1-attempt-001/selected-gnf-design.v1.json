@@ -1,0 +1,61 @@
+{
+  "schema": "gate14re-me-selected-gnf-design-v1",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+  "status": "PROPOSED_PENDING_USER_APPROVAL_REFREEZE_AND_NEW_QUALIFICATION",
+  "selectedAtUtc": "2026-10-19T11:21:13Z",
+  "levels": {
+    "G": [64, 96, 128],
+    "N": [32, 48, 80, 128],
+    "F": [1, 9, 25, 81]
+  },
+  "preserved": {
+    "factorial": "3 x 4 x 4",
+    "coreCells": 48,
+    "algorithms": 6,
+    "independentQualificationSuperblocksPerCell": 3,
+    "stressContextStrata": 18,
+    "strictSerialFreshProcesses": true,
+    "pairedWilliamsOrder": true,
+    "endpointsAndStoppingRules": "unchanged"
+  },
+  "oldLevels": {
+    "G": [64, 128, 256],
+    "N": [8, 32, 128, 512],
+    "F": [1, 9, 81, 225]
+  },
+  "boundsChange": {
+    "GMaximum": {"old": 256, "new": 128, "reductionPercent": 50.0},
+    "NMinimum": {"old": 8, "new": 32, "increaseFactor": 4.0},
+    "NMaximum": {"old": 512, "new": 128, "reductionPercent": 75.0},
+    "FMaximum": {"old": 225, "new": 81, "reductionPercent": 64.0},
+    "oldToNewHighCornerStructuralProxyRatio": 0.0225,
+    "highCornerStructuralProxyReductionPercent": 97.75
+  },
+  "selectionRationale": [
+    "The observed low anchor G64 x N32 x F1 separated all 15 anonymous pairs at the frozen 5 percent rule and completed with a 19.536 second worst observed process wall.",
+    "The observed upper anchor G128 x N128 x F81 separated 14 of 15 anonymous pairs at the frozen 10 and 20 percent rules and completed with a 117.611 second worst observed process wall.",
+    "N8 had the lowest factor-level median 10 percent pair coverage and was removed.",
+    "N512 and G256 drove the multi-minute tail while providing no monotonic discrimination advantage and were removed.",
+    "F81 preserves a substantial footprint-scaling range while replacing the old F225 maximum; F25 preserves an odd-square compact-footprint level between F9 and F81.",
+    "G96 and N48/N80 provide interior levels in the bounded range; they are unobserved and therefore require a fresh qualification rather than an outcome guarantee."
+  ],
+  "prospectiveQualificationDecisionRules": {
+    "discrimination": [
+      "For every one of the 15 anonymous pairs, the pair must satisfy the frozen 5 percent D1-or-D2 stable-direction rule in at least 75 percent of the 48 core cells.",
+      "For every one of the 15 anonymous pairs, the pair must satisfy the frozen 10 percent D1-or-D2 stable-direction rule in at least 60 percent of the 48 core cells.",
+      "No algorithm identity, direction, rank, or winner may be used to alter the grid after qualification begins."
+    ],
+    "runtime": [
+      "P99 algorithm-lane process wall must be no more than 180 seconds.",
+      "No algorithm-lane process wall may exceed the 300 second hard planning ceiling.",
+      "Any failure triggers preservation and redesign; no retry, top-up, replacement, or same-root continuation."
+    ]
+  },
+  "notAuthorizedByThisArtifact": [
+    "editing the sealed attempt-009 roots",
+    "starting a new qualification",
+    "starting formal ST, MQ, or MT",
+    "claiming that unobserved interior levels are already validated"
+  ]
+}

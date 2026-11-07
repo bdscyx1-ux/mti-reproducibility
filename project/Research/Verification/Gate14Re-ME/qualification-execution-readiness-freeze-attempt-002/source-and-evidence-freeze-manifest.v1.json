@@ -1,0 +1,78 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-freeze-attempt-002-source-and-evidence-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-freeze-attempt-002",
+  "attemptId": "qualification-execution-readiness-freeze-attempt-002",
+  "status": "FROZEN_FAILED_CLOSED_READINESS_EVIDENCE",
+  "createdAtUtc": "2026-10-17T15:12:24.047327Z",
+  "attemptFilesExcludingThisManifest": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/audit_qualification_execution_readiness_v2.py",
+      "bytes": 80971,
+      "sha256": "44be8ef774e749c82f957a11b2164833a5a08e6f2ac5f35e53eff74aa645eba9"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/authorization-boundary-receipt.v1.json",
+      "bytes": 829,
+      "sha256": "f5a09ecee7c7c8e66310bc07a82cf4a3413ce62730c86c9d9f65cd6c351aa2de"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/authorization-receipt.v1.json",
+      "bytes": 2060,
+      "sha256": "1e0542ed34a69c3364bae4788a69352a59197164df10de475f4579e0645ac4f6"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/failure-receipt.v1.json",
+      "bytes": 3161,
+      "sha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/readiness-audit.v2.json",
+      "bytes": 27604,
+      "sha256": "0ca56eece5fcd92dbbbef955937d51c2d0cdee44852b5c5eb374d3c8b622bbb4"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/stage-contract.v1.json",
+      "bytes": 1524,
+      "sha256": "9f159ce41da2791ea74f44bf47cad7342f39594ca0fe154180c86cd7af6edf59"
+    }
+  ],
+  "boundCurrentAssets": [
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/Run-Gate14ReMELoadQualification.v2.ps1",
+      "sha256": "a7e997f7b9d1c48753294b437566d40cf448106ef140e16a2780ce79b7059771"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-execution-contract.v2.json",
+      "sha256": "bee4b5103cc83c1528322faa98c7227cf6e94a481c4fa1059be93ffa5844ce69"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-current-implementation-manifest.v2.json",
+      "sha256": "53d1b7bd1fc12c6c13514c5180b4f59267c13bf90ea6809d1448038446af144f"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-002/compile-identity-receipt.v1.json",
+      "sha256": "07118a3b4be7e9cd0b044d073426d8db24ba116498d548c3bbfa42df2cdf9937"
+    }
+  ],
+  "retainedEvidenceInventoryDigests": {
+    "readinessAttempt001": {
+      "before": "183f39aaad42cb867c561129b5ad836eb2deca461beeddc6e5ee8bd1309f9ebc",
+      "after": "183f39aaad42cb867c561129b5ad836eb2deca461beeddc6e5ee8bd1309f9ebc"
+    },
+    "repairAttempt001": {
+      "before": "4d244f419543c93257a24a29bf63e631ca8ef3b41a181763f44b4caa34c90a55",
+      "after": "4d244f419543c93257a24a29bf63e631ca8ef3b41a181763f44b4caa34c90a55"
+    },
+    "repairAttempt002": {
+      "before": "1dfcb653f6a251bca9c6884d957a793522b41866f0569f0cb7b453d80dd8a8ba",
+      "after": "1dfcb653f6a251bca9c6884d957a793522b41866f0569f0cb7b453d80dd8a8ba"
+    }
+  },
+  "selfExcludedToAvoidCircularHash": true,
+  "readOnlyFreezeAppliedAfterManifestCreation": true
+}

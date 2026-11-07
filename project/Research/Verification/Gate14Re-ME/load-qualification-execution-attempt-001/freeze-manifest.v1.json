@@ -1,0 +1,58 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-001-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-001-921b3fd4-9f0d-4c0b-b6ad-caed4aea83d2",
+  "attemptId": "load-qualification-execution-attempt-001",
+  "status": "FROZEN_FAILED_CLOSED_PRELAUNCH_EVIDENCE",
+  "createdAtUtc": "2026-10-17T16:11:00.4493741Z",
+  "artifactCount": 6,
+  "artifacts": [
+    {
+      "role": "user-authorization-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/authorization-receipt.v1.json",
+      "bytes": 3104,
+      "sha256": "b11046e20e0988c078d757a931b4a3a4f9d210ad8d94e5b831dbf79856dfe622"
+    },
+    {
+      "role": "attempt-stage-contract",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/stage-contract.v1.json",
+      "bytes": 1883,
+      "sha256": "8c21d225c67c702ef0c4b67fdc23805d5776ed9161aff6c2e4a6f7899dffa8eb"
+    },
+    {
+      "role": "prelaunch-runtime-compatibility-audit",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/prelaunch-runtime-compatibility-audit.v1.json",
+      "bytes": 3176,
+      "sha256": "8259ad9c4c09a6b1e8e6e43cc3d5e38cb27afb6c8401c28bae600d9bfdac097d"
+    },
+    {
+      "role": "terminal-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/failure-receipt.v1.json",
+      "bytes": 2831,
+      "sha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d"
+    },
+    {
+      "role": "status-adoption-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/status-adoption-receipt.v1.json",
+      "bytes": 1054,
+      "sha256": "5ca5c6e6724098cdd933bc10f9cead3cf3f08615578bdfae946094414785bdeb"
+    },
+    {
+      "role": "adopted-status-v30",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v30.json",
+      "bytes": 2550,
+      "sha256": "aae1979990bd9b7e2bfce320f1a301abba8eeb5c0efc62bebd41ef5a42d5ed3b"
+    }
+  ],
+  "manifestExcludesItselfToAvoidCircularHash": true,
+  "boundary": {
+    "supervisorLaunchAttempted": false,
+    "unityInvocationCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "analysisRankingOrWinnerComputed": false
+  },
+  "nextActionRequiresSeparateAuthorization": true
+}

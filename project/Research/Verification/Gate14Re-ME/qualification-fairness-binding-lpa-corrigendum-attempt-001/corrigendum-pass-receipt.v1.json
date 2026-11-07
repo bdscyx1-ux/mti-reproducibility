@@ -1,0 +1,60 @@
+{
+  "schema": "gate14re-me-qualification-fairness-binding-lpa-corrigendum-pass-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-fairness-binding-lpa-corrigendum-attempt-001",
+  "status": "PASS_LPA_STAR_CORRECTNESS_IMPLEMENTATION_REBOUND_WITH_FAIRNESS_INVARIANTS_UNCHANGED",
+  "passed": true,
+  "retainedFailedExecution": {
+    "attemptId": "load-qualification-execution-attempt-008",
+    "failureFreezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-008/failure-freeze-receipt.v1.json",
+    "failureFreezeReceiptSha256": "7a8a0d0dd3e836dd05f65809119f7be0c1b26d47f916d4df155e025488523ef2",
+    "processLedgerRows": 187,
+    "failureLedgerRows": 1,
+    "replacementLedgerRows": 0,
+    "modifiedOrReclassified": false,
+    "rootReuseProhibited": true
+  },
+  "supersededBinding": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1_1.json",
+    "sha256": "9e406f3ca05f9946e3b94be8af1b85c4a4406ed1d23b9ea4f8b73cd93fcdd468"
+  },
+  "forwardBinding": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1_2.json",
+    "sha256": "ed7d45a47ee5cc1882e0cfe57daf0735be73f0ee84f50f45e4724726d96e5291",
+    "schemaCompatibility": "gate14re-me-six-algorithm-fairness-binding-v1",
+    "revision": "1.2",
+    "algorithmCount": 6
+  },
+  "changedBinding": {
+    "algorithmId": "LPA*",
+    "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+    "implementationSha256": "948bdc4019e96776c8d382f381c159041038ac191f4b6000debd94f7daf8a82a",
+    "specificationRelativePath": "Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+    "specificationSha256": "703e72a92207ceb05f0e63c35322f2a8e727b5e8be6e1dc699cd287ce254d4a9",
+    "stateModelId": "per-agent-fixed-start-goal-rooted-g-rhs-queue-v1",
+    "nativeMetricsSemanticsId": "navigation-operation-metrics-native-counters-v1"
+  },
+  "verification": {
+    "allSixImplementationHashesMatch": true,
+    "allSixSpecificationHashesMatch": true,
+    "nonLpaAlgorithmBindingsByteEquivalent": true,
+    "topLevelFairnessBooleansIdentical": true,
+    "fairnessRulesIdentical": true,
+    "navigationContractsBindingIdentical": true,
+    "navigationGridBindingIdentical": true
+  },
+  "scientificBoundary": {
+    "scientificDesignChanged": false,
+    "sixAlgorithmSetChanged": false,
+    "stateModelsChanged": false,
+    "nativeMetricSemanticsChanged": false,
+    "scheduleChanged": false,
+    "loadGateChanged": false,
+    "metricDefinitionsChanged": false,
+    "deliveryContractChanged": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false
+  },
+  "completedAtUtc": "2026-10-18T02:29:34.1206003Z"
+}

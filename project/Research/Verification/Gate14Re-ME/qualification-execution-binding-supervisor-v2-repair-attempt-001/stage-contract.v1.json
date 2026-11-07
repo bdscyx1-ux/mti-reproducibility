@@ -1,0 +1,51 @@
+{
+  "schema": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-001",
+  "status": "FROZEN_PREEXECUTION_REPAIR_BOUNDARY",
+  "attempt": 1,
+  "projectRoot": "H:/DDM_Final_Project",
+  "retainedPriorAttempt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001",
+    "failureReceiptSha256": "feea3650801239a1e92ced9031b137f9c22f7e9a9a483d05a6456353f1827b57",
+    "expectedFileCount": 7,
+    "modifyDeleteOrReclassify": false
+  },
+  "outputs": [
+    "Research/Gate14Re-ME/Execution/v2/Run-Gate14ReMELoadQualification.v2.ps1",
+    "Research/Gate14Re-ME/Execution/v2/load-qualification-execution-contract.v2.json",
+    "Research/Gate14Re-ME/Execution/v2/load-qualification-current-implementation-manifest.v2.json",
+    "attempt-local static, compile-identity, boundary and terminal evidence"
+  ],
+  "unityAllowance": {
+    "maximumInvocations": 1,
+    "projectPath": "H:/DDM_Final_Project",
+    "mode": "algorithm-free project compilation and executable identity probe",
+    "executeMethod": null,
+    "plannerAllowed": false,
+    "algorithmLaneAllowed": false,
+    "naturalExitRequired": true,
+    "signalOrForcedTerminationAllowed": false,
+    "retryAllowed": false
+  },
+  "prohibitedRoots": [
+    "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+    "Research/FormalRuns/Gate14Re-ME",
+    "Research/Exports/Gate14Re-ME/load-qualification/attempt-001"
+  ],
+  "replacementPolicy": {
+    "assetsMayBeGenerated": false,
+    "frozenOperationalBehavior": "ZERO_REPLACEMENT_FAIL_STOP"
+  },
+  "terminalPassRequires": [
+    "all offline static bindings and known answers pass",
+    "exactly one algorithm-free current-project Unity invocation exits naturally with zero",
+    "prelaunch, live-concurrent and post-exit authoritative executable identity checks pass",
+    "PID, creation time, executable path and exact command line composite identity passes",
+    "Unity log contains no compiler error or failed compilation marker",
+    "current editor assembly exists and is hash-frozen",
+    "current implementation manifest v2 binds the compile identity receipt and all required artifacts",
+    "prohibited roots, planner, algorithm lanes, observations, replacement assets, analysis, ranking and winner counts remain zero"
+  ],
+  "failurePolicy": "FAIL_CLOSED_PRESERVE_EVIDENCE_NO_RETRY"
+}

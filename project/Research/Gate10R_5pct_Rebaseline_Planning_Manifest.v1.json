@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "gate10r-5pct-rebaseline-planning-manifest-v1",
+  "createdAtUtc": "2026-10-06T07:52:15.2401419Z",
+  "status": "PLANNING-COMPLETE-EXECUTION-NOT-AUTHORIZED",
+  "designId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "artifacts": [
+    {
+      "role": "material-passport",
+      "relativePath": "Research/Gate10R_5pct_Rebaseline_Run_Passport.md",
+      "bytes": 1440,
+      "sha256": "17a109cff06c60c0bd1f215ce0818ba06ab4015f610b254711572e8d3cd6850f"
+    },
+    {
+      "role": "user-instruction-ledger-entry",
+      "relativePath": "Research/Gate10R_5pct_LedgerEntries/001-user-rebaseline-instruction.json",
+      "bytes": 339,
+      "sha256": "bcc2b2a6843cd2179090f215e7efbf577eb7972afc3373275a5f8c6f6d4f37f0"
+    },
+    {
+      "role": "read-only-evidence-audit",
+      "relativePath": "Research/Gate10R_5pct_Rebaseline_Evidence_Audit.v1.json",
+      "bytes": 6565,
+      "sha256": "e428c3b7a3667f52d6eb4c306bb4eaa070616ed7d3710fd3020b20a182751799"
+    },
+    {
+      "role": "machine-readable-rebaseline-decision",
+      "relativePath": "Research/Gate10R_5pct_Rebaseline_Decision.v1.json",
+      "bytes": 7798,
+      "sha256": "45f5225f22c737704194303c81ddfcf70898b386955cb844193c8ac8a8312409"
+    },
+    {
+      "role": "active-experiment-plan",
+      "relativePath": "Research/Gate10R_Onward_ProcessReuse_5pct_Experiment_Plan.md",
+      "bytes": 20584,
+      "sha256": "e91660310eccb9082393fe21cb5bf2c957b77b9a780e03eaa97b462fb6174953"
+    },
+    {
+      "role": "updated-overall-project-plan",
+      "relativePath": "Research/Overall_Project_Plan.md",
+      "bytes": 69014,
+      "sha256": "60a423a7403e06ace833b0fff6913d59c25135538b1f57505d57cda456a26478"
+    },
+    {
+      "role": "updated-next-session-checkpoint",
+      "relativePath": "Research/Next_Session_Checkpoint.md",
+      "bytes": 9030,
+      "sha256": "21f99fe2e9376d1ab0d39c92851c7ef4b703669e36e2f508f51524f32f9685e0"
+    },
+    {
+      "role": "planning-validation-summary",
+      "relativePath": "Research/Verification/Gate10R_5pct_Rebaseline_Planning_Audit.summary.json",
+      "bytes": 3195,
+      "sha256": "a605fae82248b0b9f6e6b0814b3bac48de345e4c2321bf6d9ac0a65bbb207a27"
+    }
+  ],
+  "plannedCounts": {
+    "uniqueCanonicalScenarios": 53,
+    "campaignConditions": 74,
+    "eligibleAlgorithmCells": 212,
+    "playableUnityScenes": 53,
+    "campaignLaunchProfiles": 74,
+    "algorithmCellPresets": 212,
+    "pilotMeasuredCampaigns": 12,
+    "pilotMeasuredBlocks": 384,
+    "pilotMeasuredSamples": 1152,
+    "pilotUnityProcessesIncludingProbeWarmupAndControls": 429,
+    "pilotWorkloadSamplesIncludingWarmupAndControls": 1212
+  },
+  "precision": {
+    "relativeCiHalfWidth": 0.05,
+    "confidenceLevel": 0.95,
+    "independentUnit": "complete-williams-block-unity-process",
+    "inheritedCap148": false,
+    "candidateNStatus": "NOT-YET-ESTIMATED"
+  },
+  "authorization": {
+    "gate10RImplementation": false,
+    "unityExecution": false,
+    "gate11RScenarioOrSceneGeneration": false,
+    "gate12RPilot": false,
+    "gate13RFormalPreparation": false,
+    "gate13RFormalCampaign": false,
+    "obsRecording": false
+  },
+  "terminalChecks": {
+    "planningAssertionsPassed": 21,
+    "planningAssertionsFailed": 0,
+    "historicalRootsUnchanged": true,
+    "plannedExecutionRootsAbsent": true,
+    "unityProcessCount": 0,
+    "projectLockExists": false
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema": "gate14re-me-nonexecuting-scientific-contract-v2",
+  "studyId": "Gate14Re-ME",
+  "version": 2,
+  "createdLocalDate": "2026-10-17",
+  "status": "FROZEN_NONEXECUTING_LOAD_QUALIFICATION_REQUIRED_PRECOLLECTION_PARAMETERS_PENDING",
+  "contractForm": "cumulative amendment by exact-hash incorporation of v1 plus a mandatory precollection load qualification gate",
+  "authorization": {
+    "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Freeze_Authorization.v1.json",
+    "authorizationId": "gate14re-me-load-qualification-freeze-attempt-001"
+  },
+  "inherits": {
+    "scientificContractV1": {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v1.json",
+      "sha256": "02b8c5edc1d6c8604dbd1816d99ee4616ac2814d6198e0cee273d031fee60e7f"
+    },
+    "experimentPlanV1": {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v1.md",
+      "sha256": "af7527b9c58ff0cd8af59fd9acd4fcdd08b5c4dc8f9241c2eccf7496e01a3f43"
+    },
+    "endpointDictionaryV1": {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+      "sha256": "9736b16601cc8c89166d65a78ff466114ad6affb57f8be2c9df59a5ddfce22f8"
+    },
+    "dataDeliveryContractV1": {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    "allV1ScientificAndDeliveryClausesRemainNormativeUnlessThisV2AddsAStricterGate": true
+  },
+  "unchangedScientificDesign": {
+    "algorithms": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF", "IDFF"],
+    "gridEdgeLevels": [64, 128, 256],
+    "agentCountLevels": [8, 32, 128, 512],
+    "changedCellLevels": [1, 9, 81, 225],
+    "primaryStructuralCells": 48,
+    "jointContextStrata": 18,
+    "eventGroupsPerLane": 24,
+    "primaryEndpointDomains": 7,
+    "majoritySupportMinimumDomains": 4,
+    "confirmatoryContrastCount": 35,
+    "multiplicity": "Holm strong FWER alpha 0.05",
+    "completePerObservationRawDataHardGate": true,
+    "ranking": false,
+    "winnerAdjudication": false,
+    "weightedComposite": false
+  },
+  "newMandatoryGate": {
+    "binding": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Protocol.v1.json",
+    "requiredReceiptStatus": "PASS_LOAD_QUALIFICATION",
+    "failureStatus": "FAIL_CLOSED_LOAD_QUALIFICATION",
+    "blocksFormalInputDraw": true,
+    "blocksFormalMeasuredRootCreation": true,
+    "blocksAnyFormalObservation": true,
+    "blocksFinalBAuthorization": true,
+    "algorithmNeutralGeometryGate": true,
+    "measurementFloorGate": true,
+    "coverageGate": true,
+    "withinAnonymousLaneDynamicRangeGate": true,
+    "resourceCeilingGate": true,
+    "completeQualificationRawDeliveryGate": true,
+    "passRequiredForEveryAnonymousLane": true
+  },
+  "qualificationDesignSnapshot": {
+    "corePilotSuperblocks": 144,
+    "highCornerStressSuperblocks": 18,
+    "totalPilotSuperblocks": 162,
+    "freshAlgorithmProcesses": 972,
+    "emptyBoundaryFreshProcesses": 12,
+    "emptyBoundaryRawIterations": 12000,
+    "expectedAlgorithmEventGroupRows": 23328,
+    "independentUnit": "pilot input superblock",
+    "pilotInputsOrObservationsMayBeReusedInFormalStudy": false
+  },
+  "integrityBoundary": {
+    "crossAlgorithmQualificationComparison": false,
+    "algorithmMeansDirectionsRanksOrWinnerInQualificationReport": false,
+    "IDFFSpecificQualificationDecision": false,
+    "qualificationInferentialPValues": false,
+    "endpointOrScenarioSelectionFromAlgorithmAdvantage": false,
+    "postHocThresholdRelaxation": false,
+    "positiveIDFFResultGuaranteed": false,
+    "allNullAdverseComparatorFavorableAndMeasurementInvalidFormalResultsReported": true
+  },
+  "precollectionSequence": [
+    "outcome-independent implementation and six-algorithm source/specification/fairness hash freeze",
+    "separate explicit authorization for qualification input generation, root creation, compile and Unity execution",
+    "PASS_LOAD_QUALIFICATION receipt with complete per-observation qualification delivery",
+    "separately authorized v2 precollection parameter amendment fixing MIPEs, final B and resource budgets",
+    "separate formal input-draw and collection-launch authorization"
+  ],
+  "authorizationBoundary": {
+    "v2ScientificFreezeAuthorized": true,
+    "loadQualificationGateFreezeAuthorized": true,
+    "qualificationImplementationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "qualificationRootCreationAuthorized": false,
+    "compileOrUnityExecutionAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "formalInputGenerationAuthorized": false,
+    "formalMeasuredRootCreationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalRawCommitAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "currentObservationBoundary": {
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "UnityProcessCount": 0,
+    "priorGate14ReObservationsReadOrReused": false,
+    "excludedGate14ReTB2ObservationsReadOrReused": false
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "gate14re-me-schema-v2-tooling-bridge-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-schema-v2-tooling-bridge-attempt-001",
+  "status": "AUTHORIZED_MINIMUM_ALGORITHM_FREE_TOOLING_BRIDGE_STAGE",
+  "authorizedAtUtc": "2026-10-17T08:21:59.7928427Z",
+  "userAuthorizationTextExact": "授权下一项最小阶段",
+  "scopeResolution": {
+    "basis": "The immediately preceding immutable runner/schema integration freeze receipt and status v9 both name this algorithm-free schema-v2 tooling bridge as the next separately authorized minimum stage.",
+    "authorizedStoppingPoint": "Versioned schema-v2 structural and lossless-delivery validators/exporters, synthetic known-answer and fail-closed negative tests, exact source/test hash freeze, and one terminal tooling-bridge receipt.",
+    "scientificEndpointChangeAuthorized": false,
+    "realQualificationExecutionAuthorized": false
+  },
+  "authorizedActions": {
+    "createVersionedStructuralValidatorV2": true,
+    "createVersionedLosslessDeliveryValidatorExporterV2": true,
+    "validateD3WindowSemanticsAndOneToOneJoins": true,
+    "exerciseFrozenTypedParquetRuntime": true,
+    "createSyntheticFixturesOnlyUnderVerificationRoot": true,
+    "runSyntheticKnownAnswer": true,
+    "runTamperMissingDuplicateTypeRateLegacyFieldAndLabelSwapNegativeTests": true,
+    "freezeToolHashesTestEvidenceAndTerminalReceipt": true
+  },
+  "prohibitedActions": {
+    "modifyOrDeletePriorEvidence": true,
+    "modifyFrozenV1Tools": true,
+    "modifyFrozenRunnerOrOutputSchema": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputs": true,
+    "generateAnonymousIdentityMapping": true,
+    "createQualificationMeasuredRoot": true,
+    "constructOrInvokeAnyAlgorithmPlanner": true,
+    "executeAnyAlgorithmLane": true,
+    "performFormalCollection": true,
+    "performFormalAnalysis": true,
+    "rankAlgorithms": true,
+    "adjudicateWinner": true,
+    "fallbackToAnotherD3Metric": true
+  },
+  "parentFreezeBinding": {
+    "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/freeze-receipt.v1.json",
+    "sha256": "b244af408606e0758841f1ad44af5af0d565e12d83da3cfddf918b2412dbaa24"
+  },
+  "statusBinding": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v9.json",
+    "sha256": "6785a099bcce12058aabcbbdb183df69a4696a7111b6048f2aa3f5af7756e641"
+  },
+  "schemaAndRuntimeBindings": {
+    "outputSchemaRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+    "outputSchemaSha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb",
+    "qualifiedD3ContractRelativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+    "qualifiedD3ContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "typedParquetRuntimeManifestRelativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+    "typedParquetRuntimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+  },
+  "protectedPreexistingArtifacts": [
+    {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v1.py",
+      "sha256": "4cc4369c50b7b0b89bc7ec657b2384b93ff48905205046c93d25584ca3e5852f"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v1.py",
+      "sha256": "3a5c58cbb4f4db93ebedd563175fa916f9a9443925a1c8955bb107cb3dbb4905"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    }
+  ],
+  "terminalRule": "Pass only if the exact schema-v2 and D3-v3.1 bindings validate, complete per-observation JSONL/CSV/JSONL.GZ/typed-Parquet round trips pass, all authorized negative fixtures fail closed for their intended reason, protected hashes remain exact, and no prohibited artifact or execution is observed. Otherwise preserve evidence and fail closed."
+}

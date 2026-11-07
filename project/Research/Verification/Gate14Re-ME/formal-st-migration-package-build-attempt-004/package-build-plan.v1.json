@@ -1,0 +1,36 @@
+{
+  "schema": "gate14re-me-formal-st-end-to-end-package-build-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "packageId": "gate14re-me-formal-st-v5-end-to-end-package-attempt-004",
+  "status": "FROZEN_BUILD_PLAN_FORMAL_EXECUTION_PROHIBITED_DURING_TEST",
+  "roots": {
+    "staging": "Research/PackageStaging/Gate14Re-ME/formal-st/v5/attempt-004",
+    "package": "Research/Packages/Gate14Re-ME/formal-st/v5/attempt-004",
+    "test": "Research/PackageTests/Gate14Re-ME/formal-st/v5/attempt-004",
+    "evidence": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-004"
+  },
+  "requiredTests": [
+    "complete per-file SHA-256 manifest verification",
+    "credential-path exclusion scan",
+    "authorization-chain dry run in staging",
+    "ZIP64 build and CRC verification",
+    "fresh extraction and complete hash verification",
+    "authorization-chain dry run in fresh extraction",
+    "algorithm-free readiness in fresh extraction",
+    "absence of FormalInputs, FormalRuns, and FormalDataPackages after package testing"
+  ],
+  "prohibitedTests": [
+    "formal input generation",
+    "formal collection",
+    "formal acceptance against formal data",
+    "formal analysis",
+    "MQ",
+    "MT"
+  ],
+  "bindings": {
+    "umbrellaAuthorizationRelativePath": "Research/Gate14Re-ME/Package/v5/Authorizations/end-to-end-through-data-package-authorization.v1.json",
+    "umbrellaAuthorizationSha256": "68d3a962a018f78b18776a436f6183b167837c6002efd991d094e285b891b508",
+    "orchestratorRelativePath": "Research/Gate14Re-ME/Package/v5/Run-To-Accepted-Data-Package.v5_1.ps1",
+    "orchestratorSha256": "83bb3b9a4ed7dc56f4429b93e5920351cc714b0d2f9e41e21e81f6646803c583"
+  }
+}

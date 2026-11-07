@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "gate11r-attempt2-generation-attempt1-one-use-receipt-v2",
+  "createdAtUtc": "2026-10-07T02:55:06.4895364Z",
+  "status": "CONSUMED-FOR-GENERATION-ATTEMPT1",
+  "consumedAtUtc": "2026-10-07T02:55:43.7497220Z",
+  "scope": "One Gate 11R create-new bundle generation attempt only",
+  "activeSourceProvenance": {
+    "path": "Research/Gate11R_Attempt2_Active_Source_Provenance.v2.3.json",
+    "sha256": "14522d9cb531ae402ce1a536f57ff260a2e31bbc39cf8fa6f2529c1483d513cf"
+  },
+  "compilePass": {
+    "path": "Research/Verification/Gate11R_5pct/v2/Compile/CompileAttempt3_Success_Receipt.v2.3.json",
+    "sha256": "772e0b1ba9ec103d906feeefcee7c704aec017eba4c22cb96ea74e324ae9c2cf"
+  },
+  "unitPass": {
+    "path": "Research/Verification/Gate11R_5pct/v2/UnitTests/UnitAttempt1_Success_Receipt.v2.json",
+    "sha256": "d36f84b218d84aa0a12b3785dfd1cf1172ba309038d506cda8d7677698214cc3"
+  },
+  "preGenerationAuditPath": "Research/Verification/Gate11R_5pct/v2/Gate11R_PreGeneration_Preservation_Audit.v2.json",
+  "expectedCreateNewRoots": [
+    "Research/FormalScenarios/Gate11R_5pct/v1",
+    "Research/PlayableExperiments/Gate11R_5pct/v1",
+    "Assets/_Scenes/Research/Playable/Gate11R_5pct/v1"
+  ],
+  "pilotExecutionAuthorized": false,
+  "timingCampaignAuthorized": false,
+  "gate12RAuthorized": false,
+  "gate13RAuthorized": false
+}

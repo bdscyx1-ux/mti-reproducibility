@@ -1,0 +1,301 @@
+{
+  "schema": "gate14re-me-precollection-load-qualification-protocol-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "FROZEN_NONEXECUTING_MANDATORY_BEFORE_FORMAL_COLLECTION",
+  "purpose": "Fail closed before formal collection unless the frozen design produces algorithm-neutral, measurable, nontrivial workload above the timing floor while retaining adequate timeout, memory, storage, and raw-delivery headroom for every anonymous algorithm lane.",
+  "authorizationBinding": {
+    "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Freeze_Authorization.v1.json",
+    "authorizationId": "gate14re-me-load-qualification-freeze-attempt-001"
+  },
+  "inheritedScientificFreeze": {
+    "plan": {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v1.md",
+      "sha256": "af7527b9c58ff0cd8af59fd9acd4fcdd08b5c4dc8f9241c2eccf7496e01a3f43"
+    },
+    "contract": {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v1.json",
+      "sha256": "02b8c5edc1d6c8604dbd1816d99ee4616ac2814d6198e0cee273d031fee60e7f"
+    },
+    "endpointDictionary": {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+      "sha256": "9736b16601cc8c89166d65a78ff466114ad6affb57f8be2c9df59a5ddfce22f8"
+    },
+    "dataDeliveryContract": {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    "preservedWithoutChange": [
+      "six named algorithms",
+      "48-cell G-by-N-by-F design",
+      "18 context strata",
+      "24 event groups per lane",
+      "seven primary endpoint domains",
+      "four-of-seven majority support rule",
+      "35-contrast Holm family",
+      "complete per-observation raw-data deliverability hard gate",
+      "no ranking, winner adjudication, weighted composite, or lexicographic tiebreak"
+    ]
+  },
+  "timingAndBlocking": {
+    "qualificationMustPassBeforeFormalInputDraw": true,
+    "qualificationMustPassBeforeFormalMeasuredRootCreation": true,
+    "qualificationMustPassBeforeAnyFormalObservation": true,
+    "qualificationMustPassBeforeFinalBMayBeAuthorized": true,
+    "qualificationInputsMayBeReusedInFormalCollection": false,
+    "qualificationObservationsMayEnterFormalEffectEstimation": false,
+    "qualificationObservationsMayDetermineAlgorithmAdvantageOrEndpointSelection": false,
+    "requiredPassReceiptStatus": "PASS_LOAD_QUALIFICATION",
+    "failureStatus": "FAIL_CLOSED_LOAD_QUALIFICATION"
+  },
+  "reservedExecutionLocation": {
+    "qualificationRoot": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+    "createAtThisFreeze": false,
+    "measuredFormalRoot": "Research/FormalRuns/Gate14Re-ME",
+    "formalRootMayExistBeforePass": false
+  },
+  "algorithmAndDecisionBlinding": {
+    "algorithmCount": 6,
+    "sealedAnonymousLaneIds": [
+      "ALG-A",
+      "ALG-B",
+      "ALG-C",
+      "ALG-D",
+      "ALG-E",
+      "ALG-F"
+    ],
+    "identityMappingHeldOutsideQualificationReports": true,
+    "perLaneQualificationRequired": true,
+    "crossAlgorithmMeansOrContrastsAllowed": false,
+    "algorithmDirectionsAllowed": false,
+    "algorithmRanksAllowed": false,
+    "winnerAllowed": false,
+    "IDFFSpecificDecisionAllowed": false,
+    "inferentialPValuesAllowed": false,
+    "onlyWithinAnonymousLaneFloorCeilingCoverageAndDynamicRangeChecksAllowed": true
+  },
+  "experimentalUnit": {
+    "independentQualificationUnit": "one immutable pilot input superblock with six paired anonymous fresh-process lanes",
+    "algorithmLaneIsIndependentN": false,
+    "eventGroupIsIndependentN": false,
+    "agentIsIndependentN": false,
+    "queryOperationTickOrGridCellIsIndependentN": false,
+    "emptyBoundaryIterationIsIndependentN": false
+  },
+  "qualificationDesign": {
+    "coreFactorial": {
+      "gridEdgeLevels": [64, 128, 256],
+      "agentCountLevels": [8, 32, 128, 512],
+      "changedCellLevels": [1, 9, 81, 225],
+      "structuralCells": 48,
+      "independentPilotSeedsPerCell": 3,
+      "pilotSuperblocks": 144,
+      "jointContextStrata": 18,
+      "exactOccurrencesPerContextStratumAcrossCore": 8
+    },
+    "highCornerStress": {
+      "gridEdge": 256,
+      "agentCount": 512,
+      "changedCells": 225,
+      "oneIndependentPilotSeedPerContextStratum": true,
+      "jointContextStrata": 18,
+      "pilotSuperblocks": 18
+    },
+    "totalPilotSuperblocks": 162,
+    "algorithmLanesPerSuperblock": 6,
+    "freshAlgorithmProcesses": 972,
+    "eventGroupsPerLane": 24,
+    "expectedAlgorithmEventGroupRows": 23328,
+    "uniquePilotSeeds": 162,
+    "pilotSeedsMustDifferFromAllFormalSeeds": true,
+    "williamsSequenceCount": 6,
+    "exactRepetitionsOfEachWilliamsSequence": 27,
+    "eachAnonymousAlgorithmOccursInEachExecutionPosition": 27,
+    "byteIdenticalInputBundleAcrossSixLanes": true,
+    "sameFreshProcessFairnessAndDynamicBoundaryAsV1": true
+  },
+  "emptyBoundaryReference": {
+    "purpose": "measure instrumentation and scheduler boundary without invoking any planner",
+    "freshProcesses": 12,
+    "iterationsPerProcess": 1000,
+    "totalIterations": 12000,
+    "sameBuildHostClockInstrumentationAndProcessPolicyAsQualification": true,
+    "plannerCalls": 0,
+    "rawIterationRowsRetained": true,
+    "floorReferenceFormula": "max(100 * stopwatchTickMilliseconds, emptyBoundaryP99ElapsedMilliseconds)",
+    "floorReferenceSymbol": "floorReferenceMs"
+  },
+  "algorithmNeutralGeometryQualification": {
+    "mustPassBeforeAnyAlgorithmProcessForThatInput": true,
+    "referenceOracle": "frozen algorithm-neutral Dijkstra implementation supporting the frozen graph profiles and cost semantics",
+    "oracleSourceAndExecutableSha256MustBeFrozenBeforeQualificationExecution": true,
+    "goal": {
+      "walkable": true,
+      "distinctFromEveryStart": true
+    },
+    "starts": {
+      "countEqualsN": true,
+      "allDistinct": true,
+      "allWalkable": true,
+      "allBaselineReachable": true,
+      "minimumBaselineOraclePathSteps": 4,
+      "fractionWithBaselineOraclePathStepsAtLeastCeilGOver4": 0.9,
+      "medianBaselineOraclePathStepsAtLeastCeilGOver2": true
+    },
+    "eventGroups": {
+      "countPerInput": 24,
+      "uniqueChangedCellsExactlyF": true,
+      "changedCellsMayIncludeGoalOrStart": false,
+      "oracleComparedImmediatelyBeforeAndAfterEveryGroup": true,
+      "affectedAgentDefinition": "baseline-or-current reference-oracle shortest-path status or cost changes across the complete same-tick event group",
+      "minimumAffectedAgentsEveryGroupFormula": "max(1, ceil(0.05 * N))",
+      "minimumMedianAffectedAgentFractionAcrossLane": 0.1,
+      "minimumAffectedAgentFractionForBottleneckBlockOrIncreaseGroups": 0.5,
+      "restoreGroupsMustRestoreGridByteExactlyToPreCycleState": true,
+      "restoreGroupsMustRestoreAllReferenceOracleStatusesAndCosts": true
+    },
+    "acceptance": "all geometry and event-group conditions pass for every one of the 162 pilot inputs; no algorithm output is used"
+  },
+  "instrumentQualification": {
+    "gridReadProxyKnownAnswerAndSemanticInvariance": "PASS required",
+    "allocationCounterPositiveControlMonotonicityAndNonzeroSensitivity": "PASS required",
+    "persistentStateSizerPerContainerSyntheticFixture": "PASS required",
+    "clockMonotonicityAndNoNegativeElapsedValues": "PASS required",
+    "counterOverflowSaturationOrNonfiniteValues": 0,
+    "rawToExportKnownAnswerRoundTrip": "PASS required",
+    "tamperMissingDuplicateAndAnonymousLabelSwapNegativeTests": "PASS required"
+  },
+  "measurementFloorGate": {
+    "upperLoadRegion": {
+      "minimumGridEdge": 128,
+      "minimumAgentCount": 128,
+      "minimumChangedCells": 81
+    },
+    "perAnonymousLane": {
+      "allPositiveElapsedValuesFinite": true,
+      "upperRegionMedianD1AtLeastFloorMultiple": 20,
+      "upperRegionFractionD1AtLeastFloorMultiple": {
+        "multiple": 5,
+        "minimumFraction": 0.9
+      },
+      "allCoreFractionD1AtLeastFloorMultiple": {
+        "multiple": 5,
+        "minimumFraction": 0.8
+      },
+      "minimumDistinctPositiveD1ValuesAcrossCore": 10,
+      "fractionOfEligibleD2EventGroupsWithPositiveGridReads": 0.99
+    },
+    "reason": "D1 and the D5-D7 scaling domains must not be dominated by timer quantization or empty-boundary overhead; D2 must show an active work counter. Legitimate zero D3 allocation and nonnegative D4 state values are retained rather than disqualified."
+  },
+  "coverageGate": {
+    "perAnonymousLaneCoreEligibleEventGroupFractionMinimum": 0.95,
+    "perAnonymousLanePerGridLevelEligibleFractionMinimum": 0.9,
+    "perAnonymousLanePerAgentLevelEligibleFractionMinimum": 0.9,
+    "perAnonymousLanePerChangedCellLevelEligibleFractionMinimum": 0.9,
+    "allThreeGridLevelsRequired": true,
+    "allFourAgentLevelsRequired": true,
+    "allFourChangedCellLevelsRequired": true,
+    "failedOrMissingRowsRemainInDenominator": true
+  },
+  "withinLaneDynamicRangeGate": {
+    "lowAnchor": {
+      "gridEdge": 64,
+      "agentCount": 8,
+      "changedCells": 1
+    },
+    "highAnchor": {
+      "gridEdge": 256,
+      "agentCount": 512,
+      "changedCells": 225
+    },
+    "D1Statistic": "geometric mean of eligible positive event-group elapsed milliseconds within the anonymous lane and anchor",
+    "D2Statistic": "median eligible event-group total grid reads within the anonymous lane and anchor",
+    "passRule": "max(highAnchorD1 / lowAnchorD1, highAnchorD2 / lowAnchorD2) >= 4.0 for every anonymous lane",
+    "minimumSpanRatio": 4.0,
+    "monotonicityRequired": false,
+    "crossAlgorithmComparison": false,
+    "advantageDirectionUsed": false
+  },
+  "resourceCeilingGate": {
+    "thresholdsFrozenBeforeQualificationExecution": [
+      "eventGroupHardTimeoutMilliseconds",
+      "laneWallClockHardTimeoutMilliseconds",
+      "laneAssignedCommittedMemoryBytes",
+      "qualificationReservedStorageBytes",
+      "formalRawAndDeliveryReservedStorageBytes"
+    ],
+    "thresholdSelectionMayUseAlgorithmIdentityOrDirection": false,
+    "outOfMemoryCount": 0,
+    "unexpectedProcessCrashCount": 0,
+    "instrumentationInvalidLaneCount": 0,
+    "perAnonymousLaneCoreBudgetExceededFractionMaximum": 0.05,
+    "perAnonymousLaneStressBudgetExceededFractionMaximum": 0.1,
+    "completedEventGroupP99MaximumFractionOfHardTimeout": 0.5,
+    "peakCommittedBytesMaximumFractionOfLaneAssignedLimit": 0.5,
+    "observedQualificationPackageBytesMaximumFractionOfReservedStorage": 0.5,
+    "projectedFormalRawPlusDeliveryBytesMaximumFractionOfReservedStorage": 0.5,
+    "minimumTimeoutMemoryAndStorageHeadroomFactor": 2.0,
+    "counterOverflowSaturationOrNonfiniteCount": 0
+  },
+  "failureAndReplacementPolicy": {
+    "algorithmSpecificFailure": "retain as outcome; no retry, no per-lane replacement, and include in coverage and ceiling denominators",
+    "infrastructureFailure": "void all six lanes in the pilot superblock; allow at most one whole-superblock technical replacement",
+    "maximumWholeSuperblockReplacementsPerSource": 1,
+    "maximumInfrastructureReplacementFraction": 0.02,
+    "originalFailureVoidAndReplacementArtifactsRetained": true,
+    "resumePerAlgorithmRetryTopUpMergeSkipOrOutcomeDependentReorder": false,
+    "outOfMemoryOrResourceCeilingFailureMayBeErasedByReplacement": false
+  },
+  "qualificationRawDataHardGate": {
+    "separateImmutableQualificationRawAndDerivedRoots": true,
+    "retainEveryEmptyBoundaryIteration": true,
+    "retainEveryInputGeometryAndOracleCheck": true,
+    "retainEveryEventGroupD1D2D3AndEligibilityRecord": true,
+    "retainEveryPersistentStateComponentAndMeasurementPoint": true,
+    "retainEveryProcessResourceSample": true,
+    "retainEveryFailureVoidAndReplacementRecord": true,
+    "retainSourcePathSourceSha256AndRecordIdentity": true,
+    "machineReadableFormats": [
+      "CSV",
+      "typed Parquet",
+      "compressed JSONL",
+      "JSON manifest and receipts"
+    ],
+    "aggregationOnlyRetentionForbidden": true,
+    "completePerObservationQualificationDeliveryReceiptRequired": true
+  },
+  "verdict": {
+    "passRequiresEveryGateForAllSixAnonymousLanes": true,
+    "passStatus": "PASS_LOAD_QUALIFICATION",
+    "failStatus": "FAIL_CLOSED_LOAD_QUALIFICATION",
+    "allowedReportContent": [
+      "overall pass or fail",
+      "anonymous per-lane pass or fail by gate",
+      "worst-case floor, coverage, dynamic-range, timeout, memory, and storage margins",
+      "structural failure reasons without algorithm identity"
+    ],
+    "forbiddenReportContent": [
+      "named algorithm means",
+      "directional pairwise effects",
+      "rankings",
+      "winner",
+      "IDFF-specific conclusions",
+      "endpoint or scenario selection based on algorithm advantage"
+    ],
+    "failureAction": "do not draw formal inputs, create a formal measured root, launch formal collection, alter thresholds post hoc, or reuse qualification observations; redesign and obtain a new scientific refreeze"
+  },
+  "authorizationBoundary": {
+    "protocolFreezeAuthorized": true,
+    "qualificationImplementationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "qualificationRootCreationAuthorized": false,
+    "compileOrUnityExecutionAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "formalInputGenerationAuthorized": false,
+    "formalMeasuredRootCreationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  }
+}

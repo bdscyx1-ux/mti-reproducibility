@@ -1,0 +1,67 @@
+{
+  "schema": "gate14re-me-qualification-planning-asset-generation-v2-attempt-001-terminal-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v2-attempt-001",
+  "status": "PASS_QUALIFICATION_PLANNING_ASSETS_FROZEN_V2",
+  "state": [
+    "SEALED_ANONYMOUS_IDENTITY_BINDING_FROZEN",
+    "INPUT_SCHEMA_V2_BUNDLES_FROZEN",
+    "ALGORITHM_NEUTRAL_GEOMETRY_ORACLE_PASS",
+    "WILLIAMS_BALANCED_SCHEDULE_FROZEN",
+    "MEASURED_ROOT_NOT_CREATED",
+    "QUALIFICATION_EXECUTION_NOT_AUTHORIZED"
+  ],
+  "completedAtUtc": "2026-10-17T14:01:02.619080Z",
+  "passed": true,
+  "terminal": true,
+  "frozenOutputs": {
+    "identityBinding": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+      "sha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08"
+    },
+    "schedule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471"
+    },
+    "offlineGeometryOracleValidation": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/validation/offline-geometry-oracle-validation.v1.jsonl",
+      "sha256": "3f4ecdc5b9355c26140e48536ec9c59376c26ff85fdbf5b246514c8759abc938"
+    },
+    "jsonSchemaValidationReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/validation/json-schema-validation-receipt.v1.json",
+      "sha256": "afca81f2b9745d133439c824f5f5e4568633c55bdd21d13bd7f792f38ea1d6f6"
+    },
+    "finalValidationReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/final-validation-receipt.v1.json",
+      "sha256": "d456158a82d7b45bdad00efd498423547be9faeeb14f875e5451d2e2493459b8"
+    },
+    "freezeManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json",
+      "sha256": "7e0cbe77cb8bb8f84642856c6356d318f708e168b52a92e6e348cdf948169aca"
+    }
+  },
+  "cardinality": {
+    "sealedAnonymousIdentityBindings": 1,
+    "coreInputBundles": 144,
+    "stressInputBundles": 18,
+    "totalInputBundles": 162,
+    "scheduleRows": 162,
+    "freshAlgorithmProcessesProspectiveOnly": 972,
+    "qualificationObservationsGenerated": 0
+  },
+  "scopeAudit": {
+    "measuredRootCreated": false,
+    "unityInvocations": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "nextAuthorizationRequired": "A separate authorization is required before creating a qualification measured root or running the qualification preflight/execution. This PASS does not authorize Unity, any planner, any algorithm lane, qualification observations, formal collection, formal analysis, ranking, or winner adjudication."
+}

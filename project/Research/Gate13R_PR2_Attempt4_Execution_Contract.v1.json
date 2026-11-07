@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "contractId": "gate13r-pr2-formal-attempt4-block-eligibility-auto-resume-v1",
+  "createdAtUtc": "2026-10-10T04:20:05.1127945Z",
+  "contractStatus": "PROSPECTIVE-FROZEN-BEFORE-ATTEMPT4-MEASURED-DATA",
+  "formalAttemptOrdinal": 4,
+  "formalRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+  "freshRestartFromGlobalProcessOrdinal": 1,
+  "attempt3ObservationReuseAuthorized": false,
+  "crossAttemptMergeAuthorized": false,
+  "formalDesign": {
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "campaignCount": 74,
+    "scenarioCount": 53,
+    "matchedSuperblockCount": 1008,
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "maximumBlocksPerUnityEditorProcess": 1,
+    "scheduleSha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "candidateConfigSha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042"
+  },
+  "perCompletedBlockFormalEligibility": true,
+  "completedBlockEligibility": {
+    "eligibilityTrigger": "COMPLETED-AND-COMMITTED-BLOCK",
+    "requiredEvidence": [
+      "entire scheduled row completed in one fresh Unity process",
+      "receipt/schedule/block/campaign/scenario/process identity closed",
+      "correctness and hard-memory gates passed",
+      "all sample files exist and match their SHA-256 declarations",
+      "append-only block eligibility commit durably created"
+    ],
+    "commitField": {
+      "formalStatisticalEligibility": true
+    },
+    "resultIndependent": true,
+    "survivesLaterAttemptFailure": true,
+    "partialOrAmbiguousBlockEligible": false,
+    "automaticSelectiveRevocationAuthorized": false,
+    "allApplicableEligibleBlocksMustEnterLaterAuthorizedAnalysis": true,
+    "estimandSpecificCompletenessStillRequired": true,
+    "heterogeneousMatchedInferenceRequiresBothEligibleHalves": true,
+    "fullMatrixClaimsRequireOriginalCoverage": true
+  },
+  "automaticResume": {
+    "authorized": true,
+    "maximumCount": 3,
+    "sameFailureSignatureStopCount": 2,
+    "boundary": "LAST-CONTIGUOUS-BLOCK-ELIGIBILITY-COMMIT",
+    "alreadyCommittedBlocksMayBeRerun": false,
+    "completeUncommittedNextBlockMayBePromotedAfterExactVerification": true,
+    "partialOrAmbiguousNextBlockPolicy": "FAIL-CLOSED",
+    "mayDeleteMoveOverwriteSkipReplaceOrTopUpMeasuredEvidence": false,
+    "mayChangeScheduleOrScientificInputs": false
+  },
+  "automaticMeasuredRetryAuthorized": false,
+  "automaticTopUpAuthorized": false,
+  "partialAttemptMergeAuthorized": false,
+  "statusPublicationPolicy": {
+    "nonScientificControlPlane": true,
+    "readOrReplaceRetrySeconds": [
+      0,
+      2,
+      5
+    ],
+    "blockEligibilityTruthSource": "append-only block eligibility commits",
+    "publicationFailureMayRevokeCommittedBlockEligibility": false
+  },
+  "terminalLabels": {
+    "complete": "ONE-COMPLETE-FORMAL-ATTEMPT-BLOCK-COMMITTED-AUTO-RESUMABLE",
+    "failureTruncated": "INCOMPLETE-FORMAL-ATTEMPT-WITH-PROSPECTIVELY-ELIGIBLE-COMMITTED-BLOCKS"
+  },
+  "monitoring": {
+    "outcomeBlind": true,
+    "snapshotWriteRootRelativePath": "Research/Monitoring/Gate13R_PR2_Attempt4/v1",
+    "mayLaunchStopSignalResumeRetryTopUpMergeSkipReplaceReorderUnity": false
+  },
+  "phaseBFormalStatisticalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "playableOrObsTimingAuthorized": false,
+  "frozenBindings": {
+    "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV5.cs": "21f86b21a49c936edd5e65fde750d269a54be984186d9c802cbc2804b2691c75",
+    "Research/Gate10RLockHygieneV3.psm1": "9eba2284dc90fcf6dbbc59080301c1ac6db14c5029f8adab69db234c94f879d6",
+    "Research/Gate13RPR2Attempt3ExecutionV1.py": "03bc5e8e73f6e74cd164f7d045dff028b670d3a4b967940a68dc41e1d0fa5a3c",
+    "Research/Gate13RPR2Attempt4ExecutionV1.py": "78852d7ef741c09fe07a4291412ddf4ed2b21174079b371eb33c729a755f3846",
+    "Research/Gate13RPR2Attempt4MonitoringV1.py": "03176eada8888c5f25e3b1aa3695106583effe627f3df7e7d6bd40fb06fa18f1",
+    "Research/Gate13RPR2MP2MemoryPolicyV2.psm1": "7f9e7252fc4a158573ca67f54baa7fa4a0d0c981f3240aa706d46a96d283ffc4",
+    "Research/Gate13R_PR2_Attempt4_Historical_Preservation_Baseline.v1.json": "6cbc7bfa3a5b2e1026d9af1b5b37458a98966724db5f6f85f3e37cf051c0abd0",
+    "Research/Gate13R_PR2_Attempt4_Monitoring_Config.v1.json": "1ea47f3657144b06d06cc90cd3a3304c669490737bbf309310dccd2657c23ef2",
+    "Research/Gate13R_PR2_Attempt4_Operational_Status_Schema.v1.json": "22a49dfc484e4e318b13178b810878ec190d4140028fb23cc707827d64d748bd",
+    "Research/Gate13R_PR2_Attempt4_Recovery_State_Machine.v1.json": "aa4725250ba8638a29584ac93d3b0871dbfa647086062b3bf2465cbca2325dcc",
+    "Research/Gate13R_PR2_Attempt4_Restart_BlockwiseEligibility_AutoResume_User_Authorization.v1.txt": "b98239061c37e606a398c195e1e5dc1f4565770016fafca6d20a9959b5218137",
+    "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+    "Research/Gate13R_PR2_Formal_Execution_Receipt.v3.json": "53a9e68281f901cc2c430d1fdc34969393013da9c854528fb29355c97aed84f6",
+    "Research/Gate13R_PR2_Formal_Execution_Status.v3.json": "3aa224e3a21329c508df1d6e74e7b2052beefe5212405a880e24b66c33fcfaca",
+    "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+    "Research/Gate13R_PR2_MP2_ExpectedNegative_LockHygiene_Repair_Amendment.v1.json": "f1b556b3052c865640651bec58751a61dd3823422027fcbef0bf4fdd3a25dd8a",
+    "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Adapter.v4.json": "2cad63b1c89608b2053552ef8c1261603f81231365689ba232d950fc279c4f62",
+    "Research/Gate13R_PR2_MP2_Formal_Attempt3_Candidate_Config.v4.json": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+    "Research/Gate13R_PR2_MP2_Memory_Policy_Amendment.v2.json": "4825f4a7863be74ff3691a129c77b92b58da75bac4041c2f265737c207bdbe69",
+    "Research/Gate13R_PR2_MP2_Memory_Policy_Registry.v2.json": "1070821ef6264510eb2e7427d7887aaca08bb5d2e7854d48f61a6c8e1285490f",
+    "Research/Gate13R_PR2_MP2_Provenance.v4.json": "0f2c666ac4dc324687073fcdd913833e4d7d72dc8ad88bfaa5b1184bcfb7c37f",
+    "Research/Gate13R_PR2_MP2_Scenario_Policy_Mapping.v2.json": "5dd5daf640831ea49d5fa9e0bb1a318e71669ee9e426bf346f7eebc36f0c5055",
+    "Research/Gate13R_PR2_MP2_Schedule_Policy_Overlay.v2.jsonl": "c87cc7eab158dc7a111867364b9c06c2314f44c644ef2a4b8e33348bd1876d13",
+    "Research/Gate13R_PR2_MP2_Schedule_Policy_Overlay_Manifest.v2.json": "772d876aa4396e4229397e611011b5562024b90ebc5b5bf36ee85680184672c0",
+    "Research/Gate13R_PR2_MP2_Specification.v1.md": "283055b35cd60c8014ea181e029ec169c6f19eccb4bab9220d46f799b18fce71",
+    "Research/Gate13R_PR2_MP2_Test_Design.v1.md": "45cfd1d5a12fa551d62b9cde4506dac71e2fd1a0c227a6d899d67d12f71db5d3",
+    "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+    "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v3.md": "9d86a949b9c56e8dd419d57bc8e604de952446d32a4091bb2b7798f665977113",
+    "Research/Gate13R_RQAligned_Preregistration_Amendment.v1.json": "9bf388293094b89e5dcbe0ad6f76c66be6200a1db1223ef1015f10bb24477a83",
+    "Research/Gate13R_RQAligned_Preregistration_BlockwiseEligibility_AutoResume_Amendment.v1.md": "272126932a538548fe42db0c314291a769386356f23d8fb1061b33750741b674",
+    "Research/Gate13R_RQAligned_Preregistration_Specification.v1.md": "76674789c8b5e6ee0394c2c0673bc1c3efbc069f2d9e0b6cac69d14a335eb2da",
+    "Research/Gate13R_RQAligned_Statistical_Analysis_Plan.v1.md": "ba4ddac6258cb952902e3383fa8bd405c2ce8d5c84b9b5c667fcd88c1d476884",
+    "Research/Get-Gate13RPR2Attempt4OperationalProgressV1.ps1": "6148cf170b8ae99aa5403b150c76fb22b9e26228b0e27c30d9f37b8b4d0f4d54",
+    "Research/New-Gate13RPR2MP2BlockPlanV4.py": "11365fb3c694ae2fab6c9d3c3cb3c93f3cbe3e6f2f7a30373730f5a236ce8785",
+    "Research/Run-Gate13RPR2FormalAttempt4V1.ps1": "8cb87329e5e1cd71724b1162038aa6af1cbadbee2c9b393f2c99d0be199af4cc",
+    "Research/Run-Gate13RPR2MP2FormalBlockV4.ps1": "0e7a6cc8a01db5aa90858518cb00e2b126bb2745617799eb591a7532f70b417f",
+    "Research/Test-Gate13RPR2FormalAttempt4PrelaunchV1.py": "970d9c7d1874487e4ba278837d2493b923ab54a025cb77af773c16cf7769a7f0",
+    "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_control/formal-failure-checkpoint.json": "2afa262d4fa37dae129f17566d122f80cdcb1a83f2ae9ef8d482caae735dfad9"
+  }
+}

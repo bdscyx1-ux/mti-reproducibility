@@ -1,0 +1,48 @@
+{
+  "schema": "gate14re-me-formal-st-fairness-runtime-binding-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_BUILD_INPUT_BINDING",
+  "qualificationFairnessSource": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json",
+    "sha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+    "algorithmSourceHashesAndStateSemanticsReusedWithoutChange": true
+  },
+  "algorithms": [
+    {"algorithmId":"A*-R","relativePath":"Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs","sha256":"a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778"},
+    {"algorithmId":"BiA*-R","relativePath":"Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs","sha256":"82316036aba90be69ca746288798bac1789cdb09afa65cf9ad4180975d1f947e"},
+    {"algorithmId":"D*L","relativePath":"Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs","sha256":"b6938a3389de4764a26ed15c59582dd31017e8b44c38fa004be356989ca8d199"},
+    {"algorithmId":"LPA*","relativePath":"Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs","sha256":"948bdc4019e96776c8d382f381c159041038ac191f4b6000debd94f7daf8a82a"},
+    {"algorithmId":"C-FF","relativePath":"Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs","sha256":"bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"},
+    {"algorithmId":"IDFF","relativePath":"Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs","sha256":"63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"}
+  ],
+  "sharedBindings": [
+    {"role":"navigation contracts","relativePath":"Assets/_Scripts/Research/Navigation/NavigationContracts.cs","sha256":"7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"},
+    {"role":"navigation grid","relativePath":"Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs","sha256":"4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"},
+    {"role":"instrument contract","relativePath":"Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json","sha256":"c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"},
+    {"role":"qualified D3 contract","relativePath":"Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json","sha256":"a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"},
+    {"role":"trusted Unity identity rule","relativePath":"Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json","sha256":"f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"},
+    {"role":"trusted timestamp comparator","relativePath":"Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1","sha256":"d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"}
+  ],
+  "runtime": {
+    "UnityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "UnitySha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "PowerShellExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "PowerShellVersion": "7.6.5",
+    "PowerShellSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "PythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "PythonSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+  },
+  "fairnessRules": {
+    "sameByteIdenticalInputBundleWithinSuperblock": true,
+    "sameGridGoalStartsEventsBudgetsAndFixedStep": true,
+    "sameFreshProcessRequirement": true,
+    "sameDynamicMeasurementBoundary": true,
+    "samePathCorrectnessOracle": true,
+    "algorithmSpecificWarmupGcRebuildOrExtraQuery": false,
+    "readOnlyOracleCacheSharedAcrossAllSixLanes": true,
+    "referenceOracleEvaluationsInsideMeasuredLane": 0,
+    "nativeDiagnosticsMayEnterCrossAlgorithmComposite": false
+  },
+  "targetHostRule": "Every runtime and source hash must be reverified after package transfer and before formal root creation; any mismatch fails closed."
+}

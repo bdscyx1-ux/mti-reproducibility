@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate10r-5pct-rebaseline-evidence-audit-v1",
+  "capturedAtUtc": "2026-10-06T07:42:56.0001545Z",
+  "status": "PASSED-PLANNING-INPUTS-ONLY",
+  "activeDesignId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "scope": "Read-only audit supporting a new Gate 10 onward plan. It does not admit any historical failed-run timing, variance, candidate sample size, or formal inference.",
+  "actualExecutionEvidence": {
+    "fourAlgorithmBlock": {
+      "manifestRelativePath": "Research/Verification/Gate13R2_PositiveBlockFixtures/v1/four-algorithm-b001/block-manifest.json",
+      "manifestSha256": "89857fa8b9d563c893888f6c5ff08ed86cc68abd5da47396295a700d74c8fb80",
+      "designId": "one-fresh-unity-process-per-williams-block-v1",
+      "unityProcessId": 30828,
+      "expectedSampleCount": 4,
+      "completedSampleCount": 4,
+      "uniqueSampleProcessIds": [30828],
+      "algorithmOrder": ["A*-R", "D*L", "IDFF", "C-FF"],
+      "oneBlockPerUnityProcess": true,
+      "allSamplesShareProcessId": true
+    },
+    "twoAlgorithmBlock": {
+      "manifestRelativePath": "Research/Verification/Gate13R2_PositiveBlockFixtures/v1/two-algorithm-b001/block-manifest.json",
+      "manifestSha256": "6b7064fc77bcbbeb947b975661cc4e850f8de417edb8412f60cbbe467302c10b",
+      "designId": "one-fresh-unity-process-per-williams-block-v1",
+      "unityProcessId": 3440,
+      "expectedSampleCount": 2,
+      "completedSampleCount": 2,
+      "uniqueSampleProcessIds": [3440],
+      "algorithmOrder": ["A*-R", "D*L"],
+      "oneBlockPerUnityProcess": true,
+      "allSamplesShareProcessId": true
+    },
+    "pilotCardinalityAndStructuralEvidence": {
+      "sourceRelativePath": "Research/Gate13_ProcessReuse_Pilot_Failure_Checkpoint.md",
+      "sourceSha256": "7de797be434247faeab280b7d3c572a52c018e51b224799cc0f7e00bf7b05017",
+      "unityProcessCount": 45,
+      "totalSampleCount": 108,
+      "measuredBlockProcessCount": 36,
+      "measuredSampleCount": 96,
+      "structuralMismatchCount": 0,
+      "hardErrorCount": 208,
+      "workingSetNonPositiveCount": 96,
+      "privateMemoryNonPositiveCount": 96,
+      "managedGrowthOver128MiBBlockCount": 16,
+      "admissibleForTimingVarianceOrSampleSize": false,
+      "reason": "FAILED-NO-AUTO-RETRY / EXCLUDED-FROM-FORMAL-ANALYSIS / CANDIDATE-N-NOT-ADMISSIBLE"
+    },
+    "nativeTelemetryMethodEvidence": {
+      "resultRelativePath": "Research/Verification/Gate13R2_v2/TelemetryProbe/v1/telemetry-probe-result.json",
+      "resultSha256": "6b9b673622b6ec17fa6656b26d1a29736e828ecb8bb4aa84a52c0f508a6c8521",
+      "passed": true,
+      "unityProcessId": 17420,
+      "workingSetBytes": {
+        "nativeBefore": 1312571392,
+        "externalCim": 1368219648,
+        "nativeAfter": 1378181120,
+        "distanceToNativeInterval": 0
+      },
+      "privateMemoryBytes": {
+        "nativeBefore": 1518309376,
+        "externalCim": 1586778112,
+        "nativeAfter": 1587040256,
+        "distanceToNativeInterval": 0
+      },
+      "method": "Unity in-process GetProcessMemoryInfo/PROCESS_MEMORY_COUNTERS_EX cross-checked by parent-process CIM Win32_Process"
+    },
+    "v2IntegrationLimitation": {
+      "failureReceiptRelativePath": "Research/PilotRuns/Gate13_ProcessReuse/v2/verification-failure-receipt.v1.json",
+      "failureReceiptSha256": "ce55ebda8e6e6c33d52a9b5d6d2801d7ec1d3bde7f798ce14df5a731dd122154",
+      "v2BlockFixtureStarted": false,
+      "v2PilotStarted": false,
+      "knownFailure": "PowerShell Test-Path expression grouped -or incorrectly and failed before fixture creation",
+      "consequence": "The native telemetry method passed independently, but the combined v2 block design still requires fresh Gate 10R integration verification."
+    }
+  },
+  "historicalPreservation": {
+    "coldProcessFormalV1": {
+      "relativePath": "Research/FormalRuns/Gate13/v1",
+      "fileCount": 891,
+      "rawBytes": 129667391,
+      "nonReadOnlyFileCount": 0,
+      "disposition": ["USER-TERMINATED-DESIGN-CHANGE", "EXCLUDED_FROM_ANALYSIS", "NO-RESUME"]
+    },
+    "processReusePilotV1": {
+      "relativePath": "Research/PilotRuns/Gate13_ProcessReuse/v1",
+      "fileCount": 838,
+      "rawBytes": 91219643,
+      "nonReadOnlyFileCount": 0,
+      "disposition": ["FAILED-NO-AUTO-RETRY", "EXCLUDED-FROM-FORMAL-ANALYSIS", "CANDIDATE-N-NOT-ADMISSIBLE"]
+    },
+    "processReusePilotV2": {
+      "relativePath": "Research/PilotRuns/Gate13_ProcessReuse/v2",
+      "fileCount": 4,
+      "rawBytes": 8899,
+      "nonReadOnlyFileCount": 0,
+      "disposition": ["FAILED-NO-AUTO-RETRY", "PILOT-NOT-STARTED", "NO-RESUME"]
+    },
+    "reservedOldProcessReuseFormalRootExists": false,
+    "reservedOldProcessReuseFormalRoot": "Research/FormalRuns/Gate13_ProcessReuse/v1"
+  },
+  "historicalMatrixEvidence": {
+    "matrixRelativePath": "Research/FormalScenarios/v1/formal-scenario-matrix.json",
+    "matrixSha256": "404df63d38bccd66bb665446e0f2cbf3e5f8c7293f543b3213bde4206435fe9f",
+    "bundleManifestRelativePath": "Research/FormalScenarios/v1/bundle-manifest.json",
+    "bundleManifestSha256": "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+    "scenarioCount": 53,
+    "campaignConditionCount": 74,
+    "eligibleAlgorithmCellCount": 212,
+    "cohortCellCounts": {
+      "four-algorithm-shared-goal-v1": 128,
+      "per-agent-heterogeneous-goal-v1": 42,
+      "grouped-field-heterogeneous-goal-v1": 42
+    },
+    "activeInputStatus": "HISTORICAL-DESIGN-EVIDENCE-ONLY; Gate 11R must generate and validate a new versioned bundle."
+  },
+  "boundSourceHashes": {
+    "historicalGate10FairnessSpec": "42a4a8439c3d7b46b7644bed14b8f91d87bae4c6f8b2183a73609ee5461e82dd",
+    "historicalGate11MatrixSpec": "498d3ea8549b234ebaac27658ee9be1ad67051f49e71e131e5b013287f28f4f4",
+    "processReuseV1Spec": "06b8f79aff15301acb45a478ac054e0a444be3581fe4cb05f4c5a106dc6e256d",
+    "processReuseV1UnityCommand": "08ab7b3c593f55232d59d6266714eeae33c2c93be846e55ac8a235928fee1c33",
+    "processReuseV2TelemetrySpec": "07850616e2592f63802c6f19edd7485ae2e16a70b78c86139da1f85a2e419258",
+    "processReuseV2UnityCommand": "54811fdb7868f7509cd48281397018a29f5814911cfc83d96d63473dd6f50379",
+    "preUpdateOverallPlan": "9ed18d7e01d906715b588e948f13295826fd6ca9cae5319028d94b927f86e3d3"
+  },
+  "terminalState": {
+    "unityProcessCount": 0,
+    "projectLockExists": false,
+    "newGate10RExecutionStarted": false,
+    "newScenarioBundleCreated": false,
+    "newPlayableSceneCreated": false,
+    "newPilotRootCreated": false,
+    "newFormalRootCreated": false
+  },
+  "passed": true
+}

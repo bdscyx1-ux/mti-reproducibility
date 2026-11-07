@@ -1,0 +1,113 @@
+{
+  "schema": "gate14re-scientific-freeze-receipt-v1",
+  "studyId": "Gate14Re",
+  "receiptVersion": 1,
+  "committedLocal": "2026-10-15T01:29:30.4876420+08:00",
+  "committedUtc": "2026-10-14T17:29:30.4894952Z",
+  "terminalState": "SCIENTIFIC-DESIGN-FROZEN / B48-FIXED / IMPLEMENTATION-AUTHORIZATION-PENDING / FORMAL-PHASE-A-NOT-AUTHORIZED",
+  "decision": {
+    "description": "Replace the pre-data B16 plan with a fixed B48 design to reduce interval-width uncertainty without result-driven expansion.",
+    "madeBeforeAnyGate14ReObservation": true,
+    "oldB": 16,
+    "newB": 48,
+    "postDataExpansionAllowed": false,
+    "forcedWinner": false,
+    "noUniqueWinnerRemainsValid": true
+  },
+  "authoritativeBindings": [
+    {
+      "path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v2.md",
+      "bytes": 13845,
+      "sha256": "cbeca6d175500770357d1a610149abda58c816547d2c19cfa2e8ce9bebf5771f"
+    },
+    {
+      "path": "Research/Gate14Re/Gate14Re_Design_Contract.v2.json",
+      "bytes": 17035,
+      "sha256": "8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f"
+    },
+    {
+      "path": "Research/Gate14Re/Gate14Re_Status.v2.json",
+      "bytes": 1176,
+      "sha256": "7829ac33324266d6cf09ea4c3156b7fbc8040883382a4820ed49be362702413b"
+    }
+  ],
+  "supersededPreservedBindings": [
+    {
+      "path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v1.md",
+      "bytes": 9380,
+      "sha256": "bbae1bf69dd9f7d14b13df3927f5ca3e21c18a686ad83c567bf8b1b24339dd86"
+    },
+    {
+      "path": "Research/Gate14Re/Gate14Re_Design_Contract.v1.json",
+      "bytes": 3912,
+      "sha256": "95c1fa5683dc66d54f5cd5a1f15d32ca02040df5a209ccf100f2421a96d5d9cc"
+    },
+    {
+      "path": "Research/Gate14Re/Gate14Re_Status.v1.json",
+      "bytes": 713,
+      "sha256": "747e8d940b75802e72c17061f81b42477ffbf40626b14aa9ad8142baea3bbef3"
+    }
+  ],
+  "frozenScale": {
+    "algorithms": 4,
+    "mainConditions": 8,
+    "quantityAnchors": 2,
+    "NPrimary": 128,
+    "unitCountLevels": [1, 8, 32, 128, 512],
+    "lanes": 2,
+    "blocksPerDesignCell": 48,
+    "williamsRows": 4,
+    "usesPerWilliamsRowPerCell": 12,
+    "mainProcesses": 768,
+    "quantityExtensionProcesses": 768,
+    "plannedFreshUnityProcesses": 1536,
+    "plannedAlgorithmLaneSamples": 6144
+  },
+  "scientificFreeze": {
+    "fourAlgorithmIdentityAndSourceBindings": "PASS",
+    "eightConditionRegistryAndHashes": "PASS",
+    "twoQuantityAnchors": "PASS",
+    "NPrimary": "PASS_128",
+    "nestedQuantityStartLaw": "PASS",
+    "singleSharedGoalAndArrivalRule": "PASS",
+    "M1DefinitionAndFivePercentMinimumDifference": "PASS",
+    "M2CommonMaskAndTenPercentGuard": "PASS",
+    "M3Eligibility": "PASS_45_OF_48_PER_CONDITION",
+    "M4FullPopulationWindowAndEligibility": "PASS",
+    "M5CriticalEventTable": "PASS_ZERO_CRITICAL_VIOLATIONS",
+    "sixPairHolmMultiplicityAndIntervalRule": "PASS",
+    "quantityInteractionModel": "PASS",
+    "failureReplacementAndNoPostHocExpansion": "PASS",
+    "hardwareRenderAndWindowConfiguration": "PASS",
+    "pendingScientificChoices": 0
+  },
+  "mechanicalValidation": {
+    "jsonParse": "PASS",
+    "arithmetic": "PASS",
+    "independentUnitIsCompleteBlock": "PASS",
+    "allInputBindings": "PASS_27_OF_27",
+    "authorInputMarkersAbsent": "PASS",
+    "formalMeasuredOrAnalysisRootAbsent": "PASS",
+    "Gate14ReObservationsProduced": 0
+  },
+  "statisticalIntegrity": {
+    "algorithmsUnitsTicksAndFramesAreNotIndependentReplicates": true,
+    "effectSizesAndIntervalsRequired": true,
+    "multiplicityFrozenBeforeData": true,
+    "engineeringEligibilityDistinctFromPopulationRiskProof": true,
+    "powerGuaranteeClaimed": false,
+    "B48ExpectedToReduceButNotEliminateInconclusiveOutcome": true
+  },
+  "authorization": {
+    "scientificDesignFreezeCompleted": true,
+    "implementationAuthorized": false,
+    "compileOrUnityExecutionAuthorized": false,
+    "formalPhaseALaunchAuthorized": false,
+    "formalMeasuredRootCreationAuthorized": false,
+    "formalAnalysisRootCreationAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "phaseBAuthorized": false,
+    "gate15Authorized": false
+  },
+  "nextRequiredAuthorization": "Single implementation, compile-only, pure-synthetic validation, short live preflight, and N512 resource-admission stage; no formal Phase A launch."
+}

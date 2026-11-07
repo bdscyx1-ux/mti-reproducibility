@@ -1,0 +1,281 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-result-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "identity-blind-power-v1-attempt-001",
+  "status": "FAIL_CLOSED_NO_CANDIDATE_MEETS_POWER",
+  "mipe": {
+    "ratio": 0.9,
+    "logScaleExact": -0.10536051565782628,
+    "lowerIsBetter": true
+  },
+  "targetPowerAtLeast": 0.9,
+  "familywiseAlpha": 0.05,
+  "multiplicity": "one-sided Holm strong FWER across six opaque primary hypotheses",
+  "candidateResults": [
+    {
+      "B": 36,
+      "seed": 141420298,
+      "opaquePrimaryResults": [
+        {
+          "opaquePrimary": "P1",
+          "draws": 200000,
+          "rejections": 184067,
+          "power": 0.920335,
+          "wilson95Lower": 0.9191402135963167,
+          "wilson95Upper": 0.9215136397178836
+        },
+        {
+          "opaquePrimary": "P2",
+          "draws": 200000,
+          "rejections": 183945,
+          "power": 0.919725,
+          "wilson95Lower": 0.9185260857245748,
+          "wilson95Upper": 0.9209077910220741
+        },
+        {
+          "opaquePrimary": "P3",
+          "draws": 200000,
+          "rejections": 174666,
+          "power": 0.87333,
+          "wilson95Lower": 0.871865156001229,
+          "wilson95Upper": 0.8747805029560084
+        },
+        {
+          "opaquePrimary": "P4",
+          "draws": 200000,
+          "rejections": 174380,
+          "power": 0.8719,
+          "wilson95Lower": 0.8704281795095691,
+          "wilson95Upper": 0.8733575343794743
+        },
+        {
+          "opaquePrimary": "P5",
+          "draws": 200000,
+          "rejections": 52591,
+          "power": 0.262955,
+          "wilson95Lower": 0.2610301725587027,
+          "wilson95Upper": 0.2648889332524608
+        },
+        {
+          "opaquePrimary": "P6",
+          "draws": 200000,
+          "rejections": 48523,
+          "power": 0.242615,
+          "wilson95Lower": 0.2407412861204968,
+          "wilson95Upper": 0.24449860102838347
+        }
+      ],
+      "worstOpaquePrimary": "P6",
+      "worstPower": 0.242615,
+      "worstWilson95Lower": 0.2407412861204968,
+      "passesFrozenPowerCriterion": false,
+      "runtime": {
+        "freshUnityProcessCount": 864,
+        "stressHoursAt1_9x": 11.988586,
+        "atOrAbove168Hours": false
+      }
+    },
+    {
+      "B": 72,
+      "seed": 141420334,
+      "opaquePrimaryResults": [
+        {
+          "opaquePrimary": "P1",
+          "draws": 200000,
+          "rejections": 199724,
+          "power": 0.99862,
+          "wilson95Lower": 0.9984474485136615,
+          "wilson95Upper": 0.9987733975722616
+        },
+        {
+          "opaquePrimary": "P2",
+          "draws": 200000,
+          "rejections": 199738,
+          "power": 0.99869,
+          "wilson95Lower": 0.9985216140952106,
+          "wilson95Upper": 0.9988392293017431
+        },
+        {
+          "opaquePrimary": "P3",
+          "draws": 200000,
+          "rejections": 199175,
+          "power": 0.995875,
+          "wilson95Lower": 0.9955844197935959,
+          "wilson95Upper": 0.9961465317383464
+        },
+        {
+          "opaquePrimary": "P4",
+          "draws": 200000,
+          "rejections": 199140,
+          "power": 0.9957,
+          "wilson95Lower": 0.9954035552883492,
+          "wilson95Upper": 0.995977402966017
+        },
+        {
+          "opaquePrimary": "P5",
+          "draws": 200000,
+          "rejections": 95608,
+          "power": 0.47804,
+          "wilson95Lower": 0.4758512509142798,
+          "wilson95Upper": 0.48022959265387455
+        },
+        {
+          "opaquePrimary": "P6",
+          "draws": 200000,
+          "rejections": 89156,
+          "power": 0.44578,
+          "wilson95Lower": 0.44360267786184776,
+          "wilson95Upper": 0.4479594049371199
+        }
+      ],
+      "worstOpaquePrimary": "P6",
+      "worstPower": 0.44578,
+      "worstWilson95Lower": 0.44360267786184776,
+      "passesFrozenPowerCriterion": false,
+      "runtime": {
+        "freshUnityProcessCount": 1728,
+        "stressHoursAt1_9x": 23.977171,
+        "atOrAbove168Hours": false
+      }
+    },
+    {
+      "B": 108,
+      "seed": 141420370,
+      "opaquePrimaryResults": [
+        {
+          "opaquePrimary": "P1",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        },
+        {
+          "opaquePrimary": "P2",
+          "draws": 200000,
+          "rejections": 199999,
+          "power": 0.999995,
+          "wilson95Lower": 0.9999716758901989,
+          "wilson95Upper": 0.9999991173766802
+        },
+        {
+          "opaquePrimary": "P3",
+          "draws": 200000,
+          "rejections": 199988,
+          "power": 0.99994,
+          "wilson95Lower": 0.9998951194992874,
+          "wilson95Upper": 0.9999656758803533
+        },
+        {
+          "opaquePrimary": "P4",
+          "draws": 200000,
+          "rejections": 199989,
+          "power": 0.999945,
+          "wilson95Lower": 0.9999015076396749,
+          "wilson95Upper": 0.9999692875478965
+        },
+        {
+          "opaquePrimary": "P5",
+          "draws": 200000,
+          "rejections": 127495,
+          "power": 0.637475,
+          "wilson95Lower": 0.6353655279314809,
+          "wilson95Upper": 0.639579191124438
+        },
+        {
+          "opaquePrimary": "P6",
+          "draws": 200000,
+          "rejections": 119836,
+          "power": 0.59918,
+          "wilson95Lower": 0.5970303514282551,
+          "wilson95Upper": 0.6013258386860643
+        }
+      ],
+      "worstOpaquePrimary": "P6",
+      "worstPower": 0.59918,
+      "worstWilson95Lower": 0.5970303514282551,
+      "passesFrozenPowerCriterion": false,
+      "runtime": {
+        "freshUnityProcessCount": 2592,
+        "stressHoursAt1_9x": 35.965757,
+        "atOrAbove168Hours": false
+      }
+    },
+    {
+      "B": 144,
+      "seed": 141420406,
+      "opaquePrimaryResults": [
+        {
+          "opaquePrimary": "P1",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        },
+        {
+          "opaquePrimary": "P2",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        },
+        {
+          "opaquePrimary": "P3",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        },
+        {
+          "opaquePrimary": "P4",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        },
+        {
+          "opaquePrimary": "P5",
+          "draws": 200000,
+          "rejections": 151084,
+          "power": 0.75542,
+          "wilson95Lower": 0.7535312928127745,
+          "wilson95Upper": 0.7572988955215613
+        },
+        {
+          "opaquePrimary": "P6",
+          "draws": 200000,
+          "rejections": 143633,
+          "power": 0.718165,
+          "wilson95Lower": 0.7161891158620226,
+          "wilson95Upper": 0.7201325035803092
+        }
+      ],
+      "worstOpaquePrimary": "P6",
+      "worstPower": 0.718165,
+      "worstWilson95Lower": 0.7161891158620226,
+      "passesFrozenPowerCriterion": false,
+      "runtime": {
+        "freshUnityProcessCount": 3456,
+        "stressHoursAt1_9x": 47.954342,
+        "atOrAbove168Hours": false
+      }
+    }
+  ],
+  "selectionRule": "smallest B whose worst opaque-primary Wilson 95 percent lower power bound is at least 0.90",
+  "selectedB": null,
+  "selectedRuntime": null,
+  "sevenDayGateHours": 168,
+  "sevenDayGateTriggered": false,
+  "disposition": "Stop without a final formal design freeze and request a separately authorized redesign.",
+  "boundaries": {
+    "qualificationObservationsUsedAsFormalSamples": false,
+    "identityMappingOpened": false,
+    "namedAlgorithmEffectsComputedOrReported": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false
+  }
+}

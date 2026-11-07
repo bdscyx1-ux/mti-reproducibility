@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13r-pr1b-v2-stale-lock-pre-recovery-audit-v1",
+  "capturedAtUtc": "2026-10-08T12:01:54.7949329Z",
+  "capturedAtAsiaShanghai": "2026-10-08T20:01:54.7967083+08:00",
+  "projectRoot": "H:/DDM_Final_Project",
+  "resolvedLockPath": "H:/DDM_Final_Project/Temp/UnityLockfile",
+  "lockRawBytes": 0,
+  "lockSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exclusiveReadWriteAvailable": true,
+  "projectUnityProcessCount": 0,
+  "attempt1FileCount": 425,
+  "attempt1RawBytes": 18056679,
+  "evidence": [
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/measured/wave-002/slot-01-core-r07-s2-hetero/pair-b002/ba-s1/p01-grouped-field.lock-hygiene/g13r-pr1b-m-b002-ba-s1-core-r07-s2-hetero-grouped-field-b002.quiescence-failure.json",
+      "expectedSha256": "8cab614422d02ef9acd858bf5e18acf2212774112ef0ecd8adf99cd16dd245eb",
+      "actualSha256": "8cab614422d02ef9acd858bf5e18acf2212774112ef0ecd8adf99cd16dd245eb",
+      "passed": true
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/measured/wave-002/slot-01-core-r07-s2-hetero/pair-b002/ba-s1/p01-grouped-field.Unity.log",
+      "expectedSha256": "25387037e1ac6f7315e3bf7d5a705440b941b09f9745c5278c6c64df765f8de2",
+      "actualSha256": "25387037e1ac6f7315e3bf7d5a705440b941b09f9745c5278c6c64df765f8de2",
+      "passed": true
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/failure-receipt.json",
+      "expectedSha256": "ca378535590d9fda229d1b8f41511b0301269ba004d8b782ccae20208f3a4d25",
+      "actualSha256": "ca378535590d9fda229d1b8f41511b0301269ba004d8b782ccae20208f3a4d25",
+      "passed": true
+    },
+    {
+      "relativePath": "Research/Gate13R_PR1B_OrderEffect_Pilot_Attempt1_Terminal_Preservation.v1.json",
+      "expectedSha256": "3b8192b5c8b6ca1defa495bce36698ccd8d9f04125df75bd118255374db15c38",
+      "actualSha256": "3b8192b5c8b6ca1defa495bce36698ccd8d9f04125df75bd118255374db15c38",
+      "passed": true
+    }
+  ],
+  "verificationRootAbsent": true,
+  "pilotRootAbsent": true,
+  "reservedFormalRootAbsent": true,
+  "deletionAuthorizedOnlyForExactResolvedPath": true,
+  "passed": true
+}

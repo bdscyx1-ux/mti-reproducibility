@@ -1,0 +1,90 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-004-external-launch-and-terminal-observation-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-004-05296e8f-0603-406e-9cfa-93a58cc7fec0",
+  "attemptId": "load-qualification-execution-attempt-004",
+  "status": "LAUNCHED_ONCE_TERMINATED_FAILED_CLOSED",
+  "capturedAtUtc": "2026-10-17T18:27:36.8307919Z",
+  "launchCount": 1,
+  "duplicateLaunchPerformed": false,
+  "supervisorProcess": {
+    "pid": 90264,
+    "creationTimeRaw": "2026-10-18T02:24:46.516892+08:00",
+    "creationTimeUtc": "2026-10-17T18:24:46.5168920Z",
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "executableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "version": "7.6.5",
+    "commandLineSha256": "5da3477c6f09733edf01d33f7159114752dbde49a11506fa2a11842be53cb877",
+    "processFoundImmediatelyAfterLaunch": true,
+    "aliveAtTerminalObservation": false,
+    "naturalExitObserved": true,
+    "signalOrForcedTerminationSent": false
+  },
+  "launchWrapperDiagnostic": {
+    "occurredAfterSuccessfulStartProcess": true,
+    "description": "The observation wrapper failed while converting the already-launched process creation timestamp from WMI text. The independently observed supervisor identity and the supervisor-created control launch receipt prove that launch had already succeeded.",
+    "causedSecondLaunch": false,
+    "causedSignalOrForcedTermination": false,
+    "classifiedAsScientificExecutionFailure": false
+  },
+  "launchBinding": {
+    "launchContractRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/launch-contract.v1.json",
+    "launchContractSha256": "5f6316ddca667cff889a5f038a660f029bfca2f955a47b843420e95ebf931bf0",
+    "prelaunchAuditRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/prelaunch-audit.v1.json",
+    "prelaunchAuditSha256": "406941f6f583cb96e371e84f2b20d192554189f4ae68957301180c8126598be6",
+    "executionAuthorizationRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/execution-authorization.v1.json",
+    "executionAuthorizationSha256": "fc9e00f9ca88f333c4f5ec3a78cf2c6f7ccf1535e1e120796898f9b7d9e1699a",
+    "stageContractRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/stage-contract.v1.json",
+    "stageContractSha256": "9f544e9340abe1681da70f04eafb062955f4ff8c77526a538219bf0506fbe5f7",
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_2.ps1",
+    "supervisorSha256": "a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409",
+    "executionContractSha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85",
+    "implementationManifestSha256": "1e56697a40692ff76fc01273ec4e5b8b7953ea88dcfe228eeeb317d9705a69c1",
+    "readinessAttempt009TerminalReceiptSha256": "565a2e5a1f97d67e37c037db05db610feabf93237d717d67e86d0be82c534a6a"
+  },
+  "controlPlane": {
+    "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "measuredRootCreated": true,
+    "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-002",
+    "deliveryRootCreated": false,
+    "launchReceiptRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/launch-receipt.v2.json",
+    "launchReceiptSha256": "a9aded15cf91d2da9acb5750767cb649b6afeaa631aa740e4dfbfd30b8afa90d",
+    "launchReceiptStatus": "AUTHORIZED_QUALIFICATION_ACQUISITION_STARTED",
+    "launchReceiptStartedAtUtc": "2026-10-17T18:24:50.3732641Z",
+    "failureReceiptRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/failure-receipt.v2.json",
+    "failureReceiptSha256": "bafbf3e36a4bad7699b7338ca166deb9495bc3cfbd1e664e17ab250ca77a5fa9",
+    "failureReceiptStatus": "FAILED_CLOSED_NO_RETRY_NO_REPLACEMENT",
+    "failedAtUtc": "2026-10-17T18:25:04.6349981Z"
+  },
+  "firstAndOnlyUnityInvocation": {
+    "pid": 89312,
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV2.Run",
+    "mode": "instrument-self-test",
+    "naturalExitCode": 1,
+    "unityInvocationCount": 1,
+    "processIdentityReceiptProduced": false,
+    "processLedgerRowProduced": false,
+    "algorithmLaneExecuted": false
+  },
+  "terminalProcessObservation": {
+    "observedAtUtc": "2026-10-17T18:27:36.8307919Z",
+    "supervisorPid90264Alive": false,
+    "matchingGate14ReMELoadQualificationUnityRunnerCount": 0
+  },
+  "executionBoundary": {
+    "plannedFreshUnityProcesses": 1147,
+    "actualUnityInvocations": 1,
+    "instrumentSelfTestCompletions": 0,
+    "oracleProcesses": 0,
+    "emptyBoundaryProcesses": 0,
+    "algorithmLaneProcesses": 0,
+    "qualificationObservations": 0,
+    "retryPerformed": false,
+    "resumePerformed": false,
+    "replacementPerformed": false,
+    "newAttemptCreatedAutomatically": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false
+  }
+}

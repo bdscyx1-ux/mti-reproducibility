@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-attempt2-derivation-attempt1-failure-receipt-v1",
+  "recordedAtUtc": "2026-10-08T18:00:00Z",
+  "status": "FAILED-VERSIONED-VALIDATION-IMPLEMENTATION-ATTEMPT-PRESERVED",
+  "reasonCode": "DERIVATION-ASSERTION-COUNT-MISMATCH",
+  "detail": "The frozen campaign source contains two occurrences of Gate13RPR2FormalExecutionV3.psm1; the V1 derivation script asserted exactly one. The create-new guard stopped before a campaign target or summary was written.",
+  "sourceInputsModified": false,
+  "attempt1EvidenceModified": false,
+  "formalRootV2Created": false,
+  "formalReceiptV2Created": false,
+  "unityStarted": false,
+  "automaticFormalRetryAttempted": false,
+  "nextAction": "Preserve all attempt-1 derivation files and use incremented target/script versions."
+}

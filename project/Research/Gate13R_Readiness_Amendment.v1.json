@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "amendmentKind": "gate13r-process-reuse-5pct-readiness-amendment-v1",
+  "amendmentId": "gate13r-one-fresh-unity-process-per-williams-block-5pct-uncapped-v1",
+  "effectiveLocalDate": "2026-10-08",
+  "prospective": true,
+  "formalCampaignAuthorized": false,
+  "executionDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "precisionPolicy": {
+    "policyId": "two-sided-95pct-ci-relative-half-width-5pct-uncapped-v1",
+    "confidenceLevel": 0.95,
+    "criticalValue": 1.96,
+    "relativeHalfWidth": 0.05,
+    "logHalfWidth": 0.048790164169432,
+    "hardCap": null,
+    "minimumBlocks": 32,
+    "cycleMultiple": 4
+  },
+  "candidateBlocksPerCampaign": {
+    "four-algorithm-shared-goal-v1": 548,
+    "per-agent-heterogeneous-goal-v1": 768,
+    "grouped-field-heterogeneous-goal-v1": 400
+  },
+  "expectedTotals": {
+    "scenarioCount": 53,
+    "campaignCount": 74,
+    "eligibleCellCount": 212,
+    "blockProcessCount": 42064,
+    "sampleCount": 119200
+  },
+  "memoryGate": {
+    "policyId": "gate12r-sample-128mib-block-128mib-per-sample-v1",
+    "sampleRetainedManagedLimitBytes": 134217728,
+    "blockRetainedManagedLimitFormula": "134217728 * expectedSampleCount",
+    "twoSampleBlockRetainedManagedLimitBytes": 268435456,
+    "fourSampleBlockRetainedManagedLimitBytes": 536870912,
+    "blockWorkingSetLimitBytes": 536870912,
+    "blockPrivateMemoryLimitBytes": 536870912
+  },
+  "storageGate": {
+    "projectedRawBytesWithSafety": 166572888336,
+    "reserveBytes": 21474836480,
+    "minimumLaunchFreeBytes": 188047724816,
+    "mustRecheckAtFormalLaunch": true,
+    "gate12rSnapshotCannotAuthorizeLaunch": true
+  },
+  "runtimeDisclosure": {
+    "serialP50Seconds": 881220.2621056,
+    "serialP95Seconds": 1141436.3340784,
+    "serialP95Hours": 317.0656483551111,
+    "serialP95Days": 13.21106868146296,
+    "estimateOnly": true
+  },
+  "processSemantics": {
+    "oneFreshUnityEditorProcessPerCompleteWilliamsBlock": true,
+    "oneAlgorithmOccurrencePerBlockProcess": true,
+    "crossBlockProcessReuseAllowed": false,
+    "crossCampaignProcessReuseAllowed": false,
+    "perSampleCompleteResetRequired": true,
+    "blockFailureStopsLaterPositions": true,
+    "automaticRetryAllowed": false,
+    "automaticResumeAllowed": false,
+    "partialBlockEligible": false
+  },
+  "upstreamBindings": {
+    "gate11RBundleManifestSha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+    "gate11RMatrixSha256": "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3",
+    "gate12RReadinessCheckpointSha256": "93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d",
+    "candidateNFormalSha256": "5e77d9b69c4c0e45dec204ca1943867453d29dcbdf1ebd24f0809af6d649c387",
+    "budgetStorageProjectionSha256": "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f",
+    "memoryGateAmendmentSha256": "69a128f8c41c2e0fad1453daed0729f752bb58b77d300f736a758f5121815c20"
+  },
+  "immutableResearchSemantics": [
+    "algorithms",
+    "scenario-matrix",
+    "deterministic-seeds",
+    "canonical-identity",
+    "eligibility-and-exclusion-rules",
+    "williams-order",
+    "five-percent-precision",
+    "uncapped-candidate-n",
+    "reset",
+    "telemetry",
+    "memory-gates",
+    "playable-mapping"
+  ]
+}

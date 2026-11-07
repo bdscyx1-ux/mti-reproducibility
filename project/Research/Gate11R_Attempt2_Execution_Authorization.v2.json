@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "authorizationId": "gate11r-attempt2-auto-repair-retry-until-passed-v2",
+  "authorizedAtUtc": "2026-10-07T02:35:49.1961421Z",
+  "authorizationSourcePath": "Research/Gate10R_to_Gate12R_LedgerEntries/067-user-gate11r-attempt2-authorization-source.txt",
+  "authorizationSourceSha256": "87997c599638ccf919ad0cace3cb8348ba4a3f8b754164fb1106969fc3cf71b0",
+  "activeUpstreamDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "preserveAttempt1": [
+    "Research/Verification/Gate11R_5pct_PreImplementation/v1",
+    "Research/Gate11R_PreImplementation_Failure_Checkpoint.md"
+  ],
+  "authorizedScope": [
+    "versioned_gate11r_audit_repairs",
+    "automatic_gate11r_retry_and_resume_after_documented_gate11r_only_failures",
+    "gate11r_additive_implementation_repairs",
+    "gate11r_scenario_config_and_playable_generation",
+    "gate11r_validation_and_final_audit"
+  ],
+  "terminalSuccessState": "GATE11R-PASSED-WAITING-FOR-GATE12R-AUTHORIZATION",
+  "notAuthorized": [
+    "gate12r_pilot_or_preflight",
+    "gate13r_preparation_or_campaign",
+    "modification_of_gate10r_attempts_1_through_4",
+    "modification_of_historical_cold_or_process_reuse_roots",
+    "modification_of_gate11_retained_bundle",
+    "modification_of_gate12_archives",
+    "modification_of_original_scripts_or_original_scenes"
+  ],
+  "repairPolicy": "AUTO-REPAIR-AND-VERSIONED-RETRY-WITHIN-GATE11R-UNTIL-PASSED",
+  "downstreamBoundary": "STOP-AND-REQUEST-USER-AUTHORIZATION-BEFORE-GATE12R",
+  "status": "AUTHORIZED"
+}

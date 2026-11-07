@@ -1,0 +1,658 @@
+{
+  "confoundingWarning": "Execution order is structurally confounded with load composition. Time drift is descriptive and cannot by itself establish thermal throttling, cache, antivirus, disk, or memory-pressure causality.",
+  "matchedAlgorithmGnfOrderComparison": {
+    "groupDefinition": "algorithmId x designRegion x G x N x F",
+    "groupsSpanningAtLeastTwoOrderStrata": 0,
+    "normalizedProcessWallByStratum": {}
+  },
+  "namedAlgorithmOrderStrata": [
+    {
+      "algorithmId": "A*-R",
+      "inclusiveLaneBodyMaximumMilliseconds": 17162.4916,
+      "inclusiveLaneBodyMinimumMilliseconds": 4206.8814,
+      "inclusiveLaneBodyP50Milliseconds": 8159.38835,
+      "inclusiveLaneBodyP90Milliseconds": 16757.47485,
+      "inclusiveLaneBodyP95Milliseconds": 16920.898485,
+      "inclusiveLaneBodyP99Milliseconds": 17099.733392,
+      "n": 42,
+      "orderStratum": "early",
+      "processWallMaximumMilliseconds": 31667.755,
+      "processWallMinimumMilliseconds": 19277.846,
+      "processWallP50Milliseconds": 22565.05,
+      "processWallP90Milliseconds": 31490.3006,
+      "processWallP95Milliseconds": 31570.3251,
+      "processWallP99Milliseconds": 31664.79849
+    },
+    {
+      "algorithmId": "A*-R",
+      "inclusiveLaneBodyMaximumMilliseconds": 28834.8814,
+      "inclusiveLaneBodyMinimumMilliseconds": 10917.7689,
+      "inclusiveLaneBodyP50Milliseconds": 21856.27215,
+      "inclusiveLaneBodyP90Milliseconds": 25427.06889,
+      "inclusiveLaneBodyP95Milliseconds": 28300.08219,
+      "inclusiveLaneBodyP99Milliseconds": 28812.21537,
+      "n": 42,
+      "orderStratum": "late",
+      "processWallMaximumMilliseconds": 43782.376,
+      "processWallMinimumMilliseconds": 25313.66,
+      "processWallP50Milliseconds": 37418.5085,
+      "processWallP90Milliseconds": 40832.5992,
+      "processWallP95Milliseconds": 43488.5696,
+      "processWallP99Milliseconds": 43758.37993
+    },
+    {
+      "algorithmId": "A*-R",
+      "inclusiveLaneBodyMaximumMilliseconds": 20398.9908,
+      "inclusiveLaneBodyMinimumMilliseconds": 4808.1867,
+      "inclusiveLaneBodyP50Milliseconds": 9402.10515,
+      "inclusiveLaneBodyP90Milliseconds": 18930.66599,
+      "inclusiveLaneBodyP95Milliseconds": 19154.3083,
+      "inclusiveLaneBodyP99Milliseconds": 20280.498504,
+      "n": 42,
+      "orderStratum": "middle",
+      "processWallMaximumMilliseconds": 55289.058,
+      "processWallMinimumMilliseconds": 19253.222,
+      "processWallP50Milliseconds": 23969.527,
+      "processWallP90Milliseconds": 34482.4531,
+      "processWallP95Milliseconds": 34589.7284,
+      "processWallP99Milliseconds": 46822.83885
+    },
+    {
+      "algorithmId": "BiA*-R",
+      "inclusiveLaneBodyMaximumMilliseconds": 20755.8259,
+      "inclusiveLaneBodyMinimumMilliseconds": 4697.5553,
+      "inclusiveLaneBodyP50Milliseconds": 9531.4801,
+      "inclusiveLaneBodyP90Milliseconds": 19545.46117,
+      "inclusiveLaneBodyP95Milliseconds": 19860.90724,
+      "inclusiveLaneBodyP99Milliseconds": 20450.266594,
+      "n": 42,
+      "orderStratum": "early",
+      "processWallMaximumMilliseconds": 34763.892,
+      "processWallMinimumMilliseconds": 19418.339,
+      "processWallP50Milliseconds": 25298.5785,
+      "processWallP90Milliseconds": 34591.5258,
+      "processWallP95Milliseconds": 34633.6835,
+      "processWallP99Milliseconds": 34727.01701
+    },
+    {
+      "algorithmId": "BiA*-R",
+      "inclusiveLaneBodyMaximumMilliseconds": 47694.7417,
+      "inclusiveLaneBodyMinimumMilliseconds": 14758.7261,
+      "inclusiveLaneBodyP50Milliseconds": 30708.37025,
+      "inclusiveLaneBodyP90Milliseconds": 38748.13012,
+      "inclusiveLaneBodyP95Milliseconds": 44331.57898,
+      "inclusiveLaneBodyP99Milliseconds": 47345.58406,
+      "n": 42,
+      "orderStratum": "late",
+      "processWallMaximumMilliseconds": 62011.112,
+      "processWallMinimumMilliseconds": 28366.764,
+      "processWallP50Milliseconds": 46634.4095,
+      "processWallP90Milliseconds": 52798.9959,
+      "processWallP95Milliseconds": 58537.78705,
+      "processWallP99Milliseconds": 61877.28472
+    },
+    {
+      "algorithmId": "BiA*-R",
+      "inclusiveLaneBodyMaximumMilliseconds": 27939.9059,
+      "inclusiveLaneBodyMinimumMilliseconds": 6065.4645,
+      "inclusiveLaneBodyP50Milliseconds": 12466.8033,
+      "inclusiveLaneBodyP90Milliseconds": 26212.52051,
+      "inclusiveLaneBodyP95Milliseconds": 26579.974375,
+      "inclusiveLaneBodyP99Milliseconds": 27446.597344,
+      "n": 42,
+      "orderStratum": "middle",
+      "processWallMaximumMilliseconds": 43607.2,
+      "processWallMinimumMilliseconds": 19362.403,
+      "processWallP50Milliseconds": 26931.2885,
+      "processWallP90Milliseconds": 40433.5976,
+      "processWallP95Milliseconds": 40664.9806,
+      "processWallP99Milliseconds": 42418.27872
+    },
+    {
+      "algorithmId": "C-FF",
+      "inclusiveLaneBodyMaximumMilliseconds": 17658.5853,
+      "inclusiveLaneBodyMinimumMilliseconds": 4272.1012,
+      "inclusiveLaneBodyP50Milliseconds": 8123.132,
+      "inclusiveLaneBodyP90Milliseconds": 15123.28268,
+      "inclusiveLaneBodyP95Milliseconds": 16536.15251,
+      "inclusiveLaneBodyP99Milliseconds": 17333.352677,
+      "n": 42,
+      "orderStratum": "early",
+      "processWallMaximumMilliseconds": 31650.817,
+      "processWallMinimumMilliseconds": 19276.272,
+      "processWallP50Milliseconds": 22621.033,
+      "processWallP90Milliseconds": 28624.1718,
+      "processWallP95Milliseconds": 31451.7178,
+      "processWallP99Milliseconds": 31631.08001
+    },
+    {
+      "algorithmId": "C-FF",
+      "inclusiveLaneBodyMaximumMilliseconds": 24578.9916,
+      "inclusiveLaneBodyMinimumMilliseconds": 7506.8663,
+      "inclusiveLaneBodyP50Milliseconds": 14412.2028,
+      "inclusiveLaneBodyP90Milliseconds": 22751.23447,
+      "inclusiveLaneBodyP95Milliseconds": 24282.332555,
+      "inclusiveLaneBodyP99Milliseconds": 24542.434237,
+      "n": 42,
+      "orderStratum": "late",
+      "processWallMaximumMilliseconds": 40615.791,
+      "processWallMinimumMilliseconds": 22368.95,
+      "processWallP50Milliseconds": 28534.1295,
+      "processWallP90Milliseconds": 37200.8189,
+      "processWallP95Milliseconds": 37780.76085,
+      "processWallP99Milliseconds": 40597.628
+    },
+    {
+      "algorithmId": "C-FF",
+      "inclusiveLaneBodyMaximumMilliseconds": 19890.6779,
+      "inclusiveLaneBodyMinimumMilliseconds": 4428.4339,
+      "inclusiveLaneBodyP50Milliseconds": 10645.11085,
+      "inclusiveLaneBodyP90Milliseconds": 15202.07459,
+      "inclusiveLaneBodyP95Milliseconds": 17582.395865,
+      "inclusiveLaneBodyP99Milliseconds": 19816.243671,
+      "n": 42,
+      "orderStratum": "middle",
+      "processWallMaximumMilliseconds": 34733.964,
+      "processWallMinimumMilliseconds": 19216.448,
+      "processWallP50Milliseconds": 25357.815,
+      "processWallP90Milliseconds": 28656.6573,
+      "processWallP95Milliseconds": 31593.1654,
+      "processWallP99Milliseconds": 34653.31659
+    },
+    {
+      "algorithmId": "D*L",
+      "inclusiveLaneBodyMaximumMilliseconds": 28060.5144,
+      "inclusiveLaneBodyMinimumMilliseconds": 5172.2562,
+      "inclusiveLaneBodyP50Milliseconds": 10347.3059,
+      "inclusiveLaneBodyP90Milliseconds": 19801.10017,
+      "inclusiveLaneBodyP95Milliseconds": 24553.379495,
+      "inclusiveLaneBodyP99Milliseconds": 26907.267466,
+      "n": 42,
+      "orderStratum": "early",
+      "processWallMaximumMilliseconds": 43630.936,
+      "processWallMinimumMilliseconds": 19173.252,
+      "processWallP50Milliseconds": 25772.563,
+      "processWallP90Milliseconds": 34633.7646,
+      "processWallP95Milliseconds": 40148.0326,
+      "processWallP99Milliseconds": 42378.85668
+    },
+    {
+      "algorithmId": "D*L",
+      "inclusiveLaneBodyMaximumMilliseconds": 99610.9039,
+      "inclusiveLaneBodyMinimumMilliseconds": 14612.2245,
+      "inclusiveLaneBodyP50Milliseconds": 32095.58445,
+      "inclusiveLaneBodyP90Milliseconds": 53657.215,
+      "inclusiveLaneBodyP95Milliseconds": 60128.01866,
+      "inclusiveLaneBodyP99Milliseconds": 98733.345681,
+      "n": 42,
+      "orderStratum": "late",
+      "processWallMaximumMilliseconds": 113079.905,
+      "processWallMinimumMilliseconds": 28289.719,
+      "processWallP50Milliseconds": 46591.82,
+      "processWallP90Milliseconds": 67638.2493,
+      "processWallP95Milliseconds": 73829.10845,
+      "processWallP99Milliseconds": 113057.51654
+    },
+    {
+      "algorithmId": "D*L",
+      "inclusiveLaneBodyMaximumMilliseconds": 49593.4196,
+      "inclusiveLaneBodyMinimumMilliseconds": 6514.5709,
+      "inclusiveLaneBodyP50Milliseconds": 14402.39255,
+      "inclusiveLaneBodyP90Milliseconds": 27270.09365,
+      "inclusiveLaneBodyP95Milliseconds": 29618.61327,
+      "inclusiveLaneBodyP99Milliseconds": 44793.897321,
+      "n": 42,
+      "orderStratum": "middle",
+      "processWallMaximumMilliseconds": 64790.751,
+      "processWallMinimumMilliseconds": 22315.151,
+      "processWallP50Milliseconds": 28576.28,
+      "processWallP90Milliseconds": 40641.4652,
+      "processWallP95Milliseconds": 43493.72275,
+      "processWallP99Milliseconds": 59757.33721
+    },
+    {
+      "algorithmId": "IDFF",
+      "inclusiveLaneBodyMaximumMilliseconds": 16745.3229,
+      "inclusiveLaneBodyMinimumMilliseconds": 5188.171,
+      "inclusiveLaneBodyP50Milliseconds": 9024.78465,
+      "inclusiveLaneBodyP90Milliseconds": 16081.17103,
+      "inclusiveLaneBodyP95Milliseconds": 16548.654115,
+      "inclusiveLaneBodyP99Milliseconds": 16684.225643,
+      "n": 42,
+      "orderStratum": "early",
+      "processWallMaximumMilliseconds": 31676.863,
+      "processWallMinimumMilliseconds": 19297.52,
+      "processWallP50Milliseconds": 25404.0055,
+      "processWallP90Milliseconds": 31553.3775,
+      "processWallP95Milliseconds": 31613.0571,
+      "processWallP99Milliseconds": 31655.99769
+    },
+    {
+      "algorithmId": "IDFF",
+      "inclusiveLaneBodyMaximumMilliseconds": 25806.5767,
+      "inclusiveLaneBodyMinimumMilliseconds": 8491.5795,
+      "inclusiveLaneBodyP50Milliseconds": 15559.9965,
+      "inclusiveLaneBodyP90Milliseconds": 18732.71176,
+      "inclusiveLaneBodyP95Milliseconds": 19293.241425,
+      "inclusiveLaneBodyP99Milliseconds": 23581.069845,
+      "n": 42,
+      "orderStratum": "late",
+      "processWallMaximumMilliseconds": 40517.346,
+      "processWallMinimumMilliseconds": 22446.854,
+      "processWallP50Milliseconds": 31449.978,
+      "processWallP90Milliseconds": 34210.2063,
+      "processWallP95Milliseconds": 34666.3205,
+      "processWallP99Milliseconds": 38121.31789
+    },
+    {
+      "algorithmId": "IDFF",
+      "inclusiveLaneBodyMaximumMilliseconds": 17088.5012,
+      "inclusiveLaneBodyMinimumMilliseconds": 5440.6809,
+      "inclusiveLaneBodyP50Milliseconds": 9336.0661,
+      "inclusiveLaneBodyP90Milliseconds": 15373.4907,
+      "inclusiveLaneBodyP95Milliseconds": 15985.836495,
+      "inclusiveLaneBodyP99Milliseconds": 16916.827025,
+      "n": 42,
+      "orderStratum": "middle",
+      "processWallMaximumMilliseconds": 31663.754,
+      "processWallMinimumMilliseconds": 19270.483,
+      "processWallP50Milliseconds": 23981.674,
+      "processWallP90Milliseconds": 31139.1852,
+      "processWallP95Milliseconds": 31516.62775,
+      "processWallP99Milliseconds": 31647.55982
+    },
+    {
+      "algorithmId": "LPA*",
+      "inclusiveLaneBodyMaximumMilliseconds": 27818.0909,
+      "inclusiveLaneBodyMinimumMilliseconds": 5230.97,
+      "inclusiveLaneBodyP50Milliseconds": 10479.495,
+      "inclusiveLaneBodyP90Milliseconds": 20571.54968,
+      "inclusiveLaneBodyP95Milliseconds": 24515.76608,
+      "inclusiveLaneBodyP99Milliseconds": 26592.451701,
+      "n": 42,
+      "orderStratum": "early",
+      "processWallMaximumMilliseconds": 43459.868,
+      "processWallMinimumMilliseconds": 19307.728,
+      "processWallP50Milliseconds": 25698.817,
+      "processWallP90Milliseconds": 34727.9003,
+      "processWallP95Milliseconds": 40412.92055,
+      "processWallP99Milliseconds": 42285.11796
+    },
+    {
+      "algorithmId": "LPA*",
+      "inclusiveLaneBodyMaximumMilliseconds": 97688.1492,
+      "inclusiveLaneBodyMinimumMilliseconds": 14964.7444,
+      "inclusiveLaneBodyP50Milliseconds": 32146.90725,
+      "inclusiveLaneBodyP90Milliseconds": 53830.14921,
+      "inclusiveLaneBodyP95Milliseconds": 60434.594995,
+      "inclusiveLaneBodyP99Milliseconds": 97124.491286,
+      "n": 42,
+      "orderStratum": "late",
+      "processWallMaximumMilliseconds": 113157.241,
+      "processWallMinimumMilliseconds": 28334.182,
+      "processWallP50Milliseconds": 46671.3595,
+      "processWallP90Milliseconds": 67846.6836,
+      "processWallP95Milliseconds": 76544.27545,
+      "processWallP99Milliseconds": 111980.00185
+    },
+    {
+      "algorithmId": "LPA*",
+      "inclusiveLaneBodyMaximumMilliseconds": 48421.9065,
+      "inclusiveLaneBodyMinimumMilliseconds": 6374.7424,
+      "inclusiveLaneBodyP50Milliseconds": 14182.83755,
+      "inclusiveLaneBodyP90Milliseconds": 27507.19277,
+      "inclusiveLaneBodyP95Milliseconds": 28715.738615,
+      "inclusiveLaneBodyP99Milliseconds": 43381.644193,
+      "n": 42,
+      "orderStratum": "middle",
+      "processWallMaximumMilliseconds": 62274.549,
+      "processWallMinimumMilliseconds": 19397.62,
+      "processWallP50Milliseconds": 28563.209,
+      "processWallP90Milliseconds": 40664.9832,
+      "processWallP95Milliseconds": 43610.83395,
+      "processWallP99Milliseconds": 57076.77892
+    }
+  ],
+  "pooledOrderStrata": [
+    {
+      "FCounts": {
+        "1": 72,
+        "25": 54,
+        "81": 54,
+        "9": 72
+      },
+      "GCounts": {
+        "64": 216,
+        "96": 36
+      },
+      "NCounts": {
+        "128": 72,
+        "32": 108,
+        "64": 72
+      },
+      "inclusiveLaneBodyMaximumMilliseconds": 28060.5144,
+      "inclusiveLaneBodyMinimumMilliseconds": 4206.8814,
+      "inclusiveLaneBodyP50Milliseconds": 9317.8041,
+      "inclusiveLaneBodyP90Milliseconds": 19199.32015,
+      "inclusiveLaneBodyP95Milliseconds": 19765.970785,
+      "inclusiveLaneBodyP99Milliseconds": 25034.0321,
+      "n": 252,
+      "orderStratum": "early",
+      "processWallMaximumMilliseconds": 43630.936,
+      "processWallMinimumMilliseconds": 19173.252,
+      "processWallP50Milliseconds": 25325.7595,
+      "processWallP90Milliseconds": 34506.0711,
+      "processWallP95Milliseconds": 34652.3197,
+      "processWallP99Milliseconds": 40585.6786,
+      "stressCount": 0
+    },
+    {
+      "FCounts": {
+        "1": 54,
+        "25": 72,
+        "81": 72,
+        "9": 54
+      },
+      "GCounts": {
+        "128": 72,
+        "96": 180
+      },
+      "NCounts": {
+        "128": 72,
+        "32": 108,
+        "64": 72
+      },
+      "inclusiveLaneBodyMaximumMilliseconds": 49593.4196,
+      "inclusiveLaneBodyMinimumMilliseconds": 4428.4339,
+      "inclusiveLaneBodyP50Milliseconds": 11693.239,
+      "inclusiveLaneBodyP90Milliseconds": 23640.05087,
+      "inclusiveLaneBodyP95Milliseconds": 26884.696935,
+      "inclusiveLaneBodyP99Milliseconds": 36990.338911,
+      "n": 252,
+      "orderStratum": "middle",
+      "processWallMaximumMilliseconds": 64790.751,
+      "processWallMinimumMilliseconds": 19216.448,
+      "processWallP50Milliseconds": 25523.608,
+      "processWallP90Milliseconds": 37682.1485,
+      "processWallP95Milliseconds": 40659.7066,
+      "processWallP99Milliseconds": 53873.84574,
+      "stressCount": 0
+    },
+    {
+      "FCounts": {
+        "1": 36,
+        "25": 36,
+        "81": 144,
+        "9": 36
+      },
+      "GCounts": {
+        "128": 252
+      },
+      "NCounts": {
+        "128": 180,
+        "64": 72
+      },
+      "inclusiveLaneBodyMaximumMilliseconds": 99610.9039,
+      "inclusiveLaneBodyMinimumMilliseconds": 7506.8663,
+      "inclusiveLaneBodyP50Milliseconds": 21856.27215,
+      "inclusiveLaneBodyP90Milliseconds": 38811.20256,
+      "inclusiveLaneBodyP95Milliseconds": 49446.23734,
+      "inclusiveLaneBodyP99Milliseconds": 96880.374458,
+      "n": 252,
+      "orderStratum": "late",
+      "processWallMaximumMilliseconds": 113157.241,
+      "processWallMinimumMilliseconds": 22368.95,
+      "processWallP50Milliseconds": 37426.429,
+      "processWallP90Milliseconds": 52798.9959,
+      "processWallP95Milliseconds": 63289.04405,
+      "processWallP99Milliseconds": 111628.21877,
+      "stressCount": 108
+    }
+  ],
+  "recentLast100": {
+    "inclusiveLaneBodyMaximumMilliseconds": 99610.9039,
+    "inclusiveLaneBodyMinimumMilliseconds": 13103.3128,
+    "inclusiveLaneBodyP50Milliseconds": 28807.2399,
+    "inclusiveLaneBodyP90Milliseconds": 43147.21289,
+    "inclusiveLaneBodyP95Milliseconds": 60413.436905,
+    "inclusiveLaneBodyP99Milliseconds": 97707.376747,
+    "n": 100,
+    "processWallMaximumMilliseconds": 113157.241,
+    "processWallMinimumMilliseconds": 28341.546,
+    "processWallP50Milliseconds": 43536.3005,
+    "processWallP90Milliseconds": 58836.2687,
+    "processWallP95Milliseconds": 74133.7375,
+    "processWallP99Milliseconds": 113080.67836,
+    "window": "last-100"
+  },
+  "recentLast76": {
+    "inclusiveLaneBodyMaximumMilliseconds": 97470.518,
+    "inclusiveLaneBodyMinimumMilliseconds": 13103.3128,
+    "inclusiveLaneBodyP50Milliseconds": 27198.0899,
+    "inclusiveLaneBodyP90Milliseconds": 38784.1536,
+    "inclusiveLaneBodyP95Milliseconds": 42231.923875,
+    "inclusiveLaneBodyP99Milliseconds": 56605.159475,
+    "n": 76,
+    "processWallMaximumMilliseconds": 113025.299,
+    "processWallMinimumMilliseconds": 28341.546,
+    "processWallP50Milliseconds": 42189.364,
+    "processWallP90Milliseconds": 52787.8995,
+    "processWallP95Milliseconds": 55763.08825,
+    "processWallP99Milliseconds": 72426.29225,
+    "window": "last-76"
+  },
+  "schema": "gate14re-me-runtime-order-and-tail-sensitivity-v2",
+  "trailingHourlyCompletionWindows": [
+    {
+      "FCounts": {
+        "81": 81
+      },
+      "GCounts": {
+        "128": 81
+      },
+      "NCounts": {
+        "128": 81
+      },
+      "hoursBeforeFinal": 0,
+      "laneCompletions": 81,
+      "windowEndUtc": "2026-10-19T22:04:59.319396Z",
+      "windowStartUtc": "2026-10-19T21:04:59.319396Z"
+    },
+    {
+      "FCounts": {
+        "25": 18,
+        "81": 45,
+        "9": 17
+      },
+      "GCounts": {
+        "128": 80
+      },
+      "NCounts": {
+        "128": 80
+      },
+      "hoursBeforeFinal": 1,
+      "laneCompletions": 80,
+      "windowEndUtc": "2026-10-19T21:04:59.319396Z",
+      "windowStartUtc": "2026-10-19T20:04:59.319396Z"
+    },
+    {
+      "FCounts": {
+        "1": 36,
+        "25": 19,
+        "81": 36,
+        "9": 19
+      },
+      "GCounts": {
+        "128": 110
+      },
+      "NCounts": {
+        "128": 19,
+        "32": 19,
+        "64": 72
+      },
+      "hoursBeforeFinal": 2,
+      "laneCompletions": 110,
+      "windowEndUtc": "2026-10-19T20:04:59.319396Z",
+      "windowStartUtc": "2026-10-19T19:04:59.319396Z"
+    },
+    {
+      "FCounts": {
+        "1": 28,
+        "25": 35,
+        "81": 18,
+        "9": 36
+      },
+      "GCounts": {
+        "128": 53,
+        "96": 64
+      },
+      "NCounts": {
+        "128": 64,
+        "32": 53
+      },
+      "hoursBeforeFinal": 3,
+      "laneCompletions": 117,
+      "windowEndUtc": "2026-10-19T19:04:59.319396Z",
+      "windowStartUtc": "2026-10-19T18:04:59.319396Z"
+    },
+    {
+      "FCounts": {
+        "1": 27,
+        "25": 36,
+        "81": 36,
+        "9": 36
+      },
+      "GCounts": {
+        "96": 135
+      },
+      "NCounts": {
+        "128": 8,
+        "32": 55,
+        "64": 72
+      },
+      "hoursBeforeFinal": 4,
+      "laneCompletions": 135,
+      "windowEndUtc": "2026-10-19T18:04:59.319396Z",
+      "windowStartUtc": "2026-10-19T17:04:59.319396Z"
+    },
+    {
+      "FCounts": {
+        "1": 35,
+        "25": 29,
+        "81": 36,
+        "9": 18
+      },
+      "GCounts": {
+        "64": 101,
+        "96": 17
+      },
+      "NCounts": {
+        "128": 72,
+        "32": 17,
+        "64": 29
+      },
+      "hoursBeforeFinal": 5,
+      "laneCompletions": 118,
+      "windowEndUtc": "2026-10-19T17:04:59.319396Z",
+      "windowStartUtc": "2026-10-19T16:04:59.319396Z"
+    }
+  ],
+  "withinSuperblockPositions": [
+    {
+      "inclusiveLaneBodyMaximumMilliseconds": 99610.9039,
+      "inclusiveLaneBodyMinimumMilliseconds": 4422.8429,
+      "inclusiveLaneBodyP50Milliseconds": 14161.84195,
+      "inclusiveLaneBodyP90Milliseconds": 29386.49825,
+      "inclusiveLaneBodyP95Milliseconds": 35811.9534,
+      "inclusiveLaneBodyP99Milliseconds": 86788.35205,
+      "n": 126,
+      "processWallMaximumMilliseconds": 113157.241,
+      "processWallMinimumMilliseconds": 19173.252,
+      "processWallP50Milliseconds": 28384.007,
+      "processWallP90Milliseconds": 43774.5165,
+      "processWallP95Milliseconds": 49579.303,
+      "processWallP99Milliseconds": 101767.326,
+      "withinSuperblockPosition": 1
+    },
+    {
+      "inclusiveLaneBodyMaximumMilliseconds": 60737.6055,
+      "inclusiveLaneBodyMinimumMilliseconds": 4265.3189,
+      "inclusiveLaneBodyP50Milliseconds": 13679.9644,
+      "inclusiveLaneBodyP90Milliseconds": 30790.59625,
+      "inclusiveLaneBodyP95Milliseconds": 38594.49745,
+      "inclusiveLaneBodyP99Milliseconds": 50785.082575,
+      "n": 126,
+      "processWallMaximumMilliseconds": 76831.728,
+      "processWallMinimumMilliseconds": 19270.483,
+      "processWallP50Milliseconds": 28469.4245,
+      "processWallP90Milliseconds": 45113.4895,
+      "processWallP95Milliseconds": 52933.76775,
+      "processWallP99Milliseconds": 66389.21525,
+      "withinSuperblockPosition": 2
+    },
+    {
+      "inclusiveLaneBodyMaximumMilliseconds": 55029.2406,
+      "inclusiveLaneBodyMinimumMilliseconds": 4558.0206,
+      "inclusiveLaneBodyP50Milliseconds": 14914.1811,
+      "inclusiveLaneBodyP90Milliseconds": 29268.3806,
+      "inclusiveLaneBodyP95Milliseconds": 33615.7819,
+      "inclusiveLaneBodyP99Milliseconds": 46466.509,
+      "n": 126,
+      "processWallMaximumMilliseconds": 70739.147,
+      "processWallMinimumMilliseconds": 19275.516,
+      "processWallP50Milliseconds": 28612.0655,
+      "processWallP90Milliseconds": 43660.0455,
+      "processWallP95Milliseconds": 48867.51975,
+      "processWallP99Milliseconds": 61773.6875,
+      "withinSuperblockPosition": 3
+    },
+    {
+      "inclusiveLaneBodyMaximumMilliseconds": 54677.3954,
+      "inclusiveLaneBodyMinimumMilliseconds": 4272.1012,
+      "inclusiveLaneBodyP50Milliseconds": 14574.2032,
+      "inclusiveLaneBodyP90Milliseconds": 29450.7087,
+      "inclusiveLaneBodyP95Milliseconds": 34434.7655,
+      "inclusiveLaneBodyP99Milliseconds": 48027.2143,
+      "n": 126,
+      "processWallMaximumMilliseconds": 71082.677,
+      "processWallMinimumMilliseconds": 19335.082,
+      "processWallP50Milliseconds": 28510.6725,
+      "processWallP90Milliseconds": 43648.8295,
+      "processWallP95Milliseconds": 49541.0545,
+      "processWallP99Milliseconds": 62127.08775,
+      "withinSuperblockPosition": 4
+    },
+    {
+      "inclusiveLaneBodyMaximumMilliseconds": 60396.3754,
+      "inclusiveLaneBodyMinimumMilliseconds": 4322.9281,
+      "inclusiveLaneBodyP50Milliseconds": 13275.1572,
+      "inclusiveLaneBodyP90Milliseconds": 30506.02535,
+      "inclusiveLaneBodyP95Milliseconds": 34445.81695,
+      "inclusiveLaneBodyP99Milliseconds": 51203.557175,
+      "n": 126,
+      "processWallMaximumMilliseconds": 73991.738,
+      "processWallMinimumMilliseconds": 19216.448,
+      "processWallP50Milliseconds": 28475.5675,
+      "processWallP90Milliseconds": 45150.1235,
+      "processWallP95Milliseconds": 49670.63975,
+      "processWallP99Milliseconds": 64912.5615,
+      "withinSuperblockPosition": 5
+    },
+    {
+      "inclusiveLaneBodyMaximumMilliseconds": 97470.518,
+      "inclusiveLaneBodyMinimumMilliseconds": 4206.8814,
+      "inclusiveLaneBodyP50Milliseconds": 14183.48225,
+      "inclusiveLaneBodyP90Milliseconds": 34554.08595,
+      "inclusiveLaneBodyP95Milliseconds": 38517.981625,
+      "inclusiveLaneBodyP99Milliseconds": 85710.368875,
+      "n": 126,
+      "processWallMaximumMilliseconds": 113025.299,
+      "processWallMinimumMilliseconds": 19231.983,
+      "processWallP50Milliseconds": 28564.9125,
+      "processWallP90Milliseconds": 49794.9825,
+      "processWallP95Milliseconds": 52701.0375,
+      "processWallP99Milliseconds": 99701.4315,
+      "withinSuperblockPosition": 6
+    }
+  ]
+}

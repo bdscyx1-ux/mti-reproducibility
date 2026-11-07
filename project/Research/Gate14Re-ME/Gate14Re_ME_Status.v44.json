@@ -1,0 +1,80 @@
+{
+  "schema": "gate14re-me-status-v44",
+  "studyId": "Gate14Re-ME",
+  "status": "ATTEMPT_008_LPA_STAR_ORACLE_MISMATCH_FROZEN_LPA_CORRECTED_FAIRNESS_REBOUND_AND_READINESS_PASS_QUALIFICATION_EXECUTION_AUTHORIZED",
+  "version": 44,
+  "updatedAtUtc": "2026-10-18T02:44:02.9931416Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v43.json",
+    "sha256": "f7e4b63b9ec5e41da345b1451cc6a6236819f22e4f42b7f55e00300894209bda",
+    "retained": true,
+    "reclassified": false
+  },
+  "retainedFailedExecution": {
+    "attemptId": "load-qualification-execution-attempt-008",
+    "failureFreezeRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-008/failure-freeze-receipt.v1.json",
+    "failureFreezeSha256": "7a8a0d0dd3e836dd05f65809119f7be0c1b26d47f916d4df155e025488523ef2",
+    "failureReceiptRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-006/_control/failure-receipt.v2.json",
+    "failureReceiptSha256": "be052ca704444d49bafff079ce5a44fd4a555f53cbe3a763ae1c4e7d0971023d",
+    "failedMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-006",
+    "failedDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-006",
+    "failureReasonCode": "ORACLE_CORRECTNESS_MISMATCH",
+    "failedProcessOrdinal": 187,
+    "acceptedProcessLedgerRows": 187,
+    "failureLedgerRows": 1,
+    "replacementLedgerRows": 0,
+    "supervisorNaturalExitCode": 1,
+    "modifiedOrReclassified": false,
+    "reused": false
+  },
+  "lpaStarOracleCorrectnessAndFairnessCorrigendum": {
+    "attemptId": "qualification-lpa-star-oracle-correctness-corrigendum-attempt-001",
+    "corrigendumPassReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-lpa-star-oracle-correctness-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+    "corrigendumPassReceiptSha256": "ba030e681a7e21207c1369bff5964fa6ee31cc0c16f15ddd78afd88c75cfd932",
+    "fairnessCorrigendumPassReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-fairness-binding-lpa-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+    "fairnessCorrigendumPassReceiptSha256": "68e0206a5436a31c2b0dff0a714803963d26601fb61d3eda87bceac8490250fe",
+    "lpaStarPlannerSha256": "948bdc4019e96776c8d382f381c159041038ac191f4b6000debd94f7daf8a82a",
+    "compileReceiptSha256": "5cb0bb6bf8fbf39dc9ace33a0ca52e7eb1292fd31b51c72f101c965bada724ad",
+    "fairnessBindingV12Sha256": "ed7d45a47ee5cc1882e0cfe57daf0735be73f0ee84f50f45e4724726d96e5291",
+    "supervisorV37Sha256": "9235bb2f8703b93a72504f68bbc0a2550ff7ccac478911bf6c7faabe61326e16",
+    "executionContractV39Sha256": "b66abe8064a65399c64e0cf0d662b92f41676d75a70a89cf7afae0b1b4917c7d",
+    "implementationManifestV39Sha256": "2adeb1f2d85a6c5f0fb9617abe8e8ad4e66745e1706aa3db5d9c91c83749cb95",
+    "compiledEditorAssemblySha256": "019d3268eaa0b4ba0c991fc2ba8650839cc6e0ec4f036898ce1012a0afca76d4",
+    "compiledRuntimeAssemblySha256": "392c791d5b59460b9460d5ede02f1e1de0265221a99091efed13c70c8772b059",
+    "scientificDesignChanged": false,
+    "sixAlgorithmSetChanged": false,
+    "loadGateChanged": false,
+    "metricDefinitionsChanged": false,
+    "deliveryContractChanged": false,
+    "passed": true
+  },
+  "executionReadiness": {
+    "attemptId": "qualification-execution-readiness-recheck-attempt-014",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-014/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "d0ca82b0f9f0e5d4a743c015e9a29ca5d0ea0565479d59c13b0076a4187bbe7c",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-014/freeze-manifest.v1.json",
+    "freezeManifestSha256": "60275f2891dae57cff15e7d079a164cb5579c7819ebb14b7fffe44a23ca48bee",
+    "passed": true
+  },
+  "nextExecution": {
+    "evidenceAttemptId": "load-qualification-execution-attempt-009",
+    "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-007",
+    "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-007",
+    "expectedFreshUnityProcesses": 1147,
+    "strictSerial": true,
+    "zeroReplacementFailStop": true,
+    "minimalParentLaunchCommandRequired": true,
+    "withinAttemptRetryResumeTopUpMergeSkipReorderOrParallelAuthorized": false
+  },
+  "authorizationState": {
+    "technicalRepairAndFreshAttemptLoopAuthorizedUntilQualificationExecutionPass": true,
+    "qualificationExecutionAuthorized": true,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "crossAlgorithmEffectInterpretationAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Create one exact-hash execution authorization for execution attempt-009 bound to the fresh attempt-007 measured and delivery roots, then invoke its frozen launcher exactly once from a minimal parent command line that contains no supervisor filename. Preserve any technical failure before a later forward-only repair and fresh attempt; stop only at qualification execution terminal PASS."
+}

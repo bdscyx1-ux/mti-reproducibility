@@ -1,0 +1,376 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006",
+  "status": "PASS_OFFLINE_CLOSURE_ADJUDICATION_INPUT_SCHEMA_V2_AND_PLANNING_BINDING_V2_ELIGIBLE_FOR_ADOPTION",
+  "adjudicatedAtUtc": "2026-10-17T13:20:22.0786957Z",
+  "passed": true,
+  "sourceAttempt": {
+    "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-004",
+    "retainedOutcome": "FAILED_CLOSED_INPUT_SCHEMA_COMPATIBILITY_ATTEMPT_004",
+    "reclassified": false,
+    "modified": false,
+    "deleted": false,
+    "beforeFileCount": 55,
+    "afterFileCount": 55,
+    "beforeContentDigestSha256": "70d266bed18b2069106e6356eb405c1e725d81b3cede8772b5092e721c1b783c",
+    "afterContentDigestSha256": "70d266bed18b2069106e6356eb405c1e725d81b3cede8772b5092e721c1b783c",
+    "directoriesUnchanged": true,
+    "allFilesReadOnly": true
+  },
+  "retainedAttempt005": {
+    "authorizationId": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-005",
+    "retainedOutcome": "FAILED_CLOSED_OFFLINE_CLOSURE_ADJUDICATION_ATTEMPT_005",
+    "reclassified": false,
+    "modified": false,
+    "deleted": false,
+    "beforeFileCount": 6,
+    "afterFileCount": 6,
+    "beforeContentDigestSha256": "3c9b8289884c055df9457a72b7d2f4e1a4d5333c581ffd2602da4ac626aa2e4d",
+    "afterContentDigestSha256": "3c9b8289884c055df9457a72b7d2f4e1a4d5333c581ffd2602da4ac626aa2e4d",
+    "directoriesUnchanged": true,
+    "allFilesReadOnly": true,
+    "failureReceiptSha256": "adc4072cfb36e8f4b2b78c77a6a4dd72faea0570284c89d064c944c06f6741fe",
+    "statusV25Sha256": "90c102e62deccd7af45e5208cdd03baf1981bd8ccf3b3b9c22cf46d07ba95a9b"
+  },
+  "sourceEvidenceChecks": {
+    "authorizationPassed": true,
+    "stageContractPassed": true,
+    "sourceFreezeBindingsPassed": true,
+    "terminalFailureReceiptPreserved": true,
+    "terminalEvidenceManifestPassed": true,
+    "statusV24Preserved": true,
+    "attempt005FailurePreserved": true,
+    "statusV25Preserved": true,
+    "soleAttempt005HashConstantCorrected": true
+  },
+  "authorizedCorrection": {
+    "field": "expectedUnityReceiptSha256",
+    "attempt005IncorrectSha256": "47ec9b695010ceb46e9d4422eaacdc03ab75afec75d3f19fb2618840c488790663",
+    "correctedSha256": "47ec9b695010ceb46e9d4422eaacdc03ab75afec75d3f19fb261884b5022f23e",
+    "scientificEvidencePredicateRegionUnchanged": true,
+    "scientificEvidencePredicateRegionSha256": "39a25448a93b9de3c4a7fb25d2f9330eeca527fac930753fe114c5dd2adcf7cc"
+  },
+  "schemaCompatibility": {
+    "unityTerminalReceiptPassed": true,
+    "authorizationHeaderPassed": true,
+    "trustedIdentityRuleHeaderPassed": true,
+    "planningBindingHeaderPassed": true,
+    "retainedSchemaKnownAnswerPassed": true,
+    "sourceAndEvidenceBindingsPassed": true,
+    "jsonUtilitySerializedTopology": true,
+    "jsonUtilityRoundTripPreservedTopology": true,
+    "validatorActuallyInvoked": true,
+    "matchingTopologyPassed": true,
+    "missingTopologyFailedForFrozenReason": true,
+    "mismatchedTopologyFailedForFrozenReason": true,
+    "frozenFailureReason": "Event-group topology must match the input context."
+  },
+  "trustedIdentity": {
+    "trustedRuleSha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+    "timestampComparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "timestampKnownAnswerReceiptSha256": "ad64fb2bce32f2e6206f6f1f80baa30f273be212075603ee631f61b560cc1b63",
+    "prelaunch": {
+      "phase": "EXTERNAL_PRELAUNCH",
+      "trustedIdentityPassed": true,
+      "fullFileSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+      "independentHashMethodsAgree": true,
+      "chunkCount": 547,
+      "timestampsRecomputed": {
+        "creationTimeUtc": {
+          "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "trusted": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "observed": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "bothParsedUniquely": true,
+          "sameUtcInstant": true,
+          "comparisonAccepted": true,
+          "failClosed": false,
+          "failureCode": null,
+          "comparisonBasis": "UTC_TICKS"
+        },
+        "lastWriteTimeUtc": {
+          "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "trusted": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "observed": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "bothParsedUniquely": true,
+          "sameUtcInstant": true,
+          "comparisonAccepted": true,
+          "failClosed": false,
+          "failureCode": null,
+          "comparisonBasis": "UTC_TICKS"
+        }
+      }
+    },
+    "liveConcurrent": {
+      "phase": "EXTERNAL_WHILE_AUTHORIZED_PID_ALIVE",
+      "trustedIdentityPassed": true,
+      "fullFileSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+      "independentHashMethodsAgree": true,
+      "chunkCount": 547,
+      "timestampsRecomputed": {
+        "creationTimeUtc": {
+          "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "trusted": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "observed": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "bothParsedUniquely": true,
+          "sameUtcInstant": true,
+          "comparisonAccepted": true,
+          "failClosed": false,
+          "failureCode": null,
+          "comparisonBasis": "UTC_TICKS"
+        },
+        "lastWriteTimeUtc": {
+          "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "trusted": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "observed": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "bothParsedUniquely": true,
+          "sameUtcInstant": true,
+          "comparisonAccepted": true,
+          "failClosed": false,
+          "failureCode": null,
+          "comparisonBasis": "UTC_TICKS"
+        }
+      }
+    },
+    "postExit": {
+      "phase": "EXTERNAL_POST_EXIT",
+      "trustedIdentityPassed": true,
+      "fullFileSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+      "independentHashMethodsAgree": true,
+      "chunkCount": 547,
+      "timestampsRecomputed": {
+        "creationTimeUtc": {
+          "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "trusted": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "observed": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "bothParsedUniquely": true,
+          "sameUtcInstant": true,
+          "comparisonAccepted": true,
+          "failClosed": false,
+          "failureCode": null,
+          "comparisonBasis": "UTC_TICKS"
+        },
+        "lastWriteTimeUtc": {
+          "trustedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "observedOriginalText": "2024-06-11T11:26:54.0000000Z",
+          "trusted": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "observed": {
+            "originalText": "2024-06-11T11:26:54.0000000Z",
+            "parsed": true,
+            "uniqueParse": true,
+            "successfulFormatCount": 1,
+            "matchedFormat": "yyyy-MM-dd'T'HH:mm:ss.fffffffK",
+            "normalizedUtc": "2024-06-11T11:26:54.0000000Z",
+            "utcTicks": 638537020140000000,
+            "sourceOffset": "00:00:00",
+            "failureCode": null
+          },
+          "bothParsedUniquely": true,
+          "sameUtcInstant": true,
+          "comparisonAccepted": true,
+          "failClosed": false,
+          "failureCode": null,
+          "comparisonBasis": "UTC_TICKS"
+        }
+      }
+    },
+    "threePhaseExternalIdentityStable": true,
+    "inProcessStructuralIdentityStableAcrossHold": true,
+    "inProcessFileReadHashesAuthoritative": false
+  },
+  "processCompositeIdentity": {
+    "processId": 76796,
+    "launchCreationTimeUtc": "2026-10-17T12:35:43.9143290Z",
+    "readyProcessStartTimeUtc": "2026-10-17T12:35:43.9143297Z",
+    "startTimeDeltaTicks": 7,
+    "startTimeToleranceTicks": 10000,
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "executeMethod": "DDM.Research.Editor.InputSchemaCorrigendumAttempt004.Gate14ReMEInputSchemaCompatibilitySelfCheckV2.Run",
+    "isolatedProjectRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-004/isolated-unity-project",
+    "commandLineBound": true,
+    "unityInvocationCount": 1,
+    "naturalExitCode": 0,
+    "forcedTerminationSent": false
+  },
+  "postScientificCleanupFailure": {
+    "scientificReceiptCompletedAtUtc": "2026-10-17T12:36:24.3643394Z",
+    "postExitFingerprintCapturedAtUtc": "2026-10-17T12:36:28.2389923Z",
+    "failureRecordedAtUtc": "2026-10-17T12:36:28.4387659Z",
+    "chronologyPassed": true,
+    "frozenFailureLine": 386,
+    "frozenCallerLine": 705,
+    "exactFailure": "The property 'Sum' cannot be found on this object. Verify that the property exists.",
+    "LibraryAbsentAfterAuthorizedCleanup": true,
+    "TempAbsentAfterAuthorizedCleanup": true,
+    "LogsPresentAndEmptyAtFailure": true,
+    "objAbsent": true,
+    "UserSettingsRetained": true,
+    "emptyPipelineMeasureObjectReturnedNull": true,
+    "failureClassification": "POST_RESULT_EMPTY_DIRECTORY_CACHE_SIZE_ACCOUNTING_ONLY"
+  },
+  "retainedEvidence": {
+    "attempt001": {
+      "fileCount": 6,
+      "contentDigestSha256": "f8401239543226c4b96d89b08db2150e7e578b55afc53e7f80aaa7062fd03fb3",
+      "allReadOnly": true
+    },
+    "attempt002": {
+      "fileCount": 14,
+      "contentDigestSha256": "6feaa2fa863bf1546e5e7d7fe6367ad4da605b7318936e4c0189baa7ab33f9fc",
+      "allReadOnly": true
+    },
+    "attempt003": {
+      "fileCount": 15,
+      "contentDigestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef",
+      "allReadOnly": true
+    },
+    "timestampComparatorAttempt007": {
+      "fileCount": 15,
+      "contentDigestSha256": "cfe7185263dcc343bbf143291246d1ca2e68b050f328d271d8770e2e215bf9f5",
+      "allReadOnly": true
+    }
+  },
+  "candidateAdoption": {
+    "inputSchemaV2": {
+      "adopted": true,
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    "planningSchemaBindingV2": {
+      "adopted": true,
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    }
+  },
+  "scientificBoundary": {
+    "offlineAdjudicatorInvocations": 1,
+    "unityInvocations": 0,
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "nextAuthorizationRequired": "A new separate authorization is required before qualification planning freeze, schedule/input/anonymous-map generation, measured-root creation, planner or algorithm-lane execution, formal collection, analysis, ranking or winner adjudication."
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "diagnosisId": "gate13r-36h-v16-pilot-preroot-free-memory-race-v1",
+  "recordedAtUtc": "2026-10-08T06:09:29.0664210Z",
+  "status": "PRE-ROOT-PREFLIGHT-REJECTED-NO-PILOT-STARTED",
+  "observed": {
+    "requiredFreePhysicalMemoryBytes": 17179869184,
+    "observedFreePhysicalMemoryBytes": 17105993728,
+    "shortfallBytes": 73875456,
+    "shortfallMiB": 70.453,
+    "pilotRootCreated": false,
+    "executionReceiptCreated": false,
+    "warmupBlocksStarted": 0,
+    "measuredBlocksStarted": 0,
+    "formalRootCreated": false
+  },
+  "cause": "Free physical memory fluctuated below the frozen 16 GiB threshold between the external three-sample readiness observation and the pilot orchestrator's authoritative launch preflight.",
+  "classification": "environmental-preflight-race-before-experiment-root",
+  "scientificInterpretation": "No pilot attempt or experimental observation exists. The sole authorized NON-FORMAL pilot remains unconsumed because the fail-closed rejection occurred before creation of the pilot root and before any Unity workload.",
+  "repairBoundary": {
+    "allowed": "A versioned non-invasive launch wrapper may require three consecutive passing samples and immediately invoke the unchanged frozen v16 pilot orchestrator in the same PowerShell host.",
+    "forbidden": [
+      "lowering the 16 GiB threshold",
+      "terminating user or system processes",
+      "trimming working sets",
+      "flushing caches",
+      "changing the 74-campaign matrix",
+      "changing the 10 percent precision target",
+      "changing the four-lane execution design",
+      "creating or authorizing a formal campaign"
+    ]
+  },
+  "bindings": {
+    "pilotOrchestratorRelativePath": "Research/Run-Gate13R36hConcurrencyPilotV16.ps1",
+    "pilotOrchestratorSha256": "a783cc0326d9f5e6c550a61afeb1dbf8799dffe4666ed5ad7408273de13d82a4",
+    "prePilotAuditRelativePath": "Research/Verification/Gate13R_36h_10pct_4Lane/v16/ValidationOnlyPrePilotAudit.summary.json",
+    "prePilotAuditSha256": "a61cd65f423f46ebe0bf64183768b853d13c4c4aac49f8372c53ffe64373fd92"
+  },
+  "formalCampaign": false
+}

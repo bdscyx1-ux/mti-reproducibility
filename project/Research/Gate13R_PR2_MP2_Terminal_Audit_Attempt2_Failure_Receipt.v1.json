@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr2-mp2-terminal-audit-attempt2-failure-v1",
+  "savedAtUtc": "2026-10-09T06:43:53Z",
+  "savedAtAsiaShanghai": "2026-10-09T14:43:53+08:00",
+  "status": "FAILED-PRESERVED-AUDIT-PREDICATE-ONLY",
+  "script": {
+    "relativePath": "Research/Audit-Gate13RPR2MP2TerminalConsistencyV2.py",
+    "sha256": "d451714d84bfc32d4094bb144d0f2670791a5da565068f3749f80e65e96a26e5"
+  },
+  "failedAudit": {
+    "relativePath": "Research/Gate13R_PR2_MP2_Terminal_Consistency_Audit.v2.json",
+    "sha256": "b14f405b68113d263fa2db448a47362c9f44b587ce39053ac828fcb8a864a1be"
+  },
+  "failureStage": "AUTHORIZATION-BOUNDARY-TEXT-SENTINEL",
+  "reasonCode": "NONEXISTENT-LITERAL-SENTINEL-IN-PLAN-AND-CHECKPOINT",
+  "reason": "The audit required exact English uppercase sentinel strings in the Markdown plan/checkpoint although those documents already expressed the same frozen boundary in their actual Chinese text and the machine-readable readiness checkpoint carried the exact authorization booleans and nextAction token.",
+  "verifiedPassingComponents": {
+    "selectedArtifacts": "64/64",
+    "validationTree": "216 files / 104922700 bytes / exact tree hash",
+    "runLedger": "8 entries / trusted hash chain / input identities current",
+    "formalDesign": "74 campaigns / 3552 processes / 10176 samples / schedule hashes exact",
+    "formalTargetsAbsent": true,
+    "unityEditorProcesses": 0,
+    "unityProjectLockAbsent": true
+  },
+  "impact": {
+    "experimentalDataAffected": false,
+    "frozenUpstreamAffected": false,
+    "planOrCheckpointModified": false,
+    "unityLaunched": false,
+    "formalAttempt3Started": false
+  },
+  "repairScope": "Create a versioned V3 audit that validates the existing plan/checkpoint wording and machine-readable readiness fields instead of requiring invented literal sentinels."
+}

@@ -1,0 +1,63 @@
+{
+    "schemaVersion":  1,
+    "telemetryKind":  "gate13r-pr2-mp1-external-stage-telemetry-v1",
+    "designId":  "gate13r-pr2-mp1-stage-separated-memory-targeted-pilot-v1",
+    "blockId":  "mp1-validation-negative-fail-closed",
+    "processId":  27800,
+    "processStartTimeUtc":  "2026-10-09T04:23:46.1068555Z",
+    "stages":  [
+                   {
+                       "stageId":  "external-first-valid-psapi-after-process-create",
+                       "capturedAtUtc":  "2026-10-09T04:23:46.1216089Z",
+                       "snapshot":  {
+                                        "schemaVersion":  1,
+                                        "snapshotKind":  "gate13r-pr2-mp1-external-process-start-snapshot-v1",
+                                        "sourceId":  "system-diagnostics-process-psapi-backed-v1",
+                                        "capturedAtUtc":  "2026-10-09T04:23:46.1216089Z",
+                                        "processId":  27800,
+                                        "processStartTimeUtc":  "2026-10-09T04:23:46.1068555Z",
+                                        "processAgeMilliseconds":  14.753400000000001,
+                                        "workingSetBytes":  20529152,
+                                        "privateMemoryBytes":  104148992,
+                                        "availablePhysicalMemoryBytes":  19066269696,
+                                        "blockId":  "mp1-validation-negative-fail-closed",
+                                        "cimAvailable":  true,
+                                        "cim":  {
+                                                    "sourceId":  "cim-win32-process-v1",
+                                                    "queriedAtUtc":  "2026-10-09T04:23:46.2707196Z",
+                                                    "processId":  27800,
+                                                    "creationDateUtc":  "2026-10-09T04:23:46.1068550Z",
+                                                    "workingSetBytes":  6021120,
+                                                    "privateMemoryBytes":  98344960
+                                                }
+                                    }
+                   },
+                   {
+                       "stageId":  "process-exit",
+                       "capturedAtUtc":  "2026-10-09T04:23:58.2864047Z",
+                       "exitCode":  1,
+                       "timedOut":  false,
+                       "safetyStopReasons":  [
+
+                                             ]
+                   },
+                   {
+                       "stageId":  "post-exit-quiescence",
+                       "capturedAtUtc":  "2026-10-09T04:24:58.3769120Z",
+                       "passed":  true,
+                       "mode":  "controlled-expected-negative-cleanup",
+                       "exceptionMessage":  null
+                   }
+               ],
+    "monitor":  {
+                    "sampleCount":  45,
+                    "baselineWorkingSetBytes":  20529152,
+                    "baselinePrivateMemoryBytes":  104148992,
+                    "maximumWorkingSetBytes":  1515618304,
+                    "maximumPrivateMemoryBytes":  1775611904,
+                    "minimumAvailablePhysicalMemoryBytes":  17304158208
+                },
+    "formalCampaign":  false,
+    "excludedFromFormalAnalysis":  true,
+    "completed":  true
+}

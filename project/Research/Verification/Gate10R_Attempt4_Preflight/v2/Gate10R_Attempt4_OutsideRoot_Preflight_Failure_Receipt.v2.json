@@ -1,0 +1,26 @@
+{
+    "schemaVersion":  1,
+    "receiptId":  "gate10r-attempt4-outside-root-preflight-v2-failure",
+    "createdAtUtc":  "2026-10-06T15:08:39.6456136Z",
+    "status":  "FAILED-ATOMICALLY-CLOSED-RETRY-AUTHORIZED",
+    "attempt":  4,
+    "preflightExecutionOrdinal":  2,
+    "failureClass":  "NEGATIVE-PREDICATE-REQUIRED-PREEXISTING-ORIGINAL-TO-BE-ABSENT",
+    "failedCheck":  "output-isolation-reject-original-summary",
+    "validatedFacts":  {
+                           "childExitCode":  1,
+                           "originalSummarySha256":  "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d",
+                           "retainedSmokePassed":  true,
+                           "retainedSmokeAssertionCount":  63
+                       },
+    "repairBoundary":  "For the pre-existing original summary negative, require nonzero child exit and unchanged frozen SHA-256; retain absence predicate only for a new forbidden target.",
+    "partialManifestSha256":  "6b18d0d7341a111d50b49973b0cd3f86755a1cc62c5ee8575f9ab37428b6b19d",
+    "officialV4RootCreated":  false,
+    "unityStarted":  false,
+    "automaticRetryAuthorized":  true,
+    "resumeThisRootAllowed":  false,
+    "nextPreflightRoot":  "Research/Verification/Gate10R_Attempt4_Preflight/v3",
+    "gate11RAuthorized":  false,
+    "gate12RAuthorized":  false,
+    "gate13RAuthorized":  false
+}

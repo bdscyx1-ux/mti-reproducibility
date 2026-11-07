@@ -1,0 +1,44 @@
+{
+    "schemaVersion":  2,
+    "planId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent-b001-plan",
+    "designId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "blockId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent-b001",
+    "campaignId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent",
+    "scenarioRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios/core-r01-s1-hetero.scenario.json",
+    "scenarioSourceSha256":  "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+    "comparisonCohortId":  "per-agent-heterogeneous-goal-v1",
+    "block":  1,
+    "formalCampaign":  false,
+    "analysisRole":  "excluded-verification",
+    "verificationInjectedFailurePosition":  0,
+    "pilotPlanRelativePath":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v4.json",
+    "pilotPlanSha256":  "105b0aa0ae988cc00194bfd0052a6856aa321821ca8a873b379ff11c83320850",
+    "specificationRelativePath":  "Research/Gate13R_PR1B_OrderEffect_Specification.v2.md",
+    "specificationSha256":  "07fb22e144b14fe6d75a7a97e0b51fc305ee2f120671bede6e9369fccfc46e9e",
+    "testDesignRelativePath":  "Research/Gate13R_PR1B_OrderEffect_Test_Design.v2.md",
+    "testDesignSha256":  "351db8ea7c01afd80cd017eb3eeba75df0d8a8a46eed42e0b1cb5fc185bfaeee",
+    "amendmentRelativePath":  "Research/Gate13R_PR1B_v2_Authorization.v1.json",
+    "amendmentSha256":  "8c7a86dc9a42ddfaa816babf7c34e209e4f9dacb99fe8ce2060134bbc296a0bc",
+    "commandRelativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV2.cs",
+    "commandSha256":  "3d5cea49e983ba44a7bec7ff29100d4c6ba8e2ee7bd2e879b7b20a8c4ec46bbf",
+    "provenanceRelativePath":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v4.json",
+    "provenanceSha256":  "9bc4eb46eea708ce9d90c822fc9248bf54ba41b026368e69bbcb8e3f3c7722a2",
+    "telemetryProbeResultRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2/TelemetryProbe/v2/telemetry-probe-result.json",
+    "telemetryProbeResultSha256":  "b6ffcc4eb2ecefa8a13fddc88d813906850df67a5f6f400e3e16a45460132e8d",
+    "entries":  [
+                    {
+                        "position":  1,
+                        "algorithmId":  "A*-R",
+                        "predecessorAlgorithmId":  "NONE",
+                        "runId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent-b001-p01-astar-r",
+                        "directory":  "runs/p01-astar-r"
+                    },
+                    {
+                        "position":  2,
+                        "algorithmId":  "D*L",
+                        "predecessorAlgorithmId":  "A*-R",
+                        "runId":  "g13r-pr1b-v2-repeat-per-agent-core-r01-s1-hetero-per-agent-b001-p02-dstar-l",
+                        "directory":  "runs/p02-dstar-l"
+                    }
+                ]
+}

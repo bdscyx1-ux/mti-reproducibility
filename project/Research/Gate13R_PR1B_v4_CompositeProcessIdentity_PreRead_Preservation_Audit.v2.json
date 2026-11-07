@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 2,
+  "auditId": "gate13r-pr1b-v4-composite-process-identity-pre-read-preservation-audit-v2",
+  "createdAtUtc": "2026-10-08T15:45:31.8936525Z",
+  "createdAtAsiaShanghai": "2026-10-08T23:45:31.8936525+08:00",
+  "status": "PASSED / V1-PRE-RECOVERY-FAILURE-FROZEN / RECOVERY-NOT-STARTED / NON-EXECUTING",
+  "passed": true,
+  "sourcePilot": {
+    "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "fileCount": 9118,
+    "rawBytes": 253513394,
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed",
+    "byteIdenticalToV1Audit": true
+  },
+  "failedValidationV1": {
+    "relativePath": "Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+    "fileCount": 8,
+    "rawBytes": 327250,
+    "canonicalTreeSha256": "1e66f43d80887cd30dc5b33652b599763fad25c15e84d1c329504430f6d0f4e3",
+    "status": "FAILED-PRE-RECOVERY / FROZEN-NO-OVERWRITE"
+  },
+  "failureIdentity": {
+    "reasonCode": "VALIDATION-SUMMARY-TRAILING-LITERAL-BACKTICK-N",
+    "pythonRecoveryInvocationCount": 0,
+    "recoveryAttemptConsumed": false,
+    "recoveryRootPresent": false,
+    "unityInvoked": false
+  },
+  "repair": {
+    "scope": "VERSIONED-V2-VALIDATION-AND-RECOVERY-WRAPPER-JSON-LF-REPAIR",
+    "scientificContractChanged": false,
+    "analyzerChanged": false,
+    "sourcePilotChanged": false,
+    "validationV1Changed": false,
+    "realLfExpression": "double-quoted PowerShell newline",
+    "newValidationRoot": "Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v2",
+    "recoveryRootStillReserved": "Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1"
+  },
+  "environment": {
+    "unityProcessCount": 0,
+    "unityLockfilePresent": false,
+    "formalRootPresent": false,
+    "recoveryRootPresent": false
+  },
+  "writesToFrozenPilotRoot": 0,
+  "realPilotNumericRecoveryStarted": false,
+  "oneAuthorizedRecoveryStillAvailable": true,
+  "formalCampaignAuthorized": false,
+  "gate14rAuthorized": false
+}

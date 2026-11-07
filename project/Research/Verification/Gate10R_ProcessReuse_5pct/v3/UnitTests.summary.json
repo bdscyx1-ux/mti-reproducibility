@@ -1,0 +1,309 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate10r-process-reuse-unit-tests-attempt3-v3",
+    "savedAtUtc":  "2026-10-06T14:08:47.1745147Z",
+    "assertionCount":  59,
+    "passedCount":  59,
+    "failedCount":  0,
+    "checks":  [
+                   {
+                       "name":  "powershell-parse-Gate10RProcessReusePreparation.psm1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "powershell-parse-Gate10RLockHygieneV3.psm1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "powershell-parse-Run-Gate10RProcessReuseBlockV3.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "powershell-parse-Run-Gate10RTelemetryProbeV3.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "powershell-parse-Run-Gate10RColdReferenceV3.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "config-design-id",
+                       "passed":  true,
+                       "detail":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1"
+                   },
+                   {
+                       "name":  "config-formal-false",
+                       "passed":  true,
+                       "detail":  "False"
+                   },
+                   {
+                       "name":  "config-attempt3-root",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3"
+                   },
+                   {
+                       "name":  "config-5pct-no-cap",
+                       "passed":  true,
+                       "detail":  "5% / null"
+                   },
+                   {
+                       "name":  "downstream-authorization-revoked",
+                       "passed":  true,
+                       "detail":  "Gate11R=false;Gate12R=false"
+                   },
+                   {
+                       "name":  "lock-policy-exact-path",
+                       "passed":  true,
+                       "detail":  "H:/DDM_Final_Project/Temp/UnityLockfile"
+                   },
+                   {
+                       "name":  "lock-policy-bounded-wait",
+                       "passed":  true,
+                       "detail":  "60s / 250ms"
+                   },
+                   {
+                       "name":  "lock-policy-negative-only",
+                       "passed":  true,
+                       "detail":  "negative-only"
+                   },
+                   {
+                       "name":  "four-williams-unique-rows",
+                       "passed":  true,
+                       "detail":  "A*-R,D*L,IDFF,C-FF;D*L,C-FF,A*-R,IDFF;C-FF,IDFF,D*L,A*-R;IDFF,A*-R,C-FF,D*L"
+                   },
+                   {
+                       "name":  "two-williams-unique-rows",
+                       "passed":  true,
+                       "detail":  "A*-R,D*L;D*L,A*-R"
+                   },
+                   {
+                       "name":  "four-position-balance",
+                       "passed":  true,
+                       "detail":  "each algorithm once per position over four rows"
+                   },
+                   {
+                       "name":  "valid-plan-accepted",
+                       "passed":  true,
+                       "detail":  "valid"
+                   },
+                   {
+                       "name":  "duplicate-algorithm-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "wrong-predecessor-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "unsafe-path-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "injected-failure-role-guard",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "managed-negative-growth-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "managed-exact-128-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "managed-128-plus-one-fail",
+                       "passed":  true,
+                       "detail":  "fail"
+                   },
+                   {
+                       "name":  "raw-peak-cleanup-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "native-negative-growth-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "native-exact-512-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "native-512-plus-one-fail",
+                       "passed":  true,
+                       "detail":  "fail"
+                   },
+                   {
+                       "name":  "telemetry-inside-interval-pass",
+                       "passed":  true,
+                       "detail":  "0"
+                   },
+                   {
+                       "name":  "telemetry-outside-tolerance-fail",
+                       "passed":  true,
+                       "detail":  "943718400"
+                   },
+                   {
+                       "name":  "telemetry-nonpositive-fail",
+                       "passed":  true,
+                       "detail":  "fail"
+                   },
+                   {
+                       "name":  "sample-size-minimum-32",
+                       "passed":  true,
+                       "detail":  "32"
+                   },
+                   {
+                       "name":  "sample-size-cycle-multiple",
+                       "passed":  true,
+                       "detail":  "32"
+                   },
+                   {
+                       "name":  "sample-size-uncapped",
+                       "passed":  true,
+                       "detail":  "uncapped"
+                   },
+                   {
+                       "name":  "lock-good-negative-eligible",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "lock-positive-cleanup-rejected",
+                       "passed":  true,
+                       "detail":  "cleanup-role-not-authorized"
+                   },
+                   {
+                       "name":  "lock-nonzero-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-wrong-hash-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-wrong-path-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-reparse-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-nonexclusive-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-outside-window-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-live-owned-pid-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-other-unity-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-missing-cleanup-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "lock-module-no-recursive-delete",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "lock-module-literal-delete-only",
+                       "passed":  true,
+                       "detail":  "present"
+                   },
+                   {
+                       "name":  "structural-identical-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "structural-mutation-detected",
+                       "passed":  true,
+                       "detail":  "detected"
+                   },
+                   {
+                       "name":  "source-new-design-only",
+                       "passed":  true,
+                       "detail":  "identity"
+                   },
+                   {
+                       "name":  "source-psapi",
+                       "passed":  true,
+                       "detail":  "present"
+                   },
+                   {
+                       "name":  "source-no-managed-process-native-fallback",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "source-no-inlining-boundary",
+                       "passed":  true,
+                       "detail":  "present"
+                   },
+                   {
+                       "name":  "historical-source-unchanged",
+                       "passed":  true,
+                       "detail":  "54811fdb7868f7509cd48281397018a29f5814911cfc83d96d63473dd6f50379"
+                   },
+                   {
+                       "name":  "formal-root-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "gate11r-root-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "gate12r-root-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "project-lock-absent-before-official-unit",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "atomic-json-no-temp-residue",
+                       "passed":  true,
+                       "detail":  "value=1"
+                   }
+               ],
+    "formalCampaign":  false,
+    "automaticRetryAttempted":  false,
+    "automaticResumeAttempted":  false,
+    "passed":  true
+}

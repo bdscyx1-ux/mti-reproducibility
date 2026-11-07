@@ -1,0 +1,24 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-pilot-canonical-reference-route-wrapper-v5",
+    "createdAtUtc":  "2026-10-07T15:12:36.0911613Z",
+    "sourceSha256":  "7788e459b2fcb7b63f33a3cf16e8fcc8f81723381c73ed3b3e3c65df4e9305d8",
+    "derivedSha256":  "65b2fc6ca4f824b1c750b4e1111b2555214d452a69bfb86ee0bf8dca9e13f477",
+    "routes":  [
+                   {
+                       "from":  "Research\\Run-Gate12RProcessReuseBlock.ps1",
+                       "to":  "Research\\Run-Gate12RProcessReuseBlockV4.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Run-Gate12RColdReference.ps1",
+                       "to":  "Research\\Run-Gate12RColdReferenceV3.ps1",
+                       "replacementCount":  1
+                   }
+               ],
+    "pilotAttempt1ResumeAllowed":  false,
+    "partialAttemptMergeAllowed":  false,
+    "thresholdsChanged":  false,
+    "formalRootCreated":  false,
+    "gate13rAuthorized":  false
+}

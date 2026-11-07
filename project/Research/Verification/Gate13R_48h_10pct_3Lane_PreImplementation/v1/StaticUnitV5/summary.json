@@ -1,0 +1,221 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-48h-three-lane-static-unit-summary-v1",
+    "completedAtUtc":  "2026-10-08T08:35:05.8864065Z",
+    "assertionCount":  42,
+    "failedAssertionCount":  0,
+    "assertions":  [
+                       {
+                           "id":  "parser-Research/Gate13R48h3LanePreparationV1.psm1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Initialize-Gate13R48h3LaneCopiesV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Run-Gate13R48h3LaneTelemetryProbeV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Run-Gate13R48h3LaneBlockV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Run-Gate13R48h3LaneLicenseProbeV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Run-Gate13R48h3LanePilotV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Analyze-Gate13R48h3LanePilotV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/New-Gate13R48h3LanePlanV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/New-Gate13R48h3LaneScheduleV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/New-Gate13R48h3LaneProvenanceV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Run-Gate13R48h3LaneCompileV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Run-Gate13R48h3LaneBootstrapCompileV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Run-Gate13R48h3LaneLicensingStressV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Run-Gate13R48h3LaneRetainedRegressionV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Run-Gate13R48h3LaneBindingSmokeV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Run-Gate13R48h3LaneVerificationV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Run-Gate13R48h3LaneValidationOnlyPrePilotAuditV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Wait-Gate13R48h3LaneEnvironmentStabilizationV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "parser-Research/Verification/Run-Gate13R48h3LaneStaticUnitV1.ps1",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "plan-identity",
+                           "passed":  true,
+                           "detail":  "gate13r-48h-10pct-three-isolated-editor-lanes-serial-license-admission-v1"
+                       },
+                       {
+                           "id":  "plan-frozen-counts",
+                           "passed":  true,
+                           "detail":  "3 lanes / 128 waves / 384 blocks / 1152 samples / 172 stress waves"
+                       },
+                       {
+                           "id":  "precision-runtime",
+                           "passed":  true,
+                           "detail":  "10%, no cap, 42h readiness, 48h hard"
+                       },
+                       {
+                           "id":  "command-hash-bound",
+                           "passed":  true,
+                           "detail":  "557e6e4c7079b3214775d6240f4c50d4d88f53cc3d752b8f4e8560886017bfd1"
+                       },
+                       {
+                           "id":  "schedule-test",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "id":  "schedule-byte-content",
+                           "passed":  true,
+                           "detail":  "stored rows equal deterministic regeneration"
+                       },
+                       {
+                           "id":  "three-lane-balance",
+                           "passed":  true,
+                           "detail":  "campaign/lane 10-11 and admission imbalance \u003c=1"
+                       },
+                       {
+                           "id":  "negative-incomplete-schedule-fails",
+                           "passed":  true,
+                           "detail":  "one row removed"
+                       },
+                       {
+                           "id":  "csharp-gate13r-48h-three-lane-method-ready-v1",
+                           "passed":  true,
+                           "detail":  "gate13r-48h-three-lane-method-ready-v1"
+                       },
+                       {
+                           "id":  "csharp-gate13r-48h-three-lane-wave-release-v1",
+                           "passed":  true,
+                           "detail":  "gate13r-48h-three-lane-wave-release-v1"
+                       },
+                       {
+                           "id":  "csharp-WaitForBarrierRelease",
+                           "passed":  true,
+                           "detail":  "WaitForBarrierRelease"
+                       },
+                       {
+                           "id":  "csharp-ProbeLicenseBarrier",
+                           "passed":  true,
+                           "detail":  "ProbeLicenseBarrier"
+                       },
+                       {
+                           "id":  "csharp-release.laneCount != 3",
+                           "passed":  true,
+                           "detail":  "release.laneCount != 3"
+                       },
+                       {
+                           "id":  "license-terminal-discrimination",
+                           "passed":  true,
+                           "detail":  "transient access-token warning is not terminal alone"
+                       },
+                       {
+                           "id":  "process-identity-is-pid-plus-start",
+                           "passed":  true,
+                           "detail":  "PID reuse is allowed only when OS process start time differs"
+                       },
+                       {
+                           "id":  "three-lane-runtime-formula",
+                           "passed":  true,
+                           "detail":  "projection divides by exactly three lanes and enforces 42h/48h gates"
+                       },
+                       {
+                           "id":  "protected-Research/PilotRuns/Gate13R_36h_10pct_4Lane/v16/failure-receipt.json",
+                           "passed":  true,
+                           "detail":  "d843920cf4fcf8fbdb862fb451d261a623828dd4d3dfc0d0df0677bc875650a0"
+                       },
+                       {
+                           "id":  "protected-Research/PilotRuns/Gate13R_36h_10pct_4Lane/v16/partial-output-manifest.json",
+                           "passed":  true,
+                           "detail":  "1196977f954a03622692d345ac743ff16ecb38afb1b1fa5de0fd1c963fd93911"
+                       },
+                       {
+                           "id":  "protected-Research/Gate13R_36h_10pct_4Lane_v16_Licensing_Failure_Diagnosis.v1.json",
+                           "passed":  true,
+                           "detail":  "8a1aa36a3f7fdaea4afe6eef00d7e33e99843b36553e6d1afd898bf3e2750ae1"
+                       },
+                       {
+                           "id":  "protected-Research/Gate13R_36h_10pct_4Lane_v16_Failed_Checkpoint.md",
+                           "passed":  true,
+                           "detail":  "64f5484b2ecac27581aac0e945e8c8a716430a4575f62125fe76115e9065cd94"
+                       },
+                       {
+                           "id":  "protected-Research/Gate13R_36h_10pct_4Lane_v17_Licensing_Repair_Authorization_Prompt.md",
+                           "passed":  true,
+                           "detail":  "f8959b26f81335fcc71e94b3504eb02ed87e2287ca27406dee39d26c58f6ca5b"
+                       },
+                       {
+                           "id":  "formal-root-absent",
+                           "passed":  true,
+                           "detail":  "Research\\FormalRuns\\Gate13R_48h_10pct_3Lane\\v1"
+                       },
+                       {
+                           "id":  "source-compile",
+                           "passed":  true,
+                           "detail":  "557e6e4c7079b3214775d6240f4c50d4d88f53cc3d752b8f4e8560886017bfd1"
+                       }
+                   ],
+    "formalCampaign":  false,
+    "passed":  true
+}

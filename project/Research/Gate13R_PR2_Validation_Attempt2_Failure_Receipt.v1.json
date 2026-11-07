@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr2-validation-attempt2-failure-v1",
+  "attempt": 2,
+  "failedAtUtc": "2026-10-08T16:15:22.8269072+00:00",
+  "status": "FAILED-VALIDATION-ONLY / CORE-NOT-STARTED / VERSIONED-REPAIR-ALLOWED",
+  "failureGate": "pre-validation-frozen-tree-identity",
+  "failureReasonCode": "PREWRITE-CANONICAL-HASH-WAS-RUNTIME-CULTURE-SORTED",
+  "diagnosis": "The v2 orchestrator correctly used StringComparer.Ordinal, but the v1 pre-write audit expected hashes produced earlier by PowerShell 7 Sort-Object culture ordering. Four trees therefore differed only in manifest row order; all six trees retained identical file counts, byte counts, individual contents, and pre/post v2 identities.",
+  "validationRoot": {
+    "relativePath": "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v2",
+    "fileCount": 6,
+    "rawBytes": 18744,
+    "canonicalOrdinalTreeSha256": "ac9c0ddca7ca97207b391732cc65d7ba8276ed9089af84e59252adf0dec67589"
+  },
+  "safetyState": {
+    "coreValidatorStarted": false,
+    "unityEditorLaunched": false,
+    "formalRootCreated": false,
+    "formalExecutionReceiptCreated": false,
+    "formalCampaignStarted": false,
+    "gate14RStarted": false,
+    "frozenInputsModified": false
+  },
+  "repairBoundary": "Create, without replacing v1, a pre-write audit v2 that explicitly declares StringComparer.Ordinal and the resulting hashes for the same file bytes; bind a new v3 validation attempt to that audit."
+}

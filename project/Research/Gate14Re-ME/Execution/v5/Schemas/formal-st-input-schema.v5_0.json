@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-formal-st-input-schema-v5.0",
+  "title": "Gate14Re-ME formal ST immutable input bundle v5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema","studyId","designId","protocolId","inputId","superblockId","designRegion","seed","gridEdge","agentCount","changedCellCount","changeTopology","graphProfile","sameTickAtomicPartitions","contextStratumId","connectivity","allowDiagonalCornerCutting","defaultTraversalCost","initialCellOverrides","goal","starts","eventGroups"],
+  "properties": {
+    "schema": {"const":"gate14re-me-formal-st-input-bundle-v5"},
+    "studyId": {"const":"Gate14Re-ME"},
+    "designId": {"const":"gate14re-me-formal-st-bounded-gnf-v5"},
+    "protocolId": {"const":"gate14re-me-formal-st-v5"},
+    "inputId": {"type":"string","minLength":1},
+    "superblockId": {"type":"string","pattern":"^formal-sb-[0-9]{4}$"},
+    "designRegion": {"const":"core"},
+    "seed": {"type":"integer"},
+    "gridEdge": {"enum":[64,96,128]},
+    "agentCount": {"enum":[32,64,128]},
+    "changedCellCount": {"enum":[1,9,25,81]},
+    "changeTopology": {"enum":["compact","dispersed","bottleneck"]},
+    "graphProfile": {"enum":["four_way_weighted_dense","eight_way_uniform_sparse"]},
+    "sameTickAtomicPartitions": {"enum":[1,4,16]},
+    "contextStratumId": {"type":"string","minLength":1},
+    "connectivity": {"type":"integer","minimum":0},
+    "allowDiagonalCornerCutting": {"type":"boolean"},
+    "defaultTraversalCost": {"type":"number","exclusiveMinimum":0},
+    "initialCellOverrides": {"type":"array","items":{"type":"object"}},
+    "goal": {"type":"object"},
+    "starts": {"type":"array","minItems":32,"maxItems":128,"items":{"type":"object"}},
+    "eventGroups": {"type":"array","minItems":24,"maxItems":24,"items":{"type":"object"}}
+  }
+}

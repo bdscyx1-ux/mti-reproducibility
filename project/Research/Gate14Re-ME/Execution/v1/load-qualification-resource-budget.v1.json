@@ -1,0 +1,74 @@
+{
+  "schema": "gate14re-me-qualification-resource-budget-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_PREEXECUTION_BUDGETS",
+  "version": 1,
+  "frozenLocalDate": "2026-10-17",
+  "eventGroupHardTimeoutMilliseconds": 300000,
+  "laneWallClockHardTimeoutMilliseconds": 5400000,
+  "oracleInputHardTimeoutMilliseconds": 900000,
+  "instrumentProcessHardTimeoutMilliseconds": 600000,
+  "emptyBoundaryProcessHardTimeoutMilliseconds": 600000,
+  "plannerOperationBudgetMilliseconds": 240000,
+  "repairOperationBudgetMilliseconds": 240000,
+  "initializationOperationBudgetMilliseconds": 600000,
+  "laneAssignedCommittedMemoryBytes": 17179869184,
+  "qualificationReservedStorageBytes": 51539607552,
+  "formalRawAndDeliveryReservedStorageBytes": 103079215104,
+  "maximumConcurrentUnityProcesses": 1,
+  "maximumWholeSuperblockTechnicalReplacements": 1,
+  "minimumHeadroomFactor": 2.0,
+  "qualificationPassCeilings": {
+    "eventGroupElapsedMillisecondsLessThanOrEqual": 300000,
+    "laneWallClockMillisecondsLessThanOrEqual": 5400000,
+    "lanePeakCommittedMemoryBytesLessThanOrEqual": 8589934592,
+    "qualificationObservedPackageBytesLessThanOrEqual": 25769803776,
+    "formalRawAndDeliveryProjectedBytesLessThanOrEqual": 51539607552,
+    "processConcurrencyExactly": 1,
+    "wholeSuperblockTechnicalReplacementsLessThanOrEqual": 1
+  },
+  "hardStopCeilings": {
+    "laneAssignedCommittedMemoryBytes": 17179869184,
+    "qualificationReservedStorageBytes": 51539607552,
+    "formalRawAndDeliveryReservedStorageBytes": 103079215104
+  },
+  "hostSnapshot": {
+    "observedAtUtc": "2026-10-17T04:14:57.3719019Z",
+    "hostSnapshotNotPerformanceBenchmark": true,
+    "baseBoard": "Micro-Star International Co., Ltd. MAG B650M MORTAR WIFI (MS-7D76)",
+    "operatingSystem": "Microsoft Windows 11 Pro",
+    "operatingSystemVersion": "10.0.26300",
+    "processor": "AMD Ryzen 9 7950X3D 16-Core Processor",
+    "logicalProcessors": 32,
+    "totalVisibleMemoryBytes": 33396609024,
+    "storageVolume": "H:",
+    "storageTotalBytes": 974665019392,
+    "storageFreeBytes": 212333391872,
+    "storageUsedBytes": 762331627520,
+    "totalFrozenReservationsBytes": 154618822656,
+    "freeBytesAfterBothReservations": 57714569216
+  },
+  "runtimeBindings": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityVersion": "2022.3.30f1c1",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "powershellExecutable": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "powershellExecutableSha256": "8bb6fa8c283b4d92120b1ef249a9b311b0f804d4cabbe9981159976c8be76a5e"
+  },
+  "rationale": {
+    "serialUnityProcesses": "The frozen maximum of one protects shared CPU, memory and filesystem resources and preserves fresh-process isolation.",
+    "memoryCeiling": "The high anchor G=256,N=512 permits per-agent g/rhs/queue state to reach multiple GiB; 16 GiB is the assigned hard ceiling and 8 GiB is the two-times-headroom qualification ceiling.",
+    "storageCeiling": "The qualification and future formal packages receive independent reservations; each must remain at or below half its reservation.",
+    "timeouts": "Absolute values are prospective safety ceilings, not post hoc performance filters and not evidence that any algorithm is faster or slower."
+  },
+  "authorizationBoundary": {
+    "valuesFrozenNow": true,
+    "directoryReservationPerformed": false,
+    "qualificationRootCreated": false,
+    "unityExecuted": false,
+    "qualificationObservationsCreated": 0
+  }
+}

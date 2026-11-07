@@ -1,0 +1,61 @@
+{
+  "schema": "gate14re-me-d3-v3-1-runner-schema-integration-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-runner-schema-integration-attempt-001",
+  "status": "AUTHORIZED_MINIMUM_RUNNER_SCHEMA_INTEGRATION_STAGE",
+  "authorizedAtUtc": "2026-10-17T08:00:00Z",
+  "userAuthorizationTextExact": "授权下一项最小阶段",
+  "scopeResolution": {
+    "basis": "The immediately preceding immutable D3-v3.1 freeze receipt names runner/schema integration as the separately authorized next action.",
+    "authorizedStoppingPoint": "A versioned qualification runner, complete per-window D3-v3.1 raw schema, Unity compilation, algorithm-free structural/serialization self-check, and immutable integration receipt.",
+    "scientificEndpointChangeAuthorized": false
+  },
+  "authorizedActions": {
+    "createVersionedRunnerRevision": true,
+    "createVersionedOutputSchemaRevision": true,
+    "createD3WindowRawContracts": true,
+    "bindQualifiedD3V31Instrument": true,
+    "compileCurrentUnityProject": true,
+    "runOneAlgorithmFreeIntegrationSelfCheck": true,
+    "freezeSourceSchemaHashesAndReceipt": true
+  },
+  "prohibitedActions": {
+    "modifyOrDeletePriorEvidence": true,
+    "modifyFrozenV1RunnerOrV1OutputSchema": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputs": true,
+    "generateAnonymousIdentityMapping": true,
+    "createQualificationMeasuredRoot": true,
+    "constructOrInvokeAnyAlgorithmPlanner": true,
+    "executeAnyAlgorithmLane": true,
+    "performFormalCollection": true,
+    "performFormalAnalysis": true,
+    "rankAlgorithms": true,
+    "adjudicateWinner": true,
+    "fallbackToAnotherD3Metric": true
+  },
+  "parentFreezeBinding": {
+    "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/freeze-receipt.v1.json",
+    "sha256": "23df3757a0cac246b5d120c9ef025a2861b2cc062e4b920c42fbb0b450147bc8"
+  },
+  "qualifiedD3Binding": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+    "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "semanticVersion": "3.1"
+  },
+  "protectedPreexistingArtifacts": [
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV1.cs",
+      "sha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-output-schema.v1.json",
+      "sha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "sha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71"
+    }
+  ],
+  "terminalRule": "Pass only if versioned sources and schema compile, the algorithm-free integration self-check passes, all parent/protected hashes remain exact, and no prohibited artifact or execution is observed; otherwise preserve evidence and fail closed."
+}

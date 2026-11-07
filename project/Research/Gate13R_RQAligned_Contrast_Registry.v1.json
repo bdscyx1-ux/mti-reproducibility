@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "registryId": "gate13r-rq-aligned-five-contrast-registry-v1",
+  "effectScale": "NUMERATOR-DIVIDED-BY-DENOMINATOR",
+  "lowerIsBetterInterpretation": "RATIO-BELOW-1-FAVORS-NUMERATOR",
+  "higherIsBetterInterpretation": "RATIO-ABOVE-1-FAVORS-NUMERATOR",
+  "sharedPrimaryFamily": {
+    "endpoint": "P1",
+    "familyWiseAlpha": 0.05,
+    "adjustment": "HOLM",
+    "independentUnit": "COMPLETE-WILLIAMS-BLOCK",
+    "comparisonMode": "WITHIN-BLOCK-PAIRED"
+  },
+  "contrasts": [
+    {
+      "id": "C1",
+      "numerator": "C-FF",
+      "denominator": "A*-R",
+      "sharedGoalRole": "PRIMARY-DIRECTIONAL-SUPERIORITY",
+      "heterogeneousGoalRole": "SECONDARY-SYSTEM-TREATMENT",
+      "sharedGoalSidedness": "ONE-SIDED-DIRECTIONAL-WITH-TWO-SIDED-COMPATIBLE-CI-REPORTING",
+      "heterogeneousComparisonUnit": "MATCHED-SUPERBLOCK-TWO-FRESH-PROCESSES"
+    },
+    {
+      "id": "C2",
+      "numerator": "C-FF",
+      "denominator": "D*L",
+      "sharedGoalRole": "PRIMARY-DIRECTIONAL-SUPERIORITY",
+      "heterogeneousGoalRole": "SECONDARY-SYSTEM-TREATMENT",
+      "sharedGoalSidedness": "ONE-SIDED-DIRECTIONAL-WITH-TWO-SIDED-COMPATIBLE-CI-REPORTING",
+      "heterogeneousComparisonUnit": "MATCHED-SUPERBLOCK-TWO-FRESH-PROCESSES"
+    },
+    {
+      "id": "C3",
+      "numerator": "IDFF",
+      "denominator": "A*-R",
+      "sharedGoalRole": "PRIMARY-DIRECTIONAL-SUPERIORITY",
+      "heterogeneousGoalRole": "SECONDARY-SYSTEM-TREATMENT",
+      "sharedGoalSidedness": "ONE-SIDED-DIRECTIONAL-WITH-TWO-SIDED-COMPATIBLE-CI-REPORTING",
+      "heterogeneousComparisonUnit": "MATCHED-SUPERBLOCK-TWO-FRESH-PROCESSES"
+    },
+    {
+      "id": "C4",
+      "numerator": "IDFF",
+      "denominator": "D*L",
+      "sharedGoalRole": "PRIMARY-DIRECTIONAL-SUPERIORITY",
+      "heterogeneousGoalRole": "SECONDARY-SYSTEM-TREATMENT",
+      "sharedGoalSidedness": "ONE-SIDED-DIRECTIONAL-WITH-TWO-SIDED-COMPATIBLE-CI-REPORTING",
+      "heterogeneousComparisonUnit": "MATCHED-SUPERBLOCK-TWO-FRESH-PROCESSES"
+    },
+    {
+      "id": "C5",
+      "numerator": "IDFF",
+      "denominator": "C-FF",
+      "sharedGoalRole": "PRIMARY-TWO-SIDED-HEAD-TO-HEAD",
+      "heterogeneousGoalRole": "SECONDARY-WITHIN-GROUPED-FIELD-PAIRED",
+      "sharedGoalSidedness": "TWO-SIDED",
+      "heterogeneousComparisonUnit": "COMPLETE-GROUPED-FIELD-WILLIAMS-BLOCK"
+    }
+  ],
+  "diagnosticContrast": {
+    "numerator": "D*L",
+    "denominator": "A*-R",
+    "role": "BASELINE-MECHANISM-DIAGNOSTIC-NOT-IN-C1-C5-FAMILY"
+  },
+  "conclusionRules": {
+    "cffSuperiorToBothBaselines": "C1-AND-C2-BOTH-PASS-PRE-REGISTERED-P1-HOLM-ADJUSTED-CRITERIA",
+    "idffSuperiorToBothBaselines": "C3-AND-C4-BOTH-PASS-PRE-REGISTERED-P1-HOLM-ADJUSTED-CRITERIA",
+    "c5": "REPORT-TWO-SIDED-DIFFERENCE-WITHOUT-POST-HOC-WINNER-DIRECTION",
+    "forbidden": ["MAJORITY-VOTE-ACROSS-METRICS", "UNREGISTERED-COMPOSITE-SCORE", "POINT-ESTIMATE-ONLY-SUPERIORITY"]
+  }
+}

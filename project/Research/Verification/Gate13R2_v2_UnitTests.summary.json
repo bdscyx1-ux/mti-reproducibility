@@ -1,0 +1,137 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13-r2-v2-unit-and-static-tests-v1",
+    "savedAtUtc":  "2026-10-06T07:18:52.8835765Z",
+    "assertionCount":  24,
+    "passedAssertionCount":  24,
+    "failedAssertionCount":  0,
+    "assertions":  [
+                       {
+                           "name":  "pilot-plan-validation",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "json-determinism",
+                           "passed":  true,
+                           "detail":  "Repeated serialization must be byte-identical."
+                       },
+                       {
+                           "name":  "telemetry-inside-interval",
+                           "passed":  true,
+                           "detail":  "External value inside native interval must pass at distance zero."
+                       },
+                       {
+                           "name":  "telemetry-at-absolute-tolerance",
+                           "passed":  true,
+                           "detail":  "Exactly 64 MiB distance must pass."
+                       },
+                       {
+                           "name":  "telemetry-beyond-tolerance",
+                           "passed":  true,
+                           "detail":  "One byte beyond the applicable tolerance must fail."
+                       },
+                       {
+                           "name":  "telemetry-non-positive",
+                           "passed":  true,
+                           "detail":  "A non-positive capture must fail."
+                       },
+                       {
+                           "name":  "managed-negative-growth",
+                           "passed":  true,
+                           "detail":  "Negative retained growth must pass."
+                       },
+                       {
+                           "name":  "managed-exact-128mib",
+                           "passed":  true,
+                           "detail":  "Exactly 128 MiB retained growth must pass."
+                       },
+                       {
+                           "name":  "managed-128mib-plus-one",
+                           "passed":  true,
+                           "detail":  "128 MiB plus one byte must fail."
+                       },
+                       {
+                           "name":  "managed-raw-diagnostic-only",
+                           "passed":  true,
+                           "detail":  "A high raw peak with low post-cleanup retention must pass."
+                       },
+                       {
+                           "name":  "sample-size-minimum",
+                           "passed":  true,
+                           "detail":  "Minimum 30 rounds to one complete four-block cycle (32)."
+                       },
+                       {
+                           "name":  "sample-size-over-cap",
+                           "passed":  true,
+                           "detail":  "Over-cap requirement must preserve raw required n and cap candidate at 148."
+                       },
+                       {
+                           "name":  "williams-four-position-balance",
+                           "passed":  true,
+                           "detail":  "Four-row cycle must place every algorithm once in every position."
+                       },
+                       {
+                           "name":  "williams-four-predecessor-balance",
+                           "passed":  true,
+                           "detail":  "Four-row cycle must cover each ordered distinct predecessor pair once."
+                       },
+                       {
+                           "name":  "williams-two-balance",
+                           "passed":  true,
+                           "detail":  "Two-row cycle must reverse order."
+                       },
+                       {
+                           "name":  "block-plan-valid",
+                           "passed":  true,
+                           "detail":  "Valid block-plan vector must pass."
+                       },
+                       {
+                           "name":  "block-plan-duplicate-directory-rejected",
+                           "passed":  true,
+                           "detail":  "Duplicate child directory must be rejected by static validation."
+                       },
+                       {
+                           "name":  "block-plan-wrong-predecessor-rejected",
+                           "passed":  true,
+                           "detail":  "Wrong predecessor must be rejected."
+                       },
+                       {
+                           "name":  "block-plan-escape-rejected",
+                           "passed":  true,
+                           "detail":  "Escaping child path must be rejected."
+                       },
+                       {
+                           "name":  "source-native-api",
+                           "passed":  true,
+                           "detail":  "V2 source must contain the frozen native API/field mappings."
+                       },
+                       {
+                           "name":  "source-no-authoritative-process-properties",
+                           "passed":  true,
+                           "detail":  "V2 source must not use v1 zero-valued Process memory properties."
+                       },
+                       {
+                           "name":  "source-no-inline-cleanup-boundary",
+                           "passed":  true,
+                           "detail":  "V2 source must expose a non-inlined post-return cleanup boundary."
+                       },
+                       {
+                           "name":  "source-no-mutable-static-state",
+                           "passed":  true,
+                           "detail":  "Unexpected mutable static declarations: 0."
+                       },
+                       {
+                           "name":  "formal-root-absent",
+                           "passed":  true,
+                           "detail":  "Process-reuse formal root must remain absent."
+                       }
+                   ],
+    "errors":  [
+
+               ],
+    "formalCampaign":  false,
+    "automaticRetryAttempted":  false,
+    "automaticResumeAttempted":  false,
+    "passed":  true
+}

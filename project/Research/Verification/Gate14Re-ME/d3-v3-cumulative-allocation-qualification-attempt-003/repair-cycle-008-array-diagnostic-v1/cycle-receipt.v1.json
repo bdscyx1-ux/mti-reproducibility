@@ -1,0 +1,66 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 8,
+  "status": "DIAGNOSTIC_COMPLETE_CONTINUE_AUTHORIZED_REPAIR",
+  "completedAtUtc": "2026-10-17T07:10:44.4197261Z",
+  "phase": "algorithm-free-known-array-counter-diagnostic",
+  "process": {
+    "unityPid": 59136,
+    "startedAtUtc": "2026-10-17T07:10:27.9566678Z",
+    "exitedAtUtc": "2026-10-17T07:10:44.4197261Z",
+    "exitCode": 0
+  },
+  "observations": {
+    "pluginReady": true,
+    "markerSeen": true,
+    "createCallbackRegistrationCode": 0,
+    "markerCallbackRegistrationCode": 0,
+    "emptyWindowsZero": "64/64",
+    "knownArrayWindowsObserved": 24,
+    "knownArrayWindowsWithExactlyOneInvalidMetadataEvent": 24,
+    "knownArrayWindowsWithPositiveOwnerBytes": 0,
+    "knownArrayWindowsWithPositiveOwnerEvents": 0,
+    "counterOverflowCountTotal": 0
+  },
+  "evidence": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-008-array-diagnostic-v1/cycle-plan.v1.json",
+      "lengthBytes": 1289,
+      "sha256": "f420f0709663482624049949b6e7361bb7b7f408945f9b1c6edb3ba20464f583"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-008-array-diagnostic-v1/unity-array-diagnostic.log",
+      "lengthBytes": 90573,
+      "sha256": "368419f722626cbfcfafaf2ca01b7b313766915e79b1910b2ee811626e19fc73"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-008-array-diagnostic-v1/diagnostic-output/array-diagnostic-receipt.v1.json",
+      "lengthBytes": 11941,
+      "sha256": "f7234f68115dc6d43733366a3fed53c7b84bfbbe0d2242c0fe2cc0c54ad57120"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V3ArrayDiagnosticRunnerV1.cs",
+      "lengthBytes": 17364,
+      "sha256": "376c7ccaf71986a2a0f07c101c7c924f772098376b1eac4c1f66d1c4fb387a87"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V3ArrayDiagnosticRunnerV1.cs.meta",
+      "lengthBytes": 243,
+      "sha256": "2f61ac45d4ce8ae6af6bff51d626d06ec40af542c2daf8e8a437da626408ab19"
+    }
+  ],
+  "diagnosis": "The GC.Alloc callback fires exactly once for each deliberate array allocation, but the original native listener rejects the metadata shape before reading allocation-size. The defect is isolated to the native metadata-shape interpretation, not marker discovery, callback registration, empty-window isolation, thread ownership setup, counter overflow, or the managed allocation stimulus.",
+  "scientificBoundary": {
+    "qualificationDecisionProduced": false,
+    "criteriaRelaxed": false,
+    "fallbackMetricUsed": false,
+    "algorithmLaneExecuted": false,
+    "qualificationMeasuredRootCreated": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "nextRepair": "Create a separate versioned native metadata probe that records the callback's event type, metadata count, metadata type, metadata size, pointer presence, and raw Int64 value for deliberate allocations; do not accept or count the event in the probe."
+}

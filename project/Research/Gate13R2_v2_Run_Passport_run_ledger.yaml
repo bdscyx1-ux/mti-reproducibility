@@ -1,0 +1,165 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-06T06:51:34Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-06T06:51:34Z'
+  user_words: '授权 Gate 13-R2 v2 telemetry/readiness 非执行修订与一次 fresh 非正式 pilot。保留 Research/FormalRuns/Gate13/v1、Research/PilotRuns/Gate13_ProcessReuse/v1、其
+    termination/failure receipt、manifest、checkpoint 和所有冻结输入只读不变；不得 retry、resume、覆盖或继续分析
+    v1。
+
+
+    先建立 versioned v2 specification、test design、amendment、pilot plan、provenance 和全新输出根
+    Research/PilotRuns/Gate13_ProcessReuse/v2。先验证能够在 Unity 批处理环境中返回正值且可由独立 OS 查询交叉核验的
+    working-set/private-memory 采集方法；同时预注册 managed-memory 的清理边界、泄漏判据和 128 MiB 规则的处理，不得依据
+    v1 结果事后简单放宽阈值。
+
+
+    静态、单元、编译、正向 block、负向 fail-closed、独立进程重复性和 validation-only 审计全部通过后，只运行一轮新的 NON-FORMAL
+    / EXCLUDED-FROM-FORMAL-ANALYSIS pilot。失败时保存原子 checkpoint 和部分证据后停止，不自动 retry/resume。不得创建
+    process-reuse formal root、formal execution receipt 或启动正式 timing campaign。成功后只生成候选
+    n_formal 和 readiness checkpoint，等待单独正式授权。'
+  prev_hash: null
+  hash: f204b1ccc0e8ab2292a2f25681aa3780aabbda85cac628c09de6b0e6d162071a
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-06T06:55:41Z'
+  step: preservation-audit
+  command: 'Read-only hash, file-count, byte-count, read-only-attribute, process,
+    and forbidden-root audit: cold 891/891 read-only files and 129667391 bytes; v1
+    pilot 838/838 read-only files and 91219643 bytes; v2 pilot and process-reuse formal
+    roots absent; zero Unity processes.'
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  input_sha256:
+    Gate13_ColdProcess_Termination_Receipt.v1.json: 4661a3edc6e569b068e065456ab34f839d60030b1d668a925ca5b9dad9e481a4
+    Gate13_ProcessReuse_Pilot_v1_Failure_Receipt.v1.json: 11f2331d55bb163a1254e7c2e1263f9cbc7c2e162f8bb5db20be5814d898c304
+    Gate13_ProcessReuse_Pilot_v1_Failure_Output_Manifest.json: eb55ae56d047b44e4a6a7d0713b09437f4435162c19037e37aa5306ebf34c65d
+  output_sha256: f5c70c7813033d48a1253eee09f0e090659daa86569ed4a10b784000f1300be0
+  prev_hash: f204b1ccc0e8ab2292a2f25681aa3780aabbda85cac628c09de6b0e6d162071a
+  hash: 3485d54fe4ab2eea2b21374e74b81314ff664c510ee1125205e5fe5e64019de3
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-06T06:59:30Z'
+  step: v2-design-freeze
+  command: Created and JSON-validated the prospective v2 telemetry/readiness specification,
+    test design, amendment, and one-shot pilot plan before implementing or invoking
+    the telemetry probe. The 128 MiB retained-managed rule and native/CIM cross-check
+    tolerance are frozen.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  input_sha256:
+    Verification/Gate13R2_v2_PreservationAudit.summary.json: f5c70c7813033d48a1253eee09f0e090659daa86569ed4a10b784000f1300be0
+    Gate13R2_v2_Telemetry_Readiness_Specification.md: 07850616e2592f63802c6f19edd7485ae2e16a70b78c86139da1f85a2e419258
+    Gate13R2_v2_Telemetry_Readiness_Test_Design.md: 19e951a95ba7e2fb6ff9a68d99eff153fc0bb990f0c9a2dbf1c7261817466ae0
+    Gate13R2_v2_Telemetry_Readiness_Amendment.v1.json: 4453d3abcead2acce7744801d2bcc35559ba68fe0d4e911e1cfa0e4e1333b302
+  output_sha256: e076c8c46a11a995e6e74a665af0c6a44d08e29ee8484c3c460b75bc1ecebb59
+  gate_tokens:
+  - SPEC-FROZEN
+  - TEST-DESIGN-FROZEN
+  - AMENDMENT-FROZEN
+  - PILOT-PLAN-FROZEN
+  - FORMAL-NOT-AUTHORIZED
+  prev_hash: 3485d54fe4ab2eea2b21374e74b81314ff664c510ee1125205e5fe5e64019de3
+  hash: 1772dd8a3345f4e10e8ed5b9e3cc65bcff46837110358e6f1a92fcf7f5754bc2
+- seq: 4
+  kind: tool_receipt
+  at: '2026-10-06T07:18:18Z'
+  step: v2-additive-implementation-and-provenance
+  command: Added the isolated v2 Unity batch command, PowerShell orchestration/analysis/verification
+    scripts, and validated the versioned provenance binding. No v1 file was modified,
+    no Unity process was started, and no pilot or formal root was created at this
+    step.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  input_sha256:
+    Gate13R2_v2_Telemetry_Readiness_Specification.md: 07850616e2592f63802c6f19edd7485ae2e16a70b78c86139da1f85a2e419258
+    Gate13R2_v2_Telemetry_Readiness_Test_Design.md: 19e951a95ba7e2fb6ff9a68d99eff153fc0bb990f0c9a2dbf1c7261817466ae0
+    Gate13R2_v2_Telemetry_Readiness_Amendment.v1.json: 4453d3abcead2acce7744801d2bcc35559ba68fe0d4e911e1cfa0e4e1333b302
+    Gate13R2_v2_Pilot_Plan.v1.json: e076c8c46a11a995e6e74a665af0c6a44d08e29ee8484c3c460b75bc1ecebb59
+  output_sha256: 1af154c8292cac2728e3fd0a11d6706e72753a048fefc7213b03d323214a4a14
+  gate_tokens:
+  - ADDITIVE-V2-IMPLEMENTATION
+  - PROVENANCE-VALIDATED
+  - V1-PRESERVED
+  - UNITY-NOT-YET-INVOKED
+  - FORMAL-NOT-AUTHORIZED
+  prev_hash: 1772dd8a3345f4e10e8ed5b9e3cc65bcff46837110358e6f1a92fcf7f5754bc2
+  hash: 948e071e6226c6db503f4474f0a59ea160e99da3e86a9f26ddff58987e22a403
+- seq: 5
+  kind: tool_receipt
+  at: '2026-10-06T07:18:46Z'
+  step: v2-preparation-only-root-initialization
+  command: Initialized the fresh Gate13_ProcessReuse/v2 pilot root exactly once with
+    only the root initialization receipt and preparation checkpoint. The checkpoint
+    remains PREPARATION-ONLY-PILOT-NOT-STARTED; no Unity process or formal root exists.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  input_sha256:
+    Gate13R2_v2_Pilot_Plan.v1.json: e076c8c46a11a995e6e74a665af0c6a44d08e29ee8484c3c460b75bc1ecebb59
+    Gate13R2_v2_Provenance.v1.json: 1af154c8292cac2728e3fd0a11d6706e72753a048fefc7213b03d323214a4a14
+  output_sha256: cc49bbad9009eb90b7982fef27cddd52b7068e6b54062ad33f4dcb996cb266cf
+  gate_tokens:
+  - FRESH-V2-PILOT-ROOT
+  - PREPARATION-ONLY-PILOT-NOT-STARTED
+  - EXACTLY-TWO-INITIAL-CHILDREN
+  - FORMAL-ROOT-ABSENT
+  - NO-RETRY-NO-RESUME
+  prev_hash: 948e071e6226c6db503f4474f0a59ea160e99da3e86a9f26ddff58987e22a403
+  hash: f89ef36b80016a90f849de86aea4fed54f50210fe76968c91cae79bef9a223e8
+- seq: 6
+  kind: tool_receipt
+  at: '2026-10-06T07:20:08Z'
+  step: v2-static-compile-and-native-telemetry-gates
+  command: 'Ran the frozen v2 unit/static suite, one Unity batch compilation, and
+    the single native/CIM telemetry probe. All gates passed without retry: 24/24 assertions,
+    zero compiler-error matches, and positive same-PID working-set/private-memory
+    measurements whose external CIM values were inside the two native captures.'
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  input_sha256:
+    Gate13R2_v2_Provenance.v1.json: 1af154c8292cac2728e3fd0a11d6706e72753a048fefc7213b03d323214a4a14
+    Gate13R2_v2_Pilot_Plan.v1.json: e076c8c46a11a995e6e74a665af0c6a44d08e29ee8484c3c460b75bc1ecebb59
+  output_sha256: 439518500df98fa19e7c62df51872d3579628f5ab2b355ffbe23a2f7201e77cb
+  gate_tokens:
+  - UNIT-STATIC-24-OF-24
+  - UNITY-COMPILE-PASSED
+  - TELEMETRY-PROBE-PASSED
+  - WORKING-SET-POSITIVE
+  - PRIVATE-MEMORY-POSITIVE
+  - INDEPENDENT-CIM-CROSS-CHECK-PASSED
+  - NO-RETRY
+  prev_hash: f89ef36b80016a90f849de86aea4fed54f50210fe76968c91cae79bef9a223e8
+  hash: d6648869815faa92ca419a2149f95dd4ece24dc8c00e5a2de2e3c010b28c3880
+- seq: 7
+  kind: tool_receipt
+  at: '2026-10-06T07:22:15Z'
+  step: v2-block-verification-entry
+  command: Invoked the versioned positive/negative/repeatability block-verification
+    wrapper once. It failed before fixture-directory creation or any fixture Unity
+    process because line 22 supplied -LiteralPath twice to one Test-Path invocation.
+    Recorded and sealed a FAILED-NO-AUTO-RETRY checkpoint, failure receipt, and 13-entry
+    partial-evidence manifest; no retry or resume was attempted.
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  input_sha256:
+    Verification/Run-Gate13R2V2BlockVerification.ps1: 3bbe78fbf686d03790168fd7e1669911c22e9327edc3e1f59f0333b8f19b7f60
+    Verification/Gate13R2_v2_UnitTests.summary.json: 5a0cbcc8b6a91f07c0753cf41e0879de3c9dc42f3215776b086c71d1c141ee11
+    Verification/Gate13R2_v2/Compile/v1.summary.json: 19a82cb043f28a19fdc03fdac146b2ea9775147a718b22ce4deb305a229f0262
+    Verification/Gate13R2_v2/TelemetryProbe/v1.summary.json: 439518500df98fa19e7c62df51872d3579628f5ab2b355ffbe23a2f7201e77cb
+  output_sha256: 2e7a7119ce099aee49d802d553c1474b02547e0578d2678e04191e7fb7b200bd
+  gate_tokens:
+  - FAILED-NO-AUTO-RETRY
+  - FAILED-BEFORE-FIXTURE-UNITY
+  - PILOT-NOT-STARTED
+  - PILOT-AUTHORIZATION-NOT-CONSUMED
+  - PARTIAL-EVIDENCE-SEALED-READ-ONLY
+  - FORMAL-ROOT-ABSENT
+  prev_hash: d6648869815faa92ca419a2149f95dd4ece24dc8c00e5a2de2e3c010b28c3880
+  hash: 3d78bbcce0ef3eea4770884434955584b7482ed37d4ba13bd20bb01b38d664c4

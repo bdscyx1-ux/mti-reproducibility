@@ -1,0 +1,25 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 attempt 2 active stack parser unit schema and deterministic schedule validation",
+  "command": "Native Windows PowerShell 5.1 and PowerShell 7 parser/binding; 18-fixture contract suite; V2 static deterministic audit",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 2,
+  "gate_tokens": [
+    "PARSER-AND-BINDING-PASSED-BOTH-RUNTIMES",
+    "EMBEDDED-FORMALCAMPAIGN-POSITIVE-AND-NEGATIVE-FIXTURES-18-OF-18",
+    "STATIC-DETERMINISTIC-46-OF-46",
+    "74-CAMPAIGNS",
+    "3552-PROCESSES",
+    "10176-SAMPLES",
+    "1008-MATCHED-SUPERBLOCKS",
+    "AB-BA-24-24",
+    "ATTEMPT1-UNCHANGED",
+    "FORMAL-ROOT-V2-ABSENT"
+  ],
+  "input_sha256": {
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/parser-binding-summary.v1.json": "1a01daf8ea5f559939234b4ead7bf637510e1d0b56fe57a8797bf6744b9ffd1c",
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/ContractUnitPS5/summary.json": "9f59bb4359f2601077cb88696713c4f4d1a2f9afa5ec303372099ee414c0568c",
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/StaticAttempt2/summary.json": "62ec4fec264cd92b451bd3435ea359b99e8535f63219542c3ed75f8129da70b0"
+  }
+}

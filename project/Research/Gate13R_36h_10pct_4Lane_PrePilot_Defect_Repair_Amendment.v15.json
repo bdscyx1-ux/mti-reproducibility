@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "amendmentKind": "gate13r-36h-prepilot-derivation-depth-amendment-v15",
+  "createdAtUtc": "2026-10-08T05:44:00Z",
+  "status": "AUTHORIZED-VERSIONED-PRE-PILOT-DEFECT-REPAIR",
+  "upstreamDiagnosis": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_v14_Derivation_Depth_Diagnosis.v1.json",
+    "sha256": "0098331825812d9937997b68b0de0cfd548ffc432aa2d18eb2b5d20aaa3b2a7e"
+  },
+  "repair": {
+    "attempt": 15,
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v15",
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v15",
+    "pilotRoot": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v15",
+    "maximumJsonSerializationDepth": 100,
+    "otherImplementationChangesAllowed": false
+  },
+  "unchangedFrozenSemantics": {
+    "formalCampaignCount": 74,
+    "relative95CiHalfWidth": 0.10,
+    "hardCap": null,
+    "isolatedUnityEditorLanes": 4,
+    "freshUnityProcessPerWilliamsBlock": true,
+    "laneBootstrapPolicyId": "serial-nonmeasured-fresh-lane-bootstrap-before-concurrent-gates-v1",
+    "measuredPilotCampaigns": 12,
+    "measuredBlocksPerCampaign": 32,
+    "measuredBlockProcesses": 384,
+    "measuredSamples": 1152,
+    "pilotUnityProcesses": 392,
+    "readinessP95HoursMaximum": 27,
+    "formalEndToEndHoursMaximum": 36,
+    "memoryThresholdsChanged": false,
+    "williamsOrderChanged": false,
+    "algorithmSemanticsChanged": false
+  },
+  "executionBoundary": {
+    "pilotExecutionAuthorizedCount": 1,
+    "pilotExecutionConsumedBeforeAttempt15": 0,
+    "measuredPilotRetryAllowed": false,
+    "sameAttemptResumeAllowed": false,
+    "formalCampaignAuthorized": false,
+    "formalRootCreationAllowed": false
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 5,
+  "status": "FAILED_PRESERVED_CONTINUE_AUTHORIZED_REPAIR",
+  "completedAtUtc": "2026-10-17T06:55:24.0439809Z",
+  "phase": "unity-compile-and-import-harness-v2",
+  "commandMode": [
+    "-batchmode",
+    "-nographics",
+    "-quit"
+  ],
+  "bindings": {
+    "unityVersion": "2022.3.30f1c1",
+    "nativeDllSha256": "924d43ecbc03f4e606a26a3de1593e96fdf7d3607d6e9e3c8942c877f0575245",
+    "managedWrapperSha256": "0fcac01678ec387aa2659543a2b84cba67b58ec97bdbfbc1e84aa77f5f0c3f9c",
+    "harnessV2Sha256": "c63d8798582fd4bf7a2dcec0a73ce46bd6d5f6e588273df61a8dc614748450c6",
+    "harnessV2MetaSha256": "324fa14032a303aa83eb14fcf227aa4f620416d80940b495ad29ffb151f80b9e"
+  },
+  "positiveEvidenceBeforeCrash": {
+    "nativePluginImported": true,
+    "nativePluginPreloaded": true,
+    "managedWrapperImported": true,
+    "harnessV2Imported": true,
+    "monoAssemblyReloadSucceeded": true,
+    "d3V3CompilerErrors": 0,
+    "d3V3CompilerWarnings": 0
+  },
+  "failure": {
+    "exactPrimaryDiagnostic": "Fatal Error! GetManagerFromContext: pointer to object of manager 'MonoManager' is NULL (table index 5)",
+    "crashPhase": "editor teardown while a Burst background compiler task was checking a library cache entry",
+    "topManagedFrames": [
+      "Burst.Compiler.IL.Server.LibraryCompiler.CheckLibraryCacheEntryReusable",
+      "Burst.Compiler.IL.Server.CompilerServer.CompileLibrary"
+    ],
+    "d3V3FramePresent": false,
+    "sourceOrAbiFailureObserved": false
+  },
+  "evidence": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-005-unity-compile-harness-v2/unity-compile.log",
+      "lengthBytes": 87194,
+      "sha256": "93f49420e6de5ea93f643e895a80dcf84fb95c6cb496b3e994a9f6cec22777fb"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-005-unity-compile-harness-v2/crash.dmp",
+      "lengthBytes": 1290745,
+      "sha256": "1df01b5e8a611c83c7504458247456030c44a2228534de763a6d56987dfff0d8"
+    }
+  ],
+  "diagnosis": "The D3-v3 plugin and C# sources imported and compiled successfully. Unity crashed only during shutdown because an unrelated Burst background compiler task entered scripting-profiler code after MonoManager teardown. The project-local Burst 1.8.13 documentation explicitly supports --burst-disable-compilation, which disables Burst including its AppDomain. An algorithm-free D3-v3 qualification does not require Burst.",
+  "repairDisposition": {
+    "sourceChanged": false,
+    "criteriaRelaxed": false,
+    "metricChanged": false,
+    "algorithmCodeNeeded": false,
+    "nextRepair": "Run the isolated Unity compile and known-answer process with --burst-disable-compilation to remove the unrelated asynchronous Burst teardown race."
+  }
+}

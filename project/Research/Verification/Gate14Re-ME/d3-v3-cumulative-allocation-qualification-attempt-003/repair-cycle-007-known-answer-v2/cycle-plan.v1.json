@@ -1,0 +1,46 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 7,
+  "status": "AUTHORIZED_IN_PROGRESS",
+  "phase": "algorithm-free-d3-v3-known-answer-v2",
+  "rationale": "Cycle 006 compiled and imported the plugin and harness without D3-v3 errors, but command-line -quit left Unity hung after successful shutdown invocation. This cycle removes only command-line -quit and delegates terminal exit to the known-answer harness after its receipt is written.",
+  "commandPolicy": [
+    "-batchmode",
+    "-nographics",
+    "--burst-disable-compilation",
+    "no-command-line--quit",
+    "harness-owned-EditorApplication.Exit"
+  ],
+  "bindings": {
+    "unityVersion": "2022.3.30f1c1",
+    "authorizationSha256": "49a766a3e92ad197a1cf880d65766c24b2f2b21c426cf425e07f2d2a571d5bb2",
+    "planSha256": "f746a80509a7725b3856d48533444f23d881db62b80113dab0226af18714bd10",
+    "instrumentContractSha256": "a72d97113a4089f5d9532c6ac6d4bb817341339e5192afdaad6729a142cd5ff1",
+    "nativeSourceSha256": "12c41acc7dc106d314bd71d3bdc1d95e0346cc8467e0a1a1e1b3109093ef2a0d",
+    "nativeBinarySha256": "924d43ecbc03f4e606a26a3de1593e96fdf7d3607d6e9e3c8942c877f0575245",
+    "managedWrapperSha256": "0fcac01678ec387aa2659543a2b84cba67b58ec97bdbfbc1e84aa77f5f0c3f9c",
+    "knownAnswerHarnessV2Sha256": "c63d8798582fd4bf7a2dcec0a73ce46bd6d5f6e588273df61a8dc614748450c6"
+  },
+  "mandatoryQualification": [
+    "GC.Alloc marker is observed with Int64 allocation-size metadata",
+    "empty windows remain zero",
+    "known array sizes preserve monotonic and bounded-overhead scaling",
+    "repeated small-object allocations preserve exact event and byte scaling",
+    "GC collection does not change cumulative allocated bytes",
+    "same-thread events are counted and foreign-thread events are excluded",
+    "bytes-per-second is a finite positive exact recomputation from bytes and elapsed seconds",
+    "invalid metadata and overflow inputs contribute zero"
+  ],
+  "prohibitions": {
+    "qualificationRunnerOrOutputSchemaIntegration": true,
+    "scheduleInputsOrIdentityMapping": true,
+    "qualificationMeasuredRoot": true,
+    "algorithmLane": true,
+    "formalCollectionAnalysisRankingOrWinner": true,
+    "fallbackMetric": true,
+    "criteriaRelaxation": true
+  }
+}

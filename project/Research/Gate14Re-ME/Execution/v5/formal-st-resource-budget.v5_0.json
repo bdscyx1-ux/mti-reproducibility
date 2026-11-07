@@ -1,0 +1,43 @@
+{
+  "schema": "gate14re-me-formal-st-resource-budget-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_PLANNING_BUDGET_TARGET_HOST_RECHECK_REQUIRED_BEFORE_COLLECTION",
+  "B": 36,
+  "measuredAlgorithmProcesses": 7776,
+  "runtime": {
+    "pointHours": 64.341,
+    "conservativeHours": 69.578,
+    "planningHoursWith20PercentHeadroom": 83.493,
+    "sevenDayGateHours": 168,
+    "atOrAboveSevenDayGate": false,
+    "sourceRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/formal-st-runtime-prediction.v2.json",
+    "sourceSha256": "2fd23a2c96ce5a743c8551466a2b9984639780c624ba802514cd09070c1e7f9f",
+    "scopeExclusions": ["formal input and oracle-cache generation", "independent acceptance", "delivery construction", "formal analysis"],
+    "notAGuarantee": true
+  },
+  "memory": {
+    "laneAssignedCommittedMemoryBytes": 17179869184,
+    "maximumConcurrentMeasuredUnityProcesses": 1,
+    "targetHostMustRepassStructuralMemoryReadiness": true
+  },
+  "storage": {
+    "qualificationMeasuredBytes": 2648256999,
+    "qualificationDeliveryBytes": 31341666,
+    "qualificationCombinedBytes": 2679598665,
+    "formalExpectedByBScalingBytes": 32155183980,
+    "formalRawAndDeliveryReservedStorageBytes": 64310367960,
+    "reservationHeadroomOverScaledExpectation": 2.0,
+    "hostHFreeBytesAtFreeze": 203472408576,
+    "hostFreeSpaceOverReservation": 3.163,
+    "targetHostRequirement": "Before package execution authorization, free usable workspace storage must be at least 64310367960 bytes and must still leave operating-system and Unity safety margin outside this reservation."
+  },
+  "timeouts": {
+    "eventGroupHardTimeoutMilliseconds": 300000,
+    "laneWallClockHardTimeoutMilliseconds": 600000,
+    "plannerOperationBudgetMilliseconds": 240000,
+    "repairOperationBudgetMilliseconds": 240000,
+    "initializationOperationBudgetMilliseconds": 600000
+  },
+  "runtimeRecalibration": "The package-build/readiness stage must replay the frozen structural benchmark on the target host. A material regression or a new >=168-hour planning estimate blocks collection and returns to user decision; it does not silently change B or the design."
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "gate13r-pr2-attempt3-monitoring-recovery-terminal-evidence-v2",
+  "createdAtUtc": "2026-10-09T07:18:00Z",
+  "status": "NON-EXECUTING-TERMINAL-READINESS-PASSED",
+  "coreEvidence": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v1.json",
+    "rawBytes": 5469,
+    "sha256": "6ca1b08a4016c11637436fdd1dec1c0c8f431ad81f06d947504226329b67695a"
+  },
+  "terminalFiles": [
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json",
+      "rawBytes": 4919,
+      "sha256": "6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.md",
+      "rawBytes": 3198,
+      "sha256": "1af977c082a2ea360d92f1ca47d05185f9af79b54775c220af65784af48d8af4"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v1.json",
+      "rawBytes": 2505,
+      "sha256": "9f011ba057df79535c3ebbede12df9a75b5e4f0c3aed5586bdf3961a181bcf49"
+    },
+    {
+      "relativePath": "Research/Overall_Project_Plan.md",
+      "rawBytes": 115398,
+      "sha256": "2b36e7cdd5e26d6bba3ec974a8d1068b09fc9b11ef7fc27c6cbd866c86254596"
+    },
+    {
+      "relativePath": "Research/Next_Session_Checkpoint.md",
+      "rawBytes": 6566,
+      "sha256": "19cf0df534dbe92d067d346e0a8aa876b732bebfa67d8aab435b5f1886607ce6"
+    }
+  ],
+  "externalAutomationIdentity": {
+    "id": "gate13r-attempt3-hourly-progress",
+    "kind": "heartbeat",
+    "status": "ACTIVE",
+    "rruleSemantic": "EVERY-5-MINUTES",
+    "scheduledReportThrottleMinutes": 60,
+    "sha256": "91c2212647883c31d0a4b6d041db0441320a074c76b6548e57bd00a3981c4531"
+  },
+  "validation": {
+    "attempt1Preserved": true,
+    "attempt2Passed54Of54": true,
+    "terminalAuditPassed": true,
+    "allActiveUpstreamHashesUnchanged": true,
+    "unityInvocations": 0,
+    "formalTargetsCreated": false
+  },
+  "authorizationBoundary": {
+    "formalAttempt3LaunchAuthorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  }
+}

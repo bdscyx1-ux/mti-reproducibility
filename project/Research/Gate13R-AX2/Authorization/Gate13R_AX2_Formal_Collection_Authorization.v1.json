@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "artifactKind": "GATE13R-AX2-FORMAL-COLLECTION-AUTHORIZATION",
+  "designId": "gate13r-ax2-shared32-b48-four-treatment-v1",
+  "status": "AUTHORIZED",
+  "stage": "PHASE-A",
+  "attempt": "attempt-001",
+  "authorizationId": "gate13r-ax2-phasea-attempt-001-01702fd7-46a3-4c4d-947e-52b3bc7cdcb5",
+  "authorizedAtUtc": "2026-10-16T15:11:14.8574087Z",
+  "exactAuthorizationText": "按 `next-formal-collection-authorization-prompt.v2.md` 授权 Gate13R-AX2 Phase A attempt-001 单次正式采集，并授权采集完成后执行独立结构性 raw commit 与只读冻结。严格绑定 32 个 shared-goal campaigns、每 campaign B=48、四处理 Williams schedule、1536 个完整 blocks、6144 个具名算法运行样本，以及 BiA*-R、LPA*、C-FF、IDFF；机器回执中的 legacy `anonymousSampleCount` 仅表示算法运行样本数，不表示标签盲化。每个完整四处理 block 使用一个 fresh Unity process，block 内严格串行，最多一次 whole-block 技术 replacement，禁止逐算法 retry/resume/top-up/merge/skip/reorder。采集监控不得读取或解释 P1。正式 P1 分析、算法排名、赢家裁决及任何后续实验仍未授权；raw commit 成功后停止并向我请求下一步授权。",
+  "authorizationPrompt": {
+    "path": "H:/DDM_Final_Project/Research/Gate13R-AX2/Authorization/next-formal-collection-authorization-prompt.v2.md",
+    "sha256": "e7125ba0cdba2e4e5957e07287d070ff16e12443d2febd1e0502e46bb738be05"
+  },
+  "terminologyClarification": {
+    "path": "H:/DDM_Final_Project/Research/Gate13R-AX2/Authorization/sample-count-terminology-clarification.v1.md",
+    "sha256": "0a42cfc504d62ebfc4934499cecf047ff65403454b6816dee957743721f1cacb"
+  },
+  "finalReadiness": {
+    "path": "H:/DDM_Final_Project/Research/Verification/Gate13R-AX2/precollection-readiness-v1/final-readiness.v1.json",
+    "sha256": "ec6d7634e830aaf51bfb5fbbe01cb1a1fdd20256aa13cee05e514ace52b27482",
+    "status": "FINAL-READINESS-PASS"
+  },
+  "measuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R-AX2/PhaseA/attempt-001",
+  "frozenBindings": {
+    "scheduleSha256": "3ea4198796bc5024194fb52f5e1c43ccbb51bf557186993b3703c19c2787838b",
+    "outputSchemaSha256": "de90d9bbfd72104e3176dd223e565a032ad6c0b21d098af2fbe7388ad2378a70",
+    "executionContractSha256": "9e4a127d5410b02e33e9b5f6e77d5a0fc6e4e637cbd9dc10b03e59e63aef03eb",
+    "blockRunnerSourceSha256": "11d2087032b5e09c7761a69f6a8ce963dbea5a19ebc9b09012a483c510b40e62",
+    "supervisorSha256": "08902326d5aeb7ff7a7ce8210514923bac4fab1f3f240b877f39cc1f5c387354",
+    "structuralValidatorSha256": "af0298440e786af07425cb42c6f03c9c3e11812dd0eeb981fceb503eea4cb8c3",
+    "rawCommitToolSha256": "38a47fb6f831350c66f85346f4f4b378ecb87dfd681e3d86ae9840c488790663",
+    "p1AnalysisImplementationSha256": "ab69d02ec61d348ed176b8616390968704ed4be72a53432d26ff463fe4c24e89",
+    "runtimeAssemblySha256": "656ff839dfcc528d44815fc7be74c2a56eaa8af7ad2b1c5db8c28797f529bd67",
+    "editorAssemblySha256": "7c3efd1a0f9b7cddffc1e1a88ada025db72ce484a03752a8d954d77eb580e128",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "pythonExecutableSha256": "b847bb9f4e48c19f585c8bf7d8b355f3f8c6d2125717ece9c9d7e16fb9f09de8",
+    "powerShellExecutableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139"
+  },
+  "design": {
+    "sharedGoalCampaignCount": 32,
+    "blocksPerCampaign": 48,
+    "schedule": "four-treatment Williams",
+    "completeBlockCount": 1536,
+    "namedAlgorithmRunSampleCount": 6144,
+    "legacyAnonymousSampleCountMeaning": "algorithm-run sample count only; the stored algorithm identities are named and are not label-blinded",
+    "algorithms": [
+      "BiA*-R",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "freshUnityProcessPerCompleteBlock": true,
+    "algorithmsWithinBlockStrictlySerial": true,
+    "maximumWholeBlockTechnicalReplacements": 1,
+    "perAlgorithmRetryResumeTopUpMergeSkipReorder": false
+  },
+  "formalCollectionAuthorized": true,
+  "singleFormalAttemptAuthorized": true,
+  "wholeAttemptRetryAuthorized": false,
+  "independentStructuralRawCommitAfterSupervisorExitAuthorized": true,
+  "readOnlyFreezeAfterRawCommitAuthorized": true,
+  "monitoringMayReadOrInterpretP1": false,
+  "rawCommitMayAggregateOrInterpretP1": false,
+  "formalP1AnalysisAuthorized": false,
+  "algorithmRankingAuthorized": false,
+  "winnerAdjudicationAuthorized": false,
+  "subsequentExperimentAuthorized": false,
+  "terminalInstruction": "After successful structural raw commit and read-only freeze, stop and request separate authorization for the next step."
+}

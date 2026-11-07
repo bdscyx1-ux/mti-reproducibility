@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-attempt2-negative-no-receipt-validation-attempt1-failure-v1",
+  "status": "FAILED-VALIDATION-HARNESS-STDERR-CAPTURE-DEFECT-PRESERVED",
+  "expectedCampaignRejectionObservedAtConsole": true,
+  "formalRootV2Created": false,
+  "unityStarted": false,
+  "diagnosis": "Windows PowerShell promoted native child stderr to a terminating ErrorRecord under ErrorActionPreference=Stop before the harness wrote its summary.",
+  "nextAction": "Use a versioned V2 harness with Start-Process redirect/wait/exit-code capture; do not modify the V1 evidence."
+}

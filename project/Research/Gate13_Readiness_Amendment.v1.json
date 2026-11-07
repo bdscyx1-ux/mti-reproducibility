@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13-readiness-amendment-v1",
+  "amendmentKind": "pre-formal-preregistration-versioned-amendment",
+  "recordedAt": "2026-10-05T23:09:58.4016032+08:00",
+  "administrativeUpdatedAt": "2026-10-05T23:45:19.0855126+08:00",
+  "materialPassport": {
+    "originSkill": "experiment-agent",
+    "originMode": "plan",
+    "verificationStatus": "SPECIFICATION-FROZEN",
+    "versionLabel": "gate13_readiness_amendment_v1"
+  },
+  "userDecision": {
+    "precisionRelativeHalfWidthTarget": 0.1,
+    "precisionInterpretation": "two-sided-95-percent-ci-relative-half-width-on-primary-log-endpoint-v1",
+    "gate11MatrixPolicy": "retain-byte-identical-v1",
+    "maximumPerAlgorithmPerCell": 148,
+    "storagePolicy": "mandatory-launch-time-preflight-v1",
+    "gate13ExecutionAuthorized": false,
+    "formalCampaignStartAllowed": false
+  },
+  "scope": {
+    "specificationAndTestDesignOnly": true,
+    "unityInvocationAllowed": false,
+    "formalTimingSamplesAllowed": false,
+    "formalOutputDirectoryCreationAllowed": false,
+    "originalScriptsMayChange": false,
+    "originalScenesMayChange": false,
+    "gate11RetainedBundleMayChange": false,
+    "gate12SuccessfulPilotMayChange": false
+  },
+  "amends": {
+    "sourcePreregistrationId": "ddm-planning-preregistration-v1",
+    "precisionRelativeHalfWidthTargetFrom": 0.05,
+    "precisionRelativeHalfWidthTargetTo": 0.1,
+    "maximumPerAlgorithmPerCellFrom": 100,
+    "maximumPerAlgorithmPerCellTo": 148,
+    "matrixOrScenarioChange": false,
+    "analysisRowChange": false,
+    "endpointChange": false,
+    "multiplicityChange": false,
+    "failureOrOutlierPolicyChange": false
+  },
+  "frozenInputs": {
+    "gate11BundleManifestRelativePath": "Research/FormalScenarios/v1/bundle-manifest.json",
+    "gate11BundleManifestSha256": "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+    "gate11OrderedBundleAggregateSha256": "91d9e3c66327185e48f68cafb05c674cc49e929adb576973098d0bfebd2e9a88",
+    "gate11MatrixRelativePath": "Research/FormalScenarios/v1/formal-scenario-matrix.json",
+    "gate11MatrixSha256": "404df63d38bccd66bb665446e0f2cbf3e5f8c7293f543b3213bde4206435fe9f",
+    "gate11PreregistrationRelativePath": "Research/FormalScenarios/v1/preregistered-analysis.json",
+    "gate11PreregistrationSha256": "7e947885c38fcf9307fd9202585dda3b2b5d11334f495428760009a2aa202b5b",
+    "gate12CandidateSampleSizesRelativePath": "Research/PilotRuns/Gate12/v1/candidate-sample-sizes.json",
+    "gate12CandidateSampleSizesSha256": "e0a32ee0545f722e46eb6c2a995f869db73944321be525e492c0dce6f3c05ff3",
+    "gate12BudgetFeasibilityRelativePath": "Research/PilotRuns/Gate12/v1/budget-feasibility.json",
+    "gate12BudgetFeasibilitySha256": "5d1c380061deb2dd4c31f5b01fa48e7665eb405699ce67e1cfdc2b33a87f5f69",
+    "gate12FinalAuditRelativePath": "Research/Verification/Gate12_FinalAudit.summary.json",
+    "gate12FinalAuditSha256": "87a5d93dead6dc367ab0716ad2e4e2239570fc42577be978d0f0378ca14f78c8",
+    "gate10CampaignRunnerRelativePath": "Research/Run-FairPlanningCampaign.ps1",
+    "gate10CampaignRunnerSha256": "176f82fed18beee2fc7e2c8cb37ce988f7c7f4740cdeec3c5510b677843615c3"
+  },
+  "precisionRule": {
+    "formula": "n_raw=ceil((1.96*sigma_log/ln(1.10))^2);required_n_formal=next_multiple_of_4(max(30,n_raw))",
+    "minimumPerAlgorithmPerCellBeforeCycleAlignment": 30,
+    "cycleMultiple": 4,
+    "maximumPerAlgorithmPerCell": 148,
+    "significanceEarlyStoppingAllowed": false,
+    "trendEarlyStoppingAllowed": false,
+    "varianceReestimationDuringFormalCampaignAllowed": false
+  },
+  "familySampleSizes": [
+    {
+      "familyId": "P1-DL-vs-A-shared",
+      "comparisonCohortId": "four-algorithm-shared-goal-v1",
+      "algorithmIds": ["A*-R", "D*L"],
+      "sigmaLog": 0.33716085054169326,
+      "nRaw": 49,
+      "requiredNFormal": 52,
+      "scheduledNFormal": 52,
+      "scheduleAdjustmentReason": "none"
+    },
+    {
+      "familyId": "P2-DL-vs-A-hetero",
+      "comparisonCohortId": "per-agent-heterogeneous-goal-v1",
+      "algorithmIds": ["A*-R", "D*L"],
+      "sigmaLog": 0.58964658736983622,
+      "nRaw": 148,
+      "requiredNFormal": 148,
+      "scheduledNFormal": 148,
+      "scheduleAdjustmentReason": "none"
+    },
+    {
+      "familyId": "P3-IDFF-vs-CFF-shared",
+      "comparisonCohortId": "four-algorithm-shared-goal-v1",
+      "algorithmIds": ["C-FF", "IDFF"],
+      "sigmaLog": 0.32661337479160679,
+      "nRaw": 46,
+      "requiredNFormal": 48,
+      "scheduledNFormal": 52,
+      "scheduleAdjustmentReason": "harmonized-to-p1-within-four-algorithm-shared-cohort-to-preserve-complete-williams-cycles-v1"
+    },
+    {
+      "familyId": "P4-IDFF-vs-CFF-grouped",
+      "comparisonCohortId": "grouped-field-heterogeneous-goal-v1",
+      "algorithmIds": ["C-FF", "IDFF"],
+      "sigmaLog": 0.34087314990914375,
+      "nRaw": 50,
+      "requiredNFormal": 52,
+      "scheduledNFormal": 52,
+      "scheduleAdjustmentReason": "none"
+    }
+  ],
+  "matrixAndSchedule": {
+    "scenarioCount": 53,
+    "eligibilityCellCount": 212,
+    "campaignCount": 74,
+    "cohorts": [
+      {
+        "comparisonCohortId": "four-algorithm-shared-goal-v1",
+        "scenarioCount": 32,
+        "eligibilityCellCount": 128,
+        "algorithmCount": 4,
+        "blocksPerScenario": 52,
+        "completeWilliamsCyclesPerScenario": 13,
+        "expectedUnityProcessCount": 6656
+      },
+      {
+        "comparisonCohortId": "per-agent-heterogeneous-goal-v1",
+        "scenarioCount": 21,
+        "eligibilityCellCount": 42,
+        "algorithmCount": 2,
+        "blocksPerScenario": 148,
+        "completeWilliamsCyclesPerScenario": 74,
+        "expectedUnityProcessCount": 6216
+      },
+      {
+        "comparisonCohortId": "grouped-field-heterogeneous-goal-v1",
+        "scenarioCount": 21,
+        "eligibilityCellCount": 42,
+        "algorithmCount": 2,
+        "blocksPerScenario": 52,
+        "completeWilliamsCyclesPerScenario": 26,
+        "expectedUnityProcessCount": 2184
+      }
+    ],
+    "expectedUnityProcessCount": 15056,
+    "eachSampleUsesIndependentUnityProcess": true,
+    "completeWilliamsCyclesRequired": true
+  },
+  "budgetProjection": {
+    "source": "Research/PilotRuns/Gate12/v1/budget-feasibility.json",
+    "medianWallSecondsPerProcess": 15.349785278125001,
+    "p95WallSecondsPerProcess": 16.17971911875,
+    "medianBytesPerProcess": 2201276.125,
+    "p95BytesPerProcess": 3516371.8125,
+    "medianWallHours": 64.19621309651389,
+    "p95WallHours": 67.66718084775,
+    "medianOutputGiB": 30.866277718916535,
+    "p95OutputGiB": 49.30653982702643,
+    "p95ProjectedOutputBytes": 52942494009,
+    "maximumTechnicalWallClockHours": 168,
+    "minimumPostCampaignFreeGiB": 20,
+    "minimumPostCampaignFreeBytes": 21474836480,
+    "minimumLaunchFreeBytes": 74417330489,
+    "minimumLaunchFreeGiB": 69.30653982702643,
+    "technicalProjectionWithinWallBoundary": true
+  },
+  "storage": {
+    "plannedOutputRootRelativePath": "Research/FormalRuns/Gate13/v1",
+    "plannedOutputVolume": "H:",
+    "createNewOnly": true,
+    "currentSnapshot": {
+      "capturedAt": "2026-10-05T23:09:39.2530945+08:00",
+      "freeBytes": 162195955712,
+      "freeGiB": 151.05675506591797,
+      "projectedFreeAfterP95OutputGiB": 101.75021523889154,
+      "marginAboveMinimumLaunchFreeGiB": 81.75021523889154,
+      "status": "snapshot-pass-not-a-launch-authorization"
+    },
+    "launchPreflight": {
+      "required": true,
+      "mustRunAfterFormalAuthorizationAndImmediatelyBeforeOutputRootCreation": true,
+      "minimumFreeBytes": 74417330489,
+      "comparisonUsesRawBytesNotRoundedGiB": true,
+      "failureAction": "stop-before-any-formal-sample"
+    }
+  },
+  "implementationStatus": {
+    "specificationFrozen": true,
+    "testDesignFrozen": true,
+    "amendmentAuditPending": false,
+    "amendmentAuditStatus": "passed",
+    "amendmentAuditSummaryRelativePath": "Research/Verification/Gate13_Readiness_Amendment_Audit.summary.json",
+    "currentGate10RunnerMaximumBlocks": 100,
+    "runnerCap148ImplementationPending": true,
+    "formalCampaignConfigurationPending": true,
+    "formalCampaignExecutionStatus": "not-started-not-authorized"
+  },
+  "authorization": {
+    "readinessAmendmentDesignDecisionRecorded": true,
+    "gate13ImplementationAuthorized": false,
+    "gate13ExecutionAuthorized": false,
+    "userUsagePolicyStatus": "no-user-imposed-codex-usage-limit",
+    "userUsagePolicy": {
+      "activeUserImposedUsageCeiling": null,
+      "fixedShortWindowStopThresholdEnabled": false,
+      "fixedShortWindowReservePercent": null,
+      "weeklyRemainingBudgetEnabled": false,
+      "usagePercentageMayTriggerPlannedStop": false,
+      "qualityReductionForUsageConservationAllowed": false,
+      "scopeExpansionToConsumeUsageAllowed": false,
+      "platformEnforcedLimitsStillApply": true,
+      "additionalResetOrCreditAuthorized": false,
+      "gate13ExecutionAuthorizedByThisPolicy": false
+    },
+    "supersededUsageBudgetDecision": {
+      "active": false,
+      "budgetBasis": "all-weekly-remaining-usage-at-gate13-start",
+      "userReportedWeeklyRemainingPercent": 89,
+      "reportedAt": "2026-10-05",
+      "supersededBeforeAudit": true
+    },
+    "userWallClockBudgetStatus": "not-explicitly-set",
+    "userTimeOrFinancialBudgetStatus": "no-user-imposed-codex-usage-limit;wall-clock-budget-not-explicitly-set",
+    "nextMandatoryGate": "nonexecuting-implementation-and-readiness-audit-requires-separate-continuation;formal-execution-requires-explicit-authorization"
+  }
+}

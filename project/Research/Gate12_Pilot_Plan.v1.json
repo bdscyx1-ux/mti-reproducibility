@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "pilotPlanId": "gate12-isolated-pilot-v1",
+  "classification": "isolated-non-formal-pilot-v1",
+  "formalCampaign": false,
+  "gate13ExecutionAuthorized": false,
+  "gate13ResultsPermitted": false,
+  "retainedBundle": {
+    "relativePath": "Research/FormalScenarios/v1",
+    "manifestRelativePath": "Research/FormalScenarios/v1/bundle-manifest.json",
+    "manifestSha256": "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+    "orderedAggregateSha256": "91d9e3c66327185e48f68cafb05c674cc49e929adb576973098d0bfebd2e9a88",
+    "matrixRelativePath": "Research/FormalScenarios/v1/formal-scenario-matrix.json",
+    "matrixSha256": "404df63d38bccd66bb665446e0f2cbf3e5f8c7293f543b3213bde4206435fe9f",
+    "preregistrationRelativePath": "Research/FormalScenarios/v1/preregistered-analysis.json",
+    "preregistrationSha256": "7e947885c38fcf9307fd9202585dda3b2b5d11334f495428760009a2aa202b5b"
+  },
+  "frozenInputs": {
+    "fairnessSpecificationRelativePath": "Research/Four_Algorithm_Fairness_and_Unified_Campaign_Specification.md",
+    "fairnessSpecificationSha256": "42a4a8439c3d7b46b7644bed14b8f91d87bae4c6f8b2183a73609ee5461e82dd",
+    "workloadSpecificationRelativePath": "Research/Scenario_IO_and_Planning_Workload_Specification.md",
+    "workloadSpecificationSha256": "2af12d33c4a010b14511f86d11d2f45634cac794b6763ea1cc36e8f1940a8ea1",
+    "campaignRunnerRelativePath": "Research/Run-FairPlanningCampaign.ps1",
+    "campaignRunnerSha256": "176f82fed18beee2fc7e2c8cb37ce988f7c7f4740cdeec3c5510b677843615c3",
+    "workloadRunnerRelativePath": "Research/Run-PlanningWorkload.ps1",
+    "workloadRunnerSha256": "c75bed92db9b6df5d1123198acb5358fd58297aa770e78acd0c4530cf9fbbbfb",
+    "batchCommandRelativePath": "Assets/_Scripts/Research/Editor/ResearchPlanningBatchCommand.cs",
+    "batchCommandSha256": "10f9b1b921a87e60753e4eb9be53c43ce89d524ce2e8044274ae332715b74ced",
+    "workloadImplementationRelativePath": "Assets/_Scripts/Research/Experiments/DeterministicPlanningWorkloadRunner.cs",
+    "workloadImplementationSha256": "8ae626ebc9d6c30b510ea0b57a7b1ed6f513a7535551caebf9a0e805debe9a6f",
+    "fairnessContractsRelativePath": "Assets/_Scripts/Research/Experiments/PlanningFairnessContracts.cs",
+    "fairnessContractsSha256": "42e1865294439986e808547115b22ccaaff53f3293790a8c4a135fb529ef3a60"
+  },
+  "unity": {
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "productVersion": "2022.3.30f1c1_a6dc00fbe362",
+    "executableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "output": {
+    "rootRelativePath": "Research/PilotRuns/Gate12/v1",
+    "createNewOnly": true,
+    "pilotAndFormalDirectoriesMustBeDisjoint": true,
+    "pilotResultsMayEnterFormalAnalysis": false
+  },
+  "monitoring": {
+    "checkIntervalSeconds": 30,
+    "outputStallChecks": 3,
+    "hardTimeoutSecondsPerCampaign": 1800,
+    "autoRetryAllowed": false,
+    "hardTimeoutMayTerminateProcessTree": true
+  },
+  "preflight": {
+    "requiredActivePowerSchemeGuid": "8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+    "requiredActivePowerSchemeName": "High performance",
+    "requireAcOnline": true,
+    "minimumFreePhysicalMemoryGiB": 4.0,
+    "minimumFreeOutputDriveGiB": 10.0,
+    "cpuLoadSampleCount": 5,
+    "cpuLoadSampleIntervalSeconds": 1,
+    "maximumMeanCpuLoadPercent": 50.0,
+    "requireNoUnityProcess": true,
+    "requireNoUnityLockfile": true,
+    "backgroundPolicy": "record-top-processes-and-block-on-objective-preflight-only-v1",
+    "topProcessSnapshotCount": 20,
+    "temperatureSensorRequired": false,
+    "temperatureUnavailablePolicy": "record-unavailable-and-rely-on-controlled-warmup-plus-balanced-order-v1"
+  },
+  "thermalWarmup": {
+    "enabled": true,
+    "scenarioId": "core-r01-s1-shared",
+    "scenarioRelativePath": "Scenarios/core-r01-s1-shared.scenario.json",
+    "scenarioSha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+    "comparisonCohortId": "four-algorithm-shared-goal-v1",
+    "blocks": 4,
+    "unityProcessCount": 16,
+    "analysisExcluded": true,
+    "quietStabilizationSecondsAfterWarmup": 60
+  },
+  "pilotSubset": {
+    "selectionRule": "balanced-core rows 1,2,7,8; seed replication 1; paired shared and heterogeneous goals",
+    "selectionRationale": "covers both grid sizes, connectivities, terrain modes, density levels, agent-count levels, dynamic-footprint levels and both goal structures while reserving the second materialized seed for non-pilot formal work",
+    "scenarioPairCount": 4,
+    "scenarioCount": 8,
+    "scenarios": [
+      {
+        "scenarioId": "core-r01-s1-shared",
+        "relativePath": "Scenarios/core-r01-s1-shared.scenario.json",
+        "structuralRow": 1,
+        "goalStructureId": "shared-single-v1",
+        "sourceSha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+        "fingerprintSha256": "b8ffb21c181056ac8019d6e8f5a1d0e4c7990bdec8f163bb2725fbf546e68c04"
+      },
+      {
+        "scenarioId": "core-r01-s1-hetero",
+        "relativePath": "Scenarios/core-r01-s1-hetero.scenario.json",
+        "structuralRow": 1,
+        "goalStructureId": "heterogeneous-v1",
+        "sourceSha256": "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+        "fingerprintSha256": "9651ef01599dfe45576434bd38dd0970f890223d3cfb416ca1cedad65e1c0c83"
+      },
+      {
+        "scenarioId": "core-r02-s1-shared",
+        "relativePath": "Scenarios/core-r02-s1-shared.scenario.json",
+        "structuralRow": 2,
+        "goalStructureId": "shared-single-v1",
+        "sourceSha256": "7612d4a77374c8920cfd493f19cb07b8ba48065dff89187cefd635eee41dfb94",
+        "fingerprintSha256": "1f677fdbcfb58f942268aadfe71297c299513ac8b132f0033b453d8e1010d33a"
+      },
+      {
+        "scenarioId": "core-r02-s1-hetero",
+        "relativePath": "Scenarios/core-r02-s1-hetero.scenario.json",
+        "structuralRow": 2,
+        "goalStructureId": "heterogeneous-v1",
+        "sourceSha256": "2f55ac69b6a2c2e439e3aaeab60929c7c41d51ad796f4ede590edd7d13ac24b6",
+        "fingerprintSha256": "1503ff725788b81182caae7022a72884044aaf2f45e42f46d41dd28dd8c6b1da"
+      },
+      {
+        "scenarioId": "core-r07-s1-shared",
+        "relativePath": "Scenarios/core-r07-s1-shared.scenario.json",
+        "structuralRow": 7,
+        "goalStructureId": "shared-single-v1",
+        "sourceSha256": "34f206248d0c563c4a2bc8bf7d0cb9a1a86b1e53d345a19968776911b5a07692",
+        "fingerprintSha256": "74ec77997bdbb8191788c2e8ee8cd35f5ca2f72a0655047c42898bd33b8a12b2"
+      },
+      {
+        "scenarioId": "core-r07-s1-hetero",
+        "relativePath": "Scenarios/core-r07-s1-hetero.scenario.json",
+        "structuralRow": 7,
+        "goalStructureId": "heterogeneous-v1",
+        "sourceSha256": "ccf2017f50b2a5bd0c4f3c7c8a2b9809f860e86c451d8f81d67d4427e65a232a",
+        "fingerprintSha256": "1883fdb6bf4503fc6543de6d975d6851b187612034a12f98da3a39bf4f76c2ca"
+      },
+      {
+        "scenarioId": "core-r08-s1-shared",
+        "relativePath": "Scenarios/core-r08-s1-shared.scenario.json",
+        "structuralRow": 8,
+        "goalStructureId": "shared-single-v1",
+        "sourceSha256": "6ba43843801f9aba47b47f6068f3dcf6e39f25089c79e442d00f45ff701ac15d",
+        "fingerprintSha256": "d940d6ecc9410d3f2c92d2ba7aedd39acea1d118329a2daf859ac8c962f4097d"
+      },
+      {
+        "scenarioId": "core-r08-s1-hetero",
+        "relativePath": "Scenarios/core-r08-s1-hetero.scenario.json",
+        "structuralRow": 8,
+        "goalStructureId": "heterogeneous-v1",
+        "sourceSha256": "25ffebc3e0c97b821e6f0f4c31c2c8357a0d4f475cd2c3fef1bcc28e234af39a",
+        "fingerprintSha256": "25f3d6b809db62618e1d5f63d2d8245262de63ce2ab076ac8879e47300fa8cbf"
+      }
+    ]
+  },
+  "repetitionDesign": {
+    "measuredRepetitionsPerAlgorithmPerScenario": 8,
+    "sharedCohortBlocks": 8,
+    "twoAlgorithmCohortBlocks": 8,
+    "measuredCampaignCount": 12,
+    "measuredUnityProcessCount": 256,
+    "warmupUnityProcessCount": 16,
+    "totalUnityProcessCount": 272,
+    "independentUnityProcessPerSample": true,
+    "orderDesign": "gate10-williams-balanced-v1",
+    "campaignOrderDesign": "interleaved-row-cohort-v1"
+  },
+  "measuredCampaigns": [
+    { "ordinal": 1, "campaignId": "g12p-c01-r01-shared", "scenarioId": "core-r01-s1-shared", "scenarioRelativePath": "Scenarios/core-r01-s1-shared.scenario.json", "comparisonCohortId": "four-algorithm-shared-goal-v1", "blocks": 8, "expectedSampleCount": 32 },
+    { "ordinal": 2, "campaignId": "g12p-c02-r08-per-agent", "scenarioId": "core-r08-s1-hetero", "scenarioRelativePath": "Scenarios/core-r08-s1-hetero.scenario.json", "comparisonCohortId": "per-agent-heterogeneous-goal-v1", "blocks": 8, "expectedSampleCount": 16 },
+    { "ordinal": 3, "campaignId": "g12p-c03-r02-grouped", "scenarioId": "core-r02-s1-hetero", "scenarioRelativePath": "Scenarios/core-r02-s1-hetero.scenario.json", "comparisonCohortId": "grouped-field-heterogeneous-goal-v1", "blocks": 8, "expectedSampleCount": 16 },
+    { "ordinal": 4, "campaignId": "g12p-c04-r07-shared", "scenarioId": "core-r07-s1-shared", "scenarioRelativePath": "Scenarios/core-r07-s1-shared.scenario.json", "comparisonCohortId": "four-algorithm-shared-goal-v1", "blocks": 8, "expectedSampleCount": 32 },
+    { "ordinal": 5, "campaignId": "g12p-c05-r01-per-agent", "scenarioId": "core-r01-s1-hetero", "scenarioRelativePath": "Scenarios/core-r01-s1-hetero.scenario.json", "comparisonCohortId": "per-agent-heterogeneous-goal-v1", "blocks": 8, "expectedSampleCount": 16 },
+    { "ordinal": 6, "campaignId": "g12p-c06-r08-grouped", "scenarioId": "core-r08-s1-hetero", "scenarioRelativePath": "Scenarios/core-r08-s1-hetero.scenario.json", "comparisonCohortId": "grouped-field-heterogeneous-goal-v1", "blocks": 8, "expectedSampleCount": 16 },
+    { "ordinal": 7, "campaignId": "g12p-c07-r02-shared", "scenarioId": "core-r02-s1-shared", "scenarioRelativePath": "Scenarios/core-r02-s1-shared.scenario.json", "comparisonCohortId": "four-algorithm-shared-goal-v1", "blocks": 8, "expectedSampleCount": 32 },
+    { "ordinal": 8, "campaignId": "g12p-c08-r07-per-agent", "scenarioId": "core-r07-s1-hetero", "scenarioRelativePath": "Scenarios/core-r07-s1-hetero.scenario.json", "comparisonCohortId": "per-agent-heterogeneous-goal-v1", "blocks": 8, "expectedSampleCount": 16 },
+    { "ordinal": 9, "campaignId": "g12p-c09-r01-grouped", "scenarioId": "core-r01-s1-hetero", "scenarioRelativePath": "Scenarios/core-r01-s1-hetero.scenario.json", "comparisonCohortId": "grouped-field-heterogeneous-goal-v1", "blocks": 8, "expectedSampleCount": 16 },
+    { "ordinal": 10, "campaignId": "g12p-c10-r08-shared", "scenarioId": "core-r08-s1-shared", "scenarioRelativePath": "Scenarios/core-r08-s1-shared.scenario.json", "comparisonCohortId": "four-algorithm-shared-goal-v1", "blocks": 8, "expectedSampleCount": 32 },
+    { "ordinal": 11, "campaignId": "g12p-c11-r02-per-agent", "scenarioId": "core-r02-s1-hetero", "scenarioRelativePath": "Scenarios/core-r02-s1-hetero.scenario.json", "comparisonCohortId": "per-agent-heterogeneous-goal-v1", "blocks": 8, "expectedSampleCount": 16 },
+    { "ordinal": 12, "campaignId": "g12p-c12-r07-grouped", "scenarioId": "core-r07-s1-hetero", "scenarioRelativePath": "Scenarios/core-r07-s1-hetero.scenario.json", "comparisonCohortId": "grouped-field-heterogeneous-goal-v1", "blocks": 8, "expectedSampleCount": 16 }
+  ],
+  "analysis": {
+    "primaryEndpointId": "dynamicHandlingMillisecondsPerScheduledEvent",
+    "transform": "natural-log-v1",
+    "cellDefinition": "scenarioId-by-algorithmId-within-comparisonCohortId-v1",
+    "cellSigmaEstimator": "sample-standard-deviation-of-natural-log-endpoint-bessel-v1",
+    "familySigmaEstimator": "maximum-valid-cell-sample-standard-deviation-v1",
+    "minimumMeasuredRepetitionsPerCell": 8,
+    "families": [
+      { "familyId": "P1-DL-vs-A-shared", "comparisonCohortId": "four-algorithm-shared-goal-v1", "algorithms": ["A*-R", "D*L"], "goalStructureId": "shared-single-v1" },
+      { "familyId": "P2-DL-vs-A-hetero", "comparisonCohortId": "per-agent-heterogeneous-goal-v1", "algorithms": ["A*-R", "D*L"], "goalStructureId": "heterogeneous-v1" },
+      { "familyId": "P3-IDFF-vs-CFF-shared", "comparisonCohortId": "four-algorithm-shared-goal-v1", "algorithms": ["C-FF", "IDFF"], "goalStructureId": "shared-single-v1" },
+      { "familyId": "P4-IDFF-vs-CFF-grouped", "comparisonCohortId": "grouped-field-heterogeneous-goal-v1", "algorithms": ["C-FF", "IDFF"], "goalStructureId": "heterogeneous-v1" }
+    ],
+    "precisionFormula": "n_raw=ceil((1.96*sigma_log/ln(1.05))^2);required_n_formal=next_multiple_of_4(max(30,n_raw));candidate_n_formal=min(100,required_n_formal)",
+    "minimumPerAlgorithm": 30,
+    "cycleMultiple": 4,
+    "maximumPerAlgorithm": 100,
+    "overCapPolicy": "candidate-is-100-but-gate13-blocked-until-versioned-amendment-v1",
+    "significanceEarlyStoppingAllowed": false,
+    "trendEarlyStoppingAllowed": false,
+    "warmupIncluded": false,
+    "technicalInvalidResultsIncluded": false,
+    "algorithmicFailuresRetained": true,
+    "timingOutliersRetained": true
+  },
+  "budgetFeasibility": {
+    "formalEligibilityCount": 212,
+    "projectionMethod": "family-cell-count-times-candidate-n-using-pilot-median-and-p95-wall-seconds-and-bytes-per-sample-v1",
+    "sharedScenarioCount": 32,
+    "heterogeneousScenarioCount": 21,
+    "maximumTechnicalWallClockHours": 168.0,
+    "minimumOutputDriveHeadroomAfterProjectionGiB": 20.0,
+    "userTimeOrFinancialBudgetStatus": "not-set-gate13-needs-separate-authorization-v1",
+    "anyCampaignHardTimeoutBlocksGate13": true,
+    "anyTechnicalInvalidityBlocksAutomaticGate13Readiness": true
+  }
+}

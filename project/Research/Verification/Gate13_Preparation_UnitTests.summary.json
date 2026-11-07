@@ -1,0 +1,321 @@
+{
+    "schemaVersion":  1,
+    "testSuiteId":  "gate13-nonexecuting-preparation-unit-tests-v1",
+    "savedAt":  "2026-10-06T11:31:21.9977980+08:00",
+    "projectPath":  "H:\\DDM_Final_Project",
+    "total":  60,
+    "passedCount":  60,
+    "failedCount":  0,
+    "formalRootPresentBefore":  false,
+    "formalRootPresentAfter":  false,
+    "unityProcessIdsAfter":  [
+
+                             ],
+    "unityLockfilePresentAfter":  false,
+    "tests":  [
+                  {
+                      "name":  "formal-root-absent-before",
+                      "passed":  true,
+                      "detail":  "present=False"
+                  },
+                  {
+                      "name":  "shared-sample-count-208",
+                      "passed":  true,
+                      "detail":  "actual=208"
+                  },
+                  {
+                      "name":  "shared-cycle-count-13",
+                      "passed":  true,
+                      "detail":  "actual=13"
+                  },
+                  {
+                      "name":  "shared-position-balanced",
+                      "passed":  true,
+                      "detail":  "four algorithms x four positions"
+                  },
+                  {
+                      "name":  "shared-predecessor-balanced",
+                      "passed":  true,
+                      "detail":  "all directed adjacent pairs"
+                  },
+                  {
+                      "name":  "shared-position-counts-13",
+                      "passed":  true,
+                      "detail":  "all position counts must be 13"
+                  },
+                  {
+                      "name":  "shared-predecessor-counts-13",
+                      "passed":  true,
+                      "detail":  "all predecessor counts must be 13"
+                  },
+                  {
+                      "name":  "per-agent-sample-count-296",
+                      "passed":  true,
+                      "detail":  "actual=296"
+                  },
+                  {
+                      "name":  "per-agent-cycle-count-74",
+                      "passed":  true,
+                      "detail":  "actual=74"
+                  },
+                  {
+                      "name":  "per-agent-position-counts-74",
+                      "passed":  true,
+                      "detail":  "all position counts must be 74"
+                  },
+                  {
+                      "name":  "per-agent-predecessor-counts-74",
+                      "passed":  true,
+                      "detail":  "both directed pairs must be 74"
+                  },
+                  {
+                      "name":  "grouped-sample-count-104",
+                      "passed":  true,
+                      "detail":  "actual=104"
+                  },
+                  {
+                      "name":  "grouped-cycle-count-26",
+                      "passed":  true,
+                      "detail":  "actual=26"
+                  },
+                  {
+                      "name":  "schedule-deterministic-sha",
+                      "passed":  true,
+                      "detail":  "51d2ae7a537baddb17707b3ef19e3b00a0f962c449df8c55997d056ffdfbd720"
+                  },
+                  {
+                      "name":  "schedule-rejects-zero-blocks",
+                      "passed":  true,
+                      "detail":  "Blocks must be in 1..148 and a multiple of algorithm count 2."
+                  },
+                  {
+                      "name":  "schedule-rejects-incomplete-cycle",
+                      "passed":  true,
+                      "detail":  "Blocks must be in 1..148 and a multiple of algorithm count 2."
+                  },
+                  {
+                      "name":  "schedule-rejects-over-cap",
+                      "passed":  true,
+                      "detail":  "Blocks must be in 1..148 and a multiple of algorithm count 2."
+                  },
+                  {
+                      "name":  "schedule-rejects-unknown-cohort",
+                      "passed":  true,
+                      "detail":  "Unsupported comparison cohort: unknown"
+                  },
+                  {
+                      "name":  "williams-rejects-odd-count",
+                      "passed":  true,
+                      "detail":  "Williams scheduling requires an even algorithm count of at least two."
+                  },
+                  {
+                      "name":  "config-deterministic-validation",
+                      "passed":  true,
+                      "detail":  ""
+                  },
+                  {
+                      "name":  "config-campaign-count-74",
+                      "passed":  true,
+                      "detail":  "actual=74"
+                  },
+                  {
+                      "name":  "config-total-samples-15056",
+                      "passed":  true,
+                      "detail":  "actual=15056"
+                  },
+                  {
+                      "name":  "config-cohort-campaign-counts-32-21-21",
+                      "passed":  true,
+                      "detail":  "32/21/21"
+                  },
+                  {
+                      "name":  "config-block-levels-52-148-52",
+                      "passed":  true,
+                      "detail":  "cohort block levels"
+                  },
+                  {
+                      "name":  "config-cohort-samples-6656-6216-2184",
+                      "passed":  true,
+                      "detail":  "cohort sample totals"
+                  },
+                  {
+                      "name":  "config-unique-campaign-ids",
+                      "passed":  true,
+                      "detail":  "74 unique campaign IDs"
+                  },
+                  {
+                      "name":  "config-unique-output-paths",
+                      "passed":  true,
+                      "detail":  "74 unique campaign output paths"
+                  },
+                  {
+                      "name":  "config-execution-flags-false",
+                      "passed":  true,
+                      "detail":  "config cannot authorize formal execution"
+                  },
+                  {
+                      "name":  "config-cap-148-independent-layer",
+                      "passed":  true,
+                      "detail":  "new layer supports 148; Gate 10 remains 100"
+                  },
+                  {
+                      "name":  "all-campaign-schedule-hashes-recompute",
+                      "passed":  true,
+                      "detail":  "mismatches=0"
+                  },
+                  {
+                      "name":  "all-15056-run-ids-unique",
+                      "passed":  true,
+                      "detail":  "count=15056"
+                  },
+                  {
+                      "name":  "config-generation-byte-deterministic",
+                      "passed":  true,
+                      "detail":  "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874"
+                  },
+                  {
+                      "name":  "config-tamper-block-rejected",
+                      "passed":  true,
+                      "detail":  "Config content differs from the deterministic reconstruction."
+                  },
+                  {
+                      "name":  "config-tamper-amendment-rejected",
+                      "passed":  true,
+                      "detail":  "canonical deterministic bytes differ"
+                  },
+                  {
+                      "name":  "config-tamper-execution-flag-rejected",
+                      "passed":  true,
+                      "detail":  "canonical deterministic bytes differ"
+                  },
+                  {
+                      "name":  "config-tamper-output-root-rejected",
+                      "passed":  true,
+                      "detail":  "canonical deterministic bytes differ"
+                  },
+                  {
+                      "name":  "storage-minimum-minus-one-fails",
+                      "passed":  true,
+                      "detail":  "margin=-1"
+                  },
+                  {
+                      "name":  "storage-minimum-equal-passes",
+                      "passed":  true,
+                      "detail":  "margin=0"
+                  },
+                  {
+                      "name":  "storage-minimum-plus-one-passes",
+                      "passed":  true,
+                      "detail":  "margin=1"
+                  },
+                  {
+                      "name":  "storage-never-confers-authorization",
+                      "passed":  true,
+                      "detail":  "storage verdict is not authorization"
+                  },
+                  {
+                      "name":  "storage-negative-rejected",
+                      "passed":  true,
+                      "detail":  "Free bytes cannot be negative."
+                  },
+                  {
+                      "name":  "storage-floating-value-rejected",
+                      "passed":  true,
+                      "detail":  "FreeBytesOverride must be an integer type."
+                  },
+                  {
+                      "name":  "authorization-complete-synthetic-object-validates",
+                      "passed":  true,
+                      "detail":  ""
+                  },
+                  {
+                      "name":  "authorization-empty-object-rejected",
+                      "passed":  true,
+                      "detail":  "Authorization schemaVersion must be 1.; Authorization kind mismatch.; Authorization ID is missing or unsafe.; gate13ExecutionAuthorized is not true.; formalCampaignStartAllowed is not true.; Authorization config SHA-256 mismatch.; Authorization amendment SHA-256 mismatch.; Authorization output root mismatch.; User authorization reference is missing.; Authorization timestamp is invalid."
+                  },
+                  {
+                      "name":  "authorization-false-flag-rejected",
+                      "passed":  true,
+                      "detail":  "gate13ExecutionAuthorized is not true."
+                  },
+                  {
+                      "name":  "authorization-wrong-kind-rejected",
+                      "passed":  true,
+                      "detail":  "Authorization kind mismatch."
+                  },
+                  {
+                      "name":  "authorization-wrong-config-rejected",
+                      "passed":  true,
+                      "detail":  "Authorization config SHA-256 mismatch."
+                  },
+                  {
+                      "name":  "authorization-wrong-amendment-rejected",
+                      "passed":  true,
+                      "detail":  "Authorization amendment SHA-256 mismatch."
+                  },
+                  {
+                      "name":  "authorization-wrong-root-rejected",
+                      "passed":  true,
+                      "detail":  "Authorization output root mismatch."
+                  },
+                  {
+                      "name":  "authorization-empty-reference-rejected",
+                      "passed":  true,
+                      "detail":  "User authorization reference is missing."
+                  },
+                  {
+                      "name":  "path-containment-accepts-child",
+                      "passed":  true,
+                      "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1\\campaigns\\c001"
+                  },
+                  {
+                      "name":  "path-containment-rejects-prefix-collision",
+                      "passed":  true,
+                      "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1-other\\campaigns\\c001"
+                  },
+                  {
+                      "name":  "path-containment-rejects-root-without-switch",
+                      "passed":  true,
+                      "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1"
+                  },
+                  {
+                      "name":  "monitor-continue",
+                      "passed":  true,
+                      "detail":  "continue"
+                  },
+                  {
+                      "name":  "monitor-stall-advisory-no-kill",
+                      "passed":  true,
+                      "detail":  "output-stall-advisory"
+                  },
+                  {
+                      "name":  "monitor-hard-timeout-owned-kill-no-retry",
+                      "passed":  true,
+                      "detail":  "hard-timeout"
+                  },
+                  {
+                      "name":  "execute-without-receipt-fails-before-root",
+                      "passed":  true,
+                      "detail":  "exit=1; output=Execution authorization receipt not found: H:\\DDM_Final_Project\\Research\\Verification\\does-not-exist-gate13-authorizati on.json At H:\\DDM_Final_Project\\Research\\Run-Gate13FormalCampaign.ps1:71 char:81 + ... pe Leaf)) { throw \"Execution authorization receipt not found: $Execut ... +                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     + CategoryInfo          : OperationStopped: (Execution autho...horization.json:String) [], RuntimeException     + FullyQualifiedErrorId : Execution authorization receipt not found: H:\\DDM_Final_Project\\Research\\Verification\\do     es-not-exist-gate13-authorization.json  "
+                  },
+                  {
+                      "name":  "formal-root-absent-after",
+                      "passed":  true,
+                      "detail":  "present=False"
+                  },
+                  {
+                      "name":  "no-unity-process-after-unit-tests",
+                      "passed":  true,
+                      "detail":  "ids="
+                  },
+                  {
+                      "name":  "no-unity-lock-after-unit-tests",
+                      "passed":  true,
+                      "detail":  "present=False"
+                  }
+              ],
+    "failedTests":  [
+
+                    ],
+    "passed":  true
+}

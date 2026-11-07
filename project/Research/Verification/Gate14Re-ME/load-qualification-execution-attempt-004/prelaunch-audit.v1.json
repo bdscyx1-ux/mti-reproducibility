@@ -1,0 +1,81 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-004-prelaunch-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-004-05296e8f-0603-406e-9cfa-93a58cc7fec0",
+  "attemptId": "load-qualification-execution-attempt-004",
+  "status": "PASS_EXACT_HASH_PREFLIGHT_SINGLE_ROOT_CREATION_AND_UNITY_LAUNCH_PERMITTED",
+  "passed": true,
+  "checkedAtUtc": "2026-10-17T18:22:52.9883456Z",
+  "coreBindings": {
+    "statusV38Sha256": "686b8aaa610d0432f3f08a53c01ff083183b9da415906006034eaec5f22d959c",
+    "readinessAttempt009TerminalReceiptSha256": "565a2e5a1f97d67e37c037db05db610feabf93237d717d67e86d0be82c534a6a",
+    "readinessAttempt009FreezeManifestSha256": "4f53177ec47863d2338644dbc3e211b2bef585c1dbb4a773f64dbf3c474cd1ba",
+    "corrigendumTerminalPassSha256": "bcf1be2a17d34d7677455c61e9108836c43b251f287ae474d0a9e0591bfd5819",
+    "executionContractV34Sha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85",
+    "implementationManifestV34Sha256": "1e56697a40692ff76fc01273ec4e5b8b7953ea88dcfe228eeeb317d9705a69c1",
+    "supervisorV32Sha256": "a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409",
+    "runnerV2Sha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+    "planningAssetsManifestSha256": "7e0cbe77cb8bb8f84642856c6356d318f708e168b52a92e6e348cdf948169aca",
+    "scheduleSha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+    "outputSchemaV3Sha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c",
+    "instrumentContractV3Sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312",
+    "d3ContractV31Sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "typedParquetRuntimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "structuralToolV31Sha256": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e",
+    "deliveryToolV22Sha256": "197b14309670fc38e26b421c458fbd4fc05abe8ba61f7f715497bbcffb19eb98",
+    "trustedUnityIdentityRuleSha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+    "timestampComparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "powerShellHostSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "allMatched": true,
+    "checkedBindingCount": 21
+  },
+  "executionAuthorizationSha256": "fc9e00f9ca88f333c4f5ec3a78cf2c6f7ccf1535e1e120796898f9b7d9e1699a",
+  "stageContractSha256": "9f544e9340abe1681da70f04eafb062955f4ff8c77526a538219bf0506fbe5f7",
+  "hostRuntime": {
+    "path": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "version": "7.6.5",
+    "hashMatched": true,
+    "convertFromJsonDepthPresent": true,
+    "convertFromJsonDateKindPresent": true
+  },
+  "rootAndProcessBoundary": {
+    "measuredRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "measuredRootAbsent": true,
+    "deliveryRoot": "H:/DDM_Final_Project/Research/Exports/Gate14Re-ME/load-qualification/attempt-002",
+    "deliveryRootAbsent": true,
+    "unityProcessCount": 0,
+    "exactSupervisorProcessCount": 0
+  },
+  "schedule": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+    "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+    "rows": 162,
+    "replacementNullRows": 162,
+    "nonNullReplacementRows": 0
+  },
+  "storage": {
+    "freeBytes": 215971352576,
+    "requiredReservationBytes": 154618822656,
+    "passed": true
+  },
+  "memory": {
+    "visiblePhysicalMemoryBytes": 33396609024,
+    "requiredLaneAssignedCommittedMemoryBytes": 17179869184,
+    "passed": true
+  },
+  "scope": {
+    "qualificationExecutionAuthorized": true,
+    "strictSerialFreshUnityProcesses": 1147,
+    "zeroReplacementFailStop": true,
+    "retryResumeTopUpMergeSkipReorderOrParallelAuthorized": false,
+    "automaticNewAttemptAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "crossAlgorithmEffectsAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

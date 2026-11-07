@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-gnf-discrimination-window-terminal-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+  "completedAtUtc": "2026-10-19T11:24:34Z",
+  "status": "PASS_PROPOSED_BOUNDED_GNF_WINDOW_NO_EXECUTION_STARTED",
+  "sourceState": {
+    "attemptId": "load-qualification-execution-attempt-009",
+    "qualificationTerminalPass": false,
+    "pausedSealStatus": "PASS_PAUSED_SEAL_CREATED_QUALIFICATION_NOT_PASS",
+    "pausedSealTerminalReceiptSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705",
+    "measuredFileManifestSha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f",
+    "sourceRootsModified": false,
+    "oldSupervisorAlive": false,
+    "currentUnityQualificationRunnerCount": 0
+  },
+  "analysis": {
+    "eventGroupFilesRead": 864,
+    "algorithmIdentityMappingRead": false,
+    "rankingOrWinnerProduced": false,
+    "formalInferenceProduced": false,
+    "anonymousCalibrationStatus": "PASS_ANONYMOUS_DESCRIPTIVE_WINDOW_CALIBRATION"
+  },
+  "proposal": {
+    "G": [64, 96, 128],
+    "N": [32, 48, 80, 128],
+    "F": [1, 9, 25, 81],
+    "oldHighCornerStructuralProxyReductionPercent": 97.75,
+    "newQualificationPlanningHoursWith20PercentHeadroom": 15.119,
+    "formalSTB36PlanningHoursWith20PercentHeadroom": 114.082,
+    "formalSTB36PlanningDays": 4.753,
+    "belowSevenDayDecisionGate": true
+  },
+  "artifactHashes": {
+    "selectedGnfDesignSha256": "d5e421b8d5ff682d0845f6cd905cbebb9c2d2c13550156ee789de861c89d1766",
+    "anonymousDiscriminationResultSha256": "b855ccebb26bae062d6fd8e69c0930850fd4bf62cdeca1148cc71ba66ba06280",
+    "selectedWindowRuntimeEstimateSha256": "3b02f73a8fd576d7aa82f4433f7e93e078c7dafa820e4981f9503a5d9639379b",
+    "designWindowReportSha256": "ad12aeab21285f6f53c36836fa2e4829fb9b41bd277fa69d246b90f8573c7b20",
+    "fileManifestSha256": "3ef23831fac91b7fa2a86280bbb2da875b8220924bf2d358be55a82fa15ed0c4"
+  },
+  "executionAuthorization": {
+    "newQualificationAuthorizedOrStarted": false,
+    "formalSTAuthorizedOrStarted": false,
+    "requiredNextState": "WAIT_FOR_USER_APPROVAL_THEN_REFREEZE_AND_READINESS"
+  },
+  "migrationPackageState": "DORMANT_SEALED_FOR_LATER_REACTIVATION"
+}

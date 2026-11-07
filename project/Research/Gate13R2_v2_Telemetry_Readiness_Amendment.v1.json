@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13-r2-v2-telemetry-readiness-amendment-v1",
+  "recordedAt": "2026-10-06T15:00:00+08:00",
+  "status": "FROZEN-BEFORE-V2-IMPLEMENTATION",
+  "materialPassport": {
+    "originSkill": "experiment-agent",
+    "originMode": "plan-run",
+    "verificationStatus": "UNVERIFIED-UNTIL-ALL-V2-GATES-PASS",
+    "versionLabel": "gate13_r2_v2_telemetry_readiness_amendment_v1"
+  },
+  "authorization": {
+    "reference": "user-message-2026-10-06-gate13-r2-v2-telemetry-readiness-and-one-fresh-nonformal-pilot",
+    "nonExecutingRevisionAuthorized": true,
+    "freshNonFormalPilotAuthorizedCount": 1,
+    "formalCampaignAuthorized": false,
+    "formalExecutionReceiptAuthorized": false,
+    "formalRootCreationAuthorized": false,
+    "automaticRetryAuthorized": false,
+    "automaticResumeAuthorized": false
+  },
+  "supersededEvidencePolicy": {
+    "coldRoot": "Research/FormalRuns/Gate13/v1",
+    "failedProcessReusePilotRoot": "Research/PilotRuns/Gate13_ProcessReuse/v1",
+    "retryV1Allowed": false,
+    "resumeV1Allowed": false,
+    "overwriteV1Allowed": false,
+    "continueV1AnalysisAllowed": false,
+    "v1CandidateSampleSizeAdmissible": false,
+    "v1Use": "historical-failure-and-design-change-evidence-only"
+  },
+  "frozenDesignDocuments": {
+    "specification": {
+      "relativePath": "Research/Gate13R2_v2_Telemetry_Readiness_Specification.md",
+      "sha256": "07850616e2592f63802c6f19edd7485ae2e16a70b78c86139da1f85a2e419258"
+    },
+    "testDesign": {
+      "relativePath": "Research/Gate13R2_v2_Telemetry_Readiness_Test_Design.md",
+      "sha256": "19e951a95ba7e2fb6ff9a68d99eff153fc0bb990f0c9a2dbf1c7261817466ae0"
+    },
+    "preservationAudit": {
+      "relativePath": "Research/Verification/Gate13R2_v2_PreservationAudit.summary.json",
+      "sha256": "f5c70c7813033d48a1253eee09f0e090659daa86569ed4a10b784000f1300be0"
+    }
+  },
+  "design": {
+    "designId": "one-fresh-unity-process-per-williams-block-v2-native-telemetry",
+    "independentUnit": "one-complete-williams-block-in-one-fresh-unity-editor-process",
+    "oneBlockPerUnityProcess": true,
+    "algorithmOccursAtMostOncePerProcess": true,
+    "campaignLongProcessAllowed": false,
+    "withinProcessSamplesCorrelated": true,
+    "gate11MatrixSeedsIdentityExclusionsAndWilliamsOrderChanged": false
+  },
+  "telemetry": {
+    "authoritativeInProcessSource": "windows-psapi-getprocessmemoryinfo-process_memory_counters_ex-v1",
+    "workingSetField": "PROCESS_MEMORY_COUNTERS_EX.WorkingSetSize",
+    "privateMemoryField": "PROCESS_MEMORY_COUNTERS_EX.PrivateUsage",
+    "externalSource": "cim-win32_process-v1",
+    "externalWorkingSetField": "Win32_Process.WorkingSetSize",
+    "externalPrivateMemoryField": "Win32_Process.PrivatePageCount",
+    "allRequiredValuesStrictlyPositive": true,
+    "probeHandshakeTimeoutSeconds": 60,
+    "processCreationTimeToleranceSeconds": 2,
+    "crossCheck": {
+      "distanceDefinition": "distance-of-external-value-to-closed-interval-of-native-before-and-native-after",
+      "absoluteFloorBytes": 67108864,
+      "relativeFractionOfLargestObservedValue": 0.25,
+      "acceptanceRule": "distance <= max(67108864, ceil(0.25 * max(nativeBefore,nativeAfter,external)))",
+      "timestampOrder": "native-before-ready < external-cim-query < native-after",
+      "samePidRequired": true,
+      "sameExecutableRequired": true
+    },
+    "systemDiagnosticsProcessPropertiesAreAuthoritative": false
+  },
+  "managedMemory": {
+    "collectionSequence": "GC.Collect;GC.WaitForPendingFinalizers;GC.Collect",
+    "beforeCapture": "after-full-collection-before-non-inlined-sample-method",
+    "rawAfterCapture": "inside-sample-method-after-workload-finalization-diagnostic-only",
+    "cleanupCapture": "after-sample-method-return-and-full-collection",
+    "authoritativeEndpoint": "afterCleanup-minus-beforeSample",
+    "rawAfterCanFailHardRule": false,
+    "maximumSampleRetainedGrowthBytes": 134217728,
+    "maximumBlockRetainedGrowthBytes": 134217728,
+    "thresholdMiB": 128,
+    "thresholdChangedFromV1": false,
+    "postHocRelaxationAllowed": false
+  },
+  "nativeMemory": {
+    "maximumBlockWorkingSetGrowthBytes": 536870912,
+    "maximumBlockPrivateMemoryGrowthBytes": 536870912,
+    "thresholdMiB": 512,
+    "negativeGrowthAllowed": true,
+    "nonPositiveCaptureAllowed": false
+  },
+  "requiredPrePilotGates": [
+    "preservation",
+    "static",
+    "unit-and-negative",
+    "unity-compilation",
+    "native-telemetry-cim-probe",
+    "positive-two-algorithm-block",
+    "positive-four-algorithm-block",
+    "negative-fail-closed-block",
+    "independent-process-repeatability",
+    "retained-63-regression",
+    "validation-only"
+  ],
+  "pilot": {
+    "rootRelativePath": "Research/PilotRuns/Gate13_ProcessReuse/v2",
+    "createNewOnly": true,
+    "initialState": "PREPARATION-ONLY-PILOT-NOT-STARTED",
+    "allowedBeforePilotStart": [
+      "root-initialization-receipt.json",
+      "preparation-checkpoint.json"
+    ],
+    "executionCount": 1,
+    "formal": false,
+    "analysisRole": "NON-FORMAL-EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "failurePolicy": "atomic-checkpoint-and-partial-evidence-then-stop-no-auto-retry-no-resume",
+    "successPolicy": "candidate-n-formal-and-readiness-checkpoint-then-stop"
+  },
+  "formalBoundary": {
+    "reservedRootRelativePath": "Research/FormalRuns/Gate13_ProcessReuse/v1",
+    "mustRemainAbsent": true,
+    "formalConfigCreationAllowed": false,
+    "formalReceiptCreationAllowed": false,
+    "formalTimingExecutionAllowed": false,
+    "requiredNextStepAfterSuccess": "separate-user-authorization"
+  }
+}

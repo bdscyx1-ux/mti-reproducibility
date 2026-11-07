@@ -1,0 +1,23 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 2,
+  "status": "PASS_HERMETIC_WINDOWS_SDK_INSTALLED_AND_FROZEN",
+  "completedAtUtc": "2026-10-17T06:49:47.6790651Z",
+  "phase": "windows-sdk-hermetic-installation",
+  "result": {
+    "sdkVersion": "10.0.26100.7705",
+    "targetPlatformVersion": "10.0.26100.0",
+    "targetArchitecture": "x64",
+    "basePackageSignatureValid": true,
+    "x64PackageSignatureValid": true,
+    "requiredHeadersPresent": true,
+    "requiredLibrariesPresent": true,
+    "criticalHashesFrozen": true,
+    "uacBypassUsed": false,
+    "securitySettingsChanged": false
+  },
+  "nextRepair": "Compile the frozen D3-v3 source with the current VS 2022 x64 compiler, current Unity 2022.3.30f1c1 PluginAPI, explicit hermetic SDK paths, /utf-8, and /WX."
+}

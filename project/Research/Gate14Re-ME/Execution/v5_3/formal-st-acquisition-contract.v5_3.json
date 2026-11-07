@@ -1,0 +1,218 @@
+{
+  "schema": "gate14re-me-formal-st-acquisition-contract-v5",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "status": "FROZEN_FORMAL_ST_V5_ACQUISITION_EXECUTION_REQUIRES_SEPARATE_AUTHORIZATION",
+  "implementationRevision": "v5.3-authorization-contract-parity-fix",
+  "entryPoint": {
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_3/Run-Gate14ReMEFormalST.v5_3.ps1",
+    "supervisorSha256": "fcfbc5c080e714c3c3e079797195b455d9a32db29e937ccb37768a34a3cbdda1",
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEFormalSTRunnerV5_1.cs",
+    "runnerSha256": "12c44c11d831a28a5277b7f3b86687dfbe6572d50b93a74635a7437995c02d12",
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMEFormalSTRunnerV5_1.Run",
+    "commandLineQuitPresent": false,
+    "runnerOwnsTerminalExit": true,
+    "preflightOnlyAvailable": true,
+    "preflightOnlyCreatesMeasuredRoot": false
+  },
+  "frozenBindings": {
+    "v5BaseImplementationManifest": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-implementation-manifest.v5_0.json",
+      "sha256": "161a12b9325ca9ef181b9673cd4c7e73b5fa68a016911afd694c1493c86af3e3"
+    },
+    "formalFreezeIndex": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-freeze-index.v5_0.json",
+      "sha256": "35c3b98e42cc21b200308460c6b93fb48961b4a450522acc23958c76b70b00dd"
+    },
+    "scientificDesign": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-scientific-design.v5_0.json",
+      "sha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708"
+    },
+    "sampleSizeDecision": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-sample-size-decision.v5_0.json",
+      "sha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5"
+    },
+    "endpointMipeContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-endpoint-mipe-contract.v5_0.json",
+      "sha256": "6b38e152c8a17c0bedcd2e700aa8274167e2e0831b33c13cdfbb5227b1354132"
+    },
+    "analysisContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-analysis-contract.v5_0.json",
+      "sha256": "ed884beebaabb05cc039c6e401169cb80659386558e6af95f3eaec9bfec519cd"
+    },
+    "scheduleContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-schedule-contract.v5_0.json",
+      "sha256": "d480b1a1fda1dda0737015e66064e58aa5f84d87fa5d594d3bab65d9b7712cbc"
+    },
+    "stoppingAndReplacementContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-stopping-and-replacement-contract.v5_0.json",
+      "sha256": "39a1b52c19b1103a4bf2a97a6d61ff5c6d59c0eeef5f931d22ff3b69bd3dbe1c"
+    },
+    "fairnessRuntimeBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-fairness-runtime-binding.v5_0.json",
+      "sha256": "fb0aff4f17618022ad4818b0f3afbf9ce44b804f97bfd2f9027e7bd3d9a8a06f"
+    },
+    "implementationBuildInputBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-implementation-build-input-binding.v5_0.json",
+      "sha256": "6882706a9b8bdde9790ad3ebdb9b6fa456ac1f925f18afb834c6c420fcb7fc5d"
+    },
+    "scientificResourceBudget": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-resource-budget.v5_0.json",
+      "sha256": "31a9bc6b085add9652fdf9c845361e0498591a75885b47dbc3c1db640e236401"
+    },
+    "operationalResourceBudget": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-operational-resource-budget.v5_1.json",
+      "sha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2"
+    },
+    "rawOutputContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-raw-output-contract.v5_0.json",
+      "sha256": "a4585821cca40cf1ebb28626de60c95f213faacabfe7dfbcd002b9cf9586d2f5"
+    },
+    "inputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/Schemas/formal-st-input-schema.v5_0.json",
+      "sha256": "75176477384570b4990e38a59affe9a87f99edff9fab78e23ab5628735213414"
+    },
+    "scheduleSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/Schemas/formal-st-schedule-schema.v5_0.json",
+      "sha256": "f04dbb393a6a2a8f55d3a0467d695c6862e601295d81484df34086356d0dc66c"
+    },
+    "outputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/Schemas/formal-st-output-schema.v5_0.json",
+      "sha256": "0e7a7f176f4b3d19ff2cbfc534f3da03a062ce3a58ed73deb883392b131cf77a"
+    },
+    "processLedgerSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/Schemas/formal-st-process-ledger-schema.v5_0.json",
+      "sha256": "c75382347348381099e6393c66cfc6d8d9f31d289be1640d458aeec97f99dbfd"
+    },
+    "receiptSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/Schemas/formal-st-receipt-schema.v5_0.json",
+      "sha256": "87ef6082382483fe4b3a6c83b7d712d508db57d701779f119eeaa8c5f3be3669"
+    },
+    "acquisitionSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5/Schemas/formal-st-acquisition-schema.v5_0.json",
+      "sha256": "c9727ef7f54bcc7572c3e2ed31ccdb7a73d618374e91d5cbdd50072d7a54dae8"
+    },
+    "fairnessBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json",
+      "sha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca"
+    },
+    "formalAlgorithmIdentityBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-algorithm-identity-binding.reused.v5_1.json",
+      "sha256": "c3d8623560f9162de858ac01b2e861395b92953896e922413fababd0298db5b3"
+    },
+    "trustedUnityIdentityRule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    "trustedTimestampComparator": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"
+    },
+    "hostLifecycleCorrigendum": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-host-lifecycle-corrigendum.v5_1.json",
+      "sha256": "17be71fb433c8e353d8fa9e5f0078e2e49a2de89531bcdb3d7d8538e3bd3d85d"
+    },
+    "localHostLifecycleReadiness": {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/terminal-readiness-receipt.v1.json",
+      "sha256": "4ef0530f35b973a68712b8c818d3b5f91390e39620de09707425f7e87946859e"
+    },
+    "v5_1ImplementationManifest": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-implementation-manifest.v5_1.json",
+      "sha256": "5ade759471ee2849ae2c9b31408e92b2625afc6c75500ff52abaccec64b096a8"
+    },
+    "v5_1AcquisitionContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-acquisition-contract.v5_1.json",
+      "sha256": "9535be91c3796d76af1473903f9dff806c5f2ea9c4b6ad49e016c8b2c23e1604"
+    },
+    "v5_1Supervisor": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_1/Run-Gate14ReMEFormalST.v5_1.ps1",
+      "sha256": "7ab5584a763fb72ea58b2a0aa677ce072b02858d1f86428b2aea8f74f2e77300"
+    },
+    "v5_2SupervisorCorrigendum": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_2/formal-st-supervisor-preflight-corrigendum.v5_2.json",
+      "sha256": "31cf349fdf4c9ea7bfb7619155c79f6ad713ed267486a8488ddaa9f04962a159"
+    },
+    "failedAttempt001EvidenceSeal": {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-001/failed-attempt-evidence-seal-manifest.v1.json",
+      "sha256": "b6c3dc8bbceb985c98de8a5238a30f0d9ca8f37f92795a5cd6e61f1dafceab09"
+    },
+    "v5_2AlgorithmFreeReadiness": {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-2-supervisor-readiness-attempt-001/terminal-readiness-receipt.v1.json",
+      "sha256": "85496c8415c40365a5f6580b57d600f5b543f4024895db98f71c1c83552ad6ba"
+    },
+    "v5_2ImplementationManifest": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_2/formal-st-implementation-manifest.v5_2.json",
+      "sha256": "c956a991f439a1ef3bd5a7afc46a40105dd4006ef0a00a2734fd51f89ce4d745"
+    },
+    "v5_2AcquisitionContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_2/formal-st-acquisition-contract.v5_2.json",
+      "sha256": "4e9386f290785e434823db4fb86c3a5a891cd26070773df5a33524a6bf892ff3"
+    },
+    "v5_2Supervisor": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_2/Run-Gate14ReMEFormalST.v5_2.ps1",
+      "sha256": "cbcdc4030eac2e4d79ae1fbafa5c1a2fe1a3ee7e25c00044575974bf78fb9889"
+    },
+    "failedAttempt002EvidenceSeal": {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-002/failed-attempt-evidence-seal-manifest.v2.json",
+      "sha256": "0f2a6ee6197f7ad0d0858b7da3b30312b1b75eaee95e3d38124bf68feb4e41cd"
+    },
+    "v5_3AuthorizationContractCorrigendum": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v5_3/formal-st-authorization-contract-corrigendum.v5_3.json",
+      "sha256": "a85ec987496381b16adccc95b8eabd7375cbea68447b5baae417813e8b047c65"
+    }
+  },
+  "fixedGeometry": {
+    "G": [
+      64,
+      96,
+      128
+    ],
+    "N": [
+      32,
+      64,
+      128
+    ],
+    "F": [
+      1,
+      9,
+      25,
+      81
+    ],
+    "B": 36,
+    "structuralCells": 36,
+    "superblocks": 1296,
+    "algorithmLanes": 7776,
+    "eventGroupsPerLane": 24
+  },
+  "processPolicy": {
+    "strictSerialFreshUnityProcesses": true,
+    "maximumConcurrentUnityProcesses": 1,
+    "sameAttemptRetry": false,
+    "resume": false,
+    "topUp": false,
+    "merge": false,
+    "skip": false,
+    "reorder": false,
+    "wholeSuperblockTechnicalReplacements": 0,
+    "naturalExitCodeZeroRequired": true,
+    "trustedCompositeProcessIdentityRequired": true,
+    "commandLineQuitPermitted": false,
+    "runnerOwnedTerminalExitRequired": true,
+    "stableBurstCompletionRequiredBeforeExit": true,
+    "lifecyclePhaseReceiptsRequired": true,
+    "forcedTerminationBySupervisorPermitted": false,
+    "preflightOnlyValidationAvailable": true,
+    "preflightOnlyMayCreateMeasuredRoot": false
+  },
+  "authorizationBoundary": {
+    "formalInputsOrScheduleMaterializedByImplementationFreeze": false,
+    "collectionMayStartFromImplementationFreezeAlone": false,
+    "separateFormalInputAuthorizationRequired": true,
+    "separateFormalCollectionAuthorizationRequired": true,
+    "formalAnalysisAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "migrationPackageRequired": false
+  }
+}

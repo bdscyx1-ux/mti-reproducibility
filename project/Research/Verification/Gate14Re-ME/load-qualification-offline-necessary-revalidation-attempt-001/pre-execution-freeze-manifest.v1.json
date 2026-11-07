@@ -1,0 +1,53 @@
+{
+  "schema": "gate14re-me-offline-revalidation-pre-execution-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "sourceAttemptId": "load-qualification-execution-attempt-009",
+  "offlineRevalidationAttemptId": "load-qualification-offline-necessary-revalidation-attempt-001",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "frozenAtUtc": "2026-10-19T10:14:24.2298439Z",
+  "oneShot": true,
+  "sameAttemptRetryPermitted": false,
+  "readOnlySourceRoots": [
+    "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-007",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-009",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-paused-seal-attempt-009"
+  ],
+  "files": [
+    {
+      "relativePath": "offline-revalidation-authorization.v1.json",
+      "bytes": 2159,
+      "sha256": "b8c798c4b596f87a8171cd6b8975d24599f7b668fc40847217fdb91a476c943e"
+    },
+    {
+      "relativePath": "offline-revalidation-protocol.v1.json",
+      "bytes": 4662,
+      "sha256": "4952737c4a5dbbc5cb40e5650c2e90f01c109a408460bd4e27f43dbe19992bcb"
+    },
+    {
+      "relativePath": "field-boundary.v1.json",
+      "bytes": 1620,
+      "sha256": "13aa40671e049cbfca235ef0006b04b2f8b7add15accc6d035cf7a5012d913fb"
+    },
+    {
+      "relativePath": "post-validation-diagnostic-plan.v1.json",
+      "bytes": 2409,
+      "sha256": "14c2cae065de63dc7d30d35ff289619e3a5374776d67548eae68edb911543e95"
+    },
+    {
+      "relativePath": "offline_necessary_validator_v1.py",
+      "bytes": 57716,
+      "sha256": "abbfedd14d7fdc46e1af0e1dbfab347d8f4f91f6c40b755a1a86342015c8f840"
+    },
+    {
+      "relativePath": "Run-OfflineNecessaryRevalidation.v1.ps1",
+      "bytes": 6415,
+      "sha256": "a50af4c1c2f4c8fae038e6d64eeb24ee5e8676fababb69ab77d0e5f8a4ffb73e"
+    }
+  ],
+  "sourceSealBindings": {
+    "terminalSealReceiptSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705",
+    "measuredFileManifestSha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f",
+    "executionEvidenceFileManifestSha256": "0e67dac637a68b3c4ce9159df5576ceca7ac6867c092b2a2b844b44c9fd28522"
+  },
+  "verdictBoundary": "This freeze authorizes only PASS_OFFLINE_NECESSARY_RAW_VALIDATION or fail-closed. It cannot produce or imply the original attempt-009 qualification terminal PASS."
+}

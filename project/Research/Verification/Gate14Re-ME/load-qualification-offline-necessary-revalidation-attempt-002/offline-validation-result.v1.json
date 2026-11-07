@@ -1,0 +1,91 @@
+{
+  "boundaries": {
+    "algorithmEffectsComputed": false,
+    "algorithmIdentityUnsealedDuringValidation": false,
+    "qualificationRowsUsedForFormalInference": false,
+    "rankingOrWinnerComputed": false,
+    "sameAttemptResumeOrRetryPerformed": false,
+    "sourceRootsModified": false
+  },
+  "completedAtUtc": "2026-10-19T10:26:45.538903Z",
+  "controlPlane": {
+    "acceptedSuperblocks": 162,
+    "emptyBoundaryReceipts": 12,
+    "failureLedgerRows": 0,
+    "laneReceipts": 972,
+    "oracleReceipts": 162,
+    "processIdentityReceipts": 1147,
+    "processLedgerRows": 1147,
+    "replacementLedgerRows": 0,
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV3.Run"
+  },
+  "deliveryBuiltOrValidated": false,
+  "elapsedSeconds": 106.432,
+  "offlineNecessaryRawValidationPass": true,
+  "performance": {
+    "boundedGlobalD3IndexRows": 36301,
+    "distinctRowBoundSourcePathsValidated": 163,
+    "distinctSourceFilesHashedOutsidePreverifiedSeal": 180,
+    "perRowFilesystemPathCanonicalization": false,
+    "phaseTimings": {
+      "controlAndReceiptSeconds": 3.782,
+      "sealedByteReplaySeconds": 7.023,
+      "streamingRawScanSeconds": 93.437
+    },
+    "rowSourceBindingPathCacheHits": 7126242,
+    "rowSourceBindingReferences": 7126405,
+    "sourceBindingReferences": 1330,
+    "sourceHashCacheHits": 1150,
+    "wholeDatasetRowsRetainedInMemory": false
+  },
+  "qualificationTerminalPass": false,
+  "rawValidation": {
+    "d3JoinsOneToOneAndComplete": true,
+    "d3WindowRecordIdsUnique": true,
+    "emptyBoundaryD3Joins": 12000,
+    "eventGroupD3Joins": 23328,
+    "persistentStateMeasurementPointLanePairs": 25272,
+    "rawFilesScanned": 5211,
+    "tableFiles": {
+      "d3-windows": 985,
+      "empty-boundary": 12,
+      "event-groups": 972,
+      "failures-and-voids": 1,
+      "operations": 972,
+      "oracle-agent-checks": 162,
+      "oracle-event-checks": 162,
+      "persistent-state": 972,
+      "process-resources": 972,
+      "replacement-ledger": 1
+    },
+    "tableRows": {
+      "d3-windows": 36301,
+      "empty-boundary": 12000,
+      "event-groups": 23328,
+      "failures-and-voids": 0,
+      "operations": 5218668,
+      "oracle-agent-checks": 1651104,
+      "oracle-event-checks": 3888,
+      "persistent-state": 155844,
+      "process-resources": 25272,
+      "replacement-ledger": 0
+    }
+  },
+  "schema": "gate14re-me-offline-necessary-raw-validation-result-v1",
+  "scope": "SEALED_RAW_NECESSARY_VALIDATION_ONLY",
+  "scopeWarning": "This is not the original attempt-009 qualification terminal PASS and does not assert delivery or typed-Parquet PASS.",
+  "sealedInventory": {
+    "allCurrentHashesMatchSeal": true,
+    "executionEvidenceBytes": 29870,
+    "executionEvidenceFiles": 11,
+    "measuredBytes": 7240319212,
+    "measuredFiles": 9789,
+    "sourceRootsUnchangedDuringValidation": true
+  },
+  "sourceAttemptId": "load-qualification-execution-attempt-009",
+  "sourceMeasuredRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-007",
+  "startedAtUtc": "2026-10-19T10:24:59.107045Z",
+  "status": "PASS_OFFLINE_NECESSARY_RAW_VALIDATION",
+  "studyId": "Gate14Re-ME",
+  "typedParquetRoundTripValidated": false
+}

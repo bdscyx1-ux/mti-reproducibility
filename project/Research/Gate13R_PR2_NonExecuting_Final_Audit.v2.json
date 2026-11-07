@@ -1,0 +1,823 @@
+{
+    "schemaVersion":  1,
+    "auditId":  "gate13r-pr2-nonexecuting-formal-preparation-final-audit-v2",
+    "completedAtUtc":  "2026-10-08T16:24:29.4902096+00:00",
+    "completedAtAsiaShanghai":  "2026-10-09T00:24:29.4902096+08:00",
+    "status":  "PASS / PR2-NONEXECUTING-PREPARATION-VALIDATED / S48-H48-FROZEN / GATE13R-FORMAL-NOT-AUTHORIZED / GATE14R-NOT-AUTHORIZED",
+    "passed":  true,
+    "checkCount":  49,
+    "passedCheckCount":  49,
+    "failedCheckCount":  0,
+    "failedCheckIds":  [
+
+                       ],
+    "checks":  [
+                   {
+                       "id":  "frozen-tree-v4",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+                                        "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+                                        "fileCount":  169,
+                                        "rawBytes":  14661848,
+                                        "canonicalTreeSha256":  "a62fcb5c0104e1ce493d8ca006f753cbd20341839c588c6ffd856cbe438beb6a"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+                                      "fileCount":  169,
+                                      "rawBytes":  14661848,
+                                      "canonicalOrdinalTreeSha256":  "a62fcb5c0104e1ce493d8ca006f753cbd20341839c588c6ffd856cbe438beb6a"
+                                  },
+                       "detail":  "Frozen upstream tree must remain byte-identical under ordinal row sorting."
+                   },
+                   {
+                       "id":  "frozen-tree-v1",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/FormalScenarios/Gate11R_5pct/v1",
+                                        "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/FormalScenarios/Gate11R_5pct/v1",
+                                        "fileCount":  57,
+                                        "rawBytes":  125218919,
+                                        "canonicalTreeSha256":  "0f41d8db5c01e9a1f1c14c7ee295151150d2efd91f6fc597fdb0b71b4f7eabe5"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/FormalScenarios/Gate11R_5pct/v1",
+                                      "fileCount":  57,
+                                      "rawBytes":  125218919,
+                                      "canonicalOrdinalTreeSha256":  "0f41d8db5c01e9a1f1c14c7ee295151150d2efd91f6fc597fdb0b71b4f7eabe5"
+                                  },
+                       "detail":  "Frozen upstream tree must remain byte-identical under ordinal row sorting."
+                   },
+                   {
+                       "id":  "frozen-tree-v4",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+                                        "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+                                        "fileCount":  8714,
+                                        "rawBytes":  554204972,
+                                        "canonicalTreeSha256":  "e0c54bfe122b67d9a7aea6bea44fd6e936b002065488c0225979f7fadd919513"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4",
+                                      "fileCount":  8714,
+                                      "rawBytes":  554204972,
+                                      "canonicalOrdinalTreeSha256":  "e0c54bfe122b67d9a7aea6bea44fd6e936b002065488c0225979f7fadd919513"
+                                  },
+                       "detail":  "Frozen upstream tree must remain byte-identical under ordinal row sorting."
+                   },
+                   {
+                       "id":  "frozen-tree-v1",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Analysis/Gate13R_RQAligned_Preregistration/v1",
+                                        "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Analysis/Gate13R_RQAligned_Preregistration/v1",
+                                        "fileCount":  8,
+                                        "rawBytes":  620326,
+                                        "canonicalTreeSha256":  "af9b8236a17110bb3b63c2fbe5be108d0229ae5da84f4036c99736e209c79d3a"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Analysis/Gate13R_RQAligned_Preregistration/v1",
+                                      "fileCount":  8,
+                                      "rawBytes":  620326,
+                                      "canonicalOrdinalTreeSha256":  "af9b8236a17110bb3b63c2fbe5be108d0229ae5da84f4036c99736e209c79d3a"
+                                  },
+                       "detail":  "Frozen upstream tree must remain byte-identical under ordinal row sorting."
+                   },
+                   {
+                       "id":  "frozen-tree-v7-gate13r-pr1b-order-effect-pathsafe-v4",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+                                        "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+                                        "fileCount":  9118,
+                                        "rawBytes":  253513394,
+                                        "canonicalTreeSha256":  "647fa0aa60f7cd0bd7763d94c1750f23efd803a2642ca69c1f21081de890faa9",
+                                        "status":  "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / NON-FORMAL / COMPLETE-RAW-EXECUTION / POST-EXECUTION-ANALYZER-FAILED / EXCLUDED-FROM-FORMAL-ANALYSIS"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+                                      "fileCount":  9118,
+                                      "rawBytes":  253513394,
+                                      "canonicalOrdinalTreeSha256":  "647fa0aa60f7cd0bd7763d94c1750f23efd803a2642ca69c1f21081de890faa9"
+                                  },
+                       "detail":  "Frozen upstream tree must remain byte-identical under ordinal row sorting."
+                   },
+                   {
+                       "id":  "frozen-tree-v1",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+                                        "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+                                        "fileCount":  8,
+                                        "rawBytes":  116998,
+                                        "canonicalTreeSha256":  "70f4f10c3ccd4f4428284c946f233e97cd2052408d74b4c72f24055f3f6c06bd",
+                                        "status":  "READ-ONLY-ANALYSIS-RECOVERY-COMPLETE / PILOT-DIAGNOSTIC-ONLY / EXCLUDED-FROM-FORMAL-ANALYSIS"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+                                      "fileCount":  8,
+                                      "rawBytes":  116998,
+                                      "canonicalOrdinalTreeSha256":  "70f4f10c3ccd4f4428284c946f233e97cd2052408d74b4c72f24055f3f6c06bd"
+                                  },
+                       "detail":  "Frozen upstream tree must remain byte-identical under ordinal row sorting."
+                   },
+                   {
+                       "id":  "key-file-Gate13R_PR1B_v4_Next_Authorization_Prompt.md",
+                       "passed":  true,
+                       "expected":  "41060497a5157675865ddf7753cd80c471de9ac5106ed2819ce28977016fab9a",
+                       "actual":  "41060497a5157675865ddf7753cd80c471de9ac5106ed2819ce28977016fab9a",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-bundle-manifest.json",
+                       "passed":  true,
+                       "expected":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+                       "actual":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-formal-scenario-matrix.json",
+                       "passed":  true,
+                       "expected":  "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3",
+                       "actual":  "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-algorithm-preset-catalog.json",
+                       "passed":  true,
+                       "expected":  "c0aad543e8dfe8ab8f5245b6d579a459b586f030d18e3cb360917fbce6393253",
+                       "actual":  "c0aad543e8dfe8ab8f5245b6d579a459b586f030d18e3cb360917fbce6393253",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-Gate12R_Readiness_Checkpoint.v1.json",
+                       "passed":  true,
+                       "expected":  "93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d",
+                       "actual":  "93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-Gate13R_RQAligned_Preregistration_Amendment.v1.json",
+                       "passed":  true,
+                       "expected":  "9bf388293094b89e5dcbe0ad6f76c66be6200a1db1223ef1015f10bb24477a83",
+                       "actual":  "9bf388293094b89e5dcbe0ad6f76c66be6200a1db1223ef1015f10bb24477a83",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-Gate13R_RQAligned_Metric_Registry.v1.json",
+                       "passed":  true,
+                       "expected":  "ca990d308f180452e7cd0a9a152c9e6c852bac9cf611e5aa2b9e686821b79b93",
+                       "actual":  "ca990d308f180452e7cd0a9a152c9e6c852bac9cf611e5aa2b9e686821b79b93",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-Gate13R_RQAligned_Contrast_Registry.v1.json",
+                       "passed":  true,
+                       "expected":  "fba8fbe41ecfbdb4f4d7fa5b4aad74be00b874e41c3b83c562fc1f2d250fcc47",
+                       "actual":  "fba8fbe41ecfbdb4f4d7fa5b4aad74be00b874e41c3b83c562fc1f2d250fcc47",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-wallclock-storage-decision-table.json",
+                       "passed":  true,
+                       "expected":  "ecde05838a5a6316af5b2393726b1010b97f372d63d0ea5cf0bc3ea059ca8c45",
+                       "actual":  "ecde05838a5a6316af5b2393726b1010b97f372d63d0ea5cf0bc3ea059ca8c45",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-Gate13R_PR1B_OrderEffect_Pilot_Plan.v9.json",
+                       "passed":  true,
+                       "expected":  "40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784",
+                       "actual":  "40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-Gate13R_PR1B_v4_CompositeProcessIdentity_Recovery_Readiness_Checkpoint.v1.json",
+                       "passed":  true,
+                       "expected":  "b2416975737afcfceef7fbd3a4b2f2af132aa11e134f9936d09120f460df081f",
+                       "actual":  "b2416975737afcfceef7fbd3a4b2f2af132aa11e134f9936d09120f460df081f",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "key-file-recovered-order-effect-analysis.json",
+                       "passed":  true,
+                       "expected":  "da58006ab03e9166c31c82489d7ae7bd8024b362a6b9da08878a05453609fee0",
+                       "actual":  "da58006ab03e9166c31c82489d7ae7bd8024b362a6b9da08878a05453609fee0",
+                       "detail":  "Frozen key-file SHA-256."
+                   },
+                   {
+                       "id":  "verification-root-v1",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v1",
+                                        "fileCount":  6,
+                                        "rawBytes":  18738,
+                                        "sha256":  "be1493a4e73354dd8cd4d4f4d5d25cb7dd2105b72d740b89bc17c394c7bb98ea",
+                                        "disposition":  "FAILED-RETAINED"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v1",
+                                      "fileCount":  6,
+                                      "rawBytes":  18738,
+                                      "canonicalOrdinalTreeSha256":  "be1493a4e73354dd8cd4d4f4d5d25cb7dd2105b72d740b89bc17c394c7bb98ea"
+                                  },
+                       "detail":  "FAILED-RETAINED"
+                   },
+                   {
+                       "id":  "verification-root-v2",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v2",
+                                        "fileCount":  6,
+                                        "rawBytes":  18744,
+                                        "sha256":  "ac9c0ddca7ca97207b391732cc65d7ba8276ed9089af84e59252adf0dec67589",
+                                        "disposition":  "FAILED-RETAINED"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v2",
+                                      "fileCount":  6,
+                                      "rawBytes":  18744,
+                                      "canonicalOrdinalTreeSha256":  "ac9c0ddca7ca97207b391732cc65d7ba8276ed9089af84e59252adf0dec67589"
+                                  },
+                       "detail":  "FAILED-RETAINED"
+                   },
+                   {
+                       "id":  "verification-root-v3",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v3",
+                                        "fileCount":  14,
+                                        "rawBytes":  11646896,
+                                        "sha256":  "482e3a92fafec64866f4cf445d8f3052e638c1aa4c05b0009f277a31c63cfab3",
+                                        "disposition":  "FAILED-RETAINED-62-OF-63"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v3",
+                                      "fileCount":  14,
+                                      "rawBytes":  11646896,
+                                      "canonicalOrdinalTreeSha256":  "482e3a92fafec64866f4cf445d8f3052e638c1aa4c05b0009f277a31c63cfab3"
+                                  },
+                       "detail":  "FAILED-RETAINED-62-OF-63"
+                   },
+                   {
+                       "id":  "verification-root-v4",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v4",
+                                        "fileCount":  14,
+                                        "rawBytes":  11585336,
+                                        "sha256":  "4c1262219f4923ba201de089b4bcf0b3be11c8c59c8dab2a9623bf53f4e38d29",
+                                        "disposition":  "PASSED-63-OF-63"
+                                    },
+                       "actual":  {
+                                      "resolvedAbsolutePath":  "H:/DDM_Final_Project/Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v4",
+                                      "fileCount":  14,
+                                      "rawBytes":  11585336,
+                                      "canonicalOrdinalTreeSha256":  "4c1262219f4923ba201de089b4bcf0b3be11c8c59c8dab2a9623bf53f4e38d29"
+                                  },
+                       "detail":  "PASSED-63-OF-63"
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_NonExecuting_Formal_Preparation_Authorization.v1.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_NonExecuting_Formal_Preparation_Authorization.v1.json",
+                                        "bytes":  1708,
+                                        "sha256":  "38a43ae2e29316648d34441bc3276c985b4119e9989343b78c48bb88c100c192"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  1708,
+                                      "sha256":  "38a43ae2e29316648d34441bc3276c985b4119e9989343b78c48bb88c100c192"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Preparation_Amendment.v1.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Amendment.v1.json",
+                                        "bytes":  2900,
+                                        "sha256":  "65db60535b9ef80f92d48fc9d7427a7cd16af52c8757e6d9588d97a142a47d24"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  2900,
+                                      "sha256":  "65db60535b9ef80f92d48fc9d7427a7cd16af52c8757e6d9588d97a142a47d24"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Preparation_Specification.v1.md",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Specification.v1.md",
+                                        "bytes":  6326,
+                                        "sha256":  "379a14dbe890531c3597597453abfef8f1d462aacd26868e40ee4bfcd51fff40"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  6326,
+                                      "sha256":  "379a14dbe890531c3597597453abfef8f1d462aacd26868e40ee4bfcd51fff40"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Preparation_Test_Design.v1.md",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Test_Design.v1.md",
+                                        "bytes":  4337,
+                                        "sha256":  "2384bbc18db86002c1cb65914c2621abf2f8f33e8b7dddfc015c4e4d23787dd9"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  4337,
+                                      "sha256":  "2384bbc18db86002c1cb65914c2621abf2f8f33e8b7dddfc015c4e4d23787dd9"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Campaign_Config.v2.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+                                        "bytes":  288367,
+                                        "sha256":  "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  288367,
+                                      "sha256":  "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+                                        "bytes":  11220567,
+                                        "sha256":  "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  11220567,
+                                      "sha256":  "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+                                        "bytes":  32861,
+                                        "sha256":  "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  32861,
+                                      "sha256":  "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Storage_WallClock_Preflight.v2.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Storage_WallClock_Preflight.v2.json",
+                                        "bytes":  2082,
+                                        "sha256":  "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  2082,
+                                      "sha256":  "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Preparation_Provenance.v2.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json",
+                                        "bytes":  5352,
+                                        "sha256":  "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  5352,
+                                      "sha256":  "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Preparation_Generation_Summary.v2.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Generation_Summary.v2.json",
+                                        "bytes":  1574,
+                                        "sha256":  "535d2205ebd84dffa446048f42e4050657add746782487996fe24f177254fe1b"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  1574,
+                                      "sha256":  "535d2205ebd84dffa446048f42e4050657add746782487996fe24f177254fe1b"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Preparation_Schema.v2.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json",
+                                        "bytes":  3611,
+                                        "sha256":  "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  3611,
+                                      "sha256":  "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_PreWrite_Preservation_Audit.v2.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_PreWrite_Preservation_Audit.v2.json",
+                                        "bytes":  5182,
+                                        "sha256":  "d02d49773e6404e036e1d5c3d7c8851f5a39e8d9ba129091ad27552a9779d2eb"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  5182,
+                                      "sha256":  "d02d49773e6404e036e1d5c3d7c8851f5a39e8d9ba129091ad27552a9779d2eb"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+                                        "bytes":  6315,
+                                        "sha256":  "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  6315,
+                                      "sha256":  "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.md",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.md",
+                                        "bytes":  5524,
+                                        "sha256":  "9ad1d5a7183fd14ad5aa26b522089bce4dab7395ada636008b96bb8986e8e197"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  5524,
+                                      "sha256":  "9ad1d5a7183fd14ad5aa26b522089bce4dab7395ada636008b96bb8986e8e197"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_Formal_Campaign_Next_Authorization_Prompt.md",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_Formal_Campaign_Next_Authorization_Prompt.md",
+                                        "bytes":  7724,
+                                        "sha256":  "0cdfa4dfe87ce5642be675a16653d9b8cb5cb29721bdda742a3cfd97ae566661"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  7724,
+                                      "sha256":  "0cdfa4dfe87ce5642be675a16653d9b8cb5cb29721bdda742a3cfd97ae566661"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_NonExecuting_Final_Audit.v1.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_NonExecuting_Final_Audit.v1.json",
+                                        "bytes":  53057,
+                                        "sha256":  "3c467a79360cb2632d318853108e1c0c56c52ef1dda6f140e30298618f365860"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  53057,
+                                      "sha256":  "3c467a79360cb2632d318853108e1c0c56c52ef1dda6f140e30298618f365860"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Gate13R_PR2_NonExecuting_Evidence_Manifest.v1.json",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Gate13R_PR2_NonExecuting_Evidence_Manifest.v1.json",
+                                        "bytes":  20191,
+                                        "sha256":  "d091d35dea1368d5aae44459dfa98fa3a5a2f1605a2fcaf1fca979073da22a4a"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  20191,
+                                      "sha256":  "d091d35dea1368d5aae44459dfa98fa3a5a2f1605a2fcaf1fca979073da22a4a"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Overall_Project_Plan.md",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Overall_Project_Plan.md",
+                                        "bytes":  92924,
+                                        "sha256":  "cf1dcc66eabe433f7bfdee3763f58310fb78e073ee4fe8127e26ca8ac491708a"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  92924,
+                                      "sha256":  "cf1dcc66eabe433f7bfdee3763f58310fb78e073ee4fe8127e26ca8ac491708a"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "official-file-Next_Session_Checkpoint.md",
+                       "passed":  true,
+                       "expected":  {
+                                        "relativePath":  "Research/Next_Session_Checkpoint.md",
+                                        "bytes":  6055,
+                                        "sha256":  "20bad61307073c761d8d08a01f79589b3ffd79aa1bc1e7065ae86d3bb12d28e6"
+                                    },
+                       "actual":  {
+                                      "exists":  true,
+                                      "rawBytes":  6055,
+                                      "sha256":  "20bad61307073c761d8d08a01f79589b3ffd79aa1bc1e7065ae86d3bb12d28e6"
+                                  },
+                       "detail":  "Version-bound PR2 artifact identity."
+                   },
+                   {
+                       "id":  "v4-core-validation-63-of-63",
+                       "passed":  true,
+                       "expected":  "PASS / 63 / 63 / 0",
+                       "actual":  "PASS / 63 / 63 / 0",
+                       "detail":  "Successful validation attempt."
+                   },
+                   {
+                       "id":  "v4-final-validation-audit-pass",
+                       "passed":  true,
+                       "expected":  "PASS / preservation PASS / authorization false",
+                       "actual":  {
+                                      "schemaVersion":  1,
+                                      "auditId":  "gate13r-pr2-nonexecuting-validation-only-final-audit-v4",
+                                      "observedAtUtc":  "2026-10-08T16:18:26.8440312+00:00",
+                                      "status":  "PASS",
+                                      "prePreservationPassed":  true,
+                                      "coreValidatorExitCode":  0,
+                                      "coreStatus":  "PASS",
+                                      "coreCheckCount":  63,
+                                      "corePassedCheckCount":  63,
+                                      "coreFailedCheckCount":  0,
+                                      "postPreservationPassed":  true,
+                                      "formalRootAbsent":  true,
+                                      "formalExecutionReceiptAbsent":  true,
+                                      "unityEditorProcessCountBefore":  0,
+                                      "unityEditorProcessCountAfter":  0,
+                                      "formalCampaignAuthorized":  false,
+                                      "gate14rAuthorized":  false
+                                  },
+                       "detail":  "Validation-only final audit."
+                   },
+                   {
+                       "id":  "all-root-pr2-json-parse",
+                       "passed":  true,
+                       "expected":  0,
+                       "actual":  0,
+                       "detail":  ""
+                   },
+                   {
+                       "id":  "schedule-jsonl-record-count",
+                       "passed":  true,
+                       "expected":  3552,
+                       "actual":  3552,
+                       "detail":  "One record per fresh Unity block-process."
+                   },
+                   {
+                       "id":  "unity-process-count-zero",
+                       "passed":  true,
+                       "expected":  0,
+                       "actual":  0,
+                       "detail":  "No Unity Editor was launched by PR2."
+                   },
+                   {
+                       "id":  "future-formal-root-absent",
+                       "passed":  true,
+                       "expected":  false,
+                       "actual":  false,
+                       "detail":  "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1"
+                   },
+                   {
+                       "id":  "formal-execution-receipt-absent",
+                       "passed":  true,
+                       "expected":  0,
+                       "actual":  0,
+                       "detail":  ""
+                   },
+                   {
+                       "id":  "launch-storage-preflight-currently-sufficient",
+                       "passed":  true,
+                       "expected":  57397541440,
+                       "actual":  276246921216,
+                       "detail":  "Informational preparation check only; must be rerun immediately before any separately authorized formal launch."
+                   }
+               ],
+    "frozenDesign":  {
+                         "designId":  "gate13r-rq-aligned-s48-h48-strict-serial-v1",
+                         "sharedCampaignCount":  32,
+                         "sharedBlocksPerCampaign":  48,
+                         "heterogeneousScenarioCount":  21,
+                         "heterogeneousMatchedSuperblocksPerScenario":  48,
+                         "ABPerHeterogeneousScenario":  24,
+                         "BAPerHeterogeneousScenario":  24,
+                         "totalProcessCount":  3552,
+                         "totalSampleCount":  10176,
+                         "strictSerial":  true,
+                         "maximumConcurrentUnityEditorProcesses":  1
+                     },
+    "resourceProjection":  {
+                               "serialP50Hours":  20.808185450666667,
+                               "conservativeSummedP95Hours":  26.455382070666669,
+                               "projectedP95RawBytes":  9631912320,
+                               "projectedSafetyBytes":  14447868480,
+                               "reserveBytes":  42949672960,
+                               "minimumLaunchFreeBytes":  57397541440,
+                               "observedFreeBytesAtCloseout":  276246921216,
+                               "formalLaunchRecheckRequired":  true
+                           },
+    "verificationRootIdentities":  [
+                                       {
+                                           "relativePath":  "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v1",
+                                           "disposition":  "FAILED-RETAINED",
+                                           "fileCount":  6,
+                                           "rawBytes":  18738,
+                                           "canonicalOrdinalTreeSha256":  "be1493a4e73354dd8cd4d4f4d5d25cb7dd2105b72d740b89bc17c394c7bb98ea",
+                                           "passed":  true
+                                       },
+                                       {
+                                           "relativePath":  "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v2",
+                                           "disposition":  "FAILED-RETAINED",
+                                           "fileCount":  6,
+                                           "rawBytes":  18744,
+                                           "canonicalOrdinalTreeSha256":  "ac9c0ddca7ca97207b391732cc65d7ba8276ed9089af84e59252adf0dec67589",
+                                           "passed":  true
+                                       },
+                                       {
+                                           "relativePath":  "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v3",
+                                           "disposition":  "FAILED-RETAINED-62-OF-63",
+                                           "fileCount":  14,
+                                           "rawBytes":  11646896,
+                                           "canonicalOrdinalTreeSha256":  "482e3a92fafec64866f4cf445d8f3052e638c1aa4c05b0009f277a31c63cfab3",
+                                           "passed":  true
+                                       },
+                                       {
+                                           "relativePath":  "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v4",
+                                           "disposition":  "PASSED-63-OF-63",
+                                           "fileCount":  14,
+                                           "rawBytes":  11585336,
+                                           "canonicalOrdinalTreeSha256":  "4c1262219f4923ba201de089b4bcf0b3be11c8c59c8dab2a9623bf53f4e38d29",
+                                           "passed":  true
+                                       }
+                                   ],
+    "officialFileIdentities":  [
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_NonExecuting_Formal_Preparation_Authorization.v1.json",
+                                       "rawBytes":  1708,
+                                       "sha256":  "38a43ae2e29316648d34441bc3276c985b4119e9989343b78c48bb88c100c192",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Amendment.v1.json",
+                                       "rawBytes":  2900,
+                                       "sha256":  "65db60535b9ef80f92d48fc9d7427a7cd16af52c8757e6d9588d97a142a47d24",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Specification.v1.md",
+                                       "rawBytes":  6326,
+                                       "sha256":  "379a14dbe890531c3597597453abfef8f1d462aacd26868e40ee4bfcd51fff40",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Test_Design.v1.md",
+                                       "rawBytes":  4337,
+                                       "sha256":  "2384bbc18db86002c1cb65914c2621abf2f8f33e8b7dddfc015c4e4d23787dd9",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+                                       "rawBytes":  288367,
+                                       "sha256":  "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+                                       "rawBytes":  11220567,
+                                       "sha256":  "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+                                       "rawBytes":  32861,
+                                       "sha256":  "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Storage_WallClock_Preflight.v2.json",
+                                       "rawBytes":  2082,
+                                       "sha256":  "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json",
+                                       "rawBytes":  5352,
+                                       "sha256":  "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Generation_Summary.v2.json",
+                                       "rawBytes":  1574,
+                                       "sha256":  "535d2205ebd84dffa446048f42e4050657add746782487996fe24f177254fe1b",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json",
+                                       "rawBytes":  3611,
+                                       "sha256":  "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_PreWrite_Preservation_Audit.v2.json",
+                                       "rawBytes":  5182,
+                                       "sha256":  "d02d49773e6404e036e1d5c3d7c8851f5a39e8d9ba129091ad27552a9779d2eb",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+                                       "rawBytes":  6315,
+                                       "sha256":  "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.md",
+                                       "rawBytes":  5524,
+                                       "sha256":  "9ad1d5a7183fd14ad5aa26b522089bce4dab7395ada636008b96bb8986e8e197",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_Formal_Campaign_Next_Authorization_Prompt.md",
+                                       "rawBytes":  7724,
+                                       "sha256":  "0cdfa4dfe87ce5642be675a16653d9b8cb5cb29721bdda742a3cfd97ae566661",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_NonExecuting_Final_Audit.v1.json",
+                                       "rawBytes":  53057,
+                                       "sha256":  "3c467a79360cb2632d318853108e1c0c56c52ef1dda6f140e30298618f365860",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Gate13R_PR2_NonExecuting_Evidence_Manifest.v1.json",
+                                       "rawBytes":  20191,
+                                       "sha256":  "d091d35dea1368d5aae44459dfa98fa3a5a2f1605a2fcaf1fca979073da22a4a",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Overall_Project_Plan.md",
+                                       "rawBytes":  92924,
+                                       "sha256":  "cf1dcc66eabe433f7bfdee3763f58310fb78e073ee4fe8127e26ca8ac491708a",
+                                       "passed":  true
+                                   },
+                                   {
+                                       "relativePath":  "Research/Next_Session_Checkpoint.md",
+                                       "rawBytes":  6055,
+                                       "sha256":  "20bad61307073c761d8d08a01f79589b3ffd79aa1bc1e7065ae86d3bb12d28e6",
+                                       "passed":  true
+                                   }
+                               ],
+    "authorizationBoundary":  {
+                                  "gate13RFormalCampaignAuthorized":  false,
+                                  "gate14RAuthorized":  false,
+                                  "unityEditorProcessCount":  0,
+                                  "formalRootRelativePath":  "Research/FormalRuns/Gate13R_RQAligned_S48H48/v1",
+                                  "formalRootExists":  false,
+                                  "formalExecutionReceiptCount":  0,
+                                  "nextAuthorizationPromptRelativePath":  "Research/Gate13R_PR2_Formal_Campaign_Next_Authorization_Prompt.md"
+                              }
+}

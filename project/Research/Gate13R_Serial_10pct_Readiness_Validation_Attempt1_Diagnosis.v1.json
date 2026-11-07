@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "diagnosisKind": "gate13r-serial-10pct-readiness-validation-attempt1-diagnosis-v1",
+  "recordedDate": "2026-10-08",
+  "status": "NONEXECUTING-VALIDATOR-FAILED-NO-UNITY-RUN",
+  "failure": {
+    "reportedOverlapCount": 398,
+    "reportedMinimumGapSeconds": -9035.6038469,
+    "classification": "windows-powershell-5.1-sort-object-ordered-dictionary-property-projection",
+    "cause": "The validator appended OrderedDictionary instances rather than PSCustomObject rows. Windows PowerShell 5.1 did not sort those rows by startedAtUtc, so the interval reducer consumed an unsorted sequence and reported false overlaps.",
+    "underlyingGate12EvidenceChanged": false,
+    "unityLaunched": false,
+    "formalRootCreated": false,
+    "formalTimingCreated": false
+  },
+  "repair": {
+    "scope": "validator-only",
+    "change": "Cast interval rows to PSCustomObject before Sort-Object.",
+    "researchSemanticsChanged": false,
+    "thresholdChanged": false,
+    "serialTopologyChanged": false
+  },
+  "preservedEvidence": {
+    "auditRelativePath": "Research/Gate13R_Serial_10pct_Gate12R_v4_Evidence_Audit_Attempt1_Failed.v1.json",
+    "auditSha256": "8e26b5da7e553208207a4d2544956811b3c9fa0d8873a7091e1a2906bb0a89b8",
+    "auditRawBytes": 13662,
+    "summaryRelativePath": "Research/Verification/Gate13R_Serial_10pct/v1/ReadinessValidation.attempt1.failed.summary.json",
+    "summarySha256": "8b906c248719d1753342058f174f3ed8085e3862235d42a5bf624f4a933529d0",
+    "summaryRawBytes": 970
+  }
+}

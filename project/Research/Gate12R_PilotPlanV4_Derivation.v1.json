@@ -1,0 +1,33 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-pilot-plan-v4-derivation-v1",
+    "createdAtUtc":  "2026-10-07T17:36:43.3325728Z",
+    "sourceRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Plan.v3.json",
+    "sourceSha256":  "498f0bac34f5ba98c946efab5577f1feed5631a4766fdd8817c74f445b150c98",
+    "targetRelativePath":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Plan.v4.json",
+    "targetSha256":  "e2f595aac916dd856e5d6062d1562d3fc7745deaa352b4b0ee3ffc8b78dc3086",
+    "changedFields":  [
+                          "schemaVersion",
+                          "planId",
+                          "attempt",
+                          "paths.pilotRootRelativePath",
+                          "paths.verificationRootRelativePath",
+                          "telemetry block managed-memory aggregation fields",
+                          "memoryGateAmendment"
+                      ],
+    "unchangedSemantics":  [
+                               "12 campaigns",
+                               "8 warm-up blocks",
+                               "36 cold structural controls",
+                               "384 measured Williams blocks",
+                               "1152 measured samples",
+                               "Williams order",
+                               "algorithm and workload semantics",
+                               "per-sample reset",
+                               "PSAPI/CIM telemetry",
+                               "5% precision",
+                               "no formal sample cap",
+                               "canonical input reference policy"
+                           ],
+    "completed":  true
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 attempt 2 Unity compile telemetry retained regression and complete contract rehearsal",
+  "command": "Versioned V4 Unity self-tests and telemetry, frozen retained 63/63 harness, one validation-only fresh four-algorithm Williams block through wrapper V6, and campaign V6 dry-run",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 1,
+  "gate_tokens": [
+    "UNITY-COMPILE-MEMORY-ATOMIC-SELFTESTS-PASSED",
+    "PSAPI-CIM-TELEMETRY-PASSED",
+    "RETAINED-REGRESSION-63-OF-63",
+    "VALIDATION-ONLY-FRESH-UNITY-WILLIAMS-BLOCK-PASSED",
+    "EMBEDDED-FORMALCAMPAIGN-4-OF-4",
+    "SAMPLE-SUMMARY-FORMALCAMPAIGN-4-OF-4",
+    "CHILD-MANIFEST-FORMALCAMPAIGN-4-OF-4",
+    "MEMORY-EVALUATION-FORMALCAMPAIGN-4-OF-4",
+    "CAMPAIGN-DRY-RUN-PASSED-BOTH-RUNTIMES",
+    "NEGATIVE-NO-RECEIPT-FAIL-CLOSED",
+    "REHEARSAL-EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "FORMAL-ROOT-V2-ABSENT"
+  ],
+  "input_sha256": {
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/UnitySelfTestsAttempt1/unity-self-tests-summary.json": "a124a1551ff529003ac4b16e627005f0534b84e970f3d01ea806934de7bf5c44",
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/TelemetryAttempt1/probe.summary.json": "a0e0854342bfd571ee502b1b515b1b21923680095504d99c776f5221babb8660",
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/RetainedRegression/summary.json": "01130445af48c1f3798c211de81bbd76c98bcc55637a38618c2a59c33e6f5edd",
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/contract-rehearsal-evidence-manifest.v1.json": "881feb2564e17651e0df6993316b0ae954402d475c0973cbae704f997284d48f",
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/campaign-validation-only-dry-run-summary.v1.json": "8101dd38fcd4c696e092f06afc26dd7f5c44b563f8a50ef61ce9eb08d32459bc",
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/NegativeNoReceiptAttempt2/summary.json": "cc0ced045b9ad285284676b3b2d52ff6c540bf29560c081c52d05ba7d6190caf"
+  }
+}

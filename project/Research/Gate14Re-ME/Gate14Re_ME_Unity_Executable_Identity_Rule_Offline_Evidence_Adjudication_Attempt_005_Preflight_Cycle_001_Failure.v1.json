@@ -1,0 +1,43 @@
+{
+  "schema": "gate14re-me-unity-identity-offline-adjudication-preflight-failure-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-offline-evidence-adjudication-attempt-005",
+  "preflightCycleId": "attempt-005-preflight-cycle-001",
+  "status": "FAILED_READ_ONLY_PREFLIGHT_TOOL_DEFECT",
+  "observedAtUtc": "2026-10-17T10:48:44.9336952Z",
+  "passed": false,
+  "terminal": false,
+  "writesPerformedByPreflight": false,
+  "unityInvocationCount": 0,
+  "currentUnityProcessCountAfterPreflight": 0,
+  "attempt005OutputRootCreated": false,
+  "statusV17Created": false,
+  "checkCount": 27,
+  "authoritativeCheckCount": 26,
+  "failedAuthoritativeChecks": [
+    "unity-probe-source-and-parent-bindings-still-match"
+  ],
+  "classification": "HISTORICAL_ISOLATED_COPY_PATHS_NOT_RESOLVED_TO_CANONICAL_ORIGINALS",
+  "exactFinding": "Seven historical Unity-probe bindings point to byte-identical source or retained-evidence copies that existed under the isolated Unity audit project during the probe and were subsequently removed by the attempt-004 transient-cache/source cleanup. The initial attempt-005 adjudicator required those historical temporary paths to remain present instead of resolving their Research/... suffixes to the retained canonical project originals.",
+  "scientificDisposition": {
+    "attempt004EvidenceMismatchObserved": false,
+    "attempt004OutcomeReclassified": false,
+    "identityCriterionRelaxed": false,
+    "toolRepairRetryAuthorized": true,
+    "repair": "Resolve only missing bindings under the exact isolated-unity-audit-project/Research prefix to the canonical project-root Research path; continue to require the same recorded length and SHA-256 and the historical receipt matched=true/actualSha256=expectedSha256 assertions."
+  },
+  "frozenInputs": {
+    "adjudicatorV1": {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_unity_identity_offline_adjudication_v1.py",
+      "lengthBytes": 62490,
+      "sha256": "4949b15d5ab77d77dc1c274d5b495f157f7330c910eb2ebb21096704a59c1734"
+    },
+    "sourceFreezeManifestV1": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Rule_Offline_Evidence_Adjudication_Attempt_005_Freeze_Manifest.v1.json",
+      "lengthBytes": 10646,
+      "sha256": "2d4cd9278c7d41395351c98163c4466ab311dd132d98374d74b0bb5c2af75d11"
+    },
+    "attempt004EvidenceFileCount": 34,
+    "attempt004EvidenceInventoryDigestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c"
+  }
+}

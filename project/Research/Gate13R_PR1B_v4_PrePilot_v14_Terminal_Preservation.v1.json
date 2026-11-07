@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "gate13r-pr1b-v4-prepilot-v14-terminal-preservation-v1",
+  "savedAtUtc": "2026-10-08T13:11:32.4664781Z",
+  "status": "FAILED-NO-PILOT",
+  "disposition": ["PRESERVE-BYTE-EXACT", "NO-OVERWRITE", "NO-RESUME", "NO-REINTERPRETATION-AS-PASS"],
+  "resolvedVerificationRoot": "H:/DDM_Final_Project/Research/Verification/Gate12R_ProcessReuse_5pct/v14-gate13r-pr1b-order-effect-pathsafe-v4",
+  "rootIdentity": {
+    "fileCount": 78,
+    "rawBytes": 624428,
+    "treeIdentityAlgorithm": "sha256-of-utf8-lines-relativePath-tab-rawBytes-tab-sha256-sorted-by-full-path",
+    "treeIdentitySha256": "c9998236dae887c8451f76650422dd6ac7205e6cf82298b454a5b79f9dc75bc9"
+  },
+  "completedGates": {
+    "staticUnit": "PASSED",
+    "unityCompile": "PASSED",
+    "pathSafeAtomicUnitySelfTest": "PASSED",
+    "memoryPolicyUnitySelfTest": "PASSED",
+    "telemetryPsapiCim": "PASSED",
+    "firstPositiveBaseBlock": "PASSED"
+  },
+  "failedGate": "POSITIVE-BLOCK-POST-VALIDATION-SUMMARY-REPLACEMENT",
+  "failureClass": "WINDOWS-POWERSHELL-5.1-NULL-BACKUP-FILE-REPLACE-COMPATIBILITY",
+  "observedFacts": {
+    "baseBlockPassed": true,
+    "memoryEvidenceValidationReached": true,
+    "pilotRootCreated": false,
+    "measuredPilotStarted": false,
+    "formalRootCreated": false,
+    "unityProcessCountAtPreservation": 0,
+    "unityLockExistsAtPreservation": false
+  },
+  "nextAttemptPolicy": "VERSIONED-PREPILOT-WRAPPER-ATOMIC-REPLACE-REPAIR-ONLY",
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

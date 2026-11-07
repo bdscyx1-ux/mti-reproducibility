@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-36h-attempt10-derivation-failure-v1",
+  "createdAtUtc": "2026-10-08T05:14:54.6147198Z",
+  "status": "FAILED-PRE-ROOT",
+  "phase": "deterministic-schedule-generation-plan-identity",
+  "errorMessage": "Overlapping mechanical routes applied plan-v2 to plan-v10 and then matched the plan-v1 prefix inside plan-v10, producing invalid plan-v100 in the preparation module.",
+  "allowedRepair": "A new versioned attempt may order the plan-v1 route before plan-v2 and assert that the derived plan identity is exactly the current plan ID with no duplicated zero.",
+  "partialManifestSha256": "bab3281eabae0c2f053bd9dd35d7869f985972baa7b7d9c323ee88851b81e865",
+  "roots": {
+    "verification": false,
+    "pilot": false,
+    "clone": false,
+    "formal": false
+  },
+  "unityProcessCount": 0,
+  "pilotStarted": false,
+  "formalCampaign": false,
+  "passed": false
+}

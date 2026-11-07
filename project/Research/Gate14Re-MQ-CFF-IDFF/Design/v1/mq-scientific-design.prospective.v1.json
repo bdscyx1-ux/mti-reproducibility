@@ -1,0 +1,46 @@
+{
+  "schema": "gate14re-mq-cff-idff-scientific-design-prospective-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "title": "C-FF/IDFF Managed Multi-Query Scalability Supplement",
+  "status": "PROSPECTIVE_TECHNICAL_QUALIFICATION_AUTHORIZED_FORMAL_COLLECTION_NOT_YET_FROZEN",
+  "studyIndependence": {
+    "independentFromFormalST": true,
+    "independentFromMT": true,
+    "reuseOfFormalSTObservations": false,
+    "formalSTSourceOrDataMutationPermitted": false
+  },
+  "algorithms": [
+    "C-FF",
+    "IDFF"
+  ],
+  "implementationFamily": "managed-fixed-worker-pool-v1",
+  "parallelUnit": "one-complete-independent-dynamic-workload-lane",
+  "snapshotSemantics": "updates-occur-only-inside-each-private-lane-and-query-batches-read-that-lanes-stable-post-update-state",
+  "laneInternalOrder": "initialize-then-initial-queries-then-serial-applychanges-and-post-event-queries",
+  "plannedPrimaryEngineeringEndpoints": [
+    "batch-wall-time",
+    "process-cpu-time",
+    "worker-thread-cpu-time",
+    "query-latency-p50-p95-p99",
+    "throughput",
+    "speedup",
+    "parallel-efficiency",
+    "managed-allocation",
+    "memory",
+    "scheduler-and-merge-overhead"
+  ],
+  "correctnessTreatment": "hard-gate-never-a-weighted-performance-score",
+  "claimBoundary": "managed-MQ-scaling-of-C-FF-versus-IDFF-only-no-six-algorithm-ranking",
+  "formalDesignPending": [
+    "formal-estimands",
+    "minimum-important-effect-thresholds",
+    "power-target",
+    "candidate-B-set-and-selection-rule",
+    "multiplicity-control",
+    "formal-stopping-rule",
+    "formal-schedule"
+  ],
+  "formalMQCollectionAuthorizedToLaunchNow": false,
+  "formalAnalysisAuthorizedToLaunchNow": false
+}
+

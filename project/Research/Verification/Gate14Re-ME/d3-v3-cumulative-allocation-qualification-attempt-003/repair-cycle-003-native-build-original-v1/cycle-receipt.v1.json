@@ -1,0 +1,40 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 3,
+  "status": "FAILED_PRESERVED_CONTINUE_AUTHORIZED_REPAIR",
+  "completedAtUtc": "2026-10-17T06:51:03.2460434Z",
+  "phase": "native-build-original-source",
+  "sourceSha256": "12c41acc7dc106d314bd71d3bdc1d95e0346cc8467e0a1a1e1b3109093ef2a0d",
+  "compilerPolicy": [
+    "/std:c++17",
+    "/O2",
+    "/LD",
+    "/EHsc",
+    "/W4",
+    "/WX",
+    "/utf-8",
+    "/permissive-",
+    "/Brepro"
+  ],
+  "compilerExitCode": 2,
+  "exactDiagnostic": "LINK : fatal error LNK1146: no argument was specified with option /OUT:",
+  "diagnosis": "The frozen source compiled successfully through the warning-as-error front end and produced a deterministic object file. PowerShell tokenized the final /OUT:<path> expression into separate arguments, so link invocation failed before a DLL was created. This is a build-orchestration argument construction defect, not a source or SDK defect.",
+  "partialArtifact": {
+    "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-003-native-build-original-v1/build/Gate14ReMED3AllocationCounterV3.obj",
+    "lengthBytes": 27106,
+    "sha256": "5147740fe61e3f89d6ff7bedc222f21d507b771f1d82c52943fee49c054f7112"
+  },
+  "result": {
+    "frontEndCompilationPassed": true,
+    "warningsAsErrorsPassed": true,
+    "utf8PolicyApplied": true,
+    "linkerStarted": true,
+    "nativeDllCreated": false,
+    "sourceChanged": false,
+    "qualificationCriteriaRelaxed": false
+  },
+  "nextRepair": "Repeat the same frozen-source build in a new repair cycle with the /OUT:<path> argument constructed as one array element."
+}

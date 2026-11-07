@@ -1,0 +1,88 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-004-technical-failure-adjudication-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-004-05296e8f-0603-406e-9cfa-93a58cc7fec0",
+  "attemptId": "load-qualification-execution-attempt-004",
+  "status": "FAILED_CLOSED_FROZEN_RUNNER_MEASURED_ROOT_BINDING_MISMATCH",
+  "passed": false,
+  "terminal": true,
+  "adjudicatedAtUtc": "2026-10-17T18:27:36.8307919Z",
+  "failureClass": "FROZEN_RUNNER_MEASURED_ROOT_BINDING_MISMATCH",
+  "supervisorFailure": {
+    "failedMode": "instrument-self-test",
+    "exactFailure": "Unity exited nonzero: mode=instrument-self-test pid=89312 exitCode=1",
+    "failureReceiptRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/failure-receipt.v2.json",
+    "failureReceiptSha256": "bafbf3e36a4bad7699b7338ca166deb9495bc3cfbd1e664e17ab250ca77a5fa9",
+    "unityLogRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/unity-logs/process-0000.unity.log",
+    "unityLogSha256": "8584f1a11703d1fc417e9dd55af610ba44a2cf6fd2c214aeb32fdf22bb45c769",
+    "unityLogError": "InvalidOperationException: Execution authorization is not bound to the exact frozen measured root.",
+    "unityLogErrorLine": 338
+  },
+  "contradictoryFrozenBindings": {
+    "authorizedAndLaunchedMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "runnerReservedMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "runnerSha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+    "compiledEditorAssemblyRelativePath": "Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+    "compiledEditorAssemblySha256": "3d1165d306227a6ec27b1b7472342d04dd3f52770852f522f7c9db4297440b18",
+    "runnerReservedRootConstantLine": 31,
+    "runnerRootComparisonLines": [583, 584, 585, 586],
+    "runnerExactGuardMessageLine": 586,
+    "authorizationRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/execution-authorization.v1.json",
+    "authorizationSha256": "fc9e00f9ca88f333c4f5ec3a78cf2c6f7ccf1535e1e120796898f9b7d9e1699a",
+    "executionContractRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_4.json",
+    "executionContractSha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85",
+    "implementationManifestRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_4.json",
+    "implementationManifestSha256": "1e56697a40692ff76fc01273ec4e5b8b7953ea88dcfe228eeeb317d9705a69c1"
+  },
+  "causalInference": {
+    "statement": "The newly authorized and launched measured root is attempt-002, while the frozen RunnerV2 source requires both the launched path and the authorization path to equal its hard-coded attempt-001 root. The exact RunnerV2 guard therefore fails before the instrument self-test can run.",
+    "basis": [
+      "The execution authorization, stage contract, launch contract, execution contract and control launch receipt all bind attempt-002.",
+      "Frozen RunnerV2 line 31 reserves attempt-001 and lines 583-586 require both runtime and authorization paths to equal that constant.",
+      "Unity emitted the exact guard message from ValidateExecutionContext.",
+      "No process ledger row, instrument receipt, algorithm-lane receipt or qualification observation was produced."
+    ],
+    "algorithmImplementationImplicated": false,
+    "instrumentMetricImplementationImplicated": false,
+    "scientificLoadResultProduced": false,
+    "readinessGap": "Readiness attempt-009 verified hashes and prospective attempt-002 bindings but did not reject the inconsistent hard-coded RunnerV2 attempt-001 root invariant."
+  },
+  "evidenceBindings": {
+    "externalLaunchAndTerminalObservationRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/external-launch-and-terminal-observation.v1.json",
+    "externalLaunchAndTerminalObservationSha256": "d78f0fc496a9505d8ea4474b21bdddbc6427918ff52ab6118d53232789b990de",
+    "measuredRootTerminalInventoryRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/measured-root-terminal-inventory.v1.json",
+    "measuredRootTerminalInventorySha256": "5580f58e4eb3b0815176040bd7b1c16826e83c0cb6bfe61bd3f6bacc08a88c1a",
+    "supervisorStdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "supervisorStderrSha256": "0f0c582fec088b127ce7f1a6e712d80ab4b9c3e721a096e627493abc315134f7"
+  },
+  "disposition": {
+    "supervisorNaturalExitObserved": true,
+    "signalOrForcedTerminationSent": false,
+    "unityInvocationCount": 1,
+    "algorithmLaneExecutionCount": 0,
+    "processLedgerRows": 0,
+    "processIdentityReceipts": 0,
+    "qualificationMeasuredRootCreated": true,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "retryPerformed": false,
+    "resumePerformed": false,
+    "replacementPerformed": false,
+    "newAttemptCreatedAutomatically": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false
+  },
+  "authorizationBoundary": {
+    "repairAuthorized": false,
+    "newQualificationExecutionAttemptAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "A separate narrow authorization is required to correct the RunnerV2 measured-root invariant, rebuild and freeze the affected implementation chain, prove that exact invariant with a no-algorithm known-answer/readiness check, and only then request authorization for a fresh measured root. This failed attempt-002 root must not be retried, resumed, reused or merged."
+}

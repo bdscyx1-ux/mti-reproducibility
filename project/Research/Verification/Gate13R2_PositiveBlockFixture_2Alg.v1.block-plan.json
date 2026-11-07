@@ -1,0 +1,39 @@
+{
+    "schemaVersion":  1,
+    "planId":  "g13r2-positive-two-algorithm-v1-b001-plan",
+    "designId":  "one-fresh-unity-process-per-williams-block-v1",
+    "blockId":  "g13r2-positive-two-algorithm-v1-b001",
+    "campaignId":  "g13r2-positive-two-algorithm-v1",
+    "scenarioRelativePath":  "Research/FormalScenarios/v1/Scenarios/core-r01-s1-hetero.scenario.json",
+    "scenarioSourceSha256":  "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+    "comparisonCohortId":  "per-agent-heterogeneous-goal-v1",
+    "block":  1,
+    "formalCampaign":  false,
+    "analysisRole":  "excluded-positive-process-reuse-verification",
+    "pilotPlanRelativePath":  "Research/Gate13_ProcessReuse_Pilot_Plan.v1.json",
+    "pilotPlanSha256":  "de79edaca2bfd7016fd9a50dba85a511c2bdfc6bdce99d629e20e4bded4ca8d9",
+    "specificationRelativePath":  "Research/Gate13_ProcessReuse_Specification.md",
+    "specificationSha256":  "06b8f79aff15301acb45a478ac054e0a444be3581fe4cb05f4c5a106dc6e256d",
+    "testDesignRelativePath":  "Research/Gate13_ProcessReuse_Test_Design.md",
+    "testDesignSha256":  "45aed83d000ef8db41a5d910394422ba576ffe96a3543ac67415aa147bc1fefb",
+    "commandRelativePath":  "Assets/_Scripts/Research/Editor/ResearchPlanningProcessReuseBatchCommand.cs",
+    "commandSha256":  "08ab7b3c593f55232d59d6266714eeae33c2c93be846e55ac8a235928fee1c33",
+    "provenanceRelativePath":  "Research/Gate13_ProcessReuse_Provenance.v4.json",
+    "provenanceSha256":  "91a8fcabdd157f7511eeda89e8355580954ed03222c51b5163f577b10354b82d",
+    "entries":  [
+                    {
+                        "position":  1,
+                        "algorithmId":  "A*-R",
+                        "predecessorAlgorithmId":  "NONE",
+                        "runId":  "g13r2-positive-two-algorithm-v1-b001-p01-astar-r",
+                        "directory":  "runs/p01-astar-r"
+                    },
+                    {
+                        "position":  2,
+                        "algorithmId":  "D*L",
+                        "predecessorAlgorithmId":  "A*-R",
+                        "runId":  "g13r2-positive-two-algorithm-v1-b001-p02-dstar-l",
+                        "directory":  "runs/p02-dstar-l"
+                    }
+                ]
+}

@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "summaryKind": "gate13r-pr1b-v4-composite-process-identity-validation-summary-v1",
+  "startedAtUtc": "2026-10-08T15:43:45.4866100+00:00",
+  "completedAtUtc": "2026-10-08T15:44:00.7568243+00:00",
+  "status": "PASSED / VALIDATION-ONLY / RECOVERY-ELIGIBLE",
+  "passed": true,
+  "checkCount": 24,
+  "passedCheckCount": 24,
+  "failedCheckCount": 0,
+  "sourceTreeBefore": {
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "fileCount": 9118,
+    "rawBytes": 253513394,
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+  },
+  "sourceTreeAfter": {
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "fileCount": 9118,
+    "rawBytes": 253513394,
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+  },
+  "stageProvenanceSha256": "6b823419e7030444e8f741fefb106a84209c2d258f3f9a116f9191fed3584d97",
+  "unityInvoked": false,
+  "newSamplesGenerated": 0,
+  "formalCampaignAuthorized": false,
+  "gate14rAuthorized": false,
+  "checks": [
+    {
+      "id": "frozen-v7-tree-before",
+      "passed": true,
+      "detail": {
+        "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+        "fileCount": 9118,
+        "rawBytes": 253513394,
+        "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+      }
+    },
+    {
+      "id": "formal-root-absent",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned\\v1"
+    },
+    {
+      "id": "recovery-root-absent",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\Analysis\\Gate13R_PR1B_CompositeProcessIdentity_Recovery\\v1"
+    },
+    {
+      "id": "unity-lockfile-absent",
+      "passed": true,
+      "detail": "Temp/UnityLockfile"
+    },
+    {
+      "id": "no-active-unity-process-before",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "stage-provenance-present",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\Gate13R_PR1B_v4_CompositeProcessIdentity_Provenance.v1.json"
+    },
+    {
+      "id": "stage-provenance-bound-files",
+      "passed": true,
+      "detail": {
+        "count": 21,
+        "mismatches": []
+      }
+    },
+    {
+      "id": "analyzer-zero-unity-launch-static-proof",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "python-ast-parse",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "schema-json-parse",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "synthetic-self-test-exit",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "synthetic-self-test-all-passed",
+      "passed": true,
+      "detail": {
+        "count": 17,
+        "passed": 17
+      }
+    },
+    {
+      "id": "bootstrap-20000-deterministic",
+      "passed": true,
+      "detail": {
+        "byteIdentical": true,
+        "first95Ci": [
+          -0.0036875,
+          0.00271875
+        ],
+        "replicates": 20000,
+        "second95Ci": [
+          -0.0036875,
+          0.00271875
+        ],
+        "seed": 13012026
+      }
+    },
+    {
+      "id": "structural-audit-exit",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "structural-audit-passed",
+      "passed": true,
+      "detail": "PASSED / VALIDATION-ONLY / NO-WORKLOAD-METRIC-ANALYSIS"
+    },
+    {
+      "id": "all-396-os-identities-unique",
+      "passed": true,
+      "detail": 396
+    },
+    {
+      "id": "all-396-block-identities-unique",
+      "passed": true,
+      "detail": 396
+    },
+    {
+      "id": "all-768-measured-run-ids-unique",
+      "passed": true,
+      "detail": 768
+    },
+    {
+      "id": "pid-reuse-nonoverlapping",
+      "passed": true,
+      "detail": {
+        "distinctPidValues": 375,
+        "largestMultiplicity": 3,
+        "reuseGroupCount": 19,
+        "samePidLifetimeOverlapCount": 0
+      }
+    },
+    {
+      "id": "provenance-77-of-77",
+      "passed": true,
+      "detail": {
+        "count": 77,
+        "mismatch": 0
+      }
+    },
+    {
+      "id": "frozen-v7-tree-after",
+      "passed": true,
+      "detail": {
+        "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+        "fileCount": 9118,
+        "rawBytes": 253513394,
+        "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+      }
+    },
+    {
+      "id": "no-active-unity-process-after",
+      "passed": true,
+      "detail": 0
+    },
+    {
+      "id": "formal-root-still-absent",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned\\v1"
+    },
+    {
+      "id": "recovery-root-still-absent",
+      "passed": true,
+      "detail": "H:\\DDM_Final_Project\\Research\\Analysis\\Gate13R_PR1B_CompositeProcessIdentity_Recovery\\v1"
+    }
+  ]
+}`n

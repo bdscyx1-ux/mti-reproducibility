@@ -1,0 +1,31 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-process-reuse-command-v2-mechanical-derivation-receipt-v1",
+    "createdAtUtc":  "2026-10-07T11:46:31.7955752Z",
+    "sourceRelativePath":  "Assets/_Scripts/Research/Editor/Gate10RProcessReuseBatchCommand.cs",
+    "sourceSha256Before":  "9218c72b7e4d1d289feef9a367e376a497b06f048099572ac73042f28d482407",
+    "sourceSha256After":  "9218c72b7e4d1d289feef9a367e376a497b06f048099572ac73042f28d482407",
+    "destinationRelativePath":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV2.cs",
+    "destinationSha256":  "2c1fdd6d8ad4edd8ac36f8d9fb3962e909673cf0eb0a14d85814f975f01b9b06",
+    "mechanicalChanges":  [
+                              {
+                                  "kind":  "class-rename",
+                                  "occurrenceCount":  1,
+                                  "from":  "public static class Gate10RProcessReuseBatchCommand",
+                                  "to":  "public static class Gate12RProcessReuseBatchCommandV2"
+                              },
+                              {
+                                  "kind":  "post-raw-telemetry-planner-reset",
+                                  "occurrenceCount":  1,
+                                  "from":  "            ProcessTelemetry rawAfter = CaptureTelemetry(process);",
+                                  "to":  "            ProcessTelemetry rawAfter = CaptureTelemetry(process);\r\n            planner.Reset();"
+                              }
+                          ],
+    "rawTelemetryCapturedBeforePlannerReset":  true,
+    "timedWorkloadBoundaryChanged":  false,
+    "rawTelemetrySemanticsChanged":  false,
+    "frozenMemoryThresholdsChanged":  false,
+    "algorithmImplementationChanged":  false,
+    "resetContractCorrected":  true,
+    "passed":  true
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "gate14re-me-status-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "NONEXECUTING_SCIENTIFIC_PROTOCOL_FROZEN_RAW_DELIVERY_HARD_GATE_FROZEN_PRECOLLECTION_PARAMETERS_PENDING",
+  "scope": "six-algorithm multi-endpoint complexity extension with no ranking, no weighted composite, no winner adjudication, and mandatory complete per-observation raw-data delivery",
+  "freezeAttempt": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001",
+  "lineage": {
+    "originalGate14ReModified": false,
+    "originalGate14ReFormalDataReadOrReusedForThisFreeze": false,
+    "gate14ReTB2ExcludedAttemptDataReadOrReusedForThisFreeze": false,
+    "newFormalMeasuredRootExists": false,
+    "newFormalAnalysisRootExists": false,
+    "newFormalExportRootExists": false
+  },
+  "frozenArtifacts": [
+    "Research/Gate14Re-ME/Gate14Re_ME_Scientific_Freeze_Authorization.v1.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v1.md",
+    "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v1.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v1.json"
+  ],
+  "designSummary": {
+    "algorithms": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "algorithmCount": 6,
+    "idffComparatorCount": 5,
+    "unorderedAlgorithmPairCount": 15,
+    "confirmatoryContrastCount": 35,
+    "primaryStructuralCells": 48,
+    "primaryEndpointDomains": 7,
+    "majoritySupportMinimumDomains": 4,
+    "ranking": false,
+    "weightedComposite": false,
+    "winnerAdjudication": false,
+    "B": null
+  },
+  "rawDeliveryHardGate": {
+    "completePerObservationRawDataDeliverable": true,
+    "coversEveryNamedAlgorithm": true,
+    "coversEveryPrimaryAndSecondaryMetric": true,
+    "sampleRunGranularity": true,
+    "metricLongGranularity": true,
+    "eventGroupGranularity": true,
+    "operationEventQueryGranularity": true,
+    "stateComponentGranularity": true,
+    "failureReplacementGranularity": true,
+    "rawAndDerivedRootsSeparated": true,
+    "dataDictionaryProvenanceManifestAndHashesRequired": true,
+    "mandatoryBeforeRawCommit": true,
+    "mandatoryBeforeAnalysis": true
+  },
+  "precollectionParametersPending": {
+    "minimumPracticallyImportantEffects": true,
+    "identityBlindNuisanceAndResourceEvidence": true,
+    "finalB": true,
+    "sentinelMovementSubsetOrOmission": true,
+    "blocksFormalObservation": true
+  },
+  "authorization": {
+    "scientificFrameworkFreeze": true,
+    "rawDeliveryHardGateFreeze": true,
+    "precollectionParameterProtocolFreeze": true,
+    "implementation": false,
+    "inputGeneration": false,
+    "compileOrUnityExecution": false,
+    "formalMeasuredRootCreation": false,
+    "formalCollection": false,
+    "formalRawCommit": false,
+    "formalExportExecution": false,
+    "formalAnalysis": false,
+    "ranking": false,
+    "winnerAdjudication": false,
+    "laterExperiment": false
+  },
+  "nextRequiredAction": "obtain a separate user authorization for the precollection parameter amendment that fixes minimum practically important effects, identity-blind nuisance/resource evidence, final B, and the sentinel movement subset or omission; implementation and collection remain separately unauthorized"
+}

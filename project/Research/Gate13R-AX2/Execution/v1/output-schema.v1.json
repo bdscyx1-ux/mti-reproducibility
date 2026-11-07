@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "artifactKind": "GATE13R-AX2-OUTPUT-SCHEMA",
+  "designId": "gate13r-ax2-shared32-b48-four-treatment-v1",
+  "comparisonCohortId": "gate13r-ax2-shared-goal-v1",
+  "blockUnit": {
+    "freshProcessPerCompleteBlock": true,
+    "expectedSamples": 4,
+    "strictSerialWilliamsOrder": true,
+    "maximumWholeBlockTechnicalReplacements": 1,
+    "perAlgorithmRetryResumeTopUpMergeSkipReorder": false
+  },
+  "algorithms": [
+    "BiA*-R",
+    "LPA*",
+    "C-FF",
+    "IDFF"
+  ],
+  "requiredBlockFiles": [
+    "block-complete.v1.json"
+  ],
+  "forbiddenAcceptedBlockFiles": [
+    "block-failure.v1.json"
+  ],
+  "requiredSampleFiles": [
+    "scenario.canonical.json",
+    "operations.v1.jsonl",
+    "workload-result.v1.json",
+    "sample-manifest.v1.json"
+  ],
+  "sampleManifestRequiredFields": [
+    "schemaVersion",
+    "artifactKind",
+    "designId",
+    "blockId",
+    "campaignId",
+    "campaignBlockOrdinal",
+    "globalBlockOrdinal",
+    "williamsRowIndex",
+    "position",
+    "runId",
+    "algorithmId",
+    "predecessorAlgorithmId",
+    "comparisonCohortId",
+    "scenarioId",
+    "scenarioSha256",
+    "scenarioFingerprintSha256",
+    "scheduleSha256",
+    "outputSchemaSha256",
+    "executionContractSha256",
+    "processId",
+    "processStartUtc",
+    "freshPlannerInstance",
+    "plannerResetCompleted",
+    "workloadCompleted",
+    "scheduledEventCount",
+    "p1RawGeometricMeanInputMillisecondsPerScheduledEvent",
+    "memoryBefore",
+    "memoryAfterCleanup",
+    "canonicalScenario",
+    "operationsLog",
+    "workloadResult",
+    "completed"
+  ],
+  "workloadResultRequiredFields": [
+    "runId",
+    "scenarioId",
+    "algorithmId",
+    "comparisonCohortId",
+    "scheduledEventCount",
+    "dynamicHandlingMillisecondsPerScheduledEvent",
+    "completed"
+  ],
+  "p1Endpoint": {
+    "endpointId": "dynamicHandlingMillisecondsPerScheduledEvent",
+    "manifestAlias": "p1RawGeometricMeanInputMillisecondsPerScheduledEvent",
+    "unit": "milliseconds/event",
+    "validation": "finite-and-strictly-positive",
+    "reportingRequirement": "retain each algorithm's raw geometric mean"
+  },
+  "structuralValidation": {
+    "verifyCanonicalPaths": true,
+    "verifyFileSha256": true,
+    "verifyScheduleIdentity": true,
+    "verifyProcessIdentity": true,
+    "verifyCardinality": true,
+    "parseP1OnlyForFinitePositiveSchemaValidation": true,
+    "aggregateOrInterpretDuringRawCommit": false
+  },
+  "formalCollectionAuthorized": false
+}

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 2,
+  "stateMachineId": "gate13r-pr2-attempt3-postfailure-administrative-continuation-v2",
+  "status": "ACTIVE-NONEXECUTING-PROTOCOL-AMENDMENT-RECOVERY-LAUNCH-NOT-AUTHORIZED",
+  "recordedAtUtc": "2026-10-10T03:46:39.0898831Z",
+  "recordedAtAsiaShanghai": "2026-10-10T11:46:39.0892210+08:00",
+  "postFailureAmendment": true,
+  "preregisteredBeforeAttempt3": false,
+  "blindingDisclosure": {
+    "classification": "INCIDENTAL-AUTOMATED-AGENT-OUTCOME-FIELD-EXPOSURE-NO-FORMAL-ANALYSIS",
+    "scope": "ordinal 3470 block manifest was opened for structural verification and the tool output also contained algorithm timing fields",
+    "comparisonsEffectsIntervalsPValuesRankingsOrWinnersComputed": false,
+    "valuesMayBeReportedToUserOrCopiedIntoAmendment": false,
+    "independentOutcomeBlindReadinessValidationRequired": true
+  },
+  "supersedesForAttempt3Only": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Recovery_State_Machine.v1.json",
+    "sha256": "2aa5d0e5a11a1e38a05d9e3e82a65dc227e98b953cc4e2678e73eaa96aec1a3d",
+    "scope": "measured-resume prohibition only after the documented administrative status-persistence failure; all scientific gates remain unchanged"
+  },
+  "preservedHistoricalTerminalEvidence": {
+    "statusRelativePath": "Research/Gate13R_PR2_Formal_Execution_Status.v3.json",
+    "statusSha256": "3aa224e3a21329c508df1d6e74e7b2052beefe5212405a880e24b66c33fcfaca",
+    "failureCheckpointRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_control/formal-failure-checkpoint.json",
+    "failureCheckpointSha256": "2afa262d4fa37dae129f17566d122f80cdcb1a83f2ae9ef8d482caae735dfad9",
+    "terminalToken": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "mayOverwriteOrRecode": false
+  },
+  "states": [
+    "ORIGINAL-ACQUISITION-HARD-FAIL-FROZEN",
+    "POSTFAILURE-AMENDMENT-RECORDED",
+    "FORENSIC-RECOVERY-READINESS-AUDIT-PENDING",
+    "FORENSIC-RECOVERY-READINESS-AUDIT-FAILED",
+    "RECOVERY-READY-FOR-SEPARATE-LAUNCH-AUTHORIZATION",
+    "ADMINISTRATIVE-CONTINUATION-RUNNING",
+    "ADMINISTRATIVE-CONTINUATION-HARD-FAIL",
+    "ACQUISITION-COMPLETE-COMMIT-PENDING",
+    "RAW-COMMIT-RECOVERY",
+    "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE",
+    "USER-ACTION-REQUIRED"
+  ],
+  "currentState": "POSTFAILURE-AMENDMENT-RECORDED",
+  "frozenFrontier": {
+    "durablyCommittedProcessCount": 3469,
+    "durablyCommittedSampleCount": 10010,
+    "lastDurablyCommittedGlobalOrdinal": 3469,
+    "landedButUncommittedGlobalOrdinal": 3470,
+    "continuationFirstExecutableGlobalOrdinal": 3471,
+    "expectedFinalProcessCount": 3552,
+    "expectedFinalSampleCount": 10176,
+    "remainingExecutableProcessCountAfterOrdinal3470Promotion": 82,
+    "remainingExecutableSampleCountAfterOrdinal3470Promotion": 164
+  },
+  "ordinal3470ForensicPromotion": {
+    "allowed": true,
+    "separateReadOnlyAuditRequired": true,
+    "rerunAllowed": false,
+    "rawPayloadMutationAllowed": false,
+    "externalCommitSidecarRequired": true,
+    "blockManifestRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/campaigns/c72-goal-count-g32-hetero--grouped-field/blocks/b0007/block-manifest.json",
+    "blockManifestSha256": "16edf38355ec428299a2793522485ba72c281195353d6eb2712b271a0abf6948",
+    "blockCheckpointRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/campaigns/c72-goal-count-g32-hetero--grouped-field/blocks/b0007/block-checkpoint.json",
+    "blockCheckpointSha256": "cf6804d63f0f4aaa67a1ef9a450a451a07dff233f1d8ec58be00f27fa5eb19b5",
+    "wrapperStdoutRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_control/block-wrapper-logs/p003470.stdout.log",
+    "wrapperStdoutSha256": "ec4ce34c813cd0ba2a6e2d85c9c2eb0807ec012f5e0e6318bc29c49bd8de3ed6"
+  },
+  "forensicReadinessAudit": {
+    "authorizedByThisStateMachine": false,
+    "mustBeSeparatelyAuthorized": true,
+    "writeBoundary": "outside formal raw root",
+    "outcomeBlindStructuralAndIntegrityFieldsOnly": true,
+    "required": [
+      "freeze-original-evidence-hashes",
+      "verify-ordinals-1-through-3469-against-frozen-schedule",
+      "verify-ordinal-3470-complete-without-mutating-payload",
+      "verify-no-measured-output-at-or-after-3471",
+      "verify-no-duplicate-global-ordinal-run-id-or-process-identity",
+      "verify-original-scientific-input-hashes",
+      "validate-versioned-status-persistence-repair-under-concurrent-monitor-read",
+      "validate-exact-frontier-3471-and-no-rerun-1-through-3470",
+      "obtain-user-outcome-unblinding-attestation",
+      "perform-independent-outcome-blind-structural-readiness-validation",
+      "emit-recovery-readiness-checkpoint"
+    ]
+  },
+  "administrativeContinuation": {
+    "launchAuthorizedByThisStateMachine": false,
+    "separateExplicitUserAuthorizationRequired": true,
+    "maximumContinuationSegments": 1,
+    "startGlobalOrdinal": 3471,
+    "endGlobalOrdinal": 3552,
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "rerunOrdinals1Through3470Allowed": false,
+    "retryFailedMeasuredBlockAllowed": false,
+    "topUpBeyond3552Allowed": false,
+    "partialAttemptMergeAllowed": false,
+    "pilotHistoryOrValidationMergeAllowed": false,
+    "secondContinuationAfterHardFailureAllowed": false,
+    "scientificSemanticsChangesAllowed": false
+  },
+  "analysisEligibility": {
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false,
+    "fullOriginalEstimandsRequire": [
+      "unique-process-count-equals-3552",
+      "unique-sample-count-equals-10176",
+      "complete-matched-superblock-count-equals-1008",
+      "all-schedule-identities-present-exactly-once",
+      "zero-duplicate-run-ids",
+      "final-raw-commit-audit-pass",
+      "separate-phase-b-authorization"
+    ],
+    "ordinals1Through3469Retained": true,
+    "ordinals1Through3469EligibleAfterSuccessfulFullRecoveryAndFinalAudit": true,
+    "ordinal3469CrossCohortEligibilityRequiresPromotedOrdinal3470": true,
+    "partialFormalInferenceAuthorized": false
+  },
+  "attemptLabelPolicy": {
+    "currentLabel": "ONE-FORMAL-ATTEMPT-INCOMPLETE-ADMINISTRATIVE-INTERRUPTION-RECOVERY-NOT-YET-AUTHORIZED",
+    "conditionalFinalLabel": "ONE-COMPLETE-FORMAL-ATTEMPT-SAME-ROOT-ADMINISTRATIVELY-INTERRUPTED-POSTFAILURE-AMENDED",
+    "conditionalFinalLabelRequiresAllFinalCompletenessGates": true,
+    "unqualifiedUninterruptedOrOriginalProtocolCompleteLabelAllowed": false,
+    "postFailureAmendmentDisclosureRequired": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "entries": [
+    {
+      "path": "reproduce.py",
+      "sha256": "dd874616f40b2f764a7eaf91d82248bd40998b6f1b6b3204d7e674cec6fa48b0"
+    },
+    {
+      "path": "tools/guarded_python.py",
+      "sha256": "40af3f2989927cefc5e1ce899628ae1860d029164554095988a0cd3ffcd054b2"
+    },
+    {
+      "path": "tools/run_unity_check.py",
+      "sha256": "9bc5ef14da9473e6658a71db1ab55e8e8a8eeed7dcf95ef4e974f6eeb4e1a436"
+    },
+    {
+      "path": "portable/analyze_a.py",
+      "sha256": "d65e7e443d05955036098cc7c2d244ed667c1ac6a837e9ff202761022a753b1b"
+    },
+    {
+      "path": "portable/analyze_b.py",
+      "sha256": "ade79db623783a213be8b618ac01e4b2b113176a9d12e9988e330fa1f7ba051f"
+    },
+    {
+      "path": "portable/portable_paths.py",
+      "sha256": "c0fb0dd8338a232aaf252ef3d1eb8e4591a048d9ed097b56ace0158a4ca4ce44"
+    },
+    {
+      "path": "unity-minimal/Assets/Editor/PortableNavigationCheck.cs",
+      "sha256": "af21c18dce7d8e6072357be0921e9e280677b2b3376bc72bc071d90ee94be800"
+    }
+  ],
+  "clean_copy_test": true,
+  "forbidden_source_roots": [
+    "original acquisition directories",
+    "original preparation directory during relocated analysis"
+  ]
+}

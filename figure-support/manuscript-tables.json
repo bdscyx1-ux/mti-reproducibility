@@ -1,0 +1,2420 @@
+[
+  {
+    "document": "main",
+    "table_index": 1,
+    "caption": "Table 1. Evaluation modules and experimental units.",
+    "rows": [
+      [
+        "Question and module",
+        "Design",
+        "Analysis unit and principal outcome"
+      ],
+      [
+        "RQ1 Dynamic planning",
+        "Original: 32 shared-goal campaigns × 48 four-backend blocks; two heterogeneous-goal cohorts, each with 21 campaigns × 48 two-backend blocks. Expanded: 32 × 48. Field confirmation: 32 × 50. Supplemental corrected-D*L comparison: 32 × 48.",
+        "Campaign means for the original, expanded and supplemental comparisons; fixed campaign-by-order strata for confirmation. P1 handling time."
+      ],
+      [
+        "RQ2 Matched costs and scaling",
+        "Six algorithms × 36 structural cells × 36 matched repetitions; 24 event groups per lane.",
+        "1,296 matched superblocks. D1 latency; D2 grid accesses; D3 allocation; D4 retained state; D5–D7 scaling."
+      ],
+      [
+        "RQ3 Movement",
+        "Historical main and quantity study: eight main conditions and two quantity anchors. Supplemental acquisition repeats eight main conditions at N = 128, with 48 blocks per movement/callback lane.",
+        "Complete block. Simulated completion, distance, reliability and movement validity."
+      ],
+      [
+        "RQ4 Workload concurrency",
+        "36 blocks; 16 private lanes per batch; two field backends under 12 execution conditions.",
+        "36 matched blocks. Batch wall-time ratio per worker doubling and balanced W16/W8."
+      ]
+    ],
+    "source_docx_sha256": "68c44d7bc7beb5c9f5bb19b4c089e632f7410c28a0a66be3e26cc2a379bbf9e5"
+  },
+  {
+    "document": "main",
+    "table_index": 2,
+    "caption": "Table 2. Navigation backends and retained state.",
+    "rows": [
+      [
+        "Backend",
+        "Route computation",
+        "Retained state and response to change"
+      ],
+      [
+        "A*-R",
+        "New A* search for each request.",
+        "Request-local frontier; repeats search after changes."
+      ],
+      [
+        "BiA*-R",
+        "New forward and reverse search for each request.",
+        "Request-local frontiers; accepts the best connection under the stated stopping rule."
+      ],
+      [
+        "D*L",
+        "Incremental heuristic search per agent.",
+        "Per-agent g/rhs and queue state; repairs changed dependencies and updates moving-start keys."
+      ],
+      [
+        "LPA*",
+        "Goal-rooted incremental search per agent.",
+        "Per-agent g/rhs and queue state for the fixed-start workload."
+      ],
+      [
+        "C-FF",
+        "Reverse shortest-path field shared across agents.",
+        "Rebuilds integration, ownership and direction arrays after a change."
+      ],
+      [
+        "IDFF",
+        "Incrementally repaired shared field.",
+        "Retains integration, ownership, queue and direction state; repairs inconsistencies before release."
+      ]
+    ],
+    "source_docx_sha256": "68c44d7bc7beb5c9f5bb19b4c089e632f7410c28a0a66be3e26cc2a379bbf9e5"
+  },
+  {
+    "document": "main",
+    "table_index": 3,
+    "caption": "Table 3. Dynamic handling time in the shared-goal acquisitions.",
+    "rows": [
+      [
+        "Acquisition",
+        "Backend",
+        "Samples per backend",
+        "P1 geometric mean\nms per scheduled event"
+      ],
+      [
+        "Original four-method",
+        "A*-R",
+        "1,536",
+        "52.4800"
+      ],
+      [
+        "Original four-method",
+        "D*L",
+        "1,536",
+        "59.5523"
+      ],
+      [
+        "Original four-method",
+        "C-FF",
+        "1,536",
+        "11.1371"
+      ],
+      [
+        "Original four-method",
+        "IDFF",
+        "1,536",
+        "8.8945"
+      ],
+      [
+        "Expanded",
+        "BiA*-R",
+        "1,536",
+        "100.0484"
+      ],
+      [
+        "Expanded",
+        "LPA*",
+        "1,536",
+        "58.7535"
+      ],
+      [
+        "Expanded",
+        "C-FF",
+        "1,536",
+        "10.9823"
+      ],
+      [
+        "Expanded",
+        "IDFF",
+        "1,536",
+        "8.8222"
+      ],
+      [
+        "Field confirmation",
+        "C-FF",
+        "1,600",
+        "11.5352"
+      ],
+      [
+        "Field confirmation",
+        "IDFF",
+        "1,600",
+        "9.1713"
+      ],
+      [
+        "Supplemental corrected D*L",
+        "A*-R",
+        "1,536",
+        "51.5919"
+      ],
+      [
+        "Supplemental corrected D*L",
+        "D*L",
+        "1,536",
+        "57.8581"
+      ],
+      [
+        "Supplemental corrected D*L",
+        "C-FF",
+        "1,536",
+        "10.7828"
+      ],
+      [
+        "Supplemental corrected D*L",
+        "IDFF",
+        "1,536",
+        "8.7185"
+      ]
+    ],
+    "source_docx_sha256": "68c44d7bc7beb5c9f5bb19b4c089e632f7410c28a0a66be3e26cc2a379bbf9e5"
+  },
+  {
+    "document": "main",
+    "table_index": 4,
+    "caption": "Table 4. Adjusted IDFF versus C-FF effects in the matched benchmark.",
+    "rows": [
+      [
+        "Outcome",
+        "IDFF reference value",
+        "C-FF reference value",
+        "IDFF/C-FF ratio\nSimultaneous interval"
+      ],
+      [
+        "D1 geometric mean (ms)",
+        "19.752366",
+        "26.037045",
+        "0.758625\n0.715234–0.804650"
+      ],
+      [
+        "D1 P95 (ms)",
+        "34.752539",
+        "31.061113",
+        "1.118844\n1.048014–1.194461"
+      ],
+      [
+        "D2 grid accesses (calls)",
+        "23,451,138.397",
+        "30,934,243.455",
+        "0.758096\n0.713996–0.804921"
+      ],
+      [
+        "D3 allocation (bytes)",
+        "6,381,914.731",
+        "29,666,416.415",
+        "0.215123\n0.205855–0.224808"
+      ],
+      [
+        "D4 retained state (bytes)",
+        "547,739.788",
+        "226,677.342",
+        "2.416379\n2.402445–2.430394"
+      ]
+    ],
+    "source_docx_sha256": "68c44d7bc7beb5c9f5bb19b4c089e632f7410c28a0a66be3e26cc2a379bbf9e5"
+  },
+  {
+    "document": "main",
+    "table_index": 5,
+    "caption": "Table 5. Supplemental movement outcomes at 128 agents with corrected D*L.",
+    "rows": [
+      [
+        "Case",
+        "Completion time (s)\nAll four algorithms",
+        "Path length\n(scene units)\nA*-R",
+        "Path length\n(scene units)\nD*L",
+        "Path length\n(scene units)\nC-FF / IDFF",
+        "Completed blocks\nAll four algorithms"
+      ],
+      [
+        "C01",
+        "6.18",
+        "59.49866",
+        "59.58136",
+        "59.58136",
+        "48/48"
+      ],
+      [
+        "C02",
+        "5.24",
+        "53.72980",
+        "53.72980",
+        "53.72980",
+        "48/48"
+      ],
+      [
+        "C03",
+        "4.10",
+        "40.47683",
+        "40.46722",
+        "40.46722",
+        "48/48"
+      ],
+      [
+        "C04",
+        "4.42",
+        "43.49985",
+        "43.49787",
+        "43.49787",
+        "48/48"
+      ],
+      [
+        "C05",
+        "11.84",
+        "117.20312",
+        "116.98437",
+        "116.98437",
+        "48/48"
+      ],
+      [
+        "C06",
+        "11.78",
+        "121.11719",
+        "121.33594",
+        "121.33594",
+        "48/48"
+      ],
+      [
+        "C07",
+        "7.30",
+        "72.94998",
+        "72.89068",
+        "72.89068",
+        "48/48"
+      ],
+      [
+        "C08",
+        "6.94",
+        "69.21693",
+        "69.19701",
+        "69.19701",
+        "48/48"
+      ]
+    ],
+    "source_docx_sha256": "68c44d7bc7beb5c9f5bb19b4c089e632f7410c28a0a66be3e26cc2a379bbf9e5"
+  },
+  {
+    "document": "main",
+    "table_index": 6,
+    "caption": "Table 6. Within-backend effects of increasing managed workers.",
+    "rows": [
+      [
+        "Backend",
+        "Placement and contrast",
+        "Geometric ratio\nOrdinary 95% interval",
+        "Reduction",
+        "Simultaneous upper ratio"
+      ],
+      [
+        "C-FF",
+        "Large-L3 chiplet\nPer worker doubling",
+        "0.6597\n0.6394–0.6807",
+        "34.03%",
+        "0.6840"
+      ],
+      [
+        "C-FF",
+        "High-frequency chiplet\nPer worker doubling",
+        "0.6642\n0.6439–0.6851",
+        "33.58%",
+        "0.6884"
+      ],
+      [
+        "IDFF",
+        "Large-L3 chiplet\nPer worker doubling",
+        "0.6715\n0.6510–0.6925",
+        "32.85%",
+        "0.6958"
+      ],
+      [
+        "IDFF",
+        "High-frequency chiplet\nPer worker doubling",
+        "0.6775\n0.6574–0.6983",
+        "32.25%",
+        "0.7015"
+      ],
+      [
+        "C-FF",
+        "Balanced dual chiplet\nW16/W8",
+        "0.8038\n0.7553–0.8554",
+        "19.62%",
+        "0.8554"
+      ],
+      [
+        "IDFF",
+        "Balanced dual chiplet\nW16/W8",
+        "0.8397\n0.7998–0.8815",
+        "16.03%",
+        "0.8815"
+      ]
+    ],
+    "source_docx_sha256": "68c44d7bc7beb5c9f5bb19b4c089e632f7410c28a0a66be3e26cc2a379bbf9e5"
+  },
+  {
+    "document": "main",
+    "table_index": 7,
+    "caption": "Table 7. Navigation-service design implications of the measured outcomes.",
+    "rows": [
+      [
+        "Application priority",
+        "Evidence from this study",
+        "Design implication"
+      ],
+      [
+        "Many agents share a destination",
+        "Both fields reduce P1 relative to the tested per-agent methods in the common-goal acquisitions.",
+        "Evaluate a shared destination representation before increasing per-agent search capacity."
+      ],
+      [
+        "Recurring update and query cost",
+        "IDFF lowers adjusted geometric mean latency, grid accesses and event-window allocation.",
+        "Consider incremental repair for workloads resembling the tested update sequences."
+      ],
+      [
+        "Sampled upper-tail latency or retained state",
+        "C-FF has lower adjusted within-lane P95 and lower retained state than IDFF.",
+        "Include full recomputation when selecting for latency consistency or state capacity."
+      ],
+      [
+        "Concurrent independent regions or tasks",
+        "Managed workers reduce the time of private 16-lane batches.",
+        "Schedule independent workloads concurrently when that parallelism is available."
+      ],
+      [
+        "Movement completion and deployment testing",
+        "All four backends, including corrected D*L, share simulated completion times in the eight supplemental main conditions.",
+        "Combine navigation-cost results with task-specific input, movement-onset and display timing in deployment tests."
+      ]
+    ],
+    "source_docx_sha256": "68c44d7bc7beb5c9f5bb19b4c089e632f7410c28a0a66be3e26cc2a379bbf9e5"
+  },
+  {
+    "document": "supplement",
+    "table_index": 1,
+    "caption": "Algorithm S1. Full-Recompute Flow Field (C-FF)",
+    "rows": [
+      [
+        "Algorithm S1. Full-Recompute Flow Field (C-FF)"
+      ],
+      [
+        "Input: grid G, canonical goal set T, legal-move relation N(.)\nOutput: integration J, owner O, and next-cell direction D\n1   Allocate fresh arrays; set J[v] <- INF, O[v] <- NIL, and D[v] <- NIL for every v in V\n2   Q <- empty deterministic min-heap\n3   for each walkable goal t in T, in canonical order do\n4       J[t] <- 0; O[t] <- t; push the current record for t into Q\n5   while Q is not empty do\n6       u <- pop a record from Q; if stale, continue\n7       for each legal predecessor p of u do\n8           candidate <- c(p, u) + J[u]\n9           if (candidate, O[u]) improves (J[p], O[p]) then\n10              J[p] <- min(J[p], candidate); O[p] <- O[u]; push the revised p into Q\n11  for each walkable, reachable, non-goal cell v do\n12      S <- {s in N(v) : c(v, s) + J[s] equals J[v]}\n13      D[v] <- deterministic minimum of S by (total, owner, remainder, coordinate)\n14      assert O[v] equals O[D[v]]\n15  return (J, O, D)\nOn every accepted grid change, build a fresh field by lines 1-15, then replace the old field.\nA plan query follows D until the declared owner goal and requires J to decrease at each step."
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 2,
+    "caption": "Algorithm S2. Incremental Dynamic Flow Field (IDFF)",
+    "rows": [
+      [
+        "Algorithm S2. Incremental Dynamic Flow Field (IDFF)"
+      ],
+      [
+        "Input: updated grid G; change set C; persistent field, Q, revisions, dirty set, cursor\nOutput: a queryable field or a resumable PENDING state\n1   For a new change set, mark repair pending and make the field non-queryable\n2   A <- changed cells and their clipped 3 x 3 dependency neighborhoods\n3   for each v in A, mark its direction dirty; UPDATE-VERTEX(v)\n4   while the queue phase is unfinished do\n5       if the budget expired then preserve state and return PENDING\n6       u <- pop the next non-stale inconsistent vertex, if any\n7       if none remains then sort dirty cells, set cursor to 0, and end this phase\n8       else if (rhs[u], rhsOwner[u]) precedes (g[u], gOwner[u]) then\n9           (g[u], gOwner[u]) <- (rhs[u], rhsOwner[u]); invalidate u's queue revision\n10      else (g[u], gOwner[u]) <- (INF, NIL); UPDATE-VERTEX(u)\n11      if u was processed, UPDATE-VERTEX each predecessor\n12      if u was processed, mark its changed direction dependencies dirty\n13  while dirty cells remain from the saved cursor do\n14      if the budget expired then preserve state and return PENDING\n15      v <- next dirty cell; advance cursor; clear D[v]\n16      if v is walkable, reachable, and not a goal then\n17          D[v] <- deterministic successor s with c(v, s) + g[s] equal to g[v]\n18  clear pending and dirty state; expose the field; return COMPLETE\nUPDATE-VERTEX(v):\n19  if v is a walkable goal then (rhs[v], rhsOwner[v]) <- (0, v)\n20  else use the best legal successor via g; blocked/no successor gives (INF, NIL)\n21  increment v's revision, invalidating its older queue entries\n22  if g and rhs cost/owner pairs differ, enqueue v with the revised key\nA resume skips lines 1-3 and retains its queue phase and direction cursor.\nA plan call resumes pending repair before following the consistent direction field."
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 3,
+    "caption": "Table S1. Original-scale P1–P4 geometric means by acquisition and cohort",
+    "rows": [
+      [
+        "Experiment",
+        "Algorithm",
+        "n",
+        "P1\nms/event",
+        "P2\nGM of P95\nms",
+        "P3\nReported\nms/agent",
+        "P4\nMemory diagnostic\nbytes/event"
+      ],
+      [
+        "Four-method\nShared goal",
+        "A*-R",
+        "1,536",
+        "52.4800",
+        "69.8998",
+        "7.1833",
+        "7,136,552"
+      ],
+      [
+        "",
+        "D*L",
+        "1,536",
+        "59.5523",
+        "131.3757",
+        "14.3483",
+        "583,573"
+      ],
+      [
+        "",
+        "C-FF",
+        "1,536",
+        "11.1371",
+        "21.1129",
+        "1.5206",
+        "554,126"
+      ],
+      [
+        "",
+        "IDFF",
+        "1,536",
+        "8.8945",
+        "19.1488",
+        "2.0522",
+        "138,432"
+      ],
+      [
+        "Four-method\nHeterogeneous",
+        "A*-R",
+        "1,008",
+        "59.3623",
+        "78.6918",
+        "6.4744",
+        "9,407,114"
+      ],
+      [
+        "",
+        "D*L",
+        "1,008",
+        "69.0824",
+        "145.6408",
+        "12.4811",
+        "828,905"
+      ],
+      [
+        "",
+        "C-FF",
+        "1,008",
+        "11.1993",
+        "22.3043",
+        "1.2032",
+        "637,594"
+      ],
+      [
+        "",
+        "IDFF",
+        "1,008",
+        "4.6743",
+        "10.5956",
+        "1.1928",
+        "75,505"
+      ],
+      [
+        "Expanded search\nShared goal",
+        "BiA*-R",
+        "1,536",
+        "100.0484",
+        "136.6949",
+        "13.6655",
+        "14,141,361"
+      ],
+      [
+        "",
+        "LPA*",
+        "1,536",
+        "58.7535",
+        "129.8672",
+        "14.1385",
+        "603,935"
+      ],
+      [
+        "",
+        "C-FF",
+        "1,536",
+        "10.9823",
+        "20.7709",
+        "1.5026",
+        "570,671"
+      ],
+      [
+        "",
+        "IDFF",
+        "1,536",
+        "8.8222",
+        "18.9473",
+        "2.0299",
+        "145,860"
+      ],
+      [
+        "Confirmation\nShared goal",
+        "C-FF",
+        "1,600",
+        "11.5352",
+        "21.7630",
+        "1.5770",
+        "815,495"
+      ],
+      [
+        "",
+        "IDFF",
+        "1,600",
+        "9.1713",
+        "19.7384",
+        "2.1021",
+        "249,389"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 4,
+    "caption": "Table S2. Descriptive shared-goal telemetry with acquisition labels",
+    "rows": [
+      [
+        "Algorithm",
+        "Source experiment",
+        "n",
+        "P1\nms/event",
+        "P2\nGM of P95\nms",
+        "P3\nReported\nms/agent",
+        "P4\nMemory diagnostic\nbytes/event"
+      ],
+      [
+        "A*-R",
+        "Four-Method Dynamic-Update",
+        "1,536",
+        "52.4800",
+        "69.8998",
+        "7.1833",
+        "7,136,552"
+      ],
+      [
+        "D*L",
+        "Four-Method Dynamic-Update",
+        "1,536",
+        "59.5523",
+        "131.3757",
+        "14.3483",
+        "583,573"
+      ],
+      [
+        "BiA*-R",
+        "Expanded Search-Strategy",
+        "1,536",
+        "100.0484",
+        "136.6949",
+        "13.6655",
+        "14,141,361"
+      ],
+      [
+        "LPA*",
+        "Expanded Search-Strategy",
+        "1,536",
+        "58.7535",
+        "129.8672",
+        "14.1385",
+        "603,935"
+      ],
+      [
+        "C-FF",
+        "Expanded Search-Strategy",
+        "1,536",
+        "10.9823",
+        "20.7709",
+        "1.5026",
+        "570,671"
+      ],
+      [
+        "IDFF",
+        "Expanded Search-Strategy",
+        "1,536",
+        "8.8222",
+        "18.9473",
+        "2.0299",
+        "145,860"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 5,
+    "caption": "Table S3. Plan and repair utilization of the operation termination budget",
+    "rows": [
+      [
+        "Algorithm",
+        "Plan\np95 ms",
+        "Plan\nmax ms",
+        "Plan remaining\nms (% budget)",
+        "Repair\np95 ms",
+        "Repair\nmax ms",
+        "Repair remaining\nms (% budget)"
+      ],
+      [
+        "A*-R",
+        "6.7425",
+        "28.4654",
+        "9,971.5346\n(99.7153%)",
+        "0.0020",
+        "0.0072",
+        "9,999.9928\n(99.9999%)"
+      ],
+      [
+        "D*L",
+        "11.2868",
+        "204.8538",
+        "9,795.1462\n(97.9515%)",
+        "1,157.5955",
+        "3,647.0733",
+        "6,352.9267\n(63.5293%)"
+      ],
+      [
+        "BiA*-R",
+        "15.0641",
+        "75.4602",
+        "9,924.5398\n(99.2454%)",
+        "0.0021",
+        "0.0083",
+        "9,999.9917\n(99.9999%)"
+      ],
+      [
+        "LPA*",
+        "11.0974",
+        "206.2685",
+        "9,793.7315\n(97.9373%)",
+        "1,147.8642",
+        "3,584.1128",
+        "6,415.8872\n(64.1589%)"
+      ],
+      [
+        "C-FF",
+        "0.0193",
+        "7.8167",
+        "9,992.1833\n(99.9218%)",
+        "24.3299",
+        "96.7939",
+        "9,903.2061\n(99.0321%)"
+      ],
+      [
+        "IDFF",
+        "0.0196",
+        "14.8485",
+        "9,985.1515\n(99.8515%)",
+        "88.2344",
+        "304.1409",
+        "9,695.8591\n(96.9586%)"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 6,
+    "caption": "Algorithm S3. Managed multi-query execution with private lane state",
+    "rows": [
+      [
+        "Algorithm S3. Managed multi-query execution with private lane state"
+      ],
+      [
+        "Input: algorithm A in {C-FF, IDFF}, 16 frozen lane inputs B, worker count W, CPU plan P\nOutput: complete-batch time T and validated results R[0..15], or batch failure\n1   Load and verify B and cached oracle outcomes before batch timing\n2   Create W fixed workers; worker j binds to P[j], signals READY, and waits\n3   Coordinator waits for every READY signal; start clock; release workers\n4   In parallel, each worker j executes lanes i = j, j + W, ... < 16:\n5       if batch failure is already flagged: skip each unstarted lane\n6       otherwise verify the worker CPU binding and enter the lane\n7       Deserialize private B[i]; build private grid G; create planner A\n8       try:\n9           Initialize A; require valid status, budget, and grid version\n10          Run all initial queries; validate paths and record outcomes\n11          for each of the 24 event groups in frozen order:\n12              for each atomic partition in its prescribed order:\n13                  Require no pending repair; apply the changes to G\n14                  Call A.ApplyChanges using the technical budget\n15                  Require completed repair, valid budget, matching versions\n16              Run all fixed-start queries; validate paths; record outcomes\n17          Require the full query and repair counts; store result R[i]\n18       finally: reset the lane planner\n19       On a lane error: flag batch failure; stop admitting unstarted lanes\n20       Fingerprint successful results; verify the ending CPU binding\n21       On a binding error: flag batch failure\n22   Each worker clears its binding and signals DONE after its lane loop\n23   Coordinator waits for all DONE signals; stop clock at T; join workers\n24   Require 16 completed lanes, no failed/skipped lanes, and valid bindings\n25   Compare every recorded query with its cached oracle after timing\n26   If any check fails: reject the complete batch; do not retry or replace\n27   Return T and results in ascending lane order\nWithin a lane, C-FF and IDFF execute the serial procedures of Algorithms S1 and S2."
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 7,
+    "caption": "Table S4. Complete managed-worker scaling effects",
+    "rows": [
+      [
+        "Algorithm",
+        "Placement and contrast",
+        "n",
+        "Geometric ratio\n(ordinary 95% CI)",
+        "Reduction",
+        "Holm-adjusted\none-sided p",
+        "Simultaneous\nupper ratio"
+      ],
+      [
+        "C-FF",
+        "Large-L3 single CCD; per ×2 workers",
+        "36",
+        "0.6597\n(0.6394–0.6807)",
+        "34.03%",
+        "1.11 × 10⁻²⁴",
+        "0.6840"
+      ],
+      [
+        "C-FF",
+        "High-frequency single CCD; per ×2 workers",
+        "36",
+        "0.6642\n(0.6439–0.6851)",
+        "33.58%",
+        "1.11 × 10⁻²⁴",
+        "0.6884"
+      ],
+      [
+        "IDFF",
+        "Large-L3 single CCD; per ×2 workers",
+        "36",
+        "0.6715\n(0.6510–0.6925)",
+        "32.85%",
+        "1.35 × 10⁻²⁴",
+        "0.6958"
+      ],
+      [
+        "IDFF",
+        "High-frequency single CCD; per ×2 workers",
+        "36",
+        "0.6775\n(0.6574–0.6983)",
+        "32.25%",
+        "1.35 × 10⁻²⁴",
+        "0.7015"
+      ],
+      [
+        "C-FF",
+        "Balanced dual CCD; W16/W8",
+        "36",
+        "0.8038\n(0.7553–0.8554)",
+        "19.62%",
+        "1.59 × 10⁻⁸",
+        "0.8554"
+      ],
+      [
+        "IDFF",
+        "Balanced dual CCD; W16/W8",
+        "36",
+        "0.8397\n(0.7998–0.8815)",
+        "16.03%",
+        "1.59 × 10⁻⁸",
+        "0.8815"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 8,
+    "caption": "Table S5. Endpoint construction from accepted records",
+    "rows": [
+      [
+        "Outcome",
+        "Accepted measurements and lane aggregation",
+        "Model input"
+      ],
+      [
+        "D1 GM (ms)",
+        "Geometric mean of 24 eventGroupElapsedMilliseconds values",
+        "ln(lane GM)"
+      ],
+      [
+        "D1 P95 (ms)",
+        "23rd ordered eventGroupElapsedMilliseconds value among 24",
+        "ln(lane P95)"
+      ],
+      [
+        "D2 (calls)",
+        "Sum over 24 groups of Contains + IsWalkable + GetTraversalCost calls",
+        "ln(total calls)"
+      ],
+      [
+        "D3 (bytes)",
+        "Sum of managedAllocationBytes in 24 event-group windows",
+        "ln(1 + total bytes)"
+      ],
+      [
+        "D4 (bytes)",
+        "Maximum persistentStateBytesTotal across 26 measurement points",
+        "ln(1 + maximum bytes)"
+      ],
+      [
+        "D5–D7",
+        "The D1 GM outcome at N, F, and G² design levels",
+        "D1 GM model; algorithm × centered log2 axis"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 9,
+    "caption": "Table S6. Original-unit lane outcomes for all six algorithms",
+    "rows": [
+      [
+        "Outcome and unit",
+        "Algorithm",
+        "Arithmetic mean",
+        "Median",
+        "Interquartile range"
+      ],
+      [
+        "D1 GM\nms",
+        "A*-R",
+        "122.724",
+        "89.9724",
+        "48.781–170.798"
+      ],
+      [
+        "D1 GM\nms",
+        "BiA*-R",
+        "239.089",
+        "172.004",
+        "90.7916–334.329"
+      ],
+      [
+        "D1 GM\nms",
+        "D*L",
+        "273.137",
+        "168.029",
+        "93.5698–329.814"
+      ],
+      [
+        "D1 GM\nms",
+        "LPA*",
+        "273.144",
+        "168.02",
+        "93.0416–329.837"
+      ],
+      [
+        "D1 GM\nms",
+        "C-FF",
+        "77.8588",
+        "39.495",
+        "13.9936–96.2977"
+      ],
+      [
+        "D1 GM\nms",
+        "IDFF",
+        "40.4637",
+        "26.7314",
+        "15.8269–47.1245"
+      ],
+      [
+        "D1 P95\nms",
+        "A*-R",
+        "306.425",
+        "218.692",
+        "132.36–344.385"
+      ],
+      [
+        "D1 P95\nms",
+        "BiA*-R",
+        "644.14",
+        "456.967",
+        "277.41–713.889"
+      ],
+      [
+        "D1 P95\nms",
+        "D*L",
+        "526.479",
+        "274.478",
+        "154.711–554.256"
+      ],
+      [
+        "D1 P95\nms",
+        "LPA*",
+        "526.478",
+        "273.99",
+        "152.929–554.139"
+      ],
+      [
+        "D1 P95\nms",
+        "C-FF",
+        "95.7569",
+        "53.7826",
+        "17.1644–116.919"
+      ],
+      [
+        "D1 P95\nms",
+        "IDFF",
+        "85.4623",
+        "44.9046",
+        "26.271–113.772"
+      ],
+      [
+        "D2\ncalls",
+        "A*-R",
+        "1.13262e+08",
+        "8.38885e+07",
+        "5.17655e+07–1.30981e+08"
+      ],
+      [
+        "D2\ncalls",
+        "BiA*-R",
+        "2.39503e+08",
+        "1.80998e+08",
+        "1.08856e+08–2.82844e+08"
+      ],
+      [
+        "D2\ncalls",
+        "D*L",
+        "3.76056e+08",
+        "2.6393e+08",
+        "1.38262e+08–5.1322e+08"
+      ],
+      [
+        "D2\ncalls",
+        "LPA*",
+        "3.76056e+08",
+        "2.6393e+08",
+        "1.38262e+08–5.1322e+08"
+      ],
+      [
+        "D2\ncalls",
+        "C-FF",
+        "1.15472e+08",
+        "5.05365e+07",
+        "1.76859e+07–1.51495e+08"
+      ],
+      [
+        "D2\ncalls",
+        "IDFF",
+        "6.49408e+07",
+        "3.1891e+07",
+        "1.82125e+07–7.39346e+07"
+      ],
+      [
+        "D3\nbytes",
+        "A*-R",
+        "4.29135e+08",
+        "3.19746e+08",
+        "1.65837e+08–6.47783e+08"
+      ],
+      [
+        "D3\nbytes",
+        "BiA*-R",
+        "8.94235e+08",
+        "6.53522e+08",
+        "3.38355e+08–1.33358e+09"
+      ],
+      [
+        "D3\nbytes",
+        "D*L",
+        "2.37048e+07",
+        "1.9078e+07",
+        "1.10381e+07–3.18413e+07"
+      ],
+      [
+        "D3\nbytes",
+        "LPA*",
+        "2.37048e+07",
+        "1.9078e+07",
+        "1.10381e+07–3.18413e+07"
+      ],
+      [
+        "D3\nbytes",
+        "C-FF",
+        "6.03071e+07",
+        "3.41916e+07",
+        "1.59845e+07–6.19179e+07"
+      ],
+      [
+        "D3\nbytes",
+        "IDFF",
+        "9.13497e+06",
+        "7.9439e+06",
+        "5.15373e+06–1.22175e+07"
+      ],
+      [
+        "D4\nbytes",
+        "A*-R",
+        "8",
+        "8",
+        "8–8"
+      ],
+      [
+        "D4\nbytes",
+        "BiA*-R",
+        "8",
+        "8",
+        "8–8"
+      ],
+      [
+        "D4\nbytes",
+        "D*L",
+        "2.93443e+07",
+        "2.17747e+07",
+        "1.16e+07–4.0993e+07"
+      ],
+      [
+        "D4\nbytes",
+        "LPA*",
+        "2.93443e+07",
+        "2.17747e+07",
+        "1.16e+07–4.0993e+07"
+      ],
+      [
+        "D4\nbytes",
+        "C-FF",
+        "267280",
+        "248848",
+        "110608–442384"
+      ],
+      [
+        "D4\nbytes",
+        "IDFF",
+        "636053",
+        "611344",
+        "290832–991248"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 10,
+    "caption": "Table S7a. D1 geometric mean reference values and formal ratios",
+    "rows": [
+      [
+        "Comparator",
+        "ηIDFF\nηcomparator",
+        "Adjusted value\nIDFF / comparator",
+        "Formal numerator\nFormal denominator",
+        "Formal ratio\n[simultaneous CI]",
+        "Holm p"
+      ],
+      [
+        "A*-R",
+        "2.983273\n4.131217",
+        "19.752\n62.254",
+        "19.752\n62.254",
+        "0.317289\n[0.29914,\n0.336538]",
+        "<1e−15"
+      ],
+      [
+        "BiA*-R",
+        "2.983273\n4.787188",
+        "19.752\n119.964",
+        "19.752\n119.964",
+        "0.164653\n[0.155235,\n0.174642]",
+        "<1e−15"
+      ],
+      [
+        "D*L",
+        "2.983273\n4.861707",
+        "19.752\n129.245",
+        "19.752\n129.245",
+        "0.152829\n[0.144088,\n0.162101]",
+        "<1e−15"
+      ],
+      [
+        "LPA*",
+        "2.983273\n4.861057",
+        "19.752\n129.161",
+        "19.752\n129.161",
+        "0.152929\n[0.144181,\n0.162207]",
+        "<1e−15"
+      ],
+      [
+        "C-FF",
+        "2.983273\n3.259520",
+        "19.752\n26.037",
+        "19.752\n26.037",
+        "0.758625\n[0.715234,\n0.80465]",
+        "1"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 11,
+    "caption": "Table S7b. D1 P95 reference values and formal ratios",
+    "rows": [
+      [
+        "Comparator",
+        "ηIDFF\nηcomparator",
+        "Adjusted value\nIDFF / comparator",
+        "Formal numerator\nFormal denominator",
+        "Formal ratio\n[simultaneous CI]",
+        "Holm p"
+      ],
+      [
+        "A*-R",
+        "3.548253\n4.957167",
+        "34.753\n142.190",
+        "34.753\n142.190",
+        "0.244408\n[0.228936,\n0.260927]",
+        "<1e−15"
+      ],
+      [
+        "BiA*-R",
+        "3.548253\n5.695226",
+        "34.753\n297.444",
+        "34.753\n297.444",
+        "0.116837\n[0.109441,\n0.124734]",
+        "<1e−15"
+      ],
+      [
+        "D*L",
+        "3.548253\n5.369476",
+        "34.753\n214.750",
+        "34.753\n214.750",
+        "0.161828\n[0.151583,\n0.172765]",
+        "<1e−15"
+      ],
+      [
+        "LPA*",
+        "3.548253\n5.368876",
+        "34.753\n214.622",
+        "34.753\n214.622",
+        "0.161925\n[0.151674,\n0.172868]",
+        "<1e−15"
+      ],
+      [
+        "C-FF",
+        "3.548253\n3.435957",
+        "34.753\n31.061",
+        "34.753\n31.061",
+        "1.11884\n[1.04801,\n1.19446]",
+        "1"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 12,
+    "caption": "Table S7c. D2 grid-access reference values and formal ratios",
+    "rows": [
+      [
+        "Comparator",
+        "ηIDFF\nηcomparator",
+        "Adjusted value\nIDFF / comparator",
+        "Formal numerator\nFormal denominator",
+        "Formal ratio\n[simultaneous CI]",
+        "Holm p"
+      ],
+      [
+        "A*-R",
+        "16.970430\n17.671250",
+        "23451138.397\n47263543.297",
+        "23451138.397\n47263543.297",
+        "0.496178\n[0.467314,\n0.526825]",
+        "<1e−15"
+      ],
+      [
+        "BiA*-R",
+        "16.970430\n18.402099",
+        "23451138.397\n98159017.881",
+        "23451138.397\n98159017.881",
+        "0.23891\n[0.225012,\n0.253666]",
+        "<1e−15"
+      ],
+      [
+        "D*L",
+        "16.970430\n18.785447",
+        "23451138.397\n144017740.126",
+        "23451138.397\n144017740.126",
+        "0.162835\n[0.153363,\n0.172893]",
+        "<1e−15"
+      ],
+      [
+        "LPA*",
+        "16.970430\n18.785447",
+        "23451138.397\n144017740.126",
+        "23451138.397\n144017740.126",
+        "0.162835\n[0.153363,\n0.172893]",
+        "<1e−15"
+      ],
+      [
+        "C-FF",
+        "16.970430\n17.247374",
+        "23451138.397\n30934243.455",
+        "23451138.397\n30934243.455",
+        "0.758096\n[0.713996,\n0.804921]",
+        "<1e−15"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 13,
+    "caption": "Table S7d. D3 allocation reference values and formal ratios",
+    "rows": [
+      [
+        "Comparator",
+        "ηIDFF\nηcomparator",
+        "Adjusted value\nIDFF / comparator",
+        "Formal numerator\nFormal denominator",
+        "Formal ratio\n[simultaneous CI]",
+        "Holm p"
+      ],
+      [
+        "A*-R",
+        "15.668979\n19.383151",
+        "6381914.731\n261815631.599",
+        "6381915.731\n261815632.599",
+        "0.0243756\n[0.0233255,\n0.025473]",
+        "<1e−15"
+      ],
+      [
+        "BiA*-R",
+        "15.668979\n20.113914",
+        "6381914.731\n543703100.276",
+        "6381915.731\n543703101.276",
+        "0.0117379\n[0.0112322,\n0.0122663]",
+        "<1e−15"
+      ],
+      [
+        "D*L",
+        "15.668979\n16.546778",
+        "6381914.731\n15352330.426",
+        "6381915.731\n15352331.426",
+        "0.415697\n[0.397788,\n0.434412]",
+        "<1e−15"
+      ],
+      [
+        "LPA*",
+        "15.668979\n16.546778",
+        "6381914.731\n15352330.426",
+        "6381915.731\n15352331.426",
+        "0.415697\n[0.397788,\n0.434412]",
+        "<1e−15"
+      ],
+      [
+        "C-FF",
+        "15.668979\n17.205526",
+        "6381914.731\n29666416.415",
+        "6381915.731\n29666417.415",
+        "0.215123\n[0.205855,\n0.224808]",
+        "<1e−15"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 14,
+    "caption": "Table S7e. D4 retained-state reference values and formal ratios",
+    "rows": [
+      [
+        "Comparator",
+        "ηIDFF\nηcomparator",
+        "Adjusted value\nIDFF / comparator",
+        "Formal numerator\nFormal denominator",
+        "Formal ratio\n[simultaneous CI]",
+        "Holm p"
+      ],
+      [
+        "A*-R",
+        "13.213557\n2.182414",
+        "547739.788\n7.868",
+        "547740.788\n8.868",
+        "61768.2\n[61412,\n62126.4]",
+        "1"
+      ],
+      [
+        "BiA*-R",
+        "13.213557\n2.182414",
+        "547739.788\n7.868",
+        "547740.788\n8.868",
+        "61768.2\n[61412,\n62126.4]",
+        "1"
+      ],
+      [
+        "D*L",
+        "13.213557\n16.892819",
+        "547739.788\n21699926.228",
+        "547740.788\n21699927.228",
+        "0.0252416\n[0.025096,\n0.025388]",
+        "<1e−15"
+      ],
+      [
+        "LPA*",
+        "13.213557\n16.892819",
+        "547739.788\n21699926.228",
+        "547740.788\n21699927.228",
+        "0.0252416\n[0.025096,\n0.025388]",
+        "<1e−15"
+      ],
+      [
+        "C-FF",
+        "13.213557\n12.331287",
+        "547739.788\n226677.342",
+        "547740.788\n226678.342",
+        "2.41638\n[2.40244,\n2.43039]",
+        "1"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 15,
+    "caption": "Table S8. Model slopes and all formal scaling contrasts",
+    "rows": [
+      [
+        "Domain",
+        "Comparator",
+        "Slope IDFF\nSlope comparator",
+        "Difference\n[simultaneous CI]",
+        "Holm p",
+        "Pass"
+      ],
+      [
+        "D5",
+        "A*-R",
+        "0.031043\n0.696738",
+        "-0.665695\n[-0.737832, -0.593559]",
+        "<1e−15",
+        "1"
+      ],
+      [
+        "D5",
+        "BiA*-R",
+        "0.031043\n0.699350",
+        "-0.668307\n[-0.740443, -0.596171]",
+        "<1e−15",
+        "1"
+      ],
+      [
+        "D5",
+        "D*L",
+        "0.031043\n0.696263",
+        "-0.665220\n[-0.737356, -0.593084]",
+        "<1e−15",
+        "1"
+      ],
+      [
+        "D5",
+        "LPA*",
+        "0.031043\n0.696997",
+        "-0.665954\n[-0.738090, -0.593818]",
+        "<1e−15",
+        "1"
+      ],
+      [
+        "D5",
+        "C-FF",
+        "0.031043\n0.028535",
+        "0.002508\n[-0.069628, 0.074644]",
+        "1",
+        "0"
+      ],
+      [
+        "D6",
+        "A*-R",
+        "0.051500\n0.012052",
+        "0.039449\n[0.014176, 0.064721]",
+        "1",
+        "0"
+      ],
+      [
+        "D6",
+        "BiA*-R",
+        "0.051500\n0.013168",
+        "0.038332\n[0.013060, 0.063604]",
+        "1",
+        "0"
+      ],
+      [
+        "D6",
+        "D*L",
+        "0.051500\n0.073288",
+        "-0.021788\n[-0.047060, 0.003484]",
+        "0.0404857",
+        "0"
+      ],
+      [
+        "D6",
+        "LPA*",
+        "0.051500\n0.073255",
+        "-0.021755\n[-0.047027, 0.003518]",
+        "0.0404857",
+        "0"
+      ],
+      [
+        "D6",
+        "C-FF",
+        "0.051500\n-0.003578",
+        "0.055078\n[0.029806, 0.080350]",
+        "1",
+        "0"
+      ],
+      [
+        "D7",
+        "A*-R",
+        "0.649907\n0.676562",
+        "-0.026655\n[-0.098446, 0.045136]",
+        "1",
+        "0"
+      ],
+      [
+        "D7",
+        "BiA*-R",
+        "0.649907\n0.698782",
+        "-0.048875\n[-0.120667, 0.022916]",
+        "0.182101",
+        "0"
+      ],
+      [
+        "D7",
+        "D*L",
+        "0.649907\n0.615584",
+        "0.034323\n[-0.037469, 0.106114]",
+        "1",
+        "0"
+      ],
+      [
+        "D7",
+        "LPA*",
+        "0.649907\n0.615855",
+        "0.034051\n[-0.037740, 0.105843]",
+        "1",
+        "0"
+      ],
+      [
+        "D7",
+        "C-FF",
+        "0.649907\n0.690961",
+        "-0.041054\n[-0.112845, 0.030738]",
+        "0.389814",
+        "0"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 16,
+    "caption": "Table S9. Effects and criteria for all non-passing hypotheses",
+    "rows": [
+      [
+        "Domain / comparator",
+        "Effect [simultaneous CI]",
+        "Holm p",
+        "Failed criteria"
+      ],
+      [
+        "D1 GM\nC-FF",
+        "0.758625\n[0.715234, 0.80465]",
+        "1",
+        "P95 effect and interval exceed 1; composite p ≥ 0.05. GM alone cannot pass D1."
+      ],
+      [
+        "D1 P95\nC-FF",
+        "1.11884\n[1.04801, 1.19446]",
+        "1",
+        "P95 effect and interval exceed 1; composite p ≥ 0.05. GM alone cannot pass D1."
+      ],
+      [
+        "D4\nA*-R",
+        "61768.2\n[61412, 62126.4]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 1; CI upper ≥ 1."
+      ],
+      [
+        "D4\nBiA*-R",
+        "61768.2\n[61412, 62126.4]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 1; CI upper ≥ 1."
+      ],
+      [
+        "D4\nC-FF",
+        "2.41638\n[2.40244, 2.43039]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 1; CI upper ≥ 1."
+      ],
+      [
+        "D5\nC-FF",
+        "0.00250772\n[-0.0696284, 0.0746438]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 0; CI upper ≥ 0."
+      ],
+      [
+        "D6\nA*-R",
+        "0.0394487\n[0.0141763, 0.064721]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 0; CI upper ≥ 0."
+      ],
+      [
+        "D6\nBiA*-R",
+        "0.0383321\n[0.0130598, 0.0636044]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 0; CI upper ≥ 0."
+      ],
+      [
+        "D6\nD*L",
+        "-0.0217879\n[-0.0470602, 0.00348443]",
+        "0.0404857",
+        "CI upper ≥ 0."
+      ],
+      [
+        "D6\nLPA*",
+        "-0.0217547\n[-0.047027, 0.00351766]",
+        "0.0404857",
+        "CI upper ≥ 0."
+      ],
+      [
+        "D6\nC-FF",
+        "0.055078\n[0.0298056, 0.0803503]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 0; CI upper ≥ 0."
+      ],
+      [
+        "D7\nA*-R",
+        "-0.026655\n[-0.0984465, 0.0451365]",
+        "1",
+        "Holm p ≥ 0.05; CI upper ≥ 0."
+      ],
+      [
+        "D7\nBiA*-R",
+        "-0.0488751\n[-0.120667, 0.0229163]",
+        "0.182101",
+        "Holm p ≥ 0.05; CI upper ≥ 0."
+      ],
+      [
+        "D7\nD*L",
+        "0.0343226\n[-0.0374689, 0.106114]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 0; CI upper ≥ 0."
+      ],
+      [
+        "D7\nLPA*",
+        "0.0340515\n[-0.03774, 0.105843]",
+        "1",
+        "Holm p ≥ 0.05; effect ≥ 0; CI upper ≥ 0."
+      ],
+      [
+        "D7\nC-FF",
+        "-0.0410537\n[-0.112845, 0.0307378]",
+        "0.389814",
+        "Holm p ≥ 0.05; CI upper ≥ 0."
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 17,
+    "caption": "Table S10. Exploratory domain decisions",
+    "rows": [
+      [
+        "Domain",
+        "Hard gates",
+        "Passing comparisons",
+        "Domain pass",
+        "Non-passing comparators"
+      ],
+      [
+        "D1 Dynamic latency",
+        "Valid",
+        "4/5",
+        "1",
+        "C-FF"
+      ],
+      [
+        "D2 Grid-read work",
+        "Valid",
+        "5/5",
+        "1",
+        "None"
+      ],
+      [
+        "D3 Dynamic allocation",
+        "Valid",
+        "5/5",
+        "1",
+        "None"
+      ],
+      [
+        "D4 Persistent state",
+        "Valid",
+        "2/5",
+        "0",
+        "A*-R, BiA*-R, C-FF"
+      ],
+      [
+        "D5 Agent count",
+        "Valid",
+        "4/5",
+        "1",
+        "C-FF"
+      ],
+      [
+        "D6 Change footprint",
+        "Valid",
+        "0/5",
+        "0",
+        "A*-R, BiA*-R, D*L, LPA*, C-FF"
+      ],
+      [
+        "D7 Grid size",
+        "Valid",
+        "0/5",
+        "0",
+        "A*-R, BiA*-R, D*L, LPA*, C-FF"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 18,
+    "caption": "Table S11. Movement rank components and total",
+    "rows": [
+      [
+        "Algorithm",
+        "Movement\n×2",
+        "Path\n×1",
+        "Scaling\n×1",
+        "Callback\n×1",
+        "Static\ntie-break",
+        "Total"
+      ],
+      [
+        "IDFF",
+        "1",
+        "1",
+        "1",
+        "2",
+        "3",
+        "6"
+      ],
+      [
+        "C-FF",
+        "1",
+        "1",
+        "2",
+        "3",
+        "2",
+        "8"
+      ],
+      [
+        "A*-R",
+        "3",
+        "3",
+        "3",
+        "1",
+        "1",
+        "13"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 19,
+    "caption": "Table S12. Weighted scores and simultaneous bounds",
+    "rows": [
+      [
+        "Rank",
+        "Algorithm",
+        "Score / 100",
+        "Simultaneous score bounds"
+      ],
+      [
+        "1",
+        "IDFF",
+        "83.00",
+        "75.50–87.50"
+      ],
+      [
+        "2",
+        "C-FF",
+        "74.50",
+        "68.50–80.50"
+      ],
+      [
+        "3",
+        "A*-R",
+        "54.75",
+        "46.50–63.00"
+      ],
+      [
+        "4",
+        "LPA*",
+        "32.75",
+        "14.00–43.00"
+      ],
+      [
+        "5",
+        "D*L",
+        "28.75",
+        "14.00–43.00"
+      ],
+      [
+        "6",
+        "BiA*-R",
+        "26.25",
+        "25.50–39.00"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 20,
+    "caption": "Table S13. Domain utilities and weighted total",
+    "rows": [
+      [
+        "Algorithm",
+        "D1\n35%",
+        "D2\n20%",
+        "D3\n15%",
+        "D4\n7.5%",
+        "D5\n7.5%",
+        "D6\n7.5%",
+        "D7\n7.5%",
+        "Total"
+      ],
+      [
+        "IDFF",
+        "90",
+        "100",
+        "100",
+        "40",
+        "80",
+        "40",
+        "60",
+        "83.00"
+      ],
+      [
+        "C-FF",
+        "90",
+        "80",
+        "40",
+        "60",
+        "100",
+        "100",
+        "20",
+        "74.50"
+      ],
+      [
+        "A*-R",
+        "60",
+        "60",
+        "20",
+        "90",
+        "40",
+        "80",
+        "40",
+        "54.75"
+      ],
+      [
+        "LPA*",
+        "30",
+        "10",
+        "70",
+        "10",
+        "20",
+        "20",
+        "80",
+        "32.75"
+      ],
+      [
+        "D*L",
+        "10",
+        "10",
+        "70",
+        "10",
+        "60",
+        "0",
+        "100",
+        "28.75"
+      ],
+      [
+        "BiA*-R",
+        "20",
+        "40",
+        "0",
+        "90",
+        "0",
+        "60",
+        "0",
+        "26.25"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 21,
+    "caption": "Table S14. Core structural rows with two seeds and both goal structures",
+    "rows": [
+      [
+        "Row",
+        "Grid edge",
+        "Agents",
+        "Changed cells",
+        "Neighbors",
+        "Cost",
+        "Obstacle %",
+        "Hetero goals"
+      ],
+      [
+        "01",
+        "64",
+        "16",
+        "9",
+        "4",
+        "U",
+        "10",
+        "4"
+      ],
+      [
+        "02",
+        "64",
+        "128",
+        "81",
+        "4",
+        "W",
+        "25",
+        "16"
+      ],
+      [
+        "03",
+        "64",
+        "128",
+        "9",
+        "8",
+        "U",
+        "25",
+        "16"
+      ],
+      [
+        "04",
+        "64",
+        "16",
+        "81",
+        "8",
+        "W",
+        "10",
+        "4"
+      ],
+      [
+        "05",
+        "128",
+        "16",
+        "81",
+        "4",
+        "U",
+        "25",
+        "4"
+      ],
+      [
+        "06",
+        "128",
+        "128",
+        "9",
+        "4",
+        "W",
+        "10",
+        "16"
+      ],
+      [
+        "07",
+        "128",
+        "128",
+        "81",
+        "8",
+        "U",
+        "10",
+        "16"
+      ],
+      [
+        "08",
+        "128",
+        "16",
+        "9",
+        "8",
+        "W",
+        "25",
+        "4"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 22,
+    "caption": "Table S15. Additional matrix families and level-to-seed rules",
+    "rows": [
+      [
+        "Family / scope",
+        "Varied levels",
+        "Fixed settings",
+        "Seed / ID rule"
+      ],
+      [
+        "Grid / 4 shared",
+        "G = 32, 64, 128, 256",
+        "N = 64; F = 25; 8 neighbors; W; 18% obstacles",
+        "120000 + G; grid-scale-g{GGG}-shared"
+      ],
+      [
+        "Agent / 5 shared",
+        "N = 1, 8, 32, 128, 512",
+        "G = 128; F = 25; 4 neighbors; W; 18% obstacles",
+        "130000 + N; agent-scale-a{NNN}-shared"
+      ],
+      [
+        "Footprint / 5 shared",
+        "F = 1, 9, 25, 81, 225",
+        "G = 128; N = 64; 8 neighbors; W; 18% obstacles",
+        "140000 + F; dynamic-footprint-f{FFF}-shared"
+      ],
+      [
+        "Reachability / 2 shared",
+        "4 or 8 neighbors",
+        "G = 64; N = 32; F = 1; U; 62 blocked cells",
+        "160004 / 160008; reachability-c4-shared / reachability-c8-strict-shared"
+      ],
+      [
+        "Goal count / 5 heterogeneous",
+        "H = 2, 4, 8, 16, 32",
+        "G = 128; N = 128; F = 25; 8 neighbors; W; 18% obstacles",
+        "150000 + H; goal-count-g{HH}-hetero"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 23,
+    "caption": "Table S16. Main movement conditions at 128 agents",
+    "rows": [
+      [
+        "Condition",
+        "Core row / seed",
+        "Grid edge",
+        "Neighbors",
+        "Cost",
+        "Obstacle %",
+        "Changed cells"
+      ],
+      [
+        "C01 *",
+        "r02-s1",
+        "64",
+        "4",
+        "W",
+        "25",
+        "81"
+      ],
+      [
+        "C02",
+        "r02-s2",
+        "64",
+        "4",
+        "W",
+        "25",
+        "81"
+      ],
+      [
+        "C03",
+        "r03-s1",
+        "64",
+        "8",
+        "U",
+        "25",
+        "9"
+      ],
+      [
+        "C04",
+        "r03-s2",
+        "64",
+        "8",
+        "U",
+        "25",
+        "9"
+      ],
+      [
+        "C05",
+        "r06-s1",
+        "128",
+        "4",
+        "W",
+        "10",
+        "9"
+      ],
+      [
+        "C06",
+        "r06-s2",
+        "128",
+        "4",
+        "W",
+        "10",
+        "9"
+      ],
+      [
+        "C07 *",
+        "r07-s1",
+        "128",
+        "8",
+        "U",
+        "10",
+        "81"
+      ],
+      [
+        "C08",
+        "r07-s2",
+        "128",
+        "8",
+        "U",
+        "10",
+        "81"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 24,
+    "caption": "Table S17. Operational scope of the matched cost measurements",
+    "rows": [
+      [
+        "Endpoint",
+        "Included in the recorded window",
+        "Boundary and exclusions"
+      ],
+      [
+        "D1",
+        "Event-group partition conversion, canonical grid mutation, repair/query calls, request and operation-record creation, path-cost calculation, and cached-oracle comparison.",
+        "Stopwatch around this event runner. Planner-accessor counting and owner-thread GC.Alloc callbacks are active. Excludes initial setup/queries, post-window file output, and post-operation state snapshots."
+      ],
+      [
+        "D2",
+        "Contains, IsWalkable, and GetTraversalCost calls through the counting grid passed to the planner.",
+        "Counters span the event window, but direct runner accesses to the underlying grid are outside the proxy count. A call is work evidence, not a unique cell visit."
+      ],
+      [
+        "D3",
+        "Owner-thread allocation bytes reported by the native GC.Alloc callback during the event-group allocation window, including runner work within it.",
+        "Window begins immediately before the D1 timer and closes after it stops. Initialization and control windows are excluded. This is a different instrument from historical P4."
+      ],
+      [
+        "D4",
+        "Logical retained-state capacities after initialization, initial queries, and each of 24 groups; maximum of these 26 points.",
+        "Excludes temporary rebuild overlap, process-wide resident memory, and unretained runner buffers. It is neither peak live heap nor whole-application memory."
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 25,
+    "caption": "Table S18. Sensitivity summaries for managed-worker contrasts",
+    "rows": [
+      [
+        "Within-algorithm contrast",
+        "Studentized bootstrap 95% ratio interval",
+        "Exact signed-rank p",
+        "Leave-one-block-out ratio range"
+      ],
+      [
+        "C-FF large-L3 ×2",
+        "0.6409–0.6831",
+        "1.455e-11",
+        "0.6559–0.6623"
+      ],
+      [
+        "C-FF high-frequency ×2",
+        "0.6455–0.6875",
+        "1.455e-11",
+        "0.6604–0.6669"
+      ],
+      [
+        "IDFF large-L3 ×2",
+        "0.6506–0.6923",
+        "1.455e-11",
+        "0.6676–0.6747"
+      ],
+      [
+        "IDFF high-frequency ×2",
+        "0.6570–0.6980",
+        "1.455e-11",
+        "0.6738–0.6809"
+      ],
+      [
+        "C-FF dual-CCD W16/W8",
+        "0.7491–0.8506",
+        "1.455e-11",
+        "0.7991–0.8136"
+      ],
+      [
+        "IDFF dual-CCD W16/W8",
+        "0.7936–0.8775",
+        "4.366e-11",
+        "0.8351–0.8475"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 26,
+    "caption": "Table S19. Numerical inputs for the movement preference score",
+    "rows": [
+      [
+        "Input",
+        "IDFF",
+        "C-FF",
+        "A*-R"
+      ],
+      [
+        "RMAT180 (s)",
+        "3.777910156",
+        "3.777910156",
+        "3.777949219"
+      ],
+      [
+        "T95 (s)",
+        "6.475000000",
+        "6.475000000",
+        "6.487500000"
+      ],
+      [
+        "T99 (s)",
+        "7.085000000",
+        "7.085000000",
+        "7.085000000"
+      ],
+      [
+        "T100 minus T50 (s)",
+        "3.380000000",
+        "3.380000000",
+        "3.370000000"
+      ],
+      [
+        "M1 (s)",
+        "7.225000000",
+        "7.225000000",
+        "7.225000000"
+      ],
+      [
+        "M2 equal-condition GM (scene units)",
+        "66.285837316",
+        "66.285837316",
+        "66.287503359"
+      ],
+      [
+        "Callback P95 equal-condition GM (ms)",
+        "0.044275629",
+        "0.044324343",
+        "0.043744405"
+      ],
+      [
+        "RMAT180 ratio per doubling of N",
+        "0.996561209",
+        "0.996561209",
+        "0.996605124"
+      ],
+      [
+        "M2 ratio per doubling of N",
+        "0.984336916",
+        "0.984336916",
+        "0.984381374"
+      ],
+      [
+        "M4P95 ratio per doubling of N",
+        "0.994735510",
+        "0.996270473",
+        "0.998818429"
+      ],
+      [
+        "Mean scaling submetric rank",
+        "1.000000",
+        "1.333333",
+        "3.000000"
+      ],
+      [
+        "Logical source lines",
+        "931",
+        "653",
+        "492"
+      ],
+      [
+        "Branch tokens",
+        "192",
+        "132",
+        "89"
+      ],
+      [
+        "Allocation sites",
+        "75",
+        "68",
+        "53"
+      ],
+      [
+        "Public tokens",
+        "47",
+        "51",
+        "26"
+      ],
+      [
+        "Source bytes",
+        "46884",
+        "34279",
+        "25807"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 27,
+    "caption": "Table S20. Supplemental A paired P1 contrasts",
+    "rows": [
+      [
+        "Contrast",
+        "Ratio",
+        "99% individual CI",
+        "Holm p\n"
+      ],
+      [
+        "C-FF/A*-R",
+        "0.209002",
+        "0.117784–0.370862",
+        "4.0988e-12"
+      ],
+      [
+        "C-FF/D*L",
+        "0.186366",
+        "0.079632–0.436160",
+        "3.592e-07"
+      ],
+      [
+        "IDFF/A*-R",
+        "0.168990",
+        "0.086517–0.330081",
+        "1.1851e-11"
+      ],
+      [
+        "IDFF/D*L",
+        "0.150687",
+        "0.093904–0.241807",
+        "1.6256e-24"
+      ],
+      [
+        "IDFF/C-FF",
+        "0.808556",
+        "0.466977–1.399988",
+        "0.31872"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 28,
+    "caption": "Table S21. Supplemental B eligibility and completion",
+    "rows": [
+      [
+        "Backend",
+        "Completed movement blocks",
+        "M3 / M4 / M5"
+      ],
+      [
+        "A*-R",
+        "384/384",
+        "Pass / Pass / Pass"
+      ],
+      [
+        "D*L",
+        "384/384",
+        "Pass / Pass / Pass"
+      ],
+      [
+        "C-FF",
+        "384/384",
+        "Pass / Pass / Pass"
+      ],
+      [
+        "IDFF",
+        "384/384",
+        "Pass / Pass / Pass"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  },
+  {
+    "document": "supplement",
+    "table_index": 29,
+    "caption": "Table S22. Historical main movement outcomes before the D*L correction",
+    "rows": [
+      [
+        "Case",
+        "M1 (s)\nA*-R/C-FF/IDFF",
+        "M1 (s)\nD*L",
+        "M2\nA*-R",
+        "M2\nD*L",
+        "M2\nC-FF/IDFF",
+        "D*L\ncomplete"
+      ],
+      [
+        "C01",
+        "6.18",
+        "6.18",
+        "59.49866",
+        "59.58136",
+        "59.58136",
+        "48/48"
+      ],
+      [
+        "C02",
+        "5.24",
+        "5.24",
+        "53.72980",
+        "53.72980",
+        "53.72980",
+        "48/48"
+      ],
+      [
+        "C03",
+        "4.10",
+        "180.00",
+        "40.18128",
+        "40.17620",
+        "40.17159",
+        "0/48"
+      ],
+      [
+        "C04",
+        "4.42",
+        "180.00",
+        "43.35362",
+        "43.35162",
+        "43.35162",
+        "0/48"
+      ],
+      [
+        "C05",
+        "11.84",
+        "11.84",
+        "117.20312",
+        "116.98437",
+        "116.98437",
+        "48/48"
+      ],
+      [
+        "C06",
+        "11.78",
+        "11.78",
+        "121.11719",
+        "121.33594",
+        "121.33594",
+        "48/48"
+      ],
+      [
+        "C07",
+        "7.30",
+        "180.00",
+        "69.61847",
+        "69.58733",
+        "69.54963",
+        "0/48"
+      ],
+      [
+        "C08",
+        "6.94",
+        "180.00",
+        "67.73488",
+        "67.76945",
+        "67.71795",
+        "0/48"
+      ]
+    ],
+    "source_docx_sha256": "a414d8a4b50d1323dc4f792668327ba3c319e9ca73dfa0bd9f79e301ec08a5f2"
+  }
+]

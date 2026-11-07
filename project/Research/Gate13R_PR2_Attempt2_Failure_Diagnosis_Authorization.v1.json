@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "gate13r-pr2-attempt2-failure-diagnosis-authorization-v1",
+  "authorizationId": "gate13r-pr2-fd1-attempt2-evidence-freeze-memory-lock-diagnosis-v1",
+  "recordedAtUtc": "2026-10-09T02:24:52.2944929Z",
+  "recordedAtAsiaShanghai": "2026-10-09T10:24:52.2944929+08:00",
+  "authorizationPrompt": {
+    "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Next_Authorization_Prompt.md",
+    "sha256": "a23106b665d78c807d2e6751579cfe39c5964f2afa973e138afc98c88152bc3a"
+  },
+  "userAuthorization": {
+    "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_User_Authorization.v1.txt",
+    "capturedVerbatim": true
+  },
+  "boundFailedAttempt": {
+    "formalRoot": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+    "executionReceiptRelativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v2.json",
+    "executionReceiptSha256": "a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e",
+    "preWriteCanonicalTreeSha256": "be2623906d741b39e87f7c1d033d21443d2776f62ed709b4c4ef296220ce5f04",
+    "fileCount": 28020,
+    "rawBytes": 8536611302,
+    "status": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE"
+  },
+  "authorizedScope": {
+    "evidenceFreeze": true,
+    "failureDiagnosticOnly": true,
+    "memoryTelemetryReadOnlyAnalysis": true,
+    "lockHygieneDiagnosis": true,
+    "conditionalExactStaleLockRemoval": true,
+    "candidateMemoryPolicyDecisionMatrix": true,
+    "versionedNonExecutingImplementationRepair": true,
+    "validationOnlyTesting": true,
+    "versionedAnalysisOnlyRetry": true,
+    "unityEditorRunAuthorized": false,
+    "attempt2RetryAuthorized": false,
+    "attempt2ResumeAuthorized": false,
+    "topUpAuthorized": false,
+    "partialMergeAuthorized": false,
+    "attempt3Authorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "mandatoryDisposition": "PARTIAL-ATTEMPT-EVIDENCE / EXCLUDED-FROM-FORMAL-ANALYSIS / NO-RESUME / NO-TOP-UP / NO-MERGE"
+}

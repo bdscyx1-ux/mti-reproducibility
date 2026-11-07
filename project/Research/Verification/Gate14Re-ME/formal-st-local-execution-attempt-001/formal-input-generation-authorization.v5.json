@@ -1,0 +1,35 @@
+{
+  "schema": "gate14re-me-formal-st-input-generation-authorization-v5",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "authorizationId": "gate14re-me-formal-st-local-input-generation-0106a852-b6af-4cb3-8b49-20f79f59625e",
+  "status": "AUTHORIZED_FORMAL_INPUT_GENERATION_ONLY",
+  "authorizationSource": {
+    "userVerbatim": "我不需要再制作迁移包了，根据迁移机上给的这个Unity超时问题进行修复，之后授权在本机启动formal ST",
+    "userVerbatimSha256": "d46d8337c9506cd228526f6f33ebd7d9abdddf4ede05ce22beaf56af466b283c",
+    "scopeInterpretation": "Generate and freeze the already-designed formal ST input material locally as a prerequisite to the explicitly authorized local collection; do not run formal analysis, MQ or MT."
+  },
+  "formalInputGenerationAuthorized": true,
+  "formalRootCreationAuthorized": false,
+  "formalCollectionAuthorized": false,
+  "formalAcceptanceExecutionAuthorized": false,
+  "formalAnalysisAuthorized": false,
+  "mqAuthorized": false,
+  "mtAuthorized": false,
+  "outputRootRelativePath": "Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001",
+  "masterSeedHex": "bfe036f32c862ea591df2387346fc1544256b32a25957bba7fc5ab9688c2c674",
+  "masterSeedCommitmentSha256": "71f79bc16850bf63c02b2ce6884b792c47a133d2d9ad0e27e08cc242160d53e5",
+  "identityBindingRelativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-algorithm-identity-binding.reused.v5_1.json",
+  "identityBindingSha256": "c3d8623560f9162de858ac01b2e861395b92953896e922413fababd0298db5b3",
+  "implementationManifestSha256": "5ade759471ee2849ae2c9b31408e92b2625afc6c75500ff52abaccec64b096a8",
+  "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+  "sampleSizeDecisionSha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5",
+  "singleUseRules": {
+    "outputRootMustBeFresh": true,
+    "retryInSameAttempt": false,
+    "resumeInSameAttempt": false,
+    "topUpInSameAttempt": false,
+    "formalExecutionStartsFromThisAuthorization": false
+  }
+}

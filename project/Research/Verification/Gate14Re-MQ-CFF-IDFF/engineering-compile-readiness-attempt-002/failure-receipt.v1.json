@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-mq-engineering-compile-failure-receipt-v1",
+  "study": "C-FF/IDFF Managed Multi-Query Scalability Supplement",
+  "attempt": "engineering-compile-readiness-attempt-002",
+  "status": "FAIL_TECHNICAL_HUNG_DURING_UNITY_BURST_SHUTDOWN",
+  "startedAtUtc": "2026-10-21T04:51:08.9271024Z",
+  "terminatedAtUtc": "2026-10-21T05:01:56.5349291Z",
+  "durationSeconds": 647.608,
+  "unityProcessId": 39384,
+  "unityExitCodeAfterTargetedTermination": -1,
+  "unityCommandLine": "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe\" -batchmode -nographics -quit -projectPath H:\\DDM_Final_Project -logFile H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-MQ-CFF-IDFF\\engineering-compile-readiness-attempt-002\\unity-compile.log",
+  "unityLogSha256": "7467b798c7861add5926a9707e491dafc68b877513fccd97f8f56f1941fe6b86",
+  "observations": {
+    "scriptCompilationCompleted": true,
+    "csharpCompilerErrorCount": 0,
+    "batchmodeQuitSuccessfullyInvoked": true,
+    "lastLogOrBurstCacheProgressAtUtc": "2026-10-21T04:53:16.3581674Z",
+    "noFurtherProgressSecondsBeforeTermination": 520.177,
+    "unityRespondingAtTermination": true,
+    "cpuSecondsAtTermination": 1363.8125,
+    "workingSetBytesAtTermination": 2076991488,
+    "threadCountAtTermination": 94,
+    "activeBurstMonoWorkerThreadsObserved": 2
+  },
+  "disposition": {
+    "attemptFrozenAsFailure": true,
+    "sameAttemptRetryOrResume": false,
+    "scientificDesignChanged": false,
+    "measuredMqDataCreated": false,
+    "nextAttempt": "engineering-compile-readiness-attempt-003",
+    "minimalProspectiveTechnicalChange": "Pass the Burst package's documented --burst-disable-compilation command-line switch for the managed-only MQ compile and execution path; retain normal C# compilation and all MQ scientific conditions."
+  }
+}

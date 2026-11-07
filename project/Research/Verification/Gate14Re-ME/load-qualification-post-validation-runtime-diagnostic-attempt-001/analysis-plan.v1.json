@@ -1,0 +1,60 @@
+{
+  "schema": "gate14re-me-post-offline-validation-runtime-diagnostic-analysis-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "diagnosticAttemptId": "load-qualification-post-validation-runtime-diagnostic-attempt-001",
+  "status": "FROZEN_BEFORE_DIAGNOSTIC_COMPUTATION",
+  "sourceAttemptId": "load-qualification-execution-attempt-009",
+  "activationGate": {
+    "offlineValidationResultPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-offline-necessary-revalidation-attempt-002/offline-validation-result.v1.json",
+    "offlineValidationResultSha256": "2afcc259c47e390ff07c2c1cc2d295fe45d3aff249666174e93d862d0f4b9270",
+    "requiredStatus": "PASS_OFFLINE_NECESSARY_RAW_VALIDATION",
+    "qualificationTerminalPassRequiredOrClaimed": false
+  },
+  "priorFrozenPlanBinding": {
+    "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-offline-necessary-revalidation-attempt-002/post-validation-diagnostic-plan.v1.json",
+    "sha256": "14c2cae065de63dc7d30d35ff289619e3a5374776d67548eae68edb911543e95",
+    "frozenBeforeValidationAndBeforeIdentityDisclosure": true
+  },
+  "sequence": [
+    "validate all diagnostic input hashes and structural cardinalities",
+    "construct and freeze anonymous lane timing/resource summary without loading named identity mapping",
+    "load the frozen identity and schedule mappings and validate their exact one-to-one correspondence",
+    "produce named engineering runtime distributions, G x N x F cells, tail and execution-order diagnostics",
+    "produce a parameterized formal-ST collection-time table and the 7-day decision gate",
+    "freeze report, file manifest, and terminal receipt"
+  ],
+  "quantiles": {
+    "method": "linear interpolation at p*(n-1) over sorted finite values",
+    "reported": ["P50", "P90", "P95", "P99", "maximum"],
+    "missingRule": "no imputation"
+  },
+  "tailRules": {
+    "pooledTailThreshold": "pooled valid lane process-wall P95",
+    "algorithmDescriptors": ["P95/P50", "P99/P50", "maximum/P50", "share above pooled P95", "matched-superblock tail frequency"],
+    "orderStrata": "lane execution index thirds: early 0..323, middle 324..647, late 648..971",
+    "recentWindows": ["last 98 lanes (ceiling of 10 percent)", "last 100 lanes", "trailing one-hour completion window"],
+    "smallCellRule": "report n, minimum, P50, maximum; do not treat P99 from n=3 as a stable population estimate"
+  },
+  "directTimingMeasures": {
+    "processWallMilliseconds": "process ledger exitedAtUtc minus creationTimeUtc",
+    "interProcessGapMilliseconds": "next process creationTimeUtc minus prior process exitedAtUtc",
+    "laneBodyMilliseconds": "lane-receipt laneWallClockMilliseconds; frozen RunnerV3 starts this stopwatch at RunAlgorithmLane entry and stops it after all lane work and raw writes",
+    "pureAlgorithmCompute": "not identifiable from permitted fields",
+    "unityStartup": "not separately identifiable because no trustworthy absolute workloadStartUtc exists",
+    "exitFinalization": "not separately identifiable because no trustworthy absolute workloadEndUtc exists",
+    "residualComponents": "must not be labeled as startup, compute, or finalization"
+  },
+  "formalStPrediction": {
+    "scope": "algorithm-lane collection plus observed strict-serial inter-process gaps; excludes input generation, oracle prechecks, post-collection validation, delivery, and analysis",
+    "formalCoreCells": 48,
+    "algorithms": 6,
+    "laneProcessesPerB": 288,
+    "allowedB": "positive multiples of 36; final B is not yet frozen",
+    "pointFormula": "for each algorithm x core G x N x F cell, use the P50 of its three pilot process walls; sum 288 cells and add 288 pooled lane-gap P50 values; multiply by B",
+    "conservativeFormula": "for each algorithm x core G x N x F cell, use the maximum of its three pilot process walls; sum 288 cells and add 288 pooled lane-gap P99 values; multiply by B",
+    "planningBudgetFormula": "conservative estimate multiplied by 1.20 operational headroom",
+    "reportedBValues": [36, 72, 108, 144],
+    "decisionGateHours": 168
+  },
+  "scientificBoundary": "This is a post-validation descriptive engineering diagnostic. It is not a formal algorithm-effect comparison, does not use qualification rows as formal samples, and does not authorize deleting algorithms, changing the question, shrinking samples, changing stopping rules, or launching ST, MQ, or MT."
+}

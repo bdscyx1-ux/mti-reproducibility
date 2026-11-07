@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "checkpointId": "gate11r-attempt2-terminal-passed-v2",
+  "savedAtUtc": "2026-10-07T03:23:51.6528159Z",
+  "status": "GATE11R-PASSED-WAITING-FOR-GATE12R-AUTHORIZATION",
+  "attempt": 2,
+  "activeDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "completedStage": "gate11r-terminal-evidence-and-plan-update",
+  "nextStage": "wait-for-separate-gate12r-authorization",
+  "results": {
+    "preimplementationAssertions": 48,
+    "unitAssertions": 1269,
+    "generationAssertions": 1544,
+    "verificationAssertions": 5893,
+    "finalAuditAssertions": 89,
+    "scenarios": 53,
+    "sharedGoalScenarios": 32,
+    "heterogeneousGoalScenarios": 21,
+    "campaignProfiles": 74,
+    "algorithmPresets": 212,
+    "playableScenarioScenes": 53,
+    "launcherScenes": 1,
+    "plannerInitializations": 212,
+    "manifestArtifacts": 744,
+    "manifestArtifactMismatches": 0
+  },
+  "terminalEvidence": {
+    "bundleManifestPath": "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+    "bundleManifestSha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+    "coverageGraphSha256": "7298c124ec6ba2036c639f7b4720bf3634f47afb3f62516d1c9c5e58ac902c0e",
+    "finalAuditPath": "Research/Verification/Gate11R_5pct/v2/Gate11R_FinalAudit.summary.v2.2.json",
+    "finalAuditSha256": "58d9a41c8d84da8438a61a13abfa255242a84dd8cdec425630651c4c89eed68a",
+    "evidenceManifestPath": "Research/Verification/Gate11R_5pct/v2/Gate11R_Evidence_Manifest.v2.json",
+    "evidenceManifestSha256": "25ade263b1101d368df4da41ba6476b53dda3639ead4afc9ad68184bf76a2d93"
+  },
+  "productionRoots": [
+    { "path": "Research/FormalScenarios/Gate11R_5pct/v1", "fileCount": 57, "rawBytes": 125218919, "ordinalTreeSha256": "0f41d8db5c01e9a1f1c14c7ee295151150d2efd91f6fc597fdb0b71b4f7eabe5" },
+    { "path": "Research/PlayableExperiments/Gate11R_5pct/v1", "fileCount": 4, "rawBytes": 427601, "ordinalTreeSha256": "4d269ff4ada239aa2e636169b590b65c23262d351f1d785087a0a9464fbc06f2" },
+    { "path": "Assets/_Scenes/Research/Playable/Gate11R_5pct/v1", "fileCount": 684, "rawBytes": 952341, "ordinalTreeSha256": "0ab0a465ce560fa7296a537d5fc969d364a6737d586ad8976215da156da4fd53" }
+  ],
+  "documents": {
+    "humanCheckpointPath": "Research/Gate11R_Attempt2_Passed_Checkpoint.md",
+    "humanCheckpointSha256": "82fe31348a672ede3b17484d9c179621b054747c0b89421bda2dc80b389c44d7",
+    "statusAddendumPath": "Research/Gate10R_Onward_ProcessReuse_5pct_Status_Addendum.v2.md",
+    "statusAddendumSha256": "77e95756334984533cc63b89c55c947609f6c2bd02567443a42e7a7061bfe02e",
+    "nextSessionCheckpointPath": "Research/Next_Session_Checkpoint.md",
+    "nextSessionCheckpointSha256": "a879293041feb323c734a360e24cb1cc68fdd3cfabe167bfe30f1989de46c534",
+    "overallProjectPlanPath": "Research/Overall_Project_Plan.md",
+    "overallProjectPlanSha256": "8eab8b7428785eb3bf4224ce5e94b8ed79590d4d82e24dc46a5738859b6fbb9b"
+  },
+  "failedEvidencePreserved": {
+    "preimplementationAttempt1": true,
+    "compileAttempts1And2": true,
+    "generationAttempt1": true,
+    "finalAuditAttempts1And2": true
+  },
+  "scenarioRootCreated": true,
+  "playableCatalogRootCreated": true,
+  "playableAssetRootCreated": true,
+  "pilotExecuted": false,
+  "formalCampaignExecuted": false,
+  "timingSamplesCollected": false,
+  "gate12RAuthorized": false,
+  "gate12RStarted": false,
+  "gate13RAuthorized": false,
+  "gate13RStarted": false,
+  "unityProcessCount": 0,
+  "unityLockPresent": false
+}

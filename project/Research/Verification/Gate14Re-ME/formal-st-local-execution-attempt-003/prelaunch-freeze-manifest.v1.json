@@ -1,0 +1,60 @@
+{
+  "schema": "gate14re-me-formal-st-local-prelaunch-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "attemptOrdinal": 3,
+  "authorizationId": "gate14re-me-formal-st-local-attempt-003-4e2ed5bc-57ca-43ea-b143-81c942344904",
+  "authorizationNonce": "f858378c-c0ed-4664-b59b-94bb86cfe07a",
+  "status": "PRELAUNCH_EVIDENCE_FROZEN_PENDING_EXACT_COMMAND_CONFIRMATION",
+  "createdAtUtc": "2026-10-26T12:24:01.3341749Z",
+  "evidenceRoot": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003",
+  "measuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "fileCount": 6,
+  "files": [
+    {
+      "relativePath": "prelaunch-user-authorization-receipt.v1.json",
+      "bytes": 1168,
+      "sha256": "d972201705fd62182a8aa018fed353776f4a3ff78f55d2f903fa621be543c101"
+    },
+    {
+      "relativePath": "formal-st-execution-authorization.v5.json",
+      "bytes": 2485,
+      "sha256": "7f37051f0a70594aafde5e58800e1f7e0687c83c4c78d714404163e6348bd1f2"
+    },
+    {
+      "relativePath": "read-only-preflight-receipt.v5_3.json",
+      "bytes": 609,
+      "sha256": "158f7ef538211cb1d0da133c4bea28819c5fd9dcc23ca1764e6db1cc7b376006"
+    },
+    {
+      "relativePath": "external-preflight-observation.v1.json",
+      "bytes": 639,
+      "sha256": "59579db3c3876d3270756fc952d7fce789ae4dcb3f195e0b015f57fc1d20197a"
+    },
+    {
+      "relativePath": "formal-st-launch-contract.v3.json",
+      "bytes": 7027,
+      "sha256": "894ec4b0924f0efb15743c7d6aa94485504dfcdaa6d6334ee97f46cab83c2889"
+    },
+    {
+      "relativePath": "prelaunch-audit.v3.json",
+      "bytes": 10589,
+      "sha256": "3ab16fd7687de6c8724ac81b437fd16285a0f6faeebcc9d6ceba830612e5d9c9"
+    }
+  ],
+  "assertions": {
+    "allListedFilesExist": true,
+    "allListedFileSizesMatch": true,
+    "allListedFileHashesMatch": true,
+    "measuredRootAbsent": true,
+    "supervisorCount": 0,
+    "formalRunnerCount": 0,
+    "allUnityProcessCount": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "exactCommandConfirmationPresent": false,
+    "launchPerformed": false
+  },
+  "nextPermittedAction": "Obtain a new exact-command confirmation for the frozen attempt-003 command; then perform a fresh instantaneous read-only audit before a single launch."
+}

@@ -1,0 +1,158 @@
+{
+  "schema": "gate14re-me-d3-v3-1-source-binary-evidence-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "status": "FROZEN_D3_V3_1_QUALIFIED_INSTRUMENT",
+  "createdAtUtc": "2026-10-17T07:54:28.1952559Z",
+  "freezeScope": [
+    "scientific definition",
+    "native source and Windows x86-64 binary",
+    "Unity managed wrapper",
+    "algorithm-free known-answer harness",
+    "hermetic SDK evidence",
+    "native build evidence",
+    "strict-JSON known-answer evidence"
+  ],
+  "compilerAndSdk": {
+    "compiler": "Microsoft Visual C++ 19.44.35222 for x64",
+    "compilerSha256": "fe251ef50a1545b1b0835ee17b1e785459712b38d79e45b5c1d3d28970a36619",
+    "sdkPackageVersion": "10.0.26100.7705",
+    "targetPlatformVersion": "10.0.26100.0",
+    "targetArchitecture": "x64",
+    "compilerPolicy": ["/nologo", "/std:c++17", "/O2", "/LD", "/EHsc", "/W4", "/WX", "/utf-8", "/permissive-", "/Brepro", "/DNOMINMAX"]
+  },
+  "artifacts": [
+    {
+      "role": "parent-authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Attempt_003_Authorization.v1.json",
+      "lengthBytes": 5937,
+      "sha256": "49a766a3e92ad197a1cf880d65766c24b2f2b21c426cf425e07f2d2a571d5bb2"
+    },
+    {
+      "role": "simplification-amendment-authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_1_Simplified_ABI_Amendment_Authorization.v1.json",
+      "lengthBytes": 3502,
+      "sha256": "ef7bd18de40303e14b849a81e7c9fe85d5e2d56420836e5255375d332674d0a8"
+    },
+    {
+      "role": "simplified-qualification-plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_1_Simplified_Qualification_Plan.v1.md",
+      "lengthBytes": 3489,
+      "sha256": "df2558447342b8185e294f99baf4571c8128c877916d0cf43b61093a38d6b179"
+    },
+    {
+      "role": "prospective-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.prospective.v2.json",
+      "lengthBytes": 4307,
+      "sha256": "d253566d4acafad0ca6f1fdaad839f17e7dbc461b53e253e9c1192f1a04abc98"
+    },
+    {
+      "role": "qualified-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "lengthBytes": 6971,
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    {
+      "role": "native-source",
+      "relativePath": "Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV31.cpp",
+      "lengthBytes": 11808,
+      "sha256": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2"
+    },
+    {
+      "role": "native-binary",
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+      "lengthBytes": 110592,
+      "sha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63"
+    },
+    {
+      "role": "native-binary-unity-import-metadata",
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll.meta",
+      "lengthBytes": 526,
+      "sha256": "0da140fbc3f6a112402e27f4bbfb77f27953b99b4b0554ebcc4cd3b00642e8a4"
+    },
+    {
+      "role": "managed-wrapper",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs",
+      "lengthBytes": 6168,
+      "sha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007"
+    },
+    {
+      "role": "managed-wrapper-unity-import-metadata",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs.meta",
+      "lengthBytes": 243,
+      "sha256": "211d45395c902d2e32131a836227ca88e98e564f15287b196fd1df2b2b740528"
+    },
+    {
+      "role": "active-known-answer-harness",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V31KnownAnswerRunnerV2.cs",
+      "lengthBytes": 55822,
+      "sha256": "89724c1106600dbd7e9cc21059942e28480e063f6e41cacbf2ef1ac3902c1ce6"
+    },
+    {
+      "role": "active-known-answer-harness-unity-import-metadata",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V31KnownAnswerRunnerV2.cs.meta",
+      "lengthBytes": 240,
+      "sha256": "0330867dfc37d9cf856af343c20c070e2cd9f128b9cc0a5afe6f5a9421d29a18"
+    },
+    {
+      "role": "hermetic-sdk-cycle-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/cycle-receipt.v1.json",
+      "lengthBytes": 947,
+      "sha256": "ae7d880509925e1b800890f0664ae703103a296f1ba58c87415db1c53fec4a6d"
+    },
+    {
+      "role": "hermetic-sdk-freeze-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk-freeze-manifest.v1.json",
+      "lengthBytes": 5794,
+      "sha256": "73aa8a6487a419a8d8150aa56b69818e469a0b22dee71c449d3f3124c9f6b07c"
+    },
+    {
+      "role": "native-build-cycle-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-012-d3-v3-1-amendment-build-v1/cycle-receipt.v1.json",
+      "lengthBytes": 4887,
+      "sha256": "6282ef30ae15b65707ae6cd662e362d0bee849509674f127f13d6511f3e4ee43"
+    },
+    {
+      "role": "preserved-v1-nonfinite-json-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-013-d3-v3-1-known-answer-v1/cycle-receipt.v1.json",
+      "lengthBytes": 3685,
+      "sha256": "f945915e707fd4dd3354e8cd97a7dd70b02e926e258cdbda2d9f5c5601a04d6e"
+    },
+    {
+      "role": "strict-json-known-answer-cycle-plan",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/cycle-plan.v1.json",
+      "lengthBytes": 3735,
+      "sha256": "f86627eb3859e877f3a1acba278d5424471d543084ee0ceaac1bc610630f0c00"
+    },
+    {
+      "role": "strict-json-known-answer-unity-log",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/unity-known-answer.log",
+      "lengthBytes": 92266,
+      "sha256": "7b008dccaa9467cc364cc303fa38131702f2677126febfb1d36b482ab3b0b922"
+    },
+    {
+      "role": "strict-json-known-answer-raw-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/known-answer-output/d3-v3-1-known-answer-receipt.v2.json",
+      "lengthBytes": 70901,
+      "sha256": "f2ec81f73a8e77c05f84b95a8e44aa5565e07628418f20d28e09f882ede53139"
+    },
+    {
+      "role": "strict-json-known-answer-cycle-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/cycle-receipt.v1.json",
+      "lengthBytes": 4926,
+      "sha256": "743c45ef3e7664be4c095a5f6c56c9cf76ccc38dc01c2ddf44dfad19eedfcdac"
+    }
+  ],
+  "scientificBoundary": {
+    "formalQualificationRunnerIntegrated": false,
+    "formalOutputSchemaIntegrated": false,
+    "scheduleInputsOrIdentityMappingCreated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisRankingOrWinner": false,
+    "futureIntegrationRequiresSeparateAuthorization": true
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 14,
+  "status": "AUTHORIZED_IN_PROGRESS",
+  "createdAtUtc": "2026-10-17T07:49:50.4198201Z",
+  "phase": "algorithm-free-d3-v3-1-known-answer-v2-strict-json-repair",
+  "repairScope": {
+    "scientificEndpointChanged": false,
+    "nativePluginChangedOrRebuilt": false,
+    "managedWrapperChanged": false,
+    "knownAnswerControlsChanged": false,
+    "serializationOnlyChange": "For an empty window whose elapsed Stopwatch ticks equal zero, serialize managedAllocationRateBytesPerSecond as 0.0 instead of non-finite NaN.",
+    "positiveFormulaCriterionUnchanged": "The reused positive one-MiB record must still have elapsed ticks greater than zero, a finite positive rate, and exact independent recomputation within 1e-9 absolute error."
+  },
+  "commandPolicy": [
+    "Unity 2022.3.30f1c1",
+    "-batchmode",
+    "-nographics",
+    "--burst-disable-compilation",
+    "no-command-line--quit",
+    "harness-owned-EditorApplication.Exit",
+    "one-replacement-known-answer-run-for-strict-json-repair"
+  ],
+  "executeMethod": "DDM.Research.Editor.Attempt003V31V2.Gate14ReMED3V31KnownAnswerRunnerV2.Run",
+  "expectedOutputRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/known-answer-output",
+  "bindings": {
+    "amendmentAuthorizationSha256": "ef7bd18de40303e14b849a81e7c9fe85d5e2d56420836e5255375d332674d0a8",
+    "simplifiedPlanSha256": "df2558447342b8185e294f99baf4571c8128c877916d0cf43b61093a38d6b179",
+    "prospectiveContractSha256": "d253566d4acafad0ca6f1fdaad839f17e7dbc461b53e253e9c1192f1a04abc98",
+    "nativeSourceSha256": "5d225ec476ddec71ee6874f2c0c0ad04e24ff12c881bb65332de718b35ba2ca2",
+    "nativeBinarySha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63",
+    "nativeBinaryMetaSha256": "0da140fbc3f6a112402e27f4bbfb77f27953b99b4b0554ebcc4cd3b00642e8a4",
+    "managedWrapperSha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007",
+    "managedWrapperMetaSha256": "211d45395c902d2e32131a836227ca88e98e564f15287b196fd1df2b2b740528",
+    "knownAnswerHarnessV2Sha256": "89724c1106600dbd7e9cc21059942e28480e063f6e41cacbf2ef1ac3902c1ce6",
+    "knownAnswerHarnessV2MetaSha256": "0330867dfc37d9cf856af343c20c070e2cd9f128b9cc0a5afe6f5a9421d29a18",
+    "nativeBuildCycleReceiptSha256": "6282ef30ae15b65707ae6cd662e362d0bee849509674f127f13d6511f3e4ee43",
+    "preservedV1FailureCycleReceiptSha256": "f945915e707fd4dd3354e8cd97a7dd70b02e926e258cdbda2d9f5c5601a04d6e",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "requiredStructuralPostChecks": {
+    "strictJsonParserSuccess": true,
+    "nonFiniteJsonTokenCount": 0,
+    "terminalPassReceipt": true,
+    "allScientificControlsPass": true,
+    "measuredWindowCount": 71,
+    "unityProcessRemaining": 0,
+    "protectedBoundaryHashDrift": false
+  },
+  "simplifications": {
+    "priorArrayDiagnosticRerun": false,
+    "priorMetadataProbeRerun": false,
+    "separateRatePayloadWindow": false,
+    "oneMiBArrayRecordReusedForSameThreadAndRate": true,
+    "oneTerminalPassOrFailReceiptWithPartialRawRecords": true
+  },
+  "prohibitions": {
+    "qualificationRunnerOrOutputSchemaIntegration": true,
+    "scheduleInputsOrIdentityMapping": true,
+    "qualificationMeasuredRoot": true,
+    "algorithmLane": true,
+    "formalCollectionAnalysisRankingOrWinner": true,
+    "fallbackMetric": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-generation-v2-and-deterministic-regeneration-passed",
+  "command": "Generated the official Gate 13R formal config, provenance, 42064-record Williams-block schedule and schedule manifest using the versioned v2 generator, then regenerated all four under an isolated verification directory. The primary and regenerated artifacts were byte-identical. The schedule contains 119200 unique sample identities and no formal timing output.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 1,
+  "input_sha256": {
+    "Gate13R_GenerationAttempt1_Failure.v1.json": "a67c6d055447ca1c4fd515918b46c88948ef6983be3f97838518a8e7a9fac164",
+    "Gate13R_NonExecuting_Preparation_Generation_Summary.v1.json": "06cb1d9a22cdbf9fc297701bd8fe0ead9a2adda80a66737090ee63998b8d98bd"
+  },
+  "output_sha256": "af5a164cdabeeff08cd6cd00b21ecd732fcbdc7f51be3454f99aaf65b2ef5109",
+  "gate_tokens": [
+    "FORMAL-CONFIG-FROZEN",
+    "BLOCKS-42064",
+    "SAMPLES-119200",
+    "DETERMINISTIC-REGENERATION-BYTE-IDENTICAL",
+    "FORMAL-ROOT-ABSENT"
+  ]
+}

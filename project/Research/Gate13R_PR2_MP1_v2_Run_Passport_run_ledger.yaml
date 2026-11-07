@@ -1,0 +1,140 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-09T04:02:43Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-09T04:02:43Z'
+  user_words: 授权 Gate 13R-PR2-MP1 attempt 2 / v2，严格按 `Research/Gate13R_PR2_MP1_Attempt2_Next_Authorization_Prompt.md`
+    中的完整授权文本执行；不授权 pilot v1 retry/resume/top-up/merge，不授权 Gate 13R-PR2 formal attempt
+    3，不授权正式统计分析或 Gate 14R。
+  prev_hash: null
+  hash: 8540d60c3b3de94277163bbc7e2699f9c76b51f510856de59f03b8086f1cbbd7
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-09T04:35:12Z'
+  step: mp1-v2-prepilot-validation
+  command: Preserved five versioned validation failures, repaired only the v2 checkpoint/orchestration
+    and root-specific frozen-tree audit implementations, then completed a fresh full
+    pre-pilot validation. Attempt 6 passed all 34 ordered steps, including PS7 and
+    native Windows PowerShell 5.1 parser/binding/state-machine fixtures, automatic
+    zero-block failure evidence, Unity compile/self-tests, PSAPI/CIM telemetry, positive
+    and negative Williams blocks, failure precedence, frozen-root identities, provenance,
+    and final readiness. No measured v2 root or formal attempt-3 root was created.
+  status: passed
+  exit_status: 0
+  retries_used: 5
+  output_sha256: 2d38fe1bd892c65547e406e663f1b24fc33dab6a6d0f838d081796bed84670ae
+  gate_tokens:
+  - PRE-PILOT-VALIDATED
+  - 34-OF-34-STEPS-PASSED
+  - MEASURED-PILOT-V2-AUTHORIZED-BUT-NOT-STARTED
+  - PILOT-V1-IMMUTABLE
+  - FORMAL-ATTEMPT2-IMMUTABLE
+  - FORMAL-ATTEMPT3-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_MP1_Provenance.v2_4.json: dc0c48e38db09d8d96e62e0b30642e0ec93a95aaa672ed253f5fb9affffdd6fd
+    Gate13R_PR2_MP1_PrePilot_Final_Audit.v2.json: ff9f546c341650f7b01783fb87158f20025fe787fb1a118d7d0c1a1138034067
+    Gate13R_PR2_MP1_PrePilot_Readiness_Checkpoint.v2.json: 2d38fe1bd892c65547e406e663f1b24fc33dab6a6d0f838d081796bed84670ae
+    Verification/Gate13R_PR2_MP1_v2/prepilot-attempt6/prepilot-execution-summary.json: e56e9a9fe198ce59b5564b44e0ec16aa23ca0a556e6d31c638df2209ba45d6d5
+  prev_hash: 8540d60c3b3de94277163bbc7e2699f9c76b51f510856de59f03b8086f1cbbd7
+  hash: df18ec65af975451db67b72b32c1087141dc7dafd0979a4a71dd6cbca5e1ba9e
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-09T05:17:07Z'
+  step: mp1-v2-measured-acquisition-phase-a
+  command: Executed the sole authorized fresh NON-FORMAL MP1 v2 measured pilot attempt
+    in strict serial order. All 96 fresh Williams-block Unity processes and 384 algorithm
+    samples passed on first execution. Phase A committed 3,360 immutable raw files
+    totaling 2,607,785,161 bytes; raw canonical tree SHA-256 is 13dd5c30cd016d42e80f472c962d09f89f4d0fb6714d68228e2c657f6c80da93.
+    No retry, resume, top-up, partial merge, formal attempt 3, formal statistical
+    analysis, or Gate 14R occurred.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  output_sha256: f5851d2b47a7a77323dba6388df0c06bbbeb9db5b6dfc6f67a92dc79acd0c050
+  gate_tokens:
+  - 96-OF-96-BLOCKS
+  - 384-OF-384-SAMPLES
+  - PILOT-RAW-DATA-COMPLETE
+  - ANALYSIS-PENDING
+  - IMMUTABLE
+  - NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - FORMAL-ATTEMPT3-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_MP1_Pilot_Config.v2.json: 4377354c7f0faeef805771f33aa7f24f06e807a168f203a414a4f4bcddaca38d
+    Gate13R_PR2_MP1_Pilot_Schedule.v1.jsonl: 826c7b85da6e3fcbe982a6e3becf21318216d5579dc198f2d47f5de0dc600136
+    Gate13R_PR2_MP1_Provenance.v2_4.json: dc0c48e38db09d8d96e62e0b30642e0ec93a95aaa672ed253f5fb9affffdd6fd
+    Gate13R_PR2_MP1_PrePilot_Readiness_Checkpoint.v2.json: 2d38fe1bd892c65547e406e663f1b24fc33dab6a6d0f838d081796bed84670ae
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v2/pilot-execution-receipt.json: afcf84f30f32691047b5ec1ff9bec78fb98802d02de090305437e9154cb78a69
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v2/pilot-checkpoint.json: c0a4ae0fa9bdeea82892aa0c2f1985959d77b46d988786a860d1b42612057ecd
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v2/pilot-raw-freeze-receipt.json: f5851d2b47a7a77323dba6388df0c06bbbeb9db5b6dfc6f67a92dc79acd0c050
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v2/pilot-raw-tree-manifest.json: 3f9ae6c969c8ff6e92a0c3c694613beb95b4bde99541a666d83837d301437ddf
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v2/pilot-raw-execution-manifest.json: b54766969f374346d774ba06735d3ab6627642f43deb81dc76ec7f54f4088980
+  prev_hash: df18ec65af975451db67b72b32c1087141dc7dafd0979a4a71dd6cbca5e1ba9e
+  hash: cc31aa6b3abd79be57f528c651b115979991ce977846f15fe654b8574217976a
+- seq: 4
+  kind: tool_receipt
+  at: '2026-10-09T05:32:37Z'
+  step: mp1-v2-readonly-diagnostic-analysis-phase-b
+  command: Ran one independent read-only diagnostic analysis attempt against the immutable
+    Phase-A raw tree. Rehashed all raw identities before and after, analyzed 96 complete
+    blocks / 384 samples / 1,824 stage records, found no runaway-growth or host-safety
+    emergency evidence, and produced a forward layered memory-policy recommendation.
+    No Unity process, formal inference, formal sample-size inference, formal attempt
+    3, or Gate 14R was run.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  output_sha256: 29de1d6df9b12f8ede92f56914cb6cabc9f7a6cc246389d78de097c0bed990eb
+  gate_tokens:
+  - PHASE-B-ANALYSIS-PASSED
+  - RAW-ACCESS-READ-ONLY
+  - 96-BLOCKS-384-SAMPLES-1824-STAGES
+  - NO-RUNAWAY-GROWTH-EVIDENCE
+  - POLICY-RECOMMENDED-BUT-UNFROZEN
+  - NO-UNITY-RERUN
+  - FORMAL-ATTEMPT3-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v2/pilot-raw-freeze-receipt.json: f5851d2b47a7a77323dba6388df0c06bbbeb9db5b6dfc6f67a92dc79acd0c050
+    PilotRuns/Gate13R_PR2_MemoryPolicy/v2/pilot-raw-tree-manifest.json: 3f9ae6c969c8ff6e92a0c3c694613beb95b4bde99541a666d83837d301437ddf
+    Analysis/Gate13R_PR2_MP1/v2/attempt-1/stage-separated-memory-analysis.json: 9676878b0cc88fa4b7230016c55e63ec2c42940a214c8c3eff245ce16d78f119
+    Analysis/Gate13R_PR2_MP1/v2/attempt-1/memory-policy-decision-matrix.json: 05bcfa7324ba7afcef8cfba081f8407431144d932007bdfeb09a2b0bd2cc2441
+  prev_hash: cc31aa6b3abd79be57f528c651b115979991ce977846f15fe654b8574217976a
+  hash: 6ecbc63d5d82f26d36f04a2b08a7f9ea1555104b5b618e82120c89323b25a40b
+- seq: 5
+  kind: tool_receipt
+  at: '2026-10-09T05:32:37Z'
+  step: mp1-v2-terminal-readiness-and-documentation
+  command: Rehashed the immutable raw tree and both historical frozen roots, passed
+    50/50 terminal validation assertions, recorded the layered scale-aware memory-policy
+    recommendation as recommended-but-unfrozen, updated the overall project plan and
+    next-session checkpoint, and prepared the MP2 non-executing authorization prompt.
+    Formal attempt 3 root/receipt, formal statistical analysis, Gate 14R, Unity process,
+    and Unity lock remain absent.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  output_sha256: daacd179b13958a296a12bf4b85022b7fc24fbe1d88ff71edc8bbec8a4129706
+  gate_tokens:
+  - MP1-V2-COMPLETE
+  - TERMINAL-AUDIT-50-OF-50
+  - RAW-DATA-IMMUTABLE
+  - POLICY-RECOMMENDED-BUT-UNFROZEN
+  - MP2-NONEXECUTING-AUTHORIZATION-REQUIRED
+  - FORMAL-ATTEMPT3-NOT-AUTHORIZED
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_MP1_v2_PostPilot_Provenance.v1.json: 0822c72e3e4211ec3da1ea0fafebb458c0f18b0e19ae339f3357db6f88cdd9a1
+    Gate13R_PR2_MP1_v2_Final_Audit.v1.json: daacd179b13958a296a12bf4b85022b7fc24fbe1d88ff71edc8bbec8a4129706
+    Gate13R_PR2_MP1_v2_Evidence_Manifest.v1.json: b89de6f5f768fe9d07931ba46af29aec301d92095c64c28f827bea923ab5e1ad
+    Gate13R_PR2_MP1_v2_Memory_Policy_Recommendation.v1.json: 90661dc14db20bf233c50395fa1bc41ae653bc673034b6e62c6e226963217e7a
+    Gate13R_PR2_MP1_v2_Readiness_Checkpoint.v1.json: 7d6e028197c45d0e989a34268961a97a97e9ea50bd96008fd31b556eca0601cf
+    Verification/Gate13R_PR2_MP1_v2/postpilot-final-attempt1/summary.json: e4a3c271f969887850fd80193bb17c92712b72d440c3e329373c3a8c81bf18a3
+    Overall_Project_Plan.md: 8899afddf4c1f3d803d6b43602285490cdf4af0e2019a183eb4e9bfe3a87a028
+    Next_Session_Checkpoint.md: b4312808c45931c5800e5ba4b22d4790287dc4b331dd251022b6d11f3342c742
+  prev_hash: 6ecbc63d5d82f26d36f04a2b08a7f9ea1555104b5b618e82120c89323b25a40b
+  hash: c40ca403e1510bf69cc8184c3a199a6e9a61f3e9f49cc7534810c1cde5ca7abe

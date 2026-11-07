@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "baselineId": "gate12r-prewrite-preservation-baseline-v1",
+  "capturedAtLocal": "2026-10-07T15:31:00+08:00",
+  "status": "CAPTURED-BEFORE-GATE12R-IMPLEMENTATION",
+  "upstream": {
+    "gate10rPassedCheckpoint": {"relativePath": "Research/Gate10R_Attempt4_Passed_Checkpoint.md", "sha256": "f16561601b0f48f8bee8daf6d949b620ea3fb5710f1ca9842860b822f9d15a47"},
+    "gate10rV4Tree": {"relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v4", "fileCount": 169, "rawBytes": 14661848, "ordinalTreeSha256": "ac7f70b2098f6fc28eaa48116faabe1a527f34168d1c851f5a5d7e8cbbbc53b2"},
+    "gate11rPassedCheckpoint": {"relativePath": "Research/Gate11R_Attempt2_Passed_Checkpoint.md", "sha256": "82fe31348a672ede3b17484d9c179621b054747c0b89421bda2dc80b389c44d7"},
+    "gate11rTerminalCheckpoint": {"relativePath": "Research/Verification/Gate11R_5pct/v2/gate11r-checkpoint.json", "sha256": "bb65e9324cfbf6faf3352659d67905ee2a1df8d54d2ad7561af2714208859393"},
+    "gate11rTerminalIntegrity": {"relativePath": "Research/Gate11R_Attempt2_Terminal_Integrity_Audit.v2.1.json", "sha256": "e7dd0714029d5110bdd5facc30e0f2a2d960b7ac3768ab2f5dedc5540ce92aa2"},
+    "gate11rScenarioTree": {"relativePath": "Research/FormalScenarios/Gate11R_5pct/v1", "fileCount": 57, "rawBytes": 125218919, "ordinalTreeSha256": "0f41d8db5c01e9a1f1c14c7ee295151150d2efd91f6fc597fdb0b71b4f7eabe5"},
+    "gate11rPlayableCatalogTree": {"relativePath": "Research/PlayableExperiments/Gate11R_5pct/v1", "fileCount": 4, "rawBytes": 427601, "ordinalTreeSha256": "4d269ff4ada239aa2e636169b590b65c23262d351f1d785087a0a9464fbc06f2"},
+    "gate11rPlayableAssetTree": {"relativePath": "Assets/_Scenes/Research/Playable/Gate11R_5pct/v1", "fileCount": 684, "rawBytes": 952341, "ordinalTreeSha256": "0ab0a465ce560fa7296a537d5fc969d364a6737d586ad8976215da156da4fd53"},
+    "gate11rBundleManifest": {"relativePath": "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json", "sha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc"}
+  },
+  "historicalEvidenceBaseline": {
+    "relativePath": "Research/Gate10R_to_Gate12R_Execution_Preservation_Audit.v1.json",
+    "sha256": null,
+    "mustRemainUnchanged": true
+  },
+  "protectedHistoricalRoots": [
+    "Research/FormalRuns/Gate13/v1",
+    "Research/PilotRuns/Gate13_ProcessReuse/v1",
+    "Research/PilotRuns/Gate13_ProcessReuse/v2",
+    "Research/FormalScenarios/v1",
+    "Research/PilotRuns/Gate12/v1",
+    "Research/Verification/Gate10R_ProcessReuse_5pct/v1",
+    "Research/Verification/Gate10R_ProcessReuse_5pct/v2",
+    "Research/Verification/Gate10R_ProcessReuse_5pct/v3"
+  ],
+  "reservedRootsAtCapture": {
+    "gate12rPilotV1Exists": false,
+    "gate13rFormalV1Exists": false
+  }
+}

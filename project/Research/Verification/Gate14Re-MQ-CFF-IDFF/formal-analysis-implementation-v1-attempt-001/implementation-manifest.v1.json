@@ -1,0 +1,45 @@
+{
+  "schema": "gate14re-mq-formal-analysis-implementation-manifest-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "FROZEN_OUTCOME_FREE_FORMAL_ANALYSIS_IMPLEMENTATION",
+  "createdAtUtc": "2026-10-22T04:38:44.8739756Z",
+  "artifactCount": 4,
+  "artifacts": [
+    {
+      "role": "formal-analysis-contract",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Analysis/v1/formal-mq-analysis-contract.v1.json",
+      "bytes": 8014,
+      "sha256": "940025bca8952568f68dd08fa333b0bac395a0203da98ddd5f61f87a6dcb6f59"
+    },
+    {
+      "role": "formal-analyzer",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Analysis/v1/analyze_formal_mq_v1.py",
+      "bytes": 60801,
+      "sha256": "c313fc16f9a4659f7e507af90fc822dff42d8319a4033cf5e9d5f492ef604748"
+    },
+    {
+      "role": "outcome-free-independent-validator",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Analysis/v1/validate_formal_mq_analysis_v1.py",
+      "bytes": 7783,
+      "sha256": "2a1ad4ccba980ab059247563ca24cd1d40fd028bd27f32bc59f212b75aa8ea39"
+    },
+    {
+      "role": "independent-validation-receipt",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-analysis-implementation-v1-attempt-001/independent-validation-receipt.v1.json",
+      "bytes": 1178,
+      "sha256": "9df10b154591fdbc9fe8f68276ed267d7da313256e49baf5e6f8e4ec773fa4d5"
+    }
+  ],
+  "software": {
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonVersion": "3.12.14",
+    "pythonExecutableSha256": "ceabb31054d429f57cb3825775677eeaf0db35fdabbc5ff6aef661c037154b00",
+    "numpyVersion": "2.3.5"
+  },
+  "outcomeFreeValidationPassed": true,
+  "formalOutcomeFilesOpenedOrParsed": false,
+  "formalAnalysisStarted": false,
+  "formalStStarted": false,
+  "mtStarted": false
+}

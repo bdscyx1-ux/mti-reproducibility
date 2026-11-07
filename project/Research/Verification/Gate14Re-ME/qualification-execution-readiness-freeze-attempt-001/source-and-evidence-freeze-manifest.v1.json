@@ -1,0 +1,49 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-source-and-evidence-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "attemptId": "qualification-execution-readiness-freeze-attempt-001",
+  "createdAtUtc": "2026-10-17T14:15:44.3556401Z",
+  "status": "FROZEN_PRETERMINAL_FAILURE_EVIDENCE",
+  "artifactCount": 5,
+  "artifacts": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/audit_qualification_execution_readiness_v1.py",
+      "sha256": "71b0b97b3cee2cd2bcd92bf6fefbadcf11f02611828cc08701a3195603606909",
+      "lengthBytes": 24507,
+      "role": "read-only deterministic audit source"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/authorization-receipt.v1.json",
+      "sha256": "cb232cb60eb521324a323106f19a9c83671c4db84aa8ca2e23ee1477d328e415",
+      "lengthBytes": 1850,
+      "role": "limited-stage authorization receipt"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/stage-contract.v1.json",
+      "sha256": "aaed5ea65dfe6a8a66f79642129d9f88b61565f0635c285f262a66e602af6670",
+      "lengthBytes": 7286,
+      "role": "scope, upstream hash and pass-condition contract"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/preflight-boundary-receipt.v1.json",
+      "sha256": "1780fc86b2fa8b0bdd8638c5b3bd85f7853e13803c6e219c6c49e6ad7757301a",
+      "lengthBytes": 1139,
+      "role": "non-execution boundary evidence"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/readiness-audit.v1.json",
+      "sha256": "2e2b14634a28aa80c617902a618e7b37ff675429deaa1bc989935a1ad3879c45",
+      "lengthBytes": 7196,
+      "role": "adjudicated readiness findings"
+    }
+  ],
+  "manifestScope": {
+    "allListedArtifactsHashAndLengthMatchedAtCreation": true,
+    "manifestSelfHashExcluded": true,
+    "terminalFailureReceiptExcludedToAvoidHashCycle": true,
+    "upstreamArtifactsAreHashBoundByStageContractRatherThanCopied": true,
+    "sealedIdentityMappingCopiedOrDisclosed": false
+  }
+}

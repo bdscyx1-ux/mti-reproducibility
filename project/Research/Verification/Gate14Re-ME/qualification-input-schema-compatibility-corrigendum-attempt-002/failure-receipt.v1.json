@@ -1,0 +1,38 @@
+{
+  "schema": "gate14re-me-input-schema-compatibility-attempt-002-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-002",
+  "status": "FAILED_CLOSED_INPUT_SCHEMA_COMPATIBILITY_ATTEMPT_002",
+  "failedAtUtc": "2026-10-17T11:19:12.2762161Z",
+  "exceptionType": "System.Management.Automation.PropertyNotFoundException",
+  "exactFailure": "The property 'sha256' cannot be found on this object. Verify that the property exists.",
+  "stackTrace": "at Get-HashValue, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-input-schema-compatibility-corrigendum-attempt-002\\Invoke-Gate14ReMEInputSchemaCompatibilityAttempt002.ps1: line 292\r\nat Test-ExternalFingerprintAgainstTrustedRule, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-input-schema-compatibility-corrigendum-attempt-002\\Invoke-Gate14ReMEInputSchemaCompatibilityAttempt002.ps1: line 385\r\nat <ScriptBlock>, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\qualification-input-schema-compatibility-corrigendum-attempt-002\\Invoke-Gate14ReMEInputSchemaCompatibilityAttempt002.ps1: line 483",
+  "unityInvocationCount": 0,
+  "unityExitCode": null,
+  "retryPerformed": false,
+  "signalOrForcedTerminationSent": false,
+  "attempt001Evidence": {
+    "beforeContentDigestSha256": "f8401239543226c4b96d89b08db2150e7e578b55afc53e7f80aaa7062fd03fb3",
+    "afterContentDigestSha256": "f8401239543226c4b96d89b08db2150e7e578b55afc53e7f80aaa7062fd03fb3",
+    "unchanged": true,
+    "reclassified": false
+  },
+  "candidateAdoption": {
+    "inputSchemaV2Adopted": false,
+    "planningSchemaBindingV2Adopted": false
+  },
+  "scientificBoundary": {
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "transientIsolatedUnityCachesRemoved": []
+  }
+}

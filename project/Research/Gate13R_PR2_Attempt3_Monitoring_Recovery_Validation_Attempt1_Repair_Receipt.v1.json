@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-attempt3-monitoring-recovery-validation-attempt1-repair-v1",
+  "failedAttemptRoot": "Research/Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-1",
+  "failedSummary": {
+    "sha256": "fc8364827927126905631f055dcb7727fe4fe0544f3f48780582e825bfd4821d",
+    "testCount": 54,
+    "passedTestCount": 53,
+    "failedTestId": "T12-missed-slots-no-catchup-flood"
+  },
+  "failureReceiptSha256": "6adf12f107a01b833204732258ccc2aec9f2484448843e000899644efbd2d486",
+  "partialOutputManifestSha256": "4d43729404f842ee59f746d85bbdb4e0bc8c9fa528b8a6cf6abffff180420f56",
+  "v1HarnessSha256": "23126b453dcf3f7e9956765f9931f3e964da37a704b8cba95e02f4385bd027b4",
+  "diagnosis": "The fixture crossed four report slots without progress, so the monitor correctly emitted one HOURLY-PROGRESS reason and one independent STALL-SUSPECTED event. The v1 test incorrectly required the entire notification array to equal a one-element array.",
+  "permittedRepair": "Mechanically change only the T12 assertion to require exactly one HOURLY-PROGRESS reason while permitting independently valid safety-event reasons.",
+  "semanticChanges": {
+    "monitorImplementation": false,
+    "hourlyCadence": false,
+    "catchUpPolicy": false,
+    "stallThreshold": false,
+    "measuredRetryBoundary": false,
+    "formalDesign": false
+  },
+  "nextValidationRoot": "Research/Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-2",
+  "formalCampaignAuthorized": false,
+  "unityLaunchAuthorized": false
+}

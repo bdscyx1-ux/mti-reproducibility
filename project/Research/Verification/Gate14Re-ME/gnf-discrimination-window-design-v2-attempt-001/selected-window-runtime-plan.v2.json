@@ -1,0 +1,23 @@
+{
+  "schema": "gate14re-me-selected-window-runtime-plan-v2",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v2-attempt-001",
+  "status": "FROZEN_BEFORE_RUNTIME_COMPUTATION",
+  "frozenAtUtc": "2026-10-19T11:26:52Z",
+  "method": {
+    "inputCoordinates": "log2(G), log2(N), log2(F)",
+    "outputCoordinate": "natural log process-wall duration",
+    "interpolation": "multilinear interpolation inside the observed attempt-009 factorial envelope",
+    "pointStatistic": "algorithm-cell process-wall P50",
+    "conservativeStatistic": "algorithm-cell observed maximum",
+    "planningHeadroomMultiplier": 1.2,
+    "formalReference": "B=36, 36 cells x 36 independent superblocks x 6 lanes",
+    "qualificationReference": "108 core plus 18 stress superblocks, 756 algorithm lanes, 895 total fresh processes"
+  },
+  "boundary": [
+    "The runtime calculation is a planning surrogate, not qualification evidence.",
+    "Algorithm names may be used only as internal grouping keys and may not be emitted.",
+    "No effect result, rank, weight, or winner may be produced.",
+    "The old non-lane wall-clock remainder is retained in full, despite the lower oracle count, to avoid claiming an unmeasured speedup."
+  ]
+}

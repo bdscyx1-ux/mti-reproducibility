@@ -1,0 +1,94 @@
+{
+  "schema": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-002-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-002",
+  "status": "AUTHORIZED_D3_V3_TOOLCHAIN_REPAIR_AND_ONE_KNOWN_ANSWER_ONLY",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T06:29:30.9172755Z",
+  "userAuthorizationTextExact": "## 下一项最小授权\n\n继续前需要一项新的、独立的工具链修复授权，至少明确允许：\n\n1. 为当前 VS 2022 安装并冻结兼容的 Windows 10/11 SDK；\n2. 记录 SDK 版本、头文件路径及关键哈希；\n3. 冻结 `/utf-8` 编译策略，同时保留 `/WX`；\n4. 创建新的 `d3-v3-cumulative-allocation-qualification-attempt-002`；\n5. 重新编译 DLL，并且只有编译成功后才执行一次原定的无算法 known-answer；\n6. 仍然禁止 runner/schema 集成、调度、输入、身份映射、measured root、算法 lane、正式采集、分析、排名及赢家裁决。",
+  "authorizedScope": {
+    "installOneCompatibleWindowsSdkForCurrentVisualStudio2022": true,
+    "freezeInstalledSdkVersionPathsAndCriticalHashes": true,
+    "freezeCompilerUtf8Policy": true,
+    "retainWarningsAsErrors": true,
+    "createAttempt002VerificationRoot": true,
+    "compileNativeDllOnceAfterToolchainFreeze": true,
+    "runOriginalAlgorithmFreeKnownAnswerOnceOnlyAfterSuccessfulDllBuild": true,
+    "freezeAttempt002EvidenceAndReceipts": true
+  },
+  "sdkSelection": {
+    "selectionBasis": "Component is present in the exact installed Visual Studio 17.14.41 catalog and is not labeled out of support.",
+    "visualStudioInstanceId": "75d0d27c",
+    "visualStudioInstallationPath": "C:/Program Files/Microsoft Visual Studio/2022/Community",
+    "visualStudioInstallationVersion": "17.14.37710.0",
+    "componentId": "Microsoft.VisualStudio.Component.Windows11SDK.26100",
+    "componentCatalogVersion": "17.14.37011.9",
+    "catalogDisplayTitle": "Windows 11 SDK (10.0.26100.7705)",
+    "catalogSha256": "f0a50ea157222c29abd5ea6ff01bfc3c33b04e011c5e45ee2ca38ef0778e5643",
+    "expectedSdkFamily": "10.0.26100",
+    "installationMayNotUpdateOrAddAnyOtherRequestedComponent": true
+  },
+  "frozenCompilerPolicy": {
+    "compiler": "MSVC cl.exe 14.44.35207 x64",
+    "sourceAndExecutionCharacterSetFlag": "/utf-8",
+    "warningsAsErrorsFlag": "/WX",
+    "warningLevelFlag": "/W4",
+    "languageStandardFlag": "/std:c++17",
+    "conformanceFlag": "/permissive-",
+    "deterministicLinkAndObjectFlag": "/Brepro",
+    "policy": "The attempt-002 native build must use /utf-8 and retain /WX. It may not suppress C4819, lower the warning level, or disable warnings-as-errors."
+  },
+  "executionOrdering": [
+    "record authorization and installation-preflight evidence",
+    "install the single selected Windows SDK component",
+    "freeze SDK version, paths, critical hashes, and initialized x64 environment",
+    "freeze attempt-002 source/input manifest",
+    "compile the native DLL exactly once",
+    "only if native compilation succeeds, run exactly one algorithm-free Unity known-answer process",
+    "freeze pass or failure evidence without retry"
+  ],
+  "mandatoryFailClosedConditions": [
+    "the selected SDK component cannot be installed or verified",
+    "SDK version, include paths, library paths, or required critical files cannot be frozen",
+    "the initialized VS x64 environment does not bind the frozen SDK",
+    "any frozen source, compiler, linker, Unity executable, PluginAPI header, protected runner, protected schema, or six-algorithm binding drifts",
+    "the native DLL compilation fails with /utf-8 and /WX",
+    "the one authorized Unity known-answer process fails, times out, throws, or fails any prospectively frozen D3-v3 criterion"
+  ],
+  "prohibitedScope": {
+    "resumeOrOverwriteAttempt001": false,
+    "deleteOrModifyPriorEvidence": false,
+    "automaticSdkInstallationRetry": false,
+    "automaticNativeBuildRetry": false,
+    "automaticUnityRetry": false,
+    "integrateFormalQualificationRunner": false,
+    "modifyOrVersionFormalOutputSchema": false,
+    "generateQualificationSchedule": false,
+    "generateQualificationInputs": false,
+    "generateAnonymousIdentityMappings": false,
+    "createQualificationMeasuredRoot": false,
+    "constructAnyPlanner": false,
+    "executeAnyAlgorithmLane": false,
+    "formalCollection": false,
+    "formalAnalysis": false,
+    "algorithmRanking": false,
+    "winnerAdjudication": false,
+    "fallbackToFrameHeapCounter": false,
+    "fallbackToAnyAlternativeMetric": false
+  },
+  "reservedPaths": {
+    "verificationRootRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002",
+    "knownAnswerOutputRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-002/d3-known-answer",
+    "qualificationMeasuredRootCreated": false
+  },
+  "evidenceBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

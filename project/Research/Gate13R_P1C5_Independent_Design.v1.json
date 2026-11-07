@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "designKind": "gate13r-p1c5-independent-confirmatory-study-design-v1",
+  "studyId": "Gate13R-P1C5-Independent-v1",
+  "scientificQuestion": "For the frozen finite matrix of 32 shared-goal campaigns, which algorithm has lower P1: C-FF or IDFF?",
+  "endpoint": {
+    "id": "P1",
+    "field": "dynamicHandlingMillisecondsPerScheduledEvent",
+    "scale": "natural-log-ratio",
+    "contrast": "IDFF/C-FF",
+    "lowerIsBetter": true
+  },
+  "alphaTwoSided": 0.05,
+  "familySize": 1,
+  "multiplicityAdjustment": "none-single-prespecified-confirmatory-contrast",
+  "targetPower": 0.9,
+  "minimumDetectableRatioSymmetric": 1.1,
+  "campaignCount": 32,
+  "minimumBlocksPerCampaign": 50,
+  "selectedBlocksPerCampaignAfterSimulation": 50,
+  "selectedUnityProcessCount": 1600,
+  "selectedAlgorithmSampleCount": 3200,
+  "orderBalancePerCampaign": {
+    "AB_CFF_then_IDFF": 25,
+    "BA_IDFF_then_CFF": 25
+  },
+  "independentExperimentalUnit": "one fresh Unity process executing one complete two-algorithm paired block",
+  "fixedStrata": [
+    "campaign",
+    "AB/BA order"
+  ],
+  "planningVariance": {
+    "metric": "C5 pilot residual sigma upper 90% on log-ratio scale",
+    "value": 1.1535914845489306,
+    "relativePath": "Research/Analysis/Gate13R_RQAligned_Preregistration/v1/candidate-design-sensitivity.json"
+  },
+  "preFreezeSimulationRule": "Beginning at 50 blocks per campaign, deterministically increase by two blocks per campaign only if the minimum directional one-sided 95% Wilson lower bound for simulated power is below 0.90; never reduce the sample size.",
+  "acquisition": {
+    "strictSerial": true,
+    "freshUnityProcessPerBlock": true,
+    "algorithmsPerBlock": [
+      "C-FF",
+      "IDFF"
+    ],
+    "automaticRetryAuthorized": false,
+    "automaticResumeAuthorized": false,
+    "topUpAuthorized": false,
+    "replacementAuthorized": false,
+    "reorderAuthorized": false
+  },
+  "lineageIsolation": {
+    "attempt4RawDataMerged": false,
+    "newFormalRawRoot": "Research/FormalRuns/Gate13R_P1C5_Independent/v1",
+    "newStudyAndRunIdentifiers": true
+  },
+  "authorizationBoundary": {
+    "phaseAAcquisitionMayStartOnlyAfterExactCommandConfirmation": true,
+    "phaseBAnalysisAutoExecutionAuthorized": false,
+    "gate14RAuthorized": false,
+    "m1ThroughM5Authorized": false
+  }
+}

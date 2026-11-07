@@ -1,0 +1,31 @@
+{
+  "schema": "gate14re-me-formal-sample-size-decision-v4.1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-bounded-gnf-discrimination-window-v4",
+  "status": "PENDING_NEW_QUALIFICATION_AND_ANONYMOUS_POWER_REFREEZE",
+  "unit": "independent six-algorithm paired superblocks per GxNxF cell",
+  "frozenCells": 36,
+  "levels": {
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81]
+  },
+  "candidateGridRule": "positive multiples of 36",
+  "candidateB": [36, 72, 108, 144],
+  "provisionalMinimumB": 36,
+  "finalB": null,
+  "whyAttempt009CannotSetFinalB": [
+    "attempt-009 used a different GxNxF support and included the excessive-load tail being removed",
+    "attempt-009 stopped before terminal qualification PASS",
+    "choosing B from named outcome separation would be outcome-driven and is prohibited"
+  ],
+  "attempt009ReusableOnlyFor": [
+    "anonymous nuisance variance and paired covariance sensitivity",
+    "structural missingness and failure modes",
+    "runtime, memory, storage and tail diagnostics",
+    "engineering priors that are explicitly recalibrated by the new qualification"
+  ],
+  "finalizationRule": "Freeze finalB only after the bounded v4 qualification terminally passes, the anonymous power calculation is reproduced, and the design/multiplicity/stopping contract is frozen before formal collection.",
+  "attempt009ObservationsMayBecomeFormalSamples": false,
+  "formalCollectionAuthorized": false
+}

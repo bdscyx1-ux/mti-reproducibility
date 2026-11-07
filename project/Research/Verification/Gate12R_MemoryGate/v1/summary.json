@@ -1,0 +1,24 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate12r-managed-memory-aggregation-unit-tests-v1",
+    "completedAtUtc":  "2026-10-07T17:52:54.9499474Z",
+    "memoryGatePolicyId":  "gate12r-sample-128mib-block-128mib-per-sample-v1",
+    "maximumSampleRetainedManagedGrowthBytes":  134217728,
+    "twoSampleBlockRetainedManagedGrowthLimitBytes":  268435456,
+    "fourSampleBlockRetainedManagedGrowthLimitBytes":  536870912,
+    "maximumBlockWorkingSetGrowthBytes":  536870912,
+    "maximumBlockPrivateMemoryGrowthBytes":  536870912,
+    "assertionCount":  40,
+    "failureCount":  1,
+    "failures":  [
+                     {
+                         "name":  "unity-command-sample-gate-retained",
+                         "detail":  "sample retained managed-memory check"
+                     }
+                 ],
+    "sampleThresholdChanged":  false,
+    "blockAggregationRuleChanged":  true,
+    "formalCampaign":  false,
+    "gate13rAuthorized":  false,
+    "passed":  false
+}

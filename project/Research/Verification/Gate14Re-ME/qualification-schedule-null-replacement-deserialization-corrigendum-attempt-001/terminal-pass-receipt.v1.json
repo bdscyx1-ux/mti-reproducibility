@@ -1,0 +1,78 @@
+{
+  "schema": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-terminal-pass-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "status": "PASS_NULL_REPLACEMENT_CORRIGENDUM_FROZEN_AND_EXECUTION_READINESS_RECHECK_PASS_EXECUTION_UNAUTHORIZED",
+  "passed": true,
+  "terminal": true,
+  "completedAtUtc": "2026-10-17T18:10:43.9974794Z",
+  "corrigendumPassReceipt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+    "sha256": "4c56ddecf1fb191dca2188c68b30aa56691f5cc498d5d92879ffd125efc14df2"
+  },
+  "compiledImplementationFreezeManifest": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/compiled-implementation-freeze-manifest.v1.json",
+    "sha256": "c8194b7f89940a02dd38749acb97c9e1627de91cecf99d1844ff384e3929fea9"
+  },
+  "knownAnswer": {
+    "requiredCases": 5,
+    "passedCases": 5,
+    "unityInvocationCount": 1,
+    "naturalExitCode": 0,
+    "retryPerformed": false,
+    "trustedIdentityPassed": true,
+    "instrumentOracleEmptyBoundaryOrAlgorithmLaneRun": false
+  },
+  "readiness": {
+    "attemptId": "qualification-execution-readiness-recheck-attempt-009",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "565a2e5a1f97d67e37c037db05db610feabf93237d717d67e86d0be82c534a6a",
+    "auditRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/readiness-recheck-audit.v9.json",
+    "auditSha256": "5a3c8fe4bd1f894d0d5982453d1c4b2d830ec8868e5f791d9da8f9e53fc59986",
+    "checks": 24,
+    "passedChecks": 24,
+    "failedChecks": 0
+  },
+  "adoptedProspectiveChain": {
+    "runnerV2Sha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+    "editorAssemblySha256": "3d1165d306227a6ec27b1b7472342d04dd3f52770852f522f7c9db4297440b18",
+    "runtimeAssemblySha256": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1",
+    "supervisorV32Sha256": "a2fe6db79551f52310a18ef6c16e77d827945aed998812d1f08aa939dd172409",
+    "executionContractV34Sha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85",
+    "implementationManifestV34Sha256": "1e56697a40692ff76fc01273ec4e5b8b7953ea88dcfe228eeeb317d9705a69c1",
+    "scheduleSha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+    "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-002",
+    "rootsCreated": false
+  },
+  "retainedEvidence": {
+    "statusV37Sha256": "effa1a9270965c537bb24c2915f3f4498fd992bc2a29e601acdceba60c8dd232",
+    "loadQualificationExecutionAttempt003FailureSha256": "ec78b55c4f7be0d00433958806a26b7ef1e1a3dd75ce140a9013079cadf13df9",
+    "loadQualificationExecutionAttempt003InventoryDigestSha256": "4609899169ed8db7e4dea41590aa81b1329a8f3a40f7bc7359f89e1baf01afc6",
+    "failedAttempt001MeasuredRootInventoryDigestSha256": "bde45ebf6b3945dd8fea8a141805d3c9ddf45605ed6a4e6e228791679576a4cd",
+    "readinessAttempt007FailureFrozen": true,
+    "readinessAttempt008FailureFrozen": true,
+    "modifiedOrReclassified": false
+  },
+  "scientificBoundary": {
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "authorizationState": {
+    "newQualificationExecutionAttemptAuthorized": false,
+    "attempt002RootCreationAuthorized": false,
+    "unityInvocationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "weightingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Obtain a separate exact-hash authorization for one new Gate14Re-ME load qualification execution attempt bound to supervisor v3.2, execution contract v3.4, implementation manifest v3.4, the attempt-009 terminal readiness receipt, and prospective attempt-002 measured/delivery roots."
+}

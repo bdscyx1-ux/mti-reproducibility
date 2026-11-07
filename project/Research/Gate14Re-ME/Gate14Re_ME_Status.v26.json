@@ -1,0 +1,68 @@
+{
+  "schema": "gate14re-me-status-v26",
+  "studyId": "Gate14Re-ME",
+  "status": "INPUT_SCHEMA_V2_COMPATIBILITY_OFFLINE_CLOSURE_PASS_PLANNING_BINDING_V2_ADOPTED",
+  "version": 26,
+  "updatedAtUtc": "2026-10-17T13:20:22.0968009Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v25.json",
+    "sha256": "90c102e62deccd7af45e5208cdd03baf1981bd8ccf3b3b9c22cf46d07ba95a9b",
+    "retained": true,
+    "reclassified": false
+  },
+  "schemaCompatibilityAttempt004": {
+    "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-004",
+    "retainedStatus": "INPUT_SCHEMA_COMPATIBILITY_ATTEMPT_004_FAILED_CLOSED",
+    "passed": false,
+    "failureReceiptSha256": "952f9b650a2ff61d973db03239ed6d2f4ee17e54b42f4d02e9669ef9a5135101",
+    "modified": false,
+    "deleted": false,
+    "reclassified": false
+  },
+  "offlineClosureAdjudicationAttempt005": {
+    "authorizationId": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-005",
+    "retainedStatus": "INPUT_SCHEMA_COMPATIBILITY_OFFLINE_CLOSURE_ATTEMPT_005_FAILED_CLOSED",
+    "passed": false,
+    "failureReceiptSha256": "adc4072cfb36e8f4b2b78c77a6a4dd72faea0570284c89d064c944c06f6741fe",
+    "modified": false,
+    "deleted": false,
+    "reclassified": false
+  },
+  "offlineClosureAdjudicationAttempt006": {
+    "authorizationId": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006",
+    "passed": true,
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006/terminal-receipt.v1.json",
+    "terminalReceiptSha256": "55b183148cb9d3dd4f6d35345b25c964c4c7cbf840730c96d440bae54da2e7c0",
+    "adjudicationRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006/offline-evidence-adjudication.v1.json",
+    "adjudicationSha256": "8263f310a9897097844a892b4aeb2d6abe93dceb23ead3170bc4a6226a874e09",
+    "unityInvocations": 0
+  },
+  "adoptedQualificationSchemas": {
+    "inputSchemaV2": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+      "adopted": true
+    },
+    "planningSchemaBindingV2": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+      "adopted": true
+    }
+  },
+  "scientificBoundary": {
+    "offlineAdjudicatorInvocations": 1,
+    "unityInvocations": 0,
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "nextRequiredAction": "Obtain a new, separate authorization for the Gate14Re-ME qualification planning freeze. No schedule, inputs, anonymous identity map, measured root, planner, algorithm lane, formal collection, analysis, ranking or winner adjudication is authorized by Status v26."
+}

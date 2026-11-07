@@ -1,0 +1,38 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-06T07:40:32Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-06T07:40:32Z'
+  user_words: 从Gate 10开始全部重来，以Gate13采用每 Williams block 一个Unity进程的5%精度实际实现证据为准重新规划实验，另外需要提供每一个实验中的Playable
+    Unity Scenes用作后续可视化实验视频录制。完成后更新整体计划和实验规划
+  prev_hash: null
+  hash: b617c0bb768d21877a355ab1fc6dab8686d89e952f28fcf4b0d9bee893f33e05
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-06T07:53:51Z'
+  step: gate10r-5pct-rebaseline-planning
+  command: Completed a read-only evidence audit and created the versioned Gate 10R
+    onward experiment plan, machine-readable rebaseline decision, updated overall
+    project plan, updated next-session checkpoint, 21-assertion planning audit, and
+    transitive planning manifest. No Unity process ran and no Gate 10R/11R/12R/13R
+    execution root was created.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  input_sha256:
+    Gate10R_5pct_Rebaseline_Evidence_Audit.v1.json: e428c3b7a3667f52d6eb4c306bb4eaa070616ed7d3710fd3020b20a182751799
+    Gate10R_5pct_Rebaseline_Decision.v1.json: 45f5225f22c737704194303c81ddfcf70898b386955cb844193c8ac8a8312409
+    Gate10R_Onward_ProcessReuse_5pct_Experiment_Plan.md: e91660310eccb9082393fe21cb5bf2c957b77b9a780e03eaa97b462fb6174953
+    Verification/Gate10R_5pct_Rebaseline_Planning_Audit.summary.json: a605fae82248b0b9f6e6b0814b3bac48de345e4c2321bf6d9ac0a65bbb207a27
+  output_sha256: edac8f182f533f26680f8bd0dacc9e055fcbbc696f3020021101040889b80586
+  gate_tokens:
+  - PLANNING-COMPLETE
+  - RESTART-FROM-GATE-10
+  - ONE-PROCESS-PER-WILLIAMS-BLOCK
+  - FIVE-PERCENT-PRECISION
+  - PLAYABLE-53-74-212
+  - HISTORICAL-ROOTS-PRESERVED
+  - EXECUTION-NOT-AUTHORIZED
+  prev_hash: b617c0bb768d21877a355ab1fc6dab8686d89e952f28fcf4b0d9bee893f33e05
+  hash: 0d3de77bfadc38194e4e1d89879bfefb7defe10be29376a04872022d539ab7cd

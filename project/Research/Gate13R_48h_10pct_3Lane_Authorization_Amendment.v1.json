@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-48h-10pct-three-lane-user-steering-amendment-v1",
+  "status": "AUTHORIZED-NONEXECUTING-REPAIR-TESTS-STRESS-AND-ONE-NONFORMAL-PILOT / FORMAL-NOT-AUTHORIZED",
+  "authority": {
+    "priorAuthorization": "Gate 13R 36h v17 licensing-stability nonexecuting repair, verification and one fresh NON-FORMAL pilot",
+    "laterUserSteering": "将4 lane并行改为3 lane甚至2 lane，稳定性优先，时间上稍微放宽",
+    "resolution": "The later instruction supersedes the four-lane topology before implementation. Three lanes and a 48-hour ceiling are selected; two lanes require a separate later redesign."
+  },
+  "frozenChanges": {
+    "laneCount": 3,
+    "hardFormalEndToEndHours": 48,
+    "maximumReadinessP95Hours": 42,
+    "readinessReserveHours": 6,
+    "pilotMeasuredWaves": 128,
+    "pilotMeasuredBlocks": 384,
+    "pilotMeasuredSamples": 1152,
+    "pilotWarmupBlocks": 12,
+    "licensingStressWaves": 172,
+    "licensingStressFreshUnityProcesses": 516,
+    "serialLicenseAdmission": true,
+    "synchronizedWorkloadBarrier": true
+  },
+  "unchanged": [
+    "74-campaign Gate 11R matrix",
+    "10% per-campaign relative 95% CI half-width",
+    "no hard sample cap",
+    "one fresh Unity Editor process per Williams block",
+    "Williams order and per-sample reset",
+    "PSAPI/CIM telemetry",
+    "128 MiB per-sample retained managed-memory rule and block scaling",
+    "Playable mapping",
+    "fail-closed no retry/resume/merge policy"
+  ],
+  "preserve": [
+    "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v16",
+    "Research/Verification/Gate13R_36h_10pct_4Lane/v16",
+    "Research/Gate13R_36h_10pct_4Lane_v16_Licensing_Failure_Diagnosis.v1.json",
+    "Research/Gate13R_36h_10pct_4Lane_v16_Failed_Checkpoint.md",
+    "Gate 10R attempt 4",
+    "Gate 11R attempt 2 bundle",
+    "Gate 12R successful v4 and archives",
+    "original game scripts and scenes"
+  ],
+  "formalExecutionAuthorized": false,
+  "gate14Authorized": false,
+  "gate15VAuthorized": false
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "gate14re-me-schema-v2-tooling-bridge-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-schema-v2-tooling-bridge-attempt-001",
+  "status": "FAILED_CLOSED_SYNTHETIC_NEGATIVE_FIXTURE_PATH_POLICY_MISMATCH",
+  "failedAtUtc": "2026-10-17T08:28:28.2835348Z",
+  "phase": "synthetic-known-answer-negative-fixture-validation",
+  "exactPrimaryDiagnostic": "negative fixture failed for an unexpected reason: tamper-source-hash: synthetic profile raw root is outside the authorized verification attempt",
+  "diagnosis": "The first positive synthetic fixture passed structural validation. The first isolated negative copy was then rejected before its intended source-hash tamper assertion because the structural validator required both containment beneath the authorized verification attempt and the literal substring 'synthetic' in the raw-root path. The negative-fixtures path was inside the authorized attempt but did not contain that substring. This is a harness/validator path-policy mismatch, not a D3 counter, schema, algorithm, or scientific-design failure.",
+  "preRepairSourceBindings": {
+    "structuralV2RelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v2.py",
+    "structuralV2Sha256": "b0d47b542125573ad3a0439bc47d8c8675df803b1f8234f16b828120574ca260",
+    "deliveryV2RelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2.py",
+    "deliveryV2Sha256": "5e9f8d8c3403321fb9e1b2b3f67fef00a963bf85f25c66d98bc2c41971434ec4",
+    "knownAnswerHarnessRelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_schema_v2_tooling_known_answer_v1.py",
+    "knownAnswerHarnessSha256": "6ebc219140d4058105b3ffb1c0928deb0ca7b0201cd78284cc68e6cd39c918ac"
+  },
+  "retainedEvidence": {
+    "positiveFixtureRelativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/synthetic-fixture",
+    "partialNegativeFixtureRelativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/negative-fixtures/tamper-source-hash",
+    "syntheticSourceRelativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/synthetic-source/synthetic-input-source.v1.json",
+    "deletedOrModified": false
+  },
+  "failClosedDisposition": {
+    "algorithmPlannerConstructedOrInvoked": false,
+    "algorithmLaneExecuted": false,
+    "qualificationScheduleGenerated": false,
+    "qualificationInputsGenerated": false,
+    "anonymousIdentityMappingGenerated": false,
+    "qualificationMeasuredRootCreated": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "fallbackMetricUsed": false,
+    "initialEvidenceRetained": true,
+    "repairCycleMayReuseInitialAttemptFiles": false
+  },
+  "repairBoundary": {
+    "allowed": "Correct only the synthetic-profile containment policy and run a fresh isolated repair-cycle-001 beneath the same authorized verification attempt.",
+    "prohibited": "Do not overwrite or delete the initial evidence; do not change D3 semantics, the frozen runner/schema/contract, protected v1 tools, or any prohibited execution scope."
+  }
+}

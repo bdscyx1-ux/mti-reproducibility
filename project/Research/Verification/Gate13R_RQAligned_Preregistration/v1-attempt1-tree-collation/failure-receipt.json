@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr1-validation-attempt1-tree-collation-failure-v1",
+  "status": "FAILED-NONEXECUTING-VALIDATION",
+  "failedAtUtc": "2026-10-08T10:45:00Z",
+  "stage": "PREWRITE-TREE-IDENTITY-CROSS-IMPLEMENTATION-CHECK",
+  "failureCode": "PYTHON-PATH-COLLATION-DID-NOT-MATCH-POWERSHELL-CULTURE-COLLATION",
+  "expectedGate10RTreeSha256": "bf92abc329290db6c5bebeacb332f83d3fb53ffaabca2b12dce3cb400ecade13",
+  "observedPythonLowercaseSortTreeSha256": "987c6ea36619796434434f1a5da37fdd1bf74951fc849ab98531976aefda1553",
+  "fileCount": 169,
+  "byteCount": 14661848,
+  "diagnosis": "The bytes were unchanged. PowerShell Sort-Object used OS culture collation, while the first Python validator used ordinal lowercase collation. A locale.strxfrm ordering reproduced the PowerShell identity exactly.",
+  "unityStarted": false,
+  "upstreamModified": false,
+  "formalCampaignAuthorized": false,
+  "automaticRetryScope": "VERSIONED-NONEXECUTING-IMPLEMENTATION-ONLY"
+}

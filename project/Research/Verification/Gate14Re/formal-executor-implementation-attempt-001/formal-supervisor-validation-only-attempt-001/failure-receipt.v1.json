@@ -1,0 +1,13 @@
+{
+  "schema": "gate14re-formal-supervisor-validation-failure-v1",
+  "studyId": "Gate14Re",
+  "status": "FAIL_CLOSED",
+  "supervisorSha256": "3183944ca11120457fe149abd1da1ea65cf7882c34a6faf79d4b562341fc958a",
+  "exceptionType": "System.Management.Automation.PropertyNotFoundException",
+  "message": "The nullable ExpectedBytes parameter was unwrapped by PowerShell, so accessing .Value failed during the first frozen-file check.",
+  "repairScope": "Replace ExpectedBytes.Value with an explicit long conversion and rerun validation in a new attempt directory.",
+  "formalAuthorizationRead": false,
+  "formalRootCreated": false,
+  "formalObservationProduced": false,
+  "formalPhaseAStarted": false
+}

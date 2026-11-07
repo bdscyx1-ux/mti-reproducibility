@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "provenanceId": "gate11r-attempt2-final-audit-explicit-utf8-repair-v2.2",
+  "createdAtUtc": "2026-10-07T03:17:12.2029102Z",
+  "failureReceipt": {
+    "path": "Research/Verification/Gate11R_5pct/v2/FinalAudit/FinalAuditAttempt2_Failure_Receipt.v2.2.json",
+    "sha256": "a90a441e30b49f0b1c2e17e9b51cbc3a4f92064573842422cc27865821108c9b"
+  },
+  "failedScript": {
+    "path": "Research/Verification/Run-Gate11RFinalAuditV2_1.ps1",
+    "sha256": "0b25b3281cac34a2e78023cc77f853fc138802341280839cca6c1a70e2da2359"
+  },
+  "repairedScript": {
+    "path": "Research/Verification/Run-Gate11RFinalAuditV2_2.ps1",
+    "rawBytes": 26036,
+    "sha256": "72c1bb24f2dfb8afc586fa4f166599b7301a52a998f6e796de311cfcd33e887c"
+  },
+  "mechanicalChange": "Read playable-scene-catalog.json using explicit UTF-8 before ConvertFrom-Json.",
+  "changedLogicalStatementCount": 1,
+  "parserErrors": 0,
+  "expectedWatermarkChanged": false,
+  "bundleBytesChanged": false,
+  "researchSemanticsChanged": false,
+  "gate12RAuthorized": false,
+  "gate13RAuthorized": false
+}

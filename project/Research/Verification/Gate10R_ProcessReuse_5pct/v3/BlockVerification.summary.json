@@ -1,0 +1,212 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate10r-block-verification-attempt3-v3",
+    "savedAtUtc":  "2026-10-06T14:13:25.7284919Z",
+    "invocationCount":  4,
+    "invocations":  [
+                        {
+                            "name":  "positive-two",
+                            "expectedFailure":  false,
+                            "outputRelativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two",
+                            "summarySha256":  "873208726bbb37b5fe84f77b8c1a72179f61acfe723fea7445e3c151971b319c",
+                            "processId":  19504,
+                            "lockHygieneMode":  "natural-lock-absence",
+                            "lockHygieneReceiptSha256":  "fb30e5519e566d2df7f2b9b575169060a8d27ac50f7be910f49f73005fb28f26",
+                            "passed":  true
+                        },
+                        {
+                            "name":  "positive-four-a",
+                            "expectedFailure":  false,
+                            "outputRelativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a",
+                            "summarySha256":  "26e5e474fd2a17e031584c7e0c61170561754ce96c2b8e531653daba7438f39b",
+                            "processId":  31800,
+                            "lockHygieneMode":  "natural-lock-absence",
+                            "lockHygieneReceiptSha256":  "d4dcdc52e451fc863fba34a7ed1b598eeda3377e7a7f7926bdec24947a569b86",
+                            "passed":  true
+                        },
+                        {
+                            "name":  "positive-four-b",
+                            "expectedFailure":  false,
+                            "outputRelativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b",
+                            "summarySha256":  "2a6918774dc00c1dc7f0f021e16c74097bcf1c40f6f4d221c3a22de9d33219f4",
+                            "processId":  31044,
+                            "lockHygieneMode":  "natural-lock-absence",
+                            "lockHygieneReceiptSha256":  "76f21ff284346b6ae0608fa1d5cbd6a31c75e101d29697fa046a02c46b6ec2b8",
+                            "passed":  true
+                        },
+                        {
+                            "name":  "negative-fail-closed",
+                            "expectedFailure":  true,
+                            "outputRelativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed",
+                            "summarySha256":  "b760bcc698617fda09058e6d95a413f589aac494f88e0679394f0762e862bc9d",
+                            "processId":  18872,
+                            "lockHygieneMode":  "controlled-expected-negative-cleanup",
+                            "lockHygieneReceiptSha256":  "5d8e47c4cbc4c41414ea330b92bb6548b3666c78af41cc12507ea840a2bfcb25",
+                            "passed":  true
+                        }
+                    ],
+    "freshColdReferenceCount":  6,
+    "coldReferences":  [
+                           {
+                               "scenarioId":  "shared",
+                               "algorithmId":  "A*-R",
+                               "processId":  10228,
+                               "lockHygieneMode":  "natural-lock-absence",
+                               "summarySha256":  "e8d68448739cfef76f7657ed45fd9c5af2a0da1b5581aa90cedb98d673b1f0b0"
+                           },
+                           {
+                               "scenarioId":  "shared",
+                               "algorithmId":  "D*L",
+                               "processId":  29784,
+                               "lockHygieneMode":  "natural-lock-absence",
+                               "summarySha256":  "7361a5753dec49ca37f1865ba69d7967e1d6dfef86b823e531b4b687e340603d"
+                           },
+                           {
+                               "scenarioId":  "shared",
+                               "algorithmId":  "C-FF",
+                               "processId":  17536,
+                               "lockHygieneMode":  "natural-lock-absence",
+                               "summarySha256":  "f6e94737ff1ff795530656d1705d0be3d58c42dd81e84fed5fd3ff473b93f55e"
+                           },
+                           {
+                               "scenarioId":  "shared",
+                               "algorithmId":  "IDFF",
+                               "processId":  19240,
+                               "lockHygieneMode":  "natural-lock-absence",
+                               "summarySha256":  "020f4677605edc66f9fba3ae9709862957592f9b554a50ee951539180f485b5d"
+                           },
+                           {
+                               "scenarioId":  "hetero",
+                               "algorithmId":  "A*-R",
+                               "processId":  16192,
+                               "lockHygieneMode":  "natural-lock-absence",
+                               "summarySha256":  "771e287c50ad62900a9c7cba2cc73a4e22f92d45696678474eb99b72dfce6042"
+                           },
+                           {
+                               "scenarioId":  "hetero",
+                               "algorithmId":  "D*L",
+                               "processId":  24312,
+                               "lockHygieneMode":  "natural-lock-absence",
+                               "summarySha256":  "11ef46d9ee2d7ecb22ab880aa6f96fcbd805bd969c4fbbab98c9671cbd978d12"
+                           }
+                       ],
+    "structuralComparisonCount":  10,
+    "structuralMismatchCount":  0,
+    "comparisons":  [
+                        {
+                            "fixture":  "positive-two",
+                            "position":  1,
+                            "algorithmId":  "A*-R",
+                            "referenceSha256":  "98c610c38271d48792c2aed27bcad30a80c438f927bdb4e2390fdb50c256e15e",
+                            "candidateSha256":  "1fc2716c1c57e6fdc3a30d27eceb930b0f4fd3d461a5cbd1d6b4e64ac9af6294",
+                            "referenceProjectionSha256":  "351bf96cbfd92a8dd927a94b2f9d3cbe673146d840aa4e934937100e873287e4",
+                            "candidateProjectionSha256":  "351bf96cbfd92a8dd927a94b2f9d3cbe673146d840aa4e934937100e873287e4",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-two",
+                            "position":  2,
+                            "algorithmId":  "D*L",
+                            "referenceSha256":  "d7e4107f17a85aace80bf2d846695de0ceb77ec21d280057b6d7a61bb2923f5f",
+                            "candidateSha256":  "08edc8544d3e00df4f6f778c11c88f70ae0220a3dff538ce5f9e06dd18742762",
+                            "referenceProjectionSha256":  "8b84d73d05ab13432ed8d183ade8d91e3b80cf084293e4cd56161dc67ec5d498",
+                            "candidateProjectionSha256":  "8b84d73d05ab13432ed8d183ade8d91e3b80cf084293e4cd56161dc67ec5d498",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-four-a",
+                            "position":  1,
+                            "algorithmId":  "A*-R",
+                            "referenceSha256":  "d134d176fffbd305bbf3f5a004e8edb2666b3ba901cce04dd0370a78c65739c5",
+                            "candidateSha256":  "30ce0570c5efd393048c691929042dbf8f732182a9964782036f64a621f45a4e",
+                            "referenceProjectionSha256":  "82f4321502b6ed28d982eb7b04e43781a73c781b250cfdc48694b71beea3501d",
+                            "candidateProjectionSha256":  "82f4321502b6ed28d982eb7b04e43781a73c781b250cfdc48694b71beea3501d",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-four-a",
+                            "position":  2,
+                            "algorithmId":  "D*L",
+                            "referenceSha256":  "a817f8fd555133a1a348fca88c191da4f8749ae33d5129e5882d9922c78e5d45",
+                            "candidateSha256":  "ad9723dd82ac475013dc8f085bd3dfb17443011d27e6f0616fc9901bb96dcfed",
+                            "referenceProjectionSha256":  "d1bd51116d67995f80f8345821547634c386874f23c8283d6b80163f7abe9c3c",
+                            "candidateProjectionSha256":  "d1bd51116d67995f80f8345821547634c386874f23c8283d6b80163f7abe9c3c",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-four-a",
+                            "position":  3,
+                            "algorithmId":  "IDFF",
+                            "referenceSha256":  "ceaba0cfa3a8ff32725228e15b5062cfea90151da803b15b39b174d7f921b812",
+                            "candidateSha256":  "c7b2081be1ebf8c13bbb3e2ee93f147280b2988fe909ded11680c0140d863583",
+                            "referenceProjectionSha256":  "24b921359e84be19d1867e87d765b860915b372a42259db6af077d51310c37a3",
+                            "candidateProjectionSha256":  "24b921359e84be19d1867e87d765b860915b372a42259db6af077d51310c37a3",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-four-a",
+                            "position":  4,
+                            "algorithmId":  "C-FF",
+                            "referenceSha256":  "e35c1638c5f15d50670083df9007ba8559f7e587b876834641b8265faf315107",
+                            "candidateSha256":  "1372caffa929ad2ab6dc11b80e2b7659354d25528ed6a21213ff0b96d3b3e539",
+                            "referenceProjectionSha256":  "6543147d5835a9cba146fdfda97b767ccbfa04284fea9864dc8393461910973f",
+                            "candidateProjectionSha256":  "6543147d5835a9cba146fdfda97b767ccbfa04284fea9864dc8393461910973f",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-four-b",
+                            "position":  1,
+                            "algorithmId":  "A*-R",
+                            "referenceSha256":  "d134d176fffbd305bbf3f5a004e8edb2666b3ba901cce04dd0370a78c65739c5",
+                            "candidateSha256":  "1b88d07d1b359249153dabaefd995d252f7762decddf50567182d8fdd7058fce",
+                            "referenceProjectionSha256":  "82f4321502b6ed28d982eb7b04e43781a73c781b250cfdc48694b71beea3501d",
+                            "candidateProjectionSha256":  "82f4321502b6ed28d982eb7b04e43781a73c781b250cfdc48694b71beea3501d",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-four-b",
+                            "position":  2,
+                            "algorithmId":  "D*L",
+                            "referenceSha256":  "a817f8fd555133a1a348fca88c191da4f8749ae33d5129e5882d9922c78e5d45",
+                            "candidateSha256":  "59e0cccfe4a2a530938897bcd5582dbc51c90ff21b614335e563a4cc29d4576d",
+                            "referenceProjectionSha256":  "d1bd51116d67995f80f8345821547634c386874f23c8283d6b80163f7abe9c3c",
+                            "candidateProjectionSha256":  "d1bd51116d67995f80f8345821547634c386874f23c8283d6b80163f7abe9c3c",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-four-b",
+                            "position":  3,
+                            "algorithmId":  "IDFF",
+                            "referenceSha256":  "ceaba0cfa3a8ff32725228e15b5062cfea90151da803b15b39b174d7f921b812",
+                            "candidateSha256":  "1f4a04fdfe183aca166f4550a12365d55939307e8857b1624f18e52e1ad60c59",
+                            "referenceProjectionSha256":  "24b921359e84be19d1867e87d765b860915b372a42259db6af077d51310c37a3",
+                            "candidateProjectionSha256":  "24b921359e84be19d1867e87d765b860915b372a42259db6af077d51310c37a3",
+                            "passed":  true
+                        },
+                        {
+                            "fixture":  "positive-four-b",
+                            "position":  4,
+                            "algorithmId":  "C-FF",
+                            "referenceSha256":  "e35c1638c5f15d50670083df9007ba8559f7e587b876834641b8265faf315107",
+                            "candidateSha256":  "1bd16cdc3835e1e5e3c0a99a1565b718dd25a2f41503704296fea7d9f344437b",
+                            "referenceProjectionSha256":  "6543147d5835a9cba146fdfda97b767ccbfa04284fea9864dc8393461910973f",
+                            "candidateProjectionSha256":  "6543147d5835a9cba146fdfda97b767ccbfa04284fea9864dc8393461910973f",
+                            "passed":  true
+                        }
+                    ],
+    "distinctPositiveProcessIdsPassed":  true,
+    "independentProcessRepeatabilityPassed":  true,
+    "negativeFailClosedPassed":  true,
+    "positiveNaturalLockReleasePassed":  true,
+    "negativeLockHygienePassed":  true,
+    "negativeLockHygieneMode":  "controlled-expected-negative-cleanup",
+    "coldNaturalLockReleasePassed":  true,
+    "negativeCheckpointSha256":  "12f176795ab6ee7c4aad72e58aadd933af2ce74a4f47d45f93e5ff5a2fc59bf6",
+    "errors":  [
+
+               ],
+    "formalCampaign":  false,
+    "automaticRetryAttempted":  false,
+    "automaticResumeAttempted":  false,
+    "passed":  true
+}

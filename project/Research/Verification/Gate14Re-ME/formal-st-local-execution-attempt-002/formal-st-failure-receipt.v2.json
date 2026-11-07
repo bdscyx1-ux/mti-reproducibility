@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-formal-st-external-failure-receipt-v2",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "status": "FAILED_CLOSED_AT_ORDINAL_ZERO_INSTRUMENT_SELF_TEST",
+  "authorizationId": "gate14re-me-formal-st-local-collection-successor-e3e12c4f-2622-48c0-9331-6590b6e024f5",
+  "failedAtUtc": "2026-10-26T11:54:17.4431110Z",
+  "failure": {
+    "phase": "UNITY_STARTUP_AND_EXECUTION_CONTEXT_VALIDATION",
+    "mode": "instrument-self-test",
+    "ordinal": 0,
+    "unityPid": 33128,
+    "unityExitCode": 1,
+    "exactSupervisorError": "Unity exited before the required lifecycle phase: phase=UNITY_STARTUP_AND_VALIDATION mode=instrument-self-test ordinal=0 pid=33128 exitCode=1",
+    "exactUnityError": "InvalidOperationException: Execution authorization is absent, incomplete, or exceeds the formal ST boundary.",
+    "measuredFailureReceiptRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-002/_control/failure-receipt.v2.json",
+    "measuredFailureReceiptSha256": "58893338a070722d14deb65d9120dbfc105f401592f135667fb31cd0f8b6c957",
+    "unityLogRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-002/_control/unity-logs/process-0000.unity.log",
+    "unityLogSha256": "17c7d54fef863bc04535c31485e19c0559eb0d95c9f30f3445755732d34f1ca7",
+    "externalStderrRelativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-002/external-supervisor.stderr.v2.log",
+    "externalStderrBytes": 3681,
+    "externalStderrSha256": "dc17c48354fb4f76f1f5ea1964e31549131f82e7e273c988cf1e3e30919b9db7"
+  },
+  "failClosedState": {
+    "supervisorPresent": false,
+    "activeUnityProcessCount": 0,
+    "measuredRootCreated": true,
+    "deliveryRootCreated": false,
+    "processLedgerRows": 0,
+    "failureVoidLedgerRows": 0,
+    "replacementLedgerRows": 0,
+    "formalAlgorithmCollectionPerformed": false,
+    "formalAnalysisStarted": false,
+    "algorithmLaneExecutions": 0,
+    "retryPerformed": false,
+    "resumePerformed": false,
+    "topUpPerformed": false,
+    "replacementPerformed": false,
+    "mergePerformed": false,
+    "skipPerformed": false,
+    "reorderPerformed": false,
+    "forcedTerminationSent": false
+  },
+  "terminalPolicy": {
+    "attempt002ReservedAndNotReusable": true,
+    "freshSuccessorAttemptRequired": true,
+    "scientificDesignChangeRequired": false
+  }
+}

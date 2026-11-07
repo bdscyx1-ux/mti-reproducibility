@@ -1,0 +1,26 @@
+{
+  "kind": "tool_receipt",
+  "step": "monitoring-recovery-readiness-v2",
+  "command": "Finalize the active v2 blinded watcher, acquisition and raw-commit hourly-report contract, bounded recovery state machine, terminal evidence package, active heartbeat and versioned formal-attempt-3 authorization prompt while proving all formal targets remain absent.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 1,
+  "gate_tokens": [
+    "MONITORING-RECOVERY-V2-VALIDATED",
+    "HEARTBEAT-ACTIVE",
+    "PRELAUNCH-REPAIR-CYCLE-1-CONSUMED",
+    "WAIT-FOR-FORMAL-ATTEMPT3-AUTHORIZATION",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "input_sha256": {
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v4.json": "3667055786238faa58d196f847fa49ba4ab531ce084c259e8f3333ece6ea8dbe",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.json": "526a7fc6ff67e3c2ac0201f1f88dcc08b9af155e0a25d0332fd4aab189aa809c",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.md": "0f9bd5b9c14d8407a2a6f4750832d2b4daf25cac7a2d645da2a6e6556fe77df0",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v2.json": "8cb90b20072f0abf1855a2d082a3d08e7865b995b0fac61341ae61a924e81789",
+    "Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v3.md": "9025be75a806bc99fc8124ea6caa7948e706c319e6e6f3af4f363908a7ee3bf5",
+    "Overall_Project_Plan.md": "ea5ea5e3820b76d492ed5a012b8d24b464d8c852ae494164c980cbad557a1ca5",
+    "Next_Session_Checkpoint.md": "b98a299bc560d7006513ddb7592f0d1449121182f38ddaa38e1bcf51b1590650",
+    "C:\\Users\\bdscy\\.codex\\automations\\gate13r-attempt3-hourly-progress\\automation.toml": "c66d41527f075137b2829a291fb303e1d81af940925e739fa3c898cb8f52b0e4"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "active": true,
+  "blindedOperationalOnly": true,
+  "capturedAtAsiaShanghai": "2026-10-09T16:00:00.000000+08:00",
+  "capturedAtUtc": "2026-10-09T08:00:00.000000Z",
+  "currentIdentity": {
+    "abbaOrder": null,
+    "blockId": "block-000101",
+    "campaignId": "shared-campaign-001",
+    "cohort": "shared-four-algorithm",
+    "globalProcessOrdinal": 101,
+    "matchedSuperblockId": null,
+    "scenarioId": "scenario-001",
+    "unityPid": 4242,
+    "unityProcessStartedAtUtc": "2026-10-09T07:55:00.000000Z",
+    "williamsRow": 1
+  },
+  "health": {
+    "classification": "OK",
+    "experimentRetryAuthorized": false,
+    "missingOwnedProcessSinceUtc": null,
+    "monitorMayKillProcess": false,
+    "readAnomalies": [],
+    "readAnomalyCount": 0,
+    "reasonCodes": []
+  },
+  "notificationReason": [
+    "ACQUISITION-STARTED"
+  ],
+  "notify": true,
+  "phase": "PHASE-A-ACQUISITION",
+  "progress": {
+    "completedProcesses": 101,
+    "completedSamples": 300,
+    "lastProgressAtUtc": "2026-10-09T08:00:00.000000Z",
+    "processPercent": 2.815315315,
+    "samplePercent": 2.948113208
+  },
+  "schemaVersion": 1,
+  "snapshotKind": "gate13r-pr2-attempt3-operational-progress-v1",
+  "sourceIdentity": {
+    "candidateConfigSha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+    "configPath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-2\\fixture-work\\counter-regression\\synthetic-config.json",
+    "configSha256": "e253e9575ec856d62fa9c4dbb4c01d01d6d3508934e562585ffa3d1611fe401a",
+    "formalRoot": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-2\\fixture-work\\counter-regression\\synthetic-formal-root",
+    "monitorVersion": "gate13r-pr2-attempt3-monitoring-recovery-v1",
+    "receiptPath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-2\\fixture-work\\counter-regression\\synthetic-receipt.json",
+    "receiptSha256": "d4b6964707f4f6ff0d0847f9c2ce6686a0321cf5736c60d1a634eb96bfde7bc8",
+    "scheduleSha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "statusPath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-2\\fixture-work\\counter-regression\\synthetic-status.json",
+    "statusSha256": "64901aa53a344c64e70ad3404e5615505a4ff1f065ec6c4d7aac0b94d3804a91"
+  },
+  "status": "ACQUISITION-RUNNING",
+  "storage": {
+    "outputFileCount": 900,
+    "rawBytes": 123456789
+  },
+  "telemetry": {
+    "advisoryCrossingCount": 2,
+    "osAvailablePhysicalMemoryBytes": 19999000000,
+    "osPrivateMemoryBytes": 451000000,
+    "osQueryStatus": "MATCHED",
+    "osWorkingSetBytes": 501000000,
+    "statusAvailablePhysicalMemoryBytes": 20000000000,
+    "statusPrivateMemoryBytes": 450000000,
+    "statusWorkingSetBytes": 500000000
+  },
+  "timing": {
+    "conservativeProcessesPerHour": 50.0,
+    "currentBlockElapsedSeconds": 300.0,
+    "elapsedSeconds": 7200.0,
+    "etaHours": 86.3,
+    "etaStatus": "AVAILABLE",
+    "lastCheckpointAgeSeconds": 60.0,
+    "overallProcessesPerHour": 50.0,
+    "reportSlot": 2,
+    "rollingProcessesPerHour": null,
+    "startedAtUtc": "2026-10-09T06:00:00.000000Z",
+    "statusAgeSeconds": 0.0
+  },
+  "totals": {
+    "campaigns": 74,
+    "matchedSuperblocks": 1008,
+    "processes": 3552,
+    "samples": 10176
+  }
+}

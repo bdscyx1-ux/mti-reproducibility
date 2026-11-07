@@ -1,0 +1,47 @@
+schema_version: 1
+ledger_id: gate13r-pr1-rq-aligned-nonexecuting-run-ledger-v1
+authorization_id: gate13r-pr1-rq-aligned-nonexecuting-v1
+created_at_utc: '2026-10-08T10:40:36.7028036Z'
+local_timezone: Asia/Shanghai
+formal_campaign_authorized: false
+unity_launch_authorized: false
+entries:
+  - ordinal: 1
+    stage: PREWRITE_PRESERVATION_AUDIT
+    status: PASSED
+    evidence: Research/Gate13R_RQAligned_PreWrite_Preservation_Audit.v1.json
+  - ordinal: 2
+    stage: PREREGISTRATION_FREEZE
+    status: PASSED
+    evidence:
+      - Research/Gate13R_RQAligned_Preregistration_Amendment.v1.json
+      - Research/Gate13R_RQAligned_Preregistration_Specification.v1.md
+      - Research/Gate13R_RQAligned_Statistical_Analysis_Plan.v1.md
+      - Research/Gate13R_RQAligned_Metric_Registry.v1.json
+      - Research/Gate13R_RQAligned_Contrast_Registry.v1.json
+  - ordinal: 3
+    stage: GATE12R_V4_READ_ONLY_REANALYSIS
+    status: PASSED
+    evidence: Research/Analysis/Gate13R_RQAligned_Preregistration/v1
+  - ordinal: 4
+    stage: VALIDATION_ONLY_FINAL_AUDIT
+    status: PASSED
+    evidence: Research/Verification/Gate13R_RQAligned_Preregistration/v8-post-plan-audit/FinalAudit.summary.json
+  - ordinal: 5
+    stage: PLAN_UPDATE
+    status: PASSED
+    evidence:
+      - Research/Overall_Project_Plan.md
+      - Research/Next_Session_Checkpoint.md
+  - ordinal: 6
+    stage: TERMINAL_CHECKPOINT
+    status: PASSED
+    evidence:
+      - Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.json
+      - Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.md
+      - Research/Gate13R_RQAligned_Next_Authorization_Prompt.md
+failures_retained:
+  - Research/Verification/Gate13R_RQAligned_Preregistration/v1-attempt1-tree-collation
+  - Research/Verification/Gate13R_RQAligned_Preregistration/v2-analysis-dryrun-a
+  - Research/Verification/Gate13R_RQAligned_Preregistration/v5-final
+  - Research/Verification/Gate13R_RQAligned_Preregistration/v6-final-audit-debug

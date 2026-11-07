@@ -1,0 +1,68 @@
+{
+  "schema": "gate14re-me-formal-st-read-only-acceptance-failure-evidence-seal-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "SEALED_FAIL_CLOSED_ACCEPTANCE_ATTEMPT_NO_RETRY",
+  "acceptanceAttempt": "attempt-001",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "createdAtUtc": "2026-10-30T11:00:22.238Z",
+  "evidenceFiles": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/acceptance-execution-authorization.v1.json",
+      "sha256": "5caf6fc5d4566449f890c833af68bb647f7ac5acba4e4f47710e7d5c34f787b4"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/recovery-compatible-acceptance-contract.v1.json",
+      "sha256": "dbda102cb9fbbec995b35f389868904ceff5fc05ef81c8e87ff059de1dec23af"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/gate14re_me_formal_st_acceptance_attempt003_adapter_v1.py",
+      "sha256": "b4a5774bcbbdc7b3b76bb5fc2050f61c8b90ecfb0ef9c3bac01d1a1501e79da9"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/control-validation.v1.json",
+      "sha256": "5929cbb0c28ba294a12296299e19262e6a2d61ccc2aece7af82544e39c248a54"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/acceptance-launch-contract.v1.json",
+      "sha256": "a3f37676d8e447e2e486a4c96d91aef2ac25c01660da8f468fbd110cac729a6a"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/prelaunch-audit.v1.json",
+      "sha256": "97161f89d7bf41b50ac23156eabf70c1457fba6c307fc7b264107896b6ccb7d7"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/external-acceptance-launch-observation.v1.json",
+      "sha256": "682380f5c13dfe23b14b9052c588c2ee9cc388ef0a189d9f4c418a9b0cd623c9"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-read-only-acceptance-attempt-001/acceptance-failure-observation.v1.json",
+      "sha256": "c628411dcf2ca9235e854081aaf983804108c96621ee8b332de2f0e926d6c019"
+    },
+    {
+      "relativePath": "Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-001/recovery-compatibility-validation.v1.json",
+      "sha256": "652782ba3c0dcd7d55ade5fd3b629eff942cfe20cdc13a78f03a71bb595ee14f"
+    },
+    {
+      "relativePath": "Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-001/failure-receipt.v5.json",
+      "sha256": "f8d68768ff10fd391a26ac3bc2aa9888ead0d1a65fee62dee9de80e31e462aee"
+    }
+  ],
+  "sourceAcquisitionBindings": {
+    "acquisitionFreezeManifestRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003/_control/acquisition-freeze-manifest.v5.json",
+    "acquisitionFreezeManifestSha256": "6ff425c9fbd2c8a8c8d7d9855283aede09f61fb090e56ca7e89e406572f7459c",
+    "acquisitionTerminalReceiptRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003/_control/acquisition-terminal-receipt.v5.json",
+    "acquisitionTerminalReceiptSha256": "87ee435e9e0aaa564ed8c2f989b65588d66198b492a315625a8d2f6a5b818d07",
+    "replacementLedgerRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003/_control/replacement-ledger.raw.v5.jsonl",
+    "replacementLedgerSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "closure": {
+    "sourceRootsModified": false,
+    "typedParquetCreated": false,
+    "acceptanceTerminalPass": false,
+    "formalAnalysisAuthorized": false,
+    "formalAnalysisPerformed": false,
+    "automaticRetryPerformed": false,
+    "sameAttemptRetryPermitted": false,
+    "newExplicitAuthorizationRequired": true
+  }
+}

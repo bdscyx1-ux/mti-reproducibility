@@ -1,0 +1,43 @@
+{
+  "schema": "gate14re-me-load-qualification-read-only-acceptance-execution-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "load-qualification-read-only-acceptance-attempt-001",
+  "authorizationId": "gate14re-me-load-qualification-read-only-acceptance-attempt-001-86192a4d-24df-4403-92e8-4ab259aa3f15",
+  "status": "AUTHORIZED_ONCE_READ_ONLY_OFFLINE_ACCEPTANCE_V4_3",
+  "authority": {
+    "basis": "User explicitly authorized the recommended sequence through item 9, including item 6 independent read-only offline acceptance after raw acquisition freeze.",
+    "userScopeRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-011/user-authorization-scope.v1.json",
+    "userScopeSha256": "9ae988fd60866f9aeea852b1e659127bf8674d919978002438761f21a56e1678"
+  },
+  "source": {
+    "rawRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-009",
+    "acquisitionTerminalRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-009/_control/acquisition-terminal-receipt.v4_1.json",
+    "acquisitionTerminalSha256": "2adade4fdbf952bb7883bc956246268a65e31715df95c23280647316980b7ae0",
+    "acquisitionFreezeManifestRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-009/_control/acquisition-freeze-manifest.v4_1.json",
+    "acquisitionFreezeManifestSha256": "e9f0c54ef74a5e094452cbc8b3cfa91f8c4dd8ea062a863e8b5f76350e758702",
+    "sourceMustRemainReadOnly": true
+  },
+  "frozenAcceptance": {
+    "contractRelativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acceptance-contract.v4_3.json",
+    "contractSha256": "dfa6ded73db0ff97dca28880b81882f1a4babd44ea52e7ed963f338fb2dd0c1f",
+    "launcherRelativePath": "Research/Gate14Re-ME/Execution/v4/Run-Gate14ReMEReadOnlyAcceptance.v4_3.ps1",
+    "launcherSha256": "a9396c4bc469b4688e732759ccceb73b59637331f8f50a9fe51ce7852ebbac9e",
+    "toolRelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_acceptance_v4_3.py",
+    "toolSha256": "cb0d2b9c03fe90e7e56e48b2702c65786f86006934255631faab9275a1527a44"
+  },
+  "output": {
+    "acceptanceEvidenceRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-read-only-acceptance-attempt-001",
+    "deliveryRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-009",
+    "deliveryMustBeNew": true,
+    "sameRootRetryOrOverwriteAuthorized": false
+  },
+  "scientificBoundary": {
+    "algorithmObservationsMayBeInterpreted": false,
+    "algorithmEffectsMayBeCompared": false,
+    "rankingOrWinnerMayBeComputed": false,
+    "formalCollectionMayBeStarted": false,
+    "formalAnalysisMayBeStarted": false,
+    "migrationPackageBuildMayBeStarted": false
+  },
+  "createdAtUtc": "2026-10-19T22:18:18.0854594Z"
+}

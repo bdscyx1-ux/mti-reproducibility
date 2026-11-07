@@ -1,0 +1,66 @@
+{
+  "analysisContractSha256": "208a9a4393d5a610c065a64f3dbb52747c0597d391a452b426d09e7d314272f2",
+  "analyzerSchema": "gate14re-formal-phase-b-analyzer-v1",
+  "analyzerSha256": "b057225e28d53dbf556201a9649e691d2e02d407b69488a00bdb704be45985be",
+  "checkCount": 10,
+  "checks": [
+    {
+      "detail": "",
+      "name": "t-cdf-zero",
+      "status": "PASS"
+    },
+    {
+      "detail": "2.228138851986272",
+      "name": "t-ppf-known-answer",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "t-cdf-roundtrip",
+      "status": "PASS"
+    },
+    {
+      "detail": "[0.04, 0.09, 0.09, 0.2]",
+      "name": "holm-known-answer",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "wilson-bounds",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "stratified-ratio-known-answer",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "simultaneous-wider-than-ordinary",
+      "status": "PASS"
+    },
+    {
+      "detail": "UNIQUE_M1_WINNER_WITH_M2_GUARD_PASS",
+      "name": "synthetic-clear-winner",
+      "status": "PASS"
+    },
+    {
+      "detail": "NO_UNIQUE_WINNER",
+      "name": "synthetic-no-forced-winner",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "cluster-model-known-coefficients",
+      "status": "PASS"
+    }
+  ],
+  "completedUtc": "2026-10-15T01:45:28.506312Z",
+  "formalAnalysisRootCreated": false,
+  "formalRawOpened": false,
+  "gate15Started": false,
+  "numpyVersion": "2.3.5",
+  "pythonVersion": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "schema": "gate14re-phase-b-analyzer-synthetic-validation-receipt-v1",
+  "status": "PASS"
+}

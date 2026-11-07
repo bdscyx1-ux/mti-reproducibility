@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "amendmentKind": "gate13r-pr2-attempt2-embedded-block-sample-contract-amendment-v2",
+  "status": "ACTIVE-SUPERSEDES-V1-TARGET-VERSION-IDENTITY-ONLY",
+  "supersedes": "Research/Gate13R_PR2_Attempt2_Block_Sample_Schema_Amendment.v1.json",
+  "supersessionReason": "The create-new derivation attempt 1 was preserved after an internal occurrence-count assertion; active implementation versions were incremented without changing the contract.",
+  "sourceProducer": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV2.cs",
+    "sha256": "af9156588bc259dfa8cafeec4adb82c93a2b07f5e2ae772b4b0fd4115dce28a8",
+    "className": "DDM.Research.Editor.Gate13RPR2FormalBatchCommandV2"
+  },
+  "failedPartialTarget": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV3.cs",
+    "sha256": "a131fcb52e2c1f5427ff9f976a82b70ae1caae3249bfe00a043961c8659f9a9c",
+    "status": "PRESERVED-READ-ONLY-EXCLUDED-FROM-ACTIVE-STACK"
+  },
+  "activeTargetProducer": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV4.cs",
+    "className": "DDM.Research.Editor.Gate13RPR2FormalBatchCommandV4"
+  },
+  "affectedDocument": {
+    "manifestKind": "gate13r-pr2-rq-aligned-s48-h48-formal-block-manifest-v1",
+    "jsonPointer": "/samples/*/formalCampaign",
+    "required": true,
+    "jsonType": "boolean",
+    "const": true,
+    "missingPolicy": "FAIL-CLOSED",
+    "falsePolicy": "FAIL-CLOSED",
+    "nullPolicy": "FAIL-CLOSED",
+    "wrongTypePolicy": "FAIL-CLOSED",
+    "coercionAllowed": false,
+    "defaultAllowed": false
+  },
+  "scientificDesignChanged": false,
+  "frozenScheduleChanged": false,
+  "formalStatisticalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "immutable": true
+}

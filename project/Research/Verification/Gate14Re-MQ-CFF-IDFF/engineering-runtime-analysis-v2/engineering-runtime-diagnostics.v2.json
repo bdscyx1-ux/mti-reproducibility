@@ -1,0 +1,364 @@
+{
+  "schema": "gate14re-mq-engineering-runtime-diagnostics-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "status": "PASS_ENGINEERING_RESOURCE_DIAGNOSIS_FORMAL_MQ_DESIGN_NOT_FROZEN",
+  "sourceExecutionId": "gate14re-mq-engineering-attempt-001-c8d8e31e-74b5-4633-bfa3-773f84f6e3a6",
+  "qualification": {
+    "batchCount": 24,
+    "laneRows": 384,
+    "summaryRows": 24,
+    "allHardChecksPassed": true
+  },
+  "wholeProcess": {
+    "observedSeconds": 287.32,
+    "summedBatchWallSeconds": 272.37834,
+    "cffSummedBatchWallSeconds": 93.34596,
+    "idffSummedBatchWallSeconds": 179.03238,
+    "residualSeconds": 14.94166,
+    "residualInterpretation": "Identifiable only as whole-process time outside the 24 recorded batch walls; it is not decomposed into startup, import, or shutdown components."
+  },
+  "singleCcdScaling": [
+    {
+      "algorithmId": "C-FF",
+      "topologyRole": "LARGE_L3_CCD",
+      "conditionId": "MQ-LARGE-L3-W1",
+      "workerCount": 1,
+      "directReferenceConditionId": "ST-DIRECT-LARGE-L3",
+      "batchWallSeconds": 12.747832,
+      "endToEndLaneThroughputPerSecond": 1.255115,
+      "technicalWallTimeSpeedup": 0.972306,
+      "technicalThroughputRatio": 0.972306,
+      "technicalParallelEfficiency": 0.972306
+    },
+    {
+      "algorithmId": "C-FF",
+      "topologyRole": "LARGE_L3_CCD",
+      "conditionId": "MQ-LARGE-L3-W2",
+      "workerCount": 2,
+      "directReferenceConditionId": "ST-DIRECT-LARGE-L3",
+      "batchWallSeconds": 9.540564,
+      "endToEndLaneThroughputPerSecond": 1.67705,
+      "technicalWallTimeSpeedup": 1.299168,
+      "technicalThroughputRatio": 1.299168,
+      "technicalParallelEfficiency": 0.649584
+    },
+    {
+      "algorithmId": "C-FF",
+      "topologyRole": "LARGE_L3_CCD",
+      "conditionId": "MQ-LARGE-L3-W4",
+      "workerCount": 4,
+      "directReferenceConditionId": "ST-DIRECT-LARGE-L3",
+      "batchWallSeconds": 5.964402,
+      "endToEndLaneThroughputPerSecond": 2.682583,
+      "technicalWallTimeSpeedup": 2.078129,
+      "technicalThroughputRatio": 2.078129,
+      "technicalParallelEfficiency": 0.519532
+    },
+    {
+      "algorithmId": "C-FF",
+      "topologyRole": "LARGE_L3_CCD",
+      "conditionId": "MQ-LARGE-L3-W8",
+      "workerCount": 8,
+      "directReferenceConditionId": "ST-DIRECT-LARGE-L3",
+      "batchWallSeconds": 4.817263,
+      "endToEndLaneThroughputPerSecond": 3.321388,
+      "technicalWallTimeSpeedup": 2.572995,
+      "technicalThroughputRatio": 2.572995,
+      "technicalParallelEfficiency": 0.321624
+    },
+    {
+      "algorithmId": "C-FF",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "conditionId": "MQ-HIGH-FREQUENCY-W1",
+      "workerCount": 1,
+      "directReferenceConditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "batchWallSeconds": 10.616746,
+      "endToEndLaneThroughputPerSecond": 1.507053,
+      "technicalWallTimeSpeedup": 1.007604,
+      "technicalThroughputRatio": 1.007604,
+      "technicalParallelEfficiency": 1.007604
+    },
+    {
+      "algorithmId": "C-FF",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "conditionId": "MQ-HIGH-FREQUENCY-W2",
+      "workerCount": 2,
+      "directReferenceConditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "batchWallSeconds": 9.072441,
+      "endToEndLaneThroughputPerSecond": 1.763583,
+      "technicalWallTimeSpeedup": 1.179118,
+      "technicalThroughputRatio": 1.179118,
+      "technicalParallelEfficiency": 0.589559
+    },
+    {
+      "algorithmId": "C-FF",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "conditionId": "MQ-HIGH-FREQUENCY-W4",
+      "workerCount": 4,
+      "directReferenceConditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "batchWallSeconds": 5.733541,
+      "endToEndLaneThroughputPerSecond": 2.790596,
+      "technicalWallTimeSpeedup": 1.865772,
+      "technicalThroughputRatio": 1.865772,
+      "technicalParallelEfficiency": 0.466443
+    },
+    {
+      "algorithmId": "C-FF",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "conditionId": "MQ-HIGH-FREQUENCY-W8",
+      "workerCount": 8,
+      "directReferenceConditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "batchWallSeconds": 4.56072,
+      "endToEndLaneThroughputPerSecond": 3.508218,
+      "technicalWallTimeSpeedup": 2.345568,
+      "technicalThroughputRatio": 2.345568,
+      "technicalParallelEfficiency": 0.293196
+    },
+    {
+      "algorithmId": "IDFF",
+      "topologyRole": "LARGE_L3_CCD",
+      "conditionId": "MQ-LARGE-L3-W1",
+      "workerCount": 1,
+      "directReferenceConditionId": "ST-DIRECT-LARGE-L3",
+      "batchWallSeconds": 25.111392,
+      "endToEndLaneThroughputPerSecond": 0.637161,
+      "technicalWallTimeSpeedup": 0.967691,
+      "technicalThroughputRatio": 0.967691,
+      "technicalParallelEfficiency": 0.967691
+    },
+    {
+      "algorithmId": "IDFF",
+      "topologyRole": "LARGE_L3_CCD",
+      "conditionId": "MQ-LARGE-L3-W2",
+      "workerCount": 2,
+      "directReferenceConditionId": "ST-DIRECT-LARGE-L3",
+      "batchWallSeconds": 18.351491,
+      "endToEndLaneThroughputPerSecond": 0.871864,
+      "technicalWallTimeSpeedup": 1.324147,
+      "technicalThroughputRatio": 1.324147,
+      "technicalParallelEfficiency": 0.662073
+    },
+    {
+      "algorithmId": "IDFF",
+      "topologyRole": "LARGE_L3_CCD",
+      "conditionId": "MQ-LARGE-L3-W4",
+      "workerCount": 4,
+      "directReferenceConditionId": "ST-DIRECT-LARGE-L3",
+      "batchWallSeconds": 10.712705,
+      "endToEndLaneThroughputPerSecond": 1.493554,
+      "technicalWallTimeSpeedup": 2.268341,
+      "technicalThroughputRatio": 2.268341,
+      "technicalParallelEfficiency": 0.567085
+    },
+    {
+      "algorithmId": "IDFF",
+      "topologyRole": "LARGE_L3_CCD",
+      "conditionId": "MQ-LARGE-L3-W8",
+      "workerCount": 8,
+      "directReferenceConditionId": "ST-DIRECT-LARGE-L3",
+      "batchWallSeconds": 9.706667,
+      "endToEndLaneThroughputPerSecond": 1.648352,
+      "technicalWallTimeSpeedup": 2.503441,
+      "technicalThroughputRatio": 2.503441,
+      "technicalParallelEfficiency": 0.31293
+    },
+    {
+      "algorithmId": "IDFF",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "conditionId": "MQ-HIGH-FREQUENCY-W1",
+      "workerCount": 1,
+      "directReferenceConditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "batchWallSeconds": 20.175908,
+      "endToEndLaneThroughputPerSecond": 0.793025,
+      "technicalWallTimeSpeedup": 1.002981,
+      "technicalThroughputRatio": 1.002981,
+      "technicalParallelEfficiency": 1.002981
+    },
+    {
+      "algorithmId": "IDFF",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "conditionId": "MQ-HIGH-FREQUENCY-W2",
+      "workerCount": 2,
+      "directReferenceConditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "batchWallSeconds": 17.272358,
+      "endToEndLaneThroughputPerSecond": 0.926336,
+      "technicalWallTimeSpeedup": 1.171586,
+      "technicalThroughputRatio": 1.171586,
+      "technicalParallelEfficiency": 0.585793
+    },
+    {
+      "algorithmId": "IDFF",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "conditionId": "MQ-HIGH-FREQUENCY-W4",
+      "workerCount": 4,
+      "directReferenceConditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "batchWallSeconds": 10.116633,
+      "endToEndLaneThroughputPerSecond": 1.581554,
+      "technicalWallTimeSpeedup": 2.000276,
+      "technicalThroughputRatio": 2.000276,
+      "technicalParallelEfficiency": 0.500069
+    },
+    {
+      "algorithmId": "IDFF",
+      "topologyRole": "HIGH_FREQUENCY_CCD",
+      "conditionId": "MQ-HIGH-FREQUENCY-W8",
+      "workerCount": 8,
+      "directReferenceConditionId": "ST-DIRECT-HIGH-FREQUENCY",
+      "batchWallSeconds": 9.138104,
+      "endToEndLaneThroughputPerSecond": 1.75091,
+      "technicalWallTimeSpeedup": 2.21447,
+      "technicalThroughputRatio": 2.21447,
+      "technicalParallelEfficiency": 0.276809
+    }
+  ],
+  "matchedCcdDescriptions": [
+    {
+      "algorithmId": "C-FF",
+      "workerCount": 1,
+      "highFrequencyToLargeL3BatchWallRatio": 0.832828,
+      "highFrequencyToLargeL3ThroughputRatio": 1.200729,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "C-FF",
+      "workerCount": 2,
+      "highFrequencyToLargeL3BatchWallRatio": 0.950933,
+      "highFrequencyToLargeL3ThroughputRatio": 1.051598,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "C-FF",
+      "workerCount": 4,
+      "highFrequencyToLargeL3BatchWallRatio": 0.961294,
+      "highFrequencyToLargeL3ThroughputRatio": 1.040265,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "C-FF",
+      "workerCount": 8,
+      "highFrequencyToLargeL3BatchWallRatio": 0.946745,
+      "highFrequencyToLargeL3ThroughputRatio": 1.05625,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "IDFF",
+      "workerCount": 1,
+      "highFrequencyToLargeL3BatchWallRatio": 0.803456,
+      "highFrequencyToLargeL3ThroughputRatio": 1.244623,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "IDFF",
+      "workerCount": 2,
+      "highFrequencyToLargeL3BatchWallRatio": 0.941196,
+      "highFrequencyToLargeL3ThroughputRatio": 1.062477,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "IDFF",
+      "workerCount": 4,
+      "highFrequencyToLargeL3BatchWallRatio": 0.944358,
+      "highFrequencyToLargeL3ThroughputRatio": 1.05892,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "IDFF",
+      "workerCount": 8,
+      "highFrequencyToLargeL3BatchWallRatio": 0.941426,
+      "highFrequencyToLargeL3ThroughputRatio": 1.062219,
+      "causalAttributionPermitted": false
+    }
+  ],
+  "dualCcdDescriptions": [
+    {
+      "algorithmId": "C-FF",
+      "conditionId": "MQ-DUAL-CCD-W8-4PLUS4",
+      "workerCount": 8,
+      "batchWallSeconds": 4.547015,
+      "endToEndLaneThroughputPerSecond": 3.518792,
+      "processCpuEquivalentCoreCount": 2.443224,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "C-FF",
+      "conditionId": "MQ-DUAL-CCD-W16-8PLUS8",
+      "workerCount": 16,
+      "batchWallSeconds": 2.65316,
+      "endToEndLaneThroughputPerSecond": 6.030545,
+      "processCpuEquivalentCoreCount": 5.818534,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "IDFF",
+      "conditionId": "MQ-DUAL-CCD-W8-4PLUS4",
+      "workerCount": 8,
+      "batchWallSeconds": 9.170958,
+      "endToEndLaneThroughputPerSecond": 1.744638,
+      "processCpuEquivalentCoreCount": 2.271096,
+      "causalAttributionPermitted": false
+    },
+    {
+      "algorithmId": "IDFF",
+      "conditionId": "MQ-DUAL-CCD-W16-8PLUS8",
+      "workerCount": 16,
+      "batchWallSeconds": 4.740033,
+      "endToEndLaneThroughputPerSecond": 3.375504,
+      "processCpuEquivalentCoreCount": 4.783063,
+      "causalAttributionPermitted": false
+    }
+  ],
+  "formalRuntimePlanning": {
+    "processesPerMatchedBlock": 24,
+    "nominalFreshProcessSecondsPerBlock": 630.978187,
+    "budgets": [
+      {
+        "B": 36,
+        "freshUnityProcessCount": 864,
+        "inProcessLowerBoundHours": 2.723783,
+        "freshProcessNominalHours": 6.309782,
+        "conservativeHoursAt1_5x": 9.464673,
+        "stressHoursAt1_9x": 11.988586,
+        "reachesSevenDayGateUnderStress": false
+      },
+      {
+        "B": 72,
+        "freshUnityProcessCount": 1728,
+        "inProcessLowerBoundHours": 5.447567,
+        "freshProcessNominalHours": 12.619564,
+        "conservativeHoursAt1_5x": 18.929346,
+        "stressHoursAt1_9x": 23.977171,
+        "reachesSevenDayGateUnderStress": false
+      },
+      {
+        "B": 108,
+        "freshUnityProcessCount": 2592,
+        "inProcessLowerBoundHours": 8.17135,
+        "freshProcessNominalHours": 18.929346,
+        "conservativeHoursAt1_5x": 28.394018,
+        "stressHoursAt1_9x": 35.965757,
+        "reachesSevenDayGateUnderStress": false
+      },
+      {
+        "B": 144,
+        "freshUnityProcessCount": 3456,
+        "inProcessLowerBoundHours": 10.895134,
+        "freshProcessNominalHours": 25.239127,
+        "conservativeHoursAt1_5x": 37.858691,
+        "stressHoursAt1_9x": 47.954342,
+        "reachesSevenDayGateUnderStress": false
+      }
+    ],
+    "selectedB": null,
+    "selectionReason": "Formal MQ MIPE, power target, multiplicity, stopping rule, and B-selection rule remain unfrozen."
+  },
+  "interpretationBoundary": {
+    "formalEffectEstimate": false,
+    "formalHypothesisTest": false,
+    "algorithmQualityComparison": false,
+    "winnerRanking": false,
+    "causalCcdAttribution": false,
+    "formalMqCollectionLaunched": false,
+    "formalAnalysisLaunched": false
+  },
+  "createdAtUtc": "2026-10-21T05:24:21.8392817Z"
+}

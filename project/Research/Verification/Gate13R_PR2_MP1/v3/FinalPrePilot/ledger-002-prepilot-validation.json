@@ -1,0 +1,22 @@
+{
+  "kind": "tool_receipt",
+  "step": "mp1-prepilot-validation",
+  "command": "Versioned MP1 static/unit/parser/binding/Unity compile/self-test/telemetry/positive-negative block/failure-precedence validation, followed by a read-only 28020-file attempt-2 preservation audit and final environment audit.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 2,
+  "input_paths": [
+    "Gate13R_PR2_MP1_PrePilot_Final_Audit.v1.json",
+    "Gate13R_PR2_MP1_PrePilot_Readiness_Checkpoint.v1.json",
+    "Gate13R_PR2_MP1_Provenance.v1.json",
+    "Gate13R_PR2_MP1_Pilot_Config.v1.json",
+    "Gate13R_PR2_MP1_Pilot_Schedule.v1.jsonl",
+    "Gate13R_PR2_MP1_Pilot_Schedule_Manifest.v1.json"
+  ],
+  "output_sha256": "0c38ac7b981ee16f93b11cb00c278f86953766be51680a490cec9b05d22503d0",
+  "gate_tokens": [
+    "PRE-PILOT-VALIDATED",
+    "MEASURED-PILOT-AUTHORIZED-BUT-NOT-STARTED",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED"
+  ]
+}

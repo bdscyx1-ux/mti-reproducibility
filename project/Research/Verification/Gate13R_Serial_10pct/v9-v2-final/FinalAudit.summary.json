@@ -1,0 +1,193 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-serial-10pct-nonexecuting-final-audit-summary-v2",
+    "savedAtUtc":  "2026-10-08T09:24:06.3667961Z",
+    "status":  "GATE13R-SERIAL-10PCT-NONEXECUTING-PREPARATION-PASSED-FORMAL-NOT-AUTHORIZED",
+    "formalDesignId":  "gate13r-one-fresh-unity-process-per-williams-block-10pct-uncapped-serial-v2",
+    "topology":  {
+                     "maximumConcurrentUnityEditorProcesses":  1,
+                     "laneCount":  1,
+                     "oneFreshUnityEditorProcessPerCompleteWilliamsBlock":  true,
+                     "parallelFallbackAllowed":  false,
+                     "mixedTopologyAllowed":  false
+                 },
+    "scale":  {
+                  "campaignCount":  74,
+                  "blockProcessCount":  11160,
+                  "sampleCount":  31536,
+                  "sharedBlocksPerCampaign":  144,
+                  "perAgentBlocksPerCampaign":  204,
+                  "groupedFieldBlocksPerCampaign":  108
+              },
+    "runtimeProjection":  {
+                              "p50Hours":  64.830802096,
+                              "p95Hours":  83.904223147,
+                              "recommendedMaintenanceWindowHours":  96,
+                              "hardWallClockLimitHours":  null,
+                              "old36HourLimitFeasible":  false,
+                              "estimateOnly":  true
+                          },
+    "storage":  {
+                    "projectedRawBytesWithSafety":  43885575792,
+                    "reserveBytes":  42949672960,
+                    "minimumLaunchFreeBytes":  86835248752,
+                    "validationOnlyObservedFreeBytes":  276620062720,
+                    "validationOnlyObservationAuthorizesLaunch":  false,
+                    "freshLaunchCheckRequired":  true
+                },
+    "boundHashes":  [
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Selection.v1.json",
+                            "sha256":  "69dd7f80a5bf415ae4d666fbd8e50fce134bc08150e674fcd16c0ca1917f553c",
+                            "rawBytes":  1880
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Redesign_Specification.v1.md",
+                            "sha256":  "63a417587f05b254f2e42bc8f51b350d920f132795949d95cb7152190b44a940",
+                            "rawBytes":  7731
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Test_Design.v1.md",
+                            "sha256":  "39cd0a124a6e7f2fca056fd5b887206d8a180e05a493bf552da18fd4bda3ccf3",
+                            "rawBytes":  4358
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Readiness_Amendment.v1.json",
+                            "sha256":  "f0a23f29a7b75afb2ebd981bb341d5c3ef2f4bb875b5cd0faf0ead62fe5c4359",
+                            "rawBytes":  2426
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Formal_Plan.v1.json",
+                            "sha256":  "73bb2ca8ac4862f1addd227e52ec79d01f69f9c2f26910dc85004bc6e09b99ce",
+                            "rawBytes":  3433
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Gate12R_v4_Evidence_Audit.v1.json",
+                            "sha256":  "84d47ac735a341ae55d8320e83c40833708409c90da47dd40d77cb4b5e14db5f",
+                            "rawBytes":  13552
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Provenance.v1.json",
+                            "sha256":  "3c86b284010e2f3eea997a1773e85560e971ceafccb8e0652fa6048301d7b388",
+                            "rawBytes":  4270
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Formal_Campaign_Config.v2.json",
+                            "sha256":  "faaec5613a2625aee462038305310e229c7cf8fdf67edb800a0b3eb256f1a300",
+                            "rawBytes":  422141
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Formal_Williams_Block_Schedule.v2.jsonl",
+                            "sha256":  "d9300cce732e12a7b90ec43ad9d5f8fe52cbad58da713c25879754eb31ea0ead",
+                            "rawBytes":  20279232
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Formal_Williams_Block_Schedule_Manifest.v2.json",
+                            "sha256":  "8bf87ae8c206355930dd6b720756216ef74052ce9d0551680e3a91933a970dc9",
+                            "rawBytes":  7896
+                        },
+                        {
+                            "relativePath":  "Research/Gate13R_Serial_10pct_Formal_Preparation_Provenance.v2.json",
+                            "sha256":  "409b79506b006378c79a0cb777909e0157b9917a2e439c90d59d0679b2340f7b",
+                            "rawBytes":  16397
+                        },
+                        {
+                            "relativePath":  "Research/Gate13RSerial10pctFormalPreparationV2.psm1",
+                            "sha256":  "42896b6c1718a62e343c08ab0caeaa464ecc234cf920d67245f33826d47bf0c2",
+                            "rawBytes":  17105
+                        },
+                        {
+                            "relativePath":  "Research/New-Gate13RSerial10pctFormalPreparationV2.ps1",
+                            "sha256":  "69b2fbe0d6a58e88f4b78795dd939f732685da4545abadccae0885cf78c036b1",
+                            "rawBytes":  27315
+                        },
+                        {
+                            "relativePath":  "Research/Test-Gate13RSerial10pctFormalScheduleV2.ps1",
+                            "sha256":  "c12686fd056ac637b9b74bc9454063addc061c5dcc0fa869ed1d86ad9d905e18",
+                            "rawBytes":  13532
+                        },
+                        {
+                            "relativePath":  "Research/Run-Gate13RSerial10pctFormalCampaignV2.ps1",
+                            "sha256":  "8bdd8f7b1edc8fc84f8ef35099f103fd55f789f352e47537874f2095a6116770",
+                            "rawBytes":  12961
+                        },
+                        {
+                            "relativePath":  "Research/Run-Gate13RSerial10pctFormalBlockV2.ps1",
+                            "sha256":  "b4827065ec609f148fa0dd58959cb79e5c9bf54f35fd7aa8b64ef172d820fe1b",
+                            "rawBytes":  12358
+                        },
+                        {
+                            "relativePath":  "Research/Test-Gate13RSerial10pctReadinessV1.ps1",
+                            "sha256":  "6b05a4625c73c0838bffa027c180a98955a29d1039a17ed4131eed4beffe56bc",
+                            "rawBytes":  26906
+                        },
+                        {
+                            "relativePath":  "Assets/_Scripts/Research/Editor/Gate13RProcessReuseFormalBatchCommandV1.cs",
+                            "sha256":  "4ddf154a4ac27d58f3c873d5d983b7ca6abdf2db9b51969ad48b9347cda938d1",
+                            "rawBytes":  65487
+                        },
+                        {
+                            "relativePath":  "Research/Verification/Gate13R_Serial_10pct/v1/ReadinessValidation.summary.json",
+                            "sha256":  "adcf7605891608cb31e5489a9314a5c4b11b9d51a637921f3292ee23465bfbf5",
+                            "rawBytes":  888
+                        },
+                        {
+                            "relativePath":  "Research/Verification/Gate13R_Serial_10pct/v5-v2-schedule/ScheduleValidation.summary.json",
+                            "sha256":  "0b10e4dd6e94f2540e456a2a27b43073d06654d53d642769787d54fc102e9132",
+                            "rawBytes":  924
+                        },
+                        {
+                            "relativePath":  "Research/Verification/Gate13R_Serial_10pct/v6-v2-deterministic/DeterministicRegeneration.summary.json",
+                            "sha256":  "c23cc4728bf51ac5ff197b308c77dadfe5a6967420b38dd7b3de947189282ec3",
+                            "rawBytes":  1525
+                        },
+                        {
+                            "relativePath":  "Research/Verification/Gate13R_Serial_10pct/v7-v2-orchestrator/OrchestratorValidation.summary.json",
+                            "sha256":  "b6a7d6f531c88a4514d0bf348b2bc2d5f514373d0ff00c804f25edc3c9f42722",
+                            "rawBytes":  1949
+                        },
+                        {
+                            "relativePath":  "Research/Verification/Gate13R_Serial_10pct/v8-v2-negative-no-receipt/NegativeReceiptGuard.summary.json",
+                            "sha256":  "5455d9bc4af925806ad609e9e8b0723792d726cb95d7ec4c7982221693cbce0b",
+                            "rawBytes":  399
+                        },
+                        {
+                            "relativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+                            "sha256":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+                            "rawBytes":  207760
+                        },
+                        {
+                            "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-execution-manifest.json",
+                            "sha256":  "fce4c7f9c7fe7df5f424c8a8ae888133942ed49dbede71d4499e502ba812ebd6",
+                            "rawBytes":  717452
+                        },
+                        {
+                            "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/candidate-n-formal.json",
+                            "sha256":  "5e77d9b69c4c0e45dec204ca1943867453d29dcbdf1ebd24f0809af6d649c387",
+                            "rawBytes":  2314
+                        },
+                        {
+                            "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/budget-storage-projection.json",
+                            "sha256":  "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f",
+                            "rawBytes":  2954
+                        },
+                        {
+                            "relativePath":  "Research/Gate12R_Readiness_Checkpoint.v1.json",
+                            "sha256":  "93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d",
+                            "rawBytes":  6480
+                        }
+                    ],
+    "assertionCount":  156,
+    "errorCount":  0,
+    "errors":  [
+
+               ],
+    "unityProcessCount":  0,
+    "formalRootV1Exists":  false,
+    "formalRootV2Exists":  false,
+    "activeFormalExecutionReceiptCount":  0,
+    "formalExecutionAuthorized":  false,
+    "formalCampaignExecuted":  false,
+    "formalTimingSamplesCreated":  false,
+    "passed":  true
+}

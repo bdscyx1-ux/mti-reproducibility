@@ -1,0 +1,473 @@
+{
+  "schema": "gate14re-me-unity-identity-offline-evidence-adjudication-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-offline-evidence-adjudication-attempt-005",
+  "status": "PASS_OFFLINE_FROZEN_EVIDENCE_ADJUDICATION",
+  "completedAtUtc": "2026-10-17T10:53:21.963105Z",
+  "passed": true,
+  "terminal": true,
+  "attempt004Outcome": {
+    "retained": true,
+    "status": "FAILED_CLOSED_UNITY_EXECUTABLE_IDENTITY_RULE_REPAIR",
+    "classification": "NOT_ADJUDICATED",
+    "reclassified": false,
+    "modified": false
+  },
+  "attempt005Execution": {
+    "mode": "OFFLINE_EVIDENCE_ONLY",
+    "unityInvocationCount": 0,
+    "processLaunchPrimitivePresent": false,
+    "deleteOrCleanupPrimitivePresent": false,
+    "retryCount": 0,
+    "criteriaRelaxed": false,
+    "automaticToolRepairCycleCount": 1,
+    "historicalBindingAliasResolution": {
+      "policy": "Only missing isolated-unity-audit-project/Research paths resolve to canonical project-root Research originals; byte length and SHA-256 remain mandatory.",
+      "resolvedAliasCount": 8,
+      "resolvedAliases": [
+        {
+          "historicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Gate14Re-ME/Gate14Re_ME_Status.v15.json",
+          "canonicalPath": "H:/DDM_Final_Project/Research/Gate14Re-ME/Gate14Re_ME_Status.v15.json"
+        },
+        {
+          "historicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/failure-receipt.v1.json",
+          "canonicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/failure-receipt.v1.json"
+        },
+        {
+          "historicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/post-exit-unity-identity-audit.v1.json",
+          "canonicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/post-exit-unity-identity-audit.v1.json"
+        },
+        {
+          "historicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/source-and-evidence-freeze-manifest.v1.json",
+          "canonicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/source-and-evidence-freeze-manifest.v1.json"
+        },
+        {
+          "historicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/failure-receipt.v1.json",
+          "canonicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/failure-receipt.v1.json"
+        },
+        {
+          "historicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/process-launch-receipt.v1.json",
+          "canonicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/process-launch-receipt.v1.json"
+        },
+        {
+          "historicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/unity-output/in-process-ready-snapshot.v1.json",
+          "canonicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/unity-output/in-process-ready-snapshot.v1.json"
+        },
+        {
+          "historicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/unity-output/unity-identity-probe-receipt.v1.json",
+          "canonicalPath": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/unity-output/unity-identity-probe-receipt.v1.json"
+        }
+      ],
+      "criteriaRelaxed": false
+    }
+  },
+  "classification": "EXTERNAL_COMPOSITE_IDENTITY_AUTHORITATIVE_IN_PROCESS_READS_DIAGNOSTIC",
+  "authoritativeChecks": [
+    {
+      "checkId": "attempt005-adjudicator-has-no-process-launch-or-delete-primitives",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "findings": []
+      }
+    },
+    {
+      "checkId": "no-unity-process-at-offline-adjudication-entry",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "unityProcessIds": []
+      }
+    },
+    {
+      "checkId": "no-gate14re-me-measured-root-present",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "present": []
+      }
+    },
+    {
+      "checkId": "attempt004-complete-inventory-frozen",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "fileCount": 34,
+        "digestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c",
+        "allReadOnly": true
+      }
+    },
+    {
+      "checkId": "attempt004-inventory-entry-list-exact",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "expectedEntryCount": 34
+      }
+    },
+    {
+      "checkId": "attempt004-failure-receipt-byte-binding",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "sha256": "883f688d7d07a10bab4a5bbd2e186d2b74108bf0f01d65d61d84fc80ba8c543c"
+      }
+    },
+    {
+      "checkId": "status-v16-byte-binding",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "sha256": "6e7b993b64fccc114038bf70b56721ed2c0568c454d2a90852d9d5eeabaa9d1e"
+      }
+    },
+    {
+      "checkId": "attempt004-orchestrator-byte-binding",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "sha256": "3317558dd838137c7fba783262d465b967da60e232e6a64c10d1af1acf23a747"
+      }
+    },
+    {
+      "checkId": "attempt004-failure-outcome-retained",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "status": "FAILED_CLOSED_UNITY_EXECUTABLE_IDENTITY_RULE_REPAIR",
+        "classification": "NOT_ADJUDICATED",
+        "unityInvocationCount": 1,
+        "retryPerformed": false,
+        "signalOrForcedTerminationSent": false
+      }
+    },
+    {
+      "checkId": "status-v16-retains-attempt004-failure",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "status": "UNITY_EXECUTABLE_IDENTITY_RULE_REPAIR_FAILED_CLOSED",
+        "version": 16,
+        "identityRuleRepair": {
+          "authorizationId": "gate14re-me-unity-executable-identity-rule-repair-attempt-004",
+          "passed": false,
+          "classification": "NOT_ADJUDICATED",
+          "failureReceiptRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/failure-receipt.v1.json",
+          "failureReceiptSha256": "883f688d7d07a10bab4a5bbd2e186d2b74108bf0f01d65d61d84fc80ba8c543c",
+          "retryPerformed": false
+        }
+      }
+    },
+    {
+      "checkId": "external-fingerprint-headers-and-chronology",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "phases": [
+          "EXTERNAL_PRELAUNCH",
+          "EXTERNAL_WHILE_AUTHORIZED_PID_ALIVE",
+          "EXTERNAL_POST_EXIT"
+        ]
+      }
+    },
+    {
+      "checkId": "external-full-file-sha256-authoritative",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "expectedSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+        "phases": [
+          {
+            "powershell-get-filehash": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+            "dotnet-sha256-filestream": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+          },
+          {
+            "powershell-get-filehash": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+            "dotnet-sha256-filestream": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+          },
+          {
+            "powershell-get-filehash": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+            "dotnet-sha256-filestream": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+          }
+        ]
+      }
+    },
+    {
+      "checkId": "external-64kib-chunk-sets-stable",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "chunkCounts": [
+          547,
+          547,
+          547
+        ],
+        "preToConcurrentMismatchCount": 0,
+        "preToPostExitMismatchCount": 0
+      }
+    },
+    {
+      "checkId": "external-path-and-ntfs-file-id-stable",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "paths": [
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe"
+        ],
+        "fileIds": [
+          "00000000000000000003000000032664",
+          "00000000000000000003000000032664",
+          "00000000000000000003000000032664"
+        ],
+        "low64": [
+          "0003000000032664",
+          "0003000000032664",
+          "0003000000032664"
+        ]
+      }
+    },
+    {
+      "checkId": "external-pe-authenticode-and-metadata-stable",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "peStable": true,
+        "signerStable": true,
+        "metadataStable": true,
+        "signerThumbprint": "3B027072EFDDD6DA096DCEE025CBAEC665AC3CA1",
+        "lengthBytes": 35821616
+      }
+    },
+    {
+      "checkId": "historical-process-launch-receipt-valid",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "processId": 63968,
+        "creationTimeUtc": "2026-10-17T10:17:42.9060760Z",
+        "executeMethod": "DDM.Research.Editor.UnityExecutableIdentityAuditAttempt001.Gate14ReMEUnityExecutableIdentityAuditV1.Run"
+      }
+    },
+    {
+      "checkId": "ready-and-probe-receipt-headers-valid",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "readyStatus": "IN_PROCESS_IDENTITY_SNAPSHOT_READY",
+        "probeStatus": "PASS_ALGORITHM_FREE_UNITY_IDENTITY_PROBE_EXTERNAL_ADJUDICATION_PENDING",
+        "passed": true,
+        "terminal": true
+      }
+    },
+    {
+      "checkId": "historical-pid-start-time-and-path-composite-identity",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "processId": 63968,
+        "processStartDeltaMilliseconds": 0.0,
+        "paths": [
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe"
+        ]
+      }
+    },
+    {
+      "checkId": "historical-exact-command-line-identity",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "argumentCount": 34,
+        "executeMethod": "DDM.Research.Editor.UnityExecutableIdentityAuditAttempt001.Gate14ReMEUnityExecutableIdentityAuditV1.Run",
+        "projectPath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\unity-executable-identity-rule-repair-attempt-004\\isolated-unity-audit-project"
+      }
+    },
+    {
+      "checkId": "in-process-structural-identity-stable-and-matches-external-file-id",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "reportedStable": true,
+        "fileIndexHex": "0003000000032664",
+        "externalFileIndexLow64Hex": "0003000000032664"
+      }
+    },
+    {
+      "checkId": "sha256-known-answers-passed",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "abcExpectedSha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+        "abcActualSha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+        "abcPassed": true,
+        "zeroStreamLengthBytes": 35821616,
+        "zeroStreamExpectedSha256": "35dfe741f6746e362540e6204db074af859f43751a8a071e4669a118bdf77732",
+        "zeroStreamActualSha256": "35dfe741f6746e362540e6204db074af859f43751a8a071e4669a118bdf77732",
+        "zeroStreamPassed": true,
+        "allPassed": true
+      }
+    },
+    {
+      "checkId": "probe-reports-no-prohibited-activity-and-byte-reads-nonauthoritative",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "schemaCompatibilitySelfCheckInvoked": false,
+        "plannerInvoked": false,
+        "algorithmLaneExecuted": false,
+        "measuredRootCreated": false,
+        "inProcessFileReadHashesAuthoritative": false
+      }
+    },
+    {
+      "checkId": "unity-probe-source-and-parent-bindings-still-match",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "bindingCount": 11,
+        "bindings": [
+          {
+            "role": "authorization",
+            "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Rule_Repair_Attempt_004_Authorization.v1.json",
+            "matched": true
+          },
+          {
+            "role": "plan",
+            "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Rule_Repair_Attempt_004_Plan.v1.md",
+            "matched": true
+          },
+          {
+            "role": "source-freeze-manifest",
+            "path": "H:/DDM_Final_Project/Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Rule_Repair_Attempt_004_Freeze_Manifest.v1.json",
+            "matched": true
+          },
+          {
+            "role": "parent-status-v15",
+            "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Gate14Re-ME/Gate14Re_ME_Status.v15.json",
+            "matched": true
+          },
+          {
+            "role": "retained-attempt-003-failure-receipt",
+            "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/failure-receipt.v1.json",
+            "matched": true
+          },
+          {
+            "role": "retained-attempt-003-process-launch-receipt",
+            "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/process-launch-receipt.v1.json",
+            "matched": true
+          },
+          {
+            "role": "retained-attempt-003-unity-probe-receipt",
+            "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/unity-output/unity-identity-probe-receipt.v1.json",
+            "matched": true
+          },
+          {
+            "role": "retained-attempt-003-ready-snapshot",
+            "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/unity-output/in-process-ready-snapshot.v1.json",
+            "matched": true
+          },
+          {
+            "role": "retained-corrigendum-failure",
+            "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/failure-receipt.v1.json",
+            "matched": true
+          },
+          {
+            "role": "retained-corrigendum-post-exit-audit",
+            "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/post-exit-unity-identity-audit.v1.json",
+            "matched": true
+          },
+          {
+            "role": "retained-corrigendum-freeze-manifest",
+            "path": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004/isolated-unity-audit-project/Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/source-and-evidence-freeze-manifest.v1.json",
+            "matched": true
+          }
+        ]
+      }
+    },
+    {
+      "checkId": "normal-exit-and-post-exit-persistence-proven-before-cleanup-failure",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "probeCompletedAtUtc": "2026-10-17T10:18:31.2475044Z",
+        "postExitCapturedAtUtc": "2026-10-17T10:18:34.5980305Z",
+        "attempt004FailedAtUtc": "2026-10-17T10:18:34.8355718Z",
+        "exceptionType": "System.Management.Automation.PropertyNotFoundException"
+      }
+    },
+    {
+      "checkId": "in-process-byte-read-observations-retained-as-diagnostic-only",
+      "authoritative": false,
+      "passed": true,
+      "detail": {
+        "initialOpenReadSha256": "ed8dac2dcd7525f70c0840f52dca3539483db1a2c35cbd80a2383bfbfac4fe8b",
+        "afterHoldOpenReadSha256": "ed8dac2dcd7525f70c0840f52dca3539483db1a2c35cbd80a2383bfbfac4fe8b",
+        "initialSharedFileStreamSha256": "ed8dac2dcd7525f70c0840f52dca3539483db1a2c35cbd80a2383bfbfac4fe8b",
+        "afterHoldSharedFileStreamSha256": "ed8dac2dcd7525f70c0840f52dca3539483db1a2c35cbd80a2383bfbfac4fe8b",
+        "initialFileReadAllBytesSha256": "b55048378b214503d92c9f79b4414921741ee6d5907de12bf598ccc67f06aeb8",
+        "afterHoldFileReadAllBytesSha256": "c5f8c27ecadd72a27171cbcb82a05514073de6ae346d5e104030770e75c7de34",
+        "fullFingerprintStableAcrossHold": false,
+        "fileReadAllBytesStableAcrossHold": false,
+        "authoritative": false,
+        "effectOnAdjudication": "NONE_DIAGNOSTIC_ONLY"
+      }
+    },
+    {
+      "checkId": "no-unity-process-before-attempt005-terminal-freeze",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "unityProcessIds": []
+      }
+    },
+    {
+      "checkId": "attempt004-evidence-unchanged-during-offline-adjudication",
+      "authoritative": true,
+      "passed": true,
+      "detail": {
+        "beforeFileCount": 34,
+        "afterFileCount": 34,
+        "beforeDigestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c",
+        "afterDigestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c"
+      }
+    }
+  ],
+  "diagnosticOnlyInProcessByteReads": {
+    "initialOpenReadSha256": "ed8dac2dcd7525f70c0840f52dca3539483db1a2c35cbd80a2383bfbfac4fe8b",
+    "afterHoldOpenReadSha256": "ed8dac2dcd7525f70c0840f52dca3539483db1a2c35cbd80a2383bfbfac4fe8b",
+    "initialSharedFileStreamSha256": "ed8dac2dcd7525f70c0840f52dca3539483db1a2c35cbd80a2383bfbfac4fe8b",
+    "afterHoldSharedFileStreamSha256": "ed8dac2dcd7525f70c0840f52dca3539483db1a2c35cbd80a2383bfbfac4fe8b",
+    "initialFileReadAllBytesSha256": "b55048378b214503d92c9f79b4414921741ee6d5907de12bf598ccc67f06aeb8",
+    "afterHoldFileReadAllBytesSha256": "c5f8c27ecadd72a27171cbcb82a05514073de6ae346d5e104030770e75c7de34",
+    "fullFingerprintStableAcrossHold": false,
+    "fileReadAllBytesStableAcrossHold": false,
+    "authoritative": false,
+    "effectOnAdjudication": "NONE_DIAGNOSTIC_ONLY"
+  },
+  "retainedAttempt004Inventory": {
+    "rootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-repair-attempt-004",
+    "fileCount": 34,
+    "digestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c",
+    "allReadOnly": true
+  },
+  "scientificBoundary": {
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  }
+}

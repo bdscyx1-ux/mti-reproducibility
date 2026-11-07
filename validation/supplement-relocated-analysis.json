@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "Complete supplemental A and B analyses; not historical acquisitions",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy_version": "2.3.5",
+  "archives_used": [
+    "supplement-A.part001.zip",
+    "supplement-A.part002.zip",
+    "supplement-B.part001.zip",
+    "supplement-plans.part001.zip"
+  ],
+  "raw_files_verified_and_extracted": 6144,
+  "A_blocks": 1536,
+  "B_blocks": 768,
+  "B_original_engine_self_checks": 10,
+  "original_acquisition_path_access": "blocked by audit hook in analyzer subprocesses",
+  "summary_metadata_excluded_from_comparison": {
+    "A": [
+      "createdUtc"
+    ],
+    "B": [
+      "completedUtc",
+      "pythonVersion",
+      "numpyVersion",
+      "analyzerSha256"
+    ]
+  },
+  "numeric_values": 51486,
+  "max_absolute_difference": 0.0,
+  "csv_rows": 6193
+}

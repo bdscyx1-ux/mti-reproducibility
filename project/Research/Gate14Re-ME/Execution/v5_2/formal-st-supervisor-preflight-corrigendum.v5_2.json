@@ -1,0 +1,51 @@
+{
+  "schema": "gate14re-me-formal-st-supervisor-preflight-corrigendum-v5.2",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_FORWARD_ONLY_MINIMAL_TECHNICAL_CORRIGENDUM",
+  "implementationRevision": "v5.2-supervisor-preflight-binding-fix",
+  "failedAttemptEvidenceRoot": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-001",
+  "failedAttemptEvidenceSealSha256": "b6c3dc8bbceb985c98de8a5238a30f0d9ca8f37f92795a5cd6e61f1dafceab09",
+  "failedSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_1/Run-Gate14ReMEFormalST.v5_1.ps1",
+  "failedSupervisorSha256": "7ab5584a763fb72ea58b2a0aa677ce072b02858d1f86428b2aea8f74f2e77300",
+  "confirmedRootCause": {
+    "classification": "POWERSHELL_CASE_INSENSITIVE_TYPED_PARAMETER_LOCAL_VARIABLE_COLLISION",
+    "typedParameter": "InputFreezeManifest",
+    "collidingLocal": "inputFreezeManifest",
+    "failureLine": 703,
+    "exceptionType": "System.Management.Automation.PropertyNotFoundException",
+    "measuredRootCreated": false,
+    "unityInvocations": 0,
+    "algorithmLaneExecutions": 0
+  },
+  "forwardFix": {
+    "parsedObjectVariable": "inputFreezeDocument",
+    "jsonPropertyGuards": true,
+    "caseInsensitiveParameterAssignmentCollisionAudit": true,
+    "readOnlyPreflightSwitch": true,
+    "detailedExternalErrorRendering": true
+  },
+  "unchanged": {
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "sampleSizeDecisionSha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5",
+    "formalInputFreezeManifestSha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "runnerSha256": "12c44c11d831a28a5277b7f3b86687dfbe6572d50b93a74635a7437995c02d12",
+    "operationalResourceBudgetSha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2",
+    "algorithms": true,
+    "metrics": true,
+    "sampleRules": true,
+    "timeouts": true,
+    "B": 36,
+    "structuralCells": 36,
+    "superblocks": 1296,
+    "algorithmLanes": 7776
+  },
+  "authorizationBoundary": {
+    "formalCollectionAuthorizedByThisCorrigendum": false,
+    "formalAnalysisAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "migrationPackageModified": false
+  }
+}

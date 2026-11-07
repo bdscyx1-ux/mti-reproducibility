@@ -1,0 +1,453 @@
+{
+  "schema": "gate14re-design-contract-v2",
+  "studyId": "Gate14Re",
+  "version": 2,
+  "createdLocalDate": "2026-10-15",
+  "status": "SCIENTIFIC_DESIGN_FROZEN_B48_NON_EXECUTING",
+  "supersedes": [
+    "Research/Gate14Re/Gate14Re_Experiment_Plan.v1.md",
+    "Research/Gate14Re/Gate14Re_Design_Contract.v1.json",
+    "Research/Gate14Re/Gate14Re_Status.v1.json"
+  ],
+  "lineage": {
+    "fromScratch": true,
+    "inheritGate14ROrGate13RObservations": false,
+    "inheritHistoricalEffectsOrVariances": false,
+    "inheritHistoricalConclusions": false,
+    "reuseExistingProductionInfrastructureOnly": true
+  },
+  "objectives": {
+    "primary": "Select a uniquely better eligible production algorithm when the preregistered evidence supports one under eight fixed application conditions at N=128.",
+    "quantity": "Estimate how movement and full-population rendering performance change with N in two fixed anchor conditions.",
+    "forcedWinner": false
+  },
+  "algorithms": [
+    {
+      "label": "A",
+      "productionId": "A*-R",
+      "sourcePath": "Assets/_Scripts/Research/Algorithms/AStarRepeatedPlanner.cs",
+      "sourceBytes": 25807,
+      "sourceSha256": "a54bb43ed906c856e3d45493c4d3d10ff1b6f1e0ccda1a9f25ea774908b9c778",
+      "specificationPath": "Research/AStar_Repeated_Specification.md",
+      "specificationBytes": 5064,
+      "specificationSha256": "0fe75b470bb0b1f256278ddf8089b86660a80a5c20c99006a140ff7c3ec8c5eb"
+    },
+    {
+      "label": "B",
+      "productionId": "D*L",
+      "sourcePath": "Assets/_Scripts/Research/Algorithms/DStarLitePlanner.cs",
+      "sourceBytes": 39778,
+      "sourceSha256": "ae9f1bdc2a30f924239145d8a165ed31d68f05b595916dbed21414fd1c69427f",
+      "specificationPath": "Research/DStar_Lite_Specification.md",
+      "specificationBytes": 10784,
+      "specificationSha256": "65f03f4827c0bd2edceb967311451cace2a34642235457277cbbaaba222b01c3"
+    },
+    {
+      "label": "C",
+      "productionId": "C-FF",
+      "sourcePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "sourceBytes": 34279,
+      "sourceSha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1",
+      "specificationPath": "Research/Corrected_Full_Recompute_Flow_Field_Specification.md",
+      "specificationBytes": 10875,
+      "specificationSha256": "6f29c7545c2f9d68ad0bfd2b707cb7f7798fd80b39816eb22010f278a6978223"
+    },
+    {
+      "label": "D",
+      "productionId": "IDFF",
+      "sourcePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "sourceBytes": 46884,
+      "sourceSha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638",
+      "specificationPath": "Research/Incremental_Dynamic_Flow_Field_Specification.md",
+      "specificationBytes": 14050,
+      "specificationSha256": "8a7895c0daa38810a5b1087348be11b427cfeb1f6f0ed2f27730578ac84e70ef"
+    }
+  ],
+  "sharedSourceBindings": [
+    {
+      "path": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "bytes": 5534,
+      "sha256": "e2a560f15f61859899524d49ddb55d92da058e1a708c81223e429d37c3a26a09"
+    },
+    {
+      "path": "Assets/_Scripts/Research/Experiments/PlanningFairnessContracts.cs",
+      "bytes": 12916,
+      "sha256": "42e1865294439986e808547115b22ccaaff53f3293790a8c4a135fb529ef3a60"
+    },
+    {
+      "path": "Research/Four_Algorithm_Fairness_and_Unified_Campaign_Specification.md",
+      "bytes": 11062,
+      "sha256": "42a4a8439c3d7b46b7644bed14b8f91d87bae4c6f8b2183a73609ee5461e82dd"
+    },
+    {
+      "path": "Research/Scenario_IO_and_Planning_Workload_Specification.md",
+      "bytes": 3983,
+      "sha256": "2af12d33c4a010b14511f86d11d2f45634cac794b6763ea1cc36e8f1940a8ea1"
+    }
+  ],
+  "binaryBinding": {
+    "state": "DEFERRED_MECHANICAL_BINDING_AT_IMPLEMENTATION_FREEZE",
+    "scientificChoicePending": false
+  },
+  "scenarioMatrix": {
+    "path": "Research/FormalScenarios/v1/formal-scenario-matrix.json",
+    "bytes": 185057,
+    "sha256": "404df63d38bccd66bb665446e0f2cbf3e5f8c7293f543b3213bde4206435fe9f"
+  },
+  "conditions": [
+    {
+      "conditionId": "C01",
+      "scenarioId": "core-r02-s1-shared",
+      "path": "Research/FormalScenarios/v1/Scenarios/core-r02-s1-shared.scenario.json",
+      "bytes": 915360,
+      "sha256": "7612d4a77374c8920cfd493f19cb07b8ba48065dff89187cefd635eee41dfb94",
+      "seed": 110021,
+      "gridSize": 64,
+      "connectivity": 4,
+      "costMode": "weighted",
+      "obstacleRate": 0.25,
+      "dynamicFootprintCells": 81,
+      "goal": [4, 48],
+      "quantityAnchor": "Q1"
+    },
+    {
+      "conditionId": "C02",
+      "scenarioId": "core-r02-s2-shared",
+      "path": "Research/FormalScenarios/v1/Scenarios/core-r02-s2-shared.scenario.json",
+      "bytes": 915499,
+      "sha256": "8cb48030e5c75ef5b4477852188dc1930bff5fba32644335af4edadf81d7f32d",
+      "seed": 110022,
+      "gridSize": 64,
+      "connectivity": 4,
+      "costMode": "weighted",
+      "obstacleRate": 0.25,
+      "dynamicFootprintCells": 81,
+      "goal": [35, 62],
+      "quantityAnchor": null
+    },
+    {
+      "conditionId": "C03",
+      "scenarioId": "core-r03-s1-shared",
+      "path": "Research/FormalScenarios/v1/Scenarios/core-r03-s1-shared.scenario.json",
+      "bytes": 776143,
+      "sha256": "a2272840c88fd70d40b2508dd00d75156c86c37ecb813c04651f09fdeb4223a2",
+      "seed": 110031,
+      "gridSize": 64,
+      "connectivity": 8,
+      "costMode": "uniform",
+      "obstacleRate": 0.25,
+      "dynamicFootprintCells": 9,
+      "goal": [14, 16],
+      "quantityAnchor": null
+    },
+    {
+      "conditionId": "C04",
+      "scenarioId": "core-r03-s2-shared",
+      "path": "Research/FormalScenarios/v1/Scenarios/core-r03-s2-shared.scenario.json",
+      "bytes": 776129,
+      "sha256": "c2eaee5d3c241fe2304c3ad794c77fe02efa1c659e32bbc3caeb8b10344d1bc8",
+      "seed": 110032,
+      "gridSize": 64,
+      "connectivity": 8,
+      "costMode": "uniform",
+      "obstacleRate": 0.25,
+      "dynamicFootprintCells": 9,
+      "goal": [58, 48],
+      "quantityAnchor": null
+    },
+    {
+      "conditionId": "C05",
+      "scenarioId": "core-r06-s1-shared",
+      "path": "Research/FormalScenarios/v1/Scenarios/core-r06-s1-shared.scenario.json",
+      "bytes": 2970120,
+      "sha256": "ff4c38d9761b46cefb584f47b8861e6f50fb0de4155e8bae38654d81baf342fc",
+      "seed": 110061,
+      "gridSize": 128,
+      "connectivity": 4,
+      "costMode": "weighted",
+      "obstacleRate": 0.1,
+      "dynamicFootprintCells": 9,
+      "goal": [94, 126],
+      "quantityAnchor": null
+    },
+    {
+      "conditionId": "C06",
+      "scenarioId": "core-r06-s2-shared",
+      "path": "Research/FormalScenarios/v1/Scenarios/core-r06-s2-shared.scenario.json",
+      "bytes": 2969869,
+      "sha256": "3c4650745359e1a60a71d3a6db32890ffb91482c947657bab9f3de322b510126",
+      "seed": 110062,
+      "gridSize": 128,
+      "connectivity": 4,
+      "costMode": "weighted",
+      "obstacleRate": 0.1,
+      "dynamicFootprintCells": 9,
+      "goal": [2, 96],
+      "quantityAnchor": null
+    },
+    {
+      "conditionId": "C07",
+      "scenarioId": "core-r07-s1-shared",
+      "path": "Research/FormalScenarios/v1/Scenarios/core-r07-s1-shared.scenario.json",
+      "bytes": 3109801,
+      "sha256": "34f206248d0c563c4a2bc8bf7d0cb9a1a86b1e53d345a19968776911b5a07692",
+      "seed": 110071,
+      "gridSize": 128,
+      "connectivity": 8,
+      "costMode": "uniform",
+      "obstacleRate": 0.1,
+      "dynamicFootprintCells": 81,
+      "goal": [103, 96],
+      "quantityAnchor": "Q2"
+    },
+    {
+      "conditionId": "C08",
+      "scenarioId": "core-r07-s2-shared",
+      "path": "Research/FormalScenarios/v1/Scenarios/core-r07-s2-shared.scenario.json",
+      "bytes": 3109676,
+      "sha256": "a1227c2b468e7ec06836198257a25efd67ac6e0cc4ff622403b582ee58899f2a",
+      "seed": 110072,
+      "gridSize": 128,
+      "connectivity": 8,
+      "costMode": "uniform",
+      "obstacleRate": 0.1,
+      "dynamicFootprintCells": 81,
+      "goal": [41, 32],
+      "quantityAnchor": null
+    }
+  ],
+  "fixedDesign": {
+    "algorithmCount": 4,
+    "applicationConditionCount": 8,
+    "quantityAnchorConditionCount": 2,
+    "quantityAnchors": ["C01", "C07"],
+    "NPrimary": 128,
+    "unitCountLevels": [1, 8, 32, 128, 512],
+    "sharedGoalPerRun": true,
+    "identicalFrozenInitialSnapshotWithinBlock": true,
+    "resetWorldAndMethodPrivateStateBetweenAlgorithms": true,
+    "identicalEventTimelineAndBudgetWithinBlock": true,
+    "lanes": [
+      "movement_M1_M2_M3_M5",
+      "full_population_render_M4"
+    ],
+    "independentUnit": "complete_input_block_in_one_fresh_unity_process",
+    "blocksPerDesignCellB": 48,
+    "williamsRows": [
+      ["A", "B", "D", "C"],
+      ["B", "C", "A", "D"],
+      ["C", "D", "B", "A"],
+      ["D", "A", "C", "B"]
+    ],
+    "usesPerWilliamsRowPerCell": 12,
+    "mainModuleProcesses": 768,
+    "mainModuleAlgorithmLaneSamples": 3072,
+    "quantityExtensionProcesses": 768,
+    "quantityExtensionAlgorithmLaneSamples": 3072,
+    "plannedValidProcesses": 1536,
+    "algorithmLaneSamples": 6144,
+    "postDataExpansionAllowed": false
+  },
+  "quantityStartConstruction": {
+    "sourceOrder": "ascending_agentId_from_128_agent_source_scenario",
+    "N1N8N32": "canonical_prefix",
+    "N128": "exact_source_agents",
+    "N512AdditionalCount": 384,
+    "candidateRequirements": [
+      "initially_walkable",
+      "initially_goal_reachable",
+      "not_goal_cell",
+      "not_already_occupied",
+      "distinct"
+    ],
+    "candidateOrder": "ascending_SHA256_UTF8_Gate14Re_pipe_conditionId_pipe_x_pipe_y_then_y_then_x",
+    "newAgentIds": "128_through_511_in_candidate_order",
+    "insufficientCandidates": "FAIL_CLOSED_NO_REDRAW_NO_PRUNE_NO_ORACLE_CHANGE"
+  },
+  "arrivalRule": {
+    "singleSharedLogicalGoal": true,
+    "gridCellMustEqualGoalCell": true,
+    "horizontalRadiusCellSizeMultiplier": 0.75,
+    "consecutiveFixedTicks": 10,
+    "fixedStepSeconds": 0.02,
+    "dwellSeconds": 0.2,
+    "arrivalLatched": true,
+    "postArrivalProductionBehaviorUnchanged": true,
+    "forcedContinuousMovement": false
+  },
+  "metrics": {
+    "M1": {
+      "role": "primary",
+      "direction": "lower_is_better",
+      "definition": "elapsed_seconds_from_measurement_release_until_all_registered_agents_latch_arrival",
+      "capSeconds": 180,
+      "noncompletion": "record_180_seconds_and_M3_reason",
+      "transform": "natural_log",
+      "effect": "geometric_mean_time_ratio",
+      "minimumImportantDifferenceFraction": 0.05
+    },
+    "M2": {
+      "role": "guard_and_secondary",
+      "direction": "lower_is_better",
+      "definition": "mean_per_agent_cumulative_horizontal_path_length_until_first_latched_arrival",
+      "mask": "same_common_valid_agent_mask_for_all_four_algorithms_within_block",
+      "minimumMask": "max(1,ceil(0.8*N))",
+      "insufficientMask": "inconclusive_missing_never_zero",
+      "maximumAcceptableWorseningFraction": 0.1
+    },
+    "M3": {
+      "role": "engineering_eligibility",
+      "completionRequirementPerEachMainMovementCondition": "at_least_45_of_48_blocks",
+      "noncompletionReasons": [
+        "timeout",
+        "no_path",
+        "budget_exceeded",
+        "internal_failure"
+      ],
+      "populationRiskProofClaimed": false
+    },
+    "M4": {
+      "role": "engineering_eligibility_and_quantity_scaling",
+      "rawMeasure": "monotonic_wall_clock_rendered_frame_interval",
+      "warmupRenderedFrames": 600,
+      "measuredRenderedFrames": 1800,
+      "blockSummaries": ["median_frame_time", "nearest_rank_P95_frame_time"],
+      "mainEligibilityN": 128,
+      "eligibilityPerEachMainCondition": {
+        "medianOf48BlockP95MillisecondsMaximum": 33.333,
+        "blocksWithP95Above50MillisecondsMaximum": 3
+      },
+      "N512IsEligibilityGate": false,
+      "allNAgentsInstantiatedAndRendered": true,
+      "framesAreIndependentN": false,
+      "forcedContinuousMovement": false
+    },
+    "M5": {
+      "role": "correctness_safety_eligibility",
+      "criticalViolationMaximumAcrossAllMainMovementBlocks": 0,
+      "criticalEvents": [
+        "nonfinite_position_velocity_or_state",
+        "outside_grid_or_world_bounds",
+        "illegal_blocked_topology_occupancy_or_transition_not_due_to_authorized_transient_event_overlap",
+        "forbidden_diagonal_corner_cut",
+        "wrong_goal_completion",
+        "missing_or_duplicate_agent_identity"
+      ],
+      "ordinaryUnitContact": "supportive_descriptive_unless_it_causes_a_critical_invalid_state"
+    }
+  },
+  "selectionPolicy": {
+    "eligibilityBeforePerformance": true,
+    "eligibleRequires": ["M3_pass", "M4_pass", "M5_pass"],
+    "primaryMetric": "M1",
+    "guardMetric": "M2",
+    "conditionsEquallyWeighted": true,
+    "pairwiseComparisonCount": 6,
+    "multiplicity": "Holm_across_six_unordered_pairwise_algorithm_comparisons",
+    "ordinaryConfidenceLevel": 0.95,
+    "adjustedIntervals": "Holm_adjusted_simultaneous_confidence_intervals_by_inverting_the_six_two_sided_paired_tests",
+    "uniqueM1WinnerRule": "candidate_adjusted_M1_ratio_upper_bound_vs_every_other_eligible_algorithm_is_less_than_0.95",
+    "M2GuardRule": "candidate_adjusted_M2_ratio_upper_bound_vs_every_other_eligible_algorithm_is_at_most_1.10",
+    "M2SecondaryRule": "only_if_M1_candidate_set_is_within_plus_or_minus_5_percent_practical_tie_band_and_one_candidate_adjusted_M2_ratio_upper_bound_is_less_than_1.00_vs_every_other_candidate",
+    "forcedWinner": false,
+    "noUniqueWinnerAllowed": true,
+    "postHocExpansionAllowed": false
+  },
+  "quantityModel": {
+    "primaryOutcomes": ["M1", "M4"],
+    "supportiveOutcomes": ["M2", "M3", "M5"],
+    "scaleForPositiveOutcomes": "natural_log",
+    "fixedEffects": ["log2_N", "algorithm", "algorithm_by_log2_N", "anchor_condition"],
+    "independentN": "complete_block",
+    "pairedWithinBlock": true,
+    "N128AnchorObservationsReusedOnceNotDuplicated": true,
+    "winnerSelectionAtN": 128
+  },
+  "replacementPolicy": {
+    "infrastructureFailure": "void_whole_block_and_allow_at_most_one_documented_whole_block_replacement",
+    "replacementIncreasesAnalyzableB": false,
+    "retainOriginalFailureEvidence": true,
+    "algorithmSpecificTimeoutNoPathBudgetOrCorrectnessFailure": "retain_as_outcome_no_replacement",
+    "partialBlockDueToInfrastructureFailure": "exclude_whole_block_from_primary_estimation"
+  },
+  "environment": {
+    "operatingSystem": "Windows 11 Pro 10.0.26300 build 26300 64-bit",
+    "cpu": "AMD Ryzen 9 7950X3D",
+    "physicalCores": 16,
+    "logicalProcessors": 32,
+    "ramBytes": 33396609024,
+    "gpu": "NVIDIA GeForce RTX 4070 Ti SUPER",
+    "gpuMemoryMiB": 16376,
+    "gpuDriver": "616.92",
+    "gpuPciBus": "01:00.0",
+    "requiredGpuNoFallback": true,
+    "unityVersion": "2022.3.30f1c1",
+    "resolution": [1920, 1080],
+    "windowMode": "FullScreenWindow",
+    "quality": "Ultra_current_index_5",
+    "vSyncCount": 0,
+    "applicationTargetFrameRate": -1,
+    "runInBackground": true,
+    "fixedTimestepSeconds": 0.02,
+    "camera": "top_down_orthographic_full_grid_plus_5_percent_margin_16_by_9_no_UI_no_debug_gizmos"
+  },
+  "environmentFileBindings": [
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "bytes": 89,
+      "sha256": "48aa38463f4a9877772b9643daa63322b4dbdd55a69848006ec6bec8cc0b35ef"
+    },
+    {
+      "path": "ProjectSettings/ProjectSettings.asset",
+      "bytes": 25515,
+      "sha256": "f6e5b0fe9e5a794c004fbe16f83c3408028b41131e7212637f733ad11e089334"
+    },
+    {
+      "path": "ProjectSettings/QualitySettings.asset",
+      "bytes": 9135,
+      "sha256": "23cbc5bf663e646e79ca4b7699cf4920525e77c6633d4ae99cccc3d0465b1c8a"
+    },
+    {
+      "path": "ProjectSettings/TimeManager.asset",
+      "bytes": 202,
+      "sha256": "1a83e54adbbda7c9f4851103a0c6ab7f6448a3343d4ea5b7620452fa08416ecd"
+    },
+    {
+      "path": "Packages/manifest.json",
+      "bytes": 1727,
+      "sha256": "be4565037805fd7142d6115301fa3289e6eaf0881047199c91db18c4dbf788c0"
+    },
+    {
+      "path": "Packages/packages-lock.json",
+      "bytes": 14202,
+      "sha256": "299d047edf56257cf99e16f273117dabf0b2c814493618cd5381035aab8067d5"
+    }
+  ],
+  "executionStages": [
+    "scientific_design_freeze",
+    "separately_authorized_single_implementation_compile_synthetic_and_short_live_preflight",
+    "separately_authorized_formal_phase_A",
+    "preregistered_analysis_and_report"
+  ],
+  "explicitlyNotRequired": [
+    "numerical_pilot",
+    "blind_nuisance_projection",
+    "monte_carlo_sample_size_search",
+    "historical_raw_tree_rescan",
+    "reuse_of_prior_observations",
+    "result_driven_sample_size_expansion",
+    "forced_winner"
+  ],
+  "authorization": {
+    "scientificDesignFreezeAuthorizedAndCompleted": true,
+    "implementationAuthorized": false,
+    "compileOrUnityExecutionAuthorized": false,
+    "formalPhaseALaunchAuthorized": false,
+    "formalMeasuredRootCreationAuthorized": false,
+    "formalAnalysisRootCreationAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "phaseBAuthorized": false,
+    "gate15Authorized": false
+  },
+  "scientificChoicesPending": []
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13r-pr1-postwrite-preservation-audit-v1",
+  "capturedAtUtc": "2026-10-08T10:59:32.5247678Z",
+  "capturedAtAsiaShanghai": "2026-10-08T18:59:32.5292994+08:00",
+  "preWriteAuditRelativePath": "Research/Gate13R_RQAligned_PreWrite_Preservation_Audit.v1.json",
+  "preWriteAuditSha256": "3a8056b28a361410aac1d0a4bfd58cf70417f1582ecf952eddda0413573e3110",
+  "identityAlgorithm": "sorted-relative-path-byte-count-file-sha256-lf-utf8-with-host-culture-collation-v1",
+  "protectedRoots": [
+    {
+      "role": "GATE10R-ATTEMPT4-PASSED-EVIDENCE",
+      "fileCountBefore": 169,
+      "fileCountAfter": 169,
+      "byteCountBefore": 14661848,
+      "byteCountAfter": 14661848,
+      "treeSha256Before": "bf92abc329290db6c5bebeacb332f83d3fb53ffaabca2b12dce3cb400ecade13",
+      "treeSha256After": "bf92abc329290db6c5bebeacb332f83d3fb53ffaabca2b12dce3cb400ecade13",
+      "unchanged": true
+    },
+    {
+      "role": "GATE11R-RETAINED-BUNDLE",
+      "fileCountBefore": 57,
+      "fileCountAfter": 57,
+      "byteCountBefore": 125218919,
+      "byteCountAfter": 125218919,
+      "treeSha256Before": "f7effb9cdfa742efbb5f20a1f9129c9bffb5e9e65387b19f1a34b3487c970d3b",
+      "treeSha256After": "f7effb9cdfa742efbb5f20a1f9129c9bffb5e9e65387b19f1a34b3487c970d3b",
+      "unchanged": true
+    },
+    {
+      "role": "GATE12R-V4-PILOT-READ-ONLY",
+      "fileCountBefore": 8714,
+      "fileCountAfter": 8714,
+      "byteCountBefore": 554204972,
+      "byteCountAfter": 554204972,
+      "treeSha256Before": "e11be5a3c95bf76941ddb83c2314b5ed6ccfe1a2143e6990154a2565a7f18379",
+      "treeSha256After": "e11be5a3c95bf76941ddb83c2314b5ed6ccfe1a2143e6990154a2565a7f18379",
+      "unchanged": true
+    }
+  ],
+  "protectedFileChecks": {
+    "count": 15,
+    "unchangedCount": 15,
+    "failedCount": 0,
+    "evidence": "Research/Verification/Gate13R_RQAligned_Preregistration/v8-post-plan-audit/FinalAudit.summary.json"
+  },
+  "gate11RBundleManifestSha256": "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc",
+  "formalRoot": {
+    "path": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_Serial_10pct/v2",
+    "exists": false
+  },
+  "unityStarted": false,
+  "upstreamModified": false,
+  "passed": true
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "gate14re-me-formal-st-v5-migration-package-build-terminal-receipt-v1",
+  "attemptId": "formal-st-migration-package-build-attempt-003",
+  "completedAtUtc": "2026-10-20T04:39:24.7891904Z",
+  "status": "PASS_MIGRATION_PACKAGE_BUILT_AND_VALIDATED_READY_FOR_TRANSFER",
+  "authorization": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-003/package-build-authorization.v1.json",
+    "sha256": "9fadf3752bc79330ec6c52ee245fd05aecabc86e37820e0c2ee6515aed6a5181",
+    "step10Authorized": true
+  },
+  "plan": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-003/package-build-plan.v1.json",
+    "sha256": "259cf7c768c584a7d81ecb1b3a25cd671314d74aad8757794ef54442e6ae0a46"
+  },
+  "frozenFormalSTV5": {
+    "freezeIndexRelativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-freeze-index.v5_0.json",
+    "freezeIndexSha256": "35c3b98e42cc21b200308460c6b93fb48961b4a450522acc23958c76b70b00dd",
+    "freezeTerminalRelativePath": "Research/Verification/Gate14Re-ME/formal-st-design-freeze-v5-attempt-001/terminal-receipt.v1.json",
+    "freezeTerminalSha256": "e792f20425227c6a2f67bc985f97eb61e390f7876e4ebedc89f565f0876c6665"
+  },
+  "package": {
+    "archiveRelativePath": "Research/Packages/Gate14Re-ME/formal-st/v5/attempt-003/Gate14ReME-FormalST-v5-one-click-attempt-003.zip",
+    "archiveBytes": 3542535365,
+    "archiveSha256": "6af324d09e442a4803ba438794503d864be8045a75e2f5f0ff9e0232396d7265",
+    "archiveEntries": 2802,
+    "payloadManifestRelativePath": "Research/PackageStaging/Gate14Re-ME/formal-st/v5/attempt-003/Research/Gate14Re-ME/Package/v5/package-manifest.v1.json",
+    "payloadManifestSha256": "7011347896a44e67b42a4708a3b64a3928f783315134c77f38d663cd3fd18857",
+    "payloadManifestFiles": 2801,
+    "payloadManifestBytes": 3769247823
+  },
+  "validation": {
+    "reportRelativePath": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-003/package-validation-report.v1.json",
+    "reportSha256": "b2c6e4a2754a7c46ac59f034842a6e83e4455366019f45cf6f6dfd3c1e09127f",
+    "stagingReadinessTerminalSha256": "2c51694175b41dc0ef7ad49e4d721d48ee1adb04d995f58e09261e59e3ccb7bb",
+    "freshExtractionReadinessTerminalSha256": "477710d145f257d165e22144d8787200f853f1cca1850e982c947f6e79669588",
+    "zipCrc": "PASS",
+    "freshExtraction": "PASS",
+    "fullPayloadHashVerification": "PASS",
+    "knownAnswerAndTypedParquetRoundTrip": "PASS",
+    "unityAlgorithmFreeReadiness": "PASS",
+    "unityNaturalExitCode": 0
+  },
+  "credentialExclusion": {
+    "receiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-003/credential-exclusion-receipt.v1.json",
+    "receiptSha256": "0a94619ebc4026532b998ea5d0cdbdd4e9e8fc1c2651787450aac98d9b5a4dec",
+    "credentialsReadOrCopied": false,
+    "credentialsInArchive": false,
+    "credentialLikeFiles": 0
+  },
+  "executionBoundary": {
+    "formalInputsCreated": 0,
+    "formalScheduleRowsCreated": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "mqStarted": false,
+    "mtStarted": false,
+    "algorithmEffectAnalysisRankingWeightingOrWinnerAdjudicationStarted": false
+  },
+  "disposition": {
+    "packageState": "BUILT_AND_VALIDATED_READY_FOR_TRANSFER",
+    "formalSTState": "FROZEN_NOT_STARTED",
+    "heartbeatAction": "PAUSE_AFTER_STATUS_AND_FINAL_EVIDENCE_FREEZE",
+    "nextPermittedUse": "Transfer the verified archive and use START-HERE.cmd for installation and algorithm-free readiness only. Formal ST execution remains outside this authorization."
+  }
+}

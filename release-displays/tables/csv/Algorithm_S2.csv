@@ -1,0 +1,28 @@
+﻿Algorithm S2. Incremental Dynamic Flow Field (IDFF)
+"Input: updated grid G; change set C; persistent field, Q, revisions, dirty set, cursor
+Output: a queryable field or a resumable PENDING state
+1   For a new change set, mark repair pending and make the field non-queryable
+2   A <- changed cells and their clipped 3 x 3 dependency neighborhoods
+3   for each v in A, mark its direction dirty; UPDATE-VERTEX(v)
+4   while the queue phase is unfinished do
+5       if the budget expired then preserve state and return PENDING
+6       u <- pop the next non-stale inconsistent vertex, if any
+7       if none remains then sort dirty cells, set cursor to 0, and end this phase
+8       else if (rhs[u], rhsOwner[u]) precedes (g[u], gOwner[u]) then
+9           (g[u], gOwner[u]) <- (rhs[u], rhsOwner[u]); invalidate u's queue revision
+10      else (g[u], gOwner[u]) <- (INF, NIL); UPDATE-VERTEX(u)
+11      if u was processed, UPDATE-VERTEX each predecessor
+12      if u was processed, mark its changed direction dependencies dirty
+13  while dirty cells remain from the saved cursor do
+14      if the budget expired then preserve state and return PENDING
+15      v <- next dirty cell; advance cursor; clear D[v]
+16      if v is walkable, reachable, and not a goal then
+17          D[v] <- deterministic successor s with c(v, s) + g[s] equal to g[v]
+18  clear pending and dirty state; expose the field; return COMPLETE
+UPDATE-VERTEX(v):
+19  if v is a walkable goal then (rhs[v], rhsOwner[v]) <- (0, v)
+20  else use the best legal successor via g; blocked/no successor gives (INF, NIL)
+21  increment v's revision, invalidating its older queue entries
+22  if g and rhs cost/owner pairs differ, enqueue v with the revised key
+A resume skips lines 1-3 and retains its queue phase and direction cursor.
+A plan call resumes pending repair before following the consistent direction field."

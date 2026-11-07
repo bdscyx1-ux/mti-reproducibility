@@ -1,0 +1,17 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-command-derivation-v3-passed",
+  "command": "Mechanically derived the versioned Gate 13R formal Unity batch command from the frozen Gate 12R V3 command, changing only formal binding and authorization fields while preserving reset, GC, PSAPI telemetry, memory hard gates, Williams order and fail-closed semantics. The derived C# SHA-256 is 4ddf154a4ac27d58f3c873d5d983b7ca6abdf2db9b51969ad48b9347cda938d1.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 2,
+  "input_sha256": {
+    "Gate13R_Formal_Command_Derivation.v3.json": "ee8c492157d93a861df88bf5aba03bcfe2c2cd60c7f45849217f0534eeb9fa85"
+  },
+  "output_sha256": "4ddf154a4ac27d58f3c873d5d983b7ca6abdf2db9b51969ad48b9347cda938d1",
+  "gate_tokens": [
+    "MECHANICAL-DERIVATION-PASSED",
+    "RESET-TELEMETRY-MEMORY-SEMANTICS-PRESERVED",
+    "FORMAL-ROOT-ABSENT"
+  ]
+}

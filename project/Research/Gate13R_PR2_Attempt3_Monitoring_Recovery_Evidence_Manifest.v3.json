@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "manifestId": "gate13r-pr2-attempt3-monitoring-recovery-v2-implementation-evidence-v3",
+  "createdAtUtc": "2026-10-09T07:26:00Z",
+  "status": "V2-MONITOR-VALIDATION-PASSED-NON-EXECUTING",
+  "retainedEvidence": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v2.json",
+    "rawBytes": 2165,
+    "sha256": "483430f8ef8150e7be3e97e98c8aa979665b9f91d711439ecd049882dfdc7f7f"
+  },
+  "newFiles": [
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_PostReadiness_Defect_Receipt.v1.json", "rawBytes": 2175, "sha256": "6786632fa89493a78936f7f91c9fb3ee2dc21e43618460db881d609953f2f503"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Config.v2.json", "rawBytes": 2441, "sha256": "b88da3901a2c2cc494140a8cd2e3f37b546f637935bc940a8941a850d42770c6"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_Implementation_Repair.v2.md", "rawBytes": 1501, "sha256": "0822efd540be52f58e5f190dd6280328871cad3a2070d13a8a5574edeca1bd66"},
+    {"relativePath": "Research/Gate13RPR2Attempt3MonitoringRecoveryV2.py", "rawBytes": 4809, "sha256": "6d1cd6b1f0542c2985fb0c11d3da6caee6c0413f0c5fe13f335897fef8f4c162"},
+    {"relativePath": "Research/Get-Gate13RPR2Attempt3OperationalProgressV2.ps1", "rawBytes": 3001, "sha256": "8b9c3733aae86b4adbe03c9bc7806931947746d864854d438bf2a67d09f537c5"},
+    {"relativePath": "Research/Test-Gate13RPR2Attempt3MonitoringRecoveryV3.py", "rawBytes": 3783, "sha256": "88b9bde2852c67100db9269fad9062949366aad10d2b43614eaf94bc8b4a60a4"},
+    {"relativePath": "Research/Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/validation-summary.json", "rawBytes": 5206, "sha256": "6a2980fab5e31c87d93882fafd5882b903309a3a8be0d76f024adfb3d670026f"},
+    {"relativePath": "Research/Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/pass-receipt.json", "rawBytes": 356, "sha256": "2192288de6f036c6e4411818cc10837d1d07a2828f92417589b6e2d16c0832c1"},
+    {"relativePath": "Research/Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/partial-output-manifest.json", "rawBytes": 26994, "sha256": "6b949fc2102a1f566f57063fe6d00fa411e1b4761c7d8c4813ecf386b003d1bb"},
+    {"relativePath": "Research/Gate13R_PR2_Attempt3_Monitoring_Recovery_PostValidation_Preservation_Audit.v2.json", "rawBytes": 4064, "sha256": "73ecca00922274fc0f9a5ec0498a9983e0502897955ae7775af3d2fe6b40a441"}
+  ],
+  "validation": {
+    "v1ImplementationPreserved": true,
+    "v1ReadinessSuperseded": true,
+    "v2ImplementationActive": true,
+    "attempt3Passed56Of56": true,
+    "rawCommitHourlyCoverage": true,
+    "rawCommitStaleCoverage": true,
+    "unityInvocations": 0,
+    "formalTargetsCreated": false
+  },
+  "authorizationBoundary": {
+    "formalAttempt3LaunchAuthorized": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  }
+}

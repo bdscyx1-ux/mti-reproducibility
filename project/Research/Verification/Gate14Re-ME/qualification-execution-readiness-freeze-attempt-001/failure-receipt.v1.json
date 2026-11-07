@@ -1,0 +1,120 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-freeze-attempt-001-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-freeze-attempt-001",
+  "attemptId": "qualification-execution-readiness-freeze-attempt-001",
+  "completedAtUtc": "2026-10-17T14:15:44.3556401Z",
+  "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_IMPLEMENTATION_BINDING_MISMATCH",
+  "passed": false,
+  "terminal": true,
+  "state": [
+    "UPSTREAM_PLANNING_ASSETS_HASHES_AND_CARDINALITY_PASS",
+    "OUTPUT_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY_PASS",
+    "D3_V3_1_AND_TYPED_PARQUET_BINDINGS_PRESENT",
+    "TRUSTED_IDENTITY_RULE_AND_TIMESTAMP_COMPARATOR_QUALIFIED",
+    "CURRENT_SUPERVISOR_AND_MANIFEST_NOT_COMPATIBLE_WITH_ADOPTED_V2_V3_CHAIN",
+    "MEASURED_ROOT_NOT_CREATED",
+    "UNITY_NOT_STARTED",
+    "NO_PLANNER_OR_ALGORITHM_LANE_EXECUTED",
+    "NO_QUALIFICATION_OR_FORMAL_OBSERVATION_CREATED",
+    "CURRENT_EXECUTION_CHAIN_NOT_ADOPTED",
+    "REPAIR_REQUIRES_SEPARATE_AUTHORIZATION"
+  ],
+  "auditEvidence": {
+    "readinessAudit": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/readiness-audit.v1.json",
+      "sha256": "2e2b14634a28aa80c617902a618e7b37ff675429deaa1bc989935a1ad3879c45"
+    },
+    "auditTool": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/audit_qualification_execution_readiness_v1.py",
+      "sha256": "71b0b97b3cee2cd2bcd92bf6fefbadcf11f02611828cc08701a3195603606909",
+      "exitCode": 2,
+      "totalChecks": 46,
+      "passedChecks": 39,
+      "failedChecks": 7
+    },
+    "sourceAndEvidenceFreezeManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/source-and-evidence-freeze-manifest.v1.json",
+      "sha256": "d1d9f348fa6209f41e68d70d0522ddf2d89169ca552578ef2b5ab91ba5de60df",
+      "allListedHashesAndLengthsMatched": true
+    },
+    "preflightBoundaryReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/preflight-boundary-receipt.v1.json",
+      "sha256": "1780fc86b2fa8b0bdd8638c5b3bd85f7853e13803c6e219c6c49e6ad7757301a"
+    }
+  },
+  "hardStopReasons": [
+    {
+      "blockerId": "EXE-001-SUPERVISOR-RUNNER-METHOD-VERSION",
+      "reason": "current supervisor invokes RunnerV1 instead of adopted RunnerV2"
+    },
+    {
+      "blockerId": "EXE-002-RECEIPT-VERSION-MISMATCH",
+      "reason": "current supervisor expects receipt v1 filenames while RunnerV2 emits receipt v2 filenames"
+    },
+    {
+      "blockerId": "EXE-003-STALE-IMPLEMENTATION-MANIFEST",
+      "reason": "current source-only manifest omits RunnerV2 and adopted v2/v3 execution bindings and cannot satisfy RunnerV2 self-verification"
+    },
+    {
+      "blockerId": "EXE-004-TRUSTED-UNITY-IDENTITY-NOT-WIRED",
+      "reason": "current supervisor does not implement the qualified three-phase identity rule, process composite identity, timestamp comparator and post-exit reconfirmation"
+    },
+    {
+      "blockerId": "EXE-005-STRUCTURAL-DELIVERY-COMMIT-NOT-WIRED",
+      "reason": "current supervisor stops at raw-commit-pending and never invokes structural-v2 plus complete per-observation delivery-v2"
+    },
+    {
+      "blockerId": "EXE-006-LAUNCH-RECEIPT-INCOMPLETE-BINDINGS",
+      "reason": "current launch receipt does not bind the adopted planning, schema, D3, identity, structural, delivery and typed-Parquet artifacts"
+    }
+  ],
+  "nonTerminalCapabilityGap": {
+    "gapId": "CAP-001-NO-PREGENERATED-WHOLE-SUPERBLOCK-REPLACEMENTS",
+    "scheduleRows": 162,
+    "rowsWithBoundReplacement": 0,
+    "rowsWithNullReplacement": 162,
+    "currentEffect": "a primary technical failure would fail closed instead of consuming a frozen replacement",
+    "requiresExplicitDispositionBeforeExecution": true
+  },
+  "scientificBoundary": {
+    "measuredRootCreated": false,
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "analysisPerformed": false,
+    "rankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "sealedIdentityMappingDisclosed": false
+  },
+  "adoption": {
+    "currentExecutionChainAdopted": false,
+    "qualificationRunAuthorized": false,
+    "globalStatusV28Written": false,
+    "repairPerformed": false,
+    "automaticRetryPerformed": false
+  },
+  "nextAuthorizationRequired": {
+    "stage": "Gate14Re-ME qualification execution binding and supervisor v2 repair attempt-001",
+    "minimumScope": [
+      "create a versioned supervisor v2, execution contract v2 and current implementation manifest v2 without modifying or reclassifying this failed attempt",
+      "bind RunnerV2, receipt v2 names, input schema v2, instrument contract v3, output schema v2, qualified D3-v3.1, planning-assets manifest, trusted identity rule, attempt-007 timestamp comparator, typed-Parquet runtime, structural-v2 and delivery-v2",
+      "implement launch/live/post-exit Unity identity verification and exact process composite identity",
+      "implement terminal structural-v2 validation and complete per-observation delivery-v2 commit",
+      "run only offline/static known-answer checks and compilation needed to freeze the repaired execution chain; do not create a measured root or execute an algorithm lane",
+      "freeze an explicit disposition for the currently absent whole-superblock replacement bindings"
+    ],
+    "stillProhibited": [
+      "qualification measured-root creation",
+      "qualification algorithm-lane execution",
+      "formal collection",
+      "formal analysis",
+      "ranking",
+      "winner adjudication"
+    ]
+  }
+}

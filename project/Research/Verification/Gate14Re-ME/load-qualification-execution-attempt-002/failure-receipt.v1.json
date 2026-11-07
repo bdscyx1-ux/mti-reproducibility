@@ -1,0 +1,67 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-002-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-002-1531999d-c89b-4200-9564-e40ea58e941d",
+  "attemptId": "load-qualification-execution-attempt-002",
+  "status": "FAILED_CLOSED_PREFLIGHT_SUPERVISOR_MANIFEST_STATE_GUARD_MISMATCH",
+  "passed": false,
+  "terminal": true,
+  "failedAtUtc": "2026-10-17T16:59:53.6034823Z",
+  "failureClass": "FROZEN_EXECUTION_BINDING_GUARD_DEFECT",
+  "exactStructuralReason": "Frozen supervisor v3 rejected frozen implementation manifest v3.2 before root creation. Supervisor line 540 requires manifestGeneration == 3 and executionReadinessStatus == FROZEN_CURRENT_IMPLEMENTATION_COMPILED_AND_TERMINAL_CHAIN_CORRECTED_OFFLINE, while the authoritative host-bound manifest v3.2 has manifestGeneration == 4 and executionReadinessStatus == FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE.",
+  "supervisorObservedError": "Authoritative implementation manifest v3 state is not adopted.",
+  "frozenSupervisorGuard": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+    "sha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+    "line": 540,
+    "expectedManifestGeneration": 3,
+    "expectedManifestSchemaV3": "gate14re-me-qualification-current-implementation-manifest-v3",
+    "expectedExecutionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_AND_TERMINAL_CHAIN_CORRECTED_OFFLINE"
+  },
+  "authoritativeManifestObserved": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_2.json",
+    "sha256": "83ef4c7081a77f7093e9f37f53b786f628459c404ca9e89b78d6e93ce64d2514",
+    "manifestGeneration": 4,
+    "manifestSchemaV3": "gate14re-me-qualification-current-implementation-manifest-v3",
+    "executionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE",
+    "manifestRevision": "3.2"
+  },
+  "readinessGap": {
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-004/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "4edafd87ffe927ccf8d9c38c73c486141ee311e291f1d20f5bb82b358f6cc56b",
+    "auditRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-004/readiness-recheck-audit.v4.json",
+    "auditSha256": "6818b49c722ee28981e2a39ceb7fcfa02431e1ceecb133ea5811542a7ecb4dbb",
+    "auditAcceptedManifestGeneration": 4,
+    "auditAcceptedExecutionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE",
+    "missingCheck": "The readiness audit did not evaluate the exact supervisor line-540 manifest acceptance predicate against manifest v3.2."
+  },
+  "evidenceBindings": {
+    "executionAuthorizationSha256": "c06ff9bce107f26cd61d016d7581a5f24c4602c618708a6f4f62058fa74affdc",
+    "stageContractSha256": "2e94a7467f82392e1b6a2d23941f546f1b7146713434214f24f1ab22b28ffd3a",
+    "prelaunchAuditSha256": "0d8780a1cb8361a03bbfdfe040abff2a2026f6ecabbe923abc6e310cf9a5cacf",
+    "launchContractSha256": "33d9708a12c1d20514e3362adf27154087ca8ad29c5527305a464e8f2c7a7c12",
+    "externalLaunchReceiptSha256": "d66c54e8170028041487cc99aba451829f3dac92cd4700682ba53480ce45e1a9",
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "038fb51786b9ec7e7f6e4141e8967a2dfe35cfe50456f1a8914d47246f9739e7"
+  },
+  "disposition": {
+    "supervisorLaunchAttempted": true,
+    "supervisorPid": 89112,
+    "supervisorNaturalExitObserved": true,
+    "signalOrForcedTerminationSent": false,
+    "unityInvocationCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "retryPerformed": false,
+    "repairPerformed": false,
+    "newAttemptCreatedAutomatically": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "nextActionRequiresSeparateRepairAuthorization": true
+  }
+}

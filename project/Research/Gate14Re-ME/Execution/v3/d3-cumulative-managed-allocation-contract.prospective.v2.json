@@ -1,0 +1,101 @@
+{
+  "schema": "gate14re-me-d3-v3-1-cumulative-managed-allocation-contract-prospective-v2",
+  "studyId": "Gate14Re-ME",
+  "endpointId": "D3",
+  "semanticVersion": "3.1",
+  "status": "PROSPECTIVE_UNQUALIFIED_D3_V3_1",
+  "createdAtUtc": "2026-10-17T07:38:00.6829088Z",
+  "name": "owner-thread cumulative managed allocation bytes",
+  "unit": "bytes",
+  "scientificEndpointChangedFromV3": false,
+  "eventSource": {
+    "nativePluginPlatform": "Windows x86-64",
+    "unityVersion": "2022.3.30f1c1",
+    "unityProfilerMarkerExactName": "GC.Alloc",
+    "acceptedDataBearingEventTypes": ["Begin"],
+    "ignoredEventTypes": ["End"],
+    "allOtherEventTypesFailClosed": true,
+    "allocationSizeMetadataIndex": 0,
+    "allocationSizeMetadataType": "UInt32",
+    "allocationSizeMetadataTypeValue": 3,
+    "allocationSizeMetadataSizeBytes": 4,
+    "allocationSizeMustBePositive": true,
+    "allocationSizePointerMustBeNonNull": true,
+    "perEventWidening": "lossless UInt32 to UInt64",
+    "cumulativeCounterLimit": "Int64.MaxValue for managed interoperability",
+    "otherProfilerMarkersListenedTo": 0
+  },
+  "threadAttribution": {
+    "ownerThreadDefinition": "Windows GetCurrentThreadId captured by native BeginWindow",
+    "primaryCounterIncludes": "valid GC.Alloc Begin-event allocation-size metadata observed on the owner thread while the native window is active",
+    "primaryCounterExcludes": "all GC.Alloc events observed on non-owner threads",
+    "foreignEventsRetainedForQualificationDiagnostics": true,
+    "formalMetricWouldUseForeignDiagnostics": false
+  },
+  "rawFields": [
+    "managedAllocationBytes",
+    "managedAllocationEventCount",
+    "foreignThreadAllocationBytes",
+    "foreignThreadAllocationEventCount",
+    "invalidMetadataEventCount",
+    "counterOverflowCount",
+    "ownerNativeThreadId",
+    "windowStartStopwatchTicks",
+    "windowEndStopwatchTicks",
+    "windowElapsedStopwatchTicks",
+    "stopwatchFrequency"
+  ],
+  "derivedFields": {
+    "managedAllocationRateBytesPerSecond": "managedAllocationBytes * stopwatchFrequency / windowElapsedStopwatchTicks",
+    "rateValidity": "managedAllocationBytes > 0 and stopwatchFrequency > 0 and windowElapsedStopwatchTicks > 0 and result is finite",
+    "separateRateMeasurementWindow": false,
+    "formulaControlRecord": "the 1 MiB known-array raw window"
+  },
+  "prospectiveKnownAnswerCriteria": {
+    "emptyWindowTrials": 64,
+    "emptyWindowRequiredOwnerBytes": 0,
+    "emptyWindowRequiredOwnerEvents": 0,
+    "knownArrayPayloadBytes": [4096, 65536, 1048576],
+    "knownArrayMaximumPerAllocationOverheadBytes": 256,
+    "knownArrayRequiredStrictMonotonicity": true,
+    "knownArrayMaximumOverheadSpreadBytes": 64,
+    "smallObjectPayloadBytes": 64,
+    "smallObjectRepetitions": 4096,
+    "smallObjectRequiredExactEventScaling": true,
+    "smallObjectRequiredExactByteScaling": true,
+    "gcReclamationPayloadBytes": 8388608,
+    "gcReclamationRequiredNondecrease": true,
+    "gcReclamationConditionalConsistency": "If event count is unchanged, bytes must be exactly unchanged; if event count increases, bytes must increase.",
+    "sameThreadControlRecord": "the 1 MiB known-array raw window",
+    "sameThreadRequiredPositiveOwnerResponse": true,
+    "crossThreadPayloadBytes": 4194304,
+    "crossThreadRequiredOwnerBytes": 0,
+    "crossThreadRequiredOwnerEvents": 0,
+    "crossThreadRequiredMinimumForeignBytes": 4194304,
+    "crossThreadRequiredMinimumForeignEvents": 1,
+    "rateFormulaMaximumAbsoluteRecomputeError": 1e-9,
+    "invalidMetadataEventsRequired": 0,
+    "counterOverflowEventsRequired": 0
+  },
+  "terminalReceiptPolicy": {
+    "singleReceiptForPassOrFail": true,
+    "preserveCompletedStageIds": true,
+    "preserveAllRawWindowsCollectedBeforeFailure": true,
+    "preserveFirstFailure": true,
+    "overwriteExistingOutput": false
+  },
+  "semanticExclusions": [
+    "live managed-heap occupancy",
+    "native allocation bytes",
+    "RSS or committed process memory",
+    "frame-level GC.Alloc aggregates",
+    "cross-thread allocation attributed to the owner lane",
+    "ranking, weighting, or winner adjudication"
+  ],
+  "integrationState": {
+    "formalQualificationRunnerIntegrated": false,
+    "formalOutputSchemaIntegrated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false
+  }
+}

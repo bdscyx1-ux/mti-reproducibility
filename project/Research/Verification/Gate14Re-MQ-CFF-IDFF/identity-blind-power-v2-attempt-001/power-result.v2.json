@@ -1,0 +1,337 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-result-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "attemptId": "identity-blind-power-v2-attempt-001",
+  "status": "PASS_IDENTITY_BLIND_PRIMARY_POWER_B_SELECTED_ELIGIBLE_FOR_FINAL_FREEZE",
+  "mipe": {
+    "ratio": 0.9,
+    "logScaleExact": -0.10536051565782628,
+    "lowerIsBetter": true
+  },
+  "primaryFamily": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "keySecondaryFamily": [
+    "S1",
+    "S2"
+  ],
+  "targetPrimaryPowerAtLeast": 0.9,
+  "familywiseAlpha": 0.05,
+  "multiplicity": "P1-P4 one-sided Holm; S1-S2 one-sided Holm only after all P1-P4 reject",
+  "candidateResults": [
+    {
+      "B": 36,
+      "seed": 141420308,
+      "primaryResults": [
+        {
+          "hypothesis": "P1",
+          "draws": 200000,
+          "rejections": 187808,
+          "power": 0.93904,
+          "wilson95Lower": 0.9379829730949355,
+          "wilson95Upper": 0.9400801616881934
+        },
+        {
+          "hypothesis": "P2",
+          "draws": 200000,
+          "rejections": 187775,
+          "power": 0.938875,
+          "wilson95Lower": 0.9378166504764341,
+          "wilson95Upper": 0.9399164906449801
+        },
+        {
+          "hypothesis": "P3",
+          "draws": 200000,
+          "rejections": 182519,
+          "power": 0.912595,
+          "wilson95Lower": 0.9113492909200108,
+          "wilson95Upper": 0.9138248597173914
+        },
+        {
+          "hypothesis": "P4",
+          "draws": 200000,
+          "rejections": 182408,
+          "power": 0.91204,
+          "wilson95Lower": 0.9107907558335663,
+          "wilson95Upper": 0.9132734161235229
+        }
+      ],
+      "worstPrimary": "P4",
+      "worstPrimaryPower": 0.91204,
+      "worstPrimaryWilson95Lower": 0.9107907558335663,
+      "passesFrozenPrimaryPowerCriterion": true,
+      "primaryGateOpenPlanningProbability": {
+        "draws": 200000,
+        "opens": 181704,
+        "probability": 0.90852,
+        "wilson95Lower": 0.9072486757703947,
+        "wilson95Upper": 0.9097756314034479
+      },
+      "keySecondaryGatedPlanningResults": [
+        {
+          "hypothesis": "S1",
+          "draws": 200000,
+          "rejections": 48435,
+          "power": 0.242175,
+          "wilson95Lower": 0.24030245373017056,
+          "wilson95Upper": 0.2440574503208039
+        },
+        {
+          "hypothesis": "S2",
+          "draws": 200000,
+          "rejections": 44787,
+          "power": 0.223935,
+          "wilson95Lower": 0.2221132929307925,
+          "wilson95Upper": 0.2257673117888129
+        }
+      ],
+      "keySecondaryUsedForBSelection": false,
+      "runtime": {
+        "freshUnityProcessCount": 864,
+        "stressHoursAt1_9x": 11.988586,
+        "atOrAbove168Hours": false
+      }
+    },
+    {
+      "B": 72,
+      "seed": 141420344,
+      "primaryResults": [
+        {
+          "hypothesis": "P1",
+          "draws": 200000,
+          "rejections": 199781,
+          "power": 0.998905,
+          "wilson95Lower": 0.9987501578826186,
+          "wilson95Upper": 0.9990406772553573
+        },
+        {
+          "hypothesis": "P2",
+          "draws": 200000,
+          "rejections": 199775,
+          "power": 0.998875,
+          "wilson95Lower": 0.9987181928280249,
+          "wilson95Upper": 0.9990126434623663
+        },
+        {
+          "hypothesis": "P3",
+          "draws": 200000,
+          "rejections": 199429,
+          "power": 0.997145,
+          "wilson95Lower": 0.9969014206239882,
+          "wilson95Upper": 0.9973694821223641
+        },
+        {
+          "hypothesis": "P4",
+          "draws": 200000,
+          "rejections": 199434,
+          "power": 0.99717,
+          "wilson95Lower": 0.9969274424009044,
+          "wilson95Upper": 0.9973934593851018
+        }
+      ],
+      "worstPrimary": "P3",
+      "worstPrimaryPower": 0.997145,
+      "worstPrimaryWilson95Lower": 0.9969014206239882,
+      "passesFrozenPrimaryPowerCriterion": true,
+      "primaryGateOpenPlanningProbability": {
+        "draws": 200000,
+        "opens": 199398,
+        "probability": 0.99699,
+        "wilson95Lower": 0.996740183778624,
+        "wilson95Upper": 0.9972207249218755
+      },
+      "keySecondaryGatedPlanningResults": [
+        {
+          "hypothesis": "S1",
+          "draws": 200000,
+          "rejections": 95412,
+          "power": 0.47706,
+          "wilson95Lower": 0.47487146277000036,
+          "wilson95Upper": 0.47924941844372737
+        },
+        {
+          "hypothesis": "S2",
+          "draws": 200000,
+          "rejections": 89093,
+          "power": 0.445465,
+          "wilson95Lower": 0.4432878349422964,
+          "wilson95Upper": 0.44764425995703416
+        }
+      ],
+      "keySecondaryUsedForBSelection": false,
+      "runtime": {
+        "freshUnityProcessCount": 1728,
+        "stressHoursAt1_9x": 23.977171,
+        "atOrAbove168Hours": false
+      }
+    },
+    {
+      "B": 108,
+      "seed": 141420380,
+      "primaryResults": [
+        {
+          "hypothesis": "P1",
+          "draws": 200000,
+          "rejections": 199997,
+          "power": 0.999985,
+          "wilson95Lower": 0.9999558950174744,
+          "wilson95Upper": 0.9999948986335431
+        },
+        {
+          "hypothesis": "P2",
+          "draws": 200000,
+          "rejections": 199995,
+          "power": 0.999975,
+          "wilson95Lower": 0.9999414725866164,
+          "wilson95Upper": 0.9999893214485395
+        },
+        {
+          "hypothesis": "P3",
+          "draws": 200000,
+          "rejections": 199984,
+          "power": 0.99992,
+          "wilson95Lower": 0.9998700418095801,
+          "wilson95Upper": 0.9999507543383377
+        },
+        {
+          "hypothesis": "P4",
+          "draws": 200000,
+          "rejections": 199985,
+          "power": 0.999925,
+          "wilson95Lower": 0.9998762494124552,
+          "wilson95Upper": 0.9999545465433931
+        }
+      ],
+      "worstPrimary": "P3",
+      "worstPrimaryPower": 0.99992,
+      "worstPrimaryWilson95Lower": 0.9998700418095801,
+      "passesFrozenPrimaryPowerCriterion": true,
+      "primaryGateOpenPlanningProbability": {
+        "draws": 200000,
+        "opens": 199984,
+        "probability": 0.99992,
+        "wilson95Lower": 0.9998700418095801,
+        "wilson95Upper": 0.9999507543383377
+      },
+      "keySecondaryGatedPlanningResults": [
+        {
+          "hypothesis": "S1",
+          "draws": 200000,
+          "rejections": 127567,
+          "power": 0.637835,
+          "wilson95Lower": 0.6357259728320888,
+          "wilson95Upper": 0.639938732394844
+        },
+        {
+          "hypothesis": "S2",
+          "draws": 200000,
+          "rejections": 120100,
+          "power": 0.6005,
+          "wilson95Lower": 0.5983515049420113,
+          "wilson95Upper": 0.6026446344660256
+        }
+      ],
+      "keySecondaryUsedForBSelection": false,
+      "runtime": {
+        "freshUnityProcessCount": 2592,
+        "stressHoursAt1_9x": 35.965757,
+        "atOrAbove168Hours": false
+      }
+    },
+    {
+      "B": 144,
+      "seed": 141420416,
+      "primaryResults": [
+        {
+          "hypothesis": "P1",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        },
+        {
+          "hypothesis": "P2",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        },
+        {
+          "hypothesis": "P3",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        },
+        {
+          "hypothesis": "P4",
+          "draws": 200000,
+          "rejections": 200000,
+          "power": 1.0,
+          "wilson95Lower": 0.9999807930748098,
+          "wilson95Upper": 1.0
+        }
+      ],
+      "worstPrimary": "P1",
+      "worstPrimaryPower": 1.0,
+      "worstPrimaryWilson95Lower": 0.9999807930748098,
+      "passesFrozenPrimaryPowerCriterion": true,
+      "primaryGateOpenPlanningProbability": {
+        "draws": 200000,
+        "opens": 200000,
+        "probability": 1.0,
+        "wilson95Lower": 0.9999807930748098,
+        "wilson95Upper": 1.0
+      },
+      "keySecondaryGatedPlanningResults": [
+        {
+          "hypothesis": "S1",
+          "draws": 200000,
+          "rejections": 151111,
+          "power": 0.755555,
+          "wilson95Lower": 0.7536666419084995,
+          "wilson95Upper": 0.7574335412399663
+        },
+        {
+          "hypothesis": "S2",
+          "draws": 200000,
+          "rejections": 143885,
+          "power": 0.719425,
+          "wilson95Lower": 0.7174517789480772,
+          "wilson95Upper": 0.721389792092803
+        }
+      ],
+      "keySecondaryUsedForBSelection": false,
+      "runtime": {
+        "freshUnityProcessCount": 3456,
+        "stressHoursAt1_9x": 47.954342,
+        "atOrAbove168Hours": false
+      }
+    }
+  ],
+  "selectionRule": "smallest B whose worst P1-P4 Wilson 95 percent lower power bound is at least 0.90",
+  "keySecondaryUsedForBSelection": false,
+  "selectedB": 36,
+  "selectedRuntime": {
+    "freshUnityProcessCount": 864,
+    "stressHoursAt1_9x": 11.988586,
+    "atOrAbove168Hours": false
+  },
+  "sevenDayGateHours": 168,
+  "sevenDayGateTriggered": false,
+  "disposition": "Continue to implementation schedule freeze and prelaunch readiness under the current authorization.",
+  "boundaries": {
+    "qualificationObservationsUsedAsFormalSamples": false,
+    "identityMappingOpened": false,
+    "namedAlgorithmEffectsComputedOrReported": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false
+  }
+}

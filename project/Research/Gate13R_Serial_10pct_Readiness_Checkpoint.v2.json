@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "checkpointKind": "gate13r-strict-serial-10pct-nonexecuting-readiness-checkpoint-v2",
+  "savedAtUtc": "2026-10-08T09:24:21.3053087Z",
+  "status": "GATE13R-SERIAL-10PCT-NONEXECUTING-PREPARATION-PASSED-FORMAL-NOT-AUTHORIZED",
+  "activeFormalDesignId": "gate13r-one-fresh-unity-process-per-williams-block-10pct-uncapped-serial-v2",
+  "userDecision": {
+    "exactDirective": "不再并行，直接串行实验",
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "laneCount": 1,
+    "oneFreshUnityEditorProcessPerCompleteWilliamsBlock": true,
+    "parallelFallbackAllowed": false,
+    "mixedTopologyAllowed": false
+  },
+  "precision": {
+    "confidenceLevel": 0.95,
+    "relativeHalfWidth": 0.1,
+    "hardCap": null,
+    "candidateBlocksPerCampaign": {
+      "four-algorithm-shared-goal-v1": 144,
+      "per-agent-heterogeneous-goal-v1": 204,
+      "grouped-field-heterogeneous-goal-v1": 108
+    }
+  },
+  "formalScale": {
+    "scenarioCount": 53,
+    "campaignCount": 74,
+    "eligibleCellCount": 212,
+    "williamsBlockProcessCount": 11160,
+    "sampleCount": 31536
+  },
+  "runtimeProjection": {
+    "serialP50Hours": 64.830802096,
+    "serialP95Hours": 83.904223147,
+    "recommendedMaintenanceWindowHours": 96,
+    "hardWallClockLimitHours": null,
+    "old36HourLimitFeasible": false,
+    "estimateOnly": true,
+    "formalAuthorizationMustExplicitlyAcceptRuntimeEnvelopeOrSupplyNewLimit": true
+  },
+  "storage": {
+    "projectedRawBytesWithSafety": 43885575792,
+    "reserveBytes": 42949672960,
+    "minimumLaunchFreeBytes": 86835248752,
+    "validationOnlyObservedFreeBytes": 276620062720,
+    "validationOnlyObservationAuthorizesLaunch": false,
+    "freshOriginalBytePreflightRequiredImmediatelyBeforeFormalRootCreation": true
+  },
+  "activeArtifacts": {
+    "config": {
+      "relativePath": "Research/Gate13R_Serial_10pct_Formal_Campaign_Config.v2.json",
+      "sha256": "faaec5613a2625aee462038305310e229c7cf8fdf67edb800a0b3eb256f1a300"
+    },
+    "schedule": {
+      "relativePath": "Research/Gate13R_Serial_10pct_Formal_Williams_Block_Schedule.v2.jsonl",
+      "sha256": "d9300cce732e12a7b90ec43ad9d5f8fe52cbad58da713c25879754eb31ea0ead"
+    },
+    "scheduleManifest": {
+      "relativePath": "Research/Gate13R_Serial_10pct_Formal_Williams_Block_Schedule_Manifest.v2.json",
+      "sha256": "8bf87ae8c206355930dd6b720756216ef74052ce9d0551680e3a91933a970dc9"
+    },
+    "provenance": {
+      "relativePath": "Research/Gate13R_Serial_10pct_Formal_Preparation_Provenance.v2.json",
+      "sha256": "409b79506b006378c79a0cb777909e0157b9917a2e439c90d59d0679b2340f7b"
+    },
+    "orchestrator": {
+      "relativePath": "Research/Run-Gate13RSerial10pctFormalCampaignV2.ps1",
+      "sha256": "8bdd8f7b1edc8fc84f8ef35099f103fd55f789f352e47537874f2095a6116770"
+    },
+    "blockWrapper": {
+      "relativePath": "Research/Run-Gate13RSerial10pctFormalBlockV2.ps1",
+      "sha256": "b4827065ec609f148fa0dd58959cb79e5c9bf54f35fd7aa8b64ef172d820fe1b"
+    },
+    "finalAuditScript": {
+      "relativePath": "Research/Test-Gate13RSerial10pctFinalAuditV2.ps1",
+      "sha256": "644931ed765b98c5e1c40d6ff202d655bfc53cdd42fa8f4ca6340d219b0aa000"
+    },
+    "finalAudit": {
+      "relativePath": "Research/Verification/Gate13R_Serial_10pct/v9-v2-final/FinalAudit.summary.json",
+      "sha256": "16ffdd5e8a92eb41da07e01017dfdc9ec0c0bea8bea3e3dcf1e7b01892654774",
+      "assertionCount": 156,
+      "errorCount": 0,
+      "passed": true
+    }
+  },
+  "validation": {
+    "gate12rExactTopologyAuditPassed": true,
+    "gate12rReadinessAssertionsPassed": 114,
+    "scheduleAssertionsPassed": 38,
+    "deterministicRegenerationByteIdentical": true,
+    "validationOnlyOrchestratorPassed": true,
+    "validationOnlyStoragePreflightPassed": true,
+    "negativeMissingReceiptGuardPassed": true,
+    "finalAuditAssertionsPassed": 156,
+    "unityProcessesLaunchedByThisPreparation": 0
+  },
+  "preservedExcludedEvidence": {
+    "fourLaneV16": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-MERGE",
+    "threeLaneV1": "EXTERNAL-FAILURE-EXCLUDED",
+    "serialPreparationV1": "REJECTED-STORAGE-GATE-COMPATIBILITY-DEFECT",
+    "serialReadinessValidatorAttempt1": "FAILED-VALIDATOR-IMPLEMENTATION-ONLY-NO-UNITY-NO-RESEARCH-DATA"
+  },
+  "authorizationBoundary": {
+    "formalCampaignAuthorized": false,
+    "formalExecutionReceiptCreated": false,
+    "formalRootRelativePath": "Research/FormalRuns/Gate13R_Serial_10pct/v2",
+    "formalRootExists": false,
+    "formalTimingSamplesCreated": false,
+    "automaticRetryAuthorized": false,
+    "automaticResumeAuthorized": false,
+    "partialAttemptMergeAuthorized": false,
+    "gate14Authorized": false,
+    "nextRequiredAction": "Obtain separate user authorization that binds the exact v2 hashes and explicitly accepts the serial runtime envelope before creating a versioned execution receipt or formal root."
+  }
+}

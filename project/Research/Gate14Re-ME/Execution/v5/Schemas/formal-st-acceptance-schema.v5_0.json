@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-formal-st-acceptance-schema-v5.0",
+  "title": "Gate14Re-ME formal ST independent read-only acceptance terminal v5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema","studyId","status","sourceMeasuredRootWriteBack","scheduleRows","acceptedSuperblocks","namedAlgorithmLanes","eventGroupRows","typedParquetFullRoundTrip","formalAnalysisPerformed","createdAtUtc"],
+  "properties": {
+    "schema":{"const":"gate14re-me-formal-st-acceptance-terminal-receipt-v5"},
+    "studyId":{"const":"Gate14Re-ME"},
+    "status":{"const":"PASS_READ_ONLY_FORMAL_ST_ACCEPTANCE"},
+    "sourceMeasuredRootWriteBack":{"const":false},
+    "scheduleRows":{"const":1296},
+    "acceptedSuperblocks":{"const":1296},
+    "namedAlgorithmLanes":{"const":7776},
+    "eventGroupRows":{"const":186624},
+    "typedParquetFullRoundTrip":{"const":true},
+    "formalAnalysisPerformed":{"const":false},
+    "createdAtUtc":{"type":"string","format":"date-time"}
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "gate14re-me-qualification-planning-preflight-compatibility-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-planning-freeze-attempt-001",
+  "status": "FAIL_INPUT_SCHEMA_RUNTIME_CONTRACT_UNSATISFIABLE",
+  "checkedAtUtc": "2026-10-17T08:42:30.5902555Z",
+  "phase": "pre-generation-frozen-contract-compatibility-audit",
+  "authorizationBinding": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Planning_Freeze_Authorization.v1.json",
+    "lengthBytes": 4596,
+    "sha256": "d19fe98380c3c2eda3897ad89e48efe2a9cf08e6a4f959680a38b270755bee62"
+  },
+  "planBinding": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Planning_Freeze_Plan.v1.md",
+    "lengthBytes": 3003,
+    "sha256": "82fa3ba2512edbef497c708c29394d0b8788186e63b8b246859231224159fd18"
+  },
+  "frozenBindings": {
+    "inputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-input-schema.v1.json",
+      "sha256": "12105816916eaadc6575ed28dc96a6bb4a9863d2dbbe70cc034ebcfbf1de2c6b"
+    },
+    "qualificationContractsSource": {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    "referenceOracleSource": {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    },
+    "runnerV2Source": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    },
+    "navigationContractsSource": {
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    }
+  },
+  "primaryContradiction": {
+    "field": "eventGroups[*].topology",
+    "schemaEvidence": {
+      "additionalPropertiesFalseLine": 82,
+      "requiredPropertyListLine": 83,
+      "allowedPropertyLines": "85-89",
+      "topologyDeclared": false,
+      "consequence": "Any event-group object containing topology violates the frozen JSON Schema because eventGroup has additionalProperties=false."
+    },
+    "dtoEvidence": {
+      "class": "Gate14ReMEEventGroupV1",
+      "fieldDeclarationLine": 210,
+      "declaration": "public string topology;"
+    },
+    "runtimeEvidence": {
+      "runnerDeserializationLine": 71,
+      "oracleValidationLine": 519,
+      "oracleRequirement": "group.topology == input.changeTopology",
+      "inputChangeTopologySchemaValues": [
+        "compact",
+        "dispersed",
+        "bottleneck"
+      ],
+      "consequence": "If topology is omitted to satisfy the JSON Schema, the deserialized string is unset and the oracle equality check fails for every allowed nonempty changeTopology value."
+    },
+    "satisfiabilityConclusion": "No event-group JSON object can simultaneously satisfy the frozen JSON Schema and the frozen Unity oracle contract."
+  },
+  "secondaryCompatibilityChecks": {
+    "topLevelInputDtoAndSchemaPropertySetsMatch": true,
+    "coordinateDtoAndSchemaPropertySetsMatch": true,
+    "cellStateDtoAndSchemaPropertySetsMatch": true,
+    "atomicPartitionDtoAndSchemaPropertySetsMatch": true,
+    "eventGroupPropertySetOnlyDetectedDifference": "topology is required by runtime but prohibited by schema",
+    "connectivityValuesCompatible": true,
+    "connectivityEvidence": "The schema allows numeric values 4 and 8; NavigationGridConnectivity explicitly assigns FourWay=4 and EightWay=8."
+  },
+  "preGenerationDisposition": {
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "partialPlanningArtifactsAdopted": false,
+    "qualificationMeasuredRootCreated": false,
+    "unityLaunched": false,
+    "algorithmPlannerConstructedOrInvoked": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "prohibitedRootChecks": {
+    "Research/PilotRuns/Gate14Re-ME": false,
+    "Research/FormalRuns/Gate14Re-ME": false,
+    "Research/QualificationRuns/Gate14Re-ME": false,
+    "Research/MeasuredRuns/Gate14Re-ME": false
+  },
+  "terminalDecision": "FAIL_CLOSED_BEFORE_PLANNING_OUTPUT_CREATION"
+}

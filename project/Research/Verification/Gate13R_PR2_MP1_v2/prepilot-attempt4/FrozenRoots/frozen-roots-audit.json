@@ -1,0 +1,77 @@
+{
+  "auditKind": "gate13r-pr2-mp1-v2-frozen-roots-postvalidation-audit-v1",
+  "capturedAtUtc": "2026-10-09T04:25:28.913196Z",
+  "checks": [
+    {
+      "actual": 5,
+      "expected": 5,
+      "id": "pilotV1-fileCount",
+      "passed": true
+    },
+    {
+      "actual": 5247,
+      "expected": 5247,
+      "id": "pilotV1-rawBytes",
+      "passed": true
+    },
+    {
+      "actual": "bf646f0eee11c999c306ed76dcc36762fbb32c9c71361fa92f3599298e4dca50",
+      "expected": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+      "id": "pilotV1-canonicalTreeSha256",
+      "passed": false
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "id": "pilotV1-all-read-only",
+      "passed": true
+    },
+    {
+      "actual": 28020,
+      "expected": 28020,
+      "id": "formalAttempt2-fileCount",
+      "passed": true
+    },
+    {
+      "actual": 8536611302,
+      "expected": 8536611302,
+      "id": "formalAttempt2-rawBytes",
+      "passed": true
+    },
+    {
+      "actual": "3e88c959d347256fb348bed264f763cc016f94537ba11accc8c485712b5a8d41",
+      "expected": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+      "id": "formalAttempt2-canonicalTreeSha256",
+      "passed": false
+    },
+    {
+      "actual": true,
+      "expected": true,
+      "id": "formalAttempt2-all-read-only",
+      "passed": true
+    }
+  ],
+  "formalAttempt3ReceiptExists": false,
+  "formalAttempt3RootExists": false,
+  "passed": false,
+  "pilotV2RootExists": false,
+  "roots": {
+    "formalAttempt2": {
+      "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+      "allFilesReadOnly": true,
+      "canonicalTreeSha256": "3e88c959d347256fb348bed264f763cc016f94537ba11accc8c485712b5a8d41",
+      "fileCount": 28020,
+      "rawBytes": 8536611302,
+      "readOnlyFileCount": 28020
+    },
+    "pilotV1": {
+      "absolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v1",
+      "allFilesReadOnly": true,
+      "canonicalTreeSha256": "bf646f0eee11c999c306ed76dcc36762fbb32c9c71361fa92f3599298e4dca50",
+      "fileCount": 5,
+      "rawBytes": 5247,
+      "readOnlyFileCount": 5
+    }
+  },
+  "schemaVersion": 1
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "status": "AUTHORIZED_D3_V3_AUTONOMOUS_REPAIR_TO_FULL_INSTRUMENT_QUALIFICATION",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T06:38:33.6186443Z",
+  "userAuthorizationTextExact": "授权下一项，允许fail后自动修复，直至D3-V3完全可用再向我要后续授权",
+  "interpretation": {
+    "authorizedStoppingPoint": "D3-v3 is fully usable as a separately frozen and scientifically qualified instrument, ready for a later separately authorized runner/schema integration stage.",
+    "automaticRepairOverride": "The user explicitly overrides the default no-auto-retry rule for repairable failures inside this bounded D3-v3 qualification attempt. Every failed cycle must remain preserved and auditable; repair may not erase or rewrite prior evidence.",
+    "notIncludedInFullyUsable": [
+      "integration into the current qualification runner",
+      "versioning or modifying the formal output schema",
+      "qualification scheduling or input generation",
+      "anonymous identity mapping",
+      "qualification measured-root creation",
+      "algorithm-lane execution",
+      "formal collection or formal analysis",
+      "algorithm ranking or winner adjudication"
+    ]
+  },
+  "authorizedScope": {
+    "createAttempt003VerificationRoot": true,
+    "installAndFreezeCompatibleWindowsSdk": true,
+    "correctAndRetrySdkInstallerInvocation": true,
+    "monitorInstallerAndVisualStudioInstanceToTerminalState": true,
+    "freezeSdkVersionPathsAndCriticalHashes": true,
+    "retainUtf8AndWarningsAsErrorsCompilerPolicy": true,
+    "createVersionedAttempt003AlgorithmFreeHarness": true,
+    "compileAndRepairD3V3NativePlugin": true,
+    "compileAndRepairD3V3ManagedWrapperAndHarness": true,
+    "runAndRepairAlgorithmFreeKnownAnswer": true,
+    "repeatRepairCyclesUntilAllFrozenQualificationCriteriaPass": true,
+    "freezeFinalSourceBinaryContractsHashesAndQualificationReceipts": true
+  },
+  "automaticRepairRules": {
+    "preserveEveryFailureLogAndReceipt": true,
+    "useMonotonicRepairCycleNumbers": true,
+    "neverMutateAttempt001OrAttempt002Evidence": true,
+    "versionAnySourceWhosePreviouslyFrozenBytesWouldOtherwiseChange": true,
+    "repairsMustPreserveD3SemanticEndpoint": "owner-thread cumulative managed allocation bytes from exact GC.Alloc Int64 allocation-size metadata",
+    "repairsMayNotRelaxAcceptanceCriteria": true,
+    "repairsMayNotSuppressCompilerWarningsOrRemoveWarningsAsErrors": true,
+    "repairsMayNotSubstituteAnotherMetric": true,
+    "repairsMayNotIntroduceAlgorithmCodeOrPlannerConstruction": true
+  },
+  "frozenCompilerPolicy": {
+    "sourceAndExecutionCharacterSetFlag": "/utf-8",
+    "warningsAsErrorsFlag": "/WX",
+    "warningLevelFlag": "/W4",
+    "languageStandardFlag": "/std:c++17",
+    "conformanceFlag": "/permissive-",
+    "deterministicObjectAndLinkFlag": "/Brepro",
+    "warningSuppressionAuthorized": false
+  },
+  "selectedSdk": {
+    "componentId": "Microsoft.VisualStudio.Component.Windows11SDK.26100",
+    "catalogVersion": "17.14.37011.9",
+    "catalogDisplayTitle": "Windows 11 SDK (10.0.26100.7705)",
+    "visualStudioInstanceId": "75d0d27c",
+    "visualStudioInstallationPath": "C:/Program Files/Microsoft Visual Studio/2022/Community"
+  },
+  "mandatoryQualificationCriteria": [
+    "the exact GC.Alloc marker is found and event callback registration succeeds",
+    "allocation-size metadata element zero is positive Int64 with exactly eight bytes",
+    "all 64 warmed empty owner-thread windows report zero owner bytes and zero owner events",
+    "4 KiB, 64 KiB, and 1 MiB arrays meet the frozen monotonic scale and bounded-overhead rules",
+    "4096 repeated small objects scale event count and bytes exactly from the one-object control",
+    "the cumulative snapshot never decreases across forced GC and is unchanged when no new owner allocation occurs",
+    "owner-thread allocation is positively attributed to the captured owner thread",
+    "worker-thread allocation is excluded from primary counters and appears in foreign-thread diagnostics",
+    "byte and rate formulas satisfy the frozen finite-positive and numerical-identity checks",
+    "all windows report zero invalid-metadata and overflow events"
+  ],
+  "hardStopsRequiringNewAuthority": [
+    "qualification would require changing the D3-v3 endpoint semantics or substituting another metric",
+    "qualification would require runner/schema integration or any currently prohibited broader stage",
+    "installation requires credentials, security-setting changes, reboot authorization, or another external user action that cannot be completed inside this scope",
+    "a non-repairable runtime limitation makes exact GC.Alloc Int64 metadata unavailable in the bound Unity version"
+  ],
+  "prohibitedScope": {
+    "deleteOrModifyPriorEvidence": false,
+    "integrateFormalQualificationRunner": false,
+    "modifyOrVersionFormalOutputSchema": false,
+    "generateQualificationSchedule": false,
+    "generateQualificationInputs": false,
+    "generateAnonymousIdentityMappings": false,
+    "createQualificationMeasuredRoot": false,
+    "constructAnyPlanner": false,
+    "executeAnyAlgorithmLane": false,
+    "formalCollection": false,
+    "formalAnalysis": false,
+    "algorithmRanking": false,
+    "winnerAdjudication": false,
+    "fallbackToD3V2": false,
+    "fallbackToFrameHeapCounter": false,
+    "fallbackToAnyAlternativeMetric": false
+  },
+  "reservedPaths": {
+    "verificationRootRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003",
+    "knownAnswerOutputRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/d3-known-answer",
+    "qualificationMeasuredRootCreated": false
+  }
+}

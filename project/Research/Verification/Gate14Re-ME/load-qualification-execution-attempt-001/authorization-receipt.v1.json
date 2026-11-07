@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-001-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-001-921b3fd4-9f0d-4c0b-b6ad-caed4aea83d2",
+  "attemptId": "load-qualification-execution-attempt-001",
+  "status": "AUTHORIZED_LOAD_QUALIFICATION_EXECUTION_SUBJECT_TO_FROZEN_PREFLIGHT",
+  "authorizedAtUtc": "2026-10-17T16:06:20.6546574Z",
+  "authorizationSource": "user-selected response annotation",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME load qualification execution attempt‑001：以 Status v29、qualification execution readiness recheck attempt‑003 terminal receipt 及其冻结哈希为唯一启动依据；允许创建唯一的 qualification measured root 与对应 delivery root，依照已冻结的 162 行 Williams schedule，严格串行执行 1 个 instrument self-test、162 个 oracle、12 个 empty-boundary 和 972 个六算法 lane，共 1,147 个 fresh Unity processes；每个进程均须执行启动前、运行中和自然退出后的 trusted identity 核验，并写入 process identity receipt 与 process ledger。采用零 replacement fail-stop，禁止 retry、resume、top-up、merge、skip、reorder 或并行执行。采集完成后仅允许执行 structural‑v3.1、delivery‑v2.2、typed‑Parquet round-trip 验证及完整逐条原始数据冻结；任一身份、哈希、schema、cardinality、process ordinal、负载资格门或交付检查失败均立即 fail closed，保留全部证据，不自动创建新 attempt。该授权不包括正式 Gate14Re‑ME 采集、正式统计分析、跨算法效应解释、排名、加权或赢家裁决。",
+  "authoritativeReadiness": {
+    "statusRelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v29.json",
+    "statusSha256": "e439e2a2c83e87510a783b8b13026838e77d9ab3d3560ec7caef6908172063a2",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-003/terminal-readiness-receipt.v1.json",
+    "terminalReceiptSha256": "fb94db25887dc30a8765980bb4c6d735388266da9285e82c0a441f1dcd9bb653",
+    "readinessAuditRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-003/readiness-recheck-audit.v3.json",
+    "readinessAuditSha256": "9668ccfa7f6249ded53a537248a45a7025ed5e6d7c24320f9fb7de9d7953de0d"
+  },
+  "scope": {
+    "frozenPreflightRequired": true,
+    "qualificationMeasuredRootCreationAuthorizedOnlyAfterPreflight": true,
+    "deliveryRootCreationAuthorizedOnlyAfterAcquisitionAndStructuralPass": true,
+    "strictSerialFreshUnityProcessesAuthorized": 1147,
+    "zeroReplacementFailStop": true,
+    "retryResumeTopUpMergeSkipReorderOrParallelAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false,
+    "automaticNewAttemptAuthorized": false
+  }
+}

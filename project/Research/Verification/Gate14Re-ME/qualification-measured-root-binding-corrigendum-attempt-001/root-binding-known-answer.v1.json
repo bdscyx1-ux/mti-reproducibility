@@ -1,0 +1,68 @@
+{
+  "schema": "gate14re-me-qualification-measured-root-binding-known-answer-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-measured-root-binding-corrigendum-attempt-001",
+  "attemptId": "qualification-measured-root-binding-corrigendum-attempt-001",
+  "status": "PASS_ROOT_BINDING_SCOPE_KNOWN_ANSWER",
+  "passed": true,
+  "cases": [
+    {
+      "id": "allowed-attempt-003",
+      "value": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-003",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "allowed-attempt-004",
+      "value": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-004",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "allowed-attempt-10",
+      "value": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-10",
+      "expected": true,
+      "observed": true,
+      "passed": true
+    },
+    {
+      "id": "reject-parent",
+      "value": "Research/PilotRuns/Gate14Re-ME/load-qualification",
+      "expected": false,
+      "observed": false,
+      "passed": true
+    },
+    {
+      "id": "reject-empty-leaf",
+      "value": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-",
+      "expected": false,
+      "observed": false,
+      "passed": true
+    },
+    {
+      "id": "reject-nondigit",
+      "value": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-x",
+      "expected": false,
+      "observed": false,
+      "passed": true
+    },
+    {
+      "id": "reject-nested",
+      "value": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-003/nested",
+      "expected": false,
+      "observed": false,
+      "passed": true
+    },
+    {
+      "id": "reject-formal-root",
+      "value": "Research/FormalRuns/Gate14Re-ME/attempt-003",
+      "expected": false,
+      "observed": false,
+      "passed": true
+    }
+  ],
+  "runnerSha256": "21b677cbf277309a69fa51001d6f34e6e496f8e9abaae8c3bae19c85bf6c4952",
+  "createdAtUtc": "2026-10-17T18:38:27.6035723Z"
+}

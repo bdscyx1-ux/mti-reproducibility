@@ -1,0 +1,62 @@
+{
+  "schema": "gate14re-me-formal-st-independent-acceptance-contract-v5",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_FORMAL_ST_V5_READ_ONLY_ACCEPTANCE",
+  "parquetBatchRows": 4096,
+  "entryPoint": {
+    "launcherRelativePath": "Research/Gate14Re-ME/Execution/v5/Run-Gate14ReMEFormalSTReadOnlyAcceptance.v5_0.ps1",
+    "launcherSha256": "ae937579d000a1fc1dd56e98d8f30a77e04317b072f5279443cb67bccd2bea26",
+    "toolRelativePath": "Research/Gate14Re-ME/Tools/gate14re_me_formal_st_acceptance_v5.py",
+    "toolSha256": "18e876973c8e68a9c836a207adc5fda3ffdbe7158fd5c5102fbcf59dcf80ac82"
+  },
+  "rawOutputContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-raw-output-contract.v5_0.json",
+    "sha256": "a4585821cca40cf1ebb28626de60c95f213faacabfe7dfbcd002b9cf9586d2f5"
+  },
+  "acquisitionContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-acquisition-contract.v5_0.json",
+    "sha256": "0eebffd7560c06414e7990cf9cb95e80aeaa3993643719fffe507981fb58be58"
+  },
+  "acceptanceSchema": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5/Schemas/formal-st-acceptance-schema.v5_0.json",
+    "sha256": "f86fd2507e3bacfbb8b2141af1aced276d6f7f1639e83c1cd55ff7c585015af6"
+  },
+  "typedParquetRuntime": {
+    "manifestRelativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+    "manifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "packageRootRelativePath": "Research/Gate14Re-ME/Runtime/v1/python-packages",
+    "pyarrowVersion": "25.0.1"
+  },
+  "inputRequirements": {
+    "sourceAcquisitionMustBeTerminallyFrozen": true,
+    "sourceAcquisitionTerminalPassRequired": true,
+    "sourceTreeMetadataDigestBeforeAndAfterMustMatch": true,
+    "processLedgerTrustedIdentityNaturalExitZeroAndContiguous": true,
+    "failureLedgerRows": 0,
+    "replacementLedgerRows": 0,
+    "scheduleRows": 1296,
+    "acceptedSuperblocks": 1296,
+    "algorithmLanes": 7776,
+    "eventGroupRows": 186624
+  },
+  "streamingPolicy": {
+    "boundedMemory": true,
+    "allRawRowsRetainedInMemory": false,
+    "eachDistinctSourceFileHashedOnceForRowSourceBinding": true,
+    "perRowSourceFileRehash": false,
+    "completeRawDelivery": true,
+    "typedParquetFullValueTypeOrderRoundTrip": true,
+    "perFileManifest": true,
+    "terminalReceipt": true
+  },
+  "writeBoundary": {
+    "sourceMeasuredRootWriteBack": false,
+    "acceptanceOutputMustBeFresh": true,
+    "deliveryOutputMustBeFresh": true,
+    "sameAttemptRepairOrPatch": false,
+    "formalCollectionPerformedByAcceptance": false,
+    "formalAnalysisPerformed": false,
+    "mqOrMtPerformed": false
+  }
+}

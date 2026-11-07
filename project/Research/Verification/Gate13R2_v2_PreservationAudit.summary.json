@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate13-r2-v2-preservation-audit-20261006t065415z",
+  "recordedAtUtc": "2026-10-06T06:54:15.4276683Z",
+  "status": "passed",
+  "authorizationScope": "Gate 13-R2 v2 telemetry/readiness non-executing revision and exactly one fresh non-formal pilot",
+  "coldProcessHistory": {
+    "rootAbsolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1",
+    "fileCount": 891,
+    "rawByteCount": 129667391,
+    "readOnlyFileCount": 891,
+    "latestWriteTimeUtc": "2026-10-06T05:19:41.2199258Z",
+    "completedSampleCount": 147,
+    "disposition": [
+      "USER-TERMINATED-DESIGN-CHANGE",
+      "EXCLUDED_FROM_ANALYSIS",
+      "NO-AUTO-RETRY",
+      "NO-RESUME",
+      "SUPERSEDED-BY-PROCESS-REUSE-DESIGN"
+    ],
+    "terminationReceipt": {
+      "relativePath": "Research/Gate13_ColdProcess_Termination_Receipt.v1.json",
+      "sha256": "4661a3edc6e569b068e065456ab34f839d60030b1d668a925ca5b9dad9e481a4"
+    },
+    "partialOutputManifest": {
+      "relativePath": "Research/Gate13_ColdProcess_Partial_Output_Manifest.v1.json",
+      "sha256": "f3ea8fa2f39bfbbb89380efb0389fc1c1f7d0cdf3849cc0ae45da75c2e960c82"
+    },
+    "preTerminationSnapshot": {
+      "relativePath": "Research/Gate13_ColdProcess_PreTermination_Snapshot.v1.json",
+      "sha256": "42c45962d19735ccb9387e4e2c348d493d30875738d6035843d377d4c9c948ec"
+    },
+    "exclusionMarker": {
+      "relativePath": "Research/Gate13_ColdProcess_Exclusion_Marker.v1.json",
+      "sha256": "076e5b0a599845f6c7424fda221507c5837c6aa49cdbe94427d2f6e9e00dd91e"
+    }
+  },
+  "processReuseV1History": {
+    "rootAbsolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13_ProcessReuse\\v1",
+    "fileCount": 838,
+    "rawByteCount": 91219643,
+    "readOnlyFileCount": 838,
+    "latestWriteTimeUtc": "2026-10-06T06:35:37.2829191Z",
+    "aggregateSha256": "c467cd4ca179f6e919fe9cbfdeee3cd2b4a32c19931bcdc285ca705555a59b38",
+    "disposition": [
+      "FAILED-NO-AUTO-RETRY",
+      "NON-FORMAL",
+      "EXCLUDED-FROM-FORMAL-ANALYSIS",
+      "NO-RESUME",
+      "NOT-READY-FOR-FORMAL",
+      "CANDIDATE-N-NOT-ADMISSIBLE"
+    ],
+    "failureReceipt": {
+      "relativePath": "Research/Gate13_ProcessReuse_Pilot_v1_Failure_Receipt.v1.json",
+      "sha256": "11f2331d55bb163a1254e7c2e1263f9cbc7c2e162f8bb5db20be5814d898c304"
+    },
+    "failureOutputManifest": {
+      "relativePath": "Research/Gate13_ProcessReuse_Pilot_v1_Failure_Output_Manifest.json",
+      "sha256": "eb55ae56d047b44e4a6a7d0713b09437f4435162c19037e37aa5306ebf34c65d"
+    },
+    "failureCheckpoint": {
+      "relativePath": "Research/Gate13_ProcessReuse_Pilot_Failure_Checkpoint.md",
+      "sha256": "7de797be434247faeab280b7d3c572a52c018e51b224799cc0f7e00bf7b05017"
+    }
+  },
+  "frozenBindings": [
+    {
+      "relativePath": "Research/Gate13_Execution_Authorization.v1.json",
+      "sha256": "864740f428c8a0c40c9883c9b9a77988968e68610cf19d48d61529959ec95cc8"
+    },
+    {
+      "relativePath": "Research/Gate13_Execution_Authorization.v2.json",
+      "sha256": "5f3898914c29a3413f70d1ee1c5b7afbe84c05ac7987677f6083227dd93417a8"
+    },
+    {
+      "relativePath": "Research/Gate13_Readiness_Amendment.v1.json",
+      "sha256": "1ccf5c6e1e2c646d160e7b597381c797cc14e6123134a28b429fcb773515e8b2"
+    },
+    {
+      "relativePath": "Research/Gate13_Formal_Campaign_Config.v1.json",
+      "sha256": "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874"
+    },
+    {
+      "relativePath": "Research/Gate13_ProcessReuse_Specification.md",
+      "sha256": "06b8f79aff15301acb45a478ac054e0a444be3581fe4cb05f4c5a106dc6e256d"
+    },
+    {
+      "relativePath": "Research/Gate13_ProcessReuse_Test_Design.md",
+      "sha256": "45aed83d000ef8db41a5d910394422ba576ffe96a3543ac67415aa147bc1fefb"
+    },
+    {
+      "relativePath": "Research/Gate13_ProcessReuse_Pilot_Plan.v1.json",
+      "sha256": "de79edaca2bfd7016fd9a50dba85a511c2bdfc6bdce99d629e20e4bded4ca8d9"
+    },
+    {
+      "relativePath": "Research/Gate13_ProcessReuse_Provenance.v4.json",
+      "sha256": "91a8fcabdd157f7511eeda89e8355580954ed03222c51b5163f577b10354b82d"
+    },
+    {
+      "relativePath": "Research/FormalScenarios/v1/bundle-manifest.json",
+      "sha256": "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e"
+    },
+    {
+      "relativePath": "Research/FormalScenarios/v1/formal-scenario-matrix.json",
+      "sha256": "404df63d38bccd66bb665446e0f2cbf3e5f8c7293f543b3213bde4206435fe9f"
+    },
+    {
+      "relativePath": "Research/FormalScenarios/v1/preregistered-analysis.json",
+      "sha256": "7e947885c38fcf9307fd9202585dda3b2b5d11334f495428760009a2aa202b5b"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate12/v1/pilot-manifest.json",
+      "sha256": "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a"
+    }
+  ],
+  "v2Boundary": {
+    "pilotRootAbsolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13_ProcessReuse\\v2",
+    "pilotRootExistedAtAudit": false,
+    "processReuseFormalRootAbsolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13_ProcessReuse\\v1",
+    "processReuseFormalRootExistedAtAudit": false,
+    "unityProcessCountAtAudit": 0,
+    "v1RetryAuthorized": false,
+    "v1ResumeAuthorized": false,
+    "formalCampaignAuthorized": false,
+    "freshV2PilotAuthorizedCount": 1
+  }
+}

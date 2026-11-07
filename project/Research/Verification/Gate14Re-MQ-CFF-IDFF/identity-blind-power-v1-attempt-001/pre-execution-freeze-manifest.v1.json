@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-pre-execution-freeze-manifest-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "identity-blind-power-v1-attempt-001",
+  "status": "FROZEN_READY_FOR_SINGLE_POWER_EXECUTION",
+  "files": [
+    {"role":"design-rule-freeze-terminal","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-rule-freeze-v1-attempt-001/terminal-receipt.v1.json","bytes":1189,"sha256":"9909c683c5a494e70ce47fb1b0cddcf9e0bae3a9ca5b4f8ee6171d2c1e7f8c22"},
+    {"role":"analysis-plan","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v1-attempt-001/analysis-plan.v1.json","bytes":5406,"sha256":"9d93a310090aa47dcafa3ab7a90dc2518c691d13d90ef5aebecf98548cf5051c"},
+    {"role":"field-boundary","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v1-attempt-001/field-boundary.v1.json","bytes":1892,"sha256":"f5bd0e13e6f1d243022a4f7889fb89958e1c49d3a4e5c0c55560b517b110b14d"},
+    {"role":"power-script","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v1-attempt-001/identity_blind_power_v1.py","bytes":22475,"sha256":"858906ae1ae6cb1656313fc49d74fc9e83e93558f019fc00a79deeae91eea80a"},
+    {"role":"pre-execution-validation","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v1-attempt-001/pre-execution-validation-receipt.v1.json","sha256":"6839803d4102b74a18a1a46492a589be0f3abb27049f1e4148896125f749d6e5"},
+    {"role":"engineering-external-freeze","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/external-freeze-receipt.v1.json","bytes":2406,"sha256":"c2bc8217e48bdb3248e97353538207f9386c2c866fd80e713fabadaf195df33b"},
+    {"role":"engineering-terminal","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/terminal-receipt.v1.json","bytes":1599,"sha256":"d5429793cc940ad2e0a1c51fea760d2cbd43766849fb0d1f80f4752ba4c5d09e"},
+    {"role":"performance-lanes","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/performance-lanes.raw.v1.jsonl","bytes":5373407,"sha256":"75430f9a2da0f82ec04d66778756b50ebc29d59b835d0f47b4dc8894b545dae0"},
+    {"role":"technical-batches","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/technical-batches.raw.v1.jsonl","bytes":290105,"sha256":"3b1fc6a3c3b7a40faa4ce17b50e9f279ac7eb21cef08d4c42478589ae955443f"},
+    {"role":"engineering-runner-order","relativePath":"Assets/_Scripts/Research/Editor/Gate14ReMQEngineeringQualificationV1.cs","bytes":36487,"sha256":"5ea8e1d8d8efddfa3ac891258e68e56ba50a0b123374a9ad44e3ce8f44fc23f8"},
+    {"role":"runtime-budget","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-runtime-analysis-v2/engineering-runtime-diagnostics.v2.json","bytes":12913,"sha256":"2a2b2b9a89bf6c9282debe7ee44c983dd6b054692e7c6b80dd8886838ab147ac"}
+  ],
+  "computedOutputsAbsent": [
+    "input-inventory.v1.json",
+    "nuisance-summary.v1.json",
+    "power-result.v1.json",
+    "terminal-receipt.v1.json"
+  ],
+  "immutableInputs": true,
+  "singleExecutionOnly": true,
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false
+}

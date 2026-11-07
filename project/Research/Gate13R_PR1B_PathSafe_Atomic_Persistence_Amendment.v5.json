@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-pr1b-v5-active-powershell-null-backup-elimination-v1",
+  "status": "FROZEN-BEFORE-V15-VERIFICATION",
+  "parentAmendment": {
+    "relativePath": "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v4.json",
+    "sha256": "e412d82d3ab3a25fe37c2ca97ae37fee730775c168e58d1e195c4880b38e1ad8"
+  },
+  "failedVerificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v14-gate13r-pr1b-order-effect-pathsafe-v4",
+  "failedVerificationTreeIdentitySha256": "c9998236dae887c8451f76650422dd6ac7205e6cf82298b454a5b79f9dc75bc9",
+  "repairScope": "Run-Gate13RPR1BMemoryAwareBlock wrapper summary replacement only",
+  "repair": "Import the already validated V4 atomic helper and replace the embedded File.Replace(temp, summary, null) sequence with Write-Gate13RPR1BV3AtomicUtf8NoBomJson.",
+  "newStaticGate": "All active PowerShell execution scripts must contain zero File.Replace calls whose backup argument is null.",
+  "scientificContractChanged": false,
+  "memoryThresholdsChanged": false,
+  "scheduleChanged": false,
+  "statisticalContractChanged": false,
+  "newVerificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5",
+  "pilotRoot": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+  "formalCampaign": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

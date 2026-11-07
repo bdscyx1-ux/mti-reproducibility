@@ -1,0 +1,777 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using DDM.Research.Algorithms;
+using DDM.Research.Experiments;
+using DDM.Research.Logging;
+using DDM.Research.Navigation;
+using DDM.Research.Scenarios;
+using UnityEngine;
+
+namespace DDM.Research.Editor
+{
+    /// <summary>
+    /// Gate 13-R2 research-only entry point. One invocation executes exactly one
+    /// complete Williams block in one Unity process. The legacy one-sample batch
+    /// command is deliberately left unchanged.
+    /// </summary>
+    public static class ResearchPlanningProcessReuseBatchCommand
+    {
+        private const string DesignId = "one-fresh-unity-process-per-williams-block-v1";
+        private static readonly UTF8Encoding Utf8WithoutBom = new UTF8Encoding(false);
+        private static readonly Regex SafeId = new Regex("^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$", RegexOptions.CultureInvariant);
+
+        [Serializable]
+        private sealed class BlockPlan
+        {
+            public int schemaVersion;
+            public string planId;
+            public string designId;
+            public string blockId;
+            public string campaignId;
+            public string scenarioRelativePath;
+            public string scenarioSourceSha256;
+            public string comparisonCohortId;
+            public int block;
+            public bool formalCampaign;
+            public string pilotPlanRelativePath;
+            public string pilotPlanSha256;
+            public string specificationRelativePath;
+            public string specificationSha256;
+            public string testDesignRelativePath;
+            public string testDesignSha256;
+            public string commandRelativePath;
+            public string commandSha256;
+            public string provenanceRelativePath;
+            public string provenanceSha256;
+            public BlockEntry[] entries = new BlockEntry[0];
+        }
+
+        [Serializable]
+        private sealed class BlockEntry
+        {
+            public int position;
+            public string algorithmId;
+            public string predecessorAlgorithmId;
+            public string runId;
+            public string directory;
+        }
+
+        [Serializable]
+        private sealed class ProcessTelemetry
+        {
+            public int processId;
+            public string processStartTimeUtc;
+            public double processAgeMilliseconds;
+            public long workingSetBytes;
+            public long privateMemoryBytes;
+            public long managedMemoryBytes;
+            public int gcCollectionCount0;
+            public int gcCollectionCount1;
+            public int gcCollectionCount2;
+        }
+
+        [Serializable]
+        private sealed class ProcessReuseSampleManifest
+        {
+            public int schemaVersion = 3;
+            public string executionDesignId = DesignId;
+            public string runId;
+            public string algorithmId;
+            public int fairnessSchemaVersion;
+            public string fairnessProtocolId;
+            public string fairnessProtocolRelativePath;
+            public string fairnessProtocolSha256;
+            public string algorithmSpecificationId;
+            public string algorithmSpecificationRelativePath;
+            public string algorithmSpecificationSha256;
+            public string algorithmImplementationRelativePath;
+            public string algorithmImplementationSha256;
+            public string workloadSpecificationId;
+            public string workloadSpecificationRelativePath;
+            public string workloadSpecificationSha256;
+            public string goalCohortId;
+            public string comparisonCohortId;
+            public int distinctGoalCount;
+            public int plannerInstanceCount;
+            public int persistentStateInstanceCount;
+            public int sharedFieldInstanceCount;
+            public string plannerStateModelId;
+            public string processedWorkUnit;
+            public string nativeMetricsSemanticsId;
+            public bool dynamicCostIncludesAllRepairsAndPostEventPlans;
+            public string scenarioSourcePath;
+            public string scenarioSourceSha256;
+            public string scenarioFingerprintSha256;
+            public string canonicalScenarioFile;
+            public string canonicalScenarioSha256;
+            public string operationsJsonlFile;
+            public string operationsJsonlSha256;
+            public string workloadResultFile;
+            public string workloadResultSha256;
+            public string unityVersion;
+            public string runtimePlatform;
+            public string startedAtUtc;
+            public string completedAtUtc;
+            public long enqueuedLogRecords;
+            public long writtenLogRecords;
+            public int planOperationCount;
+            public int repairOperationCount;
+            public string blockId;
+            public int block;
+            public int position;
+            public int cohortSize;
+            public string predecessorAlgorithmId;
+            public string blockPlanSha256;
+            public string processReuseSpecificationSha256;
+            public string processReuseCommandSha256;
+            public bool forcedGcBoundaryCompleted;
+            public bool plannerResetCompleted;
+            public bool loggerDisposed;
+            public bool formalCampaign;
+            public ProcessTelemetry telemetryBefore;
+            public ProcessTelemetry telemetryAfter;
+            public bool completed;
+        }
+
+        [Serializable]
+        private sealed class BlockChildRecord
+        {
+            public int position;
+            public string algorithmId;
+            public string predecessorAlgorithmId;
+            public string runId;
+            public string outputRelativePath;
+            public string manifestRelativePath;
+            public string manifestSha256;
+            public string summaryRelativePath;
+            public string summarySha256;
+            public string workloadResultRelativePath;
+            public string workloadResultSha256;
+            public int processId;
+            public double processAgeBeforeMilliseconds;
+            public double processAgeAfterMilliseconds;
+            public long workingSetBeforeBytes;
+            public long workingSetAfterBytes;
+            public long privateMemoryBeforeBytes;
+            public long privateMemoryAfterBytes;
+            public long managedMemoryBeforeBytes;
+            public long managedMemoryAfterBytes;
+            public int gcCollectionDelta0;
+            public int gcCollectionDelta1;
+            public int gcCollectionDelta2;
+            public double totalPlannerElapsedMilliseconds;
+            public double dynamicHandlingMillisecondsPerScheduledEvent;
+            public bool completed;
+        }
+
+        [Serializable]
+        private sealed class ProcessReuseSampleSummary
+        {
+            public int schemaVersion = 1;
+            public string summaryKind = "gate13-r2-process-reuse-sample-summary-v1";
+            public string executionDesignId = DesignId;
+            public string runId;
+            public string blockId;
+            public int block;
+            public int position;
+            public string algorithmId;
+            public string predecessorAlgorithmId;
+            public int processId;
+            public string processStartTimeUtc;
+            public string workloadResultRelativePath;
+            public string workloadResultSha256;
+            public string manifestRelativePath;
+            public string manifestSha256;
+            public string completedAtUtc;
+            public bool formalCampaign;
+            public bool completed;
+        }
+
+        [Serializable]
+        private sealed class BlockManifest
+        {
+            public int schemaVersion = 1;
+            public string manifestKind = "gate13-r2-process-reuse-block-manifest-v1";
+            public string executionDesignId = DesignId;
+            public string blockId;
+            public string campaignId;
+            public string comparisonCohortId;
+            public string scenarioRelativePath;
+            public string scenarioSourceSha256;
+            public string blockPlanSha256;
+            public int block;
+            public int processId;
+            public string processStartTimeUtc;
+            public string startedAtUtc;
+            public string completedAtUtc;
+            public int expectedSampleCount;
+            public int completedSampleCount;
+            public bool oneBlockPerUnityProcess;
+            public bool oneSamplePerAlgorithmPerProcess;
+            public bool allSamplesShareProcessId;
+            public bool orderMatchesBlockPlan;
+            public bool formalCampaign;
+            public BlockChildRecord[] samples = new BlockChildRecord[0];
+            public bool completed;
+        }
+
+        [Serializable]
+        private sealed class BlockCheckpoint
+        {
+            public int schemaVersion = 1;
+            public string checkpointKind = "gate13-r2-process-reuse-block-checkpoint-v1";
+            public string blockId;
+            public string status;
+            public string savedAtUtc;
+            public int processId;
+            public int expectedSampleCount;
+            public int completedSampleCount;
+            public int currentPosition;
+            public string currentRunId;
+            public string error;
+            public bool automaticRetryAuthorized;
+            public bool automaticResumeAuthorized;
+            public bool formalCampaign;
+        }
+
+        [Serializable]
+        private sealed class BlockFailure
+        {
+            public int schemaVersion = 1;
+            public string failureKind = "gate13-r2-process-reuse-block-failure-v1";
+            public string failedAtUtc;
+            public string blockId;
+            public int processId;
+            public int completedSampleCount;
+            public int failedPosition;
+            public string failedRunId;
+            public string exceptionType;
+            public string message;
+            public string stackTrace;
+            public bool laterPositionsExecuted;
+            public bool automaticRetryAttempted;
+            public bool automaticResumeAttempted;
+            public bool formalCampaign;
+        }
+
+        [Serializable]
+        private sealed class SampleFailure
+        {
+            public int schemaVersion = 1;
+            public string failedAtUtc;
+            public string exceptionType;
+            public string message;
+            public string stackTrace;
+        }
+
+        public static void Run()
+        {
+            string outputRoot = null;
+            BlockPlan plan = null;
+            List<BlockChildRecord> completed = new List<BlockChildRecord>();
+            int currentPosition = 0;
+            string currentRunId = null;
+            DateTime blockStartedUtc = DateTime.UtcNow;
+            Process process = Process.GetCurrentProcess();
+            int processId = process.Id;
+            try
+            {
+                string[] arguments = Environment.GetCommandLineArgs();
+                string projectRoot = Directory.GetParent(Application.dataPath).FullName;
+                string planPath = Path.GetFullPath(RequiredOption(arguments, "-ddmProcessReuseBlockPlanPath"));
+                string expectedPlanSha256 = RequiredOption(arguments, "-ddmProcessReuseBlockPlanSha256");
+                outputRoot = Path.GetFullPath(RequiredOption(arguments, "-ddmProcessReuseOutputDirectory"));
+                if (!File.Exists(planPath)) throw new FileNotFoundException("Process-reuse block plan is missing.", planPath);
+                string actualPlanSha256 = ComputeFileSha256(planPath);
+                if (!string.Equals(actualPlanSha256, expectedPlanSha256, StringComparison.Ordinal)) throw new InvalidOperationException("Block-plan SHA-256 mismatch.");
+                plan = JsonUtility.FromJson<BlockPlan>(File.ReadAllText(planPath, Encoding.UTF8));
+                ValidatePlan(plan, projectRoot, outputRoot);
+                EnsureFreshOutputDirectory(outputRoot);
+                Directory.CreateDirectory(outputRoot);
+                WriteCheckpoint(outputRoot, plan, processId, "block-started", completed.Count, 0, null, null);
+
+                string scenarioPath = Path.GetFullPath(Path.Combine(projectRoot, plan.scenarioRelativePath.Replace('/', Path.DirectorySeparatorChar)));
+                if (!File.Exists(scenarioPath)) throw new FileNotFoundException("Scenario file is missing.", scenarioPath);
+                if (!string.Equals(ComputeFileSha256(scenarioPath), plan.scenarioSourceSha256, StringComparison.Ordinal)) throw new InvalidOperationException("Scenario source SHA-256 mismatch.");
+
+                for (int index = 0; index < plan.entries.Length; index++)
+                {
+                    BlockEntry entry = plan.entries[index];
+                    currentPosition = entry.position;
+                    currentRunId = entry.runId;
+                    WriteCheckpoint(outputRoot, plan, processId, "running-sample", completed.Count, currentPosition, currentRunId, null);
+                    ForceCollectionBoundary();
+                    ProcessTelemetry before = CaptureTelemetry(process);
+                    BlockChildRecord child = RunSample(projectRoot, outputRoot, scenarioPath, plan, entry, actualPlanSha256, before, process);
+                    completed.Add(child);
+                    WriteCheckpoint(outputRoot, plan, processId, "sample-completed", completed.Count, currentPosition, currentRunId, null);
+                }
+
+                ValidateCompletedBlock(plan, completed, processId);
+                BlockManifest blockManifest = new BlockManifest
+                {
+                    blockId = plan.blockId,
+                    campaignId = plan.campaignId,
+                    comparisonCohortId = plan.comparisonCohortId,
+                    scenarioRelativePath = plan.scenarioRelativePath,
+                    scenarioSourceSha256 = plan.scenarioSourceSha256,
+                    blockPlanSha256 = actualPlanSha256,
+                    block = plan.block,
+                    processId = processId,
+                    processStartTimeUtc = process.StartTime.ToUniversalTime().ToString("O", CultureInfo.InvariantCulture),
+                    startedAtUtc = blockStartedUtc.ToString("O", CultureInfo.InvariantCulture),
+                    completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                    expectedSampleCount = plan.entries.Length,
+                    completedSampleCount = completed.Count,
+                    oneBlockPerUnityProcess = true,
+                    oneSamplePerAlgorithmPerProcess = true,
+                    allSamplesShareProcessId = true,
+                    orderMatchesBlockPlan = true,
+                    formalCampaign = plan.formalCampaign,
+                    samples = completed.ToArray(),
+                    completed = true
+                };
+                WriteAtomicJson(Path.Combine(outputRoot, "block-manifest.json"), blockManifest);
+                WriteCheckpoint(outputRoot, plan, processId, "block-completed", completed.Count, 0, null, null);
+                UnityEngine.Debug.Log("DDM process-reuse block completed: " + plan.blockId);
+            }
+            catch (Exception exception)
+            {
+                if (!string.IsNullOrWhiteSpace(outputRoot))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(outputRoot);
+                        BlockFailure failure = new BlockFailure
+                        {
+                            failedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                            blockId = plan == null ? string.Empty : plan.blockId,
+                            processId = processId,
+                            completedSampleCount = completed.Count,
+                            failedPosition = currentPosition,
+                            failedRunId = currentRunId ?? string.Empty,
+                            exceptionType = exception.GetType().FullName,
+                            message = exception.Message,
+                            stackTrace = exception.ToString(),
+                            laterPositionsExecuted = false,
+                            automaticRetryAttempted = false,
+                            automaticResumeAttempted = false,
+                            formalCampaign = plan != null && plan.formalCampaign
+                        };
+                        WriteAtomicJson(Path.Combine(outputRoot, "block-failure.json"), failure);
+                        if (plan != null) WriteCheckpoint(outputRoot, plan, processId, "failed-no-auto-retry", completed.Count, currentPosition, currentRunId, exception.Message);
+                    }
+                    catch { }
+                }
+                UnityEngine.Debug.LogException(exception);
+                throw;
+            }
+        }
+
+        private static BlockChildRecord RunSample(
+            string projectRoot,
+            string outputRoot,
+            string scenarioPath,
+            BlockPlan plan,
+            BlockEntry entry,
+            string blockPlanSha256,
+            ProcessTelemetry before,
+            Process process)
+        {
+            string childDirectory = ResolveChildDirectory(outputRoot, entry.directory);
+            EnsureFreshOutputDirectory(childDirectory);
+            DateTime startedUtc = DateTime.UtcNow;
+            bool failureOutputAuthorized = false;
+            try
+            {
+                INavigationPlanner planner = CreatePlanner(entry.algorithmId);
+                PlanningRunProvenance provenance = BuildProvenance(projectRoot, entry.algorithmId);
+                LoadedDeterministicScenario loaded = DeterministicScenarioJson.LoadFromFile(scenarioPath);
+                Directory.CreateDirectory(childDirectory);
+                failureOutputAuthorized = true;
+
+                const string canonicalFileName = "scenario.canonical.json";
+                const string operationsFileName = "operations.jsonl";
+                const string resultFileName = "workload-result.json";
+                const string manifestFileName = "manifest.json";
+                const string summaryFileName = "sample-summary.json";
+                string canonicalPath = Path.Combine(childDirectory, canonicalFileName);
+                string operationsPath = Path.Combine(childDirectory, operationsFileName);
+                string resultPath = Path.Combine(childDirectory, resultFileName);
+                string manifestPath = Path.Combine(childDirectory, manifestFileName);
+                string summaryPath = Path.Combine(childDirectory, summaryFileName);
+
+                string canonicalSha256 = DeterministicScenarioJson.SaveCanonical(canonicalPath, loaded.Resolved, false);
+                PlanningWorkloadResult workload;
+                long enqueued;
+                long written;
+                bool loggerDisposed = false;
+                using (JsonlExperimentLogger logger = new JsonlExperimentLogger(operationsPath, ExperimentLogFileMode.CreateNew))
+                {
+                    workload = DeterministicPlanningWorkloadRunner.Run(entry.runId, loaded.Definition, planner, logger, provenance);
+                    logger.Flush(TimeSpan.FromSeconds(30d));
+                    enqueued = logger.EnqueuedCount;
+                    written = logger.WrittenCount;
+                }
+                loggerDisposed = true;
+                if (!workload.completed) throw new InvalidOperationException("Planning workload did not complete; refusing to publish a sample completion marker.");
+                WriteAtomicJson(resultPath, workload);
+                ProcessTelemetry after = CaptureTelemetry(process);
+
+                ProcessReuseSampleManifest manifest = new ProcessReuseSampleManifest
+                {
+                    runId = entry.runId,
+                    algorithmId = entry.algorithmId,
+                    fairnessSchemaVersion = workload.fairnessSchemaVersion,
+                    fairnessProtocolId = workload.fairnessProtocolId,
+                    fairnessProtocolRelativePath = workload.fairnessProtocolRelativePath,
+                    fairnessProtocolSha256 = workload.fairnessProtocolSha256,
+                    algorithmSpecificationId = workload.algorithmSpecificationId,
+                    algorithmSpecificationRelativePath = workload.algorithmSpecificationRelativePath,
+                    algorithmSpecificationSha256 = workload.algorithmSpecificationSha256,
+                    algorithmImplementationRelativePath = workload.algorithmImplementationRelativePath,
+                    algorithmImplementationSha256 = workload.algorithmImplementationSha256,
+                    workloadSpecificationId = workload.workloadSpecificationId,
+                    workloadSpecificationRelativePath = workload.workloadSpecificationRelativePath,
+                    workloadSpecificationSha256 = workload.workloadSpecificationSha256,
+                    goalCohortId = workload.goalCohortId,
+                    comparisonCohortId = workload.comparisonCohortId,
+                    distinctGoalCount = workload.distinctGoalCount,
+                    plannerInstanceCount = workload.plannerInstanceCount,
+                    persistentStateInstanceCount = workload.persistentStateInstanceCount,
+                    sharedFieldInstanceCount = workload.sharedFieldInstanceCount,
+                    plannerStateModelId = workload.plannerStateModelId,
+                    processedWorkUnit = workload.processedWorkUnit,
+                    nativeMetricsSemanticsId = workload.nativeMetricsSemanticsId,
+                    dynamicCostIncludesAllRepairsAndPostEventPlans = workload.dynamicCostIncludesAllRepairsAndPostEventPlans,
+                    scenarioSourcePath = loaded.SourcePath,
+                    scenarioSourceSha256 = loaded.SourceSha256,
+                    scenarioFingerprintSha256 = loaded.Resolved.FingerprintSha256,
+                    canonicalScenarioFile = canonicalFileName,
+                    canonicalScenarioSha256 = canonicalSha256,
+                    operationsJsonlFile = operationsFileName,
+                    operationsJsonlSha256 = ComputeFileSha256(operationsPath),
+                    workloadResultFile = resultFileName,
+                    workloadResultSha256 = ComputeFileSha256(resultPath),
+                    unityVersion = Application.unityVersion,
+                    runtimePlatform = Application.platform.ToString(),
+                    startedAtUtc = startedUtc.ToString("O", CultureInfo.InvariantCulture),
+                    completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                    enqueuedLogRecords = enqueued,
+                    writtenLogRecords = written,
+                    planOperationCount = workload.planOperationCount,
+                    repairOperationCount = workload.repairOperationCount,
+                    blockId = plan.blockId,
+                    block = plan.block,
+                    position = entry.position,
+                    cohortSize = plan.entries.Length,
+                    predecessorAlgorithmId = entry.predecessorAlgorithmId,
+                    blockPlanSha256 = blockPlanSha256,
+                    processReuseSpecificationSha256 = plan.specificationSha256,
+                    processReuseCommandSha256 = plan.commandSha256,
+                    forcedGcBoundaryCompleted = true,
+                    plannerResetCompleted = true,
+                    loggerDisposed = loggerDisposed,
+                    formalCampaign = plan.formalCampaign,
+                    telemetryBefore = before,
+                    telemetryAfter = after,
+                    completed = workload.completed
+                };
+                WriteAtomicJson(manifestPath, manifest);
+                string resultSha256 = ComputeFileSha256(resultPath);
+                string manifestSha256 = ComputeFileSha256(manifestPath);
+                ProcessReuseSampleSummary summary = new ProcessReuseSampleSummary
+                {
+                    runId = entry.runId,
+                    blockId = plan.blockId,
+                    block = plan.block,
+                    position = entry.position,
+                    algorithmId = entry.algorithmId,
+                    predecessorAlgorithmId = entry.predecessorAlgorithmId,
+                    processId = before.processId,
+                    processStartTimeUtc = before.processStartTimeUtc,
+                    workloadResultRelativePath = resultFileName,
+                    workloadResultSha256 = resultSha256,
+                    manifestRelativePath = manifestFileName,
+                    manifestSha256 = manifestSha256,
+                    completedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                    formalCampaign = plan.formalCampaign,
+                    completed = true
+                };
+                WriteAtomicJson(summaryPath, summary);
+                return new BlockChildRecord
+                {
+                    position = entry.position,
+                    algorithmId = entry.algorithmId,
+                    predecessorAlgorithmId = entry.predecessorAlgorithmId,
+                    runId = entry.runId,
+                    outputRelativePath = NormalizeRelative(entry.directory),
+                    manifestRelativePath = NormalizeRelative(Path.Combine(entry.directory, manifestFileName)),
+                    manifestSha256 = manifestSha256,
+                    summaryRelativePath = NormalizeRelative(Path.Combine(entry.directory, summaryFileName)),
+                    summarySha256 = ComputeFileSha256(summaryPath),
+                    workloadResultRelativePath = NormalizeRelative(Path.Combine(entry.directory, resultFileName)),
+                    workloadResultSha256 = resultSha256,
+                    processId = before.processId,
+                    processAgeBeforeMilliseconds = before.processAgeMilliseconds,
+                    processAgeAfterMilliseconds = after.processAgeMilliseconds,
+                    workingSetBeforeBytes = before.workingSetBytes,
+                    workingSetAfterBytes = after.workingSetBytes,
+                    privateMemoryBeforeBytes = before.privateMemoryBytes,
+                    privateMemoryAfterBytes = after.privateMemoryBytes,
+                    managedMemoryBeforeBytes = before.managedMemoryBytes,
+                    managedMemoryAfterBytes = after.managedMemoryBytes,
+                    gcCollectionDelta0 = after.gcCollectionCount0 - before.gcCollectionCount0,
+                    gcCollectionDelta1 = after.gcCollectionCount1 - before.gcCollectionCount1,
+                    gcCollectionDelta2 = after.gcCollectionCount2 - before.gcCollectionCount2,
+                    totalPlannerElapsedMilliseconds = workload.totalPlannerElapsedMilliseconds,
+                    dynamicHandlingMillisecondsPerScheduledEvent = workload.dynamicHandlingMillisecondsPerScheduledEvent,
+                    completed = workload.completed
+                };
+            }
+            catch (Exception exception)
+            {
+                if (failureOutputAuthorized)
+                {
+                    try
+                    {
+                        WriteAtomicJson(Path.Combine(childDirectory, "failure.json"), new SampleFailure
+                        {
+                            failedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                            exceptionType = exception.GetType().FullName,
+                            message = exception.Message,
+                            stackTrace = exception.ToString()
+                        });
+                    }
+                    catch { }
+                }
+                throw;
+            }
+        }
+
+        private static void ValidatePlan(BlockPlan plan, string projectRoot, string outputRoot)
+        {
+            if (plan == null || plan.schemaVersion != 1) throw new InvalidOperationException("Unsupported process-reuse block-plan schema.");
+            if (!string.Equals(plan.designId, DesignId, StringComparison.Ordinal)) throw new InvalidOperationException("Process-reuse design identity mismatch.");
+            if (plan.formalCampaign) throw new InvalidOperationException("This command invocation is not authorized to produce formal samples.");
+            if (!SafeId.IsMatch(plan.planId ?? string.Empty) || !SafeId.IsMatch(plan.blockId ?? string.Empty) || !SafeId.IsMatch(plan.campaignId ?? string.Empty)) throw new InvalidOperationException("Unsafe block/campaign/plan identity.");
+            if (plan.block < 1 || plan.block > 148) throw new InvalidOperationException("Block ordinal is outside 1..148.");
+            string[] expectedAlgorithms = ExpectedAlgorithms(plan.comparisonCohortId);
+            if (plan.entries == null || plan.entries.Length != expectedAlgorithms.Length) throw new InvalidOperationException("Block entry count does not match cohort size.");
+            HashSet<string> algorithms = new HashSet<string>(StringComparer.Ordinal);
+            HashSet<string> runIds = new HashSet<string>(StringComparer.Ordinal);
+            string[] expectedRow = WilliamsRow(expectedAlgorithms, (plan.block - 1) % expectedAlgorithms.Length);
+            for (int index = 0; index < plan.entries.Length; index++)
+            {
+                BlockEntry entry = plan.entries[index];
+                int expectedPosition = index + 1;
+                string expectedPredecessor = index == 0 ? "NONE" : plan.entries[index - 1].algorithmId;
+                if (entry == null || entry.position != expectedPosition) throw new InvalidOperationException("Block positions must be contiguous and one-based.");
+                if (!string.Equals(entry.algorithmId, expectedRow[index], StringComparison.Ordinal)) throw new InvalidOperationException("Block order differs from the frozen Williams row.");
+                if (!string.Equals(entry.predecessorAlgorithmId, expectedPredecessor, StringComparison.Ordinal)) throw new InvalidOperationException("Predecessor identity mismatch.");
+                if (!algorithms.Add(entry.algorithmId)) throw new InvalidOperationException("An algorithm appears more than once in the process.");
+                if (!SafeId.IsMatch(entry.runId ?? string.Empty) || !runIds.Add(entry.runId)) throw new InvalidOperationException("Unsafe or duplicate run ID.");
+                ResolveChildDirectory(outputRoot, entry.directory);
+            }
+            if (algorithms.Count != expectedAlgorithms.Length) throw new InvalidOperationException("The block does not contain the exact authorized cohort.");
+            ValidateBoundFile(projectRoot, plan.pilotPlanRelativePath, plan.pilotPlanSha256, "pilot plan");
+            ValidateBoundFile(projectRoot, plan.specificationRelativePath, plan.specificationSha256, "process-reuse specification");
+            ValidateBoundFile(projectRoot, plan.testDesignRelativePath, plan.testDesignSha256, "process-reuse test design");
+            ValidateBoundFile(projectRoot, plan.commandRelativePath, plan.commandSha256, "process-reuse command");
+            ValidateBoundFile(projectRoot, plan.provenanceRelativePath, plan.provenanceSha256, "process-reuse provenance");
+        }
+
+        private static void ValidateCompletedBlock(BlockPlan plan, List<BlockChildRecord> completed, int processId)
+        {
+            if (completed.Count != plan.entries.Length) throw new InvalidOperationException("A partial block cannot be marked complete.");
+            HashSet<string> algorithms = new HashSet<string>(StringComparer.Ordinal);
+            for (int index = 0; index < completed.Count; index++)
+            {
+                BlockChildRecord child = completed[index];
+                BlockEntry entry = plan.entries[index];
+                if (!child.completed || child.position != entry.position || child.algorithmId != entry.algorithmId || child.runId != entry.runId) throw new InvalidOperationException("Completed child identity/order mismatch.");
+                if (child.processId != processId) throw new InvalidOperationException("Samples in one block reported mixed process IDs.");
+                if (!algorithms.Add(child.algorithmId)) throw new InvalidOperationException("Duplicate algorithm in completed block.");
+            }
+        }
+
+        private static void ForceCollectionBoundary()
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+        }
+
+        private static ProcessTelemetry CaptureTelemetry(Process process)
+        {
+            process.Refresh();
+            DateTime startUtc = process.StartTime.ToUniversalTime();
+            return new ProcessTelemetry
+            {
+                processId = process.Id,
+                processStartTimeUtc = startUtc.ToString("O", CultureInfo.InvariantCulture),
+                processAgeMilliseconds = Math.Max(0d, (DateTime.UtcNow - startUtc).TotalMilliseconds),
+                workingSetBytes = process.WorkingSet64,
+                privateMemoryBytes = process.PrivateMemorySize64,
+                managedMemoryBytes = GC.GetTotalMemory(false),
+                gcCollectionCount0 = GC.CollectionCount(0),
+                gcCollectionCount1 = GC.CollectionCount(1),
+                gcCollectionCount2 = GC.CollectionCount(2)
+            };
+        }
+
+        private static INavigationPlanner CreatePlanner(string algorithmId)
+        {
+            if (algorithmId == NavigationAlgorithmIds.AStarRepeated) return new AStarRepeatedPlanner();
+            if (algorithmId == NavigationAlgorithmIds.DStarLite) return new DStarLitePlanner();
+            if (algorithmId == NavigationAlgorithmIds.CorrectedFullRecomputeFlowField) return new CorrectedFullRecomputeFlowFieldPlanner();
+            if (algorithmId == NavigationAlgorithmIds.IncrementalDynamicFlowField) return new IncrementalDynamicFlowFieldPlanner();
+            throw new NotSupportedException("Unauthorized process-reuse planner: " + algorithmId);
+        }
+
+        private static PlanningRunProvenance BuildProvenance(string projectRoot, string algorithmId)
+        {
+            PlanningAlgorithmFairnessProfile profile = PlanningFairnessContracts.GetProfile(algorithmId);
+            PlanningRunProvenance provenance = new PlanningRunProvenance
+            {
+                fairnessProtocolId = PlanningFairnessContracts.FairnessProtocolId,
+                fairnessProtocolRelativePath = PlanningFairnessContracts.FairnessProtocolRelativePath,
+                fairnessProtocolSha256 = HashProjectFile(projectRoot, PlanningFairnessContracts.FairnessProtocolRelativePath),
+                algorithmId = profile.AlgorithmId,
+                algorithmSpecificationId = profile.SpecificationId,
+                algorithmSpecificationRelativePath = profile.SpecificationRelativePath,
+                algorithmSpecificationSha256 = HashProjectFile(projectRoot, profile.SpecificationRelativePath),
+                algorithmImplementationRelativePath = profile.ImplementationRelativePath,
+                algorithmImplementationSha256 = HashProjectFile(projectRoot, profile.ImplementationRelativePath),
+                workloadSpecificationId = PlanningFairnessContracts.WorkloadSpecificationId,
+                workloadSpecificationRelativePath = PlanningFairnessContracts.WorkloadSpecificationRelativePath,
+                workloadSpecificationSha256 = HashProjectFile(projectRoot, PlanningFairnessContracts.WorkloadSpecificationRelativePath)
+            };
+            PlanningFairnessContracts.ValidateProvenance(provenance, algorithmId);
+            return provenance;
+        }
+
+        private static string[] ExpectedAlgorithms(string cohortId)
+        {
+            if (cohortId == "four-algorithm-shared-goal-v1") return new[] { "A*-R", "D*L", "C-FF", "IDFF" };
+            if (cohortId == "per-agent-heterogeneous-goal-v1") return new[] { "A*-R", "D*L" };
+            if (cohortId == "grouped-field-heterogeneous-goal-v1") return new[] { "C-FF", "IDFF" };
+            throw new InvalidOperationException("Unsupported comparison cohort: " + cohortId);
+        }
+
+        private static string[] WilliamsRow(string[] items, int rowIndex)
+        {
+            int count = items.Length;
+            int[] baseIndices = new int[count];
+            baseIndices[0] = 0;
+            for (int step = 1; step < count; step++) baseIndices[step] = step % 2 == 1 ? (step + 1) / 2 : count - (step / 2);
+            string[] row = new string[count];
+            for (int index = 0; index < count; index++) row[index] = items[(baseIndices[index] + rowIndex) % count];
+            return row;
+        }
+
+        private static void WriteCheckpoint(string outputRoot, BlockPlan plan, int processId, string status, int completedCount, int currentPosition, string currentRunId, string error)
+        {
+            WriteAtomicJson(Path.Combine(outputRoot, "block-checkpoint.json"), new BlockCheckpoint
+            {
+                blockId = plan.blockId,
+                status = status,
+                savedAtUtc = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture),
+                processId = processId,
+                expectedSampleCount = plan.entries.Length,
+                completedSampleCount = completedCount,
+                currentPosition = currentPosition,
+                currentRunId = currentRunId ?? string.Empty,
+                error = error ?? string.Empty,
+                automaticRetryAuthorized = false,
+                automaticResumeAuthorized = false,
+                formalCampaign = plan.formalCampaign
+            });
+        }
+
+        private static void ValidateBoundFile(string projectRoot, string relativePath, string expectedSha256, string label)
+        {
+            if (string.IsNullOrWhiteSpace(relativePath) || Path.IsPathRooted(relativePath)) throw new InvalidOperationException("Invalid " + label + " relative path.");
+            string path = Path.GetFullPath(Path.Combine(projectRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)));
+            if (!IsWithin(path, projectRoot) || !File.Exists(path)) throw new FileNotFoundException("Bound " + label + " is missing or outside the project.", path);
+            if (!string.Equals(ComputeFileSha256(path), expectedSha256, StringComparison.Ordinal)) throw new InvalidOperationException("Bound " + label + " SHA-256 mismatch.");
+        }
+
+        private static string ResolveChildDirectory(string outputRoot, string relativePath)
+        {
+            if (string.IsNullOrWhiteSpace(relativePath) || Path.IsPathRooted(relativePath)) throw new InvalidOperationException("Child output path must be a non-empty relative path.");
+            string fullPath = Path.GetFullPath(Path.Combine(outputRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)));
+            if (!IsWithin(fullPath, outputRoot) || string.Equals(fullPath.TrimEnd(Path.DirectorySeparatorChar), outputRoot.TrimEnd(Path.DirectorySeparatorChar), StringComparison.OrdinalIgnoreCase)) throw new InvalidOperationException("Child output path escapes or equals the block root.");
+            return fullPath;
+        }
+
+        private static bool IsWithin(string candidate, string root)
+        {
+            string normalizedRoot = Path.GetFullPath(root).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
+            string normalizedCandidate = Path.GetFullPath(candidate);
+            return normalizedCandidate.StartsWith(normalizedRoot, StringComparison.OrdinalIgnoreCase);
+        }
+
+        private static string RequiredOption(string[] arguments, string option)
+        {
+            string value = null;
+            for (int index = 0; index < arguments.Length; index++)
+            {
+                if (!string.Equals(arguments[index], option, StringComparison.Ordinal)) continue;
+                if (value != null) throw new ArgumentException("Command-line option was supplied more than once: " + option);
+                if (index + 1 >= arguments.Length || string.IsNullOrWhiteSpace(arguments[index + 1])) throw new ArgumentException("Command-line option requires a value: " + option);
+                value = arguments[index + 1];
+            }
+            if (value == null) throw new ArgumentException("Required command-line option is missing: " + option);
+            return value;
+        }
+
+        private static void EnsureFreshOutputDirectory(string outputDirectory)
+        {
+            if (File.Exists(outputDirectory)) throw new IOException("Output path is an existing file: " + outputDirectory);
+            if (Directory.Exists(outputDirectory) && Directory.GetFileSystemEntries(outputDirectory).Length > 0) throw new IOException("Output directory is not empty; refusing to mix or overwrite runs: " + outputDirectory);
+        }
+
+        private static string HashProjectFile(string projectRoot, string relativePath)
+        {
+            string path = Path.GetFullPath(Path.Combine(projectRoot, relativePath.Replace('/', Path.DirectorySeparatorChar)));
+            if (!File.Exists(path)) throw new FileNotFoundException("Required provenance source is missing.", path);
+            return ComputeFileSha256(path);
+        }
+
+        private static string ComputeFileSha256(string path)
+        {
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                return BitConverter.ToString(sha256.ComputeHash(stream)).Replace("-", string.Empty).ToLowerInvariant();
+            }
+        }
+
+        private static string NormalizeRelative(string value)
+        {
+            return value.Replace(Path.DirectorySeparatorChar, '/');
+        }
+
+        private static void WriteJson<T>(string path, T value)
+        {
+            string json = JsonUtility.ToJson(value, true).Replace("\r\n", "\n").Replace("\r", "\n");
+            if (!json.EndsWith("\n", StringComparison.Ordinal)) json += "\n";
+            File.WriteAllText(path, json, Utf8WithoutBom);
+        }
+
+        private static void WriteAtomicJson<T>(string path, T value)
+        {
+            string temporary = path + ".tmp-" + Guid.NewGuid().ToString("N");
+            WriteJson(temporary, value);
+            if (File.Exists(path)) File.Replace(temporary, path, null);
+            else File.Move(temporary, path);
+        }
+    }
+}

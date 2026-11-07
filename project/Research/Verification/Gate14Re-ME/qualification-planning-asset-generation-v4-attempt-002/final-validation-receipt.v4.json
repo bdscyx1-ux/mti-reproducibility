@@ -1,0 +1,52 @@
+{
+  "schema": "gate14re-me-qualification-planning-asset-generation-v4-final-validation-v4",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-bounded-gnf-discrimination-window-v4",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v4-attempt-002",
+  "status": "PASS_PLANNING_ASSET_STRUCTURAL_AND_ORACLE_VALIDATION",
+  "validatedAtUtc": "2026-10-19T11:57:36.589127Z",
+  "checks": {
+    "explicitFrozenBindingsChecked": 8,
+    "streamingEssentialAcceptanceFeasibilityPass": true,
+    "inputSchemaV4RowsPassed": 126,
+    "scheduleSchemaRowsPassed": 126,
+    "offlineGeometryOracleRowsPassed": 126,
+    "sealedBijectionCount": 1,
+    "uniqueInputIds": 126,
+    "uniquePilotSeeds": 126,
+    "uniqueInputPaths": 126,
+    "uniqueSuperblockIds": 126,
+    "coreStructuralCells": 36,
+    "coreReplicatesPerStructuralCell": [
+      3
+    ],
+    "coreContextStrata": 18,
+    "coreOccurrencesPerContextStratum": [
+      6
+    ],
+    "stressContextStrata": 18,
+    "stressOccurrencesPerContextStratum": [
+      1
+    ],
+    "williamsSequences": 6,
+    "repetitionsPerWilliamsSequence": [
+      21
+    ],
+    "laneOccurrencesPerExecutionPosition": 21,
+    "orderedCarryoverOccurrencesPerPair": 21,
+    "replacementInputsGenerated": 0
+  },
+  "scopeAudit": {
+    "measuredRootCreated": false,
+    "unityInvocations": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  }
+}

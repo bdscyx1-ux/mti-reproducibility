@@ -1,0 +1,168 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-storage-reference-wrapper-generation-v2-complete",
+    "createdAtUtc":  "2026-10-07T15:01:35.3564136Z",
+    "attempt1Status":  "FAILED-DURING-GENERATION-AFTER-THREE-COMPLETE-WRAPPERS",
+    "attempt1CompletedWrapperCount":  3,
+    "attempt2Generated":  [
+                              {
+                                  "sourceRelativePath":  "Research/Run-Gate12RPilotV4.ps1",
+                                  "sourceSha256":  "2ed5d7dd6b620746c7548b8153c9892e0e69ac61098b46724d6aa714134a3839",
+                                  "outputRelativePath":  "Research/Run-Gate12RPilotV5.ps1",
+                                  "outputSha256":  "1bd10a98cc87f877a2b2a5d08592a0b1101717d7e90de7f54028075286d61ebf",
+                                  "routes":  [
+                                                 {
+                                                     "from":  "Run-Gate12RPilotV4",
+                                                     "to":  "Run-Gate12RPilotV5",
+                                                     "count":  2
+                                                 },
+                                                 {
+                                                     "from":  "Run-Gate12RProcessReuseBlockV2.ps1",
+                                                     "to":  "Run-Gate12RProcessReuseBlockV4.ps1",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "Gate12R_PilotDerived\\v4",
+                                                     "to":  "Gate12R_PilotDerived\\v5",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "pilot v4",
+                                                     "to":  "pilot v5",
+                                                     "count":  4
+                                                 },
+                                                 {
+                                                     "from":  "reset-contract-route-wrapper-v4",
+                                                     "to":  "canonical-reference-route-wrapper-v5",
+                                                     "count":  1
+                                                 }
+                                             ]
+                              },
+                              {
+                                  "sourceRelativePath":  "Research/Verification/Run-Gate12RPrePilotAttemptV5.ps1",
+                                  "sourceSha256":  "4b122800e1457e04ce46e3c8af8e888a3784e008a5c610878c3adc863cb5397a",
+                                  "outputRelativePath":  "Research/Verification/Run-Gate12RPrePilotAttemptV6.ps1",
+                                  "outputSha256":  "dbd58d53754aca80c348ff67ef956aff317b8b69e06d48f0c350bddecc61380b",
+                                  "routes":  [
+                                                 {
+                                                     "from":  "Run-Gate12RPrePilotAttemptV5",
+                                                     "to":  "Run-Gate12RPrePilotAttemptV6",
+                                                     "count":  2
+                                                 },
+                                                 {
+                                                     "from":  "Run-Gate12RProcessReuseBlockV2.ps1",
+                                                     "to":  "Run-Gate12RProcessReuseBlockV4.ps1",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "Run-Gate12RStaticUnitAuditV3.ps1",
+                                                     "to":  "Run-Gate12RStaticUnitAuditV4.ps1",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "Run-Gate12RPilotV4.ps1",
+                                                     "to":  "Run-Gate12RPilotV5.ps1",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "Run-Gate12RBlockAndRegressionGatesV4.ps1",
+                                                     "to":  "Run-Gate12RBlockAndRegressionGatesV5.ps1",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "Run-Gate12RValidationOnlyPrePilotAuditV2.ps1",
+                                                     "to":  "Run-Gate12RValidationOnlyPrePilotAuditV3.ps1",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "Gate12R_PrePilotDerived\\v5",
+                                                     "to":  "Gate12R_PrePilotDerived\\v6",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "New-Gate12RPilotAttempt1PreservationManifest.ps1",
+                                                     "to":  "Test-Gate12RFailedPilotPreservationV2.ps1",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "pilot-attempt1-preservation-reaudit.json",
+                                                     "to":  "failed-pilot-attempts-preservation-reaudit.json",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "pilotAttempt1PreservationReauditSha256",
+                                                     "to":  "failedPilotPreservationReauditSha256",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "pilotAttempt1RootModified",
+                                                     "to":  "failedPilotRootsModified",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "pilotAttempt1ResumeAttempted",
+                                                     "to":  "failedPilotResumeAttempted",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "v5 pre-pilot",
+                                                     "to":  "v6 pre-pilot",
+                                                     "count":  3
+                                                 },
+                                                 {
+                                                     "from":  "receiptKind=\u0027gate12r-pre-pilot-reset-contract-route-wrapper-v5\u0027",
+                                                     "to":  "receiptKind=\u0027gate12r-pre-pilot-canonical-reference-route-wrapper-v6\u0027",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "receiptKind=\u0027gate12r-pre-pilot-gates-execution-receipt-v5\u0027",
+                                                     "to":  "receiptKind=\u0027gate12r-pre-pilot-gates-execution-receipt-v6\u0027",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "checkpointKind=\u0027gate12r-pre-pilot-verification-checkpoint-v5\u0027",
+                                                     "to":  "checkpointKind=\u0027gate12r-pre-pilot-verification-checkpoint-v6\u0027",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "manifestKind=\u0027gate12r-pre-pilot-partial-output-manifest-v5\u0027",
+                                                     "to":  "manifestKind=\u0027gate12r-pre-pilot-partial-output-manifest-v6\u0027",
+                                                     "count":  1
+                                                 },
+                                                 {
+                                                     "from":  "receiptKind=\u0027gate12r-pre-pilot-gates-failure-receipt-v5\u0027",
+                                                     "to":  "receiptKind=\u0027gate12r-pre-pilot-gates-failure-receipt-v6\u0027",
+                                                     "count":  1
+                                                 }
+                                             ]
+                              }
+                          ],
+    "activeWrappers":  [
+                           {
+                               "relativePath":  "Research/Verification/Run-Gate12RStaticUnitAuditV4.ps1",
+                               "sha256":  "cb167ff68f430625dfc02af409fda01909ad9aff41f082ffbefc4f90b6b2a699"
+                           },
+                           {
+                               "relativePath":  "Research/Verification/Run-Gate12RValidationOnlyPrePilotAuditV3.ps1",
+                               "sha256":  "8f7fc37336095f42e1ac489ce685a49435b40649cf198858cd99fa9b6b9b734b"
+                           },
+                           {
+                               "relativePath":  "Research/Verification/Run-Gate12RBlockAndRegressionGatesV5.ps1",
+                               "sha256":  "909529e2e078e187101dce65e419b6bf778b914889bd0e02dff4fddd103fa417"
+                           },
+                           {
+                               "relativePath":  "Research/Run-Gate12RPilotV5.ps1",
+                               "sha256":  "1bd10a98cc87f877a2b2a5d08592a0b1101717d7e90de7f54028075286d61ebf"
+                           },
+                           {
+                               "relativePath":  "Research/Verification/Run-Gate12RPrePilotAttemptV6.ps1",
+                               "sha256":  "dbd58d53754aca80c348ff67ef956aff317b8b69e06d48f0c350bddecc61380b"
+                           }
+                       ],
+    "planV3Sha256":  "498f0bac34f5ba98c946efab5577f1feed5631a4766fdd8817c74f445b150c98",
+    "thresholdsChanged":  false,
+    "matrixChanged":  false,
+    "williamsChanged":  false,
+    "algorithmSemanticsChanged":  false,
+    "gate13rAuthorized":  false
+}

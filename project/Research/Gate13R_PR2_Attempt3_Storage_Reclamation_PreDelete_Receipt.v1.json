@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "GATE13R-PR2-ATTEMPT3-STORAGE-RECLAMATION-PREDELETE-RECEIPT",
+  "receiptStatus": "PREDELETE-VERIFIED-READY-FOR-EXACT-SINGLE-DIRECTORY-DELETION",
+  "generatedAtUtc": "2026-10-11T13:12:20.6173694Z",
+  "authorization": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Storage_Reclamation_Authorization.v1.json",
+    "sha256": "768f43820078347ca8942cc02622c5612302b7c283429c6f220e8e5d3b113299"
+  },
+  "preDeleteSnapshot": {
+    "relativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/pre-delete-snapshot.json",
+    "sha256": "fb7062c68b228c67bef85872367802994e981c2bf674ca6c519431b69dca8084"
+  },
+  "exactDeletionTarget": {
+    "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/campaigns",
+    "fileCount": 87832,
+    "rawBytes": 25876073527,
+    "canonicalTreeManifestRelativePath": "Research/Preservation/Gate13R_PR2_Attempt3_Storage_Reclamation/v1/campaigns-canonical-file-manifest.jsonl",
+    "canonicalTreeSha256": "c17db7cd92f721b4426f7c18fca0590af3c308a8f35115913445cf5b2826e024"
+  },
+  "isolationFinding": {
+    "attempt3ObservationReuseAuthorized": false,
+    "crossAttemptMergeAuthorized": false,
+    "attempt3ObservationsConfirmedNotReusedOrMergedIntoAttempt4": true
+  },
+  "verificationSummary": {
+    "attempt4AcquisitionFrozenBindingsVerified": "39/39",
+    "attempt4PhaseBV2BindingsVerified": "25/25",
+    "attempt4PhaseBManifestArtifactsVerified": "5/5",
+    "attempt4RawRootFileCount": 110795,
+    "attempt4RawRootRawBytes": 26474012996,
+    "attempt4RawCanonicalTreeSha256": "02cbeed034d6a7211e2d6b7e2b3832a0485d25fb703a2b0f561bf50f7a838c1b",
+    "attempt4NonpayloadCanonicalTreeSha256": "85b64e2cd36bf1584a81c854d96f3cb40aa6fe488103762bfd8c33d43d30d8ab",
+    "preservedV3CanonicalTreeSha256": "d5a8dfd82145d3883c6c0c1e20b7693c507ae3d8ba6fb894be8c01e09f3b056b",
+    "gate14RFilesVerified": "10/10",
+    "unityProcessCount": 0
+  },
+  "storage": {
+    "volume": "H:",
+    "freeBytesImmediatelyBeforeDeletion": 213559336960,
+    "logicalBytesAuthorizedForDeletion": 25876073527
+  },
+  "deletionExecutedAtReceiptTime": false,
+  "deletionBoundary": "DELETE ONLY Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/campaigns; no scope expansion is authorized."
+}

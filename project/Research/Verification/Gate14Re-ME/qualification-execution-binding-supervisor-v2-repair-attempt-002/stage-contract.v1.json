@@ -1,0 +1,57 @@
+{
+  "schema": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-002",
+  "status": "FROZEN_PREEXECUTION_REPAIR_BOUNDARY",
+  "attempt": 2,
+  "projectRoot": "H:/DDM_Final_Project",
+  "retainedPriorAttempts": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001",
+      "failureReceiptSha256": "feea3650801239a1e92ced9031b137f9c22f7e9a9a483d05a6456353f1827b57",
+      "expectedFileCount": 7,
+      "modifyDeleteOrReclassify": false
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-001",
+      "failureReceiptSha256": "e5842af9ec3a6205aa9e9014ad1fddd6fab2f99696995577575c4ae4607d4c3e",
+      "sourceAndEvidenceFreezeManifestSha256": "69dd2ba7f58d51b3de7b65cac74285661d4bfd63742c59778ec938a275bbde0a",
+      "expectedFileCount": 8,
+      "modifyDeleteOrReclassify": false
+    }
+  ],
+  "repair": {
+    "cause": "ConvertFrom-Json default ISO timestamp coercion discarded the trusted rule original text",
+    "change": "Use ConvertFrom-Json -DateKind String for scientific and identity JSON reads",
+    "trustedIdentityRuleModified": false,
+    "timestampComparatorModified": false,
+    "identityRequirementsLowered": false
+  },
+  "outputs": [
+    "Research/Gate14Re-ME/Execution/v2/Run-Gate14ReMELoadQualification.v2.ps1",
+    "Research/Gate14Re-ME/Execution/v2/load-qualification-execution-contract.v2.json",
+    "Research/Gate14Re-ME/Execution/v2/load-qualification-current-implementation-manifest.v2.json",
+    "attempt-local static, compile-identity, boundary and terminal evidence"
+  ],
+  "unityAllowance": {
+    "maximumInvocations": 1,
+    "projectPath": "H:/DDM_Final_Project",
+    "mode": "algorithm-free project compilation and executable identity probe",
+    "executeMethod": null,
+    "plannerAllowed": false,
+    "algorithmLaneAllowed": false,
+    "naturalExitRequired": true,
+    "signalOrForcedTerminationAllowed": false,
+    "retryAllowedWithinAttempt": false
+  },
+  "prohibitedRoots": [
+    "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+    "Research/FormalRuns/Gate14Re-ME",
+    "Research/Exports/Gate14Re-ME/load-qualification/attempt-001"
+  ],
+  "replacementPolicy": {
+    "assetsMayBeGenerated": false,
+    "frozenOperationalBehavior": "ZERO_REPLACEMENT_FAIL_STOP"
+  },
+  "failurePolicy": "FAIL_CLOSED_PRESERVE_EVIDENCE_NO_RETRY_WITHIN_ATTEMPT"
+}

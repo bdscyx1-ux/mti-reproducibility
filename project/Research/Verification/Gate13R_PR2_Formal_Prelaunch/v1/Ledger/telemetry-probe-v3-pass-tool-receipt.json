@@ -1,0 +1,20 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 formal prelaunch telemetry probe v3",
+  "command": "Run-Gate13RPR2FormalTelemetryProbeV3.ps1 under native Windows PowerShell 5.1",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "gate_tokens": [
+    "PSAPI-CIM-CROSSCHECK-PASSED",
+    "POSITIVE-WORKING-SET",
+    "POSITIVE-PRIVATE-MEMORY",
+    "PROCESS-IDENTITY-PASSED",
+    "LICENSE-ENTITLEMENT-PASSED",
+    "LOCK-HYGIENE-PASSED",
+    "NO-MEASURED-SAMPLE"
+  ],
+  "input_paths": [
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/TelemetryProbeV3/Probe.summary.json"
+  ]
+}

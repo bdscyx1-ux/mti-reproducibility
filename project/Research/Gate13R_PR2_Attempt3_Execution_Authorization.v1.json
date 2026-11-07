@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "gate13r-pr2-s48-h48-formal-attempt3-monitored-two-stage-authorization-v1",
+  "authorizationId": "gate13r-pr2-formal-attempt3-active-v2-monitored-bounded-recovery-v1",
+  "recordedAtUtc": "2026-10-09T07:48:49.1652437Z",
+  "recordedAtAsiaShanghai": "2026-10-09T15:48:49.1690243+08:00",
+  "authorizationPrompt": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v4.md",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v4.md",
+    "sha256": "35652dfb462191c10abca3c426fb3e9aeefe8f37beaee28358704568ca133bc5"
+  },
+  "userAuthorization": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Execution_User_Authorization.v1.txt",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Attempt3_Execution_User_Authorization.v1.txt",
+    "sha256": "f276061a6cacc79bb91b7aacc50b58ec48f13d3afeb6dd75a1789901425f5dd9",
+    "exactText": "授权 Gate 13R-PR2 formal attempt 3，严格按 Research/Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v4.md 中的完整授权文本执行；不授权 Phase-B 正式统计分析，不授权 Gate 14R。"
+  },
+  "preWritePreservationAudit": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Execution_PreWrite_Preservation_Audit.v1.json",
+    "sha256": "95ffb69e7a21ccc490d288741ca328c24a5aef7d167e1c69b9f0a16761e594b4",
+    "passed": true
+  },
+  "authorizedReadinessChain": {
+    "mp2ReadinessSha256": "88333a15f3e5deb0eb7998bf15a5f1976df5de9a0382350016aa8623ad4680f8",
+    "mp2FinalAuditSha256": "bbf41f14682a85e061799a5cb9daed2122d6f8631a878b22bb714ede161bbe9e",
+    "monitoringReadinessV2Sha256": "526a7fc6ff67e3c2ac0201f1f88dcc08b9af155e0a25d0332fd4aab189aa809c",
+    "monitoringTerminalAuditV3Sha256": "6290bcab9b051af1215bd3658cf88be91fbeec65729f8eed4ff3a5bfe9f59c9b",
+    "monitoringEvidenceManifestV5Sha256": "79f5cfd08b4f00559271e8889b88c9bd4991840ff9141815bb03e83c7a4d03bd"
+  },
+  "activeFormalInputs": {
+    "candidateConfigV4Sha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+    "candidateAdapterV4Sha256": "2cad63b1c89608b2053552ef8c1261603f81231365689ba232d950fc279c4f62",
+    "candidateProvenanceV4Sha256": "0f2c666ac4dc324687073fcdd913833e4d7d72dc8ad88bfaa5b1184bcfb7c37f",
+    "scheduleV2Sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "scheduleManifestV2Sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+    "memoryPolicyRegistryV2Sha256": "1070821ef6264510eb2e7427d7887aaca08bb5d2e7854d48f61a6c8e1285490f",
+    "scenarioPolicyMappingV2Sha256": "5dd5daf640831ea49d5fa9e0bb1a318e71669ee9e426bf346f7eebc36f0c5055",
+    "schedulePolicyOverlayV2Sha256": "c87cc7eab158dc7a111867364b9c06c2314f44c644ef2a4b8e33348bd1876d13",
+    "blockWrapperV3Sha256": "fc0c42b858afb8e8d80c6f10544a0d7fb75694ae8c57910d205cea721731ff13",
+    "blockPlanBuilderV4Sha256": "11365fb3c694ae2fab6c9d3c3cb3c93f3cbe3e6f2f7a30373730f5a236ce8785",
+    "unityCommandV5Sha256": "21f86b21a49c936edd5e65fde750d269a54be984186d9c802cbc2804b2691c75"
+  },
+  "formalDesign": {
+    "designId": "gate13r-pr2-rq-aligned-s48-h48-formal-attempt3-v1",
+    "campaignCount": 74,
+    "freshUnityBlockProcessCount": 3552,
+    "algorithmSampleCount": 10176,
+    "heterogeneousMatchedSuperblockCount": 1008,
+    "abBaPerHeterogeneousScenario": "24/24",
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "maximumWilliamsBlocksPerUnityProcess": 1,
+    "scheduleChangesAuthorized": false,
+    "scientificSemanticsChangesAuthorized": false
+  },
+  "authorizedScope": {
+    "versionedPrelaunchExecutionImplementationAuthorized": true,
+    "freshValidationOnlyUnityPreflightAuthorized": true,
+    "oneFreshFormalAttempt3PhaseARawAcquisitionAuthorizedAfterAllPrelaunchGates": true,
+    "twoStageRawCommitAuthorized": true,
+    "hourlyBlindedOperationalMonitoringAuthorized": true,
+    "boundedNonUnityRawCommitRecoveryAuthorized": true,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false,
+    "playableOrObsTimingAuthorized": false
+  },
+  "recoveryPolicy": {
+    "prelaunchMaximumVersionedRepairCycles": 3,
+    "prelaunchRepairCyclesAlreadyConsumed": 1,
+    "prelaunchRepairCyclesRemainingAtAuthorization": 2,
+    "stopAfterSamePrelaunchFailureSignatureCount": 2,
+    "measuredRetryAuthorized": false,
+    "measuredResumeAuthorized": false,
+    "measuredTopUpAuthorized": false,
+    "partialAttemptMergeAuthorized": false,
+    "postAcquisitionMaximumNonUnityCommitRecoveryAttempts": 3,
+    "stopAfterSameCommitFailureSignatureCount": 2
+  },
+  "twoStageCommit": {
+    "required": true,
+    "amendmentRelativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+    "amendmentSha256": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+    "specificationRelativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+    "specificationSha256": "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5",
+    "phaseACommitState": "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE",
+    "ordinaryCommitOrAnalysisFailureMayRerunUnity": false,
+    "phaseBReadOnlyAnalysisRequiresSeparateAuthorization": true
+  },
+  "formalAttempt3OutputBoundary": {
+    "formalRootResolved": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v3",
+    "formalExecutionReceiptRelativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+    "formalOperationalStatusRelativePath": "Research/Gate13R_PR2_Formal_Execution_Status.v3.json",
+    "historicalRootReuseAuthorized": false,
+    "pilotOrHistoryMergeAuthorized": false
+  },
+  "immutable": true
+}

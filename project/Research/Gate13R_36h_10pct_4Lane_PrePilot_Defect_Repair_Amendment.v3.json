@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-plan-identity-repair-v3",
+  "createdAtUtc": "2026-10-08T04:42:21.0635237Z",
+  "status": "AUTHORIZED-NON-FORMAL-PREIMPLEMENTATION-REPAIR-ONLY",
+  "authorizationBasis": "The user authorized versioned redesign, tests, isolated project copies, and exactly one NON-FORMAL concurrent pilot; Gate 13R formal execution remains unauthorized.",
+  "confirmedDefect": {
+    "kind": "stale-versioned-plan-id-literal",
+    "staticUnitLocation": "Research/Verification/Run-Gate13R36hStaticUnitV2.ps1:39",
+    "pilotLocation": "Research/Run-Gate13R36hConcurrencyPilotV2.ps1:18",
+    "expectedActivePlanId": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v3",
+    "staleLiteral": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v1",
+    "evidenceSummaryRelativePath": "Research/Verification/Gate13R_36h_10pct_4Lane_PreImplementation/v7/StaticUnitV2/summary.json",
+    "evidenceSummarySha256": "f47d42f9a2bedfd97e79a8466d1258e941ff4c71741e0353223aaee44127897b"
+  },
+  "frozenAttempt2Inputs": {
+    "plan": {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Pilot_Plan.v2.json",
+      "sha256": "fbee6a4b7a6f1f85317bb88b1d27ffb1894be7e178bcf65a9cc2f4e928365b22"
+    },
+    "schedule": {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Pilot_Schedule.v2.json",
+      "sha256": "3fe5a0f42b9571a83f0b05a7a54c450995f897ae4afabd66b21bc582b7b82a6a"
+    },
+    "scheduleGenerationReceipt": {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Pilot_Schedule_Generation.v2.json",
+      "sha256": "04b1afbdd6fe8908c6053c84d25b5b9a36ac164be8d50c36f793eb3291debafd"
+    },
+    "provenance": {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Provenance.v2.json",
+      "sha256": "c3feccd67feb8c4d9c8ef197c0fde68e2d3bb4e081d638ef9dc3b2c0f7d2122c"
+    },
+    "derivationReceipt": {
+      "relativePath": "Research/Gate13R_36h_10pct_4Lane_Attempt2_Derivation_Receipt.v1.json",
+      "sha256": "9e4a940e5a80d07e8e9b54f37925f0ec7bc3b122201471c6fb38da3c963e3c2d"
+    }
+  },
+  "attempt2TerminalFacts": {
+    "officialVerificationRootCreated": false,
+    "isolatedCloneRootCreated": false,
+    "pilotRootCreated": false,
+    "unityStarted": false,
+    "formalRootCreated": false
+  },
+  "allowedChanges": [
+    "Create versioned v3 plan, schedule, provenance, wrappers, tests, verification runner, analyzer, and isolated-root routing derived mechanically from v2.",
+    "Replace only the stale plan-v1 identity checks in the v3 static/unit and pilot entry points with plan-v3.",
+    "Route all active attempt outputs to new v3 verification, clone, and pilot roots.",
+    "Record reversible derivation hashes and preserve all v1/v2 artifacts byte-for-byte."
+  ],
+  "forbiddenChanges": [
+    "algorithm behavior or Unity C# command changes",
+    "74-campaign matrix, deterministic seeds, scenarios, Williams orders, or reset semantics changes",
+    "10 percent per-campaign relative 95 percent CI half-width changes",
+    "hard-cap introduction",
+    "four-lane isolation, affinity, telemetry, memory, thermal, storage, or fail-closed threshold relaxation",
+    "27-hour readiness p95 or 36-hour formal wall-clock gate changes",
+    "formal root, formal receipt, formal campaign, Gate 14 analysis, or formal inference",
+    "pilot retry, pilot resume, or partial-output merge after any measured pilot starts"
+  ],
+  "activeAttempt3Roots": {
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v3",
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v3",
+    "pilotRoot": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v3",
+    "reservedFormalRoot": "Research/FormalRuns/Gate13R_36h_10pct_4Lane/v1"
+  },
+  "pilotAuthorization": {
+    "authorizedCount": 1,
+    "consumedCountBeforeAttempt3": 0,
+    "formalCampaignAuthorized": false,
+    "automaticRetryAuthorized": false,
+    "sameAttemptResumeAuthorized": false
+  }
+}

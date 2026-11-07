@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "auditKind": "gate13r-pr2-attempt4-historical-preservation-baseline-v1",
+  "recordedAtUtc": "2026-10-10T04:17:26.9662328Z",
+  "scope": "Recorded after prospective attempt-4 control-plane drafting and before creation of any attempt-4 formal target, receipt, status, or raw-data file.",
+  "attempt3": {
+    "formalAttemptOrdinal": 3,
+    "terminalStatus": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "completedProcessCount": 3469,
+    "completedSampleCount": 10010,
+    "currentGlobalProcessOrdinalAtFailure": 3470,
+    "formalRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3",
+    "formalRootFileCount": 101716,
+    "formalRootRawBytes": 25891613890,
+    "formalRootLatestWriteAtUtc": "2026-10-10T03:20:40.4581503Z",
+    "status": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Status.v3.json",
+      "sha256": "3aa224e3a21329c508df1d6e74e7b2052beefe5212405a880e24b66c33fcfaca"
+    },
+    "executionReceipt": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+      "sha256": "53a9e68281f901cc2c430d1fdc34969393013da9c854528fb29355c97aed84f6"
+    },
+    "failureCheckpoint": {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_control/formal-failure-checkpoint.json",
+      "sha256": "2afa262d4fa37dae129f17566d122f80cdcb1a83f2ae9ef8d482caae735dfad9"
+    },
+    "dataReuseInAttempt4Authorized": false,
+    "mergeWithAttempt4Authorized": false,
+    "mutatedByAttempt4Preparation": false
+  },
+  "attempt4Targets": [
+    {
+      "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+      "exists": false
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v4.json",
+      "exists": false
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Status.v4.json",
+      "exists": false
+    }
+  ],
+  "environment": {
+    "unityProcessCount": 0,
+    "projectUnityLockPresent": false,
+    "hDriveAvailableFreeBytes": 238603304960
+  },
+  "formalStatisticalAnalysisExecuted": false,
+  "gate14RExecuted": false,
+  "passed": true
+}

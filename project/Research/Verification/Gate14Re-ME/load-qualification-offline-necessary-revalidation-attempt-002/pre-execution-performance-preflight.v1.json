@@ -1,0 +1,18 @@
+{
+  "schema": "gate14re-me-offline-revalidation-performance-preflight-v1",
+  "studyId": "Gate14Re-ME",
+  "offlineRevalidationAttemptId": "load-qualification-offline-necessary-revalidation-attempt-002",
+  "status": "PASS_TARGETED_SOURCE_BINDING_PREFLIGHT",
+  "performedBeforeExecution": true,
+  "inputTable": "oracle-agent-checks",
+  "rows": 100000,
+  "distinctSourcePaths": 37,
+  "sourceBindingCacheHits": 99963,
+  "newContentHashes": 37,
+  "elapsedSeconds": 0.781,
+  "rowsPerSecond": 128094.7,
+  "predecessorObservedRowsPerSecond": 1631.69,
+  "targetedSpeedupRatio": 78.51,
+  "scopeBoundary": "This is a read-only microbenchmark of source-path/hash binding only. It is not an offline validation verdict and does not predict total validation time as a guarantee.",
+  "sourceRootsWritten": false
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-mp2-validation-failure-receipt-v1",
+  "attemptId": "gate13r-pr2-mp2-validation-attempt-2",
+  "savedAtUtc": "2026-10-09T06:18:31.6044872Z",
+  "status": "FAILED-VERSIONED-VALIDATION-REPAIR-AUTHORIZED",
+  "lastCompletedGate": "EXPECTED-NEGATIVE-NATIVE-HARD-BLOCK-CONTRACT-PASSED; WRAPPER-LOCK-HYGIENE-ACCEPTANCE-FAILED",
+  "failureCode": "EXPECTED-NEGATIVE-CONTROLLED-LOCK-CLEANUP-REJECTED-BY-WRAPPER",
+  "failureDiagnosis": "The frozen Gate10R lock-hygiene module correctly authorized and completed exact-file cleanup for an expected-negative Unity exit after the 10-second quiescence window. The MP2 V2 wrapper then incorrectly required natural-lock-absence for every role, rejecting the valid controlled-expected-negative-cleanup result even though the lock module returned passed=true and no Unity process or lock remained.",
+  "nextAction": "CREATE-VERSIONED-V3-WRAPPER-AND-ATTEMPT-3; ACCEPT-CONTROLLED-EXPECTED-NEGATIVE-CLEANUP-ONLY-FOR-EXPECTED-NEGATIVE-ROLE",
+  "checkpointSha256": "0e7ade1b1e69624fdec04981c1fad665125cfcb9819e6325a419ee5d94ed8caf",
+  "partialOutputManifestSha256": "20d18158d7bc57037f2c0bc57b494c1ff8ea45030301719b8de4bc4347ab50e8",
+  "formalAttempt3OutputRootCreated": false,
+  "formalAttempt3ExecutionReceiptCreated": false,
+  "formalAttempt3MeasuredCampaignExecuted": false,
+  "formalStatisticalAnalysisExecuted": false,
+  "gate14RExecuted": false,
+  "automaticFormalRetryAttempted": false,
+  "automaticFormalResumeAttempted": false
+}

@@ -1,0 +1,352 @@
+{
+  "confoundingWarning": "Execution order is structurally confounded with load order, especially the final stress superblocks. Order association is descriptive and cannot by itself establish system degradation.",
+  "matchedCellOrderComparison": {
+    "groupDefinition": "anonymousLaneId x designRegion x G x N x F",
+    "groupsSpanningAtLeastTwoOrderStrata": 0,
+    "normalizedProcessWallByStratum": {}
+  },
+  "recentLast100": {
+    "laneBodyMaximumMilliseconds": 1445882.9231,
+    "laneBodyMinimumMilliseconds": 50939.1227,
+    "laneBodyP50Milliseconds": 314901.10325,
+    "laneBodyP90Milliseconds": 617264.84158,
+    "laneBodyP95Milliseconds": 700503.64596,
+    "laneBodyP99Milliseconds": 1438667.221178,
+    "n": 100,
+    "operationRowsMaximum": 13185.0,
+    "operationRowsP50": 12897.0,
+    "processWallMaximumMilliseconds": 1462081.798,
+    "processWallMinimumMilliseconds": 64953.504,
+    "processWallP50Milliseconds": 330801.888,
+    "processWallP90Milliseconds": 633564.1194,
+    "processWallP95Milliseconds": 716743.18285,
+    "processWallP99Milliseconds": 1452677.85433,
+    "window": "last-100"
+  },
+  "recentLast98": {
+    "laneBodyMaximumMilliseconds": 1445882.9231,
+    "laneBodyMinimumMilliseconds": 50939.1227,
+    "laneBodyP50Milliseconds": 314901.10325,
+    "laneBodyP90Milliseconds": 599533.75643,
+    "laneBodyP95Milliseconds": 665387.734325,
+    "laneBodyP99Milliseconds": 1438812.992934,
+    "n": 98,
+    "operationRowsMaximum": 13185.0,
+    "operationRowsP50": 12897.0,
+    "processWallMaximumMilliseconds": 1462081.798,
+    "processWallMinimumMilliseconds": 64953.504,
+    "processWallP50Milliseconds": 330801.888,
+    "processWallP90Milliseconds": 616019.57,
+    "processWallP95Milliseconds": 703711.8831,
+    "processWallP99Milliseconds": 1452867.83299,
+    "window": "last-98"
+  },
+  "schema": "gate14re-me-runtime-order-and-tail-sensitivity-v1",
+  "strata": [
+    {
+      "fCounts": {
+        "1": 90,
+        "225": 72,
+        "81": 72,
+        "9": 90
+      },
+      "gCounts": {
+        "128": 36,
+        "64": 288
+      },
+      "laneBodyMaximumMilliseconds": 208866.6355,
+      "laneBodyMinimumMilliseconds": 1228.4374,
+      "laneBodyP50Milliseconds": 6688.0865,
+      "laneBodyP90Milliseconds": 64458.6838,
+      "laneBodyP95Milliseconds": 79031.93202,
+      "laneBodyP99Milliseconds": 169515.947618,
+      "n": 324,
+      "nCounts": {
+        "128": 72,
+        "32": 72,
+        "512": 72,
+        "8": 108
+      },
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 1185.0,
+      "orderStratum": "early",
+      "processWallMaximumMilliseconds": 224057.016,
+      "processWallMinimumMilliseconds": 16038.411,
+      "processWallP50Milliseconds": 22429.0615,
+      "processWallP90Milliseconds": 80590.2104,
+      "processWallP95Milliseconds": 95424.89865,
+      "processWallP99Milliseconds": 185286.59357,
+      "stressCount": 0
+    },
+    {
+      "fCounts": {
+        "1": 72,
+        "225": 90,
+        "81": 90,
+        "9": 72
+      },
+      "gCounts": {
+        "128": 252,
+        "256": 72
+      },
+      "laneBodyMaximumMilliseconds": 459829.7946,
+      "laneBodyMinimumMilliseconds": 2060.5737,
+      "laneBodyP50Milliseconds": 13399.83665,
+      "laneBodyP90Milliseconds": 119460.76291,
+      "laneBodyP95Milliseconds": 136438.55224,
+      "laneBodyP99Milliseconds": 350998.481709,
+      "n": 324,
+      "nCounts": {
+        "128": 72,
+        "32": 72,
+        "512": 72,
+        "8": 108
+      },
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 1185.0,
+      "orderStratum": "middle",
+      "processWallMaximumMilliseconds": 474184.075,
+      "processWallMinimumMilliseconds": 16213.16,
+      "processWallP50Milliseconds": 28574.895,
+      "processWallP90Milliseconds": 135382.802,
+      "processWallP95Milliseconds": 150669.58745,
+      "processWallP99Milliseconds": 367011.78354,
+      "stressCount": 0
+    },
+    {
+      "fCounts": {
+        "1": 54,
+        "225": 162,
+        "81": 54,
+        "9": 54
+      },
+      "gCounts": {
+        "256": 324
+      },
+      "laneBodyMaximumMilliseconds": 1445882.9231,
+      "laneBodyMinimumMilliseconds": 6146.5779,
+      "laneBodyP50Milliseconds": 80632.47885,
+      "laneBodyP90Milliseconds": 408866.38219,
+      "laneBodyP95Milliseconds": 505884.147265,
+      "laneBodyP99Milliseconds": 1225553.506014,
+      "n": 324,
+      "nCounts": {
+        "128": 72,
+        "32": 72,
+        "512": 180
+      },
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 12825.0,
+      "orderStratum": "late",
+      "processWallMaximumMilliseconds": 1462081.798,
+      "processWallMinimumMilliseconds": 22128.475,
+      "processWallP50Milliseconds": 98284.26,
+      "processWallP90Milliseconds": 426969.5432,
+      "processWallP95Milliseconds": 521597.42575,
+      "processWallP99Milliseconds": 1242358.69947,
+      "stressCount": 108
+    }
+  ],
+  "trailingHourlyCompletionWindows": [
+    {
+      "FCounts": {
+        "225": 13
+      },
+      "GCounts": {
+        "256": 13
+      },
+      "NCounts": {
+        "512": 13
+      },
+      "hoursBeforeFinal": 0,
+      "laneCompletions": 13,
+      "windowEndUtc": "2026-10-19T08:15:39.410010Z",
+      "windowStartUtc": "2026-10-19T07:15:39.410010Z"
+    },
+    {
+      "FCounts": {
+        "225": 14
+      },
+      "GCounts": {
+        "256": 14
+      },
+      "NCounts": {
+        "512": 14
+      },
+      "hoursBeforeFinal": 1,
+      "laneCompletions": 14,
+      "windowEndUtc": "2026-10-19T07:15:39.410010Z",
+      "windowStartUtc": "2026-10-19T06:15:39.410010Z"
+    },
+    {
+      "FCounts": {
+        "225": 12
+      },
+      "GCounts": {
+        "256": 12
+      },
+      "NCounts": {
+        "512": 12
+      },
+      "hoursBeforeFinal": 2,
+      "laneCompletions": 12,
+      "windowEndUtc": "2026-10-19T06:15:39.410010Z",
+      "windowStartUtc": "2026-10-19T05:15:39.410010Z"
+    },
+    {
+      "FCounts": {
+        "225": 13
+      },
+      "GCounts": {
+        "256": 13
+      },
+      "NCounts": {
+        "512": 13
+      },
+      "hoursBeforeFinal": 3,
+      "laneCompletions": 13,
+      "windowEndUtc": "2026-10-19T05:15:39.410010Z",
+      "windowStartUtc": "2026-10-19T04:15:39.410010Z"
+    },
+    {
+      "FCounts": {
+        "225": 12
+      },
+      "GCounts": {
+        "256": 12
+      },
+      "NCounts": {
+        "512": 12
+      },
+      "hoursBeforeFinal": 4,
+      "laneCompletions": 12,
+      "windowEndUtc": "2026-10-19T04:15:39.410010Z",
+      "windowStartUtc": "2026-10-19T03:15:39.410010Z"
+    },
+    {
+      "FCounts": {
+        "225": 10
+      },
+      "GCounts": {
+        "256": 10
+      },
+      "NCounts": {
+        "512": 10
+      },
+      "hoursBeforeFinal": 5,
+      "laneCompletions": 10,
+      "windowEndUtc": "2026-10-19T03:15:39.410010Z",
+      "windowStartUtc": "2026-10-19T02:15:39.410010Z"
+    }
+  ],
+  "withinSuperblockPositions": [
+    {
+      "laneBodyMaximumMilliseconds": 663674.3752,
+      "laneBodyMinimumMilliseconds": 1315.7522,
+      "laneBodyP50Milliseconds": 24599.42935,
+      "laneBodyP90Milliseconds": 313588.23415,
+      "laneBodyP95Milliseconds": 380923.35914,
+      "laneBodyP99Milliseconds": 538776.873185,
+      "n": 162,
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 3225.0,
+      "processWallMaximumMilliseconds": 678537.19,
+      "processWallMinimumMilliseconds": 16221.397,
+      "processWallP50Milliseconds": 40419.066,
+      "processWallP90Milliseconds": 327773.7844,
+      "processWallP95Milliseconds": 397052.5109,
+      "processWallP99Milliseconds": 553050.24041,
+      "withinSuperblockPosition": 1
+    },
+    {
+      "laneBodyMaximumMilliseconds": 1438594.3353,
+      "laneBodyMinimumMilliseconds": 1247.1904,
+      "laneBodyP50Milliseconds": 22071.75895,
+      "laneBodyP90Milliseconds": 208853.76714,
+      "laneBodyP95Milliseconds": 377834.088855,
+      "laneBodyP99Milliseconds": 580056.644668,
+      "n": 162,
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 3225.0,
+      "processWallMaximumMilliseconds": 1452582.865,
+      "processWallMinimumMilliseconds": 16109.121,
+      "processWallP50Milliseconds": 38171.9315,
+      "processWallP90Milliseconds": 224944.2675,
+      "processWallP95Milliseconds": 393738.9376,
+      "processWallP99Milliseconds": 595521.92602,
+      "withinSuperblockPosition": 2
+    },
+    {
+      "laneBodyMaximumMilliseconds": 1372697.4684,
+      "laneBodyMinimumMilliseconds": 1228.4374,
+      "laneBodyP50Milliseconds": 19758.23875,
+      "laneBodyP90Milliseconds": 337077.43799,
+      "laneBodyP95Milliseconds": 450150.338715,
+      "laneBodyP99Milliseconds": 674820.772445,
+      "n": 162,
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 3225.0,
+      "processWallMaximumMilliseconds": 1390012.889,
+      "processWallMinimumMilliseconds": 16038.411,
+      "processWallP50Milliseconds": 34712.4955,
+      "processWallP90Milliseconds": 351821.0516,
+      "processWallP95Milliseconds": 466713.4674,
+      "processWallP99Milliseconds": 691329.44795,
+      "withinSuperblockPosition": 3
+    },
+    {
+      "laneBodyMaximumMilliseconds": 1445882.9231,
+      "laneBodyMinimumMilliseconds": 1336.9416,
+      "laneBodyP50Milliseconds": 21069.64515,
+      "laneBodyP90Milliseconds": 260825.11953,
+      "laneBodyP95Milliseconds": 338156.651185,
+      "laneBodyP99Milliseconds": 598219.066954,
+      "n": 162,
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 3225.0,
+      "processWallMaximumMilliseconds": 1462081.798,
+      "processWallMinimumMilliseconds": 16130.798,
+      "processWallP50Milliseconds": 37609.081,
+      "processWallP90Milliseconds": 298156.9914,
+      "processWallP95Milliseconds": 354849.0416,
+      "processWallP99Milliseconds": 613951.47001,
+      "withinSuperblockPosition": 4
+    },
+    {
+      "laneBodyMaximumMilliseconds": 1374938.1472,
+      "laneBodyMinimumMilliseconds": 1342.1227,
+      "laneBodyP50Milliseconds": 20688.28675,
+      "laneBodyP90Milliseconds": 318822.53619,
+      "laneBodyP95Milliseconds": 387317.90169,
+      "laneBodyP99Milliseconds": 617890.379851,
+      "n": 162,
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 3225.0,
+      "processWallMaximumMilliseconds": 1389936.776,
+      "processWallMinimumMilliseconds": 16174.176,
+      "processWallP50Milliseconds": 36059.2855,
+      "processWallP90Milliseconds": 334944.0811,
+      "processWallP95Milliseconds": 402277.72555,
+      "processWallP99Milliseconds": 643182.65785,
+      "withinSuperblockPosition": 5
+    },
+    {
+      "laneBodyMaximumMilliseconds": 640009.546,
+      "laneBodyMinimumMilliseconds": 1561.2428,
+      "laneBodyP50Milliseconds": 23680.34135,
+      "laneBodyP90Milliseconds": 255962.51182,
+      "laneBodyP95Milliseconds": 334382.619015,
+      "laneBodyP99Milliseconds": 536243.736456,
+      "n": 162,
+      "operationRowsMaximum": 13185.0,
+      "operationRowsP50": 3225.0,
+      "processWallMaximumMilliseconds": 654824.238,
+      "processWallMinimumMilliseconds": 16203.427,
+      "processWallP50Milliseconds": 39053.746,
+      "processWallP90Milliseconds": 270814.7648,
+      "processWallP95Milliseconds": 349156.87725,
+      "processWallP99Milliseconds": 551442.36307,
+      "withinSuperblockPosition": 6
+    }
+  ]
+}

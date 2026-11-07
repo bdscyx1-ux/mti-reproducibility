@@ -1,0 +1,235 @@
+{
+  "$id": "gate13r-pr2-attempt3-operational-status-schema-v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "advisoryCrossingCount": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "analysisAuthorized": {
+      "const": false
+    },
+    "automaticMeasuredRetryAttempted": {
+      "const": false
+    },
+    "automaticResumeAttempted": {
+      "const": false
+    },
+    "automaticTopUpAttempted": {
+      "const": false
+    },
+    "candidateConfigSha256": {
+      "const": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042"
+    },
+    "completedProcessCount": {
+      "maximum": 3552,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "completedSampleCount": {
+      "maximum": 10176,
+      "minimum": 0,
+      "type": "integer"
+    },
+    "currentABBAOrder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentBlockId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentCampaignId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentCohort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentGlobalProcessOrdinal": {
+      "maximum": 3552,
+      "minimum": 1,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "currentMatchedSuperblockId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentScenarioId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentUnityBlockStartedAtUtc": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentUnityProcessId": {
+      "minimum": 1,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "currentUnityProcessStartedAtUtc": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "currentWilliamsRow": {
+      "minimum": 1,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "errorReasonCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "executionReceiptSha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "failureCheckpointPath": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "formalAttemptOrdinal": {
+      "const": 3
+    },
+    "formalRoot": {
+      "const": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-1\\fixture-work\\receipt-mismatch\\synthetic-formal-root"
+    },
+    "gate14RAuthorized": {
+      "const": false
+    },
+    "lastDurableCheckpointAtUtc": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "latestAvailablePhysicalMemoryBytes": {
+      "minimum": 0,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "latestPrivateMemoryBytes": {
+      "minimum": 0,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "latestWorkingSetBytes": {
+      "minimum": 0,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "outputFileCount": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "partialAttemptMergeAttempted": {
+      "const": false
+    },
+    "rawBytes": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "rawDataComplete": {
+      "type": "boolean"
+    },
+    "savedAtUtc": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "scheduleSha256": {
+      "const": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "startedAtUtc": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PRELAUNCH",
+        "ACQUISITION-RUNNING",
+        "ACQUISITION-COMPLETE-COMMIT-PENDING",
+        "RAW-COMMIT-RECOVERY",
+        "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE",
+        "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+        "USER-ACTION-REQUIRED"
+      ]
+    },
+    "statusKind": {
+      "const": "gate13r-pr2-formal-attempt3-operational-status-v1"
+    },
+    "totalProcessCount": {
+      "const": 3552
+    },
+    "totalSampleCount": {
+      "const": 10176
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "statusKind",
+    "savedAtUtc",
+    "status",
+    "formalAttemptOrdinal",
+    "formalRoot",
+    "executionReceiptSha256",
+    "candidateConfigSha256",
+    "scheduleSha256",
+    "startedAtUtc",
+    "lastDurableCheckpointAtUtc",
+    "completedProcessCount",
+    "completedSampleCount",
+    "totalProcessCount",
+    "totalSampleCount",
+    "currentGlobalProcessOrdinal",
+    "outputFileCount",
+    "rawBytes",
+    "advisoryCrossingCount",
+    "rawDataComplete",
+    "analysisAuthorized",
+    "gate14RAuthorized",
+    "automaticMeasuredRetryAttempted",
+    "automaticResumeAttempted",
+    "automaticTopUpAttempted",
+    "partialAttemptMergeAttempted"
+  ],
+  "type": "object"
+}

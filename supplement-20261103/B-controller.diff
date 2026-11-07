@@ -1,0 +1,100 @@
+--- H:\DDM_Final_Project\Assets\_Scripts\Research\Gate14Re\v2\Gate14ReFormalControllerV1.cs
++++ H:\DDM_Final_Project\Assets\_Scripts\Research\Revision20261103\RevisionMovementController.cs
+@@ -15,7 +15,7 @@
+ 
+ namespace DDM.Research.Gate14Re.V2
+ {
+-    public sealed class Gate14ReFormalControllerV1 : MonoBehaviour
++    public sealed class RevisionMovementController : MonoBehaviour
+     {
+         private enum RuntimePhase
+         {
+@@ -87,7 +87,7 @@
+                 }
+                 else
+                 {
+-                    string verificationRoot = Path.GetFullPath(Path.Combine(projectRoot, "Research", "Verification", "Gate14Re"));
++                    string verificationRoot = Path.GetFullPath("C:/Users/bdscy/DDM_Revision_20261103/pilot");
+                     RequireContained(outputPath, verificationRoot, "Validation output");
+                     Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+                 }
+@@ -244,7 +244,7 @@
+             Gate14ReValidationMarkerV1 marker = new Gate14ReValidationMarkerV1
+             {
+                 schema = "gate14re-formal-runner-validation-marker-v1",
+-                studyId = "Gate14Re",
++                studyId = "DDM-Revision-20261103-B",
+                 status = "PASS",
+                 lane = block.lane,
+                 unitCount = block.unitCount,
+@@ -397,8 +397,8 @@
+ 
+             Gate14ReFormalBlockOutputV1 output = new Gate14ReFormalBlockOutputV1
+             {
+-                schema = "gate14re-formal-block-output-v2",
+-                studyId = "Gate14Re",
++                schema = "revision20261103-b-output-v1",
++                studyId = "DDM-Revision-20261103-B",
+                 status = "COMPLETE",
+                 blockId = block.blockId,
+                 blockSequence = block.sequence,
+@@ -496,14 +496,14 @@
+             string authorizationSha = RequiredLowerSha(arguments, "gate14re-formal-authorization-sha256");
+             RequireReadOnlyFile(authorizationPath, authorizationSha);
+             Gate14ReFormalAuthorizationV1 authorization = JsonUtility.FromJson<Gate14ReFormalAuthorizationV1>(File.ReadAllText(authorizationPath, Encoding.UTF8));
+-            if (authorization == null || authorization.schema != "gate14re-formal-phase-a-authorization-v2" || authorization.studyId != "Gate14Re" || authorization.status != "AUTHORIZED")
++            if (authorization == null || authorization.schema != "revision20261103-b-authorization-v1" || authorization.studyId != "DDM-Revision-20261103-B" || authorization.status != "AUTHORIZED")
+                 throw new InvalidOperationException("Formal authorization schema/status binding failed.");
+             if (!authorization.userExplicitlyAuthorizedFormalPhaseA) throw new InvalidOperationException("Formal Phase A lacks explicit user authorization.");
+             if (authorization.planSha256 != planSha256 || authorization.executableSha256 != executableSha256 || authorization.assemblyCSharpSha256 != assemblyCSharpSha256 || authorization.buildReceiptSha256 != buildReceiptSha256)
+                 throw new InvalidOperationException("Formal authorization does not bind this plan, executable, managed assembly, and build receipt.");
+             if (string.IsNullOrWhiteSpace(authorization.authorizationId)) throw new InvalidOperationException("Formal authorization id is missing.");
+             string formalRoot = Path.GetFullPath(authorization.formalRoot);
+-            string expectedParent = Path.GetFullPath(Path.Combine(projectRoot, "Research", "FormalRuns", "Gate14Re"));
++            string expectedParent = Path.GetFullPath("C:/Users/bdscy/DDM_Revision_20261103");
+             RequireContained(formalRoot, expectedParent, "Formal root");
+             RequireContained(outputPath, formalRoot, "Formal block output");
+             if (!Directory.Exists(formalRoot) || !Directory.Exists(Path.GetDirectoryName(outputPath)))
+@@ -514,9 +514,9 @@
+ 
+         private static void ValidatePlanHeader(Gate14ReFormalPlanV1 plan)
+         {
+-            if (plan == null || plan.schema != "gate14re-formal-block-plan-v1" || plan.studyId != "Gate14Re" || plan.version != 1 || plan.status != "FROZEN_NONEXECUTING")
++            if (plan == null || plan.schema != "revision20261103-b-block-plan-v1" || plan.studyId != "DDM-Revision-20261103-B" || plan.version != 1 || plan.status != "FROZEN_NONEXECUTING")
+                 throw new InvalidOperationException("Formal plan header is invalid.");
+-            if (plan.fixedB != 48 || plan.plannedValidProcesses != 1536 || plan.blocks == null || plan.blocks.Length != 1536)
++            if (plan.fixedB != 48 || plan.plannedValidProcesses != 768 || plan.blocks == null || plan.blocks.Length != 768)
+                 throw new InvalidOperationException("Formal plan size/B binding is invalid.");
+         }
+ 
+@@ -532,8 +532,9 @@
+                 }
+             }
+             if (found == null) throw new InvalidOperationException("Requested formal block is absent from the frozen plan.");
+-            if (found.sequence < 1 || found.sequence > 1536 || found.blockIndex < 1 || found.blockIndex > 48 || found.williamsRow < 1 || found.williamsRow > 4)
++            if (found.sequence < 1 || found.sequence > 768 || found.blockIndex < 1 || found.blockIndex > 48 || found.williamsRow < 1 || found.williamsRow > 4)
+                 throw new InvalidOperationException("Formal block indices are invalid.");
++            if (found.module != "A" || found.unitCount != 128 || (found.lane != "movement" && found.lane != "m4")) throw new InvalidOperationException("Only main N128 movement and M4 blocks authorized.");
+             if (found.maximumWholeBlockReplacements != 1) throw new InvalidOperationException("Formal block replacement policy drifted.");
+             return found;
+         }
+@@ -644,8 +645,8 @@
+             {
+                 Gate14ReFormalFailureV1 failure = new Gate14ReFormalFailureV1
+                 {
+-                    schema = "gate14re-formal-runner-failure-v1",
+-                    studyId = "Gate14Re",
++                    schema = "revision20261103-b-failure-v1",
++                    studyId = "DDM-Revision-20261103-B",
+                     status = "FAIL_CLOSED",
+                     blockId = block == null ? string.Empty : block.blockId,
+                     exceptionType = exception == null ? "unknown" : exception.GetType().FullName,
+@@ -680,7 +681,7 @@
+ 
+         private static string GetCurrentAssemblyPath()
+         {
+-            string location = typeof(Gate14ReFormalControllerV1).Assembly.Location;
++            string location = typeof(RevisionMovementController).Assembly.Location;
+             if (string.IsNullOrWhiteSpace(location) || !File.Exists(location)) throw new InvalidOperationException("Cannot resolve Assembly-CSharp.dll for formal binding.");
+             return Path.GetFullPath(location);
+         }

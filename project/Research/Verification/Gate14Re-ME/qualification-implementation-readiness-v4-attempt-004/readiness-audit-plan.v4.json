@@ -1,0 +1,39 @@
+{
+  "schema": "gate14re-me-qualification-readiness-audit-plan-v4",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-implementation-readiness-v4-attempt-004",
+  "createdAtUtc": "2026-10-19T12:23:00.5275711Z",
+  "status": "FROZEN_BEFORE_READ_ONLY_AUDIT",
+  "purpose": "Prove that the bounded-load v4 acquisition and independent v4.1 streaming acceptance implementation are internally bound and ready for a future explicitly authorized execution without launching qualification in this audit.",
+  "allowedActions": [
+    "read files referenced by the v4 implementation manifest and contracts",
+    "recompute byte counts and SHA-256 values",
+    "parse JSON, PowerShell, and Python syntax without executing qualification",
+    "validate the 126-row schedule and its 126 referenced input bundles",
+    "inspect only process metadata needed to prove that no Unity qualification runner is active"
+  ],
+  "prohibitedActions": [
+    "create a measured or delivery root",
+    "launch Unity or a qualification supervisor",
+    "read or interpret algorithm observations or outcome metrics",
+    "modify or unseal attempt-009 evidence or measured data",
+    "perform formal collection, formal analysis, ranking, weighting, or winner adjudication",
+    "build a migration package"
+  ],
+  "requiredChecks": [
+    "all implementation-manifest artifacts exist and match frozen byte counts and SHA-256",
+    "acquisition and acceptance contract entry points and frozen bindings match current files",
+    "all bound JSON documents parse",
+    "PowerShell entry points parse and the acceptance Python tool passes AST parsing",
+    "schedule cardinality is 126 with ordinals 0 through 125 and zero replacement",
+    "every schedule row binds one existing input by SHA-256",
+    "core design is G={64,96,128}, N={32,64,128}, F={1,9,25,81}, three superblocks per cell",
+    "stress design contains 18 additional superblocks at G=128, N=128, F=81",
+    "each superblock contains six unique paired algorithms and Williams balance is 21 appearances per lane position",
+    "planned acquisition cardinality is 895 fresh processes with zero retry and zero replacement",
+    "formal B is not frozen; provisional planning grid starts at B=36 and uses multiples of 36",
+    "readiness compile attempt-003 is PASS and earlier failed readiness attempts remain preserved",
+    "attempt-009 paused seal remains hash-bound and no active Unity qualification runner exists"
+  ],
+  "terminalPassMeaning": "Static and compile readiness only. It does not authorize or imply qualification execution or qualification PASS."
+}

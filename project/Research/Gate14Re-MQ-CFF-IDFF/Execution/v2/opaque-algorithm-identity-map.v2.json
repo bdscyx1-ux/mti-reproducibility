@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-mq-formal-opaque-algorithm-identity-map-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "FROZEN_AFTER_IDENTITY_BLIND_POWER_SELECTION",
+  "mappingOpenedOnlyAfterPowerSelectionSealed": true,
+  "powerSelectionSeal": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v2-attempt-001/power-selection-seal-receipt.v2.json",
+    "bytes": 1403,
+    "sha256": "5297b9ea3b60251b46ef21ba0878b26085a01b0c46f39c29e8562544f57638b0"
+  },
+  "algorithms": [
+    {
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "algorithmId": "C-FF",
+      "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "implementationSha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"
+    },
+    {
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "algorithmId": "IDFF",
+      "implementationRelativePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "implementationSha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"
+    }
+  ],
+  "formalEffectDataRead": false,
+  "formalAnalysisStarted": false,
+  "createdAtUtc": "2026-10-21T07:33:32.1939533Z"
+}

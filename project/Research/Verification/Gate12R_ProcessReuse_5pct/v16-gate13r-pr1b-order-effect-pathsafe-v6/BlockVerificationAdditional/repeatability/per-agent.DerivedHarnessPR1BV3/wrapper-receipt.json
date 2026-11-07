@@ -1,0 +1,58 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-pr1b-v3-pathsafe-memory-aware-block-derived-wrapper-receipt-v1",
+    "createdAtUtc":  "2026-10-08T13:23:10.9080887Z",
+    "sourceRelativePath":  "Research/Run-Gate12RProcessReuseBlockV3.ps1",
+    "sourceSha256":  "b5ac864438c3f98684cc62a988f742ef9500434feb41504b5e4742af14d7ef8a",
+    "derivedSha256":  "72c6131f412b3c092dfc38d0986b1b5e4d099ec4cfd87d5c358572829ff025c8",
+    "routes":  [
+                   {
+                       "from":  "Import-Module (Join-Path $PSScriptRoot \u0027Gate10RProcessReusePreparation.psm1\u0027) -Force",
+                       "to":  "Import-Module (Join-Path $ProjectPath \u0027Research\\Gate10RProcessReusePreparation.psm1\u0027) -Force",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Import-Module (Join-Path $PSScriptRoot \u0027Gate10RLockHygieneV3.psm1\u0027) -Force",
+                       "to":  "Import-Module (Join-Path $ProjectPath \u0027Research\\Gate10RLockHygieneV3.psm1\u0027) -Force",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "$formalRoot=[IO.Path]::GetFullPath((Join-Path $ProjectPath \u0027Research\\FormalRuns\\Gate13R_ProcessReuse_5pct\\v1\u0027))",
+                       "to":  "$formalRoot=[IO.Path]::GetFullPath((Join-Path $ProjectPath \u0027Research\\FormalRuns\\Gate13R_RQAligned\\v1\u0027))",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "DDM.Research.Editor.Gate12RProcessReuseBatchCommandV3.Run",
+                       "to":  "DDM.Research.Editor.Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3.Run",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "$expectedBlockManagedLimit=[long]134217728*[long]@($plan.entries).Count",
+                       "to":  "$expectedBlockManagedLimit=[long]268435456",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "[int]$manifest.schemaVersion-ne3-or[string]$manifest.manifestKind-ne\u0027gate12r-process-reuse-5pct-process-reuse-block-manifest-v2\u0027",
+                       "to":  "[int]$manifest.schemaVersion-ne4-or[string]$manifest.manifestKind-ne\u0027gate13r-pr1b-v2-memory-aware-process-reuse-block-manifest-v1\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "[string]$manifest.memoryGatePolicyId-ne\u0027gate12r-sample-128mib-block-128mib-per-sample-v1\u0027-or[string]$manifest.blockManagedLimitFormulaId-ne\u0027checked-sample-limit-times-expected-sample-count-v1\u0027-or[long]$manifest.maximumSampleRetainedManagedGrowthBytes-ne134217728-or[long]$manifest.maximumManagedGrowthBytes-ne$expectedBlockManagedLimit",
+                       "to":  "[string]$manifest.memoryGatePolicyId-ne\u0027gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1\u0027-or[string]$manifest.blockManagedLimitFormulaId-ne\u0027fixed-two-sample-independent-block-256mib-v1\u0027-or[long]$manifest.maximumSampleRetainedManagedGrowthBytes-ne268435456-or[long]$manifest.sampleManagedAlertThresholdBytes-ne134217728-or[long]$manifest.sampleManagedEmergencyStopBytes-ne268435456-or[long]$manifest.maximumManagedGrowthBytes-ne$expectedBlockManagedLimit",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "if([long]$a.sampleRetainedManagedGrowthBytes-gt134217728){$errors.Add(\"Sample retained managed-memory growth exceeded 128 MiB at $i\")}",
+                       "to":  "if([long]$a.sampleRetainedManagedGrowthBytes-gt268435456){$errors.Add(\"Sample retained managed-memory growth exceeded emergency 256 MiB at $i\")}",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "[int]$cm.schemaVersion-ne5-or[string]$cm.memoryGatePolicyId-ne\u0027gate12r-sample-128mib-block-128mib-per-sample-v1\u0027-or[long]$cm.maximumSampleRetainedManagedGrowthBytes-ne134217728-or$cm.retainedManagedGrowthWithinLimit-ne$true",
+                       "to":  "[int]$cm.schemaVersion-ne6-or[string]$cm.memoryGatePolicyId-ne\u0027gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1\u0027-or[long]$cm.maximumSampleRetainedManagedGrowthBytes-ne268435456-or[long]$cm.sampleManagedAlertThresholdBytes-ne134217728-or[long]$cm.sampleManagedEmergencyStopBytes-ne268435456-or$cm.sampleEmergencyStopPassed-ne$true-or$cm.retainedManagedGrowthWithinLimit-ne$true",
+                       "replacementCount":  1
+                   }
+               ],
+    "researchSemanticsChanged":  false,
+    "memoryEligibilityAmendmentApplied":  true,
+    "formalCampaign":  false
+}

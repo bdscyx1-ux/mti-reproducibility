@@ -1,0 +1,236 @@
+{
+    "schemaVersion":  1,
+    "snapshotId":  "gate13-cold-process-pre-termination-snapshot-v1",
+    "capturedAt":  "2026-10-06T13:19:25.1273810+08:00",
+    "formalRoot":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1",
+    "formalRootResolvedMatchesAuthorizedTarget":  true,
+    "orchestratorProcessId":  3476,
+    "activeRun":  {
+                      "campaignOrdinal":  1,
+                      "campaignId":  "g13-c001-core-r01-s1-shared-s4",
+                      "williamsBlock":  37,
+                      "position":  4,
+                      "algorithm":  "C-FF",
+                      "runId":  "g13-c001-core-r01-s1-shared-s4-b037-p04-cff",
+                      "outputDirectory":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1\\campaigns\\c001-core-r01-s1-shared-s4\\runs\\b037\\p04-cff",
+                      "scenarioRunnerProcessId":  29232,
+                      "workloadRunnerProcessId":  5272,
+                      "unityProcessId":  15936
+                  },
+    "processTree":  [
+                        {
+                            "processId":  3380,
+                            "parentProcessId":  15936,
+                            "name":  "Unity.Licensing.Client.exe",
+                            "creationDate":  "2026-10-06T13:19:19.0271020+08:00",
+                            "executablePath":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Resources\\Licensing\\Client\\Unity.Licensing.Client.exe",
+                            "commandLine":  "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Resources\\Licensing\\Client\\Unity.Licensing.Client.exe\" \"--namedPipe\" \"Unity-LicenseClient-bdscy\""
+                        },
+                        {
+                            "processId":  3476,
+                            "parentProcessId":  25224,
+                            "name":  "powershell.exe",
+                            "creationDate":  "2026-10-06T12:42:18.7943100+08:00",
+                            "executablePath":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                            "commandLine":  "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -ExecutionPolicy Bypass -File \"H:\\DDM_Final_Project\\Research\\Run-Gate13FormalCampaign.ps1\" -ProjectPath \"H:\\DDM_Final_Project\" -ConfigPath \"H:\\DDM_Final_Project\\Research\\Gate13_Formal_Campaign_Config.v1.json\" -Execute -ExecutionAuthorizationPath \"H:\\DDM_Final_Project\\Research\\Gate13_Execution_Authorization.v2.json\""
+                        },
+                        {
+                            "processId":  4388,
+                            "parentProcessId":  29232,
+                            "name":  "conhost.exe",
+                            "creationDate":  "2026-10-06T12:42:39.0927710+08:00",
+                            "executablePath":  "C:\\WINDOWS\\system32\\conhost.exe",
+                            "commandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+                        },
+                        {
+                            "processId":  5272,
+                            "parentProcessId":  29232,
+                            "name":  "powershell.exe",
+                            "creationDate":  "2026-10-06T13:19:17.0416520+08:00",
+                            "executablePath":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                            "commandLine":  "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -ExecutionPolicy Bypass -File H:\\DDM_Final_Project\\Research\\Run-PlanningWorkload.ps1 -ScenarioPath H:\\DDM_Final_Project\\Research\\FormalScenarios\\v1\\Scenarios\\core-r01-s1-shared.scenario.json -OutputDirectory H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1\\campaigns\\c001-core-r01-s1-shared-s4\\runs\\b037\\p04-cff -RunId g13-c001-core-r01-s1-shared-s4-b037-p04-cff -Algorithm C-FF -UnityPath H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe -ProjectPath H:\\DDM_Final_Project"
+                        },
+                        {
+                            "processId":  7692,
+                            "parentProcessId":  3380,
+                            "name":  "conhost.exe",
+                            "creationDate":  "2026-10-06T13:19:19.0320210+08:00",
+                            "executablePath":  "C:\\WINDOWS\\system32\\conhost.exe",
+                            "commandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+                        },
+                        {
+                            "processId":  10056,
+                            "parentProcessId":  15936,
+                            "name":  "UnityCrashHandler64.exe",
+                            "creationDate":  "2026-10-06T13:19:18.9857970+08:00",
+                            "executablePath":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Tools\\UnityCrashHandler64.exe",
+                            "commandLine":  "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Tools\\UnityCrashHandler64.exe\" --attach 15936 2262488649728"
+                        },
+                        {
+                            "processId":  15936,
+                            "parentProcessId":  5272,
+                            "name":  "Unity.exe",
+                            "creationDate":  "2026-10-06T13:19:17.2805710+08:00",
+                            "executablePath":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe",
+                            "commandLine":  "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe\" -batchmode -nographics -quit -projectPath \"H:\\DDM_Final_Project\" -executeMethod DDM.Research.Editor.ResearchPlanningBatchCommand.Run -ddmScenarioPath \"H:\\DDM_Final_Project\\Research\\FormalScenarios\\v1\\Scenarios\\core-r01-s1-shared.scenario.json\" -ddmOutputDirectory \"H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1\\campaigns\\c001-core-r01-s1-shared-s4\\runs\\b037\\p04-cff\" -ddmRunId \"g13-c001-core-r01-s1-shared-s4-b037-p04-cff\" -ddmAlgorithm \"C-FF\" -logFile \"H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13\\v1\\campaigns\\c001-core-r01-s1-shared-s4\\runs\\b037\\p04-cff.Unity.log\" "
+                        },
+                        {
+                            "processId":  17744,
+                            "parentProcessId":  25108,
+                            "name":  "conhost.exe",
+                            "creationDate":  "2026-10-06T13:19:23.7363970+08:00",
+                            "executablePath":  "C:\\WINDOWS\\system32\\conhost.exe",
+                            "commandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+                        },
+                        {
+                            "processId":  22400,
+                            "parentProcessId":  3476,
+                            "name":  "conhost.exe",
+                            "creationDate":  "2026-10-06T12:42:18.8050760+08:00",
+                            "executablePath":  "C:\\WINDOWS\\system32\\conhost.exe",
+                            "commandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+                        },
+                        {
+                            "processId":  23268,
+                            "parentProcessId":  23304,
+                            "name":  "conhost.exe",
+                            "creationDate":  "2026-10-06T13:19:20.1050740+08:00",
+                            "executablePath":  "C:\\WINDOWS\\system32\\conhost.exe",
+                            "commandLine":  "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+                        },
+                        {
+                            "processId":  23304,
+                            "parentProcessId":  15936,
+                            "name":  "UnityPackageManager.exe",
+                            "creationDate":  "2026-10-06T13:19:20.0999430+08:00",
+                            "executablePath":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe",
+                            "commandLine":  "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe\" \"-s\" \"15936\" \"-ipc\" \"-ipc-path\" \"Unity-Upm-15936\" \"-l\" \"2\""
+                        },
+                        {
+                            "processId":  25108,
+                            "parentProcessId":  15936,
+                            "name":  "Unity.ILPP.Runner.exe",
+                            "creationDate":  "2026-10-06T13:19:23.7309860+08:00",
+                            "executablePath":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Tools\\ilpp\\Unity.ILPP.Runner\\Unity.ILPP.Runner.exe",
+                            "commandLine":  "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Tools\\ilpp\\Unity.ILPP.Runner\\Unity.ILPP.Runner.exe\" \"unity-ilpp-0479941ebc9e195f29e2690a1abbe421\""
+                        },
+                        {
+                            "processId":  25296,
+                            "parentProcessId":  15936,
+                            "name":  "hasp_rt.exe",
+                            "creationDate":  "2026-10-06T13:19:17.3893080+08:00",
+                            "executablePath":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\hasp_rt.exe",
+                            "commandLine":  "hasp_rt.exe 36049 -A \"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe\" -D \"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe\""
+                        },
+                        {
+                            "processId":  28216,
+                            "parentProcessId":  15936,
+                            "name":  "UnityAutoQuitter.exe",
+                            "creationDate":  "2026-10-06T13:19:23.7349400+08:00",
+                            "executablePath":  "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Tools\\UnityAutoQuitter.exe",
+                            "commandLine":  "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Data\\Tools\\UnityAutoQuitter.exe\" \"15936\" \"25108\""
+                        },
+                        {
+                            "processId":  29232,
+                            "parentProcessId":  3476,
+                            "name":  "powershell.exe",
+                            "creationDate":  "2026-10-06T12:42:39.0846290+08:00",
+                            "executablePath":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                            "commandLine":  "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -ExecutionPolicy Bypass -File \"H:\\DDM_Final_Project\\Research\\Run-Gate13FormalScenarioCampaign.ps1\" -ProjectPath \"H:\\DDM_Final_Project\" -ConfigPath \"H:\\DDM_Final_Project\\Research\\Gate13_Formal_Campaign_Config.v1.json\" -CampaignOrdinal 1 -Execute -ExecutionAuthorizationPath \"H:\\DDM_Final_Project\\Research\\Gate13_Execution_Authorization.v2.json\" "
+                        }
+                    ],
+    "checkpointBefore":  {
+                             "schemaVersion":  1,
+                             "checkpointId":  "gate13-formal-checkpoint-v1",
+                             "status":  "running-campaign",
+                             "savedAt":  "2026-10-06T12:42:39.0770482+08:00",
+                             "formalStartedAt":  "2026-10-06T12:42:39.0640036+08:00",
+                             "configId":  "gate13-formal-campaign-config-v1",
+                             "configSha256":  "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874",
+                             "amendmentSha256":  "1ccf5c6e1e2c646d160e7b597381c797cc14e6123134a28b429fcb773515e8b2",
+                             "executionAuthorizationId":  "gate13-formal-execution-v2-20261006T124113p0800",
+                             "executionAuthorizationSha256":  "5f3898914c29a3413f70d1ee1c5b7afbe84c05ac7987677f6083227dd93417a8",
+                             "expectedCampaignCount":  74,
+                             "expectedUnityProcessCount":  15056,
+                             "completedCampaignCount":  0,
+                             "completedSampleCount":  0,
+                             "currentCampaignOrdinal":  1,
+                             "currentCampaignId":  "g13-c001-core-r01-s1-shared-s4",
+                             "completedCampaigns":  [
+
+                                                    ],
+                             "error":  "",
+                             "automaticResumeAuthorized":  false,
+                             "automaticRetryAuthorized":  false,
+                             "formalCampaign":  true
+                         },
+    "checkpointBeforeSha256":  "8f0abab06d2793539d64f1ebe40ce85b7b99b17378dc2eaad531c59bfab01553",
+    "completedSampleCountFromCompletedManifests":  147,
+    "partialOutputFileCount":  890,
+    "partialOutputRawByteCount":  128951239,
+    "partialOutputLastWriteTimeUtc":  "2026-10-06T05:19:19.0211457Z",
+    "partialOutputManifestRelativePath":  "Research/Gate13_ColdProcess_Partial_Output_Manifest.v1.json",
+    "partialOutputManifestSha256":  "f3ea8fa2f39bfbbb89380efb0389fc1c1f7d0cdf3849cc0ae45da75c2e960c82",
+    "protectedEvidenceHashes":  [
+                                    {
+                                        "relativePath":  "Research/Gate13_Formal_Campaign_Config.v1.json",
+                                        "exists":  true,
+                                        "lengthBytes":  201615,
+                                        "sha256":  "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874"
+                                    },
+                                    {
+                                        "relativePath":  "Research/Gate13_Readiness_Amendment.v1.json",
+                                        "exists":  true,
+                                        "lengthBytes":  9486,
+                                        "sha256":  "1ccf5c6e1e2c646d160e7b597381c797cc14e6123134a28b429fcb773515e8b2"
+                                    },
+                                    {
+                                        "relativePath":  "Research/Gate13_Execution_Authorization.v1.json",
+                                        "exists":  true,
+                                        "lengthBytes":  1178,
+                                        "sha256":  "864740f428c8a0c40c9883c9b9a77988968e68610cf19d48d61529959ec95cc8"
+                                    },
+                                    {
+                                        "relativePath":  "Research/Gate13_Execution_Authorization.v2.json",
+                                        "exists":  true,
+                                        "lengthBytes":  1694,
+                                        "sha256":  "5f3898914c29a3413f70d1ee1c5b7afbe84c05ac7987677f6083227dd93417a8"
+                                    },
+                                    {
+                                        "relativePath":  "Research/Gate13_Formal_Launch_Attempt1_Checkpoint.md",
+                                        "exists":  true,
+                                        "lengthBytes":  6823,
+                                        "sha256":  "fa31b804b3f8e4d8b402c4e7031a96416af23987cab9a3566b50fcc20ab7c3d4"
+                                    },
+                                    {
+                                        "relativePath":  "Research/Gate13_Formal_Launch_Attempt2_Checkpoint.md",
+                                        "exists":  true,
+                                        "lengthBytes":  10496,
+                                        "sha256":  "26ba6e76c9071e9cf9d2706a5f5c7c186814e6e256b07b7e60a24dee99a2a46b"
+                                    },
+                                    {
+                                        "relativePath":  "Research/FormalRuns/Gate13/v1/frozen-config.json",
+                                        "exists":  true,
+                                        "lengthBytes":  201615,
+                                        "sha256":  "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874"
+                                    },
+                                    {
+                                        "relativePath":  "Research/FormalRuns/Gate13/v1/execution-authorization.json",
+                                        "exists":  true,
+                                        "lengthBytes":  1694,
+                                        "sha256":  "5f3898914c29a3413f70d1ee1c5b7afbe84c05ac7987677f6083227dd93417a8"
+                                    },
+                                    {
+                                        "relativePath":  "Research/FormalRuns/Gate13/v1/launch-preflight.json",
+                                        "exists":  true,
+                                        "lengthBytes":  1704,
+                                        "sha256":  "672ed55298320c2eb730919b48f8702ef62c96b047883d92a7c5826a6708e444"
+                                    },
+                                    {
+                                        "relativePath":  "Research/FormalRuns/Gate13/v1/formal-checkpoint.json",
+                                        "exists":  true,
+                                        "lengthBytes":  1075,
+                                        "sha256":  "8f0abab06d2793539d64f1ebe40ce85b7b99b17378dc2eaad531c59bfab01553"
+                                    }
+                                ]
+}

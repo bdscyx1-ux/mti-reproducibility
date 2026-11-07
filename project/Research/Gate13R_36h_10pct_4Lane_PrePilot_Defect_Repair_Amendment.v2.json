@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 2,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-defect-repair-v2",
+  "createdAtUtc": "2026-10-08T04:35:30.0000000Z",
+  "scope": "PRE-PILOT VERSIONED IMPLEMENTATION DEFECT REPAIR ONLY",
+  "authorizationBasis": {
+    "relativePath": "Research/Gate13R_36h_Redesign_Pilot_Authorization.v1.json",
+    "sha256": "a8c97f506048727a84558e22a680f619f71f8ecdb3762dc59b4c1a91764de123",
+    "prePilotVersionedDefectRepairAllowed": true
+  },
+  "supersededVerificationAttempt": {
+    "verificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v1",
+    "cloneRoot": "H:/DDM_Final_Project_Gate13R36H/v1",
+    "status": "FAILED-NO-AUTO-RETRY / EXCLUDED-FROM-READINESS",
+    "executionReceiptSha256": "f18de988bb110e0a47acf346857af2de5e2bfe792162442b3333abb75f93ef8e",
+    "terminalCheckpointSha256": "10d97f29d30fbff1744f4e86b1c26b26b1208bef6f10fe0cc4a486bd823e108c",
+    "failureReceiptSha256": "c627f2ff7f21e8d02624b9e6fff27c003c63a9602ce36bcc3928218f722cfd35",
+    "partialOutputManifestSha256": "fb6d78f16cb2383b996ecf58642f5ca0f1d01c6c391f77485be60ac05f1ae8fc",
+    "laneCopySummarySha256": "d4ae19ca701681ba431868ebf3bdd5eb69e35a8cbdb08437ebfbfe4633e21da6",
+    "staticUnitSummarySha256": "3a75ce2f0db848c6c882fde0f77db264a95c3fbc009dfc42f5a3a710c9d1b3b7",
+    "verificationFileCount": 22,
+    "verificationRawBytes": 51252,
+    "cloneFileCount": 127120,
+    "cloneRawBytes": 13862872848,
+    "pilotRootCreated": false,
+    "formalRootCreated": false,
+    "mustRemainByteStable": true,
+    "retryOrResumeAllowed": false
+  },
+  "confirmedDefect": {
+    "classification": "Windows PowerShell 5.1 wrapper-runtime lexical compatibility defect",
+    "location": [
+      "Research/Run-Gate13R36hTelemetryProbeV1.ps1:Get-LaneUnityProcesses",
+      "Research/Run-Gate13R36hBlockV1.ps1:Get-LaneUnityProcesses"
+    ],
+    "symptom": "The compact token return@(...) is evaluated as a command named return@ under Windows PowerShell 5.1.",
+    "scientificWorkloadStarted": false,
+    "unityTelemetryProbeStarted": false,
+    "algorithmSampleStarted": false,
+    "pilotStarted": false
+  },
+  "permittedRepair": {
+    "newVerificationRoot": "Research/Verification/Gate13R_36h_10pct_4Lane/v2",
+    "newCloneRoot": "H:/DDM_Final_Project_Gate13R36H/v2",
+    "newPilotRoot": "Research/PilotRuns/Gate13R_36h_10pct_4Lane/v2",
+    "mechanicalChange": "Insert required token separation after return and route all attempt-2 artifacts to new v2 paths.",
+    "reuseAttempt1Clone": false,
+    "reuseAttempt1VerificationOutput": false,
+    "reuseAttempt1TelemetryOutput": false,
+    "scientificDesignChanged": false,
+    "campaignMatrixChanged": false,
+    "precisionChanged": false,
+    "williamsOrderChanged": false,
+    "algorithmSemanticsChanged": false,
+    "memoryThresholdChanged": false,
+    "readinessThresholdChanged": false
+  },
+  "frozenSemantics": {
+    "campaignCount": 74,
+    "relative95CiHalfWidth": 0.10,
+    "hardCap": null,
+    "laneCount": 4,
+    "readinessP95HoursMaximum": 27.0,
+    "hardFormalEndToEndHours": 36.0,
+    "oneFreshUnityEditorProcessPerWilliamsBlock": true,
+    "formalCampaignAuthorized": false
+  },
+  "failurePolicy": {
+    "attempt2VerificationRetryCount": 0,
+    "soleMeasuredPilotCount": 1,
+    "automaticMeasuredPilotRetry": false,
+    "sameAttemptResume": false,
+    "partialAttemptMerge": false,
+    "failClosed": true
+  }
+}

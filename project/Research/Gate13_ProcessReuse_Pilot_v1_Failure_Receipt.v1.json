@@ -1,0 +1,96 @@
+{
+    "schemaVersion":  1,
+    "receiptId":  "gate13-r2-process-reuse-pilot-v1-failure-receipt-v1",
+    "recordedAt":  "2026-10-06T14:39:16.3047935+08:00",
+    "authorizationReference":  "user-message-2026-10-06-gate13-cold-process-to-process-reuse-controlled-design-migration",
+    "status":  "FAILED-NO-AUTO-RETRY",
+    "dispositions":  [
+                         "NON-FORMAL",
+                         "EXCLUDED-FROM-FORMAL-ANALYSIS",
+                         "NO-AUTO-RETRY",
+                         "NO-RESUME",
+                         "NOT-READY-FOR-FORMAL",
+                         "CANDIDATE-N-NOT-ADMISSIBLE"
+                     ],
+    "execution":  {
+                      "totalUnityProcessCount":  45,
+                      "warmupBlockProcessCount":  1,
+                      "warmupSampleCount":  4,
+                      "freshColdProcessCount":  8,
+                      "freshColdSampleCount":  8,
+                      "measuredBlockProcessCount":  36,
+                      "measuredSampleCount":  96,
+                      "structuralMismatchCount":  0,
+                      "allPlannedSamplesExecuted":  true,
+                      "analysisAccepted":  false
+                  },
+    "analysisFailure":  {
+                            "hardErrorCount":  208,
+                            "nonPositiveWorkingSetTelemetryCount":  96,
+                            "nonPositivePrivateMemoryTelemetryCount":  96,
+                            "managedMemoryGrowthLimitExceededBlockCount":  16,
+                            "frozenManagedMemoryGrowthLimitBytesPerBlock":  134217728,
+                            "candidateSampleSizeOutputsAdmissible":  false,
+                            "readinessPassed":  false
+                        },
+    "evidence":  {
+                     "pilotPlan":  {
+                                       "relativePath":  "Research/Gate13_ProcessReuse_Pilot_Plan.v1.json",
+                                       "sha256":  "de79edaca2bfd7016fd9a50dba85a511c2bdfc6bdce99d629e20e4bded4ca8d9",
+                                       "byteCount":  10245
+                                   },
+                     "provenanceV4":  {
+                                          "relativePath":  "Research/Gate13_ProcessReuse_Provenance.v4.json",
+                                          "sha256":  "91a8fcabdd157f7511eeda89e8355580954ed03222c51b5163f577b10354b82d",
+                                          "byteCount":  20372
+                                      },
+                     "prePilotAudit":  {
+                                           "relativePath":  "Research/Verification/Gate13R2_PrePilotAudit.summary.json",
+                                           "sha256":  "4be30a094cfc116a28f0b2f845dd0c73fdf221ab05d6bd4d756e601771b168c8",
+                                           "byteCount":  6335
+                                       },
+                     "executionManifest":  {
+                                               "relativePath":  "Research/PilotRuns/Gate13_ProcessReuse/v1/pilot-execution-manifest.json",
+                                               "sha256":  "09ce291e7bdeaf4694d61bc034d9caf7478154eb40f5ac30bff52cd9ecd56ed4",
+                                               "byteCount":  50050
+                                           },
+                     "failedPilotManifest":  {
+                                                 "relativePath":  "Research/PilotRuns/Gate13_ProcessReuse/v1/pilot-manifest.json",
+                                                 "sha256":  "72fca3aa870be78e8925f81d2c736149d14d8fa957553578ee2ed06a1c38d014",
+                                                 "byteCount":  32336
+                                             },
+                     "failure":  {
+                                     "relativePath":  "Research/PilotRuns/Gate13_ProcessReuse/v1/pilot-failure.json",
+                                     "sha256":  "d5ad7528cf0cfe73e487acaa41ba201a1cf5df333231296f122c83a7747abbc8",
+                                     "byteCount":  49667
+                                 },
+                     "terminalCheckpoint":  {
+                                                "relativePath":  "Research/PilotRuns/Gate13_ProcessReuse/v1/pilot-checkpoint.json",
+                                                "sha256":  "8f498bb3b5517baa749799124d2ad636fb718a97372eb07a149ff32d2d2e101d",
+                                                "byteCount":  50179
+                                            },
+                     "analysisStdout":  {
+                                            "relativePath":  "Research/PilotRuns/Gate13_ProcessReuse/v1/analysis.stdout.log",
+                                            "sha256":  "39cf41c0f8d6068f0739edfbc7a955edb712a204ab465748a8dedc885e9fa613",
+                                            "byteCount":  50278
+                                        },
+                     "outputManifest":  {
+                                            "relativePath":  "Research/Gate13_ProcessReuse_Pilot_v1_Failure_Output_Manifest.json",
+                                            "sha256":  "eb55ae56d047b44e4a6a7d0713b09437f4435162c19037e37aa5306ebf34c65d",
+                                            "byteCount":  386336
+                                        }
+                 },
+    "preservation":  {
+                         "pilotRootAbsolutePath":  "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13_ProcessReuse\\v1",
+                         "pilotRootReadOnly":  true,
+                         "pilotRootFileCount":  838,
+                         "pilotRootRawByteCount":  91219643,
+                         "pilotRootAggregateSha256":  "c467cd4ca179f6e919fe9cbfdeee3cd2b4a32c19931bcdc285ca705555a59b38",
+                         "reservedFormalRootAbsolutePath":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13_ProcessReuse\\v1",
+                         "reservedFormalRootCreated":  false,
+                         "formalExecutionReceiptCreated":  false,
+                         "automaticRetryAttempted":  false,
+                         "automaticResumeAttempted":  false
+                     },
+    "requiredNextAuthorization":  "A separately authorized, versioned telemetry/readiness repair and a fresh pilot root are required before formal process-reuse readiness can be reconsidered."
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "gate14re-me-d3-v3-cumulative-managed-allocation-contract-prospective-v1",
+  "studyId": "Gate14Re-ME",
+  "endpointId": "D3",
+  "semanticVersion": 3,
+  "status": "PROSPECTIVE_UNQUALIFIED",
+  "createdAtUtc": "2026-10-17T06:17:15.3719523Z",
+  "name": "owner-thread cumulative managed allocation bytes",
+  "unit": "bytes",
+  "eventSource": {
+    "nativePluginPlatform": "Windows x86-64",
+    "unityProfilerMarkerExactName": "GC.Alloc",
+    "acceptedEventTypes": ["Begin", "Single"],
+    "ignoredEventTypes": ["End"],
+    "allocationSizeMetadataIndex": 0,
+    "allocationSizeMetadataType": "Int64",
+    "allocationSizeMetadataSizeBytes": 8,
+    "allocationSizeMustBePositive": true,
+    "otherProfilerMarkersListenedTo": 0
+  },
+  "threadAttribution": {
+    "ownerThreadDefinition": "Windows GetCurrentThreadId captured by native BeginWindow",
+    "primaryCounterIncludes": "GC.Alloc allocation-size metadata observed on the owner thread while the native window is active",
+    "primaryCounterExcludes": "all GC.Alloc events observed on non-owner threads",
+    "foreignEventsRetainedForQualificationDiagnostics": true,
+    "formalMetricWouldUseForeignDiagnostics": false
+  },
+  "rawFields": [
+    "managedAllocationBytes",
+    "managedAllocationEventCount",
+    "foreignThreadAllocationBytes",
+    "foreignThreadAllocationEventCount",
+    "invalidMetadataEventCount",
+    "counterOverflowCount",
+    "ownerNativeThreadId",
+    "windowStartStopwatchTicks",
+    "windowEndStopwatchTicks",
+    "windowElapsedStopwatchTicks",
+    "stopwatchFrequency"
+  ],
+  "derivedFields": {
+    "managedAllocationRateBytesPerSecond": "managedAllocationBytes * stopwatchFrequency / windowElapsedStopwatchTicks",
+    "rateValidity": "managedAllocationBytes >= 0 and stopwatchFrequency > 0 and windowElapsedStopwatchTicks > 0 and result is finite"
+  },
+  "prospectiveKnownAnswerCriteria": {
+    "emptyWindowTrials": 64,
+    "emptyWindowRequiredOwnerBytes": 0,
+    "emptyWindowRequiredOwnerEvents": 0,
+    "knownArrayPayloadBytes": [4096, 65536, 1048576],
+    "knownArrayMaximumPerAllocationOverheadBytes": 256,
+    "knownArrayRequiredStrictMonotonicity": true,
+    "knownArrayMaximumOverheadSpreadBytes": 64,
+    "smallObjectPayloadBytes": 64,
+    "smallObjectRepetitions": 4096,
+    "smallObjectRequiredExactEventScaling": true,
+    "smallObjectRequiredExactByteScaling": true,
+    "gcReclamationPayloadBytes": 8388608,
+    "gcReclamationRequiredNondecreaseAfterCollection": true,
+    "gcReclamationRequiredExactStabilityInAbsenceOfNewAllocationEvents": true,
+    "sameThreadPayloadBytes": 1048576,
+    "sameThreadRequiredPositiveOwnerResponse": true,
+    "crossThreadPayloadBytes": 4194304,
+    "crossThreadRequiredOwnerBytes": 0,
+    "crossThreadRequiredOwnerEvents": 0,
+    "crossThreadRequiredMinimumForeignBytes": 4194304,
+    "crossThreadRequiredMinimumForeignEvents": 1,
+    "rateFormulaPayloadBytes": 1048576,
+    "rateFormulaMaximumAbsoluteRecomputeError": 1e-9,
+    "invalidMetadataEventsRequired": 0,
+    "counterOverflowEventsRequired": 0
+  },
+  "hardStopRules": [
+    "marker readiness failure",
+    "metadata type or width failure",
+    "empty-window nonzero owner response",
+    "known-size range or monotonicity failure",
+    "repeated-small-object scaling failure",
+    "GC reclamation reduces the cumulative counter",
+    "owner-thread attribution failure",
+    "cross-thread owner-counter contamination or missing foreign diagnostic response",
+    "byte/rate formula failure"
+  ],
+  "semanticExclusions": [
+    "live managed-heap occupancy",
+    "native allocation bytes",
+    "RSS or committed process memory",
+    "frame-level GC.Alloc aggregates",
+    "cross-thread allocation attributed to the owner lane",
+    "ranking, weighting, or winner adjudication"
+  ],
+  "integrationState": {
+    "formalQualificationRunnerIntegrated": false,
+    "formalOutputSchemaIntegrated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false
+  }
+}

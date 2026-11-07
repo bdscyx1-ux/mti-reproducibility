@@ -1,0 +1,90 @@
+{
+  "active": false,
+  "blindedOperationalOnly": true,
+  "capturedAtAsiaShanghai": "2026-10-09T23:55:00.000000+08:00",
+  "capturedAtUtc": "2026-10-09T15:55:00.000000Z",
+  "currentIdentity": {
+    "abbaOrder": null,
+    "blockId": null,
+    "campaignId": null,
+    "cohort": null,
+    "globalProcessOrdinal": null,
+    "matchedSuperblockId": null,
+    "scenarioId": null,
+    "unityPid": null,
+    "unityProcessStartedAtUtc": null,
+    "williamsRow": null
+  },
+  "health": {
+    "classification": "ACTION-REQUIRED",
+    "experimentRetryAuthorized": false,
+    "missingOwnedProcessSinceUtc": "2026-10-09T15:55:00.000000Z",
+    "monitorMayKillProcess": false,
+    "readAnomalies": [],
+    "readAnomalyCount": 0,
+    "reasonCodes": [
+      "FUTURE-TIMESTAMP:lastDurableCheckpointAtUtc",
+      "FUTURE-TIMESTAMP:savedAtUtc"
+    ]
+  },
+  "notificationReason": [
+    "USER-ACTION-REQUIRED"
+  ],
+  "notify": true,
+  "phase": "PRELAUNCH",
+  "progress": {
+    "completedProcesses": 0,
+    "completedSamples": 0,
+    "lastProgressAtUtc": null,
+    "processPercent": 0.0,
+    "samplePercent": 0.0
+  },
+  "schemaVersion": 1,
+  "snapshotKind": "gate13r-pr2-attempt3-operational-progress-v1",
+  "sourceIdentity": {
+    "candidateConfigSha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+    "configPath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_FormalExecution\\v1\\attempt-1\\monitoring-56\\fixture-work\\missing-exact\\synthetic-config.json",
+    "configSha256": "dd2d6ca8db250bc9f76d9585067be378cea616d4e59df6c6a89b28335abaf3b1",
+    "formalRoot": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_FormalExecution\\v1\\attempt-1\\monitoring-56\\fixture-work\\missing-exact\\synthetic-formal-root",
+    "monitorVersion": "gate13r-pr2-attempt3-monitoring-recovery-v2",
+    "receiptPath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_FormalExecution\\v1\\attempt-1\\monitoring-56\\fixture-work\\missing-exact\\synthetic-receipt.json",
+    "receiptSha256": "44c58e04b3706719460f449d31a4fa3ea1d9e7e71459b2df4d1a09a266d8d92a",
+    "scheduleSha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "statusPath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_FormalExecution\\v1\\attempt-1\\monitoring-56\\fixture-work\\missing-exact\\synthetic-status.json",
+    "statusSha256": "7cde6e1e16d43e40e23d4f09f0e2c5660dc92468f7acc24b9001d603d28d4016"
+  },
+  "status": "ACTION-REQUIRED",
+  "storage": {
+    "outputFileCount": 0,
+    "rawBytes": 0
+  },
+  "telemetry": {
+    "advisoryCrossingCount": 0,
+    "osAvailablePhysicalMemoryBytes": null,
+    "osPrivateMemoryBytes": null,
+    "osQueryStatus": "NOT-APPLICABLE",
+    "osWorkingSetBytes": null,
+    "statusAvailablePhysicalMemoryBytes": null,
+    "statusPrivateMemoryBytes": null,
+    "statusWorkingSetBytes": null
+  },
+  "timing": {
+    "conservativeProcessesPerHour": null,
+    "currentBlockElapsedSeconds": null,
+    "elapsedSeconds": 0.0,
+    "etaHours": null,
+    "etaStatus": "UNAVAILABLE",
+    "lastCheckpointAgeSeconds": null,
+    "overallProcessesPerHour": null,
+    "reportSlot": null,
+    "rollingProcessesPerHour": null,
+    "startedAtUtc": null,
+    "statusAgeSeconds": null
+  },
+  "totals": {
+    "campaigns": 74,
+    "matchedSuperblocks": 1008,
+    "processes": 3552,
+    "samples": 10176
+  }
+}

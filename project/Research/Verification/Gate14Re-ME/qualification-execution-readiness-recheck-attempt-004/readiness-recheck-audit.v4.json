@@ -1,0 +1,1493 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-audit-v4",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-attempt-004",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-004",
+  "startedAtUtc": "2026-10-17T16:51:00.961171Z",
+  "completedAtUtc": "2026-10-17T16:51:08.914283Z",
+  "mode": "READ_ONLY_NO_UNITY_STATIC_AND_EXISTING_OFFLINE_EVIDENCE",
+  "status": "PASS_QUALIFICATION_EXECUTION_READINESS_RECHECK_V4_HOST_BOUND",
+  "passed": true,
+  "summary": {
+    "totalChecks": 49,
+    "passedChecks": 49,
+    "failedChecks": 0
+  },
+  "checks": [
+    {
+      "checkId": "BOUNDARY::UNITY_ABSENT_AT_START",
+      "domain": "authorization-boundary",
+      "passed": true,
+      "observed": {
+        "unityProcessCount": 0
+      },
+      "expected": {
+        "unityProcessCount": 0
+      }
+    },
+    {
+      "checkId": "BOUNDARY::PROHIBITED_ROOTS_ABSENT_AT_START",
+      "domain": "authorization-boundary",
+      "passed": true,
+      "observed": {
+        "Research/PilotRuns/Gate14Re-ME/load-qualification": false,
+        "Research/Exports/Gate14Re-ME/load-qualification": false,
+        "Research/FormalRuns/Gate14Re-ME": false
+      },
+      "expected": {
+        "Research/PilotRuns/Gate14Re-ME/load-qualification": false,
+        "Research/Exports/Gate14Re-ME/load-qualification": false,
+        "Research/FormalRuns/Gate14Re-ME": false
+      }
+    },
+    {
+      "checkId": "RETENTION::readinessAttempt002::STATUS_HASH_AND_INVENTORY_CAPTURED",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "fileCount": 7,
+        "inventoryDigestSha256": "3b08e379d98f974bb5f2d9ffd2d198ba3eca037d70c369fec42b17ddefa5257d",
+        "receiptSha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+        "receiptStatus": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE",
+        "readOnlyFiles": 7
+      },
+      "expected": {
+        "receiptSha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+        "receiptStatus": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE",
+        "nonEmptyEvidenceInventory": true,
+        "preservationVerifiedBy": "before/after full inventory equality"
+      }
+    },
+    {
+      "checkId": "RETENTION::terminalCorrigendumAttempt001::STATUS_HASH_AND_INVENTORY_CAPTURED",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "fileCount": 18,
+        "inventoryDigestSha256": "2234296992f5971a66ece7b8b42ef6bbddb7de0da08b2793a3fd27f2a4b84c93",
+        "receiptSha256": "b195c99e01bc20900762b3752ff6172a64fac4bb914609bf1ba83d832ed99340",
+        "receiptStatus": "FAILED_CLOSED_TERMINAL_CHAIN_CORRIGENDUM",
+        "readOnlyFiles": 13
+      },
+      "expected": {
+        "receiptSha256": "b195c99e01bc20900762b3752ff6172a64fac4bb914609bf1ba83d832ed99340",
+        "receiptStatus": "FAILED_CLOSED_TERMINAL_CHAIN_CORRIGENDUM",
+        "nonEmptyEvidenceInventory": true,
+        "preservationVerifiedBy": "before/after full inventory equality"
+      }
+    },
+    {
+      "checkId": "RETENTION::terminalCorrigendumAttempt002::STATUS_HASH_AND_INVENTORY_CAPTURED",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "fileCount": 114,
+        "inventoryDigestSha256": "9047577d732ba017aeb6770fe4c736956181db163402246a3ffe7eacaba4a107",
+        "receiptSha256": "bf7e157f6f25ea19d6cd898745476cd6c88569fbc99c1d614abd76945ca33cad",
+        "receiptStatus": "PASS_TERMINAL_CHAIN_CORRIGENDUM_OFFLINE_ONLY",
+        "readOnlyFiles": 114
+      },
+      "expected": {
+        "receiptSha256": "bf7e157f6f25ea19d6cd898745476cd6c88569fbc99c1d614abd76945ca33cad",
+        "receiptStatus": "PASS_TERMINAL_CHAIN_CORRIGENDUM_OFFLINE_ONLY",
+        "nonEmptyEvidenceInventory": true,
+        "preservationVerifiedBy": "before/after full inventory equality"
+      }
+    },
+    {
+      "checkId": "RETENTION::readinessRecheckAttempt003::STATUS_HASH_AND_INVENTORY_CAPTURED",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "fileCount": 8,
+        "inventoryDigestSha256": "d836511bc35e82cae8b315027be5dd973a390b4b318a28d347477ce5fa5c73cb",
+        "receiptSha256": "fb94db25887dc30a8765980bb4c6d735388266da9285e82c0a441f1dcd9bb653",
+        "receiptStatus": "PASS_QUALIFICATION_EXECUTION_READINESS_RECHECK_V3_FROZEN_EXECUTION_UNAUTHORIZED",
+        "readOnlyFiles": 7
+      },
+      "expected": {
+        "receiptSha256": "fb94db25887dc30a8765980bb4c6d735388266da9285e82c0a441f1dcd9bb653",
+        "receiptStatus": "PASS_QUALIFICATION_EXECUTION_READINESS_RECHECK_V3_FROZEN_EXECUTION_UNAUTHORIZED",
+        "nonEmptyEvidenceInventory": true,
+        "preservationVerifiedBy": "before/after full inventory equality"
+      }
+    },
+    {
+      "checkId": "RETENTION::loadQualificationExecutionAttempt001::STATUS_HASH_AND_INVENTORY_CAPTURED",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "fileCount": 6,
+        "inventoryDigestSha256": "7a9d56b536fea043cc8b00b4543e2c75a51c6ed68aa65db11f34eeb43a40dedf",
+        "receiptSha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+        "receiptStatus": "FAILED_CLOSED_PRELAUNCH_FROZEN_POWERSHELL_RUNTIME_INCOMPATIBLE",
+        "readOnlyFiles": 6
+      },
+      "expected": {
+        "receiptSha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+        "receiptStatus": "FAILED_CLOSED_PRELAUNCH_FROZEN_POWERSHELL_RUNTIME_INCOMPATIBLE",
+        "nonEmptyEvidenceInventory": true,
+        "preservationVerifiedBy": "before/after full inventory equality"
+      }
+    },
+    {
+      "checkId": "RETENTION::powerShellHostBindingAttempt003::STATUS_HASH_AND_INVENTORY_CAPTURED",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "fileCount": 10,
+        "inventoryDigestSha256": "902477bbcda1319d59678e9f510001706ff3881d8f74218de62ba73d400fe038",
+        "receiptSha256": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418",
+        "receiptStatus": "PASS_FROZEN_POWERSHELL_7_6_5_SUPERVISOR_HOST_BINDING",
+        "readOnlyFiles": 10
+      },
+      "expected": {
+        "receiptSha256": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418",
+        "receiptStatus": "PASS_FROZEN_POWERSHELL_7_6_5_SUPERVISOR_HOST_BINDING",
+        "nonEmptyEvidenceInventory": true,
+        "preservationVerifiedBy": "before/after full inventory equality"
+      }
+    },
+    {
+      "checkId": "RETENTION::powerShellHostBindingAttempt004::STATUS_HASH_AND_INVENTORY_CAPTURED",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "fileCount": 6,
+        "inventoryDigestSha256": "804be8c9e012f0ef541285870c43f4cac1821dcba92181e8e60475cf1cd93f1d",
+        "receiptSha256": "7389f1151a7bfc4d7ce8adb27450210f7f3dfa051d4e44538256da4f9b5270dd",
+        "receiptStatus": "PASS_FROZEN_POWERSHELL_HOST_BINDING_READONLY_CLOSURE",
+        "readOnlyFiles": 6
+      },
+      "expected": {
+        "receiptSha256": "7389f1151a7bfc4d7ce8adb27450210f7f3dfa051d4e44538256da4f9b5270dd",
+        "receiptStatus": "PASS_FROZEN_POWERSHELL_HOST_BINDING_READONLY_CLOSURE",
+        "nonEmptyEvidenceInventory": true,
+        "preservationVerifiedBy": "before/after full inventory equality"
+      }
+    },
+    {
+      "checkId": "HASHES::ALL_FROZEN_BINDINGS_EXACT",
+      "domain": "hashes",
+      "passed": true,
+      "observed": {
+        "bindingCount": 40,
+        "mismatches": []
+      },
+      "expected": {
+        "bindingCount": 40,
+        "mismatches": []
+      }
+    },
+    {
+      "checkId": "FREEZE::HOST_BOUND_STATUS_CONTRACT_MANIFEST_AND_RECEIPTS_READ_ONLY",
+      "domain": "freeze-state",
+      "passed": true,
+      "observed": {
+        "statusV31": true,
+        "executionContractV32": true,
+        "implementationManifestV32": true,
+        "hostBindingAttempt003KnownAnswer": true,
+        "hostBindingAttempt003Terminal": true,
+        "hostBindingAttempt003Freeze": true,
+        "hostBindingAttempt004Closure": true,
+        "hostBindingAttempt004Terminal": true,
+        "hostBindingAttempt004Freeze": true
+      },
+      "expected": {
+        "statusV31": true,
+        "executionContractV32": true,
+        "implementationManifestV32": true,
+        "hostBindingAttempt003KnownAnswer": true,
+        "hostBindingAttempt003Terminal": true,
+        "hostBindingAttempt003Freeze": true,
+        "hostBindingAttempt004Closure": true,
+        "hostBindingAttempt004Terminal": true,
+        "hostBindingAttempt004Freeze": true
+      }
+    },
+    {
+      "checkId": "STATUS::V31_HOST_BOUND_PENDING_READINESS_STATE",
+      "domain": "status",
+      "passed": true,
+      "observed": {
+        "schema": "gate14re-me-status-v31",
+        "version": 31,
+        "status": "SUPERVISOR_POWERSHELL_HOST_BINDING_CORRIGENDUM_ATTEMPT_003_PASS",
+        "authorizationState": {
+          "hostBindingCorrigendumConsumed": true,
+          "offlineExecutionReadinessRecheckAuthorized": false,
+          "newQualificationExecutionAttemptAuthorized": false,
+          "qualificationMeasuredRootCreationAuthorized": false,
+          "deliveryRootCreationAuthorized": false,
+          "unityInvocationAuthorized": false,
+          "formalCollectionAuthorized": false,
+          "formalAnalysisAuthorized": false,
+          "rankingAuthorized": false,
+          "weightingAuthorized": false,
+          "winnerAdjudicationAuthorized": false
+        },
+        "hostBinding": {
+          "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-003",
+          "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-003/terminal-pass-receipt.v1.json",
+          "terminalReceiptSha256": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418",
+          "knownAnswerReceiptRelativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-003/powershell-known-answer-receipt.v1.json",
+          "knownAnswerReceiptSha256": "d105d621077d301aa99d925a215887f827213a8d3725a194ba2a9e515194a158",
+          "executionContractRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_2.json",
+          "executionContractSha256": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0",
+          "implementationManifestRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-current-implementation-manifest.v3_2.json",
+          "implementationManifestSha256": "83ef4c7081a77f7093e9f37f53b786f628459c404ca9e89b78d6e93ce64d2514",
+          "exactHostRuntimePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+          "exactHostRuntimeSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+          "exactHostRuntimeVersion": "7.6.5",
+          "passed": true
+        }
+      },
+      "expected": "Status v31 host binding PASS with offline readiness recheck and qualification execution/root creation/Unity unauthorized"
+    },
+    {
+      "checkId": "RETENTION::READINESS_ATTEMPT002_35_PASS_2_FAIL_VERDICT_EXACT",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "priorPassCount": 35,
+        "priorFailedCheckIds": [
+          "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+          "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE"
+        ]
+      },
+      "expected": {
+        "priorPassCount": 35,
+        "priorFailedCheckIds": [
+          "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+          "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE"
+        ]
+      }
+    },
+    {
+      "checkId": "CONTRACT::V3_2_HEADER_ENTRY_POINT_AND_INERT_STATE",
+      "domain": "execution-contract",
+      "passed": true,
+      "observed": {
+        "schema": "gate14re-me-load-qualification-execution-contract-v3",
+        "status": "FROZEN_EXECUTION_BINDING_V3_TERMINAL_CHAIN_CORRECTED_QUALIFICATION_EXECUTION_UNAUTHORIZED",
+        "version": 3,
+        "revision": "3.2",
+        "entryPoint": {
+          "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+          "supervisorSha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+          "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+          "runnerSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+          "runnerExecuteMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV2.Run",
+          "receiptGeneration": 2,
+          "supervisorGeneration": 3
+        }
+      },
+      "expected": "frozen execution contract v3.2 bound to supervisor-v3 and RunnerV2 with receipt generation 2"
+    },
+    {
+      "checkId": "CONTRACT::V3_2_EXACT_POWERSHELL_7_6_5_HOST_BINDING",
+      "domain": "execution-contract",
+      "passed": true,
+      "observed": {
+        "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-003",
+        "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-003",
+        "supervisorHostRuntime": {
+          "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+          "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+          "version": "7.6.5",
+          "commandPrefix": [
+            "-NoLogo",
+            "-NoProfile",
+            "-NonInteractive",
+            "-File"
+          ],
+          "requiredCmdlet": "ConvertFrom-Json",
+          "requiredParameters": [
+            "Depth",
+            "DateKind"
+          ],
+          "requiredInvocationForm": "ConvertFrom-Json -Depth 100 -DateKind String",
+          "exactExecutablePathHashAndVersionRequired": true,
+          "externalSupervisorLaunchMustUseExactExecutable": true,
+          "partOfUnityExecutableIdentity": false,
+          "mismatchDisposition": "FAIL_CLOSED_BEFORE_ROOT_CREATION_OR_UNITY_LAUNCH"
+        }
+      },
+      "expected": {
+        "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+        "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+        "version": "7.6.5",
+        "commandPrefix": [
+          "-NoLogo",
+          "-NoProfile",
+          "-NonInteractive",
+          "-File"
+        ],
+        "failClosedBeforeRootOrUnity": true
+      }
+    },
+    {
+      "checkId": "CONTRACT::FOURTEEN_FROZEN_BINDINGS_EXACT",
+      "domain": "execution-contract",
+      "passed": true,
+      "observed": {
+        "bindingCount": 14,
+        "bindingKeys": [
+          "completeRawDeliveryContract",
+          "deliveryV21",
+          "inputValidationSchema",
+          "instrumentContract",
+          "outputSchema",
+          "planningAssetsManifest",
+          "planningSchemaBinding",
+          "qualifiedD3V31",
+          "schedule",
+          "sealedIdentityBinding",
+          "structuralV3",
+          "timestampComparator",
+          "trustedUnityIdentityRule",
+          "typedParquetRuntime"
+        ],
+        "mismatches": []
+      },
+      "expected": {
+        "bindingCount": 14,
+        "bindingKeys": [
+          "completeRawDeliveryContract",
+          "deliveryV21",
+          "inputValidationSchema",
+          "instrumentContract",
+          "outputSchema",
+          "planningAssetsManifest",
+          "planningSchemaBinding",
+          "qualifiedD3V31",
+          "schedule",
+          "sealedIdentityBinding",
+          "structuralV3",
+          "timestampComparator",
+          "trustedUnityIdentityRule",
+          "typedParquetRuntime"
+        ],
+        "mismatches": []
+      }
+    },
+    {
+      "checkId": "CARDINALITY::CONTRACT_FORMULAS_AND_1147_TOTAL",
+      "domain": "cardinality",
+      "passed": true,
+      "observed": {
+        "coreSuperblocks": 144,
+        "stressSuperblocks": 18,
+        "totalSuperblocks": 162,
+        "algorithmLanesPerSuperblock": 6,
+        "freshAlgorithmProcesses": 972,
+        "oracleProcesses": 162,
+        "emptyBoundaryProcesses": 12,
+        "instrumentSelfTestProcesses": 1,
+        "expectedTotalUnityProcessesWithoutFailure": 1147,
+        "eventGroupsPerLane": 24,
+        "eventGroupRows": 23328,
+        "d3WindowsPerLane": 25,
+        "processResourceRows": 25272,
+        "emptyBoundaryRows": 12000,
+        "persistentStateMeasurementPointsPerLane": 26,
+        "acceptedSuperblockReceipts": 162,
+        "processLedgerRows": 1147,
+        "processIdentityReceipts": 1147,
+        "supervisorFinalProcessOrdinal": 1147
+      },
+      "expected": {
+        "coreSuperblocks": 144,
+        "stressSuperblocks": 18,
+        "totalSuperblocks": 162,
+        "algorithmLanesPerSuperblock": 6,
+        "freshAlgorithmProcesses": 972,
+        "oracleProcesses": 162,
+        "emptyBoundaryProcesses": 12,
+        "instrumentSelfTestProcesses": 1,
+        "expectedTotalUnityProcessesWithoutFailure": 1147,
+        "eventGroupsPerLane": 24,
+        "eventGroupRows": 23328,
+        "d3WindowsPerLane": 25,
+        "processResourceRows": 25272,
+        "emptyBoundaryRows": 12000,
+        "persistentStateMeasurementPointsPerLane": 26,
+        "acceptedSuperblockReceipts": 162,
+        "processLedgerRows": 1147,
+        "processIdentityReceipts": 1147,
+        "supervisorFinalProcessOrdinal": 1147
+      }
+    },
+    {
+      "checkId": "EXECUTION::STRICT_SERIAL_FRESH_ORDER_AND_ZERO_REPLACEMENT",
+      "domain": "execution-control",
+      "passed": true,
+      "observed": {
+        "maximumConcurrentUnityProcesses": 1,
+        "instrumentSelfTestBeforeAnyOracleOrLane": true,
+        "all162AlgorithmNeutralOracleProcessesBeforeAnyLane": true,
+        "twelveFreshEmptyBoundaryProcessesBeforeAnyLane": true,
+        "strictWilliamsSixLaneOrderWithinEachSuperblock": true,
+        "oneFreshUnityProcessPerAlgorithmLane": true,
+        "zeroReplacementPolicy": "ZERO_REPLACEMENT_FAIL_STOP",
+        "wholeSuperblockReplacementAssetsGeneratedOrConsumed": false,
+        "perAlgorithmRetryResumeTopUpMergeSkipOrReorderProhibited": true
+      },
+      "expected": "one process at a time; 1 instrument, 162 oracle, 12 empty, then 972 Williams-ordered fresh lane processes; zero replacement fail-stop"
+    },
+    {
+      "checkId": "CONTRACT::EXECUTION_AND_ANALYSIS_REMAIN_UNAUTHORIZED",
+      "domain": "authorization-boundary",
+      "passed": true,
+      "observed": {
+        "unityInvocationAuthorized": false,
+        "qualificationMeasuredRootCreationAuthorized": false,
+        "deliveryRootCreationAuthorized": false,
+        "qualificationExecutionAuthorized": false,
+        "replacementAssetGenerationAuthorized": false,
+        "formalCollectionAuthorized": false,
+        "formalAnalysisAuthorized": false,
+        "rankingAuthorized": false,
+        "winnerAdjudicationAuthorized": false
+      },
+      "expected": {
+        "unityInvocationAuthorized": false,
+        "qualificationMeasuredRootCreationAuthorized": false,
+        "deliveryRootCreationAuthorized": false,
+        "qualificationExecutionAuthorized": false,
+        "replacementAssetGenerationAuthorized": false,
+        "formalCollectionAuthorized": false,
+        "formalAnalysisAuthorized": false,
+        "rankingAuthorized": false,
+        "winnerAdjudicationAuthorized": false
+      }
+    },
+    {
+      "checkId": "MANIFEST::V3_2_FORTY_EIGHT_ARTIFACTS_EXACT_TERMINAL_CORRECTED_AND_HOST_BOUND",
+      "domain": "implementation-manifest",
+      "passed": true,
+      "observed": {
+        "manifestGeneration": 4,
+        "manifestRevision": "3.2",
+        "executionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE",
+        "artifactAudit": {
+          "entryCount": 48,
+          "uniquePathCount": 48,
+          "allPathsUnique": true,
+          "readOnlyFileCount": 30,
+          "mismatchCount": 0,
+          "mismatches": []
+        },
+        "terminalChainCorrigendum": {
+          "authorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-002",
+          "outputReceiptPathsCorrectedToRuntimeV2": true,
+          "structuralV3ClosesProcessResourcesPersistentPointsAcceptedReceiptsLedgerAndIdentities": true,
+          "supervisorV3ExplicitFinalProcessOrdinal1147": true,
+          "deliveryV21PreservesV2DeliveryFormat": false,
+          "runnerV2Changed": false,
+          "compiledAssembliesChanged": false,
+          "unityInvocationCount": 0,
+          "deliveryV22PreservesV2DeliveryFormat": true,
+          "attempt001PreservedFailed": true,
+          "syntheticFixtureReadOnlyAttributeNormalizationOnly": true
+        }
+      },
+      "expected": {
+        "manifestGeneration": 4,
+        "manifestRevision": "3.2",
+        "artifactCount": 48,
+        "mismatchCount": 0,
+        "terminalChainCorrected": true,
+        "powerShellHostBound": true
+      }
+    },
+    {
+      "checkId": "MANIFEST::V3_2_POWERSHELL_HOST_CORRIGENDUM_EXACT",
+      "domain": "implementation-manifest",
+      "passed": true,
+      "observed": {
+        "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-003",
+        "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-003",
+        "exactExecutablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+        "exactExecutableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+        "exactPowerShellVersion": "7.6.5",
+        "convertFromJsonDepthPresent": true,
+        "convertFromJsonDateKindPresent": true,
+        "jsonKnownAnswerPassed": true,
+        "jsonlKnownAnswerPassed": true,
+        "dateTimeOffsetStringPreservationPassed": true,
+        "exceptionFailClosedPassed": true,
+        "supervisorParameterBindingPassed": true,
+        "supervisorV3Changed": false,
+        "runnerV2Changed": false,
+        "compiledAssembliesChanged": false,
+        "scientificAssetsChanged": false,
+        "unityInvocationCount": 0,
+        "qualificationExecutionAuthorized": false
+      },
+      "expected": "attempt-003 exact PowerShell 7.6.5 path/hash/version; JSON/JSONL/DateKind/fail-closed/supervisor binding PASS; no Unity or scientific asset change; execution unauthorized"
+    },
+    {
+      "checkId": "RUNTIME::UNITY_PYTHON_POWERSHELL_EXECUTABLE_HASHES",
+      "domain": "runtime",
+      "passed": true,
+      "observed": {
+        "unity": {
+          "path": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+          "expectedSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+          "actualSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+        },
+        "python": {
+          "path": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+          "expectedSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+          "actualSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+        },
+        "powershell": {
+          "path": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+          "expectedSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+          "actualSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139"
+        }
+      },
+      "expected": "Unity, Python, and exact PowerShell 7.6.5 executable identities match the v3.2 implementation manifest"
+    },
+    {
+      "checkId": "RUNTIME::LIVE_READ_ONLY_POWERSHELL_7_6_5_HOST_PROBE",
+      "domain": "runtime",
+      "passed": true,
+      "observed": {
+        "processPath": "C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+        "version": "7.6.5",
+        "convertFromJsonDepth": true,
+        "convertFromJsonDateKind": true,
+        "dateKindStringPreserved": true,
+        "resolvedProcessPath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+        "actualSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139"
+      },
+      "expected": {
+        "resolvedProcessPath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+        "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+        "version": "7.6.5",
+        "ConvertFromJsonDepth": true,
+        "ConvertFromJsonDateKind": true,
+        "DateKindStringPreserved": true
+      }
+    },
+    {
+      "checkId": "HOST_BINDING::ATTEMPT_003_PASS_AND_ATTEMPT_004_READONLY_CLOSURE",
+      "domain": "host-binding-evidence",
+      "passed": true,
+      "observed": {
+        "knownAnswerStatus": "PASS_POWERSHELL_7_6_5_JSON_JSONL_FAIL_CLOSED_AND_SUPERVISOR_BINDING",
+        "knownAnswerChecks": 222,
+        "knownAnswerFailedChecks": 0,
+        "terminalStatus": "PASS_FROZEN_POWERSHELL_7_6_5_SUPERVISOR_HOST_BINDING",
+        "freezeStatus": "FROZEN_TERMINAL_PASS_EVIDENCE",
+        "closureStatus": "PASS_ATTEMPT_003_CONTENT_PRESERVED_AND_READONLY_FREEZE_CLOSED",
+        "closureTerminalStatus": "PASS_FROZEN_POWERSHELL_HOST_BINDING_READONLY_CLOSURE",
+        "closureFreezeStatus": "FROZEN_TERMINAL_PASS_READONLY_CLOSURE_EVIDENCE",
+        "hostRuntime": {
+          "processPath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+          "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+          "version": "7.6.5",
+          "convertFromJsonDepth": true,
+          "convertFromJsonDateKind": true
+        },
+        "scopeEvidence": {
+          "unityInvocationCount": 0,
+          "instrumentInvocationCount": 0,
+          "oracleInvocationCount": 0,
+          "emptyBoundaryInvocationCount": 0,
+          "algorithmLaneExecutionCount": 0,
+          "qualificationObservationCount": 0,
+          "formalObservationCount": 0,
+          "formalCollectionPerformed": false,
+          "formalAnalysisPerformed": false,
+          "rankingPerformed": false,
+          "weightingPerformed": false,
+          "winnerAdjudicationPerformed": false,
+          "rootStateBefore": {
+            "qualificationMeasuredRootExists": false,
+            "deliveryRootExists": false,
+            "formalRootExists": false
+          },
+          "rootStateAfter": {
+            "qualificationMeasuredRootExists": false,
+            "deliveryRootExists": false,
+            "formalRootExists": false
+          }
+        }
+      },
+      "expected": "222/222 PowerShell host known-answer checks PASS; terminal PASS; all attempt-003 evidence read-only closed by attempt-004; exact v3.2 contract/manifest/Status v31 bindings; no Unity, observation, analysis, ranking, weighting, or winner activity"
+    },
+    {
+      "checkId": "COMPILE_IDENTITY::RUNNERV2_ASSEMBLIES_ALGORITHM_FREE_PASS",
+      "domain": "compiled-assemblies",
+      "passed": true,
+      "observed": {
+        "status": "PASS_CURRENT_PROJECT_COMPILED_ALGORITHM_FREE_TRUSTED_IDENTITY",
+        "unityInvocationCount": 1,
+        "executeMethod": null,
+        "naturalExit": true,
+        "exitCode": 0,
+        "signalOrForcedTerminationSent": false,
+        "retryPerformed": false,
+        "currentProjectCompiled": true,
+        "compilerFailureMarkersFound": 0,
+        "measuredRootCreated": false,
+        "deliveryRootCreated": false,
+        "plannerInvocations": 0,
+        "algorithmLaneExecutions": 0
+      },
+      "expected": "one retained algorithm-free compile identity PASS; exact assemblies; natural zero exit; no measured/delivery root or algorithm activity"
+    },
+    {
+      "checkId": "INPUT::SCHEMA_V2_AND_PLANNING_BINDING_V2_EXACT",
+      "domain": "input-contract",
+      "passed": true,
+      "observed": {
+        "inputSchemaId": "gate14re-me-qualification-input-validation-schema-v2",
+        "eventGroupItemsRef": "#/$defs/eventGroup",
+        "eventGroupRequired": [
+          "eventGroupId",
+          "eventGroupIndex",
+          "cycleIndex",
+          "phase",
+          "topology",
+          "atomicPartitions"
+        ],
+        "bindingSchema": "gate14re-me-load-qualification-planning-schema-binding-v2",
+        "selectedSchema": {
+          "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+          "lengthBytes": 4664,
+          "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+          "selectionReason": "Versioned validation corrigendum declares and requires the topology field already present in the frozen DTO and required by the frozen Unity oracle."
+        },
+        "corrigendum": {
+          "field": "eventGroups[*].topology",
+          "declared": true,
+          "required": true,
+          "levels": [
+            "compact",
+            "dispersed",
+            "bottleneck"
+          ],
+          "crossFieldEqualityOwner": "Gate14ReMEInputGeometryValidatorV1.ValidateGroupHeader",
+          "otherFrozenInputConstraintsChanged": false,
+          "scientificDesignChanged": false
+        }
+      },
+      "expected": "input schema v2 requires eventGroups[*].topology and planning binding v2 selects its exact hash without scientific-design change"
+    },
+    {
+      "checkId": "OUTPUT_SCHEMA::V3_CORRIGENDUM_ONLY_SCIENTIFIC_CONTENT_UNCHANGED",
+      "domain": "output-schema",
+      "passed": true,
+      "observed": {
+        "schema": "gate14re-me-load-qualification-output-schema-v3",
+        "version": 3,
+        "status": "FROZEN_COMPLETE_PER_OBSERVATION_D3_V3_1_TERMINAL_CHAIN_CORRIGENDUM",
+        "unchangedSections": {
+          "retentionRule": true,
+          "identityRule": true,
+          "d3Binding": true,
+          "rawTables": true,
+          "deliveryViews": true,
+          "requiredRoundTripChecks": true
+        },
+        "corrigendum": {
+          "authorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-001",
+          "triggerFailureReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/failure-receipt.v1.json",
+          "triggerFailureReceiptSha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+          "receiptPathVersionCorrectionOnly": true,
+          "rawTableDefinitionsChanged": false,
+          "metricSemanticsChanged": false,
+          "scientificThresholdsChanged": false
+        }
+      },
+      "expected": "v3 corrects receipt/terminal control only; raw tables, D3, delivery views, round trips, metrics, and thresholds remain byte-equivalent as JSON values"
+    },
+    {
+      "checkId": "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT_RESOLVED",
+      "domain": "terminal-chain",
+      "passed": true,
+      "observed": {
+        "receipts": [
+          "_control/acquisition-complete.v2.json",
+          "_control/launch-receipt.v2.json",
+          "accepted-superblock-receipt.v1.json",
+          "delivery-manifest.v2.json",
+          "empty-boundary-receipt.v2.json",
+          "instrument-csharp-receipt.v2.json",
+          "instrument-export-receipt.v2.json",
+          "lane-receipt.v2.json",
+          "oracle-pass-receipt.v1.json"
+        ],
+        "missing": [],
+        "unexpected": []
+      },
+      "expected": {
+        "receipts": [
+          "_control/acquisition-complete.v2.json",
+          "_control/launch-receipt.v2.json",
+          "accepted-superblock-receipt.v1.json",
+          "delivery-manifest.v2.json",
+          "empty-boundary-receipt.v2.json",
+          "instrument-csharp-receipt.v2.json",
+          "instrument-export-receipt.v2.json",
+          "lane-receipt.v2.json",
+          "oracle-pass-receipt.v1.json"
+        ],
+        "missing": [],
+        "unexpected": []
+      }
+    },
+    {
+      "checkId": "TERMINAL::FULL_CARDINALITY_LEDGER_IDENTITY_AND_ORDINAL_SCHEMA_CLOSURE",
+      "domain": "terminal-chain",
+      "passed": true,
+      "observed": {
+        "acceptedSuperblockReceipts": {
+          "glob": "raw/superblocks/*/accepted-superblock-receipt.v1.json",
+          "schema": "gate14re-me-accepted-superblock-receipt-v1",
+          "status": "ACCEPTED_COMPLETE_SIX_LANE_SUPERBLOCK",
+          "expectedQualificationFull": 162,
+          "expectedSyntheticKnownAnswer": 1,
+          "expectedAnonymousLanesPerQualificationSuperblock": 6
+        },
+        "processLedger": {
+          "relativePath": "_control/process-ledger.raw.v2.jsonl",
+          "schema": "gate14re-me-process-ledger-row-v2",
+          "expectedQualificationFullRows": 1147,
+          "expectedSyntheticKnownAnswerRows": 4,
+          "qualificationModeCounts": {
+            "instrument-self-test": 1,
+            "oracle": 162,
+            "empty-boundary": 12,
+            "lane": 972
+          },
+          "strictZeroBasedOrdinalCoverage": true,
+          "identityReceiptHashLinkRequired": true
+        },
+        "processIdentityReceipts": {
+          "glob": "_control/process-identities/process-*.identity.v2.json",
+          "schema": "gate14re-me-qualified-unity-process-identity-receipt-v2",
+          "status": "PASS_TRUSTED_THREE_PHASE_COMPOSITE_IDENTITY_NATURAL_EXIT",
+          "expectedQualificationFull": 1147,
+          "expectedSyntheticKnownAnswer": 4,
+          "naturalExitRequired": true,
+          "zeroExitRequired": true,
+          "signalOrForcedTerminationProhibited": true,
+          "retryProhibited": true
+        },
+        "fullQualificationClosure": {
+          "laneReceipts": 972,
+          "emptyBoundaryReceipts": 12,
+          "acceptedSuperblockReceipts": 162,
+          "eventGroupRows": 23328,
+          "laneD3WindowRows": 24300,
+          "instrumentD3WindowRows": 1,
+          "emptyBoundaryD3WindowRows": 12000,
+          "processResourceRows": 25272,
+          "processResourceRowsPerLane": 26,
+          "persistentStateMeasurementPointsPerLane": 26,
+          "processLedgerRows": 1147,
+          "processIdentityReceipts": 1147,
+          "supervisorFinalProcessOrdinal": 1147
+        }
+      },
+      "expected": {
+        "fullQualificationClosure": {
+          "laneReceipts": 972,
+          "emptyBoundaryReceipts": 12,
+          "acceptedSuperblockReceipts": 162,
+          "eventGroupRows": 23328,
+          "laneD3WindowRows": 24300,
+          "instrumentD3WindowRows": 1,
+          "emptyBoundaryD3WindowRows": 12000,
+          "processResourceRows": 25272,
+          "processResourceRowsPerLane": 26,
+          "persistentStateMeasurementPointsPerLane": 26,
+          "processLedgerRows": 1147,
+          "processIdentityReceipts": 1147,
+          "supervisorFinalProcessOrdinal": 1147
+        },
+        "ledgerModes": {
+          "instrument-self-test": 1,
+          "oracle": 162,
+          "empty-boundary": 12,
+          "lane": 972
+        },
+        "naturalZeroExitNoSignalNoRetry": true
+      }
+    },
+    {
+      "checkId": "STRUCTURAL::V3_1_PARSE_BIND_AND_NO_INFERENCE",
+      "domain": "structural-v3.1",
+      "passed": true,
+      "observed": {
+        "functionCount": 29,
+        "requiredFunctionPresent": true,
+        "missingTokens": [],
+        "statisticalImportsAbsent": true
+      },
+      "expected": "AST parses; validates full terminal plane and declares no cross-algorithm effects, ranking, or winner"
+    },
+    {
+      "checkId": "DELIVERY::V2_2_PARSE_V3_ADAPTER_AND_LOSSLESS_FOUR_FORMAT_CHAIN",
+      "domain": "delivery-v2.2",
+      "passed": true,
+      "observed": {
+        "functionCount": 30,
+        "requiredFunctionsPresent": [
+          "build_delivery",
+          "round_trip_validate",
+          "verify_delivery",
+          "write_parquet"
+        ],
+        "missingTokens": [],
+        "importsStructuralV31": true
+      },
+      "expected": "AST parses; schema-v3 structural adapter; JSONL/CSV/JSONL.GZ/typed-Parquet lossless delivery; v2 manifest/receipt contract"
+    },
+    {
+      "checkId": "SUPERVISOR::V3_POWERSHELL_AST_CLEAN",
+      "domain": "supervisor-v3",
+      "passed": true,
+      "observed": {
+        "parseErrors": []
+      },
+      "expected": {
+        "parseErrors": []
+      }
+    },
+    {
+      "checkId": "SUPERVISOR::V3_STATIC_SERIAL_FRESH_1147_TERMINAL_STATE_MACHINE",
+      "domain": "supervisor-v3",
+      "passed": true,
+      "observed": {
+        "orderedTokenPositions": {
+          "Invoke-VerifiedFreshUnityProcess -Mode 'instrument-self-test'": 2273,
+          "Invoke-VerifiedFreshUnityProcess -Mode 'oracle'": 2940,
+          "Invoke-VerifiedFreshUnityProcess -Mode 'empty-boundary'": 3456,
+          "Invoke-Superblock -Record $record": 3986,
+          "Require-Condition ($processOrdinal -eq 1147)": 4052,
+          "_control/acquisition-complete.v2.json": 4384,
+          "PASS_SCHEMA_V3_STRUCTURAL_COMPLETE_RAW_NO_INFERENCE": 5491,
+          "'build'": 5901,
+          "PASS_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY": 6629,
+          "'verify'": 6864,
+          "PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY": 7156,
+          "_control/qualification-complete.v2.json": 7344
+        },
+        "processOrdinalInitialized": true,
+        "singleIncrementSiteCount": 1,
+        "parallelPrimitivesAbsent": true,
+        "terminationSignalsAbsent": true
+      },
+      "expected": "ordered instrument/oracle/empty/lane phases; one ordinal increment per fresh process; exact final 1147 assertion; structural then delivery; no parallelism, retry, or signal"
+    },
+    {
+      "checkId": "TERMINAL::RUNTIME_RECEIPT_VERSIONS_MATCH_SCHEMA_V3",
+      "domain": "terminal-chain",
+      "passed": true,
+      "observed": {
+        "runtimeReceiptPresence": {
+          "_control/launch-receipt.v2.json": true,
+          "oracle-pass-receipt.v1.json": true,
+          "lane-receipt.v2.json": true,
+          "accepted-superblock-receipt.v1.json": true,
+          "empty-boundary-receipt.v2.json": true,
+          "instrument-csharp-receipt.v2.json": true,
+          "instrument-export-receipt.v2.json": true,
+          "_control/acquisition-complete.v2.json": true,
+          "delivery-manifest.v2.json": true
+        },
+        "staleCorrectedReceiptTokensPresent": []
+      },
+      "expected": {
+        "runtimeReceiptPresence": {
+          "_control/launch-receipt.v2.json": true,
+          "oracle-pass-receipt.v1.json": true,
+          "lane-receipt.v2.json": true,
+          "accepted-superblock-receipt.v1.json": true,
+          "empty-boundary-receipt.v2.json": true,
+          "instrument-csharp-receipt.v2.json": true,
+          "instrument-export-receipt.v2.json": true,
+          "_control/acquisition-complete.v2.json": true,
+          "delivery-manifest.v2.json": true
+        },
+        "staleCorrectedReceiptTokensPresent": []
+      }
+    },
+    {
+      "checkId": "KNOWN_ANSWER::TERMINAL_CHAIN_POSITIVE_SIX_NEGATIVES_AND_40_PRODUCTS",
+      "domain": "terminal-known-answer",
+      "passed": true,
+      "observed": {
+        "status": "PASS_TERMINAL_CHAIN_CORRIGENDUM_OFFLINE_ONLY",
+        "structuralPositive": {
+          "schema": "gate14re-me-qualification-structural-validation-v3.1",
+          "studyId": "Gate14Re-ME",
+          "status": "PASS_SCHEMA_V3_STRUCTURAL_COMPLETE_RAW_NO_INFERENCE",
+          "profile": "synthetic-known-answer",
+          "outputSchemaSha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c",
+          "d3ContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+          "identityBindingSha256": "f5cb5febb214a520ad88fe5b592c1688ccae291ee8059615a90d1badff5c302c",
+          "tableRows": {
+            "oracle-agent-checks": 0,
+            "oracle-event-checks": 0,
+            "operations": 0,
+            "event-groups": 24,
+            "d3-windows": 1026,
+            "persistent-state": 26,
+            "process-resources": 26,
+            "empty-boundary": 1000,
+            "replacement-ledger": 0,
+            "failures-and-voids": 0
+          },
+          "laneReceipts": 1,
+          "emptyBoundaryReceipts": 1,
+          "processResourceRows": 26,
+          "persistentStateMeasurementPointLanePairs": 26,
+          "eventGroupD3Joins": 24,
+          "emptyBoundaryD3Joins": 1000,
+          "acceptedSuperblockReceipts": 1,
+          "oraclePassReceipts": 1,
+          "instrumentCsharpReceipts": 1,
+          "processLedgerRows": 4,
+          "processIdentityReceipts": 4,
+          "supervisorFinalProcessOrdinal": 4,
+          "terminalControlPlaneClosed": true,
+          "supervisorFinalProcessOrdinalAsserted": true,
+          "d3WindowRecordIdsUnique": true,
+          "d3JoinsOneToOneAndComplete": true,
+          "retiredSnapshotFieldsAbsent": true,
+          "operationManagedAllocatedBytesTreatedAsD3": false,
+          "crossAlgorithmEffectsComputed": false,
+          "rankingOrWinnerComputed": false,
+          "qualificationReusedForFormalInference": false
+        },
+        "negativeFixtures": [
+          {
+            "name": "missing-process-resource",
+            "passed": true,
+            "reasonContains": "requires 26 process-resource rows"
+          },
+          {
+            "name": "missing-persistent-measurement-point",
+            "passed": true,
+            "reasonContains": "persistent-state measurement-point coverage mismatch"
+          },
+          {
+            "name": "missing-accepted-superblock-receipt",
+            "passed": true,
+            "reasonContains": "requires 1 accepted-superblock receipt"
+          },
+          {
+            "name": "short-process-ledger",
+            "passed": true,
+            "reasonContains": "requires 4 process-ledger rows"
+          },
+          {
+            "name": "tampered-process-identity",
+            "passed": true,
+            "reasonContains": "process identity receipt"
+          },
+          {
+            "name": "wrong-terminal-process-count",
+            "passed": true,
+            "reasonContains": "unityProcessCount"
+          }
+        ],
+        "deliveryKnownAnswer": {
+          "buildStatus": "PASS_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+          "verifyStatus": "PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+          "tables": 10,
+          "products": 40,
+          "manifestSha256": "caed7fa48166bfefccc0254cf4cd497509b145461066142fcce19248d3d77872",
+          "missingProductNegativePassed": true
+        },
+        "scientificBoundary": {
+          "unityInvocationCount": 0,
+          "plannerInvocationCount": 0,
+          "algorithmLaneExecutionCount": 0,
+          "qualificationMeasuredRootCreated": false,
+          "formalDeliveryRootCreated": false,
+          "qualificationObservationCount": 0,
+          "formalObservationCount": 0,
+          "formalCollectionPerformed": false,
+          "formalAnalysisPerformed": false,
+          "rankingPerformed": false,
+          "winnerAdjudicationPerformed": false,
+          "sealedIdentityMappingOpened": false
+        }
+      },
+      "expected": "schema-v3 structural positive, six fail-closed negatives, 10 tables x 4 lossless products, no Unity/planner/lane"
+    },
+    {
+      "checkId": "PLANNING::ONE_HUNDRED_SEVENTY_THREE_ARTIFACTS_AND_162_INPUTS_EXACT",
+      "domain": "planning-assets",
+      "passed": true,
+      "observed": {
+        "status": "FROZEN_PLANNING_ASSETS_PASS",
+        "declaredArtifactCount": 173,
+        "inputBundleCount": 162,
+        "artifactAudit": {
+          "entryCount": 173,
+          "uniquePathCount": 173,
+          "allPathsUnique": true,
+          "readOnlyFileCount": 173,
+          "mismatchCount": 0,
+          "mismatches": []
+        },
+        "identityBindingRemainsSealed": true
+      },
+      "expected": {
+        "status": "FROZEN_PLANNING_ASSETS_PASS",
+        "artifactCount": 173,
+        "inputBundleCount": 162,
+        "mismatchCount": 0,
+        "identityBindingRemainsSealed": true
+      }
+    },
+    {
+      "checkId": "PLANNING::162_ROW_SIX_ALGORITHM_WILLIAMS_BALANCE_UNIQUENESS_AND_ZERO_REPLACEMENT",
+      "domain": "planning-schedule",
+      "passed": true,
+      "observed": {
+        "rows": 162,
+        "ordinalCoverage": true,
+        "uniqueSuperblocks": 162,
+        "uniqueInputPaths": 162,
+        "uniqueInputHashes": 162,
+        "core": 144,
+        "stress": 18,
+        "rowShape": true,
+        "inputHashesExact": true,
+        "replacementFieldsAllNull": true,
+        "identityHashBindingsExact": true,
+        "positionCountsAll27": true,
+        "orderedAdjacencyCountsAll27": true,
+        "distinctWilliamsSequences": 6,
+        "eachSequenceCount": [
+          27
+        ]
+      },
+      "expected": {
+        "rows": 162,
+        "ordinals": "0..161",
+        "uniqueSuperblocks": 162,
+        "uniqueInputs": 162,
+        "core": 144,
+        "stress": 18,
+        "sixAlgorithmsAndLanesPerRow": true,
+        "positionsPerAlgorithm": 27,
+        "orderedAdjacencyPerPair": 27,
+        "sixSequencesEach": 27,
+        "replacement": null
+      }
+    },
+    {
+      "checkId": "IDENTITY::SEALED_BINDING_HASHED_NOT_OPENED",
+      "domain": "sealed-identity",
+      "passed": true,
+      "observed": {
+        "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+        "sha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+        "readOnly": true,
+        "mustRemainSealed": true,
+        "contentParsedByThisAudit": false,
+        "mappingDisclosed": false
+      },
+      "expected": {
+        "sha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+        "readOnly": true,
+        "mustRemainSealed": true,
+        "contentParsedByThisAudit": false,
+        "mappingDisclosed": false
+      }
+    },
+    {
+      "checkId": "FAIRNESS::SIX_ALGORITHM_SOURCE_AND_SPEC_BINDINGS_EXACT",
+      "domain": "fairness-binding",
+      "passed": true,
+      "observed": {
+        "status": "FROZEN_SIX_ALGORITHM_BINDING",
+        "algorithmIds": [
+          "A*-R",
+          "BiA*-R",
+          "C-FF",
+          "D*L",
+          "IDFF",
+          "LPA*"
+        ],
+        "mismatches": [],
+        "sameInput": true,
+        "freshProcess": true,
+        "sameBoundary": true,
+        "sameOracle": true
+      },
+      "expected": {
+        "algorithmIds": [
+          "A*-R",
+          "BiA*-R",
+          "C-FF",
+          "D*L",
+          "IDFF",
+          "LPA*"
+        ],
+        "mismatches": [],
+        "sameInputFreshProcessBoundaryOracle": true
+      }
+    },
+    {
+      "checkId": "INSTRUMENTS::D2_D4_AND_CLOCK_RETAINED_PASS_WITH_OLD_D3_FAILURE_UNCHANGED",
+      "domain": "instrumentation",
+      "passed": true,
+      "observed": {
+        "retainedOverallStatus": "FAIL_CLOSED_D3_ALLOCATION_COUNTER_POSITIVE_CONTROL",
+        "D2": {
+          "gridReadProxy": true,
+          "semanticInvariance": true
+        },
+        "D4": true,
+        "clock": {
+          "monotonic": true,
+          "samples": 10000
+        },
+        "oldD3PositiveControlPassed": false
+      },
+      "expected": "retained original attempt remains FAIL_CLOSED for old D3, while its independent D2, D4, and 10,000-sample clock subtests remain PASS"
+    },
+    {
+      "checkId": "D3::V3_1_TRUE_CUMULATIVE_MANAGED_ALLOCATION_QUALIFIED",
+      "domain": "D3-v3.1",
+      "passed": true,
+      "observed": {
+        "status": "QUALIFIED_FROZEN_D3_V3_1",
+        "semanticVersion": "3.1",
+        "allCriteriaPassed": true,
+        "bindingMismatches": [],
+        "knownAnswerStatus": "PASS_D3_V3_1_TRUE_CUMULATIVE_MANAGED_ALLOCATION_QUALIFICATION",
+        "cycleStatus": "PASS_D3_V3_1_STRICT_JSON_KNOWN_ANSWER"
+      },
+      "expected": "qualified D3-v3.1 exact source/binary/wrapper/harness and terminal known-answer evidence"
+    },
+    {
+      "checkId": "RUNTIME::TYPED_PARQUET_763_DECLARED_FILES_EXACT",
+      "domain": "typed-parquet-runtime",
+      "passed": true,
+      "observed": {
+        "status": "FROZEN_TYPED_PARQUET_RUNTIME",
+        "distribution": {
+          "name": "pyarrow",
+          "platform": "win_amd64",
+          "pythonAbi": "cp312",
+          "version": "25.0.1"
+        },
+        "entryCount": 763,
+        "uniquePathCount": 763,
+        "allPathsUnique": true,
+        "readOnlyFileCount": 763,
+        "mismatchCount": 0,
+        "mismatches": []
+      },
+      "expected": {
+        "installedFiles": 762,
+        "wheelArtifacts": 1,
+        "distribution": {
+          "name": "pyarrow",
+          "platform": "win_amd64",
+          "pythonAbi": "cp312",
+          "version": "25.0.1"
+        },
+        "mismatchCount": 0
+      }
+    },
+    {
+      "checkId": "IDENTITY::TRUSTED_RULE_AND_ATTEMPT007_TIMESTAMP_COMPARATOR_PASS",
+      "domain": "unity-identity",
+      "passed": true,
+      "observed": {
+        "ruleStatus": "FROZEN_TRUSTED_IDENTITY_RULE_FROM_OFFLINE_ADJUDICATION",
+        "classification": "EXTERNAL_COMPOSITE_IDENTITY_AUTHORITATIVE_IN_PROCESS_READS_DIAGNOSTIC",
+        "requirements": {
+          "externalThreePhaseExpectedSha256AndIndependentMethodAgreement": true,
+          "external64KiBChunksPathFileIdPeSignerAndMetadataStable": true,
+          "pidCreationTimePathCommandLineAndExecuteMethodBound": true,
+          "inProcessPathSourcesAndStructuralIdentityStable": true,
+          "knownAnswersPassed": true,
+          "normalExitAndPostExitReconfirmationRequired": true,
+          "inProcessSelfHashesRequiredForAuthorization": false,
+          "fileReadAllBytesRole": "DIAGNOSTIC_ONLY",
+          "anyAuthoritativeMismatchDisposition": "FAIL_CLOSED_NO_ADOPTION"
+        },
+        "timestampComparatorStatus": "PASS_TRUSTED_TIMESTAMP_COMPARATOR_OFFLINE_KNOWN_ANSWER"
+      },
+      "expected": "three-phase external identity plus process composite, natural exit, diagnostic-only in-process reads, and attempt-007 comparator PASS"
+    },
+    {
+      "checkId": "BUDGET::CURRENT_HOST_QUALIFIES_WITH_BOTH_RESERVATIONS",
+      "domain": "runtime-budget",
+      "passed": true,
+      "observed": {
+        "status": "FROZEN_PREEXECUTION_BUDGETS",
+        "positiveTimeoutFields": true,
+        "maximumConcurrentUnityProcesses": 1,
+        "visibleMemoryBytes": 33396609024,
+        "requiredAssignedMemoryBytes": 17179869184,
+        "driveHFreeBytes": 215974481920,
+        "requiredCombinedReservationsBytes": 154618822656,
+        "logicalProcessors": 32,
+        "expectedLogicalProcessors": 32,
+        "operatingSystemVersion": "10.0.26300",
+        "expectedOperatingSystemVersion": "10.0.26300"
+      },
+      "expected": "positive frozen time/memory budgets, concurrency 1, same host class, and H: free space at least both frozen reservations"
+    },
+    {
+      "checkId": "DELIVERY::COMPLETE_PER_OBSERVATION_HARD_GATE_AND_BRIDGE",
+      "domain": "complete-raw-delivery",
+      "passed": true,
+      "observed": {
+        "rawTables": [
+          "oracle-agent-checks",
+          "oracle-event-checks",
+          "operations",
+          "event-groups",
+          "d3-windows",
+          "persistent-state",
+          "process-resources",
+          "empty-boundary",
+          "replacement-ledger",
+          "failures-and-voids"
+        ],
+        "deliveryViews": {
+          "losslessCanonical": "UTF-8 JSON Lines retaining every raw row",
+          "humanPortable": "RFC 4180 CSV retaining every raw row and a fixed column order",
+          "compressedPortable": "gzip-compressed UTF-8 JSON Lines retaining every raw row",
+          "typedAnalytical": "Parquet retaining every raw row and explicit integer/float/boolean/string types",
+          "aggregateOnlyAllowed": false,
+          "rowIdentityPreservedAcrossViews": true,
+          "rowOrderManifested": true,
+          "sha256ManifestRequired": true
+        },
+        "bridgeStatus": "PASS_SCHEMA_V2_TOOLING_BRIDGE_VALIDATION",
+        "bridgeDelivery": {
+          "buildStatus": "PASS_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+          "verifyStatus": "PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+          "independentCliRecheckPassed": true,
+          "tables": 10,
+          "formatsPerTable": 4,
+          "products": 40,
+          "formats": [
+            "canonical JSONL",
+            "RFC 4180 CSV with canonical-JSON scalar cells",
+            "deterministic JSONL.GZ",
+            "typed Parquet"
+          ],
+          "completeValueTypeOrderRoundTripPassed": true,
+          "typedParquetRoundTripPassed": true,
+          "d3JoinsOneToOneAndComplete": true,
+          "aggregateOnlyPackage": false,
+          "deliveryManifestSha256": "1cb1d490d2397e6295a4883e23090349d550ca042a39bd97673ec8748e4a2070"
+        },
+        "hardCondition": {
+          "completePerObservationRawDataDeliverable": true,
+          "mandatoryForPrecollectionReadiness": true,
+          "mandatoryForFormalRawCommit": true,
+          "mandatoryBeforeAnyFormalAnalysisAuthorizationCanBeExercised": true,
+          "cannotBeWaivedAfterFirstFormalObservation": true,
+          "failureDisposition": "FAIL_CLOSED_PRESERVE_EVIDENCE_NO_ANALYSIS_NO_CLAIM_NO_TOPUP_NO_MERGE"
+        },
+        "aggregationOnlyStorageForbidden": true
+      },
+      "expected": "ten raw tables; every-row four-format delivery; exact identity/order; bridge PASS; complete-per-observation hard gate; no aggregate-only substitute"
+    },
+    {
+      "checkId": "TERMINAL::POST_ACQUISITION_STRUCTURAL_DELIVERY_FINAL_RECEIPT_CHAIN",
+      "domain": "terminal-chain",
+      "passed": true,
+      "observed": [
+        "write acquisition-complete.v2 with explicit 1147-process closure and no inference",
+        "run structural-v3 qualification-full and require PASS_SCHEMA_V3_STRUCTURAL_COMPLETE_RAW_NO_INFERENCE",
+        "run delivery-v2.2 schema-v3 adapter build to a new disjoint delivery root while preserving v2 delivery filenames",
+        "run delivery-v2.2 verify and require PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+        "freeze qualification-complete.v2 declaring complete per-observation delivery and no analysis"
+      ],
+      "expected": "acquisition-complete.v2 -> structural-v3 PASS -> delivery-v2.2 build -> delivery-v2.2 verify -> qualification-complete.v2 no-analysis freeze"
+    },
+    {
+      "checkId": "RETENTION::ALL_BOUND_PRIOR_ATTEMPTS_BYTE_AND_ATTRIBUTE_IDENTICAL",
+      "domain": "retention",
+      "passed": true,
+      "observed": {
+        "readinessAttempt002": {
+          "beforeFileCount": 7,
+          "afterFileCount": 7,
+          "beforeDigestSha256": "3b08e379d98f974bb5f2d9ffd2d198ba3eca037d70c369fec42b17ddefa5257d",
+          "afterDigestSha256": "3b08e379d98f974bb5f2d9ffd2d198ba3eca037d70c369fec42b17ddefa5257d",
+          "identical": true
+        },
+        "terminalCorrigendumAttempt001": {
+          "beforeFileCount": 18,
+          "afterFileCount": 18,
+          "beforeDigestSha256": "2234296992f5971a66ece7b8b42ef6bbddb7de0da08b2793a3fd27f2a4b84c93",
+          "afterDigestSha256": "2234296992f5971a66ece7b8b42ef6bbddb7de0da08b2793a3fd27f2a4b84c93",
+          "identical": true
+        },
+        "terminalCorrigendumAttempt002": {
+          "beforeFileCount": 114,
+          "afterFileCount": 114,
+          "beforeDigestSha256": "9047577d732ba017aeb6770fe4c736956181db163402246a3ffe7eacaba4a107",
+          "afterDigestSha256": "9047577d732ba017aeb6770fe4c736956181db163402246a3ffe7eacaba4a107",
+          "identical": true
+        },
+        "readinessRecheckAttempt003": {
+          "beforeFileCount": 8,
+          "afterFileCount": 8,
+          "beforeDigestSha256": "d836511bc35e82cae8b315027be5dd973a390b4b318a28d347477ce5fa5c73cb",
+          "afterDigestSha256": "d836511bc35e82cae8b315027be5dd973a390b4b318a28d347477ce5fa5c73cb",
+          "identical": true
+        },
+        "loadQualificationExecutionAttempt001": {
+          "beforeFileCount": 6,
+          "afterFileCount": 6,
+          "beforeDigestSha256": "7a9d56b536fea043cc8b00b4543e2c75a51c6ed68aa65db11f34eeb43a40dedf",
+          "afterDigestSha256": "7a9d56b536fea043cc8b00b4543e2c75a51c6ed68aa65db11f34eeb43a40dedf",
+          "identical": true
+        },
+        "powerShellHostBindingAttempt003": {
+          "beforeFileCount": 10,
+          "afterFileCount": 10,
+          "beforeDigestSha256": "902477bbcda1319d59678e9f510001706ff3881d8f74218de62ba73d400fe038",
+          "afterDigestSha256": "902477bbcda1319d59678e9f510001706ff3881d8f74218de62ba73d400fe038",
+          "identical": true
+        },
+        "powerShellHostBindingAttempt004": {
+          "beforeFileCount": 6,
+          "afterFileCount": 6,
+          "beforeDigestSha256": "804be8c9e012f0ef541285870c43f4cac1821dcba92181e8e60475cf1cd93f1d",
+          "afterDigestSha256": "804be8c9e012f0ef541285870c43f4cac1821dcba92181e8e60475cf1cd93f1d",
+          "identical": true
+        }
+      },
+      "expected": "all retained attempt inventories, hashes, lengths, paths, and read-only attributes are identical before and after"
+    },
+    {
+      "checkId": "BOUNDARY::UNITY_ABSENT_AT_END",
+      "domain": "authorization-boundary",
+      "passed": true,
+      "observed": {
+        "unityProcessCount": 0
+      },
+      "expected": {
+        "unityProcessCount": 0
+      }
+    },
+    {
+      "checkId": "BOUNDARY::PROHIBITED_ROOTS_ABSENT_AT_END",
+      "domain": "authorization-boundary",
+      "passed": true,
+      "observed": {
+        "Research/PilotRuns/Gate14Re-ME/load-qualification": false,
+        "Research/Exports/Gate14Re-ME/load-qualification": false,
+        "Research/FormalRuns/Gate14Re-ME": false
+      },
+      "expected": {
+        "Research/PilotRuns/Gate14Re-ME/load-qualification": false,
+        "Research/Exports/Gate14Re-ME/load-qualification": false,
+        "Research/FormalRuns/Gate14Re-ME": false
+      }
+    }
+  ],
+  "hardStopReasons": [],
+  "retainedEvidenceInventories": {
+    "readinessAttempt002": {
+      "beforeFileCount": 7,
+      "afterFileCount": 7,
+      "beforeDigestSha256": "3b08e379d98f974bb5f2d9ffd2d198ba3eca037d70c369fec42b17ddefa5257d",
+      "afterDigestSha256": "3b08e379d98f974bb5f2d9ffd2d198ba3eca037d70c369fec42b17ddefa5257d",
+      "identical": true
+    },
+    "terminalCorrigendumAttempt001": {
+      "beforeFileCount": 18,
+      "afterFileCount": 18,
+      "beforeDigestSha256": "2234296992f5971a66ece7b8b42ef6bbddb7de0da08b2793a3fd27f2a4b84c93",
+      "afterDigestSha256": "2234296992f5971a66ece7b8b42ef6bbddb7de0da08b2793a3fd27f2a4b84c93",
+      "identical": true
+    },
+    "terminalCorrigendumAttempt002": {
+      "beforeFileCount": 114,
+      "afterFileCount": 114,
+      "beforeDigestSha256": "9047577d732ba017aeb6770fe4c736956181db163402246a3ffe7eacaba4a107",
+      "afterDigestSha256": "9047577d732ba017aeb6770fe4c736956181db163402246a3ffe7eacaba4a107",
+      "identical": true
+    },
+    "readinessRecheckAttempt003": {
+      "beforeFileCount": 8,
+      "afterFileCount": 8,
+      "beforeDigestSha256": "d836511bc35e82cae8b315027be5dd973a390b4b318a28d347477ce5fa5c73cb",
+      "afterDigestSha256": "d836511bc35e82cae8b315027be5dd973a390b4b318a28d347477ce5fa5c73cb",
+      "identical": true
+    },
+    "loadQualificationExecutionAttempt001": {
+      "beforeFileCount": 6,
+      "afterFileCount": 6,
+      "beforeDigestSha256": "7a9d56b536fea043cc8b00b4543e2c75a51c6ed68aa65db11f34eeb43a40dedf",
+      "afterDigestSha256": "7a9d56b536fea043cc8b00b4543e2c75a51c6ed68aa65db11f34eeb43a40dedf",
+      "identical": true
+    },
+    "powerShellHostBindingAttempt003": {
+      "beforeFileCount": 10,
+      "afterFileCount": 10,
+      "beforeDigestSha256": "902477bbcda1319d59678e9f510001706ff3881d8f74218de62ba73d400fe038",
+      "afterDigestSha256": "902477bbcda1319d59678e9f510001706ff3881d8f74218de62ba73d400fe038",
+      "identical": true
+    },
+    "powerShellHostBindingAttempt004": {
+      "beforeFileCount": 6,
+      "afterFileCount": 6,
+      "beforeDigestSha256": "804be8c9e012f0ef541285870c43f4cac1821dcba92181e8e60475cf1cd93f1d",
+      "afterDigestSha256": "804be8c9e012f0ef541285870c43f4cac1821dcba92181e8e60475cf1cd93f1d",
+      "identical": true
+    }
+  },
+  "hostProbeStart": {
+    "observedAtUtc": "2026-10-17T16:51:01.4206958Z",
+    "unityProcessCount": 0,
+    "unityProcesses": [],
+    "operatingSystemVersion": "10.0.26300",
+    "logicalProcessors": 32,
+    "totalVisibleMemoryBytes": 33396609024,
+    "driveHFreeBytes": 215974481920,
+    "driveHTotalBytes": 974665019392
+  },
+  "hostProbeEnd": {
+    "observedAtUtc": "2026-10-17T16:51:08.8154351Z",
+    "unityProcessCount": 0,
+    "unityProcesses": [],
+    "operatingSystemVersion": "10.0.26300",
+    "logicalProcessors": 32,
+    "totalVisibleMemoryBytes": 33396609024,
+    "driveHFreeBytes": 215974481920,
+    "driveHTotalBytes": 974665019392
+  },
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "sealedIdentityMappingOpened": false
+  }
+}

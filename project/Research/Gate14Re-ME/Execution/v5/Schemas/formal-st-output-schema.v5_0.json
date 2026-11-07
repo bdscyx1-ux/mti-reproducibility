@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-formal-st-output-schema-v5.0",
+  "title": "Gate14Re-ME formal ST raw lane output contract v5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["laneReceipt","oracleCacheLink","canonicalRawFiles"],
+  "properties": {
+    "laneReceipt": {
+      "type":"object",
+      "required":["schema","studyId","status","superblockId","anonymousLaneId","eventGroupCount","persistentStateMeasurementPointCount"],
+      "properties": {
+        "schema":{"const":"gate14re-me-formal-st-lane-receipt-v5"},
+        "studyId":{"const":"Gate14Re-ME"},
+        "status":{"const":"COMPLETE_RAW_FORMAL_ST_LANE"},
+        "superblockId":{"type":"string"},
+        "anonymousLaneId":{"enum":["ALG-A","ALG-B","ALG-C","ALG-D","ALG-E","ALG-F"]},
+        "eventGroupCount":{"const":24},
+        "persistentStateMeasurementPointCount":{"const":26}
+      }
+    },
+    "oracleCacheLink": {
+      "type":"object",
+      "required":["status","referenceOracleEvaluationsPerformedInsideLane","oracleCacheBindingSha256"],
+      "properties": {
+        "status":{"const":"BOUND_TO_FROZEN_ALGORITHM_NEUTRAL_ORACLE_CACHE_V5"},
+        "referenceOracleEvaluationsPerformedInsideLane":{"const":0},
+        "oracleCacheBindingSha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}
+      }
+    },
+    "canonicalRawFiles": {
+      "type":"array","minItems":1,
+      "items":{"type":"object","required":["relativePath","bytes","sha256"],"properties":{"relativePath":{"type":"string"},"bytes":{"type":"integer","minimum":1},"sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"}}}
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-prelaunch-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-local-execution-attempt-003",
+  "status": "AUTHORIZED_PRELAUNCH_REPAIR_FREEZE_AND_READ_ONLY_PREFLIGHT",
+  "userAuthorizationTextExact": "继续推进formalST实验，授权允许attempt最小修复直至formalST启动前",
+  "authorizedScope": {
+    "minimalForwardOnlyRepair": true,
+    "implementationRefreeze": true,
+    "algorithmFreeReadiness": true,
+    "freshAttemptEvidenceRootCreation": true,
+    "freshExecutionAuthorizationPreparation": true,
+    "readOnlyPreflight": true,
+    "exactLaunchCommandPreparation": true
+  },
+  "launchBoundary": {
+    "formalSTLaunchAuthorizedByThisReceipt": false,
+    "formalMeasuredRootCreationAuthorizedByThisReceipt": false,
+    "algorithmLaneExecutionAuthorizedByThisReceipt": false,
+    "exactCommandConfirmationStillRequired": true
+  },
+  "prohibitedScope": {
+    "formalAnalysis": true,
+    "mqOrMtExecution": true,
+    "scientificDesignChange": true,
+    "sampleRuleChange": true,
+    "migrationPackageChange": true
+  },
+  "capturedAtUtc": "2026-10-26T12:17:18.2040332Z"
+}

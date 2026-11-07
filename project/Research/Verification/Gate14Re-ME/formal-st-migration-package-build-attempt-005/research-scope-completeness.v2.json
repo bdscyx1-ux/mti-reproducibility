@@ -1,0 +1,20 @@
+{
+  "schema": "gate14re-me-formal-st-research-source-inventory-summary-v2",
+  "status": "PASS_COMPLETE_RESEARCH_SNAPSHOT_WITH_EXPLICIT_OUTPUT_EXCLUSIONS",
+  "snapshotAtUtc": "2026-10-23T03:34:47.144319Z",
+  "sourceRoot": "Research",
+  "includedSourceFiles": 24904,
+  "includedSourceBytes": 3897000638,
+  "inventoryRelativePath": "Research/Gate14Re-ME/Package/v5/research-source-inventory.attempt-005.jsonl",
+  "inventorySha256": "5758968156b851df056201371bd26b0a4e689c177ca6f148d49cde9d807e16e8",
+  "inventorySelfExcluded": true,
+  "explicitExclusions": {
+    "Research/FormalRuns": "user-requested exclusion of measured/formal run data",
+    "Research/Packages": "package-output exclusion prevents recursive embedding and excludes the superseded Unity-bearing archive",
+    "Research/PackageStaging": "ephemeral package-construction output; excluded to prevent self-inclusion",
+    "Research/PackageTests": "ephemeral extraction/readiness output; excluded to prevent self-inclusion"
+  },
+  "allOtherResearchFilesRequired": true,
+  "packageManifestSha256": "a5ef37139caeddf87806e2a88b5904fe5c1f317a358cdcf114d8a35bd160a78b",
+  "testedAtUtc": "2026-10-23T03:36:50.969082Z"
+}

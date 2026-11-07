@@ -1,0 +1,332 @@
+{
+  "schema": "gate14re-me-ranking-score-results-v1",
+  "status": "PASS_RANKING_SCORE_ANALYSIS",
+  "createdAtUtc": "2026-10-30T14:31:16.109512+00:00",
+  "contractSha256": "c8a56bcf2a2d8e68a26b63db6d59cab7389201b32c6d85343b76b28700851660",
+  "independentSuperblocks": 1296,
+  "algorithmLanes": 7776,
+  "eligibilityAllAlgorithms": true,
+  "primaryWeights": {
+    "D1": 0.35,
+    "D2": 0.2,
+    "D3": 0.15,
+    "D4": 0.075,
+    "D5": 0.075,
+    "D6": 0.075,
+    "D7": 0.075
+  },
+  "normalization": "Within the fixed six-algorithm cohort, rank lower values first with midranks for numerical ties; utility = 100*(6-rank)/5",
+  "primaryScoreWinners": [
+    "IDFF"
+  ],
+  "statisticallySeparatedScoreWinners": [],
+  "globalDominanceWinners": [],
+  "ranking": [
+    {
+      "algorithm": "IDFF",
+      "rank": 1.0,
+      "primaryScore": 83.0,
+      "conservativeSimultaneousScoreLower": 75.5,
+      "conservativeSimultaneousScoreUpper": 87.5,
+      "D1Utility": 90.0,
+      "D2Utility": 100.0,
+      "D3Utility": 100.0,
+      "D4Utility": 40.0,
+      "D5Utility": 80.0,
+      "D6Utility": 40.0,
+      "D7Utility": 60.0,
+      "D1WeightedContribution": 31.499999999999996,
+      "D2WeightedContribution": 20.0,
+      "D3WeightedContribution": 15.0,
+      "D4WeightedContribution": 3.0,
+      "D5WeightedContribution": 6.0,
+      "D6WeightedContribution": 3.0,
+      "D7WeightedContribution": 4.5
+    },
+    {
+      "algorithm": "C-FF",
+      "rank": 2.0,
+      "primaryScore": 74.5,
+      "conservativeSimultaneousScoreLower": 68.5,
+      "conservativeSimultaneousScoreUpper": 80.5,
+      "D1Utility": 90.0,
+      "D2Utility": 80.0,
+      "D3Utility": 40.0,
+      "D4Utility": 60.0,
+      "D5Utility": 100.0,
+      "D6Utility": 100.0,
+      "D7Utility": 20.0,
+      "D1WeightedContribution": 31.499999999999996,
+      "D2WeightedContribution": 16.0,
+      "D3WeightedContribution": 6.0,
+      "D4WeightedContribution": 4.5,
+      "D5WeightedContribution": 7.5,
+      "D6WeightedContribution": 7.5,
+      "D7WeightedContribution": 1.5
+    },
+    {
+      "algorithm": "A*-R",
+      "rank": 3.0,
+      "primaryScore": 54.75,
+      "conservativeSimultaneousScoreLower": 46.5,
+      "conservativeSimultaneousScoreUpper": 63.0,
+      "D1Utility": 60.0,
+      "D2Utility": 60.0,
+      "D3Utility": 20.0,
+      "D4Utility": 90.0,
+      "D5Utility": 40.0,
+      "D6Utility": 80.0,
+      "D7Utility": 40.0,
+      "D1WeightedContribution": 21.0,
+      "D2WeightedContribution": 12.0,
+      "D3WeightedContribution": 3.0,
+      "D4WeightedContribution": 6.75,
+      "D5WeightedContribution": 3.0,
+      "D6WeightedContribution": 6.0,
+      "D7WeightedContribution": 3.0
+    },
+    {
+      "algorithm": "LPA*",
+      "rank": 4.0,
+      "primaryScore": 32.75,
+      "conservativeSimultaneousScoreLower": 14.0,
+      "conservativeSimultaneousScoreUpper": 43.0,
+      "D1Utility": 30.0,
+      "D2Utility": 10.0,
+      "D3Utility": 70.0,
+      "D4Utility": 10.0,
+      "D5Utility": 20.0,
+      "D6Utility": 20.0,
+      "D7Utility": 80.0,
+      "D1WeightedContribution": 10.5,
+      "D2WeightedContribution": 2.0,
+      "D3WeightedContribution": 10.5,
+      "D4WeightedContribution": 0.75,
+      "D5WeightedContribution": 1.5,
+      "D6WeightedContribution": 1.5,
+      "D7WeightedContribution": 6.0
+    },
+    {
+      "algorithm": "D*L",
+      "rank": 5.0,
+      "primaryScore": 28.75,
+      "conservativeSimultaneousScoreLower": 14.0,
+      "conservativeSimultaneousScoreUpper": 43.0,
+      "D1Utility": 10.0,
+      "D2Utility": 10.0,
+      "D3Utility": 70.0,
+      "D4Utility": 10.0,
+      "D5Utility": 60.0,
+      "D6Utility": 0.0,
+      "D7Utility": 100.0,
+      "D1WeightedContribution": 3.5,
+      "D2WeightedContribution": 2.0,
+      "D3WeightedContribution": 10.5,
+      "D4WeightedContribution": 0.75,
+      "D5WeightedContribution": 4.5,
+      "D6WeightedContribution": 0.0,
+      "D7WeightedContribution": 7.5
+    },
+    {
+      "algorithm": "BiA*-R",
+      "rank": 6.0,
+      "primaryScore": 26.25,
+      "conservativeSimultaneousScoreLower": 25.5,
+      "conservativeSimultaneousScoreUpper": 39.0,
+      "D1Utility": 20.0,
+      "D2Utility": 40.0,
+      "D3Utility": 0.0,
+      "D4Utility": 90.0,
+      "D5Utility": 0.0,
+      "D6Utility": 60.0,
+      "D7Utility": 0.0,
+      "D1WeightedContribution": 7.0,
+      "D2WeightedContribution": 8.0,
+      "D3WeightedContribution": 0.0,
+      "D4WeightedContribution": 6.75,
+      "D5WeightedContribution": 0.0,
+      "D6WeightedContribution": 4.5,
+      "D7WeightedContribution": 0.0
+    }
+  ],
+  "uniqueDomainWinners": {
+    "D1": [],
+    "D2": [
+      "IDFF"
+    ],
+    "D3": [
+      "IDFF"
+    ],
+    "D4": [],
+    "D5": [],
+    "D6": [],
+    "D7": []
+  },
+  "scoreBoundsMethod": "Conservative projection of all 120 globally simultaneous normal-z ordering intervals; not a bootstrap percentile interval",
+  "normalZCritical": 3.529296088834735,
+  "primitiveFamilySize": 120,
+  "compositeHolmFamilySize": 105,
+  "sensitivity": {
+    "equalWeights": {
+      "winners": [
+        "IDFF"
+      ],
+      "scores": {
+        "A*-R": 55.714285714285715,
+        "BiA*-R": 30.0,
+        "D*L": 37.142857142857146,
+        "LPA*": 34.285714285714285,
+        "C-FF": 70.0,
+        "IDFF": 72.85714285714286
+      }
+    },
+    "runtimeGroupSweepWinningSegments": [
+      {
+        "from": 0.0,
+        "to": 0.4468085106382979,
+        "winners": [
+          "C-FF"
+        ]
+      },
+      {
+        "from": 0.4468085106382979,
+        "to": 1.0,
+        "winners": [
+          "IDFF"
+        ]
+      }
+    ],
+    "runtimeGroupSweepBoundaryWinners": [
+      {
+        "rho": 0.0,
+        "winners": [
+          "C-FF"
+        ]
+      },
+      {
+        "rho": 0.4468085106382979,
+        "winners": [
+          "C-FF",
+          "IDFF"
+        ]
+      },
+      {
+        "rho": 1.0,
+        "winners": [
+          "IDFF"
+        ]
+      }
+    ],
+    "weightCornerScenarioCount": 128,
+    "cornerWinCounts": {
+      "A*-R": 0,
+      "BiA*-R": 0,
+      "D*L": 0,
+      "LPA*": 0,
+      "C-FF": 10,
+      "IDFF": 118
+    },
+    "cornerScoreRanges": {
+      "A*-R": [
+        45.468750000000014,
+        61.730769230769226
+      ],
+      "BiA*-R": [
+        16.406250000000004,
+        38.08823529411765
+      ],
+      "D*L": [
+        17.187499999999996,
+        46.09375000000001
+      ],
+      "LPA*": [
+        23.918918918918912,
+        45.344827586206904
+      ],
+      "C-FF": [
+        61.56249999999999,
+        83.75
+      ],
+      "IDFF": [
+        71.72413793103448,
+        90.00000000000001
+      ]
+    },
+    "leaveOneDomainOut": [
+      {
+        "removedDomain": "D1",
+        "A*-R": 51.923076923076934,
+        "BiA*-R": 29.615384615384617,
+        "D*L": 38.846153846153854,
+        "LPA*": 34.23076923076923,
+        "C-FF": 66.15384615384616,
+        "IDFF": 79.23076923076924,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D2",
+        "A*-R": 53.43750000000001,
+        "BiA*-R": 22.812500000000004,
+        "D*L": 33.43750000000001,
+        "LPA*": 38.43750000000001,
+        "C-FF": 73.12500000000001,
+        "IDFF": 78.75000000000001,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D3",
+        "A*-R": 60.88235294117647,
+        "BiA*-R": 30.882352941176478,
+        "D*L": 21.47058823529412,
+        "LPA*": 26.176470588235297,
+        "C-FF": 80.58823529411765,
+        "IDFF": 80.00000000000001,
+        "winners": "C-FF"
+      },
+      {
+        "removedDomain": "D4",
+        "A*-R": 51.891891891891895,
+        "BiA*-R": 21.08108108108108,
+        "D*L": 30.270270270270274,
+        "LPA*": 34.5945945945946,
+        "C-FF": 75.67567567567568,
+        "IDFF": 86.4864864864865,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D5",
+        "A*-R": 55.94594594594595,
+        "BiA*-R": 28.37837837837838,
+        "D*L": 26.21621621621622,
+        "LPA*": 33.78378378378379,
+        "C-FF": 72.43243243243244,
+        "IDFF": 83.24324324324326,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D6",
+        "A*-R": 52.70270270270271,
+        "BiA*-R": 23.513513513513516,
+        "D*L": 31.081081081081088,
+        "LPA*": 33.78378378378379,
+        "C-FF": 72.43243243243244,
+        "IDFF": 86.4864864864865,
+        "winners": "IDFF"
+      },
+      {
+        "removedDomain": "D7",
+        "A*-R": 55.94594594594595,
+        "BiA*-R": 28.37837837837838,
+        "D*L": 22.972972972972975,
+        "LPA*": 28.91891891891892,
+        "C-FF": 78.91891891891893,
+        "IDFF": 84.86486486486487,
+        "winners": "IDFF"
+      }
+    ],
+    "scenarioFractionsAreNotProbabilities": true
+  },
+  "modelRefit": false,
+  "sourceMutation": false,
+  "originalDomainDecisionModified": false
+}

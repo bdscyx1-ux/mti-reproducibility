@@ -1,0 +1,66 @@
+{
+  "boundary": [
+    "G96, N64, and F25 are interpolated planning points and remain unqualified.",
+    "The old fixed non-lane remainder is retained in full even though the new oracle count is lower.",
+    "No new qualification or formal execution was started."
+  ],
+  "designAttemptId": "gnf-discrimination-window-design-v2-attempt-001",
+  "formalSTB36": {
+    "belowSevenDayDecisionGate": true,
+    "conservativeHours": 72.26,
+    "planningDays": 3.613,
+    "planningWith20PercentHeadroomHours": 86.712,
+    "pointHours": 65.889
+  },
+  "highCorner": {
+    "F": 81,
+    "G": 128,
+    "N": 128,
+    "maximumAcrossAnonymousAlgorithmsConservativeSeconds": 117.611215,
+    "maximumAcrossAnonymousAlgorithmsP50Seconds": 56.16874,
+    "observedCellWorstProcessWallSeconds": 117.611215
+  },
+  "levels": {
+    "F": [
+      1,
+      9,
+      25,
+      81
+    ],
+    "G": [
+      64,
+      96,
+      128
+    ],
+    "N": [
+      32,
+      64,
+      128
+    ]
+  },
+  "method": {
+    "algorithmIdentitiesEmitted": false,
+    "fixedOldNonLaneRemainderHoursRetained": 2.627281,
+    "gapP50Milliseconds": 799.051,
+    "gapP99Milliseconds": 993.31312,
+    "inputCoordinates": "log2(G), log2(N), log2(F)",
+    "outputCoordinate": "natural log process-wall duration",
+    "planningHeadroomMultiplier": 1.2
+  },
+  "newQualification": {
+    "conservativeHours": 10.699,
+    "planningWith20PercentHeadroomHours": 12.839,
+    "pointHours": 9.487
+  },
+  "rankingOrWinnerProduced": false,
+  "schema": "gate14re-me-selected-window-runtime-estimate-v2",
+  "status": "PASS_PLANNING_SURROGATE_NEW_LEVELS_NOT_YET_QUALIFIED",
+  "structure": {
+    "coreCells": 36,
+    "formalB36AlgorithmProcesses": 7776,
+    "qualificationAlgorithmLanes": 756,
+    "qualificationOracleProcesses": 126,
+    "qualificationTotalFreshProcesses": 895
+  },
+  "studyId": "Gate14Re-ME"
+}

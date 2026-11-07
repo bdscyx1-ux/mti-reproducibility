@@ -1,0 +1,55 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 1,
+  "status": "FAILED_PRESERVED_CONTINUE_AUTHORIZED_REPAIR",
+  "startedAtUtc": "2026-10-17T06:40:16Z",
+  "observedAtUtc": "2026-10-17T06:44:09.0718394Z",
+  "phase": "windows-sdk-installation",
+  "objective": "Install the selected Windows SDK component using Visual Studio Installer supported syntax without the attempt-002 --wait option.",
+  "exactRequestedComponent": "Microsoft.VisualStudio.Component.Windows11SDK.26100",
+  "exactCommand": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe\" modify --installPath \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\" --add Microsoft.VisualStudio.Component.Windows11SDK.26100 --quiet --norestart",
+  "installerExitCode": 5007,
+  "exactPrimaryDiagnostic": "Commands with --quiet or --passive should be run elevated from the beginning.",
+  "processContext": {
+    "isAdminAccount": true,
+    "isElevated": false
+  },
+  "diagnosis": "The corrected command was parsed and selected the intended component, but Visual Studio Installer rejected unattended execution because the initiating process was not elevated. No SDK package installation was performed.",
+  "evidence": {
+    "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-001-sdk-install/vs-installer.log",
+    "sha256": "8c925f091513f06f96e291ecdca67bdfba6d3654e1bfd2ea72eec659841b521c",
+    "lengthBytes": 2948
+  },
+  "postFailureState": {
+    "windowsKits10RootExists": false,
+    "selectedComponentInstalled": false,
+    "sdkFrozen": false,
+    "nativeBuildStarted": false,
+    "unityKnownAnswerStarted": false,
+    "d3V3Qualified": false
+  },
+  "repairDisposition": {
+    "failureEvidenceRetained": true,
+    "sourceOrPriorEvidenceOverwritten": false,
+    "qualificationCriteriaRelaxed": false,
+    "fallbackMetricUsed": false,
+    "utf8PolicyRemoved": false,
+    "warningsAsErrorsPolicyRemoved": false,
+    "nextRepair": "Use an installer-supported interactive/elevation-service path or a verifiably equivalent exact-SDK deployment path; do not bypass UAC or change security settings."
+  },
+  "scientificBoundary": {
+    "qualificationRunnerModified": false,
+    "outputSchemaModified": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

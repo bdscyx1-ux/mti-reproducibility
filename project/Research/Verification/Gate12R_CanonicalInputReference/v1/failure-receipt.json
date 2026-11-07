@@ -1,0 +1,19 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-canonical-reference-unit-failure-v1",
+    "failedAtUtc":  "2026-10-07T14:49:35.7037249Z",
+    "message":  "System.Management.Automation.MethodInvocationException: Exception calling \"Replace\" with \"3\" argument(s): \"The path is not of a legal form.\" ---\u003e System.ArgumentException: The path is not of a legal form.\r\n   at System.IO.Path.NewNormalizePath(String path, Int32 maxPathLength, Boolean expandShortPaths)\r\n   at System.IO.Path.NormalizePath(String path, Boolean fullCheck, Int32 maxPathLength, Boolean expandShortPaths)\r\n   at System.IO.Path.GetFullPathInternal(String path)\r\n   at System.IO.File.InternalReplace(String sourceFileName, String destinationFileName, String destinationBackupFileName, Boolean ignoreMetadataErrors)\r\n   at CallSite.Target(Closure , CallSite , Type , String , String , Object )\r\n   --- End of inner exception stack trace ---\r\n   at System.Management.Automation.ExceptionHandlingOps.CheckActionPreference(FunctionContext funcContext, Exception exception)\r\n   at System.Management.Automation.Interpreter.ActionCallInstruction`2.Run(InterpretedFrame frame)\r\n   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)\r\n   at System.Management.Automation.Interpreter.EnterTryCatchFinallyInstruction.Run(InterpretedFrame frame)\r\n   at System.Management.Automation.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at System.Management.Automation.Interpreter.LightLambda.RunVoid1[T0](T0 arg0)\r\n   at System.Management.Automation.PSScriptCmdlet.RunClause(Action`1 clause, Object dollarUnderbar, Object inputToProcess)\r\n   at System.Management.Automation.PSScriptCmdlet.DoEndProcessing()\r\n   at System.Management.Automation.CommandProcessorBase.Complete()",
+    "checks":  [
+                   {
+                       "name":  "attempt2-preservation-present",
+                       "passed":  true,
+                       "evidence":  "H:\\DDM_Final_Project\\Research\\Gate12R_PilotAttempt2_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "name":  "attempt2-partial-manifest-still-frozen",
+                       "passed":  true,
+                       "evidence":  "attempt2 partial-output-manifest SHA-256"
+                   }
+               ],
+    "passed":  false
+}

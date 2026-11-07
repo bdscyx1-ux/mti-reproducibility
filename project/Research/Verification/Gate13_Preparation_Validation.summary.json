@@ -1,0 +1,166 @@
+{
+    "schemaVersion":  1,
+    "validationId":  "gate13-nonexecuting-preparation-validation-v1",
+    "savedAt":  "2026-10-06T11:39:55.2835026+08:00",
+    "projectPath":  "H:\\DDM_Final_Project",
+    "configSha256":  "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874",
+    "amendmentSha256":  "1ccf5c6e1e2c646d160e7b597381c797cc14e6123134a28b429fcb773515e8b2",
+    "powerShellFileCount":  49,
+    "powerShellParseErrors":  [
+
+                              ],
+    "jsonFileCount":  1484,
+    "jsonParseErrors":  [
+
+                        ],
+    "bundle":  {
+                   "passed":  true,
+                   "errors":  [
+
+                              ],
+                   "fileCount":  57,
+                   "artifactCount":  56,
+                   "manifestSha256":  "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+                   "orderedAggregateSha256":  "91d9e3c66327185e48f68cafb05c674cc49e929adb576973098d0bfebd2e9a88"
+               },
+    "baselineChecked":  24,
+    "baselineMismatches":  [
+
+                           ],
+    "gate12V1FileCount":  1694,
+    "gate12KeyChecks":  [
+                            {
+                                "relativePath":  "Research/PilotRuns/Gate12/v1/pilot-manifest.json",
+                                "expectedSha256":  "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a",
+                                "actualSha256":  "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a",
+                                "matches":  true
+                            },
+                            {
+                                "relativePath":  "Research/PilotRuns/Gate12/v1/candidate-sample-sizes.json",
+                                "expectedSha256":  "e0a32ee0545f722e46eb6c2a995f869db73944321be525e492c0dce6f3c05ff3",
+                                "actualSha256":  "e0a32ee0545f722e46eb6c2a995f869db73944321be525e492c0dce6f3c05ff3",
+                                "matches":  true
+                            },
+                            {
+                                "relativePath":  "Research/PilotRuns/Gate12/v1/budget-feasibility.json",
+                                "expectedSha256":  "5d1c380061deb2dd4c31f5b01fa48e7665eb405699ce67e1cfdc2b33a87f5f69",
+                                "actualSha256":  "5d1c380061deb2dd4c31f5b01fa48e7665eb405699ce67e1cfdc2b33a87f5f69",
+                                "matches":  true
+                            },
+                            {
+                                "relativePath":  "Research/Verification/Gate12_FinalAudit.summary.json",
+                                "expectedSha256":  "87a5d93dead6dc367ab0716ad2e4e2239570fc42577be978d0f0378ca14f78c8",
+                                "actualSha256":  "87a5d93dead6dc367ab0716ad2e4e2239570fc42577be978d0f0378ca14f78c8",
+                                "matches":  true
+                            }
+                        ],
+    "childValidationResults":  [
+                                   {
+                                       "label":  "deterministic-config-check-only",
+                                       "exitCode":  0,
+                                       "passed":  true,
+                                       "outputTail":  [
+                                                          "{",
+                                                          "    \"schemaVersion\":  1,",
+                                                          "    \"mode\":  \"validation-only\",",
+                                                          "    \"outputPath\":  \"H:\\\\DDM_Final_Project\\\\Research\\\\Gate13_Formal_Campaign_Config.v1.json\",",
+                                                          "    \"exists\":  true,",
+                                                          "    \"canonicalBytesMatch\":  true,",
+                                                          "    \"canonicalSha256\":  \"b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874\",",
+                                                          "    \"campaignCount\":  74,",
+                                                          "    \"expectedUnityProcessCount\":  15056,",
+                                                          "    \"formalCampaignStartAllowed\":  false,",
+                                                          "    \"passed\":  true",
+                                                          "}"
+                                                      ]
+                                   },
+                                   {
+                                       "label":  "top-level-orchestrator-validation-only",
+                                       "exitCode":  0,
+                                       "passed":  true,
+                                       "outputTail":  [
+                                                          "                      \"failedChecks\":  [",
+                                                          "",
+                                                          "                                       ],",
+                                                          "                      \"passed\":  true",
+                                                          "                  },",
+                                                          "    \"executionAuthorizationValidated\":  false,",
+                                                          "    \"executionAttempted\":  false,",
+                                                          "    \"outputCreated\":  false,",
+                                                          "    \"launchAuthorizationConferred\":  false,",
+                                                          "    \"passed\":  true",
+                                                          "}",
+                                                          "Gate 13 validation-only checks passed; no formal root or Unity process was created."
+                                                      ]
+                                   },
+                                   {
+                                       "label":  "cap-148-scenario-validation-only",
+                                       "exitCode":  0,
+                                       "passed":  true,
+                                       "outputTail":  [
+                                                          "    \"comparisonCohortId\":  \"per-agent-heterogeneous-goal-v1\",",
+                                                          "    \"blockCount\":  148,",
+                                                          "    \"sampleCount\":  296,",
+                                                          "    \"canonicalScheduleSha256\":  \"5071bf40692ecb703d6f39f64907cfe9ff8c864194c5ed8519a3372d2a88314d\",",
+                                                          "    \"scenarioSourceSha256\":  \"60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc\",",
+                                                          "    \"outputDirectory\":  \"H:\\\\DDM_Final_Project\\\\Research\\\\FormalRuns\\\\Gate13\\\\v1\\\\campaigns\\\\c002-core-r01-s1-hetero-pa2\",",
+                                                          "    \"formalRootExists\":  false,",
+                                                          "    \"unityInvoked\":  false,",
+                                                          "    \"outputCreated\":  false,",
+                                                          "    \"formalCampaignStartAllowed\":  false,",
+                                                          "    \"passed\":  true",
+                                                          "}"
+                                                      ]
+                                   }
+                               ],
+    "staticSafetyChecks":  {
+                               "explicitParameterSets":  true,
+                               "authorizationBeforeLaunchPreflight":  true,
+                               "launchPreflightImmediatelyBeforeRootCreation":  true,
+                               "noAutomaticRetry":  true,
+                               "noAutomaticResume":  true,
+                               "rawByteThresholdExact":  true
+                           },
+    "formalTrueJsonFiles":  [
+
+                            ],
+    "executionAuthorizationReceiptFiles":  [
+
+                                           ],
+    "formalRootPresentBefore":  false,
+    "formalRootPresentAfter":  false,
+    "unityProcessIdsBefore":  [
+
+                              ],
+    "unityProcessIdsAfter":  [
+
+                             ],
+    "unityLockfilePresentBefore":  false,
+    "unityLockfilePresentAfter":  false,
+    "checks":  {
+                   "allResearchPowerShellParses":  true,
+                   "allResearchJsonParses":  true,
+                   "configDeterministicAndHashBound":  true,
+                   "gate11RetainedBundleUnchanged":  true,
+                   "originalBaseline24Of24":  true,
+                   "gate12SuccessfulV1Unchanged":  true,
+                   "gate12ArchivedPreflightsPass":  true,
+                   "gate13UnitTests60Of60":  true,
+                   "gate12Regression63Of63":  true,
+                   "gate13AmendmentAuditPasses":  true,
+                   "validationOnlyChildrenPass":  true,
+                   "staticAuthorizationPreflightOrderPasses":  true,
+                   "noFormalTrueJson":  true,
+                   "noExecutionReceiptCreated":  true,
+                   "noFormalRootBeforeOrAfter":  true,
+                   "noUnityBeforeOrAfter":  true,
+                   "noUnityLockBeforeOrAfter":  true
+               },
+    "failedChecks":  [
+
+                     ],
+    "errors":  [
+
+               ],
+    "passed":  true
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "gate14re-mq-formal-supervisor-process-identity-fix-receipt-v2_2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "PASS_MINIMAL_PROSPECTIVE_PROCESS_IDENTITY_ACQUISITION_AND_FRESH_TARGET_READINESS_FIX",
+  "completedAtUtc": "2026-10-21T17:34:26.2039940+00:00",
+  "authorizationRelativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/supervisor-process-identity-corrigendum-v2_2-attempt-001/user-authorization-receipt.v2_2.json",
+  "authorizationSha256": "407f7474458cadece4c0c008016f1639a97b46832e900aa2a787a77c8d954420",
+  "failedAttempt002": {
+    "terminalRelativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-002/terminal-receipt.v2.json",
+    "terminalSha256": "66c19952223b9111f48a61055c5f13794e531059170e2ae1ed582c0aa03513e1",
+    "failureRelativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-002/failure-receipt.v2.json",
+    "failureSha256": "f984df0930d7251f0f98a99f160ef5f9f86382f26e3d7dd3596dc01f630d3c2d",
+    "sealRelativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-002/failure-seal-manifest.v2.json",
+    "sealSha256": "dd9217cc50f880f5ac4b8741a93224e7700c5ded2cdfa42b640e34156c43a617"
+  },
+  "supervisorRepair": {
+    "previousRelativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/Run-Gate14ReMQFormalCollection.v2_1.ps1",
+    "previousSha256": "42f2e58639f93458021293798460df0cefe2cfd0d6ce2e66b9f205573c049bbe",
+    "repairedRelativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/Run-Gate14ReMQFormalCollection.v2_2.ps1",
+    "repairedSha256": "61b717834f820e564e62883281b0bdb76ca63d5119d1ef361dda506823cea3cd",
+    "changedFunctionBlocks": [
+      "Get-ProcessIdentity"
+    ],
+    "identityPollTimeoutMilliseconds": 10000,
+    "identityPollIntervalMilliseconds": 100,
+    "requiredNonemptyFields": [
+      "ExecutablePath",
+      "CommandLine",
+      "CreationDate"
+    ],
+    "requiredIdentityBindings": [
+      "launched PID",
+      "Unity executable",
+      "formal runner method",
+      "fresh measured root",
+      "creation time"
+    ],
+    "processMustRemainAliveWhilePolling": true,
+    "incompleteIdentityAccepted": false,
+    "explicitTimeoutFailure": true,
+    "existingEmptySetCountFixRetained": true,
+    "sameAttemptRetryOrResumeAdded": false
+  },
+  "readinessRepair": {
+    "previousRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQFormalReadinessV2.cs",
+    "previousSha256": "e42d2987146e7d037c72ca5e843c7df4b84ac6bbdd6ede87345dbe783378337b",
+    "repairedRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQFormalReadinessV2_1.cs",
+    "repairedSha256": "622a8510a0aba7405f8b7da6d010b88778a560717f3469e87a09f4681d8e3fc5",
+    "entryPoint": "DDM.Research.Editor.Gate14ReMQFormalReadinessV2_1.Run",
+    "scope": "replace the obsolete requirement that the entire formal-v2 parent be absent with a fail-closed check that the explicitly named successor attempt root is absent and uses the reserved attempt-N namespace",
+    "nextEligibleMeasuredRoot": "Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003",
+    "existingFailedRootsRemainReadOnly": true,
+    "algorithmFree": true
+  },
+  "scope": {
+    "scientificDesignChanged": false,
+    "scheduleChanged": false,
+    "algorithmChanged": false,
+    "metricsChanged": false,
+    "sampleSizeChanged": false,
+    "selectedB": 36,
+    "matchedBlocks": 36,
+    "lanesPerBlock": 16,
+    "freshUnityProcesses": 864,
+    "strictSerial": true,
+    "maximumConcurrentMeasuredUnityProcesses": 1,
+    "formalAnalysisAuthorized": false,
+    "stAuthorized": false,
+    "mtAuthorized": false
+  },
+  "firstEligibleSuccessorAttempt": 3,
+  "automaticSuccessorCollectionAuthorizedAfterAllGatesPass": true
+}

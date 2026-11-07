@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-resource-preflight-receipt-v1",
+  "studyId": "Gate14Re",
+  "attempt": "resource-preflight-attempt-001",
+  "status": "PASS",
+  "completedAtLocal": "2026-10-15T02:15:13.0806251+08:00",
+  "scope": "N512_instantiation_and_rendering_without_M1_M4_summary",
+  "scenario": {
+    "conditionId": "C07",
+    "scenarioId": "core-r07-s1-shared",
+    "path": "Research/FormalScenarios/v1/Scenarios/core-r07-s1-shared.scenario.json",
+    "sha256": "34f206248d0c563c4a2bc8bf7d0cb9a1a86b1e53d345a19968776911b5a07692"
+  },
+  "ownedProcess": {
+    "pid": 27976,
+    "creationUtc": "2026-10-14T18:12:26.1843527Z",
+    "exitCode": 0,
+    "peakPrivateBytes": 356077568
+  },
+  "gates": {
+    "unitCount": 512,
+    "unitsWithEnabledRenderer": 512,
+    "renderedFrameCount": 600,
+    "gridVisualRevisionMatched": true,
+    "m1ThroughM5SummaryProduced": false,
+    "frameTimeOrFpsSummaryProduced": false,
+    "rankingWinnerOrSuperiorityProduced": false,
+    "formalObservationProduced": false,
+    "formalPhaseAStarted": false
+  },
+  "markerSha256": "ecad62362316d13f0f9080b2f53a7b622e2ad4c169d97ab9043ed7cb29c01cb5",
+  "playerLogSha256": "28f6a2c658a5c19fa4e906d3d92d974008ab87e8394a5115e2340756eded7f7a"
+}

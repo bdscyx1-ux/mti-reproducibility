@@ -1,0 +1,100 @@
+{
+  "schema": "gate14re-me-nonexecuting-scientific-freeze-readiness-checkpoint-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "PASS_SCIENTIFIC_PROTOCOL_AND_RAW_DELIVERY_HARD_GATE_FROZEN_COLLECTION_NOT_READY_NOT_AUTHORIZED",
+  "exactBindings": [
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Scientific_Freeze_Authorization.v1.json",
+      "sha256": "ecc04686ac7f243d3a7c603a44c4675bcf81002f3d8af3255160200dc81490b6"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v1.md",
+      "sha256": "af7527b9c58ff0cd8af59fd9acd4fcdd08b5c4dc8f9241c2eccf7496e01a3f43"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+      "sha256": "9736b16601cc8c89166d65a78ff466114ad6affb57f8be2c9df59a5ddfce22f8"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v1.json",
+      "sha256": "02b8c5edc1d6c8604dbd1816d99ee4616ac2814d6198e0cee273d031fee60e7f"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v1.json",
+      "sha256": "66eb4bc493236394784d146c6e82c2f4cdd1b4bfaf684a2b202b7f7b939503b9"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Status.v1.json",
+      "sha256": "d43cc2fdb5f35b7936efa1741f8db0957a3f9444bf0a4910e9ef748a5c45e908"
+    },
+    {
+      "path": "Research/Validate-Gate14ReMEDesignV1.py",
+      "sha256": "ca394b67b6b452536f5e978806419eff62e4af662677f082b2d34b4ee515513c"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001/validation-receipt.v1.json",
+      "sha256": "a93afee95aab95b18a860999176cd38c1d350a7cca298f6dcdde899370b5260c"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001/nonexecuting-design-manifest.v1.json",
+      "sha256": "8a2e7926359bd6085ff2c1937cae5292ffb59ba1b01d7b9ec595472bce7b8683"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001/canonical-tree.v1.jsonl",
+      "sha256": "f2523ee164a377d872f546500cf24ae4f0097b50422bb2737ab42b408cab5f47"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001/scientific-freeze-receipt.v1.json",
+      "sha256": "e70c2d89e2717cb84f2111f973c63170995eadf5a5d17cd2df523fd03055ba6f"
+    }
+  ],
+  "checks": {
+    "explicitUserFreezeAuthorization": "PASS",
+    "sixNamedAlgorithmsIncludingBiAStarRAndLPAStar": "PASS",
+    "fortyEightStructuralCells": "PASS",
+    "sixTreatmentWilliamsBalance": "PASS",
+    "sevenDomainsAndFourOfSevenMajorityRule": "PASS",
+    "thirtyFiveIDFFComparatorContrastFamily": "PASS",
+    "noRanking": "PASS",
+    "noWinnerAdjudication": "PASS",
+    "noWeightedComposite": "PASS",
+    "completePerObservationRawDeliveryHardCondition": "PASS",
+    "sampleRunAndOperationEventGranularity": "PASS",
+    "immutableRawAndDerivedDeliverySeparation": "PASS",
+    "longWideTraceDictionaryProvenanceManifestAndChecksums": "PASS",
+    "failedVoidedAndReplacementSourceRowsRetained": "PASS",
+    "aggregationOnlyDeliveryForbidden": "PASS",
+    "formalRawCommitBlockedWithoutDeliveryReceipt": "PASS",
+    "formalAnalysisBlockedWithoutDeliveryReceipt": "PASS",
+    "minimumPracticalEffectsAndFinalBNotInvented": "PASS",
+    "precollectionParameterAmendmentProtocolFrozen": "PASS",
+    "noMeasuredRoot": "PASS",
+    "noAnalysisRoot": "PASS",
+    "noExportRoot": "PASS",
+    "noPriorObservationAccess": "PASS",
+    "outcomeFreeValidation99Checks": "PASS"
+  },
+  "readiness": {
+    "scientificProtocolVersionFrozen": true,
+    "rawDataDeliveryHardGateFrozen": true,
+    "precollectionParameterProtocolFrozen": true,
+    "minimumPracticallyImportantEffectsReady": false,
+    "finalBReady": false,
+    "sixAlgorithmSourceAndFairnessHashBindingReady": false,
+    "executionImplementationReady": false,
+    "outputSchemaExporterAndStructuralValidatorReady": false,
+    "syntheticEndToEndDeliveryImplementationValidated": false,
+    "resourceAndLivePreflightReady": false,
+    "formalMeasuredRootMayBeCreated": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  },
+  "nextPermittedStageOnlyAfterNewUserAuthorization": "precollection parameter amendment and/or outcome-independent implementation; either path must stop again before formal input draw, measured-root creation, or collection unless those later actions receive separate explicit authorization",
+  "result": "PASS"
+}

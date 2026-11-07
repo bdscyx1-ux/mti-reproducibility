@@ -1,0 +1,64 @@
+{
+  "schema": "gate14re-me-status-v17",
+  "studyId": "Gate14Re-ME",
+  "status": "UNITY_EXECUTABLE_TRUSTED_LAUNCH_IDENTITY_RULE_FROZEN_OFFLINE_ADJUDICATION",
+  "version": 17,
+  "updatedAtUtc": "2026-10-17T10:53:21.979157Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v16.json",
+    "lengthBytes": 1447,
+    "sha256": "6e7b993b64fccc114038bf70b56721ed2c0568c454d2a90852d9d5eeabaa9d1e",
+    "retained": true,
+    "status": "UNITY_EXECUTABLE_IDENTITY_RULE_REPAIR_FAILED_CLOSED"
+  },
+  "attempt004": {
+    "authorizationId": "gate14re-me-unity-executable-identity-rule-repair-attempt-004",
+    "status": "FAILED_CLOSED_UNITY_EXECUTABLE_IDENTITY_RULE_REPAIR",
+    "classification": "NOT_ADJUDICATED",
+    "retainedUnchanged": true,
+    "reclassified": false,
+    "evidenceFileCount": 34,
+    "evidenceInventoryDigestSha256": "cc345167106631a73b437ead78acc315856851c25ee100937daf13b1e02fa10c"
+  },
+  "offlineEvidenceAdjudication": {
+    "authorizationId": "gate14re-me-unity-executable-identity-rule-offline-evidence-adjudication-attempt-005",
+    "status": "PASS_TRUSTED_LAUNCH_IDENTITY_RULE_FROZEN_BY_OFFLINE_ADJUDICATION",
+    "classification": "EXTERNAL_COMPOSITE_IDENTITY_AUTHORITATIVE_IN_PROCESS_READS_DIAGNOSTIC",
+    "unityInvocationCount": 0,
+    "trustedRuleRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+    "trustedRuleSha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/terminal-receipt.v1.json",
+    "terminalReceiptSha256": "ab522787fba973f3441e4d32a2de97244a8b44540f74017d4d15d000af1253db",
+    "automaticToolRepairCycleCount": 1
+  },
+  "scientificBoundary": {
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "authorizationState": {
+    "offlineIdentityEvidenceAdjudicationAuthorizationConsumed": true,
+    "trustedLaunchIdentityRuleFrozen": true,
+    "schemaCompatibilitySelfCheckAuthorized": false,
+    "qualificationPlanningAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "inputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize the next minimum stage. The frozen trusted launch-identity rule may be consumed by a future expressly authorized Unity stage, but attempt-005 itself authorizes no Unity launch or scientific qualification activity."
+}

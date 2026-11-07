@@ -1,0 +1,78 @@
+{
+  "schema": "gate14re-mq-cff-idff-engineering-qualification-contract-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "status": "FROZEN_BEFORE_ENGINEERING_QUALIFICATION_EXECUTION",
+  "prerequisite": {
+    "gate13rStatus": "PASS_GATE13R_MQ_CORRECTNESS_DETERMINISM_AFFINITY_ISOLATION_FAIL_CLOSED",
+    "externalFreezeReceiptRelativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/external-freeze-receipt.v1.json",
+    "externalFreezeReceiptSha256": "6b67f820b5c841d99ec915a2966a24bb48535047753fa95fe828cc0343718814"
+  },
+  "scope": "engineering-runtime-qualification-only-not-powered-or-randomized-formal-MQ-experiment",
+  "technicalCorpus": {
+    "sourceInputCount": 8,
+    "lanesPerBatch": 16,
+    "replicasPerSourceInput": 2,
+    "eventGroupsPerLane": 24,
+    "formalSample": false
+  },
+  "conditionsPerAlgorithm": [
+    "LARGE_L3_CCD:ST-direct",
+    "LARGE_L3_CCD:MQ-1",
+    "LARGE_L3_CCD:MQ-2",
+    "LARGE_L3_CCD:MQ-4",
+    "LARGE_L3_CCD:MQ-8",
+    "HIGH_FREQUENCY_CCD:ST-direct",
+    "HIGH_FREQUENCY_CCD:MQ-1",
+    "HIGH_FREQUENCY_CCD:MQ-2",
+    "HIGH_FREQUENCY_CCD:MQ-4",
+    "HIGH_FREQUENCY_CCD:MQ-8",
+    "DUAL_CCD_BALANCED:MQ-8-4-plus-4",
+    "DUAL_CCD_BALANCED:MQ-16-8-plus-8"
+  ],
+  "algorithms": [
+    "C-FF",
+    "IDFF"
+  ],
+  "batchCount": 24,
+  "timingBoundary": {
+    "executorLaneWall": "includes-private-input-deserialization-workload-and-result-fingerprint",
+    "workloadWall": "explicit-workloadStartUtc-to-workloadEndUtc-inside-performance-kernel",
+    "initialization": "planner-Initialize-only",
+    "query": "planner-Plan-only",
+    "repair": "grid-ApplyChanges-plus-planner-ApplyChanges",
+    "eventGroup": "all-partition-repairs-plus-all-post-event-queries",
+    "oracleInsideMeasuredWorkload": false,
+    "fullFieldHashInsideMeasuredWorkload": false
+  },
+  "reportedEngineeringEndpoints": [
+    "batch-wall-time",
+    "process-cpu-time",
+    "worker-thread-cpu-time",
+    "end-to-end-lane-throughput",
+    "end-to-end-query-throughput",
+    "outer-lane-wall-p50-p95-p99-max",
+    "workload-wall-p50-p95-p99-max",
+    "query-wall-p50-p95-p99-max",
+    "repair-wall-p50-p95-p99-max",
+    "initialization-wall-p50-p95-p99-max",
+    "managed-allocation"
+  ],
+  "hardPassRequirements": [
+    "all-batches-complete",
+    "all-lanes-complete",
+    "no-budget-exceeded-invalid-failed-or-cancelled-query",
+    "all-repairs-succeed",
+    "IDFF-never-queryable-with-repair-pending",
+    "terminal-semantic-digest-exactly-invariant-across-all-conditions-within-algorithm-and-input",
+    "hard-affinity-remains-observed",
+    "input-source-hashes-remain-bound"
+  ],
+  "interpretationProhibitions": [
+    "formal-effect-estimation",
+    "winner-ranking",
+    "formal-hypothesis-test",
+    "automatic-formal-MQ-design-freeze",
+    "reuse-as-formal-MQ-observations"
+  ],
+  "failurePolicy": "fail-closed-preserve-attempt-no-retry-no-replacement-no-top-up"
+}

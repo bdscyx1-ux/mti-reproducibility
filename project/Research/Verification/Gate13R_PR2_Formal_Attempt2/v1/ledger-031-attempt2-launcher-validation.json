@@ -1,0 +1,24 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 attempt 2 one-shot independent launcher parser and parameter-binding validation",
+  "command": "Start-Gate13RPR2Attempt2FormalV1.ps1 parsed under native Windows PowerShell 5.1 and active PowerShell; BindingSmokeOnly under native Windows PowerShell 5.1",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "gate_tokens": [
+    "ONE-SHOT-LAUNCHER-V1",
+    "WINDOWS-POWERSHELL-5.1-PARSER-PASSED",
+    "ACTIVE-POWERSHELL-PARSER-PASSED",
+    "WINDOWS-POWERSHELL-5.1-BINDING-SMOKE-PASSED",
+    "INDEPENDENT-HIDDEN-PROCESS",
+    "EXACT-NATIVE-PSMODULEPATH",
+    "NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "input_sha256": {
+    "Start-Gate13RPR2Attempt2FormalV1.ps1": "76fb838efdcaa62f9847de90e1424d1862dadbdd0d871328c9c4960325a4e2d0",
+    "Gate13R_PR2_Formal_Execution_Receipt.v2.json": "a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e",
+    "Verification/Gate13R_PR2_Formal_Attempt2/v1/ReceiptValidationAttempt1/summary.json": "306aa5e0cdeeadc0a1123258cc54656119ef6929bbb311578e6152b5c60aa560"
+  }
+}

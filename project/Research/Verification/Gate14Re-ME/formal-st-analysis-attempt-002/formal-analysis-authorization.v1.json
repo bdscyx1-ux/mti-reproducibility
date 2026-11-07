@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "AUTHORIZED_FORMAL_ST_ANALYSIS_ATTEMPT_002",
+  "authorizationSource": {
+    "userVerbatim": "授权准备兼容运行时的 attempt-002",
+    "userVerbatimSha256": "2c3df42432624c5c4878f526f16e4bcf92a082efc2273cff3a87ef92d529822f",
+    "scope": "PREPARE_AND_FREEZE_ATTEMPT_002_ONLY_PENDING_EXACT_COMMAND_CONFIRMATION"
+  },
+  "originalFormalAnalysisAuthorization": {
+    "userVerbatim": "授权formal analysis",
+    "userVerbatimSha256": "4806d0bb54b44461e8c7e4ac45cde5febdf15d18adb40043c407f927c49fc9bc"
+  },
+  "predecessorAttempt": {
+    "attempt": "formal-st-analysis-attempt-001",
+    "status": "FAIL_CLOSED_BEFORE_FORMAL_OBSERVATIONS_READ",
+    "externalFailureObservationSha256": "d7484ce283386c7869c1eec33f54bd178a13f11fd90fbdbedd891d3d86143c79",
+    "failureReceiptSha256": "65d5ede4e19988cf6388d7810d17ca6ef38b5b325efd2462ed80808e98259e7f",
+    "mustRemainUnchanged": true,
+    "retryAttempt001Authorized": false
+  },
+  "sourceAcceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "scope": {
+    "frozenConfirmatoryAnalysisAuthorized": true,
+    "frozenSecondaryDescriptiveReportingAuthorized": true,
+    "frozenExploratoryFifteenPairMatricesAuthorized": true,
+    "estimateIntervalPValueAndMipeReportingAuthorized": true,
+    "preRegisteredFourOfSevenAdjudicationAuthorized": true,
+    "runtimeCompatibilityCorrectionAuthorized": true,
+    "evidenceBindingRevisionAuthorized": true,
+    "sourceMutationAuthorized": false,
+    "scientificDesignModificationAuthorized": false
+  },
+  "runtimeCorrectionBoundary": {
+    "fromPythonVersion": "3.14.7",
+    "toPythonVersion": "3.12.14",
+    "reason": "frozen PyArrow 25.0.1 native extension ABI is cp312",
+    "statisticalMethodModificationAuthorized": false
+  },
+  "rankingOrWinnerAuthorized": false,
+  "aggregateScoreAuthorized": false,
+  "mqAuthorized": false,
+  "mtAuthorized": false,
+  "retryPolicy": "FAIL_CLOSED_NO_AUTOMATIC_RETRY",
+  "exactCommandConfirmationRequiredBeforeFormalObservationsAreRead": true,
+  "exactCommandConfirmedByThisReceipt": false,
+  "formalObservationsReadByThisReceipt": false,
+  "createdAtUtc": "2026-10-30T12:23:36.170Z"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-attempt2-exact-stale-unity-lock-cleanup-receipt-v1",
+  "cleanedAtUtc": "2026-10-09T02:38:06.6003498Z",
+  "cleanedAtAsiaShanghai": "2026-10-09T10:38:06.6003498+08:00",
+  "status": "EXACT-STALE-LOCK-REMOVED / ATTEMPT-DISPOSITION-UNCHANGED / UNITY-NOT-STARTED",
+  "removedExactPath": "H:\\DDM_Final_Project\\Temp\\UnityLockfile",
+  "removedBytes": 0,
+  "removedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "preCleanupEvidence": {
+    "relativePath": "Research/Gate13R_PR2_Attempt2_Stale_Lock_PreCleanup_Evidence.v1.json",
+    "sha256": "6d4317c90fb09532de173ba46771078e684c861972d92b545195a108342f49cb"
+  },
+  "cleanupImplementation": {
+    "relativePath": "Research/Remove-Gate13RPR2Attempt2StaleLockV1.ps1",
+    "sha256": "c8b4410f7ab5c2de1651dd3387be7f3a118e138160cf8cf9bf1fadebbc0206a2",
+    "windowsPowerShell51ParserPassed": true,
+    "validationOnlyPassedBeforeDelete": true
+  },
+  "postCleanup": {
+    "lockAbsent": true,
+    "unityProcessCount": 0,
+    "attempt2OrchestratorAlive": false,
+    "failedRootFileCount": 28020,
+    "failedRootRawBytes": 8536611302,
+    "failedRootNotReadOnlyCount": 0,
+    "failedRootCanonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "failedRootHashUnchanged": true
+  },
+  "attempt2Disposition": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / EXCLUDED-FROM-FORMAL-ANALYSIS",
+  "unityExecutionAuthorized": false,
+  "attempt3Authorized": false,
+  "formalAnalysisAuthorized": false,
+  "gate14RAuthorized": false
+}

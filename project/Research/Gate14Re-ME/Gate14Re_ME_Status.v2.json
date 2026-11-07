@@ -1,0 +1,99 @@
+{
+  "schema": "gate14re-me-status-v2",
+  "studyId": "Gate14Re-ME",
+  "version": 2,
+  "createdLocalDate": "2026-10-17",
+  "status": "NONEXECUTING_V2_SCIENTIFIC_FREEZE_LOAD_QUALIFICATION_GATE_FROZEN_EXECUTION_NOT_AUTHORIZED",
+  "scope": "v1 six-algorithm multi-endpoint design and complete raw-delivery gate, augmented by a mandatory anonymous precollection load qualification gate",
+  "authorizationId": "gate14re-me-load-qualification-freeze-attempt-001",
+  "freezeAttempt": "Research/Verification/Gate14Re-ME/precollection-load-qualification-freeze-attempt-001",
+  "v1Preservation": {
+    "v1ArtifactsModified": false,
+    "v1ScientificDesignSuperseded": false,
+    "v1EndpointDictionaryStillNormative": true,
+    "v1DataDeliveryContractStillNormative": true
+  },
+  "newFrozenArtifacts": [
+    "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Freeze_Authorization.v1.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Protocol.v1.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v2.md",
+    "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v2.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v2.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_Status.v2.json",
+    "Research/Validate-Gate14ReMELoadQualificationFreezeV1.py"
+  ],
+  "loadQualificationSnapshot": {
+    "requiredBeforeFormalInputDrawMeasuredRootObservationAndFinalB": true,
+    "corePilotSuperblocks": 144,
+    "highCornerStressSuperblocks": 18,
+    "totalPilotSuperblocks": 162,
+    "freshAlgorithmProcesses": 972,
+    "emptyBoundaryFreshProcesses": 12,
+    "emptyBoundaryRawIterations": 12000,
+    "expectedAlgorithmEventGroupRows": 23328,
+    "independentUnit": "pilot input superblock",
+    "anonymousLaneCount": 6,
+    "algorithmNeutralGeometryQualification": true,
+    "measurementFloorGate": true,
+    "coverageGate": true,
+    "withinLaneDynamicRangeGate": true,
+    "resourceCeilingGate": true,
+    "completePerObservationQualificationDataRequired": true,
+    "requiredPassStatus": "PASS_LOAD_QUALIFICATION",
+    "failureStatus": "FAIL_CLOSED_LOAD_QUALIFICATION"
+  },
+  "unchangedDesignSummary": {
+    "algorithms": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF", "IDFF"],
+    "primaryStructuralCells": 48,
+    "primaryEndpointDomains": 7,
+    "majoritySupportMinimumDomains": 4,
+    "confirmatoryContrastCount": 35,
+    "ranking": false,
+    "weightedComposite": false,
+    "winnerAdjudication": false,
+    "finalB": null
+  },
+  "rootAndObservationState": {
+    "qualificationRootExists": false,
+    "formalMeasuredRootExists": false,
+    "formalAnalysisRootExists": false,
+    "formalExportRootExists": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "UnityProcessCount": 0,
+    "priorGate14ReObservationsReadOrReused": false,
+    "excludedGate14ReTB2ObservationsReadOrReused": false
+  },
+  "pendingBeforeQualificationExecution": [
+    "outcome-independent implementation",
+    "six-algorithm source/specification/fairness hash binding",
+    "reference-oracle source and executable hash binding",
+    "instrument and raw-delivery known-answer validation",
+    "exact timeout, memory and storage ceilings",
+    "separate user authorization for qualification input generation, root creation, compile and Unity execution"
+  ],
+  "pendingAfterQualificationPass": [
+    "minimum practically important effects by domain",
+    "final B as a positive multiple of 36",
+    "final planned superblock and process cardinalities",
+    "movement-transfer sentinel subset or omission",
+    "separate formal input-draw and collection-launch authorization"
+  ],
+  "authorization": {
+    "v2ScientificFreeze": true,
+    "loadQualificationGateFreeze": true,
+    "qualificationImplementation": false,
+    "qualificationInputGeneration": false,
+    "qualificationRootCreation": false,
+    "compileOrUnityExecution": false,
+    "qualificationExecution": false,
+    "formalInputGeneration": false,
+    "formalMeasuredRootCreation": false,
+    "formalCollection": false,
+    "formalRawCommit": false,
+    "formalAnalysis": false,
+    "ranking": false,
+    "winnerAdjudication": false
+  },
+  "nextRequiredAction": "only after separate user authorization: implement and freeze the outcome-independent qualification machinery and exact resource ceilings; stop again before generating qualification inputs or running Unity unless execution is explicitly authorized"
+}

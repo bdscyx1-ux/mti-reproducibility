@@ -1,0 +1,32 @@
+{
+  "schema": "gate14re-me-formal-st-input-generation-authorization-v5",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "authorizationId": "gate14re-me-formal-st-end-to-end-fc17313b-ad51-4bbc-9999-56c835acd029/input-generation",
+  "status": "AUTHORIZED_FORMAL_INPUT_GENERATION_ONLY",
+  "authorizationSource": {
+    "userScopeSha256": "0dafa5724cdea831a27d8490fc6f6f5df6b1d2815a1bd9ad2328d9f767a50409",
+    "umbrellaAuthorizationRelativePath": "Research/Gate14Re-ME/Package/v5/Authorizations/end-to-end-through-data-package-authorization.v1.json",
+    "derivation": "Preissued child authorization under the user-authorized end-to-end package scope."
+  },
+  "formalInputGenerationAuthorized": true,
+  "formalRootCreationAuthorized": false,
+  "formalCollectionAuthorized": false,
+  "formalAcceptanceExecutionAuthorized": false,
+  "formalAnalysisAuthorized": false,
+  "mqAuthorized": false,
+  "mtAuthorized": false,
+  "outputRootRelativePath": "Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001",
+  "masterSeedHex": "bfe036f32c862ea591df2387346fc1544256b32a25957bba7fc5ab9688c2c674",
+  "masterSeedCommitmentSha256": "71f79bc16850bf63c02b2ce6884b792c47a133d2d9ad0e27e08cc242160d53e5",
+  "identityBindingRelativePath": "Research/Gate14Re-ME/Package/v5/Authorizations/formal-st-algorithm-identity-binding.reused.v5.json",
+  "identityBindingSha256": "2a21042283b1197d2a66d7948aede3623b9c5e71ef2576c9f6534494c086dc5e",
+  "singleUseRules": {
+    "outputRootMustBeFresh": true,
+    "retryInSameAttempt": false,
+    "resumeInSameAttempt": false,
+    "topUpInSameAttempt": false,
+    "formalExecutionStartsFromThisAuthorization": false
+  }
+}

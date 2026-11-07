@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "diagnosisId": "gate13r-36h-v11-lock-unit-root-boundary-diagnosis-v1",
+  "createdAtUtc": "2026-10-08T05:20:00Z",
+  "status": "CONFIRMED-PRE-UNITY-VERIFICATION-DEFECT",
+  "failedAttempt": 11,
+  "failedStage": "lock-hygiene-unit",
+  "cause": "The frozen Run-Gate13R36hLockHygieneUnitV5.ps1 authorizes its official output only under Verification/Gate13R_36h_10pct_4Lane/v5. The v11 verifier correctly supplied its own v11/LockHygieneUnit directory, so the unit runner rejected the output before creating it.",
+  "scientificEffect": "none",
+  "executionBoundary": {
+    "staticUnitCompleted": true,
+    "lockUnitOutputCreated": false,
+    "laneCopiesCreated": false,
+    "unityStarted": false,
+    "pilotStarted": false,
+    "formalCampaignStarted": false
+  },
+  "evidence": {
+    "executionReceiptSha256": "52a1a9dae7515aa01275e8c22fe7a3f56faa3e0201ac0ecf73f23c0ec7608778",
+    "failureReceiptSha256": "56b077069fba99823dfb4b99ea623bea655bd7361de08f2507c1d6c5cf890c4c",
+    "partialManifestSha256": "95697ce5ba2acc4c5dcca5088ea3a46feefac59cd940fe9e17cbfc34133a51fb",
+    "checkpointSha256": "d7cdb246f7e0faeac5131ed1451883a5cdbc78e7385e07917eaae78d68df4ad6",
+    "staticSummarySha256": "6d24432bbc6b6078a5222c5ea25e3b9eed8c47d1ea468ec47be7c21f5c1a9f32",
+    "lockUnitStderrSha256": "b922ba5265de5bc393f6a737756a503a9bd7c4df5df243475d93a2373f63f3bd"
+  },
+  "allowedRepair": "Mechanically derive a new versioned lock-hygiene unit runner from V5, changing only its runner identity, versioned official verification root, versioned pilot-root absence check and summary identity; retain the frozen Gate10R lock module hash and all 14 test semantics.",
+  "prohibitions": [
+    "do not modify or resume v11",
+    "do not broaden the runner to arbitrary output roots",
+    "do not change lock eligibility, cleanup or refusal semantics",
+    "do not create a formal root or run a formal campaign"
+  ]
+}

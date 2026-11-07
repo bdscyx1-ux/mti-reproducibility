@@ -1,0 +1,68 @@
+{
+  "schema": "gate14re-me-d3-v3-preexecution-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-001",
+  "status": "NATIVE_BUILD_ATTEMPTED_FAILED_BEFORE_UNITY",
+  "createdAtUtc": "2026-10-17T06:22:30.6803123Z",
+  "bindings": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Authorization.v1.json",
+      "sha256": "77c1754ef52821c46be752e47675db6483836c2f75b55238f9c7a9eaecf0dec9"
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_Cumulative_Allocation_Qualification_Plan.v1.md",
+      "sha256": "907c60a5ca2695850190c27bc688ea5053aa7da1f533aea748f492b86b4c313b"
+    },
+    {
+      "role": "prospective-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.prospective.v1.json",
+      "sha256": "a72d97113a4089f5d9532c6ac6d4bb817341339e5192afdaad6729a142cd5ff1"
+    },
+    {
+      "role": "native-source",
+      "relativePath": "Research/Gate14Re-ME/Native/v3/Gate14ReMED3AllocationCounterV3.cpp",
+      "sha256": "12c41acc7dc106d314bd71d3bdc1d95e0346cc8467e0a1a1e1b3109093ef2a0d"
+    },
+    {
+      "role": "managed-wrapper",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV1.cs",
+      "sha256": "0fcac01678ec387aa2659543a2b84cba67b58ec97bdbfbc1e84aa77f5f0c3f9c"
+    },
+    {
+      "role": "algorithm-free-known-answer-harness",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V3KnownAnswerRunnerV1.cs",
+      "sha256": "78cfc48b00fa2890f4b17ea6e6de6e7719bab8c57870e5126a40b72d6e71c3f3"
+    },
+    {
+      "role": "native-plugin-import-metadata",
+      "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV3.dll.meta",
+      "sha256": "84702a5d6098fd43c6e1fc2acf2ab6f9a65ee3566d846ee7937f4278b25c47ae"
+    }
+  ],
+  "toolchain": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "clExecutable": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+    "clExecutableSha256": "fe251ef50a1545b1b0835ee17b1e785459712b38d79e45b5c1d3d28970a36619",
+    "linkExecutable": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe",
+    "linkExecutableSha256": "a364af801a8539e4324d9489313dbf001d959128451fc99a27b24676bbac058f",
+    "iUnityInterfaceHeaderSha256": "e23e267b57c049b438307542d62c30fbcd3fa77b6dac3b08842eae0df10b8239",
+    "iUnityProfilerHeaderSha256": "c426b1a3ce74cd470b07833cfbfc64d2df32963a6276022c0ed48715d575be82",
+    "iUnityProfilerCallbacksHeaderSha256": "4a2690c419ef0c9930f57955310d81b3a6fff58ac108dcf7afdaebf15ad7c638"
+  },
+  "unchangedFrozenInputs": {
+    "currentQualificationRunnerSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+    "currentOutputSchemaSha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c",
+    "sixAlgorithmBindingSha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71",
+    "d3V2ContractSha256": "e402dfc90362a3ac07f5342d218f19c67d31d46f82bec584d5d817fbccb9f0bf",
+    "d3V2SourceSha256": "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca"
+  },
+  "preBuildState": {
+    "reservedVerificationRootWasAbsent": true,
+    "nativeBinaryWasAbsent": true,
+    "activeUnityProcesses": 0,
+    "activeCompilerOrLinkerProcesses": 0
+  }
+}

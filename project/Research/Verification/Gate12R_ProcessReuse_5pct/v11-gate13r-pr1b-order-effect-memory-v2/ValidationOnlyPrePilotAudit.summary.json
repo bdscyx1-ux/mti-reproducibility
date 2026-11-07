@@ -1,0 +1,410 @@
+{
+    "schemaVersion":  2,
+    "summaryKind":  "gate13r-pr1b-v2-validation-only-pre-pilot-audit-v1",
+    "savedAtUtc":  "2026-10-08T12:42:06.8614276Z",
+    "pilotPlanSha256":  "105b0aa0ae988cc00194bfd0052a6856aa321821ca8a873b379ff11c83320850",
+    "provenanceSha256":  "9bc4eb46eea708ce9d90c822fc9248bf54ba41b026368e69bbcb8e3f3c7722a2",
+    "telemetryResultSha256":  "b6ffcc4eb2ecefa8a13fddc88d813906850df67a5f6f400e3e16a45460132e8d",
+    "checkCount":  78,
+    "passedCheckCount":  78,
+    "checks":  [
+                   {
+                       "id":  "upstream-static",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v11-gate13r-pr1b-order-effect-memory-v2\\StaticUnit\\summary.json"
+                   },
+                   {
+                       "id":  "upstream-compile",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v11-gate13r-pr1b-order-effect-memory-v2\\Compile\\summary.json"
+                   },
+                   {
+                       "id":  "upstream-memoryPolicy",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v11-gate13r-pr1b-order-effect-memory-v2\\MemoryPolicySelfTest.summary.json"
+                   },
+                   {
+                       "id":  "upstream-telemetry",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v11-gate13r-pr1b-order-effect-memory-v2\\TelemetryProbe\\v2.summary.json"
+                   },
+                   {
+                       "id":  "upstream-positiveNegative",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v11-gate13r-pr1b-order-effect-memory-v2\\BlockVerification\\summary.json"
+                   },
+                   {
+                       "id":  "upstream-additional",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v11-gate13r-pr1b-order-effect-memory-v2\\BlockVerificationAdditional\\summary.json"
+                   },
+                   {
+                       "id":  "telemetry-v2-positive-crosscheck",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v11-gate13r-pr1b-order-effect-memory-v2\\TelemetryProbe\\v2\\telemetry-probe-result.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Authorization_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Authorization.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_PreWrite_Preservation_Audit_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_PreWrite_Preservation_Audit.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_StaleLock_PreRecovery_Audit_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_StaleLock_PreRecovery_Audit.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_StaleLock_Recovery_Receipt_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_StaleLock_Recovery_Receipt.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Memory_Eligibility_Amendment_v2_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Memory_Eligibility_Amendment.v2.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Specification_v2_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Specification.v2.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Statistical_Analysis_Plan_v2_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Statistical_Analysis_Plan.v2.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Test_Design_v2_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Test_Design.v2.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v2_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v2.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Provenance_v2_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v2.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Verification_Attempt1_Failure_Diagnosis_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Verification_Attempt1_Failure_Diagnosis.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Verification_Attempt2_Repair_Receipt_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Verification_Attempt2_Repair_Receipt.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v3_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v3.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Provenance_v3_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v3.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Verification_Attempt2_Failure_Diagnosis_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Verification_Attempt2_Failure_Diagnosis.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Verification_Attempt3_Repair_Receipt_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Verification_Attempt3_Repair_Receipt.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v4_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v4.json"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BBlockVerificationV3_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BBlockVerificationV3.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BPrePilotV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BPrePilotV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13RPR1BOrderEffectPreparationV2_psm1",
+                       "passed":  true,
+                       "detail":  "Research/Gate13RPR1BOrderEffectPreparationV2.psm1"
+                   },
+                   {
+                       "id":  "hash-Research_Analyze-Gate13RPR1BOrderEffectPilotV2_py",
+                       "passed":  true,
+                       "detail":  "Research/Analyze-Gate13RPR1BOrderEffectPilotV2.py"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BMemoryAwareBlockV2_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BMemoryAwareBlockV2.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BMemoryTelemetryProbeV2_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BMemoryTelemetryProbeV2.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BOrderEffectPilotV2_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BOrderEffectPilotV2.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BStaticUnitV2_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BStaticUnitV2.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BMemoryPolicySelfTestV2_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BMemoryPolicySelfTestV2.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BBlockVerificationV2_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BBlockVerificationV2.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BValidationOnlyPrePilotAuditV2_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BValidationOnlyPrePilotAuditV2.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BPrePilotV2_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BPrePilotV2.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BMemoryPolicySelfTestV3_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BMemoryPolicySelfTestV3.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BPrePilotV3_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BPrePilotV3.ps1"
+                   },
+                   {
+                       "id":  "hash-Assets__Scripts_Research_Editor_Gate13RPR1BMemoryAwareProcessReuseBatchCommandV2_cs",
+                       "passed":  true,
+                       "detail":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV2.cs"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Pilot_Attempt1_Terminal_Preservation_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Attempt1_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Provenance_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v1.json"
+                   },
+                   {
+                       "id":  "hash-Assets__Scripts_Research_Editor_Gate12RProcessReuseBatchCommandV3_cs",
+                       "passed":  true,
+                       "detail":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs"
+                   },
+                   {
+                       "id":  "hash-Research_FormalScenarios_Gate11R_5pct_v1_bundle-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json"
+                   },
+                   {
+                       "id":  "hash-Research_FormalScenarios_Gate11R_5pct_v1_formal-scenario-matrix_json",
+                       "passed":  true,
+                       "detail":  "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json"
+                   },
+                   {
+                       "id":  "hash-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v4_pilot-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-manifest.json"
+                   },
+                   {
+                       "id":  "hash-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v4_pilot-execution-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-execution-manifest.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate12RProcessReuseBlockV3_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate12RProcessReuseBlockV3.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate12RTelemetryProbe_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate12RTelemetryProbe.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BOrderEffectPilotV1_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BOrderEffectPilotV1.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BBlockVerificationV1_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BBlockVerificationV1.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate12RCompileV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate12RCompileV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate12RColdReferenceV3_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate12RColdReferenceV3.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Gate10RAttempt4RetainedHarnessV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate10RAttempt4RetainedHarnessV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate12AnalysisUnitTests_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate12AnalysisUnitTests.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Gate12_AnalysisUnitTests_summary_json",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate12_AnalysisUnitTests.summary.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_PR1B_OrderEffect_Pilot_Attempt1_Terminal_Preservation_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Attempt1_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_PR1B_OrderEffect_Attempt1_Documentation_Manifest_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Attempt1_Documentation_Manifest.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_PR1B_OrderEffect_Provenance_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Verification_Gate12R_ProcessReuse_5pct_v8-gate13r-pr1b-order-effect_ValidationOnlyPrePilotAudit_summary_json",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate12R_ProcessReuse_5pct/v8-gate13r-pr1b-order-effect/ValidationOnlyPrePilotAudit.summary.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v5-gate13r-pr1b-order-effect_failure-receipt_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/failure-receipt.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v5-gate13r-pr1b-order-effect_pilot-checkpoint_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/pilot-checkpoint.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v5-gate13r-pr1b-order-effect_partial-output-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/partial-output-manifest.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_FormalScenarios_Gate11R_5pct_v1_bundle-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v4_pilot-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-manifest.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v4_pilot-execution-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-execution-manifest.json"
+                   },
+                   {
+                       "id":  "frozen-Assets__Scripts_Research_Editor_Gate12RProcessReuseBatchCommandV3_cs",
+                       "passed":  true,
+                       "detail":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs"
+                   },
+                   {
+                       "id":  "attempt1-root-inventory-unchanged",
+                       "passed":  true,
+                       "detail":  "files=425 bytes=18056679"
+                   },
+                   {
+                       "id":  "schedule-deterministic-regeneration",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "id":  "positive-memory-evaluation-count",
+                       "passed":  true,
+                       "detail":  "count=8"
+                   },
+                   {
+                       "id":  "negative-fail-closed-terminal",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v11-gate13r-pr1b-order-effect-memory-v2\\BlockVerification\\negative-fail-closed\\per-agent"
+                   },
+                   {
+                       "id":  "pilot-root-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate12R_ProcessReuse_5pct\\v6-gate13r-pr1b-order-effect-memory-v2"
+                   },
+                   {
+                       "id":  "formal-root-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned\\v1"
+                   },
+                   {
+                       "id":  "unity-closed",
+                       "passed":  true,
+                       "detail":  "No Unity process may remain."
+                   },
+                   {
+                       "id":  "unity-lock-absent",
+                       "passed":  true,
+                       "detail":  "Unity project lock must be absent."
+                   }
+               ],
+    "errors":  [
+
+               ],
+    "pilotExecutionAuthorized":  true,
+    "formalCampaign":  false,
+    "gate13rFormalAuthorized":  false,
+    "gate14rAuthorized":  false,
+    "passed":  true
+}

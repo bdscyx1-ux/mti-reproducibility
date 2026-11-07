@@ -1,0 +1,25 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 immutable formal execution receipt commit and native PS5 acceptance",
+  "command": "Test-G13RPR2FormalExecutionReceipt under native Windows PowerShell 5.1 followed by read-only receipt freeze",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "gate_tokens": [
+    "FORMAL-EXECUTION-RECEIPT-VALIDATED",
+    "NATIVE-POWERSHELL-5.1",
+    "ALL-BINDINGS-MATCHED",
+    "RECEIPT-READ-ONLY",
+    "FORMAL-ROOT-ABSENT",
+    "FORMAL-STATUS-ABSENT",
+    "UNITY-QUIESCENT",
+    "ONE-RAW-ACQUISITION-ATTEMPT-AUTHORIZED",
+    "FORMAL-ANALYSIS-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "input_sha256": {
+    "Gate13R_PR2_Formal_Execution_Receipt.v1.json": "2cd30b4d605f231bca64250e91a4e7df7548a10681853f84ad31620b970972bc",
+    "Gate13R_PR2_Formal_Prelaunch_Checkpoint.v1.json": "92ad97462acc8a19ae27317e1f59c2de47615b2aa9b550257e2adf8448604315",
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/final-prelaunch-evidence-manifest.v1.json": "1d32dbaa2f440836dea51348a730441141fed859532869c301de5591e1557909"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "gate14re-me-formal-st-v5.2-readiness-terminal-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_ALGORITHM_FREE_COMPILE_BURST_NATURAL_EXIT",
+  "implementationRevision": "v5.2-supervisor-preflight-binding-fix",
+  "process": {
+    "pid": 15396,
+    "creationTimeUtc": "2026-10-26T11:44:45.5715870Z",
+    "exitedAtUtc": "2026-10-26T11:45:02.8536463Z",
+    "exitCode": 0,
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "executableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "exactCommandLine": "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe\" -batchmode -nographics -projectPath H:/DDM_Final_Project -executeMethod DDM.Research.Editor.Gate14ReMEReadinessCompileExitV4.Run --g14me-readiness-receipt H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-2-supervisor-readiness-attempt-001/compile-readiness-receipt.v4.json -logFile H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-2-supervisor-readiness-attempt-001/unity-readiness.log",
+    "commandLineQuitPresent": false
+  },
+  "burst": {
+    "finalCompilationDone": true,
+    "elapsedMilliseconds": 982,
+    "reflectedType": "Unity.Burst.BurstCompiler, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "reflectedMethod": "IsCurrentCompilationDone"
+  },
+  "artifacts": {
+    "compileReadinessReceiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-2-supervisor-readiness-attempt-001/compile-readiness-receipt.v4.json",
+    "compileReadinessReceiptBytes": 528,
+    "compileReadinessReceiptSha256": "0b59a10ff4dca9ab25d610425779d23dff19b08b95ff1eebd128c43abe537b11",
+    "unityLogRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-2-supervisor-readiness-attempt-001/unity-readiness.log",
+    "unityLogBytes": 81577,
+    "unityLogSha256": "18dfb372412a4ecba1a656e6250e832382ac9ce1b1f337331aa4fcc7a6a28024",
+    "disallowedLogMatchCount": 0
+  },
+  "scope": {
+    "qualificationExecuted": false,
+    "algorithmLaneExecuted": false,
+    "formalInputRead": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "activeUnityProcessCountAfterExit": 0
+  }
+}

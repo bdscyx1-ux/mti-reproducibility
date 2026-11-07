@@ -1,0 +1,121 @@
+{
+  "schema": "gate14re-me-formal-st-precollection-freeze-readiness-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-precollection-freeze-readiness-attempt-001",
+  "createdAtUtc": "2026-10-19T22:40:05.6431502Z",
+  "status": "FAIL_CLOSED_AUTHOR_INPUT_NEEDED_BEFORE_FINAL_B",
+  "authorizedStep": 8,
+  "authorization": {
+    "sourceTextExact": "授权推荐顺序中直至第九项",
+    "scopePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-011/user-authorization-scope.v1.json",
+    "scopeSha256": "9ae988fd60866f9aeea852b1e659127bf8674d919978002438761f21a56e1678",
+    "interpretation": "Step 8 may execute only if all predeclared scientific and technical gates pass; it does not authorize inventing missing scientific parameters."
+  },
+  "passedPrerequisites": {
+    "qualificationTerminalPass": {
+      "path": "Research/Verification/Gate14Re-ME/load-qualification-read-only-acceptance-attempt-001/qualification-terminal-pass-receipt.v1.json",
+      "sha256": "9ffc2c83896f1516eea969619ccc8c07f6be1bdab85cecead7224fc8f9cbeafa",
+      "status": "PASS_QUALIFICATION_TERMINAL"
+    },
+    "runtimeDiagnostic": {
+      "path": "Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/terminal-receipt.v2.json",
+      "sha256": "92e2cd918f55bae33c38bd8a71b915b5ab7b5f96e8a31ccbeb06d9533b980e6e",
+      "finalEvidenceFreezeManifestPath": "Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/final-evidence-freeze-manifest.v1.json",
+      "finalEvidenceFreezeManifestSha256": "0c6e78412aca2c01bd97575994afbc0c7a420089f856cff47116f75f43e09593",
+      "status": "PASS_POST_QUALIFICATION_DESCRIPTIVE_ENGINEERING_RUNTIME_DIAGNOSTIC"
+    },
+    "boundedDesign": {
+      "G": [64, 96, 128],
+      "N": [32, 64, 128],
+      "F": [1, 9, 25, 81],
+      "structuralCells": 36,
+      "algorithms": 6,
+      "pairedIndependentUnit": "one six-algorithm superblock"
+    },
+    "multiplicityAndStopping": {
+      "targetPowerAtLeast": 0.9,
+      "familywiseAlpha": 0.05,
+      "confirmatoryContrastCount": 35,
+      "method": "Holm strong FWER",
+      "BMustBePositiveMultipleOf": 36,
+      "adaptiveExpansion": false,
+      "postOutcomeTopUp": false
+    }
+  },
+  "parameterizedRuntimeOnly": [
+    {"B":36,"formalSuperblocks":1296,"freshAlgorithmProcesses":7776,"planningHoursWith20PercentHeadroom":83.493,"atOrAbove168HourGate":false},
+    {"B":72,"formalSuperblocks":2592,"freshAlgorithmProcesses":15552,"planningHoursWith20PercentHeadroom":166.987,"atOrAbove168HourGate":false},
+    {"B":108,"formalSuperblocks":3888,"freshAlgorithmProcesses":23328,"planningHoursWith20PercentHeadroom":250.480,"atOrAbove168HourGate":true},
+    {"B":144,"formalSuperblocks":5184,"freshAlgorithmProcesses":31104,"planningHoursWith20PercentHeadroom":333.973,"atOrAbove168HourGate":true}
+  ],
+  "blockingScientificGates": [
+    {
+      "gate": "domain-specific minimum practically important effects",
+      "requiredDomains": [
+        "D1_DYNAMIC_LATENCY geometric-mean ratio and P95 ratio",
+        "D2_GRID_READ_WORK ratio",
+        "D3_DYNAMIC_ALLOCATION log1p contrast with raw-byte interpretation",
+        "D4_PERSISTENT_STATE_BYTES log1p contrast with raw-byte interpretation",
+        "D5_AGENT_COUNT_SCALING slope difference per frozen log2 axis unit",
+        "D6_CHANGE_FOOTPRINT_SCALING slope difference per frozen log2 axis unit",
+        "D7_GRID_SIZE_SCALING slope difference per frozen log2 grid-cell-count unit"
+      ],
+      "state": "MISSING",
+      "whyBlocking": "Power is undefined without prespecified non-zero target effects in the estimand units."
+    },
+    {
+      "gate": "reproducible identity-blind power calculation",
+      "state": "MISSING_BECAUSE_MIPE_MISSING",
+      "whyBlocking": "The frozen target is at least 0.90 power across the 35-confirmatory-contrast Holm family; runtime feasibility alone cannot establish power."
+    },
+    {
+      "gate": "final B",
+      "state": "NOT_SELECTED",
+      "whyBlocking": "B=36 is only the minimum balanced candidate and B=72 is only the largest candidate below the 168-hour engineering gate; neither fact is a scientific power decision."
+    },
+    {
+      "gate": "movement-transfer sentinel subset or explicit omission",
+      "state": "UNRESOLVED",
+      "whyBlocking": "The precollection protocol requires an explicit prospective choice."
+    }
+  ],
+  "authorInputNeeded": {
+    "minimumRequired": [
+      "approve exact domain-specific MIPE values in the listed estimand units, or provide an independently justified prospective rule that deterministically produces them without inspecting algorithm outcomes",
+      "choose whether the S5 movement-transfer sentinel is omitted or specify its exact prospective subset"
+    ],
+    "notAcceptableSubstitutes": [
+      "choosing B from qualification algorithm separation",
+      "using named qualification means or effect directions",
+      "declaring B=36 adequate only because it is faster",
+      "inventing MIPE values from observed effects"
+    ]
+  },
+  "disposition": {
+    "finalB": null,
+    "formalSTContractFrozen": false,
+    "formalScheduleFrozen": false,
+    "formalCollectionAuthorized": false,
+    "migrationPackageState": "DORMANT_SEALED_FOR_LATER_REACTIVATION",
+    "step9Executed": false,
+    "migrationPackageBuilt": false,
+    "formalSTStarted": false,
+    "mqOrMtStarted": false
+  },
+  "normativeProtocol": {
+    "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v2.json",
+    "sha256": "8960c2050f34ff56a8f680f092bdc4cf156ed8cff4ae264015411cbb249255d6"
+  },
+  "priorSampleSizeDecision": {
+    "path": "Research/Gate14Re-ME/Execution/v4/formal-sample-size-decision.v4_1.json",
+    "sha256": "952d64c34c9e7821386c36a60519a5003658e89b78dbb81f4c2233b702636980",
+    "status": "PENDING_NEW_QUALIFICATION_AND_ANONYMOUS_POWER_REFREEZE"
+  },
+  "statisticalIntegrity": {
+    "qualificationObservationsUsedAsFormalEffects": false,
+    "algorithmEffectsComputedForBSelection": false,
+    "algorithmRankingWeightingOrWinnerUsed": false,
+    "sampleSizeInvented": false,
+    "powerCalculationInvented": false
+  }
+}

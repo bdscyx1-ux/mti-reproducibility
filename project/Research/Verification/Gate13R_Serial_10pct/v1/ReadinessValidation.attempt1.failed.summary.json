@@ -1,0 +1,22 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-strict-serial-10pct-readiness-validation-summary-v1",
+    "savedAtUtc":  "2026-10-08T09:08:14.2056855Z",
+    "assertionCount":  114,
+    "failureCount":  2,
+    "errors":  [
+                   "serial-process-overlap-count",
+                   "serial-process-gap-nonpositive"
+               ],
+    "evidenceAuditRelativePath":  "Research/Gate13R_Serial_10pct_Gate12R_v4_Evidence_Audit.v1.json",
+    "evidenceAuditSha256":  "8e26b5da7e553208207a4d2544956811b3c9fa0d8873a7091e1a2906bb0a89b8",
+    "maximumConcurrentUnityEditorProcesses":  1,
+    "scheduleTopology":  "strict-serial-one-fresh-unity-editor-per-complete-williams-block",
+    "reusedSameTopologyPilot":  true,
+    "newUnityProcessCount":  0,
+    "formalRootExists":  false,
+    "formalExecutionReceiptCreated":  false,
+    "formalTimingSamplesCreated":  false,
+    "status":  "READINESS-VALIDATION-FAILED",
+    "passed":  false
+}

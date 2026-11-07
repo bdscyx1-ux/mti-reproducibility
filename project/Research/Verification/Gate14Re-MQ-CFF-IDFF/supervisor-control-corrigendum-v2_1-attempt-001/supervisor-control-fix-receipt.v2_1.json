@@ -1,0 +1,28 @@
+{
+  "schema": "gate14re-mq-formal-supervisor-control-fix-receipt-v2_1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "PASS_MINIMAL_PROSPECTIVE_SUPERVISOR_EMPTY_SET_COUNT_FIX",
+  "completedAtUtc": "2026-10-21T17:01:33.6661185Z",
+  "previousSupervisorRelativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/Run-Gate14ReMQFormalCollection.v2_0.ps1",
+  "previousSupervisorSha256": "f3e79f827a62b7dc970ecebc926d171c5e012fde295cb56c14d515bd65d80f5f",
+  "repairedSupervisorRelativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/Run-Gate14ReMQFormalCollection.v2_1.ps1",
+  "repairedSupervisorSha256": "42f2e58639f93458021293798460df0cefe2cfd0d6ce2e66b9f205573c049bbe",
+  "repair": {
+    "faultyExpression": "(Get-UnityProcesses -ExecutablePath $UnityExecutable).Count",
+    "replacementExpression": "@(Get-UnityProcesses -ExecutablePath $UnityExecutable).Count",
+    "changedCallSites": 3,
+    "affectedOldLineNumbers": [211, 291, 338],
+    "unwrappedCallSitesRemaining": 0,
+    "allOtherSupervisorTextEquivalent": true,
+    "powershellParseErrorCount": 0,
+    "emptySetResultAfterRepair": 0
+  },
+  "changedCallSites": 3,
+  "scientificDesignChanged": false,
+  "scheduleChanged": false,
+  "algorithmImplementationChanged": false,
+  "formalCollectionAttempt002Authorized": false,
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false
+}

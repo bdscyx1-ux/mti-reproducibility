@@ -1,0 +1,48 @@
+{
+  "schema": "gate14re-mq-cff-idff-fairness-topology-contract-prospective-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "status": "FROZEN_FOR_GATE13R_TECHNICAL_QUALIFICATION_FORMAL_PERFORMANCE_FREEZE_PENDING",
+  "hostAssertion": {
+    "processorFamily": "AMD-Ryzen-9-7950X3D",
+    "physicalCoreCount": 16,
+    "ccdCount": 2,
+    "physicalCoresPerCcd": 8,
+    "functionalLabels": [
+      "LARGE_L3_CCD",
+      "HIGH_FREQUENCY_CCD"
+    ],
+    "causalInterpretationProhibited": "CCD comparisons combine topology cache and frequency effects and cannot attribute causality to one component"
+  },
+  "primaryConditionMatrix": [
+    "LARGE_L3_CCD:ST-direct",
+    "LARGE_L3_CCD:MQ-1",
+    "LARGE_L3_CCD:MQ-2",
+    "LARGE_L3_CCD:MQ-4",
+    "LARGE_L3_CCD:MQ-8",
+    "HIGH_FREQUENCY_CCD:ST-direct",
+    "HIGH_FREQUENCY_CCD:MQ-1",
+    "HIGH_FREQUENCY_CCD:MQ-2",
+    "HIGH_FREQUENCY_CCD:MQ-4",
+    "HIGH_FREQUENCY_CCD:MQ-8",
+    "DUAL_CCD_BALANCED:MQ-8-4-plus-4",
+    "DUAL_CCD_BALANCED:MQ-16-8-plus-8"
+  ],
+  "prohibitedPrimaryConditions": [
+    "SMT-workers",
+    "single-CCD-MQ-16",
+    "MQ-32"
+  ],
+  "workerRules": {
+    "hardWindowsCpuSetBinding": true,
+    "oneLogicalSiblingPerPhysicalCore": true,
+    "onePrivateGridPerLane": true,
+    "onePrivatePlannerPerLane": true,
+    "plannerSharedAcrossThreads": false,
+    "deterministicAssignment": "lane-ordinal-mod-worker-count",
+    "deterministicOutputRestore": "ascending-lane-ordinal",
+    "retry": false,
+    "replacement": false,
+    "partialBatchAcceptance": false
+  }
+}
+

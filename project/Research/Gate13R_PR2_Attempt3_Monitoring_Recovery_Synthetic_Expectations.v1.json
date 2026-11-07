@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "registryId": "gate13r-pr2-attempt3-monitoring-recovery-synthetic-expectations-v1",
+  "status": "FROZEN-BEFORE-VALIDATION-RESULTS",
+  "expected": {
+    "allFormalTargetsAbsent": {
+      "status": "NOT-STARTED",
+      "notify": false,
+      "snapshotWritten": false
+    },
+    "partialFormalTargetSet": {
+      "status": "ACTION-REQUIRED",
+      "notificationReason": ["USER-ACTION-REQUIRED"]
+    },
+    "firstAcquisitionObservation": {
+      "status": "ACQUISITION-RUNNING",
+      "notificationReason": ["ACQUISITION-STARTED"]
+    },
+    "hourBoundary": {
+      "atExactlyOneNewSlot": "ONE-HOURLY-PROGRESS-NOTIFICATION",
+      "missedSlots": "ONE-CURRENT-NOTIFICATION-NO-CATCHUP"
+    },
+    "thresholdBoundaries": {
+      "statusAgeSeconds900": "NOT-STALE",
+      "statusAgeSecondsGreaterThan900": "STATUS-STALE-ADVISORY",
+      "noProgressSeconds1800": "NOT-STALLED",
+      "noProgressSecondsGreaterThan1800": "STALL-SUSPECTED",
+      "missingOwnedProcessSeconds300": "NOT-ACTION-REQUIRED",
+      "missingOwnedProcessSecondsGreaterThan300": "PROCESS-IDENTITY-ACTION-REQUIRED",
+      "blockElapsedSecondsGreaterThan3660": "HARD-TIMEOUT-OVERDUE-ACTION-REQUIRED"
+    },
+    "eta": {
+      "rate": "MIN-POSITIVE-OF-ROLLING-AND-OVERALL",
+      "safetyMultiplier": 1.25,
+      "zeroOrInsufficientRate": "UNAVAILABLE"
+    },
+    "prelaunchRepair": {
+      "eligibleDisposition": "VERSIONED-PRELAUNCH-REPAIR-ELIGIBLE",
+      "maximumCycles": 3,
+      "sameSignatureStopCount": 2,
+      "unityCommandAllowed": false
+    },
+    "acquisitionFailure": {
+      "disposition": "READ-ONLY-DIAGNOSTICS-ONLY",
+      "measuredRetryAllowed": false,
+      "resumeAllowed": false,
+      "topUpAllowed": false,
+      "mergeAllowed": false
+    },
+    "postAcquisitionCommit": {
+      "eligibleDisposition": "NON-UNITY-RAW-COMMIT-RECOVERY-ELIGIBLE",
+      "successState": "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE",
+      "unityCommandAllowed": false
+    }
+  },
+  "prohibitedExpectedOutcomeChanges": [
+    "CHANGE-REPORT-CADENCE-AFTER-TEST",
+    "CHANGE-BOUNDARY-AFTER-TEST",
+    "ADD-MEASURED-RETRY",
+    "RELAX-IDENTITY-CHECK",
+    "EXPOSE-INTERIM-ENDPOINTS"
+  ]
+}

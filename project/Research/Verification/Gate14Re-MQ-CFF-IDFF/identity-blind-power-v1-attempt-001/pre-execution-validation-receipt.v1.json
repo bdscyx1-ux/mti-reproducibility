@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-pre-execution-validation-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "identity-blind-power-v1-attempt-001",
+  "validatedAtUtc": "2026-10-21T06:00:00Z",
+  "status": "PASS_READY_FOR_SINGLE_POWER_EXECUTION",
+  "checks": {
+    "designRuleFreezePassed": true,
+    "analysisPlanBoundToAuthorizedDesign": true,
+    "candidateBAndSelectionRuleFrozen": true,
+    "identityBlindFieldBoundaryFrozen": true,
+    "forbiddenIdentityMemberAccessAbsentFromExecutableCode": true,
+    "inputHashesMatch": true,
+    "inputSchemasAndCardinalitiesMatch": true,
+    "powerScriptCompiles": true,
+    "outputRootFreshForComputedOutputs": true,
+    "formalCollectionNotAuthorizedOrStarted": true,
+    "formalAnalysisNotAuthorizedOrStarted": true
+  },
+  "structuralPreflight": {
+    "performanceLaneRows": 384,
+    "technicalBatchRows": 24,
+    "opaqueSlots": 2,
+    "conditionsPerOpaqueSlot": 12,
+    "laneRowsPerBatch": 16,
+    "performanceLaneSchema": "gate14re-mq-performance-lane-evidence-v1",
+    "technicalBatchSchema": "gate14re-mq-managed-batch-runtime-v1",
+    "technicalBatchPassStatus": "PASS_ALL_LANES_COMPLETED"
+  },
+  "timingValuesReported": false,
+  "algorithmIdentityOpened": false,
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false
+}

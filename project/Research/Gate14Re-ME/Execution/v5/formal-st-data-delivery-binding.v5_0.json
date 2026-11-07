@@ -1,0 +1,38 @@
+{
+  "schema": "gate14re-me-formal-st-data-delivery-binding-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_REQUIREMENTS_IMPLEMENTATION_TO_BE_BUILT",
+  "baseContract": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+    "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd",
+    "allCompleteRawDeliveryRequirementsRemainNormative": true
+  },
+  "requiredFormalCardinalities": {
+    "superblocks": 1296,
+    "namedAlgorithmLanes": 7776,
+    "eventGroupsPerEligibleLane": 24,
+    "eventGroupRowsIfAllLanesEligible": 186624,
+    "persistentStateMeasurementPointsPerEligibleLane": 26
+  },
+  "acceptanceArchitecture": {
+    "separateFromAcquisition": true,
+    "sourceMeasuredRootReadOnly": true,
+    "newVersionedAcceptanceEvidenceRoot": true,
+    "newVersionedDeliveryRoot": true,
+    "hashEachUniqueSourceFileOnce": true,
+    "streamingBoundedMemory": true,
+    "retainAllRawRowsInMemory": false,
+    "canonicalRawJsonlGating": true,
+    "typedParquetFullValueTypeOrderRoundTripGating": true,
+    "redundantCsvGzipAndDuplicateJsonlViewsGating": false,
+    "completePerObservationRawDelivery": true
+  },
+  "hardGate": "Formal analysis cannot begin and formal collection cannot be declared complete until independent read-only acceptance passes with a per-file manifest and terminal receipt.",
+  "notBuiltByThisFreeze": [
+    "formal acceptance launcher",
+    "formal acceptance tool",
+    "formal delivery root",
+    "formal typed Parquet outputs"
+  ]
+}

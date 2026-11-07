@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "checkpointKind": "gate13r-pr2-mp1-v2-postpilot-audit-attempt1-checkpoint-v1",
+  "savedAtUtc": "2026-10-09T05:19:57.6834754Z",
+  "state": "ANALYSIS-AUDIT-FAILED-PRESERVED",
+  "failureCode": "PREPILOT-ROOT-ABSENCE-CONTRACT-USED-POSTPILOT",
+  "phaseAStatus": "PILOT-RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE",
+  "diagnosticAnalysisAttempt1Status": "PASSED",
+  "safeNextAction": "Create a new post-pilot-only read-only auditor, validate it without Unity, and rerun it against the same immutable raw commit and frozen upstream roots.",
+  "measuredPilotRerunRequired": false,
+  "measuredPilotRerunAuthorized": false,
+  "formalAttempt3Authorized": false,
+  "formalAnalysisAuthorized": false,
+  "gate14RAuthorized": false
+}

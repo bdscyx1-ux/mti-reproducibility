@@ -1,0 +1,463 @@
+{
+  "schema": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-004-readonly-freeze-closure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-powershell-host-binding-auto-repair-until-pass",
+  "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-004",
+  "status": "PASS_ATTEMPT_003_CONTENT_PRESERVED_AND_READONLY_FREEZE_CLOSED",
+  "passed": true,
+  "terminal": true,
+  "completedAtUtc": "2026-10-17T16:41:02.2396972+00:00",
+  "repairedDefect": "flattened readonly target application performed by independent closure attempt",
+  "attempt003ContentModified": false,
+  "attempt003FileCount": 10,
+  "attempt003AllReadOnly": true,
+  "retainedBindings": {
+    "executionContractV32Sha256": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0",
+    "implementationManifestV32Sha256": "83ef4c7081a77f7093e9f37f53b786f628459c404ca9e89b78d6e93ce64d2514",
+    "statusV31Sha256": "27e766ac61ce77321a6e01ed772398d19135e5dc57e70419bf849292b2ad5529"
+  },
+  "checks": [
+    {
+      "checkId": "attempt004-directory-exists",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt004-pristine-except-orchestrator",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\supervisor-powershell-host-binding-corrigendum-attempt-004\\Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt004.ps1",
+      "expected": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\supervisor-powershell-host-binding-corrigendum-attempt-004\\Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt004.ps1"
+    },
+    {
+      "checkId": "target-absent-authorization-receipt.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-stage-contract.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-readonly-freeze-closure-receipt.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-terminal-pass-receipt.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-failure-receipt.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "exact-pwsh-process-path",
+      "passed": true,
+      "observed": "C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+      "expected": "C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe"
+    },
+    {
+      "checkId": "exact-pwsh-sha256",
+      "passed": true,
+      "observed": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+      "expected": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139"
+    },
+    {
+      "checkId": "exact-pwsh-version",
+      "passed": true,
+      "observed": "7.6.5",
+      "expected": "7.6.5"
+    },
+    {
+      "checkId": "unity-process-count",
+      "passed": true,
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "checkId": "qualification-measured-root-absent",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "delivery-root-absent",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "formal-root-absent",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "contract-v3_2-exists",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "contract-v3_2-hash",
+      "passed": true,
+      "observed": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0",
+      "expected": "10c5689a3fccfbc5faef13d83a3b1db3026b8931581b510fbee9be1cd3a0e9d0"
+    },
+    {
+      "checkId": "contract-v3_2-readonly",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "manifest-v3_2-exists",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "manifest-v3_2-hash",
+      "passed": true,
+      "observed": "83ef4c7081a77f7093e9f37f53b786f628459c404ca9e89b78d6e93ce64d2514",
+      "expected": "83ef4c7081a77f7093e9f37f53b786f628459c404ca9e89b78d6e93ce64d2514"
+    },
+    {
+      "checkId": "manifest-v3_2-readonly",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "status-v31-exists",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "status-v31-hash",
+      "passed": true,
+      "observed": "27e766ac61ce77321a6e01ed772398d19135e5dc57e70419bf849292b2ad5529",
+      "expected": "27e766ac61ce77321a6e01ed772398d19135e5dc57e70419bf849292b2ad5529"
+    },
+    {
+      "checkId": "status-v31-readonly",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-count",
+      "passed": true,
+      "observed": 10,
+      "expected": 10
+    },
+    {
+      "checkId": "attempt003-file-expected-authorization-receipt.v1.json",
+      "passed": true,
+      "observed": "865258f5fcd79153d5a265940e897c6be35db358308910c592935fbd3e7be7e7",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-authorization-receipt.v1.json",
+      "passed": true,
+      "observed": "865258f5fcd79153d5a265940e897c6be35db358308910c592935fbd3e7be7e7",
+      "expected": "865258f5fcd79153d5a265940e897c6be35db358308910c592935fbd3e7be7e7"
+    },
+    {
+      "checkId": "attempt003-file-expected-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": "f884b5bce36f82c3f5e8424a4da29910252a9155953abb7a589b4c1ca18e3cc5",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": "f884b5bce36f82c3f5e8424a4da29910252a9155953abb7a589b4c1ca18e3cc5",
+      "expected": "f884b5bce36f82c3f5e8424a4da29910252a9155953abb7a589b4c1ca18e3cc5"
+    },
+    {
+      "checkId": "attempt003-file-expected-Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt003.ps1",
+      "passed": true,
+      "observed": "5180fb118783e38890878f17e38a0a51ea6d33112b5cc58a05505ca61934de86",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt003.ps1",
+      "passed": true,
+      "observed": "5180fb118783e38890878f17e38a0a51ea6d33112b5cc58a05505ca61934de86",
+      "expected": "5180fb118783e38890878f17e38a0a51ea6d33112b5cc58a05505ca61934de86"
+    },
+    {
+      "checkId": "attempt003-file-expected-powershell-invalid-json-negative-fixture.v1.txt",
+      "passed": true,
+      "observed": "2e665de337bdff4f542f3d6cc02d448a430e83ecb3e8b869ce5252e0f4830d3b",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-powershell-invalid-json-negative-fixture.v1.txt",
+      "passed": true,
+      "observed": "2e665de337bdff4f542f3d6cc02d448a430e83ecb3e8b869ce5252e0f4830d3b",
+      "expected": "2e665de337bdff4f542f3d6cc02d448a430e83ecb3e8b869ce5252e0f4830d3b"
+    },
+    {
+      "checkId": "attempt003-file-expected-powershell-json-known-answer-fixture.v1.json",
+      "passed": true,
+      "observed": "a6971c57c616b09d1680a41ab5e4203d690301d1bfc2ff176a1fdcd7db7d5429",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-powershell-json-known-answer-fixture.v1.json",
+      "passed": true,
+      "observed": "a6971c57c616b09d1680a41ab5e4203d690301d1bfc2ff176a1fdcd7db7d5429",
+      "expected": "a6971c57c616b09d1680a41ab5e4203d690301d1bfc2ff176a1fdcd7db7d5429"
+    },
+    {
+      "checkId": "attempt003-file-expected-powershell-jsonl-known-answer-fixture.v1.jsonl",
+      "passed": true,
+      "observed": "414e560e34a206ddeae831ed556985acee7f924305c82729564a046a2db77682",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-powershell-jsonl-known-answer-fixture.v1.jsonl",
+      "passed": true,
+      "observed": "414e560e34a206ddeae831ed556985acee7f924305c82729564a046a2db77682",
+      "expected": "414e560e34a206ddeae831ed556985acee7f924305c82729564a046a2db77682"
+    },
+    {
+      "checkId": "attempt003-file-expected-powershell-known-answer-receipt.v1.json",
+      "passed": true,
+      "observed": "d105d621077d301aa99d925a215887f827213a8d3725a194ba2a9e515194a158",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-powershell-known-answer-receipt.v1.json",
+      "passed": true,
+      "observed": "d105d621077d301aa99d925a215887f827213a8d3725a194ba2a9e515194a158",
+      "expected": "d105d621077d301aa99d925a215887f827213a8d3725a194ba2a9e515194a158"
+    },
+    {
+      "checkId": "attempt003-file-expected-stage-contract.v1.json",
+      "passed": true,
+      "observed": "7b69c587879a1acd19c157af3cec04a829228a279547e54353b5a255f6078df7",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-stage-contract.v1.json",
+      "passed": true,
+      "observed": "7b69c587879a1acd19c157af3cec04a829228a279547e54353b5a255f6078df7",
+      "expected": "7b69c587879a1acd19c157af3cec04a829228a279547e54353b5a255f6078df7"
+    },
+    {
+      "checkId": "attempt003-file-expected-supervisor-parameter-binding-known-answer.v1.json",
+      "passed": true,
+      "observed": "55627382558751e15883f12fb1a9d2deac7e3a2877233d6205232bfea242016e",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-supervisor-parameter-binding-known-answer.v1.json",
+      "passed": true,
+      "observed": "55627382558751e15883f12fb1a9d2deac7e3a2877233d6205232bfea242016e",
+      "expected": "55627382558751e15883f12fb1a9d2deac7e3a2877233d6205232bfea242016e"
+    },
+    {
+      "checkId": "attempt003-file-expected-terminal-pass-receipt.v1.json",
+      "passed": true,
+      "observed": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418",
+      "expected": "non-empty expected hash"
+    },
+    {
+      "checkId": "attempt003-file-hash-terminal-pass-receipt.v1.json",
+      "passed": true,
+      "observed": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418",
+      "expected": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418"
+    },
+    {
+      "checkId": "attempt003-terminal-pass-content",
+      "passed": true,
+      "observed": "PASS_FROZEN_POWERSHELL_7_6_5_SUPERVISOR_HOST_BINDING",
+      "expected": "PASS_FROZEN_POWERSHELL_7_6_5_SUPERVISOR_HOST_BINDING"
+    },
+    {
+      "checkId": "attempt003-known-answer-pass-content",
+      "passed": true,
+      "observed": "PASS_POWERSHELL_7_6_5_JSON_JSONL_FAIL_CLOSED_AND_SUPERVISOR_BINDING",
+      "expected": "PASS_POWERSHELL_7_6_5_JSON_JSONL_FAIL_CLOSED_AND_SUPERVISOR_BINDING"
+    },
+    {
+      "checkId": "attempt003-known-answer-check-count",
+      "passed": true,
+      "observed": 222,
+      "expected": 222
+    },
+    {
+      "checkId": "attempt003-freeze-manifest-content",
+      "passed": true,
+      "observed": "FROZEN_TERMINAL_PASS_EVIDENCE",
+      "expected": "FROZEN_TERMINAL_PASS_EVIDENCE"
+    },
+    {
+      "checkId": "attempt003-forbidden-process-counts-zero",
+      "passed": true,
+      "observed": "{\"unityInvocationCount\":0,\"instrumentInvocationCount\":0,\"oracleInvocationCount\":0,\"emptyBoundaryInvocationCount\":0,\"algorithmLaneExecutionCount\":0,\"qualificationObservationCount\":0,\"formalObservationCount\":0,\"formalCollectionPerformed\":false,\"formalAnalysisPerformed\":false,\"rankingPerformed\":false,\"weightingPerformed\":false,\"winnerAdjudicationPerformed\":false,\"rootStateBefore\":{\"qualificationMeasuredRootExists\":false,\"deliveryRootExists\":false,\"formalRootExists\":false},\"rootStateAfter\":{\"qualificationMeasuredRootExists\":false,\"deliveryRootExists\":false,\"formalRootExists\":false}}",
+      "expected": "all prohibited process counts zero"
+    },
+    {
+      "checkId": "attempt003-forbidden-analysis-flags-false",
+      "passed": true,
+      "observed": "{\"unityInvocationCount\":0,\"instrumentInvocationCount\":0,\"oracleInvocationCount\":0,\"emptyBoundaryInvocationCount\":0,\"algorithmLaneExecutionCount\":0,\"qualificationObservationCount\":0,\"formalObservationCount\":0,\"formalCollectionPerformed\":false,\"formalAnalysisPerformed\":false,\"rankingPerformed\":false,\"weightingPerformed\":false,\"winnerAdjudicationPerformed\":false,\"rootStateBefore\":{\"qualificationMeasuredRootExists\":false,\"deliveryRootExists\":false,\"formalRootExists\":false},\"rootStateAfter\":{\"qualificationMeasuredRootExists\":false,\"deliveryRootExists\":false,\"formalRootExists\":false}}",
+      "expected": "all prohibited analysis flags false"
+    },
+    {
+      "checkId": "status-v31-attempt003-pass-binding",
+      "passed": true,
+      "observed": "SUPERVISOR_POWERSHELL_HOST_BINDING_CORRIGENDUM_ATTEMPT_003_PASS",
+      "expected": "SUPERVISOR_POWERSHELL_HOST_BINDING_CORRIGENDUM_ATTEMPT_003_PASS"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-authorization-receipt.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-authorization-receipt.v1.json",
+      "passed": true,
+      "observed": "865258f5fcd79153d5a265940e897c6be35db358308910c592935fbd3e7be7e7",
+      "expected": "865258f5fcd79153d5a265940e897c6be35db358308910c592935fbd3e7be7e7"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": "f884b5bce36f82c3f5e8424a4da29910252a9155953abb7a589b4c1ca18e3cc5",
+      "expected": "f884b5bce36f82c3f5e8424a4da29910252a9155953abb7a589b4c1ca18e3cc5"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt003.ps1",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt003.ps1",
+      "passed": true,
+      "observed": "5180fb118783e38890878f17e38a0a51ea6d33112b5cc58a05505ca61934de86",
+      "expected": "5180fb118783e38890878f17e38a0a51ea6d33112b5cc58a05505ca61934de86"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-powershell-invalid-json-negative-fixture.v1.txt",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-powershell-invalid-json-negative-fixture.v1.txt",
+      "passed": true,
+      "observed": "2e665de337bdff4f542f3d6cc02d448a430e83ecb3e8b869ce5252e0f4830d3b",
+      "expected": "2e665de337bdff4f542f3d6cc02d448a430e83ecb3e8b869ce5252e0f4830d3b"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-powershell-json-known-answer-fixture.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-powershell-json-known-answer-fixture.v1.json",
+      "passed": true,
+      "observed": "a6971c57c616b09d1680a41ab5e4203d690301d1bfc2ff176a1fdcd7db7d5429",
+      "expected": "a6971c57c616b09d1680a41ab5e4203d690301d1bfc2ff176a1fdcd7db7d5429"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-powershell-jsonl-known-answer-fixture.v1.jsonl",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-powershell-jsonl-known-answer-fixture.v1.jsonl",
+      "passed": true,
+      "observed": "414e560e34a206ddeae831ed556985acee7f924305c82729564a046a2db77682",
+      "expected": "414e560e34a206ddeae831ed556985acee7f924305c82729564a046a2db77682"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-powershell-known-answer-receipt.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-powershell-known-answer-receipt.v1.json",
+      "passed": true,
+      "observed": "d105d621077d301aa99d925a215887f827213a8d3725a194ba2a9e515194a158",
+      "expected": "d105d621077d301aa99d925a215887f827213a8d3725a194ba2a9e515194a158"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-stage-contract.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-stage-contract.v1.json",
+      "passed": true,
+      "observed": "7b69c587879a1acd19c157af3cec04a829228a279547e54353b5a255f6078df7",
+      "expected": "7b69c587879a1acd19c157af3cec04a829228a279547e54353b5a255f6078df7"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-supervisor-parameter-binding-known-answer.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-supervisor-parameter-binding-known-answer.v1.json",
+      "passed": true,
+      "observed": "55627382558751e15883f12fb1a9d2deac7e3a2877233d6205232bfea242016e",
+      "expected": "55627382558751e15883f12fb1a9d2deac7e3a2877233d6205232bfea242016e"
+    },
+    {
+      "checkId": "attempt003-file-readonly-closed-terminal-pass-receipt.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt003-file-hash-after-readonly-terminal-pass-receipt.v1.json",
+      "passed": true,
+      "observed": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418",
+      "expected": "3ac34ef5e92af59648828e719add81a0d42078bfbd4ff4a9f1eb5b1613af6418"
+    }
+  ],
+  "forbiddenActivityCounts": {
+    "unityProcesses": 0,
+    "instrumentProcesses": 0,
+    "oracleProcesses": 0,
+    "emptyBoundaryProcesses": 0,
+    "algorithmLaneProcesses": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "qualificationExecutionAttempts": 0
+  }
+}

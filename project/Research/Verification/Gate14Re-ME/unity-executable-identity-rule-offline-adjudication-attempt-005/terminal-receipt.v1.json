@@ -1,0 +1,39 @@
+{
+  "schema": "gate14re-me-unity-identity-offline-adjudication-terminal-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-offline-evidence-adjudication-attempt-005",
+  "status": "PASS_TRUSTED_LAUNCH_IDENTITY_RULE_FROZEN_BY_OFFLINE_ADJUDICATION",
+  "completedAtUtc": "2026-10-17T10:53:21.973136Z",
+  "passed": true,
+  "terminal": true,
+  "attempt005UnityInvocationCount": 0,
+  "attempt004OutcomeRetained": "FAILED_CLOSED_NOT_ADJUDICATED",
+  "classification": "EXTERNAL_COMPOSITE_IDENTITY_AUTHORITATIVE_IN_PROCESS_READS_DIAGNOSTIC",
+  "trustedIdentityRule": {
+    "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+    "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+  },
+  "offlineAdjudication": {
+    "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/offline-evidence-adjudication.v1.json",
+    "sha256": "b3f7e26000176e7572c4140a4dfd3d694529dec31582e6e77ff905fe7ebb978c"
+  },
+  "attempt004EvidenceUnchanged": true,
+  "automaticRetryCount": 1,
+  "criteriaRelaxed": false,
+  "scientificBoundary": {
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "nextAuthorizationRequired": "A new, separate authorization is required before any schema-compatibility self-check, qualification planning, schedule/input/identity-map generation, measured-root creation, planner, algorithm lane, collection, analysis, ranking or winner adjudication.",
+  "automaticRetryKind": "READ_ONLY_PREFLIGHT_TOOL_REPAIR",
+  "historicalBindingAliasCount": 8
+}

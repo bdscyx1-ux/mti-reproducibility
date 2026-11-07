@@ -1,0 +1,105 @@
+{
+  "schema": "gate14re-mq-formal-analysis-execution-authorization-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "authorizationId": "gate14re-mq-formal-analysis-attempt-001-b9079a33-6716-4485-a88c-1981edb87afc",
+  "status": "AUTHORIZED_FORMAL_MQ_ANALYSIS_ONLY",
+  "createdAtUtc": "2026-10-22T04:38:44.8739756Z",
+  "exactUserAuthorization": "授权后续工作",
+  "authorizationInterpretation": "authorize the immediate next gate: one formal MQ analysis execution on the sealed terminal-PASS attempt-003 collection under the unchanged frozen v2 design, followed by result/evidence freezing and a paper-facing evidence report",
+  "scope": {
+    "formalMqAnalysis": true,
+    "paperEvidencePackage": true,
+    "formalSt": false,
+    "mt": false,
+    "scientificDesignChange": false,
+    "newUnityAcquisition": false,
+    "algorithmRankingOrWinner": false
+  },
+  "evidenceRoot": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-analysis-execution-attempt-001",
+  "resultRoot": "Research/Analysis/Gate14Re-MQ-CFF-IDFF/formal-mq/v1/attempt-001",
+  "analysisContract": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Analysis/v1/formal-mq-analysis-contract.v1.json",
+    "bytes": 8014,
+    "sha256": "940025bca8952568f68dd08fa333b0bac395a0203da98ddd5f61f87a6dcb6f59"
+  },
+  "analyzer": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Analysis/v1/analyze_formal_mq_v1.py",
+    "bytes": 60801,
+    "sha256": "c313fc16f9a4659f7e507af90fc822dff42d8319a4033cf5e9d5f492ef604748"
+  },
+  "implementationManifest": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-analysis-implementation-v1-attempt-001/implementation-manifest.v1.json",
+    "bytes": 1873,
+    "sha256": "0b7fe87616867cb0ef764878a49767c9507b2244d3af9582a7321a477a0bf39f"
+  },
+  "readinessReceipt": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-analysis-implementation-v1-attempt-001/readiness-checkpoint.v1.json",
+    "bytes": 1824,
+    "sha256": "6f8eee4f8d302e5f4c8984e942cf0ec4b694dfe457e04ee57da0b4484663da14"
+  },
+  "frozenInputs": {
+    "measuredRoot": "Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003",
+    "collectionTerminalReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-003/collection-terminal-receipt.v2.json",
+      "sha256": "e3c2f64d3a612ca329924d0a2574e3301c9a60543ba8af87f2ac3e60b5e5f39b"
+    },
+    "collectionFinalEvidenceSeal": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-003/final-evidence-seal-manifest.v2.json",
+      "sha256": "300ceda2788d3f13c98e39df8629613df6b951c94d8154944fc82fd9ec9c4226"
+    },
+    "acquisitionComplete": {
+      "relativePath": "Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003/_control/acquisition-complete.v2.json",
+      "sha256": "49d8dd3224a8b602ddabf3894aeb65b5cb3665b35e7c2881d4872f5e1dfaf33f"
+    },
+    "acquisitionFreezeManifest": {
+      "relativePath": "Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003/_control/acquisition-freeze-manifest.v2.json",
+      "sha256": "df3d760b678e1fb4bc4c863f23d7911600e76eefedae5efb0c197f53d021e6f0"
+    },
+    "scientificAndAnalysisContract": {
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-scientific-and-analysis-contract.v2.json",
+      "sha256": "794f3958de4eecad67fbeefa1353b6f0a07aeb5d60882495a4b6a021d4af434a"
+    },
+    "authorizedDesign": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-rule-freeze-v2-attempt-001/formal-mq-authorized-design.v2.json",
+      "sha256": "79b4cbf309f278c2611955419ddb0d524915e4ddc6ae1596746cff1ec7bfa18a"
+    },
+    "formalSchedule": {
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/formal-process-schedule.v2.jsonl",
+      "sha256": "70121c16dd42472610ddeddb3848dcd25d279390930def5b66d29049316c44a5"
+    },
+    "identityMap": {
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/opaque-algorithm-identity-map.v2.json",
+      "sha256": "aac226811f2e6ce2acf15f3fe3c5b0ad3861569992aef3cc5822d7188dbb8059"
+    }
+  },
+  "executionPolicy": {
+    "singleFormalExecution": true,
+    "resultRootMustNotExist": true,
+    "atomicCreateNoOverwrite": true,
+    "verifyAll4325AcquisitionFilesBeforeOutcomeParsing": true,
+    "parseBatchEndpointOnly": true,
+    "parseLaneObservationValues": false,
+    "noRetryWithinAttempt": true,
+    "noReplacement": true,
+    "noTopUp": true,
+    "noMergeAcrossAttempts": true
+  },
+  "exactCommandTemplate": [
+    "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "H:/DDM_Final_Project/Research/Gate14Re-MQ-CFF-IDFF/Analysis/v1/analyze_formal_mq_v1.py",
+    "--project-root",
+    "H:/DDM_Final_Project",
+    "--authorization",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-analysis-execution-attempt-001/execution-authorization.v1.json",
+    "--authorization-sha256",
+    "AUTHORIZATION_SHA256_TO_BE_SUPPLIED_EXACTLY_AT_LAUNCH",
+    "--evidence-root",
+    "H:/DDM_Final_Project/Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-analysis-execution-attempt-001",
+    "--result-root",
+    "H:/DDM_Final_Project/Research/Analysis/Gate14Re-MQ-CFF-IDFF/formal-mq/v1/attempt-001"
+  ],
+  "formalAnalysisStarted": false,
+  "formalStStarted": false,
+  "mtStarted": false
+}

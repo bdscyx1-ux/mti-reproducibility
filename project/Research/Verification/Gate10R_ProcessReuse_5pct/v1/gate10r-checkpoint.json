@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "checkpointKind": "gate10r-process-reuse-5pct-checkpoint-v1",
+  "savedAtUtc": "2026-10-06T08:25:43.044Z",
+  "status": "GATE10R-FAILED-NO-AUTO-RETRY",
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "attempt": 1,
+  "completedStages": [
+    "authorization-recorded",
+    "historical-preservation-audit",
+    "specification-frozen",
+    "test-design-frozen",
+    "additive-implementation-frozen",
+    "powershell-parser-preflight"
+  ],
+  "failedStage": "official-unit-test-entry",
+  "failureReceiptRelativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v1/Gate10R_Attempt1_Failure_Receipt.v1.json",
+  "failureReceiptSha256": "a1d501c72fa1e1a21f041c9cb7c73967b85e0dafbe2b74fe1cf83d003613917a",
+  "partialManifestRelativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v1/Gate10R_Attempt1_Partial_Output_Manifest.v1.json",
+  "partialManifestSha256": "9dc16acfc7bab0f72d621fd6620f83235411e3afa6d9138fbde1445f87ff138e",
+  "unityStarted": false,
+  "automaticRetryAuthorized": false,
+  "automaticResumeAuthorized": false,
+  "gate11AuthorizedButBlockedByFailedGate10R": true,
+  "gate12AuthorizedButBlockedByFailedGate10R": true,
+  "gate13RFormalCampaignAuthorized": false,
+  "nextAction": "WAIT-FOR-EXPLICIT-GATE10R-ATTEMPT2-RETRY-AUTHORIZATION"
+}
+

@@ -1,0 +1,117 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-simplified-abi-amendment-20261017",
+  "parentAuthorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 14,
+  "status": "PASS_D3_V3_1_STRICT_JSON_KNOWN_ANSWER",
+  "completedAtUtc": "2026-10-17T07:52:55.2457807Z",
+  "phase": "algorithm-free-d3-v3-1-known-answer-v2-strict-json-repair",
+  "unityProcess": {
+    "pid": 61112,
+    "startedAtUtc": "2026-10-17T07:50:40.1899845Z",
+    "exitedAtUtc": "2026-10-17T07:50:56.6311202Z",
+    "exitCode": 0,
+    "harnessOwnedExit": true,
+    "unityProcessRemainingAfterExit": false
+  },
+  "repairAudit": {
+    "v1EvidenceRetained": true,
+    "v1HarnessModified": false,
+    "nativeSourceModified": false,
+    "nativeBinaryRebuilt": false,
+    "managedWrapperModified": false,
+    "scientificControlsChanged": false,
+    "serializationOnlyChange": "A zero-elapsed empty window now serializes managedAllocationRateBytesPerSecond as 0.0 instead of NaN.",
+    "positiveFormulaGateRelaxed": false
+  },
+  "strictArtifactAudit": {
+    "strictJsonParserPassed": true,
+    "nonFiniteJsonTokenCount": 0,
+    "unityCompileErrors": 0,
+    "unityRuntimeExceptions": 0,
+    "terminalReceiptStatus": "PASS_D3_V3_1_TRUE_CUMULATIVE_MANAGED_ALLOCATION_QUALIFICATION",
+    "terminalReceiptPassed": true,
+    "terminalReceiptVersion": 2,
+    "completedStageCount": 10,
+    "allCompletedStagesPassed": true,
+    "measuredWindowCount": 71
+  },
+  "knownAnswerResults": {
+    "exactGcAllocMarkerPassed": true,
+    "beginUInt32SizeFourAbiPassed": true,
+    "positiveMetadataObserved": true,
+    "emptyWindowTrials": 64,
+    "emptyWindowOwnerBytesAndEventsAllZero": true,
+    "knownArrayRequestedBytes": [4096, 65536, 1048576],
+    "knownArrayObservedBytes": [4128, 65568, 1048608],
+    "knownArrayObservedEvents": [1, 1, 1],
+    "knownArrayPerAllocationOverheadBytes": [32, 32, 32],
+    "knownArrayOverheadSpreadBytes": 0,
+    "singleSixtyFourByteObjectObservedBytes": 96,
+    "singleSixtyFourByteObjectObservedEvents": 1,
+    "repeatedSmallObjectCount": 4096,
+    "repeatedSmallObjectObservedBytes": 393216,
+    "repeatedSmallObjectObservedEvents": 4096,
+    "gcBeforeAfterEndBytes": [8388640, 8388640, 8388640],
+    "gcBeforeAfterEndEvents": [1, 1, 1],
+    "gcNondecreaseAndConditionalConsistencyPassed": true,
+    "sameThreadOneMiBOwnerBytes": 1048608,
+    "sameThreadOneMiBOwnerEvents": 1,
+    "crossThreadOwnerBytes": 0,
+    "crossThreadOwnerEvents": 0,
+    "crossThreadForeignBytes": 4194336,
+    "crossThreadForeignEvents": 1,
+    "byteAndRateFormulaAbsoluteRecomputeError": 0.0,
+    "invalidMetadataCountsAllZero": true,
+    "counterOverflowCountsAllZero": true,
+    "allCriteriaPassed": true
+  },
+  "bindingAudit": {
+    "receiptBindingCount": 18,
+    "allReceiptBindingsRehashedAfterRun": true,
+    "allReceiptBindingsMatched": true,
+    "protectedQualificationRunnerHashMatched": true,
+    "protectedOutputSchemaHashMatched": true,
+    "protectedSixAlgorithmBindingHashMatched": true
+  },
+  "artifacts": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/cycle-plan.v1.json",
+      "lengthBytes": 3735,
+      "sha256": "f86627eb3859e877f3a1acba278d5424471d543084ee0ceaac1bc610630f0c00"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/unity-known-answer.log",
+      "lengthBytes": 92266,
+      "sha256": "7b008dccaa9467cc364cc303fa38131702f2677126febfb1d36b482ab3b0b922"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/known-answer-output/d3-v3-1-known-answer-receipt.v2.json",
+      "lengthBytes": 70901,
+      "sha256": "f2ec81f73a8e77c05f84b95a8e44aa5565e07628418f20d28e09f882ede53139"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V31KnownAnswerRunnerV2.cs",
+      "lengthBytes": 55822,
+      "sha256": "89724c1106600dbd7e9cc21059942e28480e063f6e41cacbf2ef1ac3902c1ce6"
+    },
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3V31KnownAnswerRunnerV2.cs.meta",
+      "lengthBytes": 240,
+      "sha256": "0330867dfc37d9cf856af343c20c070e2cd9f128b9cc0a5afe6f5a9421d29a18"
+    }
+  ],
+  "scientificBoundary": {
+    "priorEvidenceModifiedOrDeleted": false,
+    "priorDiagnosticsRerun": false,
+    "qualificationRunnerOrSchemaIntegrated": false,
+    "qualificationMeasuredRootCreated": false,
+    "scheduleInputsOrIdentityMappingsCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisRankingOrWinner": false,
+    "fallbackMetricUsed": false
+  }
+}

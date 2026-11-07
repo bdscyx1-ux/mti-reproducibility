@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "provenanceKind": "gate13r-pr2-formal-attempt3-phase-a-execution-adapter-provenance-v2",
+  "recordedAtUtc": "2026-10-09T08:25:42.4887624Z",
+  "recordedAtAsiaShanghai": "2026-10-09T16:25:42.4887624+08:00",
+  "supersedesForLaunch": "Research/Gate13R_PR2_Attempt3_Formal_Execution_Adapter_Provenance.v1.json",
+  "repairCycle": {
+    "ordinal": 3,
+    "limit": 3,
+    "remainingAfterRepair": 0,
+    "failureSignature": "FORMAL-PRECOMMIT/LAUNCHER/POWERSHELL-PATH-ARRAY-EXPRESSION-SPLIT",
+    "failureReceiptRelativePath": "Research/Verification/Gate13R_PR2_Attempt3_FormalExecution/v1/attempt-3-prelaunch-repair-cycle3/failure-receipt.json",
+    "changeClass": "POWERSHELL-ARGUMENT-CONSTRUCTION-ONLY",
+    "scientificSemanticsChanged": false,
+    "executionScheduleChanged": false,
+    "memoryPolicyChanged": false,
+    "unityCommandChanged": false
+  },
+  "authorization": {
+    "relativePath": "Research/Gate13R_PR2_Attempt3_Execution_Authorization.v1.json",
+    "sha256": "b32e6f3887f86c88909b2f2b77d8d36a9c9e4c6bf985b4c075ab53b5a67033de"
+  },
+  "implementation": {
+    "orchestrator": {
+      "relativePath": "Research/Gate13RPR2Attempt3ExecutionV1.py",
+      "sha256": "03bc5e8e73f6e74cd164f7d045dff028b670d3a4b967940a68dc41e1d0fa5a3c"
+    },
+    "launcher": {
+      "relativePath": "Research/Run-Gate13RPR2FormalAttempt3V2.ps1",
+      "sha256": "2c8803d90677f097fd718865b5ae5d904dcaf39dc08ab1a8d6e47f4290a519fe"
+    },
+    "prelaunchTestHarness": {
+      "relativePath": "Research/Test-Gate13RPR2FormalAttempt3PrelaunchV1.py",
+      "sha256": "0ccc43c89dafde97db7835ec830d955c7e73b84f5cbe4b5c37c047715a462cd4"
+    }
+  },
+  "repairMechanism": {
+    "nativePowerShellPathConstruction": "[IO.Path]::GetFullPath((Join-Path $PSHOME 'powershell.exe'))",
+    "resolvedBeforeArgumentArray": true,
+    "resolvedPathMustExist": true,
+    "argumentsOnlyValidationSwitch": "EmitArgumentsOnly",
+    "argumentsOnlyValidationMayLaunchPython": false,
+    "argumentsOnlyValidationMayLaunchUnity": false
+  },
+  "frozenExecutionBindings": {
+    "candidateConfigV4Sha256": "c8d3e9965ae72798e2366c0187a96e578df306bb68196f54039c421672b78042",
+    "scheduleV2Sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "scheduleManifestV2Sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+    "policyOverlayV2Sha256": "c87cc7eab158dc7a111867364b9c06c2314f44c644ef2a4b8e33348bd1876d13",
+    "blockWrapperV3Sha256": "fc0c42b858afb8e8d80c6f10544a0d7fb75694ae8c57910d205cea721731ff13",
+    "blockPlanBuilderV4Sha256": "11365fb3c694ae2fab6c9d3c3cb3c93f3cbe3e6f2f7a30373730f5a236ce8785",
+    "unityCommandV5Sha256": "21f86b21a49c936edd5e65fde750d269a54be984186d9c802cbc2804b2691c75",
+    "statusSchemaV1Sha256": "3aff68ac8e041838283f8e28b72b388ab4de50abe3b357f59bb3e3597f74d89b",
+    "monitorV2Sha256": "6d1cd6b1f0542c2985fb0c11d3da6caee6c0413f0c5fe13f335897fef8f4c162",
+    "monitorWrapperV2Sha256": "8b9c3733aae86b4adbe03c9bc7806931947746d864854d438bf2a67d09f537c5"
+  },
+  "executionContract": {
+    "formalAttemptOrdinal": 3,
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "freshUnityProcessPerCompleteWilliamsBlock": true,
+    "campaignCount": 74,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "matchedSuperblockCount": 1008,
+    "measuredRetryResumeTopUpMergeAuthorized": false,
+    "phaseBFormalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false,
+    "twoStageRawCommitRequired": true
+  },
+  "formalTargetsPresentWhenRecorded": false,
+  "immutable": true
+}

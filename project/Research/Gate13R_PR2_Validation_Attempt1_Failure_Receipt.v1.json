@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr2-validation-attempt1-failure-v1",
+  "attempt": 1,
+  "failedAtUtc": "2026-10-08T16:13:19.3387207+00:00",
+  "status": "FAILED-VALIDATION-ONLY / CORE-NOT-STARTED / VERSIONED-REPAIR-ALLOWED",
+  "failureGate": "pre-validation-frozen-tree-identity",
+  "failureReasonCode": "POWERSHELL-RUNTIME-COLLATION-DIVERGENCE",
+  "diagnosis": "Windows PowerShell 5.1 Sort-Object FullName placed analysis-recovery.log before sibling JSON files, while the previously frozen PowerShell 7 tree identity placed JSON before LOG. File count, raw bytes, individual file hashes, and pre/post tree contents were unchanged.",
+  "validationRoot": {
+    "relativePath": "Research/Verification/Gate13R_PR2_NonExecuting_Preparation/v1",
+    "fileCount": 6,
+    "rawBytes": 18738,
+    "canonicalOrdinalTreeSha256": "be1493a4e73354dd8cd4d4f4d5d25cb7dd2105b72d740b89bc17c394c7bb98ea"
+  },
+  "safetyState": {
+    "coreValidatorStarted": false,
+    "unityEditorLaunched": false,
+    "formalRootCreated": false,
+    "formalExecutionReceiptCreated": false,
+    "formalCampaignStarted": false,
+    "gate14RStarted": false,
+    "frozenInputsModified": false
+  },
+  "repairBoundary": "Create new v2 validator/orchestrator files and a new v2 validation root. Freeze path ordering as StringComparer.Ordinal. Preserve v1 byte-for-byte."
+}

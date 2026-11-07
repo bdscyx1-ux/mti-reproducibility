@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate13r-pr1b-v3-path-safe-atomic-persistence-non-formal-pilot-v1",
+  "recordedAtUtc": "2026-10-08T12:54:09.0386486Z",
+  "recordedAtAsiaShanghai": "2026-10-08T20:54:09.0407134+08:00",
+  "authorizationPrompt": {
+    "relativePath": "Research/Gate13R_PR1B_v3_PathSafe_Next_Authorization_Prompt.md",
+    "rawBytes": 7455,
+    "sha256": "0994f20de79d1ca31dad5825daccfa7c89c2b4dfe039f280ea03700f598725a1"
+  },
+  "authorized": [
+    "CONTROLLED-STALE-LOCK-RECOVERY",
+    "VERSIONED-V3-PATH-SAFE-ATOMIC-PERSISTENCE-REPAIR",
+    "PREPILOT-VALIDATION-WITH-VERSIONED-REPAIR-RETRY",
+    "ONE-FRESH-NON-FORMAL-BALANCED-MIRRORED-ORDER-EFFECT-PILOT",
+    "POST-PILOT-ORDER-EFFECT-ANALYSIS-ONLY-AFTER-COMPLETE-PILOT"
+  ],
+  "notAuthorized": [
+    "GATE13R-FORMAL-CAMPAIGN",
+    "GATE14R",
+    "FORMAL-ROOT-CREATION",
+    "FORMAL-EXECUTION-RECEIPT",
+    "OBS-CAPTURE",
+    "ORIGINAL-GAME-SCRIPT-CHANGE",
+    "ORIGINAL-SCENE-CHANGE",
+    "PILOT-RETRY-AFTER-NEW-PILOT-ROOT-CREATION",
+    "PILOT-RESUME",
+    "PILOT-TOP-UP",
+    "HISTORICAL-ATTEMPT-MERGE"
+  ],
+  "staleLockRecovery": {
+    "preAuditRelativePath": "Research/Gate13R_PR1B_v3_StaleLock_PreRecovery_Audit.v1.json",
+    "preAuditSha256": "8ed2d4e6cb3c9f2a4dc6cd2e0af88050ee32387aedf94e6d96d03d59e6ab846e",
+    "recoveryReceiptRelativePath": "Research/Gate13R_PR1B_v3_StaleLock_Recovery_Receipt.v1.json",
+    "recoveryReceiptSha256": "7e2f06396f890bdf78b99b22adb8ae839fc69031bddfbe7e66fae80cf63dda9d",
+    "passed": true
+  },
+  "v6Status": "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+  "formalCampaignAuthorized": false,
+  "gate14rAuthorized": false
+}

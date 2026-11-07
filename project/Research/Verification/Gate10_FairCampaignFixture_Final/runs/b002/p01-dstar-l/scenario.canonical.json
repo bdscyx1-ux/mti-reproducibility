@@ -1,0 +1,210 @@
+{
+    "schemaVersion": 1,
+    "scenarioId": "gate10-shared-goal-v1",
+    "randomSeed": 101004,
+    "gridWidth": 10,
+    "gridHeight": 6,
+    "defaultTraversalCost": 1.0,
+    "worldOrigin": {
+        "x": -5.0,
+        "y": 0.0,
+        "z": -3.0
+    },
+    "cellSize": 1.0,
+    "connectivity": 4,
+    "allowDiagonalCornerCutting": false,
+    "fixedStepSeconds": 0.02,
+    "maxSimulationTicks": 1000001,
+    "goalSetId": "gate10-single-shared-goal",
+    "initializationBudgetMilliseconds": 1000.0,
+    "defaultPlanBudgetMilliseconds": 1000.0,
+    "defaultRepairBudgetMilliseconds": 20.0,
+    "agents": [
+        {
+            "agentId": 0,
+            "start": {
+                "x": 0,
+                "y": 1
+            },
+            "goal": {
+                "x": 9,
+                "y": 1
+            }
+        },
+        {
+            "agentId": 1,
+            "start": {
+                "x": 0,
+                "y": 4
+            },
+            "goal": {
+                "x": 9,
+                "y": 1
+            }
+        }
+    ],
+    "initialGridOverrides": [
+        {
+            "coordinate": {
+                "x": 4,
+                "y": 0
+            },
+            "isWalkable": false,
+            "traversalCost": 1.0
+        },
+        {
+            "coordinate": {
+                "x": 2,
+                "y": 1
+            },
+            "isWalkable": true,
+            "traversalCost": 2.0
+        },
+        {
+            "coordinate": {
+                "x": 7,
+                "y": 1
+            },
+            "isWalkable": true,
+            "traversalCost": 2.0
+        },
+        {
+            "coordinate": {
+                "x": 4,
+                "y": 2
+            },
+            "isWalkable": false,
+            "traversalCost": 1.0
+        },
+        {
+            "coordinate": {
+                "x": 4,
+                "y": 3
+            },
+            "isWalkable": false,
+            "traversalCost": 1.0
+        },
+        {
+            "coordinate": {
+                "x": 2,
+                "y": 4
+            },
+            "isWalkable": true,
+            "traversalCost": 2.0
+        },
+        {
+            "coordinate": {
+                "x": 7,
+                "y": 4
+            },
+            "isWalkable": true,
+            "traversalCost": 2.0
+        },
+        {
+            "coordinate": {
+                "x": 4,
+                "y": 5
+            },
+            "isWalkable": false,
+            "traversalCost": 1.0
+        }
+    ],
+    "scheduledChanges": [
+        {
+            "eventId": "close-upper-gate",
+            "simulationTick": 10,
+            "order": 0,
+            "repairBudgetMilliseconds": 20.0,
+            "changes": [
+                {
+                    "coordinate": {
+                        "x": 4,
+                        "y": 1
+                    },
+                    "isWalkable": false,
+                    "traversalCost": 1.0
+                }
+            ]
+        },
+        {
+            "eventId": "open-center-north",
+            "simulationTick": 10,
+            "order": 1,
+            "repairBudgetMilliseconds": 20.0,
+            "changes": [
+                {
+                    "coordinate": {
+                        "x": 4,
+                        "y": 2
+                    },
+                    "isWalkable": true,
+                    "traversalCost": 1.0
+                }
+            ]
+        },
+        {
+            "eventId": "move-lower-gate",
+            "simulationTick": 500000,
+            "order": 0,
+            "repairBudgetMilliseconds": 20.0,
+            "changes": [
+                {
+                    "coordinate": {
+                        "x": 4,
+                        "y": 3
+                    },
+                    "isWalkable": true,
+                    "traversalCost": 1.0
+                },
+                {
+                    "coordinate": {
+                        "x": 4,
+                        "y": 4
+                    },
+                    "isWalkable": false,
+                    "traversalCost": 1.0
+                }
+            ]
+        },
+        {
+            "eventId": "restore-original-gates",
+            "simulationTick": 999999,
+            "order": 0,
+            "repairBudgetMilliseconds": 20.0,
+            "changes": [
+                {
+                    "coordinate": {
+                        "x": 4,
+                        "y": 1
+                    },
+                    "isWalkable": true,
+                    "traversalCost": 1.0
+                },
+                {
+                    "coordinate": {
+                        "x": 4,
+                        "y": 2
+                    },
+                    "isWalkable": false,
+                    "traversalCost": 1.0
+                },
+                {
+                    "coordinate": {
+                        "x": 4,
+                        "y": 3
+                    },
+                    "isWalkable": false,
+                    "traversalCost": 1.0
+                },
+                {
+                    "coordinate": {
+                        "x": 4,
+                        "y": 4
+                    },
+                    "isWalkable": true,
+                    "traversalCost": 1.0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-36h-four-lane-unity-command-mechanical-derivation-v1",
+    "createdAtUtc":  "2026-10-08T04:09:37.6169907Z",
+    "sourceRelativePath":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs",
+    "sourceSha256":  "eeca58f7e1121d0a297e8796430a90ae32f8492c32fc5fb676ae102b5f4a0c97",
+    "outputRelativePath":  "Assets/_Scripts/Research/Editor/Gate13R36hConcurrencyBatchCommandV1.cs",
+    "outputSha256":  "842ca34cce82774ad4b892e003dec55c7a4bae0a3dedbbe0f769a6e9a376f404",
+    "reverseTransformSha256":  "eeca58f7e1121d0a297e8796430a90ae32f8492c32fc5fb676ae102b5f4a0c97",
+    "routes":  [
+                   {
+                       "from":  "Gate12RProcessReuseBatchCommandV3",
+                       "to":  "Gate13R36hConcurrencyBatchCommandV1",
+                       "count":  1
+                   },
+                   {
+                       "from":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+                       "to":  "gate13r-36h-10pct-four-isolated-editor-lanes-v1",
+                       "count":  1
+                   },
+                   {
+                       "from":  "gate12r-process-reuse-5pct-process-reuse-block-manifest-v2",
+                       "to":  "gate13r-36h-10pct-four-lane-nonformal-block-manifest-v1",
+                       "count":  1
+                   },
+                   {
+                       "from":  "gate10r-process-reuse-5pct-process-reuse-sample-summary-v1",
+                       "to":  "gate13r-36h-10pct-four-lane-nonformal-sample-summary-v1",
+                       "count":  1
+                   },
+                   {
+                       "from":  "gate10r-process-reuse-5pct-process-reuse-block-checkpoint-v1",
+                       "to":  "gate13r-36h-10pct-four-lane-nonformal-block-checkpoint-v1",
+                       "count":  1
+                   },
+                   {
+                       "from":  "gate10r-process-reuse-5pct-process-reuse-block-failure-v1",
+                       "to":  "gate13r-36h-10pct-four-lane-nonformal-block-failure-v1",
+                       "count":  1
+                   },
+                   {
+                       "from":  "gate10r-process-reuse-5pct-native-telemetry-probe-ready-v1",
+                       "to":  "gate13r-36h-10pct-four-lane-telemetry-probe-ready-v1",
+                       "count":  1
+                   },
+                   {
+                       "from":  "gate10r-process-reuse-5pct-native-telemetry-probe-result-v1",
+                       "to":  "gate13r-36h-10pct-four-lane-telemetry-probe-result-v1",
+                       "count":  1
+                   }
+               ],
+    "workloadLogicChanged":  false,
+    "resetLogicChanged":  false,
+    "telemetryLogicChanged":  false,
+    "memoryThresholdsChanged":  false,
+    "formalCampaignEnabled":  false
+}

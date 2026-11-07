@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "clarificationId": "gate10r-cold-structural-control-coverage-v1",
+  "createdAt": "2026-10-06T16:15:00+08:00",
+  "status": "PROSPECTIVE-PRE-EXECUTION-RIGOR-INCREASE",
+  "boundTestDesign": "Research/Gate10R_ProcessReuse_5pct_Test_Design.md",
+  "rule": "The frozen minimum of four shared-scenario cold references is retained. Two additional heterogeneous-scenario cold references are added so every positive two-algorithm sample also has a same-scenario, same-algorithm fresh cold reference.",
+  "sharedColdControls": 4,
+  "heterogeneousColdControls": 2,
+  "totalColdControls": 6,
+  "structuralComparisonCoverage": "all samples in positive-two, positive-four-a, and positive-four-b",
+  "thresholdRelaxed": false,
+  "executionStartedBeforeClarification": false
+}
+

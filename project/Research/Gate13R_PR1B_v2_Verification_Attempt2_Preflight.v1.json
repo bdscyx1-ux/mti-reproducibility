@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "preflightId": "gate13r-pr1b-v2-verification-attempt2-preflight-v1",
+  "completedAtUtc": "2026-10-08T12:29:21.2384582Z",
+  "completedAtAsiaShanghai": "2026-10-08T20:29:21.2384582+08:00",
+  "status": "PASSED-VERIFICATION-V10-MAY-START",
+  "pilotPlan": {
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v3.json",
+    "rawBytes": 6566,
+    "sha256": "f1c4d3e977cfa9374fdd0a265db78ab38efc14c356c64a9dd72d45715a7974d9"
+  },
+  "provenance": {
+    "relativePath": "Research/Gate13R_PR1B_OrderEffect_Provenance.v3.json",
+    "rawBytes": 11974,
+    "sha256": "f7c5c717cee57c838c8af471822bbace64596597465332aed03c2dbac97a34b7"
+  },
+  "checks": [
+    {"id":"windows-powershell-5.1-parser","count":8,"passed":true},
+    {"id":"windows-powershell-5.1-parameter-binding-smoke","count":8,"passed":true},
+    {"id":"v3-plan-json","passed":true},
+    {"id":"v3-provenance-json","passed":true},
+    {"id":"v3-provenance-bound-file-hashes","count":44,"passed":true},
+    {"id":"deterministic-schedule-regeneration","campaignCount":6,"measuredProcessCount":384,"warmupProcessCount":12,"passed":true},
+    {"id":"v9-byte-preservation","fileCount":20,"rawBytes":176860,"canonicalTreeSha256":"5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74","passed":true},
+    {"id":"unity-process-absence","observed":0,"passed":true},
+    {"id":"unity-project-lock-absence","passed":true},
+    {"id":"pilot-v6-root-absence","passed":true},
+    {"id":"verification-v10-root-absence","passed":true},
+    {"id":"reserved-formal-root-absence","passed":true}
+  ],
+  "scientificContractChanged": false,
+  "measuredPilotStarted": false,
+  "formalCampaign": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

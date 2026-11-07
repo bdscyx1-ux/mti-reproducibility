@@ -1,0 +1,17 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-generation-attempt1-failed",
+  "command": "Ran Gate 13R formal preparation generation attempt 1. It failed closed before official artifact creation because the generator assumed a non-existent completeCoverage property rather than the frozen Gate 11R coverage count fields. The failure receipt was preserved; zero official artifacts, Unity processes, formal receipts or formal roots were created.",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "input_sha256": {
+    "Gate13R_GenerationAttempt1_Failure.v1.json": "a67c6d055447ca1c4fd515918b46c88948ef6983be3f97838518a8e7a9fac164"
+  },
+  "output_sha256": "a67c6d055447ca1c4fd515918b46c88948ef6983be3f97838518a8e7a9fac164",
+  "gate_tokens": [
+    "GENERATION-ATTEMPT1-FAILED-CLOSED",
+    "ZERO-OFFICIAL-ARTIFACTS",
+    "FORMAL-ROOT-ABSENT"
+  ]
+}

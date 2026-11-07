@@ -1,0 +1,128 @@
+{
+  "schema": "gate14re-me-load-qualification-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "VALIDATED_AWAITING_FINAL_FREEZE_RECEIPT",
+  "authorizationId": "gate14re-me-load-qualification-freeze-attempt-001",
+  "artifacts": [
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Freeze_Authorization.v1.json",
+      "bytes": 2253,
+      "sha256": "5e2c6b7781069b41c18929bac80705d9523c8fe47d51403d1b51d11012085c1f",
+      "role": "explicit user authorization and nonexecution scope boundary"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Protocol.v1.json",
+      "bytes": 13494,
+      "sha256": "93f176513ba09f07abe2cb3182a5e7c20662495773d810c54caa7d9589dfa364",
+      "role": "normative precollection load qualification protocol"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v2.md",
+      "bytes": 9962,
+      "sha256": "774942ace72f98961fa65fc97c43ecbc7f850f2dbad47775dc5ff1b96eb4c4d0",
+      "role": "human-readable cumulative v2 scientific amendment"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v2.json",
+      "bytes": 5144,
+      "sha256": "73d81fe3be7c0e8f1ba6bbf25e584d86137a2e196d89ec03de7e8d59bf6412f5",
+      "role": "machine-readable cumulative v2 scientific contract"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v2.json",
+      "bytes": 4217,
+      "sha256": "8960c2050f34ff56a8f680f092bdc4cf156ed8cff4ae264015411cbb249255d6",
+      "role": "parameter-freeze protocol with mandatory qualification prerequisite"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Status.v2.json",
+      "bytes": 4455,
+      "sha256": "287b2483dc87bae95e1a0891d30879e58eaad0fea02c3d3885111506284f050a",
+      "role": "current frozen state and authorization boundary"
+    },
+    {
+      "path": "Research/Validate-Gate14ReMELoadQualificationFreezeV1.py",
+      "bytes": 22246,
+      "sha256": "0a205f99a0686dcb550c3456c860b4825097c37e9c39c765ea12d21125835c37",
+      "role": "read-only outcome-free cross-file validator"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/precollection-load-qualification-freeze-attempt-001/validation-receipt.v1.json",
+      "bytes": 4290,
+      "sha256": "2f1c353f453af4f9c1236adcce8a1bd384cc6052db7b817f65adaacf56b66ecc",
+      "role": "239-check outcome-free validation receipt"
+    }
+  ],
+  "inheritedV1ExactBindings": [
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v1.md",
+      "sha256": "af7527b9c58ff0cd8af59fd9acd4fcdd08b5c4dc8f9241c2eccf7496e01a3f43"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v1.json",
+      "sha256": "02b8c5edc1d6c8604dbd1816d99ee4616ac2814d6198e0cee273d031fee60e7f"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+      "sha256": "9736b16601cc8c89166d65a78ff466114ad6affb57f8be2c9df59a5ddfce22f8"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v1.json",
+      "sha256": "66eb4bc493236394784d146c6e82c2f4cdd1b4bfaf684a2b202b7f7b939503b9"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Scientific_Freeze_Authorization.v1.json",
+      "sha256": "ecc04686ac7f243d3a7c603a44c4675bcf81002f3d8af3255160200dc81490b6"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Status.v1.json",
+      "sha256": "d43cc2fdb5f35b7936efa1741f8db0957a3f9444bf0a4910e9ef748a5c45e908"
+    },
+    {
+      "path": "Research/Validate-Gate14ReMEDesignV1.py",
+      "sha256": "ca394b67b6b452536f5e978806419eff62e4af662677f082b2d34b4ee515513c"
+    }
+  ],
+  "qualificationSnapshot": {
+    "independentUnit": "pilot input superblock",
+    "corePilotSuperblocks": 144,
+    "stressPilotSuperblocks": 18,
+    "totalPilotSuperblocks": 162,
+    "freshAlgorithmProcesses": 972,
+    "emptyBoundaryFreshProcesses": 12,
+    "emptyBoundaryRawIterations": 12000,
+    "expectedAlgorithmEventGroupRows": 23328,
+    "algorithmNeutralGeometryQualification": true,
+    "measurementFloorQualification": true,
+    "perLevelCoverageQualification": true,
+    "anonymousWithinLaneDynamicRangeMinimum": 4.0,
+    "minimumTimeoutMemoryStorageHeadroomFactor": 2.0,
+    "completePerObservationQualificationDataRequired": true
+  },
+  "scientificIntegrity": {
+    "qualificationDataExcludedFromFormalEstimation": true,
+    "crossAlgorithmQualificationComparison": false,
+    "algorithmDirectionRankingWinnerOrIDFFSpecificDecision": false,
+    "endpointOrScenarioSelectionFromAdvantage": false,
+    "v1EndpointsAndMajorityRuleChanged": false,
+    "positiveIDFFResultGuaranteed": false
+  },
+  "boundaries": {
+    "qualificationRootCreated": false,
+    "formalMeasuredRootCreated": false,
+    "formalAnalysisRootCreated": false,
+    "formalExportRootCreated": false,
+    "qualificationObservationsCreated": 0,
+    "formalObservationsCreated": 0,
+    "UnityLaunched": false,
+    "qualificationExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "authorizationState": {
+    "formalAnalysisOutputRootState": "ABSENT",
+    "formalOutcomeDataLoadingAuthorized": false,
+    "gate14RAuthorized": false,
+    "phaseBFormalStatisticalAnalysisExecutionAuthorized": false,
+    "preparationAuthorized": true,
+    "separateExecutionAuthorizationFileState": "ABSENT",
+    "separateExecutionAuthorizationPath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Authorization.v1.json"
+  },
+  "checks": {
+    "allFrozenInputHashesMatch": true,
+    "allImplementationHashesMatch": true,
+    "analyzerStaticInspection": {
+      "astParsed": true,
+      "authorizationGuardsPresent": true,
+      "exactM1ThroughM5MetricConstantsFound": [],
+      "forbiddenCallsFound": [],
+      "forbiddenImportsFound": [],
+      "importedModuleRoots": [
+        "__future__",
+        "argparse",
+        "collections",
+        "hashlib",
+        "importlib",
+        "json",
+        "math",
+        "os",
+        "pathlib",
+        "re",
+        "shutil",
+        "statistics",
+        "sys",
+        "typing",
+        "uuid"
+      ],
+      "mainGuardPresent": true
+    },
+    "analyzerSyntheticSelfTest": {
+      "analyzerId": "gate13r-pr2-attempt4-phaseb-analyzer-v1",
+      "formalAnalysisExecuted": false,
+      "formalRawOpened": false,
+      "gate14RExecuted": false,
+      "selfTest": "PASS"
+    },
+    "formalRawReadyAuditPass": true,
+    "outputSchemaBoundaryPass": true,
+    "preparationAuthorizationBoundaryPass": true,
+    "rawFreezeReceiptPass": true,
+    "rawPayloadManifestStructure": {
+      "declaredRawBytes": 26429810187,
+      "manifestRows": 89472,
+      "outcomeValuesRead": false,
+      "payloadFilesOpened": false,
+      "uniqueRelativePathCount": 89472
+    },
+    "scheduleStructure": {
+      "cohortProcessCounts": {
+        "four-algorithm-shared-goal-v1": 1536,
+        "grouped-field-heterogeneous-goal-v1": 1008,
+        "per-agent-heterogeneous-goal-v1": 1008
+      },
+      "cohortSampleCounts": {
+        "four-algorithm-shared-goal-v1": 6144,
+        "grouped-field-heterogeneous-goal-v1": 2016,
+        "per-agent-heterogeneous-goal-v1": 2016
+      },
+      "heterogeneousWilliamsProcessRowCounts": {
+        "0": 1008,
+        "1": 1008
+      },
+      "matchedSuperblockCount": 1008,
+      "matchedSuperblockOrderCounts": {
+        "AB": 504,
+        "BA": 504
+      },
+      "processCount": 3552,
+      "sampleCount": 10176,
+      "sharedWilliamsRowCounts": {
+        "0": 384,
+        "1": 384,
+        "2": 384,
+        "3": 384
+      },
+      "uniqueBlockIdCount": 3552,
+      "uniqueRunIdCount": 10176
+    },
+    "topManifestStructure": {
+      "blockManifestFilesOpened": false,
+      "eligibilityCommitReferenceCount": 3552,
+      "perBlockCommitFilesOpened": false,
+      "processCount": 3552,
+      "rawEvidenceBlockReferenceCount": 3552,
+      "sampleCount": 10176,
+      "workloadResultFilesOpened": false
+    },
+    "wrapperStaticInspection": {
+      "forbiddenCommandInvocationsFound": [],
+      "implementationHashChecksPresent": true,
+      "parsedAsText": true,
+      "separateAuthorizationGuardsPresent": true
+    }
+  },
+  "contractRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Contract.v1.json",
+  "contractSha256": "b59f6828cb1fd14dd7cb9911bd4260aafd8421828da5644cfdc016f33f9c6692",
+  "createdAtUtc": "2026-10-11T01:34:56.1423626Z",
+  "nextRequiredGate": {
+    "action": "SEPARATE-EXPLICIT-PHASEB-FORMAL-ANALYSIS-EXECUTION-AUTHORIZATION",
+    "mustBindContractSha256": true,
+    "mustKeepGate14RUnauthorized": true
+  },
+  "nonActions": {
+    "M1ThroughM5ReadDerivedOrReported": false,
+    "P1ThroughP5OutcomeValuesRead": false,
+    "blockManifestsOpened": false,
+    "formalAnalysisOutputCreated": false,
+    "formalStatisticalAnalysisExecuted": false,
+    "gate14RExecuted": false,
+    "rawRootWritten": false,
+    "unityLaunchedOrControlled": false,
+    "workloadResultFilesOpened": false
+  },
+  "preflightId": "gate13r-pr2-attempt4-phaseb-structural-preflight-v1",
+  "pythonVersion": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "schemaVersion": 1,
+  "status": "PASS-READY-FOR-SEPARATE-PHASEB-EXECUTION-AUTHORIZATION"
+}

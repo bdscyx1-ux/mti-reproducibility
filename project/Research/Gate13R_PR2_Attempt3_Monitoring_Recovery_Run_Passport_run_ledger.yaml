@@ -1,0 +1,210 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-09T06:53:49Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-09T06:53:49Z'
+  user_words: 接受
+  prev_hash: null
+  hash: 02fc7b3d66ab215dba860d3769c8061dcff2a01fc8cc5a8dfd408bbed159878c
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-09T07:20:55Z'
+  step: monitoring-validation-attempt-1
+  command: Run the frozen 54-check validation-only monitoring/recovery harness without
+    Unity or formal target creation and preserve the failed attempt before any versioned
+    repair.
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - FAILED-PRESERVED-53-OF-54
+  - TEST-ASSERTION-DIAGNOSED
+  - NO-UNITY
+  - NO-FORMAL-TARGET
+  input_sha256:
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-1/validation-summary.json: fc8364827927126905631f055dcb7727fe4fe0544f3f48780582e825bfd4821d
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-1/failure-receipt.json: 6adf12f107a01b833204732258ccc2aec9f2484448843e000899644efbd2d486
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-1/partial-output-manifest.json: 4d43729404f842ee59f746d85bbdb4e0bc8c9fa528b8a6cf6abffff180420f56
+  prev_hash: 02fc7b3d66ab215dba860d3769c8061dcff2a01fc8cc5a8dfd408bbed159878c
+  hash: f913aadfc5a368dfd303e30255be99bcccfede131ea14bd6c04ec978a299c5e3
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-09T07:20:55Z'
+  step: monitoring-validation-attempt-2
+  command: Run the versioned test-only repair that counts exactly one hourly progress
+    reason while retaining independent stall events, then validate all monitoring,
+    blinding, persistence, runtime and recovery boundaries.
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - VALIDATION-PASSED-54-OF-54
+  - PWSH-AND-WINPS51-PASSED
+  - ACQUISITION-NO-MEASURED-RETRY
+  - NO-UNITY
+  - NO-FORMAL-TARGET
+  input_sha256:
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Validation_Attempt1_Repair_Receipt.v1.json: 40546c1e92036e02fa3afc547a947229ccac8eb2d4b17914020edd117c6f46ec
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-2/validation-summary.json: 7c856d8698c0160c7e6ede08f1f057110be2bc2a8bc9da331e53152df650d1aa
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-2/pass-receipt.json: 6201ea32af4bfc6b3e2ca413237ea7486df95a055a288bda8586b66ea33b3b89
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v1/attempt-2/partial-output-manifest.json: 4bfd37568d265a84484232df40bab295f9c8b2878c0ff220b9476e0980d00817
+  prev_hash: f913aadfc5a368dfd303e30255be99bcccfede131ea14bd6c04ec978a299c5e3
+  hash: dd9c12b4096d7b0cdd545d4c0a7073743afefd221d710b1683d81cc70385ed37
+- seq: 4
+  kind: tool_receipt
+  at: '2026-10-09T07:20:55Z'
+  step: monitoring-recovery-readiness
+  command: Finalize the blinded five-minute watcher and sixty-minute report contract,
+    bounded recovery state machine, terminal audits, active heartbeat, project-plan/checkpoint
+    updates and the versioned formal-attempt-3 authorization prompt while proving
+    all formal targets remain absent.
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - MONITORING-RECOVERY-VALIDATED
+  - HEARTBEAT-ACTIVE
+  - WAIT-FOR-FORMAL-ATTEMPT3-AUTHORIZATION
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v2.json: 483430f8ef8150e7be3e97e98c8aa979665b9f91d711439ecd049882dfdc7f7f
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json: 6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.md: 1af977c082a2ea360d92f1ca47d05185f9af79b54775c220af65784af48d8af4
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v1.json: 9f011ba057df79535c3ebbede12df9a75b5e4f0c3aed5586bdf3961a181bcf49
+    Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v2.md: 54a6e4b1db4006ba2c03cdc7395bd109e1e07dc3a6e212f5dc5252bb5e541fb6
+    Overall_Project_Plan.md: 2b36e7cdd5e26d6bba3ec974a8d1068b09fc9b11ef7fc27c6cbd866c86254596
+    Next_Session_Checkpoint.md: 19cf0df534dbe92d067d346e0a8aa876b732bebfa67d8aab435b5f1886607ce6
+  prev_hash: dd9c12b4096d7b0cdd545d4c0a7073743afefd221d710b1683d81cc70385ed37
+  hash: edf09d52b709b552bb2f7a2e99f1e7b9b7e59a1a7304f46474cc69a15d50f0a6
+- seq: 5
+  kind: tool_receipt
+  at: '2026-10-09T07:34:45Z'
+  step: monitoring-postreadiness-terminal-review
+  command: Review the completed v1 monitoring readiness against the frozen specification
+    and preserve the discovered scheduled-report state coverage defect before any
+    repair.
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - V1-READINESS-SUPERSEDED-PRESERVED
+  - RAW-COMMIT-SCHEDULED-REPORT-OMISSION-DIAGNOSED
+  - PRELAUNCH-ONLY-DEFECT
+  - NO-UNITY
+  - NO-FORMAL-TARGET
+  input_sha256:
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_PostReadiness_Defect_Receipt.v1.json: 6786632fa89493a78936f7f91c9fb3ee2dc21e43618460db881d609953f2f503
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json: 6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d
+    Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v2.md: 54a6e4b1db4006ba2c03cdc7395bd109e1e07dc3a6e212f5dc5252bb5e541fb6
+  prev_hash: edf09d52b709b552bb2f7a2e99f1e7b9b7e59a1a7304f46474cc69a15d50f0a6
+  hash: 82455e6b7349303ecee10c405e0316b4fe57d3601a59bc794056eeaa91f6c702
+- seq: 6
+  kind: tool_receipt
+  at: '2026-10-09T07:34:45Z'
+  step: monitoring-validation-attempt-3
+  command: Run the versioned v2 monitoring repair validation, retaining the original
+    54 checks and adding explicit hourly-report and stale-advisory coverage for raw-commit
+    states, without Unity or formal target creation.
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - VALIDATION-PASSED-56-OF-56
+  - RAW-COMMIT-HOURLY-REPORT-COVERED
+  - PWSH-AND-WINPS51-PASSED
+  - ACQUISITION-NO-MEASURED-RETRY
+  - NO-UNITY
+  - NO-FORMAL-TARGET
+  input_sha256:
+    Gate13R_PR2_Attempt3_Monitoring_Config.v2.json: b88da3901a2c2cc494140a8cd2e3f37b546f637935bc940a8941a850d42770c6
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Implementation_Repair.v2.md: 0822efd540be52f58e5f190dd6280328871cad3a2070d13a8a5574edeca1bd66
+    Gate13RPR2Attempt3MonitoringRecoveryV2.py: 6d1cd6b1f0542c2985fb0c11d3da6caee6c0413f0c5fe13f335897fef8f4c162
+    Get-Gate13RPR2Attempt3OperationalProgressV2.ps1: 8b9c3733aae86b4adbe03c9bc7806931947746d864854d438bf2a67d09f537c5
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/validation-summary.json: 6a2980fab5e31c87d93882fafd5882b903309a3a8be0d76f024adfb3d670026f
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/pass-receipt.json: 2192288de6f036c6e4411818cc10837d1d07a2828f92417589b6e2d16c0832c1
+    Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/partial-output-manifest.json: 6b949fc2102a1f566f57063fe6d00fa411e1b4761c7d8c4813ecf386b003d1bb
+  prev_hash: 82455e6b7349303ecee10c405e0316b4fe57d3601a59bc794056eeaa91f6c702
+  hash: 335992859ad639ba54844f91168e914a70bef8c12949b8c0aa3d657350cd7297
+- seq: 7
+  kind: tool_receipt
+  at: '2026-10-09T07:34:57Z'
+  step: monitoring-recovery-readiness-v2
+  command: Finalize the active v2 blinded watcher, acquisition and raw-commit hourly-report
+    contract, bounded recovery state machine, terminal evidence package, active heartbeat
+    and versioned formal-attempt-3 authorization prompt while proving all formal targets
+    remain absent.
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - MONITORING-RECOVERY-V2-VALIDATED
+  - HEARTBEAT-ACTIVE
+  - PRELAUNCH-REPAIR-CYCLE-1-CONSUMED
+  - WAIT-FOR-FORMAL-ATTEMPT3-AUTHORIZATION
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v4.json: 3667055786238faa58d196f847fa49ba4ab531ce084c259e8f3333ece6ea8dbe
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.json: 526a7fc6ff67e3c2ac0201f1f88dcc08b9af155e0a25d0332fd4aab189aa809c
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.md: 0f9bd5b9c14d8407a2a6f4750832d2b4daf25cac7a2d645da2a6e6556fe77df0
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v2.json: 8cb90b20072f0abf1855a2d082a3d08e7865b995b0fac61341ae61a924e81789
+    Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v3.md: 9025be75a806bc99fc8124ea6caa7948e706c319e6e6f3af4f363908a7ee3bf5
+    Overall_Project_Plan.md: ea5ea5e3820b76d492ed5a012b8d24b464d8c852ae494164c980cbad557a1ca5
+    Next_Session_Checkpoint.md: b98a299bc560d7006513ddb7592f0d1449121182f38ddaa38e1bcf51b1590650
+    C:\Users\bdscy\.codex\automations\gate13r-attempt3-hourly-progress\automation.toml: c66d41527f075137b2829a291fb303e1d81af940925e739fa3c898cb8f52b0e4
+  prev_hash: 335992859ad639ba54844f91168e914a70bef8c12949b8c0aa3d657350cd7297
+  hash: a40f2ff21221685806bed074228d093c37cd83a43567b94d8cc8604ebe63b2ff
+- seq: 8
+  kind: tool_receipt
+  at: '2026-10-09T07:35:48Z'
+  step: monitoring-recovery-readiness
+  command: 'Correct the earlier v1 readiness outcome after the preserved terminal-review
+    defect: keep the original receipt immutable, mark v1 readiness superseded and
+    failed for launch use, and defer only to the independently validated active v2
+    readiness.'
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - V1-READINESS-SUPERSEDED
+  - V1-LAUNCH-USE-PROHIBITED
+  - RAW-COMMIT-HOURLY-COVERAGE-DEFECT-PRESERVED
+  - ACTIVE-V2-READINESS-SEPARATELY-PASSED
+  - NO-UNITY
+  - NO-FORMAL-TARGET
+  input_sha256:
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json: 6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_PostReadiness_Defect_Receipt.v1.json: 6786632fa89493a78936f7f91c9fb3ee2dc21e43618460db881d609953f2f503
+    Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v2.md: 54a6e4b1db4006ba2c03cdc7395bd109e1e07dc3a6e212f5dc5252bb5e541fb6
+  prev_hash: a40f2ff21221685806bed074228d093c37cd83a43567b94d8cc8604ebe63b2ff
+  hash: 7f078d3f455acdec3b27b076c3d95c32c75f3548619852500e0317e87f142c96
+- seq: 9
+  kind: tool_receipt
+  at: '2026-10-09T07:39:57Z'
+  step: monitoring-recovery-readiness-v2
+  command: Finalize the active v2 monitoring/recovery readiness after correcting every
+    current-plan route to the full versioned v4 authorization prompt; preserve all
+    prior packages and bind the final terminal audit, evidence manifest, heartbeat
+    and prompt without Unity or formal target creation.
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - MONITORING-RECOVERY-V2-VALIDATED
+  - FINAL-PROMPT-ROUTE-CONSISTENT
+  - HEARTBEAT-ACTIVE
+  - PRELAUNCH-REPAIR-CYCLE-1-CONSUMED
+  - WAIT-FOR-FORMAL-ATTEMPT3-AUTHORIZATION
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.json: 526a7fc6ff67e3c2ac0201f1f88dcc08b9af155e0a25d0332fd4aab189aa809c
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v2.md: 0f9bd5b9c14d8407a2a6f4750832d2b4daf25cac7a2d645da2a6e6556fe77df0
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Terminal_Audit.v3.json: 6290bcab9b051af1215bd3658cf88be91fbeec65729f8eed4ff3a5bfe9f59c9b
+    Gate13R_PR2_Attempt3_Monitoring_Recovery_Evidence_Manifest.v5.json: 79f5cfd08b4f00559271e8889b88c9bd4991840ff9141815bb03e83c7a4d03bd
+    Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v4.md: 35652dfb462191c10abca3c426fb3e9aeefe8f37beaee28358704568ca133bc5
+    C:\Users\bdscy\.codex\automations\gate13r-attempt3-hourly-progress\automation.toml: c66d41527f075137b2829a291fb303e1d81af940925e739fa3c898cb8f52b0e4
+  prev_hash: 7f078d3f455acdec3b27b076c3d95c32c75f3548619852500e0317e87f142c96
+  hash: f471b4a0f4d1e6950b2493d44f50ea6d73ad5b8b9711e60d4ad3b5e5d417a1ce

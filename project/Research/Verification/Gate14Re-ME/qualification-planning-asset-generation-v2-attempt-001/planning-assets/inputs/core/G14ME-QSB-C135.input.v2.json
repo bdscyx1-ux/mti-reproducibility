@@ -1,0 +1,5623 @@
+{
+  "schema": "gate14re-me-qualification-input-bundle-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "inputId": "G14ME-QI-C135",
+  "superblockId": "G14ME-QSB-C135",
+  "designRegion": "core",
+  "seed": -1400000135,
+  "gridEdge": 256,
+  "agentCount": 512,
+  "changedCellCount": 1,
+  "changeTopology": "bottleneck",
+  "graphProfile": "four_way_weighted_dense",
+  "sameTickAtomicPartitions": 1,
+  "contextStratumId": "CTX-BTN-4WD-P01",
+  "connectivity": 4,
+  "allowDiagonalCornerCutting": false,
+  "defaultTraversalCost": 1.0,
+  "initialCellOverrides": [
+    {
+      "x": 127,
+      "y": 0,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 0,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 1,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 1,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 2,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 2,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 3,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 3,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 4,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 4,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 5,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 5,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 6,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 6,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 7,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 7,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 8,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 8,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 9,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 9,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 10,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 10,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 11,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 11,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 12,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 12,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 13,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 13,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 14,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 14,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 15,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 15,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 16,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 16,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 17,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 17,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 18,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 18,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 19,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 19,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 20,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 20,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 21,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 21,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 22,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 22,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 23,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 23,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 24,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 24,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 25,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 25,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 26,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 26,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 27,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 27,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 28,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 28,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 29,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 29,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 30,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 30,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 31,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 31,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 32,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 32,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 33,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 33,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 34,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 34,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 35,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 35,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 36,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 36,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 37,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 37,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 38,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 38,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 39,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 39,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 40,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 40,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 41,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 41,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 42,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 42,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 43,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 43,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 44,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 44,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 45,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 45,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 46,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 46,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 47,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 47,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 48,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 48,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 49,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 49,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 50,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 50,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 51,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 51,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 52,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 52,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 53,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 53,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 54,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 54,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 55,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 55,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 56,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 56,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 57,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 57,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 58,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 58,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 59,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 59,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 60,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 60,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 61,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 61,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 62,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 62,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 63,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 63,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 64,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 64,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 65,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 65,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 66,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 66,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 67,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 67,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 68,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 68,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 69,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 69,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 70,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 70,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 71,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 71,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 72,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 72,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 73,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 73,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 74,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 74,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 75,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 75,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 76,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 76,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 77,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 77,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 78,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 78,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 79,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 79,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 80,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 80,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 81,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 81,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 82,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 82,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 83,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 83,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 84,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 84,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 85,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 85,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 86,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 86,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 87,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 87,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 88,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 88,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 89,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 89,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 90,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 90,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 91,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 91,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 92,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 92,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 93,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 93,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 94,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 94,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 95,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 95,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 96,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 96,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 97,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 97,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 98,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 98,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 99,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 99,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 100,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 100,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 101,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 101,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 102,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 102,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 103,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 103,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 104,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 104,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 105,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 105,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 106,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 106,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 107,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 107,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 108,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 108,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 109,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 109,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 110,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 110,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 111,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 111,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 112,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 112,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 113,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 113,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 114,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 114,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 115,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 115,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 116,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 116,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 117,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 117,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 118,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 118,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 119,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 119,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 120,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 120,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 121,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 121,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 122,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 122,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 123,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 123,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 124,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 124,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 125,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 125,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 126,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 126,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 127,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 127,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 128,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 127,
+      "y": 129,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 129,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 130,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 130,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 131,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 131,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 132,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 132,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 133,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 133,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 134,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 134,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 135,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 135,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 136,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 136,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 137,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 137,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 138,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 138,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 139,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 139,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 140,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 140,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 141,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 141,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 142,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 142,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 143,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 143,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 144,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 144,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 145,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 145,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 146,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 146,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 147,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 147,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 148,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 148,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 149,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 149,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 150,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 150,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 151,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 151,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 152,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 152,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 153,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 153,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 154,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 154,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 155,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 155,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 156,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 156,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 157,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 157,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 158,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 158,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 159,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 159,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 160,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 160,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 161,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 161,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 162,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 162,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 163,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 163,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 164,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 164,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 165,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 165,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 166,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 166,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 167,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 167,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 168,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 168,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 169,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 169,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 170,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 170,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 171,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 171,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 172,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 172,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 173,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 173,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 174,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 174,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 175,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 175,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 176,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 176,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 177,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 177,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 178,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 178,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 179,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 179,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 180,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 180,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 181,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 181,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 182,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 182,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 183,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 183,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 184,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 184,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 185,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 185,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 186,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 186,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 187,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 187,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 188,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 188,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 189,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 189,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 190,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 190,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 191,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 191,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 192,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 192,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 193,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 193,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 194,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 194,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 195,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 195,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 196,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 196,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 197,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 197,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 198,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 198,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 199,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 199,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 200,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 200,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 201,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 201,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 202,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 202,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 203,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 203,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 204,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 204,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 205,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 205,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 206,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 206,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 207,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 207,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 208,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 208,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 209,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 209,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 210,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 210,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 211,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 211,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 212,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 212,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 213,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 213,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 214,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 214,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 215,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 215,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 216,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 216,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 217,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 217,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 218,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 218,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 219,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 219,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 220,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 220,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 221,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 221,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 222,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 222,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 223,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 223,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 224,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 224,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 225,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 225,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 226,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 226,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 227,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 227,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 228,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 228,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 229,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 229,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 230,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 230,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 231,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 231,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 232,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 232,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 233,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 233,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 234,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 234,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 235,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 235,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 236,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 236,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 237,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 237,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 238,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 238,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 239,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 239,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 240,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 240,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 241,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 241,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 242,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 242,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 243,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 243,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 244,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 244,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 245,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 245,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 246,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 246,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 247,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 247,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 248,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 248,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 249,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 249,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 250,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 250,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 251,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 251,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 252,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 252,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 253,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 253,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 254,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 254,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    },
+    {
+      "x": 127,
+      "y": 255,
+      "isWalkable": true,
+      "traversalCost": 1.25
+    },
+    {
+      "x": 128,
+      "y": 255,
+      "isWalkable": false,
+      "traversalCost": 1.0
+    }
+  ],
+  "goal": {
+    "x": 254,
+    "y": 128
+  },
+  "starts": [
+    {
+      "x": 62,
+      "y": 70
+    },
+    {
+      "x": 6,
+      "y": 179
+    },
+    {
+      "x": 27,
+      "y": 187
+    },
+    {
+      "x": 9,
+      "y": 118
+    },
+    {
+      "x": 15,
+      "y": 65
+    },
+    {
+      "x": 21,
+      "y": 56
+    },
+    {
+      "x": 18,
+      "y": 169
+    },
+    {
+      "x": 61,
+      "y": 155
+    },
+    {
+      "x": 31,
+      "y": 245
+    },
+    {
+      "x": 34,
+      "y": 183
+    },
+    {
+      "x": 39,
+      "y": 248
+    },
+    {
+      "x": 3,
+      "y": 190
+    },
+    {
+      "x": 31,
+      "y": 205
+    },
+    {
+      "x": 5,
+      "y": 162
+    },
+    {
+      "x": 54,
+      "y": 147
+    },
+    {
+      "x": 31,
+      "y": 103
+    },
+    {
+      "x": 42,
+      "y": 224
+    },
+    {
+      "x": 53,
+      "y": 122
+    },
+    {
+      "x": 28,
+      "y": 134
+    },
+    {
+      "x": 48,
+      "y": 172
+    },
+    {
+      "x": 18,
+      "y": 35
+    },
+    {
+      "x": 39,
+      "y": 63
+    },
+    {
+      "x": 32,
+      "y": 194
+    },
+    {
+      "x": 19,
+      "y": 37
+    },
+    {
+      "x": 14,
+      "y": 151
+    },
+    {
+      "x": 26,
+      "y": 254
+    },
+    {
+      "x": 3,
+      "y": 55
+    },
+    {
+      "x": 28,
+      "y": 157
+    },
+    {
+      "x": 2,
+      "y": 152
+    },
+    {
+      "x": 27,
+      "y": 95
+    },
+    {
+      "x": 43,
+      "y": 164
+    },
+    {
+      "x": 37,
+      "y": 204
+    },
+    {
+      "x": 21,
+      "y": 2
+    },
+    {
+      "x": 24,
+      "y": 193
+    },
+    {
+      "x": 54,
+      "y": 50
+    },
+    {
+      "x": 32,
+      "y": 179
+    },
+    {
+      "x": 59,
+      "y": 145
+    },
+    {
+      "x": 35,
+      "y": 162
+    },
+    {
+      "x": 52,
+      "y": 30
+    },
+    {
+      "x": 44,
+      "y": 149
+    },
+    {
+      "x": 29,
+      "y": 227
+    },
+    {
+      "x": 27,
+      "y": 32
+    },
+    {
+      "x": 12,
+      "y": 107
+    },
+    {
+      "x": 45,
+      "y": 138
+    },
+    {
+      "x": 55,
+      "y": 7
+    },
+    {
+      "x": 36,
+      "y": 26
+    },
+    {
+      "x": 10,
+      "y": 39
+    },
+    {
+      "x": 33,
+      "y": 44
+    },
+    {
+      "x": 28,
+      "y": 28
+    },
+    {
+      "x": 29,
+      "y": 160
+    },
+    {
+      "x": 3,
+      "y": 248
+    },
+    {
+      "x": 64,
+      "y": 82
+    },
+    {
+      "x": 35,
+      "y": 98
+    },
+    {
+      "x": 13,
+      "y": 94
+    },
+    {
+      "x": 6,
+      "y": 241
+    },
+    {
+      "x": 54,
+      "y": 129
+    },
+    {
+      "x": 21,
+      "y": 6
+    },
+    {
+      "x": 9,
+      "y": 201
+    },
+    {
+      "x": 38,
+      "y": 197
+    },
+    {
+      "x": 6,
+      "y": 63
+    },
+    {
+      "x": 17,
+      "y": 102
+    },
+    {
+      "x": 28,
+      "y": 34
+    },
+    {
+      "x": 60,
+      "y": 56
+    },
+    {
+      "x": 46,
+      "y": 131
+    },
+    {
+      "x": 50,
+      "y": 62
+    },
+    {
+      "x": 47,
+      "y": 253
+    },
+    {
+      "x": 48,
+      "y": 19
+    },
+    {
+      "x": 52,
+      "y": 68
+    },
+    {
+      "x": 24,
+      "y": 228
+    },
+    {
+      "x": 17,
+      "y": 120
+    },
+    {
+      "x": 62,
+      "y": 86
+    },
+    {
+      "x": 57,
+      "y": 218
+    },
+    {
+      "x": 11,
+      "y": 131
+    },
+    {
+      "x": 30,
+      "y": 111
+    },
+    {
+      "x": 18,
+      "y": 224
+    },
+    {
+      "x": 41,
+      "y": 20
+    },
+    {
+      "x": 25,
+      "y": 220
+    },
+    {
+      "x": 50,
+      "y": 65
+    },
+    {
+      "x": 25,
+      "y": 178
+    },
+    {
+      "x": 48,
+      "y": 151
+    },
+    {
+      "x": 52,
+      "y": 71
+    },
+    {
+      "x": 46,
+      "y": 98
+    },
+    {
+      "x": 41,
+      "y": 185
+    },
+    {
+      "x": 39,
+      "y": 173
+    },
+    {
+      "x": 4,
+      "y": 67
+    },
+    {
+      "x": 39,
+      "y": 188
+    },
+    {
+      "x": 60,
+      "y": 88
+    },
+    {
+      "x": 6,
+      "y": 168
+    },
+    {
+      "x": 48,
+      "y": 246
+    },
+    {
+      "x": 41,
+      "y": 162
+    },
+    {
+      "x": 46,
+      "y": 222
+    },
+    {
+      "x": 27,
+      "y": 224
+    },
+    {
+      "x": 5,
+      "y": 193
+    },
+    {
+      "x": 35,
+      "y": 241
+    },
+    {
+      "x": 57,
+      "y": 60
+    },
+    {
+      "x": 49,
+      "y": 244
+    },
+    {
+      "x": 60,
+      "y": 53
+    },
+    {
+      "x": 20,
+      "y": 69
+    },
+    {
+      "x": 32,
+      "y": 153
+    },
+    {
+      "x": 8,
+      "y": 208
+    },
+    {
+      "x": 57,
+      "y": 222
+    },
+    {
+      "x": 40,
+      "y": 75
+    },
+    {
+      "x": 42,
+      "y": 219
+    },
+    {
+      "x": 18,
+      "y": 136
+    },
+    {
+      "x": 12,
+      "y": 70
+    },
+    {
+      "x": 41,
+      "y": 73
+    },
+    {
+      "x": 26,
+      "y": 240
+    },
+    {
+      "x": 10,
+      "y": 55
+    },
+    {
+      "x": 33,
+      "y": 205
+    },
+    {
+      "x": 42,
+      "y": 146
+    },
+    {
+      "x": 54,
+      "y": 227
+    },
+    {
+      "x": 2,
+      "y": 81
+    },
+    {
+      "x": 37,
+      "y": 234
+    },
+    {
+      "x": 19,
+      "y": 126
+    },
+    {
+      "x": 46,
+      "y": 130
+    },
+    {
+      "x": 18,
+      "y": 159
+    },
+    {
+      "x": 41,
+      "y": 218
+    },
+    {
+      "x": 62,
+      "y": 42
+    },
+    {
+      "x": 56,
+      "y": 1
+    },
+    {
+      "x": 13,
+      "y": 120
+    },
+    {
+      "x": 49,
+      "y": 80
+    },
+    {
+      "x": 24,
+      "y": 11
+    },
+    {
+      "x": 53,
+      "y": 116
+    },
+    {
+      "x": 3,
+      "y": 237
+    },
+    {
+      "x": 15,
+      "y": 171
+    },
+    {
+      "x": 25,
+      "y": 123
+    },
+    {
+      "x": 10,
+      "y": 90
+    },
+    {
+      "x": 22,
+      "y": 3
+    },
+    {
+      "x": 30,
+      "y": 196
+    },
+    {
+      "x": 45,
+      "y": 212
+    },
+    {
+      "x": 23,
+      "y": 31
+    },
+    {
+      "x": 56,
+      "y": 80
+    },
+    {
+      "x": 43,
+      "y": 25
+    },
+    {
+      "x": 53,
+      "y": 232
+    },
+    {
+      "x": 54,
+      "y": 157
+    },
+    {
+      "x": 5,
+      "y": 131
+    },
+    {
+      "x": 62,
+      "y": 232
+    },
+    {
+      "x": 14,
+      "y": 224
+    },
+    {
+      "x": 54,
+      "y": 63
+    },
+    {
+      "x": 31,
+      "y": 104
+    },
+    {
+      "x": 40,
+      "y": 179
+    },
+    {
+      "x": 44,
+      "y": 62
+    },
+    {
+      "x": 55,
+      "y": 56
+    },
+    {
+      "x": 43,
+      "y": 219
+    },
+    {
+      "x": 39,
+      "y": 177
+    },
+    {
+      "x": 53,
+      "y": 251
+    },
+    {
+      "x": 35,
+      "y": 70
+    },
+    {
+      "x": 26,
+      "y": 1
+    },
+    {
+      "x": 51,
+      "y": 169
+    },
+    {
+      "x": 55,
+      "y": 69
+    },
+    {
+      "x": 40,
+      "y": 86
+    },
+    {
+      "x": 56,
+      "y": 41
+    },
+    {
+      "x": 20,
+      "y": 130
+    },
+    {
+      "x": 36,
+      "y": 169
+    },
+    {
+      "x": 30,
+      "y": 59
+    },
+    {
+      "x": 23,
+      "y": 4
+    },
+    {
+      "x": 57,
+      "y": 9
+    },
+    {
+      "x": 15,
+      "y": 179
+    },
+    {
+      "x": 62,
+      "y": 59
+    },
+    {
+      "x": 37,
+      "y": 109
+    },
+    {
+      "x": 18,
+      "y": 64
+    },
+    {
+      "x": 15,
+      "y": 69
+    },
+    {
+      "x": 46,
+      "y": 51
+    },
+    {
+      "x": 1,
+      "y": 126
+    },
+    {
+      "x": 12,
+      "y": 67
+    },
+    {
+      "x": 60,
+      "y": 85
+    },
+    {
+      "x": 18,
+      "y": 82
+    },
+    {
+      "x": 42,
+      "y": 190
+    },
+    {
+      "x": 21,
+      "y": 245
+    },
+    {
+      "x": 19,
+      "y": 78
+    },
+    {
+      "x": 49,
+      "y": 13
+    },
+    {
+      "x": 21,
+      "y": 141
+    },
+    {
+      "x": 38,
+      "y": 165
+    },
+    {
+      "x": 39,
+      "y": 102
+    },
+    {
+      "x": 9,
+      "y": 176
+    },
+    {
+      "x": 44,
+      "y": 15
+    },
+    {
+      "x": 17,
+      "y": 5
+    },
+    {
+      "x": 15,
+      "y": 9
+    },
+    {
+      "x": 4,
+      "y": 127
+    },
+    {
+      "x": 4,
+      "y": 243
+    },
+    {
+      "x": 9,
+      "y": 124
+    },
+    {
+      "x": 58,
+      "y": 230
+    },
+    {
+      "x": 52,
+      "y": 187
+    },
+    {
+      "x": 26,
+      "y": 88
+    },
+    {
+      "x": 40,
+      "y": 112
+    },
+    {
+      "x": 30,
+      "y": 187
+    },
+    {
+      "x": 39,
+      "y": 110
+    },
+    {
+      "x": 51,
+      "y": 71
+    },
+    {
+      "x": 20,
+      "y": 219
+    },
+    {
+      "x": 51,
+      "y": 144
+    },
+    {
+      "x": 32,
+      "y": 239
+    },
+    {
+      "x": 57,
+      "y": 167
+    },
+    {
+      "x": 36,
+      "y": 118
+    },
+    {
+      "x": 34,
+      "y": 163
+    },
+    {
+      "x": 18,
+      "y": 215
+    },
+    {
+      "x": 53,
+      "y": 4
+    },
+    {
+      "x": 52,
+      "y": 138
+    },
+    {
+      "x": 62,
+      "y": 25
+    },
+    {
+      "x": 21,
+      "y": 97
+    },
+    {
+      "x": 8,
+      "y": 151
+    },
+    {
+      "x": 53,
+      "y": 114
+    },
+    {
+      "x": 47,
+      "y": 1
+    },
+    {
+      "x": 49,
+      "y": 245
+    },
+    {
+      "x": 19,
+      "y": 174
+    },
+    {
+      "x": 32,
+      "y": 234
+    },
+    {
+      "x": 13,
+      "y": 186
+    },
+    {
+      "x": 13,
+      "y": 83
+    },
+    {
+      "x": 17,
+      "y": 188
+    },
+    {
+      "x": 52,
+      "y": 100
+    },
+    {
+      "x": 34,
+      "y": 135
+    },
+    {
+      "x": 3,
+      "y": 74
+    },
+    {
+      "x": 48,
+      "y": 225
+    },
+    {
+      "x": 29,
+      "y": 73
+    },
+    {
+      "x": 41,
+      "y": 25
+    },
+    {
+      "x": 29,
+      "y": 186
+    },
+    {
+      "x": 35,
+      "y": 102
+    },
+    {
+      "x": 11,
+      "y": 214
+    },
+    {
+      "x": 15,
+      "y": 142
+    },
+    {
+      "x": 44,
+      "y": 38
+    },
+    {
+      "x": 37,
+      "y": 156
+    },
+    {
+      "x": 56,
+      "y": 179
+    },
+    {
+      "x": 51,
+      "y": 142
+    },
+    {
+      "x": 39,
+      "y": 218
+    },
+    {
+      "x": 46,
+      "y": 97
+    },
+    {
+      "x": 19,
+      "y": 14
+    },
+    {
+      "x": 30,
+      "y": 131
+    },
+    {
+      "x": 50,
+      "y": 184
+    },
+    {
+      "x": 11,
+      "y": 14
+    },
+    {
+      "x": 57,
+      "y": 107
+    },
+    {
+      "x": 48,
+      "y": 13
+    },
+    {
+      "x": 41,
+      "y": 52
+    },
+    {
+      "x": 55,
+      "y": 74
+    },
+    {
+      "x": 62,
+      "y": 169
+    },
+    {
+      "x": 58,
+      "y": 244
+    },
+    {
+      "x": 48,
+      "y": 221
+    },
+    {
+      "x": 21,
+      "y": 206
+    },
+    {
+      "x": 58,
+      "y": 162
+    },
+    {
+      "x": 36,
+      "y": 107
+    },
+    {
+      "x": 61,
+      "y": 147
+    },
+    {
+      "x": 25,
+      "y": 13
+    },
+    {
+      "x": 31,
+      "y": 49
+    },
+    {
+      "x": 39,
+      "y": 124
+    },
+    {
+      "x": 26,
+      "y": 72
+    },
+    {
+      "x": 52,
+      "y": 171
+    },
+    {
+      "x": 38,
+      "y": 186
+    },
+    {
+      "x": 21,
+      "y": 17
+    },
+    {
+      "x": 57,
+      "y": 164
+    },
+    {
+      "x": 36,
+      "y": 78
+    },
+    {
+      "x": 32,
+      "y": 143
+    },
+    {
+      "x": 50,
+      "y": 68
+    },
+    {
+      "x": 47,
+      "y": 152
+    },
+    {
+      "x": 52,
+      "y": 245
+    },
+    {
+      "x": 4,
+      "y": 93
+    },
+    {
+      "x": 41,
+      "y": 163
+    },
+    {
+      "x": 14,
+      "y": 228
+    },
+    {
+      "x": 53,
+      "y": 209
+    },
+    {
+      "x": 11,
+      "y": 197
+    },
+    {
+      "x": 22,
+      "y": 123
+    },
+    {
+      "x": 35,
+      "y": 38
+    },
+    {
+      "x": 35,
+      "y": 138
+    },
+    {
+      "x": 31,
+      "y": 67
+    },
+    {
+      "x": 17,
+      "y": 69
+    },
+    {
+      "x": 15,
+      "y": 220
+    },
+    {
+      "x": 53,
+      "y": 118
+    },
+    {
+      "x": 24,
+      "y": 19
+    },
+    {
+      "x": 33,
+      "y": 176
+    },
+    {
+      "x": 63,
+      "y": 178
+    },
+    {
+      "x": 15,
+      "y": 88
+    },
+    {
+      "x": 46,
+      "y": 143
+    },
+    {
+      "x": 42,
+      "y": 107
+    },
+    {
+      "x": 24,
+      "y": 250
+    },
+    {
+      "x": 54,
+      "y": 196
+    },
+    {
+      "x": 28,
+      "y": 241
+    },
+    {
+      "x": 19,
+      "y": 16
+    },
+    {
+      "x": 2,
+      "y": 182
+    },
+    {
+      "x": 36,
+      "y": 92
+    },
+    {
+      "x": 20,
+      "y": 95
+    },
+    {
+      "x": 30,
+      "y": 230
+    },
+    {
+      "x": 6,
+      "y": 126
+    },
+    {
+      "x": 25,
+      "y": 174
+    },
+    {
+      "x": 31,
+      "y": 169
+    },
+    {
+      "x": 40,
+      "y": 125
+    },
+    {
+      "x": 45,
+      "y": 196
+    },
+    {
+      "x": 47,
+      "y": 212
+    },
+    {
+      "x": 38,
+      "y": 137
+    },
+    {
+      "x": 1,
+      "y": 137
+    },
+    {
+      "x": 52,
+      "y": 199
+    },
+    {
+      "x": 63,
+      "y": 212
+    },
+    {
+      "x": 21,
+      "y": 144
+    },
+    {
+      "x": 14,
+      "y": 59
+    },
+    {
+      "x": 5,
+      "y": 83
+    },
+    {
+      "x": 14,
+      "y": 207
+    },
+    {
+      "x": 25,
+      "y": 101
+    },
+    {
+      "x": 46,
+      "y": 26
+    },
+    {
+      "x": 5,
+      "y": 189
+    },
+    {
+      "x": 41,
+      "y": 230
+    },
+    {
+      "x": 24,
+      "y": 211
+    },
+    {
+      "x": 46,
+      "y": 224
+    },
+    {
+      "x": 3,
+      "y": 63
+    },
+    {
+      "x": 48,
+      "y": 20
+    },
+    {
+      "x": 45,
+      "y": 202
+    },
+    {
+      "x": 39,
+      "y": 219
+    },
+    {
+      "x": 8,
+      "y": 224
+    },
+    {
+      "x": 48,
+      "y": 169
+    },
+    {
+      "x": 10,
+      "y": 211
+    },
+    {
+      "x": 33,
+      "y": 74
+    },
+    {
+      "x": 28,
+      "y": 101
+    },
+    {
+      "x": 33,
+      "y": 188
+    },
+    {
+      "x": 6,
+      "y": 130
+    },
+    {
+      "x": 5,
+      "y": 88
+    },
+    {
+      "x": 58,
+      "y": 168
+    },
+    {
+      "x": 29,
+      "y": 149
+    },
+    {
+      "x": 64,
+      "y": 22
+    },
+    {
+      "x": 61,
+      "y": 117
+    },
+    {
+      "x": 27,
+      "y": 27
+    },
+    {
+      "x": 48,
+      "y": 200
+    },
+    {
+      "x": 64,
+      "y": 29
+    },
+    {
+      "x": 34,
+      "y": 19
+    },
+    {
+      "x": 3,
+      "y": 216
+    },
+    {
+      "x": 6,
+      "y": 128
+    },
+    {
+      "x": 5,
+      "y": 27
+    },
+    {
+      "x": 8,
+      "y": 68
+    },
+    {
+      "x": 3,
+      "y": 138
+    },
+    {
+      "x": 9,
+      "y": 216
+    },
+    {
+      "x": 10,
+      "y": 202
+    },
+    {
+      "x": 44,
+      "y": 198
+    },
+    {
+      "x": 1,
+      "y": 124
+    },
+    {
+      "x": 15,
+      "y": 169
+    },
+    {
+      "x": 43,
+      "y": 107
+    },
+    {
+      "x": 53,
+      "y": 58
+    },
+    {
+      "x": 47,
+      "y": 55
+    },
+    {
+      "x": 50,
+      "y": 8
+    },
+    {
+      "x": 38,
+      "y": 59
+    },
+    {
+      "x": 58,
+      "y": 233
+    },
+    {
+      "x": 29,
+      "y": 75
+    },
+    {
+      "x": 28,
+      "y": 252
+    },
+    {
+      "x": 45,
+      "y": 98
+    },
+    {
+      "x": 57,
+      "y": 30
+    },
+    {
+      "x": 38,
+      "y": 142
+    },
+    {
+      "x": 43,
+      "y": 247
+    },
+    {
+      "x": 15,
+      "y": 27
+    },
+    {
+      "x": 52,
+      "y": 161
+    },
+    {
+      "x": 19,
+      "y": 26
+    },
+    {
+      "x": 45,
+      "y": 12
+    },
+    {
+      "x": 42,
+      "y": 191
+    },
+    {
+      "x": 28,
+      "y": 50
+    },
+    {
+      "x": 61,
+      "y": 29
+    },
+    {
+      "x": 46,
+      "y": 163
+    },
+    {
+      "x": 26,
+      "y": 89
+    },
+    {
+      "x": 18,
+      "y": 8
+    },
+    {
+      "x": 34,
+      "y": 100
+    },
+    {
+      "x": 57,
+      "y": 123
+    },
+    {
+      "x": 45,
+      "y": 63
+    },
+    {
+      "x": 36,
+      "y": 143
+    },
+    {
+      "x": 33,
+      "y": 135
+    },
+    {
+      "x": 3,
+      "y": 84
+    },
+    {
+      "x": 42,
+      "y": 234
+    },
+    {
+      "x": 55,
+      "y": 231
+    },
+    {
+      "x": 7,
+      "y": 13
+    },
+    {
+      "x": 17,
+      "y": 166
+    },
+    {
+      "x": 10,
+      "y": 10
+    },
+    {
+      "x": 61,
+      "y": 125
+    },
+    {
+      "x": 1,
+      "y": 54
+    },
+    {
+      "x": 8,
+      "y": 76
+    },
+    {
+      "x": 59,
+      "y": 3
+    },
+    {
+      "x": 1,
+      "y": 3
+    },
+    {
+      "x": 3,
+      "y": 91
+    },
+    {
+      "x": 63,
+      "y": 238
+    },
+    {
+      "x": 2,
+      "y": 151
+    },
+    {
+      "x": 43,
+      "y": 7
+    },
+    {
+      "x": 44,
+      "y": 233
+    },
+    {
+      "x": 31,
+      "y": 171
+    },
+    {
+      "x": 31,
+      "y": 209
+    },
+    {
+      "x": 27,
+      "y": 67
+    },
+    {
+      "x": 64,
+      "y": 111
+    },
+    {
+      "x": 25,
+      "y": 51
+    },
+    {
+      "x": 52,
+      "y": 59
+    },
+    {
+      "x": 55,
+      "y": 27
+    },
+    {
+      "x": 24,
+      "y": 170
+    },
+    {
+      "x": 4,
+      "y": 174
+    },
+    {
+      "x": 54,
+      "y": 41
+    },
+    {
+      "x": 33,
+      "y": 119
+    },
+    {
+      "x": 33,
+      "y": 63
+    },
+    {
+      "x": 61,
+      "y": 203
+    },
+    {
+      "x": 21,
+      "y": 246
+    },
+    {
+      "x": 32,
+      "y": 203
+    },
+    {
+      "x": 34,
+      "y": 179
+    },
+    {
+      "x": 63,
+      "y": 174
+    },
+    {
+      "x": 23,
+      "y": 193
+    },
+    {
+      "x": 14,
+      "y": 125
+    },
+    {
+      "x": 51,
+      "y": 54
+    },
+    {
+      "x": 55,
+      "y": 230
+    },
+    {
+      "x": 9,
+      "y": 16
+    },
+    {
+      "x": 46,
+      "y": 91
+    },
+    {
+      "x": 44,
+      "y": 80
+    },
+    {
+      "x": 34,
+      "y": 85
+    },
+    {
+      "x": 58,
+      "y": 18
+    },
+    {
+      "x": 15,
+      "y": 92
+    },
+    {
+      "x": 7,
+      "y": 191
+    },
+    {
+      "x": 9,
+      "y": 168
+    },
+    {
+      "x": 53,
+      "y": 69
+    },
+    {
+      "x": 29,
+      "y": 153
+    },
+    {
+      "x": 40,
+      "y": 197
+    },
+    {
+      "x": 15,
+      "y": 223
+    },
+    {
+      "x": 55,
+      "y": 241
+    },
+    {
+      "x": 55,
+      "y": 193
+    },
+    {
+      "x": 2,
+      "y": 92
+    },
+    {
+      "x": 16,
+      "y": 215
+    },
+    {
+      "x": 57,
+      "y": 20
+    },
+    {
+      "x": 42,
+      "y": 35
+    },
+    {
+      "x": 6,
+      "y": 88
+    },
+    {
+      "x": 38,
+      "y": 132
+    },
+    {
+      "x": 63,
+      "y": 225
+    },
+    {
+      "x": 54,
+      "y": 91
+    },
+    {
+      "x": 10,
+      "y": 94
+    },
+    {
+      "x": 62,
+      "y": 129
+    },
+    {
+      "x": 55,
+      "y": 95
+    },
+    {
+      "x": 17,
+      "y": 154
+    },
+    {
+      "x": 29,
+      "y": 91
+    },
+    {
+      "x": 63,
+      "y": 248
+    },
+    {
+      "x": 19,
+      "y": 97
+    },
+    {
+      "x": 20,
+      "y": 105
+    },
+    {
+      "x": 7,
+      "y": 39
+    },
+    {
+      "x": 31,
+      "y": 231
+    },
+    {
+      "x": 1,
+      "y": 56
+    },
+    {
+      "x": 51,
+      "y": 40
+    },
+    {
+      "x": 5,
+      "y": 175
+    },
+    {
+      "x": 28,
+      "y": 160
+    },
+    {
+      "x": 46,
+      "y": 153
+    },
+    {
+      "x": 3,
+      "y": 219
+    },
+    {
+      "x": 23,
+      "y": 169
+    },
+    {
+      "x": 30,
+      "y": 136
+    },
+    {
+      "x": 63,
+      "y": 10
+    },
+    {
+      "x": 9,
+      "y": 86
+    },
+    {
+      "x": 51,
+      "y": 143
+    },
+    {
+      "x": 33,
+      "y": 90
+    },
+    {
+      "x": 38,
+      "y": 209
+    },
+    {
+      "x": 24,
+      "y": 7
+    },
+    {
+      "x": 55,
+      "y": 160
+    },
+    {
+      "x": 6,
+      "y": 129
+    },
+    {
+      "x": 35,
+      "y": 115
+    },
+    {
+      "x": 16,
+      "y": 220
+    },
+    {
+      "x": 35,
+      "y": 213
+    },
+    {
+      "x": 28,
+      "y": 147
+    },
+    {
+      "x": 52,
+      "y": 52
+    },
+    {
+      "x": 60,
+      "y": 27
+    },
+    {
+      "x": 58,
+      "y": 26
+    },
+    {
+      "x": 59,
+      "y": 186
+    },
+    {
+      "x": 24,
+      "y": 108
+    },
+    {
+      "x": 20,
+      "y": 118
+    },
+    {
+      "x": 45,
+      "y": 126
+    },
+    {
+      "x": 6,
+      "y": 250
+    },
+    {
+      "x": 53,
+      "y": 231
+    },
+    {
+      "x": 7,
+      "y": 179
+    },
+    {
+      "x": 37,
+      "y": 59
+    },
+    {
+      "x": 56,
+      "y": 95
+    },
+    {
+      "x": 51,
+      "y": 168
+    },
+    {
+      "x": 37,
+      "y": 34
+    },
+    {
+      "x": 43,
+      "y": 155
+    },
+    {
+      "x": 26,
+      "y": 86
+    },
+    {
+      "x": 51,
+      "y": 118
+    },
+    {
+      "x": 46,
+      "y": 162
+    },
+    {
+      "x": 58,
+      "y": 216
+    },
+    {
+      "x": 51,
+      "y": 30
+    },
+    {
+      "x": 60,
+      "y": 68
+    },
+    {
+      "x": 20,
+      "y": 143
+    },
+    {
+      "x": 13,
+      "y": 171
+    },
+    {
+      "x": 44,
+      "y": 135
+    },
+    {
+      "x": 23,
+      "y": 85
+    },
+    {
+      "x": 38,
+      "y": 218
+    },
+    {
+      "x": 44,
+      "y": 220
+    },
+    {
+      "x": 35,
+      "y": 110
+    },
+    {
+      "x": 1,
+      "y": 39
+    },
+    {
+      "x": 4,
+      "y": 144
+    },
+    {
+      "x": 26,
+      "y": 57
+    },
+    {
+      "x": 28,
+      "y": 73
+    },
+    {
+      "x": 52,
+      "y": 243
+    },
+    {
+      "x": 57,
+      "y": 147
+    },
+    {
+      "x": 58,
+      "y": 159
+    },
+    {
+      "x": 34,
+      "y": 21
+    },
+    {
+      "x": 37,
+      "y": 85
+    },
+    {
+      "x": 23,
+      "y": 205
+    },
+    {
+      "x": 41,
+      "y": 208
+    },
+    {
+      "x": 39,
+      "y": 252
+    },
+    {
+      "x": 52,
+      "y": 133
+    },
+    {
+      "x": 43,
+      "y": 166
+    },
+    {
+      "x": 39,
+      "y": 49
+    },
+    {
+      "x": 17,
+      "y": 144
+    },
+    {
+      "x": 54,
+      "y": 165
+    },
+    {
+      "x": 57,
+      "y": 65
+    },
+    {
+      "x": 21,
+      "y": 180
+    },
+    {
+      "x": 40,
+      "y": 166
+    },
+    {
+      "x": 17,
+      "y": 75
+    },
+    {
+      "x": 36,
+      "y": 7
+    },
+    {
+      "x": 10,
+      "y": 252
+    },
+    {
+      "x": 23,
+      "y": 174
+    },
+    {
+      "x": 30,
+      "y": 54
+    },
+    {
+      "x": 60,
+      "y": 57
+    },
+    {
+      "x": 10,
+      "y": 185
+    },
+    {
+      "x": 26,
+      "y": 217
+    },
+    {
+      "x": 28,
+      "y": 246
+    },
+    {
+      "x": 23,
+      "y": 11
+    },
+    {
+      "x": 19,
+      "y": 75
+    },
+    {
+      "x": 55,
+      "y": 140
+    },
+    {
+      "x": 38,
+      "y": 112
+    },
+    {
+      "x": 49,
+      "y": 99
+    },
+    {
+      "x": 45,
+      "y": 61
+    },
+    {
+      "x": 28,
+      "y": 201
+    },
+    {
+      "x": 30,
+      "y": 139
+    },
+    {
+      "x": 26,
+      "y": 232
+    },
+    {
+      "x": 1,
+      "y": 123
+    },
+    {
+      "x": 21,
+      "y": 146
+    }
+  ],
+  "eventGroups": [
+    {
+      "eventGroupId": "G14ME-QI-C135:EG00",
+      "eventGroupIndex": 0,
+      "cycleIndex": 0,
+      "phase": "block",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG01",
+      "eventGroupIndex": 1,
+      "cycleIndex": 0,
+      "phase": "unblock_or_restore",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG02",
+      "eventGroupIndex": 2,
+      "cycleIndex": 0,
+      "phase": "increase_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG03",
+      "eventGroupIndex": 3,
+      "cycleIndex": 0,
+      "phase": "decrease_or_restore_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG04",
+      "eventGroupIndex": 4,
+      "cycleIndex": 1,
+      "phase": "block",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG05",
+      "eventGroupIndex": 5,
+      "cycleIndex": 1,
+      "phase": "unblock_or_restore",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG06",
+      "eventGroupIndex": 6,
+      "cycleIndex": 1,
+      "phase": "increase_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG07",
+      "eventGroupIndex": 7,
+      "cycleIndex": 1,
+      "phase": "decrease_or_restore_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG08",
+      "eventGroupIndex": 8,
+      "cycleIndex": 2,
+      "phase": "block",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG09",
+      "eventGroupIndex": 9,
+      "cycleIndex": 2,
+      "phase": "unblock_or_restore",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG10",
+      "eventGroupIndex": 10,
+      "cycleIndex": 2,
+      "phase": "increase_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG11",
+      "eventGroupIndex": 11,
+      "cycleIndex": 2,
+      "phase": "decrease_or_restore_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG12",
+      "eventGroupIndex": 12,
+      "cycleIndex": 3,
+      "phase": "block",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG13",
+      "eventGroupIndex": 13,
+      "cycleIndex": 3,
+      "phase": "unblock_or_restore",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG14",
+      "eventGroupIndex": 14,
+      "cycleIndex": 3,
+      "phase": "increase_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG15",
+      "eventGroupIndex": 15,
+      "cycleIndex": 3,
+      "phase": "decrease_or_restore_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG16",
+      "eventGroupIndex": 16,
+      "cycleIndex": 4,
+      "phase": "block",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG17",
+      "eventGroupIndex": 17,
+      "cycleIndex": 4,
+      "phase": "unblock_or_restore",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG18",
+      "eventGroupIndex": 18,
+      "cycleIndex": 4,
+      "phase": "increase_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG19",
+      "eventGroupIndex": 19,
+      "cycleIndex": 4,
+      "phase": "decrease_or_restore_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG20",
+      "eventGroupIndex": 20,
+      "cycleIndex": 5,
+      "phase": "block",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": false,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG21",
+      "eventGroupIndex": 21,
+      "cycleIndex": 5,
+      "phase": "unblock_or_restore",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG22",
+      "eventGroupIndex": 22,
+      "cycleIndex": 5,
+      "phase": "increase_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 9.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "eventGroupId": "G14ME-QI-C135:EG23",
+      "eventGroupIndex": 23,
+      "cycleIndex": 5,
+      "phase": "decrease_or_restore_cost",
+      "topology": "bottleneck",
+      "atomicPartitions": [
+        {
+          "partitionIndex": 0,
+          "changes": [
+            {
+              "x": 128,
+              "y": 128,
+              "isWalkable": true,
+              "traversalCost": 1.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

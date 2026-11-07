@@ -1,0 +1,62 @@
+{
+  "schema": "gate14re-me-post-qualification-runtime-diagnostic-analysis-plan-v2",
+  "studyId": "Gate14Re-ME",
+  "diagnosticAttemptId": "load-qualification-post-qualification-runtime-diagnostic-attempt-002",
+  "status": "FROZEN_BEFORE_DIAGNOSTIC_COMPUTATION_AND_BEFORE_NAMED_IDENTITY_LOAD",
+  "sourceQualificationExecutionAttemptId": "load-qualification-execution-attempt-011",
+  "sourceMeasuredAttempt": "attempt-009",
+  "activationGate": {
+    "qualificationTerminalPassReceipt": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-read-only-acceptance-attempt-001/qualification-terminal-pass-receipt.v1.json",
+    "qualificationTerminalPassReceiptSha256": "9ffc2c83896f1516eea969619ccc8c07f6be1bdab85cecead7224fc8f9cbeafa",
+    "requiredStatus": "PASS_QUALIFICATION_TERMINAL"
+  },
+  "sequence": [
+    "validate the frozen diagnostic protocol, qualification PASS receipt, source hashes, schemas, cardinalities and ordinals",
+    "construct the structural timing records without loading the named identity mapping or named schedule fields",
+    "write, hash and make read-only the anonymous structural runtime prediction",
+    "only after the anonymous freeze, load the frozen schedule and identity mapping and validate their one-to-one correspondence",
+    "produce the named descriptive engineering runtime distributions, G x N x F cells, tail diagnostics, order sensitivity and time-component identifiability",
+    "freeze the input inventory, diagnostic outputs, report and terminal receipt"
+  ],
+  "quantiles": {
+    "method": "linear interpolation at p*(n-1) over sorted finite values",
+    "reportedForAlgorithmDistributions": ["P50", "P90", "P95", "P99", "maximum"],
+    "missingRule": "no imputation; a missing or non-finite required timing value fails closed"
+  },
+  "tailRules": {
+    "pooledTailThreshold": "pooled valid lane process-wall P95",
+    "algorithmDescriptors": [
+      "P95/P50",
+      "P99/P50",
+      "maximum/P50",
+      "share above pooled process-wall P95",
+      "matched-superblock maximum-wall frequency"
+    ],
+    "assessmentRule": "report every descriptor leader and call one algorithm most prominent only when it has a strict plurality of the five predeclared descriptor leads; otherwise report no single dominant long-tail algorithm",
+    "orderStrata": "lane execution indices 0..251 early, 252..503 middle and 504..755 late",
+    "recentWindows": ["last 76 lanes (ceiling of 10 percent)", "last 100 lanes", "trailing one-hour completion window"],
+    "smallCellRule": "algorithm x core G x N x F cells have n=3; report n, minimum, P50, maximum and range, and do not interpret their P99 as a stable population estimate"
+  },
+  "directTimingMeasures": {
+    "processWallMilliseconds": "process ledger exitedAtUtc minus creationTimeUtc",
+    "interProcessGapMilliseconds": "next process creationTimeUtc minus previous process exitedAtUtc",
+    "inclusiveLaneBodyMilliseconds": "lane receipt laneWallClockMilliseconds; the frozen RunnerV4_2 stopwatch spans RunAlgorithmLane entry through all lane work and raw writes",
+    "pureAlgorithmCompute": "not separately identifiable",
+    "unityStartup": "not separately identifiable because no trustworthy absolute workloadStartUtc exists",
+    "exitFinalization": "not separately identifiable because no trustworthy absolute workloadEndUtc exists",
+    "residualRule": "no residual may be relabeled as startup, compute or finalization"
+  },
+  "formalStPrediction": {
+    "scope": "algorithm-lane collection plus observed strict-serial inter-process gaps; excludes input generation, qualification oracle batches, post-collection acceptance, delivery and analysis",
+    "formalCoreCells": 36,
+    "algorithms": 6,
+    "laneProcessesPerB": 216,
+    "allowedBValuesForParameterTable": [36, 72, 108, 144],
+    "finalBAtPlanFreeze": null,
+    "pointFormula": "sum the P50 process wall of each of the 216 anonymous-lane x core-GNF pilot cells and 216 pooled lane-gap P50 values, then multiply by B",
+    "conservativeFormula": "sum the observed maximum process wall of each of the 216 anonymous-lane x core-GNF pilot cells and 216 pooled lane-gap P99 values, then multiply by B",
+    "planningBudgetFormula": "conservative estimate multiplied by 1.20 operational headroom",
+    "decisionGateHours": 168
+  },
+  "scientificBoundary": "This is a post-qualification descriptive engineering runtime diagnostic. It does not read outcome observations, estimate scientific effects, rank quality, adjudicate a winner, use qualification rows as formal samples, change the design or authorize ST, MQ or MT execution."
+}

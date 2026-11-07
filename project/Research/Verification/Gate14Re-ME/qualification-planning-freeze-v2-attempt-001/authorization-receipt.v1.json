@@ -1,0 +1,60 @@
+{
+  "schema": "gate14re-me-qualification-planning-freeze-v2-attempt-001-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-planning-freeze-v2-attempt-001",
+  "requestedStageLabel": "Gate14Re-ME qualification planning freeze attempt-001",
+  "canonicalStageLabel": "Gate14Re-ME qualification planning freeze v2 attempt-001 after Status v26",
+  "status": "AUTHORIZED_NONEXECUTING_QUALIFICATION_PLANNING_FREEZE_V2_ATTEMPT_001",
+  "authorizedAtUtc": "2026-10-17T13:30:15.0000000Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME qualification planning freeze attempt‑001：以 Status v26 已采用的 input schema v2 与 planning schema binding v2 为唯一输入契约，绑定现有 D2、D3‑v3、D4、clock 仪器资格证据、Unity trusted launch identity rule、六算法集合、完整逐条原始数据可交付硬门和正式采集前负载资格门；仅允许冻结资格设计、负载层级、实验单位、重复与阻断结构、指标方向、资格判定规则、技术失败/replacement 规则、停止规则、逐条数据 provenance 及后续资产生成合同。不得生成资格 schedule、input bundles 或匿名身份映射，不得创建 measured root，不得启动 Unity、planner 或算法 lane，不得进行正式采集、正式分析、排名或赢家裁决；失败时保留全部证据并 fail closed。",
+  "scopeResolution": {
+    "basis": "The selected authorization text is treated as the independent authorization requested by Status v26.",
+    "authorizedStoppingPoint": "Freeze only the nonexecuting qualification design and the contract governing a future, separately authorized planning-asset generation stage.",
+    "scientificEndpointChangeAuthorized": false,
+    "qualificationPlanningAssetGenerationAuthorized": false,
+    "qualificationExecutionAuthorized": false
+  },
+  "historicalNameCollisionResolution": {
+    "collisionDetected": true,
+    "historicalAttemptRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-attempt-001",
+    "historicalAttemptFailureReceiptSha256": "f3ebfb70faba9d48d39d12eeff5fe64cfc2776ac73c0b672e1ecf04273b4b2c6",
+    "historicalAttemptStatus": "FAILED_CLOSED_INPUT_SCHEMA_RUNTIME_CONTRACT_CONTRADICTION",
+    "historicalAttemptRetainedUnmodified": true,
+    "historicalAttemptReclassified": false,
+    "newIndependentEvidenceRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001",
+    "reasonForV2Qualifier": "Avoid overwriting the immutable historical attempt-001 and identify this as the first planning-freeze attempt under the Status-v26-adopted schema-v2 contract."
+  },
+  "parentStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v26.json",
+    "sha256": "5fe7400ca466119a15c593c74ac0e1eb0c56bceb4eb5fb00a8fb9bf8a35c1b26",
+    "requiredStatus": "INPUT_SCHEMA_V2_COMPATIBILITY_OFFLINE_CLOSURE_PASS_PLANNING_BINDING_V2_ADOPTED"
+  },
+  "authorizedActions": {
+    "readFrozenEvidenceAndProcessMetadata": true,
+    "verifyFrozenHashesAndPassReceipts": true,
+    "freezeQualificationDesign": true,
+    "freezeLoadLevelsUnitsRepeatsAndBlocking": true,
+    "freezeMetricDirections": true,
+    "freezeQualificationDecisionRules": true,
+    "freezeTechnicalFailureReplacementAndStopRules": true,
+    "freezePerObservationProvenance": true,
+    "freezeFuturePlanningAssetGenerationContract": true,
+    "writeIndependentEvidenceAndNextStatus": true
+  },
+  "prohibitedActions": {
+    "generateQualificationSchedule": true,
+    "generateQualificationInputBundles": true,
+    "generateAnonymousIdentityMapping": true,
+    "createQualificationOrFormalMeasuredRoot": true,
+    "launchUnity": true,
+    "constructOrInvokePlanner": true,
+    "executeAlgorithmLane": true,
+    "performFormalCollection": true,
+    "performFormalAnalysis": true,
+    "rankAlgorithms": true,
+    "adjudicateWinner": true,
+    "modifyOrReclassifyPriorEvidence": true,
+    "automaticRetryAfterFailure": true
+  },
+  "failureDisposition": "FAIL_CLOSED_RETAIN_ALL_EVIDENCE_NO_AUTOMATIC_RETRY_OR_SCOPE_EXPANSION"
+}

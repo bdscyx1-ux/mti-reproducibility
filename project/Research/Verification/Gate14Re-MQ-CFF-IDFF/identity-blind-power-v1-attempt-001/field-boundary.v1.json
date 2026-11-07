@@ -1,0 +1,57 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-field-boundary-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "identity-blind-power-v1-attempt-001",
+  "status": "FROZEN_BEFORE_QUALIFICATION_TIMING_ACCESS",
+  "allowedInputs": {
+    "performanceLaneRow": [
+      "schema",
+      "batchOrdinal",
+      "laneOrdinal",
+      "sourceReplicaIndex",
+      "executorRuntime.ordinal",
+      "executorRuntime.wallMilliseconds",
+      "executorRuntime.state",
+      "executorRuntime.stayedOnConfiguredCpuSet"
+    ],
+    "technicalBatchRow": [
+      "schema",
+      "workerCount",
+      "laneCount",
+      "batchWallMilliseconds",
+      "completedLaneCount",
+      "failedLaneCount",
+      "skippedLaneCount",
+      "succeeded",
+      "status"
+    ],
+    "runtimeBudget": [
+      "formalRuntimePlanning.processesPerMatchedBlock",
+      "formalRuntimePlanning.budgets[].B",
+      "formalRuntimePlanning.budgets[].freshUnityProcessCount",
+      "formalRuntimePlanning.budgets[].stressHoursAt1_9x",
+      "runtimeGate.sevenDayGateHours"
+    ]
+  },
+  "forbiddenFields": [
+    "algorithmId",
+    "conditionId",
+    "batchId",
+    "workload.algorithmId",
+    "inputId",
+    "production identity mapping",
+    "named algorithm means effects directions ranks weights or winner"
+  ],
+  "allowedDerivations": [
+    "opaque structural worker makespan",
+    "identity-blind duplicate timing jitter",
+    "centered six-dimensional nuisance covariance",
+    "conservative covariance inflation",
+    "Holm-adjusted opaque-primary Monte Carlo power",
+    "Wilson power intervals",
+    "selected B and its precomputed engineering runtime budget"
+  ],
+  "identityRule": "Opaque slots are assigned only from frozen batch ordinals. The script must not access or compare algorithmId conditionId batchId inputId or any identity map.",
+  "formalSamplesCreated": false,
+  "formalCollectionAuthorized": false
+}

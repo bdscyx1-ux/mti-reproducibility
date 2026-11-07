@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-pr2-rq-aligned-s48-h48-formal-preparation-v1",
+  "status": "FROZEN-NON-EXECUTING",
+  "effectiveScope": "future Gate 13R formal data only",
+  "selectedDesign": {
+    "candidateId": "S48-H48",
+    "campaignCount": 74,
+    "sharedCampaignCount": 32,
+    "heterogeneousScenarioCount": 21,
+    "sharedBlocksPerCampaign": 48,
+    "heterogeneousMatchedSuperblocksPerScenario": 48,
+    "heterogeneousProcessesPerMatchedSuperblock": 2,
+    "AB": 24,
+    "BA": 24,
+    "sharedProcessCount": 1536,
+    "sharedSampleCount": 6144,
+    "heterogeneousMatchedSuperblockCount": 1008,
+    "heterogeneousProcessCount": 2016,
+    "heterogeneousSampleCount": 4032,
+    "totalProcessCount": 3552,
+    "totalSampleCount": 10176
+  },
+  "scientificContract": {
+    "primaryEndpoint": "P1-dynamicHandlingMillisecondsPerScheduledEvent",
+    "sharedConfirmatoryContrasts": ["C1", "C2", "C3", "C4", "C5"],
+    "confirmatoryFamilyWiseAlpha": 0.05,
+    "multiplicityMethod": "Holm",
+    "superiorityReferenceRatio": 1.0,
+    "heterogeneousCrossFamilyIdentity": "SECONDARY-SYSTEM-TREATMENT-CONTRAST",
+    "supportivePlanningEndpoints": ["P2", "P3", "P4", "P5"],
+    "prospectiveGate14REndpoints": ["M1", "M2", "M3", "M4", "M5"],
+    "planningEffectAnchorRelative": 0.15,
+    "planningEffectAnchorIsPracticalMargin": false,
+    "practicalSuperiorityMargin": null,
+    "adaptiveStoppingAllowed": false,
+    "perCampaignPrecisionGuarantee": null
+  },
+  "executionContract": {
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "oneFreshUnityEditorProcessPerCompleteWilliamsBlock": true,
+    "maximumWilliamsBlocksPerUnityProcess": 1,
+    "perSampleCompleteResetRequired": true,
+    "crossBlockReuseAllowed": false,
+    "crossCampaignReuseAllowed": false,
+    "playableAndObsExcludedFromTiming": true,
+    "failClosed": true,
+    "automaticRetryAllowed": false,
+    "automaticResumeAllowed": false,
+    "partialAttemptMergeAllowed": false
+  },
+  "projectionContract": {
+    "serialP50Hours": 20.808185450666667,
+    "conservativeSummedP95Hours": 26.45538207066667,
+    "projectedP95RawBytes": 9631912320,
+    "safetyMultiplier": 1.5,
+    "projectedSafetyBytes": 14447868480,
+    "reserveBytes": 42949672960,
+    "minimumLaunchFreeBytes": 57397541440
+  },
+  "historicalDesignDisposition": {
+    "Gate13R_Serial_10pct": "PRE-AMENDMENT-COMPARISON-BASELINE / NOT-AUTHORIZED-FOR-LAUNCH",
+    "parallelAnd36h48hDesigns": "HISTORICAL-EVIDENCE-ONLY",
+    "PR1Bv7Pilot": "FAILED / NON-FORMAL / COMPLETE-RAW-EXECUTION / EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "PR1Bv4Recovery": "PILOT-DIAGNOSTIC-ONLY / EXCLUDED-FROM-FORMAL-ANALYSIS"
+  },
+  "authorizationBoundary": {
+    "formalCampaignAuthorized": false,
+    "formalRootCreationAuthorized": false,
+    "formalExecutionReceiptAuthorized": false,
+    "unityExecutionAuthorized": false,
+    "gate14RAuthorized": false
+  }
+}

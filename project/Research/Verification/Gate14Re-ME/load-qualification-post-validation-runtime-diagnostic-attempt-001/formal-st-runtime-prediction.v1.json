@@ -1,0 +1,71 @@
+{
+  "boundary": "This engineering budget is not a sample-size authorization and does not alter B or the scientific design.",
+  "conservativeHoursPerB": 6.497378,
+  "planningHoursPerBWith20PercentHeadroom": 7.796854,
+  "pointHoursPerB": 5.55243,
+  "rows": [
+    {
+      "B": 36,
+      "atOrAboveSevenDayGate": true,
+      "conservativeDays": 9.746,
+      "conservativeHours": 233.906,
+      "formalSuperblocks": 1728,
+      "laneProcesses": 10368,
+      "planningWith20PercentHeadroomDays": 11.695,
+      "planningWith20PercentHeadroomHours": 280.687,
+      "pointDays": 8.329,
+      "pointHours": 199.887
+    },
+    {
+      "B": 72,
+      "atOrAboveSevenDayGate": true,
+      "conservativeDays": 19.492,
+      "conservativeHours": 467.811,
+      "formalSuperblocks": 3456,
+      "laneProcesses": 20736,
+      "planningWith20PercentHeadroomDays": 23.391,
+      "planningWith20PercentHeadroomHours": 561.373,
+      "pointDays": 16.657,
+      "pointHours": 399.775
+    },
+    {
+      "B": 108,
+      "atOrAboveSevenDayGate": true,
+      "conservativeDays": 29.238,
+      "conservativeHours": 701.717,
+      "formalSuperblocks": 5184,
+      "laneProcesses": 31104,
+      "planningWith20PercentHeadroomDays": 35.086,
+      "planningWith20PercentHeadroomHours": 842.06,
+      "pointDays": 24.986,
+      "pointHours": 599.662
+    },
+    {
+      "B": 144,
+      "atOrAboveSevenDayGate": true,
+      "conservativeDays": 38.984,
+      "conservativeHours": 935.622,
+      "formalSuperblocks": 6912,
+      "laneProcesses": 41472,
+      "planningWith20PercentHeadroomDays": 46.781,
+      "planningWith20PercentHeadroomHours": 1122.747,
+      "pointDays": 33.315,
+      "pointHours": 799.55
+    }
+  ],
+  "schema": "gate14re-me-formal-st-parameterized-runtime-prediction-v1",
+  "scopeExclusions": [
+    "input generation",
+    "oracle prechecks",
+    "post-collection validation",
+    "delivery construction",
+    "formal analysis"
+  ],
+  "sevenDayDecisionGate": {
+    "minimumPermittedB": 36,
+    "thresholdHours": 168,
+    "triggeredAtMinimumPermittedB": true
+  },
+  "status": "PARAMETERIZED_ONLY_FINAL_B_NOT_FROZEN",
+  "targetHostRecalibration": "Run the same qualification on the target host, recompute the 288 core algorithm-cell medians/maxima and lane-gap P50/P99, then replay these formulas before formal ST authorization."
+}

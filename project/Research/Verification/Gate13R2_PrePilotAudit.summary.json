@@ -1,0 +1,106 @@
+{
+    "schemaVersion":  1,
+    "auditId":  "gate13-r2-process-reuse-pre-pilot-audit-v1",
+    "auditMode":  "preservation-static-unit-regression-negative-fail-closed-validation-only",
+    "savedAt":  "2026-10-06T14:21:55.7732562+08:00",
+    "projectPath":  "H:\\DDM_Final_Project",
+    "assertionCount":  147,
+    "failures":  [
+
+                 ],
+    "pilotPlanSha256":  "de79edaca2bfd7016fd9a50dba85a511c2bdfc6bdce99d629e20e4bded4ca8d9",
+    "provenanceSha256":  "91a8fcabdd157f7511eeda89e8355580954ed03222c51b5163f577b10354b82d",
+    "processReuseCommandSha256":  "08ab7b3c593f55232d59d6266714eeae33c2c93be846e55ac8a235928fee1c33",
+    "compileLogSha256":  "b4f02654af7c09f44116665162186b4f2dd6abe0f67101aca2168b13b7c2d9fc",
+    "retainedRegression":  {
+                               "sourceScriptSha256":  "e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1",
+                               "assertionCount":  63,
+                               "summarySha256":  "dffdfb2fe1d5ca6de8df40ea2af9f178d828ab7dcf1d700cf952cc11d03b6396",
+                               "passed":  true
+                           },
+    "preservation":  {
+                         "coldRootFileCount":  891,
+                         "coldRootRawBytes":  129667391,
+                         "coldRootReadOnlyFileCount":  891,
+                         "coldCheckpointSha256":  "351ace32b633c0f155c624f6fbc9148f6139f909cb5f96063c2407aadeae4bdf",
+                         "gate11BundleFileCount":  57,
+                         "gate12SuccessfulV1FileCount":  1694,
+                         "gate12FailureAttempt1":  {
+                                                       "fileCount":  1,
+                                                       "byteCount":  20841,
+                                                       "aggregateSha256":  "5965bcfe1c9587a1ec6bf574b1cb4a423d1fe0e234e4bcbd9e50645c2f3e13a0"
+                                                   },
+                         "gate12FailureAttempt2":  {
+                                                       "fileCount":  103,
+                                                       "byteCount":  14187382,
+                                                       "aggregateSha256":  "b52ee8f13c9b96edd2f0ab83f4969161ef5b257d1543588ec9608877086dc500"
+                                                   },
+                         "originalBaselineChecked":  24,
+                         "originalBaselineMismatches":  [
+
+                                                        ]
+                     },
+    "parserErrors":  [
+
+                     ],
+    "mutableStaticFields":  [
+
+                            ],
+    "positiveBlockFixtures":  [
+                                  {
+                                      "label":  "four-algorithm",
+                                      "planSha256":  "9373365acab990ee02762bd34c9257fa9bf2d086b86c6593c7fbbb9d07a58cc2",
+                                      "wrapperSummarySha256":  "97f7d31ea49782041372253dc738dfd93828942df0e331d875878d1953b322d6",
+                                      "blockManifestSha256":  "89857fa8b9d563c893888f6c5ff08ed86cc68abd5da47396295a700d74c8fb80",
+                                      "processId":  30828,
+                                      "sampleCount":  4,
+                                      "allSamplesShareProcessId":  true,
+                                      "orderMatchesBlockPlan":  true,
+                                      "formalCampaign":  false,
+                                      "passed":  true
+                                  },
+                                  {
+                                      "label":  "two-algorithm",
+                                      "planSha256":  "d7ae6f47879ae460d9ec206a49014e52c43224bcdabd51eba9495b1765b0128f",
+                                      "wrapperSummarySha256":  "d8d0b1bf8f76f98feda611ad00252e2772dc91678a9c44098c506222f346f318",
+                                      "blockManifestSha256":  "6b7064fc77bcbbeb947b975661cc4e850f8de417edb8412f60cbbe467302c10b",
+                                      "processId":  3440,
+                                      "sampleCount":  2,
+                                      "allSamplesShareProcessId":  true,
+                                      "orderMatchesBlockPlan":  true,
+                                      "formalCampaign":  false,
+                                      "passed":  true
+                                  }
+                              ],
+    "negativeFailClosedFixture":  {
+                                      "expectedFailureObserved":  true,
+                                      "unityExitCode":  1,
+                                      "reusedExistingEvidenceWithoutRerun":  true,
+                                      "planSha256":  "d07df17d467342de94e09eab8e7af84d11290fb6ff3862a8c926c02ba48fba3f",
+                                      "unityLogSha256":  "270a3d3ec806b6c07086c1b8c932c4f46a92ac608e1d2377c5c450f3f4e4b8ab",
+                                      "failureSha256":  "3c108becef5a9e059558e9cb646562ebbc82dc135c0d8c3d044fbb73638126c4",
+                                      "checkpointSha256":  "c35ef97b835b615afff2ae1068c7feaaa36dbd87e7fd9d6c2c65cfadd988f8b0",
+                                      "completedSampleCount":  1,
+                                      "failedPosition":  2,
+                                      "laterPositionsExecuted":  false,
+                                      "finalCheckpointStatus":  "failed-no-auto-retry",
+                                      "sampleCompletionMarkerCount":  1,
+                                      "blockManifestExists":  false,
+                                      "automaticRetryAttempted":  false,
+                                      "automaticResumeAttempted":  false
+                                  },
+    "unityProcessIdsAfterAudit":  [
+
+                                  ],
+    "unityLockfileAfterAudit":  false,
+    "coldOwnedProcessIdsAfterAudit":  [
+
+                                      ],
+    "pilotRootExists":  false,
+    "reservedFormalRootExists":  false,
+    "formalExecutionAuthorized":  false,
+    "pilotExecutionAuthorizedByAudit":  true,
+    "automaticRetryAuthorized":  false,
+    "automaticResumeAuthorized":  false,
+    "passed":  true
+}

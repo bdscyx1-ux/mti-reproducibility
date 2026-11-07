@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate10r-attempt3-final-integrity-audit-v1",
+  "auditedAtUtc": "2026-10-06T14:26:10.3144219Z",
+  "status": "PASSED",
+  "terminalExperimentStatus": "GATE10R-ATTEMPT3-FAILED-NO-AUTO-RETRY",
+  "attempt": 3,
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "assertionCount": 28,
+  "passedCount": 28,
+  "failedCount": 0,
+  "checks": [
+    {"name": "partial-manifest-cardinality", "passed": true, "detail": "162 artifacts"},
+    {"name": "partial-manifest-raw-bytes", "passed": true, "detail": "14598617"},
+    {"name": "partial-manifest-all-artifact-hashes", "passed": true, "detail": "162/162 paths, byte counts, and SHA-256 values matched"},
+    {"name": "failure-receipt-bound", "passed": true, "detail": "e697d3a9fef4272298cd76faeaf7f63e369f657b8fb1937e7c375df97cf5d64e"},
+    {"name": "terminal-checkpoint-bound", "passed": true, "detail": "e25faf1cdf6892a5468e45248216f1b15676b05b5e6ef8c9d8d46c466d0a9010"},
+    {"name": "preflight-67-of-67", "passed": true, "detail": "stale lock captured and removed; Unity not started"},
+    {"name": "unit-59-of-59", "passed": true, "detail": "all v3 unit assertions passed"},
+    {"name": "unity-compile", "passed": true, "detail": "exit 0; natural-lock-absence"},
+    {"name": "telemetry-probe", "passed": true, "detail": "PSAPI/CIM cross-check passed; natural-lock-absence"},
+    {"name": "block-cardinality", "passed": true, "detail": "4 block invocations; 6 fresh cold references; 10 comparisons"},
+    {"name": "structural-equivalence", "passed": true, "detail": "10/10 passed; zero mismatch"},
+    {"name": "lock-hygiene", "passed": true, "detail": "positive/cold natural; expected-negative controlled cleanup only"},
+    {"name": "retained-failure-signature", "passed": true, "detail": "reported passed=true, failures=0, assertionCount=0; hard gate required 63 and stopped"},
+    {"name": "original-retained-summary-unchanged", "passed": true, "detail": "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d"},
+    {"name": "final-audit-not-started", "passed": true, "detail": "no Gate10R_FinalAudit.summary.v3.json"},
+    {"name": "attempt1-tree-byte-identical", "passed": true, "detail": "4 files / 9577 bytes / 2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d"},
+    {"name": "attempt2-tree-byte-identical", "passed": true, "detail": "101 files / 9375526 bytes / da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce"},
+    {"name": "attempt3-terminal-tree", "passed": true, "detail": "165 files / 14661809 bytes / 29f5aa8f0461abb120792dea0f2806e46e4dc9836aa843ce747f2436c1645a23"},
+    {"name": "historical-cold-root", "passed": true, "detail": "891 files / 129667391 bytes / 0 non-read-only"},
+    {"name": "historical-process-reuse-v1-root", "passed": true, "detail": "838 files / 91219643 bytes / 0 non-read-only"},
+    {"name": "historical-process-reuse-v2-root", "passed": true, "detail": "4 files / 8899 bytes / 0 non-read-only"},
+    {"name": "original-archive-unchanged", "passed": true, "detail": "b2431197f962fab8af8893772e822ee641a575120a95e47f04444e5172bcd5aa"},
+    {"name": "terminal-process-and-lock-state", "passed": true, "detail": "Unity process count 0; project lock absent"},
+    {"name": "downstream-roots-absent", "passed": true, "detail": "Gate11R scenario/Playable, Gate12R pilot, and Gate13R formal roots absent"},
+    {"name": "downstream-authorization-revoked", "passed": true, "detail": "Gate11R=false; Gate12R=false; Gate13R=false"},
+    {"name": "plans-and-checkpoints-synchronized", "passed": true, "detail": "overall plan v3.3, active experiment plan v1.1, and Next_Session_Checkpoint reference attempt 3"},
+    {"name": "run-ledger-valid", "passed": true, "detail": "ledger_status=ok; 32 entries; 29 backed; no awaiting_answer/cannot_confirm/not_run/missing"},
+    {"name": "retry-resume-count", "passed": true, "detail": "automatic retry 0; automatic resume 0"}
+  ],
+  "terminalEvidence": {
+    "partialManifest": {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Gate10R_Attempt3_Partial_Output_Manifest.v3.json",
+      "bytes": 57312,
+      "sha256": "1c0a4aa737e217cd93bb35d5cfa8cc3286bb8954b8df56320c88c03c5632979c",
+      "artifactCount": 162,
+      "rawBytes": 14598617
+    },
+    "failureReceipt": {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Gate10R_Attempt3_Failure_Receipt.v3.json",
+      "bytes": 4779,
+      "sha256": "e697d3a9fef4272298cd76faeaf7f63e369f657b8fb1937e7c375df97cf5d64e"
+    },
+    "checkpoint": {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v3/gate10r-checkpoint.json",
+      "bytes": 1101,
+      "sha256": "e25faf1cdf6892a5468e45248216f1b15676b05b5e6ef8c9d8d46c466d0a9010"
+    },
+    "humanCheckpoint": {
+      "relativePath": "Research/Gate10R_Attempt3_RetainedRegression_Failure_Checkpoint.md",
+      "bytes": 8635,
+      "sha256": "908e948b015545c0d2d444ed19ca2d5568b54e3beb9c7b5eda2ed4464c3a398c"
+    },
+    "diagnosis": {
+      "relativePath": "Research/Gate10R_Attempt3_RetainedRegression_Failure_Diagnosis.v1.md",
+      "bytes": 2988,
+      "sha256": "cf70bfa21b3f47e5e0eca63d0ae5bcfefca6eda93b82461a115424fc12707fb4"
+    }
+  },
+  "terminalTrees": {
+    "attempt1": {"fileCount": 4, "rawBytes": 9577, "treeSha256": "2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d"},
+    "attempt2": {"fileCount": 101, "rawBytes": 9375526, "treeSha256": "da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce"},
+    "attempt3": {"fileCount": 165, "rawBytes": 14661809, "treeSha256": "29f5aa8f0461abb120792dea0f2806e46e4dc9836aa843ce747f2436c1645a23"}
+  },
+  "synchronizedDocuments": {
+    "overallProjectPlan": {
+      "relativePath": "Research/Overall_Project_Plan.md",
+      "bytes": 72685,
+      "sha256": "a1ae270f3502be5d1f2fb60759ca0b94b98e2967495efe5a6f15c0443f142e02"
+    },
+    "activeExperimentPlan": {
+      "relativePath": "Research/Gate10R_Onward_ProcessReuse_5pct_Experiment_Plan.md",
+      "bytes": 21689,
+      "sha256": "0cababa30b17fd23cb713b3774622205971cde338f179356d5e7ac06acc04c67"
+    },
+    "nextSessionCheckpoint": {
+      "relativePath": "Research/Next_Session_Checkpoint.md",
+      "bytes": 5755,
+      "sha256": "97ac92b57949e307ccad33c24cc49d09003fbd53da2b5bc4f9730e4922200580"
+    }
+  },
+  "ledgerBoundaryBeforeAuditReference": {
+    "passportRelativePath": "Research/Gate10R_to_Gate12R_Execution_Run_Passport.md",
+    "passportSha256": "13986cf7bbedc6a94e70a55ff81cce8afb396a4226bc7fbf85df4b58da77ba9d",
+    "ledgerRelativePath": "Research/Gate10R_to_Gate12R_Execution_Run_Passport_run_ledger.yaml",
+    "ledgerSha256": "40d0534a1b44cb564131ad54a32b0f964cfd9781f9b27c298e18928890c40c0d",
+    "entryCount": 32,
+    "headHash": "01db4b5a1e4dad7839d16f03591d20a973d8635bab349ec69caede9608b4a51c",
+    "ledgerStatus": "ok"
+  },
+  "terminalState": {
+    "unityProcessCount": 0,
+    "projectLockExists": false,
+    "finalAuditStarted": false,
+    "gate11RAuthorized": false,
+    "gate11RStarted": false,
+    "gate12RAuthorized": false,
+    "gate12RStarted": false,
+    "gate13RAuthorized": false,
+    "gate13RStarted": false,
+    "automaticRetryAttempted": false,
+    "automaticResumeAttempted": false,
+    "formalCampaign": false,
+    "nextAction": "WAIT-FOR-USER-AUTHORIZATION"
+  }
+}

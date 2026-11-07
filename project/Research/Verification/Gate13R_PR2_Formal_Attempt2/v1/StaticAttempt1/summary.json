@@ -1,0 +1,209 @@
+{
+  "checkCount": 46,
+  "checks": [
+    {
+      "name": "frozen-hash-Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Formal_Campaign_Config.v2.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Storage_WallClock_Preflight.v2.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Formal_Preparation_Provenance.v2.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Formal_Preparation_Schema.v2.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Formal_Execution_Authorization.v2.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13RPR2FormalBatchCommandV2.cs",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13RPR2FormalExecutionV3.psm1",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Run-Gate13RPR2FormalBlockV4.ps1",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Run-Gate13RPR2FormalCampaignV4.ps1",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Formal_Execution_Receipt.v1.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-Gate13R_PR2_Formal_Execution_Status.v1.json",
+      "passed": true
+    },
+    {
+      "name": "frozen-hash-formal-attempt-1-partial-tree-manifest.json",
+      "passed": true
+    },
+    {
+      "detail": [],
+      "name": "attempt1-tree-preserved",
+      "passed": true
+    },
+    {
+      "name": "producer-exact-mechanical-diff",
+      "passed": true
+    },
+    {
+      "name": "producer-required-field-once",
+      "passed": false
+    },
+    {
+      "name": "producer-required-assignment-once",
+      "passed": true
+    },
+    {
+      "name": "module-strict-embedded-validator",
+      "passed": true
+    },
+    {
+      "name": "module-attempt2-receipt",
+      "passed": true
+    },
+    {
+      "name": "wrapper-active-stack",
+      "passed": true
+    },
+    {
+      "name": "wrapper-rehearsal-boundary",
+      "passed": true
+    },
+    {
+      "name": "wrapper-no-default-true",
+      "passed": true
+    },
+    {
+      "name": "campaign-active-stack",
+      "passed": true
+    },
+    {
+      "name": "campaign-attempt2-authorization",
+      "passed": true
+    },
+    {
+      "name": "campaign-dry-run",
+      "passed": true
+    },
+    {
+      "name": "campaign-two-phase",
+      "passed": false
+    },
+    {
+      "name": "campaign-no-analysis-invocation",
+      "passed": true
+    },
+    {
+      "name": "config-cardinality",
+      "passed": true
+    },
+    {
+      "name": "config-serial",
+      "passed": true
+    },
+    {
+      "name": "schedule-cardinality",
+      "passed": true
+    },
+    {
+      "name": "schedule-identities",
+      "passed": true
+    },
+    {
+      "name": "schedule-campaigns",
+      "passed": true
+    },
+    {
+      "name": "schedule-sample-counts",
+      "passed": true
+    },
+    {
+      "name": "schedule-superblocks",
+      "passed": true
+    },
+    {
+      "name": "schedule-abba",
+      "passed": true
+    },
+    {
+      "name": "schedule-order-row",
+      "passed": true
+    },
+    {
+      "detail": [],
+      "name": "schedule-errors-zero",
+      "passed": true
+    },
+    {
+      "name": "formal-root-v2-absent",
+      "passed": true
+    },
+    {
+      "name": "formal-receipt-v2-absent",
+      "passed": true
+    },
+    {
+      "name": "formal-status-v2-absent",
+      "passed": true
+    },
+    {
+      "name": "unity-lock-absent",
+      "passed": true
+    }
+  ],
+  "failedCheckCount": 2,
+  "failedCheckNames": [
+    "producer-required-field-once",
+    "campaign-two-phase"
+  ],
+  "formalRootV2Absent": true,
+  "passed": false,
+  "passedCheckCount": 44,
+  "reconstructed": {
+    "campaignCount": 74,
+    "matchedSuperblockCount": 1008,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "uniqueRunIdCount": 10176
+  },
+  "schemaVersion": 1,
+  "summaryKind": "gate13r-pr2-attempt2-static-deterministic-validation-v1",
+  "unityStarted": false
+}

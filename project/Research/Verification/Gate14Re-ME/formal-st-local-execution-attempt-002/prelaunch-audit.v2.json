@@ -1,0 +1,95 @@
+{
+  "schema": "gate14re-me-formal-st-local-prelaunch-audit-v2",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "status": "PASS_SUCCESSOR_PRELAUNCH_PENDING_EXACT_COMMAND_CONFIRMATION",
+  "auditedAtUtc": "2026-10-26T11:49:30.4426652Z",
+  "implementationRevision": "v5.2-supervisor-preflight-binding-fix",
+  "failedPredecessor": {
+    "evidenceRootRelativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-001",
+    "evidenceSealSha256": "b6c3dc8bbceb985c98de8a5238a30f0d9ca8f37f92795a5cd6e61f1dafceab09",
+    "measuredRootWasCreated": false,
+    "reused": false
+  },
+  "authorization": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-002/formal-st-execution-authorization.v5.json",
+    "sha256": "2c8e9c3853b9674d0987bc552dbd0d91ff9635ab4fc12e8b4b1e6f07462bfd6c",
+    "schemaAndScopePass": true,
+    "collectionAuthorized": true,
+    "formalAnalysisAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false
+  },
+  "implementation": {
+    "manifestRelativePath": "Research/Gate14Re-ME/Execution/v5_2/formal-st-implementation-manifest.v5_2.json",
+    "manifestSha256": "c956a991f439a1ef3bd5a7afc46a40105dd4006ef0a00a2734fd51f89ce4d745",
+    "manifestArtifactCount": 41,
+    "manifestArtifactFailureCount": 0,
+    "contractRelativePath": "Research/Gate14Re-ME/Execution/v5_2/formal-st-acquisition-contract.v5_2.json",
+    "contractSha256": "4e9386f290785e434823db4fb86c3a5a891cd26070773df5a33524a6bf892ff3",
+    "contractFrozenBindingCount": 31,
+    "contractBindingFailureCount": 0,
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_2/Run-Gate14ReMEFormalST.v5_2.ps1",
+    "supervisorSha256": "cbcdc4030eac2e4d79ae1fbafa5c1a2fe1a3ee7e25c00044575974bf78fb9889",
+    "supervisorParseErrorCount": 0,
+    "caseInsensitiveParameterAssignmentCollisionCount": 0,
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEFormalSTRunnerV5_1.cs",
+    "runnerSha256": "12c44c11d831a28a5277b7f3b86687dfbe6572d50b93a74635a7437995c02d12",
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMEFormalSTRunnerV5_1.Run",
+    "commandLineQuitPresent": false,
+    "runnerOwnsTerminalExit": true
+  },
+  "validation": {
+    "finalFreezeTerminalSha256": "647dcc6a57249036fb565eee917b56d64cddc3393e4db6090ba00edbc1158640",
+    "independentStaticValidationSha256": "d05664baff743d690b4b432ae6454e6ba42490ddd029ded8141d1f682c3be6fa",
+    "algorithmFreeReadinessSha256": "85496c8415c40365a5f6580b57d600f5b543f4024895db98f71c1c83552ad6ba",
+    "readOnlyPreflightReceiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-002/read-only-preflight-receipt.v5_2.json",
+    "readOnlyPreflightReceiptSha256": "0b288f424d1f71906ea9113863b86e8708f3695ef6f27a08fbe91fba58fab96b",
+    "readOnlyPreflightStatus": "PASS_READ_ONLY_PREFLIGHT_NO_MEASURED_ROOT_CREATED",
+    "scheduleRowsValidated": 1296,
+    "inputBundlesValidated": 1296,
+    "algorithmFreeUnityExitCode": 0,
+    "burstFinalCompilationDone": true
+  },
+  "formalInputs": {
+    "freezeManifestSha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "inputCount": 1296,
+    "scheduleRowCount": 1296,
+    "changedFromAttempt001": false
+  },
+  "host": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unitySha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "activeUnityProcessCount": 0,
+    "activeFormalSupervisorCount": 0,
+    "measuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-002",
+    "measuredRootExists": false,
+    "hDriveFreeBytes": 156566446080,
+    "requiredReservedBytes": 64310367960,
+    "freeSpacePass": true
+  },
+  "executionPolicy": {
+    "strictSerialFreshUnityProcesses": true,
+    "maximumConcurrentUnityProcesses": 1,
+    "wholeSuperblockTechnicalReplacements": 0,
+    "retry": false,
+    "resume": false,
+    "topUp": false,
+    "merge": false,
+    "skip": false,
+    "reorder": false,
+    "parallelCompletion": false,
+    "failurePolicy": "FAIL_CLOSED_PRESERVE_ROOT_REQUIRE_FRESH_SUCCESSOR_ATTEMPT"
+  },
+  "boundaries": {
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "mqStarted": false,
+    "mtStarted": false,
+    "effectOutputsReadOrInterpreted": false,
+    "migrationPackageCreatedOrModified": false,
+    "exactLaunchCommandRequiresNewUserConfirmation": true
+  }
+}

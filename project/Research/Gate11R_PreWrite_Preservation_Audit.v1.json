@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate11r-prewrite-preservation-audit-v1",
+  "savedAtUtc": "2026-10-07T02:16:11.0084943Z",
+  "projectRoot": "H:\\DDM_Final_Project",
+  "authorizationSource": {
+    "path": "Research/Gate10R_to_Gate12R_LedgerEntries/063-user-gate11r-authorization-source.txt",
+    "sha256": "49485321501bc10220279c61a6d4d5530b7d50110c83ee59f72e867ee4b798be"
+  },
+  "activeUpstream": {
+    "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "attempt": 4,
+    "terminalCheckpointPath": "Research/Verification/Gate10R_ProcessReuse_5pct/v4/gate10r-checkpoint.json",
+    "terminalCheckpointSha256": "fab889a1ff9f2d7911a6018b9cd3316e4dbff6e1c8cd8523678488ef252cbf56",
+    "finalAuditPath": "Research/Verification/Gate10R_ProcessReuse_5pct/v4/Gate10R_FinalAudit.summary.v4.json",
+    "finalAuditSha256": "8714fea2235d488abad7278bd6ccef9cf50f75aae57969220f40a19de16dd72c",
+    "evidenceTree": {
+      "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v4",
+      "fileCount": 169,
+      "rawBytes": 14661848,
+      "treeSha256": "ac7f70b2098f6fc28eaa48116faabe1a527f34168d1c851f5a5d7e8cbbbc53b2"
+    }
+  },
+  "protectedTrees": [
+    { "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v1", "fileCount": 4, "rawBytes": 9577, "treeSha256": "2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d" },
+    { "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v2", "fileCount": 101, "rawBytes": 9375526, "treeSha256": "da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce" },
+    { "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v3", "fileCount": 165, "rawBytes": 14661809, "treeSha256": "29f5aa8f0461abb120792dea0f2806e46e4dc9836aa843ce747f2436c1645a23" },
+    { "path": "Research/Verification/Gate10R_ProcessReuse_5pct/v4", "fileCount": 169, "rawBytes": 14661848, "treeSha256": "ac7f70b2098f6fc28eaa48116faabe1a527f34168d1c851f5a5d7e8cbbbc53b2" },
+    { "path": "Research/FormalScenarios/v1", "fileCount": 57, "rawBytes": 124776145, "treeSha256": "d7a1c20022870e9987cb21dfef98dd8b8c88624deb7de33df4cff0fffecf9b88" },
+    { "path": "Research/PilotRuns/Gate12/v1", "fileCount": 1694, "rawBytes": 577893148, "treeSha256": "64a1be1cf1339f40e596d5a1545320e6b7a5edb453a6f515f905430ab38310f7" },
+    { "path": "Research/PilotRuns/Gate12/v1-failed-pre-sample-attempt1", "fileCount": 1, "rawBytes": 20841, "treeSha256": "64aa59ed9cd425d59079fff4dea4b48be1b0e8b3b6fc60e7d10d8a0ac7a5ceac" },
+    { "path": "Research/PilotRuns/Gate12/v1-failed-warmup-attempt2", "fileCount": 103, "rawBytes": 14187382, "treeSha256": "435a60aabd6f4df85aa166b73e1cd9fddba193d92523d55876500b2a6b36bfd5" },
+    { "path": "Research/FormalRuns/Gate13/v1", "fileCount": 891, "rawBytes": 129667391, "treeSha256": "39d395dc87a033870c0d8638d3f56ddaede0e57a7497b6264d4fafcf2f8107fa" },
+    { "path": "Research/PilotRuns/Gate13_ProcessReuse/v1", "fileCount": 838, "rawBytes": 91219643, "treeSha256": "652c0cc0a66b62d1adfb8d4f71e0edc27e5804caaf18be49c5c30a4633b210ca" },
+    { "path": "Research/PilotRuns/Gate13_ProcessReuse/v2", "fileCount": 4, "rawBytes": 8899, "treeSha256": "21f59a6b6f7617bb0a745408543aa67d371c41cef356649b442185f0584edbc7" }
+  ],
+  "protectedMaterial": [
+    { "path": "Assets/_Scripts/Research/Scenarios/FormalScenarioMatrixGenerator.cs", "rawBytes": 29920, "sha256": "248ee464d4ddbc900b229ff4f86386308f652f229751aaef7cff6e72fbc981cb" },
+    { "path": "Assets/_Scripts/Research/Scenarios/FormalScenarioMatrixGenerator.cs.meta", "rawBytes": 243, "sha256": "ebdda2bc3c36f82f49c3e8088505d0ecc089af6513fae976a706903d6fb07ca9" },
+    { "path": "Assets/_Scripts/Research/Scenarios/DeterministicScenarioDefinition.cs", "rawBytes": 28465, "sha256": "97a5dba23c74dad389357e6d79c1a404a52bfe00f52a86a13385f50228f51670" },
+    { "path": "Assets/_Scripts/Research/Scenarios/DeterministicScenarioJson.cs", "rawBytes": 24085, "sha256": "ecd9c1a2c060e0e279341e1c1dddc49dacc2d6a0afe2720b46c9ecf7d0837716" },
+    { "path": "Assets/_Scripts/Research/Editor/Gate11FormalScenarioMatrixCommand.cs", "rawBytes": 100547, "sha256": "6edd91d11500ed15fdd744ce02d2b887a6a6ee244eb5c9172ab22ca552a63d8f" },
+    { "path": "Research/Gate10R_Onward_ProcessReuse_5pct_Experiment_Plan.md", "rawBytes": 21689, "sha256": "0cababa30b17fd23cb713b3774622205971cde338f179356d5e7ac06acc04c67" },
+    { "path": "Research/Gate10R_ProcessReuse_5pct_Specification.md", "rawBytes": 8463, "sha256": "609f2a9a149908d92c3630e008f5d4dbf29d9d704dda5adacf80dd61da795039" },
+    { "path": "Research/Gate10R_ProcessReuse_5pct_Test_Design.md", "rawBytes": 6246, "sha256": "187d651dd8030c366544fd229f3d64cce326d94b8c9b415b484a1a21f462ff7c" },
+    { "path": "Research/Verification/Run-Gate12AnalysisUnitTests.ps1", "rawBytes": 13713, "sha256": "e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1" },
+    { "path": "Research/Verification/Gate12_AnalysisUnitTests.summary.json", "rawBytes": 1748, "sha256": "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d" }
+  ],
+  "newRootsInitiallyAbsent": [
+    "Research/FormalScenarios/Gate11R_5pct/v1",
+    "Research/PlayableExperiments/Gate11R_5pct/v1",
+    "Assets/_Scenes/Research/Playable/Gate11R_5pct/v1",
+    "Research/Verification/Gate11R_5pct/v1",
+    "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v1",
+    "Research/FormalRuns/Gate13R_ProcessReuse_5pct/v1"
+  ],
+  "environmentBoundary": {
+    "unityProcessCount": 0,
+    "unityLockfilePresent": false,
+    "protectedBaselineMaterialEntryCount": 24,
+    "protectedBaselineMaterialMismatchCount": 0
+  },
+  "result": "PASSED"
+}

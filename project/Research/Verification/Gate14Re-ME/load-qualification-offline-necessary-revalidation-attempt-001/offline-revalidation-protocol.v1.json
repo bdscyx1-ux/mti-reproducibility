@@ -1,0 +1,64 @@
+{
+  "schema": "gate14re-me-offline-necessary-revalidation-protocol-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "protocolId": "gate14re-me-attempt-009-offline-necessary-raw-revalidation-v1",
+  "purpose": "Determine whether the sealed attempt-009 acquisition is structurally usable at the raw-data layer using a materially faster, read-only, fail-closed validation.",
+  "sourceRoots": {
+    "measured": "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-007",
+    "executionEvidence": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-009",
+    "delivery": "H:/DDM_Final_Project/Research/Exports/Gate14Re-ME/load-qualification/attempt-007"
+  },
+  "sealBindings": {
+    "sealRoot": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-paused-seal-attempt-009",
+    "terminalReceiptSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705",
+    "measuredFileManifestSha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f",
+    "executionEvidenceFileManifestSha256": "0e67dac637a68b3c4ce9159df5576ceca7ac6867c092b2a2b844b44c9fd28522"
+  },
+  "frozenInputs": {
+    "outputSchemaSha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c",
+    "d3ContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "identityBindingSha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+    "originalStructuralToolSha256": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e",
+    "actualRunnerMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV3.Run"
+  },
+  "necessaryGates": [
+    "sealed measured and execution-evidence file sets, byte counts, and SHA-256 values remain exact",
+    "launch, authorization, schema, D3, identity-binding, implementation, fairness, runtime, and acquisition bindings remain exact",
+    "process ledger has exactly 1147 trusted zero-exit rows with strict ordinals 0..1146 and frozen mode counts",
+    "all 1147 process identity receipts bind one-to-one to the ledger and prove RunnerV3, natural exit, no signal, and no retry",
+    "failure and replacement ledgers are empty",
+    "162 accepted superblocks, 162 oracle receipts, 972 lane receipts, 12 empty-boundary receipts, and instrument receipt close exactly",
+    "every raw JSONL nonblank line parses to a flat object and contains all frozen required fields",
+    "numeric values are finite and signed-int64 safe where applicable",
+    "record identifiers are unique within exact disjoint file partitions",
+    "row source paths are canonical and every distinct source file is hashed exactly once then cache-compared for every row",
+    "anonymous lane and identity-binding values remain sealed and valid during validation",
+    "lane, oracle, empty-boundary, measurement-point, D3-window, and per-receipt row cardinalities close exactly",
+    "D3-v3.1 row semantics, rate arithmetic, prohibited-field absence, and one-to-one event/empty joins pass",
+    "accepted event rows remain eligible, finite-positive, counter-valid, and budget-exceedance-free",
+    "persistent-state component uniqueness and point totals close per lane without retaining the whole dataset",
+    "operation rows retain nonnegative managed-allocation diagnostics and a nonempty native-semantics identifier"
+  ],
+  "performanceRules": {
+    "sealedFileHashing": "one current SHA-256 calculation per sealed file, parallelized with bounded workers",
+    "rowSourceHashing": "one SHA-256 calculation per distinct canonical source path, cached for all rows",
+    "rowMemory": "stream file-by-file; discard row objects immediately except bounded D3 and join indexes",
+    "globalUniqueness": "exact per-file uniqueness plus enforced disjoint partition identity; bounded global sets only for join-bearing D3 rows",
+    "progress": "write progress only to this verification root",
+    "hardTimeoutMinutes": 30,
+    "retry": "prohibited"
+  },
+  "explicitExclusions": [
+    "delivery view construction",
+    "CSV, gzip JSONL, or typed-Parquet materialization and round-trip",
+    "formal-effect analysis or use of qualification observations as formal samples",
+    "algorithm identity disclosure during validation",
+    "quality, effect, direction, ranking, weighting, or winner computation"
+  ],
+  "verdicts": {
+    "pass": "PASS_OFFLINE_NECESSARY_RAW_VALIDATION",
+    "fail": "FAIL_CLOSED_OFFLINE_NECESSARY_RAW_VALIDATION",
+    "scopeWarning": "A pass is not the original attempt-009 qualification terminal PASS and does not assert delivery or typed-Parquet PASS."
+  }
+}

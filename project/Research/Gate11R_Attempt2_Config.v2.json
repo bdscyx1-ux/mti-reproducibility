@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "configId": "gate11r-attempt2-scenario-playable-bundle-v2",
+  "specificationId": "gate11r-process-reuse-5pct-scenario-playable-spec-v1",
+  "testDesignId": "gate11r-process-reuse-5pct-scenario-playable-tests-v1",
+  "matrixId": "gate11r-process-reuse-5pct-scenario-matrix-v1",
+  "generatorId": "ddm-gate11r-formal-scenario-generator-v1",
+  "preregistrationId": "ddm-gate11r-planning-preregistration-v1",
+  "playableBundleId": "gate11r-playable-experiment-bundle-v1",
+  "executionDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "precisionPolicyId": "two-sided-95pct-ci-relative-half-width-5pct-uncapped-v1",
+  "expectedCounts": {
+    "scenarios": 53,
+    "sharedScenarios": 32,
+    "heterogeneousScenarios": 21,
+    "campaigns": 74,
+    "eligibleAlgorithmCells": 212,
+    "playableScenarioScenes": 53,
+    "campaignProfileAssets": 74,
+    "algorithmPresetAssets": 212,
+    "launcherScenes": 1
+  },
+  "precision": {
+    "relativeHalfWidth": 0.05,
+    "logTarget": 0.048790164169432,
+    "confidenceLevel": 0.95,
+    "minimumBlocks": 32,
+    "blockMultiple": 4,
+    "hardCap": null
+  },
+  "projectPath": "H:\\DDM_Final_Project",
+  "unityPath": "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe",
+  "unitySha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+  "productionRoots": {
+    "scenario": "Research/FormalScenarios/Gate11R_5pct/v1",
+    "playableCatalog": "Research/PlayableExperiments/Gate11R_5pct/v1",
+    "playableAsset": "Assets/_Scenes/Research/Playable/Gate11R_5pct/v1",
+    "verification": "Research/Verification/Gate11R_5pct/v2"
+  },
+  "unityEntryPoints": {
+    "unit": "DDM.Research.Editor.Gate11RScenarioPlayableBundleCommand.UnitTests",
+    "generate": "DDM.Research.Editor.Gate11RScenarioPlayableBundleCommand.Generate",
+    "verify": "DDM.Research.Editor.Gate11RScenarioPlayableBundleCommand.Verify"
+  },
+  "retryPolicy": "VERSIONED-AUTO-REPAIR-AND-RETRY-WITHIN-GATE11R-UNTIL-PASSED",
+  "downstreamBoundary": "STOP-BEFORE-GATE12R-AND-REQUEST-USER-AUTHORIZATION",
+  "gate12RAuthorized": false,
+  "gate13RAuthorized": false
+}

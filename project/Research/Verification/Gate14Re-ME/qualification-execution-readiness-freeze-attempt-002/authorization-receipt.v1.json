@@ -1,0 +1,17 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-freeze-attempt-002-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-freeze-attempt-002",
+  "attemptId": "qualification-execution-readiness-freeze-attempt-002",
+  "status": "AUTHORIZED_READ_ONLY_NO_UNITY_EXECUTION_READINESS_AUDIT",
+  "authorizedAtUtc": "2026-10-17T15:12:19.259953Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME qualification execution readiness freeze attempt‑002：完整保留 qualification execution readiness freeze attempt‑001、execution binding supervisor v2 repair attempt‑001 和 attempt‑002 的全部状态与证据，不删除、不修改、不改判；仅允许以只读、无 Unity 的方式核对已冻结 supervisor v2、execution contract v2、current implementation manifest v2、RunnerV2、receipt v2、input schema v2、instrument contract v3、output schema v2、qualified D3‑v3.1、planning assets、sealed identity、typed‑Parquet runtime、trusted Unity identity rule、attempt‑007 timestamp comparator、structural‑v2、delivery‑v2、完整逐条数据交付合同和本次 compile identity receipt，验证所有路径、哈希、cardinality、六算法 Williams 顺序、零 replacement fail‑stop、运行时预算、预期 1147 个串行 fresh Unity processes 及终局 structural/delivery 链。只有全部检查通过时才允许冻结独立 terminal readiness PASS receipt；不得启动 Unity，不得创建 measured root 或 delivery root，不得运行 planner、算法 lane、资格或正式采集、正式分析、排名或赢家裁决。失败时保留全部证据并 fail closed。",
+  "authorizedWrites": [
+    "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002"
+  ],
+  "unityInvocationMaximum": 0,
+  "measuredOrDeliveryRootCreationAuthorized": false,
+  "qualificationExecutionAuthorized": false,
+  "formalCollectionOrAnalysisAuthorized": false,
+  "rankingOrWinnerAdjudicationAuthorized": false
+}

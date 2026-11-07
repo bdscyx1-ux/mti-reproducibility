@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "stateMachineId": "gate13r-pr2-attempt4-block-committed-bounded-auto-resume-v1",
+  "status": "PROSPECTIVE-PRELAUNCH",
+  "formalAttemptOrdinal": 4,
+  "formalRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+  "attempt3ContinuationAbandoned": true,
+  "attempt3DataReuseAuthorized": false,
+  "states": [
+    "PRELAUNCH",
+    "ACQUISITION-RUNNING",
+    "INTERRUPTED-AUTO-RESUME-ELIGIBLE",
+    "AUTO-RESUME-VALIDATING",
+    "AUTO-RESUME-RUNNING",
+    "FAILED-PARTIAL-FORMAL-BLOCKS-RETAINED-NO-AUTO-RETRY",
+    "ACQUISITION-COMPLETE-COMMIT-PENDING",
+    "RAW-COMMIT-RECOVERY",
+    "RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE",
+    "USER-ACTION-REQUIRED"
+  ],
+  "blockEligibility": {
+    "automaticAtCompletedValidatedBlockCommit": true,
+    "formalStatisticalEligibilityToken": true,
+    "resultIndependentInclusion": true,
+    "wholeAttemptCompletionRequired": false,
+    "partialBlockEligible": false,
+    "objectiveIntegrityViolationMayInvalidateWithPreservedEvidence": true,
+    "phaseBAnalysisAuthorized": false
+  },
+  "automaticResume": {
+    "authorized": true,
+    "maximumCount": 3,
+    "truthSource": "contiguous append-only block-eligibility commits",
+    "committedBlockRerunAllowed": false,
+    "completeUncommittedBlockReadOnlyPromotionAllowed": true,
+    "partialOrAmbiguousBlockAutomaticRetryAllowed": false,
+    "skipReplaceReorderTopUpAllowed": false,
+    "crossAttemptMergeAllowed": false,
+    "sameFailureSignatureLimit": 2
+  },
+  "analysisBoundary": {
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false,
+    "failureTruncatedCommittedBlocksRetainEligibility": true,
+    "fullMatrixClaimRequiresOriginalCoverage": true,
+    "heterogeneousCrossCohortRequiresBothMatchedHalves": true
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "gate14re-me-load-qualification-planning-schema-binding-v2",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_INPUT_VALIDATION_SCHEMA_CORRIGENDUM_PLANNING_PENDING",
+  "version": 2,
+  "createdAtUtc": "2026-10-17T08:51:41.0643675Z",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-001",
+  "runtimeBundleIdentity": {
+    "field": "schema",
+    "value": "gate14re-me-qualification-input-bundle-v1",
+    "changedByCorrigendum": false
+  },
+  "selectedInputValidationSchema": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+    "lengthBytes": 4664,
+    "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+    "selectionReason": "Versioned validation corrigendum declares and requires the topology field already present in the frozen DTO and required by the frozen Unity oracle."
+  },
+  "retainedLegacyValidationSchema": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-input-schema.v1.json",
+    "lengthBytes": 4244,
+    "sha256": "12105816916eaadc6575ed28dc96a6bb4a9863d2dbbe70cc034ebcfbf1de2c6b",
+    "retainedUnmodified": true,
+    "selectedForFuturePlanning": false,
+    "historicalDisposition": "Retained as immutable evidence of the attempt-001 schema/runtime contradiction."
+  },
+  "corrigendum": {
+    "field": "eventGroups[*].topology",
+    "declared": true,
+    "required": true,
+    "levels": [
+      "compact",
+      "dispersed",
+      "bottleneck"
+    ],
+    "crossFieldEqualityOwner": "Gate14ReMEInputGeometryValidatorV1.ValidateGroupHeader",
+    "otherFrozenInputConstraintsChanged": false,
+    "scientificDesignChanged": false
+  },
+  "frozenRuntimeBindings": {
+    "qualificationContractsSource": {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "lengthBytes": 17536,
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    "referenceOracleSource": {
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "lengthBytes": 30510,
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    },
+    "qualificationRunnerV2Source": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "lengthBytes": 77345,
+      "sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73"
+    },
+    "navigationContractsSource": {
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "lengthBytes": 5661,
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    "qualificationProtocol": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Protocol.v1.json",
+      "lengthBytes": 13494,
+      "sha256": "93f176513ba09f07abe2cb3182a5e7c20662495773d810c54caa7d9589dfa364"
+    },
+    "scheduleSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-schedule-schema.v1.json",
+      "lengthBytes": 2910,
+      "sha256": "8a96a5a53d22617ef90134ac1a57e3b7115e5ea7ce03a6739c632fd52119f8a5"
+    },
+    "executionContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-execution-contract.v1.json",
+      "lengthBytes": 4903,
+      "sha256": "6fd3b87e5a7fba5398335bd77d8620c65a5e28576636ae47cf157a6df06c7654"
+    },
+    "sixAlgorithmFairnessBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+      "lengthBytes": 5257,
+      "sha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71"
+    }
+  },
+  "authorizationBoundary": {
+    "qualificationPlanningAttempt002Authorized": false,
+    "qualificationScheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "algorithmPlannerConstructionOrInvocationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

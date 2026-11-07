@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate12r-pilot-plan-v4-generator-attempt1-failure-v1",
+  "status": "FAILED-NO-OUTPUT-CREATED",
+  "failedScriptRelativePath": "Research/Verification/New-Gate12RPilotPlanV4.ps1",
+  "failedScriptSha256": "9bb099cb490be968e130171c3d241d79de12e2a1af51dfccfed3e43c9a32759e",
+  "parserPassed": true,
+  "targetPlanCreated": false,
+  "derivationReceiptCreated": false,
+  "errorClass": "WINDOWS-POWERSHELL-5.1-PARAMETER-BINDING",
+  "error": "Test-Path expression supplied -LiteralPath twice because the boolean operands were not parenthesized.",
+  "repairRule": "Preserve this script byte-identically and create a V2 generator changing only the boolean Test-Path expression.",
+  "formalCampaign": false,
+  "gate13rAuthorized": false
+}

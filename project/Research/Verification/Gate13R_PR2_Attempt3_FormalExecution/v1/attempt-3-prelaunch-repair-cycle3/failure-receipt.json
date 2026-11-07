@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-formal-attempt3-prelaunch-repair-cycle3-failure-receipt-v1",
+  "savedAtUtc": "2026-10-09T08:24:33.9179614Z",
+  "savedAtAsiaShanghai": "2026-10-09T16:24:33.9179614+08:00",
+  "prelaunchRepairCycleOrdinal": 3,
+  "prelaunchRepairCycleLimit": 3,
+  "failureSignature": "FORMAL-PRECOMMIT/LAUNCHER/POWERSHELL-PATH-ARRAY-EXPRESSION-SPLIT",
+  "failureMessage": "Python argparse rejected an extra \\powershell.exe token before create_receipt was entered.",
+  "cause": "The launcher placed `$PSHOME + '\\powershell.exe'` unparenthesized inside an array expression, producing two arguments instead of one absolute executable path.",
+  "failedLauncher": {
+    "relativePath": "Research/Run-Gate13RPR2FormalAttempt3V1.ps1",
+    "sha256": "305152d708e289a4a002e81de5556d85ee71ff118ae51f7a555f7d7b4bb98424",
+    "rawBytes": 3613
+  },
+  "orchestrator": {
+    "relativePath": "Research/Gate13RPR2Attempt3ExecutionV1.py",
+    "sha256": "879df23c687fbb69f94d01e52447bdef1d642f990ce6127be6a242172670501a"
+  },
+  "launchLogs": {
+    "stdoutRelativePath": "Research/Verification/Gate13R_PR2_Attempt3_FormalExecution/v1/attempt-2-final-prelaunch-repair-cycle2/formal-launch.stdout.log",
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrRelativePath": "Research/Verification/Gate13R_PR2_Attempt3_FormalExecution/v1/attempt-2-final-prelaunch-repair-cycle2/formal-launch.stderr.log",
+    "stderrSha256": "0dbc3659e2377f79726026e32cd6d8af9925a2e1c133cf70aeff4edfe16dd503"
+  },
+  "formalRootCreated": false,
+  "formalExecutionReceiptCreated": false,
+  "formalStatusCreated": false,
+  "measuredUnityProcessStarted": false,
+  "measuredProcessCount": 0,
+  "measuredSampleCount": 0,
+  "unityProcessCountAfterFailure": 0,
+  "unityProjectLockAbsent": true,
+  "authorizedRepairScope": "Create a V2 launcher that resolves the native PowerShell executable into one scalar absolute path before building the Python argument array; bind that V2 launcher in the receipt and rerun all affected validation-only gates.",
+  "remainingPrelaunchRepairCyclesAfterThisFailure": 0,
+  "immutable": true,
+  "passed": false
+}

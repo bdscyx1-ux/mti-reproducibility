@@ -1,0 +1,54 @@
+{
+  "schema": "gate14re-me-formal-st-precollection-parameter-amendment-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_AUTHORIZED_PRECOLLECTION_AMENDMENT",
+  "resolvesProtocol": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v2.json",
+    "sha256": "8960c2050f34ff56a8f680f092bdc4cf156ed8cff4ae264015411cbb249255d6"
+  },
+  "authorizationReceipt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/user-authorization-receipt.v1.json",
+    "sha256": "a89ea69729fa1c0752716ea604e0e0e209813bcea65fa92a9c31604f38fc283a"
+  },
+  "resolvedParameters": {
+    "minimumPracticallyImportantEffects": {
+      "D1GeometricMeanRatio": 0.9,
+      "D1P95Ratio": 0.9,
+      "D2Ratio": 0.9,
+      "D3Log1pRatio": 0.9,
+      "D4Log1pRatio": 0.9,
+      "D5SlopeDifferencePerLog2AxisUnit": -0.10536051565782628,
+      "D6SlopeDifferencePerLog2AxisUnit": -0.10536051565782628,
+      "D7SlopeDifferencePerLog2GridCellCountUnit": -0.10536051565782628
+    },
+    "finalBPerStructuralCell": 36,
+    "finalPlannedSuperblocks": 1296,
+    "finalPlannedMeasuredFreshUnityProcesses": 7776,
+    "eventGroupHardTimeoutMilliseconds": 300000,
+    "laneWallClockHardTimeoutMilliseconds": 600000,
+    "laneAssignedCommittedMemoryBytes": 17179869184,
+    "formalRawAndDeliveryReservedStorageBytes": 64310367960,
+    "movementTransferSentinel": "OMITTED"
+  },
+  "retainedHardGates": {
+    "allCorrectnessGates": true,
+    "allOracleGates": true,
+    "completeRawDelivery": true,
+    "D3InstrumentValidity": true,
+    "D4SizingValidity": true,
+    "trustedFreshProcessIdentity": true
+  },
+  "sevenDayDecision": {
+    "planningHoursWith20PercentHeadroom": 83.493,
+    "thresholdHours": 168,
+    "simplificationProposalRequiredBeforeFreeze": false
+  },
+  "authorizationBoundary": {
+    "parameterFreezeAuthorized": true,
+    "formalInputGenerationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "migrationPackageBuildAuthorized": false
+  }
+}

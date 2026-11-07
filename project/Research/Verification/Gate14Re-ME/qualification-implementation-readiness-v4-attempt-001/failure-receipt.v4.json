@@ -1,0 +1,30 @@
+{
+  "schema": "gate14re-me-qualification-implementation-readiness-failure-v4",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-implementation-readiness-v4-attempt-001",
+  "status": "FAIL_CLOSED_UNITY_BURST_COMPILER_THREAD_TEARDOWN_CRASH",
+  "phase": "ALGORITHM_FREE_COMPILE_ONLY",
+  "observed": {
+    "runnerV4Imported": true,
+    "csharpCompilerErrorCount": 0,
+    "batchmodeQuitInvoked": true,
+    "naturalZeroExitProven": false,
+    "fatalAnchor": "Burst.Compiler.IL.Server.CompilerThread during Mono teardown",
+    "unityLogSha256": "3d620d7444011306963c1639e238d6be2c728435174ee3ba1fcf1f83c63bdc96",
+    "crashDumpSha256": "a830301ef1d430d5962d9f1c9fc49e62b1b704b4a6a26e136176949eb1955499"
+  },
+  "rootCauseClass": "KNOWN_HOST_LIFECYCLE_RACE_WHEN_QUITTING_WITHOUT_WAITING_FOR_CURRENT_BURST_COMPILATION",
+  "forwardRepair": "Use a newly versioned algorithm-free readiness execute method that calls the already qualified Gate14ReMEBurstHostLifecycleV1 completion predicate before EditorApplication.Exit.",
+  "boundaries": {
+    "measuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationProcessesExecuted": 0,
+    "algorithmLanesExecuted": 0,
+    "qualificationObservationsGenerated": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "sameAttemptRetryPermitted": false
+  },
+  "failedAtUtc": "2026-10-19T12:10:58.556Z"
+}

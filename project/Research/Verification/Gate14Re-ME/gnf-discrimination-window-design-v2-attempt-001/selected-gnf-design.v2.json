@@ -1,0 +1,68 @@
+{
+  "schema": "gate14re-me-selected-gnf-design-v2",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v2-attempt-001",
+  "status": "PROPOSED_PENDING_USER_APPROVAL_REFREEZE_AND_NEW_QUALIFICATION",
+  "selectedAtUtc": "2026-10-19T11:26:52Z",
+  "levels": {
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81]
+  },
+  "structure": {
+    "factorial": "3 x 3 x 4",
+    "coreCells": 36,
+    "algorithms": 6,
+    "qualificationCoreSuperblocksPerCell": 3,
+    "qualificationCoreSuperblocks": 108,
+    "stressContextStrata": 18,
+    "qualificationTotalSuperblocks": 126,
+    "qualificationOracleProcesses": 126,
+    "qualificationAlgorithmLanes": 756,
+    "instrumentSelfTestProcesses": 1,
+    "emptyBoundaryProcesses": 12,
+    "qualificationTotalFreshProcesses": 895,
+    "formalB36AlgorithmProcesses": 7776,
+    "strictSerialFreshProcesses": true,
+    "pairedWilliamsOrder": true
+  },
+  "oldLevels": {
+    "G": [64, 128, 256],
+    "N": [8, 32, 128, 512],
+    "F": [1, 9, 81, 225]
+  },
+  "boundsChange": {
+    "GMaximum": {"old": 256, "new": 128, "reductionPercent": 50.0},
+    "NMinimum": {"old": 8, "new": 32, "increaseFactor": 4.0},
+    "NMaximum": {"old": 512, "new": 128, "reductionPercent": 75.0},
+    "FMaximum": {"old": 225, "new": 81, "reductionPercent": 64.0},
+    "oldToNewHighCornerStructuralProxyRatio": 0.0225,
+    "highCornerStructuralProxyReductionPercent": 97.75,
+    "coreCellReductionPercent": 25.0
+  },
+  "selectionRationale": [
+    "N is fixed exactly as the user requested: 32, 64, 128.",
+    "F remains four levels. F=1 is retained because the observed G64 x N32 x F1 anchor separated all 15 anonymous pairs at the frozen 5 percent rule rather than showing a lack of discrimination.",
+    "F=9 and F=81 are observed anchors; F=25 is an odd-square intermediate footprint that fills the large gap without retaining F=225.",
+    "G96, N64, and F25 are unobserved interior levels and therefore require a fresh qualification.",
+    "The observed G128 x N128 x F81 high anchor had a 117.611 second worst process wall and remained below the 180 second preferred ceiling."
+  ],
+  "prospectiveEngineeringGates": {
+    "runtime": {
+      "algorithmLaneP99SecondsMaximum": 180,
+      "anyAlgorithmLaneHardMaximumSeconds": 300
+    },
+    "discrimination": {
+      "unit": "anonymous algorithm-pair coverage across the 36-cell profile",
+      "fivePercentStableDirectionMinimumCellFractionPerPair": 0.75,
+      "tenPercentStableDirectionMinimumCellFractionPerPair": 0.60,
+      "status": "PROPOSED_NOT_YET_REFROZEN_OR_TESTED"
+    }
+  },
+  "notAuthorizedByThisArtifact": [
+    "editing the sealed attempt-009 roots",
+    "starting a new qualification",
+    "starting formal ST, MQ, or MT",
+    "claiming that G96, N64, or F25 is already qualified"
+  ]
+}

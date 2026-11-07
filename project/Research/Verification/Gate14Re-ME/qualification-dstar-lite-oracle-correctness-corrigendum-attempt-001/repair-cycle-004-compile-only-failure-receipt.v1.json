@@ -1,0 +1,22 @@
+{
+  "schema": "gate14re-me-unity-compile-only-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "FAIL_UNITY_COMPILE_ONLY_HOST_EXIT",
+  "processId": 85036,
+  "processStartTime": "2026-10-18T05:52:34.3297117+08:00",
+  "unityExitCode": 1073741845,
+  "unityExecutablePath": "H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe",
+  "unitySha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+  "v4SourceSha256": "348af8199faacec28c159737047180b28cdf5addb20627f286129d15d79ca419",
+  "unityLogRelativePath": "Research/Verification/Gate14Re-ME/qualification-dstar-lite-oracle-correctness-corrigendum-attempt-001/repair-cycle-004-compile-only.unity.log",
+  "unityLogSha256": "ffdc15c753eb6d06e7b162c918cd5fa1f94907edb5633c8ebbeeccb0d0edd45a",
+  "compilerErrorCount": 0,
+  "sourceCompilationCompleted": true,
+  "failureClass": "BURST_BACKGROUND_COMPILER_SHUTDOWN_RACE",
+  "fatalMessage": "GetManagerFromContext: pointer to object of manager 'MonoManager' is NULL (table index 5)",
+  "structuralEvidence": "The fatal stack is on Burst.Compiler.IL.Server.CompilerThread while Unity is tearing down MonoManager after a source-triggered batchmode compile. No C# compiler error was emitted.",
+  "minimalForwardMitigation": "Run the isolated compile-only phase with the locally documented --burst-disable-compilation command-line option; do not change qualification scientific design, runner semantics, or frozen measured execution contract.",
+  "evidencePreserved": true,
+  "outputReusable": false,
+  "completedAtUtc": "2026-10-17T21:52:49.9702956Z"
+}

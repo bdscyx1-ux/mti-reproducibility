@@ -1,0 +1,53 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "AUTHORIZED_FORMAL_ST_ANALYSIS_ATTEMPT_004_ANY_FOUR_OF_FIVE_DOMAIN_RULE",
+  "authorizationSource": {
+    "userVerbatim": "不许约束，直接用新的域通过规则重新进行formal analysis",
+    "userVerbatimSha256": "58ad39645ad16fdea33dc9fef565a71fd8812a4326871aabbad5b000104c26b8",
+    "scope": "EXECUTE_FORMAL_ANALYSIS_WITH_USER_REVISED_DOMAIN_RULE"
+  },
+  "ruleClarification": {
+    "userVerbatim": "是将域通过改为`域通过 = 硬门控有效 AND 对其中四个比较算法的假设全部通过`  ，如果对C-FF的比较假设未通过则说明具体数据并解释",
+    "userVerbatimSha256": "03ca77c66d46006afd152063c71e1886f55e4d45b413bf739f5394bf8ee73867",
+    "operationalMeaning": "the five comparator hypotheses remain eligible and any four passing hypotheses satisfy the comparator part of the domain rule"
+  },
+  "additionalDirectives": [
+    {
+      "userVerbatim": "若门控比较通过，则对任何比较算法的假设失败都要单独列出效应、同时区间、校正 p 值和失败原因",
+      "userVerbatimSha256": "2c5a28588bc3012c69998a103ab99f9e25e1dc094b82c8aee2ac6faa074ffcd8"
+    },
+    {
+      "userVerbatim": "不明确标注",
+      "userVerbatimSha256": "acff6f2ed4b17dac45a1d70090a09aae9f7d7fe58d75f8dc0a2c644db9914064",
+      "operationalMeaning": "do not add an extra disclaimer label about a domain passing while fewer than five hypotheses pass"
+    },
+    {
+      "userVerbatim": "域通过即可判定为1",
+      "userVerbatimSha256": "e6ee2b30749416a27f7dd4a40eec2b511f36462a2a93b8ccc3598afd5a44fee0"
+    }
+  ],
+  "sourceAcceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "predecessorAnalysisAttempt": "attempt-003",
+  "scope": {
+    "formalAnalysisAuthorized": true,
+    "anyFourOfFiveDomainRuleAuthorized": true,
+    "comparators": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF"],
+    "minimumComparatorHypothesesRequiredForDomainPass": 4,
+    "binaryDomainPassOutputRequired": true,
+    "allFailedComparatorDetailedReportingRequired": true,
+    "cFFConcreteFailureExplanationRequired": true,
+    "frozenSecondaryDescriptiveReportingAuthorized": true,
+    "frozenExploratoryFifteenPairMatricesAuthorized": true,
+    "sourceMutationAuthorized": false,
+    "domainAggregationRuleModificationAuthorized": true
+  },
+  "rankingOrWinnerAuthorized": false,
+  "aggregateScoreAuthorized": false,
+  "mqAuthorized": false,
+  "mtAuthorized": false,
+  "retryPolicy": "FAIL_CLOSED_NO_AUTOMATIC_RETRY",
+  "additionalExactCommandConfirmationRequired": false,
+  "createdAtUtc": "2026-10-30T13:06:19.263Z"
+}

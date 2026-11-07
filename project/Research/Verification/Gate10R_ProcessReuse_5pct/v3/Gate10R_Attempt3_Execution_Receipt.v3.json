@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 3,
+  "receiptId": "gate10r-attempt3-one-official-execution-receipt-v3",
+  "createdAtUtc": "2026-10-06T14:06:52.7909779Z",
+  "status": "AUTHORIZED-READY-FOR-ONE-OFFICIAL-GATE10R-EXECUTION",
+  "attempt": 3,
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "lineageId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "changeClass": "ORCHESTRATION-LOCK-HYGIENE-ONLY",
+  "verificationRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v3",
+  "maximumOfficialExecutions": 1,
+  "officialExecutionCountBeforeReceipt": 0,
+  "preflight": {
+    "summaryRelativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Gate10R_Attempt3_Preflight.summary.v3.json",
+    "summarySha256": "7d73d28d21a3b61fda887827d8789d221d5ca7235cbd31a01759940283c1e096",
+    "assertionCount": 67,
+    "passedCount": 67,
+    "failedCount": 0,
+    "unityStarted": false,
+    "checkpointRelativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v3/gate10r-preflight-checkpoint.v3.json",
+    "checkpointSha256": "d066cb33120dbff0ba9bdcd7e4be10eb327042691cf4a8ce078fa02890e8f09b"
+  },
+  "preExistingLockCleanup": {
+    "mode": "controlled-pre-existing-attempt2-negative-cleanup",
+    "exactLiteralPathRemoved": "H:/DDM_Final_Project/Temp/UnityLockfile",
+    "captureReceiptRelativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Preflight/PreExistingLockCleanup/attempt2-negative-stale-lock.lock-capture.json",
+    "captureReceiptSha256": "33196d3865aaca07c0ba0a7ef9626338ff08a9be8d28eb599b8be95b80826355",
+    "completionReceiptRelativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Preflight/PreExistingLockCleanup/attempt2-negative-stale-lock.lock-cleanup.json",
+    "completionReceiptSha256": "0de035e2af5e566b1c70ddb9231c1295e053b0fb72bba02317486839d5a60a5c",
+    "recursiveDeleteUsed": false,
+    "wildcardDeleteUsed": false,
+    "tempNonlockContentUnchanged": true,
+    "attempt1TreeUnchanged": true,
+    "attempt2TreeUnchanged": true
+  },
+  "config": {
+    "relativePath": "Research/Gate10R_ProcessReuse_5pct_Attempt3_Config.v3.json",
+    "sha256": "2e2f7f5f43c78ce25a03b6783f83c5f0081351d5fd94bf7283ff03b2c2b535cb"
+  },
+  "provenance": {
+    "relativePath": "Research/Gate10R_ProcessReuse_5pct_Attempt3_Provenance.v3.json",
+    "sha256": "fcc03b0a5b3df445cea14c22ca090b9fc36999ba2f8067f25b996b010d918897"
+  },
+  "authorization": {
+    "relativePath": "Research/Gate10R_Attempt3_Execution_Authorization.v1.json",
+    "sha256": "a74f732074d38f8668c4b4ee0f7ed23c57b0dd862cb4435781cfea9421da1ca1",
+    "gate10ROnly": true,
+    "gate11RRevoked": true,
+    "gate12RRevoked": true
+  },
+  "historicalBoundaries": {
+    "attempt1TreeSha256": "2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d",
+    "attempt2TreeSha256": "da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce",
+    "attempt1MutationAllowed": false,
+    "attempt2MutationAllowed": false,
+    "attempt1ResumeAllowed": false,
+    "attempt2ResumeAllowed": false
+  },
+  "officialSequence": [
+    "Research/Verification/Run-Gate10RUnitTestsV3.ps1",
+    "Research/Verification/Run-Gate10RCompileV3.ps1",
+    "Research/Run-Gate10RTelemetryProbeV3.ps1",
+    "Research/Verification/Run-Gate10RBlockVerificationV3.ps1",
+    "Research/Verification/Run-Gate10RRetainedRegressionV3.ps1",
+    "Research/Verification/Run-Gate10RFinalAuditV3.ps1"
+  ],
+  "executionEnvironment": {
+    "shell": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe",
+    "projectPath": "H:/DDM_Final_Project",
+    "projectPathExplicit": true,
+    "projectPathAbsolute": true,
+    "nativePSModulePathRequired": true,
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unitySha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "lockHygienePolicy": {
+    "positiveMustReleaseNaturally": true,
+    "compileMustReleaseNaturally": true,
+    "telemetryMustReleaseNaturally": true,
+    "coldReferenceMustReleaseNaturally": true,
+    "expectedNegativeControlledCleanupAllowed": true,
+    "naturalQuiescenceSeconds": 60,
+    "automaticRetryOnLockFailure": false
+  },
+  "failurePolicy": {
+    "failClosed": true,
+    "automaticRetry": false,
+    "automaticResume": false,
+    "continueAfterHardFailure": false
+  },
+  "gate11RContinuationAuthorized": false,
+  "gate12RContinuationAuthorized": false,
+  "gate13RPreparationAuthorized": false,
+  "gate13RFormalCampaignAuthorized": false,
+  "gate13RFormalRootCreationAuthorized": false,
+  "successCheckpoint": "GATE10R-PASSED-WAITING-FOR-USER-AUTHORIZATION",
+  "formalCampaign": false
+}

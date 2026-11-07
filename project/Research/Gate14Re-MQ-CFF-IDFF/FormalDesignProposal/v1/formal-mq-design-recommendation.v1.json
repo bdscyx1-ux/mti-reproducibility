@@ -1,0 +1,269 @@
+{
+  "schema": "gate14re-mq-cff-idff-formal-design-recommendation-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "title": "C-FF/IDFF Managed Multi-Query Scalability Supplement",
+  "status": "PROPOSAL_ONLY_AWAITING_EXPLICIT_USER_SCIENTIFIC_AUTHORIZATION",
+  "createdAtUtc": "2026-10-21T05:29:40.0092449Z",
+  "authorityBoundary": {
+    "formalDesignFrozen": false,
+    "formalInputsDrawn": false,
+    "formalScheduleGenerated": false,
+    "formalCollectionAuthorized": false,
+    "formalCollectionLaunched": false,
+    "formalAnalysisAuthorized": false,
+    "formalAnalysisLaunched": false,
+    "reason": "The user authorized the independent C-FF/IDFF MQ study to advance, but has not yet explicitly authorized the MQ-specific estimands, MIPE, multiplicity, power, B-selection, or stopping rules in this proposal. Formal ST rules are not inherited by default."
+  },
+  "independence": {
+    "independentFromFormalST": true,
+    "independentFromMT": true,
+    "qualificationObservationsEligibleAsFormalOutcomes": false,
+    "formalSTObservationsEligibleAsMQOutcomes": false,
+    "formalSTPackageOrDataMayBeMutated": false,
+    "requiredFormalRoots": "new-versioned-MQ-only-input-execution-measured-delivery-analysis-roots"
+  },
+  "evidenceBindings": [
+    {
+      "role": "prospective-scientific-design",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v1/mq-scientific-design.prospective.v1.json",
+      "sha256": "86299ecbbbae4cac77b02ac657ea69ff45e915426b7b9be48327e19986228861"
+    },
+    {
+      "role": "prospective-fairness-and-topology-contract",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v1/mq-fairness-and-topology-contract.prospective.v1.json",
+      "sha256": "0955e8f28aa8c5469d9e2fba640b78247c687dc96d102f0e80970444049c8eee"
+    },
+    {
+      "role": "gate13r-correctness-freeze",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/external-freeze-receipt.v1.json",
+      "sha256": "6b67f820b5c841d99ec915a2966a24bb48535047753fa95fe828cc0343718814"
+    },
+    {
+      "role": "engineering-qualification-freeze",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/external-freeze-receipt.v1.json",
+      "sha256": "c2bc8217e48bdb3248e97353538207f9386c2c866fd80e713fabadaf195df33b"
+    },
+    {
+      "role": "engineering-runtime-analysis-freeze",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-runtime-analysis-v2/analysis-freeze-manifest.v2.json",
+      "sha256": "2047a47c2d318e8d9e101194068c8cc26d6a26eb8edc75296cf36b1563c565b4"
+    },
+    {
+      "role": "engineering-runtime-diagnostics",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-runtime-analysis-v2/engineering-runtime-diagnostics.v2.json",
+      "sha256": "2a2b2b9a89bf6c9282debe7ee44c983dd6b054692e7c6b80dd8886838ab147ac"
+    }
+  ],
+  "recommendedScientificQuestion": "For each of C-FF and IDFF, does the frozen managed fixed-worker-pool implementation provide statistically supported and practically important reductions in matched batch wall time as physical-core worker count increases within one CCD and from balanced dual-CCD W8 to W16, while preserving all correctness and oracle hard gates?",
+  "claimBoundary": {
+    "permitted": [
+      "within-algorithm single-CCD worker-scaling claims",
+      "within-algorithm balanced-dual-CCD W16-versus-W8 scaling claims",
+      "descriptive engineering resource and latency distributions"
+    ],
+    "prohibited": [
+      "six-algorithm ranking",
+      "winner declaration",
+      "causal attribution of CCD differences to cache frequency or any one hardware mechanism",
+      "reinterpretation of formal ST outcomes",
+      "movement-transfer claims"
+    ]
+  },
+  "recommendedDesign": {
+    "independentUnit": "one complete matched MQ block",
+    "matchedBlock": {
+      "privateWorkloadLanes": 16,
+      "algorithms": 2,
+      "conditionsPerAlgorithm": 12,
+      "freshUnityProcesses": 24,
+      "sameOpaqueInputsAndSeedsAcrossAll24Processes": true,
+      "primaryInferenceUnitIsBlockNotLane": true,
+      "laneAndEventRowsAreNestedMeasurements": true
+    },
+    "conditionsPerAlgorithm": [
+      "LARGE_L3_CCD:ST-direct",
+      "LARGE_L3_CCD:MQ-1",
+      "LARGE_L3_CCD:MQ-2",
+      "LARGE_L3_CCD:MQ-4",
+      "LARGE_L3_CCD:MQ-8",
+      "HIGH_FREQUENCY_CCD:ST-direct",
+      "HIGH_FREQUENCY_CCD:MQ-1",
+      "HIGH_FREQUENCY_CCD:MQ-2",
+      "HIGH_FREQUENCY_CCD:MQ-4",
+      "HIGH_FREQUENCY_CCD:MQ-8",
+      "DUAL_CCD_BALANCED:MQ-8-4-plus-4",
+      "DUAL_CCD_BALANCED:MQ-16-8-plus-8"
+    ],
+    "singleCcdPrimaryWorkerLevels": [1, 2, 4, 8],
+    "dualCcdPrimaryContrast": "balanced-W16-8-plus-8 versus balanced-W8-4-plus-4",
+    "stDirectRole": "secondary implementation-overhead sentinel and descriptive reference; excluded from the six-test confirmatory scaling family",
+    "execution": {
+      "freshUnityProcessPerAlgorithmConditionBlock": true,
+      "measuredProcessesStrictSerial": true,
+      "internalMqWorkersPermittedOnlyInsideTheCurrentMeasuredProcess": true,
+      "hardWindowsCpuSetBinding": true,
+      "oneLogicalSiblingPerPhysicalCore": true,
+      "randomizedCounterbalancedOpaqueProcessOrder": true,
+      "scheduleFrozenBeforeFormalCollection": true,
+      "noSmtWorkers": true,
+      "noSingleCcdW16": true,
+      "noMq32": true
+    }
+  },
+  "recommendedPrimaryFamily": {
+    "globalDirection": "lower-batch-wall-time-is-better",
+    "endpoint": "batchWallSeconds",
+    "transform": "natural-log",
+    "singleCcdBlockEstimand": "equal-weight OLS slope of log(batchWallSeconds) over log2(workerCount) at W1 W2 W4 W8, computed within each matched block; population estimand is the mean block slope and exp(slope) is the geometric wall-time ratio per worker doubling",
+    "dualCcdBlockEstimand": "within-block log(batchWallSeconds_W16 / batchWallSeconds_W8); population estimand is the mean paired log ratio and exp(contrast) is the geometric wall-time ratio",
+    "hypotheses": [
+      {
+        "id": "P1",
+        "algorithm": "C-FF",
+        "topology": "LARGE_L3_CCD",
+        "estimand": "single-CCD log2-worker slope"
+      },
+      {
+        "id": "P2",
+        "algorithm": "C-FF",
+        "topology": "HIGH_FREQUENCY_CCD",
+        "estimand": "single-CCD log2-worker slope"
+      },
+      {
+        "id": "P3",
+        "algorithm": "IDFF",
+        "topology": "LARGE_L3_CCD",
+        "estimand": "single-CCD log2-worker slope"
+      },
+      {
+        "id": "P4",
+        "algorithm": "IDFF",
+        "topology": "HIGH_FREQUENCY_CCD",
+        "estimand": "single-CCD log2-worker slope"
+      },
+      {
+        "id": "P5",
+        "algorithm": "C-FF",
+        "topology": "DUAL_CCD_BALANCED",
+        "estimand": "W16-versus-W8 paired log batch-wall ratio"
+      },
+      {
+        "id": "P6",
+        "algorithm": "IDFF",
+        "topology": "DUAL_CCD_BALANCED",
+        "estimand": "W16-versus-W8 paired log batch-wall ratio"
+      }
+    ],
+    "recommendedMipe": {
+      "wallTimeRatio": 0.9,
+      "logScaleExact": -0.10536051565782628,
+      "interpretation": "at least 10 percent lower batch wall time per worker doubling or for W16 versus W8",
+      "role": "prospective planning alternative and practical-importance threshold; it does not move the superiority null"
+    },
+    "confirmatoryNulls": {
+      "singleCcd": "slope >= 0",
+      "dualCcd": "log ratio >= 0",
+      "alternative": "less than 0"
+    },
+    "claimRulePerHypothesis": "A confirmatory scaling claim requires Holm-adjusted one-sided p < 0.05, a simultaneous confidence interval entirely below the no-improvement boundary 0 (ratio 1), and a point estimate at or beyond the 10 percent MIPE. Statistical superiority without reaching MIPE is reported as statistically supported but not practically important.",
+    "studyLevelRule": "No aggregate winner or majority score. Each of P1 through P6 is reported separately, including estimate, interval, raw and Holm-adjusted p value, direction, MIPE flag, eligibility, and missingness.",
+    "multiplicity": {
+      "familySize": 6,
+      "familywiseAlpha": 0.05,
+      "method": "Holm strong FWER",
+      "sidedness": "one-sided"
+    }
+  },
+  "recommendedPowerAndSampleSize": {
+    "candidateB": [36, 72, 108, 144],
+    "targetPowerAtLeast": 0.9,
+    "planningAlternative": "all six primary estimands at the 10 percent MIPE",
+    "selectionRule": "Before any formal input draw or formal observation, choose the smallest candidate B whose worst of the six opaque-primary Monte Carlo power estimates has a Wilson 95 percent lower bound at least 0.90 after applying the frozen Holm procedure.",
+    "nuisanceInputRule": {
+      "identityBlindOnly": true,
+      "allowed": [
+        "pooled de-identified qualification timing residuals",
+        "opaque within-input covariance structure",
+        "frozen schedule geometry",
+        "host and process overhead distributions",
+        "missingness and technical-failure rates without algorithm or condition labels"
+      ],
+      "prohibited": [
+        "named algorithm effect estimates",
+        "named condition effect estimates",
+        "qualification winner or direction information",
+        "formal ST outcome effects",
+        "post-formal-outcome variance updates"
+      ]
+    },
+    "ifNoCandidatePasses": "Do not top up beyond B=144. Stop the design freeze and submit a revised MQ design for explicit user authorization.",
+    "adaptiveReestimationAfterFormalStart": false,
+    "postOutcomeTopUp": false
+  },
+  "recommendedAnalysis": {
+    "primaryEstimator": "mean of matched-block slope or paired log-ratio estimands with block-level robust standard error",
+    "distributionalSensitivity": [
+      "studentized matched-block bootstrap confidence interval with a frozen deterministic seed",
+      "one-sample signed-rank sensitivity analysis",
+      "leave-one-block-out influence diagnostics"
+    ],
+    "secondaryDescriptiveEndpoints": [
+      "ST-direct-versus-MQ-W1 overhead",
+      "end-to-end lane throughput",
+      "end-to-end query throughput",
+      "outer lane wall P50 P95 P99 max",
+      "explicit workload wall P50 P95 P99 max",
+      "query repair and initialization latency distributions",
+      "process CPU and worker-thread CPU",
+      "parallel efficiency",
+      "managed allocation and memory",
+      "scheduler and deterministic merge overhead"
+    ],
+    "crossAlgorithmInteractions": "exploratory only with estimates and intervals; no winner ranking and no substitution for P1 through P6",
+    "causalCcdAttribution": false
+  },
+  "recommendedCorrectnessAndStopping": {
+    "correctnessAndOracleHardGates": "all retained and never combined with performance into a weighted score",
+    "terminalSemanticDigestInvariantAcrossConditions": true,
+    "allInputSourceHashesBound": true,
+    "allAffinityBindingsObserved": true,
+    "allLanesAndBatchesComplete": true,
+    "benefitStopping": false,
+    "futilityStopping": false,
+    "endpointDropping": false,
+    "conditionDropping": false,
+    "algorithmDropping": false,
+    "laneRetry": false,
+    "partialResume": false,
+    "replacement": false,
+    "topUp": false,
+    "mergeAcrossAttempts": false,
+    "technicalFailurePolicy": "Fail closed, preserve the complete failed attempt, and require a fresh readiness authorization and entirely new formal execution measured and delivery roots. No observations from a failed attempt may enter a later successful attempt."
+  },
+  "runtimeGate": {
+    "processesPerMatchedBlock": 24,
+    "candidateBudgetsStressHours": {
+      "B36": 11.988586,
+      "B72": 23.977171,
+      "B108": 35.965757,
+      "B144": 47.954342
+    },
+    "sevenDayGateHours": 168,
+    "triggeredByAnyCurrentCandidate": false,
+    "interpretation": "Engineering planning only; these values are not formal effects and do not authorize collection."
+  },
+  "authorizationNeeded": {
+    "singleDecisionBundle": [
+      "six primary estimands P1 through P6",
+      "10 percent MQ-specific MIPE",
+      "Holm one-sided familywise alpha 0.05",
+      "identity-blind nuisance-only power simulation",
+      "candidate B set 36 72 108 144 and smallest-passing selection rule",
+      "power target at least 0.90 using the worst opaque-primary Wilson lower bound",
+      "no adaptive reestimation no optional stopping no retry replacement or top-up",
+      "all correctness and oracle hard gates retained",
+      "secondary endpoints and cross-algorithm analyses remain descriptive or exploratory"
+    ],
+    "recommendedUserAuthorizationText": "我授权 Gate14Re-MQ-CFF-IDFF 独立 MQ 正式设计按 formal-mq-design-recommendation.v1 执行：六项主检验、MQ 专属 10% MIPE、单侧 Holm FWER 0.05、仅使用 identity-blind nuisance inputs 做功效，在 B=36/72/108/144 中选择最小满足最差主检验 Wilson 95% 功效下界不低于 0.90 的 B；保留全部 correctness/oracle 硬门，不允许正式启动后的重估、获益或无效停止、retry、replacement、top-up 或跨 attempt 合并。授权完成只读功效、正式设计/实现/日程冻结与 prelaunch readiness；正式 collection 在 readiness PASS 后仍须单独报告并等待我明确启动授权。"
+  }
+}

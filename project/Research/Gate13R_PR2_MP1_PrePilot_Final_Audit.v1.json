@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "auditKind": "gate13r-pr2-mp1-final-validation-only-prepilot-audit-v1",
+  "completedAtUtc": "2026-10-09T03:38:34.1493586Z",
+  "completedAtAsiaShanghai": "2026-10-09T11:38:34.1493586",
+  "projectPath": "H:\\DDM_Final_Project",
+  "formalCampaign": false,
+  "measuredPilotStarted": false,
+  "unityMeasuredBlockCreated": false,
+  "formalAttempt3Authorized": false,
+  "formalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "checkCount": 29,
+  "passedCheckCount": 29,
+  "failedCheckCount": 0,
+  "checks": [
+    {
+      "id": "upstream-sha256:Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Checkpoint.v1.json",
+      "passed": true,
+      "evidence": {
+        "expected": "388b7a1921fe07daf97827353f402c365b0f208a9dc62cbbff2d4b5ea2829b7d",
+        "actual": "388b7a1921fe07daf97827353f402c365b0f208a9dc62cbbff2d4b5ea2829b7d"
+      }
+    },
+    {
+      "id": "upstream-sha256:Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Provenance.v1.json",
+      "passed": true,
+      "evidence": {
+        "expected": "f192265e12155d0e56e1aa94e18cea1305b66e2fbc0eeb0eeb6ad9618aeb3c3a",
+        "actual": "f192265e12155d0e56e1aa94e18cea1305b66e2fbc0eeb0eeb6ad9618aeb3c3a"
+      }
+    },
+    {
+      "id": "upstream-sha256:Research/Gate13R_PR2_Attempt2_Partial_Output_Evidence_Manifest.v1.json",
+      "passed": true,
+      "evidence": {
+        "expected": "11cf507ad3daee5c4d17adf3d7349e50b73a925f58fdb175e2b68315240eff5b",
+        "actual": "11cf507ad3daee5c4d17adf3d7349e50b73a925f58fdb175e2b68315240eff5b"
+      }
+    },
+    {
+      "id": "upstream-sha256:Research/Analysis/Gate13R_PR2_Attempt2_Failure_Diagnosis/v1/evidence-manifest.json",
+      "passed": true,
+      "evidence": {
+        "expected": "73e34e3910a38462d8dc3a125eaf88e2c800b8f1808206db054fbe50e4f24c46",
+        "actual": "73e34e3910a38462d8dc3a125eaf88e2c800b8f1808206db054fbe50e4f24c46"
+      }
+    },
+    {
+      "id": "upstream-sha256:Research/Analysis/Gate13R_PR2_Attempt2_Failure_Diagnosis/v2/evidence-manifest.json",
+      "passed": true,
+      "evidence": {
+        "expected": "847e93f13fe7e46eea154741d3e93421ff7c4df389b1a7a2e10cb1b676e4eb3b",
+        "actual": "847e93f13fe7e46eea154741d3e93421ff7c4df389b1a7a2e10cb1b676e4eb3b"
+      }
+    },
+    {
+      "id": "attempt2-final-preservation-audit",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v3/FinalPrePilot/attempt2-preservation-final-audit.json",
+        "sha256": "740c3c0fafccdd6baa2bc4a2bcfac459070f63f73b89499c3ce86eaa4eac3ced",
+        "fileCount": 28020,
+        "rawBytes": 8536611302,
+        "canonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+        "allFilesReadOnly": true
+      }
+    },
+    {
+      "id": "provenance-bound-artifacts-byte-identical",
+      "passed": true,
+      "evidence": {
+        "artifactCount": 27,
+        "mismatchCount": 0,
+        "mismatches": []
+      }
+    },
+    {
+      "id": "static-unit-345-of-345",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v2/Static/static-unit-summary.json",
+        "sha256": "377b9337e1fc4f923ebd8fb0b9bc437e1e5d7ccf220a3e56b8e48460e1b20b35"
+      }
+    },
+    {
+      "id": "unity-self-tests-2-of-2",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v3/UnitySelfTests/unity-self-tests-summary.json",
+        "sha256": "dc7715b2100f1f75b78e92021c4da2038d61a6425c5925f13c99c1d156481d2b"
+      }
+    },
+    {
+      "id": "memory-policy-boundary-and-telemetry-fixtures",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v3/UnitySelfTests/MemoryPolicySelfTest/memory-policy-self-test.json",
+        "sha256": "2b956eb8bc57fdf92107c6e293ca4bdebe0ecf9c1e55edd3560492a1d2c51e40"
+      }
+    },
+    {
+      "id": "path-safe-atomic-self-tests-14-of-14",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v3/UnitySelfTests/PathSafeAtomicSelfTest/path-safe-atomic-self-test.json",
+        "sha256": "6dd809d63f35cba9ea64f54451ca0276104bffabc006b30eca5db6add1e596cc"
+      }
+    },
+    {
+      "id": "psapi-cim-telemetry-probe",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v3/TelemetryProbe/probe.summary.json",
+        "sha256": "2a64b84ab2c22f5675717add9716633e65ed1dda079f17d6574b1c9e2a502158"
+      }
+    },
+    {
+      "id": "positive-negative-block-validation-2-of-2",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v3/BlockValidation/block-validation-summary.json",
+        "sha256": "54434d40c31b4c98f182bd966e6b3e29b58777bda33d6d18c6adb4fc40a2083f"
+      }
+    },
+    {
+      "id": "failure-precedence-powershell7-6-of-6",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v3/FailurePrecedencePS7/summary.json",
+        "sha256": "fed3998650a94d77194b8a26fe321ba5252b6ef6bc2012d0b47b3b711efab920"
+      }
+    },
+    {
+      "id": "failure-precedence-windows-powershell51-6-of-6",
+      "passed": true,
+      "evidence": {
+        "relativePath": "Research/Verification/Gate13R_PR2_MP1/v3/FailurePrecedencePS51/summary.json",
+        "sha256": "bb331002e270e24cbbb76b7fe053b6885c2f35fe77e10c2a0e70c1cfb0742f4b"
+      }
+    },
+    {
+      "id": "stage-separated-positive-block-19-records",
+      "passed": true,
+      "evidence": {
+        "sha256": "8aa08a6e6eb909c1a7e762f48c3efd81b163d8a55fa50752990c920b260d254b",
+        "recordCount": 19,
+        "stageCounts": {
+          "unity-command-entry-project-loaded": 1,
+          "before-scenario-load": 1,
+          "sample-before": 4,
+          "after-scenario-load-before-first-sample": 1,
+          "sample-raw-after-workload": 4,
+          "sample-after-cleanup": 4,
+          "sample-after-scenario-load": 3,
+          "post-block-pre-exit": 1
+        }
+      }
+    },
+    {
+      "id": "negative-durable-failure-precedence-fail-closed",
+      "passed": true,
+      "evidence": {
+        "sha256": "d99c3db74b1f3d95b423dc64daad81bf503bb6136b426ef59607624f116971e5",
+        "primaryCause": "DURABLE-UNITY-BLOCK-FAILURE",
+        "secondaryCauseCount": 0
+      }
+    },
+    {
+      "id": "powershell-parser-both-runtimes",
+      "passed": true,
+      "evidence": [
+        {
+          "runtimeId": "powershell-current",
+          "executable": "C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+          "exitCode": 0,
+          "runtimeVersion": "7.6.5",
+          "fileCount": 7,
+          "passed": true,
+          "output": null
+        },
+        {
+          "runtimeId": "windows-powershell-5.1",
+          "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "exitCode": 0,
+          "runtimeVersion": "5.1.26100.9444",
+          "fileCount": 7,
+          "passed": true,
+          "output": null
+        }
+      ]
+    },
+    {
+      "id": "parameter-binding-both-runtimes",
+      "passed": true,
+      "evidence": {
+        "testCount": 14,
+        "passedCount": 14,
+        "results": [
+          {
+            "runtimeId": "powershell-current",
+            "entryId": "block-wrapper",
+            "relativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotBlockV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Run-Gate13RPR2MemoryPolicyPilotBlockV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "powershell-current",
+            "entryId": "campaign-orchestrator",
+            "relativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Run-Gate13RPR2MemoryPolicyPilotV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "powershell-current",
+            "entryId": "one-shot-launcher",
+            "relativePath": "Research/Start-Gate13RPR2MemoryPolicyPilotV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Start-Gate13RPR2MemoryPolicyPilotV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "powershell-current",
+            "entryId": "unity-self-tests",
+            "relativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotUnitySelfTestsV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Run-Gate13RPR2MemoryPolicyPilotUnitySelfTestsV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "powershell-current",
+            "entryId": "telemetry-probe",
+            "relativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotTelemetryProbeV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Run-Gate13RPR2MemoryPolicyPilotTelemetryProbeV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "powershell-current",
+            "entryId": "block-validation",
+            "relativePath": "Research/Invoke-Gate13RPR2MemoryPolicyPilotBlockValidationV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Invoke-Gate13RPR2MemoryPolicyPilotBlockValidationV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "powershell-current",
+            "entryId": "prepilot-finalizer",
+            "relativePath": "Research/Finalize-Gate13RPR2MP1PrePilotV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Finalize-Gate13RPR2MP1PrePilotV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "windows-powershell-5.1",
+            "entryId": "block-wrapper",
+            "relativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotBlockV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Run-Gate13RPR2MemoryPolicyPilotBlockV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "windows-powershell-5.1",
+            "entryId": "campaign-orchestrator",
+            "relativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Run-Gate13RPR2MemoryPolicyPilotV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "windows-powershell-5.1",
+            "entryId": "one-shot-launcher",
+            "relativePath": "Research/Start-Gate13RPR2MemoryPolicyPilotV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Start-Gate13RPR2MemoryPolicyPilotV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "windows-powershell-5.1",
+            "entryId": "unity-self-tests",
+            "relativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotUnitySelfTestsV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Run-Gate13RPR2MemoryPolicyPilotUnitySelfTestsV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "windows-powershell-5.1",
+            "entryId": "telemetry-probe",
+            "relativePath": "Research/Run-Gate13RPR2MemoryPolicyPilotTelemetryProbeV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Run-Gate13RPR2MemoryPolicyPilotTelemetryProbeV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "windows-powershell-5.1",
+            "entryId": "block-validation",
+            "relativePath": "Research/Invoke-Gate13RPR2MemoryPolicyPilotBlockValidationV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Invoke-Gate13RPR2MemoryPolicyPilotBlockValidationV1|H:\\DDM_Final_Project"
+          },
+          {
+            "runtimeId": "windows-powershell-5.1",
+            "entryId": "prepilot-finalizer",
+            "relativePath": "Research/Finalize-Gate13RPR2MP1PrePilotV1.ps1",
+            "exitCode": 0,
+            "passed": true,
+            "output": "BINDING-SMOKE-PASSED|Finalize-Gate13RPR2MP1PrePilotV1|H:\\DDM_Final_Project"
+          }
+        ]
+      }
+    },
+    {
+      "id": "frozen-pilot-cardinality-96-blocks-384-samples",
+      "passed": true,
+      "evidence": {
+        "configSha256": "e3b50d2a62a43e1eef7bdf65af95f1d8596d28dee83b287e2f3cc589e78029ce",
+        "scheduleSha256": "826c7b85da6e3fcbe982a6e3becf21318216d5579dc198f2d47f5de0dc600136",
+        "scheduleManifestSha256": "1ad38d5c78df69d4d94374dee1f95bbb0375c2df90aa2ceab978dd0d4e221c46",
+        "measuredProcesses": 96,
+        "measuredSamples": 384,
+        "warmupProcesses": 0
+      }
+    },
+    {
+      "id": "unity-process-tree-zero",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "id": "project-unity-lock-absent",
+      "passed": true,
+      "evidence": {
+        "path": "H:\\DDM_Final_Project\\Temp\\UnityLockfile",
+        "exists": false
+      }
+    },
+    {
+      "id": "pilot-root-absent-before-one-shot-launch",
+      "passed": true,
+      "evidence": {
+        "path": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v1",
+        "exists": false
+      }
+    },
+    {
+      "id": "formal-attempt3-root-absent",
+      "passed": true,
+      "evidence": {
+        "path": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3",
+        "exists": false
+      }
+    },
+    {
+      "id": "formal-attempt3-receipt-absent",
+      "passed": true,
+      "evidence": {
+        "path": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+        "exists": false
+      }
+    },
+    {
+      "id": "h-drive-free-at-least-40-gib",
+      "passed": true,
+      "evidence": {
+        "freeBytes": 267584532480,
+        "requiredBytes": 42949672960
+      }
+    },
+    {
+      "id": "available-physical-memory-above-8-gib",
+      "passed": true,
+      "evidence": {
+        "availablePhysicalMemoryBytes": 19339489280,
+        "requiredBytes": 8589934592
+      }
+    },
+    {
+      "id": "high-performance-power-plan",
+      "passed": true,
+      "evidence": "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)"
+    },
+    {
+      "id": "ac-sleep-disabled",
+      "passed": true,
+      "evidence": "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)\n  GUID 别名: SCHEME_MIN\n  子组 GUID: 238c9fa8-0aad-41ed-83f4-97be242c8f20  (睡眠)\n    GUID 别名: SUB_SLEEP\n    电源设置 GUID: 29f6c1db-86da-48c5-9fdb-f2b67b1f44da  (在此时间后睡眠)\n      GUID 别名: STANDBYIDLE\n      最小可能的设置: 0x00000000\n      最大可能的设置: 0xffffffff\n      可能的设置增量: 0x00000001\n      可能的设置单位: 秒\n    当前交流电源设置索引: 0x00000000\n    当前直流电源设置索引: 0x00000000\n"
+    }
+  ],
+  "passed": true
+}

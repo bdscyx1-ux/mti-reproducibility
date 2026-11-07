@@ -1,0 +1,58 @@
+{
+  "schema": "gate14re-me-formal-st-execution-contract-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_NONEXECUTING_PACKAGE_BUILD_REQUIRED",
+  "prerequisiteChain": [
+    "terminal PASS qualification and independent acceptance",
+    "frozen identity-blind power selection of B=36",
+    "formal v5 package build under separate authorization",
+    "independent package validation and target-host compile/readiness PASS",
+    "frozen 1296-input and 1296-row schedule hashes",
+    "fresh formal execution authorization naming exact roots and hashes"
+  ],
+  "measuredExecution": {
+    "superblocks": 1296,
+    "lanesPerSuperblock": 6,
+    "expectedMeasuredFreshUnityProcesses": 7776,
+    "maximumConcurrentMeasuredUnityProcesses": 1,
+    "strictSerial": true,
+    "oneFreshUnityProcessPerLane": true,
+    "trustedCompositeIdentityRequired": true,
+    "naturalExitZeroRequiredForSuccessfulLane": true,
+    "scheduleOrdinals": "exactly 0..1295 for superblocks and an exact contiguous formal process ordinal sequence in the built contract"
+  },
+  "oracleAndCorrectness": {
+    "precomputedReadOnlyOracleCachePerInput": true,
+    "cacheHashAndInputHashMustMatchBeforeEveryLane": true,
+    "allPathStatusLegalityVersionAndReferenceOracleChecksRetained": true,
+    "correctnessOrOracleMismatch": "record failure and fail closed under the stopping contract"
+  },
+  "acquisitionAcceptanceSeparation": {
+    "acquisitionWrites": "raw observations, process ledger, failures/voids/replacement ledgers, acquisition receipts and freeze manifest only",
+    "acceptanceStartsOnlyAfterAcquisitionFreeze": true,
+    "acceptanceSourceIsReadOnly": true,
+    "qualificationAcceptanceToolMayBeCopiedWithoutRenaming": false,
+    "formalV5AcceptanceMustHaveNewNamesAndHashes": true
+  },
+  "prohibited": [
+    "same-lane retry",
+    "partial resume",
+    "post-outcome top-up",
+    "merge of failed-attempt observations into a later attempt",
+    "skip",
+    "outcome-dependent reorder",
+    "parallel measured lanes",
+    "algorithm substitution",
+    "G/N/F, endpoint, majority, multiplicity, B, or stopping-rule change without a new scientific amendment"
+  ],
+  "currentAuthorization": {
+    "packageBuildAuthorized": false,
+    "formalInputGenerationAuthorized": false,
+    "formalRootsCreationAuthorized": false,
+    "formalExecutionAuthorized": false,
+    "formalAcceptanceExecutionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "MQOrMTAuthorized": false
+  }
+}

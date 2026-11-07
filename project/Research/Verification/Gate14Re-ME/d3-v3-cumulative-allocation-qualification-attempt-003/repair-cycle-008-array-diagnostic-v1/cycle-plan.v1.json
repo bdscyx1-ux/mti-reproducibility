@@ -1,0 +1,27 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 8,
+  "status": "AUTHORIZED_IN_PROGRESS",
+  "phase": "algorithm-free-known-array-counter-diagnostic",
+  "rationale": "The V2 full known-answer passed marker readiness and 64 empty-window zero trials, then failed its unchanged known-array scale criterion without preserving the three counter records. A diagnostic-only, versioned harness is required to distinguish payload-bound, event-count, monotonicity, and overhead-spread failure modes before any source repair.",
+  "design": {
+    "emptyWindowTrials": 64,
+    "knownArrayPayloadBytes": [4096, 65536, 1048576],
+    "replicateTrialsPerPayload": 8,
+    "counter": "same D3-v3 native GC.Alloc Int64 allocation-size counter",
+    "acceptanceCriteriaChanged": false,
+    "qualificationDecisionProduced": false
+  },
+  "prohibitions": {
+    "qualificationRunnerOrOutputSchemaIntegration": true,
+    "scheduleInputsOrIdentityMapping": true,
+    "qualificationMeasuredRoot": true,
+    "algorithmLane": true,
+    "formalCollectionAnalysisRankingOrWinner": true,
+    "fallbackMetric": true,
+    "criteriaRelaxation": true
+  }
+}

@@ -1,0 +1,227 @@
+{
+    "schemaVersion":  1,
+    "provenanceKind":  "gate13r-nonexecuting-preparation-provenance-v1",
+    "formalDesignId":  "gate13r-one-fresh-unity-process-per-williams-block-5pct-uncapped-v1",
+    "preparationAuthorization":  {
+                                     "path":  "Research/Gate13R_NonExecuting_Preparation_Authorization.v1.json",
+                                     "sha256":  "b9bc74c033f1c2be795136067eb91305fea1a3cf3ce89a97bb7379a279ec7c99"
+                                 },
+    "frozenInputs":  {
+                         "authorization":  {
+                                               "path":  "Research/Gate13R_NonExecuting_Preparation_Authorization.v1.json",
+                                               "sha256":  "b9bc74c033f1c2be795136067eb91305fea1a3cf3ce89a97bb7379a279ec7c99"
+                                           },
+                         "specification":  {
+                                               "path":  "Research/Gate13R_NonExecuting_Preparation_Specification.v1.md",
+                                               "sha256":  "0ea4c99fc86f6de4db4c52d39b7667436fad1bb8278bcd824e6fe7dba7f94f0a"
+                                           },
+                         "testDesign":  {
+                                            "path":  "Research/Gate13R_NonExecuting_Preparation_Test_Design.v1.md",
+                                            "sha256":  "9fdea33cb9ba25fade02179bebeeedb23da2a8f7389e478f671fb91a8cec45c6"
+                                        },
+                         "amendment":  {
+                                           "path":  "Research/Gate13R_Readiness_Amendment.v1.json",
+                                           "sha256":  "72d6ed97aebcf652d6796a72a3794ff11b39ed166271eb9ee8d87e8205984db7"
+                                       },
+                         "gate11Bundle":  {
+                                              "path":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+                                              "sha256":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc"
+                                          },
+                         "gate11Matrix":  {
+                                              "path":  "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json",
+                                              "sha256":  "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3"
+                                          },
+                         "gate11Preregistration":  {
+                                                       "path":  "Research/FormalScenarios/Gate11R_5pct/v1/preregistered-analysis.json",
+                                                       "sha256":  "d1c81a83d85377f37adc6b234e7523e8b2189632bf55416734bcbbd92bf7db47"
+                                                   },
+                         "campaignCatalog":  {
+                                                 "path":  "Research/PlayableExperiments/Gate11R_5pct/v1/campaign-profile-catalog.json",
+                                                 "sha256":  "f3fd6e390b57f2f230ba62a05a2471f38065d30ec6e8839be6b55b6511f961bd"
+                                             },
+                         "presetCatalog":  {
+                                               "path":  "Research/PlayableExperiments/Gate11R_5pct/v1/algorithm-preset-catalog.json",
+                                               "sha256":  "c0aad543e8dfe8ab8f5245b6d579a459b586f030d18e3cb360917fbce6393253"
+                                           },
+                         "sceneCatalog":  {
+                                              "path":  "Research/PlayableExperiments/Gate11R_5pct/v1/playable-scene-catalog.json",
+                                              "sha256":  "9b1265c2a19430016ab4365bdb895ea03f30916355ffa73782e56ab1f6d2b8b8"
+                                          },
+                         "coverageManifest":  {
+                                                  "path":  "Research/PlayableExperiments/Gate11R_5pct/v1/coverage-manifest.json",
+                                                  "sha256":  "615c81b99fc31b65b56390017eeed34deaae8c4f8177b74631abd619f63d22d4"
+                                              },
+                         "gate12Readiness":  {
+                                                 "path":  "Research/Gate12R_Readiness_Checkpoint.v1.json",
+                                                 "sha256":  "93d1ffac30305ecbc3ff32820aa0eee016c7a2cc6824f41c491aac393cfd291d"
+                                             },
+                         "candidateN":  {
+                                            "path":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/candidate-n-formal.json",
+                                            "sha256":  "5e77d9b69c4c0e45dec204ca1943867453d29dcbdf1ebd24f0809af6d649c387"
+                                        },
+                         "budgetStorage":  {
+                                               "path":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/budget-storage-projection.json",
+                                               "sha256":  "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f"
+                                           },
+                         "memoryAmendment":  {
+                                                 "path":  "Research/Gate12R_Memory_Gate_Amendment.v1.json",
+                                                 "sha256":  "69a128f8c41c2e0fad1453daed0729f752bb58b77d300f736a758f5121815c20"
+                                             }
+                     },
+    "implementation":  {
+                           "module":  {
+                                          "path":  "Research/Gate13RFormalPreparationV1.psm1",
+                                          "sha256":  "299d46642eb3260b788b036f912ce9777a3f1b2f038c6927fd543cb158ea6e77"
+                                      },
+                           "generator":  {
+                                             "path":  "Research/New-Gate13RFormalPreparationV2.ps1",
+                                             "sha256":  "07b8fbfb9de5eeedc8a58840c84a818cb810d3a8f2137693500dc08cb1d32480"
+                                         },
+                           "scheduleValidator":  {
+                                                     "path":  "Research/Test-Gate13RFormalScheduleV1.ps1",
+                                                     "sha256":  "c51b35988195182db279f0d5add6b213cfd08a6da6e850a9dee6fc20b66739b3"
+                                                 },
+                           "orchestrator":  {
+                                                "path":  "Research/Run-Gate13RFormalCampaignV1.ps1",
+                                                "sha256":  "70eb2395253a0fd633dd67b95469439462833fc8ddf3d1048529e988a8ee740c"
+                                            },
+                           "blockWrapper":  {
+                                                "path":  "Research/Run-Gate13RFormalBlockV1.ps1",
+                                                "sha256":  "8c2c35296757a7f430a470ebd4fe97a06e5845740d997fb4876a6188baa96fdf"
+                                            },
+                           "compileWrapper":  {
+                                                  "path":  "Research/Verification/Run-Gate13RCompileV1.ps1",
+                                                  "sha256":  "513c2a48c778e93b1cae3f870079b2ca724da0c88bc5c1c256c8b636aa8c5f4c"
+                                              },
+                           "unitTests":  {
+                                             "path":  "Research/Run-Gate13RNonExecutingPreparationUnitTestsV2.ps1",
+                                             "sha256":  "809379c25db80e72cabbb49f851f987f2ebc860f6b3ef81c0c01f8449bcd31de"
+                                         },
+                           "finalAudit":  {
+                                              "path":  "Research/Run-Gate13RNonExecutingFinalAuditV1.ps1",
+                                              "sha256":  "fcc5ac67417b81e7a87738a35dc042e6fe848bd8a080511d0520394d6eecacf4"
+                                          },
+                           "readinessSealer":  {
+                                                   "path":  "Research/New-Gate13RNonExecutingReadinessV1.ps1",
+                                                   "sha256":  "87d12950176fdbd330dd2c9de886d2dd17cbfcb94007c1152a82f112d253a585"
+                                               },
+                           "unityCommand":  {
+                                                "path":  "Assets/_Scripts/Research/Editor/Gate13RProcessReuseFormalBatchCommandV1.cs",
+                                                "sha256":  "4ddf154a4ac27d58f3c873d5d983b7ca6abdf2db9b51969ad48b9347cda938d1"
+                                            },
+                           "unityCommandDerivation":  {
+                                                          "path":  "Research/Gate13R_Formal_Command_Derivation.v3.json",
+                                                          "sha256":  "ee8c492157d93a861df88bf5aba03bcfe2c2cd60c7f45849217f0534eeb9fa85"
+                                                      }
+                       },
+    "formalConfig":  {
+                         "relativePath":  "Research/Gate13R_Formal_Campaign_Config.v1.json",
+                         "sha256":  "af5a164cdabeeff08cd6cd00b21ecd732fcbdc7f51be3454f99aaf65b2ef5109"
+                     },
+    "schedule":  {
+                     "relativePath":  "Research/Gate13R_Formal_Williams_Block_Schedule.v1.jsonl",
+                     "sha256":  "dc460db08f501ef39869de29602cc0caf15106a264f930b55eb1875336c91aa6",
+                     "manifestRelativePath":  "Research/Gate13R_Formal_Williams_Block_Schedule_Manifest.v1.json",
+                     "manifestSha256":  "070fc787df97c63a808c9a8abd8179d708a361a1c83d9cdec107f2aa6ed1182b"
+                 },
+    "sourceCandidateRows":  [
+                                {
+                                    "comparisonCohortId":  "four-algorithm-shared-goal-v1",
+                                    "candidateNFormal":  548,
+                                    "minimumBlocks":  32,
+                                    "cycleMultiple":  4,
+                                    "hardCap":  null,
+                                    "driverKind":  "paired-block-log-difference-sd",
+                                    "driverCampaignId":  "core-r01-s1-shared--shared",
+                                    "driverAlgorithmId":  null,
+                                    "driverContrastId":  "IDFF-minus-C-FF",
+                                    "sigmaUpper":  0.58175694566059455
+                                },
+                                {
+                                    "comparisonCohortId":  "per-agent-heterogeneous-goal-v1",
+                                    "candidateNFormal":  768,
+                                    "minimumBlocks":  32,
+                                    "cycleMultiple":  4,
+                                    "hardCap":  null,
+                                    "driverKind":  "paired-block-log-difference-sd",
+                                    "driverCampaignId":  "core-r01-s1-hetero--per-agent",
+                                    "driverAlgorithmId":  null,
+                                    "driverContrastId":  "D*L-minus-A*-R",
+                                    "sigmaUpper":  0.68941483881787924
+                                },
+                                {
+                                    "comparisonCohortId":  "grouped-field-heterogeneous-goal-v1",
+                                    "candidateNFormal":  400,
+                                    "minimumBlocks":  32,
+                                    "cycleMultiple":  4,
+                                    "hardCap":  null,
+                                    "driverKind":  "paired-block-log-difference-sd",
+                                    "driverCampaignId":  "core-r01-s1-hetero--grouped-field",
+                                    "driverAlgorithmId":  null,
+                                    "driverContrastId":  "IDFF-minus-C-FF",
+                                    "sigmaUpper":  0.49699794016508997
+                                }
+                            ],
+    "sourceBudgetRows":  [
+                             {
+                                 "comparisonCohortId":  "four-algorithm-shared-goal-v1",
+                                 "campaignCount":  32,
+                                 "candidateNFormal":  548,
+                                 "projectedBlockProcesses":  17536,
+                                 "p50BlockWallSeconds":  26.2618372,
+                                 "p95BlockWallSeconds":  35.425643199999996,
+                                 "projectedWallSecondsAtP50":  460527.5771392,
+                                 "projectedWallSecondsAtP95":  621224.07915519993,
+                                 "p50BlockRawBytes":  763062,
+                                 "p95BlockRawBytes":  5330853,
+                                 "projectedRawBytesWithSafety":  140222757312,
+                                 "requiredFreeBytesIncludingReserve":  161697593792,
+                                 "availableFreeBytes":  292135882752,
+                                 "storageFeasible":  true
+                             },
+                             {
+                                 "comparisonCohortId":  "per-agent-heterogeneous-goal-v1",
+                                 "campaignCount":  21,
+                                 "candidateNFormal":  768,
+                                 "projectedBlockProcesses":  16128,
+                                 "p50BlockWallSeconds":  17.1582088,
+                                 "p95BlockWallSeconds":  23.2917994,
+                                 "projectedWallSecondsAtP50":  276727.5915264,
+                                 "projectedWallSecondsAtP95":  375650.1407232,
+                                 "p50BlockRawBytes":  710840,
+                                 "p95BlockRawBytes":  716322,
+                                 "projectedRawBytesWithSafety":  17329261824,
+                                 "requiredFreeBytesIncludingReserve":  38804098304,
+                                 "availableFreeBytes":  292135882752,
+                                 "storageFeasible":  true
+                             },
+                             {
+                                 "comparisonCohortId":  "grouped-field-heterogeneous-goal-v1",
+                                 "campaignCount":  21,
+                                 "candidateNFormal":  400,
+                                 "projectedBlockProcesses":  8400,
+                                 "p50BlockWallSeconds":  17.1387016,
+                                 "p95BlockWallSeconds":  17.2097755,
+                                 "projectedWallSecondsAtP50":  143965.09344,
+                                 "projectedWallSecondsAtP95":  144562.11419999998,
+                                 "p50BlockRawBytes":  710110,
+                                 "p95BlockRawBytes":  715942,
+                                 "projectedRawBytesWithSafety":  9020869200,
+                                 "requiredFreeBytesIncludingReserve":  30495705680,
+                                 "availableFreeBytes":  292135882752,
+                                 "storageFeasible":  true
+                             }
+                         ],
+    "gate12SnapshotAvailableFreeBytes":  292135882752,
+    "gate12SnapshotCanAuthorizeFormalLaunch":  false,
+    "priorFailedPreparationAttempts":  [
+                                           "Research/Gate13R_Command_Derivation_Attempt1_Failure.v1.json",
+                                           "Research/Gate13R_Command_Derivation_Attempt2_Failure.v1.json",
+                                           "Research/Gate13R_UnitAttempt1_Failure.v1.json",
+                                           "Research/Gate13R_GenerationAttempt1_Failure.v1.json"
+                                       ],
+    "deterministicGeneration":  true,
+    "formalRootCreated":  false,
+    "formalExecutionReceiptCreated":  false,
+    "formalCampaignExecuted":  false
+}

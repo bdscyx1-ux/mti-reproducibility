@@ -1,0 +1,35 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "AUTHORIZED_FORMAL_ST_ANALYSIS_ATTEMPT_003_FOUR_COMPARATOR_DOMAIN_RULE",
+  "authorizationSource": {
+    "userVerbatim": "不许约束，直接用新的域通过规则重新进行formal analysis",
+    "userVerbatimSha256": "58ad39645ad16fdea33dc9fef565a71fd8812a4326871aabbad5b000104c26b8",
+    "scope": "EXECUTE_FORMAL_ANALYSIS_ATTEMPT_003_WITH_NEW_FOUR_COMPARATOR_DOMAIN_RULE"
+  },
+  "ruleSource": {
+    "userVerbatim": "将域通过改为`域通过 = 硬门控有效 AND 对四个比较算法的假设全部通过`  ，如果对C-FF的比较假设未通过则说明具体数据并解释",
+    "userVerbatimSha256": "cad0e77c6b1068364c0630f2f9228438cdb65a307d81e8b1b4979017556b8427"
+  },
+  "sourceAcceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "predecessorAnalysisAttempt": "attempt-002",
+  "scope": {
+    "formalAnalysisAuthorized": true,
+    "fourComparatorDomainRuleAuthorized": true,
+    "domainGateComparators": ["A*-R", "BiA*-R", "D*L", "LPA*"],
+    "cFFFormalNonGatingReportingAuthorized": true,
+    "cFFConcreteFailureExplanationRequired": true,
+    "frozenSecondaryDescriptiveReportingAuthorized": true,
+    "frozenExploratoryFifteenPairMatricesAuthorized": true,
+    "sourceMutationAuthorized": false,
+    "domainAggregationRuleModificationAuthorized": true
+  },
+  "rankingOrWinnerAuthorized": false,
+  "aggregateScoreAuthorized": false,
+  "mqAuthorized": false,
+  "mtAuthorized": false,
+  "retryPolicy": "FAIL_CLOSED_NO_AUTOMATIC_RETRY",
+  "additionalExactCommandConfirmationRequired": false,
+  "createdAtUtc": "2026-10-30T12:57:11.744Z"
+}

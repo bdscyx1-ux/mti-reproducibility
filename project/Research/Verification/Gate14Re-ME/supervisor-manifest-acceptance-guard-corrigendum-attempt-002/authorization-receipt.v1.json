@@ -1,0 +1,32 @@
+{
+  "schema": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-attempt-002-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-auto-repair-until-pass-263a2c10-45da-4ede-ae8e-684baf3e9057",
+  "attemptId": "supervisor-manifest-acceptance-guard-corrigendum-attempt-002",
+  "status": "AUTHORIZED_AUTOMATIC_REPAIR_WITHIN_SUPERVISOR_MANIFEST_ACCEPTANCE_GUARD_CORRIGENDUM_UNTIL_PASS",
+  "authorizedAtUtc": "2026-10-17T17:16:33.9937694+00:00",
+  "authorizationSource": "direct user message carried forward under explicit until-PASS scope",
+  "userAuthorizationTextExact": "授权修复supervisor–manifest acceptance guard corrigendum部分直至attempt通过",
+  "retainedAttempt001Failure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001/failure-receipt.v1.json",
+    "sha256": "1cb8861ca48098cff1556f9a83c501b5700aaade337980c6b9a0865753583412",
+    "freezeManifestRelativePath": "Research/Verification/Gate14Re-ME/supervisor-manifest-acceptance-guard-corrigendum-attempt-001/freeze-manifest.v1.json",
+    "freezeManifestSha256": "103066173a69eb94500dc148e737fb9a1d23b5ea9f794c20ab10ce06634268f5",
+    "modifiedOrReclassified": false
+  },
+  "permittedRepair": "Replace the single invalid PowerShell receipt-constructor literal terminal = true with terminal = $true in a new attempt-002 harness; reuse the exact frozen successor supervisor, contract and manifest without modification.",
+  "automaticRepairRetryWithinThisCorrigendumAuthorized": true,
+  "unityInvocationAuthorized": false,
+  "qualificationMeasuredRootCreationAuthorized": false,
+  "deliveryRootCreationAuthorized": false,
+  "plannerInvocationAuthorized": false,
+  "algorithmLaneExecutionAuthorized": false,
+  "qualificationExecutionAuthorized": false,
+  "formalCollectionAuthorized": false,
+  "formalAnalysisAuthorized": false,
+  "rankingAuthorized": false,
+  "weightingAuthorized": false,
+  "winnerAdjudicationAuthorized": false,
+  "readinessRecheckAuthorized": false,
+  "newQualificationExecutionAttemptAuthorized": false
+}

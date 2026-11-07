@@ -1,0 +1,35 @@
+{
+  "schema": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-002-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-002",
+  "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-002",
+  "status": "AUTHORIZED_OFFLINE_POWERSHELL_HOST_BINDING_CORRIGENDUM_ONLY",
+  "authorizedAtUtc": "2026-10-17T16:31:06.2769223+00:00",
+  "authorizationSource": "user-selected response annotation",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME supervisor PowerShell host binding corrigendum attempt‑002：完整保留 supervisor PowerShell host binding corrigendum attempt‑001 的失败状态、failure receipt、freeze manifest、冻结编排器和全部证据，不删除、不修改、不改判；不得重用或续跑 attempt‑001。仅允许创建独立 attempt‑002，将编排器中 Unity 进程快照的两个调用点规范化为 $unityBefore = @(Get-UnityProcessSnapshot) 与 $unityAfter = @(Get-UnityProcessSnapshot)，冻结修复后编排器源码及哈希；不得修改其他 known-answer 判定、版本化合同内容、实现清单内容、supervisor v3、RunnerV2、compiled assemblies、input schema、schedule、sealed identity、仪器合同、算法实现、structural‑v3.1 或 delivery‑v2.2。仅允许使用 C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe、SHA‑256 362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139、版本 7.6.5 执行一次原定的无 Unity PowerShell known-answer；全部断言通过后才允许生成并冻结 execution contract v3.2、implementation manifest v3.2、terminal PASS receipt 与 Status v31。失败时保留并冻结全部证据后停止，不自动重试。仍禁止启动 Unity，禁止创建 qualification measured root、delivery root 或 formal root，禁止 instrument、oracle、empty-boundary、算法 lane、qualification/formal observation、正式采集、正式分析、排名、加权及赢家裁决，也不得创建新的 qualification execution attempt。",
+  "exactHostRuntime": {
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "version": "7.6.5"
+  },
+  "explicitProhibitions": [
+    "Unity invocation",
+    "qualification measured root creation",
+    "delivery root creation",
+    "formal root creation",
+    "instrument execution",
+    "oracle execution",
+    "empty-boundary execution",
+    "algorithm lane execution",
+    "qualification observation",
+    "formal observation",
+    "formal collection",
+    "formal analysis",
+    "ranking",
+    "weighting",
+    "winner adjudication",
+    "automatic retry",
+    "new qualification execution attempt"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-pr2-formal-negative-no-receipt-fail-closed-validation-v1",
+    "completedAtUtc":  "2026-10-08T17:27:40.5692874Z",
+    "input":  {
+                  "orchestratorRelativePath":  "Research/Run-Gate13RPR2FormalCampaignV4.ps1",
+                  "orchestratorSha256":  "66821f7642a260a80a5ea30f3e45a4e93e4dbc0c78095a3bcf2800d86bf65b53",
+                  "adapterProvenanceRelativePath":  "Research/Gate13R_PR2_Formal_Execution_Adapter_Provenance.v3.json",
+                  "adapterProvenanceSha256":  "0f264fb4a8d246a893a077a8c3f66426394274cd112887b0d49f5aba164a72b7",
+                  "deliberatelyAbsentReceiptPath":  "H:/DDM_Final_Project/Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/NegativeNoReceiptV1/deliberately-absent-formal-execution-receipt.json"
+              },
+    "before":  {
+                   "formalRootExists":  false,
+                   "formalStatusExists":  false,
+                   "missingReceiptExists":  false,
+                   "unityProcessCount":  0,
+                   "projectLockExists":  false
+               },
+    "childExitCode":  1,
+    "after":  {
+                  "formalRootExists":  false,
+                  "formalStatusExists":  false,
+                  "missingReceiptExists":  false,
+                  "unityProcessCount":  0,
+                  "projectLockExists":  false
+              },
+    "checks":  [
+                   {
+                       "name":  "child-exit-nonzero",
+                       "passed":  true,
+                       "detail":  "exitCode=1"
+                   },
+                   {
+                       "name":  "missing-receipt-rejected",
+                       "passed":  true,
+                       "detail":  "The one-shot orchestrator rejected the absent receipt before commit."
+                   },
+                   {
+                       "name":  "formal-root-remained-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v1"
+                   },
+                   {
+                       "name":  "formal-status-remained-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Status.v1.json"
+                   },
+                   {
+                       "name":  "receipt-remained-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Formal_Prelaunch\\v1\\NegativeNoReceiptV1\\deliberately-absent-formal-execution-receipt.json"
+                   },
+                   {
+                       "name":  "unity-never-launched",
+                       "passed":  true,
+                       "detail":  "unityProcessCount=0"
+                   },
+                   {
+                       "name":  "project-lock-remained-absent",
+                       "passed":  true,
+                       "detail":  "projectLockExists=False"
+                   }
+               ],
+    "passed":  true,
+    "noFormalSampleCreated":  true
+}

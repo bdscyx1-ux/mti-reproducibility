@@ -1,0 +1,204 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate10r-process-reuse-unit-tests-attempt2-v2",
+    "savedAtUtc":  "2026-10-06T13:07:06.1655838Z",
+    "assertionCount":  38,
+    "passedCount":  38,
+    "failedCount":  0,
+    "checks":  [
+                   {
+                       "name":  "powershell-parse-Gate10RProcessReusePreparation.psm1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "powershell-parse-Run-Gate10RProcessReuseBlockV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "powershell-parse-Run-Gate10RTelemetryProbeV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "powershell-parse-Run-Gate10RColdReferenceV2.ps1",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "config-design-id",
+                       "passed":  true,
+                       "detail":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1"
+                   },
+                   {
+                       "name":  "config-formal-false",
+                       "passed":  true,
+                       "detail":  "False"
+                   },
+                   {
+                       "name":  "config-attempt2-root",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate10R_ProcessReuse_5pct/v2"
+                   },
+                   {
+                       "name":  "config-5pct-no-cap",
+                       "passed":  true,
+                       "detail":  "5% / null"
+                   },
+                   {
+                       "name":  "four-williams-unique-rows",
+                       "passed":  true,
+                       "detail":  "A*-R,D*L,IDFF,C-FF;D*L,C-FF,A*-R,IDFF;C-FF,IDFF,D*L,A*-R;IDFF,A*-R,C-FF,D*L"
+                   },
+                   {
+                       "name":  "two-williams-unique-rows",
+                       "passed":  true,
+                       "detail":  "A*-R,D*L;D*L,A*-R"
+                   },
+                   {
+                       "name":  "four-position-balance",
+                       "passed":  true,
+                       "detail":  "each algorithm once per position over four rows"
+                   },
+                   {
+                       "name":  "valid-plan-accepted",
+                       "passed":  true,
+                       "detail":  "valid"
+                   },
+                   {
+                       "name":  "duplicate-algorithm-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "wrong-predecessor-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "unsafe-path-rejected",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "injected-failure-role-guard",
+                       "passed":  true,
+                       "detail":  "rejected"
+                   },
+                   {
+                       "name":  "managed-negative-growth-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "managed-exact-128-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "managed-128-plus-one-fail",
+                       "passed":  true,
+                       "detail":  "fail"
+                   },
+                   {
+                       "name":  "raw-peak-cleanup-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "native-negative-growth-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "native-exact-512-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "native-512-plus-one-fail",
+                       "passed":  true,
+                       "detail":  "fail"
+                   },
+                   {
+                       "name":  "telemetry-inside-interval-pass",
+                       "passed":  true,
+                       "detail":  "0"
+                   },
+                   {
+                       "name":  "telemetry-outside-tolerance-fail",
+                       "passed":  true,
+                       "detail":  "943718400"
+                   },
+                   {
+                       "name":  "telemetry-nonpositive-fail",
+                       "passed":  true,
+                       "detail":  "fail"
+                   },
+                   {
+                       "name":  "sample-size-minimum-32",
+                       "passed":  true,
+                       "detail":  "32"
+                   },
+                   {
+                       "name":  "sample-size-cycle-multiple",
+                       "passed":  true,
+                       "detail":  "32"
+                   },
+                   {
+                       "name":  "sample-size-uncapped",
+                       "passed":  true,
+                       "detail":  "uncapped"
+                   },
+                   {
+                       "name":  "structural-identical-pass",
+                       "passed":  true,
+                       "detail":  "pass"
+                   },
+                   {
+                       "name":  "structural-mutation-detected",
+                       "passed":  true,
+                       "detail":  "detected"
+                   },
+                   {
+                       "name":  "source-new-design-only",
+                       "passed":  true,
+                       "detail":  "identity"
+                   },
+                   {
+                       "name":  "source-psapi",
+                       "passed":  true,
+                       "detail":  "present"
+                   },
+                   {
+                       "name":  "source-no-managed-process-native-fallback",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "source-no-inlining-boundary",
+                       "passed":  true,
+                       "detail":  "present"
+                   },
+                   {
+                       "name":  "historical-source-unchanged",
+                       "passed":  true,
+                       "detail":  "54811fdb7868f7509cd48281397018a29f5814911cfc83d96d63473dd6f50379"
+                   },
+                   {
+                       "name":  "formal-root-absent",
+                       "passed":  true,
+                       "detail":  "absent"
+                   },
+                   {
+                       "name":  "atomic-json-no-temp-residue",
+                       "passed":  true,
+                       "detail":  "value=1"
+                   }
+               ],
+    "formalCampaign":  false,
+    "automaticRetryAttempted":  false,
+    "automaticResumeAttempted":  false,
+    "passed":  true
+}

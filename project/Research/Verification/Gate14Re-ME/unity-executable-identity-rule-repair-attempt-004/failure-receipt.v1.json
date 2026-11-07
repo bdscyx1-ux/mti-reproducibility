@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-rule-repair-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-repair-attempt-004",
+  "status": "FAILED_CLOSED_UNITY_EXECUTABLE_IDENTITY_RULE_REPAIR",
+  "failedAtUtc": "2026-10-17T10:18:34.8355718Z",
+  "classification": "NOT_ADJUDICATED",
+  "exceptionType": "System.Management.Automation.PropertyNotFoundException",
+  "exactFailure": "The property 'Sum' cannot be found on this object. Verify that the property exists.",
+  "stackTrace": "at Remove-IsolatedUnityTransientCaches, H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Tools\\Invoke-Gate14ReMEUnityExecutableIdentityAuditV4.ps1: line 382\r\nat <ScriptBlock>, H:\\DDM_Final_Project\\Research\\Gate14Re-ME\\Tools\\Invoke-Gate14ReMEUnityExecutableIdentityAuditV4.ps1: line 597\r\nat <ScriptBlock>, <No file>: line 2",
+  "unityInvocationCount": 1,
+  "retryPerformed": false,
+  "signalOrForcedTerminationSent": false,
+  "priorAttemptEvidence": {
+    "beforeInventoryDigestSha256": "51d5183db0a6654d89c61fb600378c224b480d8ed9c85aeca4db53d26dc122c8",
+    "afterInventoryDigestSha256": "51d5183db0a6654d89c61fb600378c224b480d8ed9c85aeca4db53d26dc122c8",
+    "unchanged": true
+  },
+  "boundary": {
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "transientUnityCacheCleanup": []
+  }
+}

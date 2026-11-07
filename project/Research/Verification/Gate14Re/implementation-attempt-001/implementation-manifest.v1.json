@@ -1,0 +1,67 @@
+{
+  "schema": "gate14re-implementation-manifest-v1",
+  "studyId": "Gate14Re",
+  "attempt": "implementation-attempt-001",
+  "status": "RESEARCH_ONLY_PREFLIGHT_IMPLEMENTATION_COMPLETE",
+  "frozenAtLocal": "2026-10-15T02:15:13.0806251+08:00",
+  "designBindings": [
+    {"path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v2.md", "sha256": "cbeca6d175500770357d1a610149abda58c816547d2c19cfa2e8ce9bebf5771f"},
+    {"path": "Research/Gate14Re/Gate14Re_Design_Contract.v2.json", "sha256": "8b0e064036b8ffac8d0e0572a93898ec8ea72b4e1898b31e21de70ce417e797f"},
+    {"path": "Research/Gate14Re/Gate14Re_Experiment_Plan.v3.md", "sha256": "3ea4bcf824b5e83c1be3d98ae96590c58dc444555388b301675a3e91d27bedcc"},
+    {"path": "Research/Gate14Re/Gate14Re_Design_Contract.v3.json", "sha256": "88c3119e0b6dbbe4d1a3a2a95bd04d619e3d68edbd38b0903c6d4037a4d0e1f3"},
+    {"path": "Research/Verification/Gate14Re/implementation-attempt-001/implementation-contract.v1.json", "sha256": "4fd8f1ff99cdda2a96bce14c533b5a443502f28764582c1f29c44d7f1e8c90ab"}
+  ],
+  "implementationSources": [
+    {"path": "Assets/_Scripts/Research/Gate14Re/v1/Gate14ReProtocolV1.cs", "bytes": 23244, "sha256": "2a4797b1cbe086e960cddac6c70003543d93ddefc263ca682b6e2e9fb025daf1"},
+    {"path": "Assets/_Scripts/Research/Gate14Re/v1/Gate14ReEventSynchronizerV1.cs", "bytes": 9086, "sha256": "c8672af77463d8748951eb77a00944054bbb37e7543b6dcf6348d112b3ada86b"},
+    {"path": "Assets/_Scripts/Research/Gate14Re/v1/Gate14ReMovementKernelV1.cs", "bytes": 15502, "sha256": "13379fede15214b275671a544a255fd3b03ab87bfad3b121b2ec3144ec207f49"},
+    {"path": "Assets/_Scripts/Research/Gate14Re/v1/Gate14ReTextureVisualGridV1.cs", "bytes": 3820, "sha256": "fac20feca574a706ebcacdc4600f47e914635ca879999c9e42489a736f979a13"},
+    {"path": "Assets/_Scripts/Research/Gate14Re/v1/Gate14RePreflightControllerV1.cs", "bytes": 16450, "sha256": "296e4ee641faa7019d53b9cfe9d2c1ca82db349e181b7d9995512bd67b3ceede"},
+    {"path": "Assets/_Scripts/Research/Editor/Gate14ReValidationCommandV1.cs", "bytes": 25510, "sha256": "c757d2a47e1f2279c8ee215a6324d09150b99cc6249d49c8278cca309b1fd0ae"},
+    {"path": "Assets/_Scripts/Research/Editor/Gate14RePreflightBuildCommandV1.cs", "bytes": 6432, "sha256": "2e5c9c4456f0f3b18f9e5ed5ef2c01c6f1f79f2eb0367724b6389e251214cf48"}
+  ],
+  "renderBindings": [
+    {"path": "Assets/Prefabs/NavMesh/NavMesh_PlayerUnit.prefab", "bytes": 6489, "sha256": "1212387a9e6822a880f177155bb9bab82a162dbee080ba7ee2423d9baf12c012"},
+    {"path": "Assets/_Scripts/Research/Gate14Re/v1/Gate14RePreflightV1.unity", "bytes": 4926, "sha256": "170b702b2f1a7bbe9d20cd12638b69298568bc4ba573988a7df3b60a68288711"}
+  ],
+  "compileAndValidation": {
+    "compileReceipt": {"path": "Research/Verification/Gate14Re/implementation-attempt-001/compile-only-attempt-010/compile-receipt.v1.json", "sha256": "0faa0e9f8077b25f1e91ddfb1d8d3ffe2a271727d03bf3829e79a88f524d4cff"},
+    "syntheticValidationReceipt": {"path": "Research/Verification/Gate14Re/implementation-attempt-001/synthetic-validation-only-attempt-003/validation-receipt.v1.json", "sha256": "d147b1f4a2dc154c905b227c4945fe3349ba7464fd2fe111a31ca93967cacbd6", "assertions": 5255}
+  },
+  "standaloneBuild": {
+    "acceptedAttempt": "standalone-build-attempt-002",
+    "buildReceiptSha256": "bc2dea8f10ab8985ab0e6039fa54fbe412d0e733ecd8038ce0fbd5dfc22bc603",
+    "unityBuildLogSha256": "76b4233afc21b1c0dcde2189562d75f4cb7dc6cb7fe21eddf14b503e7e00c499",
+    "buildTreeFiles": 150,
+    "buildTreeBytes": 77986528,
+    "executableSha256": "88b1b04971f8b712ddd0f18bca4f7296d287fdd6cdadef57c155d37b9ef0928c",
+    "assemblyCSharpSha256": "51a0e41192fc225d9c4f29a21a57f72e061598733d623fad697bd583d9360923",
+    "rejectedAttempt001Preserved": true,
+    "obsoleteGate14RSourcesRestored": false
+  },
+  "liveGates": {
+    "movementPreflightReceiptSha256": "3573e5a92f3142c3099bfc09f795baef840daeb605e10944085cd231283602f4",
+    "resourcePreflightReceiptSha256": "eeb74ed67a8012f7031fbb89cc995e758c41d181de2aed92fb2fac8dc9599074",
+    "N512PeakPrivateBytes": 356077568
+  },
+  "capabilitiesComplete": [
+    "v3_tick_only_event_retiming",
+    "grid_planner_render_revision_lockstep",
+    "deterministic_N1_N8_N32_N128_N512_construction",
+    "shared_production_semantics_movement_kernel",
+    "canonical_full_population_unit_rendering",
+    "short_nonformal_no_outcome_live_preflight"
+  ],
+  "capabilitiesStillRequiredBeforeFormalLaunchReady": [
+    "formal_block_plan_and_Williams_schedule",
+    "formal_movement_raw_schema_and_M1_M2_M3_M5_capture",
+    "formal_M4_raw_frame_interval_lane",
+    "whole_block_state_reset_and_failure_replacement_controller",
+    "formal_nonexecuting_execution_package_and_supervisor",
+    "final_live_no_outcome_preflight_of_formal_runner"
+  ],
+  "formalMeasuredRootCreated": false,
+  "formalAnalysisRootCreated": false,
+  "formalObservationProduced": false,
+  "formalPhaseAStarted": false
+}

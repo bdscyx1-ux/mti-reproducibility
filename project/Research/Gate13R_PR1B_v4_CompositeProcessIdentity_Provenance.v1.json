@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "provenanceId": "gate13r-pr1b-v4-composite-process-identity-read-only-analysis-recovery-provenance-v1",
+  "createdAtUtc": "2026-10-08T15:42:47.1133988Z",
+  "createdAtAsiaShanghai": "2026-10-08T23:42:47.1133988+08:00",
+  "status": "FROZEN-BEFORE-REAL-PILOT-NUMERIC-ANALYSIS / NON-EXECUTING / FORMAL-CAMPAIGN-NOT-AUTHORIZED",
+  "authorizationId": "gate13r-pr1b-v4-composite-process-identity-analysis-recovery-authorization-v1",
+  "sourcePilot": {
+    "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "fileCount": 9118,
+    "rawBytes": 253513394,
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed",
+    "status": "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / NON-FORMAL / COMPLETE-RAW-EXECUTION / POST-EXECUTION-ANALYZER-FAILED / EXCLUDED-FROM-FORMAL-ANALYSIS"
+  },
+  "repairBoundary": {
+    "scientificContractChanged": false,
+    "identityContractChanged": true,
+    "oldInvalidIdentity": "numeric processId globally unique across the pilot",
+    "osProcessIdentity": ["processId", "processStartTimeUtc"],
+    "blockEvidenceIdentity": ["processId", "processStartTimeUtc", "blockId"],
+    "numericPidReuseLegalOnlyAfterPriorProcessEnd": true,
+    "frozenAnalyzerV1ThroughV4Modified": false
+  },
+  "statisticalContract": {
+    "metrics": ["P1", "P2", "P3", "P4", "P5"],
+    "contrasts": ["C1", "C2", "C3", "C4", "C5"],
+    "orderEstimand": "AB-minus-BA",
+    "confidenceLevel": 0.95,
+    "orderEffectAbsoluteLogBound": 0.09531017980432493,
+    "bootstrapReplicates": 20000,
+    "bootstrapSeed": 13012026,
+    "bootstrapUnit": "complete-mirrored-order-pair",
+    "pooledWeighting": "equal-scenario",
+    "formalInference": false
+  },
+  "paths": {
+    "validationRootRelativePath": "Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+    "analysisRecoveryRootRelativePath": "Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+    "reservedFormalRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned/v1"
+  },
+  "environment": {
+    "pythonVersion": "3.14.7",
+    "powerShellVersion": "7.6.5",
+    "dotnetRuntimeVersion": "10.0.11",
+    "timezone": "Asia/Shanghai"
+  },
+  "boundFiles": [
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Next_Authorization_Prompt.md","rawBytes":6568,"sha256":"bdcee00366e12c679aa19a32e3b08780ebb9e50a49e844be7db5eef071a15e77"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Authorization.v1.json","rawBytes":1741,"sha256":"bb3e1f32bd2fd27500613f3b2d9d749ccd5f18f73afe5abf8a68b3d3d3cdc5d1"},
+    {"relativePath":"Research/Gate13R_PR1B_v3_PathSafe_Pilot_Terminal_Preservation.v1.json","rawBytes":8396,"sha256":"4004c76c7127896ea54efcfc3dbf40b9888de0d133cb905624ab72ba29abd626"},
+    {"relativePath":"Research/Gate13R_PR1B_v3_PathSafe_Pilot_Failure_Diagnosis.v1.md","rawBytes":5334,"sha256":"120263281ea24fa7273a810b4912a1cdaeee29c65aa813b0153b87e8c7b50039"},
+    {"relativePath":"Research/Gate13R_PR1B_v3_PathSafe_Pilot_Failure_Checkpoint.v1.json","rawBytes":1484,"sha256":"6f2c2da618d100c6495e34adc8215c6f26a7444c6e92d6947d55cafd781a9f75"},
+    {"relativePath":"Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v9.json","rawBytes":13997,"sha256":"40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784"},
+    {"relativePath":"Research/Gate13R_PR1B_OrderEffect_Provenance.v10.json","rawBytes":32917,"sha256":"993f554a03bc52493c3fea116f1206f14746db89e4c14c59d8e4e15befbef320"},
+    {"relativePath":"Research/Analyze-Gate13RPR1BOrderEffectPilotV1.py","rawBytes":30974,"sha256":"bb805a147882336965d8e42f7dc688e6e43291a969cebebb3db1ad5abb3ef528"},
+    {"relativePath":"Research/Analyze-Gate13RPR1BOrderEffectPilotV2.py","rawBytes":17918,"sha256":"2b017e4180ac13904760d04244823ad9ee727f95b241f5126454ca01aacec630"},
+    {"relativePath":"Research/Analyze-Gate13RPR1BOrderEffectPilotV3.py","rawBytes":17959,"sha256":"e00db871cad2d36416dd69742fddf971635b4b8c0109cafc92c4dbca09bd2fe8"},
+    {"relativePath":"Research/Analyze-Gate13RPR1BOrderEffectPilotV4.py","rawBytes":17959,"sha256":"01aa0697cde7db3c9e1f97d91eaee6801fb9bd4f32db1c17e1c66cfedd7c120d"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Specification.v1.md","rawBytes":4173,"sha256":"ece6e7de7921d9125fac40986c3d545593d6ebb2e2418d2d449fd2f575523cb9"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_AnalysisRecovery_Specification.v1.md","rawBytes":3137,"sha256":"d5c6e7d40887ff218cc955503cf68784ab2140c95d792bfe001319d7a4070bea"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Test_Design.v1.md","rawBytes":3402,"sha256":"ee0b4e5053861cf5d5b298d22188500d8119a48f8364aebd77ec5a226f9256da"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_AnalysisRecovery_Output_Schema.v1.json","rawBytes":1831,"sha256":"3aca3b5accdd3a8f85fd0114ff05175f868ba7bb12771f044b57cd42921f95b1"},
+    {"relativePath":"Research/Verification/Fixtures/Gate13R_PR1B_CompositeProcessIdentity/v1/expected-results.json","rawBytes":1729,"sha256":"cdc8fcc49d5d0563ec908db0a2026e5c1539aa6b1bf17da57cc78df10ef90763"},
+    {"relativePath":"Research/Analyze-Gate13RPR1BCompositeProcessIdentityRecoveryV1.py","rawBytes":49830,"sha256":"63a8aef6d729e449e8ffd15ea1447f4cc9b8c7eb5588ecd0d13bfab306ae9564"},
+    {"relativePath":"Research/Verification/Run-Gate13RPR1BCompositeProcessIdentityValidationV1.ps1","rawBytes":11654,"sha256":"f6435ed288f4a34d5c461d55a7653acfc257d13d7fab1991235ad674815924da"},
+    {"relativePath":"Research/Run-Gate13RPR1BCompositeProcessIdentityRecoveryV1.ps1","rawBytes":3193,"sha256":"4fd43e005be166d1a27facbc801760988c2e46c0d4e68349b38beff35a134e31"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_PreRead_Preservation_Audit.v1.json","rawBytes":4247,"sha256":"1e14a74c1fdcfabb44851a3662a24c636876e4c66eb4f1e75ec920dec3761d80"},
+    {"relativePath":"Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/dev-smoke-v1/synthetic-self-test.json","rawBytes":3048,"sha256":"6ea1f1e3974bdb7be0ac304f87b0ba26b5dd6700e789d2b72f6f55dc0065100d"}
+  ],
+  "randomSeeds": {
+    "bootstrap": 13012026
+  },
+  "unityInvoked": false,
+  "newSamplesGenerated": 0,
+  "pilotRetryResumeTopUpMergeAuthorized": false,
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

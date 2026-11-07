@@ -1,0 +1,177 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-audit-source-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-rule-repair-attempt-004",
+  "status": "FROZEN_PREEXECUTION_IDENTITY_AUDIT_SOURCES",
+  "frozenAtUtc": "2026-10-17T10:16:02.3056145Z",
+  "authorizedExecuteMethod": "DDM.Research.Editor.UnityExecutableIdentityAuditAttempt001.Gate14ReMEUnityExecutableIdentityAuditV1.Run",
+  "maximumUnityInvocations": 1,
+  "automaticRetryAuthorized": false,
+  "auditMethodChanged": true,
+  "auditMethodChangeAuthorized": true,
+  "observationScopeExpanded": false,
+  "identityAuthoritySimplified": true,
+  "inProcessFileReadHashesAuthoritative": false,
+  "sourceDeltaAudit": {
+    "attempt003ProbeSha256": "26e018247e2dc4ee71820a3bf9db72d894cb017ad64b379ae6fc342f4b2b10c0",
+    "attempt004ProbeSha256": "9ef956d7a8a2ff0ec2efc5450ae7e15d0975299e75ac0016b6b51b332d9ac0c2",
+    "attempt003OrchestratorSha256": "bcfdf36e9b514ae14116588f639fe84e78489ef5578ca890d8d564ff2dd01841",
+    "attempt004OrchestratorSha256": "3317558dd838137c7fba783262d465b967da60e232e6a64c10d1af1acf23a747",
+    "authorizedSemanticChanges": [
+      "three-phase external SHA-256, chunk digests, NTFS file ID, PE identity, Authenticode signer and metadata are authoritative",
+      "PID, creation time, executable path, exact command line and execute method form the live process identity",
+      "EditorApplication.applicationPath, Process.MainModule.FileName and QueryFullProcessImageNameW must identify the same path",
+      "in-process path, file metadata, NTFS file identity and PE identity must remain structurally stable across the hold",
+      "File.OpenRead, shared FileStream, File.ReadAllBytes and in-process chunk digests are retained as diagnostic-only observations",
+      "File.ReadAllBytes instability alone cannot fail executable identity"
+    ],
+    "mechanicalChanges": [
+      "attempt-004 authorization and evidence paths",
+      "parent status v15 and terminal status v16",
+      "attempt-004 receipt, rule and evidence labels"
+    ],
+    "powershellParserErrorCount": 0,
+    "executeMethodChanged": false,
+    "holdSecondsChanged": false
+  },
+  "priorAttempt003Inventory": {
+    "relativeRoot": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003",
+    "fileCount": 33,
+    "contentDigestSha256": "51d5183db0a6654d89c61fb600378c224b480d8ed9c85aeca4db53d26dc122c8",
+    "digestIncludes": [
+      "relative path",
+      "length",
+      "SHA-256",
+      "attributes",
+      "creation time UTC",
+      "last-write time UTC"
+    ]
+  },
+  "unityExecutable": {
+    "absolutePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "lengthBytes": 35821616,
+    "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "zeroStreamKnownAnswer": {
+    "lengthBytes": 35821616,
+    "sha256": "35dfe741f6746e362540e6204db074af859f43751a8a071e4669a118bdf77732"
+  },
+  "d3V3_1Preservation": {
+    "sourceOrBinaryChangesAuthorized": false,
+    "contractRelativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+    "contractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "knownAnswerReceiptSha256": "f2ec81f73a8e77c05f84b95a8e44aa5565e07628418f20d28e09f882ede53139",
+    "runnerSchemaIntegrationReceiptSha256": "b0dbcc4d178f5770325ceaea613c0d736c27b52849f33f413953e69f488eb41c"
+  },
+  "bindings": [
+    {
+      "role": "attempt-004-authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Rule_Repair_Attempt_004_Authorization.v1.json",
+      "lengthBytes": 5374,
+      "sha256": "e318825d507a15b991b07641cc5cbaa41d8ca321d36f8d8caeadd38ae124cc05"
+    },
+    {
+      "role": "attempt-004-plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Rule_Repair_Attempt_004_Plan.v1.md",
+      "lengthBytes": 4145,
+      "sha256": "02bfcfb1b7fe4e614b34d86c6d74864222fef284407b4787e28703f31101eaa5"
+    },
+    {
+      "role": "attempt-004-probe-source",
+      "relativePath": "Research/Gate14Re-ME/Tools/Gate14ReMEUnityExecutableIdentityAuditV4.cs",
+      "lengthBytes": 45381,
+      "sha256": "9ef956d7a8a2ff0ec2efc5450ae7e15d0975299e75ac0016b6b51b332d9ac0c2"
+    },
+    {
+      "role": "attempt-004-orchestrator",
+      "relativePath": "Research/Gate14Re-ME/Tools/Invoke-Gate14ReMEUnityExecutableIdentityAuditV4.ps1",
+      "lengthBytes": 68686,
+      "sha256": "3317558dd838137c7fba783262d465b967da60e232e6a64c10d1af1acf23a747"
+    },
+    {
+      "role": "parent-status-v15",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v15.json",
+      "lengthBytes": 1460,
+      "sha256": "d2c40956c43987bebda84e1f0cd7105408e2615183cc64f943dd16cbeb21283f"
+    },
+    {
+      "role": "attempt-003-source-freeze-manifest",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Audit_Attempt_003_Freeze_Manifest.v1.json",
+      "lengthBytes": 9724,
+      "sha256": "3278942738ce33972c889de5fef424012346beb8c307e216a081b0dfa5062d0c"
+    },
+    {
+      "role": "attempt-003-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/failure-receipt.v1.json",
+      "lengthBytes": 1691,
+      "sha256": "26a7f349e22d5233338206d1ed9569443208971a36bb1e07f7909e7d585ab524"
+    },
+    {
+      "role": "attempt-003-process-launch-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/process-launch-receipt.v1.json",
+      "lengthBytes": 2621,
+      "sha256": "0e3bf1d1e1586ebab4730b40c9b2b9828c9028b5284facdd5c4e737251cd2b7a"
+    },
+    {
+      "role": "attempt-003-external-prelaunch-fingerprint",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/external-prelaunch-fingerprint.v1.json",
+      "lengthBytes": 103397,
+      "sha256": "ed00a181b96e59e2de0bddb0f3330dfadd904f2922f9ec9806c04103f105ae0e"
+    },
+    {
+      "role": "attempt-003-external-concurrent-fingerprint",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/external-concurrent-fingerprint.v1.json",
+      "lengthBytes": 103414,
+      "sha256": "c5f90113e8bb47a16ea9cccea98d3d473e172e103bf5edfabbcb2c8352e718ef"
+    },
+    {
+      "role": "attempt-003-ready-snapshot",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/unity-output/in-process-ready-snapshot.v1.json",
+      "lengthBytes": 134548,
+      "sha256": "9f05099c208de0842464cf26e87402c38576375086e1989379c6b2cfa97d1ffc"
+    },
+    {
+      "role": "attempt-003-unity-probe-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-003/unity-output/unity-identity-probe-receipt.v1.json",
+      "lengthBytes": 270326,
+      "sha256": "c8917aa13b939af447f258785c15c78d8efdeba1f60991c27f20287ff42b0abf"
+    },
+    {
+      "role": "d3-v3-1-qualified-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "lengthBytes": 6971,
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    {
+      "role": "d3-v3-1-known-answer-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-014-d3-v3-1-known-answer-v2/known-answer-output/d3-v3-1-known-answer-receipt.v2.json",
+      "lengthBytes": 70901,
+      "sha256": "f2ec81f73a8e77c05f84b95a8e44aa5565e07628418f20d28e09f882ede53139"
+    },
+    {
+      "role": "d3-v3-1-runner-schema-integration-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/unity-self-check-output/integration-self-check-receipt.v1.json",
+      "lengthBytes": 8471,
+      "sha256": "b0dbcc4d178f5770325ceaea613c0d736c27b52849f33f413953e69f488eb41c"
+    },
+    {
+      "role": "retained-schema-corrigendum-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/failure-receipt.v1.json",
+      "lengthBytes": 4986,
+      "sha256": "a92d258027ea0add02e874d3b73b20c7790f18b904af7d051a3ccc09e5eb69f1"
+    }
+  ],
+  "prohibitedActivityCountersAtFreeze": {
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  }
+}

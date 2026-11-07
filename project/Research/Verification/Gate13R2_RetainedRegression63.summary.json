@@ -1,0 +1,43 @@
+{
+    "schemaVersion":  1,
+    "testId":  "gate12-analysis-unit-tests-v1",
+    "savedAt":  "2026-10-06T14:07:56.3535828+08:00",
+    "modulePath":  "H:\\DDM_Final_Project\\Research\\Gate12PilotAnalysis.psm1",
+    "moduleSha256":  "96194e77239ad1e842d6ccacd2ffc870afdf8d3a2701144ae05dadeb472fe676",
+    "frozenPlanSha256":  "cc63505f444223c06a7f69a979c6a0d2e7f0d29e8217d910fe46b61db5618ce4",
+    "formulaVectors":  [
+                           {
+                               "sigma":  0,
+                               "raw":  0,
+                               "required":  32,
+                               "candidate":  32,
+                               "status":  "within-cap"
+                           },
+                           {
+                               "sigma":  0.15,
+                               "raw":  37,
+                               "required":  40,
+                               "candidate":  40,
+                               "status":  "within-cap"
+                           },
+                           {
+                               "sigma":  0.24,
+                               "raw":  93,
+                               "required":  96,
+                               "candidate":  96,
+                               "status":  "within-cap"
+                           },
+                           {
+                               "sigma":  0.25,
+                               "raw":  101,
+                               "required":  104,
+                               "candidate":  100,
+                               "status":  "blocked-amendment-required"
+                           }
+                       ],
+    "assertionCount":  63,
+    "failures":  [
+
+                 ],
+    "passed":  true
+}

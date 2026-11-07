@@ -1,0 +1,100 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate13r-36h-expected-negative-lock-hygiene-unit-v13",
+    "completedAtUtc":  "2026-10-08T05:31:35.7210829Z",
+    "moduleRelativePath":  "Research/Gate10RLockHygieneV3.psm1",
+    "moduleSha256":  "9eba2284dc90fcf6dbbc59080301c1ac6db14c5029f8adab69db234c94f879d6",
+    "assertionCount":  14,
+    "passedAssertionCount":  14,
+    "failedAssertionCount":  0,
+    "assertions":  [
+                       {
+                           "name":  "valid-expected-negative",
+                           "passed":  true,
+                           "detail":  ""
+                       },
+                       {
+                           "name":  "positive-role-refused",
+                           "passed":  true,
+                           "detail":  "cleanup-role-not-authorized"
+                       },
+                       {
+                           "name":  "live-owner-refused",
+                           "passed":  true,
+                           "detail":  "owned-process-still-alive"
+                       },
+                       {
+                           "name":  "nonzero-unity-refused",
+                           "passed":  true,
+                           "detail":  "unity-process-count-not-zero"
+                       },
+                       {
+                           "name":  "wrong-path-refused",
+                           "passed":  true,
+                           "detail":  "lock-path-not-exact"
+                       },
+                       {
+                           "name":  "reparse-refused",
+                           "passed":  true,
+                           "detail":  "lock-is-reparse-point"
+                       },
+                       {
+                           "name":  "nonzero-bytes-refused",
+                           "passed":  true,
+                           "detail":  "lock-is-not-zero-bytes"
+                       },
+                       {
+                           "name":  "nonempty-hash-refused",
+                           "passed":  true,
+                           "detail":  "lock-sha256-is-not-empty-file-hash"
+                       },
+                       {
+                           "name":  "shared-open-refused",
+                           "passed":  true,
+                           "detail":  "lock-cannot-be-opened-exclusively"
+                       },
+                       {
+                           "name":  "timestamp-refused",
+                           "passed":  true,
+                           "detail":  "lock-creation-outside-owned-window"
+                       },
+                       {
+                           "name":  "controlled-cleanup-passed",
+                           "passed":  true,
+                           "detail":  "controlled-expected-negative-cleanup"
+                       },
+                       {
+                           "name":  "capture-receipt-bound",
+                           "passed":  true,
+                           "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v13\\LockHygieneUnitV13\\Evidence\\g13r36-v5-synthetic-negative.lock-capture.json"
+                       },
+                       {
+                           "name":  "completion-receipt-bound",
+                           "passed":  true,
+                           "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v13\\LockHygieneUnitV13\\Evidence\\g13r36-v5-synthetic-negative.lock-cleanup.json"
+                       },
+                       {
+                           "name":  "unity-remained-zero",
+                           "passed":  true,
+                           "detail":  "No Unity process was started."
+                       }
+                   ],
+    "failures":  [
+
+                 ],
+    "cleanupResult":  {
+                          "mode":  "controlled-expected-negative-cleanup",
+                          "captureReceiptPath":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v13\\LockHygieneUnitV13\\Evidence\\g13r36-v5-synthetic-negative.lock-capture.json",
+                          "captureReceiptSha256":  "eb20bb93977d9bf71965b4a3d7ae0cb0bb793af0f14e3fc45890dc06706ab851",
+                          "completionReceiptPath":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_36h_10pct_4Lane_PreImplementation\\v13\\LockHygieneUnitV13\\Evidence\\g13r36-v5-synthetic-negative.lock-cleanup.json",
+                          "completionReceiptSha256":  "01a224bc57e7a6b1644a493914518eae11bbac27bcfa1860688f6df29c2afb81",
+                          "passed":  true
+                      },
+    "unityProcessCount":  0,
+    "pilotRootCreated":  false,
+    "formalRootCreated":  false,
+    "error":  "",
+    "formalCampaign":  false,
+    "pilotExecuted":  false,
+    "passed":  true
+}

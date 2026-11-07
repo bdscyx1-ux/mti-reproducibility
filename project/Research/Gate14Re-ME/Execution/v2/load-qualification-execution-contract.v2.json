@@ -1,0 +1,168 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-contract-v2",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_EXECUTION_BINDING_V2_QUALIFICATION_EXECUTION_UNAUTHORIZED",
+  "version": 2,
+  "createdLocalDate": "2026-10-17",
+  "repairAuthorizationId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-001",
+  "repairAttemptId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-002",
+  "retainedPriorFailure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/failure-receipt.v1.json",
+    "sha256": "feea3650801239a1e92ced9031b137f9c22f7e9a9a483d05a6456353f1827b57",
+    "statusRetained": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_IMPLEMENTATION_BINDING_MISMATCH",
+    "modifiedOrReclassified": false
+  },
+  "retainedRepairAttempt001Failure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-001/failure-receipt.v1.json",
+    "sha256": "e5842af9ec3a6205aa9e9014ad1fddd6fab2f99696995577575c4ae4607d4c3e",
+    "statusRetained": "FAILED_CLOSED_EXECUTION_BINDING_SUPERVISOR_V2_REPAIR",
+    "exactFailure": "prelaunch creation timestamp mismatch: TRUSTED_NOT_STRICT_ISO8601_OFFSET_TIMESTAMP",
+    "unityInvocationCount": 0,
+    "sourceAndEvidenceFreezeManifestSha256": "69dd2ba7f58d51b3de7b65cac74285661d4bfd63742c59778ec938a275bbde0a",
+    "modifiedOrReclassified": false
+  },
+  "entryPoint": {
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v2/Run-Gate14ReMELoadQualification.v2.ps1",
+    "supervisorSha256": "a7e997f7b9d1c48753294b437566d40cf448106ef140e16a2780ce79b7059771",
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "runnerSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "runnerExecuteMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV2.Run",
+    "receiptGeneration": 2
+  },
+  "reservedRoots": {
+    "qualificationMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+    "completePerObservationDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-001",
+    "resumeOverwriteMergeTopUpAllowed": false
+  },
+  "frozenBindings": {
+    "inputValidationSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    "planningSchemaBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    },
+    "instrumentContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"
+    },
+    "outputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+      "sha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb"
+    },
+    "qualifiedD3V31": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+      "semanticVersion": "3.1"
+    },
+    "planningAssetsManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json",
+      "sha256": "7e0cbe77cb8bb8f84642856c6356d318f708e168b52a92e6e348cdf948169aca"
+    },
+    "schedule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+      "rows": 162
+    },
+    "sealedIdentityBinding": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+      "sha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+      "mustRemainSealedDuringQualification": true
+    },
+    "trustedUnityIdentityRule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    "timestampComparator": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"
+    },
+    "typedParquetRuntime": {
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    "structuralV2": {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v2.py",
+      "sha256": "daa1fc48077cc0cb8c62221956355a35c74e8b946660b683f7178e2072e9bc0e"
+    },
+    "deliveryV2": {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2.py",
+      "sha256": "5e9f8d8c3403321fb9e1b2b3f67fef00a963bf85f25c66d98bc2c41971434ec4"
+    },
+    "completeRawDeliveryContract": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    }
+  },
+  "unityIdentityPolicy": {
+    "everyUnityProcess": true,
+    "externalPhases": ["PRELAUNCH", "LIVE_CONCURRENT", "POST_EXIT"],
+    "twoIndependentFullFileSha256Methods": true,
+    "chunkSizeBytes": 65536,
+    "pathNtfsFileIdentityPeAuthenticodeLengthAndTimestampsRequired": true,
+    "timestampEqualityBasis": "STRICT_DATETIMEOFFSET_PARSE_THEN_UTC_TICKS",
+    "processComposite": ["PID", "creationTimeUtc", "executablePath", "exactCommandLine", "executeMethod", "projectPath", "outputPath"],
+    "naturalExitRequired": true,
+    "signalOrForcedTerminationAllowed": false,
+    "retryAllowed": false,
+    "inProcessPathEquivalenceBasis": "inherited frozen evidence in trusted Unity identity rule v1; RunnerV2 source remains byte-identical and no wrapper is introduced",
+    "inProcessByteReadHashesAuthoritative": false,
+    "anyMismatchDisposition": "FAIL_CLOSED"
+  },
+  "executionOrder": {
+    "maximumConcurrentUnityProcesses": 1,
+    "instrumentSelfTestBeforeAnyOracleOrLane": true,
+    "all162AlgorithmNeutralOracleProcessesBeforeAnyLane": true,
+    "twelveFreshEmptyBoundaryProcessesBeforeAnyLane": true,
+    "strictWilliamsSixLaneOrderWithinEachSuperblock": true,
+    "oneFreshUnityProcessPerAlgorithmLane": true,
+    "zeroReplacementPolicy": "ZERO_REPLACEMENT_FAIL_STOP",
+    "wholeSuperblockReplacementAssetsGeneratedOrConsumed": false,
+    "perAlgorithmRetryResumeTopUpMergeSkipOrReorderProhibited": true
+  },
+  "expectedCardinalities": {
+    "coreSuperblocks": 144,
+    "stressSuperblocks": 18,
+    "totalSuperblocks": 162,
+    "algorithmLanesPerSuperblock": 6,
+    "freshAlgorithmProcesses": 972,
+    "oracleProcesses": 162,
+    "emptyBoundaryProcesses": 12,
+    "instrumentSelfTestProcesses": 1,
+    "expectedTotalUnityProcessesWithoutFailure": 1147,
+    "eventGroupsPerLane": 24,
+    "eventGroupRows": 23328,
+    "d3WindowsPerLane": 25,
+    "processResourceRows": 25272,
+    "emptyBoundaryRows": 12000
+  },
+  "postAcquisitionTerminalChain": [
+    "write acquisition-complete.v2 with no inference",
+    "run structural-v2 qualification-full and require PASS_SCHEMA_V2_STRUCTURAL_COMPLETE_RAW_NO_INFERENCE",
+    "run delivery-v2 build to a new disjoint delivery root",
+    "run delivery-v2 verify and require PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+    "freeze qualification-complete.v2 declaring complete per-observation delivery and no analysis"
+  ],
+  "failClosedRules": [
+    "No measured or delivery root is created before every authorization, path, hash, manifest, schedule, identity, budget, storage and process precondition passes.",
+    "Any source, schema, runtime, schedule, identity-rule, timestamp-comparator, structural-tool or delivery-tool drift stops before acquisition.",
+    "Any Unity identity, process identity, natural-exit, oracle, instrument, lane, receipt, cardinality, structural or delivery failure stops with preserved evidence and no retry or replacement.",
+    "No qualification observation is admitted to formal estimation.",
+    "No cross-algorithm effect, rank, weighted score, winner or formal decision is computed by the supervisor, structural-v2 or delivery-v2 chain."
+  ],
+  "currentAuthorization": {
+    "supervisorV2RepairAuthorized": true,
+    "offlineStaticKnownAnswerAuthorized": true,
+    "singleAlgorithmFreeUnityCompileIdentityProbeAuthorized": true,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "replacementAssetGenerationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "activationRule": "This contract and supervisor remain inert until a later separate exact-hash execution authorization satisfies every v2 precondition."
+}

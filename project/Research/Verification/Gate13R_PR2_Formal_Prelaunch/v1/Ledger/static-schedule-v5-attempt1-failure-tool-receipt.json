@@ -1,0 +1,19 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 active implementation and deterministic schedule audit V5 attempt 1",
+  "command": "Test-Gate13RPR2FormalExecutionAdapterV5.py validation-only",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "gate_tokens": [
+    "PRELAUNCH-VALIDATOR-IMPLEMENTATION-DEFECT",
+    "MANIFEST-PROPERTY-NAME-MISMATCH",
+    "FORMAL-ROOT-ABSENT",
+    "UNITY-NOT-LAUNCHED"
+  ],
+  "input_sha256": {
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/StaticScheduleV5Attempt1Failure/failure-receipt.json": "bff49268de27906b147cd97c5f61e0716094adfff8f044cea916b3b2fe327919",
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/StaticScheduleV5Attempt1Failure/failure-checkpoint.json": "37424f870bda3af4ec5e3d907bfa181fe8e83dd50e752433c138497a3e24f161",
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/StaticScheduleV5Attempt1Failure/partial-output-manifest.json": "7fdf1ffcd2066f6528b4c3782df0e9f4068c1dd1a9a4484ecb43d57a18619d7e"
+  }
+}

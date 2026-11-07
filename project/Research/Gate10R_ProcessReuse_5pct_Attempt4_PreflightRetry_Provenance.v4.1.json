@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "provenanceId": "gate10r-attempt4-outside-preflight-retry1-provenance-v4.1",
+  "createdAtUtc": "2026-10-06T15:04:55.0000000Z",
+  "status": "FROZEN-READY-FOR-OUTSIDE-PREFLIGHT-V2",
+  "attempt": 4,
+  "preflightExecutionOrdinal": 2,
+  "changeClass": "EXPECTED-NEGATIVE-CHILD-EXIT-CAPTURE-ONLY",
+  "formalCampaign": false,
+  "baseProvenance": {
+    "relativePath": "Research/Gate10R_ProcessReuse_5pct_Attempt4_Provenance.v4.json",
+    "bytes": 13701,
+    "sha256": "6ea15fbd9e9c9755c6d69c56e7db15fa55de0239fdba7d4a14d352035f72f482"
+  },
+  "failedPreflight": {
+    "root": "Research/Verification/Gate10R_Attempt4_Preflight/v1",
+    "resumeAllowed": false,
+    "overwriteAllowed": false,
+    "failureReceiptSha256": "126619727e9603fb14036bcd9c5c07a817f738a3fe8bdcaa2dd3db8bdd6a84ac",
+    "partialManifestSha256": "e9684290a408ab5b15bc36a9e03052c5e5884fd086e2a44e8269750fc723b584",
+    "checkpointSha256": "0a2f791e2a10961ffe98d72925dbf48808c147990bd67ac7e33f5a2b389f55ec"
+  },
+  "retryPreflightRoot": "Research/Verification/Gate10R_Attempt4_Preflight/v2",
+  "repairBoundary": {
+    "allowed": "capture expected-negative Windows PowerShell child stdout, stderr, and ExitCode through System.Diagnostics.Process",
+    "retainedHarnessChanged": false,
+    "researchSemanticsChanged": false,
+    "officialV4RootCreated": false,
+    "unityStarted": false
+  },
+  "boundFiles": [
+    {
+      "relativePath": "Research/Verification/Run-Gate10RAttempt4OutsideRootPreflightV4R1.ps1",
+      "bytes": 17841,
+      "sha256": "02d15e0a201879aa687d08f472d0698a013d1a2ae0ab1cfbe0c90174f7c3d59b"
+    },
+    {
+      "relativePath": "Research/Verification/Run-Gate10RAttempt4OfficialPreflightV4R1.ps1",
+      "bytes": 10849,
+      "sha256": "71800b857bdbe83198d53225131cb3be105cc0586b4c384ca747c5905d8d0a75"
+    },
+    {
+      "relativePath": "Research/Verification/Run-Gate10RFinalAuditV4R1.ps1",
+      "bytes": 20894,
+      "sha256": "f2410e20b9d5195bf315b4041f1785589ac1e5736709c7029954122b729b91cd"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_Attempt4_Preflight/v1/Gate10R_Attempt4_OutsideRoot_Preflight_Failure_Receipt.v1.json",
+      "bytes": 1356,
+      "sha256": "126619727e9603fb14036bcd9c5c07a817f738a3fe8bdcaa2dd3db8bdd6a84ac"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_Attempt4_Preflight/v1/Gate10R_Attempt4_OutsideRoot_Preflight_Partial_Manifest.v1.json",
+      "bytes": 938,
+      "sha256": "e9684290a408ab5b15bc36a9e03052c5e5884fd086e2a44e8269750fc723b584"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_Attempt4_Preflight/v1/gate10r-attempt4-outside-root-preflight-checkpoint.v1.json",
+      "bytes": 660,
+      "sha256": "0a2f791e2a10961ffe98d72925dbf48808c147990bd67ac7e33f5a2b389f55ec"
+    }
+  ],
+  "downstreamAuthorization": {
+    "gate11R": false,
+    "gate12R": false,
+    "gate13R": false
+  }
+}

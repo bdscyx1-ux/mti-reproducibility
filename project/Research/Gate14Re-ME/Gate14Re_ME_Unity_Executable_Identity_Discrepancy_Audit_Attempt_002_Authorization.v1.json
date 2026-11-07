@@ -1,0 +1,112 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-discrepancy-audit-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-discrepancy-audit-attempt-002",
+  "status": "AUTHORIZED_ALGORITHM_FREE_UNITY_EXECUTABLE_IDENTITY_DISCREPANCY_AUDIT",
+  "authorizedAtUtc": "2026-10-17T09:35:35.0814470Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME Unity 可执行身份差异审计 attempt‑002：保留 attempt‑001 的全部失败证据；只允许修复冻结编排器 `Get-HashValue` 返回表达式的括号/类型转换错误，重新计算并冻结源码哈希，然后执行一次原定的隔离无算法 Unity 身份探针。不得修改审计方法、扩大观测范围或自动重试；仍禁止 schema compatibility 自检、调度、输入、身份映射、measured root、planner、算法 lane、正式采集、分析、排名及赢家裁决。",
+  "scopeResolution": {
+    "basis": "Identity-audit attempt-001 failed before Unity launch because the frozen PowerShell orchestrator parsed the return expression as a property access on a cast expression. The failure receipt records unityInvocationCount=0.",
+    "authorizedStoppingPoint": "Create versioned attempt-002 authorization, plan, diagnostic-source copy, orchestrator copy and source-freeze manifest; preserve attempt-001 byte-for-byte; apply exactly one semantic repair in Get-HashValue; then invoke the original isolated algorithm-free Unity identity probe at most once and freeze its terminal evidence.",
+    "auditMethodMayChange": false,
+    "observationScopeMayExpand": false,
+    "automaticRetryAuthorized": false,
+    "scientificDesignChangeAuthorized": false,
+    "schemaCompatibilitySelfCheckRetryAuthorized": false,
+    "qualificationPlanningAuthorized": false,
+    "algorithmExecutionAuthorized": false
+  },
+  "authorizedActions": {
+    "retainAttempt001FailureEvidence": true,
+    "createVersionedAttempt002SourceCopies": true,
+    "repairGetHashValueReturnParenthesesAndTypeConversionOnly": true,
+    "updateAttempt002EvidencePathsAuthorizationIdAndVersionedStatusBinding": true,
+    "recomputeAndFreezeAttempt002SourceHashes": true,
+    "launchExactlyOneOriginalIsolatedAlgorithmFreeUnityIdentityProbe": true,
+    "freezeAttempt002DiagnosticEvidenceAndTerminalStatus": true
+  },
+  "executionLimits": {
+    "maximumUnityBatchmodeInvocations": 1,
+    "maximumUnityExecuteMethodInvocations": 1,
+    "permittedExecuteMethod": "DDM.Research.Editor.UnityExecutableIdentityAuditAttempt001.Gate14ReMEUnityExecutableIdentityAuditV1.Run",
+    "permittedVerificationRootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-002",
+    "permittedUnityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "permittedUnityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "inProcessObservationHoldSeconds": 30,
+    "automaticUnityRetryAuthorized": false,
+    "processSignalOrForcedTerminationAuthorized": false
+  },
+  "frozenAttempt001Bindings": {
+    "authorization": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Discrepancy_Audit_Authorization.v1.json",
+      "lengthBytes": 6048,
+      "sha256": "604b508983eb3e2c715252ce650a6f82984594c1da0bb2928e2fd9731dd54571"
+    },
+    "plan": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Discrepancy_Audit_Plan.v1.md",
+      "lengthBytes": 5688,
+      "sha256": "1ad310ec4a511fba3befd34a610f7672b79f3ddc9fb7dad0bc645b039f2209d5"
+    },
+    "probeSource": {
+      "relativePath": "Research/Gate14Re-ME/Tools/Gate14ReMEUnityExecutableIdentityAuditV1.cs",
+      "lengthBytes": 40495,
+      "sha256": "67619c17634ba460c406872e87c9debaaeb586fcff099eb432a156252f2821ab"
+    },
+    "orchestrator": {
+      "relativePath": "Research/Gate14Re-ME/Tools/Invoke-Gate14ReMEUnityExecutableIdentityAuditV1.ps1",
+      "lengthBytes": 61411,
+      "sha256": "664e39cd9ebafcb2d45bb5b6df234a9a69802ef6d5b2d9a1e47fb65f73b50ed1"
+    },
+    "preexecutionFreezeManifest": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Unity_Executable_Identity_Audit_Freeze_Manifest.v1.json",
+      "lengthBytes": 3831,
+      "sha256": "081d798b2bf621014220fd778b958b852f0b528b8dab4bb7b123d602c8bb2be0"
+    },
+    "failureReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-001/failure-receipt.v1.json",
+      "lengthBytes": 1758,
+      "sha256": "beeabefd60221e11afdf8fb565d986c2af47ac2a69594e12fa91d6602a3720ae"
+    },
+    "priorAttemptInventory": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-001/prior-attempt-inventory.before.v1.json",
+      "lengthBytes": 2664,
+      "sha256": "3dc229ba9379a00c583ead552d4f13d089d07fdbe9f7965264c0d6dd28a4634c"
+    },
+    "terminalStatus": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v13.json",
+      "lengthBytes": 1460,
+      "sha256": "69342e693f9a646a12cfd5a83a2d9d3f298d0403d62e2bab10d62a7fbfcb22b6"
+    }
+  },
+  "permittedSourceDelta": {
+    "semanticRepairCount": 1,
+    "semanticRepair": "In Get-HashValue, replace return [string]$matches[0].sha256 with return [string]($matches[0].sha256).",
+    "mechanicalAttemptVersioningOnly": [
+      "attempt-002 authorization and evidence-root identifiers",
+      "attempt-002 authorization, plan, probe-source and orchestrator paths",
+      "parent status v13 and new terminal status v14 bindings",
+      "attempt-002 current-evidence relative paths"
+    ],
+    "probeObservationFieldsChanged": false,
+    "classificationLogicChanged": false,
+    "trustedRuleLogicChanged": false
+  },
+  "prohibitedActions": {
+    "modifyOrDeleteAttempt001Evidence": true,
+    "modifyIdentityAuditMethod": true,
+    "expandObservationScope": true,
+    "automaticallyRetryUnityIdentityProbe": true,
+    "invokeInputSchemaCompatibilitySelfCheckV1": true,
+    "invokeAnyGate14ReMEPlanner": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputs": true,
+    "generateAnonymousIdentityMapping": true,
+    "createAnyMeasuredRoot": true,
+    "executeAnyAlgorithmLane": true,
+    "performFormalCollection": true,
+    "performFormalAnalysis": true,
+    "rankAlgorithms": true,
+    "adjudicateWinner": true
+  },
+  "terminalRule": "Pass only if the complete attempt-001 frozen set remains byte-identical, the attempt-002 source delta is limited to the authorized one-line Get-HashValue repair plus mechanical version/evidence routing, exactly one original isolated algorithm-free Unity identity-probe invocation occurs, no retry or prohibited activity occurs, and the original audit reaches its own pass condition. Any other failure consumes attempt-002 and fails closed without repair or retry."
+}

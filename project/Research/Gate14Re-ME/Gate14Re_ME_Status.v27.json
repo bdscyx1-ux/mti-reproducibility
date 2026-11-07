@@ -1,0 +1,78 @@
+{
+  "schema": "gate14re-me-status-v27",
+  "studyId": "Gate14Re-ME",
+  "status": "QUALIFICATION_PLANNING_FREEZE_V2_PASS_ASSET_GENERATION_NOT_AUTHORIZED",
+  "version": 27,
+  "updatedAtUtc": "2026-10-17T13:35:30.0000000Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v26.json",
+    "sha256": "5fe7400ca466119a15c593c74ac0e1eb0c56bceb4eb5fb00a8fb9bf8a35c1b26",
+    "retained": true,
+    "reclassified": false
+  },
+  "historicalQualificationPlanningAttempt001": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-attempt-001",
+    "retainedStatus": "QUALIFICATION_PLANNING_FREEZE_FAILED_CLOSED_INPUT_SCHEMA_RUNTIME_CONTRACT_CONTRADICTION",
+    "failureReceiptSha256": "f3ebfb70faba9d48d39d12eeff5fe64cfc2776ac73c0b672e1ecf04273b4b2c6",
+    "modified": false,
+    "deleted": false,
+    "reclassified": false
+  },
+  "qualificationPlanningFreezeV2Attempt001": {
+    "authorizationId": "gate14re-me-qualification-planning-freeze-v2-attempt-001",
+    "canonicalEvidenceRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001",
+    "passed": true,
+    "terminalReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/terminal-receipt.v1.json",
+    "terminalReceiptSha256": "bdf45059f4ccd9bffed49b3e63c3256719703ec292c8527ac87a6f82bc9e0c17",
+    "qualificationDesignRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/qualification-design-freeze.v2.json",
+    "qualificationDesignSha256": "067736663b75c7d4fdb545e947959da787a0ee727c276fd0a6e9385bd831f390",
+    "humanReadablePlanRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/qualification-planning-freeze.v2.md",
+    "humanReadablePlanSha256": "820b74a9a1e0e10d853b88bc78208d0bc68dfd9fb9ea7e1cb3be39455852756f",
+    "validationReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/preflight-validation-receipt.v1.json",
+    "validationReceiptSha256": "54eebc142c53301da706fe970740af96a04df851c2728e5fde37996551618103",
+    "sourceAndEvidenceManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-freeze-v2-attempt-001/source-and-evidence-freeze-manifest.v1.json",
+    "sourceAndEvidenceManifestSha256": "7ad7b11ffafaaeadf8fda3e397af038b2f62788a7908bd727d51194089acd352"
+  },
+  "adoptedQualificationPlanningDesign": {
+    "designId": "gate14re-me-load-qualification-planning-v2",
+    "inputSchemaV2Sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117",
+    "planningSchemaBindingV2Sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7",
+    "algorithms": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF", "IDFF"],
+    "coreStructuralCells": 48,
+    "corePilotSuperblocks": 144,
+    "stressPilotSuperblocks": 18,
+    "totalPilotSuperblocks": 162,
+    "freshAlgorithmProcesses": 972,
+    "eventGroupsPerLane": 24,
+    "expectedEventGroupRows": 23328,
+    "completePerObservationRawDeliveryRequired": true,
+    "precollectionLoadQualificationRequired": true,
+    "crossAlgorithmQualificationComparisonAllowed": false,
+    "qualificationRankingOrWinnerAllowed": false
+  },
+  "instrumentEvidenceState": {
+    "D2KnownAnswerAndSemanticInvariance": "BOUND_PASS",
+    "D3V31CumulativeManagedAllocation": "BOUND_PASS",
+    "D4PersistentStateSyntheticFixture": "BOUND_PASS",
+    "clockMonotonicity": "BOUND_PASS",
+    "completeRawExportTooling": "BOUND_PASS",
+    "trustedUnityLaunchIdentityRule": "BOUND",
+    "legacyD3Failure": "RETAINED_NOT_RECLASSIFIED"
+  },
+  "scientificBoundary": {
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "unityInvocations": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "nextRequiredAction": "Obtain a new, separate authorization for a nonexecuting qualification planning-asset generation stage that creates and freezes only one sealed six-algorithm anonymous identity binding, 162 input-schema-v2 qualification input bundles, and a 162-row Williams-balanced schedule. Measured-root creation, Unity, planner or algorithm-lane execution, qualification observations, formal collection, formal analysis, ranking and winner adjudication remain unauthorized."
+}

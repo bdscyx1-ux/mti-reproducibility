@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "gate12r-pilot-attempt2-terminal-preservation-manifest-v1",
+  "savedAtUtc": "2026-10-07T14:40:34.9583513Z",
+  "pilotRoot": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate12R_ProcessReuse_5pct\\v2",
+  "status": "FAILED-NO-RESUME-NO-MERGE",
+  "formalCampaign": false,
+  "excludedFromFormalAnalysis": true,
+  "eligibleForSampleSizeEstimation": false,
+  "eligibleForGate13R": false,
+  "automaticRetryAuthorizedForThisRoot": false,
+  "automaticResumeAuthorizedForThisRoot": false,
+  "partialAttemptMergeAuthorized": false,
+  "completedEntryCount": 428,
+  "warmupBlockCount": 8,
+  "coldControlCount": 36,
+  "completedMeasuredBlockCount": 384,
+  "completedMeasuredSampleCount": 1152,
+  "failurePhase": "post-measured-storage-feasibility-analysis",
+  "primaryHardFailure": {
+    "message": "Formal storage projection is not feasible under the frozen p95 safety rule.",
+    "sharedGoalCandidateNFormal": 432,
+    "sharedGoalProjectedRawBytesWithSafety": 995602606848,
+    "sharedGoalRequiredFreeBytesIncludingReserve": 1017077443328,
+    "availableFreeBytesAtAnalysis": 154941710336,
+    "frozenReserveBytes": 21474836480,
+    "frozenP95SafetyMultiplier": 1.5
+  },
+  "candidateNFormalEvidenceOnly": {
+    "four-algorithm-shared-goal-v1": 432,
+    "per-agent-heterogeneous-goal-v1": 264,
+    "grouped-field-heterogeneous-goal-v1": 68,
+    "mayBeUsedByLaterAttempt": false
+  },
+  "terminalEvidence": [
+    {
+      "name": "partial-output-manifest.json",
+      "rawBytes": 3360473,
+      "sha256": "ceee7b34eedb9d6cbd4053c138e8fc3c7da1526aeb8016d6ee00a3cd0089e0b7"
+    },
+    {
+      "name": "failure-receipt.json",
+      "rawBytes": 579,
+      "sha256": "8df99a8fa90de81dbd9114443173cedc4017c97406a1b6ccbe4d562a603ac2b4"
+    },
+    {
+      "name": "pilot-checkpoint.json",
+      "rawBytes": 717802,
+      "sha256": "87c4ff2cb71223c3f6789f667b5d8eff501a081fed13427f5ef2c339b5566ba3"
+    },
+    {
+      "name": "execution-receipt.json",
+      "rawBytes": 896,
+      "sha256": "da3642f92044333ee5db569c4d276a69633f8bc9b36a5b1f3e6589c69e641e58"
+    },
+    {
+      "name": "pilot-execution-manifest.json",
+      "rawBytes": 717913,
+      "sha256": "a5c60182047d1a660f6a8964407dfcc3ff772850e6a2259a75162f0be3b84ae2"
+    }
+  ],
+  "verifiedFileCountFromPartialManifest": 9497,
+  "verifiedRawBytesFromPartialManifest": 4370828399,
+  "rootFileCountIncludingPartialManifest": 9498,
+  "rootRawBytesIncludingPartialManifest": 4374188872,
+  "unexpectedFileCount": 0,
+  "independentFullHashAuditPassed": true,
+  "canonicalDuplicationAudit": {
+    "measuredSampleManifestCount": 1152,
+    "exactSourceIdentityCount": 1152,
+    "mismatchCount": 0,
+    "uniqueFrozenScenarioSourceCount": 9,
+    "uniqueFrozenScenarioSourceRawBytes": 29741125,
+    "duplicatedPerSampleCanonicalRawBytes": 3806864000
+  },
+  "reservedGate13RFormalRootAbsent": true
+}

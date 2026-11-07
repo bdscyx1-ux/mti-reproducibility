@@ -1,0 +1,45 @@
+{
+  "schema": "gate14re-me-formal-st-external-launch-observation-v2",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "status": "OBSERVED_SINGLE_LAUNCH_THEN_FAIL_CLOSED_AT_INSTRUMENT_SELF_TEST",
+  "authorizationId": "gate14re-me-formal-st-local-collection-successor-e3e12c4f-2622-48c0-9331-6590b6e024f5",
+  "supervisorProcess": {
+    "pid": 31776,
+    "creationTimeUtc": "2026-10-26T11:53:50.2076620Z",
+    "firstObservedAtUtc": "2026-10-26T11:53:50.1928994Z",
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "executableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "exactCommandLine": "\"C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_2/Run-Gate14ReMEFormalST.v5_2.ps1 -ProjectRoot H:/DDM_Final_Project -MeasuredRoot H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-002 -ExecutionAuthorization H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-002/formal-st-execution-authorization.v5.json -ExecutionAuthorizationSha256 2c8e9c3853b9674d0987bc552dbd0d91ff9635ab4fc12e8b4b1e6f07462bfd6c -ImplementationManifest H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_2/formal-st-implementation-manifest.v5_2.json -ImplementationManifestSha256 c956a991f439a1ef3bd5a7afc46a40105dd4006ef0a00a2734fd51f89ce4d745 -ExecutionContract H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_2/formal-st-acquisition-contract.v5_2.json -ExecutionContractSha256 4e9386f290785e434823db4fb86c3a5a891cd26070773df5a33524a6bf892ff3 -InputFreezeManifest H:/DDM_Final_Project/Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/formal-input-freeze-manifest.v5.json -InputFreezeManifestSha256 aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe -ResourceBudget H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_1/formal-st-operational-resource-budget.v5_1.json -ResourceBudgetSha256 973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2 -FairnessBinding H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json -FairnessBindingSha256 5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca -Schedule H:/DDM_Final_Project/Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/schedule/formal-st-williams-schedule.v5.jsonl -ScheduleSha256 45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3 -TrustedIdentityRule H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json -TrustedIdentityRuleSha256 f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06 -TimestampComparator H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1 -TimestampComparatorSha256 d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27 -UnityExecutable H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe -UnityExecutableSha256 0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "firstUnityProcess": {
+    "pid": 33128,
+    "creationTimeUtc": "2026-10-26T11:53:59.1795680Z",
+    "mode": "instrument-self-test",
+    "ordinal": 0,
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "executableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMEFormalSTRunnerV5_1.Run",
+    "commandLineQuitPresent": false,
+    "exitCode": 1
+  },
+  "terminalObservation": {
+    "observedAtUtc": "2026-10-26T11:54:43.2449392Z",
+    "supervisorStillPresent": false,
+    "activeUnityProcessCount": 0,
+    "measuredRootExists": true,
+    "measuredLaunchReceiptExists": true,
+    "processLedgerRows": 0,
+    "failureVoidLedgerRows": 0,
+    "replacementLedgerRows": 0,
+    "algorithmLaneExecutions": 0,
+    "formalAlgorithmObservationsProduced": 0
+  },
+  "bindings": {
+    "launchContractSha256": "cefe3159d96074a0f068c5b896c6d6c78cb357ffba2969d99c4407840969a01b",
+    "executionAuthorizationSha256": "2c8e9c3853b9674d0987bc552dbd0d91ff9635ab4fc12e8b4b1e6f07462bfd6c",
+    "exactCommandConfirmationSha256": "c696fbac5c5817ecda8f638b31b7f7373fdf02149882e93524b87c1365337ba3",
+    "measuredLaunchReceiptSha256": "d7ee0cc63ed8aafb6aece7f374499a7b0c42da7b9b6b1334ba43ef2607e98b6b"
+  }
+}

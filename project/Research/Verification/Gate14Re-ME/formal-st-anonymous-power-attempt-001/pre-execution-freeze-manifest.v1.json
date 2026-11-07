@@ -1,0 +1,55 @@
+{
+  "schema": "gate14re-me-formal-st-anonymous-power-pre-execution-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-anonymous-power-attempt-001",
+  "frozenAtUtc": "2026-10-20T02:40:07.1647901Z",
+  "status": "FROZEN_BEFORE_OBSERVATION_VALUE_ACCESS",
+  "files": [
+    {
+      "relativePath": "user-authorization-receipt.v1.json",
+      "bytes": 2111,
+      "sha256": "a89ea69729fa1c0752716ea604e0e0e209813bcea65fa92a9c31604f38fc283a"
+    },
+    {
+      "relativePath": "field-boundary.v1.json",
+      "bytes": 2573,
+      "sha256": "42dc6d6fdc9f0a834824ca008ee656cde9a2e3a257787362c72955bdc6d2c556"
+    },
+    {
+      "relativePath": "analysis-plan.v1.json",
+      "bytes": 6610,
+      "sha256": "1d4f37b8c6fa2395bca3384ef445bdab29c21f8812d36a0a5253f4210b13bcdc"
+    },
+    {
+      "relativePath": "anonymous_power_v1.py",
+      "bytes": 40945,
+      "sha256": "1d287c95f9dfaa3fc06ba70074e45ec6fe41bb3c77be6e96870646fb12dfe8aa"
+    },
+    {
+      "relativePath": "Run-AnonymousPower.v1.ps1",
+      "bytes": 2716,
+      "sha256": "1e4b91d58c7e5be77911b766e8ca15bb2904fbfb050a2249a3aed078f4d39e9c"
+    }
+  ],
+  "runtime": {
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1",
+    "pythonPackagesRoot": "Research/Gate14Re-ME/Runtime/v1/python-packages",
+    "requiredPackages": {
+      "numpy": "2.3.5",
+      "pyarrow": "25.0.1"
+    }
+  },
+  "scientificFreeze": {
+    "identityBlindNuisanceOnly": true,
+    "mipeRatio": 0.9,
+    "mipeLogRatioExact": -0.10536051565782628,
+    "candidateB": [36, 72, 108, 144],
+    "targetPowerAtLeast": 0.9,
+    "monteCarloDrawsPerOpaqueTargetPerB": 200000,
+    "movementTransferSentinel": "OMITTED",
+    "correctnessAndOracleHardGates": "RETAINED",
+    "sevenDayStopRuleHours": 168
+  },
+  "boundary": "No observation value was opened before this manifest froze the plan, field boundary, authorization receipt, implementation, and launcher. Schema-only inspection was performed."
+}

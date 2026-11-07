@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "repairId": "gate13r-pr2-validation-attempt4-schema-and-artifact-set-v2-repair-v1",
+  "status": "FROZEN-BEFORE-V2-GENERATION-AND-ATTEMPT4",
+  "failureSource": {
+    "relativePath": "Research/Gate13R_PR2_Validation_Attempt3_Failure_Receipt.v1.json",
+    "sha256": "d574ac17c270c3c153a980a4fa0eb1ee284a5c7851f947d4358a0aa7fb6b3c2f"
+  },
+  "repairScope": [
+    "Correct schema required/property name from matchedSuperblockCount to heterogeneousMatchedSuperblockCount.",
+    "Generate a complete v2 config/schedule/manifest/preflight/provenance/summary set bound to schema v2 and ordinal pre-write audit v2.",
+    "Target only the v2 artifact set from new v4 validation sources and a new v4 validation root."
+  ],
+  "activeSources": [
+    {"relativePath": "Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json", "rawBytes": 3611, "sha256": "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e"},
+    {"relativePath": "Research/New-Gate13RPR2FormalPreparationV2.py", "rawBytes": 32890, "sha256": "e1954e2e9133d29fe93fc73c0edf718958960eed423210d4f1b750eff0374feb"},
+    {"relativePath": "Research/Test-Gate13RPR2FormalPreparationV4.py", "rawBytes": 31352, "sha256": "903225555b0953508c38b26572b37a3ad5b84dd0d91f92d635908a32e7433ce1"},
+    {"relativePath": "Research/Verification/Run-Gate13RPR2NonExecutingValidationV4.ps1", "rawBytes": 10563, "sha256": "a68aeef7f0a51903c67c89478ea331e7fe9e9e866000c80d6784429bb46743db"}
+  ],
+  "preflight": {
+    "schemaJsonParsePassed": true,
+    "pythonAstParsePassed": true,
+    "powerShell7ParserPassed": true,
+    "windowsPowerShell51ParserPassed": true,
+    "attempts1Through3Preserved": true,
+    "v2OfficialArtifactNamesAbsent": true,
+    "v4ValidationRootAbsent": true,
+    "formalRootAbsent": true,
+    "unityEditorProcessCount": 0
+  },
+  "changeClassification": "NEW-SCHEMA-IMPLEMENTATION-DEFECT-ONLY",
+  "scientificContractChanged": false,
+  "scheduleArithmeticChanged": false,
+  "hardGateRelaxed": false
+}

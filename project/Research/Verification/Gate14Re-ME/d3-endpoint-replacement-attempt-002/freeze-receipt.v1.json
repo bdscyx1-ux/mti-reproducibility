@@ -1,0 +1,136 @@
+{
+  "schema": "gate14re-me-d3-endpoint-replacement-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-endpoint-replacement-attempt-002",
+  "status": "FROZEN_PASS_D3_V2_SOURCE_ONLY",
+  "version": 1,
+  "frozenAtUtc": "2026-10-17T05:52:51.5013578Z",
+  "outcome": {
+    "originalD3RetiredProspectively": true,
+    "replacementEndpointId": "D3",
+    "replacementSemanticVersion": 2,
+    "replacementEndpointName": "event-boundary managed-heap occupancy",
+    "counterId": "GC.GetTotalMemory(false)-managed-heap-occupancy-v1",
+    "primaryRawField": "eventGroupManagedHeapBytesEnd",
+    "cumulativeAllocationCounter": false,
+    "unityCompilationPassedForFinalSources": true,
+    "standaloneKnownAnswerPassed": true,
+    "negativeControlPassed": true,
+    "positiveControlsPassed": true,
+    "scaleSeparationPassed": true,
+    "reclamationControlPassed": true,
+    "sourceOnlyScientificFreezeCreated": true,
+    "integratedIntoQualificationRunner": false,
+    "integratedIntoOutputSchema": false
+  },
+  "compileEvidenceDisposition": {
+    "initialStaleBeeGraphCs2001Preserved": true,
+    "sameAuthorizedProcessAdditionalGraphRun": true,
+    "finalTundraBuildSuccessAfterStaleDiagnostic": true,
+    "finalAssembliesReloadedBeforeKnownAnswerReceipt": true,
+    "unresolvedFinalCompilerErrors": 0,
+    "unityProcessExitCode": 0,
+    "automaticRetryPerformed": false,
+    "hardTimeoutTriggered": false
+  },
+  "frozenBindings": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Endpoint_Replacement_Authorization.v1.json",
+      "sha256": "5ce2907d37660129ce6751a54c6c48a660965bb8007a7f3ab21f8c1bd905e583"
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Endpoint_Replacement_Plan.v1.md",
+      "sha256": "4981b37f8a20fe705e857ffe648dd412e6cfbbdaa6ff5497568d9bcead7d72df"
+    },
+    {
+      "role": "prospective-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/d3-managed-heap-occupancy-contract.prospective.v1.json",
+      "sha256": "5960c63ccb0468bf84802f649326d10edea0bd0527ada0c2fdf7342d26f4604d"
+    },
+    {
+      "role": "preexecution-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/preexecution-manifest.v1.json",
+      "sha256": "7d004248125a5068210d8c691cad3d687ac6058e78ea5003596e2d24feed19d1"
+    },
+    {
+      "role": "d3-v2-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs",
+      "sha256": "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca"
+    },
+    {
+      "role": "d3-v2-known-answer-harness",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3EndpointReplacementRunnerV1.cs",
+      "sha256": "d05c2939ecd73d3582c9800e0f2a576260b1aa230400914668c4516e7ddc62fa"
+    },
+    {
+      "role": "known-answer-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/d3-known-answer/d3-known-answer-receipt.v1.json",
+      "sha256": "e8b16d76e339c87fe5485edcd68c8a6518ce40a5e49acf15b6e8cc6dadfc65aa"
+    },
+    {
+      "role": "unity-log",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/unity-d3-endpoint-known-answer.log",
+      "sha256": "7a52346f7fc09a9ee12869cb5b4d445b1b8d9e7d0f30b7ecb17fade00b834d7b"
+    },
+    {
+      "role": "unity-process-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/unity-process-receipt.v1.json",
+      "sha256": "3565571501f9b9a6afbb6fb78b4c0b54ce54bc91595de4d82238b9be7cd4d311"
+    },
+    {
+      "role": "final-d3-v2-instrument-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-instrument-contract.v2.json",
+      "sha256": "e402dfc90362a3ac07f5342d218f19c67d31d46f82bec584d5d817fbccb9f0bf"
+    },
+    {
+      "role": "source-freeze-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/source-freeze-manifest.v1.json",
+      "sha256": "4ed57ddfbfb2d0b6b73e2b8c0480c0d2fce575505c580afe0efc1af622ddea0a"
+    },
+    {
+      "role": "status-v6",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v6.json",
+      "sha256": "06043046e01640f0f8c7b54cd7095a4cf704bece676c952c65a653b17e9c3bc1"
+    },
+    {
+      "role": "validator",
+      "relativePath": "Research/Validate-Gate14ReMED3EndpointReplacementAttempt002V1.py",
+      "sha256": "c0024ec66af4ed6f0986e6eceb49b660eec272afd40752f116de2f9dfd07e50f"
+    },
+    {
+      "role": "validation-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/validation-receipt.v1.json",
+      "sha256": "4ccf0f5d15657040bdbb0fd4f4aee38d57dd131643780feca4efe4108e07b49b"
+    }
+  ],
+  "validation": {
+    "status": "PASS_D3_V2_SOURCE_FREEZE",
+    "checksPassed": 234,
+    "checksFailed": 0,
+    "currentUnityProcessCount": 0,
+    "validatorRuns": 2,
+    "unityKnownAnswerRuns": 1,
+    "validatorOnlyCorrectionAfterFirstRun": true,
+    "scientificArtifactsChangedBetweenValidatorRuns": false,
+    "knownAnswerRerun": false
+  },
+  "scientificBoundary": {
+    "sourceOnlyFreeze": true,
+    "algorithmSourcesModified": false,
+    "algorithmLaneExecuted": false,
+    "runtimeQualificationAttempt002Started": false,
+    "dataExporterKnownAnswerRun": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "qualificationObservations": 0,
+    "formalMeasuredRootCreated": false,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "nextRequiredAction": "A separate minimum authorization is required to version the raw output schema and integrate D3 v2 into a new qualification-runner revision, with compilation/static conformance only. Runtime qualification, exporter known-answer, algorithm lanes, formal collection, analysis, ranking, and winner adjudication remain unauthorized."
+}

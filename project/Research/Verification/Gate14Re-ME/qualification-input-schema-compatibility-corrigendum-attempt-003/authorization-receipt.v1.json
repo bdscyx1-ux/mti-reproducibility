@@ -1,0 +1,37 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-corrigendum-authorization-v3",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-003",
+  "status": "AUTHORIZED_ONE_ISOLATED_ALGORITHM_FREE_UNITY_SCHEMA_COMPATIBILITY_SELF_CHECK",
+  "authorizedAtUtc": "2026-10-17T11:40:26.1531584Z",
+  "userAuthorizationTextExact": "进行下一项最小授权",
+  "contextualInterpretation": "Authorize only the previously proposed minimum next stage: preserve attempt-001, attempt-002 and Gate14Re_ME_Status.v18 unchanged; create independent attempt-003; repair only the PowerShell local-variable collision between $matches and automatic variable $Matches; freeze the repaired source and all bindings; then, only after complete preflight passes, compile and execute at most one isolated algorithm-free Unity schema-compatibility self-check. No retry or scope expansion is authorized.",
+  "scope": {
+    "preserveAttempt001Unchanged": true,
+    "preserveAttempt002Unchanged": true,
+    "preserveParentStatusV18Unchanged": true,
+    "authorizedRepair": "Rename and structurally validate the Get-HashValue local match collection so it cannot collide case-insensitively with PowerShell automatic variable $Matches.",
+    "maximumUnityInvocations": 1,
+    "maximumExecuteMethodInvocations": 1,
+    "automaticRetryAuthorized": false,
+    "isolatedAlgorithmFreeSelfCheckOnly": true,
+    "candidateSchemaAdoptionOnlyAfterTerminalPass": true,
+    "candidatePlanningBindingAdoptionOnlyAfterTerminalPass": true
+  },
+  "prohibited": {
+    "modifyDeleteOrReclassifyAttempt001": true,
+    "modifyDeleteOrReclassifyAttempt002": true,
+    "modifyOrOverwriteStatusV18": true,
+    "changeScientificSelfCheckMethod": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputBundles": true,
+    "generateAnonymousIdentityMapping": true,
+    "createMeasuredRoot": true,
+    "runPlanner": true,
+    "runAlgorithmLane": true,
+    "formalCollection": true,
+    "formalAnalysis": true,
+    "algorithmRanking": true,
+    "winnerAdjudication": true
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "gate14re-me-d3-v3-1-runner-schema-integration-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-1-runner-schema-integration-attempt-001",
+  "status": "FROZEN_PASS_D3_V3_1_RUNNER_SCHEMA_INTEGRATION",
+  "state": [
+    "SOURCE_INTEGRATED",
+    "UNITY_COMPILED",
+    "ALGORITHM_FREE_SELF_CHECK_PASSED",
+    "IMMUTABLE_HASH_FREEZE",
+    "FULL_RUNTIME_QUALIFICATION_PENDING_SEPARATE_AUTHORIZATION"
+  ],
+  "frozenAtUtc": "2026-10-17T08:14:27.3664256Z",
+  "result": {
+    "qualificationRunnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "qualificationRunnerSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "outputSchemaRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+    "outputSchemaSha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb",
+    "integratedInstrumentContractRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+    "integratedInstrumentContractSha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312",
+    "d3PrimaryRawTable": "d3-windows.raw.v1.jsonl",
+    "d3PrimaryRawField": "managedAllocationBytes",
+    "d3RateField": "managedAllocationRateBytesPerSecond",
+    "eventGroupD3Join": "d3WindowRecordId",
+    "emptyBoundaryD3Join": "d3WindowRecordId",
+    "oldSnapshotDifferenceRepresentationUsed": false,
+    "fullPerWindowRawDeliveryRequired": true
+  },
+  "evidence": {
+    "sourceFreezeManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/source-freeze-manifest.v1.json",
+      "lengthBytes": 4359,
+      "sha256": "a20fcc0c27e716385e890b3a70cb554b5aab92c82aee37a494956d2a5c4904bb"
+    },
+    "validationReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/validation-receipt.v1.json",
+      "lengthBytes": 3310,
+      "sha256": "245aef0cab407a0681b2d33beaf2b146039a9b1c7692b3e342ccc0a81443cdee"
+    },
+    "integrationSelfCheckReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/unity-self-check-output/integration-self-check-receipt.v1.json",
+      "lengthBytes": 8471,
+      "sha256": "b0dbcc4d178f5770325ceaea613c0d736c27b52849f33f413953e69f488eb41c",
+      "status": "PASS_D3_V3_1_RUNNER_SCHEMA_INTEGRATION_SELF_CHECK"
+    },
+    "unityCompileLog": {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/unity-compile/unity-compile.log",
+      "lengthBytes": 79412,
+      "sha256": "cdd3072fa56fe082c35d5a6b951c8beaa31a76a75aba1272e5424f0256e77d54"
+    }
+  },
+  "parentEvidence": {
+    "d3V31InstrumentFreezeReceiptSha256": "23df3757a0cac246b5d120c9ef025a2861b2cc062e4b920c42fbb0b450147bc8",
+    "qualifiedD3ContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "runnerV1Sha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+    "outputSchemaV1Sha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c",
+    "priorEvidenceRetained": true
+  },
+  "scientificBoundary": {
+    "d3EndpointChanged": false,
+    "runtimeD3KnownAnswerRerun": false,
+    "nativeD3WindowOpened": false,
+    "scheduleGenerated": false,
+    "qualificationInputGenerated": false,
+    "anonymousIdentityMappingGenerated": false,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "authorizationState": {
+    "integrationAuthorizationConsumed": true,
+    "qualificationToolingBridgeAuthorized": false,
+    "scheduleInputOrIdentityGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "runtimeQualificationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisRankingOrWinnerAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize the next minimum algorithm-free tooling bridge: version the structural validator and lossless JSONL/CSV/JSONL.GZ/typed-Parquet delivery validator for output schema v2 including d3-windows joins, then run only synthetic known-answer and negative tests."
+}

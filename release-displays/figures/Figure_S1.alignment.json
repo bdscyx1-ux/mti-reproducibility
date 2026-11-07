@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "scope": "Comparable axes edges and equal-span widths; not a font or collision audit",
+  "tolerance_pt": 1.5,
+  "panels": [
+    {
+      "axis": 0,
+      "row": [
+        0,
+        1
+      ],
+      "column": [
+        0,
+        1
+      ],
+      "rectangle_pt": [
+        48.6,
+        73.872,
+        206.26844919786095,
+        227.08799999999997
+      ]
+    },
+    {
+      "axis": 1,
+      "row": [
+        0,
+        1
+      ],
+      "column": [
+        1,
+        2
+      ],
+      "rectangle_pt": [
+        264.60577540106954,
+        73.872,
+        422.27422459893046,
+        227.08799999999997
+      ]
+    },
+    {
+      "axis": 2,
+      "row": [
+        0,
+        1
+      ],
+      "column": [
+        2,
+        3
+      ],
+      "rectangle_pt": [
+        480.61155080213905,
+        73.872,
+        638.28,
+        227.08799999999997
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "axes": [
+        0,
+        1
+      ],
+      "check": "row_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        0,
+        1
+      ],
+      "check": "equal_span_width",
+      "error_pt": 2.842170943040401e-14
+    },
+    {
+      "axes": [
+        0,
+        2
+      ],
+      "check": "row_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        0,
+        2
+      ],
+      "check": "equal_span_width",
+      "error_pt": 2.842170943040401e-14
+    },
+    {
+      "axes": [
+        1,
+        2
+      ],
+      "check": "row_edges",
+      "error_pt": 0.0
+    },
+    {
+      "axes": [
+        1,
+        2
+      ],
+      "check": "equal_span_width",
+      "error_pt": 0.0
+    }
+  ],
+  "failures": []
+}

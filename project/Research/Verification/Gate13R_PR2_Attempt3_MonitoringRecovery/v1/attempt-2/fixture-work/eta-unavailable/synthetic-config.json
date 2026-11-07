@@ -1,0 +1,78 @@
+{
+  "blinding": {
+    "forbiddenFieldPatterns": [
+      "dynamicHandling",
+      "totalPlannerElapsed",
+      "ManagedAllocatedBytesPerScheduledEvent",
+      "budgetOverrunRate",
+      "timeTo95PercentArrival",
+      "pathEfficiencyRatio",
+      "completionRateByDeadline",
+      "frameTimeP95",
+      "MovementFailureRate",
+      "contrast",
+      "effect",
+      "confidenceInterval",
+      "pValue",
+      "ranking",
+      "winner",
+      "superiority"
+    ],
+    "operationalOnly": true
+  },
+  "catchUpReports": false,
+  "configId": "gate13r-pr2-attempt3-operational-monitoring-v1",
+  "etaPolicy": {
+    "rateChoice": "MIN-POSITIVE-OF-ROLLING-AND-OVERALL",
+    "researchInferenceAllowed": false,
+    "safetyMultiplier": 1.25,
+    "zeroOrInsufficientRate": "UNAVAILABLE"
+  },
+  "fixedTotals": {
+    "campaignCount": 74,
+    "matchedSuperblockCount": 1008,
+    "processCount": 3552,
+    "sampleCount": 10176
+  },
+  "formalAttemptOrdinal": 3,
+  "formalReceipt": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-2\\fixture-work\\eta-unavailable\\synthetic-receipt.json",
+  "formalRoot": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-2\\fixture-work\\eta-unavailable\\synthetic-formal-root",
+  "formalStatus": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-2\\fixture-work\\eta-unavailable\\synthetic-status.json",
+  "heartbeatAutomationId": "gate13r-attempt3-hourly-progress",
+  "monitoringRoot": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_Attempt3_MonitoringRecovery\\v1\\attempt-2\\fixture-work\\eta-unavailable\\synthetic-monitoring",
+  "notificationRetry": {
+    "experimentActionAllowed": false,
+    "maxAttempts": 3
+  },
+  "quietAfterAcknowledgedTerminalState": true,
+  "quietBeforeStart": true,
+  "readRetry": {
+    "delaySeconds": [
+      0,
+      0,
+      0
+    ],
+    "maxAttempts": 3
+  },
+  "reportOnActionRequired": true,
+  "reportOnCompletion": true,
+  "reportOnFailure": true,
+  "reportOnStart": true,
+  "scheduledReportCadenceMinutes": 60,
+  "schemaVersion": 1,
+  "stallPolicy": {
+    "blockHardTimeoutSeconds": 3600,
+    "hardTimeoutOverdueActionSecondsExclusive": 3660,
+    "missingOwnedProcessActionSecondsExclusive": 300,
+    "monitorMayKillProcess": false,
+    "noProgressStallSecondsExclusive": 1800,
+    "statusStaleAdvisorySecondsExclusive": 900
+  },
+  "watcherCadenceMinutes": 5,
+  "writePolicy": {
+    "atomicCreate": true,
+    "formalRootReadOnlyForMonitor": true,
+    "overwriteExistingSnapshot": false,
+    "snapshotRootMustBeMonitoringRoot": true
+  }
+}

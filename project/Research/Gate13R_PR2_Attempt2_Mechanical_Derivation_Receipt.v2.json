@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "receiptKind": "gate13r-pr2-attempt2-versioned-stack-mechanical-derivation-receipt-v2",
+  "status": "DERIVED-AND-STATICALLY-VALIDATED",
+  "failedDerivationAttemptPreserved": {
+    "attempt": 1,
+    "failureReceiptRelativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/DerivationAttempt1/failure-receipt.json",
+    "failureReceiptSha256": "9a8ecc7c4425c6d1785013669045b03fb5e2d41c5b7294c8cb18ca79dde66c82",
+    "partialTargetsReadOnly": true
+  },
+  "producerDerivation": {
+    "sourceRelativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV2.cs",
+    "sourceSha256": "af9156588bc259dfa8cafeec4adb82c93a2b07f5e2ae772b4b0fd4115dce28a8",
+    "targetRelativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV4.cs",
+    "targetSha256": "ef12eb01b903318c5ce9455d5872cff5e7f505f3d1496ffc860d512173be5467",
+    "exactChanges": [
+      {
+        "id": "class-identity",
+        "replacementCount": 1,
+        "from": "Gate13RPR2FormalBatchCommandV2",
+        "to": "Gate13RPR2FormalBatchCommandV4"
+      },
+      {
+        "id": "embedded-record-field",
+        "replacementCount": 1,
+        "addition": "public bool formalCampaign;",
+        "scope": "BlockChildRecord"
+      },
+      {
+        "id": "embedded-record-assignment",
+        "replacementCount": 1,
+        "addition": "formalCampaign = plan.formalCampaign,",
+        "scope": "FinalizeSample BlockChildRecord initializer"
+      }
+    ],
+    "normalizeTargetBackToSourceExactMatch": true,
+    "algorithmChanges": false,
+    "scenarioChanges": false,
+    "workloadChanges": false,
+    "telemetryOrMemoryChanges": false
+  },
+  "activeStack": [
+    {
+      "relativePath": "Research/Gate13RPR2FormalExecutionV5.psm1",
+      "sha256": "2f87e3b9844ccd7d85ba8c7cf8bfd4736a6bef6ceb4400b33d38a206d53c69ce"
+    },
+    {
+      "relativePath": "Research/Run-Gate13RPR2FormalBlockV6.ps1",
+      "sha256": "06e2a51c1fe2f23e8189310d4708cd2a21f36bfd205bfbddf8df002ad0ac8e2a"
+    },
+    {
+      "relativePath": "Research/Run-Gate13RPR2FormalCampaignV6.ps1",
+      "sha256": "17ac97da23b2bf77b7d6beed8e901ed7c768095a7791f2ee2f2f0dfe211c155a"
+    }
+  ],
+  "formalRootV2Created": false,
+  "unityStartedByDerivation": false,
+  "formalStatisticalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "immutable": true
+}

@@ -1,0 +1,246 @@
+{
+    "schemaVersion":  1,
+    "auditId":  "gate12-final-audit-v1",
+    "savedAt":  "2026-10-05T22:40:43.2342380+08:00",
+    "projectPath":  "H:\\DDM_Final_Project",
+    "classification":  "isolated-non-formal-pilot-final-audit-v1",
+    "expectedHashes":  {
+                           "specification":  "29e6ca0de24b10f4a3a679378a353f9ae1821b130d1218f298591d2e89878b7c",
+                           "testDesign":  "c8f71a54f9c73f936e3ddfeff6d4212bd48fb495847b9185a69adf720226e199",
+                           "pilotPlan":  "cc63505f444223c06a7f69a979c6a0d2e7f0d29e8217d910fe46b61db5618ce4",
+                           "bundleManifest":  "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+                           "bundleAggregate":  "91d9e3c66327185e48f68cafb05c674cc49e929adb576973098d0bfebd2e9a88",
+                           "analysisModule":  "96194e77239ad1e842d6ccacd2ffc870afdf8d3a2701144ae05dadeb472fe676",
+                           "pilotRunner":  "bf45cebf1b04a73f1d3ca4cbdc6375f3aab00b9979e129145ac27e91e62cb025",
+                           "analyzer":  "6aab2f34713ca929ca184bdda2238defedf022f2a39f050959aed02194b91a65",
+                           "pilotManifest":  "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a",
+                           "analysisManifest":  "c8b6586bcc59d7ce1fc332a490cada73ee69052ef5abcc65fe2b3b90cdff7699"
+                       },
+    "actualHashes":  {
+                         "specification":  "29e6ca0de24b10f4a3a679378a353f9ae1821b130d1218f298591d2e89878b7c",
+                         "testDesign":  "c8f71a54f9c73f936e3ddfeff6d4212bd48fb495847b9185a69adf720226e199",
+                         "pilotPlan":  "cc63505f444223c06a7f69a979c6a0d2e7f0d29e8217d910fe46b61db5618ce4",
+                         "bundleManifest":  "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+                         "analysisModule":  "96194e77239ad1e842d6ccacd2ffc870afdf8d3a2701144ae05dadeb472fe676",
+                         "pilotRunner":  "bf45cebf1b04a73f1d3ca4cbdc6375f3aab00b9979e129145ac27e91e62cb025",
+                         "analyzer":  "6aab2f34713ca929ca184bdda2238defedf022f2a39f050959aed02194b91a65",
+                         "pilotManifest":  "638ac2e3fe243212ef031bdbed4c06394447e055c4d080be370357c41122e18a",
+                         "analysisManifest":  "c8b6586bcc59d7ce1fc332a490cada73ee69052ef5abcc65fe2b3b90cdff7699",
+                         "bundleAggregate":  "91d9e3c66327185e48f68cafb05c674cc49e929adb576973098d0bfebd2e9a88"
+                     },
+    "frozenHashErrors":  [
+
+                         ],
+    "baselineChecked":  24,
+    "baselineMismatches":  [
+
+                           ],
+    "retainedBundle":  {
+                           "fileCount":  57,
+                           "artifactCount":  56,
+                           "manifestSha256":  "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+                           "orderedAggregateSha256":  "91d9e3c66327185e48f68cafb05c674cc49e929adb576973098d0bfebd2e9a88",
+                           "artifactErrors":  [
+
+                                              ],
+                           "beforeMatchesAfter":  true
+                       },
+    "retainedPassingSummaryCount":  14,
+    "retainedSummaryHashes":  {
+                                  "Gate2_Unity.summary.json":  "5a3de52c4b37b7ff846528e5a3debe5393968d47115d00354b9f01cc99984448",
+                                  "Gate2_Smoke.summary.json":  "1cc585f8c11779557976d880b62b582d7f42b0d59fbf0ed38eba0f20d53f7dca",
+                                  "Gate3_AStar_Compile.summary.json":  "6c3de562b27f689cf5335c2fb121e4a044e0e96989124f16aa6248c8bcc12ba2",
+                                  "Gate3_AStar.summary.json":  "6c9b6bdcfb26033787128d7a1503271455b0411e2701017bf41ca2a2b70281c6",
+                                  "Gate4_ScenarioIO_Compile.summary.json":  "6e88c23fa53857d60ffa87333dc3928469b2098a47509b2071795293432e1001",
+                                  "Gate4_ScenarioWorkload.summary.json":  "dd09cdea9442298607b26979fcb2ecc1de5ae425f69e6779afaaf7ee8cbbf218",
+                                  "Gate5_BatchFixture_Final.summary.json":  "1638aa05d377913f15e2d94353c44a2eacd4a9ed3df51f8411866225e2ab40ca",
+                                  "Gate5_BatchPipeline.summary.json":  "100ef56748310df44bfb5eeaa24de16da7362522ca9250ade4e2524ae4d41ac7",
+                                  "Gate6_FinalAudit.summary.json":  "9ac9edbca40881fe6d33f94e564b401943f0f3109f7be23bdf471b1480e2a6a0",
+                                  "Gate7_FinalAudit.summary.json":  "f1d1b3af1097c49fffc77ad7c013d13069810261287405fadeef66becd12e618",
+                                  "Gate8_FinalAudit.summary.json":  "7b21f1d715ac2396ba107f9da25d4c661a6f895108d315c2cddc37bfe5c063be",
+                                  "Gate9_FinalAudit.summary.json":  "aef425a4a417175f252bbd2d232e5aed7a7e98ee5ee0db70adef5ca1ba14ffd4",
+                                  "Gate10_FinalAudit.summary.json":  "e679eeed0a63ad2c25b83f13b3372fb6dc5dffe54aeff8217f33f393a3caf5c5",
+                                  "Gate11_FinalAudit.summary.json":  "5ec97e45cedf33debf67e19e4f19b4e9917a5a9b64b56904172ab77ff0bc0ed4"
+                              },
+    "retainedSummaryErrors":  [
+
+                              ],
+    "processCounts":  {
+                          "campaignCount":  13,
+                          "warmupCampaignCount":  1,
+                          "measuredCampaignCount":  12,
+                          "warmupUnityProcessCount":  16,
+                          "measuredUnityProcessCount":  256,
+                          "totalUnityProcessCount":  272,
+                          "uniqueRunIdCount":  272,
+                          "operationsLineCount":  96160
+                      },
+    "campaignErrors":  [
+
+                       ],
+    "childErrors":  [
+
+                    ],
+    "familyRecomputations":  [
+                                 {
+                                     "familyId":  "P1-DL-vs-A-shared",
+                                     "measuredSampleCount":  64,
+                                     "cellCount":  8,
+                                     "repetitionsPerCell":  8,
+                                     "sigmaLog":  0.33716085054169326,
+                                     "governingCellId":  "four-algorithm-shared-goal-v1::core-r01-s1-shared::D*L",
+                                     "nRaw":  184,
+                                     "requiredNFormal":  184,
+                                     "candidateNFormal":  100,
+                                     "precisionStatus":  "blocked-amendment-required"
+                                 },
+                                 {
+                                     "familyId":  "P2-DL-vs-A-hetero",
+                                     "measuredSampleCount":  64,
+                                     "cellCount":  8,
+                                     "repetitionsPerCell":  8,
+                                     "sigmaLog":  0.58964658736983622,
+                                     "governingCellId":  "per-agent-heterogeneous-goal-v1::core-r01-s1-hetero::A*-R",
+                                     "nRaw":  562,
+                                     "requiredNFormal":  564,
+                                     "candidateNFormal":  100,
+                                     "precisionStatus":  "blocked-amendment-required"
+                                 },
+                                 {
+                                     "familyId":  "P3-IDFF-vs-CFF-shared",
+                                     "measuredSampleCount":  64,
+                                     "cellCount":  8,
+                                     "repetitionsPerCell":  8,
+                                     "sigmaLog":  0.32661337479160679,
+                                     "governingCellId":  "four-algorithm-shared-goal-v1::core-r01-s1-shared::IDFF",
+                                     "nRaw":  173,
+                                     "requiredNFormal":  176,
+                                     "candidateNFormal":  100,
+                                     "precisionStatus":  "blocked-amendment-required"
+                                 },
+                                 {
+                                     "familyId":  "P4-IDFF-vs-CFF-grouped",
+                                     "measuredSampleCount":  64,
+                                     "cellCount":  8,
+                                     "repetitionsPerCell":  8,
+                                     "sigmaLog":  0.34087314990914375,
+                                     "governingCellId":  "grouped-field-heterogeneous-goal-v1::core-r02-s1-hetero::IDFF",
+                                     "nRaw":  188,
+                                     "requiredNFormal":  188,
+                                     "candidateNFormal":  100,
+                                     "precisionStatus":  "blocked-amendment-required"
+                                 }
+                             ],
+    "statisticalErrors":  [
+
+                          ],
+    "budgetRecomputation":  {
+                                "observedMedianWallSecondsPerProcess":  15.349785278125001,
+                                "observedP95WallSecondsPerProcess":  16.17971911875,
+                                "observedMedianBytesPerProcess":  2201276.125,
+                                "observedP95BytesPerProcess":  3516371.8125,
+                                "candidateUnityProcessCount":  21200,
+                                "candidateMedianWallHours":  90.393179971180558,
+                                "candidateP95WallHours":  95.28056814375,
+                                "candidateMedianOutputGiB":  43.462080741301179,
+                                "candidateP95OutputGiB":  69.42738073412329,
+                                "outputDriveFreeGiBBeforeAnalysis":  69.382,
+                                "candidateP95ProjectedHeadroomGiB":  -0.045380734123284583,
+                                "uncappedRequiredUnityProcessCount":  54624,
+                                "uncappedRequiredP95WallHours":  245.50027142849999,
+                                "uncappedRequiredP95OutputGiB":  178.88685118965805,
+                                "operationTotals":  {
+                                                        "totalPlanOperations":  92160,
+                                                        "totalRepairOperations":  1280,
+                                                        "totalBudgetExceededOperations":  0,
+                                                        "totalNoPathPlans":  0,
+                                                        "totalBudgetExceededPlans":  0,
+                                                        "totalInvalidPlans":  20720,
+                                                        "totalFailedPlans":  1088
+                                                    },
+                                "comparisons":  {
+                                                    "observedMedianWall":  true,
+                                                    "observedP95Wall":  true,
+                                                    "observedMedianBytes":  true,
+                                                    "observedP95Bytes":  true,
+                                                    "candidateProcessCount":  true,
+                                                    "candidateMedianHours":  true,
+                                                    "candidateP95Hours":  true,
+                                                    "candidateMedianGiB":  true,
+                                                    "candidateP95GiB":  true,
+                                                    "candidateHeadroom":  true,
+                                                    "requiredProcessCount":  true,
+                                                    "requiredP95Hours":  true,
+                                                    "requiredP95GiB":  true
+                                                },
+                                "errors":  [
+
+                                           ]
+                            },
+    "parserCoverage":  {
+                           "powerShellScriptCount":  41,
+                           "powerShellParseErrors":  [
+
+                                                     ],
+                           "jsonFileCount":  1478,
+                           "jsonParseErrors":  [
+
+                                               ],
+                           "jsonlFileCount":  321,
+                           "jsonlLineCount":  98155,
+                           "jsonlParseErrors":  [
+
+                                                ]
+                       },
+    "unityLogCount":  272,
+    "runSummaryCount":  272,
+    "compilerErrorMatches":  [
+
+                             ],
+    "technicalInvalidityCount":  0,
+    "autoRetryCount":  0,
+    "formalTrueFiles":  [
+
+                        ],
+    "unexpectedFormalDirectories":  [
+
+                                    ],
+    "gate13OutputRootPresent":  false,
+    "unityProcessIds":  [
+
+                        ],
+    "unityLockfilePresent":  false,
+    "gate13Readiness":  "blocked-precision-cap-and-storage-versioned-amendment-required",
+    "gate13Authorized":  false,
+    "gate13Executed":  false,
+    "checks":  {
+                   "frozenGate12HashesMatch":  true,
+                   "preImplementationAuditPassed":  true,
+                   "analysisUnitTestsPassed63":  true,
+                   "originalBaseline24Of24":  true,
+                   "retainedBundle56ArtifactsUnchanged":  true,
+                   "gate2Through11RetainedStatePassing":  true,
+                   "environmentPreflightAllPassing":  true,
+                   "pilotManifestCompleteAndNonFormal":  true,
+                   "analysisArtifactsHashValid":  true,
+                   "all13CampaignsCompleteAndBalanced":  true,
+                   "all272ChildIdentitiesAndHashesValid":  true,
+                   "warmupExcludedFrom256Measured":  true,
+                   "independentFourFamilyRecomputeMatches":  true,
+                   "candidateValuesAreCapOnlyAndBlocked":  true,
+                   "independentBudgetRecomputeMatches":  true,
+                   "storageFeasibilityBlocksGate13":  true,
+                   "powerShellParses":  true,
+                   "jsonParses":  true,
+                   "jsonlParses":  true,
+                   "all272UnityLogsClean":  true,
+                   "noTechnicalInvalidityOrAutoRetry":  true,
+                   "noGate13OrFormalOutput":  true,
+                   "noUnityProcess":  true,
+                   "noUnityLockfile":  true
+               },
+    "failedChecks":  [
+
+                     ],
+    "passed":  true
+}

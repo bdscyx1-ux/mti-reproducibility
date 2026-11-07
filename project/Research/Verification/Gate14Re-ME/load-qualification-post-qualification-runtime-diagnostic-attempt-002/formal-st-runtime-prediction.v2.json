@@ -1,0 +1,69 @@
+{
+  "anonymousPredictionSha256": "f87f08b0f5a450b25e9504420590684e31897f9453f29c9851ba40cb2db90f9c",
+  "boundary": "This engineering budget does not select B, change the scientific design, or authorize formal collection.",
+  "conservativeHoursPerB": 1.932717,
+  "formalSampleDecisionStatusAtDiagnosticFreeze": "PENDING_NEW_QUALIFICATION_AND_ANONYMOUS_POWER_REFREEZE",
+  "planningHoursPerBWith20PercentHeadroom": 2.31926,
+  "pointHoursPerB": 1.78725,
+  "rows": [
+    {
+      "B": 36,
+      "atOrAboveSevenDayGate": false,
+      "conservativeDays": 2.899,
+      "conservativeHours": 69.578,
+      "formalSuperblocks": 1296,
+      "laneProcesses": 7776,
+      "planningWith20PercentHeadroomDays": 3.479,
+      "planningWith20PercentHeadroomHours": 83.493,
+      "pointDays": 2.681,
+      "pointHours": 64.341
+    },
+    {
+      "B": 72,
+      "atOrAboveSevenDayGate": false,
+      "conservativeDays": 5.798,
+      "conservativeHours": 139.156,
+      "formalSuperblocks": 2592,
+      "laneProcesses": 15552,
+      "planningWith20PercentHeadroomDays": 6.958,
+      "planningWith20PercentHeadroomHours": 166.987,
+      "pointDays": 5.362,
+      "pointHours": 128.682
+    },
+    {
+      "B": 108,
+      "atOrAboveSevenDayGate": true,
+      "conservativeDays": 8.697,
+      "conservativeHours": 208.733,
+      "formalSuperblocks": 3888,
+      "laneProcesses": 23328,
+      "planningWith20PercentHeadroomDays": 10.437,
+      "planningWith20PercentHeadroomHours": 250.48,
+      "pointDays": 8.043,
+      "pointHours": 193.023
+    },
+    {
+      "B": 144,
+      "atOrAboveSevenDayGate": true,
+      "conservativeDays": 11.596,
+      "conservativeHours": 278.311,
+      "formalSuperblocks": 5184,
+      "laneProcesses": 31104,
+      "planningWith20PercentHeadroomDays": 13.916,
+      "planningWith20PercentHeadroomHours": 333.973,
+      "pointDays": 10.724,
+      "pointHours": 257.364
+    }
+  ],
+  "schema": "gate14re-me-formal-st-parameterized-runtime-prediction-v2",
+  "scopeExclusions": [
+    "input generation",
+    "qualification oracle batches",
+    "post-collection acceptance",
+    "delivery construction",
+    "formal analysis"
+  ],
+  "sevenDayDecisionGateHours": 168,
+  "status": "PARAMETERIZED_ONLY_FINAL_B_NOT_FROZEN_BY_THIS_DIAGNOSTIC",
+  "targetHostRecalibration": "Run the same frozen qualification on the target host, rebuild the 216 anonymous-lane x core-GNF P50/max cells and pooled lane-gap P50/P99, then replay these formulas before target-host formal authorization."
+}

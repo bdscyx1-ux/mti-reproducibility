@@ -1,0 +1,42 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-external-recovery-v2-launch-observation-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "OBSERVED_EXACT_RECOVERY_V2_SUPERVISOR_AND_FIRST_NEW_RUNNER",
+  "recoveryLaunchContractRelativePath": "recovery-launch-contract.v2.json",
+  "recoveryLaunchContractSha256": "d7b9cf3e08423ed3546aead27a214919ff60ae0b694799c41ecedc2ceafddc60",
+  "exactCommandLineUtf8Sha256": "49fdbb5fa9ee1545403d3a236d9b51fe1a638175bdd71b5cdb095ec1e5c799b9",
+  "exactCommandLineMatch": true,
+  "commandConfirmationReceiptRelativePath": "recovery-exact-command-confirmation-receipt.v2.json",
+  "commandConfirmationReceiptSha256": "31af871947d549a96ee3aeea60d8344bb369f7bcb874141bfe00eab1a498bf8e",
+  "supervisor": {
+    "processId": 89972,
+    "creationTimeUtc": "2026-10-30T03:25:08.4813660Z",
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "executableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "commandLineUtf8Sha256": "49fdbb5fa9ee1545403d3a236d9b51fe1a638175bdd71b5cdb095ec1e5c799b9",
+    "compositeIdentity": "PASS"
+  },
+  "measuredRecoveryStartReceipt": {
+    "relativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003/_control/recovery-start-receipt.v2.json",
+    "sha256": "89800f1da671abc0a1fe9e03081b620121a7afc5a7adc975cf1fa0c2f5a71a5d",
+    "status": "AUTHORIZED_CONTROL_PLANE_RECOVERY_V2_STARTED",
+    "startedAtUtc": "2026-10-30T03:25:10.1434563Z",
+    "resumeFirstNewOrdinal": 7519,
+    "remainingNewUnityProcesses": 324
+  },
+  "firstNewRunnerObservation": {
+    "processId": 89752,
+    "creationTimeUtc": "2026-10-30T03:25:10.8594270Z",
+    "mode": "lane",
+    "ordinal": 7519,
+    "commandLineUtf8Sha256": "857105049c08145fd0361daaec706173767bbc7df2116527a7454de6eaa82f11",
+    "stillRunningAtObservation": true
+  },
+  "boundary": {
+    "rerunExistingAlgorithmLane": false,
+    "replacementPerformed": false,
+    "formalAnalysisAuthorized": false,
+    "rawAlgorithmObservationsInterpreted": false
+  },
+  "observedAtUtc": "2026-10-30T03:25:43.6996205Z"
+}

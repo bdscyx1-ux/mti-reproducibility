@@ -1,0 +1,75 @@
+{
+  "algorithmRankingOrWinner": false,
+  "fallacyScan": [
+    {
+      "detail": "Separate frozen topology-specific block estimands were analysed; no pooled topology effect was substituted.",
+      "fallacy": "Simpson's paradox",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "Inference is explicitly at the complete matched-block level; lane and process rows are not independent n.",
+      "fallacy": "Ecological fallacy",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "No outcome-based sample filtering was permitted; all 36 frozen complete blocks entered each estimand.",
+      "fallacy": "Berkson's paradox",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "The frozen primary analysis contains no post-treatment covariate adjustment.",
+      "fallacy": "Collider bias",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "Not applicable: the endpoint is continuous batch wall time, not a diagnostic classification rate.",
+      "fallacy": "Base-rate neglect",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "Not applicable: blocks were not selected by extreme outcome and the design is not an extreme-score pre/post study.",
+      "fallacy": "Regression to the mean",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "All 36 frozen blocks and all 864 processes passed the acquisition hard gates; no completer-only subset was created.",
+      "fallacy": "Survivorship bias",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "P1-P4 were prespecified and Holm-adjusted; S1-S2 are separately gated and Holm-adjusted.",
+      "fallacy": "Look-elsewhere effect",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "Estimator, test, multiplicity, interval companion, bootstrap seed/draw count and outputs were frozen before batch outcome parsing.",
+      "fallacy": "Garden of forking paths",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "Claims are bounded to controlled within-algorithm worker scaling; causal CCD-mechanism attribution is prohibited.",
+      "fallacy": "Correlation is not causation",
+      "severity": "NOTE"
+    },
+    {
+      "detail": "Not applicable to the randomized, fixed-condition execution contrast.",
+      "fallacy": "Reverse causality",
+      "severity": "NOTE"
+    }
+  ],
+  "fallacyScanCoverage": "11/11",
+  "independentUnit": "complete matched block",
+  "multipleComparisonControl": "Holm P1-P4; gated Holm S1-S2; conservative Bonferroni one-sided simultaneous decision bounds",
+  "nPerHypothesis": 36,
+  "overallConfidence": "SOLID",
+  "primaryGateForSecondariesOpen": true,
+  "reproducibility": {
+    "method": "single authorized deterministic formal execution plus frozen synthetic known-answer validation",
+    "reasonNotRerun": "the analysis contract authorizes one formal execution and no overwrite; no second formal-data run was performed",
+    "verdict": "ANALYZED"
+  },
+  "schema": "gate14re-mq-formal-statistical-validation-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "technicalRowsTreatedAsIndependent": false,
+  "verificationStatus": "ANALYZED"
+}

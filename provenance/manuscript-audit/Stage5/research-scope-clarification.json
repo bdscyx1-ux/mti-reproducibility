@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-03",
+  "user_statement": "其实跟原来的内容关系不大，只是一个基于flowfield算法的扩展而已，并没有继续采用原来内容",
+  "interpretation": "用户确认原工程代码由本人编写，并进一步说明本研究为flow-field方向的扩展，未继续采用原项目研究内容。旧文件留存不等于方法或场景继承。正式运动构建使用专门生成的场景，但仍引用NavMesh_PlayerUnit显示预制体，并禁用其旧运动组件。原代码作者与论文书目已确认；复现依赖核对仅针对实际使用和拟发布文件，旧工程其他素材不自动列为本研究待办。",
+  "evidence": [
+    "Research/Baseline_Audit.md labels original implementation historical audit material",
+    "Assets/_Scripts/Research/Editor/Gate14ReFormalBuildCommandV1.cs creates a new empty research scene and binds the unit visual prefab",
+    "Assets/_Scripts/Research/Editor/Revision20261103Build.cs uses the same prefab in a dedicated scene",
+    "Assets/_Scripts/Research/Gate14Re/v2/Gate14ReFormalControllerV1.cs lines 441-456 instantiate visuals; lines 611-626 disable legacy components; line 196 constructs research movement kernel",
+    "C:/Users/bdscy/DDM_Revision_20261103/build/build-receipt.v2.json confirms scene and visual prefab paths"
+  ],
+  "actual_visual_dependency": "Assets/Prefabs/NavMesh/NavMesh_PlayerUnit.prefab",
+  "notes": [
+    "Direct references resolve to PlayerUnitMaterial.mat, Non-Friction.physicMaterial, original PlayerUnit.cs and a built-in mesh; one sprite GUID was not resolved in the Assets metadata search. No complete dependency-closure claim is made.",
+    "Do not modify frozen experiment inputs or strip/replace visuals during current acquisition.",
+    "Reference [29] is retained as background only; it is not evidence of architecture reuse."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ddm:gate13r-pr2:formal-preparation:v2",
+  "title": "Gate 13R-PR2 non-executing formal-preparation artifacts v2",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "algorithmEntry": {
+      "type": "object",
+      "required": ["position", "algorithmId", "predecessorAlgorithmId", "runId", "presetId", "sampleOutputRelativePath"],
+      "properties": {
+        "position": {"type": "integer", "minimum": 1, "maximum": 4},
+        "algorithmId": {"enum": ["A*-R", "D*L", "C-FF", "IDFF"]},
+        "predecessorAlgorithmId": {"type": "string"},
+        "runId": {"type": "string", "minLength": 1},
+        "presetId": {"type": "string", "minLength": 1},
+        "sampleOutputRelativePath": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": true
+    },
+    "scheduleRecord": {
+      "type": "object",
+      "required": ["schemaVersion", "scheduleKind", "globalProcessOrdinal", "campaignId", "scenarioId", "comparisonCohortId", "campaignBlockOrdinal", "williamsRowIndex", "blockId", "processIdentityPolicy", "expectedSampleCount", "entries"],
+      "properties": {
+        "schemaVersion": {"const": 1},
+        "scheduleKind": {"const": "gate13r-pr2-rq-aligned-s48-h48-process-record-v1"},
+        "globalProcessOrdinal": {"type": "integer", "minimum": 1, "maximum": 3552},
+        "campaignBlockOrdinal": {"type": "integer", "minimum": 1, "maximum": 48},
+        "williamsRowIndex": {"type": "integer", "minimum": 0, "maximum": 3},
+        "expectedSampleCount": {"enum": [2, 4]},
+        "entries": {"type": "array", "minItems": 2, "maxItems": 4, "items": {"$ref": "#/$defs/algorithmEntry"}}
+      },
+      "additionalProperties": true
+    },
+    "formalConfig": {
+      "type": "object",
+      "required": ["schemaVersion", "configKind", "configId", "formalDesignId", "formalExecutionAuthorized", "formalRootCreated", "formalTimingExecuted", "totals", "cohortDesign", "scientificContract", "processSemantics", "failurePolicy", "schedule", "campaigns"],
+      "properties": {
+        "schemaVersion": {"const": 1},
+        "configKind": {"const": "gate13r-pr2-rq-aligned-s48-h48-formal-campaign-config-v2"},
+        "formalExecutionAuthorized": {"const": false},
+        "formalRootCreated": {"const": false},
+        "formalTimingExecuted": {"const": false},
+        "campaigns": {"type": "array", "minItems": 74, "maxItems": 74}
+      },
+      "additionalProperties": true
+    },
+    "scheduleManifest": {
+      "type": "object",
+      "required": ["schemaVersion", "manifestKind", "scheduleRelativePath", "scheduleSha256", "scheduleRawBytes", "processRecordCount", "sampleIdentityCount", "heterogeneousMatchedSuperblockCount", "formalExecutionAuthorized"],
+      "properties": {
+        "schemaVersion": {"const": 1},
+        "scheduleSha256": {"$ref": "#/$defs/sha256"},
+        "processRecordCount": {"const": 3552},
+        "sampleIdentityCount": {"const": 10176},
+        "heterogeneousMatchedSuperblockCount": {"const": 1008},
+        "formalExecutionAuthorized": {"const": false}
+      },
+      "additionalProperties": true
+    },
+    "resourcePreflight": {
+      "type": "object",
+      "required": ["schemaVersion", "preflightKind", "projection", "preparationObservation", "formalLaunchRecheckRequired", "formalLaunchAuthorized"],
+      "properties": {
+        "schemaVersion": {"const": 1},
+        "formalLaunchRecheckRequired": {"const": true},
+        "formalLaunchAuthorized": {"const": false}
+      },
+      "additionalProperties": true
+    }
+  }
+}

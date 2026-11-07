@@ -1,0 +1,2439 @@
+{
+  "domains": [
+    {
+      "allFiveComparatorsPassing": false,
+      "atLeastFourOfFiveComparatorHypothesesPassing": true,
+      "cFFComparatorOutcome": {
+        "comparator": "C-FF",
+        "data": {
+          "equalDesignGeometricMeanRatio": 0.75862549200297,
+          "equalDesignGeometricMeanSimultaneousInterval": [
+            0.7152336887123905,
+            0.8046497895713263
+          ],
+          "equalDesignNearestRankP95Ratio": 1.1188439637099126,
+          "equalDesignNearestRankP95SimultaneousInterval": [
+            1.0480138084152575,
+            1.194461184650822
+          ]
+        },
+        "directionFavorable": false,
+        "failureExplanationZhCN": "C-FF 比较未通过：GM 比率 0.758625，同时区间 [0.715234, 0.80465]；P95 比率 1.11884，同时区间 [1.04801, 1.19446]；Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；P95 点估计未低于 1；P95 同时区间未完全低于 1。D1 为 GM 与 P95 的交并检验，两部分必须同时满足。",
+        "holmAdjustedOneSidedP": 1.0,
+        "hypothesisId": "D1_DYNAMIC_LATENCY:IDFF_vs_C-FF",
+        "passed": false,
+        "reachesPrespecifiedMipe": false,
+        "simultaneousIntervalFavorable": false
+      },
+      "classification": "DOMAIN_PASS",
+      "comparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "comparatorsPassing": 4,
+      "comparatorsRequired": 4,
+      "comparatorsTotal": 5,
+      "domainId": "D1_DYNAMIC_LATENCY",
+      "domainPass": 1,
+      "failedComparatorOutcomes": [
+        {
+          "comparator": "C-FF",
+          "data": {
+            "equalDesignGeometricMeanRatio": 0.75862549200297,
+            "equalDesignGeometricMeanSimultaneousInterval": [
+              0.7152336887123905,
+              0.8046497895713263
+            ],
+            "equalDesignNearestRankP95Ratio": 1.1188439637099126,
+            "equalDesignNearestRankP95SimultaneousInterval": [
+              1.0480138084152575,
+              1.194461184650822
+            ]
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "C-FF 比较未通过：GM 比率 0.758625，同时区间 [0.715234, 0.80465]；P95 比率 1.11884，同时区间 [1.04801, 1.19446]；Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；P95 点估计未低于 1；P95 同时区间未完全低于 1。D1 为 GM 与 P95 的交并检验，两部分必须同时满足。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D1_DYNAMIC_LATENCY:IDFF_vs_C-FF",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        }
+      ],
+      "failedComparators": [
+        "C-FF"
+      ],
+      "invalidDomainRemovedFromDenominator": false,
+      "valid": true
+    },
+    {
+      "allFiveComparatorsPassing": true,
+      "atLeastFourOfFiveComparatorHypothesesPassing": true,
+      "cFFComparatorOutcome": {
+        "comparator": "C-FF",
+        "data": {
+          "nullBoundary": 1.0,
+          "ratioEstimate": 0.758096393427498,
+          "simultaneousInterval": [
+            0.7139960894708226,
+            0.8049205733797865
+          ]
+        },
+        "directionFavorable": true,
+        "failureExplanationZhCN": null,
+        "holmAdjustedOneSidedP": 0.0,
+        "hypothesisId": "D2_GRID_READ_WORK:IDFF_vs_C-FF",
+        "passed": true,
+        "reachesPrespecifiedMipe": true,
+        "simultaneousIntervalFavorable": true
+      },
+      "classification": "DOMAIN_PASS",
+      "comparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "comparatorsPassing": 5,
+      "comparatorsRequired": 4,
+      "comparatorsTotal": 5,
+      "domainId": "D2_GRID_READ_WORK",
+      "domainPass": 1,
+      "failedComparatorOutcomes": [],
+      "failedComparators": [],
+      "invalidDomainRemovedFromDenominator": false,
+      "valid": true
+    },
+    {
+      "allFiveComparatorsPassing": true,
+      "atLeastFourOfFiveComparatorHypothesesPassing": true,
+      "cFFComparatorOutcome": {
+        "comparator": "C-FF",
+        "data": {
+          "nullBoundary": 1.0,
+          "ratioEstimate": 0.21512256239328448,
+          "simultaneousInterval": [
+            0.2058546491727846,
+            0.22480773223542433
+          ]
+        },
+        "directionFavorable": true,
+        "failureExplanationZhCN": null,
+        "holmAdjustedOneSidedP": 0.0,
+        "hypothesisId": "D3_DYNAMIC_ALLOCATION:IDFF_vs_C-FF",
+        "passed": true,
+        "reachesPrespecifiedMipe": true,
+        "simultaneousIntervalFavorable": true
+      },
+      "classification": "DOMAIN_PASS",
+      "comparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "comparatorsPassing": 5,
+      "comparatorsRequired": 4,
+      "comparatorsTotal": 5,
+      "domainId": "D3_DYNAMIC_ALLOCATION",
+      "domainPass": 1,
+      "failedComparatorOutcomes": [],
+      "failedComparators": [],
+      "invalidDomainRemovedFromDenominator": false,
+      "valid": true
+    },
+    {
+      "allFiveComparatorsPassing": false,
+      "atLeastFourOfFiveComparatorHypothesesPassing": false,
+      "cFFComparatorOutcome": {
+        "comparator": "C-FF",
+        "data": {
+          "nullBoundary": 1.0,
+          "ratioEstimate": 2.41637901566465,
+          "simultaneousInterval": [
+            2.40244455549557,
+            2.4303942973368775
+          ]
+        },
+        "directionFavorable": false,
+        "failureExplanationZhCN": "C-FF 比较未通过：IDFF/C-FF 比率 2.41638，同时区间 [2.40244, 2.43039]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 1；同时区间未完全低于 1。",
+        "holmAdjustedOneSidedP": 1.0,
+        "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_C-FF",
+        "passed": false,
+        "reachesPrespecifiedMipe": false,
+        "simultaneousIntervalFavorable": false
+      },
+      "classification": "COMPARATOR_ADVANTAGE",
+      "comparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "comparatorsPassing": 2,
+      "comparatorsRequired": 4,
+      "comparatorsTotal": 5,
+      "domainId": "D4_PERSISTENT_STATE_BYTES",
+      "domainPass": 0,
+      "failedComparatorOutcomes": [
+        {
+          "comparator": "A*-R",
+          "data": {
+            "nullBoundary": 1.0,
+            "ratioEstimate": 61768.1791457962,
+            "simultaneousInterval": [
+              61411.982445508744,
+              62126.44182871837
+            ]
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "A*-R 比较未通过：IDFF/A*-R 比率 61768.2，同时区间 [61412, 62126.4]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 1；同时区间未完全低于 1。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_A*-R",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "BiA*-R",
+          "data": {
+            "nullBoundary": 1.0,
+            "ratioEstimate": 61768.1791457962,
+            "simultaneousInterval": [
+              61411.982445508744,
+              62126.44182871837
+            ]
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "BiA*-R 比较未通过：IDFF/BiA*-R 比率 61768.2，同时区间 [61412, 62126.4]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 1；同时区间未完全低于 1。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_BiA*-R",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "C-FF",
+          "data": {
+            "nullBoundary": 1.0,
+            "ratioEstimate": 2.41637901566465,
+            "simultaneousInterval": [
+              2.40244455549557,
+              2.4303942973368775
+            ]
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "C-FF 比较未通过：IDFF/C-FF 比率 2.41638，同时区间 [2.40244, 2.43039]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 1；同时区间未完全低于 1。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_C-FF",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        }
+      ],
+      "failedComparators": [
+        "A*-R",
+        "BiA*-R",
+        "C-FF"
+      ],
+      "invalidDomainRemovedFromDenominator": false,
+      "valid": true
+    },
+    {
+      "allFiveComparatorsPassing": false,
+      "atLeastFourOfFiveComparatorHypothesesPassing": true,
+      "cFFComparatorOutcome": {
+        "comparator": "C-FF",
+        "data": {
+          "nullBoundary": 0.0,
+          "simultaneousInterval": [
+            -0.06962841793113718,
+            0.07464384829261529
+          ],
+          "slopeDifferenceEstimate": 0.002507715180739058
+        },
+        "directionFavorable": false,
+        "failureExplanationZhCN": "C-FF 比较未通过：IDFF−C-FF 斜率差 0.00250772，同时区间 [-0.0696284, 0.0746438]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 0；同时区间未完全低于 0。",
+        "holmAdjustedOneSidedP": 1.0,
+        "hypothesisId": "D5_AGENT_COUNT_SCALING:IDFF_vs_C-FF",
+        "passed": false,
+        "reachesPrespecifiedMipe": false,
+        "simultaneousIntervalFavorable": false
+      },
+      "classification": "DOMAIN_PASS",
+      "comparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "comparatorsPassing": 4,
+      "comparatorsRequired": 4,
+      "comparatorsTotal": 5,
+      "domainId": "D5_AGENT_COUNT_SCALING",
+      "domainPass": 1,
+      "failedComparatorOutcomes": [
+        {
+          "comparator": "C-FF",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              -0.06962841793113718,
+              0.07464384829261529
+            ],
+            "slopeDifferenceEstimate": 0.002507715180739058
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "C-FF 比较未通过：IDFF−C-FF 斜率差 0.00250772，同时区间 [-0.0696284, 0.0746438]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 0；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D5_AGENT_COUNT_SCALING:IDFF_vs_C-FF",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        }
+      ],
+      "failedComparators": [
+        "C-FF"
+      ],
+      "invalidDomainRemovedFromDenominator": false,
+      "valid": true
+    },
+    {
+      "allFiveComparatorsPassing": false,
+      "atLeastFourOfFiveComparatorHypothesesPassing": false,
+      "cFFComparatorOutcome": {
+        "comparator": "C-FF",
+        "data": {
+          "nullBoundary": 0.0,
+          "simultaneousInterval": [
+            0.0298056347596587,
+            0.08035029649580588
+          ],
+          "slopeDifferenceEstimate": 0.055077965627732296
+        },
+        "directionFavorable": false,
+        "failureExplanationZhCN": "C-FF 比较未通过：IDFF−C-FF 斜率差 0.055078，同时区间 [0.0298056, 0.0803503]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 0；同时区间未完全低于 0。",
+        "holmAdjustedOneSidedP": 1.0,
+        "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_C-FF",
+        "passed": false,
+        "reachesPrespecifiedMipe": false,
+        "simultaneousIntervalFavorable": false
+      },
+      "classification": "COMPARATOR_ADVANTAGE",
+      "comparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "comparatorsPassing": 0,
+      "comparatorsRequired": 4,
+      "comparatorsTotal": 5,
+      "domainId": "D6_CHANGE_FOOTPRINT_SCALING",
+      "domainPass": 0,
+      "failedComparatorOutcomes": [
+        {
+          "comparator": "A*-R",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              0.014176331327857568,
+              0.06472099306400475
+            ],
+            "slopeDifferenceEstimate": 0.03944866219593116
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "A*-R 比较未通过：IDFF−A*-R 斜率差 0.0394487，同时区间 [0.0141763, 0.064721]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 0；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_A*-R",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "BiA*-R",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              0.01305975768169848,
+              0.06360441941784567
+            ],
+            "slopeDifferenceEstimate": 0.038332088549772075
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "BiA*-R 比较未通过：IDFF−BiA*-R 斜率差 0.0383321，同时区间 [0.0130598, 0.0636044]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 0；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_BiA*-R",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "D*L",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              -0.0470602343186971,
+              0.0034844274174500867
+            ],
+            "slopeDifferenceEstimate": -0.021787903450623508
+          },
+          "directionFavorable": true,
+          "failureExplanationZhCN": "D*L 比较未通过：IDFF−D*L 斜率差 -0.0217879，同时区间 [-0.0470602, 0.00348443]，Holm 调整单侧 p=0.0404857。失败原因：同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 0.04048569821787362,
+          "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_D*L",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "LPA*",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              -0.04702700664501257,
+              0.0035176550911346326
+            ],
+            "slopeDifferenceEstimate": -0.021754675776938966
+          },
+          "directionFavorable": true,
+          "failureExplanationZhCN": "LPA* 比较未通过：IDFF−LPA* 斜率差 -0.0217547，同时区间 [-0.047027, 0.00351766]，Holm 调整单侧 p=0.0404857。失败原因：同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 0.04048569821787362,
+          "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_LPA*",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "C-FF",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              0.0298056347596587,
+              0.08035029649580588
+            ],
+            "slopeDifferenceEstimate": 0.055077965627732296
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "C-FF 比较未通过：IDFF−C-FF 斜率差 0.055078，同时区间 [0.0298056, 0.0803503]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 0；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_C-FF",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        }
+      ],
+      "failedComparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "invalidDomainRemovedFromDenominator": false,
+      "valid": true
+    },
+    {
+      "allFiveComparatorsPassing": false,
+      "atLeastFourOfFiveComparatorHypothesesPassing": false,
+      "cFFComparatorOutcome": {
+        "comparator": "C-FF",
+        "data": {
+          "nullBoundary": 0.0,
+          "simultaneousInterval": [
+            -0.11284512239343461,
+            0.030737817442515004
+          ],
+          "slopeDifferenceEstimate": -0.0410536524754598
+        },
+        "directionFavorable": true,
+        "failureExplanationZhCN": "C-FF 比较未通过：IDFF−C-FF 斜率差 -0.0410537，同时区间 [-0.112845, 0.0307378]，Holm 调整单侧 p=0.389814。失败原因：Holm 调整单侧 p=0.389814 不小于 0.05；同时区间未完全低于 0。",
+        "holmAdjustedOneSidedP": 0.3898139802234639,
+        "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_C-FF",
+        "passed": false,
+        "reachesPrespecifiedMipe": false,
+        "simultaneousIntervalFavorable": false
+      },
+      "classification": "DOMAIN_NOT_PASS",
+      "comparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "comparatorsPassing": 0,
+      "comparatorsRequired": 4,
+      "comparatorsTotal": 5,
+      "domainId": "D7_GRID_SIZE_SCALING",
+      "domainPass": 0,
+      "failedComparatorOutcomes": [
+        {
+          "comparator": "A*-R",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              -0.0984464832892324,
+              0.045136456546717205
+            ],
+            "slopeDifferenceEstimate": -0.026655013371257596
+          },
+          "directionFavorable": true,
+          "failureExplanationZhCN": "A*-R 比较未通过：IDFF−A*-R 斜率差 -0.026655，同时区间 [-0.0984465, 0.0451365]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_A*-R",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "BiA*-R",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              -0.12066660274417615,
+              0.02291633709177348
+            ],
+            "slopeDifferenceEstimate": -0.04887513282620134
+          },
+          "directionFavorable": true,
+          "failureExplanationZhCN": "BiA*-R 比较未通过：IDFF−BiA*-R 斜率差 -0.0488751，同时区间 [-0.120667, 0.0229163]，Holm 调整单侧 p=0.182101。失败原因：Holm 调整单侧 p=0.182101 不小于 0.05；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 0.18210141324822982,
+          "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_BiA*-R",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "D*L",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              -0.03746889511666748,
+              0.10611404471928215
+            ],
+            "slopeDifferenceEstimate": 0.034322574801307335
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "D*L 比较未通过：IDFF−D*L 斜率差 0.0343226，同时区间 [-0.0374689, 0.106114]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 0；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_D*L",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "LPA*",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              -0.03773998660436434,
+              0.10584295323158527
+            ],
+            "slopeDifferenceEstimate": 0.034051483313610464
+          },
+          "directionFavorable": false,
+          "failureExplanationZhCN": "LPA* 比较未通过：IDFF−LPA* 斜率差 0.0340515，同时区间 [-0.03774, 0.105843]，Holm 调整单侧 p=1。失败原因：Holm 调整单侧 p=1 不小于 0.05；点估计未低于 0；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 1.0,
+          "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_LPA*",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        },
+        {
+          "comparator": "C-FF",
+          "data": {
+            "nullBoundary": 0.0,
+            "simultaneousInterval": [
+              -0.11284512239343461,
+              0.030737817442515004
+            ],
+            "slopeDifferenceEstimate": -0.0410536524754598
+          },
+          "directionFavorable": true,
+          "failureExplanationZhCN": "C-FF 比较未通过：IDFF−C-FF 斜率差 -0.0410537，同时区间 [-0.112845, 0.0307378]，Holm 调整单侧 p=0.389814。失败原因：Holm 调整单侧 p=0.389814 不小于 0.05；同时区间未完全低于 0。",
+          "holmAdjustedOneSidedP": 0.3898139802234639,
+          "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_C-FF",
+          "passed": false,
+          "reachesPrespecifiedMipe": false,
+          "simultaneousIntervalFavorable": false
+        }
+      ],
+      "failedComparators": [
+        "A*-R",
+        "BiA*-R",
+        "D*L",
+        "LPA*",
+        "C-FF"
+      ],
+      "invalidDomainRemovedFromDenominator": false,
+      "valid": true
+    }
+  ],
+  "family": {
+    "D1IntersectionUnion": "maximum of geometric-mean and nearest-rank-P95 one-sided p-values",
+    "alpha": 0.05,
+    "comparators": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF"
+    ],
+    "domainPassRule": "valid hard gates and at least four of the five comparator hypotheses pass",
+    "failedComparatorReporting": "every failed comparator hypothesis is reported with effect, simultaneous interval, adjusted p-value, and concrete explanation",
+    "hypotheses": 35,
+    "intervalMultiplicity": "two-sided Bonferroni simultaneous intervals over 40 primitive contrasts",
+    "minimumComparatorHypothesesRequiredForDomainPass": 4,
+    "minimumPracticallyImportantEffectRole": "reporting flag only; null boundary unchanged",
+    "pValueMultiplicity": "Holm strong FWER over 35 composite hypotheses",
+    "primitiveContrasts": 40
+  },
+  "hypotheses": [
+    {
+      "comparator": "A*-R",
+      "components": {
+        "equalDesignGeometricMeanRatio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -1.1479434233101806,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -1.1837140837813125,
+            -1.1121727628390488
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.3061395963660839,
+            0.32884368495537125
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.31728862724619206,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -1.206842329357375,
+            -1.0890445172629863
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.29914037643609287,
+            0.3365378962852251
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.018250672335454306,
+          "statistic": -62.89869228982601,
+          "twoSidedP": 0.0
+        },
+        "equalDesignNearestRankP95Ratio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -1.4089143276795164,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -1.4486327754277717,
+            -1.3691958799312611
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.234891217697021,
+            0.2543113742345422
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.24440848669421125,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -1.474313542886986,
+            -1.3435151124720468
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.2289358277449862,
+            0.26092686739575943
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.020264886529318592,
+          "statistic": -69.52490583360257,
+          "twoSidedP": 0.0
+        }
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D1_DYNAMIC_LATENCY",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D1_DYNAMIC_LATENCY:IDFF_vs_A*-R",
+      "intersectionUnionOneSidedP": 0.0,
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "BiA*-R",
+      "components": {
+        "equalDesignGeometricMeanRatio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -1.8039149096322173,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -1.8396855701033492,
+            -1.7681442491610855
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.15886737090545527,
+            0.17064937789115542
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.16465302308861318,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -1.8628138156794116,
+            -1.745016003585023
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.15523521197578494,
+            0.17464219404324555
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.018250672335454306,
+          "statistic": -98.84101125019257,
+          "twoSidedP": 0.0
+        },
+        "equalDesignNearestRankP95Ratio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -2.146973678900853,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -2.1866921266491084,
+            -2.1072552311525974
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.1122875680212845,
+            0.12157119373352232
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.11683721019342101,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -2.2123728941083227,
+            -2.081574463693383
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.10944064909051826,
+            0.12473366888102946
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.02026488652931859,
+          "statistic": -105.9455070619162,
+          "twoSidedP": 0.0
+        }
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D1_DYNAMIC_LATENCY",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D1_DYNAMIC_LATENCY:IDFF_vs_BiA*-R",
+      "intersectionUnionOneSidedP": 0.0,
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "D*L",
+      "components": {
+        "equalDesignGeometricMeanRatio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -1.87843342142983,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -1.9142040819009618,
+            -1.842662760958698
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.14745915129931297,
+            0.15839509579698996
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.15282933748530586,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -1.9373323274770242,
+            -1.8195345153826357
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.14408781664386539,
+            0.1621011889848214
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.018250672335454306,
+          "statistic": -102.92406695509669,
+          "twoSidedP": 0.0
+        },
+        "equalDesignNearestRankP95Ratio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -1.8212232414040963,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -1.8609416891523516,
+            -1.781504793655841
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.15552610414256826,
+            0.16838457249116076
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.16182767549854415,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -1.886622456611566,
+            -1.7558240261966267
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.15158292309488655,
+            0.17276482088202672
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.02026488652931859,
+          "statistic": -89.87088275916122,
+          "twoSidedP": 0.0
+        }
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D1_DYNAMIC_LATENCY",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D1_DYNAMIC_LATENCY:IDFF_vs_D*L",
+      "intersectionUnionOneSidedP": 0.0,
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "LPA*",
+      "components": {
+        "equalDesignGeometricMeanRatio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -1.8777835499024291,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -1.913554210373561,
+            -1.8420128894312973
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.14755501194837656,
+            0.15849806571481326
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.15292868919971767,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -1.9366824559496234,
+            -1.8188846438552349
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.14418148564645986,
+            0.16220656816985765
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.018250672335454306,
+          "statistic": -102.88845886814757,
+          "twoSidedP": 0.0
+        },
+        "equalDesignNearestRankP95Ratio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -1.8206237978466533,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -1.8603422455949086,
+            -1.780905350098398
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.15561936121209297,
+            0.16848553979739062
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.16192471113682616,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -1.886023013054123,
+            -1.7552245826391837
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.1516738157413381,
+            0.1728684146870747
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.02026488652931859,
+          "statistic": -89.84130235383421,
+          "twoSidedP": 0.0
+        }
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D1_DYNAMIC_LATENCY",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D1_DYNAMIC_LATENCY:IDFF_vs_LPA*",
+      "intersectionUnionOneSidedP": 0.0,
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "C-FF",
+      "components": {
+        "equalDesignGeometricMeanRatio": {
+          "degreesFreedom": null,
+          "directionFavorable": true,
+          "estimateModelScale": -0.2762470462806434,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            -0.3120177067517753,
+            -0.24047638580951144
+          ],
+          "marginalTwoSided95RatioInterval": [
+            0.7319685673278362,
+            0.7862532119620188
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.0,
+          "ratioEstimate": 0.75862549200297,
+          "reachesMipe": true,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            -0.33514595232783767,
+            -0.21734814023344912
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            0.7152336887123905,
+            0.8046497895713263
+          ],
+          "simultaneousUpperBelowNull": true,
+          "standardError": 0.018250672335454306,
+          "statistic": -15.136266829140183,
+          "twoSidedP": 0.0
+        },
+        "equalDesignNearestRankP95Ratio": {
+          "degreesFreedom": null,
+          "directionFavorable": false,
+          "estimateModelScale": 0.11229597698827493,
+          "inferenceDistribution": "normal-z",
+          "marginalTwoSided95IntervalModelScale": [
+            0.07257752924001962,
+            0.15201442473653023
+          ],
+          "marginalTwoSided95RatioInterval": [
+            1.0752761682027445,
+            1.1641770292579177
+          ],
+          "mipeRatioThreshold": 0.9,
+          "nullBoundaryRatio": 1.0,
+          "oneSidedLowerP": 0.9999999849974242,
+          "ratioEstimate": 1.1188439637099126,
+          "reachesMipe": false,
+          "simultaneousPrimitiveFamilySize": 40,
+          "simultaneousTwoSidedBonferroniIntervalModelScale": [
+            0.04689676178080529,
+            0.17769519219574456
+          ],
+          "simultaneousTwoSidedBonferroniRatioInterval": [
+            1.0480138084152575,
+            1.194461184650822
+          ],
+          "simultaneousUpperBelowNull": false,
+          "standardError": 0.02026488652931859,
+          "statistic": 5.541406650652038,
+          "twoSidedP": 3.000515169659934e-08
+        }
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D1_DYNAMIC_LATENCY",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D1_DYNAMIC_LATENCY:IDFF_vs_C-FF",
+      "intersectionUnionOneSidedP": 0.9999999849974242,
+      "rawCompositeOneSidedP": 0.9999999849974242,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "A*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.7008202040775386,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -0.737218930199091,
+          -0.6644214779559863
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.47844264941753234,
+          0.5145711323561877
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.4961781694898256,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.7607532643519224,
+          -0.6408871438031549
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.4673142832071892,
+          0.5268248472711923
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.018571119882130917,
+        "statistic": -37.73709978318895,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D2_GRID_READ_WORK",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D2_GRID_READ_WORK:IDFF_vs_A*-R",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "BiA*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -1.43166975564831,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -1.4680684817698624,
+          -1.3952710295267576
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.23037001962791942,
+          0.24776587539838116
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.23890966824022358,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -1.4916028159226937,
+          -1.3717366953739263
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.22501171399729794,
+          0.2536660361572959
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.018571119882130917,
+        "statistic": -77.09119130860056,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D2_GRID_READ_WORK",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D2_GRID_READ_WORK:IDFF_vs_BiA*-R",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "D*L",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -1.8150174478864487,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -1.851416174008001,
+          -1.7786187217648963
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.15701464872460463,
+          0.1688712444199757
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.16283506723764796,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -1.8749505081608324,
+          -1.755084387612065
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.15336255685210326,
+          0.17289265167807283
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.018571119882130917,
+        "statistic": -97.73333322956219,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D2_GRID_READ_WORK",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D2_GRID_READ_WORK:IDFF_vs_D*L",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "LPA*",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -1.8150174478864485,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -1.8514161740080008,
+          -1.778618721764896
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.15701464872460466,
+          0.16887124441997572
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.16283506723764798,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -1.8749505081608322,
+          -1.7550843876120648
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.1533625568521033,
+          0.17289265167807286
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.018571119882130917,
+        "statistic": -97.73333322956218,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D2_GRID_READ_WORK",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D2_GRID_READ_WORK:IDFF_vs_LPA*",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "C-FF",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.2769447333147884,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -0.31334345943634073,
+          -0.2405460071932361
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.7309988010118723,
+          0.7861984738309383
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.758096393427498,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.33687779358917214,
+          -0.21701167304040467
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.7139960894708226,
+          0.8049205733797865
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.018571119882130917,
+        "statistic": -14.912656591122644,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D2_GRID_READ_WORK",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D2_GRID_READ_WORK:IDFF_vs_C-FF",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "A*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -3.7141722400274,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -3.740917281501046,
+          -3.6874271985537543
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.02373232392228858,
+          0.02503633276484881
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.02437560992060709,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -3.7582098301707485,
+          -3.670134649884052
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.023325459555495993,
+          0.025473039773898008
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.013645680065862085,
+        "statistic": -272.18667168661574,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D3_DYNAMIC_ALLOCATION",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D3_DYNAMIC_ALLOCATION:IDFF_vs_A*-R",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "BiA*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -4.4449350045001825,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -4.471680045973828,
+          -4.418189963026537
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.011428099979892772,
+          0.012056034415485353
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.011737868914807097,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -4.488972594643531,
+          -4.400897414356834
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.01123217788321202,
+          0.012266326984290516
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.013645680065862085,
+        "statistic": -325.7393536303291,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D3_DYNAMIC_ALLOCATION",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D3_DYNAMIC_ALLOCATION:IDFF_vs_BiA*-R",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "D*L",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.8777990232920573,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -0.9045440647657031,
+          -0.8510539818184114
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.40472637205604134,
+          0.42696468170100366
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.41569684461264517,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.9218366134354057,
+          -0.8337614331487089
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.3977877873801347,
+          0.4344121969128592
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.013645680065862085,
+        "statistic": -64.32797918867234,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D3_DYNAMIC_ALLOCATION",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D3_DYNAMIC_ALLOCATION:IDFF_vs_D*L",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "LPA*",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.8777990232920572,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -0.904544064765703,
+          -0.8510539818184113
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.4047263720560414,
+          0.4269646817010037
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.4156968446126452,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.9218366134354055,
+          -0.8337614331487089
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.3977877873801348,
+          0.4344121969128592
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.013645680065862085,
+        "statistic": -64.32797918867233,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D3_DYNAMIC_ALLOCATION",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D3_DYNAMIC_ALLOCATION:IDFF_vs_LPA*",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "C-FF",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -1.5365473556324256,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -1.5632923971060715,
+          -1.5098023141587797
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.20944535748392096,
+          0.22095365305103642
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.21512256239328448,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -1.580584945775774,
+          -1.4925097654890773
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.2058546491727846,
+          0.22480773223542433
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.013645680065862085,
+        "statistic": -112.6032083572342,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D3_DYNAMIC_ALLOCATION",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D3_DYNAMIC_ALLOCATION:IDFF_vs_C-FF",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "A*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 11.031143610285511,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          11.027631241902409,
+          11.034655978668614
+        ],
+        "marginalTwoSided95RatioInterval": [
+          61551.607109318706,
+          61985.51320050826
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 1.0,
+        "ratioEstimate": 61768.1791457962,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          11.025360248930848,
+          11.036926971640174
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          61411.982445508744,
+          62126.44182871837
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.0017920576147358819,
+        "statistic": 6155.574195593767,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D4_PERSISTENT_STATE_BYTES",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_A*-R",
+      "rawCompositeOneSidedP": 1.0,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "BiA*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 11.031143610285511,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          11.027631241902409,
+          11.034655978668614
+        ],
+        "marginalTwoSided95RatioInterval": [
+          61551.607109318706,
+          61985.51320050826
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 1.0,
+        "ratioEstimate": 61768.1791457962,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          11.025360248930848,
+          11.036926971640174
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          61411.982445508744,
+          62126.44182871837
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.001792057614735882,
+        "statistic": 6155.5741955937665,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D4_PERSISTENT_STATE_BYTES",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_BiA*-R",
+      "rawCompositeOneSidedP": 1.0,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "D*L",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -3.679262024788911,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -3.682774393172014,
+          -3.675749656405808
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.025153093370220796,
+          0.025330409299701172
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.025241595635404922,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -3.685045386143574,
+          -3.673478663434248
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.025096035685287236,
+          0.025387999850303863
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.001792057614735882,
+        "statistic": -2053.0936028701117,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D4_PERSISTENT_STATE_BYTES",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_D*L",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "LPA*",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -3.67926202478891,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          -3.682774393172013,
+          -3.675749656405807
+        ],
+        "marginalTwoSided95RatioInterval": [
+          0.025153093370220817,
+          0.025330409299701196
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 0.0,
+        "ratioEstimate": 0.025241595635404943,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -3.6850453861435732,
+          -3.673478663434247
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          0.02509603568528726,
+          0.025387999850303884
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.0017920576147358819,
+        "statistic": -2053.0936028701117,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D4_PERSISTENT_STATE_BYTES",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_LPA*",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "C-FF",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 0.8822701451132445,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95IntervalModelScale": [
+          0.8787577767301414,
+          0.8857825134963476
+        ],
+        "marginalTwoSided95RatioInterval": [
+          2.4079066900827537,
+          2.424881151496695
+        ],
+        "mipeRatioThreshold": 0.9,
+        "nullBoundaryRatio": 1.0,
+        "oneSidedLowerP": 1.0,
+        "ratioEstimate": 2.41637901566465,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          0.8764867837585812,
+          0.8880535064679078
+        ],
+        "simultaneousTwoSidedBonferroniRatioInterval": [
+          2.40244455549557,
+          2.4303942973368775
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.001792057614735882,
+        "statistic": 492.32242192351373,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D4_PERSISTENT_STATE_BYTES",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D4_PERSISTENT_STATE_BYTES:IDFF_vs_C-FF",
+      "rawCompositeOneSidedP": 1.0,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "A*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.6656954535308287,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.4918874314720218,
+          0.5369310879367513
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.7095053864891374,
+          -0.62188552057252
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.0,
+        "perAxisUnitMultiplicativeFactor": 0.5139159987027908,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.47814961821835883,
+          0.5523577634690794
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.737831586642705,
+          -0.5935593204189524
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.02235241734229601,
+        "statistic": -29.7818103221962,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D5_AGENT_COUNT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D5_AGENT_COUNT_SCALING:IDFF_vs_A*-R",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "BiA*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.6683069806277301,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.49060453001119464,
+          0.5355307072134298
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.7121169135860388,
+          -0.6244970476694214
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.0,
+        "perAxisUnitMultiplicativeFactor": 0.512575644094613,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.4769025466233995,
+          0.550917148124359
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.7404431137396064,
+          -0.5961708475158538
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.02235241734229601,
+        "statistic": -29.898644535557086,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D5_AGENT_COUNT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D5_AGENT_COUNT_SCALING:IDFF_vs_BiA*-R",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "D*L",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.6652200536137768,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.49212133030948124,
+          0.5371864056156122
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.7090299865720855,
+          -0.6214101206554681
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.0,
+        "perAxisUnitMultiplicativeFactor": 0.5141603724089631,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.4783769845478832,
+          0.5526204167317385
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.7373561867256531,
+          -0.5930839205019005
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.02235241734229601,
+        "statistic": -29.76054193275215,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D5_AGENT_COUNT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D5_AGENT_COUNT_SCALING:IDFF_vs_D*L",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "LPA*",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.6659540444519166,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.4917602502927037,
+          0.5367922603827071
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.7097639774102253,
+          -0.6221441114936079
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.0,
+        "perAxisUnitMultiplicativeFactor": 0.5137831218724358,
+        "reachesMipe": true,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.4780259890535446,
+          0.5522149472325407
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.7380901775637929,
+          -0.5938179113400404
+        ],
+        "simultaneousUpperBelowNull": true,
+        "standardError": 0.02235241734229601,
+        "statistic": -29.79337913451426,
+        "twoSidedP": 0.0
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D5_AGENT_COUNT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.0,
+      "hypothesisId": "D5_AGENT_COUNT_SCALING:IDFF_vs_LPA*",
+      "rawCompositeOneSidedP": 0.0,
+      "reachesPrespecifiedMipe": true,
+      "rejectAtFamilywiseAlpha0.05": true,
+      "simultaneousIntervalFavorable": true,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "C-FF",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 0.002507715180739058,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.9595390963501617,
+          1.0474070650256981
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.04130221777756963,
+          0.04631764813904774
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.5446635763116514,
+        "perAxisUnitMultiplicativeFactor": 1.0025108621284526,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.9327403451078323,
+          1.0775003289574054
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.06962841793113718,
+          0.07464384829261529
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.02235241734229601,
+        "statistic": 0.11218988722055907,
+        "twoSidedP": 0.9106728473766972
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D5_AGENT_COUNT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D5_AGENT_COUNT_SCALING:IDFF_vs_C-FF",
+      "rawCompositeOneSidedP": 0.5446635763116514,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "A*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 0.03944866219593116,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          1.024392951114433,
+          1.056326296086348
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          0.024100194330134,
+          0.05479713006172833
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.9999997641782534,
+        "perAxisUnitMultiplicativeFactor": 1.0402370940260073,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          1.0142772920328105,
+          1.0668613211471447
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          0.014176331327857568,
+          0.06472099306400475
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.007830994848305338,
+        "statistic": 5.037503275138539,
+        "twoSidedP": 4.716434931495428e-07
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D6_CHANGE_FOOTPRINT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_A*-R",
+      "rawCompositeOneSidedP": 0.9999997641782534,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "BiA*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 0.038332088549772075,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          1.0232497792784496,
+          1.0551474882177652
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          0.02298362068397491,
+          0.053680556415569236
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.999999508269847,
+        "perAxisUnitMultiplicativeFactor": 1.039076240910665,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          1.0131454087717355,
+          1.065670756711975
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          0.01305975768169848,
+          0.06360441941784567
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.007830994848305338,
+        "statistic": 4.894919393040759,
+        "twoSidedP": 9.834603060809854e-07
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D6_CHANGE_FOOTPRINT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_BiA*-R",
+      "rawCompositeOneSidedP": 0.999999508269847,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "D*L",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.021787903450623508,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.9635447265262734,
+          0.9935812531487569
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.03713637131642067,
+          -0.006439435584826344
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.0026990465478582415,
+        "perAxisUnitMultiplicativeFactor": 0.9784477384341236,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.9540299305167622,
+          1.0034905050916851
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.0470602343186971,
+          0.0034844274174500867
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.007830994848305338,
+        "statistic": -2.782265072660405,
+        "twoSidedP": 0.005398093095716483
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D6_CHANGE_FOOTPRINT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.04048569821787362,
+      "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_D*L",
+      "rawCompositeOneSidedP": 0.0026990465478582415,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "LPA*",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.021754675776938966,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.9635767434079472,
+          0.9936142680909175
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.03710314364273613,
+          -0.006406207911141798
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.002734545965870694,
+        "perAxisUnitMultiplicativeFactor": 0.978480250516441,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.9540616312386464,
+          1.0035238493007061
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.04702700664501257,
+          0.0035176550911346326
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.00783099484830534,
+        "statistic": -2.7780219752853967,
+        "twoSidedP": 0.005469091931741388
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D6_CHANGE_FOOTPRINT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.04048569821787362,
+      "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_LPA*",
+      "rawCompositeOneSidedP": 0.002734545965870694,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "C-FF",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 0.055077965627732296,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          1.0405292706239564,
+          1.0729656321940568
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          0.03972949776193513,
+          0.07042643349352946
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.9999999999989917,
+        "perAxisUnitMultiplicativeFactor": 1.0566229917389902,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          1.0302542688732799,
+          1.0836666058102753
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          0.0298056347596587,
+          0.08035029649580588
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.007830994848305338,
+        "statistic": 7.033329314429496,
+        "twoSidedP": 2.0166091019291343e-12
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D6_CHANGE_FOOTPRINT_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D6_CHANGE_FOOTPRINT_SCALING:IDFF_vs_C-FF",
+      "rawCompositeOneSidedP": 0.9999999999989917,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "A*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.026655013371257596,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.9321555077148813,
+          1.0170899887866838
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.07025562444375628,
+          0.016945597701241096
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.11541684209043718,
+        "perAxisUnitMultiplicativeFactor": 0.973697096066931,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.906244190524764,
+          1.046170606997416
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.0984464832892324,
+          0.045136456546717205
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.022245618499326908,
+        "statistic": -1.1982140830143295,
+        "twoSidedP": 0.23083368418087435
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D7_GRID_SIZE_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_A*-R",
+      "rawCompositeOneSidedP": 0.11541684209043718,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "BiA*-R",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.04887513282620134,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.9116713242882634,
+          0.9947393641116691
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.09247574389870003,
+          -0.005274521753702639
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.014007801019094601,
+        "perAxisUnitMultiplicativeFactor": 0.9523000332885379,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.8863294101320334,
+          1.0231809336736961
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.12066660274417615,
+          0.02291633709177348
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.02224561849932691,
+        "statistic": -2.197067832826503,
+        "twoSidedP": 0.028015602038189202
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D7_GRID_SIZE_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.18210141324822982,
+      "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_BiA*-R",
+      "rawCompositeOneSidedP": 0.014007801019094601,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "D*L",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 0.034322574801307335,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.9907648719035957,
+          1.0810396163672007
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.009278036271191364,
+          0.07792318587380603
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.9385714433641321,
+        "perAxisUnitMultiplicativeFactor": 1.0349183914844502,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.9632243782367683,
+          1.1119486811508914
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.03746889511666748,
+          0.10611404471928215
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.02224561849932691,
+        "statistic": 1.5428914598326784,
+        "twoSidedP": 0.12285711327173576
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D7_GRID_SIZE_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_D*L",
+      "rawCompositeOneSidedP": 0.9385714433641321,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "LPA*",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": false,
+        "estimateModelScale": 0.034051483313610464,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.9904963203831738,
+          1.0807465954488733
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.009549127758888228,
+          0.07765209438610915
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.9370788626431914,
+        "perAxisUnitMultiplicativeFactor": 1.0346378719430058,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.9629632916978542,
+          1.1116472821838685
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.03773998660436434,
+          0.10584295323158527
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.022245618499326908,
+        "statistic": 1.5307051730047772,
+        "twoSidedP": 0.1258422747136172
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": false,
+      "domainId": "D7_GRID_SIZE_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 1.0,
+      "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_LPA*",
+      "rawCompositeOneSidedP": 0.9370788626431914,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    },
+    {
+      "comparator": "C-FF",
+      "component": {
+        "degreesFreedom": null,
+        "directionFavorable": true,
+        "estimateModelScale": -0.0410536524754598,
+        "inferenceDistribution": "normal-z",
+        "marginalTwoSided95FactorInterval": [
+          0.9188299024827333,
+          1.0025502048515267
+        ],
+        "marginalTwoSided95IntervalModelScale": [
+          -0.08465426354795849,
+          0.0025469585970388925
+        ],
+        "mipeSlopeThreshold": -0.10536051565782628,
+        "nullBoundarySlopeDifference": 0.0,
+        "oneSidedLowerP": 0.03248449835195533,
+        "perAxisUnitMultiplicativeFactor": 0.9597776341204105,
+        "reachesMipe": false,
+        "simultaneousPrimitiveFamilySize": 40,
+        "simultaneousTwoSidedBonferroniFactorInterval": [
+          0.8932889998651447,
+          1.0312151018280056
+        ],
+        "simultaneousTwoSidedBonferroniIntervalModelScale": [
+          -0.11284512239343461,
+          0.030737817442515004
+        ],
+        "simultaneousUpperBelowNull": false,
+        "standardError": 0.022245618499326908,
+        "statistic": -1.845471389195224,
+        "twoSidedP": 0.06496899670391065
+      },
+      "direction": "lower_is_better",
+      "directionFavorable": true,
+      "domainId": "D7_GRID_SIZE_SCALING",
+      "domainMeasurementGateValid": true,
+      "globalCorrectnessGateValid": true,
+      "holmAdjustedOneSidedP": 0.3898139802234639,
+      "hypothesisId": "D7_GRID_SIZE_SCALING:IDFF_vs_C-FF",
+      "rawCompositeOneSidedP": 0.03248449835195533,
+      "reachesPrespecifiedMipe": false,
+      "rejectAtFamilywiseAlpha0.05": false,
+      "simultaneousIntervalFavorable": false,
+      "target": "IDFF"
+    }
+  ],
+  "primaryClaim": {
+    "claimId": "MAJORITY_OF_ENDPOINT_DOMAINS_PASS_UNDER_ANY_FOUR_OF_FIVE_COMPARATOR_RULE",
+    "comparators": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF"
+    ],
+    "denominatorDomains": 7,
+    "minimumComparatorHypothesesRequiredForDomainPass": 4,
+    "pass": true,
+    "rankingOrWinnerClaim": false,
+    "requiredDomains": 4,
+    "supportedDomains": 4
+  },
+  "schema": "gate14re-me-formal-st-confirmatory-results-v1",
+  "studyId": "Gate14Re-ME"
+}

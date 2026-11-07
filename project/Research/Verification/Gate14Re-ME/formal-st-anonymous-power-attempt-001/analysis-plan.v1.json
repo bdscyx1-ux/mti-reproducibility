@@ -1,0 +1,107 @@
+{
+  "schema": "gate14re-me-formal-st-anonymous-power-analysis-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-anonymous-power-attempt-001",
+  "status": "FROZEN_BEFORE_OBSERVATION_VALUE_ACCESS",
+  "createdAtUtc": "2026-10-20T02:35:40.6966007Z",
+  "objective": "Choose the smallest B in the authorized candidate set whose conservative identity-blind power is at least 0.90, then apply the 168-hour stop rule.",
+  "prerequisites": {
+    "qualificationTerminalPass": {
+      "path": "Research/Verification/Gate14Re-ME/load-qualification-read-only-acceptance-attempt-001/qualification-terminal-pass-receipt.v1.json",
+      "sha256": "9ffc2c83896f1516eea969619ccc8c07f6be1bdab85cecead7224fc8f9cbeafa"
+    },
+    "postQualificationRuntimeDiagnosticTerminal": {
+      "path": "Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/terminal-receipt.v2.json",
+      "sha256": "92e2cd918f55bae33c38bd8a71b915b5ab7b5f96e8a31ccbeb06d9533b980e6e"
+    },
+    "postQualificationRuntimeDiagnosticFreeze": {
+      "path": "Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/final-evidence-freeze-manifest.v1.json",
+      "sha256": "0c6e78412aca2c01bd97575994afbc0c7a420089f856cff47116f75f43e09593"
+    }
+  },
+  "frozenScientificDesign": {
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81],
+    "structuralCells": 36,
+    "qualificationCoreSuperblocksPerCell": 3,
+    "qualificationCoreSuperblocks": 108,
+    "anonymousLanesPerSuperblock": 6,
+    "independentExperimentalUnit": "one complete six-anonymous-lane paired superblock",
+    "candidateB": [36, 72, 108, 144],
+    "familywiseAlpha": 0.05,
+    "multiplicity": "Holm strong FWER across 35 domain-by-comparator hypotheses",
+    "primaryClaimSuccess": "at least four of seven domains pass; a domain passes only when all five target-versus-comparator hypotheses in that domain are rejected",
+    "adaptiveExpansion": false,
+    "postOutcomeTopUp": false,
+    "movementTransferSentinel": "OMITTED",
+    "correctnessAndOracleHardGates": "RETAINED"
+  },
+  "frozenMipe": {
+    "ratio": 0.9,
+    "logRatioExact": -0.10536051565782628,
+    "D1": "both log geometric-mean elapsed and log P95 elapsed contrasts equal ln(0.90) under the planning alternative",
+    "D2": "log geometric-mean grid-access contrast equals ln(0.90)",
+    "D3": "log1p(total managed allocation bytes) contrast equals ln(0.90); this is a ratio on the 1+bytes scale and raw-byte interpretation must be reported",
+    "D4": "log1p(max persistent-state bytes) contrast equals ln(0.90); this is a ratio on the 1+bytes scale and raw-byte interpretation must be reported",
+    "D5": "D1 log-geometric-mean slope difference per log2(agentCount) unit equals ln(0.90)",
+    "D6": "D1 log-geometric-mean slope difference per log2(changedCellCount) unit equals ln(0.90)",
+    "D7": "D1 log-geometric-mean slope difference per log2(gridEdge^2) unit equals ln(0.90)"
+  },
+  "endpointConstruction": {
+    "eligibleEventGroupsPerCoreLane": 24,
+    "D1GeometricMean": "mean(log(eventGroupElapsedMilliseconds))",
+    "D1P95": "log(nearest-rank P95 eventGroupElapsedMilliseconds)",
+    "D2": "mean(log(gridAccessorCallsTotal))",
+    "D3": "log1p(sum of counter-valid event-group managedAllocationBytes joined by d3WindowRecordId)",
+    "D4": "log1p(max valid persistentStateBytesTotal over lane measurement points)"
+  },
+  "nuisanceModel": {
+    "rows": "648 core lane summaries clustered into 108 independent superblocks",
+    "responseVector": ["D1 geometric mean", "D1 P95", "D2", "D3", "D4"],
+    "fixedEffects": [
+      "anonymous-lane-specific intercept",
+      "anonymous-lane-specific centered log2(N) slope",
+      "anonymous-lane-specific centered log2(F) slope",
+      "anonymous-lane-specific centered log2(G^2) slope",
+      "shared changeTopology factor",
+      "shared graphProfile factor",
+      "shared sameTickAtomicPartitions factor",
+      "shared within-superblock execution-position factor"
+    ],
+    "estimator": "multivariate OLS with superblock-clustered CR1 sandwich covariance",
+    "covarianceScalingForFormalB": "qualification covariance multiplied by qualification B per cell / formal B = 3/B",
+    "nuisanceUncertaintyInflation": "multiply by df/chi-square-lower-0.05(df), with df = number of independent clusters minus model rank and the lower quantile computed by the Wilson-Hilferty approximation",
+    "identityBlindness": "repeat for every possible opaque target label ALG-A through ALG-F, never open the identity map, and use the worst power across the six possibilities"
+  },
+  "powerAlgorithm": {
+    "planningAlternative": "all 40 primitive target-versus-comparator contrasts are exactly ln(0.90)",
+    "primitiveContrasts": "5 comparators x [D1 geometric mean, D1 P95, D2, D3, D4, D5, D6, D7] = 40",
+    "domainPValues": "D1 uses the intersection-union maximum of its two one-sided p-values; D2-D7 each use one one-sided p-value, yielding 35 domain-by-comparator hypotheses",
+    "simulation": "multivariate-normal Monte Carlo from the frozen contrast covariance",
+    "drawsPerOpaqueTargetPerB": 200000,
+    "baseSeed": 141402026,
+    "powerEstimate": "probability that the frozen primary-claim success rule is satisfied",
+    "acceptanceCriterion": "the minimum across six opaque targets of the two-sided 95% Wilson lower confidence bound must be at least 0.90",
+    "selection": "first passing B in ascending order",
+    "noPassingCandidate": "FAIL_CLOSED_NO_CANDIDATE_MEETS_POWER"
+  },
+  "sevenDayRule": {
+    "runtimeSource": {
+      "path": "Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/formal-st-runtime-prediction.v2.json",
+      "sha256": "2fd23a2c96ce5a743c8551466a2b9984639780c624ba802514cd09070c1e7f9f"
+    },
+    "budgetField": "planningWith20PercentHeadroomHours",
+    "thresholdHours": 168,
+    "actionIfAtOrAboveThreshold": "stop before formal ST freeze and submit a simplification proposal for explicit user authorization",
+    "actionIfBelowThreshold": "eligible to proceed to final formal ST freeze under already-authorized step 8"
+  },
+  "prohibitions": [
+    "no named algorithm effect estimation or reporting",
+    "no ranking, weighting, or winner decision",
+    "no use of qualification observations as formal samples",
+    "no effect-size tuning from observed separation",
+    "no change to G, N, F, six algorithms, endpoints, majority rule, multiplicity, correctness gates, or oracle gates",
+    "no formal collection, MQ, MT, or migration-package build"
+  ]
+}

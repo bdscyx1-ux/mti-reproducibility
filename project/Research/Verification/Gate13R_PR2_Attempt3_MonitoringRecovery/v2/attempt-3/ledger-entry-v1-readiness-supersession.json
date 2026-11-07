@@ -1,0 +1,21 @@
+{
+  "kind": "tool_receipt",
+  "step": "monitoring-recovery-readiness",
+  "command": "Correct the earlier v1 readiness outcome after the preserved terminal-review defect: keep the original receipt immutable, mark v1 readiness superseded and failed for launch use, and defer only to the independently validated active v2 readiness.",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "gate_tokens": [
+    "V1-READINESS-SUPERSEDED",
+    "V1-LAUNCH-USE-PROHIBITED",
+    "RAW-COMMIT-HOURLY-COVERAGE-DEFECT-PRESERVED",
+    "ACTIVE-V2-READINESS-SEPARATELY-PASSED",
+    "NO-UNITY",
+    "NO-FORMAL-TARGET"
+  ],
+  "input_sha256": {
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json": "6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_PostReadiness_Defect_Receipt.v1.json": "6786632fa89493a78936f7f91c9fb3ee2dc21e43618460db881d609953f2f503",
+    "Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v2.md": "54a6e4b1db4006ba2c03cdc7395bd109e1e07dc3a6e212f5dc5252bb5e541fb6"
+  }
+}

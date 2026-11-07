@@ -1,0 +1,32 @@
+{
+  "authorizationId": "gate13r-pr2-mp1-targeted-memory-policy-pilot-authorization-v1",
+  "authorizedAtLocal": "2026-10-09T11:06:39.3350688+08:00",
+  "authorizedAtUtc": "2026-10-09T03:06:39.3350688Z",
+  "authorizedStages": [
+    "stage-separated-memory-instrumentation",
+    "pilot-only-failure-precedence-wrapper-repair",
+    "static-unit-compile-validation-only-validation",
+    "one-fresh-non-formal-balanced-targeted-memory-pilot",
+    "two-stage-raw-freeze-and-read-only-diagnostic-analysis"
+  ],
+  "explicitlyNotAuthorized": [
+    "gate13r-pr2-formal-attempt-3",
+    "attempt-2-retry",
+    "attempt-2-resume",
+    "attempt-2-top-up",
+    "attempt-2-partial-merge",
+    "formal-statistical-analysis",
+    "gate14r",
+    "algorithm-superiority-inference-from-pilot"
+  ],
+  "executionLimit": {
+    "measuredPilotAttempts": 1,
+    "automaticMeasuredRetry": false,
+    "automaticMeasuredResume": false,
+    "automaticMeasuredTopUp": false,
+    "partialAttemptMerge": false
+  },
+  "promptRelativePath": "Research/Gate13R_PR2_MemoryPolicy_Targeted_Pilot_Next_Authorization_Prompt.md",
+  "promptSha256": "5dd3e77e984e2b44e9b866b735b6f644173f096cea484d2dfedcbe7ae0fc81a5",
+  "status": "AUTHORIZED-WITH-BOUNDARIES"
+}

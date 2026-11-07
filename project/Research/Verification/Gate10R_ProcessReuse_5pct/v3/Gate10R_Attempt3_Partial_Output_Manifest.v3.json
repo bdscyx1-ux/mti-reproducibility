@@ -1,0 +1,828 @@
+{
+    "schemaVersion":  1,
+    "manifestId":  "gate10r-attempt3-partial-output-manifest-v3",
+    "createdAtUtc":  "2026-10-06T14:18:11.7782702Z",
+    "attempt":  3,
+    "status":  "FAILED-NO-AUTO-RETRY",
+    "failedStage":  "retained-regression",
+    "artifactCount":  162,
+    "rawBytes":  14598617,
+    "artifacts":  [
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/BlockVerification.summary.json",
+                          "bytes":  13671,
+                          "sha256":  "31b02619298fad4a674599722c3bea17543972b0571bcb32a4db6318bfbf8c78"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Compile/attempt3.summary.json",
+                          "bytes":  1121,
+                          "sha256":  "e0c81e5de3a247250ec639bfa384473fa761093f774e9fa2e71dc4e64782a485"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Compile/attempt3.Unity.log",
+                          "bytes":  62749,
+                          "sha256":  "dbcf20e8dd52d63faeae7240b6913e87324942ab43d9025cd7021b6a992d194e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Compile/LockHygiene/attempt3-compile.quiescence.json",
+                          "bytes":  675,
+                          "sha256":  "41849f98af883bf0e05b80261b79ae4e9cb43d40956509f0576f665b0e5ff226"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r.lock-hygiene/g10r-ref-hetero-astar-r.quiescence.json",
+                          "bytes":  689,
+                          "sha256":  "b881017b0d3fc082fe07c273da544051700a97634edf00987d9026c8223cc95f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r.orchestrator.stdout.log",
+                          "bytes":  152,
+                          "sha256":  "c6ac89343a4a0e6657816e33b5a5a5090e338dbbbd04a6a9b3967cbffc8b27c9"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r.summary.json",
+                          "bytes":  1775,
+                          "sha256":  "771e287c50ad62900a9c7cba2cc73a4e22f92d45696678474eb99b72dfce6042"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r.Unity.log",
+                          "bytes":  63737,
+                          "sha256":  "32f312bea9df40fe0b60b89f4b114eac3f82374f8d2a2addd79b52cb027dcd57"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r/manifest.json",
+                          "bytes":  2663,
+                          "sha256":  "5de221da9f4fedc45376fc9989481f75f98771aceda1a0ed44115d62dc3c9c42"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r/operations.jsonl",
+                          "bytes":  46282,
+                          "sha256":  "70c78e5f9434e7859f7b6400d31f2c4e216099345e64504b7365ecbbe99dd44f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r/scenario.canonical.json",
+                          "bytes":  750894,
+                          "sha256":  "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-astar-r/workload-result.json",
+                          "bytes":  6075,
+                          "sha256":  "98c610c38271d48792c2aed27bcad30a80c438f927bdb4e2390fdb50c256e15e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l.lock-hygiene/g10r-ref-hetero-dstar-l.quiescence.json",
+                          "bytes":  689,
+                          "sha256":  "ba3bfeb739c5b424d815b4a209b667d44b5e9c4e36e524675bdad04932e17f7f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l.orchestrator.stdout.log",
+                          "bytes":  152,
+                          "sha256":  "739d105bdeb78dacc0db5c62b11b2ba5b773c3f501c2156a16c2823dc8eac897"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l.summary.json",
+                          "bytes":  1774,
+                          "sha256":  "11ef46d9ee2d7ecb22ab880aa6f96fcbd805bd969c4fbbab98c9671cbd978d12"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l.Unity.log",
+                          "bytes":  63738,
+                          "sha256":  "173893b2723dad6257cd8c76fe7137ea1ba575e483c1dee58b916ccfda4ecf3f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l/manifest.json",
+                          "bytes":  2659,
+                          "sha256":  "780f1849f1eaee79c2c9ef25adeefcff0853d839b82e55a1a0053212e2f4105e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l/operations.jsonl",
+                          "bytes":  45874,
+                          "sha256":  "da7d7c8b2be6524a59d01fa8f276628fc548e635cde73b535bce359870b3e657"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l/scenario.canonical.json",
+                          "bytes":  750894,
+                          "sha256":  "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/hetero-dstar-l/workload-result.json",
+                          "bytes":  6030,
+                          "sha256":  "d7e4107f17a85aace80bf2d846695de0ceb77ec21d280057b6d7a61bb2923f5f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r.lock-hygiene/g10r-ref-shared-astar-r.quiescence.json",
+                          "bytes":  689,
+                          "sha256":  "be3c138fd7102ca348e20d4f8b3143c705326f217661fe1d5dba82ffcd6e5930"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r.orchestrator.stdout.log",
+                          "bytes":  152,
+                          "sha256":  "0ae9d8aab65497b2cc98957572f4ef69af6b1b6d828e2565da70f57597a01f48"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r.summary.json",
+                          "bytes":  1767,
+                          "sha256":  "e8d68448739cfef76f7657ed45fd9c5af2a0da1b5581aa90cedb98d673b1f0b0"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r.Unity.log",
+                          "bytes":  63734,
+                          "sha256":  "aada512b131ba2e80667121566f64737ead9d745c8198cbf38617e8f43dce5dd"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r/manifest.json",
+                          "bytes":  2661,
+                          "sha256":  "ab9b8b8fc7cabe4da8e6fbc9094319bf98edd6e5f33dd05f961639510f5bac16"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r/operations.jsonl",
+                          "bytes":  46212,
+                          "sha256":  "0e5794451150a6a6020e9e19d5718931cfa7abae8551e8eb67d8dfd458264f63"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-astar-r/workload-result.json",
+                          "bytes":  6044,
+                          "sha256":  "d134d176fffbd305bbf3f5a004e8edb2666b3ba901cce04dd0370a78c65739c5"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff.lock-hygiene/g10r-ref-shared-cff.quiescence.json",
+                          "bytes":  685,
+                          "sha256":  "90efa7d7da98821bdbb578cc2cec9c5542035d7d0d8afbc92d2747bc7e2c2d5a"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff.orchestrator.stdout.log",
+                          "bytes":  144,
+                          "sha256":  "b80fd13f511ca6348aaf3ba662a19f20ad62781753752ca9652146e6ae8b1eee"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff.summary.json",
+                          "bytes":  1747,
+                          "sha256":  "f6e94737ff1ff795530656d1705d0be3d58c42dd81e84fed5fd3ff473b93f55e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff.Unity.log",
+                          "bytes":  63716,
+                          "sha256":  "1e60f0fd5a01d263ab08053d22ec192d558eb7a169129957a90597ef2eba0cff"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff/manifest.json",
+                          "bytes":  2737,
+                          "sha256":  "8cd73a31d9a8ed54ad8d5699b7bba26faa1a3a26fc4e8af28a4768b91f6518d5"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff/operations.jsonl",
+                          "bytes":  45480,
+                          "sha256":  "8119f690d2e3d56b68c1596e952fc94dfd42c1385895b3b08ab6fa95e780ba50"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-cff/workload-result.json",
+                          "bytes":  6151,
+                          "sha256":  "e35c1638c5f15d50670083df9007ba8559f7e587b876834641b8265faf315107"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l.lock-hygiene/g10r-ref-shared-dstar-l.quiescence.json",
+                          "bytes":  689,
+                          "sha256":  "0193a1f92ae350e5a0b6408ff422809145de63c677bd8eb01c7fdec31f849601"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l.orchestrator.stdout.log",
+                          "bytes":  152,
+                          "sha256":  "caed7aa9c25115726ba17867a86ff268e24d69d54ba0b88ef867783d76b45580"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l.summary.json",
+                          "bytes":  1766,
+                          "sha256":  "7361a5753dec49ca37f1865ba69d7967e1d6dfef86b823e531b4b687e340603d"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l.Unity.log",
+                          "bytes":  63726,
+                          "sha256":  "3bbc641da56042600d8422d3262ff2461b98be40a5419662205702938885d079"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l/manifest.json",
+                          "bytes":  2657,
+                          "sha256":  "35a8a7e69b960981acebf8bf9a3bb0456acf46d9ddb9affc533215e19a3caf36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l/operations.jsonl",
+                          "bytes":  45870,
+                          "sha256":  "fe15f98508e9c7ddd2b57a257302c0a5435710f3ded0ba678d5d0ad737fb40a5"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-dstar-l/workload-result.json",
+                          "bytes":  6023,
+                          "sha256":  "a817f8fd555133a1a348fca88c191da4f8749ae33d5129e5882d9922c78e5d45"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff.lock-hygiene/g10r-ref-shared-idff.quiescence.json",
+                          "bytes":  686,
+                          "sha256":  "242bd8d7d22ceab88320b47dd8807adef4beb2fe18303c2a03185ebf2a0e300a"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff.orchestrator.stdout.log",
+                          "bytes":  146,
+                          "sha256":  "c86433c8da977615e55ab48a7bd9962367628ba7f1689b3802fc90d6c59afef8"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff.summary.json",
+                          "bytes":  1752,
+                          "sha256":  "020f4677605edc66f9fba3ae9709862957592f9b554a50ee951539180f485b5d"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff.Unity.log",
+                          "bytes":  63723,
+                          "sha256":  "bb1f1fdf4f6ef8ef71ea7dc637c50b4dbb2503497c6661c0edbeed8bb7c7a029"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff/manifest.json",
+                          "bytes":  2743,
+                          "sha256":  "e59a44d5e71d070a14b836d66a262a7c68223118807b1ca0d57087e5ff1a08a8"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff/operations.jsonl",
+                          "bytes":  45441,
+                          "sha256":  "6098bfb388d92978104b5b41292121942d48af3f2a8caa19bebe21ea0dda9c2f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/cold-reference/shared-idff/workload-result.json",
+                          "bytes":  6091,
+                          "sha256":  "ceaba0cfa3a8ff32725228e15b5062cfea90151da803b15b39b174d7f921b812"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed.lock-hygiene/g10r-verify-negative-b001.lock-capture.json",
+                          "bytes":  1797,
+                          "sha256":  "f5c9ab66e7a4287ee8a7ea642a3d2cc19c902e11ec3943474c18b13a19e28722"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed.lock-hygiene/g10r-verify-negative-b001.lock-cleanup.json",
+                          "bytes":  1575,
+                          "sha256":  "5d8e47c4cbc4c41414ea330b92bb6548b3666c78af41cc12507ea840a2bfcb25"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed.orchestrator.stdout.log",
+                          "bytes":  170,
+                          "sha256":  "e947b5787362ea26660ec9d75605c22d4a06f5b3af0360076d01adc8330edab9"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed.summary.json",
+                          "bytes":  1786,
+                          "sha256":  "b760bcc698617fda09058e6d95a413f589aac494f88e0679394f0762e862bc9d"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed.Unity.log",
+                          "bytes":  23020,
+                          "sha256":  "49cdbc1293d4018927c5fd81bb1d1a11f73a86f8ee621076f6e71e44eefe3953"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed/block-checkpoint.json",
+                          "bytes":  595,
+                          "sha256":  "12f176795ab6ee7c4aad72e58aadd933af2ce74a4f47d45f93e5ff5a2fc59bf6"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed/block-failure.json",
+                          "bytes":  902,
+                          "sha256":  "e4a2e94f5cde7a10ec17178c9c19996506da04407a273c8a3e1ff49c73e066e6"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/manifest.json",
+                          "bytes":  5575,
+                          "sha256":  "bf9a8cab3aabbb5eb188daabf58928956637cc420a614bfef288c0efa1fe7b9f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/operations.jsonl",
+                          "bytes":  47634,
+                          "sha256":  "cf48f3ef2c130a01bc092bc0afe4aca39b1d6ee153e50cbfb9ed42afec6b75d3"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/sample-summary.json",
+                          "bytes":  871,
+                          "sha256":  "f32be997d57ef489b91c2f37032cf508bfc24ed30964e68a908e30ba56ecf9c0"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/workload-result.json",
+                          "bytes":  6111,
+                          "sha256":  "b474359e46b842849b5ecffa71c8415deb629c7e5cb052e05caf81944a1c0c4a"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/plans/negative-fail-closed.block-plan.json",
+                          "bytes":  3332,
+                          "sha256":  "14d598c07f7ce20fa9d76027fd30bf0fe9fb899dc9f90088ce2a5466968988bf"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/plans/positive-four.block-plan.json",
+                          "bytes":  3283,
+                          "sha256":  "d8eb253081513bc3a251ec5220ba73261a4960ad2e0ccd88265499921a8ffcc1"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/plans/positive-two.block-plan.json",
+                          "bytes":  2655,
+                          "sha256":  "f8b9d81d4bd4a932bd8ef10fbcbf02d34344866b0078b543490249fb5290170a"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a.lock-hygiene/g10r-verify-four-b001.quiescence.json",
+                          "bytes":  681,
+                          "sha256":  "d4dcdc52e451fc863fba34a7ed1b598eeda3377e7a7f7926bdec24947a569b86"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a.orchestrator.stdout.log",
+                          "bytes":  162,
+                          "sha256":  "8bf103956cb93c99c0543104a95e6fec791b423e76586f868cdc933a5d03c3ab"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a.summary.json",
+                          "bytes":  1710,
+                          "sha256":  "26e5e474fd2a17e031584c7e0c61170561754ce96c2b8e531653daba7438f39b"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a.Unity.log",
+                          "bytes":  63655,
+                          "sha256":  "f4820aa8a67e35015f0f161a2b599619c6cb684797d2cf6d74db22388eee85b9"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/block-checkpoint.json",
+                          "bytes":  496,
+                          "sha256":  "f262bf0cb50f9aa7948101a279d7988aaad2b405921299bb0761c08659d464c7"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/block-manifest.json",
+                          "bytes":  8575,
+                          "sha256":  "961a41a1c0e53cb056502c28c7799bc88f5a14ef51ee811b50d9794dd20191ac"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p01-astar-r/manifest.json",
+                          "bytes":  5584,
+                          "sha256":  "70b2734ff2f6c839936532c5b75ef5daa7de8ae928f616d2866b266e23609295"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p01-astar-r/operations.jsonl",
+                          "bytes":  47147,
+                          "sha256":  "14b6f7f86fae007ac38d263af38e83a2c94511c1e9fa83bfe2998010c3a021ef"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p01-astar-r/sample-summary.json",
+                          "bytes":  863,
+                          "sha256":  "075d9ffcf5bc6f40f5d60f7906ed28aed5eda3bb55133f1703a384f67c83213a"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p01-astar-r/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p01-astar-r/workload-result.json",
+                          "bytes":  6101,
+                          "sha256":  "30ce0570c5efd393048c691929042dbf8f732182a9964782036f64a621f45a4e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p02-dstar-l/manifest.json",
+                          "bytes":  5572,
+                          "sha256":  "ede6a4f3288c5775fd0f706fcbc368a94ffb67ae7561b9361c90f846a32d2281"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p02-dstar-l/operations.jsonl",
+                          "bytes":  46620,
+                          "sha256":  "703b0095e4e8132f1e0c1aa14c20fff42a599d0c27af2017446bd7d1706805ac"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p02-dstar-l/sample-summary.json",
+                          "bytes":  862,
+                          "sha256":  "ffb54ccd5b3794c42fdffee18b8d4577ec0d615f460f47c281fea827a2bb0eed"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p02-dstar-l/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p02-dstar-l/workload-result.json",
+                          "bytes":  6030,
+                          "sha256":  "ad9723dd82ac475013dc8f085bd3dfb17443011d27e6f0616fc9901bb96dcfed"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p03-idff/manifest.json",
+                          "bytes":  5663,
+                          "sha256":  "febee6c29b028f564790ad92aa6df0bae992ea9462d38f7d36c72b606174c3ce"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p03-idff/operations.jsonl",
+                          "bytes":  46279,
+                          "sha256":  "d9b386d7aa7250ea88a7a710e103e35ac3ab18c20f99970a2e1e7f84e35c27ec"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p03-idff/sample-summary.json",
+                          "bytes":  859,
+                          "sha256":  "eb337498ea251d2fdce0cbb600653f89ae104d0e01abddfc9ee68dec52480e82"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p03-idff/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p03-idff/workload-result.json",
+                          "bytes":  6080,
+                          "sha256":  "c7b2081be1ebf8c13bbb3e2ee93f147280b2988fe909ded11680c0140d863583"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p04-cff/manifest.json",
+                          "bytes":  5650,
+                          "sha256":  "0f08342be1028cb1f8527aa29997de9d98722bdb13fcd84fbe4dfe243856a261"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p04-cff/operations.jsonl",
+                          "bytes":  46243,
+                          "sha256":  "54e8b6a01f1cf442aede7f47630dcbda0fdd9b92a6a6787091dcc53d10995b84"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p04-cff/sample-summary.json",
+                          "bytes":  859,
+                          "sha256":  "78a3b4a62783242670a67889cd4306715e9efe3556f76a37ffc8ca587e3ba4ea"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p04-cff/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-a/runs/p04-cff/workload-result.json",
+                          "bytes":  6127,
+                          "sha256":  "1372caffa929ad2ab6dc11b80e2b7659354d25528ed6a21213ff0b96d3b3e539"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b.lock-hygiene/g10r-verify-four-b001.quiescence.json",
+                          "bytes":  681,
+                          "sha256":  "76f21ff284346b6ae0608fa1d5cbd6a31c75e101d29697fa046a02c46b6ec2b8"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b.orchestrator.stdout.log",
+                          "bytes":  162,
+                          "sha256":  "8bf103956cb93c99c0543104a95e6fec791b423e76586f868cdc933a5d03c3ab"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b.summary.json",
+                          "bytes":  1710,
+                          "sha256":  "2a6918774dc00c1dc7f0f021e16c74097bcf1c40f6f4d221c3a22de9d33219f4"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b.Unity.log",
+                          "bytes":  63663,
+                          "sha256":  "43966d96ddee234b08600729173ab76d78b87168c8d2d359fef599dd0091e39e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/block-checkpoint.json",
+                          "bytes":  496,
+                          "sha256":  "0a19f309917445df30177592f7ba9d664875599868147cfdc381c04f4f99c4de"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/block-manifest.json",
+                          "bytes":  8560,
+                          "sha256":  "8475ea832c5d92c59a3c6534a40474b93e6b8bfb5408e570a30b7b538314eade"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p01-astar-r/manifest.json",
+                          "bytes":  5576,
+                          "sha256":  "1b430de8567fc2760b154a2b7638e3c53d1074bf2627ef5c15cf3aec40946b3e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p01-astar-r/operations.jsonl",
+                          "bytes":  47122,
+                          "sha256":  "7086a8c81115e2d0c45ee996d9a0d3ef1a027e981a55f165b71e6569096dc46f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p01-astar-r/sample-summary.json",
+                          "bytes":  863,
+                          "sha256":  "15a9742d18b5d010858896d634ea92c4881033b43bbffda0af187554f6494045"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p01-astar-r/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p01-astar-r/workload-result.json",
+                          "bytes":  6057,
+                          "sha256":  "1b88d07d1b359249153dabaefd995d252f7762decddf50567182d8fdd7058fce"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p02-dstar-l/manifest.json",
+                          "bytes":  5581,
+                          "sha256":  "645f41b172322251bb4ea030e3a66d2a0651742477ab5eaeac590ee8dc0576c4"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p02-dstar-l/operations.jsonl",
+                          "bytes":  46714,
+                          "sha256":  "31322d743bb8307ff20065bdfbea5b8c45fe486c0139b0235814fc55eedc8fbb"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p02-dstar-l/sample-summary.json",
+                          "bytes":  862,
+                          "sha256":  "ea030efce38d1f48c39ecc6920ba14c186ac3f03ee190db6cd633fdf07662c5f"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p02-dstar-l/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p02-dstar-l/workload-result.json",
+                          "bytes":  6008,
+                          "sha256":  "59e0cccfe4a2a530938897bcd5582dbc51c90ff21b614335e563a4cc29d4576d"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p03-idff/manifest.json",
+                          "bytes":  5666,
+                          "sha256":  "7b30cfbf69f8ccb1d46c732c3711d24a605491ccf41c32796df85ae02f459118"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p03-idff/operations.jsonl",
+                          "bytes":  46294,
+                          "sha256":  "7991983711be541b5cb4f4738c957122f0f188ca4bc191849eeca5cf22a2d545"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p03-idff/sample-summary.json",
+                          "bytes":  859,
+                          "sha256":  "704ab031353d8afa7180d90623ce3604700f1bd68dfc9a83da73ed2d7ce5d084"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p03-idff/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p03-idff/workload-result.json",
+                          "bytes":  6118,
+                          "sha256":  "1f4a04fdfe183aca166f4550a12365d55939307e8857b1624f18e52e1ad60c59"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p04-cff/manifest.json",
+                          "bytes":  5641,
+                          "sha256":  "e3ae70dd30ad393d0695fa12286177912ece6e775a610a4b76f69a1dc29ed547"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p04-cff/operations.jsonl",
+                          "bytes":  46236,
+                          "sha256":  "0f81336718ff7f99ea6494504e898f9b95ea450d5b8a1421fbc12ab3df44f11e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p04-cff/sample-summary.json",
+                          "bytes":  859,
+                          "sha256":  "859639b9d5aeb342fcbdae9a1e0b89dd57b362b13de6d3fe5924cda2158d613d"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p04-cff/scenario.canonical.json",
+                          "bytes":  750882,
+                          "sha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-four-b/runs/p04-cff/workload-result.json",
+                          "bytes":  6102,
+                          "sha256":  "1bd16cdc3835e1e5e3c0a99a1565b718dd25a2f41503704296fea7d9f344437b"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two.lock-hygiene/g10r-verify-two-b001.quiescence.json",
+                          "bytes":  680,
+                          "sha256":  "fb30e5519e566d2df7f2b9b575169060a8d27ac50f7be910f49f73005fb28f26"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two.orchestrator.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two.orchestrator.stdout.log",
+                          "bytes":  160,
+                          "sha256":  "61d2656f557b43cae1de30c3794c84e8b90a15c52d6910b595f01f048f98b01c"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two.summary.json",
+                          "bytes":  1697,
+                          "sha256":  "873208726bbb37b5fe84f77b8c1a72179f61acfe723fea7445e3c151971b319c"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two.Unity.log",
+                          "bytes":  63656,
+                          "sha256":  "eaae6c3885155d8db444a4728c0457311468dd57edb90d3e0e9b32ab70ae1edc"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/block-checkpoint.json",
+                          "bytes":  495,
+                          "sha256":  "81db1ea6f98a54742a0163e8fd441cea0b0b2954598320ac56200e05f5950c67"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/block-manifest.json",
+                          "bytes":  4971,
+                          "sha256":  "587eb176a91b1beef7b00077cffb3a4fdae3dbd80d4d1a60565271563b419878"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p01-astar-r/manifest.json",
+                          "bytes":  5567,
+                          "sha256":  "704c25baa3a5f73ed27ba5c1bac5b590f2e9830c05d633d2f563835261146830"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p01-astar-r/operations.jsonl",
+                          "bytes":  47037,
+                          "sha256":  "4d226792f2856046be7b582e9bc3bf7155da5dee4a2b8d587fee3111a3644141"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p01-astar-r/sample-summary.json",
+                          "bytes":  861,
+                          "sha256":  "20a59702ddb789672e9a93b73cb4226712f7a4a24b2654d72e8f132b38e04fce"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p01-astar-r/scenario.canonical.json",
+                          "bytes":  750894,
+                          "sha256":  "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p01-astar-r/workload-result.json",
+                          "bytes":  6031,
+                          "sha256":  "1fc2716c1c57e6fdc3a30d27eceb930b0f4fd3d461a5cbd1d6b4e64ac9af6294"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p02-dstar-l/manifest.json",
+                          "bytes":  5563,
+                          "sha256":  "2d26175f3ebe1014f8e11ef58c5a96a161b7eefb261e8228de5057fb45340345"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p02-dstar-l/operations.jsonl",
+                          "bytes":  46473,
+                          "sha256":  "e114061fd8028732365d4c593d8ce6d340ba4274a225349eb5cb7c652a981536"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p02-dstar-l/sample-summary.json",
+                          "bytes":  860,
+                          "sha256":  "60cf9ff34dde0fe37c5d50b387a2273a7ac0cbe8c52fc652e9d33116e51ea748"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p02-dstar-l/scenario.canonical.json",
+                          "bytes":  750894,
+                          "sha256":  "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Fixtures/v1/positive-two/runs/p02-dstar-l/workload-result.json",
+                          "bytes":  5992,
+                          "sha256":  "08edc8544d3e00df4f6f778c11c88f70ae0220a3dff538ce5f9e06dd18742762"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Gate10R_Attempt3_Execution_Receipt.v3.json",
+                          "bytes":  4612,
+                          "sha256":  "32b4632ac3362f38d6e86fe8e7797f8c344392de2c4ddd3a3adb2538b940609e"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Gate10R_Attempt3_Preflight.summary.v3.json",
+                          "bytes":  17514,
+                          "sha256":  "7d73d28d21a3b61fda887827d8789d221d5ca7235cbd31a01759940283c1e096"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/gate10r-preflight-checkpoint.v3.json",
+                          "bytes":  721,
+                          "sha256":  "d066cb33120dbff0ba9bdcd7e4be10eb327042691cf4a8ce078fa02890e8f09b"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Preflight/PreExistingLockCleanup/attempt2-negative-stale-lock.lock-capture.json",
+                          "bytes":  1826,
+                          "sha256":  "33196d3865aaca07c0ba0a7ef9626338ff08a9be8d28eb599b8be95b80826355"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/Preflight/PreExistingLockCleanup/attempt2-negative-stale-lock.lock-cleanup.json",
+                          "bytes":  1580,
+                          "sha256":  "0de035e2af5e566b1c70ddb9231c1295e053b0fb72bba02317486839d5a60a5c"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/RetainedRegression/RetainedRegression63.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/RetainedRegression/RetainedRegression63.stdout.log",
+                          "bytes":  3686,
+                          "sha256":  "1d9aca22d6743f91bb000d61dd2d808e678948b28a4fcb92b05c1bf710868bf4"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/RetainedRegression/RetainedRegression63.summary.json",
+                          "bytes":  1747,
+                          "sha256":  "d008ab6d94e5d62e0f1773fef5eb92632c7352da04f75045b5e96c3231141dcb"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/TelemetryProbe/v1.lock-hygiene/telemetry-probe-v1.quiescence.json",
+                          "bytes":  679,
+                          "sha256":  "fe09fbd35a118e3de82d66d9fbcb363abbbe2c32eab8fe59e8f436b9b8841c73"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/TelemetryProbe/v1.summary.json",
+                          "bytes":  1449,
+                          "sha256":  "e5d5125f46235e6788273c10d09343d7deba82c03b9be15534e3d31684585169"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/TelemetryProbe/v1.Unity.log",
+                          "bytes":  67065,
+                          "sha256":  "6f5d7aeb72ffd6220603e0dfb946f54941a6f2fe2d9ab1004816d581404a70e4"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/TelemetryProbe/v1.wrapper.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/TelemetryProbe/v1.wrapper.stdout.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/TelemetryProbe/v1/external-os-query.json",
+                          "bytes":  464,
+                          "sha256":  "15bda6bd7ab66d8569a557605fa152f8f9ff71f9d7a929474b8014583bbeb762"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/TelemetryProbe/v1/telemetry-probe-ready.json",
+                          "bytes":  944,
+                          "sha256":  "e9ec5d2206961161bc908ece9ef68c76ce8c56e5a7d8a9d318f517b4f7cbd727"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/TelemetryProbe/v1/telemetry-probe-result.json",
+                          "bytes":  2544,
+                          "sha256":  "f81c0830d865fc0ff586acbb44c970077fcb6419a6ff3d844e40e60ec9e18e1b"
+                      },
+                      {
+                          "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v3/UnitTests.summary.json",
+                          "bytes":  11858,
+                          "sha256":  "60d4a3a5baffe27be8f0664757328a7fb5f6cbdd623ca2c2b3161b197ce856c8"
+                      }
+                  ],
+    "finalAuditStarted":  false,
+    "gate11RStarted":  false,
+    "gate12RStarted":  false,
+    "gate13RStarted":  false,
+    "excludedFromFormalAnalysis":  true,
+    "formalCampaign":  false
+}

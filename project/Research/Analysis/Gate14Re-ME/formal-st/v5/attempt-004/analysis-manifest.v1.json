@@ -1,0 +1,84 @@
+{
+  "algorithmLanes": 7776,
+  "analysisAttempt": "attempt-004",
+  "bindings": {
+    "acceptanceFileManifestSha256": "02eefd2cffe1f611f0523cbb7f94c1e15ab60f4bfd86488cdcf4e2cabf348329",
+    "acceptanceManifestSha256": "9f6470e399fd00469a444959753e4fd07670c193cd0cd76331d88965dfa832f0",
+    "acceptanceTerminalFinalSha256": "2f12db25a27c023ef786251f7400546417883af639b3d405cc31ee5f5c681823",
+    "acceptanceTerminalReceiptSha256": "35397eee59ec151faf6988babe2aa83676a3c03ed226e299e2a85c10e6081b7f",
+    "analysisContractSha256": "8e0715cbad6de4a1af10ea4cddd11dd1ef8497bd3e15c6db72996dfe951ec746",
+    "authorizationReceiptSha256": "adb4fa0c5f214c2b40a0fb2a1e831c43124f6a28dc70cced36bec8bea48001f8",
+    "endpointContractSha256": "6b38e152c8a17c0bedcd2e700aa8274167e2e0831b33c13cdfbb5227b1354132",
+    "executionContractSha256": "e2b61eccfc274a7eba0e8784c817ac089bd42f5a4f727685fab2fa1ba62067b1",
+    "identityBindingSha256": "c3d8623560f9162de858ac01b2e861395b92953896e922413fababd0298db5b3",
+    "runtimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "toolSha256": "6e217d371fa725ee544c02d24dd895dba58b09193cba02045016580075ea5858"
+  },
+  "boundaries": {
+    "aggregateScoreComputed": false,
+    "allFailedComparatorDetailedReporting": true,
+    "comparators": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF"
+    ],
+    "domainAggregationRuleModified": true,
+    "formalAnalysisPerformed": true,
+    "minimumComparatorHypothesesRequiredForDomainPass": 4,
+    "mqPerformed": false,
+    "mtPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "scientificDesignModified": true,
+    "sourceRootsModified": false
+  },
+  "completedAtUtc": "2026-10-30T13:08:16.066Z",
+  "confirmatoryHypotheses": 35,
+  "confirmatoryPrimitiveContrasts": 40,
+  "elapsedSeconds": 17.295,
+  "hardGates": {
+    "D1MeasurementValidity": true,
+    "D2CounterValidity": true,
+    "D3CounterValidity": true,
+    "D4SizingFormulaValidity": true,
+    "completeAcceptedDelivery": true,
+    "correctnessOracle": true,
+    "preservedFailureResolutionCompatibility": true,
+    "sourcePackageUnchangedDuringAnalysis": true,
+    "zeroReplacement": true
+  },
+  "independentN": 1296,
+  "independentUnit": "superblock",
+  "modelFallbacks": {
+    "D1_GEOMETRIC_MEAN": false,
+    "D1_NEAREST_RANK_P95": false,
+    "D2": false,
+    "D3": false,
+    "D4": false
+  },
+  "primaryClaim": {
+    "claimId": "MAJORITY_OF_ENDPOINT_DOMAINS_PASS_UNDER_ANY_FOUR_OF_FIVE_COMPARATOR_RULE",
+    "comparators": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF"
+    ],
+    "denominatorDomains": 7,
+    "minimumComparatorHypothesesRequiredForDomainPass": 4,
+    "pass": true,
+    "rankingOrWinnerClaim": false,
+    "requiredDomains": 4,
+    "supportedDomains": 4
+  },
+  "schema": "gate14re-me-formal-st-analysis-manifest-v1",
+  "sourceAcceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "startedAtUtc": "2026-10-30T13:07:58.771Z",
+  "status": "PASS_FORMAL_ST_ANY_FOUR_OF_FIVE_DOMAIN_RULE_ANALYSIS_EXECUTED",
+  "studyId": "Gate14Re-ME"
+}

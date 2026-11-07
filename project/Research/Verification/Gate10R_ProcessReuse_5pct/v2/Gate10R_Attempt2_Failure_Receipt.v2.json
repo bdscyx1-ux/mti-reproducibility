@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "gate10r-attempt2-block-verification-failure-v2",
+  "createdAtUtc": "2026-10-06T13:12:18.0389569Z",
+  "status": "GATE10R-ATTEMPT2-FAILED-NO-AUTO-RETRY",
+  "attempt": 2,
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "authorizationId": "gate10r-attempt2-controlled-retry-v1",
+  "failedGate": "official-block-verification",
+  "failedSubstage": "first-fresh-cold-structural-control-before-unity-start",
+  "command": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -ExecutionPolicy Bypass -File H:/DDM_Final_Project/Research/Verification/Run-Gate10RBlockVerificationV2.ps1 -ProjectPath H:/DDM_Final_Project -UnityPath H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+  "exitCode": 1,
+  "failure": {
+    "exception": "NativeCommandError",
+    "file": "Research/Verification/Run-Gate10RBlockVerificationV2.ps1",
+    "line": 32,
+    "column": 55,
+    "message": "Unity must be closed and the project lock absent.",
+    "evidenceBasedInterpretation": "The expected negative fail-closed Unity process had exited and its negative assertions passed, but the project UnityLockfile created during that process still existed when the first cold structural control performed its pre-start guard. At later read-only inspection no Unity.exe process remained. The evidence therefore establishes lock persistence at the transition, but does not by itself distinguish delayed lock release from a stale lock artifact."
+  },
+  "completedOfficialStages": [
+    {
+      "stage": "unit-tests",
+      "assertions": 38,
+      "passed": true
+    },
+    {
+      "stage": "unity-compilation",
+      "exitCode": 0,
+      "passed": true
+    },
+    {
+      "stage": "telemetry-probe",
+      "passed": true
+    }
+  ],
+  "partialBlockVerification": {
+    "positiveBlocksCompleted": 3,
+    "expectedNegativeBlocksCompleted": 1,
+    "completedBlockSamples": 11,
+    "freshColdControlsCompleted": 0,
+    "freshColdControlsPlanned": 6,
+    "structuralComparisonsCompleted": 0,
+    "structuralComparisonsPlanned": 10,
+    "unityProcessIds": [22532, 22896, 2200, 19936],
+    "positiveTwoPassed": true,
+    "positiveFourAPassed": true,
+    "positiveFourBPassed": true,
+    "independentProcessIdsObserved": true,
+    "negativeFailClosedFixturePassed": true,
+    "blockVerificationGatePassed": false
+  },
+  "inspection": {
+    "observedAtUtc": "2026-10-06T13:11:06.2548580Z",
+    "unityProcessCount": 0,
+    "projectLockExists": true,
+    "projectLockBytes": 0,
+    "projectLockCreationTimeUtc": "2026-10-06T13:09:17.4285441Z",
+    "projectLockLastWriteTimeUtc": "2026-10-06T13:09:17.4285441Z",
+    "retainedRegressionStarted": false,
+    "finalAuditStarted": false,
+    "gate11RStarted": false,
+    "gate12RStarted": false,
+    "gate13RFormalRootCreated": false
+  },
+  "evidence": {
+    "failureLog": {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Attempt2-BlockVerification-Failure.stderr.log",
+      "sha256": "2aee9da910c1faf889e7e056ebb994860d3ecd901647b69b9f27f282b76eb0a6"
+    },
+    "partialManifest": {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Gate10R_Attempt2_Partial_Output_Manifest.v2.json",
+      "sha256": "1d228e45195aee1eca5c58730952b65753e723b66ad21e1fa8f80f6ac8e72dbe",
+      "artifactCount": 98,
+      "recordedRawBytes": 9337336
+    },
+    "executionReceipt": {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Gate10R_Attempt2_Execution_Receipt.v2.json",
+      "sha256": "02660a160a67655aa27a364d63fbed896471d02c0c5b953f646143feeafdc9d7"
+    }
+  },
+  "analysisDisposition": [
+    "NON-FORMAL",
+    "EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "NOT-FOR-GATE14-INFERENCE",
+    "NO-CANDIDATE-N-FORMAL"
+  ],
+  "disposition": [
+    "NO-AUTO-RETRY",
+    "NO-RESUME",
+    "NO-CONTINUE-TO-RETAINED-REGRESSION",
+    "NO-CONTINUE-TO-FINAL-AUDIT",
+    "NO-CONTINUE-TO-GATE11R",
+    "NO-CONTINUE-TO-GATE12R",
+    "WAIT-FOR-EXPLICIT-NEW-AUTHORIZATION"
+  ],
+  "automaticRetryAttempted": false,
+  "automaticResumeAttempted": false,
+  "formalCampaign": false
+}

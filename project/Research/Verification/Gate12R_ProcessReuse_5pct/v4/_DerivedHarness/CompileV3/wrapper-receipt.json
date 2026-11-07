@@ -1,0 +1,26 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-compile-v3-reset-command-and-empty-array-wrapper",
+    "createdAtUtc":  "2026-10-07T11:59:21.5454420Z",
+    "sourceSha256":  "76ab2ede0c58f9b6da33404547851652299133b221e303fce28a87b5224472f3",
+    "derivedSha256":  "de1c10da5bdae01164652500c7cd7e235227e57c0efc3562cbb7d9936ea32bed",
+    "routes":  [
+                   {
+                       "from":  "$matches=if(Test-Path -LiteralPath $log){@(Select-String -LiteralPath $log -Pattern \u0027error CS\\d+|Scripts have compiler errors|Compilation failed|executeMethod.+could not be found\u0027 -CaseSensitive:$false)}else{@()}",
+                       "to":  "$matches=@();if(Test-Path -LiteralPath $log){$matches=@(Select-String -LiteralPath $log -Pattern \u0027error CS\\d+|Scripts have compiler errors|Compilation failed|executeMethod.+could not be found\u0027 -CaseSensitive:$false)}",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Assets\\_Scripts\\Research\\Editor\\Gate10RProcessReuseBatchCommand.cs",
+                       "to":  "Assets\\_Scripts\\Research\\Editor\\Gate12RProcessReuseBatchCommandV2.cs",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "summaryKind=\u0027gate12r-unity-compilation-v1\u0027",
+                       "to":  "summaryKind=\u0027gate12r-unity-compilation-v2-reset-contract-command\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "researchAlgorithmSemanticsChanged":  false,
+    "resetCommandCompiled":  true
+}

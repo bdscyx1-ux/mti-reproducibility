@@ -1,0 +1,654 @@
+{
+  "schemaVersion": 2,
+  "manifestId": "gate10r-attempt2-partial-output-manifest-v2",
+  "createdAtUtc": "2026-10-06T13:12:01.4687243Z",
+  "status": "GATE10R-ATTEMPT2-FAILED-NO-AUTO-RETRY",
+  "failedGate": "official-block-verification",
+  "failedSubstage": "first-fresh-cold-structural-control-before-unity-start",
+  "failureCause": "stale-or-active-project-lock-detected-after-expected-negative-fixture",
+  "attempt": 2,
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "artifactCount": 98,
+  "artifacts": [
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Attempt2-BlockVerification-Failure.stderr.log",
+      "bytes": 1810,
+      "sha256": "2aee9da910c1faf889e7e056ebb994860d3ecd901647b69b9f27f282b76eb0a6",
+      "lastWriteTimeUtc": "2026-10-06T13:11:33.7497037Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Compile/attempt2.summary.json",
+      "bytes": 797,
+      "sha256": "7ef73cfcaf1a32ce8e9fb62691b79f3455a9ab3d262c2fb1ef5acaf7b1b1663d",
+      "lastWriteTimeUtc": "2026-10-06T13:07:37.4923124Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Compile/attempt2.Unity.log",
+      "bytes": 70589,
+      "sha256": "380ac69c2864e3c9375974997934d1d5709fe39e71a8c5abdedf82b95849ff46",
+      "lastWriteTimeUtc": "2026-10-06T13:07:37.3044066Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/cold-reference/shared-astar-r.orchestrator.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lastWriteTimeUtc": "2026-10-06T13:09:26.2907558Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/cold-reference/shared-astar-r.orchestrator.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lastWriteTimeUtc": "2026-10-06T13:09:26.2907558Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed.orchestrator.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lastWriteTimeUtc": "2026-10-06T13:09:14.3038147Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed.orchestrator.stdout.log",
+      "bytes": 150,
+      "sha256": "cc951e4b6b837eb7381a6a05f5f2b6b34c4d11019c4ad41e050cd88f85eb70d7",
+      "lastWriteTimeUtc": "2026-10-06T13:09:26.2676573Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed.summary.json",
+      "bytes": 1416,
+      "sha256": "747680ff2a6ef0146799f658a4a92024bdb5915ed32616e0ce9b4a2f9cb827b4",
+      "lastWriteTimeUtc": "2026-10-06T13:09:26.2636430Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed.Unity.log",
+      "bytes": 23020,
+      "sha256": "d7f60f9570f7a4bb36fada429d23d27af22de3220401cf80cb7ec0832273bbc7",
+      "lastWriteTimeUtc": "2026-10-06T13:09:26.0385477Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed/block-checkpoint.json",
+      "bytes": 595,
+      "sha256": "bb67af537eefd9f878a03e7787265f87a42b100548b5904be92e8d0fcf06d8ea",
+      "lastWriteTimeUtc": "2026-10-06T13:09:26.0310038Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed/block-failure.json",
+      "bytes": 902,
+      "sha256": "92ef95530b60d4485e2b4595bdecacfc1fa723688df480c7615071237b4818fb",
+      "lastWriteTimeUtc": "2026-10-06T13:09:26.0254835Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/manifest.json",
+      "bytes": 5582,
+      "sha256": "5b0a0d7cfd5874f1e7db2933ce5f033049f06be396e7e0ac805eb9718bddb2f4",
+      "lastWriteTimeUtc": "2026-10-06T13:09:25.9978595Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/operations.jsonl",
+      "bytes": 47472,
+      "sha256": "00428b64ad34399d2a9687a7482210e0f1db11c7ca173be5d22f8eacf0361d4e",
+      "lastWriteTimeUtc": "2026-10-06T13:09:25.6432346Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/sample-summary.json",
+      "bytes": 871,
+      "sha256": "75783d91695890a81e3e5ecc5b1976dc4f4ba26e4f6a6e9dfdd2db5397776f14",
+      "lastWriteTimeUtc": "2026-10-06T13:09:26.0063922Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:09:25.5940514Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/negative-fail-closed/runs/p01-astar-r/workload-result.json",
+      "bytes": 6088,
+      "sha256": "91281acebbe2ca4ca36f15815eba64ffe99d854bab98c9b0143248a91bd30c0c",
+      "lastWriteTimeUtc": "2026-10-06T13:09:25.6462415Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/plans/negative-fail-closed.block-plan.json",
+      "bytes": 3332,
+      "sha256": "9f2eef186b3c58652baf0f73f99c1e694f8e7bd8b6eb3d4b2b9adf2a2c5e8e09",
+      "lastWriteTimeUtc": "2026-10-06T13:08:24.7817810Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/plans/positive-four.block-plan.json",
+      "bytes": 3283,
+      "sha256": "987aaa12e8041117e52a9a7218ea384f0d73628326e8bcf4f68ebfa1927ce1d0",
+      "lastWriteTimeUtc": "2026-10-06T13:08:24.7807776Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/plans/positive-two.block-plan.json",
+      "bytes": 2655,
+      "sha256": "3faab815a52a1d8d1751da88c886bcd09a5e29a597f5738ec1e9cb77719bb01d",
+      "lastWriteTimeUtc": "2026-10-06T13:08:24.7807776Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a.orchestrator.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lastWriteTimeUtc": "2026-10-06T13:08:41.2170992Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a.orchestrator.stdout.log",
+      "bytes": 142,
+      "sha256": "34c7a2d3e84b4d1effe52f05f19dfdc6c0e63a4d83fcd4798bd7cb28e03126fd",
+      "lastWriteTimeUtc": "2026-10-06T13:08:57.7566345Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a.summary.json",
+      "bytes": 1367,
+      "sha256": "0292570fc81cd52ffcd40a0ef1076e418758a0a48e2ba44fa587e5316e531dd7",
+      "lastWriteTimeUtc": "2026-10-06T13:08:57.7516176Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a.Unity.log",
+      "bytes": 63664,
+      "sha256": "6e557e9c0866397b851453d61cef397c6e4eb565c951dbf314b6df60f20652a4",
+      "lastWriteTimeUtc": "2026-10-06T13:08:57.5935592Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/block-checkpoint.json",
+      "bytes": 496,
+      "sha256": "e829c93b4221cceb1a9ca7e36bd8176f4a2db8249073eb3601670d6589fa4d86",
+      "lastWriteTimeUtc": "2026-10-06T13:08:55.2851283Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/block-manifest.json",
+      "bytes": 8536,
+      "sha256": "ea0cedc75b23bb53c4a5a213a0231d2c0cb3fb620ceb1a6c919492285d1ab671",
+      "lastWriteTimeUtc": "2026-10-06T13:08:55.2800934Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p01-astar-r/manifest.json",
+      "bytes": 5576,
+      "sha256": "2f557a350cdf7eaaef5815762d9e60ac2eaf98de8ff07e06a3e0dc3491966206",
+      "lastWriteTimeUtc": "2026-10-06T13:08:53.0751635Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p01-astar-r/operations.jsonl",
+      "bytes": 47073,
+      "sha256": "358e56cb3c837e42f60d1c9d67a452c10acb6c19305eebe72a5f27204364abc2",
+      "lastWriteTimeUtc": "2026-10-06T13:08:52.7281473Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p01-astar-r/sample-summary.json",
+      "bytes": 863,
+      "sha256": "d24d05b130520aa7db657d19a840ad979f1e635f0fa1491869c79320dcb310a4",
+      "lastWriteTimeUtc": "2026-10-06T13:08:53.0812662Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p01-astar-r/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:08:52.6812640Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p01-astar-r/workload-result.json",
+      "bytes": 6031,
+      "sha256": "d7f406bf196d2d432383cd7bc90c537d03ac03ebc67ca0475ba80f403bd89d64",
+      "lastWriteTimeUtc": "2026-10-06T13:08:52.7301568Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p02-dstar-l/manifest.json",
+      "bytes": 5573,
+      "sha256": "7de9fe8f1647510974e75af5a031920f99ad0474339ac9df99a195b7909e12bc",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.0432129Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p02-dstar-l/operations.jsonl",
+      "bytes": 46486,
+      "sha256": "4f0a3f1814208254b7ca9c2af30ad68dec95810bc7f2f7c0f79721255353ce88",
+      "lastWriteTimeUtc": "2026-10-06T13:08:53.7708929Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p02-dstar-l/sample-summary.json",
+      "bytes": 862,
+      "sha256": "45e3b4be90d26325f9d0869d433d5d9a85b1e22cf81ba9ea5fb546157efa595a",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.0493446Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p02-dstar-l/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:08:53.6260318Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p02-dstar-l/workload-result.json",
+      "bytes": 6024,
+      "sha256": "dcdb3ba8b3244dea84693078dbe3a67a64319fa7906aff8c5e15bc5c7d6668f8",
+      "lastWriteTimeUtc": "2026-10-06T13:08:53.7718965Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p03-idff/manifest.json",
+      "bytes": 5654,
+      "sha256": "ae94d66ceb7a268fdafd060cfc492c6c444ede972cb00c745102171c33d989b5",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.6473790Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p03-idff/operations.jsonl",
+      "bytes": 46204,
+      "sha256": "2c01085929d9d1a56f90a577249b48cf838497286da2f91cdf06ca812f79b1c4",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.3848417Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p03-idff/sample-summary.json",
+      "bytes": 859,
+      "sha256": "913382395a216291a3ccd53b9b19e2cfce7a4431ba15b3c288f1398e23a143d0",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.6544003Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p03-idff/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.3587392Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p03-idff/workload-result.json",
+      "bytes": 6118,
+      "sha256": "5f01fdc2af38b1d0931c6c6945c4b6990d6bbdba04d797444505cedb86406810",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.3858449Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p04-cff/manifest.json",
+      "bytes": 5650,
+      "sha256": "13bf1948d1d0a16407cdcc58e36ccd7ee8c563fd4aa769ff186a7c1fe0ee3095",
+      "lastWriteTimeUtc": "2026-10-06T13:08:55.2660919Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p04-cff/operations.jsonl",
+      "bytes": 46069,
+      "sha256": "772a34c6eee6cdcf734ada9b2d53c661792a6098500f56bad5aebe76b602d0fb",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.9987295Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p04-cff/sample-summary.json",
+      "bytes": 859,
+      "sha256": "e62e10f1c87ed8f761c4a1dfdbe1aacba24281d61c617e112ec772c03548b302",
+      "lastWriteTimeUtc": "2026-10-06T13:08:55.2721145Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p04-cff/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.9625569Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-a/runs/p04-cff/workload-result.json",
+      "bytes": 6047,
+      "sha256": "7d140d61777425114243757f4d26cc1e2b555930249b3703dc4e8f47c5ff0c18",
+      "lastWriteTimeUtc": "2026-10-06T13:08:54.9997294Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b.orchestrator.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lastWriteTimeUtc": "2026-10-06T13:08:57.7726901Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b.orchestrator.stdout.log",
+      "bytes": 142,
+      "sha256": "34c7a2d3e84b4d1effe52f05f19dfdc6c0e63a4d83fcd4798bd7cb28e03126fd",
+      "lastWriteTimeUtc": "2026-10-06T13:09:14.2867564Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b.summary.json",
+      "bytes": 1366,
+      "sha256": "e7076626668d9a1c904d6346137ac9921b74fbd56c33543f04f810e0a20b0021",
+      "lastWriteTimeUtc": "2026-10-06T13:09:14.2817391Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b.Unity.log",
+      "bytes": 63665,
+      "sha256": "b699b367872c05861585da7849531e2827db8090deb4b6ab021340f754cb9fb3",
+      "lastWriteTimeUtc": "2026-10-06T13:09:14.1210427Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/block-checkpoint.json",
+      "bytes": 495,
+      "sha256": "d5b93c8e9d77e90ddc3c8f139a6127935ac526171368507fcbf5eabedf8b8f29",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.7212936Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/block-manifest.json",
+      "bytes": 8534,
+      "sha256": "442b06a6702acf2721abc66c0abbdc54ee3071fd870571650d87c9bb2168f4be",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.7167798Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p01-astar-r/manifest.json",
+      "bytes": 5573,
+      "sha256": "f8628bd33a6047de42f4cc63938671a535294b71c54bfc7e6f0f664def73e643",
+      "lastWriteTimeUtc": "2026-10-06T13:09:09.5072757Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p01-astar-r/operations.jsonl",
+      "bytes": 47232,
+      "sha256": "47d91275c2fd3aeebed62faa9ecdfafbc2f8bce40571de5b85a3aecc7f28ac0d",
+      "lastWriteTimeUtc": "2026-10-06T13:09:09.1889810Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p01-astar-r/sample-summary.json",
+      "bytes": 862,
+      "sha256": "5d813d963ffbbfe967e2a670a110e95b0c5590ba2f2279e5d870a872944fae7c",
+      "lastWriteTimeUtc": "2026-10-06T13:09:09.5137895Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p01-astar-r/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:09:09.1423223Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p01-astar-r/workload-result.json",
+      "bytes": 6053,
+      "sha256": "7f3e867edad96f79111f1ecfa9caf7d6bc1977521b034c7ef40cfffe810bf594",
+      "lastWriteTimeUtc": "2026-10-06T13:09:09.1909846Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p02-dstar-l/manifest.json",
+      "bytes": 5569,
+      "sha256": "5bf15157efbbc5c9b97a150667f266392a955a0aa68ee0d7b0a908953a398472",
+      "lastWriteTimeUtc": "2026-10-06T13:09:10.3505645Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p02-dstar-l/operations.jsonl",
+      "bytes": 46865,
+      "sha256": "0cd6349777c8583af774565182dc353c6246042f16cc88f3b42bda896bac410a",
+      "lastWriteTimeUtc": "2026-10-06T13:09:10.0295672Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p02-dstar-l/sample-summary.json",
+      "bytes": 861,
+      "sha256": "8bde0121a823ac7a57e2bec50827db6cbfc22f2e3d6e2a5ade6c403fbf3548e9",
+      "lastWriteTimeUtc": "2026-10-06T13:09:10.3570906Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p02-dstar-l/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:09:09.9140505Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p02-dstar-l/workload-result.json",
+      "bytes": 6018,
+      "sha256": "c10089b8b4195f57a15fd5f578bf436ee0dfa2e26093bee82b5dde66107f16cb",
+      "lastWriteTimeUtc": "2026-10-06T13:09:10.0315746Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p03-idff/manifest.json",
+      "bytes": 5646,
+      "sha256": "ec46722100c6556b6468b9b5d470c25bc9bb902bb87a3a46c86b37632fa3de17",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.0897073Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p03-idff/operations.jsonl",
+      "bytes": 46348,
+      "sha256": "4c4eb9939147aa84301c41ff9afc0165413c5d5e86b0c0452f97b89eb915b44f",
+      "lastWriteTimeUtc": "2026-10-06T13:09:10.8026857Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p03-idff/sample-summary.json",
+      "bytes": 858,
+      "sha256": "8ce5d1f77862252370b6223290f0820f7a51ccb6135068256179fcc3f9ebe8fa",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.0957212Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p03-idff/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:09:10.7740805Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p03-idff/workload-result.json",
+      "bytes": 6148,
+      "sha256": "7e81719716875724e7af930a6727fcac3789334412faa059557fb4d889dd7a96",
+      "lastWriteTimeUtc": "2026-10-06T13:09:10.8158714Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p04-cff/manifest.json",
+      "bytes": 5646,
+      "sha256": "3caf7e6b13c42a67af284df36c0b97840f1713e0ed6ca4d55bc9b3f9086797f7",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.7012232Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p04-cff/operations.jsonl",
+      "bytes": 46232,
+      "sha256": "bad30793ddc234cc6d5a55ccc2bce26ef57884d27c11258dbb294fb157300a21",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.4319738Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p04-cff/sample-summary.json",
+      "bytes": 858,
+      "sha256": "026110256d9d55c3a282abb8813bc892f23fb11deb5e94e00a7a6261560a7586",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.7072382Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p04-cff/scenario.canonical.json",
+      "bytes": 750882,
+      "sha256": "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.3958760Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-four-b/runs/p04-cff/workload-result.json",
+      "bytes": 6136,
+      "sha256": "924397ac678b9c8ecbc12ab8bafb931f173fd75487aea559175d789bed6b4ed6",
+      "lastWriteTimeUtc": "2026-10-06T13:09:11.4319738Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two.orchestrator.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lastWriteTimeUtc": "2026-10-06T13:08:24.7908122Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two.orchestrator.stdout.log",
+      "bytes": 140,
+      "sha256": "1781544a14129f7bf2d3f078c9cd6f1ef424c611b8d3a21464fc5b34fa307c51",
+      "lastWriteTimeUtc": "2026-10-06T13:08:41.2000405Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two.summary.json",
+      "bytes": 1359,
+      "sha256": "2e94d697e41a5de00990e199379bc698953638cbac8e737b7bdb863a2d16e0f7",
+      "lastWriteTimeUtc": "2026-10-06T13:08:41.1940196Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two.Unity.log",
+      "bytes": 63680,
+      "sha256": "1d68d7d52aabed4b7a4295b3bc0babe70f6935908bc04c4dabda666a9c685d1f",
+      "lastWriteTimeUtc": "2026-10-06T13:08:41.0510322Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/block-checkpoint.json",
+      "bytes": 495,
+      "sha256": "698505b23ccc4284789352fbc8b3b9457f59cf96ffaac36fefa27484fd17c978",
+      "lastWriteTimeUtc": "2026-10-06T13:08:37.4481985Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/block-manifest.json",
+      "bytes": 5001,
+      "sha256": "2ceeab6e04366fc71b5a6433c35336e7b9b7e308ef6f6bc4148f04b735375ae1",
+      "lastWriteTimeUtc": "2026-10-06T13:08:37.4431858Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p01-astar-r/manifest.json",
+      "bytes": 5576,
+      "sha256": "14483544d868219f73628782d29c82fe04bda24f82815bb97779d7b726aec0c2",
+      "lastWriteTimeUtc": "2026-10-06T13:08:36.5628377Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p01-astar-r/operations.jsonl",
+      "bytes": 47035,
+      "sha256": "e12c2749ab0e238ce6d5e5f18f30b84446bffb30acc5534014329f9c36864e9c",
+      "lastWriteTimeUtc": "2026-10-06T13:08:36.2146383Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p01-astar-r/sample-summary.json",
+      "bytes": 861,
+      "sha256": "6f7995e36ea1eae03537612b3848ef8df2428260634fb71a6db9f86779450d81",
+      "lastWriteTimeUtc": "2026-10-06T13:08:36.5708783Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p01-astar-r/scenario.canonical.json",
+      "bytes": 750894,
+      "sha256": "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+      "lastWriteTimeUtc": "2026-10-06T13:08:36.1644807Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p01-astar-r/workload-result.json",
+      "bytes": 6014,
+      "sha256": "4342205ab395c98994899864525d6f9b5c8cde5c4f0769cba1185aea24fa995a",
+      "lastWriteTimeUtc": "2026-10-06T13:08:36.2171460Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p02-dstar-l/manifest.json",
+      "bytes": 5574,
+      "sha256": "3e1306c6705eda57ed3c0ad9df45ad3f3d31ba96f16877c8b370a704426d0f42",
+      "lastWriteTimeUtc": "2026-10-06T13:08:37.4266310Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p02-dstar-l/operations.jsonl",
+      "bytes": 46609,
+      "sha256": "c551f391c252ac88e5f4c479033e4dd8829ee988a7398553b62581c1d0996d2d",
+      "lastWriteTimeUtc": "2026-10-06T13:08:37.1618595Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p02-dstar-l/sample-summary.json",
+      "bytes": 860,
+      "sha256": "ebbf0c5fee6feb0ec4f932215112b78151fcf7b5b4e6d1f72d5564890ee751e4",
+      "lastWriteTimeUtc": "2026-10-06T13:08:37.4336510Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p02-dstar-l/scenario.canonical.json",
+      "bytes": 750894,
+      "sha256": "60e4aac8d7c3d0bbd8b09749be1ed5a56bd00d6ab4450bffc26b5f31056475cc",
+      "lastWriteTimeUtc": "2026-10-06T13:08:37.0469819Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Fixtures/v1/positive-two/runs/p02-dstar-l/workload-result.json",
+      "bytes": 6088,
+      "sha256": "65a79c16dede8ac05436d1b6b2ee491a3a249a614b0de29868aacd8e28218fcc",
+      "lastWriteTimeUtc": "2026-10-06T13:08:37.1628629Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Gate10R_Attempt2_Execution_Receipt.v2.json",
+      "bytes": 3200,
+      "sha256": "02660a160a67655aa27a364d63fbed896471d02c0c5b953f646143feeafdc9d7",
+      "lastWriteTimeUtc": "2026-10-06T13:05:43.4449041Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/Gate10R_Attempt2_Preflight.summary.v2.json",
+      "bytes": 14699,
+      "sha256": "dfb24677c34528688264ca0d8c3b8cb92c1004d7526b459275c9578f85cf35f4",
+      "lastWriteTimeUtc": "2026-10-06T13:04:51.0762696Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/gate10r-preflight-checkpoint.v2.json",
+      "bytes": 655,
+      "sha256": "620fddf1c32466c5f029a8b0a7570c4139551feb045ba6459c52b54491a40c4a",
+      "lastWriteTimeUtc": "2026-10-06T13:04:51.0863043Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/TelemetryProbe/v1.summary.json",
+      "bytes": 1128,
+      "sha256": "d63ddf7da14ca4e19f4c51316fd00c35d972a8e01b6be66dbf5008eca797f69b",
+      "lastWriteTimeUtc": "2026-10-06T13:08:06.6007334Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/TelemetryProbe/v1.Unity.log",
+      "bytes": 67060,
+      "sha256": "2ec35e3721d8cf01c17afa85ac454f560e728c438f71b66580269d496f095d3c",
+      "lastWriteTimeUtc": "2026-10-06T13:08:06.4272253Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/TelemetryProbe/v1.wrapper.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lastWriteTimeUtc": "2026-10-06T13:07:53.4473021Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/TelemetryProbe/v1.wrapper.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lastWriteTimeUtc": "2026-10-06T13:07:53.4473021Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/TelemetryProbe/v1/external-os-query.json",
+      "bytes": 464,
+      "sha256": "66f42d420b536ad2d2bdbc1f9443554b97697ea0aea030106478ab12707dd423",
+      "lastWriteTimeUtc": "2026-10-06T13:08:04.3886159Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/TelemetryProbe/v1/telemetry-probe-ready.json",
+      "bytes": 952,
+      "sha256": "1bfe98233a409748495ccdb0e3961b14922a7eb97ca24d53dfea65a140e972bb",
+      "lastWriteTimeUtc": "2026-10-06T13:08:04.1458417Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/TelemetryProbe/v1/telemetry-probe-result.json",
+      "bytes": 2544,
+      "sha256": "9fc45340ecefd419157d788f28baa097ed57d9b2e7ca66f74b12af0ebc91f209",
+      "lastWriteTimeUtc": "2026-10-06T13:08:04.4943804Z"
+    },
+    {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2/UnitTests.summary.json",
+      "bytes": 7794,
+      "sha256": "810bb589f46152f57b5b9fa6dc62b8fee9d248c8479b1f18786e3f40eb7382d0",
+      "lastWriteTimeUtc": "2026-10-06T13:07:06.1695995Z"
+    }
+  ],
+  "verificationRoot": {
+    "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v2",
+    "fileCount": 98,
+    "rawBytes": 9337336,
+    "lastWriteTimeUtc": "2026-10-06T13:11:33.7497037Z"
+  },
+  "completedStages": [
+    "attempt2-no-unity-preflight-62-of-62",
+    "official-unit-tests-38-of-38",
+    "unity-compilation",
+    "telemetry-probe",
+    "positive-two-block",
+    "positive-four-a-block",
+    "positive-four-b-block",
+    "expected-negative-fail-closed-block"
+  ],
+  "blockEvidence": {
+    "positiveBlocksCompleted": 3,
+    "expectedNegativeBlocksCompleted": 1,
+    "completedBlockSamples": 11,
+    "freshColdControlsCompleted": 0,
+    "freshColdControlsPlanned": 6,
+    "structuralComparisonsCompleted": 0,
+    "structuralComparisonsPlanned": 10,
+    "unityProcessIds": [
+      22532,
+      22896,
+      2200,
+      19936
+    ]
+  },
+  "failureSite": {
+    "coldControl": "shared/A*-R",
+    "unityStartedForColdControl": false,
+    "coldSummaryExists": false,
+    "coldWorkloadResultExists": false,
+    "unityProcessCountAtInspection": 0,
+    "projectLockExistsAtInspection": true,
+    "projectLockBytes": 0,
+    "projectLockCreationTimeUtc": "2026-10-06T13:09:17.4285441Z",
+    "projectLockLastWriteTimeUtc": "2026-10-06T13:09:17.4285441Z"
+  },
+  "downstream": {
+    "retainedRegressionStarted": false,
+    "finalAuditStarted": false,
+    "gate11RStarted": false,
+    "gate12RStarted": false,
+    "gate13RFormalRootCreated": false
+  },
+  "automaticRetryAttempted": false,
+  "automaticResumeAttempted": false,
+  "formalCampaign": false
+}

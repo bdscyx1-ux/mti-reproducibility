@@ -1,0 +1,25 @@
+{
+  "kind": "tool_receipt",
+  "step": "monitoring-validation-attempt-3",
+  "command": "Run the versioned v2 monitoring repair validation, retaining the original 54 checks and adding explicit hourly-report and stale-advisory coverage for raw-commit states, without Unity or formal target creation.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 1,
+  "gate_tokens": [
+    "VALIDATION-PASSED-56-OF-56",
+    "RAW-COMMIT-HOURLY-REPORT-COVERED",
+    "PWSH-AND-WINPS51-PASSED",
+    "ACQUISITION-NO-MEASURED-RETRY",
+    "NO-UNITY",
+    "NO-FORMAL-TARGET"
+  ],
+  "input_sha256": {
+    "Gate13R_PR2_Attempt3_Monitoring_Config.v2.json": "b88da3901a2c2cc494140a8cd2e3f37b546f637935bc940a8941a850d42770c6",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Implementation_Repair.v2.md": "0822efd540be52f58e5f190dd6280328871cad3a2070d13a8a5574edeca1bd66",
+    "Gate13RPR2Attempt3MonitoringRecoveryV2.py": "6d1cd6b1f0542c2985fb0c11d3da6caee6c0413f0c5fe13f335897fef8f4c162",
+    "Get-Gate13RPR2Attempt3OperationalProgressV2.ps1": "8b9c3733aae86b4adbe03c9bc7806931947746d864854d438bf2a67d09f537c5",
+    "Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/validation-summary.json": "6a2980fab5e31c87d93882fafd5882b903309a3a8be0d76f024adfb3d670026f",
+    "Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/pass-receipt.json": "2192288de6f036c6e4411818cc10837d1d07a2828f92417589b6e2d16c0832c1",
+    "Verification/Gate13R_PR2_Attempt3_MonitoringRecovery/v2/attempt-3/partial-output-manifest.json": "6b949fc2102a1f566f57063fe6d00fa411e1b4761c7d8c4813ecf386b003d1bb"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "gate14re-status-v5",
+  "studyId": "Gate14Re",
+  "status": "FORMAL-PHASE-A-LAUNCH-READY",
+  "substatus": "NOT-AUTHORIZED-NOT-STARTED",
+  "scientificDesign": {
+    "fixedB": 48,
+    "designCells": 32,
+    "plannedBlocks": 1536,
+    "plannedAlgorithmLaneSamples": 6144,
+    "algorithms": ["A*-R", "D*L", "C-FF", "IDFF"],
+    "outcomes": ["M1", "M2", "M3", "M4", "M5"],
+    "quantityLevels": [1, 8, 32, 128, 512],
+    "forcedContinuousMovement": false,
+    "dynamicEventAdapter": "frozen deterministic in-memory structural event sequence"
+  },
+  "readiness": {
+    "path": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/formal-phase-a-launch-readiness.v1.json",
+    "bytes": 3004,
+    "sha256": "7eda9cb08751d5915f962b6a204b5ad937908c7b08f186d098e630baeda1569f"
+  },
+  "authorizationPrompt": {
+    "path": "Research/Gate14Re/Execution/Gate14Re_Formal_PhaseA_Authorization_Prompt.v1.md",
+    "bytes": 2952,
+    "sha256": "20e4757759579576b1a04d798da3f958ea552b6cae823307e7669d8960a3bc56"
+  },
+  "authorizationTemplate": {
+    "path": "Research/Gate14Re/Execution/Gate14Re_Formal_PhaseA_Authorization_Template.v2.json",
+    "bytes": 1404,
+    "sha256": "2a9511aa6f0d9ba6499a65275f74efb8057a3bcff1f1142ac363a8639cd46191",
+    "status": "PENDING_USER_AUTHORIZATION",
+    "userExplicitlyAuthorizedFormalPhaseA": false
+  },
+  "formalAuthorizationReceiptExists": false,
+  "formalMeasuredRootExists": false,
+  "formalAnalysisRootExists": false,
+  "formalObservationProduced": false,
+  "formalPhaseAStarted": false,
+  "formalPhaseBStarted": false,
+  "gate15Started": false,
+  "nextRequiredAction": "request_separate_explicit_user_authorization_using_the_frozen_prompt"
+}

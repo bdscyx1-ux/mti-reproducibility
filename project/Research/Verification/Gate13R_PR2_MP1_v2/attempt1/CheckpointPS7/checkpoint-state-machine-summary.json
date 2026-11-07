@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "summaryKind": "gate13r-pr2-mp1-v2-checkpoint-state-machine-fixtures-v1",
+  "savedAtUtc": "2026-10-09T04:05:41.3693065Z",
+  "runtime": "7.6.5",
+  "testCount": 12,
+  "passedTestCount": 12,
+  "tests": [
+    {
+      "id": "create-new-initial",
+      "passed": true,
+      "detail": "78b9cf7c22a0d1ebf0de7682e2a4d69d133ea8a0cdc6597140d19d7024b3b3cf"
+    },
+    {
+      "id": "create-new-collision-rejected",
+      "passed": true,
+      "detail": "A duplicate create-new write must fail."
+    },
+    {
+      "id": "running-transition",
+      "passed": true,
+      "detail": "MEASURED-ACQUISITION-RUNNING"
+    },
+    {
+      "id": "first-block-progress",
+      "passed": true,
+      "detail": "BLOCK-PROGRESS"
+    },
+    {
+      "id": "last-block-progress",
+      "passed": true,
+      "detail": "384"
+    },
+    {
+      "id": "phase-a-start",
+      "passed": true,
+      "detail": "10/09/2026 04:05:41"
+    },
+    {
+      "id": "raw-complete-persistence",
+      "passed": true,
+      "detail": "abababababababababababababababababababababababababababababababab"
+    },
+    {
+      "id": "failure-before-first-block",
+      "passed": true,
+      "detail": "failure-before-first-block"
+    },
+    {
+      "id": "failure-inside-block",
+      "passed": true,
+      "detail": "failure-inside-block"
+    },
+    {
+      "id": "failure-after-last-before-freeze",
+      "passed": true,
+      "detail": "failure-after-last-before-freeze"
+    },
+    {
+      "id": "no-residual-atomic-artifacts",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "id": "unity-not-invoked",
+      "passed": true,
+      "detail": "Checkpoint fixtures do not invoke Unity."
+    }
+  ],
+  "measuredPilotStarted": false,
+  "unityInvoked": false,
+  "formalCampaign": false,
+  "formalAnalysis": false,
+  "gate14R": false,
+  "passed": true
+}

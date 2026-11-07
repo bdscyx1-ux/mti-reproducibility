@@ -1,0 +1,38 @@
+{
+  "schema": "gate14re-me-streaming-essential-acceptance-pre-execution-freeze-v4",
+  "version": 4,
+  "status": "FROZEN_BEFORE_FEASIBILITY_EXECUTION",
+  "studyId": "Gate14Re-ME",
+  "createdAtUtc": "2026-10-19T11:43:00.000Z",
+  "implementation": {
+    "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v4_0.py",
+    "bytes": 30422,
+    "sha256": "c77519c772f6f7fcc1a80f6e3698d446d67445b524d4bd1f0d526eff864df717"
+  },
+  "governanceFiles": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-acceptance-v4-feasibility-attempt-001/analysis-plan.v4.json",
+      "bytes": 2229,
+      "sha256": "d9de7de8115855e136585e38824843e0140c8ab79c4a6f6b53d55e64ea3d8bdb"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-acceptance-v4-feasibility-attempt-001/user-authorization-receipt.v4.json",
+      "bytes": 1094,
+      "sha256": "c21795c37d9b145a66ff1a8e4b3d9499f5659c68ac2a94452a6d7ae0aa2c8ab5"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-acceptance-v4-feasibility-attempt-001/field-boundary.v4.json",
+      "bytes": 860,
+      "sha256": "fedf07fa507f272247c490c961ee8c6782c37a7c5eaa2971bfd59b70c835f9c8"
+    }
+  ],
+  "inputBindings": {
+    "outputSchemaSha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c",
+    "sealManifestSha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f",
+    "sealTerminalSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705",
+    "offlineNecessaryValidationResultSha256": "2afcc259c47e390ff07c2c1cc2d295fe45d3aff249666174e93d862d0f4b9270",
+    "typedParquetRuntimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "pythonSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+  },
+  "executionRule": "One execution only. Any failure freezes attempt-001; fixes require attempt-002."
+}

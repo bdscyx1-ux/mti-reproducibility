@@ -1,0 +1,49 @@
+{
+  "schema": "gate14re-me-formal-st-migration-package-build-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "authorizationId": "gate14re-me-formal-st-v5-package-build-attempt-002",
+  "status": "AUTHORIZED_PACKAGE_BUILD_AND_VALIDATION_ONLY",
+  "userAuthorizationVerbatim": "授权执行第10项：依据已冻结的 formal ST v5 合同建立全新的 package staging/build/test roots，构建并验证一键迁移包；不得启动正式 ST collection、formal analysis、MQ 或 MT。凭据不得写入 ZIP，若确需复制凭据，须先单独列出目标位置和保护方式供我确认。",
+  "authorized": {
+    "createFreshPackageStagingRoot": true,
+    "createFreshPackageBuildRoot": true,
+    "createFreshPackageTestRoot": true,
+    "copyUnityInstaller": true,
+    "buildZip64Archive": true,
+    "extractAndValidatePackage": true,
+    "algorithmFreeCompileReadiness": true
+  },
+  "prohibited": {
+    "credentialCopyWithoutSeparateConfirmation": true,
+    "credentialsInArchive": true,
+    "formalInputOrScheduleMaterialization": true,
+    "formalMeasuredOrDeliveryRootCreation": true,
+    "formalSTCollection": true,
+    "formalAnalysis": true,
+    "MQ": true,
+    "MT": true
+  },
+  "credentialPolicy": "No credential, license activation file, token value, secret, account material, or user profile is copied to staging, build, test, or ZIP. Python standard-library source modules named secrets.py and token.py are executable library code, not credential material, and are allowed only at their three exact frozen runtime paths.",
+  "priorAttemptFailure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-001/failure-receipt.v1.json",
+    "sha256": "d194da1c0eb51baa729469945b6dc4d2c7d67d6416f2eea141804375f0c01822",
+    "sameAttemptRepairPerformed": false
+  },
+  "frozenFormalSTFreezeIndex": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-freeze-index.v5_0.json",
+    "sha256": "35c3b98e42cc21b200308460c6b93fb48961b4a450522acc23958c76b70b00dd"
+  },
+  "priorStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v45.json",
+    "sha256": "a110186d1dcc2922bdb16df501905ae29813408ab1e3aee9985d714436f34ad",
+    "state": "REACTIVATED_READY_FOR_BUILD_NOT_BUILT"
+  },
+  "roots": {
+    "staging": "Research/PackageStaging/Gate14Re-ME/formal-st/v5/attempt-002",
+    "build": "Research/Packages/Gate14Re-ME/formal-st/v5/attempt-002",
+    "test": "Research/PackageTests/Gate14Re-ME/formal-st/v5/attempt-002",
+    "evidence": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-002"
+  },
+  "authorizedAtUtc": "2026-10-20T04:13:55.1795963Z"
+}

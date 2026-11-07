@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "checkpointId": "gate13r-pr1b-v4-composite-process-identity-read-only-analysis-recovery-readiness-v1",
+  "createdAtUtc": "2026-10-08T15:49:28.4428295Z",
+  "createdAtAsiaShanghai": "2026-10-08T23:49:28.4428295+08:00",
+  "status": "COMPOSITE-PROCESS-IDENTITY-VALIDATED / READ-ONLY-ANALYSIS-RECOVERY-COMPLETE / PILOT-DIAGNOSTIC-ONLY / EXCLUDED-FROM-FORMAL-ANALYSIS / FORMAL-SAMPLE-DESIGN-UNFROZEN / GATE13R-FORMAL-NOT-AUTHORIZED / GATE14R-NOT-AUTHORIZED",
+  "passed": true,
+  "authorization": {
+    "relativePath": "Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Authorization.v1.json",
+    "sha256": "bb3e1f32bd2fd27500613f3b2d9d749ccd5f18f73afe5abf8a68b3d3d3cdc5d1"
+  },
+  "frozenPilot": {
+    "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "fileCount": 9118,
+    "rawBytes": 253513394,
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed",
+    "status": "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / NON-FORMAL / COMPLETE-RAW-EXECUTION / POST-EXECUTION-ANALYZER-FAILED / EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "remainsFailed": true,
+    "modifiedByRecovery": false
+  },
+  "validation": {
+    "failedV1Root": {
+      "relativePath": "Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+      "fileCount": 8,
+      "rawBytes": 327250,
+      "canonicalTreeSha256": "1e66f43d80887cd30dc5b33652b599763fad25c15e84d1c329504430f6d0f4e3",
+      "preserved": true,
+      "recoveryInvocations": 0
+    },
+    "passedV2Root": {
+      "relativePath": "Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v2",
+      "fileCount": 10,
+      "rawBytes": 330936,
+      "canonicalTreeSha256": "39721807d3e708b02831e4468b45f570288a8193059df97602bcb2cfd6039231",
+      "validationSummarySha256": "af81162441dd56e6915fb1ec9edb505e7754578702411c39927575bcbccd61aa",
+      "evidenceManifestSha256": "665f20836ac66b2d6e3f0d6f109467d51d34675791ac47a0eb4e86680240e454",
+      "checksPassed": 23,
+      "checksTotal": 23
+    },
+    "processIdentity": {
+      "processRecords": 396,
+      "distinctNumericPids": 375,
+      "numericPidReuseGroups": 19,
+      "largestNumericPidMultiplicity": 3,
+      "samePidLifetimeOverlapCount": 0,
+      "uniqueOsProcessIdentities": 396,
+      "uniqueBlockEvidenceIdentities": 396,
+      "verdict": "COMPOSITE-PROCESS-IDENTITY-VALID"
+    }
+  },
+  "recovery": {
+    "relativePath": "Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+    "fileCount": 8,
+    "rawBytes": 116998,
+    "canonicalTreeSha256": "70f4f10c3ccd4f4428284c946f233e97cd2052408d74b4c72f24055f3f6c06bd",
+    "receiptSha256": "e48adbfbe6acf4dc2d35c73d117f7179444bcab420edc423c3189304eb4f7096",
+    "analysisSha256": "da58006ab03e9166c31c82489d7ae7bd8024b362a6b9da08878a05453609fee0",
+    "evidenceManifestSha256": "71206e7f69ab90991b0f82c8adeee21c918004d70bbb40b2674f2f50c5fd9415",
+    "executionCount": 1,
+    "automaticRetryCount": 0,
+    "unityInvoked": false,
+    "newSamplesGenerated": 0,
+    "pilotRetriedOrResumed": false
+  },
+  "recoveredEvidence": {
+    "warmupProcesses": 12,
+    "warmupExcludedSamples": 24,
+    "measuredMirroredPairs": 96,
+    "measuredMatchedSuperblocks": 192,
+    "measuredFreshProcesses": 384,
+    "measuredSamples": 768,
+    "estimand": "AB_LOG_SYSTEM_RATIO_MINUS_BA_LOG_SYSTEM_RATIO",
+    "confidenceLevel": 0.95,
+    "orderEffectBound": "plus-or-minus log(1.10)",
+    "bootstrapReplicates": 20000,
+    "bootstrapSeed": 13012026,
+    "identifiabilityVerdict": "PILOT-LEVEL-ORDER-EFFECT-IDENTIFIABLE / SOME-CELLS-INCONCLUSIVE",
+    "p1ClassificationCountsAcrossScenarioAndPooledRows": {
+      "ORDER-EFFECT-BOUNDED": 9,
+      "DETECTABLE-BUT-BELOW-BOUND": 2,
+      "INCONCLUSIVE": 5,
+      "MATERIAL-ORDER-EFFECT": 0
+    },
+    "managedMemoryAlertSamples": 0,
+    "eligibleMeasuredSamplesForMemory": 768,
+    "p5Verdict": "ZERO-EVENT / ORDER-RATIO-NOT-ESTIMABLE",
+    "formalClaimAllowed": false,
+    "pureAlgorithmCausalClaimAllowed": false
+  },
+  "sampleDesignRecommendation": {
+    "shared": "S48-UNCHANGED",
+    "heterogeneous": "H48-RECOMMENDED",
+    "frozenFormalDesign": false,
+    "requiresSeparateGate13RPR2Authorization": true,
+    "recommendedCandidate": {
+      "id": "S48-H48",
+      "sharedProcesses": 1536,
+      "sharedSamples": 6144,
+      "heterogeneousMatchedSuperblocks": 1008,
+      "heterogeneousProcesses": 2016,
+      "heterogeneousSamples": 4032,
+      "totalProcesses": 3552,
+      "totalSamples": 10176,
+      "abQuotaPerHeterogeneousScenario": 24,
+      "baQuotaPerHeterogeneousScenario": 24,
+      "serialP50Hours": 20.808185450666667,
+      "conservativeSummedP95Hours": 26.45538207066667,
+      "projectedP95RawBytes": 9631912320,
+      "storageWithOnePointFiveSafetyBytes": 14447868480,
+      "minimumFreeBytesIncluding40GiBReserve": 57397541440,
+      "status": "CANDIDATE / UNFROZEN / NOT-AUTHORIZED-FOR-LAUNCH"
+    }
+  },
+  "prohibitions": {
+    "gate13rFormalCampaign": true,
+    "gate14r": true,
+    "formalRootCreation": true,
+    "formalExecutionReceipt": true,
+    "unityEditorInvocation": true,
+    "pilotRetryResumeTopUpMerge": true,
+    "formalSuperiorityInferenceFromRecovery": true
+  },
+  "nextAllowedStage": "GATE13R-PR2-OR-OTHER-SEPARATELY-AUTHORIZED-WORK",
+  "nextAuthorizationRequired": true
+}

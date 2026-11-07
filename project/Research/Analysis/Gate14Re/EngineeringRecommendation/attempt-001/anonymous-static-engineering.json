@@ -1,0 +1,62 @@
+{
+  "anonymousProfiles": [
+    {
+      "anonymousLabel": "U17",
+      "eligible": true,
+      "metrics": {
+        "allocationSites": 68,
+        "branchTokens": 132,
+        "logicalSourceLines": 653,
+        "publicSurfaceTokens": 51,
+        "sourceBytes": 34279
+      },
+      "staticBurdenRankAmongEligible": 2
+    },
+    {
+      "anonymousLabel": "U29",
+      "eligible": true,
+      "metrics": {
+        "allocationSites": 53,
+        "branchTokens": 89,
+        "logicalSourceLines": 492,
+        "publicSurfaceTokens": 26,
+        "sourceBytes": 25807
+      },
+      "staticBurdenRankAmongEligible": 1
+    },
+    {
+      "anonymousLabel": "U43",
+      "eligible": true,
+      "metrics": {
+        "allocationSites": 75,
+        "branchTokens": 192,
+        "logicalSourceLines": 931,
+        "publicSurfaceTokens": 47,
+        "sourceBytes": 46884
+      },
+      "staticBurdenRankAmongEligible": 3
+    },
+    {
+      "anonymousLabel": "U61",
+      "eligible": false,
+      "metrics": {
+        "allocationSites": 68,
+        "branchTokens": 149,
+        "logicalSourceLines": 796,
+        "publicSurfaceTokens": 44,
+        "sourceBytes": 39778
+      },
+      "staticBurdenRankAmongEligible": null
+    }
+  ],
+  "limitations": "These lexical source measures are transparent proxies, not direct measurements of long-term maintenance cost.",
+  "metricOrder": [
+    "logicalSourceLines",
+    "branchTokens",
+    "allocationSites",
+    "publicSurfaceTokens",
+    "sourceBytes"
+  ],
+  "role": "last-resort static maintainability proxy only",
+  "schema": "gate14re-engineering-recommendation-anonymous-static-tiebreak-v1"
+}

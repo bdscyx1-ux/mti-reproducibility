@@ -1,0 +1,37 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate10r-attempt3-lock-pre-delete-capture-v1",
+    "capturedAtUtc":  "2026-10-06T14:06:12.3456169Z",
+    "contextId":  "attempt2-negative-stale-lock",
+    "role":  "pre-existing-attempt2-negative",
+    "ownedProcessId":  19936,
+    "snapshot":  {
+                     "expectedPath":  "H:\\DDM_Final_Project\\Temp\\UnityLockfile",
+                     "resolvedPath":  "H:\\DDM_Final_Project\\Temp\\UnityLockfile",
+                     "pathMatchesExpected":  true,
+                     "exists":  true,
+                     "isLeaf":  true,
+                     "isReparsePoint":  false,
+                     "bytes":  0,
+                     "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                     "creationTimeUtc":  "2026-10-06T13:09:17.4285441Z",
+                     "lastWriteTimeUtc":  "2026-10-06T13:09:17.4285441Z",
+                     "exclusiveReadWriteAvailable":  true,
+                     "exclusiveOpenError":  null
+                 },
+    "eligibility":  {
+                        "role":  "pre-existing-attempt2-negative",
+                        "eligible":  true,
+                        "errors":  [
+
+                                   ],
+                        "expectedEmptyFileSha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                        "timestampToleranceSeconds":  2,
+                        "ownedProcessStartedAtUtc":  "2026-10-06T13:09:14.5903019Z",
+                        "ownedProcessCompletedAtUtc":  "2026-10-06T13:09:26.2233236Z",
+                        "ownedProcessAlive":  false,
+                        "unityProcessCount":  0
+                    },
+    "deletionAttempted":  false,
+    "formalCampaign":  false
+}

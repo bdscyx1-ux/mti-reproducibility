@@ -1,0 +1,24 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-36h-wallclock-decision-old-new-comparison-and-plan-update",
+  "command": "Compared the frozen old Gate 13 and current Gate 13R configs, recomputed precision-only and observed count/runtime ratios, generated read-only 5/7.5/10/15-percent candidate projections for a 36-hour ceiling, and additively recorded the 36-hour author decision. Updated the living plans and next-session checkpoint without modifying the frozen Gate 13R config, schedule, readiness evidence, formal authorization prompt or any timing output. No Unity process was started and no formal root or receipt was created.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "input_sha256": {
+    "Gate13_Formal_Campaign_Config.v1.json": "b74f777f4022d5890839ed54987b2ae28a9ff27ae400c5a8d72dd0efccfd0874",
+    "Gate13R_Formal_Campaign_Config.v1.json": "af5a164cdabeeff08cd6cd00b21ecd732fcbdc7f51be3454f99aaf65b2ef5109",
+    "PilotRuns/Gate12R_ProcessReuse_5pct/v4/candidate-n-formal.json": "5e77d9b69c4c0e45dec204ca1943867453d29dcbdf1ebd24f0809af6d649c387",
+    "PilotRuns/Gate12R_ProcessReuse_5pct/v4/budget-storage-projection.json": "cca76d3206311119b3b81fd72d162f8425a2657f02d85a906a5fc91a35690e1f"
+  },
+  "output_sha256": "4aea18a96fb70bec76ed469c34dd7888082c7a07107d390b94bbddbd8883b2a0",
+  "gate_tokens": [
+    "36H-HARD-END-TO-END-CEILING-ACTIVE",
+    "48H-SELECTION-SUPERSEDED-BEFORE-FREEZE",
+    "OLD-5PCT-CONFIG-MUST-NOT-LAUNCH",
+    "OLD-AND-CURRENT-FROZEN-CONFIG-HASHES-UNCHANGED",
+    "FORMAL-ROOT-ABSENT",
+    "FORMAL-CAMPAIGN-NOT-AUTHORIZED",
+    "REDESIGN-SELECTION-PENDING"
+  ]
+}

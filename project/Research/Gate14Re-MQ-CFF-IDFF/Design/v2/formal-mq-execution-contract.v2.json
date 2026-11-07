@@ -1,0 +1,72 @@
+{
+  "schema": "gate14re-mq-formal-execution-contract-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "FROZEN_EXECUTION_CONTRACT_REQUIRES_SEPARATE_LAUNCH_AUTHORIZATION",
+  "cardinality": {
+    "matchedBlocks": 36,
+    "lanesPerBlock": 16,
+    "algorithms": 2,
+    "conditionsPerAlgorithm": 12,
+    "freshUnityProcesses": 864
+  },
+  "schedule": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/formal-process-schedule.v2.jsonl",
+    "bytes": 416794,
+    "sha256": "70121c16dd42472610ddeddb3848dcd25d279390930def5b66d29049316c44a5",
+    "expectedSchema": "gate14re-mq-formal-process-schedule-row-v2"
+  },
+  "blockInputs": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/FormalInputs/v2/formal-block-input-assignments.v2.jsonl",
+    "bytes": 914462,
+    "sha256": "bf4d9cf0cf6bd808c02c24b95035cb4e887b883c5399ea8be7f47e4514d465db",
+    "expectedSchema": "gate14re-mq-formal-block-input-assignment-row-v2"
+  },
+  "sourceManifest": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/FormalInputs/v2/formal-input-source-manifest.v2.json",
+    "bytes": 172977,
+    "sha256": "35b6c28e7c05d9dea8de8711a99057eb877227a504a5c2e3b36dc9411c805302"
+  },
+  "identityMap": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/opaque-algorithm-identity-map.v2.json",
+    "bytes": 1267,
+    "sha256": "aac226811f2e6ce2acf15f3fe3c5b0ad3861569992aef3cc5822d7188dbb8059"
+  },
+  "fairness": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/fairness-and-topology-binding.v2.json",
+    "bytes": 12852,
+    "sha256": "941f2f62464105d5c5e09e16126a1dff6cc4b74ab7a565ec8942b03342c466bb"
+  },
+  "resourceBudget": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-resource-budget.v2.json",
+    "bytes": 1195,
+    "sha256": "9459b06376cbfceb8f0c1659e642d3355a0560ce76d47bb0693020a0f033f2aa"
+  },
+  "scientificContract": {
+    "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-scientific-and-analysis-contract.v2.json",
+    "bytes": 3748,
+    "sha256": "794f3958de4eecad67fbeefa1353b6f0a07aeb5d60882495a4b6a021d4af434a"
+  },
+  "processPolicy": {
+    "freshUnityProcessPerScheduleRow": true,
+    "strictSerial": true,
+    "maximumConcurrentMeasuredUnityProcesses": 1,
+    "ordinalOrder": "exactly 0..863",
+    "noRetryResumeTopUpMergeSkipReorderReplacement": true,
+    "trustedProcessIdentityRequired": true,
+    "naturalExitCodeZeroRequired": true
+  },
+  "attemptPolicy": {
+    "measuredRootMustBeNew": true,
+    "failurePreservedImmutable": true,
+    "successRequires864TrustedNaturalZeroExits": true,
+    "successRequiresAllOracleAndAffinityHardGates": true
+  },
+  "requiredFutureAuthorization": {
+    "separateUserLaunchAuthorization": true,
+    "executionAuthorizationReceiptBoundToAllFrozenHashes": true,
+    "formalCollectionCurrentlyAuthorized": false,
+    "formalAnalysisCurrentlyAuthorized": false
+  },
+  "createdAtUtc": "2026-10-21T07:33:32.1939533Z"
+}

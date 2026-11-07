@@ -1,0 +1,94 @@
+{
+    "schemaVersion":  1,
+    "manifestId":  "gate10r-attempt4-official-execution1-partial-v4",
+    "createdAtUtc":  "2026-10-06T15:15:19.8393154Z",
+    "status":  "FAILED-BEFORE-BLOCK-UNITY-START",
+    "artifactCount":  15,
+    "rawBytes":  156491,
+    "artifacts":  [
+                      {
+                          "relativePath":  "Compile/attempt4.summary.json",
+                          "bytes":  1113,
+                          "sha256":  "81eab0a2b4121b54f0a97fc89b08cbb579efa4bee33a6e067b1746675eb84940"
+                      },
+                      {
+                          "relativePath":  "Compile/attempt4.Unity.log",
+                          "bytes":  62743,
+                          "sha256":  "7b9243936d5a0a500ffe37d6c613ed84267814c4b1d76fb9208a8abde016a983"
+                      },
+                      {
+                          "relativePath":  "Compile/LockHygiene/attempt4-compile.quiescence.json",
+                          "bytes":  675,
+                          "sha256":  "9e9ca0e13b30fbd2330ad560df9c10260740acaa58ca38b9012095933e5f6204"
+                      },
+                      {
+                          "relativePath":  "Gate10R_Attempt4_Execution_Receipt.v4.json",
+                          "bytes":  2112,
+                          "sha256":  "7941737dd6d07e1802e56aa38ff497a5928673854b19c0841264c202b97c9f6f"
+                      },
+                      {
+                          "relativePath":  "Gate10R_Attempt4_Preflight.summary.v4.json",
+                          "bytes":  4244,
+                          "sha256":  "5b6a95706d46c95d00c9f936368934a40c82d5a98d3a422ea4311ec872400d42"
+                      },
+                      {
+                          "relativePath":  "gate10r-preflight-checkpoint.v4.json",
+                          "bytes":  593,
+                          "sha256":  "85868030204eb409ecfd7fdc492e71495cfb9e1d5e8adcd6330da692be1ac1d5"
+                      },
+                      {
+                          "relativePath":  "TelemetryProbe/v1.lock-hygiene/telemetry-probe-v1.quiescence.json",
+                          "bytes":  679,
+                          "sha256":  "ef88e005c28b8575748f68c8beed1b8502990b59dbea000ba06899b0761a4beb"
+                      },
+                      {
+                          "relativePath":  "TelemetryProbe/v1.summary.json",
+                          "bytes":  1457,
+                          "sha256":  "ff9beca47bc7eb39be044cbdd39478154e5effb7a59ed10fd48618458d834408"
+                      },
+                      {
+                          "relativePath":  "TelemetryProbe/v1.Unity.log",
+                          "bytes":  67074,
+                          "sha256":  "6a85dc1b70a78d5b4b25434e0506ae259c9a861aeaa9ce189109f6a2f5ebddb4"
+                      },
+                      {
+                          "relativePath":  "TelemetryProbe/v1.wrapper.stderr.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "TelemetryProbe/v1.wrapper.stdout.log",
+                          "bytes":  0,
+                          "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                      },
+                      {
+                          "relativePath":  "TelemetryProbe/v1/external-os-query.json",
+                          "bytes":  464,
+                          "sha256":  "24c6d2cafcef7eef35c98b0448bbf9de4b5d11964dc99e8227aeb0f72a9d0d28"
+                      },
+                      {
+                          "relativePath":  "TelemetryProbe/v1/telemetry-probe-ready.json",
+                          "bytes":  944,
+                          "sha256":  "d57725881b602b9019f2d99cd62fb1fd066cb8b7c582688336e98a5e54bd9d6f"
+                      },
+                      {
+                          "relativePath":  "TelemetryProbe/v1/telemetry-probe-result.json",
+                          "bytes":  2535,
+                          "sha256":  "99635eaba10ea1992f1e21830b9900556bec7fe27a5b835e12922adf34e369ca"
+                      },
+                      {
+                          "relativePath":  "UnitTests.summary.json",
+                          "bytes":  11858,
+                          "sha256":  "26d88399030a5895a8eb312df5d9a539b71204b0c1b4ab9bb7dc69d74d084d42"
+                      }
+                  ],
+    "completedGates":  [
+                           "official-preflight",
+                           "unit-59-of-59",
+                           "unity-compile",
+                           "telemetry-probe"
+                       ],
+    "failedGate":  "block-plan-generation",
+    "blockUnityProcessesStarted":  0,
+    "formalCampaign":  false
+}

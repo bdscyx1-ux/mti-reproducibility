@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-008-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-until-pass-3bb50249-7ac1-49e5-af37-839465bc47bd",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-008",
+  "status": "FAILED_CLOSED_READINESS_AUDIT_TOOL_RESOURCE_BUDGET_FIELD_MAPPING",
+  "passed": false,
+  "terminal": true,
+  "failedAtUtc": "2026-10-17T18:09:11.0940898Z",
+  "exactFailure": {
+    "exceptionType": "System.Management.Automation.PropertyNotFoundStrict",
+    "message": "The property 'qualificationAssignedMemoryBytes' cannot be found on this object. Verify that the property exists.",
+    "cause": "The audit tool referenced qualificationAssignedMemoryBytes; the frozen resource budget v1 authoritative field is laneAssignedCommittedMemoryBytes.",
+    "scientificAssetFailure": false,
+    "executionBindingFailure": false,
+    "qualificationReadinessDeterminationProduced": false
+  },
+  "auditTool": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-008/Invoke-Gate14ReMEQualificationExecutionReadinessRecheckV8.ps1",
+    "sha256": "4f3f5973250b80fc3deef87c0736b9efa422d34b6f7a56c91b2c0a5c8f9fe9c2",
+    "bytes": 30164,
+    "parserErrors": 0,
+    "invocationCount": 1,
+    "exitCode": 1
+  },
+  "preservation": {
+    "attempt007RetainedFrozen": true,
+    "attempt008WillNotBeModifiedOrReclassified": true,
+    "statusV37Retained": true,
+    "loadQualificationExecutionAttempt003Retained": true,
+    "failedAttempt001MeasuredRootRetainedReadOnly": true,
+    "prospectiveAttempt002RootsAbsent": true
+  },
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "instrumentInvocationCount": 0,
+    "oracleInvocationCount": 0,
+    "emptyBoundaryInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false
+  },
+  "disposition": "FAIL_CLOSED_PRESERVE_ATTEMPT_008; create a forward-only attempt-009 changing only the audit resource-budget field mapping under the readiness-recheck-until-pass authorization."
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "gate14re-me-d3-endpoint-replacement-unity-process-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-endpoint-replacement-attempt-002",
+  "status": "UNITY_PROCESS_EXITED_ZERO_AFTER_FINAL_SUCCESSFUL_RECOMPILE",
+  "version": 1,
+  "process": {
+    "processId": 55648,
+    "processCreationUtc": "2026-10-17T05:46:31.3102940Z",
+    "observedStartedAtUtc": "2026-10-17T05:46:31.2630611Z",
+    "observedEndedAtUtc": "2026-10-17T05:46:48.0137244Z",
+    "elapsedMilliseconds": 16751,
+    "exitCode": 0,
+    "hardTimeoutTriggered": false,
+    "automaticRetryPerformed": false,
+    "externalWmiCommandLineSha256": "f67332d21b980aee86201e251eb9acf2221b779432de01d3c7894cd25ca20909",
+    "inProcessEnvironmentCommandLineSha256": "bfa3a577214231f8318bc75b83ca23dd8fd305b1fd0801cfd632666cf2a0d7b2"
+  },
+  "runtime": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "unityVersion": "2022.3.30f1c1",
+    "frameworkDescription": "Mono 6.13.0 (Visual Studio built mono)",
+    "runtimeVersion": "4.0.30319.42000",
+    "is64BitProcess": true
+  },
+  "compilationSequence": {
+    "initialStaleGraphDiagnosticObserved": true,
+    "initialStaleGraphDiagnostic": "CS2001: prior withdrawn Gate14ReMEAllocationCounterV2.cs path not found",
+    "initialStaleGraphExitCode": 1,
+    "sameProcessRequestedAdditionalGraphRun": true,
+    "finalTundraBuildSuccessObservedAfterInitialDiagnostic": true,
+    "finalAssemblyCSharpCompiled": true,
+    "finalAssemblyCSharpEditorCompiled": true,
+    "finalAssemblyReloadSucceeded": true,
+    "newD3SourceImportedAfterFinalBuild": true,
+    "newD3HarnessImportedAfterFinalBuild": true,
+    "currentAssemblyCSharpResponseFileContainsWithdrawnCandidate": false,
+    "currentAssemblyCSharpResponseFileContainsNewD3Source": true,
+    "unresolvedFinalCompilerErrors": 0,
+    "interpretation": "The first diagnostic came from the pre-refresh Bee graph. Unity rebuilt the graph in the same authorized process, compiled both final assemblies successfully, reloaded them, and only then executed the new harness and wrote the passing receipt."
+  },
+  "evidence": {
+    "logRelativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/unity-d3-endpoint-known-answer.log",
+    "logSha256": "7a52346f7fc09a9ee12869cb5b4d445b1b8d9e7d0f30b7ecb17fade00b834d7b",
+    "logBytes": 130764,
+    "knownAnswerReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/d3-known-answer/d3-known-answer-receipt.v1.json",
+    "knownAnswerReceiptSha256": "e8b16d76e339c87fe5485edcd68c8a6518ce40a5e49acf15b6e8cc6dadfc65aa"
+  },
+  "postExit": {
+    "matchingUnityProcessCount": 0,
+    "prohibitedRootsAbsent": true
+  }
+}

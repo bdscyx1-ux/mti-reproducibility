@@ -1,0 +1,44 @@
+{
+  "schema": "gate14re-mq-formal-analysis-readiness-checkpoint-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "PASS_READY_FOR_SEPARATELY_AUTHORIZED_SINGLE_FORMAL_ANALYSIS_EXECUTION",
+  "createdAtUtc": "2026-10-22T04:38:44.8739756Z",
+  "implementationManifest": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-analysis-implementation-v1-attempt-001/implementation-manifest.v1.json",
+    "bytes": 1873,
+    "sha256": "0b7fe87616867cb0ef764878a49767c9507b2244d3af9582a7321a477a0bf39f"
+  },
+  "independentValidation": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-analysis-implementation-v1-attempt-001/independent-validation-receipt.v1.json",
+    "bytes": 1178,
+    "sha256": "9df10b154591fdbc9fe8f68276ed267d7da313256e49baf5e6f8e4ec773fa4d5",
+    "status": "PASS_OUTCOME_FREE_STATIC_AND_SYNTHETIC_VALIDATION"
+  },
+  "embeddedSelfTest": {
+    "status": "PASS",
+    "checks": 5
+  },
+  "collectionBindings": {
+    "collectionTerminalReceiptSha256": "e3c2f64d3a612ca329924d0a2574e3301c9a60543ba8af87f2ac3e60b5e5f39b",
+    "collectionFinalEvidenceSealSha256": "300ceda2788d3f13c98e39df8629613df6b951c94d8154944fc82fd9ec9c4226",
+    "acquisitionFreezeManifestSha256": "df3d760b678e1fb4bc4c863f23d7911600e76eefedae5efb0c197f53d021e6f0",
+    "acquisitionFreezeFileCount": 4325,
+    "matchedBlocks": 36,
+    "processes": 864
+  },
+  "preOutcomeBoundary": {
+    "formalBatchOutcomeValuesParsed": false,
+    "formalLaneObservationValuesParsed": false,
+    "scientificRuleChanged": false
+  },
+  "executionBoundary": {
+    "singleFormalExecution": true,
+    "newResultRootRequired": true,
+    "noOverwrite": true,
+    "noRetryWithinAttempt": true,
+    "formalSt": false,
+    "mt": false,
+    "algorithmRankingOrWinner": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "gate14re-me-formal-st-launch-root-cause-diagnosis-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "ROOT_CAUSE_CONFIRMED_MINIMAL_FORWARD_FIX_AVAILABLE",
+  "diagnosedAtUtc": "2026-10-26T11:40:49.5926691Z",
+  "failedImplementationRevision": "v5.1-host-lifecycle-corrigendum",
+  "failedSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_1/Run-Gate14ReMEFormalST.v5_1.ps1",
+  "failedSupervisorSha256": "7ab5584a763fb72ea58b2a0aa677ce072b02858d1f86428b2aea8f74f2e77300",
+  "rootCause": {
+    "classification": "POWERSHELL_CASE_INSENSITIVE_TYPED_PARAMETER_LOCAL_VARIABLE_COLLISION",
+    "parameterDeclaration": "[string]$InputFreezeManifest",
+    "collidingLocalVariable": "$inputFreezeManifest",
+    "mechanism": "PowerShell variable names are case-insensitive. The parsed JSON PSCustomObject assignment targeted the same variable slot as the typed string parameter and was coerced back to System.String. Strict-mode access to .schema then raised PropertyNotFoundException.",
+    "confirmedFailureLine": 703,
+    "confirmedExceptionType": "System.Management.Automation.PropertyNotFoundException",
+    "diagnosticObservedType": "System.String",
+    "diagnosticObservedProperties": [
+      "Length"
+    ]
+  },
+  "evidence": {
+    "allSixTopLevelFrozenJsonFilesContainExpectedSchema": true,
+    "all1296ScheduleRowsContainExpectedSchema": true,
+    "all1296InputBundlesContainExpectedSchema": true,
+    "readOnlyTruncatedSupervisorPreflightReproducedFailure": true,
+    "readOnlyTruncatedSupervisorPreflightCreatedMeasuredRoot": false,
+    "unityInvocationsDuringDiagnosis": 0
+  },
+  "minimalForwardFix": {
+    "renameParsedInputFreezeObjectVariable": true,
+    "addCaseInsensitiveParameterLocalCollisionStaticCheck": true,
+    "changeScientificDesign": false,
+    "changeFormalInputs": false,
+    "changeSchedule": false,
+    "changeAlgorithms": false,
+    "changeMetrics": false,
+    "changeSampleRules": false,
+    "changeTimeouts": false
+  },
+  "boundary": {
+    "failedAttemptWillNotBeModifiedOrReused": true,
+    "successorRequiresNewImplementationFreeze": true,
+    "successorRequiresNewAuthorizationAndMeasuredRoot": true,
+    "formalAnalysisAuthorized": false
+  }
+}

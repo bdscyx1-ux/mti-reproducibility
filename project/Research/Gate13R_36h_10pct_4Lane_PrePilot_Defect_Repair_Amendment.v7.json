@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-defect-repair-v7",
+  "createdAtUtc": "2026-10-08T05:12:00Z",
+  "status": "AUTHORIZED-NONEXECUTING-REPAIR",
+  "formalCampaignAuthorized": false,
+  "pilotAuthorizationCount": 1,
+  "pilotAuthorizationConsumed": false,
+  "sourceAttempt": 6,
+  "targetAttempt": 7,
+  "confirmedDefect": {
+    "phase": "static-smoke-overlay-source-match-before-any-root",
+    "type": "generated-script source matcher interpolated a generator-scope variable",
+    "description": "Attempt 6 correctly kept $preImplementationRoot literal in the replacement text but still expanded $ProjectPath in the search text, so the source matcher could not match the frozen derived script.",
+    "scientificEffect": "none; no Unity process, verification root, lane copy, pilot sample, or formal artifact was created"
+  },
+  "authorizedRepair": "In a new attempt, keep both occurrences of $ProjectPath in staticSmokeFrom and both $ProjectPath/$preImplementationRoot in staticSmokeTo literal until the generated static-unit script executes.",
+  "unchangedSemantics": {
+    "campaignMatrixCount": 74,
+    "relative95CiHalfWidthTarget": 0.10,
+    "hardSampleCap": null,
+    "isolatedLaneCount": 4,
+    "unityProcessUnit": "one fresh Unity Editor process per Williams block",
+    "readinessP95MaximumHours": 27,
+    "formalWallClockMaximumHours": 36,
+    "pilotMeasuredBlockCount": 384,
+    "pilotMeasuredSampleCount": 1152,
+    "pilotWarmupBlockCount": 8,
+    "retainedManagedMemoryRuleMiBPerSample": 128
+  },
+  "immutableAttempt6Evidence": {
+    "partialManifestSha256": "3debc65a44cc349045f56af539dedb7a85e65afba930084bb7e3e88505fba47e",
+    "failureReceiptSha256": "4fac4277e0d4d7d21b28117a62158c5d80dcf169e3c1eda98683f41c1dac1268",
+    "checkpointSha256": "00a89621b416f112af68da85a6e1895329ea0effe1eb4882e3548c972600499a"
+  },
+  "prohibitions": [
+    "do not modify, overwrite, resume or reinterpret attempts 1 through 6",
+    "do not weaken thresholds or change experimental semantics",
+    "do not create the formal output root or a formal execution receipt",
+    "do not start a formal timing campaign",
+    "do not consume more than the single authorized NON-FORMAL pilot"
+  ]
+}

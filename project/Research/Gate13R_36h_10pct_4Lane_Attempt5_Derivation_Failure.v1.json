@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-36h-attempt5-derivation-failure-v1",
+  "createdAtUtc": "2026-10-08T05:04:28.7629253Z",
+  "status": "FAILED-PRE-ROOT",
+  "phase": "authorized-overlay-construction",
+  "errorType": "StrictModeVariableIsUndefined",
+  "errorMessage": "The variable '$preImplementationRoot' cannot be retrieved because it has not been set.",
+  "cause": "The attempt-5 artifact generator interpolated a generated-script variable while the derivation generator itself was executing.",
+  "allowedRepair": "A new versioned attempt may preserve the literal generated-script variable by escaping it or by using a non-interpolating string. Attempt 5 remains immutable.",
+  "partialManifestRelativePath": "Research/Gate13R_36h_10pct_4Lane_Attempt5_Derivation_Partial_Manifest.v1.json",
+  "partialManifestSha256": "f62366baa7d0147d85563039605c5cae15fde20d491bffe295c6e94d061dcd6c",
+  "verificationRootCreated": false,
+  "pilotRootCreated": false,
+  "cloneRootCreated": false,
+  "formalRootCreated": false,
+  "unityProcessCount": 0,
+  "automaticRetry": false,
+  "automaticResume": false,
+  "pilotStarted": false,
+  "formalCampaign": false,
+  "passed": false
+}

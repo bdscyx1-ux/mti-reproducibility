@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 2,
+  "auditKind": "gate13r-pr1b-v6-nonformal-pilot-launch-audit-v2",
+  "savedAtUtc": "2026-10-08T13:24:40.3545518Z",
+  "status": "PASSED-ONE-FRESH-NONFORMAL-PILOT-AUTHORIZED",
+  "supersedes": "Research/Gate13R_PR1B_v5_Pilot_Launch_Audit.v1.json",
+  "selectedInputs": {
+    "pilotPlan": {
+      "relativePath": "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v9.json",
+      "sha256": "40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784"
+    },
+    "provenance": {
+      "relativePath": "Research/Gate13R_PR1B_OrderEffect_Provenance.v10.json",
+      "sha256": "993f554a03bc52493c3fea116f1206f14746db89e4c14c59d8e4e15befbef320",
+      "boundFileCount": 77,
+      "mismatchCount": 0
+    },
+    "validationOnlyAudit": {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v16-gate13r-pr1b-order-effect-pathsafe-v6/ValidationOnlyPrePilotAudit.summary.json",
+      "sha256": "2e78c61552acebf03efda7381a71935af6c692911e8f05782e1d10f7c737ab8f",
+      "checkCount": 111,
+      "passedCheckCount": 111,
+      "pilotExecutionAuthorized": true
+    },
+    "telemetryResult": {
+      "relativePath": "Research/Verification/Gate12R_ProcessReuse_5pct/v16-gate13r-pr1b-order-effect-pathsafe-v6/TelemetryProbe/v3/telemetry-probe-result.json",
+      "sha256": "863cdd6ad531ae81a8401f90d4c4c41367e779686be1424f75786d02d99af242",
+      "passed": true
+    }
+  },
+  "verification": {
+    "staticUnit": "124/124",
+    "positiveMirroredProcesses": 4,
+    "positiveMirroredSamples": 8,
+    "negativeFailClosed": true,
+    "structuralComparisons": 6,
+    "retainedRegression": "63/63",
+    "finalAudit": "111/111",
+    "v16Tree": {
+      "fileCount": 246,
+      "rawBytes": 6125721,
+      "treeIdentitySha256": "86e5a49e17070e4cf3003529f364474c30e619b72fff8363090c3b09559e7ebf"
+    }
+  },
+  "launchIsolation": {
+    "pilotLaunchHarnessRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v17-gate13r-pr1b-pilot-launch-harness-v1",
+    "launchHarnessRootAbsent": true,
+    "passedVerificationRootMutationAllowed": false,
+    "analyzerRelativePath": "Research/Analyze-Gate13RPR1BOrderEffectPilotV4.py",
+    "analyzerProvenanceBound": true
+  },
+  "targetPilot": {
+    "relativeRoot": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "rootAbsentAtAudit": true,
+    "warmupBlockProcesses": 12,
+    "warmupSamples": 24,
+    "measuredBlockProcesses": 384,
+    "measuredSamples": 768,
+    "strictSerial": true,
+    "maximumConcurrentUnityProcesses": 1,
+    "nonFormal": true,
+    "excludedFromFormalAnalysis": true
+  },
+  "environment": {
+    "pilotDriveFreeBytes": 276567912448,
+    "unityProcessCount": 0,
+    "unityLockExists": false,
+    "reservedFormalRootAbsent": true
+  },
+  "authorizationBoundary": {
+    "maximumFreshPilotAttempts": 1,
+    "retryAfterPilotRootCreationAllowed": false,
+    "resumeAllowed": false,
+    "topUpAllowed": false,
+    "mergeAllowed": false,
+    "gate13rFormalAuthorized": false,
+    "gate14rAuthorized": false
+  },
+  "passed": true
+}

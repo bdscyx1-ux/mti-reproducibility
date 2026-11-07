@@ -1,0 +1,98 @@
+{
+  "schema": "gate14re-mq-formal-scientific-and-analysis-contract-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "status": "FROZEN_FINAL_B36_SCIENTIFIC_DESIGN_FORMAL_COLLECTION_NOT_AUTHORIZED",
+  "paperRole": "supplemental managed multi-query deployment and scalability evidence strengthening the existing paper",
+  "selectedB": 36,
+  "matchedBlock": {
+    "privateWorkloadLanes": 16,
+    "processesPerBlock": 24,
+    "sameInputsAcrossAll24Processes": true,
+    "primaryInferenceUnit": "complete matched block"
+  },
+  "endpoint": {
+    "field": "batchWallSeconds",
+    "direction": "lower-is-better",
+    "transform": "natural-log",
+    "singleCcdEstimand": "within-block equal-weight OLS slope of log(batchWallSeconds) on log2(workerCount) for W1 W2 W4 W8",
+    "dualCcdEstimand": "within-block log(batchWallSeconds_W16 / batchWallSeconds_W8)"
+  },
+  "confirmatoryPrimaryFamily": [
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "keySecondaryFamily": [
+    "S1",
+    "S2"
+  ],
+  "keySecondaryFormerIds": {
+    "S1": "P5",
+    "S2": "P6"
+  },
+  "mipe": {
+    "ratio": 0.9,
+    "logScaleExact": -0.10536051565782628
+  },
+  "primaryInference": {
+    "null": "estimand >= 0",
+    "alternative": "estimand < 0",
+    "oneSided": true,
+    "familywiseAlpha": 0.05,
+    "multiplicity": "Holm strong FWER across exactly P1-P4",
+    "claimRule": "Holm-adjusted p<0.05, multiplicity-compatible confidence interval below zero, and point estimate <= -0.10536051565782628"
+  },
+  "keySecondaryInference": {
+    "gate": "open only if all P1-P4 reject under the frozen primary Holm procedure",
+    "familywiseAlphaWhenOpen": 0.05,
+    "multiplicityWhenOpen": "Holm across exactly S1-S2",
+    "claimRule": "when open: adjusted p<0.05, multiplicity-compatible confidence interval below zero, and point estimate <= -0.10536051565782628; otherwise descriptive only",
+    "usedForBSelection": false,
+    "poweredGuarantee": false,
+    "failureInvalidatesPrimaryConclusions": false
+  },
+  "otherSecondary": {
+    "stDirectVersusMqW1": "descriptive implementation-overhead sentinel only",
+    "crossAlgorithmInteractions": "exploratory estimates and intervals only",
+    "algorithmWinnerOrRanking": false,
+    "movementTransferSentinelIncluded": false
+  },
+  "stopping": {
+    "benefit": false,
+    "futility": false,
+    "adaptiveReestimation": false,
+    "retry": false,
+    "replacement": false,
+    "topUp": false
+  },
+  "correctness": {
+    "allInputAndOracleHashesHardBound": true,
+    "everyMeasuredQueryComparedWithFrozenAlgorithmNeutralOracleAfterBatch": true,
+    "oracleComparisonInsideMeasuredBatch": false,
+    "allAffinityBindingsObserved": true,
+    "allLanesAndBatchesComplete": true,
+    "correctnessWeightedWithPerformance": false
+  },
+  "prerequisites": {
+    "authorizedDesign": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-rule-freeze-v2-attempt-001/formal-mq-authorized-design.v2.json",
+      "bytes": 6308,
+      "sha256": "79b4cbf309f278c2611955419ddb0d524915e4ddc6ae1596746cff1ec7bfa18a"
+    },
+    "powerResult": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v2-attempt-001/power-result.v2.json",
+      "bytes": 9760,
+      "sha256": "75d52ba9f029920e711029cea02b7e98703290de75cf9413aa653a64eb802a3a"
+    },
+    "powerSelectionSeal": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v2-attempt-001/power-selection-seal-receipt.v2.json",
+      "bytes": 1403,
+      "sha256": "5297b9ea3b60251b46ef21ba0878b26085a01b0c46f39c29e8562544f57638b0"
+    }
+  },
+  "formalCollectionAuthorized": false,
+  "formalAnalysisAuthorized": false,
+  "createdAtUtc": "2026-10-21T07:33:32.1939533Z"
+}

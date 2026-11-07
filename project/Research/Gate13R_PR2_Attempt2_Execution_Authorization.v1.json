@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "gate13r-pr2-s48-h48-formal-attempt-2-authorization-v1",
+  "authorizationId": "gate13r-pr2-s48-h48-formal-attempt-2-embedded-sample-contract-repair-and-one-raw-acquisition-v1",
+  "recordedAtUtc": "2026-10-08T17:54:00Z",
+  "recordedAtAsiaShanghai": "2026-10-09T01:54:00+08:00",
+  "authorizationPrompt": {
+    "relativePath": "Research/Gate13R_PR2_Attempt2_Next_Authorization_Prompt.md",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Attempt2_Next_Authorization_Prompt.md",
+    "sha256": "5dd1b5859045bb14db374edc3aa6b28539af125abfcbb54b66a91f0a716a6927"
+  },
+  "userAuthorization": {
+    "relativePath": "Research/Gate13R_PR2_Attempt2_User_Authorization.v1.txt",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Attempt2_User_Authorization.v1.txt",
+    "sha256": "9a7926af6167b843202d19a8d0b77623285f7a555bc2325ac230f68233575fbf",
+    "exactText": "授权 Gate 13R-PR2 attempt 2，严格按 `Research/Gate13R_PR2_Attempt2_Next_Authorization_Prompt.md` 中的完整授权文本执行；不授权 Gate 13R 正式统计分析，不授权 Gate 14R。"
+  },
+  "preWritePreservationAudit": {
+    "relativePath": "Research/Gate13R_PR2_Attempt2_PreWrite_Preservation_Audit.v1.json",
+    "sha256": "f0df04c611206fcc5638b326e6752996b005e8688c29a013289a544144e48961",
+    "passed": true
+  },
+  "authorizedScope": {
+    "versionedEmbeddedBlockSampleContractRepairAuthorized": true,
+    "preFormalValidationImplementationRepairAndRetryAuthorized": true,
+    "oneValidationOnlyFreshUnityWilliamsBlockRehearsalAuthorized": true,
+    "oneFreshFullFormalRawAcquisitionAttempt2AuthorizedAfterAllPrelaunchGates": true,
+    "attempt2StrictSerial": true,
+    "attempt2MaximumConcurrentUnityEditorProcesses": 1,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false,
+    "playableOrObsExecutionAuthorized": false
+  },
+  "formalDesign": {
+    "designId": "gate13r-pr2-rq-aligned-s48-h48-formal-attempt-2-v1",
+    "campaignCount": 74,
+    "freshUnityBlockProcessCount": 3552,
+    "algorithmSampleCount": 10176,
+    "heterogeneousMatchedSuperblockCount": 1008,
+    "abBaPerHeterogeneousScenario": "24/24",
+    "scheduleChangesAuthorized": false,
+    "configChangesAuthorized": false,
+    "scientificSemanticsChangesAuthorized": false
+  },
+  "attempt1Disposition": {
+    "formalRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1",
+    "canonicalTreeSha256": "026b9830f220b06af3f0a106f638b3d918d115ba08f5f06c13d9d76542ba4f56",
+    "fileCount": 31,
+    "rawBytes": 3338221,
+    "status": "FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+    "permanentlyExcludedFromFormalAnalysis": true,
+    "mustRemainReadOnly": true,
+    "resumeAuthorized": false,
+    "topUpAuthorized": false,
+    "mergeAuthorized": false
+  },
+  "attempt2OutputBoundary": {
+    "formalRootResolved": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v2",
+    "formalStatusRelativePath": "Research/Gate13R_PR2_Formal_Execution_Status.v2.json",
+    "formalExecutionReceiptRelativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v2.json",
+    "attempt1RootReuseAuthorized": false,
+    "attempt1ReceiptReuseAuthorized": false,
+    "pilotOrHistoryMergeAuthorized": false
+  },
+  "attempt2FailurePolicy": {
+    "automaticFormalRetryAuthorized": false,
+    "automaticFormalResumeAuthorized": false,
+    "topUpAuthorized": false,
+    "partialAttemptMergeAuthorized": false,
+    "automaticAttempt3Authorized": false,
+    "failClosedOnAnyMeasuredContractFailure": true
+  },
+  "twoPhaseCommit": {
+    "required": true,
+    "twoPhaseCommitId": "gate13r-pr2-raw-analysis-two-phase-commit-v1",
+    "unityCollectionCompleteToken": "UNITY-COLLECTION-COMPLETE / RAW-COMMIT-AUDIT-PENDING / NO-UNITY-RERUN",
+    "rawCommitToken": "RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE",
+    "ordinaryPostCollectionToolFailureMayRerunUnity": false,
+    "analysisFailureMayRerunUnity": false,
+    "rawContractViolationToken": "RAW-CONTRACT-VIOLATION / USER-DECISION-REQUIRED / NO-UNITY-RERUN"
+  },
+  "immutable": true
+}

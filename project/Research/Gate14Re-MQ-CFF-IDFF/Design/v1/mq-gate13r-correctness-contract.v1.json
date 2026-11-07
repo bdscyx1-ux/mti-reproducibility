@@ -1,0 +1,40 @@
+{
+  "schema": "gate13r-mq-cff-idff-correctness-contract-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "status": "FROZEN_BEFORE_GATE13R_EXECUTION",
+  "qualificationScope": "technical-correctness-only-not-formal-performance-sample",
+  "algorithms": [
+    "C-FF",
+    "IDFF"
+  ],
+  "technicalCorpus": {
+    "source": "existing-frozen-Gate14Re-ME-v4-input-bundles-copied-only-by-in-memory-deserialization",
+    "sourceInputCount": 8,
+    "laneCount": 16,
+    "replicasPerSourceInput": 2,
+    "eventGroupLimit": 4,
+    "formalSample": false
+  },
+  "hardPassRequirements": [
+    "every-query-matches-frozen-reference-oracle-reachability-and-cost",
+    "exact-status-and-failure-reason",
+    "legal-path-and-correct-endpoints",
+    "exact-path-signature-invariance-within-algorithm-across-executor-and-worker-count",
+    "exact-flow-field-signature-invariance-within-algorithm-across-executor-and-worker-count",
+    "exact-grid-version",
+    "IDFF-repair-pending-false-at-every-queryable-boundary",
+    "repeat-run-determinism",
+    "worker-count-and-CCD-invariance",
+    "private-grid-and-private-planner-per-lane",
+    "ordinal-restoration",
+    "hard-affinity-observed",
+    "injected-failure-rejects-whole-batch-with-no-retry-or-replacement"
+  ],
+  "comparisonConditions": {
+    "direct": 2,
+    "managed": 10,
+    "repeatedDeterminismCondition": "LARGE_L3_CCD:MQ-8"
+  },
+  "failurePolicy": "fail-closed-preserve-attempt-no-in-attempt-repair-or-top-up"
+}
+

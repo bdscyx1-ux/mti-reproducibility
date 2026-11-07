@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr2-mp2-terminal-audit-attempt1-failure-v1",
+  "savedAtUtc": "2026-10-09T06:42:44Z",
+  "savedAtAsiaShanghai": "2026-10-09T14:42:44+08:00",
+  "status": "FAILED-PRESERVED-NO-OUTPUT-WRITTEN",
+  "script": {
+    "relativePath": "Research/Audit-Gate13RPR2MP2TerminalConsistencyV1.py",
+    "sha256": "54212f75aeba8413e1131bd39f349fc69a773c26366c617145720e1abbe987d2"
+  },
+  "intendedOutput": {
+    "relativePath": "Research/Gate13R_PR2_MP2_Terminal_Consistency_Audit.v1.json",
+    "exists": false
+  },
+  "failureStage": "RUN-LEDGER-SHOW-OUTPUT-DECODE",
+  "reasonCode": "WINDOWS-CONSOLE-CODEPAGE-NOT-UTF8",
+  "exception": "UnicodeDecodeError while decoding run_ledger.py stdout as UTF-8; byte 0xCA at offset 335 was not valid UTF-8.",
+  "impact": {
+    "runLedgerCorrupted": false,
+    "experimentalDataAffected": false,
+    "frozenUpstreamAffected": false,
+    "unityLaunched": false,
+    "formalAttempt3Started": false
+  },
+  "repairScope": "Create a versioned V2 audit that decodes subprocess output using UTF-8 first and the active Windows code page as a compatibility fallback; do not alter any research or execution semantics."
+}

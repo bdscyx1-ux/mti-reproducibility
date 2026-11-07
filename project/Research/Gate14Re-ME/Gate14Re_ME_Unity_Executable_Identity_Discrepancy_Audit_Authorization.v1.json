@@ -1,0 +1,78 @@
+{
+  "schema": "gate14re-me-unity-executable-identity-discrepancy-audit-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-executable-identity-discrepancy-audit-attempt-001",
+  "status": "AUTHORIZED_ALGORITHM_FREE_UNITY_EXECUTABLE_IDENTITY_DISCREPANCY_AUDIT",
+  "authorizedAtUtc": "2026-10-17T09:14:44.2342426Z",
+  "userAuthorizationTextExact": "单独授权 Gate14Re‑ME 无算法 Unity 可执行身份差异审计阶段：保留并冻结 schema compatibility corrigendum attempt‑001 的全部证据；仅允许以只读方式复现和解释 Unity.exe 外部启动前/退出后 SHA‑256 与运行中 EditorApplication.applicationPath SHA‑256 不一致的问题，并冻结一条可信的启动前/进程身份核验规则；本阶段不允许重跑 schema compatibility Unity 自检，不允许生成调度、输入或身份映射，不允许创建 measured root，不允许运行 planner、算法 lane、正式采集、分析、排名或赢家裁决。",
+  "scopeResolution": {
+    "basis": "Gate14Re_ME_Status.v12.json identifies this exact algorithm-free executable-identity discrepancy audit as the next separately authorized minimum stage.",
+    "authorizedStoppingPoint": "Retain and verify every schema-compatibility-corrigendum attempt-001 evidence file unchanged; reproduce and operationally explain the external-versus-in-process Unity.exe SHA-256 discrepancy in one isolated algorithm-free Unity process; then freeze one evidence-bound prelaunch, live-process, and post-exit identity verification rule.",
+    "readOnlyMeaning": "The prior attempt, the installed Unity executable, and all frozen scientific or qualification assets are read only. New writes are limited to this authorization, its plan and frozen diagnostic source/tool, one evidence-only verification root, terminal receipts, the identity rule, and one new versioned status. Unity-generated transient files are confined to a new isolated audit project and are not measured data.",
+    "scientificDesignChangeAuthorized": false,
+    "schemaCompatibilitySelfCheckRetryAuthorized": false,
+    "qualificationPlanningAuthorized": false,
+    "algorithmExecutionAuthorized": false
+  },
+  "authorizedActions": {
+    "readAndHashPriorAttempt001Evidence": true,
+    "createEvidenceOnlyVerificationRoot": true,
+    "createAndFreezeAlgorithmFreeIdentityProbe": true,
+    "createIsolatedMinimalUnityAuditProject": true,
+    "launchExactlyOneUnityBatchmodeIdentityProbe": true,
+    "captureExternalPrelaunchConcurrentAndPostExitFileFingerprints": true,
+    "capturePidCreationTimeExecutablePathCommandLineAndFileIdentity": true,
+    "runSha256KnownAnswersOnSyntheticBytesOnly": true,
+    "compareExternalAndInProcessReadViews": true,
+    "freezeDiagnosticEvidenceIdentityRuleAndTerminalStatus": true
+  },
+  "executionLimits": {
+    "maximumUnityBatchmodeInvocations": 1,
+    "maximumUnityExecuteMethodInvocations": 1,
+    "permittedExecuteMethod": "DDM.Research.Editor.UnityExecutableIdentityAuditAttempt001.Gate14ReMEUnityExecutableIdentityAuditV1.Run",
+    "permittedVerificationRootRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-discrepancy-audit-attempt-001",
+    "permittedUnityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "permittedUnityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "inProcessObservationHoldSeconds": 30,
+    "automaticUnityRetryAuthorized": false,
+    "processSignalOrForcedTerminationAuthorized": false
+  },
+  "protectedBindings": {
+    "statusV12": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v12.json",
+      "lengthBytes": 6078,
+      "sha256": "a741f745ee58a8ec0ca505464078b1441161226e6cf278c57b9af76f2945846d"
+    },
+    "corrigendumAttempt001FailureReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/failure-receipt.v1.json",
+      "lengthBytes": 4986,
+      "sha256": "a92d258027ea0add02e874d3b73b20c7790f18b904af7d051a3ccc09e5eb69f1"
+    },
+    "corrigendumAttempt001PostExitAudit": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/post-exit-unity-identity-audit.v1.json",
+      "lengthBytes": 3610,
+      "sha256": "9585fdc3b2b250dc1801d9a81d41d045cee1028a0d1d9707f982664133fcee41"
+    },
+    "corrigendumAttempt001FreezeManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/source-and-evidence-freeze-manifest.v1.json",
+      "lengthBytes": 4363,
+      "sha256": "9ad8a0ce59a286f5c32704f612154d6f751bb38d8bcd3003a8902da5bc1dc2b9"
+    }
+  },
+  "prohibitedActions": {
+    "modifyOrDeleteCorrigendumAttempt001Evidence": true,
+    "invokeInputSchemaCompatibilitySelfCheckV1": true,
+    "invokeAnyGate14ReMEPlanner": true,
+    "generateQualificationSchedule": true,
+    "generateQualificationInputs": true,
+    "generateAnonymousIdentityMapping": true,
+    "createAnyMeasuredRoot": true,
+    "executeAnyAlgorithmLane": true,
+    "performFormalCollection": true,
+    "performFormalAnalysis": true,
+    "rankAlgorithms": true,
+    "adjudicateWinner": true,
+    "retryUnityIdentityProbe": true
+  },
+  "terminalRule": "Pass only if all protected attempt-001 evidence remains byte-identical; exactly one isolated Unity identity-probe invocation occurs; no schema-compatibility self-check or prohibited activity occurs; the audit captures authoritative external fingerprints before launch, while the exact process is alive, and after exit together with PID, creation time, executable path, command line and stable file identity; SHA-256 known answers distinguish hash-engine failure from differing file-read views; and the frozen rule uses only evidence demonstrated trustworthy by this audit. If the discrepancy cannot be reproduced or explained at the operational evidence level, or any boundary check fails, retain evidence and fail closed without retry."
+}

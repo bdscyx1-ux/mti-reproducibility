@@ -1,0 +1,143 @@
+{
+  "anchors": [
+    "C01",
+    "C07"
+  ],
+  "anonymousScaling": [
+    {
+      "anonymousLabel": "U17",
+      "eligible": true,
+      "meanSubmetricRank": 1.3333333333333333,
+      "ordinary95RatioIntervals": {
+        "M2": [
+          0.9834110759371554,
+          0.9852636275883585
+        ],
+        "M4P95": [
+          0.9942215971991586,
+          0.9983235710066352
+        ],
+        "RMAT180": [
+          0.9911464324910247,
+          1.0020055662641445
+        ]
+      },
+      "perDoublingRatios": {
+        "M2": 0.9843369159431198,
+        "M4P95": 0.9962704729579134,
+        "RMAT180": 0.9965612085260273
+      },
+      "scalingRankAmongEligible": 2,
+      "submetricRanksAmongEligible": {
+        "M2": 1,
+        "M4P95": 2,
+        "RMAT180": 1
+      }
+    },
+    {
+      "anonymousLabel": "U29",
+      "eligible": true,
+      "meanSubmetricRank": 3.0,
+      "ordinary95RatioIntervals": {
+        "M2": [
+          0.983429989327044,
+          0.9853336782542145
+        ],
+        "M4P95": [
+          0.9967223502685769,
+          1.000918915405475
+        ],
+        "RMAT180": [
+          0.9911956240970695,
+          1.0020441465590244
+        ]
+      },
+      "perDoublingRatios": {
+        "M2": 0.9843813735992362,
+        "M4P95": 0.9988184288404074,
+        "RMAT180": 0.9966051240192314
+      },
+      "scalingRankAmongEligible": 3,
+      "submetricRanksAmongEligible": {
+        "M2": 3,
+        "M4P95": 3,
+        "RMAT180": 3
+      }
+    },
+    {
+      "anonymousLabel": "U43",
+      "eligible": true,
+      "meanSubmetricRank": 1.0,
+      "ordinary95RatioIntervals": {
+        "M2": [
+          0.9834110759371555,
+          0.9852636275883587
+        ],
+        "M4P95": [
+          0.9923879353711533,
+          0.9970886377274761
+        ],
+        "RMAT180": [
+          0.9911464324910242,
+          1.002005566264144
+        ]
+      },
+      "perDoublingRatios": {
+        "M2": 0.9843369159431199,
+        "M4P95": 0.9947355098599858,
+        "RMAT180": 0.9965612085260267
+      },
+      "scalingRankAmongEligible": 1,
+      "submetricRanksAmongEligible": {
+        "M2": 1,
+        "M4P95": 1,
+        "RMAT180": 1
+      }
+    },
+    {
+      "anonymousLabel": "U61",
+      "eligible": false,
+      "meanSubmetricRank": null,
+      "ordinary95RatioIntervals": {
+        "M2": [
+          0.9834397568823102,
+          0.9852969982308241
+        ],
+        "M4P95": [
+          0.9874634326087723,
+          0.9935263323668297
+        ],
+        "RMAT180": [
+          1.1158998708718169,
+          1.1516924958181447
+        ]
+      },
+      "perDoublingRatios": {
+        "M2": 0.9843679395414052,
+        "M4P95": 0.9904902435391041,
+        "RMAT180": 1.1336549331112655
+      },
+      "scalingRankAmongEligible": null,
+      "submetricRanksAmongEligible": {
+        "M2": null,
+        "M4P95": null,
+        "RMAT180": null
+      }
+    }
+  ],
+  "availableSubmetrics": [
+    "RMAT180",
+    "M2",
+    "M4P95"
+  ],
+  "metric": "per-doubling ratio from the frozen anchor-plus-log2N model; lower growth is better",
+  "schema": "gate14re-engineering-recommendation-anonymous-quantity-scaling-v1",
+  "selectionRole": "engineering scaling dimension, not a new confirmatory hypothesis",
+  "unitCounts": [
+    1,
+    8,
+    32,
+    128,
+    512
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "schema": "gate14re-me-input-schema-compatibility-attempt-003-source-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-003",
+  "status": "FROZEN_PREEXECUTION_SOURCES_AND_BINDINGS",
+  "frozenAtUtc": "2026-10-17T11:41:34.0819408Z",
+  "projectRoot": "H:/DDM_Final_Project",
+  "isolatedUnityProjectRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/isolated-unity-project",
+  "unityVersion": "2022.3.30f1c1",
+  "unityRevision": "a6dc00fbe362",
+  "executeMethod": "DDM.Research.Editor.InputSchemaCorrigendumAttempt003.Gate14ReMEInputSchemaCompatibilitySelfCheckV2.Run",
+  "authorizedRepair": {
+    "description": "The only PowerShell defect repair replaces the case-insensitive collision-prone local variable $matches with explicit $hashRecords and $hashRecord variables in Get-HashValue, validates exactly one successful method record, validates its lowercase 64-hex SHA-256, and returns that value.",
+    "powershellParserErrorCount": 0,
+    "caseInsensitiveDollarMatchesReferences": 0,
+    "scientificSelfCheckMethodChanged": false
+  },
+  "retainedAttempt001": {
+    "rootRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001",
+    "status": "FAILED_CLOSED_RETAINED_UNCHANGED",
+    "fileCount": 6,
+    "contentDigestSha256": "f8401239543226c4b96d89b08db2150e7e578b55afc53e7f80aaa7062fd03fb3",
+    "reclassificationAuthorized": false,
+    "deletionAuthorized": false,
+    "modificationAuthorized": false
+  },
+  "retainedAttempt002": {
+    "rootRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-002",
+    "status": "FAILED_CLOSED_RETAINED_UNCHANGED",
+    "fileCount": 14,
+    "contentDigestSha256": "6feaa2fa863bf1546e5e7d7fe6367ad4da605b7318936e4c0189baa7ab33f9fc",
+    "reclassificationAuthorized": false,
+    "deletionAuthorized": false,
+    "modificationAuthorized": false
+  },
+  "bindings": [
+    {
+      "role": "parent-status-v18",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v18.json",
+      "lengthBytes": 1507,
+      "sha256": "59e11282be382c2b46660e03cca3a85c3eb2ee855f49d7b212301c14807bd277"
+    },
+    {
+      "role": "trusted-launch-identity-rule-v1",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "lengthBytes": 5960,
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    {
+      "role": "candidate-input-schema-v2",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "lengthBytes": 4664,
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    {
+      "role": "candidate-planning-schema-binding-v2",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "lengthBytes": 4360,
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    },
+    {
+      "role": "current-runtime-dto-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "lengthBytes": 17536,
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    {
+      "role": "current-oracle-and-geometry-validator-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "lengthBytes": 30510,
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    },
+    {
+      "role": "current-research-grid-source",
+      "relativePath": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "lengthBytes": 10018,
+      "sha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"
+    },
+    {
+      "role": "current-navigation-contracts-source",
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "lengthBytes": 5661,
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    {
+      "role": "attempt001-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/failure-receipt.v1.json",
+      "lengthBytes": 4986,
+      "sha256": "a92d258027ea0add02e874d3b73b20c7790f18b904af7d051a3ccc09e5eb69f1"
+    },
+    {
+      "role": "attempt001-post-exit-identity-audit",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/post-exit-unity-identity-audit.v1.json",
+      "lengthBytes": 3610,
+      "sha256": "9585fdc3b2b250dc1801d9a81d41d045cee1028a0d1d9707f982664133fcee41"
+    },
+    {
+      "role": "attempt001-static-known-answer-pass",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/schema-known-answer-receipt.v1.json",
+      "lengthBytes": 6621,
+      "sha256": "76977549e66d3e98af3e4f214b507bda1bba9d5d13006762d0f004bd62f40358"
+    },
+    {
+      "role": "attempt001-source-and-evidence-freeze-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/source-and-evidence-freeze-manifest.v1.json",
+      "lengthBytes": 4363,
+      "sha256": "9ad8a0ce59a286f5c32704f612154d6f751bb38d8bcd3003a8902da5bc1dc2b9"
+    },
+    {
+      "role": "attempt001-unity-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/unity-self-check-output/input-schema-compatibility-self-check-receipt.v1.json",
+      "lengthBytes": 8436,
+      "sha256": "f9a3ee42729fc055836e8448043278732cd43decf2ca2a06c58e135fb979944b"
+    },
+    {
+      "role": "attempt002-source-freeze-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-002/source-freeze-manifest.v1.json",
+      "lengthBytes": 9518,
+      "sha256": "8c679db079a38c35fc892c08cefb1fb035d9335066020ee6b1ccc638d30e076f"
+    },
+    {
+      "role": "attempt002-failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-002/failure-receipt.v1.json",
+      "lengthBytes": 2254,
+      "sha256": "ddba11bfc889e1e34b08b036926af7e92dd3030390672bc28bbbbf34ddcf6b1f"
+    },
+    {
+      "role": "attempt002-source-and-evidence-freeze-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-002/source-and-evidence-freeze-manifest.v1.json",
+      "lengthBytes": 4517,
+      "sha256": "63160466da1b5e52106fae7a4681372a8b0af6913678513c89b51f4f9fada14c"
+    },
+    {
+      "role": "attempt003-authorization-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/authorization-receipt.v1.json",
+      "lengthBytes": 2126,
+      "sha256": "0765228aaf5045264ad3c94a0adad6b2c4370bab825fdfe9360b7f4ae70b3a52"
+    },
+    {
+      "role": "attempt003-stage-contract",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/stage-contract.v1.json",
+      "lengthBytes": 2501,
+      "sha256": "2607c001373ce84d451f755fe6808d5c8992fa4c5189feb9719cf1398a5348fb"
+    },
+    {
+      "role": "attempt003-frozen-orchestrator",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/Invoke-Gate14ReMEInputSchemaCompatibilityAttempt003.ps1",
+      "lengthBytes": 63322,
+      "sha256": "37f3e84396be0602c2dc5b853cacfc42b81c9152f92f1a8a3542782d350bfbfe"
+    },
+    {
+      "role": "attempt003-isolated-project-version",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/isolated-unity-project/ProjectSettings/ProjectVersion.txt",
+      "lengthBytes": 89,
+      "sha256": "48aa38463f4a9877772b9643daa63322b4dbdd55a69848006ec6bec8cc0b35ef"
+    },
+    {
+      "role": "attempt003-isolated-package-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/isolated-unity-project/Packages/manifest.json",
+      "lengthBytes": 25,
+      "sha256": "bfb62e6eafd1bf6db3ca8fa70b6712d62d1ba3562451585ece7bdb56ffcd2f73"
+    },
+    {
+      "role": "attempt003-unity-self-check-source",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/isolated-unity-project/Assets/Editor/Gate14ReMEInputSchemaCompatibilitySelfCheckV2.cs",
+      "lengthBytes": 47661,
+      "sha256": "7273e2d9bb7758602bcdc0c20152b8c9e57b867a3949004c44bc00da33897d27"
+    },
+    {
+      "role": "attempt003-exact-navigation-contracts-copy",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/isolated-unity-project/Assets/Runtime/Navigation/NavigationContracts.cs",
+      "lengthBytes": 5661,
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    {
+      "role": "attempt003-exact-research-grid-copy",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/isolated-unity-project/Assets/Runtime/Grid/ResearchNavigationGrid.cs",
+      "lengthBytes": 10018,
+      "sha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"
+    },
+    {
+      "role": "attempt003-exact-runtime-dto-copy",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/isolated-unity-project/Assets/Runtime/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "lengthBytes": 17536,
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    {
+      "role": "attempt003-exact-oracle-and-geometry-validator-copy",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-003/isolated-unity-project/Assets/Runtime/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "lengthBytes": 30510,
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    }
+  ],
+  "executionBoundary": {
+    "unityInvocationMaximum": 1,
+    "automaticRetryAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

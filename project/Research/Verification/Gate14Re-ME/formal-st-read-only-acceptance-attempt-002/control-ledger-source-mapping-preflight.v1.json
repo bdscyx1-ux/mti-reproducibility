@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-me-formal-st-control-ledger-source-mapping-preflight-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_EXACT_TWO_CONTROL_LEDGER_SOURCE_MAPPINGS",
+  "acceptanceAttempt": "attempt-002",
+  "sourceAcquisitionAttempt": "attempt-003",
+  "tables": [
+    {
+      "tableId": "replacement-ledger",
+      "legacyFileName": "replacement-ledger.raw.v1.jsonl",
+      "sealedRelativePath": "_control/replacement-ledger.raw.v5.jsonl",
+      "sourceCount": 1,
+      "rowCount": 0,
+      "sourceBytes": 0,
+      "sourceManifestDigest": "ec0d2a2179ece43a76cbc065b9b22b98a76a3da4c6150d3a075caf9d506dea91",
+      "sealedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "tableId": "failures-and-voids",
+      "legacyFileName": "failures-and-voids.raw.v1.jsonl",
+      "sealedRelativePath": "_control/failures-and-voids.raw.v5.jsonl",
+      "sourceCount": 1,
+      "rowCount": 2,
+      "sourceBytes": 1129,
+      "sourceManifestDigest": "a39aaf40df4eb9a3bcf16cd5ee1a356ab0b04323b7a1c46a93ac3d6901476b61",
+      "sealedSha256": "fc36def2d515396256767a4105112bc3ac51e56b85d981a08e04bab610d5bd3b"
+    }
+  ],
+  "baseRecoveryCompatibilityPreflightStatus": "PASS_AUTHORIZED_CONTROL_PLANE_RECOVERY_COMPATIBILITY_PREFLIGHT",
+  "sourceMeasuredRootWriteBack": false,
+  "formalAnalysisAuthorized": false,
+  "formalAnalysisPerformed": false,
+  "effectInterpretationPerformed": false
+}

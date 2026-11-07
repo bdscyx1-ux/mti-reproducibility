@@ -1,0 +1,51 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-009-status-adoption-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-009",
+  "status": "PASS_STATUS_V38_ADOPTED_EXECUTION_UNAUTHORIZED",
+  "passed": true,
+  "terminal": true,
+  "completedAtUtc": "2026-10-17T18:14:22.9158490Z",
+  "readinessTerminalReceipt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/terminal-readiness-receipt.v1.json",
+    "sha256": "565a2e5a1f97d67e37c037db05db610feabf93237d717d67e86d0be82c534a6a"
+  },
+  "readinessAudit": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-009/readiness-recheck-audit.v9.json",
+    "sha256": "5a3c8fe4bd1f894d0d5982453d1c4b2d830ec8868e5f791d9da8f9e53fc59986",
+    "checks": 24,
+    "passedChecks": 24,
+    "failedChecks": 0
+  },
+  "corrigendumTerminalPassReceipt": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/terminal-pass-receipt.v1.json",
+    "sha256": "bcf1be2a17d34d7677455c61e9108836c43b251f287ae474d0a9e0591bfd5819"
+  },
+  "adoptedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v38.json",
+    "sha256": "686b8aaa610d0432f3f08a53c01ff083183b9da415906006034eaec5f22d959c",
+    "version": 38,
+    "state": "QUALIFICATION_SCHEDULE_NULL_REPLACEMENT_CORRIGENDUM_PASS_EXECUTION_READINESS_PASS_NEW_EXECUTION_AUTHORIZATION_PENDING"
+  },
+  "retention": {
+    "statusV37Retained": true,
+    "statusV37Sha256": "effa1a9270965c537bb24c2915f3f4498fd992bc2a29e601acdceba60c8dd232",
+    "loadQualificationExecutionAttempt003Retained": true,
+    "readinessAttempt007Retained": true,
+    "readinessAttempt008Retained": true,
+    "modifiedOrReclassified": false
+  },
+  "boundary": {
+    "prospectiveMeasuredRootCreated": false,
+    "prospectiveDeliveryRootCreated": false,
+    "unityInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "newQualificationExecutionAttemptAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingWeightingOrWinnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "A separate exact-hash authorization is required before creating the attempt-002 roots or starting the new load qualification execution attempt."
+}

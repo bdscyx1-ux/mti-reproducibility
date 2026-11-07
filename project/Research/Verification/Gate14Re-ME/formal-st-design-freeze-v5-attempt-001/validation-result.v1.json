@@ -1,0 +1,71 @@
+{
+  "attemptId": "formal-st-design-freeze-v5-attempt-001",
+  "boundary": {
+    "formalInputs": 0,
+    "formalObservations": 0,
+    "formalScheduleRows": 0,
+    "installerOrCredentialCopied": false,
+    "packageBuilt": false,
+    "zipCreated": false
+  },
+  "design": {
+    "B": 36,
+    "F": [
+      1,
+      9,
+      25,
+      81
+    ],
+    "G": [
+      64,
+      96,
+      128
+    ],
+    "N": [
+      32,
+      64,
+      128
+    ],
+    "measuredLanes": 7776,
+    "superblocks": 1296
+  },
+  "hardGates": {
+    "S5": "OMITTED",
+    "completeRawDeliveryRetained": true,
+    "correctnessOracleRetained": true
+  },
+  "power": {
+    "candidateB": [
+      36,
+      72,
+      108,
+      144
+    ],
+    "identityBlind": true,
+    "selectedB": 36,
+    "target": 0.9,
+    "worstB36Wilson95Lower": 0.9999807930748098
+  },
+  "runtime": {
+    "planningHoursWith20PercentHeadroom": 83.493,
+    "sevenDayGateHours": 168,
+    "triggered": false
+  },
+  "scheduleProof": {
+    "contextStrataPerCell": 18,
+    "eachAlgorithmPositionOverall": 216,
+    "eachDirectedPredecessorPairOverall": 216,
+    "eachOrderOverall": 216,
+    "eachOrderPerCell": 6,
+    "repeatsPerContextPerCell": 2,
+    "superblocks": 1296
+  },
+  "schema": "gate14re-me-formal-st-design-freeze-validation-result-v1",
+  "status": "PASS_FORMAL_ST_V5_NONEXECUTING_FREEZE",
+  "storage": {
+    "currentHostFreeBytes": 203472232448,
+    "reservedBytes": 64310367960
+  },
+  "studyId": "Gate14Re-ME",
+  "validatedAtUtc": "2026-10-20T02:59:26.435926Z"
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "gate14re-me-offline-revalidation-terminal-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "sourceAttemptId": "load-qualification-execution-attempt-009",
+  "offlineRevalidationAttemptId": "load-qualification-offline-necessary-revalidation-attempt-001",
+  "status": "FAIL_CLOSED_VALIDATOR_PERFORMANCE_BUDGET_UNACHIEVABLE",
+  "failureReasonCode": "PER_ROW_PATH_CANONICALIZATION_REMAINED_IN_V1",
+  "startedAtUtc": "2026-10-19T10:15:13.2663897Z",
+  "terminatedAtUtc": "2026-10-19T10:19:52.9350123Z",
+  "elapsedSeconds": 279.665,
+  "validatorProcessId": 126448,
+  "validatorExitCode": -1,
+  "lastCompletedProgress": {
+    "table": "oracle-agent-checks",
+    "rows": 443755,
+    "tableRowsTotal": 1651104,
+    "files": 76,
+    "filesTotal": 162,
+    "progressElapsedSeconds": 271.961,
+    "observedRowsPerSecond": 1631.69
+  },
+  "projectionAtObservedRate": {
+    "oracleAgentMinutes": 16.87,
+    "oracleAgentPlusOperationsMinutes": 70.17,
+    "frozenHardTimeoutMinutes": 30,
+    "conclusion": "The validator could not complete the two dominant tables within the frozen hard timeout at the observed rate."
+  },
+  "resourceObservation": {
+    "peakWorkingSetBytes": 80052224,
+    "peakPrivateMemoryBytes": 70565888,
+    "wholeDatasetRowsRetainedInMemory": false
+  },
+  "disposition": {
+    "sameAttemptRetryPerformed": false,
+    "sourceRootsWritten": false,
+    "attempt001Preserved": true,
+    "qualificationTerminalPassClaimed": false,
+    "offlineValidationPassClaimed": false,
+    "nextPermittedStep": "Create a new versioned offline revalidation attempt with per-distinct-path canonicalization and hash caching, then execute once."
+  }
+}

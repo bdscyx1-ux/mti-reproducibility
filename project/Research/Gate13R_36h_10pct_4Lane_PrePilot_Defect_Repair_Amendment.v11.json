@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "amendmentId": "gate13r-36h-10pct-four-lane-prepilot-defect-repair-v11",
+  "createdAtUtc": "2026-10-08T05:28:00Z",
+  "status": "AUTHORIZED-NONEXECUTING-REPAIR",
+  "formalCampaignAuthorized": false,
+  "pilotAuthorizationCount": 1,
+  "pilotAuthorizationConsumed": false,
+  "sourceAttempt": 10,
+  "targetAttempt": 11,
+  "confirmedDefect": "Sequential route plan-v2 to plan-v10 followed by plan-v1 to plan-v10 matched the v1 prefix of the already-derived v10 token and produced plan-v100.",
+  "authorizedRepair": "Order the exact plan-v1 route before plan-v2 for two-digit target versions, then assert the preparation-module identity is exactly plan-v11 and contains no plan-v110 token before schedule generation.",
+  "unchangedSemantics": {
+    "campaignMatrixCount": 74,
+    "relative95CiHalfWidthTarget": 0.10,
+    "hardSampleCap": null,
+    "isolatedLaneCount": 4,
+    "unityProcessUnit": "one fresh Unity Editor process per Williams block",
+    "readinessP95MaximumHours": 27,
+    "formalWallClockMaximumHours": 36,
+    "pilotMeasuredBlockCount": 384,
+    "pilotMeasuredSampleCount": 1152,
+    "pilotWarmupBlockCount": 8,
+    "retainedManagedMemoryRuleMiBPerSample": 128
+  },
+  "immutableAttempt10Evidence": {
+    "partialManifestSha256": "bab3281eabae0c2f053bd9dd35d7869f985972baa7b7d9c323ee88851b81e865",
+    "failureReceiptSha256": "c7db39912fa607610b14b100875961fba692b86c63dedc00a97128409dac7acc",
+    "checkpointSha256": "0b3f330fba063f9b886bb43548244932b51612c9b3385a56729e064e2c0cd7d7"
+  },
+  "prohibitions": [
+    "do not modify or resume attempts 1 through 10",
+    "do not change scientific, telemetry, memory, reset, schedule, precision or readiness semantics",
+    "do not create a formal root or start a formal campaign",
+    "do not consume more than the single authorized NON-FORMAL pilot"
+  ]
+}

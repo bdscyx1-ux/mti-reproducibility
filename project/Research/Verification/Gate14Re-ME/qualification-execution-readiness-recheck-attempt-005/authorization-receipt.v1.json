@@ -1,0 +1,36 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-005-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-until-pass-3bb50249-7ac1-49e5-af37-839465bc47bd",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-005",
+  "status": "AUTHORIZED_READ_ONLY_NO_UNITY_READINESS_RECHECK_UNTIL_FIRST_PASS",
+  "authorizedAtUtc": "2026-10-17T17:29:26.255118Z",
+  "authorizationSource": "direct user request",
+  "userAuthorizationTextExact": "授权`qualification execution-readiness recheck`  阶段直至attempt通过",
+  "attemptSequenceScope": {
+    "firstAttemptId": "qualification-execution-readiness-recheck-attempt-005",
+    "subsequentFreshAttemptsAuthorizedAfterFrozenFailure": true,
+    "sameStageOnly": true,
+    "stopImmediatelyAtFirstTerminalPass": true,
+    "qualificationExecutionAttemptAuthorized": false
+  },
+  "allowed": [
+    "create and freeze this independent attempt-005 evidence directory",
+    "read and hash the explicitly bound frozen source, contract, status, planning, runtime, identity and prior-attempt evidence",
+    "parse Python/PowerShell/JSON/JSONL statically without executing the qualification supervisor or algorithm code",
+    "inspect read-only host/process/storage metadata",
+    "after any frozen failed recheck, repair only the readiness audit implementation/evidence closure and create a fresh sequential recheck attempt under this same authorization",
+    "freeze a terminal readiness PASS receipt and Status v35 only if every check passes, then stop and request separate qualification-execution authorization"
+  ],
+  "prohibited": [
+    "starting Unity",
+    "creating qualification measured, delivery, or formal roots",
+    "running any planner or algorithm lane",
+    "producing qualification or formal observations",
+    "formal collection or formal analysis",
+    "cross-algorithm effects, ranking, weighting, or winner adjudication",
+    "opening or disclosing the sealed identity mapping",
+    "deleting, modifying, or reclassifying prior attempts"
+  ]
+}

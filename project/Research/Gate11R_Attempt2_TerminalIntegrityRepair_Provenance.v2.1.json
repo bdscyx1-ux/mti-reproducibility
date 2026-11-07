@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 2,
+  "provenanceId": "gate11r-attempt2-terminal-integrity-ascii-probe-repair-v2.1",
+  "createdAtUtc": "2026-10-07T03:27:33.5000924Z",
+  "failureReceipt": {
+    "path": "Research/Verification/Gate11R_5pct/v2/FinalAudit/TerminalIntegrityAttempt1_Failure_Receipt.v2.1.json",
+    "sha256": "07c3aa180861b20df39abe2227730168854fc65961bcba7b8a96118154b1a382"
+  },
+  "failedScript": {
+    "path": "Research/Verification/Run-Gate11RTerminalIntegrityAuditV2.ps1",
+    "sha256": "303b7d6e73141a1c3271520ebbf295b66dff66453d04466d1a8a697338c2c220"
+  },
+  "repairedScript": {
+    "path": "Research/Verification/Run-Gate11RTerminalIntegrityAuditV2_1.ps1",
+    "rawBytes": 10675,
+    "sha256": "3701f06245d4efb11dc233157d187140d7d66af1b3b4c370345715285e1af651"
+  },
+  "repair": "Replaced non-ASCII script-source probes with ASCII terminal-token/Gate 12R probes while retaining the exact Overall_Project_Plan.md hash check; added immutable attempt-1 audit evidence verification.",
+  "projectDocumentChanged": false,
+  "bundleChanged": false,
+  "researchSemanticsChanged": false,
+  "parserErrors": 0,
+  "gate12RAuthorized": false,
+  "gate13RAuthorized": false
+}

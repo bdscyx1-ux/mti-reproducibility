@@ -1,0 +1,224 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-08T15:39:15Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-08T15:39:15Z'
+  user_words: 授权 Gate 13R-PR1B v4 复合进程身份的非执行分析修复、验证，以及对已冻结完整 v3 pilot 的一次独立只读 analysis
+    recovery，严格按 Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Next_Authorization_Prompt.md
+    中的完整授权文本执行；不授权任何新的 Unity Editor 运行，不授权 pilot retry/resume/top-up/merge，不授权 Gate
+    13R 正式 campaign，不授权 Gate 14R。
+  prev_hash: null
+  hash: 8ea4d85561ebf97aec77196b430405f66b145664adbf4e5ed0308d08ebb0e308
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-08T15:43:40Z'
+  step: v4 composite process identity and one-shot recovery design freeze
+  command: Freeze authorization, identity specification, recovery specification, test
+    design, schema, synthetic expected results, analyzer, validation/recovery orchestrators,
+    pre-read preservation audit, and provenance before real pilot numeric analysis
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - SOURCE-TREE-4125D99E-PRESERVED
+  - SPECS-FROZEN-BEFORE-NUMERIC-ANALYSIS
+  - PROVENANCE-21-OF-21
+  - BOOTSTRAP-20000-SEED-13012026
+  - ZERO-UNITY
+  - RECOVERY-NOT-STARTED
+  - FORMAL-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Specification.v1.md: ece6e7de7921d9125fac40986c3d545593d6ebb2e2418d2d449fd2f575523cb9
+    Gate13R_PR1B_v4_AnalysisRecovery_Specification.v1.md: d5c6e7d40887ff218cc955503cf68784ab2140c95d792bfe001319d7a4070bea
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Test_Design.v1.md: ee0b4e5053861cf5d5b298d22188500d8119a48f8364aebd77ec5a226f9256da
+    Gate13R_PR1B_v4_AnalysisRecovery_Output_Schema.v1.json: 3aca3b5accdd3a8f85fd0114ff05175f868ba7bb12771f044b57cd42921f95b1
+    Gate13R_PR1B_v4_CompositeProcessIdentity_PreRead_Preservation_Audit.v1.json: 1e14a74c1fdcfabb44851a3662a24c636876e4c66eb4f1e75ec920dec3761d80
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Provenance.v1.json: 6b823419e7030444e8f741fefb106a84209c2d258f3f9a116f9191fed3584d97
+  prev_hash: 8ea4d85561ebf97aec77196b430405f66b145664adbf4e5ed0308d08ebb0e308
+  hash: 2f405fb2f324b7f7f631b5dadb9f86a5976095b02066d1d7a74eb8429dc60708
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-08T15:44:09Z'
+  step: v4 composite process identity validation-only hard gates
+  command: Run-Gate13RPR1BCompositeProcessIdentityValidationV1.ps1
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - VALIDATION-24-OF-24
+  - SYNTHETIC-17-OF-17
+  - BOOTSTRAP-20000-DETERMINISTIC
+  - OS-IDENTITIES-396-OF-396
+  - BLOCK-IDENTITIES-396-OF-396
+  - MEASURED-RUN-IDS-768-OF-768
+  - PID-REUSE-GROUPS-19-NO-OVERLAP
+  - SOURCE-PROVENANCE-77-OF-77
+  - STAGE-PROVENANCE-21-OF-21
+  - SOURCE-TREE-PRESERVED
+  - ZERO-UNITY
+  - RECOVERY-ELIGIBLE
+  input_sha256:
+    Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1/validation-summary.json: bc0cc2259aa15d2d5d4cc81890e2efb7cf25366865c86fa93e2b77b9c455e157
+    Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1/pilot-structural-preanalysis-audit.json: 68cbfdebc5cdb31462a622e0e4aff2d5f1218f9ebfc32f9c771ae97257f89700
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Provenance.v1.json: 6b823419e7030444e8f741fefb106a84209c2d258f3f9a116f9191fed3584d97
+  prev_hash: 2f405fb2f324b7f7f631b5dadb9f86a5976095b02066d1d7a74eb8429dc60708
+  hash: c8430afa2d1af984a33cea14e3dfc4c24189469a8683b381eedfa410d9386ff3
+- seq: 4
+  kind: tool_receipt
+  at: '2026-10-08T15:46:06Z'
+  step: v2 path-safe JSON newline wrapper repair freeze
+  command: Create versioned validation v2 and recovery wrapper v2; bind failure evidence
+    and v2 pre-read audit in provenance v2
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - V1-VERIFICATION-TREE-FROZEN
+  - SOURCE-TREE-PRESERVED
+  - V2-PROVENANCE-15-OF-15
+  - REAL-LF-AND-JSON-ROUNDTRIP
+  - SCIENTIFIC-CONTRACT-UNCHANGED
+  - RECOVERY-ATTEMPT-STILL-AVAILABLE
+  - ZERO-UNITY
+  input_sha256:
+    Verification/Run-Gate13RPR1BCompositeProcessIdentityValidationV2.ps1: d9521a7d730d886795fe712ed62783f14715331148895998d83bc19fd9625c5d
+    Run-Gate13RPR1BCompositeProcessIdentityRecoveryV2.ps1: 1a54359396e38073f3a443afc90e771ea522dc5667ed0c9667fefb10cd6cbdd0
+    Gate13R_PR1B_v4_CompositeProcessIdentity_PreRead_Preservation_Audit.v2.json: 61f96c3f6aa989dd6c91b6bbf7f1c2179ec711481d647cf5821d170acf35937c
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Provenance.v2.json: 22b15753f3a2b2781e90bdb3907d855753a1b197e64a23a4a2119ed5e1fe2822
+  prev_hash: c8430afa2d1af984a33cea14e3dfc4c24189469a8683b381eedfa410d9386ff3
+  hash: 88ab4e5d0bf8a84a535be155a8906b0d360c638a329e51e9a38d3a0ac6235745
+- seq: 5
+  kind: tool_receipt
+  at: '2026-10-08T15:46:06Z'
+  step: v1 recovery wrapper pre-invocation parse failure
+  command: Run-Gate13RPR1BCompositeProcessIdentityRecoveryV1.ps1
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - VALIDATION-SUMMARY-TRAILING-LITERAL-BACKTICK-N
+  - PYTHON-RECOVERY-INVOCATIONS-0
+  - RECOVERY-ROOT-ABSENT
+  - RECOVERY-ATTEMPT-NOT-CONSUMED
+  - SOURCE-TREE-PRESERVED
+  - ZERO-UNITY
+  - VERSIONED-VALIDATION-REPAIR-ALLOWED
+  input_sha256:
+    Gate13R_PR1B_v4_Validation_v1_Terminal_Preservation.v1.json: 712d919d2287ebcfacaec1c18236194ec3b6f76e9f7ed7344bd817f64d65df1a
+    Gate13R_PR1B_v4_Validation_v1_Failure_Diagnosis.v1.md: 7cb0116efa16cd846c8f57ce38a93a46b503c2c66ecfe2c638e704c2b75552e7
+    Gate13R_PR1B_v4_Recovery_Launch_Attempt1_Failure_Receipt.v1.json: fbfaea2d22ce91794dfecf80a53d9c803fb143a5fffb520e07c3ab94d123617e
+  prev_hash: 88ab4e5d0bf8a84a535be155a8906b0d360c638a329e51e9a38d3a0ac6235745
+  hash: 9973299653f55c0d77a43e82bff26e73716de47f6d0a161cd95429597e8420e9
+- seq: 6
+  kind: tool_receipt
+  at: '2026-10-08T15:46:30Z'
+  step: ledger chronology clarification
+  command: Record that the actual chronology was v1 pre-recovery failure first and
+    v2 repair freeze second; concurrent append requests assigned seq 4 to the repair
+    and seq 5 to the earlier failure. Preserve both entries and the hash chain without
+    edits.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - ACTUAL-CHRONOLOGY-FAILURE-THEN-REPAIR
+  - SEQ4-SEQ5-CONCURRENT-APPEND-ORDER-DOCUMENTED
+  - HASH-CHAIN-PRESERVED
+  - NO-ENTRY-EDITED-OR-DELETED
+  prev_hash: 9973299653f55c0d77a43e82bff26e73716de47f6d0a161cd95429597e8420e9
+  hash: 74fdf108ac65f4b919cce1a4bceffe8d3fe74d76834e5016350d47ec9f99cd61
+- seq: 7
+  kind: tool_receipt
+  at: '2026-10-08T15:47:08Z'
+  step: v2 composite process identity validation-only hard gates
+  command: Run-Gate13RPR1BCompositeProcessIdentityValidationV2.ps1
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - VALIDATION-V2-23-OF-23
+  - ATOMIC-JSON-ROUNDTRIP-PASSED
+  - SYNTHETIC-17-OF-17
+  - BOOTSTRAP-20000-DETERMINISTIC
+  - COMPOSITE-IDENTITIES-396-OF-396
+  - MEASURED-RUN-IDS-768-OF-768
+  - PID-REUSE-19-GROUPS-NO-OVERLAP
+  - SOURCE-PROVENANCE-77-OF-77
+  - STAGE-PROVENANCE-15-OF-15
+  - FAILED-V1-TREE-PRESERVED
+  - SOURCE-TREE-PRESERVED
+  - RECOVERY-ELIGIBLE
+  - ZERO-UNITY
+  input_sha256:
+    Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v2/validation-summary.json: af81162441dd56e6915fb1ec9edb505e7754578702411c39927575bcbccd61aa
+    Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v2/pilot-structural-preanalysis-audit.json: 68cbfdebc5cdb31462a622e0e4aff2d5f1218f9ebfc32f9c771ae97257f89700
+    Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v2/evidence-manifest.json: 665f20836ac66b2d6e3f0d6f109467d51d34675791ac47a0eb4e86680240e454
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Provenance.v2.json: 22b15753f3a2b2781e90bdb3907d855753a1b197e64a23a4a2119ed5e1fe2822
+  prev_hash: 74fdf108ac65f4b919cce1a4bceffe8d3fe74d76834e5016350d47ec9f99cd61
+  hash: 358ff2e8e1af1fe9e485f4fac005c0076b50aadd9fc584bd855d5ca51a166a35
+- seq: 8
+  kind: tool_receipt
+  at: '2026-10-08T15:54:11Z'
+  step: single authorized read-only composite-identity analysis recovery
+  command: Run-Gate13RPR1BCompositeProcessIdentityRecoveryV2.ps1
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - RECOVERY-EXECUTION-1-OF-1
+  - RECOVERY-AUTOMATIC-RETRIES-0
+  - FROZEN-SOURCE-TREE-PRESERVED
+  - COMPOSITE-IDENTITIES-396-OF-396
+  - MEASURED-MIRRORED-PAIRS-96
+  - MEASURED-PROCESSES-384
+  - MEASURED-SAMPLES-768
+  - ORDER-EFFECT-PILOT-LEVEL-IDENTIFIABLE
+  - P1-MATERIAL-ORDER-EFFECT-CELLS-0
+  - MEMORY-ALERTS-0-OF-768
+  - P5-ZERO-EVENT-NO-PSEUDOCOUNT
+  - H48-RECOMMENDED-NOT-FROZEN
+  - ZERO-UNITY
+  - ZERO-NEW-SAMPLES
+  - FORMAL-INFERENCE-PROHIBITED
+  input_sha256:
+    Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1/analysis-recovery-receipt.json: e48adbfbe6acf4dc2d35c73d117f7179444bcab420edc423c3189304eb4f7096
+    Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1/analysis-recovery-checkpoint.json: caa7cf4d004ba1c8e12ddfd9dcf9995a429f4c8d350733c559721983046096f1
+    Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1/recovered-order-effect-analysis.json: da58006ab03e9166c31c82489d7ae7bd8024b362a6b9da08878a05453609fee0
+    Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1/evidence-manifest.json: 71206e7f69ab90991b0f82c8adeee21c918004d70bbb40b2674f2f50c5fd9415
+  prev_hash: 358ff2e8e1af1fe9e485f4fac005c0076b50aadd9fc584bd855d5ca51a166a35
+  hash: 184bc483e89b25ae40a731ef479f0a5ef3f69983be7eac77ad8c0d40da202ced
+- seq: 9
+  kind: tool_receipt
+  at: '2026-10-08T15:54:14Z'
+  step: v4 recovery final audit, plan update, and terminal checkpoint
+  command: Read-only canonical tree/hash audit plus versioned readiness and plan checkpoint
+    update
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - FINAL-AUDIT-35-OF-35
+  - PILOT-TREE-EXACT
+  - VALIDATION-V1-TREE-EXACT
+  - VALIDATION-V2-TREE-EXACT
+  - RECOVERY-TREE-EXACT
+  - FROZEN-V1-V4-ANALYZERS-UNCHANGED
+  - UNITY-PROCESSES-0
+  - UNITY-LOCKFILE-ABSENT
+  - FORMAL-ROOT-ABSENT
+  - OVERALL-PLAN-V4-4
+  - S48-H48-CANDIDATE-UNFROZEN
+  - GATE13R-PR2-AUTHORIZATION-REQUIRED
+  - GATE13R-FORMAL-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Recovery_Final_Audit.v1.json: 3776ef314189e9e184ea5ccce01d4cc40d3826e8d3e00c23398e6bf199325092
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Recovery_Final_Audit.v1.md: fabda535f19dfeffadc0a2eb87cb97894ca8a820be098aa92235298c158def42
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Recovery_Readiness_Checkpoint.v1.json: b2416975737afcfceef7fbd3a4b2f2af132aa11e134f9936d09120f460df081f
+    Gate13R_PR1B_v4_CompositeProcessIdentity_Recovery_Readiness_Checkpoint.v1.md: ec4ca119af9ea5594b1dc18e00dfe52bfa7a72baf5d11a0e5fffb67cbb105c41
+    Overall_Project_Plan.md: a03c9b86391b880982256eeb91c8db4ce37c91a987b8518121f82bdab67a2a8a
+    Next_Session_Checkpoint.md: c7a957fb38dabf454ec5b37e5a3c2270af7e7757fbc7308511dade5dd11145e3
+    Gate13R_PR1B_v4_Next_Authorization_Prompt.md: 41060497a5157675865ddf7753cd80c471de9ac5106ed2819ce28977016fab9a
+  prev_hash: 184bc483e89b25ae40a731ef479f0a5ef3f69983be7eac77ad8c0d40da202ced
+  hash: a6570837887ba07e3d115c1c210c2a360636d67976647c6ab970606229d114fa

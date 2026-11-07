@@ -1,0 +1,27 @@
+{
+  "schema": "gate14re-me-migration-package-reactivation-user-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "migration-package-reactivation-attempt-001",
+  "recordedAtUtc": "2026-10-20T03:01:30Z",
+  "authorizedSequence": {
+    "throughStep": 9,
+    "terminalState": "REACTIVATED_READY_FOR_BUILD_NOT_BUILT",
+    "step10Authorized": false
+  },
+  "latestScientificAuthorizationVerbatim": "我授权统一 10% MIPE 规则：D1 几何均值和 P95、D2、D3、D4 的改善阈值均为 ratio≤0.90；D5、D6、D7 的每个 log2 轴单位斜率差阈值均为≤ln(0.90)=-0.1053605。省略 S5 movement-transfer sentinel，但保留全部 correctness/oracle 硬门。授权只使用 identity-blind nuisance inputs 计算功效，并在 B=36、72、108、144 中选择满足功效≥0.90的最小 B；如果该 B 的保守规划预算达到或超过168小时，则停止冻结并先提交简化 ST 方案。",
+  "authorizedAtThisStage": [
+    "record completion of qualification and independent acceptance",
+    "record identity-blind power selection and formal ST v5 non-executing freeze",
+    "reactivate the migration-package stage as ready for a separately authorized build"
+  ],
+  "notAuthorized": [
+    "create package staging, build, or test roots",
+    "copy a Unity installer",
+    "copy credentials or Unity账号(有许可证).txt",
+    "generate a ZIP or any migration bundle",
+    "generate formal inputs or formal schedule rows",
+    "start formal ST collection or analysis",
+    "start MQ or MT",
+    "perform algorithm-effect interpretation, ranking, weighting, or winner adjudication"
+  ]
+}

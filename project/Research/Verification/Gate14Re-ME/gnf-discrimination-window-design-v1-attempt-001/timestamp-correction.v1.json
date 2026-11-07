@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-me-gnf-design-timestamp-correction-v1",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v1-attempt-001",
+  "correctedAtUtc": "2026-10-19T11:23:15Z",
+  "reason": "Three manually entered audit timestamps were later than the host UTC clock. Their values were corrected before the final runtime replay and terminal receipt.",
+  "supersededPreCorrectionFiles": [
+    {
+      "relativePath": "selected-gnf-design.v1.json",
+      "sha256": "33e1aaa39e29eebc28ebc47f91fe4b17ed70f3794ce09253c5c56d5db975e442"
+    },
+    {
+      "relativePath": "selected-window-runtime-plan.v1.json",
+      "sha256": "6a9f09421dd8ee805bae220cd01f87a7e0cf579d131f33dccba94fafa09de2d6"
+    },
+    {
+      "relativePath": "selected-window-runtime-freeze-manifest.v1.json",
+      "sha256": "0d92fcdbf18a3a7fafa114398045cda06a48bded8c5158233344cce70576aae9"
+    },
+    {
+      "relativePath": "selected-window-runtime-estimate.v1.json",
+      "sha256": "3b02f73a8fd576d7aa82f4433f7e93e078c7dafa820e4981f9503a5d9639379b"
+    }
+  ],
+  "semanticChanges": false,
+  "candidateLevelsChanged": false,
+  "methodChanged": false,
+  "previousRuntimeOutputStatus": "SUPERSEDED_BY_FINAL_REPLAY_AFTER_TIMESTAMP_CORRECTION"
+}

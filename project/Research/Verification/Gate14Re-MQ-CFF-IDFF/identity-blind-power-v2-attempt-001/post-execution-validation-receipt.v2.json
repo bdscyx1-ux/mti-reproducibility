@@ -1,0 +1,42 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-post-execution-validation-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "attemptId": "identity-blind-power-v2-attempt-001",
+  "validatedAtUtc": "2026-10-21T07:22:12.2659451Z",
+  "status": "PASS_VALIDATED_B_SELECTED",
+  "checks": {
+    "terminalStatusPass": true,
+    "candidateSetExactly36_72_108_144": true,
+    "allFourPrimariesPresentAtEveryCandidate": true,
+    "keySecondaryNeverUsedForSelection": true,
+    "B36IsFirstPassingCandidate": true,
+    "B36WorstPrimaryWilsonLowerAtLeast0_90": true,
+    "selectedRuntimeBelow168Hours": true,
+    "terminalBindsPowerResult": true,
+    "terminalBindsNuisanceSummary": true,
+    "terminalBindsInputInventory": true,
+    "identityMappingNotOpened": true,
+    "namedAlgorithmEffectsNotComputedOrReported": true,
+    "formalCollectionNotStarted": true,
+    "formalAnalysisNotStarted": true
+  },
+  "selection": {
+    "selectedB": 36,
+    "worstPrimaryAtSelectedB": "P4",
+    "worstPrimaryPower": 0.91204,
+    "worstPrimaryWilson95Lower": 0.9107907558335663,
+    "requiredWilson95Lower": 0.90,
+    "freshUnityProcessCount": 864,
+    "stressHoursAt1_9x": 11.988586,
+    "sevenDayGateTriggered": false
+  },
+  "keySecondaryBoundary": {
+    "family": ["S1", "S2"],
+    "usedForBSelection": false,
+    "poweredGuarantee": false,
+    "inferenceGate": "all P1-P4 must reject before the S1-S2 Holm family opens"
+  },
+  "powerResultSha256": "75d52ba9f029920e711029cea02b7e98703290de75cf9413aa653a64eb802a3a",
+  "terminalReceiptSha256": "af1a0bd576589a88ffad68e98dc21ea79745b667560ae9c14af997f06a962359"
+}

@@ -1,0 +1,211 @@
+{
+  "schema": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-001-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-001",
+  "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-001",
+  "status": "FAILED_CLOSED_SUPERVISOR_POWERSHELL_HOST_BINDING_CORRIGENDUM",
+  "passed": false,
+  "terminal": true,
+  "failedAtUtc": "2026-10-17T16:24:23.7942191+00:00",
+  "exactStructuralReason": "The property 'Count' cannot be found on this object. Verify that the property exists.",
+  "checks": [
+    {
+      "checkId": "attempt-directory-exists",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt-directory-pristine-except-orchestrator",
+      "passed": true,
+      "observed": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\supervisor-powershell-host-binding-corrigendum-attempt-001\\Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt001.ps1",
+      "expected": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\supervisor-powershell-host-binding-corrigendum-attempt-001\\Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt001.ps1"
+    },
+    {
+      "checkId": "target-absent-authorization-receipt.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-stage-contract.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-powershell-json-known-answer-fixture.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-powershell-jsonl-known-answer-fixture.v1.jsonl",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-powershell-invalid-json-negative-fixture.v1.txt",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-supervisor-parameter-binding-known-answer.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-powershell-known-answer-receipt.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-terminal-pass-receipt.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-failure-receipt.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-load-qualification-execution-contract.v3_2.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-load-qualification-current-implementation-manifest.v3_2.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "target-absent-Gate14Re_ME_Status.v31.json",
+      "passed": true,
+      "observed": false,
+      "expected": false
+    },
+    {
+      "checkId": "status-v30-hash-retained",
+      "passed": true,
+      "observed": "aae1979990bd9b7e2bfce320f1a301abba8eeb5c0efc62bebd41ef5a42d5ed3b",
+      "expected": "aae1979990bd9b7e2bfce320f1a301abba8eeb5c0efc62bebd41ef5a42d5ed3b"
+    },
+    {
+      "checkId": "attempt001-failure-hash-retained",
+      "passed": true,
+      "observed": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+      "expected": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d"
+    },
+    {
+      "checkId": "attempt001-freeze-hash-retained",
+      "passed": true,
+      "observed": "511604d503de30ffcabbeb1734157b85984348604f0dd8f2fcf2bc3fb39d73af",
+      "expected": "511604d503de30ffcabbeb1734157b85984348604f0dd8f2fcf2bc3fb39d73af"
+    },
+    {
+      "checkId": "attempt001-file-count-retained",
+      "passed": true,
+      "observed": 6,
+      "expected": 6
+    },
+    {
+      "checkId": "attempt001-file-hash-authorization-receipt.v1.json",
+      "passed": true,
+      "observed": "b11046e20e0988c078d757a931b4a3a4f9d210ad8d94e5b831dbf79856dfe622",
+      "expected": "b11046e20e0988c078d757a931b4a3a4f9d210ad8d94e5b831dbf79856dfe622"
+    },
+    {
+      "checkId": "attempt001-file-readonly-authorization-receipt.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt001-file-hash-failure-receipt.v1.json",
+      "passed": true,
+      "observed": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+      "expected": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d"
+    },
+    {
+      "checkId": "attempt001-file-readonly-failure-receipt.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt001-file-hash-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": "511604d503de30ffcabbeb1734157b85984348604f0dd8f2fcf2bc3fb39d73af",
+      "expected": "511604d503de30ffcabbeb1734157b85984348604f0dd8f2fcf2bc3fb39d73af"
+    },
+    {
+      "checkId": "attempt001-file-readonly-freeze-manifest.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt001-file-hash-prelaunch-runtime-compatibility-audit.v1.json",
+      "passed": true,
+      "observed": "8259ad9c4c09a6b1e8e6e43cc3d5e38cb27afb6c8401c28bae600d9bfdac097d",
+      "expected": "8259ad9c4c09a6b1e8e6e43cc3d5e38cb27afb6c8401c28bae600d9bfdac097d"
+    },
+    {
+      "checkId": "attempt001-file-readonly-prelaunch-runtime-compatibility-audit.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt001-file-hash-stage-contract.v1.json",
+      "passed": true,
+      "observed": "8c21d225c67c702ef0c4b67fdc23805d5776ed9161aff6c2e4a6f7899dffa8eb",
+      "expected": "8c21d225c67c702ef0c4b67fdc23805d5776ed9161aff6c2e4a6f7899dffa8eb"
+    },
+    {
+      "checkId": "attempt001-file-readonly-stage-contract.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    },
+    {
+      "checkId": "attempt001-file-hash-status-adoption-receipt.v1.json",
+      "passed": true,
+      "observed": "5ca5c6e6724098cdd933bc10f9cead3cf3f08615578bdfae946094414785bdeb",
+      "expected": "5ca5c6e6724098cdd933bc10f9cead3cf3f08615578bdfae946094414785bdeb"
+    },
+    {
+      "checkId": "attempt001-file-readonly-status-adoption-receipt.v1.json",
+      "passed": true,
+      "observed": true,
+      "expected": true
+    }
+  ],
+  "disposition": {
+    "automaticRetryPerformed": false,
+    "newQualificationExecutionAttemptCreated": false,
+    "unityInvocationCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "supervisorV3Modified": false,
+    "runnerV2Modified": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingWeightingOrWinnerComputed": false
+  }
+}

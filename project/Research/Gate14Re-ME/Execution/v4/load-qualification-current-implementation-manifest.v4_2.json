@@ -1,0 +1,274 @@
+{
+  "schema": "gate14re-me-qualification-implementation-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "FROZEN_IMPLEMENTATION_SOURCE_ONLY_UNCOMPILED",
+  "manifestGeneration": 3,
+  "executionReadinessStatus": "FROZEN_V4_2_COMPILED_READINESS_PASS_EXECUTION_UNAUTHORIZED",
+  "designId": "gate14re-me-bounded-gnf-discrimination-window-v4",
+  "implementationId": "gate14re-me-bounded-gnf-oracle-cache-v4.2",
+  "compatibilityNote": "The stable v1 manifest status remains source-oriented for typed runner compatibility. The authoritative v4.2 readiness state is executionReadinessStatus plus the exact-source natural-exit-zero compile receipt. V4.2 changes only the version-owned G/N/F geometry validator and its runner/supervisor/acceptance bindings after attempt-010 failed closed; the frozen design, schedule, six algorithms, 126 superblocks and 775-process acquisition remain unchanged.",
+  "artifacts": [
+    {
+      "role": "reused-algorithm-free-readiness-guard",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEReadinessCompileExitV4.cs",
+      "bytes": 4147,
+      "sha256": "6454afe65a9fb349fd002d04d987d12bbe088047767a8462b7faf1bbc7050121"
+    },
+    {
+      "role": "reused-algorithm-free-readiness-guard-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEReadinessCompileExitV4.cs.meta",
+      "bytes": 243,
+      "sha256": "ed3094d9d57abc74e8d93c5c5e41b2b6159d4cc987fdddba00d9f41435b41f98"
+    },
+    {
+      "role": "reused-burst-lifecycle-helper",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEBurstHostLifecycleV1.cs",
+      "bytes": 4926,
+      "sha256": "28953d969993ce9044412004234904f8f0c4dfeef6c8da91e8b540a7618f4a41"
+    },
+    {
+      "role": "reused-qualification-contracts-and-geometry-validator",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+      "bytes": 17536,
+      "sha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4"
+    },
+    {
+      "role": "reused-algorithm-neutral-reference-oracle",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEReferenceOracleV1.cs",
+      "bytes": 30510,
+      "sha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25"
+    },
+    {
+      "role": "reused-d3-v3.1-runtime-contracts",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+      "bytes": 14453,
+      "sha256": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902"
+    },
+    {
+      "role": "input-schema-v4.1",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-input-schema.v4_1.json",
+      "bytes": 5383,
+      "sha256": "757d8d2e3283c5e66170a2ccece74ea41bcad3f581de9b3a9017d6b72cf1a9e9"
+    },
+    {
+      "role": "schedule-schema-v4.1",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-schedule-schema.v4_1.json",
+      "bytes": 3339,
+      "sha256": "62cd5b0880564d9d334482a4597dadb0ee653105db25d4b7f9b6854616944b2c"
+    },
+    {
+      "role": "output-schema-v4.1",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-output-schema.v4_1.json",
+      "bytes": 14765,
+      "sha256": "ed2db36b42cee326d78bd1a72cb79bd766676ba0bb0b5c40633af55b559160ae"
+    },
+    {
+      "role": "resource-budget-v4.1",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-resource-budget.v4_1.json",
+      "bytes": 2186,
+      "sha256": "b6938a75285167045fb9736e6c5a765dba1e54eb037edabec91d82e56d5ccc4e"
+    },
+    {
+      "role": "sample-size-decision-v4.1",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/formal-sample-size-decision.v4_1.json",
+      "bytes": 1453,
+      "sha256": "952d64c34c9e7821386c36a60519a5003658e89b78dbb81f4c2233b702636980"
+    },
+    {
+      "role": "fairness-binding-v4.1-file",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json",
+      "bytes": 7070,
+      "sha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca"
+    },
+    {
+      "role": "reused-instrument-contract-v3",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "bytes": 4771,
+      "sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"
+    },
+    {
+      "role": "reused-qualified-d3-v3.1",
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "bytes": 6971,
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+    },
+    {
+      "role": "planning-assets-manifest-v4",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets-freeze-manifest.v4.json",
+      "bytes": 47365,
+      "sha256": "8624880f6fbe0b709dd6d2127b5861d62d862d592dcd2b0e311c579afffbeee3"
+    },
+    {
+      "role": "williams-schedule-v4",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/schedule/bounded-qualification-williams-schedule.v4.jsonl",
+      "bytes": 156166,
+      "sha256": "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb"
+    },
+    {
+      "role": "sealed-anonymous-identity-v4",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/identity/anonymous-identity-binding.sealed.v4.json",
+      "bytes": 1518,
+      "sha256": "77b88a23a559642d455edf0d4caad9a1f9c06b7ddf33703b8fd100f4a1878bd2"
+    },
+    {
+      "role": "reused-trusted-unity-identity-rule",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "bytes": 5960,
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    {
+      "role": "reused-trusted-timestamp-comparator",
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "bytes": 5350,
+      "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"
+    },
+    {
+      "role": "reused-typed-parquet-runtime",
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "bytes": 179214,
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    {
+      "role": "reused-complete-raw-delivery-contract",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "bytes": 14693,
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    {
+      "role": "attempt009-streaming-feasibility-pass",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-acceptance-v4-feasibility-attempt-001/delivery/terminal-final.v4.json",
+      "bytes": 1199,
+      "sha256": "8e23efa3dda65b437eb096c48740c68df7f0271859c7fabf28e40e664e03ef9e"
+    },
+    {
+      "role": "oracle-simplification-plan-v4.1",
+      "relativePath": "Research/Verification/Gate14Re-ME/oracle-stage-simplification-v4_1-attempt-001/oracle-simplification-plan.v4_1.json",
+      "bytes": 4095,
+      "sha256": "bb32af0c4b74b434d831c225371000562f8a6604132b8274cb6e9ad65c9e66d7"
+    },
+    {
+      "role": "attempt009-read-only-oracle-cache-validator-v4.1",
+      "relativePath": "Research/Verification/Gate14Re-ME/oracle-stage-simplification-v4_1-attempt-001/validate_oracle_cache_reuse_v4_1.py",
+      "bytes": 11143,
+      "sha256": "3ecca77173cb25373761a30dd94aea5b6736c76118eacf72e79a5df0b3f0e4dc"
+    },
+    {
+      "role": "attempt009-read-only-oracle-cache-feasibility-pass-v4.1",
+      "relativePath": "Research/Verification/Gate14Re-ME/oracle-stage-simplification-v4_1-attempt-001/attempt009-oracle-cache-feasibility-receipt.v4_1.json",
+      "bytes": 1065,
+      "sha256": "12d391661c7663b0d745853d76362fd81b3d21ec68272e4509b9b4dd6a8b6bcc"
+    },
+    {
+      "role": "runner-v4.2-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_2.cs",
+      "bytes": 116324,
+      "sha256": "622d97031efe51a1ea89fc2da95e5b473c170b817d452e76d3b25d81b228140d"
+    },
+    {
+      "role": "runner-v4.2-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4_2.cs.meta",
+      "bytes": 241,
+      "sha256": "fe193b1f2899fd6aae3510c032291c3ef2948687a27245d8cd2d847696ef8e92"
+    },
+    {
+      "role": "geometry-validator-v4-folder-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v4.meta",
+      "bytes": 169,
+      "sha256": "66a806d4c4aba19f075fff172b92146e3da5a4e38a43232dad385c19c2198a08"
+    },
+    {
+      "role": "geometry-validator-v4.2-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v4/Gate14ReMEInputGeometryValidatorV4_2.cs",
+      "bytes": 17955,
+      "sha256": "08e2b067e667a11a0cae2f6162721bbd3b59c2e32ce806d247bd10aa63487eb9"
+    },
+    {
+      "role": "geometry-validator-v4.2-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v4/Gate14ReMEInputGeometryValidatorV4_2.cs.meta",
+      "bytes": 241,
+      "sha256": "f51bcabccfcbe372d49d10f31a53cfd74c6443d7de593252c2c368b1b282bac8"
+    },
+    {
+      "role": "acquisition-only-supervisor-v4.2",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/Run-Gate14ReMELoadQualification.v4_2.ps1",
+      "bytes": 52147,
+      "sha256": "1525e2e3a724404e649a5234dc801242cd598fcddaac92bc31514770f9b7b7f5"
+    },
+    {
+      "role": "read-only-acceptance-launcher-v4.3",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/Run-Gate14ReMEReadOnlyAcceptance.v4_3.ps1",
+      "bytes": 9140,
+      "sha256": "a9396c4bc469b4688e732759ccceb73b59637331f8f50a9fe51ce7852ebbac9e"
+    },
+    {
+      "role": "streaming-acceptance-tool-v4.3",
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_acceptance_v4_3.py",
+      "bytes": 55208,
+      "sha256": "cb0d2b9c03fe90e7e56e48b2702c65786f86006934255631faab9275a1527a44"
+    },
+    {
+      "role": "acquisition-contract-v4.2",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acquisition-contract.v4_2.json",
+      "bytes": 7773,
+      "sha256": "4498b9bf0b8d8e3cd92c6ddc65a6dbef1a61ec22f88acc6c63e52694cdeeaf7f"
+    },
+    {
+      "role": "acceptance-contract-v4.3",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acceptance-contract.v4_3.json",
+      "bytes": 4807,
+      "sha256": "dfa6ded73db0ff97dca28880b81882f1a4babd44ea52e7ed963f338fb2dd0c1f"
+    },
+    {
+      "role": "attempt-010-failure-seal",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-failure-seal-attempt-010/terminal-failure-seal-receipt.v1.json",
+      "bytes": 1371,
+      "sha256": "4101192a424d33ac227d49fa61ca6580a2d01d381984ed92901f1f9ce151af6d"
+    },
+    {
+      "role": "v4.2-gnf-validator-compatibility-pass",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-technical-repair-v4_2-attempt-001/gnf-validator-compatibility-receipt.v1.json",
+      "bytes": 1220,
+      "sha256": "fd0af4e29dbe73aa90ec29de117a5c66333b0e6dead3de7f8a1fb88bcf9acd11"
+    },
+    {
+      "role": "exact-v4.2-compile-readiness-pass",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-readiness-v4-attempt-009/terminal-readiness-receipt.v4_6.json",
+      "bytes": 1859,
+      "sha256": "6d590303a6b464831648c6993ff4f340cb99b5dfaac4bf17e6e9bf8c44e4e6bc"
+    },
+    {
+      "role": "exact-v4.2-compile-readiness-freeze",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-readiness-v4-attempt-009/freeze-manifest.v4_6.json",
+      "bytes": 1178,
+      "sha256": "6455c1eecd88d4bd826ba862ca3a44d4bd575c2df8627b0f849248303363f646"
+    }
+  ],
+  "oracleCacheImplementation": {
+    "oracleBatchProcesses": 6,
+    "inputCaches": 126,
+    "algorithmLanes": 756,
+    "laneReferenceOracleEvaluations": 0,
+    "plannedFreshProcesses": 775,
+    "assignmentRule": "balanced-g-n-f-replicate-v4.1-formula"
+  },
+  "scope": {
+    "qualificationDesignFrozen": true,
+    "overallFormalDesignFrozen": false,
+    "formalSampleSizeFinalized": false,
+    "qualificationExecutionAuthorized": false,
+    "measuredRootCreated": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingOrWinnerAuthorized": false,
+    "migrationPackageState": "DORMANT_SEALED_FOR_LATER_REACTIVATION"
+  },
+  "manifestSchemaV4_2": "gate14re-me-qualification-current-implementation-manifest-v4.2",
+  "technicalRepair": {
+    "priorFailedAttempt": "load-qualification-execution-attempt-010",
+    "failureClass": "VERSION_BINDING_OMISSION_OLD_ORACLE_GEOMETRY_LEVELS",
+    "scientificDesignChanged": false,
+    "scheduleChanged": false,
+    "algorithmCohortChanged": false,
+    "processCardinalityChanged": false
+  }
+}

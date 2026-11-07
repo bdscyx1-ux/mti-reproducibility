@@ -1,0 +1,52 @@
+{
+  "schema": "gate14re-me-formal-st-schedule-contract-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_RULE_ONLY_NO_FORMAL_SCHEDULE_ROWS_GENERATED",
+  "cardinality": {
+    "structuralCells": 36,
+    "superblocksPerCell": 36,
+    "totalSuperblocks": 1296,
+    "lanesPerSuperblock": 6,
+    "totalMeasuredLaneProcesses": 7776
+  },
+  "cellOrder": "lexicographic G, then N, then F using G=[64,96,128], N=[32,64,128], F=[1,9,25,81]",
+  "withinCellReplicateIndex": "0..35",
+  "contextAssignment": {
+    "jointStrata": 18,
+    "stratumOrder": "lexicographic changeTopology, graphProfile, sameTickAtomicPartitions using the frozen factor arrays",
+    "contextStratumIndex": "replicateIndex mod 18",
+    "repetitionsPerStratumPerCell": 2
+  },
+  "williamsOrders": [
+    ["A*-R", "BiA*-R", "IDFF", "D*L", "C-FF", "LPA*"],
+    ["BiA*-R", "D*L", "A*-R", "LPA*", "IDFF", "C-FF"],
+    ["D*L", "LPA*", "BiA*-R", "C-FF", "A*-R", "IDFF"],
+    ["LPA*", "C-FF", "D*L", "IDFF", "BiA*-R", "A*-R"],
+    ["C-FF", "IDFF", "LPA*", "A*-R", "D*L", "BiA*-R"],
+    ["IDFF", "A*-R", "C-FF", "BiA*-R", "LPA*", "D*L"]
+  ],
+  "orderAssignment": {
+    "firstContextPassReplicate0To17": "orderIndex = (contextStratumIndex + cellOrdinal) mod 6",
+    "secondContextPassReplicate18To35": "orderIndex = (contextStratumIndex + 3 + cellOrdinal) mod 6",
+    "ordersPerCellEach": 6,
+    "ordersOverallEach": 216,
+    "eachAlgorithmInEachExecutionPositionOverall": 216,
+    "eachDirectedFirstOrderPredecessorPairOverall": 216,
+    "contextOrderAntiConfounding": "each context stratum receives two distinct order rows separated by three, and cellOrdinal rotates the pairing across cells"
+  },
+  "inputDraw": {
+    "performedByThisFreeze": false,
+    "formalInputFilesCreated": 0,
+    "formalScheduleRowsCreated": 0,
+    "seedRule": "A future separately authorized package build must implement a cryptographic deterministic generator whose master seed is committed before any formal measured root or observation; exact generated inputs and schedule receive a separate hash freeze.",
+    "sameByteIdenticalInputAcrossSixLanes": true
+  },
+  "execution": {
+    "oneFreshUnityProcessPerLane": true,
+    "strictSerial": true,
+    "withinSuperblockOrderMustEqualFrozenSchedule": true,
+    "skipOrOutcomeDependentReorder": false,
+    "parallelMeasuredLanes": false
+  }
+}

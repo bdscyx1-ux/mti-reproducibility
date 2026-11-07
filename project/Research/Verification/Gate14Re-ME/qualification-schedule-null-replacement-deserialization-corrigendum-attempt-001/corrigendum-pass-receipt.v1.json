@@ -1,0 +1,82 @@
+{
+  "schema": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-pass-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "status": "PASS_FORWARD_ONLY_RUNNERV2_SCHEDULE_NULL_REPLACEMENT_DESERIALIZATION_CORRIGENDUM",
+  "passed": true,
+  "terminalForCorrigendumImplementationAndKnownAnswer": true,
+  "completedAtUtc": "2026-10-17T17:59:54.2819055Z",
+  "semanticChange": {
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "preRepairSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "postRepairSha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+    "postRepairBytes": 90914,
+    "jsonNullDisposition": "NORMALIZED_TO_NO_REPLACEMENT",
+    "missingMemberDisposition": "NORMALIZED_TO_NO_REPLACEMENT",
+    "completeReplacementObjectDisposition": "PRESERVED_FOR_EXISTING_DOWNSTREAM_VALIDATION",
+    "emptyOrPartialReplacementObjectDisposition": "FAIL_CLOSED",
+    "duplicateMemberMalformedJsonOrUnsupportedTokenDisposition": "FAIL_CLOSED",
+    "existingDownstreamPathHashIdentityAndUniquenessValidationChanged": false
+  },
+  "knownAnswer": {
+    "unityInvocationCount": 1,
+    "retryPerformed": false,
+    "naturalExitObserved": true,
+    "unityExitCode": 0,
+    "algorithmFree": true,
+    "casesRequired": 5,
+    "casesPassed": 5,
+    "receiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/unity-known-answer-output/known-answer-receipt.v1.json",
+    "receiptSha256": "3278f19b818f386b83f6fb21fe1fd583937819dcb70be84a777e7c12b0f9c4bd",
+    "identityAdjudicationRelativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/unity-known-answer-adjudication.v1.json",
+    "identityAdjudicationSha256": "8b5c7591f5b7be4fa656436e214dfd012bd127158ced0825391bfc82f753fc52"
+  },
+  "compiledImplementation": {
+    "editorAssemblyRelativePath": "Library/ScriptAssemblies/Assembly-CSharp-Editor.dll",
+    "editorAssemblySha256": "3d1165d306227a6ec27b1b7472342d04dd3f52770852f522f7c9db4297440b18",
+    "editorAssemblyBytes": 992256,
+    "runtimeAssemblyRelativePath": "Library/ScriptAssemblies/Assembly-CSharp.dll",
+    "runtimeAssemblySha256": "c21848ca1618dc010f52a1035489ac9347fe481735b362ee3ac8c8d938324bd1",
+    "runtimeAssemblyBytes": 466432
+  },
+  "authoritativeScheduleReadOnlyCheck": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+    "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+    "rows": 162,
+    "replacementNullRows": 162,
+    "replacementNonNullRows": 0,
+    "scheduleModified": false
+  },
+  "retainedFailureEvidence": {
+    "statusV37RelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v37.json",
+    "statusV37Sha256": "effa1a9270965c537bb24c2915f3f4498fd992bc2a29e601acdceba60c8dd232",
+    "attempt003FailureReceiptSha256": "ec78b55c4f7be0d00433958806a26b7ef1e1a3dd75ce140a9013079cadf13df9",
+    "attempt003FreezeManifestSha256": "10764c3f357eeec90eb138701d4c29a3d16a6e1047dbbc48a4a26be551fee249",
+    "failedMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001",
+    "failedMeasuredRootFileCount": 6,
+    "failedMeasuredRootWritableFileCount": 0,
+    "modifiedOrReclassified": false,
+    "retryResumeOrReusePerformed": false
+  },
+  "nextProspectiveBindings": {
+    "qualificationMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+    "completePerObservationDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-002",
+    "measuredRootExistsAtCorrigendumClosure": false,
+    "deliveryRootExistsAtCorrigendumClosure": false,
+    "creationAuthorizedInThisStage": false
+  },
+  "scientificBoundary": {
+    "instrumentInvocationCount": 0,
+    "oracleInvocationCount": 0,
+    "emptyBoundaryInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingWeightingOrWinnerAdjudicationPerformed": false
+  },
+  "nextAction": "Create forward-only prospective attempt-002 measured/delivery path bindings and perform one read-only, no-Unity execution-readiness recheck. A new qualification execution attempt remains separately unauthorized."
+}

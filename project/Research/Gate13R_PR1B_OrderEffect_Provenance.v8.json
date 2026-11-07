@@ -1,0 +1,390 @@
+{
+    "schemaVersion":  8,
+    "provenanceId":  "gate13r-pr1b-v4-pathsafe-provenance-compatibility-repair-v1",
+    "createdAtUtc":  "2026-10-08T13:09:46.0378534Z",
+    "createdAtAsiaShanghai":  "2026-10-08T21:09:46.0398604+08:00",
+    "status":  "FROZEN-BEFORE-PROVENANCE-COMPATIBILITY-SMOKE-AND-V14-VERIFICATION",
+    "authorizationBasis":  "User-authorized Gate13R PR1B v3 path-safe scope with versioned pre-pilot repair; v12 failed before Unity/pilot creation. Gate13R formal and Gate14R remain unauthorized.",
+    "parentProvenance":  {
+                             "relativePath":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v7.json",
+                             "rawBytes":  20437,
+                             "sha256":  "6e1a4d5bbadd5e95dc00e935b8d3eb2540acbaed644cba4da3c51123a5122090"
+                         },
+    "executionDesignId":  "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "memoryGatePolicyId":  "gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1",
+    "operationalRepairId":  "gate13r-pr1b-v4-winps51-same-directory-backup-leaf-atomic-replace-v1",
+    "scientificContractChanged":  false,
+    "config":  {
+                   "id":  "gate13rPr1bPilotPlanV7",
+                   "relativePath":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v7.json",
+                   "rawBytes":  13281,
+                   "sha256":  "3c2abe91aae77a683bbf3e2f52896601db648401162c3dd35970945d285f488c"
+               },
+    "specification":  {
+                          "id":  "gate13rPr1bPathSafeSpecificationV4",
+                          "relativePath":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Specification.v4.md",
+                          "rawBytes":  2654,
+                          "sha256":  "55a6f09fb9e8e6f236cd856f59ecfa9566d8832bcb383e4e7bb5fdc1d35e1754"
+                      },
+    "testDesign":  {
+                       "id":  "gate13rPr1bPathSafeTestDesignV4",
+                       "relativePath":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Test_Design.v4.md",
+                       "rawBytes":  2172,
+                       "sha256":  "f2ed403b73a0832a3077045b00eda11b62b96eb1e58d220e80fa21a37c7b9bf8"
+                   },
+    "failedV12":  {
+                      "relativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v12-gate13r-pr1b-order-effect-pathsafe-v3",
+                      "fileCount":  7,
+                      "rawBytes":  25700,
+                      "treeIdentitySha256":  "4ae0c0ea30e65b0cf5e15bbdffeffd8155e7e5de341c262f4ad3d2e00c4f12fe",
+                      "status":  "FAILED-NO-PILOT-UNITY-NOT-INVOKED"
+                  },
+    "frozenV6Root":  {
+                         "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2",
+                         "fileCount":  49,
+                         "rawBytes":  1955414,
+                         "treeSha256":  "85a3fba48ae687acaa04b7b1f91afe0dc115f6efdde5bcaa4bbffa50e9139557",
+                         "status":  "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE"
+                     },
+    "frozenVerificationRoots":  [
+                                    {
+                                        "relativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v9-gate13r-pr1b-order-effect-memory-v2",
+                                        "fileCount":  20,
+                                        "rawBytes":  176860,
+                                        "treeSha256":  "5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74"
+                                    },
+                                    {
+                                        "relativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v10-gate13r-pr1b-order-effect-memory-v2",
+                                        "fileCount":  39,
+                                        "rawBytes":  275071,
+                                        "treeSha256":  "5d20fbea2e6e734c9feddc2ed199a365bc307caac1a4b2cef3bb680cfebb2d44"
+                                    },
+                                    {
+                                        "relativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2",
+                                        "fileCount":  244,
+                                        "rawBytes":  6057665,
+                                        "treeSha256":  "d819eb685a119175a5b1e362e7ac14997ff27b6f6696d109a6dd0202546b8d5b"
+                                    }
+                                ],
+    "boundFiles":  [
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v3_PathSafe_Next_Authorization_Prompt.md",
+                           "rawBytes":  7455,
+                           "sha256":  "0994f20de79d1ca31dad5825daccfa7c89c2b4dfe039f280ea03700f598725a1"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v3_Authorization.v1.json",
+                           "rawBytes":  1643,
+                           "sha256":  "03119942fdb7794f8a5fb294494eea2f254b63ea53a0d96957016ae5680272f7"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v3_StaleLock_PreRecovery_Audit.v1.json",
+                           "rawBytes":  4547,
+                           "sha256":  "8ed2d4e6cb3c9f2a4dc6cd2e0af88050ee32387aedf94e6d96d03d59e6ab846e"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v3_StaleLock_Recovery_Receipt.v1.json",
+                           "rawBytes":  2239,
+                           "sha256":  "7e2f06396f890bdf78b99b22adb8ae839fc69031bddfbe7e66fae80cf63dda9d"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_OrderEffect_Statistical_Analysis_Plan.v2.md",
+                           "rawBytes":  3015,
+                           "sha256":  "cfd234875f296c5e94bd17db9a574c6674d7543e90b5f12ac6369b39e3a2c999"
+                       },
+                       {
+                           "relativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3.cs",
+                           "rawBytes":  121567,
+                           "sha256":  "a47a731c979d58304230a150947ca1bb50207d13d1214b7d4de6e683bba6b5d6"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v2_Pilot_Attempt2_Terminal_Preservation.v1.json",
+                           "rawBytes":  3849,
+                           "sha256":  "ba403fbf604b2e4c5474b703e325722ca1b9853559fffdc8beb0c50e68846d3f"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v2_Pilot_Attempt2_Failure_Diagnosis.v1.md",
+                           "rawBytes":  3223,
+                           "sha256":  "bbcc55ed803d19c8f990793b91f8b7d021bf69bb21631751493b0675d7340c48"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v2_Failure_Checkpoint.v1.json",
+                           "rawBytes":  993,
+                           "sha256":  "8481027dadbb020750190cfab270fe61dd0a7dfd45e1eb8ef7efa8e5e0cf1e1c"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v2_Terminal_Evidence_Manifest.v1.json",
+                           "rawBytes":  2295,
+                           "sha256":  "f04afe3c979b4fe09bed5826b53c1b49636113eec3548737548e4e76f9baf487"
+                       },
+                       {
+                           "relativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV2.cs",
+                           "rawBytes":  96860,
+                           "sha256":  "3d5cea49e983ba44a7bec7ff29100d4c6ba8e2ee7bd2e879b7b20a8c4ec46bbf"
+                       },
+                       {
+                           "relativePath":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs",
+                           "rawBytes":  65635,
+                           "sha256":  "eeca58f7e1121d0a297e8796430a90ae32f8492c32fc5fb676ae102b5f4a0c97"
+                       },
+                       {
+                           "relativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json",
+                           "rawBytes":  207760,
+                           "sha256":  "5baaeec18344a9e99e55da38f3c4875b7e7e9f3bf0add9d5f2d2f1e821b5f7fc"
+                       },
+                       {
+                           "relativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json",
+                           "rawBytes":  426698,
+                           "sha256":  "cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3"
+                       },
+                       {
+                           "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-manifest.json",
+                           "rawBytes":  3448,
+                           "sha256":  "5b0678518423816212ea27f6cbb0bea18c1d11110ed10aefa1a238c17e0a53b6"
+                       },
+                       {
+                           "relativePath":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-execution-manifest.json",
+                           "rawBytes":  717452,
+                           "sha256":  "fce4c7f9c7fe7df5f424c8a8ae888133942ed49dbede71d4499e502ba812ebd6"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.json",
+                           "rawBytes":  5839,
+                           "sha256":  "d1d2c8f2aa5b7b075ec74f18911cb15bb47076840ec456d3eee6d58030c722ee"
+                       },
+                       {
+                           "relativePath":  "Research/Run-Gate12RProcessReuseBlockV3.ps1",
+                           "rawBytes":  13113,
+                           "sha256":  "b5ac864438c3f98684cc62a988f742ef9500434feb41504b5e4742af14d7ef8a"
+                       },
+                       {
+                           "relativePath":  "Research/Run-Gate12RTelemetryProbe.ps1",
+                           "rawBytes":  8087,
+                           "sha256":  "dad26465e5c0fc349806b98fea965f46abf670ef2b5b720cee36665839a3b3b3"
+                       },
+                       {
+                           "relativePath":  "Research/Run-Gate13RPR1BOrderEffectPilotV1.ps1",
+                           "rawBytes":  20640,
+                           "sha256":  "9f6ed211daddf5624f6b16eaf41ae82f53de6c5e08129e432ddc8323e6ca564c"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BBlockVerificationV1.ps1",
+                           "rawBytes":  6933,
+                           "sha256":  "fab1b2e25c3e2492c45e4e700590727b1f289831dd410724bd2670437f85a691"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate12RCompileV4.ps1",
+                           "rawBytes":  4415,
+                           "sha256":  "79b607c26bd7e43664ec56e44d079e934da4cd2a1d151f25025734da21de27a5"
+                       },
+                       {
+                           "relativePath":  "Research/Run-Gate12RColdReferenceV3.ps1",
+                           "rawBytes":  4940,
+                           "sha256":  "410c95b09c1ef28877b56e0a100a91d7f534b6877b722423f3d0edfe6b4c4821"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Gate10RAttempt4RetainedHarnessV4.ps1",
+                           "rawBytes":  15232,
+                           "sha256":  "c31f37a0c3ed28b1c54323f9e7d97d8359d720aff60da6fcabc14bc3f251ff3f"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate12AnalysisUnitTests.ps1",
+                           "rawBytes":  13713,
+                           "sha256":  "e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Gate12_AnalysisUnitTests.summary.json",
+                           "rawBytes":  1748,
+                           "sha256":  "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v4.json",
+                           "rawBytes":  2406,
+                           "sha256":  "e412d82d3ab3a25fe37c2ca97ae37fee730775c168e58d1e195c4880b38e1ad8"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Specification.v4.md",
+                           "rawBytes":  2654,
+                           "sha256":  "55a6f09fb9e8e6f236cd856f59ecfa9566d8832bcb383e4e7bb5fdc1d35e1754"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Test_Design.v4.md",
+                           "rawBytes":  2172,
+                           "sha256":  "f2ed403b73a0832a3077045b00eda11b62b96eb1e58d220e80fa21a37c7b9bf8"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v3_PrePilot_v12_Terminal_Preservation.v1.json",
+                           "rawBytes":  2571,
+                           "sha256":  "c0053c68b9a07eb08a0686f8a2eea40b51036cba758e0e55b66b58524abcaa95"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v3_PrePilot_v12_Failure_Diagnosis.v1.md",
+                           "rawBytes":  1697,
+                           "sha256":  "5bc5189aed40b8639f975ad48438f7395ad1fa5615db0eedbc931fe7ea1fed73"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_v3_PrePilot_v12_Failure_Checkpoint.v1.json",
+                           "rawBytes":  855,
+                           "sha256":  "fd0c28436981c037d138c1929f80e32b693243991ceb60b0f56ce517d422ceb6"
+                       },
+                       {
+                           "relativePath":  "Research/Build-Gate13RPR1BPathSafePrePilotV4.ps1",
+                           "rawBytes":  15966,
+                           "sha256":  "1a28b71cba3176456456f8f72c3d46b2f49c48ca470a594e842f57140826aa8c"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v6.json",
+                           "rawBytes":  12983,
+                           "sha256":  "a3427ba55c42c34227386151b774ff5f795c5aa436015713c27df1b4c0d7120a"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13RPR1BOrderEffectPreparationV4.psm1",
+                           "rawBytes":  8252,
+                           "sha256":  "60edf2e30df8ee12cd342873e7a0c2b012fd3cc8bcb5c21855d008b3ba37798b"
+                       },
+                       {
+                           "relativePath":  "Research/Analyze-Gate13RPR1BOrderEffectPilotV4.py",
+                           "rawBytes":  17959,
+                           "sha256":  "01aa0697cde7db3c9e1f97d91eaee6801fb9bd4f32db1c17e1c66cfedd7c120d"
+                       },
+                       {
+                           "relativePath":  "Research/Run-Gate13RPR1BMemoryAwareBlockV4.ps1",
+                           "rawBytes":  15041,
+                           "sha256":  "e91b7e6ea368d41963a0a72667f1437c7f52320952347bc337c1fcc4a4511d87"
+                       },
+                       {
+                           "relativePath":  "Research/Run-Gate13RPR1BMemoryTelemetryProbeV4.ps1",
+                           "rawBytes":  5614,
+                           "sha256":  "b9d02830dd0de24aef481b87e08274649c7cbb3b28cac39ccac73a7b25bbb7f2"
+                       },
+                       {
+                           "relativePath":  "Research/Run-Gate13RPR1BOrderEffectPilotV4.ps1",
+                           "rawBytes":  6691,
+                           "sha256":  "ead748d64dc2e4f5cd9efef70295bc5a0968f8b73d7cf8e97cffe83cbd518f0e"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BStaticUnitV4.ps1",
+                           "rawBytes":  8973,
+                           "sha256":  "aac95a79966f34908fa42315f258b11c351af65edbf2225b2e4f4ae0c023982a"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BPathSafeAtomicSelfTestV4.ps1",
+                           "rawBytes":  5725,
+                           "sha256":  "243b1ff61c7df18698a38d40b075067ae7d0eeba550f7ed6b417328c7a158d55"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BMemoryPolicySelfTestV5.ps1",
+                           "rawBytes":  4971,
+                           "sha256":  "55fa2a3b88f62f91ca138fb058856024ae7004a0a89ed0fc39945f124fb9b1c3"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BBlockVerificationV5.ps1",
+                           "rawBytes":  14117,
+                           "sha256":  "1698a2f44e4e8dad842869699d9d3d6fa0c1184ff45b032b5404925e46ce5a11"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BValidationOnlyPrePilotAuditV4.ps1",
+                           "rawBytes":  9551,
+                           "sha256":  "bed43861e4ac78bd78557cc8ad3d37e6370e3d12ff7d071ed0cf762490132a79"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BPrePilotV6.ps1",
+                           "rawBytes":  9511,
+                           "sha256":  "f36749357838062aa9cd973487b65a1addb725ca199a39c1bd44d895dd77666b"
+                       },
+                       {
+                           "relativePath":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v6.json",
+                           "rawBytes":  18753,
+                           "sha256":  "867085ccc38184f211938a5d7bcfd76dc727b7687d59d132c095b80c008baed9"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BPowerShellAtomicHelperSmokeV1.ps1",
+                           "rawBytes":  5970,
+                           "sha256":  "ecc6fd3b658e526267f8784f2aa08d613e2e031db5ce667b043bc646b4b96234"
+                       },
+                       {
+                           "relativePath":  "Research/Verification/Gate13R_PR1B_v4_AtomicHelperSmoke/v1/summary.json",
+                           "rawBytes":  2451,
+                           "sha256":  "8a4f73e539f9fcbbcb08739195c7d66ed8926621b49fa89c7b2fc3f0e24f07cb"
+                       },
+                       {
+                           "relativePath":  "Research/Freeze-Gate13RPR1BPathSafeProvenanceV7.ps1",
+                           "rawBytes":  3153,
+                           "sha256":  "473bdf31971ba179d1fe69c83870e3e2868e91721ff4358d0d32c65a1cad0a83"
+                       },
+                       {
+                           "id":  "gate13rPr1bPilotPlanV7",
+                           "relativePath":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v7.json",
+                           "rawBytes":  13281,
+                           "sha256":  "3c2abe91aae77a683bbf3e2f52896601db648401162c3dd35970945d285f488c"
+                       },
+                       {
+                           "id":  "parentProvenanceV7",
+                           "relativePath":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v7.json",
+                           "rawBytes":  20437,
+                           "sha256":  "6e1a4d5bbadd5e95dc00e935b8d3eb2540acbaed644cba4da3c51123a5122090"
+                       },
+                       {
+                           "id":  "v13TerminalPreservation",
+                           "relativePath":  "Research/Gate13R_PR1B_v4_PrePilot_v13_Terminal_Preservation.v1.json",
+                           "rawBytes":  1511,
+                           "sha256":  "e7b37de2562cfb49d041eb7694b1665d7852d1f7f70522552724cd8acd03dda1"
+                       },
+                       {
+                           "id":  "v13FailureDiagnosis",
+                           "relativePath":  "Research/Gate13R_PR1B_v4_PrePilot_v13_Failure_Diagnosis.v1.md",
+                           "rawBytes":  1854,
+                           "sha256":  "f3e9b801731db0b8121bf5b71466568f017ea872004de84b2b68bd5a058b2b6d"
+                       },
+                       {
+                           "id":  "v13FailureCheckpoint",
+                           "relativePath":  "Research/Gate13R_PR1B_v4_PrePilot_v13_Failure_Checkpoint.v1.json",
+                           "rawBytes":  826,
+                           "sha256":  "35b9ee21a5f210fe4d29e3413f21bb2cd9856f13996e8ad7684b88ad5a3b81b7"
+                       },
+                       {
+                           "id":  "planProvenanceGeneratorV8",
+                           "relativePath":  "Research/New-Gate13RPR1BPathSafePlanV7ProvenanceV8.ps1",
+                           "rawBytes":  6279,
+                           "sha256":  "7b0c7f33288a1ef1998721b6998eec52ca8e470d0e87aad9bc408a8b0beb8549"
+                       },
+                       {
+                           "id":  "provenanceCompatibilitySmokeRunnerV1",
+                           "relativePath":  "Research/Verification/Run-Gate13RPR1BProvenanceCompatibilitySmokeV1.ps1",
+                           "rawBytes":  3499,
+                           "sha256":  "43a3bbd257ab451b1c1091eb29728ad3588d1bdbff81247e2a31720dc5499eb1"
+                       }
+                   ],
+    "nonFormal":  true,
+    "excludedFromFormalAnalysis":  true,
+    "formalCampaign":  false,
+    "gate13rFormalAuthorized":  false,
+    "gate14rAuthorized":  false,
+    "pilotRetryAfterRootCreationAllowed":  false,
+    "winps51AtomicHelperSmoke":  {
+                                     "relativePath":  "Research/Verification/Gate13R_PR1B_v4_AtomicHelperSmoke/v1/summary.json",
+                                     "checkCount":  7,
+                                     "passedCheckCount":  7,
+                                     "passed":  true,
+                                     "unityInvoked":  false
+                                 },
+    "executionAuthorization":  {
+                                   "id":  "gate13rPr1bV3UserAuthorization",
+                                   "relativePath":  "Research/Gate13R_PR1B_v3_Authorization.v1.json",
+                                   "rawBytes":  1643,
+                                   "sha256":  "03119942fdb7794f8a5fb294494eea2f254b63ea53a0d96957016ae5680272f7"
+                               },
+    "unityCommand":  {
+                         "id":  "gate13rPr1bMemoryAwareProcessReuseBatchCommandV3",
+                         "relativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3.cs",
+                         "rawBytes":  121567,
+                         "sha256":  "a47a731c979d58304230a150947ca1bb50207d13d1214b7d4de6e683bba6b5d6"
+                     },
+    "failedV13":  {
+                      "relativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v13-gate13r-pr1b-order-effect-pathsafe-v4",
+                      "fileCount":  54,
+                      "rawBytes":  381042,
+                      "treeIdentitySha256":  "34ba634c4cff9d90a4f52b01ceca0372cadb7607dec91cc8bf0d1734dc82cce0",
+                      "status":  "FAILED-NO-PILOT-BEFORE-BLOCK-SAMPLE"
+                  }
+}

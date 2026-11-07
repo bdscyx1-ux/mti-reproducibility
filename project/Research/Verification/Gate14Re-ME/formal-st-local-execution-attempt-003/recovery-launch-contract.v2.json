@@ -1,0 +1,44 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-recovery-launch-contract-v2",
+  "studyId": "Gate14Re-ME",
+  "status": "READY_AWAITING_EXACT_RECOVERY_V2_COMMAND_CONFIRMATION",
+  "measuredRootRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "recoveryAuthorizationRelativePath": "attempt-003-recovery-authorization.v2.json",
+  "recoveryAuthorizationSha256": "de1f538b20b96243522d247df2d35f5627c856522342723bfdabdef0e82986a4",
+  "recoveryPreflightReceiptRelativePath": "recovery-preflight-receipt.v2.json",
+  "recoveryPreflightReceiptSha256": "84ba706a2b1aeec3057cc54cd7941f1c8068d2b61478569b64291edf0c306d57",
+  "recoverySupervisorRelativePath": "Run-Gate14ReMEFormalST.Attempt003Recovery.v2.ps1",
+  "recoverySupervisorSha256": "932e2419d499978187f43bde5ef996b2e2e28d54cd8f42c4c745b92f7534fdbe",
+  "exactCommandLine": "\"C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe\" -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/Run-Gate14ReMEFormalST.Attempt003Recovery.v2.ps1 -ProjectRoot H:/DDM_Final_Project -MeasuredRoot H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003 -RecoveryAuthorization H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/attempt-003-recovery-authorization.v2.json -RecoveryAuthorizationSha256 de1f538b20b96243522d247df2d35f5627c856522342723bfdabdef0e82986a4 -ExecutionAuthorization H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-003/formal-st-execution-authorization.v5.json -ExecutionAuthorizationSha256 7f37051f0a70594aafde5e58800e1f7e0687c83c4c78d714404163e6348bd1f2 -ImplementationManifest H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_3/formal-st-implementation-manifest.v5_3.json -ImplementationManifestSha256 86b1c84b099849e052f3d9bea7e95da91ec492b98b058b25b284b20ab279ac82 -ExecutionContract H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_3/formal-st-acquisition-contract.v5_3.json -ExecutionContractSha256 b668fee1f1d245a3a898f958ea4b81af2fa328e2139d57ceebc162a3fb26a55b -InputFreezeManifest H:/DDM_Final_Project/Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/formal-input-freeze-manifest.v5.json -InputFreezeManifestSha256 aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe -ResourceBudget H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v5_1/formal-st-operational-resource-budget.v5_1.json -ResourceBudgetSha256 973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2 -FairnessBinding H:/DDM_Final_Project/Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json -FairnessBindingSha256 5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca -Schedule H:/DDM_Final_Project/Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001/schedule/formal-st-williams-schedule.v5.jsonl -ScheduleSha256 45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3 -TrustedIdentityRule H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json -TrustedIdentityRuleSha256 f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06 -TimestampComparator H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1 -TimestampComparatorSha256 d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27 -UnityExecutable H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe -UnityExecutableSha256 0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+  "exactCommandLineUtf8Sha256": "49fdbb5fa9ee1545403d3a236d9b51fe1a638175bdd71b5cdb095ec1e5c799b9",
+  "tokenCountIncludingExecutable": 56,
+  "monitorInterlock": {
+    "automationId": "gate14re-me-formal-st-collection",
+    "statusBeforeLaunch": "PAUSED",
+    "reason": "Prevent any non-shared process-ledger reader from recreating the original append sharing violation.",
+    "resumeOnlyAfterSupervisorIdentityIsFrozen": true,
+    "resumedReaderMustUseFileShareReadWriteAndDelete": true
+  },
+  "mutationBoundary": {
+    "firstMeasuredRootWrite": "_control/recovery-start-receipt.v2.json",
+    "processLedgerRowsBeforeLaunch": 7519,
+    "lastCompletedOrdinalBeforeLaunch": 7518,
+    "resumeFirstNewOrdinal": 7519,
+    "resumeFirstNewSuperblockOrdinal": 1242,
+    "reusePreservedEmptySuperblockRoot": true,
+    "remainingNewUnityProcesses": 324,
+    "rerunExistingAlgorithmLane": false,
+    "replacementPerformed": false,
+    "preserveTwoFailureRows": true,
+    "automaticRetryAfterNewFailure": false
+  },
+  "authorizationBoundary": {
+    "formalCollectionContinuationAuthorized": true,
+    "formalAnalysisAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "rankingOrWinnerAuthorized": false,
+    "rawAlgorithmObservationInspectionAuthorized": false
+  },
+  "createdAtUtc": "2026-10-30T03:20:03.0520110Z"
+}

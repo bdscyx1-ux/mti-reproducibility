@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "schemaId": "gate13r-pr2-attempt4-phaseb-output-schema-v1",
+  "scope": "P1-P5-ONLY-GATE13R-PR2-ATTEMPT4",
+  "outputRootRelativePath": "Research/Analysis/Gate13R_PR2_Attempt4_PhaseB/v1",
+  "commitPolicy": {
+    "targetMustNotExistBeforeExecution": true,
+    "writeToSiblingStagingDirectory": true,
+    "commitByAtomicDirectoryRename": true,
+    "overwriteForbidden": true,
+    "rawRootWritesForbidden": true
+  },
+  "requiredArtifactsInCommitOrder": [
+    {
+      "relativePath": "analysis-input-audit.json",
+      "role": "INPUT-PROVENANCE-HASH-AND-ELIGIBILITY-AUDIT",
+      "mayContainOutcomeEstimates": false
+    },
+    {
+      "relativePath": "schedule-coverage-and-missingness.json",
+      "role": "STRUCTURAL-COVERAGE-AND-RETAINED-MISSINGNESS",
+      "mayContainOutcomeEstimates": false
+    },
+    {
+      "relativePath": "shared-primary-p1-analysis.json",
+      "role": "CONFIRMATORY-P1-C1-THROUGH-C5-WITH-HOLM-AND-SIMULTANEOUS-CI",
+      "mayContainOutcomeEstimates": true
+    },
+    {
+      "relativePath": "shared-supportive-p2-p5-analysis.json",
+      "role": "SUPPORTIVE-P2-P5-INCLUDING-DISTINCT-P3-SLOPE-AND-P5-COUNTS",
+      "mayContainOutcomeEstimates": true
+    },
+    {
+      "relativePath": "heterogeneous-secondary-analysis.json",
+      "role": "MATCHED-SUPERBLOCK-SECONDARY-AND-ORDER-SENSITIVITY",
+      "mayContainOutcomeEstimates": true
+    },
+    {
+      "relativePath": "phase-b-analysis-manifest.json",
+      "role": "HASHED-OUTPUT-MANIFEST",
+      "mayContainOutcomeEstimates": false
+    },
+    {
+      "relativePath": "phase-b-execution-receipt.json",
+      "role": "TERMINAL-PHASEB-ONLY-EXECUTION-RECEIPT",
+      "mayContainOutcomeEstimates": false
+    }
+  ],
+  "continuousMetricRules": {
+    "metricIds": ["P1", "P2", "P3-PER-AGENT", "P4"],
+    "effectScale": "LN-NUMERATOR-MINUS-LN-DENOMINATOR",
+    "strictlyPositiveFinitePairsRequired": true,
+    "pseudocountForbidden": true,
+    "sharedIndependentUnit": "CAMPAIGN-MEAN-OF-COMPLETE-WILLIAMS-BLOCK-LOG-RATIOS",
+    "sharedMatrixWeighting": "EQUAL-WEIGHT-ACROSS-32-FROZEN-SHARED-CAMPAIGNS",
+    "unadjustedInterval": "NORMAL-APPROXIMATION-TWO-SIDED-95-PERCENT",
+    "simultaneousInterval": "BONFERRONI-COMPATIBLE-TWO-SIDED-99-PERCENT-FOR-FIVE-CONTRASTS",
+    "varianceBound": "ONE-SIDED-90-PERCENT-CHI-SQUARE-SIGMA-UPPER"
+  },
+  "p1ConfirmatoryRules": {
+    "family": ["C1", "C2", "C3", "C4", "C5"],
+    "familyWiseAlpha": 0.05,
+    "multiplicity": "HOLM",
+    "directionalContrasts": ["C1", "C2", "C3", "C4"],
+    "twoSidedContrasts": ["C5"],
+    "directionalSuperiorityRequires": [
+      "CORRECTNESS-AND-STRUCTURAL-GATES-PASS",
+      "POINT-ESTIMATE-DIRECTION-FAVORS-NUMERATOR-FOR-LOWER-IS-BETTER",
+      "HOLM-ADJUSTED-PVALUE-LESS-THAN-0.05",
+      "BONFERRONI-SIMULTANEOUS-UPPER-RATIO-BOUND-LESS-THAN-1"
+    ],
+    "c5WinnerLabelForbidden": true,
+    "globalWinnerOrMajorityVoteForbidden": true
+  },
+  "p3ScalingSlopeRules": {
+    "role": "SUPPORTIVE-DISTINCT-ESTIMAND",
+    "scenarioIdRegex": "^agent-scale-a(001|008|032|128|512)-shared$",
+    "frozenAgentCountLevels": [1, 8, 32, 128, 512],
+    "x": "LN-AGENT-COUNT",
+    "y": "LN-TOTAL-PLANNER-ELAPSED-MILLISECONDS-PER-AGENT",
+    "levelWeighting": "EQUAL",
+    "replicateUnit": "CAMPAIGN-BLOCK-ORDINAL-MATCHED-ACROSS-ALL-FIVE-LEVELS",
+    "insufficientOrMismatchedLevelsVerdict": "NOT-ESTIMABLE",
+    "crossFamilySubstitutionForbidden": true
+  },
+  "p5Rules": {
+    "role": "SUPPORTIVE-COUNT-RATE",
+    "strata": ["OVERALL", "PLAN", "REPAIR"],
+    "retainNumeratorsAndDenominators": true,
+    "pseudocountForbidden": true,
+    "allZeroOneSided95Upper": "1 - 0.05^(1/N)",
+    "continuousLogRatioInferenceForbidden": true,
+    "allZeroSuperiorityConclusionForbidden": true
+  },
+  "heterogeneousRules": {
+    "role": "SECONDARY-SYSTEM-TREATMENT",
+    "independentUnit": "MATCHED-SUPERBLOCK",
+    "requiredProcessesPerSuperblock": 2,
+    "requiredCohortOrders": ["AB", "BA"],
+    "crossFamilyContrasts": ["C1", "C2", "C3", "C4"],
+    "withinGroupedFieldContrast": "C5",
+    "withinPerAgentDiagnostic": "D*L/A*-R",
+    "reportOrderStrata": true,
+    "confirmatoryPromotionForbidden": true
+  },
+  "explicitExclusions": {
+    "gate14RAuthorized": false,
+    "movementMetricIdsForbidden": ["M1", "M2", "M3", "M4", "M5"],
+    "playableOrObsTimingForbidden": true,
+    "formalSampleSizeTopUpForbidden": true,
+    "outcomeConditionedAdviceForbidden": true
+  }
+}

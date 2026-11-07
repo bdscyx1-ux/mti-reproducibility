@@ -1,0 +1,373 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-contract-v3",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_EXECUTION_BINDING_V3_TERMINAL_CHAIN_CORRECTED_QUALIFICATION_EXECUTION_UNAUTHORIZED",
+  "version": 3,
+  "createdLocalDate": "2026-10-18",
+  "repairAuthorizationId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-001",
+  "repairAttemptId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-002",
+  "retainedPriorFailure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-001/failure-receipt.v1.json",
+    "sha256": "feea3650801239a1e92ced9031b137f9c22f7e9a9a483d05a6456353f1827b57",
+    "statusRetained": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_IMPLEMENTATION_BINDING_MISMATCH",
+    "modifiedOrReclassified": false
+  },
+  "retainedRepairAttempt001Failure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-binding-supervisor-v2-repair-attempt-001/failure-receipt.v1.json",
+    "sha256": "e5842af9ec3a6205aa9e9014ad1fddd6fab2f99696995577575c4ae4607d4c3e",
+    "statusRetained": "FAILED_CLOSED_EXECUTION_BINDING_SUPERVISOR_V2_REPAIR",
+    "exactFailure": "prelaunch creation timestamp mismatch: TRUSTED_NOT_STRICT_ISO8601_OFFSET_TIMESTAMP",
+    "unityInvocationCount": 0,
+    "sourceAndEvidenceFreezeManifestSha256": "69dd2ba7f58d51b3de7b65cac74285661d4bfd63742c59778ec938a275bbde0a",
+    "modifiedOrReclassified": false
+  },
+  "entryPoint": {
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_3.ps1",
+    "supervisorSha256": "060d075103d6a7c654a3943863f1a173021a848cd9297dd9ec5860f0a138f1e4",
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "runnerSha256": "21b677cbf277309a69fa51001d6f34e6e496f8e9abaae8c3bae19c85bf6c4952",
+    "runnerExecuteMethod": "DDM.Research.Editor.Gate14ReMELoadQualificationRunnerV2.Run",
+    "receiptGeneration": 2,
+    "supervisorGeneration": 3,
+    "supervisorRevision": "3.3"
+  },
+  "reservedRoots": {
+    "qualificationMeasuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-003",
+    "completePerObservationDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-003",
+    "resumeOverwriteMergeTopUpAllowed": false
+  },
+  "frozenBindings": {
+    "inputValidationSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    "planningSchemaBinding": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    },
+    "instrumentContract": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+      "sha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312"
+    },
+    "outputSchema": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v3.json",
+      "sha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c"
+    },
+    "qualifiedD3V31": {
+      "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+      "sha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+      "semanticVersion": "3.1"
+    },
+    "planningAssetsManifest": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets-freeze-manifest.v1.json",
+      "sha256": "7e0cbe77cb8bb8f84642856c6356d318f708e168b52a92e6e348cdf948169aca"
+    },
+    "schedule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+      "sha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+      "rows": 162
+    },
+    "sealedIdentityBinding": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/identity/anonymous-identity-binding.sealed.v1.json",
+      "sha256": "4e52f6f37c4ae496268a173c51ae498eba27a0efaf5303d131e6a102f8aabe08",
+      "mustRemainSealedDuringQualification": true
+    },
+    "trustedUnityIdentityRule": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+      "sha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06"
+    },
+    "timestampComparator": {
+      "relativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+      "sha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27"
+    },
+    "typedParquetRuntime": {
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    "completeRawDeliveryContract": {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd"
+    },
+    "structuralV3": {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_structural_v3_1.py",
+      "sha256": "85b037f50cf913753ea4c77a7642b1d25b7550a833a4d5309ab16b41ad3fca7e"
+    },
+    "deliveryV21": {
+      "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_delivery_v2_2.py",
+      "sha256": "197b14309670fc38e26b421c458fbd4fc05abe8ba61f7f715497bbcffb19eb98"
+    },
+    "scheduleNullReplacementCorrigendum": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+      "sha256": "4c56ddecf1fb191dca2188c68b30aa56691f5cc498d5d92879ffd125efc14df2"
+    },
+    "measuredRootBindingCompileReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-measured-root-binding-corrigendum-attempt-001/unity-compile-identity-receipt.v1.json",
+      "sha256": "15bd29862847788a8537a1d1c8ee37a3bc4af1d48e13da45537695f375693726"
+    }
+  },
+  "unityIdentityPolicy": {
+    "everyUnityProcess": true,
+    "externalPhases": [
+      "PRELAUNCH",
+      "LIVE_CONCURRENT",
+      "POST_EXIT"
+    ],
+    "twoIndependentFullFileSha256Methods": true,
+    "chunkSizeBytes": 65536,
+    "pathNtfsFileIdentityPeAuthenticodeLengthAndTimestampsRequired": true,
+    "timestampEqualityBasis": "STRICT_DATETIMEOFFSET_PARSE_THEN_UTC_TICKS",
+    "processComposite": [
+      "PID",
+      "creationTimeUtc",
+      "executablePath",
+      "exactCommandLine",
+      "executeMethod",
+      "projectPath",
+      "outputPath"
+    ],
+    "naturalExitRequired": true,
+    "signalOrForcedTerminationAllowed": false,
+    "retryAllowed": false,
+    "inProcessPathEquivalenceBasis": "inherited frozen evidence in trusted Unity identity rule v1; RunnerV2 source remains byte-identical and no wrapper is introduced",
+    "inProcessByteReadHashesAuthoritative": false,
+    "anyMismatchDisposition": "FAIL_CLOSED"
+  },
+  "executionOrder": {
+    "maximumConcurrentUnityProcesses": 1,
+    "instrumentSelfTestBeforeAnyOracleOrLane": true,
+    "all162AlgorithmNeutralOracleProcessesBeforeAnyLane": true,
+    "twelveFreshEmptyBoundaryProcessesBeforeAnyLane": true,
+    "strictWilliamsSixLaneOrderWithinEachSuperblock": true,
+    "oneFreshUnityProcessPerAlgorithmLane": true,
+    "zeroReplacementPolicy": "ZERO_REPLACEMENT_FAIL_STOP",
+    "wholeSuperblockReplacementAssetsGeneratedOrConsumed": false,
+    "perAlgorithmRetryResumeTopUpMergeSkipOrReorderProhibited": true
+  },
+  "expectedCardinalities": {
+    "coreSuperblocks": 144,
+    "stressSuperblocks": 18,
+    "totalSuperblocks": 162,
+    "algorithmLanesPerSuperblock": 6,
+    "freshAlgorithmProcesses": 972,
+    "oracleProcesses": 162,
+    "emptyBoundaryProcesses": 12,
+    "instrumentSelfTestProcesses": 1,
+    "expectedTotalUnityProcessesWithoutFailure": 1147,
+    "eventGroupsPerLane": 24,
+    "eventGroupRows": 23328,
+    "d3WindowsPerLane": 25,
+    "processResourceRows": 25272,
+    "emptyBoundaryRows": 12000,
+    "persistentStateMeasurementPointsPerLane": 26,
+    "acceptedSuperblockReceipts": 162,
+    "processLedgerRows": 1147,
+    "processIdentityReceipts": 1147,
+    "supervisorFinalProcessOrdinal": 1147
+  },
+  "postAcquisitionTerminalChain": [
+    "write acquisition-complete.v2 with explicit 1147-process closure and no inference",
+    "run structural-v3 qualification-full and require PASS_SCHEMA_V3_STRUCTURAL_COMPLETE_RAW_NO_INFERENCE",
+    "run delivery-v2.2 schema-v3 adapter build to a new disjoint delivery root while preserving v2 delivery filenames",
+    "run delivery-v2.2 verify and require PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+    "freeze qualification-complete.v2 declaring complete per-observation delivery and no analysis"
+  ],
+  "failClosedRules": [
+    "No measured or delivery root is created before every authorization, path, hash, manifest, schedule, identity, budget, storage and process precondition passes.",
+    "Any source, schema, runtime, schedule, identity-rule, timestamp-comparator, structural-tool or delivery-tool drift stops before acquisition.",
+    "Any Unity identity, process identity, natural-exit, oracle, instrument, lane, receipt, cardinality, structural or delivery failure stops with preserved evidence and no retry or replacement.",
+    "No qualification observation is admitted to formal estimation.",
+    "No cross-algorithm effect, rank, weighted score, winner or formal decision is computed by the supervisor, structural-v3 or delivery-v2.1 chain.",
+    "The supervisor must be launched only by the exact frozen PowerShell 7.6.5 host runtime path and SHA-256 in supervisorHostRuntime; any path, hash, version or ConvertFrom-Json capability mismatch stops before root creation or Unity launch."
+  ],
+  "currentAuthorization": {
+    "terminalChainCorrigendumAuthorized": true,
+    "offlineSyntheticKnownAnswerAuthorized": true,
+    "unityInvocationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "deliveryRootCreationAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "replacementAssetGenerationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false,
+    "hostBindingCorrigendumAuthorized": true,
+    "offlinePowerShellKnownAnswerAuthorized": true,
+    "supervisorManifestAcceptanceGuardCorrigendumAuthorized": true,
+    "offlineExactPredicateKnownAnswerAuthorized": true,
+    "scheduleNullReplacementCorrigendumAuthorized": true,
+    "prospectiveAttempt002RootBindingUpdateAuthorized": true,
+    "readOnlyNoUnityExecutionReadinessRecheckAuthorized": true,
+    "measuredRootBindingCorrigendumAuthorized": true,
+    "compileOnlyUnityInvocationAuthorized": true,
+    "prospectiveAttempt003RootBindingUpdateAuthorized": true
+  },
+  "activationRule": "This v3.5 contract and supervisor v3.3 become active only through an exact-hash qualification execution authorization bound to a fresh attempt root. Each attempt remains zero-retry and zero-replacement; the user authorizes the external qualification repair loop to create a later fresh attempt only after freezing any technical failure.",
+  "terminalChainCorrigendumAuthorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-002",
+  "supersedes": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-execution-contract.v3_4.json",
+    "sha256": "e3b519f226a3d24eb1d71927fe0cd6d4e16ba879d2c382b0203453a03ff55a85",
+    "modifiedOrReclassified": false
+  },
+  "retainedReadinessAttempt002Failure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/failure-receipt.v1.json",
+    "sha256": "ac58c5110fcf500e520ba8dcac7406c05601f12e99595cf1a4a3cb9c496a3e9b",
+    "statusRetained": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE",
+    "passedChecks": 35,
+    "failedChecks": 2,
+    "modifiedOrReclassified": false
+  },
+  "attempt002HarnessCorrigendum": {
+    "retainedAttempt001FailureRelativePath": "Research/Verification/Gate14Re-ME/qualification-execution-terminal-chain-corrigendum-attempt-001/failure-receipt.v1.json",
+    "retainedAttempt001FailureSha256": "b195c99e01bc20900762b3752ff6172a64fac4bb914609bf1ba83d832ed99340",
+    "exactFailure": "copied frozen synthetic fixture retained Windows read-only attributes",
+    "scientificOrRuntimeContractChanged": false,
+    "unityInvocationCount": 0,
+    "modifiedOrReclassified": false
+  },
+  "revision": "3.5",
+  "hostBindingCorrigendumAuthorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-003",
+  "hostBindingCorrigendumAttemptId": "supervisor-powershell-host-binding-corrigendum-attempt-003",
+  "retainedLoadQualificationExecutionAttempt001Failure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/failure-receipt.v1.json",
+    "sha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+    "statusRetained": "FAILED_CLOSED_PRELAUNCH_FROZEN_POWERSHELL_RUNTIME_INCOMPATIBLE",
+    "statusV30RelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v30.json",
+    "statusV30Sha256": "aae1979990bd9b7e2bfce320f1a301abba8eeb5c0efc62bebd41ef5a42d5ed3b",
+    "modifiedOrReclassified": false
+  },
+  "supervisorHostRuntime": {
+    "executablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "version": "7.6.5",
+    "commandPrefix": [
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-File"
+    ],
+    "requiredCmdlet": "ConvertFrom-Json",
+    "requiredParameters": [
+      "Depth",
+      "DateKind"
+    ],
+    "requiredInvocationForm": "ConvertFrom-Json -Depth 100 -DateKind String",
+    "exactExecutablePathHashAndVersionRequired": true,
+    "externalSupervisorLaunchMustUseExactExecutable": true,
+    "partOfUnityExecutableIdentity": false,
+    "mismatchDisposition": "FAIL_CLOSED_BEFORE_ROOT_CREATION_OR_UNITY_LAUNCH"
+  },
+  "hostBindingCorrigendum": {
+    "scientificDesignChanged": false,
+    "supervisorV3Changed": false,
+    "runnerV2Changed": false,
+    "compiledAssembliesChanged": false,
+    "inputSchemaChanged": false,
+    "scheduleChanged": false,
+    "sealedIdentityChanged": false,
+    "instrumentContractChanged": false,
+    "algorithmImplementationsChanged": false,
+    "structuralV31Changed": false,
+    "deliveryV22Changed": false,
+    "unityInvocationCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0
+  },
+  "retainedLoadQualificationExecutionAttempt002Failure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-002/failure-receipt.v1.json",
+    "sha256": "83882d9bcfba2cc08c86c87da9e8ae2fb920b32814b7b1fee165e59025323c10",
+    "statusRetained": "FAILED_CLOSED_PREFLIGHT_SUPERVISOR_MANIFEST_STATE_GUARD_MISMATCH",
+    "statusV33RelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v33.json",
+    "statusV33Sha256": "f2e3f84699914aed337b0c5058038976e1eae272e7b9ca0421208b837b845c1d",
+    "modifiedOrReclassified": false
+  },
+  "supervisorManifestAcceptanceGuardCorrigendum": {
+    "authorizationId": "gate14re-me-supervisor-manifest-acceptance-guard-corrigendum-auto-repair-until-pass-263a2c10-45da-4ede-ae8e-684baf3e9057",
+    "attemptId": "supervisor-manifest-acceptance-guard-corrigendum-attempt-001",
+    "sourceSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3.ps1",
+    "sourceSupervisorSha256": "e672d2bc3e584192d1f9850ed2bb76538ba11fead80e1ce94670febd9fb45035",
+    "correctedSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v3/Run-Gate14ReMELoadQualification.v3_1.ps1",
+    "correctedSupervisorSha256": "33764e996f9a2fe8ff5487eabd5b455a931b82f0923b8ac083b4aef9dc7242dc",
+    "changedPredicateCount": 1,
+    "acceptedManifestGeneration": 4,
+    "acceptedManifestSchemaV3": "gate14re-me-qualification-current-implementation-manifest-v3",
+    "acceptedExecutionReadinessStatus": "FROZEN_CURRENT_IMPLEMENTATION_COMPILED_TERMINAL_CHAIN_CORRECTED_POWERSHELL_7_6_5_HOST_BOUND_OFFLINE",
+    "exactPredicateOfflineKnownAnswerRequired": true,
+    "scientificDesignChanged": false,
+    "runnerV2Changed": false,
+    "compiledAssembliesChanged": false,
+    "inputSchemaChanged": false,
+    "scheduleChanged": false,
+    "sealedIdentityChanged": false,
+    "instrumentContractChanged": false,
+    "algorithmImplementationsChanged": false,
+    "structuralV31Changed": false,
+    "deliveryV22Changed": false,
+    "unityInvocationCount": 0,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "deliveryRootCreationAuthorized": false,
+    "qualificationExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "scheduleNullReplacementDeserializationCorrigendum": {
+    "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+    "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+    "retainedLoadQualificationExecutionAttempt003FailureRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-003/terminal-failure-receipt.v1.json",
+    "retainedLoadQualificationExecutionAttempt003FailureSha256": "ec78b55c4f7be0d00433958806a26b7ef1e1a3dd75ce140a9013079cadf13df9",
+    "statusV37RelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v37.json",
+    "statusV37Sha256": "effa1a9270965c537bb24c2915f3f4498fd992bc2a29e601acdceba60c8dd232",
+    "corrigendumPassReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/corrigendum-pass-receipt.v1.json",
+    "corrigendumPassReceiptSha256": "4c56ddecf1fb191dca2188c68b30aa56691f5cc498d5d92879ffd125efc14df2",
+    "runnerV2Changed": true,
+    "compiledEditorAssemblyChanged": true,
+    "runtimeAssemblyChanged": false,
+    "supervisorRootBindingChangedOnly": true,
+    "scientificDesignChanged": false,
+    "inputSchemaChanged": false,
+    "scheduleChanged": false,
+    "sealedIdentityChanged": false,
+    "instrumentContractChanged": false,
+    "algorithmImplementationsChanged": false,
+    "structuralV31Changed": false,
+    "deliveryV22Changed": false,
+    "knownAnswerUnityInvocationCount": 1,
+    "knownAnswerAlgorithmLaneExecutionCount": 0,
+    "newQualificationMeasuredRootCreated": false,
+    "newDeliveryRootCreated": false,
+    "qualificationExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "measuredRootBindingCorrigendum": {
+    "authorizationId": "gate14re-me-qualification-closed-loop-until-execution-pass-2026-10-18",
+    "attemptId": "qualification-measured-root-binding-corrigendum-attempt-001",
+    "userAuthorizationTextExact": "授权所有最短下一步直至qualification execution通过",
+    "retainedStatusV39RelativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v39.json",
+    "retainedStatusV39Sha256": "8c9f329c9106b31c768198833f49c004b87c6cc00c89cb9a9795e93b4d45f0b6",
+    "retainedAttempt004FailureRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-004/terminal-failure-receipt.v1.json",
+    "retainedAttempt004FailureSha256": "89ae588df381230399790bff540913294fab98532c276ff3048d7d21290b5ff8",
+    "previousRunnerSha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+    "correctedRunnerSha256": "21b677cbf277309a69fa51001d6f34e6e496f8e9abaae8c3bae19c85bf6c4952",
+    "compileReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-measured-root-binding-corrigendum-attempt-001/unity-compile-identity-receipt.v1.json",
+    "compileReceiptSha256": "15bd29862847788a8537a1d1c8ee37a3bc4af1d48e13da45537695f375693726",
+    "knownAnswerRelativePath": "Research/Verification/Gate14Re-ME/qualification-measured-root-binding-corrigendum-attempt-001/root-binding-known-answer.v1.json",
+    "knownAnswerSha256": "66237818f4cca5f1eb3845dd6a7fd5e74937a84f2bb1b47898b4350dcc0f7303",
+    "scientificDesignChanged": false,
+    "algorithmImplementationsChanged": false,
+    "scheduleChanged": false,
+    "sealedIdentityChanged": false,
+    "instrumentContractChanged": false,
+    "runnerMeasuredRootBindingChangedOnly": true,
+    "qualificationExecutionAuthorizedByThisContractAlone": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

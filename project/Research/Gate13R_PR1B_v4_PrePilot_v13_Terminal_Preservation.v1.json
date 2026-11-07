@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "recordKind": "gate13r-pr1b-v4-prepilot-v13-terminal-preservation-v1",
+  "savedAtUtc": "2026-10-08T13:08:12.3691225Z",
+  "status": "FAILED-NO-PILOT",
+  "disposition": [
+    "PRESERVE-BYTE-EXACT",
+    "NO-OVERWRITE",
+    "NO-RESUME",
+    "NO-REINTERPRETATION-AS-PASS"
+  ],
+  "resolvedVerificationRoot": "H:/DDM_Final_Project/Research/Verification/Gate12R_ProcessReuse_5pct/v13-gate13r-pr1b-order-effect-pathsafe-v4",
+  "rootIdentity": {
+    "fileCount": 54,
+    "rawBytes": 381042,
+    "treeIdentityAlgorithm": "sha256-of-utf8-lines-relativePath-tab-rawBytes-tab-sha256-sorted-by-full-path",
+    "treeIdentitySha256": "34ba634c4cff9d90a4f52b01ceca0372cadb7607dec91cc8bf0d1734dc82cce0"
+  },
+  "completedGates": {
+    "staticUnit": "PASSED-85-OF-85-PLUS-V7-PROVENANCE-BINDINGS",
+    "unityCompile": "PASSED",
+    "pathSafeAtomicUnitySelfTest": "PASSED",
+    "memoryPolicyUnitySelfTest": "PASSED",
+    "telemetryPsapiCim": "PASSED"
+  },
+  "failedGate": "BLOCK-VERIFICATION-PLAN-GENERATION",
+  "failureClass": "PROVENANCE-COMPATIBILITY-FIELD-MISSING",
+  "missingProperty": "executionAuthorization",
+  "observedFacts": {
+    "blockSampleStarted": false,
+    "measuredPilotStarted": false,
+    "pilotRootCreated": false,
+    "formalRootCreated": false,
+    "unityProcessCountAtPreservation": 0,
+    "unityLockExistsAtPreservation": false
+  },
+  "nextAttemptPolicy": "VERSIONED-PREPILOT-PROVENANCE-COMPATIBILITY-REPAIR-ONLY",
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

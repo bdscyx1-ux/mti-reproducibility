@@ -1,0 +1,65 @@
+{
+    "schemaVersion": 1,
+    "runId": "gate5-fixture-final",
+    "scenarioId": "场景-四号门",
+    "scenarioFingerprintSha256": "d2a8e612af706f03513c726cad734d747141411742fbe92fefd88e7b824c04cf",
+    "algorithmId": "A*-R",
+    "agentCount": 2,
+    "scheduledEventCount": 3,
+    "dynamicPlanningPhaseCount": 2,
+    "planOperationCount": 6,
+    "repairOperationCount": 3,
+    "succeededPlanCount": 6,
+    "noPathPlanCount": 0,
+    "budgetExceededPlanCount": 0,
+    "invalidPlanCount": 0,
+    "failedPlanCount": 0,
+    "budgetExceededOperationCount": 0,
+    "initializationMilliseconds": 0.3146,
+    "planP95Milliseconds": 1.3773,
+    "dynamicHandlingP95Milliseconds": 0.0233,
+    "totalPlannerElapsedMilliseconds": 1.7585,
+    "processedNodesOrCells": 196,
+    "expandedNodes": 46,
+    "relaxedEdges": 68,
+    "repairedCells": 0,
+    "managedAllocatedBytes": 561152,
+    "planSuccessRate": 1.0,
+    "budgetOverrunRate": 0.0,
+    "finalGridVersion": 3,
+    "usesFixedScenarioStarts": true,
+    "completed": true,
+    "dynamicPhases": [
+        {
+            "simulationTick": 2,
+            "eventIds": [
+                "block-upper",
+                "block-lower"
+            ],
+            "finalGridVersion": 2,
+            "repairOperationCount": 2,
+            "planOperationCount": 2,
+            "succeededPlanCount": 2,
+            "noPathPlanCount": 0,
+            "budgetExceededOperationCount": 0,
+            "repairElapsedMilliseconds": 0.0023,
+            "replanElapsedMilliseconds": 0.021,
+            "combinedElapsedMilliseconds": 0.0233
+        },
+        {
+            "simulationTick": 1000000,
+            "eventIds": [
+                "reopen-both"
+            ],
+            "finalGridVersion": 3,
+            "repairOperationCount": 1,
+            "planOperationCount": 2,
+            "succeededPlanCount": 2,
+            "noPathPlanCount": 0,
+            "budgetExceededOperationCount": 0,
+            "repairElapsedMilliseconds": 0.0001,
+            "replanElapsedMilliseconds": 0.017400000000000004,
+            "combinedElapsedMilliseconds": 0.0175
+        }
+    ]
+}

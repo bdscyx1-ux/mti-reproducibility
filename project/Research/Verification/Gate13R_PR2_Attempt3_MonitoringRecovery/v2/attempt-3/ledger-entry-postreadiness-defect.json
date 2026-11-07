@@ -1,0 +1,20 @@
+{
+  "kind": "tool_receipt",
+  "step": "monitoring-postreadiness-terminal-review",
+  "command": "Review the completed v1 monitoring readiness against the frozen specification and preserve the discovered scheduled-report state coverage defect before any repair.",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "gate_tokens": [
+    "V1-READINESS-SUPERSEDED-PRESERVED",
+    "RAW-COMMIT-SCHEDULED-REPORT-OMISSION-DIAGNOSED",
+    "PRELAUNCH-ONLY-DEFECT",
+    "NO-UNITY",
+    "NO-FORMAL-TARGET"
+  ],
+  "input_sha256": {
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_PostReadiness_Defect_Receipt.v1.json": "6786632fa89493a78936f7f91c9fb3ee2dc21e43618460db881d609953f2f503",
+    "Gate13R_PR2_Attempt3_Monitoring_Recovery_Readiness_Checkpoint.v1.json": "6baefc80d67c76b8c85fed475f8714af36dd4764d94fd4428fc725a0eed9e34d",
+    "Gate13R_PR2_Attempt3_Next_Authorization_Prompt.v2.md": "54a6e4b1db4006ba2c03cdc7395bd109e1e07dc3a6e212f5dc5252bb5e541fb6"
+  }
+}

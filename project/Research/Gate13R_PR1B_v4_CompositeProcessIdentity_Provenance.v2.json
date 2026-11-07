@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 2,
+  "provenanceId": "gate13r-pr1b-v4-composite-process-identity-validation-v2-and-recovery-wrapper-v2-provenance-v1",
+  "createdAtUtc": "2026-10-08T15:45:31.8936525Z",
+  "createdAtAsiaShanghai": "2026-10-08T23:45:31.8936525+08:00",
+  "status": "FROZEN-BEFORE-V2-VALIDATION / RECOVERY-NOT-STARTED / NON-EXECUTING",
+  "parentProvenance": {
+    "relativePath": "Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Provenance.v1.json",
+    "rawBytes": 6341,
+    "sha256": "6b823419e7030444e8f741fefb106a84209c2d258f3f9a116f9191fed3584d97"
+  },
+  "repairBoundary": {
+    "reasonCode": "VALIDATION-SUMMARY-TRAILING-LITERAL-BACKTICK-N",
+    "repair": "append a real LF using a double-quoted PowerShell newline and self-parse the resulting JSON",
+    "analyzerChanged": false,
+    "identityContractChangedFromV1": false,
+    "scientificContractChanged": false,
+    "recoveryPreviouslyInvoked": false,
+    "oneAuthorizedRecoveryStillAvailable": true
+  },
+  "frozenRoots": [
+    {
+      "relativePath": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+      "fileCount": 9118,
+      "rawBytes": 253513394,
+      "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed"
+    },
+    {
+      "relativePath": "Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+      "fileCount": 8,
+      "rawBytes": 327250,
+      "canonicalTreeSha256": "1e66f43d80887cd30dc5b33652b599763fad25c15e84d1c329504430f6d0f4e3"
+    }
+  ],
+  "paths": {
+    "newValidationRoot": "Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v2",
+    "analysisRecoveryRoot": "Research/Analysis/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+    "formalRoot": "Research/FormalRuns/Gate13R_RQAligned/v1"
+  },
+  "boundFiles": [
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Authorization.v1.json","rawBytes":1741,"sha256":"bb3e1f32bd2fd27500613f3b2d9d749ccd5f18f73afe5abf8a68b3d3d3cdc5d1"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Provenance.v1.json","rawBytes":6341,"sha256":"6b823419e7030444e8f741fefb106a84209c2d258f3f9a116f9191fed3584d97"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_Validation_v1_Terminal_Preservation.v1.json","rawBytes":1622,"sha256":"712d919d2287ebcfacaec1c18236194ec3b6f76e9f7ed7344bd817f64d65df1a"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_Validation_v1_Failure_Diagnosis.v1.md","rawBytes":1302,"sha256":"7cb0116efa16cd846c8f57ce38a93a46b503c2c66ecfe2c638e704c2b75552e7"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_Validation_v1_Failure_Checkpoint.v1.json","rawBytes":671,"sha256":"da9644c9a9d121a9c76b851a5ce6909bf15aeb74bcdf69ed5241b43b2f1aed65"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_Recovery_Launch_Attempt1_Failure_Receipt.v1.json","rawBytes":694,"sha256":"fbfaea2d22ce91794dfecf80a53d9c803fb143a5fffb520e07c3ab94d123617e"},
+    {"relativePath":"Research/Analyze-Gate13RPR1BCompositeProcessIdentityRecoveryV1.py","rawBytes":49830,"sha256":"63a8aef6d729e449e8ffd15ea1447f4cc9b8c7eb5588ecd0d13bfab306ae9564"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Specification.v1.md","rawBytes":4173,"sha256":"ece6e7de7921d9125fac40986c3d545593d6ebb2e2418d2d449fd2f575523cb9"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_AnalysisRecovery_Specification.v1.md","rawBytes":3137,"sha256":"d5c6e7d40887ff218cc955503cf68784ab2140c95d792bfe001319d7a4070bea"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_Test_Design.v1.md","rawBytes":3402,"sha256":"ee0b4e5053861cf5d5b298d22188500d8119a48f8364aebd77ec5a226f9256da"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_AnalysisRecovery_Output_Schema.v1.json","rawBytes":1831,"sha256":"3aca3b5accdd3a8f85fd0114ff05175f868ba7bb12771f044b57cd42921f95b1"},
+    {"relativePath":"Research/Verification/Fixtures/Gate13R_PR1B_CompositeProcessIdentity/v1/expected-results.json","rawBytes":1729,"sha256":"cdc8fcc49d5d0563ec908db0a2026e5c1539aa6b1bf17da57cc78df10ef90763"},
+    {"relativePath":"Research/Verification/Run-Gate13RPR1BCompositeProcessIdentityValidationV2.ps1","rawBytes":12844,"sha256":"d9521a7d730d886795fe712ed62783f14715331148895998d83bc19fd9625c5d"},
+    {"relativePath":"Research/Run-Gate13RPR1BCompositeProcessIdentityRecoveryV2.ps1","rawBytes":3224,"sha256":"1a54359396e38073f3a443afc90e771ea522dc5667ed0c9667fefb10cd6cbdd0"},
+    {"relativePath":"Research/Gate13R_PR1B_v4_CompositeProcessIdentity_PreRead_Preservation_Audit.v2.json","rawBytes":2048,"sha256":"61f96c3f6aa989dd6c91b6bbf7f1c2179ec711481d647cf5821d170acf35937c"}
+  ],
+  "unityInvoked": false,
+  "newSamplesGenerated": 0,
+  "recoveryExecuted": false,
+  "formalCampaignAuthorized": false,
+  "gate14rAuthorized": false
+}

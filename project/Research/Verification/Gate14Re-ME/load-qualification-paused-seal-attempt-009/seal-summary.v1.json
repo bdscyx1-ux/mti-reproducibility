@@ -1,0 +1,53 @@
+{
+  "schema": "gate14re-me-qualification-paused-seal-summary-v1",
+  "status": "PAUSED_SEALED_NOT_QUALIFIED",
+  "createdAtUtc": "2026-10-19T09:48:18.6217622Z",
+  "stop": {
+    "stoppedAtUtc": "2026-10-19T09:45:39.9516217Z",
+    "supervisorPid": 89976,
+    "validatorPid": 125488,
+    "remainingMatchingProcessCount": 0
+  },
+  "acquisition": {
+    "receiptPresent": true,
+    "receiptStatus": "QUALIFICATION_RAW_STRUCTURAL_VALIDATION_PENDING",
+    "plannedProcesses": 1147,
+    "trustedExitedZeroProcesses": 1147,
+    "failureLedgerRows": 0,
+    "replacementLedgerRows": 0
+  },
+  "qualification": {
+    "terminalPass": false,
+    "terminalReceiptCount": 0,
+    "structuralValidationInterruptedByUser": true,
+    "deliveryBuildStarted": false,
+    "typedParquetRoundTripPass": false
+  },
+  "preservation": {
+    "mode": "CRYPTOGRAPHIC_INVENTORY_WITHOUT_SOURCE_ROOT_MODIFICATION",
+    "measured": {
+      "root": "measured",
+      "absolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate14Re-ME\\load-qualification\\attempt-007",
+      "fileCount": 9789,
+      "byteCount": 7240319212,
+      "manifestFile": "measured-file-manifest.v1.jsonl",
+      "manifestSha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f"
+    },
+    "executionEvidence": {
+      "root": "execution-evidence",
+      "absolutePath": "H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\load-qualification-execution-attempt-009",
+      "fileCount": 11,
+      "byteCount": 29870,
+      "manifestFile": "execution-evidence-file-manifest.v1.jsonl",
+      "manifestSha256": "0e67dac637a68b3c4ce9159df5576ceca7ac6867c092b2a2b844b44c9fd28522"
+    },
+    "observationValuesParsedOrReportedBySeal": false,
+    "sourceFilesDeletedMovedOrModifiedBySeal": false
+  },
+  "gates": {
+    "sameAttemptRetryResumeTopUpMergeReplacementAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingOrWinnerComputed": false
+  }
+}

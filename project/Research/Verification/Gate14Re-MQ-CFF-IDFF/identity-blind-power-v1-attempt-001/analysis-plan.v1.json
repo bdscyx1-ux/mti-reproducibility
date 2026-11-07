@@ -1,0 +1,79 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-analysis-plan-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "identity-blind-power-v1-attempt-001",
+  "status": "FROZEN_BEFORE_QUALIFICATION_TIMING_ACCESS",
+  "objective": "Select the smallest authorized B with conservative identity-blind Holm-adjusted marginal rejection power at least 0.90 for every one of the six opaque primary hypotheses.",
+  "authorizedDesign": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-rule-freeze-v1-attempt-001/formal-mq-authorized-design.v1.json",
+    "sha256": "896ac312b95c78ceb179820fb97b2b38d471f542d6ddfbd00c7666595321fd18"
+  },
+  "inputBindings": [
+    {"role":"engineering-external-freeze","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/external-freeze-receipt.v1.json","sha256":"c2bc8217e48bdb3248e97353538207f9386c2c866fd80e713fabadaf195df33b"},
+    {"role":"engineering-terminal","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/terminal-receipt.v1.json","sha256":"d5429793cc940ad2e0a1c51fea760d2cbd43766849fb0d1f80f4752ba4c5d09e"},
+    {"role":"performance-lanes","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/performance-lanes.raw.v1.jsonl","sha256":"75430f9a2da0f82ec04d66778756b50ebc29d59b835d0f47b4dc8894b545dae0"},
+    {"role":"technical-batches","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-qualification-attempt-001/output/technical-batches.raw.v1.jsonl","sha256":"3b1fc6a3c3b7a40faa4ce17b50e9f279ac7eb21cef08d4c42478589ae955443f"},
+    {"role":"engineering-runner-structural-order","relativePath":"Assets/_Scripts/Research/Editor/Gate14ReMQEngineeringQualificationV1.cs","sha256":"5ea8e1d8d8efddfa3ac891258e68e56ba50a0b123374a9ad44e3ce8f44fc23f8"},
+    {"role":"runtime-budget","relativePath":"Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-runtime-analysis-v2/engineering-runtime-diagnostics.v2.json","sha256":"2a2b2b9a89bf6c9282debe7ee44c983dd6b054692e7c6b80dd8886838ab147ac"}
+  ],
+  "opaqueStructuralMapping": {
+    "batchOrdinals0To11": "OPAQUE-A",
+    "batchOrdinals12To23": "OPAQUE-B",
+    "withinOpaqueSlotConditionOrder": [
+      "ST_DIRECT_LARGE",
+      "MQ_LARGE_W1",
+      "MQ_LARGE_W2",
+      "MQ_LARGE_W4",
+      "MQ_LARGE_W8",
+      "ST_DIRECT_HIGH",
+      "MQ_HIGH_W1",
+      "MQ_HIGH_W2",
+      "MQ_HIGH_W4",
+      "MQ_HIGH_W8",
+      "MQ_DUAL_W8",
+      "MQ_DUAL_W16"
+    ],
+    "algorithmIdentityMapOpened": false
+  },
+  "nuisanceEstimator": {
+    "sourceUnits": "eight opaque workload sources with two timing replicas per source across the same 24 structural batches",
+    "timingField": "executorRuntime.wallMilliseconds",
+    "bootstrapBlocks": 100000,
+    "bootstrapSeed": 141420261,
+    "pseudoBlockConstruction": "sample 16 opaque workload sources with replacement; sample one of two replicas for each selected lane; preserve each selected source's full 24-dimensional timing vector; apply the frozen ordinal-mod-worker deterministic assignment and reconstruct the worker makespan",
+    "batchCalibration": "multiply each reconstructed makespan by its identity-blind observed batchWall/reconstructed-makespan calibration constant; constants disappear from centered nuisance covariance and are never serialized",
+    "processJitter": "add independent zero-mean log jitter with sigma equal to max(0.03, pooled centered duplicate-log-difference divided by sqrt(2))",
+    "observedEffectsRemoved": "center all six pseudo-block estimands before covariance; never serialize means or observed directions",
+    "smallSourceUncertainty": "multiply variance by df/chi-square-lower-0.05(df), df=7, Wilson-Hilferty lower-quantile approximation",
+    "modelRiskVarianceMultiplier": 2.0,
+    "psdRule": "symmetrize and raise eigenvalues below maxEigenvalue times 1e-10"
+  },
+  "powerSimulation": {
+    "candidateB": [36,72,108,144],
+    "planningAlternative": -0.10536051565782628,
+    "familywiseAlpha": 0.05,
+    "method": "six-test one-sided Holm strong FWER",
+    "drawsPerB": 200000,
+    "baseSeed": 141420262,
+    "testStatistic": "mean block estimand divided by sample standard error; asymptotic normal one-sided p-value as frozen for the block-robust primary estimator",
+    "powerPerHypothesis": "probability the given opaque primary is rejected by the complete Holm procedure",
+    "uncertainty": "two-sided 95 percent Wilson interval for each Monte Carlo rejection proportion",
+    "passRule": "minimum Wilson lower bound across the six opaque primaries is at least 0.90",
+    "selectionRule": "first passing B in ascending order"
+  },
+  "runtimeGate": {
+    "budgetField": "candidateBudgetsStressHours",
+    "thresholdHours": 168,
+    "actionAtOrAbove": "stop before final implementation and schedule freeze and submit a simplified MQ proposal",
+    "actionBelow": "continue under the present authorization"
+  },
+  "outputSuppression": [
+    "no algorithm names",
+    "no condition identifiers from qualification rows",
+    "no fitted or observed effect means",
+    "no qualification direction rank weight or winner",
+    "no formal-effect interpretation"
+  ],
+  "failClosed": "Any hash schema cardinality ordinal positivity covariance or finite-value violation terminates without selecting B.",
+  "formalCollectionAuthorized": false
+}

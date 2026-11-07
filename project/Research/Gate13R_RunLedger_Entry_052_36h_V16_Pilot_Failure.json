@@ -1,0 +1,28 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-36h-v16-nonformal-pilot",
+  "command": "Ran exactly one authorized NON-FORMAL four-lane pilot. The run passed 8 warm-up blocks and 79 complete measured waves, then failed closed at measured wave 80 when Unity lanes 1 and 3 exited with no valid Editor license and no serial assignment. The orchestrator atomically wrote a terminal checkpoint, failure receipt and partial-output manifest; it did not retry, resume, merge, or create a formal root.",
+  "status": "failed",
+  "exit_status": 1,
+  "retries_used": 0,
+  "input_paths": [
+    "Gate13R_36h_10pct_4Lane_Pilot_Plan.v16.json",
+    "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v16.json",
+    "Gate13R_36h_10pct_4Lane_Provenance.v16.json",
+    "Verification/Gate13R_36h_10pct_4Lane/v16/ValidationOnlyPrePilotAudit.summary.json",
+    "Gate13R_36h_10pct_4Lane_Pilot_Launch_Stabilization.v1.json"
+  ],
+  "output_sha256": "d843920cf4fcf8fbdb862fb451d261a623828dd4d3dfc0d0df0677bc875650a0",
+  "gate_tokens": [
+    "NONFORMAL-PILOT-FAILED-CLOSED",
+    "WARMUP-8-OF-8",
+    "MEASURED-WAVES-79-OF-96",
+    "MEASURED-BLOCKS-316-OF-384",
+    "MEASURED-SAMPLES-948-OF-1152",
+    "UNITY-LICENSING-ENTITLEMENT-FAILURE",
+    "NO-AUTO-RETRY",
+    "NO-RESUME",
+    "NO-PARTIAL-MERGE",
+    "FORMAL-CAMPAIGN-NOT-AUTHORIZED"
+  ]
+}

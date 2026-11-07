@@ -1,0 +1,36 @@
+{
+  "studyId": "DDM-Revision-20261103",
+  "createdUtc": "2026-11-03T10:19:31.118970+00:00",
+  "userInstruction": "落实工作安排，做第 1 项的 A、B 两部分，并给出ETA",
+  "authorized": true,
+  "A": {
+    "scenarios": 32,
+    "blocksPerScenario": 48,
+    "algorithms": [
+      "A*-R",
+      "D*L",
+      "C-FF",
+      "IDFF"
+    ],
+    "processes": 1536,
+    "endpoint": "same DeterministicPlanningWorkloadRunner P1; one fresh Unity Editor process per complete four-algorithm Williams block; fresh planner/input/log and forced GC boundaries",
+    "analysis": "equal campaign weights, paired log ratios; original five comparisons, Holm tests and simultaneous Bonferroni intervals; n=32 campaign means; no pooling with historical timings"
+  },
+  "B": {
+    "conditions": 8,
+    "agents": 128,
+    "blocksPerCondition": 48,
+    "lanes": [
+      "movement",
+      "m4"
+    ],
+    "processes": 768,
+    "analysis": "original completion/critical violation/callback eligibility, simulated M1 and common-mask M2; no mixing historical and new samples"
+  },
+  "pilot": "separate outputs excluded from formal analysis; representative runtime estimate and functional checks before collection",
+  "failurePolicy": "retain all failures; stop queue on infrastructure/validation failure; never retry individual algorithm or silently replace; new implementation attempt and explicit receipt after repair",
+  "collectionOrder": "serial processes; B followed by A; no simultaneous benchmarks",
+  "timeoutSecondsPerProcess": 3600,
+  "rawHistory": "untouched",
+  "claims": "results determine conclusions; no requirement to reproduce historical ranking"
+}

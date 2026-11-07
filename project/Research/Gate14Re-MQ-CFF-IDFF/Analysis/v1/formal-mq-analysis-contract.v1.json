@@ -1,0 +1,151 @@
+{
+  "schema": "gate14re-mq-formal-analysis-contract-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "analysisVersion": "v1",
+  "status": "FROZEN_PRE_OUTCOME_FORMAL_ANALYSIS_IMPLEMENTATION",
+  "createdAtUtc": "2026-10-22T04:28:09.4793619Z",
+  "authorizationBoundary": {
+    "exactUserAuthorization": "授权后续工作",
+    "interpretedAuthorizedStage": "formal MQ analysis of the terminal-PASS attempt-003 collection under the already frozen v2 scientific design",
+    "formalMqAnalysisAuthorized": true,
+    "paperEvidencePackageAuthorized": true,
+    "formalStAuthorized": false,
+    "mtAuthorized": false,
+    "scientificDesignChangeAuthorized": false,
+    "algorithmRankingOrWinnerAuthorized": false
+  },
+  "frozenInputs": {
+    "measuredRoot": "Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003",
+    "collectionEvidenceRoot": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-003",
+    "collectionTerminalReceipt": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-003/collection-terminal-receipt.v2.json",
+      "sha256": "e3c2f64d3a612ca329924d0a2574e3301c9a60543ba8af87f2ac3e60b5e5f39b"
+    },
+    "collectionFinalEvidenceSeal": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-003/final-evidence-seal-manifest.v2.json",
+      "sha256": "300ceda2788d3f13c98e39df8629613df6b951c94d8154944fc82fd9ec9c4226"
+    },
+    "acquisitionComplete": {
+      "relativePath": "Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003/_control/acquisition-complete.v2.json",
+      "sha256": "49d8dd3224a8b602ddabf3894aeb65b5cb3665b35e7c2881d4872f5e1dfaf33f"
+    },
+    "acquisitionFreezeManifest": {
+      "relativePath": "Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003/_control/acquisition-freeze-manifest.v2.json",
+      "sha256": "df3d760b678e1fb4bc4c863f23d7911600e76eefedae5efb0c197f53d021e6f0",
+      "fileCount": 4325
+    },
+    "scientificAndAnalysisContract": {
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-scientific-and-analysis-contract.v2.json",
+      "sha256": "794f3958de4eecad67fbeefa1353b6f0a07aeb5d60882495a4b6a021d4af434a"
+    },
+    "authorizedDesign": {
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-rule-freeze-v2-attempt-001/formal-mq-authorized-design.v2.json",
+      "sha256": "79b4cbf309f278c2611955419ddb0d524915e4ddc6ae1596746cff1ec7bfa18a"
+    },
+    "formalSchedule": {
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/formal-process-schedule.v2.jsonl",
+      "sha256": "70121c16dd42472610ddeddb3848dcd25d279390930def5b66d29049316c44a5",
+      "rows": 864
+    },
+    "identityMap": {
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/opaque-algorithm-identity-map.v2.json",
+      "sha256": "aac226811f2e6ce2acf15f3fe3c5b0ad3861569992aef3cc5822d7188dbb8059"
+    }
+  },
+  "independentUnit": {
+    "unit": "complete matched block",
+    "matchedBlocks": 36,
+    "processesPerBlock": 24,
+    "lanesPerProcess": 16,
+    "processRowsAndLaneRowsAreNestedTechnicalMeasurements": true,
+    "inferentialNPerHypothesis": 36
+  },
+  "endpointAndEstimands": {
+    "endpoint": "batchWallSeconds",
+    "direction": "lower is better",
+    "transform": "natural log",
+    "singleCcd": "within-block equal-weight OLS slope of log(batchWallSeconds) on log2(workerCount) for W1, W2, W4 and W8",
+    "dualCcd": "within-block log(batchWallSeconds at W16 / batchWallSeconds at W8)",
+    "populationEstimator": "arithmetic mean of the 36 matched-block estimands"
+  },
+  "primaryInference": {
+    "family": ["P1", "P2", "P3", "P4"],
+    "nullPerHypothesis": "mean block estimand >= 0",
+    "alternativePerHypothesis": "mean block estimand < 0",
+    "test": "one-sample Student t test on the 36 block estimands",
+    "standardError": "sample standard deviation of block estimands divided by sqrt(36)",
+    "degreesOfFreedom": 35,
+    "rawPValue": "lower-tail one-sided Student t probability",
+    "multiplicity": "Holm step-down adjusted p-values across exactly P1-P4 at familywise alpha 0.05",
+    "decisionInterval": {
+      "kind": "Bonferroni simultaneous one-sided upper confidence bounds across P1-P4",
+      "familywiseConfidence": 0.95,
+      "marginalAlpha": 0.0125,
+      "reason": "ordinary Holm-adjusted p-values do not uniquely determine a rectangular family of marginal intervals; the Bonferroni companion bounds provide auditable strong simultaneous coverage and are conservative while remaining multiplicity-compatible",
+      "claimExactHolmIntervals": false
+    },
+    "mipeLogScale": -0.10536051565782628,
+    "claimRule": "Holm-adjusted one-sided p < 0.05 AND Bonferroni simultaneous upper bound < 0 AND point estimate <= MIPE",
+    "studyLevelWinnerOrMajorityScore": false
+  },
+  "keySecondaryInference": {
+    "family": ["S1", "S2"],
+    "formerIds": {"S1": "P5", "S2": "P6"},
+    "gate": "opens only if all P1-P4 have Holm-adjusted one-sided p < 0.05",
+    "testWhenGateOpen": "one-sample Student t tests with Holm adjustment across exactly S1-S2",
+    "decisionIntervalWhenGateOpen": "Bonferroni simultaneous one-sided upper confidence bounds across S1-S2 at familywise confidence 0.95",
+    "mipeLogScale": -0.10536051565782628,
+    "claimRuleWhenGateOpen": "Holm-adjusted one-sided p < 0.05 AND Bonferroni simultaneous upper bound < 0 AND point estimate <= MIPE",
+    "whenGateClosed": "estimates and ordinary intervals are descriptive only",
+    "failureInvalidatesPrimary": false
+  },
+  "sensitivityAnalyses": {
+    "claimChanging": false,
+    "studentizedMatchedBlockBootstrap": {
+      "draws": 100000,
+      "seed": 141420274,
+      "resamplingUnit": "complete matched block",
+      "interval": "two-sided 95 percent studentized bootstrap interval",
+      "numpyBitGenerator": "PCG64"
+    },
+    "signedRank": "exact conditional one-sample Wilcoxon signed-rank lower-tail p-value with zero differences removed and average ranks for ties",
+    "influence": "leave-one-matched-block-out mean-estimate diagnostics"
+  },
+  "descriptiveAnalyses": {
+    "conditionSummaries": "geometric mean and ordinary two-sided 95 percent t interval for batchWallSeconds in each algorithm-by-condition cell",
+    "stDirectVersusMqW1": "within-block MQ-W1 versus ST-direct log ratio, estimate and ordinary two-sided 95 percent interval only",
+    "crossAlgorithmInteractions": "within-block differences of the corresponding single-CCD slopes and dual-CCD contrast, estimate and ordinary two-sided 95 percent interval only",
+    "rankingOrWinner": false,
+    "causalCcdAttribution": false
+  },
+  "integrityAndExecution": {
+    "oneFormalExecution": true,
+    "resultRootMustNotExistBeforeLaunch": true,
+    "atomicCreateNoOverwrite": true,
+    "formalMeasuredRootReadOnly": true,
+    "verifyEveryAcquisitionManifestFileByPathSizeAndSha256BeforeParsingOutcomeValues": true,
+    "parseLaneObservationValues": false,
+    "parseOnlyBatchEvidenceNeededForFrozenEndpoint": true,
+    "newUnityAcquisition": false,
+    "retry": false,
+    "replacement": false,
+    "topUp": false,
+    "mergeAcrossAttempts": false,
+    "outcomeDrivenRuleChange": false,
+    "formalStOrMtExecution": false
+  },
+  "softwarePlan": {
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonVersion": "3.12.14",
+    "pythonExecutableSha256": "ceabb31054d429f57cb3825775677eeaf0db35fdabbc5ff6aef661c037154b00",
+    "numpyVersion": "2.3.5",
+    "studentTImplementation": "regularized incomplete beta plus deterministic bisection with frozen known-answer self-tests"
+  },
+  "preOutcomeBoundary": {
+    "batchOutcomeFileOpenedOrParsedBeforeThisContractWasWritten": false,
+    "laneObservationValueOpenedOrParsedBeforeThisContractWasWritten": false,
+    "effectValueUsedToChooseAnyAnalysisRule": false,
+    "scientificChoicesChanged": false
+  }
+}

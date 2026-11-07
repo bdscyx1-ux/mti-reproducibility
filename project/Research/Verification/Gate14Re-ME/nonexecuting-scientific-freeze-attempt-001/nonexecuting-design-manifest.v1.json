@@ -1,0 +1,115 @@
+{
+  "schema": "gate14re-me-nonexecuting-design-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "VALIDATED_AWAITING_FINAL_FREEZE_RECEIPT",
+  "artifacts": [
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Scientific_Freeze_Authorization.v1.json",
+      "bytes": 2060,
+      "sha256": "ecc04686ac7f243d3a7c603a44c4675bcf81002f3d8af3255160200dc81490b6",
+      "role": "user authorization and scope boundary"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v1.md",
+      "bytes": 12176,
+      "sha256": "af7527b9c58ff0cd8af59fd9acd4fcdd08b5c4dc8f9241c2eccf7496e01a3f43",
+      "role": "human-readable frozen nonexecuting plan"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+      "bytes": 12707,
+      "sha256": "9736b16601cc8c89166d65a78ff466114ad6affb57f8be2c9df59a5ddfce22f8",
+      "role": "endpoint and raw-observation dictionary"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v1.json",
+      "bytes": 11907,
+      "sha256": "02b8c5edc1d6c8604dbd1816d99ee4616ac2814d6198e0cee273d031fee60e7f",
+      "role": "machine-readable scientific contract"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+      "bytes": 14693,
+      "sha256": "1e3a70d6be62554027ca639b6a3c7d896fd232906d627962d8c296e9e884c8dd",
+      "role": "complete per-observation raw-data deliverability hard gate"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v1.json",
+      "bytes": 2854,
+      "sha256": "66eb4bc493236394784d146c6e82c2f4cdd1b4bfaf684a2b202b7f7b939503b9",
+      "role": "required procedure for non-invented practical thresholds and final B"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Status.v1.json",
+      "bytes": 3443,
+      "sha256": "d43cc2fdb5f35b7936efa1741f8db0957a3f9444bf0a4910e9ef748a5c45e908",
+      "role": "frozen state and authorization boundary"
+    },
+    {
+      "path": "Research/Validate-Gate14ReMEDesignV1.py",
+      "bytes": 16938,
+      "sha256": "ca394b67b6b452536f5e978806419eff62e4af662677f082b2d34b4ee515513c",
+      "role": "outcome-free cross-file and synthetic validator"
+    },
+    {
+      "path": "Research/Verification/Gate14Re-ME/nonexecuting-scientific-freeze-attempt-001/validation-receipt.v1.json",
+      "bytes": 3710,
+      "sha256": "a93afee95aab95b18a860999176cd38c1d350a7cca298f6dcdde899370b5260c",
+      "role": "99-check outcome-free validation receipt"
+    }
+  ],
+  "scientificSnapshot": {
+    "algorithms": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "independentUnit": "input superblock",
+    "primaryStructuralCells": 48,
+    "withinCellContextStrata": 18,
+    "eventGroupsPerLane": 24,
+    "primaryEndpointDomains": 7,
+    "majoritySupportMinimumDomains": 4,
+    "confirmatoryContrasts": 35,
+    "familywiseAlpha": 0.05,
+    "targetPowerAtLeast": 0.9,
+    "BPositiveMultipleOf": 36,
+    "actualBSelected": false,
+    "minimumPracticallyImportantEffectsSelected": false,
+    "ranking": false,
+    "winnerAdjudication": false,
+    "weightedComposite": false
+  },
+  "rawDeliverySnapshot": {
+    "completePerObservationRawDataDeliverable": true,
+    "hardPrecollectionGate": true,
+    "hardRawCommitGate": true,
+    "hardPreAnalysisGate": true,
+    "immutableRawAndDerivedExportSeparated": true,
+    "sampleRunLevel": true,
+    "metricLongLevel": true,
+    "eventGroupLevel": true,
+    "operationEventQueryLevel": true,
+    "persistentStateComponentLevel": true,
+    "failureReplacementLevel": true,
+    "requiredDeliveryArtifactCount": 13,
+    "aggregationOnlyDeliveryForbidden": true
+  },
+  "boundaries": {
+    "priorGate14ReModified": false,
+    "priorGate14ReObservationsReadOrReused": false,
+    "excludedGate14ReTB2ObservationsReadOrReused": false,
+    "actualInputDrawCreated": false,
+    "Gate14ReMEFormalMeasuredRootCreated": false,
+    "Gate14ReMEFormalAnalysisRootCreated": false,
+    "Gate14ReMEFormalExportRootCreated": false,
+    "UnityLaunched": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "gate14re-me-qualification-execution-terminal-chain-corrigendum-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-001",
+  "status": "FROZEN_STAGE_BOUNDARY",
+  "requiredCorrections": {
+    "outputSchemaReceiptPaths": [
+      "_control/launch-receipt.v2.json",
+      "_control/acquisition-complete.v2.json",
+      "instrument-export-receipt.v2.json",
+      "delivery-manifest.v2.json"
+    ],
+    "processResourceRows": 25272,
+    "persistentStateMeasurementPointsPerLane": 26,
+    "acceptedSuperblockReceipts": 162,
+    "processLedgerRows": 1147,
+    "processIdentityReceipts": 1147,
+    "supervisorFinalProcessOrdinal": 1147
+  },
+  "unchangedScientificAssets": [
+    "RunnerV2 source and compiled assemblies",
+    "input schema v2 and planning schema binding v2",
+    "qualification schedule and sealed anonymous identity binding",
+    "D2, D3-v3.1, D4 and clock semantics",
+    "raw-table definitions, metric directions and load thresholds"
+  ],
+  "allowedVerification": "one offline synthetic terminal-chain and delivery known-answer with negative fixtures",
+  "unityInvocationCountAllowed": 0,
+  "qualificationExecutionAuthorized": false,
+  "formalCollectionAnalysisRankingOrWinnerAuthorized": false
+}

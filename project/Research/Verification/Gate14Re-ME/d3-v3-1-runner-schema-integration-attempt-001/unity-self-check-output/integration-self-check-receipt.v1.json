@@ -1,0 +1,140 @@
+{
+    "schema": "gate14re-me-d3-v3-1-runner-schema-integration-self-check-receipt-v1",
+    "studyId": "Gate14Re-ME",
+    "authorizationId": "gate14re-me-d3-v3-1-runner-schema-integration-attempt-001",
+    "status": "PASS_D3_V3_1_RUNNER_SCHEMA_INTEGRATION_SELF_CHECK",
+    "createdAtUtc": "2026-10-17T08:13:34.2173049Z",
+    "completedAtUtc": "2026-10-17T08:13:34.2341091Z",
+    "unityVersion": "2022.3.30f1c1",
+    "passed": true,
+    "terminal": true,
+    "parentAndProtectedHashesPassed": true,
+    "outputSchemaHeaderPassed": true,
+    "d3RawFieldSetPassed": true,
+    "eventAndEmptyJoinFieldsPassed": true,
+    "oldSnapshotFieldsExcludedFromV2Tables": true,
+    "runnerSourceBindingPassed": true,
+    "runnerTypeAndEntryPointPassed": true,
+    "syntheticStrictJsonRoundTripPassed": true,
+    "syntheticRateFormulaPassed": true,
+    "priorV1ArtifactsUnchanged": true,
+    "qualificationMeasuredRootAbsentBefore": true,
+    "qualificationMeasuredRootAbsentAfter": true,
+    "formalMeasuredRootAbsentBefore": true,
+    "formalMeasuredRootAbsentAfter": true,
+    "plannerConstructed": false,
+    "algorithmLaneExecuted": false,
+    "scheduleInputOrIdentityGenerated": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisRankingOrWinnerPerformed": false,
+    "bindings": [
+        {
+            "role": "authorization",
+            "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_1_Runner_Schema_Integration_Authorization.v1.json",
+            "lengthBytes": 3090,
+            "expectedSha256": "f58a70591bf24d1c9e7800cfc27134a582cd9ab1c89197e2b2f44e950c36f2a2",
+            "actualSha256": "f58a70591bf24d1c9e7800cfc27134a582cd9ab1c89197e2b2f44e950c36f2a2",
+            "matched": true
+        },
+        {
+            "role": "integration-plan",
+            "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_V3_1_Runner_Schema_Integration_Plan.v1.md",
+            "lengthBytes": 3038,
+            "expectedSha256": "e7dfb8ead352c132e152315c4abf7a1bd63688be59fb8c0907030232cdb52e0c",
+            "actualSha256": "e7dfb8ead352c132e152315c4abf7a1bd63688be59fb8c0907030232cdb52e0c",
+            "matched": true
+        },
+        {
+            "role": "parent-freeze-receipt",
+            "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/freeze-receipt.v1.json",
+            "lengthBytes": 4431,
+            "expectedSha256": "23df3757a0cac246b5d120c9ef025a2861b2cc062e4b920c42fbb0b450147bc8",
+            "actualSha256": "23df3757a0cac246b5d120c9ef025a2861b2cc062e4b920c42fbb0b450147bc8",
+            "matched": true
+        },
+        {
+            "role": "qualified-d3-contract",
+            "relativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+            "lengthBytes": 6971,
+            "expectedSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+            "actualSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+            "matched": true
+        },
+        {
+            "role": "native-d3-binary",
+            "relativePath": "Assets/Plugins/x86_64/Gate14ReMED3AllocationCounterV31.dll",
+            "lengthBytes": 110592,
+            "expectedSha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63",
+            "actualSha256": "8973663f67d5becf6ea3693ae088dc1186f8b84d82c15026d45c51124f6a0e63",
+            "matched": true
+        },
+        {
+            "role": "managed-d3-wrapper",
+            "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMECumulativeAllocationCounterV2.cs",
+            "lengthBytes": 6168,
+            "expectedSha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007",
+            "actualSha256": "f9e2dd5bff847d7c0fe56795af6091342e542ea7bd5aa7ecbcf8ad0dd08c7007",
+            "matched": true
+        },
+        {
+            "role": "protected-runner-v1",
+            "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV1.cs",
+            "lengthBytes": 73151,
+            "expectedSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+            "actualSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+            "matched": true
+        },
+        {
+            "role": "protected-output-schema-v1",
+            "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-output-schema.v1.json",
+            "lengthBytes": 7416,
+            "expectedSha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c",
+            "actualSha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c",
+            "matched": true
+        },
+        {
+            "role": "protected-six-algorithm-fairness-binding",
+            "relativePath": "Research/Gate14Re-ME/Execution/v1/six-algorithm-fairness-binding.v1.json",
+            "lengthBytes": 5257,
+            "expectedSha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71",
+            "actualSha256": "1ebabb51cacdaa5bb06f5dfd088f0cc557bcacb69efcf9bc2de67be1b2844e71",
+            "matched": true
+        },
+        {
+            "role": "d3-v3-1-runner-contracts",
+            "relativePath": "Assets/_Scripts/Research/Gate14ReME/v3/Gate14ReMELoadQualificationD3V31ContractsV1.cs",
+            "lengthBytes": 14453,
+            "expectedSha256": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902",
+            "actualSha256": "a30d8cb6a246de1e3ed1c8f2b3e8e0bd2ab1255f10781ee68a3027fa2ed5a902",
+            "matched": true
+        },
+        {
+            "role": "qualification-runner-v2",
+            "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+            "lengthBytes": 77345,
+            "expectedSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+            "actualSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+            "matched": true
+        },
+        {
+            "role": "output-schema-v2",
+            "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+            "lengthBytes": 10470,
+            "expectedSha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb",
+            "actualSha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb",
+            "matched": true
+        },
+        {
+            "role": "integrated-instrument-contract-v3",
+            "relativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+            "lengthBytes": 4771,
+            "expectedSha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312",
+            "actualSha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312",
+            "matched": true
+        }
+    ],
+    "syntheticSerializedD3Window": "{\"recordId\":\"synthetic:d3-window:1\",\"inputId\":\"synthetic-input\",\"superblockId\":\"synthetic-superblock\",\"anonymousLaneId\":\"ALG-A\",\"identityBindingSha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"measurementScope\":\"event-group\",\"eventGroupIndex\":0,\"processOrdinal\":-1,\"iterationIndex\":-1,\"d3CounterId\":\"GC.Alloc-Begin-owner-thread-window-v3.1\",\"d3SemanticVersion\":\"3.1\",\"managedAllocationBytes\":4096,\"managedAllocationEventCount\":1,\"foreignThreadAllocationBytes\":0,\"foreignThreadAllocationEventCount\":0,\"invalidMetadataEventCount\":0,\"counterOverflowCount\":0,\"ownerNativeThreadId\":42,\"observerNativeThreadId\":42,\"windowStartStopwatchTicks\":100,\"windowEndStopwatchTicks\":200,\"windowElapsedStopwatchTicks\":100,\"stopwatchFrequency\":1000,\"managedAllocationRateBytesPerSecond\":40960.0,\"managedAllocationRateValid\":true,\"beginReturnCode\":0,\"endReturnCode\":0,\"pluginReady\":true,\"markerSeen\":true,\"metadataAbiValid\":true,\"ownerThreadMatched\":true,\"counterValid\":true,\"invalidReasonCode\":\"\",\"d3ContractRelativePath\":\"Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json\",\"d3ContractSha256\":\"a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce\",\"sourceRelativePath\":\"synthetic\",\"sourceSha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}",
+    "exceptionType": "",
+    "exactFailure": "",
+    "stackTrace": ""
+}

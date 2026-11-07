@@ -1,0 +1,19 @@
+{
+  "schema": "gate14re-me-gnf-load-redesign-field-boundary-v2",
+  "studyId": "Gate14Re-ME",
+  "redesignAttemptId": "gnf-load-redesign-v2-attempt-001",
+  "permitted": [
+    "frozen design structure and load coordinates",
+    "per-algorithm engineering process-wall P50 and maximum by core G x N x F cell",
+    "per-algorithm old stress/core timing ratio for qualification-lane planning only",
+    "pooled strict-serial gap P50 and P99",
+    "anonymous acquisition and lane-phase elapsed time for replay sensitivity"
+  ],
+  "prohibited": [
+    "scientific observations or D1-D7 effect values",
+    "effect comparison, ranking, weighting, or winner adjudication",
+    "reuse of qualification observations as formal samples",
+    "writes to any sealed attempt-009 root"
+  ],
+  "claimBoundary": "All new-load timings are in-envelope planning interpolations, not measurements. The proposal requires an entirely new qualification before it can pass any scientific or engineering gate."
+}

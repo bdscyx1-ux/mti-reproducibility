@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate13r-pr1b-v4-analysis-recovery-output-schema-v1",
+  "title": "Gate 13R-PR1B v4 recovered order-effect analysis",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "analysisKind",
+    "status",
+    "formalInference",
+    "source",
+    "processIdentityAudit",
+    "scenarioRows",
+    "pooledEqualScenarioRows",
+    "memoryEligibility",
+    "noAlertSensitivity",
+    "executionDiagnostics",
+    "pilotLevelOrderEffectIdentifiability",
+    "prohibitedClaims"
+  ],
+  "properties": {
+    "schemaVersion": {"const": 4},
+    "analysisKind": {"const": "gate13r-pr1b-v4-composite-process-identity-read-only-analysis-recovery-v1"},
+    "status": {"const": "ANALYSIS-RECOVERY-FROM-COMPLETE-FAILED-NONFORMAL-PILOT / PILOT-DIAGNOSTIC-ONLY / EXCLUDED-FROM-FORMAL-ANALYSIS"},
+    "formalInference": {"const": false},
+    "source": {
+      "type": "object",
+      "required": ["pilotRoot", "sourceTreeSha256", "measuredMirroredPairs", "measuredMatchedSuperblocks", "measuredUnityProcesses", "measuredAlgorithmSamples"]
+    },
+    "processIdentityAudit": {
+      "type": "object",
+      "required": ["totalProcessRecords", "distinctNumericPidCount", "uniqueOsProcessIdentityCount", "uniqueBlockEvidenceIdentityCount", "samePidLifetimeOverlapCount"]
+    },
+    "scenarioRows": {"type": "array", "minItems": 48},
+    "pooledEqualScenarioRows": {"type": "array", "minItems": 16},
+    "memoryEligibility": {"type": "object"},
+    "noAlertSensitivity": {"type": "object"},
+    "executionDiagnostics": {"type": "object"},
+    "pilotLevelOrderEffectIdentifiability": {"type": "object", "required": ["verdict", "formalClaimAllowed"]},
+    "prohibitedClaims": {"type": "array", "contains": {"const": "FORMAL-ALGORITHM-SUPERIORITY"}}
+  },
+  "additionalProperties": true
+}

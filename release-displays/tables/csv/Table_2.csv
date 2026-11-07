@@ -1,0 +1,7 @@
+﻿Backend,Route computation,Retained state and response to change
+A*-R,New A* search for each request.,Request-local frontier; repeats search after changes.
+BiA*-R,New forward and reverse search for each request.,Request-local frontiers; accepts the best connection under the stated stopping rule.
+D*L,Incremental heuristic search per agent.,Per-agent g/rhs and queue state; repairs changed dependencies and updates moving-start keys.
+LPA*,Goal-rooted incremental search per agent.,Per-agent g/rhs and queue state for the fixed-start workload.
+C-FF,Reverse shortest-path field shared across agents.,"Rebuilds integration, ownership and direction arrays after a change."
+IDFF,Incrementally repaired shared field.,"Retains integration, ownership, queue and direction state; repairs inconsistencies before release."

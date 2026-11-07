@@ -1,0 +1,31 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-pr1b-v2-derived-positive-negative-verification-receipt-v1",
+    "createdAtUtc":  "2026-10-08T12:38:35.1618967Z",
+    "sourceSha256":  "fab1b2e25c3e2492c45e4e700590727b1f289831dd410724bd2670437f85a691",
+    "derivedSha256":  "51d17c507296eb65cb3b15bca34219ed7ba57bd91affcd857ccc98b03ab4285b",
+    "globalFunctionTokenReplacementCount":  13,
+    "routes":  [
+                   {
+                       "from":  "Research\\Gate13RPR1BV2OrderEffectPreparationV1.psm1",
+                       "to":  "Research\\Gate13RPR1BOrderEffectPreparationV2.psm1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Research\\Run-Gate12RProcessReuseBlockV5.ps1",
+                       "to":  "Research\\Run-Gate13RPR1BMemoryAwareBlockV2.ps1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "summaryKind=\u0027gate13r-pr1b-positive-mirrored-and-negative-fail-closed-verification-v1\u0027",
+                       "to":  "summaryKind=\u0027gate13r-pr1b-v2-positive-mirrored-and-negative-fail-closed-verification-v1\u0027",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "receiptKind=\u0027gate13r-pr1b-block-verification-failure-v1\u0027",
+                       "to":  "receiptKind=\u0027gate13r-pr1b-v2-block-verification-failure-v1\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "formalCampaign":  false
+}

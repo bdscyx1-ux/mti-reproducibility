@@ -1,0 +1,276 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-08T13:01:40Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-08T13:01:40Z'
+  user_words: 授权 Gate 13R-PR1B v3 path-safe atomic persistence 修复、验证及一次全新的 NON-FORMAL
+    balanced mirrored order-effect pilot，严格按 Research/Gate13R_PR1B_v3_PathSafe_Next_Authorization_Prompt.md
+    中的完整授权文本执行；不授权 Gate 13R 正式 campaign，不授权 Gate 14R。
+  prev_hash: null
+  hash: 9eae01e1715e9f24ed1fa8409c14b302988ec7d2585d1a7e7c8c9ac796128d7d
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-08T13:01:40Z'
+  step: controlled stale Unity lock recovery
+  command: Read-only process/path/reparse/exclusive-access/frozen-hash audit; delete
+    only H:/DDM_Final_Project/Temp/UnityLockfile; post-recovery audit
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - UNITY-PROCESS-COUNT-0
+  - LOCK-EXCLUSIVE-ACCESS-CONFIRMED
+  - FORMAL-ROOT-ABSENT
+  - FROZEN-TREES-UNCHANGED
+  input_sha256:
+    Gate13R_PR1B_v3_StaleLock_PreRecovery_Audit.v1.json: 8ed2d4e6cb3c9f2a4dc6cd2e0af88050ee32387aedf94e6d96d03d59e6ab846e
+    Gate13R_PR1B_v3_StaleLock_Recovery_Receipt.v1.json: 7e2f06396f890bdf78b99b22adb8ae839fc69031bddfbe7e66fae80cf63dda9d
+  prev_hash: 9eae01e1715e9f24ed1fa8409c14b302988ec7d2585d1a7e7c8c9ac796128d7d
+  hash: 1a20113b996d396c8707764c2dce71d362a72f0c80d17bc4e47c0be99eb05e15
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-08T13:01:40Z'
+  step: v3 design freeze and non-Unity smoke validation
+  command: PowerShell parser and parameter-binding smoke, plan cardinality, C# source-order/static
+    checks, Python AST, provenance-bound hash audit
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - NO-UNITY-LAUNCHED
+  - SCHEDULE-384-MEASURED-BLOCKS
+  - WARMUP-12-BLOCKS
+  - ATOMIC-EVALUATION-BEFORE-THRESHOLD
+  - PROVENANCE-41-OF-41
+  input_sha256:
+    Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v3.json: 3f69db4ed8b0c46c4f59892904f4950ccfa71f52fb8a1cbe7d7fe88d54f9808f
+    Gate13R_PR1B_PathSafe_Atomic_Persistence_Specification.v3.md: c50eee741da810901cc66419bd6205b713b5a7a58edd01d3f2ec335f5d7fec8e
+    Gate13R_PR1B_PathSafe_Atomic_Persistence_Test_Design.v3.md: 4df8fd3c3cf463ea58a05dbcc463d567d1727a835f8bd752d0a8812e728cedff
+    Gate13R_PR1B_OrderEffect_Pilot_Plan.v5.json: f5046f3155ed452951fd6bcb51280f3ecba0b05cbf4e258d6111412fccbe3b28
+    Gate13R_PR1B_OrderEffect_Provenance.v5.json: 6430416d22e332b65a68354d0796d7044a96472ecd4bd9691b21dc7171bd3d3d
+  prev_hash: 1a20113b996d396c8707764c2dce71d362a72f0c80d17bc4e47c0be99eb05e15
+  hash: f57eafdeb1321862cf355e674f807479830ad89b8cad90c9d039a2274a3813e9
+- seq: 4
+  kind: tool_receipt
+  at: '2026-10-08T13:03:27Z'
+  step: v12 pre-pilot verification attempt
+  command: Run-Gate13RPR1BPrePilotV5.ps1 with frozen plan v5 and provenance v5
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - FAILED-NO-PILOT
+  - STATIC-UNIT-85-OF-85
+  - UNITY-NOT-INVOKED
+  - PILOT-ROOT-ABSENT
+  - VERSIONED-PREPILOT-REPAIR-ALLOWED
+  input_sha256:
+    Gate13R_PR1B_v3_PrePilot_v12_Terminal_Preservation.v1.json: c0053c68b9a07eb08a0686f8a2eea40b51036cba758e0e55b66b58524abcaa95
+    Gate13R_PR1B_v3_PrePilot_v12_Failure_Checkpoint.v1.json: fd0c28436981c037d138c1929f80e32b693243991ceb60b0f56ce517d422ceb6
+  prev_hash: f57eafdeb1321862cf355e674f807479830ad89b8cad90c9d039a2274a3813e9
+  hash: 512f2c1a13761c0e44a15a8033ded82574f9a10e385012a6a5d64c4c4726a732
+- seq: 5
+  kind: tool_receipt
+  at: '2026-10-08T13:07:10Z'
+  step: v4 WinPS 5.1 atomic-replace repair and v13 launch preflight
+  command: Versioned same-directory short backup-leaf repair; 7/7 helper smoke; 10
+    parser, 9 binding, plan identity, Python compile, 49/49 provenance, and five frozen-tree
+    checks
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - WINPS51-ATOMIC-HELPER-7-OF-7
+  - PROVENANCE-49-OF-49
+  - V12-BYTE-IDENTICAL
+  - FROZEN-ROOTS-BYTE-IDENTICAL
+  - V13-ABSENT
+  - PILOT-ROOT-ABSENT
+  - FORMAL-ROOT-ABSENT
+  input_sha256:
+    Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v4.json: e412d82d3ab3a25fe37c2ca97ae37fee730775c168e58d1e195c4880b38e1ad8
+    Gate13R_PR1B_OrderEffect_Pilot_Plan.v6.json: a3427ba55c42c34227386151b774ff5f795c5aa436015713c27df1b4c0d7120a
+    Gate13R_PR1B_OrderEffect_Provenance.v7.json: 6e1a4d5bbadd5e95dc00e935b8d3eb2540acbaed644cba4da3c51123a5122090
+    Verification/Gate13R_PR1B_v4_AtomicHelperSmoke/v1/summary.json: 8a4f73e539f9fcbbcb08739195c7d66ed8926621b49fa89c7b2fc3f0e24f07cb
+  prev_hash: 512f2c1a13761c0e44a15a8033ded82574f9a10e385012a6a5d64c4c4726a732
+  hash: bdb1d1eb7627fc936cc94b31a2127b914444708cac5ba16d77505c8c86463181
+- seq: 6
+  kind: tool_receipt
+  at: '2026-10-08T13:08:58Z'
+  step: v13 pre-pilot verification attempt
+  command: Run-Gate13RPR1BPrePilotV6.ps1 with plan v6 and provenance v7
+  status: failed
+  exit_status: 1
+  retries_used: 1
+  gate_tokens:
+  - COMPILE-PASSED
+  - PATHSAFE-UNITY-SELFTEST-PASSED
+  - MEMORY-POLICY-SELFTEST-PASSED
+  - TELEMETRY-PASSED
+  - FAILED-BEFORE-BLOCK-SAMPLE
+  - PILOT-ROOT-ABSENT
+  - VERSIONED-PROVENANCE-REPAIR-ALLOWED
+  input_sha256:
+    Gate13R_PR1B_v4_PrePilot_v13_Terminal_Preservation.v1.json: e7b37de2562cfb49d041eb7694b1665d7852d1f7f70522552724cd8acd03dda1
+    Gate13R_PR1B_v4_PrePilot_v13_Failure_Checkpoint.v1.json: 35b9ee21a5f210fe4d29e3413f21bb2cd9856f13996e8ad7684b88ad5a3b81b7
+  prev_hash: bdb1d1eb7627fc936cc94b31a2127b914444708cac5ba16d77505c8c86463181
+  hash: ef709b8e73442a23721dbd7f1446841c999e52969d4dd0b96f2fc94558d1a6b4
+- seq: 7
+  kind: tool_receipt
+  at: '2026-10-08T13:09:59Z'
+  step: provenance compatibility repair and block-plan smoke
+  command: Create plan v7/provenance v8; restore config/spec/test/authorization/Unity-command
+    compatibility; generate one nonexecuting two-sample block plan from the 384-item
+    schedule
+  status: passed
+  exit_status: 0
+  retries_used: 2
+  gate_tokens:
+  - COMPATIBILITY-FIELDS-5-OF-5
+  - MEASURED-SCHEDULE-384
+  - TWO-SAMPLE-BLOCK-PLAN-VALID
+  - UNITY-NOT-INVOKED
+  - V13-BYTE-IDENTICAL
+  - PILOT-ROOT-ABSENT
+  input_sha256:
+    Gate13R_PR1B_OrderEffect_Pilot_Plan.v7.json: 3c2abe91aae77a683bbf3e2f52896601db648401162c3dd35970945d285f488c
+    Gate13R_PR1B_OrderEffect_Provenance.v8.json: 908af55913b8370f2311b7ad441590bf95e853b59a0a6b0635c85819c9e7da7c
+    Verification/Gate13R_PR1B_v4_ProvenanceCompatibilitySmoke/v1/summary.json: 6a50e140bde3bcdb16ada91fea467deee01e2f4f27ac11f6006e9fd0212c6d14
+  prev_hash: ef709b8e73442a23721dbd7f1446841c999e52969d4dd0b96f2fc94558d1a6b4
+  hash: 9eff72dbf029f18aacbc58f7cab6601713fd399d66793207af38f7274f76d755
+- seq: 8
+  kind: tool_receipt
+  at: '2026-10-08T13:12:08Z'
+  step: v14 pre-pilot verification attempt
+  command: Run-Gate13RPR1BPrePilotV6.ps1 with plan v7 and provenance v8
+  status: failed
+  exit_status: 1
+  retries_used: 2
+  gate_tokens:
+  - COMPILE-PASSED
+  - PATHSAFE-UNITY-SELFTEST-PASSED
+  - MEMORY-POLICY-SELFTEST-PASSED
+  - TELEMETRY-PASSED
+  - FIRST-POSITIVE-BASE-BLOCK-PASSED
+  - PILOT-ROOT-ABSENT
+  - VERSIONED-WRAPPER-REPAIR-ALLOWED
+  input_sha256:
+    Gate13R_PR1B_v4_PrePilot_v14_Terminal_Preservation.v1.json: 36eb8731ce2f92950fde5454401f83bffa78760b37fa99b5e4c4026ecf4f490d
+    Gate13R_PR1B_v4_PrePilot_v14_Failure_Checkpoint.v1.json: 769ced5f6ac820cf9c23d5eaa81ffb36ce639cd7ed8c8c814f2f72a2c6dcd9b4
+  prev_hash: 9eff72dbf029f18aacbc58f7cab6601713fd399d66793207af38f7274f76d755
+  hash: 2cc8d2c9dbe47f49b735a3d66a659452c6ca9c3bca66a4e2f28c68bd4b375b2d
+- seq: 9
+  kind: tool_receipt
+  at: '2026-10-08T13:13:07Z'
+  step: active block-wrapper null-backup elimination and v15 preflight
+  command: Route summary replacement through validated V4 atomic helper; regenerate
+    active block/static/block-verification/pilot/prepilot wrappers; scan all 10 active
+    scripts
+  status: passed
+  exit_status: 0
+  retries_used: 3
+  gate_tokens:
+  - ACTIVE-NULL-BACKUP-HITS-0
+  - PS5-PARSER-10-OF-10
+  - BINDING-5-OF-5
+  - PROVENANCE-68-OF-68
+  - V14-BYTE-IDENTICAL
+  - V15-ABSENT
+  - PILOT-ROOT-ABSENT
+  input_sha256:
+    Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v5.json: 3be8369f809db8c7e90a06127bab58029cf7b7eae2292da12318c73d1d176129
+    Gate13R_PR1B_OrderEffect_Pilot_Plan.v8.json: 64f147a9e53b500ddde9d2afffacf619f950cd495d9ccb2380fe42ec76ceb0c9
+    Gate13R_PR1B_OrderEffect_Provenance.v9.json: 26a97a4e686e49004aba78be0dff86f9b40f15698a49c92a3b93ac72224ab6df
+  prev_hash: 2cc8d2c9dbe47f49b735a3d66a659452c6ca9c3bca66a4e2f28c68bd4b375b2d
+  hash: e10185fa661e33ba59daf7ac2aa38a1fb687c7b6226118a01be2148bc4c8ea38
+- seq: 10
+  kind: tool_receipt
+  at: '2026-10-08T13:18:31Z'
+  step: v15 complete pre-pilot verification
+  command: Run-Gate13RPR1BPrePilotV7.ps1 with plan v8 and provenance v9
+  status: passed
+  exit_status: 0
+  retries_used: 3
+  gate_tokens:
+  - STATIC-113-OF-113
+  - PATHSAFE-14-OF-14
+  - MEMORY-12-OF-12
+  - POSITIVE-4-PROCESSES-8-SAMPLES
+  - NEGATIVE-FAIL-CLOSED-PASSED
+  - STRUCTURAL-COMPARISONS-6
+  - RETAINED-63-OF-63
+  - FINAL-AUDIT-102-OF-102
+  - PILOT-EXECUTION-AUTHORIZED
+  input_sha256:
+    Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5/ValidationOnlyPrePilotAudit.summary.json: 4351f060856ce18cb85821bb756128a7e2c64ff349ead61b9bbb833715fe7040
+    Verification/Gate12R_ProcessReuse_5pct/v15-gate13r-pr1b-order-effect-pathsafe-v5/checkpoint.json: b4990ac7014f55dfcd95bd72ab8a0affaf8ce900522264e75420344c362ad490
+    Gate13R_PR1B_v5_Pilot_Launch_Audit.v1.json: f8d5632423b79e8f8133f919bdaebb3cc887679308f3164c1b697c23ca225bbe
+  prev_hash: e10185fa661e33ba59daf7ac2aa38a1fb687c7b6226118a01be2148bc4c8ea38
+  hash: ed5792dc3144af233a4268e2fb43a4b22f0beadc5ab59537830a21a423920301
+- seq: 11
+  kind: tool_receipt
+  at: '2026-10-08T13:19:56Z'
+  step: byte-bound pilot launch routing repair
+  command: Route derived pilot to bound Analyzer V4 and independent v17 launch harness;
+    create plan v9/provenance v10; parser/binding/hash audit
+  status: passed
+  exit_status: 0
+  retries_used: 4
+  gate_tokens:
+  - ANALYZER-ROUTE-BOUND-V4
+  - INDEPENDENT-V17-LAUNCH-HARNESS
+  - V15-TREE-PRESERVED
+  - PROVENANCE-77-OF-77
+  - PILOT-ATTEMPT-NOT-CONSUMED
+  - PILOT-ROOT-ABSENT
+  input_sha256:
+    Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v6.json: cebf0cea4e1260d9401c033fc010407b73c073f59d2cd46a185a824e58eea1b2
+    Gate13R_PR1B_OrderEffect_Pilot_Plan.v9.json: 40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784
+    Gate13R_PR1B_OrderEffect_Provenance.v10.json: 993f554a03bc52493c3fea116f1206f14746db89e4c14c59d8e4e15befbef320
+    Gate13R_PR1B_v5_PilotLaunch_Routing_Gap_Diagnosis.v1.json: a3983205586b9ccf201f73a668c497e004904434289ccdb046534d60d9a910dd
+  prev_hash: ed5792dc3144af233a4268e2fb43a4b22f0beadc5ab59537830a21a423920301
+  hash: b310c88cf9570f1e260a0ab7def8cc8e3f2ce423f9d88e35a8a58f27d1649ff0
+- seq: 12
+  kind: tool_receipt
+  at: '2026-10-08T13:24:52Z'
+  step: v16 final byte-bound pre-pilot verification
+  command: Run-Gate13RPR1BPrePilotV8.ps1 with plan v9 and provenance v10
+  status: passed
+  exit_status: 0
+  retries_used: 4
+  gate_tokens:
+  - STATIC-124-OF-124
+  - FINAL-AUDIT-111-OF-111
+  - ANALYZER-V4-BOUND
+  - INDEPENDENT-LAUNCH-HARNESS-ABSENT
+  - PILOT-ROOT-ABSENT
+  - ONE-FRESH-PILOT-AUTHORIZED
+  input_sha256:
+    Verification/Gate12R_ProcessReuse_5pct/v16-gate13r-pr1b-order-effect-pathsafe-v6/ValidationOnlyPrePilotAudit.summary.json: 2e78c61552acebf03efda7381a71935af6c692911e8f05782e1d10f7c737ab8f
+    Gate13R_PR1B_v6_Pilot_Launch_Audit.v2.json: 2a05c6bbe48d9db404d438f52e4351d33d0968209509262e66e848b1f504e22f
+  prev_hash: b310c88cf9570f1e260a0ab7def8cc8e3f2ce423f9d88e35a8a58f27d1649ff0
+  hash: c8d03d20a19265608eb1775452a7682c210dbeb99c422e5df11d60d7ea798541
+- seq: 13
+  kind: tool_receipt
+  at: '2026-10-08T15:33:40Z'
+  step: one authorized v7 path-safe balanced mirrored pilot
+  command: Run-Gate13RPR1BOrderEffectPilotV6.ps1 with plan v9, provenance v10, and
+    analyzer v4
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - RAW-EXECUTION-396-OF-396-PROCESSES-COMPLETE
+  - MEASURED-384-OF-384-PROCESSES-COMPLETE
+  - MEASURED-768-OF-768-SAMPLES-COMPLETE
+  - ANALYZER-FAILED-ON-LEGAL-WINDOWS-PID-REUSE
+  - NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - FORMAL-NOT-AUTHORIZED
+  input_sha256:
+    PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4/failure-receipt.json: c9f8a96aa1ff953e84bcdcc5a7b70be2a635f764e4970824b1891473046d2680
+    Gate13R_PR1B_v3_PathSafe_Pilot_Terminal_Preservation.v1.json: 4004c76c7127896ea54efcfc3dbf40b9888de0d133cb905624ab72ba29abd626
+    Gate13R_PR1B_v3_PathSafe_Pilot_Failure_Diagnosis.v1.md: 120263281ea24fa7273a810b4912a1cdaeee29c65aa813b0153b87e8c7b50039
+    Gate13R_PR1B_v3_PathSafe_Pilot_Failure_Checkpoint.v1.json: 6f2c2da618d100c6495e34adc8215c6f26a7444c6e92d6947d55cafd781a9f75
+  prev_hash: c8d03d20a19265608eb1775452a7682c210dbeb99c422e5df11d60d7ea798541
+  hash: 77202c02c093db503135989283addfe4cee143fcd57744cf06e8b5212c2e0144

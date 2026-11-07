@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate13r-pr2-attempt3-progress-snapshot-schema-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "snapshotKind", "capturedAtUtc", "capturedAtAsiaShanghai", "active", "phase", "status", "notify", "notificationReason", "blindedOperationalOnly", "totals", "progress", "currentIdentity", "timing", "telemetry", "storage", "health", "sourceIdentity"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "snapshotKind": {"const": "gate13r-pr2-attempt3-operational-progress-v1"},
+    "capturedAtUtc": {"type": "string", "format": "date-time"},
+    "capturedAtAsiaShanghai": {"type": "string", "format": "date-time"},
+    "active": {"type": "boolean"},
+    "phase": {"type": "string"},
+    "status": {"type": "string"},
+    "notify": {"type": "boolean"},
+    "notificationReason": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "blindedOperationalOnly": {"const": true},
+    "totals": {"type": "object"},
+    "progress": {"type": "object"},
+    "currentIdentity": {"type": "object"},
+    "timing": {"type": "object"},
+    "telemetry": {"type": "object"},
+    "storage": {"type": "object"},
+    "health": {"type": "object"},
+    "sourceIdentity": {"type": "object"}
+  }
+}

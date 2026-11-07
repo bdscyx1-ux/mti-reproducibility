@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-me-trusted-timestamp-comparator-attempt-004-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004",
+  "status": "FAILED_CLOSED_TRUSTED_TIMESTAMP_COMPARATOR_ATTEMPT_004",
+  "failedAtUtc": "2026-10-17T11:55:24.4025475Z",
+  "exceptionType": "System.InvalidOperationException",
+  "exactFailure": "Frozen trusted creationTimeUtc differs from the authorized known-answer input.",
+  "stackTrace": "at Require-Condition, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004\\Invoke-Gate14ReMETrustedTimestampComparatorCorrigendumAttempt004.ps1: line 35\r\nat <ScriptBlock>, H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\unity-trusted-identity-timestamp-comparator-corrigendum-attempt-004\\Invoke-Gate14ReMETrustedTimestampComparatorCorrigendumAttempt004.ps1: line 241",
+  "offlineKnownAnswerInvocationCount": 1,
+  "retryPerformed": false,
+  "unityInvocationCount": 0,
+  "attempt003Evidence": {
+    "beforeContentDigestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef",
+    "afterContentDigestSha256": "770a7f1bf25f763d42186bba77a148280dde6193e05f9887ed0d9a5ffe02deef",
+    "unchanged": true,
+    "reclassified": false
+  },
+  "scientificBoundary": {
+    "unityInvocations": 0,
+    "schemaCompatibilitySelfCheckInvocations": 0,
+    "scheduleRowsGenerated": 0,
+    "qualificationInputsGenerated": 0,
+    "anonymousIdentityMappingsGenerated": 0,
+    "measuredRootCreated": false,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-me-trusted-timestamp-comparator-auto-attempts-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-auto-attempts-until-pass",
+  "attemptId": "gate14re-me-unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007",
+  "authorizedAtUtc": "2026-10-17T12:01:49.8654383Z",
+  "attemptPreparedAtUtc": "2026-10-17T12:15:07.5985872Z",
+  "userAuthorizationVerbatim": "授权所有后续attempt，等到attempt通过后再向我索要后续授权",
+  "standingAuthorizationApplication": {
+    "priorAttempt": "attempt-006",
+    "priorAttemptStatus": "FAILED_CLOSED_RETAINED_UNCHANGED",
+    "newIndependentAttemptAuthorized": true,
+    "sameAttemptRetryAuthorized": false,
+    "automaticStructuralRepairAuthorized": true,
+    "stopAtFirstPass": true,
+    "requestNextAuthorizationOnlyAfterPass": true,
+    "scopeExpansionBeyondCurrentTimestampComparatorStage": false
+  },
+  "attempt007AuthorizedChanges": [
+    "Remove eager expansion of failedCases.caseId when the failed-case collection is empty.",
+    "Construct failed-case identifiers only inside the non-empty failure branch; leave the qualified timestamp comparator source unchanged."
+  ],
+  "retentionRequirements": {
+    "preserveAttempt003": true,
+    "preserveAttempt004": true,
+    "preserveAttempt005": true,
+    "preserveAttempt006": true,
+    "preserveStatusV19V20V21V22": true,
+    "preserveTrustedLaunchIdentityRuleV1": true,
+    "deleteModifyOrReclassifyPriorEvidenceAuthorized": false
+  },
+  "executionBoundary": {
+    "offlineKnownAnswerInvocationMaximumThisAttempt": 1,
+    "unityInvocationMaximum": 0,
+    "schemaCompatibilitySelfCheckAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  }
+}

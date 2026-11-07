@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 7,
+  "status": "FAILED_PRESERVED_CONTINUE_AUTHORIZED_REPAIR",
+  "completedAtUtc": "2026-10-17T07:07:52.0334019Z",
+  "phase": "algorithm-free-d3-v3-known-answer-v2",
+  "process": {
+    "unityPid": 40948,
+    "startedAtUtc": "2026-10-17T07:06:41.3270596Z",
+    "exitedAtUtc": "2026-10-17T07:06:54.8124161Z",
+    "exitCode": 3,
+    "cleanHarnessOwnedExit": true
+  },
+  "failure": {
+    "exceptionType": "System.InvalidOperationException",
+    "exactReason": "Known-array size or monotonic scale criterion failed.",
+    "failedAtUtc": "2026-10-17T07:06:51.3179573Z",
+    "failedStage": "known-array-scale-control",
+    "priorMarkerReadinessAndEmptyWindowControlPassed": true
+  },
+  "evidence": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-007-known-answer-v2/cycle-plan.v1.json",
+      "lengthBytes": 2400,
+      "sha256": "ae19606ae6aaec93963e43856b34a05bcbb4ab16c499b00a7d5d3e9c7a5a6b0c"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-007-known-answer-v2/unity-known-answer.log",
+      "lengthBytes": 84609,
+      "sha256": "0e97aadc2892666e1e6db3c0e17deaf0187b7c5587f8d9764d7c7ac8db254039"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-007-known-answer-v2/failed-output/failure-receipt.v1.json",
+      "lengthBytes": 1258,
+      "sha256": "a559d4cb067ef1d7aab087af4c42be450cbb6c59b9b98603768bdb53cd240248"
+    }
+  ],
+  "diagnosis": "The command-line shutdown repair succeeded: Unity exited cleanly under harness control. Plugin readiness, exact marker registration, metadata callback registration, and all 64 empty-window zero-response trials passed before the first scientific failure. The V2 failure receipt intentionally does not expose the three array-window counters, so the exact violated subcriterion cannot yet be distinguished without a diagnostic-only versioned harness.",
+  "repairDisposition": {
+    "sourceChanged": false,
+    "criteriaRelaxed": false,
+    "metricChanged": false,
+    "algorithmCodeNeeded": false,
+    "failedOutputMovedWithoutModification": "repair-cycle-007-known-answer-v2/failed-output",
+    "nextRepair": "Create a versioned V3 known-answer harness that writes the three array-window records and their unchanged acceptance booleans before fail-closed evaluation, then rerun once."
+  }
+}

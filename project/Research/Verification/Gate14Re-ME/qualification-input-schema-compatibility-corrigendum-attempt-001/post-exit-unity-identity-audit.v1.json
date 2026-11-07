@@ -1,0 +1,66 @@
+{
+  "schema": "gate14re-me-post-exit-unity-identity-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-001",
+  "status": "CONFIRMED_UNITY_HASH_VIEW_MISMATCH_AND_CLEAN_PROCESS_EXIT",
+  "checkedAtUtc": "2026-10-17T08:57:07.3553272Z",
+  "unityExecutable": {
+    "path": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "lengthBytes": 35821616,
+    "lastWriteTimeUtc": "2024-06-11T11:26:54.0000000Z",
+    "authorizedExpectedSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "externalPrelaunchSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "inProcessEditorApplicationPath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "inProcessSha256": "ad243c5b18041d674874864cea86626623ff366a6363aede529fec923e80579e",
+    "externalPostExitSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "externalBeforeAndAfterMatch": true,
+    "inProcessViewMatchesExternal": false,
+    "identityConsistencyPassed": false
+  },
+  "singleUnityInvocation": {
+    "invocationCount": 1,
+    "processId": 68968,
+    "creationTimeLocal": "2026-10-17T16:56:21.6412210+08:00",
+    "executeMethod": "DDM.Research.Editor.InputSchemaCorrigendumAttempt001.Gate14ReMEInputSchemaCompatibilitySelfCheckV1.Run",
+    "commandLineMatchedAuthorization": true,
+    "unityVersionObserved": "2022.3.30f1c1",
+    "scriptCompilationSucceeded": true,
+    "tundraBuildExitCode": 0,
+    "selfCheckMethodExecuted": true,
+    "processExited": true,
+    "remainingUnityProcessCount": 0,
+    "remainingUnityPackageManagerProcessCount": 0,
+    "retryPerformed": false
+  },
+  "failurePosition": {
+    "sourceRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEInputSchemaCompatibilitySelfCheckV1.cs",
+    "sourceLine": 172,
+    "exactFailure": "Unity executable hash mismatch.",
+    "parentAndProtectedHashesPassedBeforeFailure": true,
+    "authorizationHeaderReached": false,
+    "jsonUtilityRoundTripReached": false,
+    "oracleHeaderControlsReached": false
+  },
+  "postExitBoundaryAudit": {
+    "prohibitedRootsPresent": [],
+    "qualificationMeasuredRootCreated": false,
+    "scheduleGenerated": false,
+    "qualificationInputGenerated": false,
+    "anonymousIdentityMappingGenerated": false,
+    "plannerConstructedOrInvoked": false,
+    "algorithmLaneExecuted": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false
+  },
+  "evidence": {
+    "unityLogRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/unity-self-check.log",
+    "unityLogLengthBytes": 95852,
+    "unityLogSha256": "bffeb712a6c14871d7c69a599dab4c4576cdc9cd6fbbb172ae12a18758b5da7b",
+    "unityReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/unity-self-check-output/input-schema-compatibility-self-check-receipt.v1.json",
+    "unityReceiptLengthBytes": 8436,
+    "unityReceiptSha256": "f9a3ee42729fc055836e8448043278732cd43decf2ca2a06c58e135fb979944b"
+  },
+  "interpretationBoundary": "This audit records a process-internal versus external file-hash identity inconsistency. It does not infer the cause, does not waive the frozen executable binding, and does not authorize a retry. The false prohibitedRootsAbsentAfter field in the early-aborted Unity receipt was never assigned; this post-exit filesystem audit establishes that no prohibited root exists."
+}

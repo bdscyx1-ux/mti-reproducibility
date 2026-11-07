@@ -1,0 +1,42 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-external-failure-observation-v1",
+  "studyId": "Gate14Re-ME",
+  "attempt": "formal-st-analysis-attempt-001",
+  "status": "FAIL_CLOSED_BEFORE_FORMAL_OBSERVATIONS_READ",
+  "exactConfirmedCommandUtf8Sha256": "5870604312f2368ebd761fe9d20e6c6aa89bf818cef32d180136dda7515bc411",
+  "launcherSha256": "2d7795abefd264ecd0019d80b54ecf85144624d86804f14df9d9b6ac64308465",
+  "toolSha256": "5d33f87ba51b67ea2b6bf72bc32c5a7845f14b549d3c30f58b7fb085468c9c9d",
+  "failureReceipt": {
+    "relativePath": "Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-001/failure-receipt.v1.json",
+    "sha256": "65d5ede4e19988cf6388d7810d17ca6ef38b5b325efd2462ed80808e98259e7f",
+    "error": "unable to import frozen PyArrow runtime: No module named 'pyarrow.lib'"
+  },
+  "rootCause": {
+    "classification": "PYTHON_ABI_MISMATCH_IN_FROZEN_LAUNCHER",
+    "launcherPythonVersion": "3.14.7",
+    "launcherPythonExecutable": "C:/Users/bdscy/AppData/Local/Python/pythoncore-3.14-64/python.exe",
+    "frozenPyArrowVersion": "25.0.1",
+    "frozenPyArrowPythonAbi": "cp312",
+    "frozenNativeModule": "lib.cp312-win_amd64.pyd",
+    "compatibleInstalledPythonVersion": "3.12.14",
+    "compatibleInstalledPythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe"
+  },
+  "boundaries": {
+    "formalObservationsRead": false,
+    "modelsFit": 0,
+    "effectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "mqPerformed": false,
+    "mtPerformed": false,
+    "sourceRootsModified": false,
+    "automaticRetryPerformed": false
+  },
+  "sourceHashRecheck": {
+    "acceptanceTerminalFinalSha256": "2f12db25a27c023ef786251f7400546417883af639b3d405cc31ee5f5c681823",
+    "acceptanceFileManifestSha256": "02eefd2cffe1f611f0523cbb7f94c1e15ab60f4bfd86488cdcf4e2cabf348329",
+    "typedParquetRuntimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "allPass": true
+  },
+  "recoveryBoundary": "A new formal-analysis attempt and new user authorization are required. Attempt-001 must remain unchanged and must not be retried or overwritten.",
+  "observedAtUtc": "2026-10-30T12:17:33.714Z"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-002-failure-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-002",
+  "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-002",
+  "status": "FROZEN_FAILED_CLOSED_EVIDENCE",
+  "frozenAtUtc": "2026-10-17T16:31:07.5420537+00:00",
+  "exactFailure": "The property 'Count' cannot be found on this object. Verify that the property exists.",
+  "artifacts": [
+    {
+      "role": "failed-attempt-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-002/authorization-receipt.v1.json",
+      "sha256": "c490cb51eba7dc23503e68521122877774beb2ca99452ee994b51671d83d523d",
+      "bytes": 2996
+    },
+    {
+      "role": "failed-attempt-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-002/failure-receipt.v1.json",
+      "sha256": "fed0e978b6c61c5b2c86d1329fd8e97565e6139f300214dca49b3de408d64d5b",
+      "bytes": 36482
+    },
+    {
+      "role": "failed-attempt-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-002/Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt002.ps1",
+      "sha256": "8b6dd6be814b300542c4b5c1dc65227615064686a869e8b8cffadd9627a07ddc",
+      "bytes": 63729
+    },
+    {
+      "role": "failed-attempt-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-002/powershell-json-known-answer-fixture.v1.json",
+      "sha256": "a6971c57c616b09d1680a41ab5e4203d690301d1bfc2ff176a1fdcd7db7d5429",
+      "bytes": 310
+    },
+    {
+      "role": "failed-attempt-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-002/powershell-jsonl-known-answer-fixture.v1.jsonl",
+      "sha256": "414e560e34a206ddeae831ed556985acee7f924305c82729564a046a2db77682",
+      "bytes": 435
+    },
+    {
+      "role": "failed-attempt-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-002/stage-contract.v1.json",
+      "sha256": "fd732e15e950d662e1ec1b11eacf4b12ae5f439d5b63d687724b0d79877d18c5",
+      "bytes": 1656
+    }
+  ],
+  "retainedAttempt001FailureSha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+  "unityInvocationCount": 0,
+  "automaticRetryPerformed": false
+}

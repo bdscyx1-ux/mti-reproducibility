@@ -1,0 +1,30 @@
+{
+  "$id": "gate13r-pr2-mp1-pilot-config-schema-v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "configId": {
+      "const": "gate13r-pr2-mp1-targeted-memory-pilot-config-v1"
+    },
+    "designId": {
+      "const": "gate13r-pr2-mp1-stage-separated-memory-targeted-pilot-v1"
+    },
+    "formalCampaign": {
+      "const": false
+    },
+    "schemaVersion": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "configId",
+    "designId",
+    "schedule",
+    "matrix",
+    "execution",
+    "policy",
+    "authorizationBoundary"
+  ],
+  "type": "object"
+}

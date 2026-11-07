@@ -1,0 +1,530 @@
+{
+    "schemaVersion":  3,
+    "summaryKind":  "gate13r-pr1b-v3-pathsafe-validation-only-pre-pilot-audit-v1",
+    "savedAtUtc":  "2026-10-08T13:17:54.7358380Z",
+    "pilotPlanSha256":  "64f147a9e53b500ddde9d2afffacf619f950cd495d9ccb2380fe42ec76ceb0c9",
+    "provenanceSha256":  "26a97a4e686e49004aba78be0dff86f9b40f15698a49c92a3b93ac72224ab6df",
+    "telemetryResultSha256":  "7bd9b0e0fd907385e2f948d1a92eb1136542d623c0c60b7dcb958ddabe4f7ece",
+    "checkCount":  102,
+    "passedCheckCount":  102,
+    "checks":  [
+                   {
+                       "id":  "upstream-static",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\StaticUnit\\summary.json"
+                   },
+                   {
+                       "id":  "upstream-compile",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\Compile\\summary.json"
+                   },
+                   {
+                       "id":  "upstream-pathSafe",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\PathSafeAtomicSelfTest.summary.json"
+                   },
+                   {
+                       "id":  "upstream-memoryPolicy",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\MemoryPolicySelfTest.summary.json"
+                   },
+                   {
+                       "id":  "upstream-telemetry",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\TelemetryProbe\\v3.summary.json"
+                   },
+                   {
+                       "id":  "upstream-positiveNegative",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\BlockVerification\\summary.json"
+                   },
+                   {
+                       "id":  "upstream-additional",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\BlockVerificationAdditional\\summary.json"
+                   },
+                   {
+                       "id":  "telemetry-v2-positive-crosscheck",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\TelemetryProbe\\v3\\telemetry-probe-result.json"
+                   },
+                   {
+                       "id":  "pathsafe-v3-boundaries",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\PathSafeAtomicSelfTest\\path-safe-atomic-self-test.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v3_PathSafe_Next_Authorization_Prompt_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v3_PathSafe_Next_Authorization_Prompt.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v3_Authorization_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v3_Authorization.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v3_StaleLock_PreRecovery_Audit_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v3_StaleLock_PreRecovery_Audit.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v3_StaleLock_Recovery_Receipt_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v3_StaleLock_Recovery_Receipt.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Statistical_Analysis_Plan_v2_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Statistical_Analysis_Plan.v2.md"
+                   },
+                   {
+                       "id":  "hash-Assets__Scripts_Research_Editor_Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3_cs",
+                       "passed":  true,
+                       "detail":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3.cs"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Pilot_Attempt2_Terminal_Preservation_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Pilot_Attempt2_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Pilot_Attempt2_Failure_Diagnosis_v1_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Pilot_Attempt2_Failure_Diagnosis.v1.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Failure_Checkpoint_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Failure_Checkpoint.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v2_Terminal_Evidence_Manifest_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v2_Terminal_Evidence_Manifest.v1.json"
+                   },
+                   {
+                       "id":  "hash-Assets__Scripts_Research_Editor_Gate13RPR1BMemoryAwareProcessReuseBatchCommandV2_cs",
+                       "passed":  true,
+                       "detail":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV2.cs"
+                   },
+                   {
+                       "id":  "hash-Assets__Scripts_Research_Editor_Gate12RProcessReuseBatchCommandV3_cs",
+                       "passed":  true,
+                       "detail":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs"
+                   },
+                   {
+                       "id":  "hash-Research_FormalScenarios_Gate11R_5pct_v1_bundle-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json"
+                   },
+                   {
+                       "id":  "hash-Research_FormalScenarios_Gate11R_5pct_v1_formal-scenario-matrix_json",
+                       "passed":  true,
+                       "detail":  "Research/FormalScenarios/Gate11R_5pct/v1/formal-scenario-matrix.json"
+                   },
+                   {
+                       "id":  "hash-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v4_pilot-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-manifest.json"
+                   },
+                   {
+                       "id":  "hash-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v4_pilot-execution-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-execution-manifest.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate12RProcessReuseBlockV3_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate12RProcessReuseBlockV3.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate12RTelemetryProbe_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate12RTelemetryProbe.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BOrderEffectPilotV1_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BOrderEffectPilotV1.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BBlockVerificationV1_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BBlockVerificationV1.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate12RCompileV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate12RCompileV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate12RColdReferenceV3_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate12RColdReferenceV3.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Gate10RAttempt4RetainedHarnessV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate10RAttempt4RetainedHarnessV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate12AnalysisUnitTests_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate12AnalysisUnitTests.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Gate12_AnalysisUnitTests_summary_json",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate12_AnalysisUnitTests.summary.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment_v4_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v4.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_PathSafe_Atomic_Persistence_Specification_v4_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Specification.v4.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_PathSafe_Atomic_Persistence_Test_Design_v4_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Test_Design.v4.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v3_PrePilot_v12_Terminal_Preservation_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v3_PrePilot_v12_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v3_PrePilot_v12_Failure_Diagnosis_v1_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v3_PrePilot_v12_Failure_Diagnosis.v1.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v3_PrePilot_v12_Failure_Checkpoint_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v3_PrePilot_v12_Failure_Checkpoint.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Build-Gate13RPR1BPathSafePrePilotV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Build-Gate13RPR1BPathSafePrePilotV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v6_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v6.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13RPR1BOrderEffectPreparationV4_psm1",
+                       "passed":  true,
+                       "detail":  "Research/Gate13RPR1BOrderEffectPreparationV4.psm1"
+                   },
+                   {
+                       "id":  "hash-Research_Analyze-Gate13RPR1BOrderEffectPilotV4_py",
+                       "passed":  true,
+                       "detail":  "Research/Analyze-Gate13RPR1BOrderEffectPilotV4.py"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BMemoryAwareBlockV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BMemoryAwareBlockV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BMemoryTelemetryProbeV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BMemoryTelemetryProbeV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BOrderEffectPilotV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BOrderEffectPilotV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BStaticUnitV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BStaticUnitV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BPathSafeAtomicSelfTestV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BPathSafeAtomicSelfTestV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BMemoryPolicySelfTestV5_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BMemoryPolicySelfTestV5.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BBlockVerificationV5_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BBlockVerificationV5.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BValidationOnlyPrePilotAuditV4_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BValidationOnlyPrePilotAuditV4.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BPrePilotV6_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BPrePilotV6.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Provenance_v6_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v6.json"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BPowerShellAtomicHelperSmokeV1_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BPowerShellAtomicHelperSmokeV1.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Gate13R_PR1B_v4_AtomicHelperSmoke_v1_summary_json",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate13R_PR1B_v4_AtomicHelperSmoke/v1/summary.json"
+                   },
+                   {
+                       "id":  "hash-Research_Freeze-Gate13RPR1BPathSafeProvenanceV7_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Freeze-Gate13RPR1BPathSafeProvenanceV7.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v7_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v7.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Provenance_v7_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v7.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v4_PrePilot_v13_Terminal_Preservation_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v4_PrePilot_v13_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v4_PrePilot_v13_Failure_Diagnosis_v1_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v4_PrePilot_v13_Failure_Diagnosis.v1.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v4_PrePilot_v13_Failure_Checkpoint_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v4_PrePilot_v13_Failure_Checkpoint.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_New-Gate13RPR1BPathSafePlanV7ProvenanceV8_ps1",
+                       "passed":  true,
+                       "detail":  "Research/New-Gate13RPR1BPathSafePlanV7ProvenanceV8.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BProvenanceCompatibilitySmokeV1_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BProvenanceCompatibilitySmokeV1.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v8_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v8.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_OrderEffect_Provenance_v8_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v8.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment_v5_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_PathSafe_Atomic_Persistence_Amendment.v5.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v4_PrePilot_v14_Terminal_Preservation_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v4_PrePilot_v14_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v4_PrePilot_v14_Failure_Diagnosis_v1_md",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v4_PrePilot_v14_Failure_Diagnosis.v1.md"
+                   },
+                   {
+                       "id":  "hash-Research_Gate13R_PR1B_v4_PrePilot_v14_Failure_Checkpoint_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_v4_PrePilot_v14_Failure_Checkpoint.v1.json"
+                   },
+                   {
+                       "id":  "hash-Research_Build-Gate13RPR1BPathSafeActiveWrapperV5_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Build-Gate13RPR1BPathSafeActiveWrapperV5.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BMemoryAwareBlockV5_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BMemoryAwareBlockV5.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Run-Gate13RPR1BOrderEffectPilotV5_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Run-Gate13RPR1BOrderEffectPilotV5.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BStaticUnitV5_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BStaticUnitV5.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BBlockVerificationV6_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BBlockVerificationV6.ps1"
+                   },
+                   {
+                       "id":  "hash-Research_Verification_Run-Gate13RPR1BPrePilotV7_ps1",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Run-Gate13RPR1BPrePilotV7.ps1"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_PR1B_OrderEffect_Pilot_Attempt1_Terminal_Preservation_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Attempt1_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_PR1B_OrderEffect_Attempt1_Documentation_Manifest_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Attempt1_Documentation_Manifest.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_PR1B_OrderEffect_Pilot_Plan_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Pilot_Plan.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_PR1B_OrderEffect_Provenance_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_PR1B_OrderEffect_Provenance.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Verification_Gate12R_ProcessReuse_5pct_v8-gate13r-pr1b-order-effect_ValidationOnlyPrePilotAudit_summary_json",
+                       "passed":  true,
+                       "detail":  "Research/Verification/Gate12R_ProcessReuse_5pct/v8-gate13r-pr1b-order-effect/ValidationOnlyPrePilotAudit.summary.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v5-gate13r-pr1b-order-effect_failure-receipt_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/failure-receipt.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v5-gate13r-pr1b-order-effect_pilot-checkpoint_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/pilot-checkpoint.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v5-gate13r-pr1b-order-effect_partial-output-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v5-gate13r-pr1b-order-effect/partial-output-manifest.json"
+                   },
+                   {
+                       "id":  "frozen-Research_Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint_v1_json",
+                       "passed":  true,
+                       "detail":  "Research/Gate13R_RQAligned_NonExecuting_Readiness_Checkpoint.v1.json"
+                   },
+                   {
+                       "id":  "frozen-Research_FormalScenarios_Gate11R_5pct_v1_bundle-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v4_pilot-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-manifest.json"
+                   },
+                   {
+                       "id":  "frozen-Research_PilotRuns_Gate12R_ProcessReuse_5pct_v4_pilot-execution-manifest_json",
+                       "passed":  true,
+                       "detail":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v4/pilot-execution-manifest.json"
+                   },
+                   {
+                       "id":  "frozen-Assets__Scripts_Research_Editor_Gate12RProcessReuseBatchCommandV3_cs",
+                       "passed":  true,
+                       "detail":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV3.cs"
+                   },
+                   {
+                       "id":  "attempt1-root-inventory-unchanged",
+                       "passed":  true,
+                       "detail":  "files=425 bytes=18056679"
+                   },
+                   {
+                       "id":  "schedule-deterministic-regeneration",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "id":  "frozen-tree-v6-gate13r-pr1b-order-effect-memory-v2",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":49,\"rawBytes\":1955414,\"treeSha256\":\"85a3fba48ae687acaa04b7b1f91afe0dc115f6efdde5bcaa4bbffa50e9139557\"}"
+                   },
+                   {
+                       "id":  "frozen-tree-v9-gate13r-pr1b-order-effect-memory-v2",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":20,\"rawBytes\":176860,\"treeSha256\":\"5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74\"}"
+                   },
+                   {
+                       "id":  "frozen-tree-v10-gate13r-pr1b-order-effect-memory-v2",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":39,\"rawBytes\":275071,\"treeSha256\":\"5d20fbea2e6e734c9feddc2ed199a365bc307caac1a4b2cef3bb680cfebb2d44\"}"
+                   },
+                   {
+                       "id":  "frozen-tree-v11-gate13r-pr1b-order-effect-memory-v2",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":244,\"rawBytes\":6057665,\"treeSha256\":\"d819eb685a119175a5b1e362e7ac14997ff27b6f6696d109a6dd0202546b8d5b\"}"
+                   },
+                   {
+                       "id":  "positive-memory-evaluation-count",
+                       "passed":  true,
+                       "detail":  "count=8"
+                   },
+                   {
+                       "id":  "negative-fail-closed-terminal",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate12R_ProcessReuse_5pct\\v15-gate13r-pr1b-order-effect-pathsafe-v5\\BlockVerification\\negative-fail-closed\\per-agent"
+                   },
+                   {
+                       "id":  "pilot-root-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate12R_ProcessReuse_5pct\\v7-gate13r-pr1b-order-effect-pathsafe-v4"
+                   },
+                   {
+                       "id":  "formal-root-absent",
+                       "passed":  true,
+                       "detail":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned\\v1"
+                   },
+                   {
+                       "id":  "unity-closed",
+                       "passed":  true,
+                       "detail":  "No Unity process may remain."
+                   },
+                   {
+                       "id":  "unity-lock-absent",
+                       "passed":  true,
+                       "detail":  "Unity project lock must be absent."
+                   }
+               ],
+    "errors":  [
+
+               ],
+    "pilotExecutionAuthorized":  true,
+    "formalCampaign":  false,
+    "gate13rFormalAuthorized":  false,
+    "gate14rAuthorized":  false,
+    "passed":  true
+}

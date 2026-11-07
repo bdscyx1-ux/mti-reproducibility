@@ -1,0 +1,55 @@
+{
+  "schema": "gate14re-me-formal-st-v5.3-final-freeze-terminal-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_V5_3_IMPLEMENTATION_FROZEN_READY_FOR_READ_ONLY_FORMAL_PREFLIGHT",
+  "implementationRevision": "v5.3-authorization-contract-parity-fix",
+  "implementation": {
+    "manifestRelativePath": "Research/Gate14Re-ME/Execution/v5_3/formal-st-implementation-manifest.v5_3.json",
+    "manifestBytes": 12243,
+    "manifestSha256": "86b1c84b099849e052f3d9bea7e95da91ec492b98b058b25b284b20ab279ac82",
+    "manifestArtifactCount": 49,
+    "manifestValidationFailureCount": 0,
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_3/Run-Gate14ReMEFormalST.v5_3.ps1",
+    "supervisorSha256": "fcfbc5c080e714c3c3e079797195b455d9a32db29e937ccb37768a34a3cbdda1",
+    "acquisitionContractRelativePath": "Research/Gate14Re-ME/Execution/v5_3/formal-st-acquisition-contract.v5_3.json",
+    "acquisitionContractSha256": "b668fee1f1d245a3a898f958ea4b81af2fa328e2139d57ceebc162a3fb26a55b",
+    "authorizationCorrigendumSha256": "a85ec987496381b16adccc95b8eabd7375cbea68447b5baae417813e8b047c65"
+  },
+  "verification": {
+    "algorithmFreeReadinessTerminalRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/terminal-readiness-receipt.v1.json",
+    "algorithmFreeReadinessTerminalSha256": "144da1e966b14f010440e15a6f9865b4b0424128b35a03127e04ec5a769eead2",
+    "independentStaticValidationRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-002/independent-static-validation.v1.json",
+    "independentStaticValidationSha256": "b86bb17b64da0cca08ec1ffdf2864899e59a969a471eb17eb9da99821be4c7cb",
+    "powerShellParseErrorCount": 0,
+    "authorizationContractFieldMismatchCount": 0,
+    "frozenBindingFailureCount": 0,
+    "unityExitCode": 0,
+    "burstFinalCompilationDone": true,
+    "algorithmLaneExecuted": false
+  },
+  "failedOrIncompletePredecessors": {
+    "formalAttempt001EvidenceSealSha256": "b6c3dc8bbceb985c98de8a5238a30f0d9ca8f37f92795a5cd6e61f1dafceab09",
+    "formalAttempt002EvidenceSealSha256": "0f2a6ee6197f7ad0d0858b7da3b30312b1b75eaee95e3d38124bf68feb4e41cd",
+    "readinessAttempt001SealSha256": "f8124b770abd1f35b3f320980e08d1b4fa8a2a9c69da65f445b33fca9d2293cd",
+    "allReusable": false
+  },
+  "unchangedScientificBindings": {
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "sampleSizeDecisionSha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5",
+    "formalInputFreezeManifestSha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "runnerSha256": "12c44c11d831a28a5277b7f3b86687dfbe6572d50b93a74635a7437995c02d12",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "boundary": {
+    "formalMeasuredRootCreated": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "mqStarted": false,
+    "mtStarted": false,
+    "migrationPackageModified": false,
+    "separateFreshExecutionAuthorizationRequired": true,
+    "separateExactFormalLaunchCommandConfirmationRequired": true
+  },
+  "frozenAtUtc": "2026-10-26T12:15:26.4453567Z"
+}

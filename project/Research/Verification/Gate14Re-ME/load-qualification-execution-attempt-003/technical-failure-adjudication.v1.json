@@ -1,0 +1,68 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-003-technical-failure-adjudication-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-003-54167a1a-6695-4e19-8d8c-a03bb92370f2",
+  "attemptId": "load-qualification-execution-attempt-003",
+  "status": "FAILED_CLOSED_SCHEDULE_NULL_REPLACEMENT_DESERIALIZATION_CONTRACT_MISMATCH",
+  "passed": false,
+  "terminal": true,
+  "adjudicatedAtUtc": "2026-10-17T17:42:03.2457544Z",
+  "failureClass": "FROZEN_RUNTIME_SCHEDULE_DTO_COMPATIBILITY_DEFECT",
+  "supervisorFailure": {
+    "failedMode": "instrument-self-test",
+    "exactFailure": "Unity exited nonzero: mode=instrument-self-test pid=84312 exitCode=1",
+    "failureReceiptRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001/_control/failure-receipt.v2.json",
+    "failureReceiptSha256": "e1d0737869fa49fd6f3df063c3cf2ba51d2ff8d519d08f460607b29ea488fdcf",
+    "unityLogRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-001/_control/unity-logs/process-0000.unity.log",
+    "unityLogSha256": "8a5af2ca6adf6bd0e429adf860abae8cd52b846febb34bee49b12b0b894929de",
+    "unityLogError": "InvalidOperationException: Replacement superblock id is invalid in schedule row 0."
+  },
+  "evidenceChain": {
+    "scheduleRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v2-attempt-001/planning-assets/schedule/formal-qualification-williams-schedule.v1.jsonl",
+    "scheduleSha256": "328301be5b496a794b67962693183242286d22bc6030db6c746daf7873582471",
+    "scheduleRow0Ordinal": 0,
+    "scheduleRow0SuperblockId": "G14ME-QSB-C001",
+    "scheduleRow0ReplacementMemberPresent": true,
+    "scheduleRow0ReplacementJsonValue": null,
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "runnerSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "runnerReadMethod": "JsonUtility.FromJson<T>",
+    "runnerReadMethodLines": [1083, 1099],
+    "runnerReplacementBranchLine": 733,
+    "runnerReplacementIdGuardLines": [735, 737],
+    "dtoRelativePath": "Assets/_Scripts/Research/Gate14ReME/v1/Gate14ReMEQualificationContractsV1.cs",
+    "dtoSha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4",
+    "dtoReplacementFieldLine": 86
+  },
+  "causalInference": {
+    "statement": "The frozen JSON null replacement is not preserved as a null object by the active Unity JsonUtility schedule deserialization path. The resulting non-null replacement DTO has no valid superblockId, so RunnerV2 enters the replacement branch and fails before the instrument self-test can execute.",
+    "basis": [
+      "The authoritative schedule row 0 contains the replacement member with JSON null.",
+      "The frozen RunnerV2 can emit the observed message only after row.replacement != null evaluates true.",
+      "The first replacement guard then rejects an empty or whitespace superblockId.",
+      "Unity emitted that exact guard message before any process ledger or instrument receipt was produced."
+    ],
+    "algorithmImplementationImplicated": false,
+    "instrumentMetricImplementationImplicated": false,
+    "scientificLoadResultProduced": false
+  },
+  "disposition": {
+    "supervisorNaturalExitObserved": true,
+    "signalOrForcedTerminationSent": false,
+    "unityInvocationCount": 1,
+    "algorithmLaneExecutionCount": 0,
+    "processLedgerRows": 0,
+    "processIdentityReceipts": 0,
+    "qualificationMeasuredRootCreated": true,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "retryPerformed": false,
+    "replacementPerformed": false,
+    "newAttemptCreatedAutomatically": false,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "nextRequiredAction": "A separately authorized schedule-null/RunnerV2 deserialization compatibility corrigendum is required. It must preserve this failed attempt, add an isolated Unity known-answer covering replacement:null and a valid replacement object, re-freeze the affected source or schedule contract and dependent hashes, then complete a new execution-readiness recheck before any new qualification execution attempt."
+}

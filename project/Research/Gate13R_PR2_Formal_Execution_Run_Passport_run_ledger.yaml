@@ -1,0 +1,901 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-08T17:02:22Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-08T17:02:22Z'
+  user_words: "授权 Gate 13R-PR2 S48/H48 正式 campaign 的一次受控执行；不授权 Gate 14R。\n\n一、唯一活动配置与冻结输入\n\
+    \n1. 以 `Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json`（SHA-256\
+    \ `669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc`）为唯一 PR2 readiness\
+    \ checkpoint。\n\n2. 只允许使用以下 active formal-preparation v2 artifacts：\n   - `Research/Gate13R_PR2_Formal_Campaign_Config.v2.json`，SHA-256\
+    \ `87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e`；\n   - `Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl`，SHA-256\
+    \ `df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae`；\n   - `Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json`，SHA-256\
+    \ `b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724`；\n   - `Research/Gate13R_PR2_Storage_WallClock_Preflight.v2.json`，SHA-256\
+    \ `c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435`；\n   - `Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json`，SHA-256\
+    \ `9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56`；\n   - `Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json`，SHA-256\
+    \ `940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e`；\n   - `Research/Gate13R_PR2_Formal_Preparation_Amendment.v1.json`；\n\
+    \   - Gate 13R-PR1 metric/contrast registries、Gate 10R attempt 4、Gate 11R attempt\
+    \ 2 retained bundle、Gate 12R v4，以及 PR1B v4 recovery 中被上述 config/provenance 精确绑定的输入。\n\
+    \n3. PR2 official v1 artifact set 和 validation attempts 1–3 只作为失败/修复历史保留，禁止用于正式启动。旧\
+    \ cold-process、parallel、36h/48h、strict-serial 10% v2、PR1B pilots 及其他历史 config/schedule/prompt\
+    \ 均不得启动或与本次数据合并。\n\n4. 完整保留并保持字节不变：Gate 10R/11R/12R/PR1/PR1B 全部冻结证据、PR1B v7 failed\
+    \ pilot、v4 recovery、PR2 v1/v2 artifacts、PR2 validation attempts 1–4、原始游戏脚本、原始场景和原始项目归档。\n\
+    \n二、正式设计\n\n5. 正式设计固定为完整 74-campaign `S48/H48`：\n   - 32 个 shared-goal campaigns，每\
+    \ campaign 48 个完整四算法 Williams blocks；\n   - 21 个 heterogeneous scenarios，每 scenario\
+    \ 48 个 matched superblocks；\n   - 每个 matched superblock 含一个 fresh per-agent process\
+    \ 和一个 fresh grouped-field process；\n   - 每个 heterogeneous scenario 的 AB/BA 为 24/24；\n\
+    \   - shared 共 1,536 processes / 6,144 samples；\n   - heterogeneous 共 1,008 matched\
+    \ superblocks / 2,016 processes / 4,032 samples；\n   - 总计 3,552 fresh Unity block\
+    \ processes / 10,176 algorithm samples。\n\n6. 严格串行，最大并发 Unity Editor 数为 1。一个 fresh\
+    \ Unity Editor process 最多执行一个完整 Williams block；每个算法在 block 内最多一次；每样本完整 reset；禁止跨\
+    \ block、matched superblock 或 campaign process reuse。\n\n7. P1 仍是唯一 confirmatory\
+    \ primary endpoint；shared C1–C5 是 Holm FWER 0.05 confirmatory family；heterogeneous\
+    \ C1–C4 是 secondary system/treatment contrasts；P2–P5 supportive；M1–M5 留给 Gate\
+    \ 14R。15% 只是 power-planning effect anchor，不是 practical-superiority margin。不得修改\
+    \ ratio-to-1/CI/Holm 规则，不得做 adaptive stopping，不得把 pooled 结果解释为每个 campaign 均优越。\n\
+    \n8. correctness、oracle、structural exact-match、deterministic identity、reset、telemetry、managed-memory、hash/provenance、failure/timeout\
+    \ denominator 和排除规则保持冻结。Playable Scene 与 OBS 只能用于未来独立可视化，禁止进入正式 timing 进程或正式 timing\
+    \ inference。\n\n三、正式启动前的非执行实现与硬门禁\n\n9. 允许为 active v2 config/schedule 新建一个 versioned\
+    \ formal execution adapter/orchestrator、authorization record、prelaunch test design、atomic\
+    \ checkpoint 和 provenance；只能把 v2 schedule 映射到已经冻结的 block runner，不得修改算法、场景、Williams/matched-superblock\
+    \ 顺序、reset、telemetry、memory 或统计语义。\n\n10. 在创建正式输出根前，必须完成并通过：\n    - Windows PowerShell\
+    \ 5.1 与活动 PowerShell runtime parser/binding 检查；\n    - config/schema/schedule/manifest\
+    \ 全量解析、SHA-256 和 deterministic reconstruction；\n    - 3,552 process / 10,176 sample、74×48、1,008\
+    \ matched-superblock、AB/BA 24/24、order×row 12/cell 和唯一 run/output identity 复核；\n\
+    \    - execution adapter 的静态、单元、synthetic fixture、negative no-receipt/fail-closed\
+    \ 和 validation-only dry-run；\n    - frozen upstream tree/key-file 不变性；\n    -\
+    \ Unity lock hygiene、零非本任务 Unity process、license/entitlement、网络、原生 Windows PowerShell\
+    \ 5.1 `PSModulePath`、高性能电源、禁用休眠、环境/热状态与存储检查；\n    - H: 可用空间不得低于 `57,397,541,440`\
+    \ bytes，并重新计算原始字节预算；\n    - 精确 formal root 和同版本 formal execution receipt 在授权启动前均不存在。\n\
+    \n11. 允许对第 9–10 条中本阶段新建且尚未创建 formal root、尚未启动任何 measured block 的 adapter/schema/validation-only\
+    \ 实现缺陷进行版本化修复和重试；每次失败必须独立保存 receipt、日志、manifest、checkpoint 与哈希。不得通过放宽门禁、修改 frozen\
+    \ config/schedule 或改变研究语义取得通过。\n\n四、一次正式执行\n\n12. 只有全部启动前硬门禁通过后，才创建精确正式根：\n  \
+    \  `H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v1`\n\
+    \    并创建与 authorization、active config、schedule、manifest、readiness、adapter、resolved\
+    \ root 和全部 preflight 结果精确绑定的 versioned formal execution receipt。\n\n13. formal\
+    \ root 和 receipt 创建后，只允许启动一次完整正式 attempt，按 schedule 的 global process ordinal 严格串行执行。不得改变顺序、跳过\
+    \ block、并行化、复用进程、提前停止、补齐、择优保留或动态改变样本量。\n\n14. 任一 measured sample、block、matched\
+    \ superblock、hash、telemetry、correctness、memory、license、环境或持久化硬门禁失败时立即 fail closed：\n\
+    \    - 不启动下一个 block；\n    - 原子保存 formal failure checkpoint、execution receipt 状态、部分输出\
+    \ manifest、日志、当前 global ordinal、campaign/superblock/block/run identity、文件数、原始字节数和最后写入时间；\n\
+    \    - 标记 `FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE`；\n    - 停止并向我报告，不得自动开始新的正式\
+    \ attempt。\n\n15. 禁止自动 retry、自动 resume、top-up、partial-attempt merge、把失败 attempt\
+    \ 改写为通过、把 pilot/历史 observations 混入正式数据，或在本授权下启动 Gate 14R。\n\n16. 完成 3,552 processes\
+    \ / 10,176 samples 后，只运行冻结的完整性、hash/provenance、block/matched-superblock completeness\
+    \ 和 formal-readiness-for-analysis 审计；不得在没有后续授权时启动 Gate 14R。成功后停止并向我请求 Gate 14R/正式分析阶段的单独授权。\n\
+    \n17. 时间与存储仅为规划包络：serial p50 `20.808185450666667 h`，conservative summed-p95 `26.45538207066667\
+    \ h`，projected p95 raw bytes `9,631,912,320`，1.5× safety bytes `14,447,868,480`。这些数值不是放宽门禁或保证完成时间的依据。"
+  prev_hash: null
+  hash: a75e609d64802261d13ab2eda07ba890c706c0d4304cbf4d7935113e3e7d50d8
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-08T17:02:43Z'
+  step: Freeze raw-data acquisition / analysis two-phase commit before formal data
+  command: Create and bind Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json
+    and specification
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - RAW-DATA-ACQUISITION-AND-ANALYSIS-SEPARATED
+  - RAW-DATA-COMPLETE-ANALYSIS-PENDING-IMMUTABLE
+  - ORDINARY-POST-COLLECTION-TOOL-FAILURE-NO-UNITY-RERUN
+  - VERSIONED-READ-ONLY-ANALYSIS-ATTEMPTS
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json: 805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df
+    Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md: 1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5
+  prev_hash: a75e609d64802261d13ab2eda07ba890c706c0d4304cbf4d7935113e3e7d50d8
+  hash: eadba35c550296abd81782fdebdd86e5debadd1df7f31b87b26dffb8024f234b
+- seq: 3
+  kind: checkpoint_opened
+  at: '2026-10-08T17:12:56Z'
+  checkpoint_id: gate13r-pr2-two-phase-supplemental-authorization-v1
+  stage: gate13r-pr2-formal-prelaunch
+  checkpoint_type: MANDATORY
+  question: Authorize the frozen raw-data / analysis two-phase commit supplement and
+    continuation through one Gate 13R-PR2 S48/H48 formal raw-acquisition attempt after
+    every prelaunch hard gate passes?
+  options:
+  - AUTHORIZED
+  - NOT-AUTHORIZED
+  prev_hash: eadba35c550296abd81782fdebdd86e5debadd1df7f31b87b26dffb8024f234b
+  hash: 57fbbc3f330a6dfe783cf9cfaa74b01db901c3853f79e996bb1a9f9410bc6873
+- seq: 4
+  kind: checkpoint_closed
+  at: '2026-10-08T17:12:57Z'
+  checkpoint_id: gate13r-pr2-two-phase-supplemental-authorization-v1
+  answer: AUTHORIZED
+  user_words: "授权将 Gate 13R-PR2 raw-data / analysis 两阶段提交规则正式绑定到此前已经授权的 Gate 13R-PR2\
+    \ S48/H48 正式 campaign，并继续完成剩余预启动验证；全部启动前硬门禁通过后，按原授权执行一次正式 raw-data acquisition\
+    \ attempt。\n\n本授权是对既有 Gate 13R-PR2 正式执行授权的补充，不替换、不扩大也不削弱既有授权。仍不授权 Gate 14R，也不授权第二阶段正式统计分析。\n\
+    \n一、活动上游与两阶段提交绑定\n\n1. 继续以此前授权的以下 active Gate 13R-PR2 formal-preparation artifacts\
+    \ 为唯一正式执行上游：\n\n   - `Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json`\n\
+    \     SHA-256：\n     `669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc`\n\
+    \n   - `Research/Gate13R_PR2_Formal_Campaign_Config.v2.json`\n     SHA-256：\n\
+    \     `87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e`\n\n \
+    \  - `Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl`\n     SHA-256：\n\
+    \     `df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae`\n\n \
+    \  - `Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json`\n\
+    \     SHA-256：\n     `b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724`\n\
+    \n   - `Research/Gate13R_PR2_Storage_WallClock_Preflight.v2.json`\n     SHA-256：\n\
+    \     `c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435`\n\n \
+    \  - `Research/Gate13R_PR2_Formal_Preparation_Provenance.v2.json`\n     SHA-256：\n\
+    \     `9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56`\n\n \
+    \  - `Research/Gate13R_PR2_Formal_Preparation_Schema.v2.json`\n     SHA-256：\n\
+    \     `940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e`\n\n2.\
+    \ 将以下已经在正式数据产生前建立的两阶段提交文件作为本次 formal execution 的强制补充合同：\n\n   - `Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json`\n\
+    \     SHA-256：\n     `805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df`\n\
+    \n   - `Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md`\n\
+    \     SHA-256：\n     `1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5`\n\
+    \n3. 后续 formal execution receipt、adapter provenance、prelaunch checkpoint、raw execution\
+    \ manifest 和 raw-data freeze receipt 必须显式绑定上述 amendment/specification 的：\n\n \
+    \  - 相对路径；\n   - 解析后绝对路径；\n   - amendment/specification ID；\n   - SHA-256；\n \
+    \  - 本次 formal authorization identity；\n   - active config、schedule、schedule manifest\
+    \ 和 readiness checkpoint identity。\n\n4. 两阶段提交 amendment 是 additive execution-integrity\
+    \ amendment。它不得改变：\n\n   - S48/H48；\n   - 74-campaign 矩阵；\n   - 3,552 个 fresh\
+    \ Unity block processes；\n   - 10,176 个 algorithm samples；\n   - shared-goal Williams\
+    \ 顺序；\n   - heterogeneous matched-superblock 顺序；\n   - AB/BA 24/24；\n   - 严格串行；\n\
+    \   - 一个 Unity Editor process 最多执行一个完整 block；\n   - 每算法在一个 block 中最多执行一次；\n  \
+    \ - 每样本完整 reset；\n   - telemetry；\n   - managed-memory 规则；\n   - correctness/oracle/structural\
+    \ exact-match；\n   - P1–P5 与 C1–C5 统计语义；\n   - Holm FWER 规则；\n   - frozen exclusion、failure\
+    \ 和 timeout denominator 规则。\n\n二、第一阶段：正式原始数据采集提交\n\n5. 第一阶段只授权 formal raw-data\
+    \ acquisition，不授权正式统计分析。\n\n6. 全部启动前硬门禁通过后，才允许创建精确正式输出根：\n\n   `H:\\DDM_Final_Project\\\
+    Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v1`\n\n   并创建唯一、版本化、不可变的 formal\
+    \ execution receipt。\n\n7. formal execution receipt 必须明确记录：\n\n   - `RAW-ACQUISITION-AUTHORIZED`\n\
+    \   - `FORMAL-ANALYSIS-NOT-AUTHORIZED`\n   - `GATE14R-NOT-AUTHORIZED`\n   - `NO-AUTOMATIC-UNITY-RETRY`\n\
+    \   - `NO-AUTOMATIC-UNITY-RESUME`\n   - `NO-TOP-UP`\n   - `NO-PARTIAL-ATTEMPT-MERGE`\n\
+    \   - `TWO-PHASE-COMMIT-REQUIRED`\n\n8. 正式采集按冻结 schedule 的 global process ordinal\
+    \ 严格串行执行：\n\n   - 32 个 shared-goal campaigns；\n   - 每个 shared campaign 48 个完整四算法\
+    \ Williams blocks；\n   - shared 共 1,536 个 Unity processes 和 6,144 个 algorithm\
+    \ samples；\n   - 21 个 heterogeneous scenarios；\n   - 每个 heterogeneous scenario\
+    \ 48 个 matched superblocks；\n   - 每个 matched superblock 包含一个 fresh per-agent process\
+    \ 和一个 fresh grouped-field process；\n   - heterogeneous 共 1,008 个 matched superblocks、2,016\
+    \ 个 Unity processes和 4,032 个 algorithm samples；\n   - 总计 3,552 个 fresh Unity block\
+    \ processes 和 10,176 个 algorithm samples。\n\n9. Unity measured execution 期间，任一\
+    \ sample、block、matched superblock、correctness、oracle、structural exact-match、reset、telemetry、managed-memory、license、environment、hash、identity\
+    \ 或原子持久化硬门禁失败时，继续执行原 formal fail-closed 规则：\n\n   - 不启动下一个 block；\n   - 原子保存 failure\
+    \ checkpoint；\n   - 保存当前 global ordinal、campaign、block、superblock 和 run identity；\n\
+    \   - 保存部分输出 manifest、日志、文件数量、原始字节数和最后写入时间；\n   - 标记：\n     `FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE`；\n\
+    \   - 停止并向我报告；\n   - 不得自动开始新的 Unity attempt。\n\n10. 上述第 9 条只适用于尚未完成全部 Unity measured\
+    \ execution 时发生的真实采集阶段失败。不得把所有 Unity blocks 完成之后发生的 raw-audit 或分析软件错误重新解释为 measured\
+    \ acquisition 失败。\n\n三、Unity 执行完成后的 raw-commit 边界\n\n11. 当且仅当 3,552 个 Unity block\
+    \ processes 均已完成且 10,176 个 algorithm samples 均已落盘后，编排器必须先原子写入中间状态：\n\n   `UNITY-COLLECTION-COMPLETE`\n\
+    \   `RAW-COMMIT-AUDIT-PENDING`\n   `NO-UNITY-RERUN`\n\n12. 一旦进入该状态：\n\n   - 本次\
+    \ attempt 的 Unity measured execution 永久结束；\n   - 不得因为后续 raw-commit auditor、manifest\
+    \ generator、hash calculator、PowerShell、Python、JSON parser、统计分析器或报告生成器的软件缺陷而再次启动\
+    \ Unity；\n   - 不得删除、覆盖或补齐已经采集的 measured block；\n   - 不得修改、重排或合并 raw observations；\n\
+    \   - 不得从 schedule 起点或失败位置自动重新执行；\n   - 不得创建新的 measured sample 来替换已有 sample。\n\
+    \n13. raw-commit audit 必须对已完成的 raw payload 进行只读验证，并生成至少：\n\n   - `raw-execution-manifest.json`；\n\
+    \   - `raw-payload-file-manifest.jsonl`；\n   - `environment-end-snapshot.json`；\n\
+    \   - `raw-data-freeze-receipt.json`；\n   - `formal-checkpoint.json`；\n   - block/sample\
+    \ 完整性结果；\n   - 文件数量和原始字节数；\n   - 每个 block、sample、summary 和 workload result 的 SHA-256；\n\
+    \   - schedule、Williams row、matched-superblock 和 AB/BA 配额检查；\n   - run ID 和 output\
+    \ identity 唯一性检查；\n   - Unity process 与项目锁最终静止状态；\n   - canonical raw-payload\
+    \ tree SHA-256。\n\n14. canonical raw-payload tree hash 必须使用确定性的、非自引用的文件清单计算。至少包括：\n\
+    \n   - project-relative payload path；\n   - original byte count；\n   - file SHA-256；\n\
+    \   - ordinal stable sort。\n\n   raw file manifest、freeze receipt、mutable root\
+    \ status/checkpoint 和未来 analysis directories 不得作为其自身 payload hash 的成员。\n\n15.\
+    \ raw-commit audit 全部通过后，必须：\n\n   - 对 schedule-owned measured payload 应用只读冻结；\n\
+    \   - 冻结前后重新计算 canonical raw-payload tree SHA-256；\n   - 验证文件数量、原始字节数和 canonical\
+    \ tree hash 均未变化；\n   - 验证冻结 payload 不包含可写 measured 文件；\n   - 生成并原子提交 `raw-data-freeze-receipt.json`；\n\
+    \   - 将最终状态写为：\n\n     `RAW-DATA-COMPLETE`\n     `ANALYSIS-PENDING`\n     `IMMUTABLE`\n\
+    \n16. `RAW-DATA-COMPLETE` 只能在 raw-commit audit 实际通过后声明。不得因为 Unity 已完成就跳过文件、身份、schedule、hash、telemetry\
+    \ 或完整性核验。\n\n四、raw-commit auditor 故障的恢复规则\n\n17. 如果全部 Unity processes 已经完成，但 raw-commit\
+    \ auditor 因普通软件问题失败，例如：\n\n   - PowerShell/Python/JSON parser 缺陷；\n   - manifest\
+    \ 生成器 bug；\n   - 路径解析错误；\n   - 非自引用 hash 实现错误；\n   - report/serialization 错误；\n\
+    \   - audit checkpoint 写入错误；\n   - 不影响 measured payload 本身的验证代码错误；\n\n   则状态必须保持为：\n\
+    \n   `UNITY-COLLECTION-COMPLETE`\n   `RAW-COMMIT-AUDIT-PENDING`\n   `NO-UNITY-RERUN`\n\
+    \n18. 第 17 条所述错误不得使正式 raw 数据作废，也不得触发 Unity measured blocks 重跑。\n\n19. 允许在不启动 Unity、不修改\
+    \ measured payload 的条件下，对 raw-commit auditor 进行：\n\n   - versioned 修复；\n   - synthetic-fixture\
+    \ 测试；\n   - validation-only 测试；\n   - 独立、版本化、只读 raw-commit audit recovery。\n\n\
+    20. 每次 raw-commit audit recovery 必须写入独立的 attempt 目录或独立 versioned evidence，不得覆盖先前失败\
+    \ attempt。每个 attempt 必须保存：\n\n   - authorization/binding；\n   - analyzer/auditor\
+    \ code SHA-256；\n   - synthetic-fixture 结果；\n   - validation-only 结果；\n   - failure或success\
+    \ receipt；\n   - checkpoint；\n   -日志；\n   - partial-output manifest；\n   - raw\
+    \ payload 审计前 SHA-256；\n   - raw payload 审计后 SHA-256。\n\n21. raw-commit audit\
+    \ recovery 必须证明 raw payload 前后 hash 完全一致。不得：\n\n   - 修改 raw measured files；\n\
+    \   - 制造缺失 observation；\n   - 复制其他 block 填补缺失 block；\n   - 改写 telemetry；\n   -\
+    \ 改写 run/block identity；\n   - 放宽原采集合同；\n   - 删除不利或失败数据；\n   - 通过修改阈值取得通过。\n\n\
+    22. 只有 raw evidence 本身证明存在真实 acquisition-contract violation 时，才允许将状态标记为：\n\n \
+    \  `RAW-CONTRACT-VIOLATION`\n   `USER-DECISION-REQUIRED`\n   `NO-UNITY-RERUN`\n\
+    \n   真实 violation 包括但不限于：\n\n   - block 或 sample 实际缺失；\n   - 原始文件损坏或 hash 不一致；\n\
+    \   - duplicate run ID；\n   - schedule/global ordinal 不一致；\n   - Williams 或 AB/BA\
+    \ 配额错误；\n   - 必需 telemetry 缺失；\n   - correctness 或 structural evidence 不合法；\n\
+    \   - measured payload 在冻结前被修改；\n   - 无法证明完整、唯一和可追溯身份。\n\n23. 即使证明存在真实 raw-contract\
+    \ violation，也不得自动重跑 Unity。必须：\n\n   - 保留现有 attempt；\n   - 保存完整违规证据；\n   - 停止；\n\
+    \   - 向我请求是否建立全新正式 attempt 的单独授权。\n\n五、第二阶段：只读分析提交\n\n24. 第二阶段正式分析不属于本次授权。本次只允许完成\
+    \ raw-data acquisition 和 raw-data commit，不得启动正式统计分析或 Gate 14R。\n\n25. 未来正式分析必须等待我的单独授权，并且只能只读访问已经达到以下状态的\
+    \ raw root：\n\n   `RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE`\n\n26. 未来每次\
+    \ analysis attempt 必须写入独立目录，例如：\n\n   `Research/Analysis/Gate13R_RQAligned_S48H48/v1/attempt-1`\n\
+    \   `Research/Analysis/Gate13R_RQAligned_S48H48/v1/attempt-2`\n\n27. 每个 analysis\
+    \ attempt 必须绑定：\n\n   - `raw-data-freeze-receipt.json` SHA-256；\n   - canonical\
+    \ raw-payload tree SHA-256；\n   - analysis implementation SHA-256；\n   - statistical\
+    \ contract/version；\n   - metric and contrast registry SHA-256；\n   - synthetic\
+    \ fixtures SHA-256；\n   - validation-only tests SHA-256；\n   - analysis authorization\
+    \ identity。\n\n28. 分析器必须在分析前后重新计算 raw-payload tree SHA-256，并证明完全一致。分析结果、临时文件、cache、bootstrap\
+    \ 输出和报告不得写入 formal raw root。\n\n29. 如果未来 analysis attempt 因普通分析代码、统计实现、bootstrap、serialization、report\
+    \ 或 schema bug 失败：\n\n   - 保留该失败 attempt；\n   - 不修改 raw data；\n   - 不删除失败证据；\n\
+    \   - 不重跑 Unity；\n   - 对分析器进行 versioned 修复；\n   - 先重新通过 synthetic fixtures 和 validation-only\
+    \ tests；\n   - 再对同一份冻结 raw data 创建新的 analysis attempt。\n\n30. 普通分析器失败永远不得使已提交的\
+    \ raw data 作废，也不得触发 Unity measured-block retry、resume、top-up 或新实验。\n\n六、预启动验证与正式启动条件\n\
+    \n31. 在创建 formal root 和 formal execution receipt 之前，继续完成原授权要求的全部 prelaunch checks，包括：\n\
+    \n   - Windows PowerShell 5.1 和活动 PowerShell parser/binding；\n   - active config/schema/schedule/manifest\
+    \ 全量解析和 SHA-256；\n   - 3,552 process、10,176 sample、74×48、1,008 matched-superblock\
+    \ 和 AB/BA 24/24 复核；\n   - formal adapter、block wrapper 和 campaign orchestrator\
+    \ 的静态、单元、synthetic-fixture、negative fail-closed 和 validation-only tests；\n   -\
+    \ two-phase state-machine tests；\n   - raw-payload deterministic hash tests；\n\
+    \   - auditor-failure-after-Unity-completion fixture；\n   - proven-raw-contract-violation\
+    \ fixture；\n   - no-Unity-rerun assertion；\n   - frozen upstream 不变性；\n   - Unity\
+    \ 编译和 telemetry/memory/path-safe atomic self-tests；\n   - license/entitlement；\n\
+    \   - Unity lock hygiene；\n   - 零非本任务 Unity process；\n   - native Windows PowerShell\
+    \ 5.1 `PSModulePath`；\n   - 网络、电源、休眠、环境、热状态和存储检查；\n   - H: 可用原始字节不得低于 `57,397,541,440`；\n\
+    \   - formal root 和 formal execution receipt 在授权创建前不存在。\n\n32. 允许对尚未创建 formal\
+    \ root、尚未启动 measured block 时，本阶段新建的 adapter、wrapper、orchestrator、two-phase state\
+    \ machine、raw-commit auditor、schema 和 validation-only 测试缺陷进行版本化修复与重试。\n\n33. 每个\
+    \ prelaunch 失败 attempt 必须保留独立 receipt、日志、manifest、checkpoint、哈希和诊断。不得覆盖失败证据，不得修改冻结\
+    \ config、schedule、amendment 或研究语义来取得通过。\n\n34. 只有全部 prelaunch hard gates 通过后，才允许：\n\
+    \n   - 创建精确 formal root；\n   - 创建唯一 formal execution receipt；\n   - 启动一次正式 raw\
+    \ acquisition attempt。\n\n七、停止条件\n\n35. 如果正式 raw acquisition 在 measured execution\
+    \ 期间失败：\n\n   - 按原 formal fail-closed 规则停止；\n   - 不自动 retry/resume/top-up/merge；\n\
+    \   - 向我报告。\n\n36. 如果所有 Unity blocks 已完成，但 raw-commit auditor 失败：\n\n   - 不重跑\
+    \ Unity；\n   - 保持 raw payload；\n   - 进入 versioned read-only raw-commit audit recovery；\n\
+    \   - 只有证明真实 raw-contract violation 时才停止并向我请求决定。\n\n37. 如果 raw-data commit 成功：\n\
+    \n   - 停止于：\n     `RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE`；\n   - 提交\
+    \ raw-data freeze receipt、manifest、文件数量、原始字节数、canonical tree hash、environment\
+    \ end snapshot 和冻结不变性结果；\n   - 不启动正式统计分析；\n   - 不启动 Gate 14R；\n   - 向我请求第二阶段正式分析的单独授权。\n\
+    \n本授权明确不授权：\n\n- Gate 14R；\n- 第二阶段正式统计分析；\n- Playable/OBS 正式测量；\n- analysis output\
+    \ 写入 formal raw root；\n- 自动 Unity retry；\n- 自动 Unity resume；\n- measured-block\
+    \ top-up；\n- partial-attempt merge；\n- 因普通 raw auditor 或 analysis bug 重跑 Unity；\n\
+    - 修改 active config、schedule、scenario、algorithm、Williams、AB/BA、sample count、telemetry、memory、correctness\
+    \ 或统计语义。"
+  prev_hash: 57fbbc3f330a6dfe783cf9cfaa74b01db901c3853f79e996bb1a9f9410bc6873
+  hash: 45e4365547939117beb07464e43d7bc37d0240b55315c1c1719054285478ca0b
+- seq: 5
+  kind: file_reference
+  at: '2026-10-08T17:12:57Z'
+  path: Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt
+  sha256: 4af69eb71362f89698d38760db335985a015af49f176dd7f81805cb6d2d4821a
+  role: exact user supplemental formal authorization
+  prev_hash: 45e4365547939117beb07464e43d7bc37d0240b55315c1c1719054285478ca0b
+  hash: cab50dbe2e10c65499bd1a9d5d2289a7f55d612c7d26a609443c559b20d65046
+- seq: 6
+  kind: tool_receipt
+  at: '2026-10-08T17:16:33Z'
+  step: Gate 13R-PR2 formal prelaunch Unity self-tests attempt 1
+  command: Run-Gate13RPR2FormalUnitySelfTestsV1.ps1 under native Windows PowerShell
+    5.1 with no formal root or measured samples
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - PRELAUNCH-IMPLEMENTATION-DEFECT
+  - UNITY-LOG-SHARING-VIOLATION
+  - MEMORY-FIXTURES-12-OF-12-PASSED
+  - TELEMETRY-FIXTURES-8-OF-8-PASSED
+  - FORMAL-ROOT-NOT-CREATED
+  - MEASURED-SAMPLES-NOT-STARTED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV1/failure-receipt.json: 5569fdee5b3fab710517e77426b5846f2856abd6ae4673633a60ce81a4827083
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV1/failure-checkpoint.json: fe497aac88e182da7333a9af30e4742217d8784ec800c36b0e3314241623103e
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV1/partial-output-manifest.json: c7bcac84ae7610b35e0a0484cbde6d4a221ff96e29e0bcdf4c94f6174dab53e0
+  prev_hash: cab50dbe2e10c65499bd1a9d5d2289a7f55d612c7d26a609443c559b20d65046
+  hash: 24cf9aa0e20edcbdc39e9ff3d566c590e58b240c2262b2a8c4b3f5368b372c2b
+- seq: 7
+  kind: tool_receipt
+  at: '2026-10-08T17:21:01Z'
+  step: Gate 13R-PR2 formal prelaunch Unity self-tests attempt 2
+  command: Run-Gate13RPR2FormalUnitySelfTestsV2.ps1 under native Windows PowerShell
+    5.1 with stable-log retry but pre-fix scalar Count handling
+  status: failed
+  exit_status: 1
+  retries_used: 1
+  gate_tokens:
+  - PRELAUNCH-POWERSHELL51-COMPATIBILITY-DEFECT
+  - STRICT-MODE-NULL-COUNT
+  - MEMORY-FIXTURES-12-OF-12-PASSED
+  - TELEMETRY-FIXTURES-8-OF-8-PASSED
+  - FORMAL-ROOT-NOT-CREATED
+  - MEASURED-SAMPLES-NOT-STARTED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV2/failure-receipt.json: ba008e50bfd85cf7bd177f98ca4334a43da21d11b3a12b1c9db3fedf3de17568
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV2/failure-checkpoint.json: 88426e987a48349f574b13f603ea22aaa1e7461702a6eb0b31d38394f606ecfe
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV2/partial-output-manifest.json: 69728dff4ab6ff2946467f6a9467261bba95c05f4ce1fc7ce720a831fef160d9
+  prev_hash: 24cf9aa0e20edcbdc39e9ff3d566c590e58b240c2262b2a8c4b3f5368b372c2b
+  hash: ea9c28f7286e79864215065dc141a328e62cb93c1139824fcd1a9945212b5340
+- seq: 8
+  kind: tool_receipt
+  at: '2026-10-08T17:23:07Z'
+  step: Gate 13R-PR2 formal adapter unit and two-phase fixtures v4
+  command: Test-Gate13RPR2FormalExecutionV4.ps1 under native Windows PowerShell 5.1
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - UNIT-35-OF-35
+  - TWO-PHASE-STATE-CLASSIFICATION-PASSED
+  - STABLE-LOG-READ-PASSED
+  - RAW-HASH-FREEZE-FIXTURES-PASSED
+  - FORMAL-ROOT-ABSENT
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/AdapterUnitV4/summary.json: b25cdd62027e4148346dbde5cb5cee92dfa736111bb4bd272521c548674efc4a
+  prev_hash: ea9c28f7286e79864215065dc141a328e62cb93c1139824fcd1a9945212b5340
+  hash: d64a8c0dec4fd4182ff2f5c4edefac65382e239a8c22d8989f38f394df23fccc
+- seq: 9
+  kind: tool_receipt
+  at: '2026-10-08T17:23:07Z'
+  step: Gate 13R-PR2 formal prelaunch Unity self-tests attempt 3
+  command: Run-Gate13RPR2FormalUnitySelfTestsV3.ps1 under native Windows PowerShell
+    5.1
+  status: passed
+  exit_status: 0
+  retries_used: 2
+  gate_tokens:
+  - UNITY-COMPILE-PASSED
+  - MEMORY-POLICY-12-OF-12
+  - TELEMETRY-VALIDATION-8-OF-8
+  - PATH-SAFE-ATOMIC-PASSED
+  - LICENSE-ENTITLEMENT-PASSED
+  - LOCK-HYGIENE-PASSED
+  - NO-MEASURED-SAMPLE
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/UnitySelfTestsV3/unity-self-tests-summary.json: 1feaf6a2714e5cb9cff6e07237baafbe03699681ff1b26289554898cee8b2614
+  prev_hash: d64a8c0dec4fd4182ff2f5c4edefac65382e239a8c22d8989f38f394df23fccc
+  hash: 74580d0bf798dfc80023132c1d70dffd5792b1db841bd50b4d2ae2ca0f864e84
+- seq: 10
+  kind: tool_receipt
+  at: '2026-10-08T17:23:07Z'
+  step: Gate 13R-PR2 formal prelaunch telemetry probe v3
+  command: Run-Gate13RPR2FormalTelemetryProbeV3.ps1 under native Windows PowerShell
+    5.1
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - PSAPI-CIM-CROSSCHECK-PASSED
+  - POSITIVE-WORKING-SET
+  - POSITIVE-PRIVATE-MEMORY
+  - PROCESS-IDENTITY-PASSED
+  - LICENSE-ENTITLEMENT-PASSED
+  - LOCK-HYGIENE-PASSED
+  - NO-MEASURED-SAMPLE
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/TelemetryProbeV3/Probe.summary.json: d75e8884450b5291aa8e8f599185f17aa4c2b1417e906ed00bfd25f8d4a5fc5e
+  prev_hash: 74580d0bf798dfc80023132c1d70dffd5792b1db841bd50b4d2ae2ca0f864e84
+  hash: 7aecdd7a1ec2b01131e8a4392b17b4f116894a8ba39d77b3e8cf90b62bc921ea
+- seq: 11
+  kind: tool_receipt
+  at: '2026-10-08T17:38:08Z'
+  step: Gate 13R-PR2 post-authorization-patch unit and two-phase fixture revalidation
+  command: Test-Gate13RPR2FormalExecutionV4.ps1 to independent AdapterUnitV5 root
+    under native Windows PowerShell 5.1
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - UNIT-35-OF-35
+  - TWO-PHASE-FIXTURES-PASSED
+  - RAW-HASH-FREEZE-FIXTURES-PASSED
+  - FORMAL-ROOT-ABSENT
+  - UNITY-NOT-LAUNCHED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/AdapterUnitV5/summary.json: 59f9d702c4900918647ec7efbdca299716bbe097bee37283b66a55f0072aa821
+  prev_hash: 7aecdd7a1ec2b01131e8a4392b17b4f116894a8ba39d77b3e8cf90b62bc921ea
+  hash: f7b60d6bbc6d06deb083e4107cba032d67f34b4aae5a0204dabf59ceb8866e8d
+- seq: 12
+  kind: tool_receipt
+  at: '2026-10-08T17:38:08Z'
+  step: Gate 13R-PR2 negative no-receipt fail-closed validation
+  command: Invoke Run-Gate13RPR2FormalCampaignV4.ps1 with a deliberately absent receipt
+    under native Windows PowerShell 5.1
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - MISSING-RECEIPT-REJECTED
+  - CHILD-EXIT-NONZERO
+  - FORMAL-ROOT-ABSENT
+  - FORMAL-STATUS-ABSENT
+  - UNITY-NEVER-LAUNCHED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/NegativeNoReceiptV1/negative-no-receipt-summary.json: 8424f8cc9dc13ad23c023e20fdb34958cddc31f51ac9fdd12431761df1b47e91
+  prev_hash: f7b60d6bbc6d06deb083e4107cba032d67f34b4aae5a0204dabf59ceb8866e8d
+  hash: d284ba436936d745afce0d508126046f13717dd022a943e382873f531565750b
+- seq: 13
+  kind: tool_receipt
+  at: '2026-10-08T17:38:24Z'
+  step: Gate 13R-PR2 active implementation and deterministic schedule audit V5 attempt
+    1
+  command: Test-Gate13RPR2FormalExecutionAdapterV5.py validation-only
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - PRELAUNCH-VALIDATOR-IMPLEMENTATION-DEFECT
+  - MANIFEST-PROPERTY-NAME-MISMATCH
+  - FORMAL-ROOT-ABSENT
+  - UNITY-NOT-LAUNCHED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/StaticScheduleV5Attempt1Failure/failure-receipt.json: bff49268de27906b147cd97c5f61e0716094adfff8f044cea916b3b2fe327919
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/StaticScheduleV5Attempt1Failure/failure-checkpoint.json: 37424f870bda3af4ec5e3d907bfa181fe8e83dd50e752433c138497a3e24f161
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/StaticScheduleV5Attempt1Failure/partial-output-manifest.json: 7fdf1ffcd2066f6528b4c3782df0e9f4068c1dd1a9a4484ecb43d57a18619d7e
+  prev_hash: d284ba436936d745afce0d508126046f13717dd022a943e382873f531565750b
+  hash: 1ef1bde66cff09b62ba61c3ed64aa94dc400e42c85cb099ee428db71ad8f6661
+- seq: 14
+  kind: tool_receipt
+  at: '2026-10-08T17:38:24Z'
+  step: Gate 13R-PR2 active V3/V4 implementation and deterministic S48-H48 schedule
+    audit V6
+  command: Test-Gate13RPR2FormalExecutionAdapterV6.py validation-only
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - STATIC-AND-DETERMINISTIC-54-OF-54
+  - 74-CAMPAIGNS
+  - 3552-PROCESSES
+  - 10176-SAMPLES
+  - 1008-MATCHED-SUPERBLOCKS
+  - AB-BA-24-24-PER-SCENARIO
+  - ORDER-ROW-12-PER-CELL
+  - FORMAL-ROOT-ABSENT
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/adapter-static-schedule-summary.v6.json: abb7fc1cbac7e11b70a4fb20205a697321bedd704982359b6e95f4878b4587a8
+  prev_hash: 1ef1bde66cff09b62ba61c3ed64aa94dc400e42c85cb099ee428db71ad8f6661
+  hash: 93524bcdc621b72fb3105dbdce2531ee0e50e5ea439582a540a09312dacbdc82
+- seq: 15
+  kind: tool_receipt
+  at: '2026-10-08T17:38:24Z'
+  step: Gate 13R-PR2 final preservation environment storage audit attempt 1
+  command: Test-Gate13RPR2FinalPrelaunchV1.ps1 under native Windows PowerShell 5.1
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - PRELAUNCH-VALIDATOR-IMPLEMENTATION-DEFECT
+  - NAMED-PARAMETER-MISMATCH
+  - FORMAL-ROOT-ABSENT
+  - UNITY-NOT-LAUNCHED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt1/failure-receipt.json: 9189d5c394b7af05d3f8e57bf4dde7bbbebbdeb21f823b49e683bbfe8cfbfec0
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt1/failure-checkpoint.json: 44b4867d72da4efdbe342a32834fe85da26ca1c091fe70a6f4378da9d034daef
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt1/partial-output-manifest.json: 3f3eaa35c10d4809ca9564d5d15cbe1cae7da3cc260c23b3cf022408602f699a
+  prev_hash: 93524bcdc621b72fb3105dbdce2531ee0e50e5ea439582a540a09312dacbdc82
+  hash: 206eeec2a5386460f8a6d083095e4bb37b2a1bbe4071ac428a6b2ffe006447ee
+- seq: 16
+  kind: tool_receipt
+  at: '2026-10-08T17:38:25Z'
+  step: Gate 13R-PR2 final preservation environment storage audit attempt 2
+  command: Test-Gate13RPR2FinalPrelaunchV2.ps1 under native Windows PowerShell 5.1
+  status: failed
+  exit_status: 1
+  retries_used: 1
+  gate_tokens:
+  - PRELAUNCH-LOCALIZATION-PARSER-DEFECT
+  - 24-OF-26-CHECKS-PASSED
+  - POWER-SETTING-UNDERLYING-VALUES-ZERO
+  - FORMAL-ROOT-ABSENT
+  - UNITY-NOT-LAUNCHED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt2/failure-receipt.json: d23bcb8bd12744a34c5f9393150ce9eed7a66785e91503d1d0cbd914948f1c4a
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt2/failure-checkpoint.json: 503f60698e3ff27662c5e0af2ea5e992e86cd32394909782b8e3e24a211e7464
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt2/partial-output-manifest.json: ba90e1a60d99ac95acde9dbd293efe01384b7804b94439babf86cf3db7fbabb9
+  prev_hash: 206eeec2a5386460f8a6d083095e4bb37b2a1bbe4071ac428a6b2ffe006447ee
+  hash: 935b89cfda17087e3c2e09a273bd5a9b21095155c0a9a732f8480c9b4c595a22
+- seq: 17
+  kind: tool_receipt
+  at: '2026-10-08T17:38:25Z'
+  step: Gate 13R-PR2 final preservation environment storage audit attempt 3
+  command: Test-Gate13RPR2FinalPrelaunchV3.ps1 under native Windows PowerShell 5.1
+  status: failed
+  exit_status: 1
+  retries_used: 2
+  gate_tokens:
+  - ALL-CHECKS-EVALUATED
+  - ZERO-FAILURE-SERIALIZATION-DEFECT
+  - FORMAL-ROOT-ABSENT
+  - UNITY-NOT-LAUNCHED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt3/failure-receipt.json: 5bc899bdc2c64fa34a86acafcd76d6c307d5d16c048ea3d44dc7b09aad77ba94
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt3/failure-checkpoint.json: 1135ef060cb650455c564925eba1bbad583a36ef05816b76e292c5bf2a819863
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt3/partial-output-manifest.json: 3fbd97171cb4ee190f173a5b007b4c22c5ebb113b06980f4929ee59bb26c087d
+  prev_hash: 935b89cfda17087e3c2e09a273bd5a9b21095155c0a9a732f8480c9b4c595a22
+  hash: 3e614a127ffed90d3daa20ab4043af74447c53a84f871764f107324ae5977ca6
+- seq: 18
+  kind: tool_receipt
+  at: '2026-10-08T17:38:25Z'
+  step: Gate 13R-PR2 final preservation environment storage audit attempt 4
+  command: Test-Gate13RPR2FinalPrelaunchV4.ps1 under native Windows PowerShell 5.1
+    with exact native PSModulePath
+  status: passed
+  exit_status: 0
+  retries_used: 3
+  gate_tokens:
+  - FINAL-PRELAUNCH-26-OF-26
+  - FROZEN-TREES-UNCHANGED
+  - ACTIVE-HASHES-PASSED
+  - HIGH-PERFORMANCE-AC-NO-SLEEP-NO-HIBERNATE
+  - LICENSE-ENTITLEMENT-NETWORK-PASSED
+  - STORAGE-PASSED
+  - UNITY-QUIESCENT
+  - FORMAL-ROOT-AND-RECEIPT-ABSENT
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/FinalPrelaunchAttempt4/audit.json: cae5ed774c2f901b0f93ae130b2f325b270f5fc621d067c1b0bf2fc1310006c5
+  prev_hash: 3e614a127ffed90d3daa20ab4043af74447c53a84f871764f107324ae5977ca6
+  hash: f0d228333150ba55f4838d79d984d68f70957f73916e139910d475ba9908863f
+- seq: 19
+  kind: tool_receipt
+  at: '2026-10-08T17:44:13Z'
+  step: Gate 13R-PR2 immutable formal execution receipt commit and native PS5 acceptance
+  command: Test-G13RPR2FormalExecutionReceipt under native Windows PowerShell 5.1
+    followed by read-only receipt freeze
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - FORMAL-EXECUTION-RECEIPT-VALIDATED
+  - NATIVE-POWERSHELL-5.1
+  - ALL-BINDINGS-MATCHED
+  - RECEIPT-READ-ONLY
+  - FORMAL-ROOT-ABSENT
+  - FORMAL-STATUS-ABSENT
+  - UNITY-QUIESCENT
+  - ONE-RAW-ACQUISITION-ATTEMPT-AUTHORIZED
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Formal_Execution_Receipt.v1.json: 2cd30b4d605f231bca64250e91a4e7df7548a10681853f84ad31620b970972bc
+    Gate13R_PR2_Formal_Prelaunch_Checkpoint.v1.json: 92ad97462acc8a19ae27317e1f59c2de47615b2aa9b550257e2adf8448604315
+    Verification/Gate13R_PR2_Formal_Prelaunch/v1/final-prelaunch-evidence-manifest.v1.json: 1d32dbaa2f440836dea51348a730441141fed859532869c301de5591e1557909
+  prev_hash: f0d228333150ba55f4838d79d984d68f70957f73916e139910d475ba9908863f
+  hash: 81acd38c8c87bb34225ee7b8ce4e65d5e300b1daf29e07cfa8e8862e13a072a4
+- seq: 20
+  kind: tool_receipt
+  at: '2026-10-08T17:48:33Z'
+  step: Gate 13R-PR2 S48-H48 formal raw acquisition attempt 1 terminal failure and
+    immutable evidence freeze
+  command: Run-Gate13RPR2FormalCampaignV4.ps1 as hidden independent native Windows
+    PowerShell 5.1 process; fail closed at global process ordinal 1
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - FORMAL-ATTEMPT-1-CONSUMED
+  - FAILED-NO-AUTO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - GLOBAL-PROCESS-ORDINAL-1
+  - FORMAL-COMMITTED-PROCESSES-0
+  - FORMAL-COMMITTED-SAMPLES-0
+  - GENERATED-BUT-EXCLUDED-SAMPLE-ARTIFACTS-4
+  - POST-UNITY-BLOCK-WRAPPER-VALIDATION-IMPLEMENTATION-DEFECT
+  - EMBEDDED-SAMPLE-FORMALCAMPAIGN-PROPERTY-MISSING
+  - PARTIAL-ATTEMPT-EXCLUDED-FROM-FORMAL-ANALYSIS
+  - FORMAL-ROOT-READ-ONLY
+  - UNITY-QUIESCENT
+  - NEW-USER-AUTHORIZATION-REQUIRED
+  input_sha256:
+    Gate13R_PR2_Formal_Execution_Status.v1.json: a7dd97d766a23fc001ac2e8adca5f34206932906a8d6452de55fa43d28d544be
+    FormalRuns/Gate13R_RQAligned_S48H48/v1/formal-checkpoint.json: f09dd3322bf868da15ef9e12387a345aa6ca056a082c4d8c9e8deffe0e83799e
+    FormalRuns/Gate13R_RQAligned_S48H48/v1/partial-output-manifest.json: 9ee77190f21cf3b216f9ab84f3c8b2fd77c1944fa09259ddea58775a48278cfc
+    Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-failure-diagnosis.json: efaf6cee119575deae056ef432a4202d2f1629a696b8ac975156995cde52dc2e
+    Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-partial-tree-manifest.json: 93d6d9efd4232a3f995621d2ad5c62951dcbdf10f7ede13d9b37948aad755ab5
+    Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-evidence-freeze-receipt.json: 481678f143e577a243c651aef86b0a960d22709836fa36be302e2e6608670b25
+    Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-evidence-manifest.json: 0f3a2612abc799f04f6e828ee747efdb8b8dda594c35c84fbccad27a734d5fc5
+    Verification/Gate13R_PR2_Formal_Execution/v1/orchestrator.stderr.log: 4f4e24552e078cbd61934b2152d665590eaf754578b07766bc7adac247fd71ab
+  prev_hash: 81acd38c8c87bb34225ee7b8ce4e65d5e300b1daf29e07cfa8e8862e13a072a4
+  hash: 05252ed85fb3dace5dfc55fc33395098bbe21a8d06130dc8166ccdaa86eebcda
+- seq: 21
+  kind: checkpoint_opened
+  at: '2026-10-08T17:56:00Z'
+  checkpoint_id: gate13r-pr2-formal-attempt2-embedded-contract-repair-authorization
+  stage: gate13r-pr2-formal-attempt1-terminal-failure
+  checkpoint_type: MANDATORY
+  question: Authorize the versioned Gate 13R-PR2 attempt 2 embedded formalCampaign
+    contract repair, one validation-only fresh Williams-block rehearsal, and—only
+    after all prelaunch hard gates pass—one fresh S48/H48 formal raw-acquisition attempt,
+    while formal statistical analysis and Gate 14R remain unauthorized?
+  options:
+  - authorize Gate 13R-PR2 attempt 2 under the complete prompt
+  - do not continue
+  prev_hash: 05252ed85fb3dace5dfc55fc33395098bbe21a8d06130dc8166ccdaa86eebcda
+  hash: b55defb0c4c76f18678b7a1895c596dd2e683c1d3d991af6349e87bf124e6ccd
+- seq: 22
+  kind: checkpoint_closed
+  at: '2026-10-08T17:56:00Z'
+  checkpoint_id: gate13r-pr2-formal-attempt2-embedded-contract-repair-authorization
+  answer: AUTHORIZED-GATE13R-PR2-ATTEMPT2-RAW-ACQUISITION-ONLY-FORMAL-ANALYSIS-AND-GATE14R-UNAUTHORIZED
+  user_words: 授权 Gate 13R-PR2 attempt 2，严格按 `Research/Gate13R_PR2_Attempt2_Next_Authorization_Prompt.md`
+    中的完整授权文本执行；不授权 Gate 13R 正式统计分析，不授权 Gate 14R。
+  prev_hash: b55defb0c4c76f18678b7a1895c596dd2e683c1d3d991af6349e87bf124e6ccd
+  hash: a8bdceb933e8f92dd094c9ae408032ee6c7e4eb70cc29ab6cce15ecc529855de
+- seq: 23
+  kind: tool_receipt
+  at: '2026-10-08T17:56:13Z'
+  step: Gate 13R-PR2 attempt 2 authorization recording and pre-write preservation
+    audit
+  command: Recorded the exact user authorization, validated the versioned authorization
+    record, and performed a read-only attempt-1/upstream preservation and attempt-2
+    namespace absence audit before creating repair implementation files.
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - ATTEMPT2-AUTHORIZATION-RECORDED
+  - ATTEMPT1-CANONICAL-TREE-HASH-VERIFIED
+  - ATTEMPT1-31-FILES-3338221-BYTES-READ-ONLY
+  - ATTEMPT2-FORMAL-ROOT-ABSENT
+  - ATTEMPT2-RECEIPT-AND-STATUS-ABSENT
+  - UNITY-QUIESCENT
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Attempt2_Next_Authorization_Prompt.md: 5dd1b5859045bb14db374edc3aa6b28539af125abfcbb54b66a91f0a716a6927
+    Gate13R_PR2_Attempt2_User_Authorization.v1.txt: 9a7926af6167b843202d19a8d0b77623285f7a555bc2325ac230f68233575fbf
+    Gate13R_PR2_Attempt2_PreWrite_Preservation_Audit.v1.json: f0df04c611206fcc5638b326e6752996b005e8688c29a013289a544144e48961
+    Gate13R_PR2_Attempt2_Execution_Authorization.v1.json: db59641e09429b697d688a2554781ff577d38a74ac34ef505360a8813adfe4cb
+    Verification/Gate13R_PR2_Formal_Execution/v1/formal-attempt-1-partial-tree-manifest.json: 93d6d9efd4232a3f995621d2ad5c62951dcbdf10f7ede13d9b37948aad755ab5
+  prev_hash: a8bdceb933e8f92dd094c9ae408032ee6c7e4eb70cc29ab6cce15ecc529855de
+  hash: a57cb50addbde5d29c83f84f49e9e454cf2b438215c3d8134af3efb5a414866c
+- seq: 24
+  kind: tool_receipt
+  at: '2026-10-08T18:03:46Z'
+  step: Gate 13R-PR2 attempt 2 versioned stack base derivation attempt 1
+  command: New-Gate13RPR2Attempt2VersionedStackV1.py create-new mechanical derivation
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - VALIDATION-IMPLEMENTATION-DEFECT
+  - DERIVATION-ASSERTION-COUNT-MISMATCH
+  - PARTIAL-TARGETS-PRESERVED-READ-ONLY
+  - FROZEN-SOURCES-UNCHANGED
+  - FORMAL-ROOT-V2-ABSENT
+  - FORMAL-RECEIPT-V2-ABSENT
+  - UNITY-NOT-LAUNCHED
+  - VERSIONED-REPAIR-AUTHORIZED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/DerivationAttempt1/failure-receipt.json: 9a8ecc7c4425c6d1785013669045b03fb5e2d41c5b7294c8cb18ca79dde66c82
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/DerivationAttempt1/failure-checkpoint.json: f0d0804e8d928c068f02b3565e05ae8840e5b2fca84b3b154454ace2d9124eb4
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/DerivationAttempt1/partial-output-manifest.json: 44a06a96c96d0c0d483bcb0cd714c446d310df68d207acc5fde75f864c8a0d1d
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/DerivationAttempt1/derivation.stderr.log: 383ed26904182f0c48365005d9266c93e4edb1b91aba0e4bcc28311cb1c97fc7
+  prev_hash: a57cb50addbde5d29c83f84f49e9e454cf2b438215c3d8134af3efb5a414866c
+  hash: dc7351fb9044310f5f33096d7effa324277a9b5ec93c321c0c42949a6991d21a
+- seq: 25
+  kind: tool_receipt
+  at: '2026-10-08T18:09:21Z'
+  step: Gate 13R-PR2 attempt 2 static deterministic validation attempt 1
+  command: Test-Gate13RPR2Attempt2StaticV1.py validation-only
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - STATIC-44-OF-46
+  - VALIDATOR-IMPLEMENTATION-DEFECT
+  - SCHEDULE-74-3552-10176-1008-RECONSTRUCTED
+  - FORMAL-ROOT-V2-ABSENT
+  - UNITY-NOT-LAUNCHED
+  - VERSIONED-VALIDATOR-REPAIR-AUTHORIZED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/StaticAttempt1/summary.json: ba65fc507ec2ab4a6932a7c9c118c8c990a09bfed9f395cfa1dd7a99fc4ce9ad
+  prev_hash: dc7351fb9044310f5f33096d7effa324277a9b5ec93c321c0c42949a6991d21a
+  hash: c0a788a65e2a2909243920eda8f2bcb4dc94ec51d76b2275ec4840aa6da2e972
+- seq: 26
+  kind: tool_receipt
+  at: '2026-10-08T18:16:09Z'
+  step: Gate 13R-PR2 attempt 2 negative no-receipt validation attempt 1
+  command: Test-Gate13RPR2Attempt2NegativeNoReceiptV1.ps1 under native Windows PowerShell
+    5.1
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - EXPECTED-MISSING-RECEIPT-REJECTION-OBSERVED
+  - VALIDATION-HARNESS-STDERR-CAPTURE-DEFECT
+  - FORMAL-ROOT-V2-ABSENT
+  - UNITY-NOT-LAUNCHED
+  - VERSIONED-VALIDATION-REPAIR-AUTHORIZED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/NegativeNoReceiptAttempt1/failure-receipt.json: 8af2d334210aac9613853be34ee17b8d7c64d7c5c5791bd499886ba7ee856646
+  prev_hash: c0a788a65e2a2909243920eda8f2bcb4dc94ec51d76b2275ec4840aa6da2e972
+  hash: 329d245da4a81a2c0ff11433c8f97ffa4efd8320eb866c057f088d7f92ef04fc
+- seq: 27
+  kind: tool_receipt
+  at: '2026-10-08T18:22:04Z'
+  step: Gate 13R-PR2 attempt 2 active stack parser unit schema and deterministic schedule
+    validation
+  command: Native Windows PowerShell 5.1 and PowerShell 7 parser/binding; 18-fixture
+    contract suite; V2 static deterministic audit
+  status: passed
+  exit_status: 0
+  retries_used: 2
+  gate_tokens:
+  - PARSER-AND-BINDING-PASSED-BOTH-RUNTIMES
+  - EMBEDDED-FORMALCAMPAIGN-POSITIVE-AND-NEGATIVE-FIXTURES-18-OF-18
+  - STATIC-DETERMINISTIC-46-OF-46
+  - 74-CAMPAIGNS
+  - 3552-PROCESSES
+  - 10176-SAMPLES
+  - 1008-MATCHED-SUPERBLOCKS
+  - AB-BA-24-24
+  - ATTEMPT1-UNCHANGED
+  - FORMAL-ROOT-V2-ABSENT
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/parser-binding-summary.v1.json: 1a01daf8ea5f559939234b4ead7bf637510e1d0b56fe57a8797bf6744b9ffd1c
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/ContractUnitPS5/summary.json: 9f59bb4359f2601077cb88696713c4f4d1a2f9afa5ec303372099ee414c0568c
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/StaticAttempt2/summary.json: 62ec4fec264cd92b451bd3435ea359b99e8535f63219542c3ed75f8129da70b0
+  prev_hash: 329d245da4a81a2c0ff11433c8f97ffa4efd8320eb866c057f088d7f92ef04fc
+  hash: 4c4b676ba8829d9d1d0d2f770b27bd40063910b5d855a3b28bf43b414b15c126
+- seq: 28
+  kind: tool_receipt
+  at: '2026-10-08T18:22:04Z'
+  step: Gate 13R-PR2 attempt 2 Unity compile telemetry retained regression and complete
+    contract rehearsal
+  command: Versioned V4 Unity self-tests and telemetry, frozen retained 63/63 harness,
+    one validation-only fresh four-algorithm Williams block through wrapper V6, and
+    campaign V6 dry-run
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - UNITY-COMPILE-MEMORY-ATOMIC-SELFTESTS-PASSED
+  - PSAPI-CIM-TELEMETRY-PASSED
+  - RETAINED-REGRESSION-63-OF-63
+  - VALIDATION-ONLY-FRESH-UNITY-WILLIAMS-BLOCK-PASSED
+  - EMBEDDED-FORMALCAMPAIGN-4-OF-4
+  - SAMPLE-SUMMARY-FORMALCAMPAIGN-4-OF-4
+  - CHILD-MANIFEST-FORMALCAMPAIGN-4-OF-4
+  - MEMORY-EVALUATION-FORMALCAMPAIGN-4-OF-4
+  - CAMPAIGN-DRY-RUN-PASSED-BOTH-RUNTIMES
+  - NEGATIVE-NO-RECEIPT-FAIL-CLOSED
+  - REHEARSAL-EXCLUDED-FROM-FORMAL-ANALYSIS
+  - FORMAL-ROOT-V2-ABSENT
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/UnitySelfTestsAttempt1/unity-self-tests-summary.json: a124a1551ff529003ac4b16e627005f0534b84e970f3d01ea806934de7bf5c44
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/TelemetryAttempt1/probe.summary.json: a0e0854342bfd571ee502b1b515b1b21923680095504d99c776f5221babb8660
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/RetainedRegression/summary.json: 01130445af48c1f3798c211de81bbd76c98bcc55637a38618c2a59c33e6f5edd
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/contract-rehearsal-evidence-manifest.v1.json: 881feb2564e17651e0df6993316b0ae954402d475c0973cbae704f997284d48f
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/campaign-validation-only-dry-run-summary.v1.json: 8101dd38fcd4c696e092f06afc26dd7f5c44b563f8a50ef61ce9eb08d32459bc
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/NegativeNoReceiptAttempt2/summary.json: cc0ced045b9ad285284676b3b2d52ff6c540bf29560c081c52d05ba7d6190caf
+  prev_hash: 4c4b676ba8829d9d1d0d2f770b27bd40063910b5d855a3b28bf43b414b15c126
+  hash: 6bbf16793129ffa45135045004744099d14232047285af4b43700e9342d149a9
+- seq: 29
+  kind: tool_receipt
+  at: '2026-10-08T18:22:04Z'
+  step: Gate 13R-PR2 attempt 2 final preservation environment power license network
+    and storage prelaunch
+  command: Test-Gate13RPR2Attempt2FinalPrelaunchV1.ps1 under native Windows PowerShell
+    5.1 with exact native PSModulePath
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - FINAL-PRELAUNCH-28-OF-28
+  - ATTEMPT1-31-FILES-3338221-BYTES-READ-ONLY-UNCHANGED
+  - ACTIVE-HASHES-PASSED
+  - HIGH-PERFORMANCE-AC-NO-SLEEP-NO-HIBERNATE
+  - LICENSE-ENTITLEMENT-NETWORK-PASSED
+  - H-FREE-BYTES-276223881216
+  - STORAGE-MINIMUM-57397541440-PASSED
+  - UNITY-QUIESCENT
+  - FORMAL-ROOT-RECEIPT-STATUS-V2-ABSENT
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/FinalPrelaunchAttempt1/audit.json: 19daff28f3b5b5c373cc19170dbe875c936bd254efd9c96d2e3f5b079399db3f
+    Gate13R_PR2_Attempt2_Prelaunch_Checkpoint.v1.json: 6d0fae0899b4b4e11753712585e5e14f300b10b823f345560ee079f496442768
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/prelaunch-evidence-manifest.v1.json: 0e0b340e9083732f35a96cbcc8c819554da11758440eae04183c0e517fbe96c8
+  prev_hash: 6bbf16793129ffa45135045004744099d14232047285af4b43700e9342d149a9
+  hash: 36bd37dfbf0fa0bf05f09aab6ce30967f11044e011672640a7af37248b3cb20a
+- seq: 30
+  kind: tool_receipt
+  at: '2026-10-08T18:24:33Z'
+  step: Gate 13R-PR2 attempt 2 immutable formal execution receipt commit and native
+    PS5 acceptance
+  command: Test-Gate13RPR2Attempt2ExecutionReceiptV1.ps1 under native Windows PowerShell
+    5.1 followed by read-only receipt freeze
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - ATTEMPT2-FORMAL-EXECUTION-RECEIPT-VALIDATED
+  - 21-ACTIVE-BINDINGS-MATCHED
+  - 6-VALIDATION-BINDINGS-MATCHED
+  - RECEIPT-READ-ONLY
+  - FORMAL-ROOT-V2-ABSENT
+  - FORMAL-STATUS-V2-ABSENT
+  - UNITY-QUIESCENT
+  - ONE-RAW-ACQUISITION-ATTEMPT2-AUTHORIZED
+  - NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Gate13R_PR2_Formal_Execution_Receipt.v2.json: a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/ReceiptValidationAttempt1/summary.json: 306aa5e0cdeeadc0a1123258cc54656119ef6929bbb311578e6152b5c60aa560
+    Gate13R_PR2_Attempt2_Prelaunch_Checkpoint.v1.json: 6d0fae0899b4b4e11753712585e5e14f300b10b823f345560ee079f496442768
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/prelaunch-evidence-manifest.v1.json: 0e0b340e9083732f35a96cbcc8c819554da11758440eae04183c0e517fbe96c8
+  prev_hash: 36bd37dfbf0fa0bf05f09aab6ce30967f11044e011672640a7af37248b3cb20a
+  hash: 8c287b3c5acd1119d8ba9a2612da51620ca1cacfe6397b507bac6ec9b7cbcf56
+- seq: 31
+  kind: tool_receipt
+  at: '2026-10-08T18:26:21Z'
+  step: Gate 13R-PR2 attempt 2 one-shot independent launcher parser and parameter-binding
+    validation
+  command: Start-Gate13RPR2Attempt2FormalV1.ps1 parsed under native Windows PowerShell
+    5.1 and active PowerShell; BindingSmokeOnly under native Windows PowerShell 5.1
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - ONE-SHOT-LAUNCHER-V1
+  - WINDOWS-POWERSHELL-5.1-PARSER-PASSED
+  - ACTIVE-POWERSHELL-PARSER-PASSED
+  - WINDOWS-POWERSHELL-5.1-BINDING-SMOKE-PASSED
+  - INDEPENDENT-HIDDEN-PROCESS
+  - EXACT-NATIVE-PSMODULEPATH
+  - NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Start-Gate13RPR2Attempt2FormalV1.ps1: 76fb838efdcaa62f9847de90e1424d1862dadbdd0d871328c9c4960325a4e2d0
+    Gate13R_PR2_Formal_Execution_Receipt.v2.json: a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e
+    Verification/Gate13R_PR2_Formal_Attempt2/v1/ReceiptValidationAttempt1/summary.json: 306aa5e0cdeeadc0a1123258cc54656119ef6929bbb311578e6152b5c60aa560
+  prev_hash: 8c287b3c5acd1119d8ba9a2612da51620ca1cacfe6397b507bac6ec9b7cbcf56
+  hash: f19889f9288a6dc05b21e5738754b0440eef4bf1f95058219b0a14b6e5375263
+- seq: 32
+  kind: tool_receipt
+  at: '2026-10-08T18:27:05Z'
+  step: Gate 13R-PR2 S48-H48 formal raw acquisition attempt 2 one-shot launch
+  command: Start-Gate13RPR2Attempt2FormalV1.ps1 under native Windows PowerShell 5.1
+    with exact native PSModulePath; independent hidden orchestrator process
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - FORMAL-ATTEMPT2-LAUNCHED-ONCE
+  - ORCHESTRATOR-PID-3548
+  - STARTED-UTC-2026-10-08T18:26:29.1664323Z
+  - PREFLIGHT-AGE-369.832-SECONDS
+  - H-FREE-BYTES-276223770624
+  - RUNNING-RAW-ACQUISITION
+  - GLOBAL-PROCESS-ORDINAL-1
+  - FORMAL-ROOT-V2-CREATED
+  - ATOMIC-CHECKPOINT-CREATED
+  - TWO-PHASE-RAW-COMMIT-REQUIRED
+  - NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Execution_Attempt2/v1/launch-receipt.json: 83044dc4165097b830795c0e403032ff44c963be60e98b88ccfd1205575fbd3e
+    Start-Gate13RPR2Attempt2FormalV1.ps1: 76fb838efdcaa62f9847de90e1424d1862dadbdd0d871328c9c4960325a4e2d0
+    Gate13R_PR2_Formal_Execution_Receipt.v2.json: a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e
+    Run-Gate13RPR2FormalCampaignV6.ps1: 17ac97da23b2bf77b7d6beed8e901ed7c768095a7791f2ee2f2f0dfe211c155a
+  prev_hash: f19889f9288a6dc05b21e5738754b0440eef4bf1f95058219b0a14b6e5375263
+  hash: 9d0d2a66052ff1536e683fcd4c4e6bf5d000ff6de815dfd6f417132ca041b0b0
+- seq: 33
+  kind: tool_receipt
+  at: '2026-10-08T18:28:05Z'
+  step: Gate 13R-PR2 formal raw acquisition attempt 2 initial measured-block health
+    verification
+  command: Read-only status, checkpoint, process and orchestrator-log inspection after
+    one-shot launch
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - RUNNING-RAW-ACQUISITION
+  - ORCHESTRATOR-PID-3548-ALIVE
+  - ONE-UNITY-PROCESS
+  - 4-BLOCK-PROCESSES-COMPLETE
+  - 16-ALGORITHM-SAMPLES-COMPLETE
+  - GLOBAL-PROCESS-ORDINAL-5
+  - FIRST-4-BLOCKS-PASSED
+  - ORCHESTRATOR-STDERR-EMPTY
+  - ATOMIC-CHECKPOINT-BEFORE-BLOCK
+  - NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE
+  - FORMAL-ANALYSIS-NOT-AUTHORIZED
+  - GATE14R-NOT-AUTHORIZED
+  input_sha256:
+    Verification/Gate13R_PR2_Formal_Execution_Attempt2/v1/launch-receipt.json: 83044dc4165097b830795c0e403032ff44c963be60e98b88ccfd1205575fbd3e
+    Gate13R_PR2_Formal_Execution_Receipt.v2.json: a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e
+  prev_hash: 9d0d2a66052ff1536e683fcd4c4e6bf5d000ff6de815dfd6f417132ca041b0b0
+  hash: 7067640663cfda970799fd7ec1cb4fbe28e91ef5c22a5dc48662b7206b43f326

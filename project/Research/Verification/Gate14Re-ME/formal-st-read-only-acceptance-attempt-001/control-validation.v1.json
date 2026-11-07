@@ -1,0 +1,39 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-recovery-acceptance-validation-v1",
+  "status": "PASS_SEALED_INVENTORY_AND_FROZEN_CONTROL_VALIDATOR_WITH_AUTHORIZED_RECOVERY_COMPATIBILITY",
+  "sealedInventoryReplay": {
+    "files": 108007,
+    "bytes": 24019279692,
+    "elapsedSeconds": 809.261,
+    "allCurrentHashesMatchSeal": true
+  },
+  "controlPlaneValidation": {
+    "scheduleRows": 1296,
+    "acceptedSuperblocks": 1296,
+    "oracleReceipts": 1296,
+    "oracleBatchReceipts": 54,
+    "oracleCacheBindingReceipts": 1296,
+    "laneReceipts": 7776,
+    "laneOracleCacheLinks": 7776,
+    "laneReferenceOracleEvaluations": 0,
+    "emptyBoundaryReceipts": 12,
+    "processLedgerRows": 7843,
+    "trustedProcessIdentityReceipts": 7843,
+    "failureLedgerRows": 2,
+    "preservedResolvedTechnicalFailureRows": 2,
+    "replacementLedgerRows": 0,
+    "authorizedControlPlaneRecoveryCompatibility": {
+      "status": "PASS_FROZEN_VALIDATOR_WITH_AUTHORIZED_RECOVERY_COMPATIBILITY",
+      "preservedTechnicalFailureRows": 2,
+      "failureResolutionV1Validated": true,
+      "failureResolutionV2Validated": true,
+      "replayedAlgorithmLanes": 0,
+      "replacementRows": 0
+    },
+    "elapsedSeconds": 105.413,
+    "pass": true
+  },
+  "sourceMeasuredRootWriteBack": false,
+  "formalAnalysisPerformed": false,
+  "createdAtUtc": "2026-10-30T10:37:44.996Z"
+}

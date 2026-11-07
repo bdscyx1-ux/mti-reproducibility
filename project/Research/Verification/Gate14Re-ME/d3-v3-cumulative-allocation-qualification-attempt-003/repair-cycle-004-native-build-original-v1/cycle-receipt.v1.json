@@ -1,0 +1,73 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 4,
+  "status": "PASS_NATIVE_PLUGIN_BUILD_AND_STATIC_EXPORT_CHECK",
+  "completedAtUtc": "2026-10-17T06:51:43.6129647Z",
+  "phase": "native-build-original-source",
+  "bindings": {
+    "nativeSourceSha256": "12c41acc7dc106d314bd71d3bdc1d95e0346cc8467e0a1a1e1b3109093ef2a0d",
+    "compilerSha256": "fe251ef50a1545b1b0835ee17b1e785459712b38d79e45b5c1d3d28970a36619",
+    "sdkFreezeManifestRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk-freeze-manifest.v1.json",
+    "sdkVersion": "10.0.26100.7705",
+    "targetPlatformVersion": "10.0.26100.0",
+    "unityPluginApiRoot": "H:/UnityEditor/2022.3.30f1c1/Editor/Data/PluginAPI"
+  },
+  "compilerPolicy": [
+    "/std:c++17",
+    "/O2",
+    "/LD",
+    "/EHsc",
+    "/W4",
+    "/WX",
+    "/utf-8",
+    "/permissive-",
+    "/Brepro"
+  ],
+  "compilerExitCode": 0,
+  "warnings": 0,
+  "artifacts": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-004-native-build-original-v1/build/Gate14ReMED3AllocationCounterV3.dll",
+      "lengthBytes": 109568,
+      "sha256": "924d43ecbc03f4e606a26a3de1593e96fdf7d3607d6e9e3c8942c877f0575245"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-004-native-build-original-v1/build/Gate14ReMED3AllocationCounterV3.obj",
+      "lengthBytes": 27106,
+      "sha256": "96fbe4af15668ebf1f3d28a86aaf4a99c4f6e78b41aac20759461487d78141eb"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-004-native-build-original-v1/build/Gate14ReMED3AllocationCounterV3.lib",
+      "lengthBytes": 4872,
+      "sha256": "86ab3cdb4372b01388104d6ba3be2c801fee08e9c17eae98c83ef087afa37e0c"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-004-native-build-original-v1/build/Gate14ReMED3AllocationCounterV3.exp",
+      "lengthBytes": 2422,
+      "sha256": "817eb704a9d1018b0380e3ff33ee9b7c3000c5b9d993108aa75241a58f599843"
+    }
+  ],
+  "staticChecks": {
+    "peMachine": "x86-64",
+    "onlyRuntimeDependentModule": "KERNEL32.dll",
+    "requiredExportsPresent": [
+      "Gate14ReMED3V3_BeginWindow",
+      "Gate14ReMED3V3_EndWindow",
+      "Gate14ReMED3V3_GetCreateCallbackRegistrationCode",
+      "Gate14ReMED3V3_GetCurrentNativeThreadId",
+      "Gate14ReMED3V3_GetMarkerCallbackRegistrationCode",
+      "Gate14ReMED3V3_GetMarkerSeen",
+      "Gate14ReMED3V3_IsReady",
+      "Gate14ReMED3V3_SnapshotWindow",
+      "UnityPluginLoad",
+      "UnityPluginUnload"
+    ],
+    "allRequiredExportsPresent": true,
+    "localBinaryAuthenticodeStatus": "NotSigned",
+    "localBinarySigningRequiredForQualification": false
+  },
+  "conclusion": "The original frozen native source builds successfully without warning suppression under the frozen compiler policy and exposes the complete D3-v3 and Unity plugin ABI."
+}

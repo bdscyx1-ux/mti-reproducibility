@@ -1,0 +1,697 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-36h-prepilot-attempt11-mechanical-derivation-v1",
+  "createdAtUtc": "2026-10-08T05:16:28.2378678Z",
+  "amendmentRelativePath": "Research/Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v11.json",
+  "amendmentSha256": "58c089ec66c0337534aff9c71630e5a2dca1a20069fe638c5036b43155cfe623",
+  "derivations": [
+    {
+      "sourceRelativePath": "Research\\Gate13R36hConcurrencyPreparationV2.psm1",
+      "sourceSha256": "babafca163629b1e006d115a2bf8bede4185be24ff71363a171ba2a1db8ba7e4",
+      "destinationRelativePath": "Research\\Gate13R36hConcurrencyPreparationV11.psm1",
+      "destinationSha256": "d4c16516b5d8fe60422173954a3b99ba7a38a35e2be72043927232f2b382af3c",
+      "routes": [
+        {
+          "from": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v2",
+          "to": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "babafca163629b1e006d115a2bf8bede4185be24ff71363a171ba2a1db8ba7e4",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Run-Gate13R36hBlockV2.ps1",
+      "sourceSha256": "c3b2c20708b3b3dab475b4460d20c6cca92b19664b9c6356e1b7408e2a441ad4",
+      "destinationRelativePath": "Research\\Run-Gate13R36hBlockV11.ps1",
+      "destinationSha256": "03f035108b56b3a513e0eafc48657728e46b4819eef21f46a2456b1fa14c76e7",
+      "routes": [
+        {
+          "from": "Run-Gate13R36hBlockV2",
+          "to": "Run-Gate13R36hBlockV11",
+          "count": 1
+        },
+        {
+          "from": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 1
+        },
+        {
+          "from": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 1
+        },
+        {
+          "from": "H:\\DDM_Final_Project_Gate13R36H\\v2",
+          "to": "H:\\DDM_Final_Project_Gate13R36H\\v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-block-wrapper-summary-v2",
+          "to": "gate13r-36h-four-lane-block-wrapper-summary-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-block-wrapper-failure-v2",
+          "to": "gate13r-36h-four-lane-block-wrapper-failure-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "c3b2c20708b3b3dab475b4460d20c6cca92b19664b9c6356e1b7408e2a441ad4",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Run-Gate13R36hTelemetryProbeV2.ps1",
+      "sourceSha256": "8570bd17ad79adf4104c80e208d5b0d0043d6fd45fb21090023b3a8ab861330d",
+      "destinationRelativePath": "Research\\Run-Gate13R36hTelemetryProbeV11.ps1",
+      "destinationSha256": "496118e02afe7a1862e2b195d712b5c3f72490f29b35ff8c9623868eb4d78707",
+      "routes": [
+        {
+          "from": "Run-Gate13R36hTelemetryProbeV2",
+          "to": "Run-Gate13R36hTelemetryProbeV11",
+          "count": 1
+        },
+        {
+          "from": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 1
+        },
+        {
+          "from": "H:\\DDM_Final_Project_Gate13R36H\\v2",
+          "to": "H:\\DDM_Final_Project_Gate13R36H\\v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-telemetry-wrapper-v2",
+          "to": "gate13r-36h-four-lane-telemetry-wrapper-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "8570bd17ad79adf4104c80e208d5b0d0043d6fd45fb21090023b3a8ab861330d",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Initialize-Gate13R36hLaneCopiesV2.ps1",
+      "sourceSha256": "fba796fb029205185797c7b185f98d52ad58218f231813b6bffd2d57bd4fdbbc",
+      "destinationRelativePath": "Research\\Initialize-Gate13R36hLaneCopiesV11.ps1",
+      "destinationSha256": "5303e9410dfd2b55b314432f6d950a8029692006f1b73c994dbf06fdd1a91867",
+      "routes": [
+        {
+          "from": "Initialize-Gate13R36hLaneCopiesV2",
+          "to": "Initialize-Gate13R36hLaneCopiesV11",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Provenance.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Provenance.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v11.json",
+          "count": 1
+        },
+        {
+          "from": "H:\\DDM_Final_Project_Gate13R36H\\v2",
+          "to": "H:\\DDM_Final_Project_Gate13R36H\\v11",
+          "count": 2
+        },
+        {
+          "from": "gate13r-36h-isolated-lane-copy-manifest-v2",
+          "to": "gate13r-36h-isolated-lane-copy-manifest-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-isolated-project-copies-v2",
+          "to": "gate13r-36h-four-isolated-project-copies-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "fba796fb029205185797c7b185f98d52ad58218f231813b6bffd2d57bd4fdbbc",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Run-Gate13R36hConcurrencyPilotV2.ps1",
+      "sourceSha256": "66c8ab3925158ff9e7c7ad7231ca2ab25c5d741f05943932b8325f78f0346685",
+      "destinationRelativePath": "Research\\Run-Gate13R36hConcurrencyPilotV11.ps1",
+      "destinationSha256": "4fed2bb81309c0c5f7e81e6362fc897872538842ca416d78026fc812b0d1f709",
+      "routes": [
+        {
+          "from": "Gate13R36hConcurrencyPreparationV2",
+          "to": "Gate13R36hConcurrencyPreparationV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hBlockV2",
+          "to": "Run-Gate13R36hBlockV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hConcurrencyPilotV2",
+          "to": "Run-Gate13R36hConcurrencyPilotV11",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Provenance.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Provenance.v11.json",
+          "count": 2
+        },
+        {
+          "from": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 1
+        },
+        {
+          "from": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v1",
+          "to": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-nonformal-pilot-execution-receipt-v2",
+          "to": "gate13r-36h-four-lane-nonformal-pilot-execution-receipt-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-nonformal-pilot-checkpoint-v2",
+          "to": "gate13r-36h-four-lane-nonformal-pilot-checkpoint-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-nonformal-pilot-execution-manifest-v2",
+          "to": "gate13r-36h-four-lane-nonformal-pilot-execution-manifest-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-nonformal-pilot-failure-v2",
+          "to": "gate13r-36h-four-lane-nonformal-pilot-failure-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-pilot-partial-output-manifest-v1",
+          "to": "gate13r-36h-four-lane-pilot-partial-output-manifest-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "66c8ab3925158ff9e7c7ad7231ca2ab25c5d741f05943932b8325f78f0346685",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Analyze-Gate13R36hConcurrencyPilotV2.ps1",
+      "sourceSha256": "cbe31a554667ee15b052dc74a49966c8c9690cda51a45d3a334559d3085f5b40",
+      "destinationRelativePath": "Research\\Analyze-Gate13R36hConcurrencyPilotV11.ps1",
+      "destinationSha256": "d52055bc6684c834144af25523a4dfc47af48489dce637bebd86eccce1732eb2",
+      "routes": [
+        {
+          "from": "Gate13R36hConcurrencyPreparationV2",
+          "to": "Gate13R36hConcurrencyPreparationV11",
+          "count": 1
+        },
+        {
+          "from": "Analyze-Gate13R36hConcurrencyPilotV2",
+          "to": "Analyze-Gate13R36hConcurrencyPilotV11",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Provenance.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Provenance.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-post-pilot-readiness-v2",
+          "to": "gate13r-36h-four-lane-post-pilot-readiness-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-nonformal-pilot-manifest-v2",
+          "to": "gate13r-36h-four-lane-nonformal-pilot-manifest-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "cbe31a554667ee15b052dc74a49966c8c9690cda51a45d3a334559d3085f5b40",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Verification\\New-Gate13R36hPilotScheduleV2.ps1",
+      "sourceSha256": "18136360095251f49453482b07a9e0792578782657e6a2cf9d5b34ce0a8ad4c8",
+      "destinationRelativePath": "Research\\Verification\\New-Gate13R36hPilotScheduleV11.ps1",
+      "destinationSha256": "18391a518e31d32a82a05b9cf719612d20bedc56e59bb6483ef5ac20e544a299",
+      "routes": [
+        {
+          "from": "Gate13R36hConcurrencyPreparationV2",
+          "to": "Gate13R36hConcurrencyPreparationV11",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v11.json",
+          "count": 2
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v11.json",
+          "count": 2
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Schedule_Generation.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Schedule_Generation.v11.json",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-10pct-four-lane-nonformal-pilot-schedule-v2",
+          "to": "gate13r-36h-10pct-four-lane-nonformal-pilot-schedule-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-pilot-schedule-generation-v2",
+          "to": "gate13r-36h-four-lane-pilot-schedule-generation-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "18136360095251f49453482b07a9e0792578782657e6a2cf9d5b34ce0a8ad4c8",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Verification\\Run-Gate13R36hStaticUnitV2.ps1",
+      "sourceSha256": "3074c32cecceaf97805d9fb2c43ffa620acf1415a60bf0348720539b04fe3a25",
+      "destinationRelativePath": "Research\\Verification\\Run-Gate13R36hStaticUnitV11.ps1",
+      "destinationSha256": "985e420024cf99cf1d7d7af395ff7e0215a008996028e90d0fb4bcc9bf97c5b8",
+      "routes": [
+        {
+          "from": "Gate13R36hConcurrencyPreparationV2",
+          "to": "Gate13R36hConcurrencyPreparationV11",
+          "count": 2
+        },
+        {
+          "from": "Run-Gate13R36hBlockV2",
+          "to": "Run-Gate13R36hBlockV11",
+          "count": 2
+        },
+        {
+          "from": "Run-Gate13R36hTelemetryProbeV2",
+          "to": "Run-Gate13R36hTelemetryProbeV11",
+          "count": 2
+        },
+        {
+          "from": "Initialize-Gate13R36hLaneCopiesV2",
+          "to": "Initialize-Gate13R36hLaneCopiesV11",
+          "count": 2
+        },
+        {
+          "from": "Run-Gate13R36hConcurrencyPilotV2",
+          "to": "Run-Gate13R36hConcurrencyPilotV11",
+          "count": 2
+        },
+        {
+          "from": "Analyze-Gate13R36hConcurrencyPilotV2",
+          "to": "Analyze-Gate13R36hConcurrencyPilotV11",
+          "count": 2
+        },
+        {
+          "from": "Run-Gate13R36hStaticUnitV2",
+          "to": "Run-Gate13R36hStaticUnitV11",
+          "count": 3
+        },
+        {
+          "from": "Run-Gate13R36hRetainedRegressionV2",
+          "to": "Run-Gate13R36hRetainedRegressionV11",
+          "count": 2
+        },
+        {
+          "from": "Run-Gate13R36hVerificationV2",
+          "to": "Run-Gate13R36hVerificationV11",
+          "count": 2
+        },
+        {
+          "from": "Run-Gate13R36hValidationOnlyPrePilotAuditV2",
+          "to": "Run-Gate13R36hValidationOnlyPrePilotAuditV11",
+          "count": 2
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Schedule_Generation.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Schedule_Generation.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Provenance.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Provenance.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 2
+        },
+        {
+          "from": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 2
+        },
+        {
+          "from": "H:\\DDM_Final_Project_Gate13R36H\\v2",
+          "to": "H:\\DDM_Final_Project_Gate13R36H\\v11",
+          "count": 3
+        },
+        {
+          "from": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v1",
+          "to": "gate13r-36h-10pct-four-lane-nonformal-pilot-plan-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-static-unit-summary-v2",
+          "to": "gate13r-36h-four-lane-static-unit-summary-v11",
+          "count": 1
+        },
+        {
+          "from": "New-Gate13R36hPilotScheduleV1.ps1",
+          "to": "New-Gate13R36hPilotScheduleV11.ps1",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "3074c32cecceaf97805d9fb2c43ffa620acf1415a60bf0348720539b04fe3a25",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Verification\\Run-Gate13R36hRetainedRegressionV2.ps1",
+      "sourceSha256": "5a1899c3f960fef683f9c87d8e9df4e0c901f707c7a1baa8ffc5ce62ea3dde01",
+      "destinationRelativePath": "Research\\Verification\\Run-Gate13R36hRetainedRegressionV11.ps1",
+      "destinationSha256": "51da71f1aa038d0a811d6e45a57cbe7baa506c79ec1f4177ca096744fe5f05b0",
+      "routes": [
+        {
+          "from": "Run-Gate13R36hRetainedRegressionV2",
+          "to": "Run-Gate13R36hRetainedRegressionV11",
+          "count": 1
+        },
+        {
+          "from": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-retained-regression-mechanical-file-scope-derivation-v2",
+          "to": "gate13r-36h-retained-regression-mechanical-file-scope-derivation-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "5a1899c3f960fef683f9c87d8e9df4e0c901f707c7a1baa8ffc5ce62ea3dde01",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Verification\\Run-Gate13R36hVerificationV2.ps1",
+      "sourceSha256": "bf101cfed03fe221edf4b0e20462bb300bd137dd7e034c0fd2d0fa43fd14807e",
+      "destinationRelativePath": "Research\\Verification\\Run-Gate13R36hVerificationV11.ps1",
+      "destinationSha256": "661dead48fc2f1bf261794c9f6ef9632a4aa67777a2d0671ff25527d4b4ddebb",
+      "routes": [
+        {
+          "from": "Gate13R36hConcurrencyPreparationV2",
+          "to": "Gate13R36hConcurrencyPreparationV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hBlockV2",
+          "to": "Run-Gate13R36hBlockV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hTelemetryProbeV2",
+          "to": "Run-Gate13R36hTelemetryProbeV11",
+          "count": 1
+        },
+        {
+          "from": "Initialize-Gate13R36hLaneCopiesV2",
+          "to": "Initialize-Gate13R36hLaneCopiesV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hStaticUnitV2",
+          "to": "Run-Gate13R36hStaticUnitV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hRetainedRegressionV2",
+          "to": "Run-Gate13R36hRetainedRegressionV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hVerificationV2",
+          "to": "Run-Gate13R36hVerificationV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hValidationOnlyPrePilotAuditV2",
+          "to": "Run-Gate13R36hValidationOnlyPrePilotAuditV11",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Provenance.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Provenance.v11.json",
+          "count": 2
+        },
+        {
+          "from": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 4
+        },
+        {
+          "from": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 2
+        },
+        {
+          "from": "H:\\DDM_Final_Project_Gate13R36H\\v2",
+          "to": "H:\\DDM_Final_Project_Gate13R36H\\v11",
+          "count": 3
+        },
+        {
+          "from": "gate13r-36h-four-lane-verification-checkpoint-v2",
+          "to": "gate13r-36h-four-lane-verification-checkpoint-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-nonexecuting-verification-receipt-v2",
+          "to": "gate13r-36h-four-lane-nonexecuting-verification-receipt-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-four-lane-block-verification-v2",
+          "to": "gate13r-36h-four-lane-block-verification-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-verification-partial-output-manifest-v2",
+          "to": "gate13r-36h-verification-partial-output-manifest-v11",
+          "count": 1
+        },
+        {
+          "from": "gate13r-36h-nonexecuting-verification-failure-v2",
+          "to": "gate13r-36h-nonexecuting-verification-failure-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "bf101cfed03fe221edf4b0e20462bb300bd137dd7e034c0fd2d0fa43fd14807e",
+      "passed": true
+    },
+    {
+      "sourceRelativePath": "Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV2.ps1",
+      "sourceSha256": "6e4c89c2b645aec0fa56d54ba7987fc4b186578e2a258e7a051eae2fc1c0a64a",
+      "destinationRelativePath": "Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV11.ps1",
+      "destinationSha256": "39ee513912b5055cc100f7a7d0ee9810038b25e0011324fe16fc1e8a20c7eb4e",
+      "routes": [
+        {
+          "from": "Gate13R36hConcurrencyPreparationV2",
+          "to": "Gate13R36hConcurrencyPreparationV11",
+          "count": 1
+        },
+        {
+          "from": "Run-Gate13R36hValidationOnlyPrePilotAuditV2",
+          "to": "Run-Gate13R36hValidationOnlyPrePilotAuditV11",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Plan.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Pilot_Schedule.v11.json",
+          "count": 1
+        },
+        {
+          "from": "Gate13R_36h_10pct_4Lane_Provenance.v2.json",
+          "to": "Gate13R_36h_10pct_4Lane_Provenance.v11.json",
+          "count": 2
+        },
+        {
+          "from": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\Verification\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 3
+        },
+        {
+          "from": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v2",
+          "to": "Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v11",
+          "count": 1
+        },
+        {
+          "from": "H:\\DDM_Final_Project_Gate13R36H\\v2",
+          "to": "H:\\DDM_Final_Project_Gate13R36H\\v11",
+          "count": 2
+        },
+        {
+          "from": "gate13r-36h-four-lane-validation-only-pre-pilot-audit-v2",
+          "to": "gate13r-36h-four-lane-validation-only-pre-pilot-audit-v11",
+          "count": 1
+        }
+      ],
+      "reverseTransformSha256": "6e4c89c2b645aec0fa56d54ba7987fc4b186578e2a258e7a051eae2fc1c0a64a",
+      "passed": true
+    }
+  ],
+  "authorizedOverlays": [
+    {
+      "overlayId": "expected-negative-lock-hygiene-v11",
+      "relativePath": "Research\\Run-Gate13R36hBlockV11.ps1",
+      "beforeSha256": "03f035108b56b3a513e0eafc48657728e46b4819eef21f46a2456b1fa14c76e7",
+      "afterSha256": "e6ed63349cf4ec5faad0c2c0b0092ae416e74a6ec1db21e8a91e0de6668b5ecc",
+      "routes": [
+        {
+          "from": "$SourceProjectPath=[IO.Path]::GetFullPath($SourceProjectPath);$LaneProjectPath=[IO.Path]::GetFullPath($LaneProjectPath);$UnityPath=[IO.Path]::GetFullPath($UnityPath)",
+          "to": "$SourceProjectPath=[IO.Path]::GetFullPath($SourceProjectPath);$LaneProjectPath=[IO.Path]::GetFullPath($LaneProjectPath);$UnityPath=[IO.Path]::GetFullPath($UnityPath)\n$lockHygieneModulePath=Join-Path $SourceProjectPath 'Research\\Gate10RLockHygieneV3.psm1'\nif((Get-LowerHash $lockHygieneModulePath)-ne'9eba2284dc90fcf6dbbc59080301c1ac6db14c5029f8adab69db234c94f879d6'){throw 'Frozen lock-hygiene module hash mismatch.'}\nImport-Module $lockHygieneModulePath -Force",
+          "count": 1
+        },
+        {
+          "from": "$quiescenceDeadline=(Get-Date).AddSeconds(60);$lockPath=Join-Path $LaneProjectPath 'Temp\\UnityLockfile'\ndo{$laneProcesses=@(Get-LaneUnityProcesses $LaneProjectPath);$lockExists=Test-Path -LiteralPath $lockPath;if($laneProcesses.Count-eq0-and-not$lockExists){break};Start-Sleep -Milliseconds 250}while((Get-Date)-lt$quiescenceDeadline)\n$laneProcesses=@(Get-LaneUnityProcesses $LaneProjectPath);$lockExists=Test-Path -LiteralPath $lockPath\nif($timedOut){$errors.Add(\"Hard timeout after $TimeoutSeconds seconds.\")};if($laneProcesses.Count-ne0){$errors.Add('Lane-owned Unity process remains after exit.')};if($lockExists){$errors.Add('Lane Unity lock remains after quiescence.')}",
+          "to": "$lockPath=Join-Path $LaneProjectPath 'Temp\\UnityLockfile';$lockHygieneResult=$null\nif($ExpectFailure){\n    $lockEvidenceDirectory=$OutputDirectory+'.lock-hygiene';if(-not(Test-Path -LiteralPath $lockEvidenceDirectory)){New-Item -ItemType Directory -Path $lockEvidenceDirectory|Out-Null}\n    try{$lockHygieneResult=Invoke-Gate10RPostExitQuiescenceV3 -ProjectPath $LaneProjectPath -OwnedProcessId $process.Id -OwnedProcessStartedAt $started -OwnedProcessCompletedAt $completed -Role expected-negative -EvidenceDirectory $lockEvidenceDirectory -ContextId ('g13r36-v11-negative-lane-{0:D2}'-f$LaneNumber) -QuiescenceSeconds 60 -PollMilliseconds 250 -TimestampToleranceSeconds 2}catch{$errors.Add('Expected-negative controlled lock hygiene failed: '+$_.Exception.Message)}\n    $laneProcesses=@(Get-LaneUnityProcesses $LaneProjectPath);$lockExists=Test-Path -LiteralPath $lockPath\n}else{\n    $quiescenceDeadline=(Get-Date).AddSeconds(60)\n    do{$laneProcesses=@(Get-LaneUnityProcesses $LaneProjectPath);$lockExists=Test-Path -LiteralPath $lockPath;if($laneProcesses.Count-eq0-and-not$lockExists){break};Start-Sleep -Milliseconds 250}while((Get-Date)-lt$quiescenceDeadline)\n    $laneProcesses=@(Get-LaneUnityProcesses $LaneProjectPath);$lockExists=Test-Path -LiteralPath $lockPath\n}\nif($timedOut){$errors.Add(\"Hard timeout after $TimeoutSeconds seconds.\")};if($laneProcesses.Count-ne0){$errors.Add('Lane-owned Unity process remains after exit.')};if($lockExists){$errors.Add('Lane Unity lock remains after quiescence.')}",
+          "count": 1
+        },
+        {
+          "from": "automaticResumeAttempted=$false;errors=$errors.ToArray();passed=$passed",
+          "to": "automaticResumeAttempted=$false;lockHygieneResult=$lockHygieneResult;errors=$errors.ToArray();passed=$passed",
+          "count": 1
+        }
+      ],
+      "parserPassed": true
+    },
+    {
+      "overlayId": "lock-hygiene-static-coverage-v11",
+      "relativePath": "Research\\Verification\\Run-Gate13R36hStaticUnitV11.ps1",
+      "beforeSha256": "985e420024cf99cf1d7d7af395ff7e0215a008996028e90d0fb4bcc9bf97c5b8",
+      "afterSha256": "0f19cf4671b8cefabe3bb4ba080e17bb8c0d0a05651a971a84f8c15cf38b9268",
+      "routes": [
+        {
+          "from": "'Research\\Verification\\Run-Gate13R36hVerificationV11.ps1','Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV11.ps1'",
+          "to": "'Research\\Verification\\Run-Gate13R36hVerificationV11.ps1','Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV11.ps1','Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1'",
+          "count": 1
+        },
+        {
+          "from": "@{name='analysis';script='Research\\Analyze-Gate13R36hConcurrencyPilotV11.ps1';arguments=@('-ProjectPath',$ProjectPath,'-PilotRoot',(Join-Path $ProjectPath 'Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v11'),'-BindingSmokeOnly')},",
+          "to": "@{name='analysis';script='Research\\Analyze-Gate13R36hConcurrencyPilotV11.ps1';arguments=@('-ProjectPath',$ProjectPath,'-PilotRoot',(Join-Path $ProjectPath 'Research\\PilotRuns\\Gate13R_36h_10pct_4Lane\\v11'),'-BindingSmokeOnly')},\n      @{name='lock-hygiene-unit';script='Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1';arguments=@('-ProjectPath',$ProjectPath,'-OutputDirectory',(Join-Path $preImplementationRoot 'BindingSmokeLockHygiene'),'-BindingSmokeOnly')},",
+          "count": 1
+        },
+        {
+          "from": "$summary=[ordered]@{schemaVersion=1;summaryKind=",
+          "to": "$blockWrapperText=[IO.File]::ReadAllText((Join-Path $ProjectPath 'Research\\Run-Gate13R36hBlockV11.ps1'))\nAdd-Assertion 'expected-negative-lock-hygiene-source' ($blockWrapperText.Contains('Invoke-Gate10RPostExitQuiescenceV3')-and$blockWrapperText.Contains('-Role expected-negative')-and$blockWrapperText.Contains(\"if(`$ExpectFailure)\")) 'Controlled cleanup must be reachable only through the expected-negative branch.'\nAdd-Assertion 'frozen-lock-module-hash' ((Get-G13R36LowerSha256 (Join-Path $ProjectPath 'Research\\Gate10RLockHygieneV3.psm1'))-eq'9eba2284dc90fcf6dbbc59080301c1ac6db14c5029f8adab69db234c94f879d6') 'Frozen Gate10R lock-hygiene module changed.'\n$summary=[ordered]@{schemaVersion=1;summaryKind=",
+          "count": 1
+        }
+      ],
+      "parserPassed": true
+    },
+    {
+      "overlayId": "official-lock-unit-gate-v11",
+      "relativePath": "Research\\Verification\\Run-Gate13R36hVerificationV11.ps1",
+      "beforeSha256": "661dead48fc2f1bf261794c9f6ef9632a4aa67777a2d0671ff25527d4b4ddebb",
+      "afterSha256": "41d87dc3ae6f8e238c58859680fa24422d6826eebc28cca5157de51b80ab67f0",
+      "routes": [
+        {
+          "from": "$static=Read-G13R36Json (Join-Path $verificationRoot 'StaticUnit\\summary.json');if($static.passed-ne$true){throw 'Static/unit summary failed.'}\n\n    Write-Checkpoint 'running' 'lane-copy-creation' ''",
+          "to": "$static=Read-G13R36Json (Join-Path $verificationRoot 'StaticUnit\\summary.json');if($static.passed-ne$true){throw 'Static/unit summary failed.'}\n    Write-Checkpoint 'running' 'lock-hygiene-unit' ''\n    [void](Invoke-Child '01b-lock-hygiene-unit' (Join-Path $ProjectPath 'Research\\Verification\\Run-Gate13R36hLockHygieneUnitV5.ps1') @('-ProjectPath',$ProjectPath,'-OutputDirectory',(Join-Path $verificationRoot 'LockHygieneUnit')) 600)\n    $lockUnit=Read-G13R36Json (Join-Path $verificationRoot 'LockHygieneUnit\\summary.json');if($lockUnit.passed-ne$true-or[int]$lockUnit.failedAssertionCount-ne0){throw 'Expected-negative lock-hygiene unit summary failed.'}\n\n    Write-Checkpoint 'running' 'lane-copy-creation' ''",
+          "count": 1
+        }
+      ],
+      "parserPassed": true
+    },
+    {
+      "overlayId": "validation-audit-lock-unit-binding-v11",
+      "relativePath": "Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV11.ps1",
+      "beforeSha256": "39ee513912b5055cc100f7a7d0ee9810038b25e0011324fe16fc1e8a20c7eb4e",
+      "afterSha256": "43c1451c039bda99d0bb1d56f8c118c02465fff8435a08db2b6185767cfda9b2",
+      "routes": [
+        {
+          "from": "$staticPath=Join-Path $VerificationRoot 'StaticUnit\\summary.json';$static=Read-IfPresent $staticPath\n    Add-Assertion 'static-unit' ($null-ne$static-and$static.passed-eq$true-and[int]$static.failedAssertionCount-eq0) 'Static/unit evidence is missing or failed.'",
+          "to": "$staticPath=Join-Path $VerificationRoot 'StaticUnit\\summary.json';$static=Read-IfPresent $staticPath\n    Add-Assertion 'static-unit' ($null-ne$static-and$static.passed-eq$true-and[int]$static.failedAssertionCount-eq0) 'Static/unit evidence is missing or failed.'\n    $lockUnitPath=Join-Path $VerificationRoot 'LockHygieneUnit\\summary.json';$lockUnit=Read-IfPresent $lockUnitPath\n    Add-Assertion 'expected-negative-lock-hygiene-unit' ($null-ne$lockUnit-and$lockUnit.passed-eq$true-and[int]$lockUnit.failedAssertionCount-eq0-and[string]$lockUnit.cleanupResult.mode-eq'controlled-expected-negative-cleanup') 'Lock-hygiene unit evidence is missing, failed, or did not exercise controlled expected-negative cleanup.'",
+          "count": 1
+        },
+        {
+          "from": "staticSummarySha256=if(Test-Path $staticPath){Get-G13R36LowerSha256 $staticPath}else{$null};compileSummarySha256=",
+          "to": "staticSummarySha256=if(Test-Path $staticPath){Get-G13R36LowerSha256 $staticPath}else{$null};lockHygieneUnitSummarySha256=if(Test-Path $lockUnitPath){Get-G13R36LowerSha256 $lockUnitPath}else{$null};compileSummarySha256=",
+          "count": 1
+        }
+      ],
+      "parserPassed": true
+    }
+  ],
+  "planV2Sha256": "fbee6a4b7a6f1f85317bb88b1d27ffb1894be7e178bcf65a9cc2f4e928365b22",
+  "planV11Sha256": "d032d74dbc49b127827b5b3d6af102638cb5ae8b1e622425d333d61da1b83d36",
+  "scheduleV11Sha256": "ca55de779f6d976c8c32943b6c16f921160fbf8a711c9d6502ec192f514953e4",
+  "provenanceV11Sha256": "4c8c740d53c5572a48028d873ff8c61deeeaf0013436fe6538c748915bf17b27",
+  "attempt2EvidencePreserved": true,
+  "attempt4EvidencePreserved": true,
+  "attempt5EvidencePreserved": true,
+  "attempt6EvidencePreserved": true,
+  "attempt7EvidencePreserved": true,
+  "attempt8EvidencePreserved": true,
+  "attempt9EvidencePreserved": true,
+  "attempt10EvidencePreserved": true,
+  "pilotRootCreated": false,
+  "formalCampaign": false,
+  "passed": true
+}

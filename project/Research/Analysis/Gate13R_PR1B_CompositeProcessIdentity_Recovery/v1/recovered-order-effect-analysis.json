@@ -1,0 +1,3638 @@
+{
+  "analysisKind": "gate13r-pr1b-v4-composite-process-identity-read-only-analysis-recovery-v1",
+  "decision": {
+    "decisionMetricId": "P1",
+    "heterogeneousSampleConfigurationRecommendation": "H48-RECOMMENDED",
+    "pooledCellCount": 4,
+    "pooledClassificationCounts": {
+      "DETECTABLE-BUT-BELOW-BOUND": 0,
+      "INCONCLUSIVE": 1,
+      "MATERIAL-ORDER-EFFECT": 0,
+      "ORDER-EFFECT-BOUNDED": 3
+    },
+    "recommendationIsFrozenFormalDesign": false,
+    "requiresSeparateFormalAuthorization": true,
+    "scenarioCellCount": 12,
+    "scenarioClassificationCounts": {
+      "DETECTABLE-BUT-BELOW-BOUND": 2,
+      "INCONCLUSIVE": 4,
+      "MATERIAL-ORDER-EFFECT": 0,
+      "ORDER-EFFECT-BOUNDED": 6
+    },
+    "sharedS48Changed": false
+  },
+  "estimand": "AB_LOG_SYSTEM_RATIO_MINUS_BA_LOG_SYSTEM_RATIO",
+  "executionDiagnostics": {
+    "byAlgorithm": [
+      {
+        "level": "A*-R",
+        "meanProcessAgeMilliseconds": 14539.008205208333,
+        "meanSampleManagedGrowthBytes": -13244096.0,
+        "memoryAlertCount": 0,
+        "n": 192
+      },
+      {
+        "level": "C-FF",
+        "meanProcessAgeMilliseconds": 12520.490298958335,
+        "meanSampleManagedGrowthBytes": -7582741.333333333,
+        "memoryAlertCount": 0,
+        "n": 192
+      },
+      {
+        "level": "D*L",
+        "meanProcessAgeMilliseconds": 15257.3475390625,
+        "meanSampleManagedGrowthBytes": -10271296.0,
+        "memoryAlertCount": 0,
+        "n": 192
+      },
+      {
+        "level": "IDFF",
+        "meanProcessAgeMilliseconds": 12518.237308854166,
+        "meanSampleManagedGrowthBytes": -9550826.666666666,
+        "memoryAlertCount": 0,
+        "n": 192
+      }
+    ],
+    "byPairProcessPosition": [
+      {
+        "level": "1",
+        "meanProcessAgeMilliseconds": 13441.210748437501,
+        "meanSampleManagedGrowthBytes": -9022613.333333334,
+        "memoryAlertCount": 0,
+        "n": 192
+      },
+      {
+        "level": "2",
+        "meanProcessAgeMilliseconds": 13925.373821875,
+        "meanSampleManagedGrowthBytes": -10253333.333333334,
+        "memoryAlertCount": 0,
+        "n": 192
+      },
+      {
+        "level": "3",
+        "meanProcessAgeMilliseconds": 14055.32223125,
+        "meanSampleManagedGrowthBytes": -10836309.333333334,
+        "memoryAlertCount": 0,
+        "n": 192
+      },
+      {
+        "level": "4",
+        "meanProcessAgeMilliseconds": 13413.176550520833,
+        "meanSampleManagedGrowthBytes": -10536704.0,
+        "memoryAlertCount": 0,
+        "n": 192
+      }
+    ],
+    "byPosition": [
+      {
+        "level": "1",
+        "meanProcessAgeMilliseconds": 12856.734148697918,
+        "meanSampleManagedGrowthBytes": 1276597.3333333333,
+        "memoryAlertCount": 0,
+        "n": 384
+      },
+      {
+        "level": "2",
+        "meanProcessAgeMilliseconds": 14560.80752734375,
+        "meanSampleManagedGrowthBytes": -21601077.333333332,
+        "memoryAlertCount": 0,
+        "n": 384
+      }
+    ],
+    "byPredecessor": [
+      {
+        "level": "A*-R",
+        "meanProcessAgeMilliseconds": 16110.750958333336,
+        "meanSampleManagedGrowthBytes": -21129301.333333332,
+        "memoryAlertCount": 0,
+        "n": 96
+      },
+      {
+        "level": "C-FF",
+        "meanProcessAgeMilliseconds": 13128.762157291667,
+        "meanSampleManagedGrowthBytes": -25192917.333333332,
+        "memoryAlertCount": 0,
+        "n": 96
+      },
+      {
+        "level": "D*L",
+        "meanProcessAgeMilliseconds": 16195.711112500001,
+        "meanSampleManagedGrowthBytes": -21244842.666666668,
+        "memoryAlertCount": 0,
+        "n": 96
+      },
+      {
+        "level": "IDFF",
+        "meanProcessAgeMilliseconds": 12808.005881250001,
+        "meanSampleManagedGrowthBytes": -18837248.0,
+        "memoryAlertCount": 0,
+        "n": 96
+      },
+      {
+        "level": "NONE",
+        "meanProcessAgeMilliseconds": 12856.734148697918,
+        "meanSampleManagedGrowthBytes": 1276597.3333333333,
+        "memoryAlertCount": 0,
+        "n": 384
+      }
+    ],
+    "interpretation": "DESCRIPTIVE-PILOT-DIAGNOSTIC-ONLY",
+    "metricOrderEffectWaveCorrelationsLocation": "scenarioRows and pooledEqualScenarioRows[*].waveCorrelation",
+    "processAgeWaveCorrelation": 0.03398003429833397,
+    "sampleCount": 768,
+    "sampleManagedGrowthWaveCorrelation": 0.0066096244032398214
+  },
+  "formalCampaignAuthorized": false,
+  "formalInference": false,
+  "frozenPilotTerminalStatus": "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE / NON-FORMAL / COMPLETE-RAW-EXECUTION / POST-EXECUTION-ANALYZER-FAILED / EXCLUDED-FROM-FORMAL-ANALYSIS",
+  "gate14rAuthorized": false,
+  "generatedAtUtc": "2026-10-08T15:25:13.5397133Z",
+  "memoryAlertDiagnostics": {
+    "alertRate": 0.0,
+    "alertSampleCount": 0,
+    "byAlgorithm": {},
+    "byCohort": {},
+    "byPairProcessPosition": {},
+    "byPosition": {},
+    "byPredecessor": {},
+    "byScenario": {},
+    "bySuperblockOrder": {},
+    "byWave": {},
+    "postAlertPosition2MeanProcessAgeMs": null,
+    "postAlertPosition2MeanSampleManagedGrowthBytes": null,
+    "postAlertPosition2SampleCount": 0,
+    "sampleCount": 768
+  },
+  "memoryEligibility": {
+    "alertMirroredPairCount": 0,
+    "alertPairsExcludedFromPrimary": false,
+    "completeMirroredPairCount": 96,
+    "noAlertMirroredPairCount": 96,
+    "policyId": "gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1",
+    "primaryAnalysisSet": "ALL-COMPLETE-ELIGIBLE-PAIRS-INCLUDING-MEMORY-ALERTS"
+  },
+  "noAlertSensitivity": {
+    "mayReplacePrimary": false,
+    "pooledEqualScenarioRows": [
+      {
+        "bootstrap95CiLog": [
+          -0.0008402499688760142,
+          0.1044454660087649
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9991601029422776,
+          1.110094854312445
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.05039913067280597,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.05330668835763922,
+          0.0758584301738922
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9480891999705373,
+          1.0788098364250658
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.008989160855631522,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.03518498070890194,
+          0.07434797508348953
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9654268144026058,
+          1.0771815726352962
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.020309344757765465,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.09015725580683985,
+          0.05423071182419764
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9137874755851797,
+          1.0557281430258547
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": -0.021100625059408924,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          0.020163913554105746,
+          0.18320902908564154
+        ],
+        "bootstrap95CiMultiplicative": [
+          1.0203685785602599,
+          1.2010654394540923
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.09848164788079534,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.05560532046564138,
+          0.09978118432436749
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9459123944901873,
+          1.1049291158105472
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.016713963915956944,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.008956675980725807,
+          0.15392897831014982
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9910833155554454,
+          1.1664080435663329
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.07152418047312949,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.09542098990225827,
+          0.08464173887567451
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9089901782193444,
+          1.088327091558648
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": -0.01024350349170894,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          0.0028039018343846865,
+          0.09852766363221152
+        ],
+        "bootstrap95CiMultiplicative": [
+          1.0028078364436932,
+          1.1035449320332653
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.04953681759325015,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.035115489924808695,
+          0.03451709869287591
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9654939049999853,
+          1.0351197274191075
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": -0.0009535343320586249,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.004065328466249074,
+          0.07829885588971122
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9959429237950153,
+          1.081445806829087
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.03675660804283779,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.04442138398599303,
+          0.019686548200944808
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9565507973486106,
+          1.0198816061945162
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": -0.013733743882470978,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.21718111943739002,
+          0.17638445868577274
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8047841940435877,
+          1.1928965899570876
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": -0.01975989861800764,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.38352291920245274,
+          0.20076500537554845
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.6814564594312185,
+          1.2223374953297652
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": -0.09281407723928324,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.17320640242051458,
+          0.15983542364508252
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.840964019920756,
+          1.1733177547418265
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": -0.005699599045774144,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.3209607690950498,
+          0.17040029402655596
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.7254517105589932,
+          1.1857794167485132
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": -0.07875377766704982,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 96,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioPairCounts": {
+          "core-r01-s1-hetero": 32,
+          "core-r07-s2-hetero": 32,
+          "goal-count-g32-hetero": 32
+        }
+      }
+    ],
+    "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+    "scenarioRows": [
+      {
+        "bootstrap95CiLog": [
+          -0.02223919789644827,
+          0.2716035613119517
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.978006270027851,
+          1.3120667441742013
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.12155245551859502,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          0.006611147345343738,
+          0.1014571464272655
+        ],
+        "bootstrap95CiMultiplicative": [
+          1.0066330492188564,
+          1.1067824877918158
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.05417308221914091,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.05532955760104801,
+          0.006409552210998586
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.946173277971081,
+          1.006430137347773
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": -0.024528145719318023,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.162597483596422,
+          0.21744527176381973
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8499332316386485,
+          1.2428974060635596
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.01756403706582587,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.01872403309780554,
+          0.03457426546711752
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9814501726375354,
+          1.0351789035663166
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.008165585254127264,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.029266881443299374,
+          0.033080227518061216
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.971157246030357,
+          1.0336334617621492
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.001237860246941433,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.13195922070680183,
+          0.17801284353904823
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.876376732374419,
+          1.1948406671190175
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.02702167484515452,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          0.005250976798081791,
+          0.10720847423173403
+        ],
+        "bootstrap95CiMultiplicative": [
+          1.005264787339111,
+          1.1131662967795783
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.055256009627120906,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.05337648871824566,
+          0.010574895510005703
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9480230253120268,
+          1.010631007335334
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": -0.021349650198979025,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.27711474233877276,
+          0.14569527381349845
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.7579675211546004,
+          1.1568436137914104
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": -0.07696674360761457,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.018539740539445272,
+          0.037142566441806406
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9816310632686406,
+          1.0378409715859807
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": 0.009248512662107244,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.026501402395217862,
+          0.03620613614948865
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.973846678116653,
+          1.036869560761826
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": 0.004416355767280555,
+        "metricId": "P1",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          0.03582607664455595,
+          0.4677446792850293
+        ],
+        "bootstrap95CiMultiplicative": [
+          1.0364755635058267,
+          1.5963897592746534
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.24299346873832486,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.0038150917616389408,
+          0.20965947971062804
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9961921764550269,
+          1.2332580390636516
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.10296075223891066,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.10456936096112797,
+          0.002275861658238923
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9007123209679132,
+          1.002278453397156
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": -0.05050927733484947,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.16646803721213718,
+          0.28786126527582306
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8466498777934051,
+          1.3335722785067137
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.04694125552794068,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.02733173122312122,
+          0.03261812395272255
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9730384007602885,
+          1.0331559263981105
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.0021689307206755534,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.03160065987848769,
+          0.03457333572486034
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9688934228507501,
+          1.0351779411171935
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.0010317054992546038,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.056289954161601825,
+          0.3607347180839432
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9452650126264985,
+          1.4343828945594788
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.15217251467765952,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          0.0017651522415901384,
+          0.22009215091927886
+        ],
+        "bootstrap95CiMultiplicative": [
+          1.0017667110398454,
+          1.246191562994471
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.11033552258784696,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.10230240932548242,
+          0.004911903356823696
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9027565083987623,
+          1.004923986529809
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": -0.04793549584611803,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.2931214582946608,
+          0.2310093198618698
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.7459315356227134,
+          1.2598709812180342
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": -0.043879698532724644,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.02560228629105093,
+          0.04453344374931289
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9747226730995218,
+          1.045539942901499
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": 0.009543701069611804,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.028436695769144177,
+          0.036507346029591416
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9719638216207886,
+          1.0371819231588637
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": 0.0036054869879860174,
+        "metricId": "P2",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.009601098416034697,
+          0.2558072127144849
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9904448449761193,
+          1.2915037184414317
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.11757231258971215,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.005285871051660609,
+          0.09661496610545615
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9947280745822995,
+          1.1014362016956363
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.04657878034736834,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.044889265821101657,
+          0.014273294397137523
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9561033492907444,
+          1.0143756442403358
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": -0.015540640157330046,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.11794179002796766,
+          0.07838242782423657
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8887477850926437,
+          1.081536189123907
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": -0.020817988146679352,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.014697313916412448,
+          0.0380007108213254
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9854101644099289,
+          1.0387319712310719
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.011379127285872329,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.022979613665043173,
+          0.03666361532690477
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9772824067766899,
+          1.0373440155138811
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.0065782578646311485,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.026551891292865785,
+          0.19170222875028026
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9737975109126062,
+          1.2113097700335131
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.08075768297719739,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.0014968062698283878,
+          0.09355311146994466
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9985043133859707,
+          1.098068921847135
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.04549034952064207,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.047083353980520534,
+          0.014519228378354895
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9540078739223707,
+          1.014625144359995
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": -0.01597820836932609,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.13893614628939766,
+          0.03138203966977255
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8702835975210653,
+          1.0318796475522667
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": -0.057632617759194094,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.021200922700766903,
+          0.04288794074894849
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9790222370146338,
+          1.0438209185062346
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": 0.010290696459146056,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.023797180758567835,
+          0.03645506247571658
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9764837393664121,
+          1.0371276970194863
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": 0.0061406896526351035,
+        "metricId": "P3",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.5795739897059734,
+          0.3205944496370962
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.5601369398468964,
+          1.377946640801997
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": -0.12106714332945871,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.236900518172758,
+          0.27396757196226923
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.7890697822169281,
+          1.3151721530950111
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.015294376030333304,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.21136744691628004,
+          0.3066701940265847
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8094765725575503,
+          1.35889272322178
+        ],
+        "contrastId": "C1",
+        "estimable": true,
+        "meanLogOrderEffect": 0.04649307144510249,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -1.1562340213627864,
+          0.4474929282985133
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.314668988959906,
+          1.5643852390158908
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": -0.3613945309169576,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.2175452904155595,
+          0.2973786938350796
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8044911683553917,
+          1.3463250479183642
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.03839571723187688,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.21611113890637262,
+          0.30138383186641843
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8056457583091827,
+          1.3517280782889791
+        ],
+        "contrastId": "C2",
+        "estimable": true,
+        "meanLogOrderEffect": 0.044556581967231,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.646395353446811,
+          0.09997834728974689
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.5239309629445039,
+          1.1051469883890506
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": -0.2650255696310585,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.016845109845089537,
+          0.37878727168444093
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9832959757064114,
+          1.4605123103709226
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.17861924974275062,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.18733407583777736,
+          0.3240687068483707
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8291666855548526,
+          1.3827423077219185
+        ],
+        "contrastId": "C3",
+        "estimable": true,
+        "meanLogOrderEffect": 0.06930752275098545,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -1.1514345961926433,
+          0.16855007832157418
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.31618284914921774,
+          1.1835874974360683
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": -0.5053529572185573,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r01-s1-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.004692475140493419,
+          0.4250340406870375
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.9953185173203075,
+          1.5296424888583806
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": 0.201720590944294,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "core-r07-s2-hetero"
+      },
+      {
+        "bootstrap95CiLog": [
+          -0.1856209706705862,
+          0.3201870227049795
+        ],
+        "bootstrap95CiMultiplicative": [
+          0.8305883526732988,
+          1.377385342581285
+        ],
+        "contrastId": "C4",
+        "estimable": true,
+        "meanLogOrderEffect": 0.06737103327311389,
+        "metricId": "P4",
+        "nCompleteMirroredPairs": 32,
+        "role": "SENSITIVITY-ONLY-NOT-PRIMARY",
+        "scenarioId": "goal-count-g32-hetero"
+      }
+    ]
+  },
+  "orderBiasBound": {
+    "absoluteLog": 0.09531017980432493,
+    "identity": "EXECUTION-ORDER-DIAGNOSTIC-NOT-ALGORITHM-PRACTICAL-MARGIN",
+    "multiplicative": 1.1
+  },
+  "p5": {
+    "pseudocountUsed": false,
+    "rows": [
+      {
+        "algorithmId": "A*-R",
+        "eligibleOverall": 44000,
+        "eligiblePlan": 43520,
+        "eligibleRepair": 480,
+        "exceededOverall": 0,
+        "exceededPlan": 0,
+        "exceededRepair": 0,
+        "order": "AB",
+        "overallRate": 0.0,
+        "planRate": 0.0,
+        "repairRate": 0.0
+      },
+      {
+        "algorithmId": "D*L",
+        "eligibleOverall": 44000,
+        "eligiblePlan": 43520,
+        "eligibleRepair": 480,
+        "exceededOverall": 0,
+        "exceededPlan": 0,
+        "exceededRepair": 0,
+        "order": "AB",
+        "overallRate": 0.0,
+        "planRate": 0.0,
+        "repairRate": 0.0
+      },
+      {
+        "algorithmId": "C-FF",
+        "eligibleOverall": 44000,
+        "eligiblePlan": 43520,
+        "eligibleRepair": 480,
+        "exceededOverall": 0,
+        "exceededPlan": 0,
+        "exceededRepair": 0,
+        "order": "AB",
+        "overallRate": 0.0,
+        "planRate": 0.0,
+        "repairRate": 0.0
+      },
+      {
+        "algorithmId": "IDFF",
+        "eligibleOverall": 44000,
+        "eligiblePlan": 43520,
+        "eligibleRepair": 480,
+        "exceededOverall": 0,
+        "exceededPlan": 0,
+        "exceededRepair": 0,
+        "order": "AB",
+        "overallRate": 0.0,
+        "planRate": 0.0,
+        "repairRate": 0.0
+      },
+      {
+        "algorithmId": "A*-R",
+        "eligibleOverall": 44000,
+        "eligiblePlan": 43520,
+        "eligibleRepair": 480,
+        "exceededOverall": 0,
+        "exceededPlan": 0,
+        "exceededRepair": 0,
+        "order": "BA",
+        "overallRate": 0.0,
+        "planRate": 0.0,
+        "repairRate": 0.0
+      },
+      {
+        "algorithmId": "D*L",
+        "eligibleOverall": 44000,
+        "eligiblePlan": 43520,
+        "eligibleRepair": 480,
+        "exceededOverall": 0,
+        "exceededPlan": 0,
+        "exceededRepair": 0,
+        "order": "BA",
+        "overallRate": 0.0,
+        "planRate": 0.0,
+        "repairRate": 0.0
+      },
+      {
+        "algorithmId": "C-FF",
+        "eligibleOverall": 44000,
+        "eligiblePlan": 43520,
+        "eligibleRepair": 480,
+        "exceededOverall": 0,
+        "exceededPlan": 0,
+        "exceededRepair": 0,
+        "order": "BA",
+        "overallRate": 0.0,
+        "planRate": 0.0,
+        "repairRate": 0.0
+      },
+      {
+        "algorithmId": "IDFF",
+        "eligibleOverall": 44000,
+        "eligiblePlan": 43520,
+        "eligibleRepair": 480,
+        "exceededOverall": 0,
+        "exceededPlan": 0,
+        "exceededRepair": 0,
+        "order": "BA",
+        "overallRate": 0.0,
+        "planRate": 0.0,
+        "repairRate": 0.0
+      }
+    ],
+    "totalOverrunEvents": 0,
+    "verdict": "ZERO-EVENT / ORDER-RATIO-NOT-ESTIMABLE"
+  },
+  "pilotLevelOrderEffectIdentifiability": {
+    "formalClaimAllowed": false,
+    "p1ClassificationCountsAcrossScenarioAndPooledRows": {
+      "DETECTABLE-BUT-BELOW-BOUND": 2,
+      "INCONCLUSIVE": 5,
+      "ORDER-EFFECT-BOUNDED": 9
+    },
+    "pilotDiagnosticOnly": true,
+    "pureAlgorithmCausalClaimAllowed": false,
+    "verdict": "PILOT-LEVEL-ORDER-EFFECT-IDENTIFIABLE / SOME-CELLS-INCONCLUSIVE"
+  },
+  "pooledEqualScenarioRows": [
+    {
+      "abGeometricSystemRatio": 0.2818924747036897,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.26803741317768387,
+      "bootstrap95CiLog": [
+        -0.0011779800294580297,
+        0.10403607982533056
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9988227135166623,
+        1.1096404898284047
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.050399130672805964,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0516907746636892,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.27264445668242515,
+      "standardError": 0.027826658336262206,
+      "t95CiLog": [
+        -0.0048437707272235495,
+        0.10564203207283548
+      ],
+      "t95CiMultiplicative": [
+        0.9951679414122686,
+        1.1114239511605264
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": 0.032075693402606714
+    },
+    {
+      "abGeometricSystemRatio": 0.2572070729137587,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.25490535790451674,
+      "bootstrap95CiLog": [
+        -0.0531785483874771,
+        0.07568060230554503
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9482106958764073,
+        1.0786180110279586
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.008989160855631522,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.009029684696169,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.3246732728930229,
+      "standardError": 0.03313682715447097,
+      "t95CiLog": [
+        -0.056795758522156445,
+        0.07477408023341948
+      ],
+      "t95CiMultiplicative": [
+        0.9447870143582274,
+        1.0776406630542554
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.037195923110288666
+    },
+    {
+      "abGeometricSystemRatio": 0.07362716743777672,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.07214693011484656,
+      "bootstrap95CiLog": [
+        -0.03536584512247614,
+        0.07425088774322224
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9652522188375082,
+        1.0770769970179905
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.020309344757765465,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0205169827818572,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.27810326401151114,
+      "standardError": 0.028383795526279947,
+      "t95CiLog": [
+        -0.036039613808112506,
+        0.07665830332364344
+      ],
+      "t95CiMultiplicative": [
+        0.9646020811645121,
+        1.0796730926486213
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.10210811314499227
+    },
+    {
+      "abGeometricSystemRatio": 0.06717961606994924,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.06861220911144163,
+      "bootstrap95CiLog": [
+        -0.08824914053519445,
+        0.05438740614590887
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.915532751987128,
+        1.0558935825925195
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C4",
+      "meanOrderEffectLog": -0.021100625059408924,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9791204355603023,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.36299824161594085,
+      "standardError": 0.03704835289527404,
+      "t95CiLog": [
+        -0.09465090484129803,
+        0.052449654722480185
+      ],
+      "t95CiMultiplicative": [
+        0.9096904475750286,
+        1.0538495043971836
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.13558848501176352
+    },
+    {
+      "abGeometricSystemRatio": 0.4084149401833299,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.3701106518459239,
+      "bootstrap95CiLog": [
+        0.018850201992991686,
+        0.18444105516730136
+      ],
+      "bootstrap95CiMultiplicative": [
+        1.019028988672029,
+        1.2025460953173115
+      ],
+      "classification": "MATERIAL-ORDER-EFFECT",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.09848164788079534,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.1034941527523288,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.4294676875107289,
+      "standardError": 0.0438323623089309,
+      "t95CiLog": [
+        0.011463406599298509,
+        0.18549988916229218
+      ],
+      "t95CiMultiplicative": [
+        1.0115293632330224,
+        1.2038200663464702
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": 0.01370162839705464
+    },
+    {
+      "abGeometricSystemRatio": 0.27130596941035096,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.2668090565335867,
+      "bootstrap95CiLog": [
+        -0.05617009056462564,
+        0.10046694451090694
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9453783222817235,
+        1.1056870920723856
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.016713963915956944,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0168544236660801,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.3910788147468108,
+      "standardError": 0.03991431438925482,
+      "t95CiLog": [
+        -0.06252596879928284,
+        0.09595389663119673
+      ],
+      "t95CiMultiplicative": [
+        0.9393886677009612,
+        1.1007083164627132
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.06487863519828554
+    },
+    {
+      "abGeometricSystemRatio": 0.12950982057112312,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.12057024538286668,
+      "bootstrap95CiLog": [
+        -0.008342677264922563,
+        0.1531616358611784
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9916920262931327,
+        1.1655133524728107
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.07152418047312949,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0741441237004132,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.41607681941914243,
+      "standardError": 0.04246566255737659,
+      "t95CiLog": [
+        -0.012780818754427603,
+        0.15582917970068658
+      ],
+      "t95CiMultiplicative": [
+        0.9873005090621859,
+        1.1686265608999666
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.07760376593270112
+    },
+    {
+      "abGeometricSystemRatio": 0.0860320814964235,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.08691788052081696,
+      "bootstrap95CiLog": [
+        -0.09601448304584066,
+        0.08246563389600385
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9084508588379955,
+        1.0859613525369962
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C4",
+      "meanOrderEffectLog": -0.01024350349170894,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9898087825072849,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.4473989899897091,
+      "standardError": 0.04566246820463943,
+      "t95CiLog": [
+        -0.10089496434008743,
+        0.08040795735666956
+      ],
+      "t95CiMultiplicative": [
+        0.9040279830749807,
+        1.083729092761164
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.14203472950226848
+    },
+    {
+      "abGeometricSystemRatio": 0.27714436047251995,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.2637500065909024,
+      "bootstrap95CiLog": [
+        0.0025847057993336454,
+        0.09927618085686865
+      ],
+      "bootstrap95CiMultiplicative": [
+        1.0025880490311712,
+        1.1043712636462168
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.04953681759325015,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.050784278850818,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.2483831439877465,
+      "standardError": 0.02535049847825926,
+      "t95CiLog": [
+        -0.000790284962614525,
+        0.09986392014911483
+      ],
+      "t95CiMultiplicative": [
+        0.9992100272303007,
+        1.105020536814075
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": 0.022301725109398242
+    },
+    {
+      "abGeometricSystemRatio": 0.1557607220998704,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.15590931612947445,
+      "bootstrap95CiLog": [
+        -0.035294769422660514,
+        0.03448954871049437
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9653208272526274,
+        1.0350912102816796
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C2",
+      "meanOrderEffectLog": -0.0009535343320586255,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9990469201373404,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.17746460146029816,
+      "standardError": 0.018112405041004375,
+      "t95CiLog": [
+        -0.03691120462456722,
+        0.035004135960449975
+      ],
+      "t95CiMultiplicative": [
+        0.9637617091325092,
+        1.0356239920906378
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.04326256883027741
+    },
+    {
+      "abGeometricSystemRatio": 0.22141451550968333,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.21342382393770498,
+      "bootstrap95CiLog": [
+        -0.003646346671389732,
+        0.07786130850625513
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9963602931777853,
+        1.0809727265510258
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.03675660804283779,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0374404854366712,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.2089236018008306,
+      "standardError": 0.021323175818185488,
+      "t95CiLog": [
+        -0.005575248158683467,
+        0.07908846424435906
+      ],
+      "t95CiMultiplicative": [
+        0.9944402646946071,
+        1.0823000626926573
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.08952023026327564
+    },
+    {
+      "abGeometricSystemRatio": 0.12443942485562803,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.1261602335710148,
+      "bootstrap95CiLog": [
+        -0.045193923014781666,
+        0.018951719510497404
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9558121098938227,
+        1.0191324432163607
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C4",
+      "meanOrderEffectLog": -0.013733743882470978,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.986360133722976,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.1633513801447795,
+      "standardError": 0.016671980422254713,
+      "t95CiLog": [
+        -0.04683180975442049,
+        0.019364321989478538
+      ],
+      "t95CiMultiplicative": [
+        0.9542478792794252,
+        1.0195530265497381
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.19540597726807762
+    },
+    {
+      "abGeometricSystemRatio": 0.09327728107988648,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.09513876146111348,
+      "bootstrap95CiLog": [
+        -0.21245139011383524,
+        0.17295424966472692
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8085996213016837,
+        1.1888117153053146
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": -0.01975989861800764,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9804340486186814,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.9749465108408372,
+      "standardError": 0.09950506158611998,
+      "t95CiLog": [
+        -0.21730242203493416,
+        0.17778262479891888
+      ],
+      "t95CiMultiplicative": [
+        0.8046865775510745,
+        1.194565624067225
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": 0.0865861681779063
+    },
+    {
+      "abGeometricSystemRatio": 0.7063916297641135,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.7750936628288979,
+      "bootstrap95CiLog": [
+        -0.3808011403734244,
+        0.20291875660492442
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.6833137596289961,
+        1.2249729432438945
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C2",
+      "meanOrderEffectLog": -0.09281407723928324,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.911362927656976,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 1.48534918431588,
+      "standardError": 0.15159781630971286,
+      "t95CiLog": [
+        -0.39377379427234827,
+        0.20814563979378176
+      ],
+      "t95CiMultiplicative": [
+        0.6745066162447538,
+        1.2313924962392164
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": 0.0536747837971579
+    },
+    {
+      "abGeometricSystemRatio": 0.0066411062836573085,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.006679066001518959,
+      "bootstrap95CiLog": [
+        -0.17180281938322303,
+        0.15731266170185726
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.842145211510412,
+        1.1703614839145113
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": -0.005699599045774137,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9943166128538011,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 0.8497211192929045,
+      "standardError": 0.08672429858059212,
+      "t95CiLog": [
+        -0.17786909987409041,
+        0.16646990178254215
+      ],
+      "t95CiMultiplicative": [
+        0.8370519865281332,
+        1.181127985488422
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.10398359743676894
+    },
+    {
+      "abGeometricSystemRatio": 0.05029329582550362,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.054414222467141,
+      "bootstrap95CiLog": [
+        -0.32176326166715513,
+        0.16983158076256819
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.7248697744807688,
+        1.1851052399908477
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C4",
+      "meanOrderEffectLog": -0.07875377766704982,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9242674717234841,
+      "nMirroredPairs": 96,
+      "pooling": "EQUAL-SCENARIO/STRATIFIED-WHOLE-MIRRORED-PAIR-BOOTSTRAP",
+      "sampleSdLog": 1.2794368629177812,
+      "standardError": 0.13058197801065802,
+      "t95CiLog": [
+        -0.33799178061701457,
+        0.1804842252829149
+      ],
+      "t95CiMultiplicative": [
+        0.7132011499475881,
+        1.1977972264190828
+      ],
+      "tCritical": 1.985251004,
+      "waveCorrelation": -0.07272585910223343
+    }
+  ],
+  "processIdentityAudit": {
+    "definition": {
+      "blockEvidenceIdentity": [
+        "processId",
+        "processStartTimeUtc",
+        "blockId"
+      ],
+      "numericPidReuseRule": "LEGAL-ONLY-AFTER-PRIOR-HALF-OPEN-LIFETIME-ENDS",
+      "osProcessIdentity": [
+        "processId",
+        "processStartTimeUtc"
+      ]
+    },
+    "distinctNumericPidCount": 375,
+    "largestNumericPidMultiplicity": 3,
+    "numericPidReuseGroupCount": 19,
+    "samePidLifetimeOverlapCount": 0,
+    "totalProcessRecords": 396,
+    "uniqueBlockEvidenceIdentityCount": 396,
+    "uniqueBlockIdCount": 396,
+    "uniqueOsProcessIdentityCount": 396,
+    "uniqueRunIdCount": 792,
+    "uniqueScheduleKeyCount": 396,
+    "verdict": "COMPOSITE-PROCESS-IDENTITY-VALID"
+  },
+  "prohibitedClaims": [
+    "FORMAL-ALGORITHM-SUPERIORITY",
+    "PURE-ALGORITHM-CAUSAL-EFFECT-ACROSS-HETEROGENEOUS-FAMILIES",
+    "POOLING-WITH-GATE12R-V4-OR-FUTURE-FORMAL-DATA",
+    "FORMAL-ALPHA-CONSUMPTION"
+  ],
+  "recoveryContract": {
+    "bootstrapReplicates": 20000,
+    "bootstrapSeed": 13012026,
+    "bootstrapUnit": "complete-mirrored-order-pair",
+    "confidenceLevel": 0.95,
+    "identityRepairOnly": true,
+    "orderBiasAbsoluteLogBound": 0.09531017980432493,
+    "pooledWeighting": "equal-scenario",
+    "scientificContractChanged": false
+  },
+  "scenarioRows": [
+    {
+      "abGeometricSystemRatio": 1.3964703837513648,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 1.2366368079904082,
+      "bootstrap95CiLog": [
+        -0.022525169131405173,
+        0.2732898863019468
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9777266283536588,
+        1.3142811817193647
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.12155245551859502,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.1292485996924946,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.4345574141917624,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.0768196235974716,
+      "t95CiLog": [
+        -0.0351221997251072,
+        0.2782271107622972
+      ],
+      "t95CiMultiplicative": [
+        0.9654874267504273,
+        1.3207861278934006
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.024613852779347946
+    },
+    {
+      "abGeometricSystemRatio": 0.2658092378223513,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.25179262152022114,
+      "bootstrap95CiLog": [
+        0.006050335776887457,
+        0.10120260972547053
+      ],
+      "bootstrap95CiMultiplicative": [
+        1.006068676027963,
+        1.106500806878355
+      ],
+      "classification": "DETECTABLE-BUT-BELOW-BOUND",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.05417308221914091,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0556673035830182,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.13987568300427458,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.024726760993855616,
+      "t95CiLog": [
+        0.0037425206961440582,
+        0.10460364374213776
+      ],
+      "t95CiMultiplicative": [
+        1.0037495326714834,
+        1.1102704604884561
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.0581286774911279
+    },
+    {
+      "abGeometricSystemRatio": 0.06034602203199554,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.06184450037485423,
+      "bootstrap95CiLog": [
+        -0.05642309765990617,
+        0.006276115357137062
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9451391651139677,
+        1.006295851436158
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C1",
+      "meanOrderEffectLog": -0.024528145719318023,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9757702247770447,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.0914299861646882,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.01616269080521081,
+      "t95CiLog": [
+        -0.05749217094008604,
+        0.008435879501449993
+      ],
+      "t95CiMultiplicative": [
+        0.9441292820022028,
+        1.0084715617995448
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.08410220979065025
+    },
+    {
+      "abGeometricSystemRatio": 3.7926411362973416,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 3.7266086429338308,
+      "bootstrap95CiLog": [
+        -0.16330637389777342,
+        0.21221472256294413
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8493309357200337,
+        1.236413342419386
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.01756403706582587,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.017719191814981,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.5554513171939686,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.09819084825171377,
+      "t95CiLog": [
+        -0.18269751821768995,
+        0.2178255923493417
+      ],
+      "t95CiMultiplicative": [
+        0.8330200910340873,
+        1.2433701954328436
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.05880518848471225
+    },
+    {
+      "abGeometricSystemRatio": 0.14024125057013528,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.13910076140023886,
+      "bootstrap95CiLog": [
+        -0.018773613658297657,
+        0.03447957859476209
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9814015129941772,
+        1.035080890353965
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.008165585254127264,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0081990145734347,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.0780093323723062,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.013790231979073244,
+      "t95CiLog": [
+        -0.01995977829065181,
+        0.03629094879890633
+      ],
+      "t95CiMultiplicative": [
+        0.980238099365783,
+        1.0369575041456778
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.09310715807822363
+    },
+    {
+      "abGeometricSystemRatio": 0.031991248848320365,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.03195167265307397,
+      "bootstrap95CiLog": [
+        -0.02875780840302766,
+        0.033284648643459654
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9716517618638353,
+        1.0338447798758594
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.001237860246941433,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0012386267121631,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.09104274206669545,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.016094235073294525,
+      "t95CiLog": [
+        -0.031586548588127546,
+        0.03406226908201041
+      ],
+      "t95CiMultiplicative": [
+        0.9689070952836355,
+        1.0346490313676517
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.12320440798135537
+    },
+    {
+      "abGeometricSystemRatio": 0.15830115767513417,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.15408087165418022,
+      "bootstrap95CiLog": [
+        -0.1304455775204616,
+        0.17672910263520242
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8777042584910156,
+        1.1933077854030527
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.02702167484515452,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.027390071042861,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.45008861902148645,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.07956517866124539,
+      "t95CiLog": [
+        -0.13525257686784772,
+        0.18929592655815677
+      ],
+      "t95CiMultiplicative": [
+        0.873495259126711,
+        1.2083984967849006
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.18197965461926627
+    },
+    {
+      "abGeometricSystemRatio": 0.09138689768776387,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.08647420031719273,
+      "bootstrap95CiLog": [
+        0.003969819271672767,
+        0.1064422207812931
+      ],
+      "bootstrap95CiMultiplicative": [
+        1.0039777094415923,
+        1.1123136559749545
+      ],
+      "classification": "DETECTABLE-BUT-BELOW-BOUND",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.055256009627120906,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.056811133870577,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.14979344935976677,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.026479990954903696,
+      "t95CiLog": [
+        0.0012497120246364388,
+        0.10926230722960537
+      ],
+      "t95CiMultiplicative": [
+        1.0012504932401063,
+        1.1154549038558996
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.03351223401862431
+    },
+    {
+      "abGeometricSystemRatio": 0.02758965391752972,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.028185016151452184,
+      "bootstrap95CiLog": [
+        -0.0537912164970248,
+        0.010702027880103727
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.947629935346806,
+        1.0107594994181694
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C3",
+      "meanOrderEffectLog": -0.021349650198979025,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9788766403140134,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.09432695548645122,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.016674807468287815,
+      "t95CiLog": [
+        -0.05535814424001324,
+        0.012658843842055192
+      ],
+      "t95CiMultiplicative": [
+        0.9461462304437859,
+        1.0127393061673047
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.008756130849496346
+    },
+    {
+      "abGeometricSystemRatio": 0.4299263983740168,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.46432315802595775,
+      "bootstrap95CiLog": [
+        -0.2758477039726921,
+        0.14752250794825023
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.7589285037564969,
+        1.158959370333716
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C4",
+      "meanOrderEffectLog": -0.07696674360761457,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9259206458747896,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.6195310348933706,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.10951864898215548,
+      "t95CiLog": [
+        -0.3003315007944749,
+        0.14639801357924573
+      ],
+      "t95CiMultiplicative": [
+        0.7405726795537885,
+        1.1576568595181602
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.20219571902143024
+    },
+    {
+      "abGeometricSystemRatio": 0.04821582922570393,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.047771960246389834,
+      "bootstrap95CiLog": [
+        -0.018846651195951185,
+        0.03705671177843381
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9813298364617892,
+        1.0377518719235963
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C4",
+      "meanOrderEffectLog": 0.009248512662107244,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.00929141230598,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.08229246280475933,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.014547389622446762,
+      "t95CiLog": [
+        -0.020421084077073787,
+        0.03891810940128827
+      ],
+      "t95CiMultiplicative": [
+        0.9797860141412563,
+        1.0396853397090207
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.0715433000080622
+    },
+    {
+      "abGeometricSystemRatio": 0.014626108803771024,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.014561657129321188,
+      "bootstrap95CiLog": [
+        -0.025877453513075802,
+        0.036873944884442074
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9744544982674742,
+        1.0375622225685703
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C4",
+      "meanOrderEffectLog": 0.004416355767280555,
+      "metricId": "P1",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0044261222385231,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.09148200659957428,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.016171886805777868,
+      "t95CiLog": [
+        -0.028566424820293396,
+        0.037399136354854506
+      ],
+      "t95CiMultiplicative": [
+        0.9718377378549989,
+        1.0381072845163
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.19763877643361125
+    },
+    {
+      "abGeometricSystemRatio": 2.0889287940214007,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 1.6382980475664637,
+      "bootstrap95CiLog": [
+        0.03995763932522308,
+        0.4651484583981032
+      ],
+      "bootstrap95CiMultiplicative": [
+        1.0407666856794946,
+        1.5922505543081227
+      ],
+      "classification": "MATERIAL-ORDER-EFFECT",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.24299346873832486,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.2750602963388171,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.6294735860993225,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.11127626032716124,
+      "t95CiLog": [
+        0.016044039580483144,
+        0.4699428978961666
+      ],
+      "t95CiMultiplicative": [
+        1.0161734362725146,
+        1.5999028327912674
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.07519277035151027
+    },
+    {
+      "abGeometricSystemRatio": 0.35877035103788635,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.3236691139954832,
+      "bootstrap95CiLog": [
+        -0.0056229202344049815,
+        0.21194010280748132
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.994392858792986,
+        1.2360738455080527
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.10296075223891066,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.1084479041237558,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.3154661765410061,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.05576706816678449,
+      "t95CiLog": [
+        -0.010776933131244879,
+        0.2166984376090662
+      ],
+      "t95CiMultiplicative": [
+        0.9892809299638351,
+        1.241969514363592
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.08087447875956386
+    },
+    {
+      "abGeometricSystemRatio": 0.09090016675241212,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.09560939726491251,
+      "bootstrap95CiLog": [
+        -0.1046191089870227,
+        0.004177208827775806
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9006675134225987,
+        1.0041859455253388
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": -0.05050927733484947,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9507451082506863,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.15804645855744737,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.02793893064712242,
+      "t95CiLog": [
+        -0.10749110205651713,
+        0.006472547386818184
+      ],
+      "t95CiMultiplicative": [
+        0.8980845135204946,
+        1.006493539588222
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.25094349105295205
+    },
+    {
+      "abGeometricSystemRatio": 3.9027279844762006,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 3.7237623302391127,
+      "bootstrap95CiLog": [
+        -0.17069951959636387,
+        0.29371759714987355
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8430748628905576,
+        1.3414050335678378
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.04694125552794068,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.048060439514032,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.6710266084971803,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.11862186630624169,
+      "t95CiLog": [
+        -0.1949896357932536,
+        0.288872146849135
+      ],
+      "t95CiMultiplicative": [
+        0.8228431861287259,
+        1.3349210437558476
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.14817122618300932
+    },
+    {
+      "abGeometricSystemRatio": 0.18780842928607835,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.1874015272448811,
+      "bootstrap95CiLog": [
+        -0.027267712477701458,
+        0.032156087943208726
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9731006954519431,
+        1.0326786814173452
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.0021689307206755534,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0021712845523694,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.08734417233202559,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.015440414138275427,
+      "t95CiLog": [
+        -0.029322001526145683,
+        0.03365986296749679
+      ],
+      "t95CiMultiplicative": [
+        0.9711037172377683,
+        1.0342327660305295
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.23078434938058218
+    },
+    {
+      "abGeometricSystemRatio": 0.02724549390885108,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.027217399078243085,
+      "bootstrap95CiLog": [
+        -0.03143677013986823,
+        0.034525456983752895
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9690522275534463,
+        1.0351283792870392
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.0010317054992546038,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0010322378904477,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.09681972594034619,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.017115471191260466,
+      "t95CiLog": [
+        -0.03387552812994676,
+        0.035938939128455964
+      ],
+      "t95CiMultiplicative": [
+        0.966691823088205,
+        1.0365925493139558
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.024138355234770606
+    },
+    {
+      "abGeometricSystemRatio": 0.29460667783501915,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.2530200302540756,
+      "bootstrap95CiLog": [
+        -0.050824888176510555,
+        0.3606413539683939
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9504450901338417,
+        1.4342489809206307
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.15217251467765952,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.16436108848451,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.6175254316488454,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.10916410506851211,
+      "t95CiLog": [
+        -0.07046914543012767,
+        0.3748141747854467
+      ],
+      "t95CiMultiplicative": [
+        0.9319564941989598,
+        1.4547210656460126
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.19242439542983178
+    },
+    {
+      "abGeometricSystemRatio": 0.13975988826459673,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.12515967770795697,
+      "bootstrap95CiLog": [
+        0.0037917387163347764,
+        0.21972389380393353
+      ],
+      "bootstrap95CiMultiplicative": [
+        1.003798936452017,
+        1.2457327285740205
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.11033552258784696,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.1166526698055854,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.3191136630410802,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.056411858776406684,
+      "t95CiLog": [
+        -0.004717221900487581,
+        0.22538826707618148
+      ],
+      "t95CiMultiplicative": [
+        0.9952938867166068,
+        1.2528090462781867
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.0017778594117576815
+    },
+    {
+      "abGeometricSystemRatio": 0.052757350086914206,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.055347893279697274,
+      "bootstrap95CiLog": [
+        -0.1024119581464797,
+        0.004299499825847678
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.902657617904387,
+        1.0043087559360175
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": -0.04793549584611803,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9531952701489119,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.15606974158168785,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.02758949315261089,
+      "t95CiLog": [
+        -0.10420463809919286,
+        0.008333646406956802
+      ],
+      "t95CiMultiplicative": [
+        0.9010408912583029,
+        1.0083684679009677
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.13043008736420758
+    },
+    {
+      "abGeometricSystemRatio": 0.5504111625494278,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.5751007631704231,
+      "bootstrap95CiLog": [
+        -0.2916084619501794,
+        0.23818903974414993
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.7470609815176426,
+        1.2689490519568634
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C4",
+      "meanOrderEffectLog": -0.043879698532724644,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9570690873632541,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.7694856890996971,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.1360271371970998,
+      "t95CiLog": [
+        -0.32130887386709645,
+        0.23354947680164714
+      ],
+      "t95CiMultiplicative": [
+        0.7251992213055648,
+        1.2630753192720003
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.22212489829161083
+    },
+    {
+      "abGeometricSystemRatio": 0.0731612437210563,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.07246633595158401,
+      "bootstrap95CiLog": [
+        -0.024967040585478446,
+        0.0442829278505191
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9753420582017668,
+        1.0452780513283493
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C4",
+      "meanOrderEffectLog": 0.009543701069611804,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0095893874079207,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.10241267526126102,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.01810417428917336,
+      "t95CiLog": [
+        -0.027380005821884754,
+        0.04646740796110836
+      ],
+      "t95CiMultiplicative": [
+        0.9729914288556943,
+        1.0475639362675928
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.0467535426520348
+    },
+    {
+      "abGeometricSystemRatio": 0.015812952954808553,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.01575604221580392,
+      "bootstrap95CiLog": [
+        -0.02758992685000439,
+        0.03642132071745763
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9727871989314252,
+        1.0370927030978312
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C4",
+      "meanOrderEffectLog": 0.0036054869879860174,
+      "metricId": "P2",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0036119945748525,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.09510456318293807,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.016812270387109994,
+      "t95CiLog": [
+        -0.03068336452431244,
+        0.03789433850028447
+      ],
+      "t95CiMultiplicative": [
+        0.969782592039257,
+        1.038621484776807
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.17840859074694151
+    },
+    {
+      "abGeometricSystemRatio": 1.3575669695827841,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 1.206980507022923,
+      "bootstrap95CiLog": [
+        -0.0094143675283038,
+        0.25470991670245813
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9906298088899707,
+        1.2900873338003946
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.11757231258971215,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.124762961525609,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.3876449712557743,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.06852659696695557,
+      "t95CiLog": [
+        -0.022188603333016532,
+        0.25733322851244084
+      ],
+      "t95CiMultiplicative": [
+        0.9780557530798927,
+        1.2934760780621055
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.01150794115921366
+    },
+    {
+      "abGeometricSystemRatio": 0.2630904358801704,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.25111702245057843,
+      "bootstrap95CiLog": [
+        -0.00481176480462456,
+        0.09638747774789569
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9951997931900946,
+        1.1011856662811803
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.04657878034736834,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0476806124600673,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.1491141403905929,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.026359904960247774,
+      "t95CiLog": [
+        -0.007182600254339089,
+        0.10034016094907577
+      ],
+      "t95CiMultiplicative": [
+        0.9928431329715169,
+        1.105546918010653
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.04890762011766317
+    },
+    {
+      "abGeometricSystemRatio": 0.05960076221120566,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.060534230772463456,
+      "bootstrap95CiLog": [
+        -0.045270432121528655,
+        0.013564801054535497
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9557389843604971,
+        1.0136572203788072
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C1",
+      "meanOrderEffectLog": -0.015540640157330046,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9845794924731671,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.08602505104581834,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.015207224236604262,
+      "t95CiLog": [
+        -0.04655597846422152,
+        0.015474698149561431
+      ],
+      "t95CiMultiplicative": [
+        0.9545111270074477,
+        1.0155950512991303
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.05861133959872056
+    },
+    {
+      "abGeometricSystemRatio": 1.1937292674716657,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 1.2188407879661625,
+      "bootstrap95CiLog": [
+        -0.11647875821297117,
+        0.07879342017469858
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.890049003007245,
+        1.081980783580587
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C2",
+      "meanOrderEffectLog": -0.020817988146679352,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9793972102489288,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.2868713286171442,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.05071216544829429,
+      "t95CiLog": [
+        -0.12424613145425217,
+        0.08261015516089346
+      ],
+      "t95CiMultiplicative": [
+        0.8831624400735435,
+        1.0861183083867418
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.08238463767719276
+    },
+    {
+      "abGeometricSystemRatio": 0.13109463244563907,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.12961134519893217,
+      "bootstrap95CiLog": [
+        -0.014866536806017724,
+        0.03805684981581164
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9852434245629583,
+        1.038790286236335
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.011379127285872329,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0114441158251257,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.07741305148603542,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.013684823414529744,
+      "t95CiLog": [
+        -0.016531254074196717,
+        0.03928950864594137
+      ],
+      "t95CiMultiplicative": [
+        0.9836046372579533,
+        1.0400715497734891
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.0676242003728399
+    },
+    {
+      "abGeometricSystemRatio": 0.024148107666252815,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.023989776529565042,
+      "bootstrap95CiLog": [
+        -0.023475377094929074,
+        0.036257102068664934
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9767980259778032,
+        1.0369224071187262
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.0065782578646311485,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.00659994212504,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.08718991416692078,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.015413144889625677,
+      "t95CiLog": [
+        -0.024857058382906604,
+        0.0380135741121689
+      ],
+      "t95CiMultiplicative": [
+        0.9754493343687152,
+        1.038745332828463
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.05597293205162898
+    },
+    {
+      "abGeometricSystemRatio": 0.7273910056982518,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.6709579615072255,
+      "bootstrap95CiLog": [
+        -0.026343526026737982,
+        0.19204654783817976
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9740004376308278,
+        1.2117269189207358
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.08075768297719739,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0841081668727146,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.3188051150219666,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.056357314677247465,
+      "t95CiLog": [
+        -0.03418381808750197,
+        0.19569918404189673
+      ],
+      "t95CiMultiplicative": [
+        0.9663938476408752,
+        1.216161009664117
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.12805738147686785
+    },
+    {
+      "abGeometricSystemRatio": 0.25467161579174036,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.24334606950257023,
+      "bootstrap95CiLog": [
+        -5.0343082655717566e-05,
+        0.09316071623367687
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.999949658184536,
+        1.097638129359096
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.04549034952064207,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.046540904943815,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.13824982264264837,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.02443934677211354,
+      "t95CiLog": [
+        -0.0043540268325401935,
+        0.09533472587382433
+      ],
+      "t95CiMultiplicative": [
+        0.9956554382003039,
+        1.1000270010078324
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.0353225308684589
+    },
+    {
+      "abGeometricSystemRatio": 0.058596246403121305,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.05954002933886846,
+      "bootstrap95CiLog": [
+        -0.04751136552785226,
+        0.014310052006223574
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.953599634907825,
+        1.0144129309490142
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C3",
+      "meanOrderEffectLog": -0.01597820836932609,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9841487660280503,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.0898087473469722,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.015876093564728348,
+      "t95CiLog": [
+        -0.04835771466454363,
+        0.01640129792589145
+      ],
+      "t95CiMultiplicative": [
+        0.9527928981187199,
+        1.0165365375696274
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.12248355590696174
+    },
+    {
+      "abGeometricSystemRatio": 0.6396059655638986,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.6775510670944958,
+      "bootstrap95CiLog": [
+        -0.1384902542807411,
+        0.030898356082473613
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8706717365500797,
+        1.0313806649872446
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C4",
+      "meanOrderEffectLog": -0.057632617759194094,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.9439966913589037,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.2492659890196346,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.04406441778873878,
+      "t95CiLog": [
+        -0.14750259032948843,
+        0.032237354811100224
+      ],
+      "t95CiMultiplicative": [
+        0.8628602032262518,
+        1.0327626073894765
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.2764923305027816
+    },
+    {
+      "abGeometricSystemRatio": 0.12689964101074946,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.12560045157157093,
+      "bootstrap95CiLog": [
+        -0.020757196972540252,
+        0.04303551868648532
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9794567507650389,
+        1.0439749748119218
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C4",
+      "meanOrderEffectLog": 0.010290696459146056,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0103438277722925,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.09409182215048036,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.016633241374200813,
+      "t95CiLog": [
+        -0.02363302297410002,
+        0.04421441589239213
+      ],
+      "t95CiMultiplicative": [
+        0.976644049931389,
+        1.0452064397354188
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.07377002056547814
+    },
+    {
+      "abGeometricSystemRatio": 0.023741113611376225,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.023595773501642412,
+      "bootstrap95CiLog": [
+        -0.023798266449276326,
+        0.036486612600621804
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9764826792076648,
+        1.037160419044059
+      ],
+      "classification": "ORDER-EFFECT-BOUNDED",
+      "contrastId": "C4",
+      "meanOrderEffectLog": 0.0061406896526351035,
+      "metricId": "P3",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0061595823389173,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.08827763113262199,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.015605427900240422,
+      "t95CiLog": [
+        -0.02568679038048878,
+        0.03796816968575899
+      ],
+      "t95CiMultiplicative": [
+        0.9746403085276977,
+        1.0386981702631428
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.23700696405492203
+    },
+    {
+      "abGeometricSystemRatio": 0.5493166719895278,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.6200141092001542,
+      "bootstrap95CiLog": [
+        -0.5807570651484012,
+        0.33048816866976716
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.5594746474371588,
+        1.3916473212915825
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": -0.12106714332945871,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.8859744703199913,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 1.328014495626124,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.2347620138428162,
+      "t95CiLog": [
+        -0.5998674271719204,
+        0.35773314051300303
+      ],
+      "t95CiMultiplicative": [
+        0.548884398427754,
+        1.4300839380882986
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.2175833635256598
+    },
+    {
+      "abGeometricSystemRatio": 0.03756370308666193,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.03699356078576571,
+      "bootstrap95CiLog": [
+        -0.23480906158042292,
+        0.2717796190462338
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.7907218143893551,
+        1.3122977640082252
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.015294376030333304,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0154119335577882,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.7476619358545791,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.13216920621945857,
+      "t95CiLog": [
+        -0.25426649720139927,
+        0.28485524926206585
+      ],
+      "t95CiMultiplicative": [
+        0.7754851098947456,
+        1.3295695580170572
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.22918335828937064
+    },
+    {
+      "abGeometricSystemRatio": 0.03933113289032267,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.03754436571146773,
+      "bootstrap95CiLog": [
+        -0.20743207188249724,
+        0.3095220912343241
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8126684429357034,
+        1.3627736769949492
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C1",
+      "meanOrderEffectLog": 0.04649307144510249,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0475908207528772,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.7575430168380601,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.1339159510616768,
+      "t95CiLog": [
+        -0.2266303113790653,
+        0.3196164542692703
+      ],
+      "t95CiMultiplicative": [
+        0.7972154492993028,
+        1.3765996741411204
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.1826392657066888
+    },
+    {
+      "abGeometricSystemRatio": 5.317155094228606,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 7.631870259905301,
+      "bootstrap95CiLog": [
+        -1.1548515288719607,
+        0.4346349702887305
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.3151043173239996,
+        1.5443992044500912
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C2",
+      "meanOrderEffectLog": -0.3613945309169576,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.6967040729403835,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 2.3449747541166817,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.4145368875867906,
+      "t95CiLog": [
+        -1.2068480870132074,
+        0.4840590251792922
+      ],
+      "t95CiMultiplicative": [
+        0.29913865409371804,
+        1.6226474198805745
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.1197875285629078
+    },
+    {
+      "abGeometricSystemRatio": 0.1390711648274077,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.13383263972248147,
+      "bootstrap95CiLog": [
+        -0.21772303787684863,
+        0.30493344270031897
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8043481848004455,
+        1.3565347127141165
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.03839571723187688,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.039142358065932,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.7589132716637333,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.1341581801814736,
+      "t95CiLog": [
+        -0.23522169513912924,
+        0.312013129602883
+      ],
+      "t95CiMultiplicative": [
+        0.7903956033405785,
+        1.36617263021583
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.2348355733003568
+    },
+    {
+      "abGeometricSystemRatio": 0.476672626833982,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.4558999403539498,
+      "bootstrap95CiLog": [
+        -0.214570263990942,
+        0.3044548612847966
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8068881145608665,
+        1.3558856557367924
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C2",
+      "meanOrderEffectLog": 0.044556581967231,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0455641351124212,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.7579953413206268,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.13399591148890672,
+      "t95CiLog": [
+        -0.22872988122342014,
+        0.31784304515788214
+      ],
+      "t95CiMultiplicative": [
+        0.7955433956933927,
+        1.3741605631463416
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": 0.18345312170175662
+    },
+    {
+      "abGeometricSystemRatio": 0.03941245537723895,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.051372728735102444,
+      "bootstrap95CiLog": [
+        -0.6510962677516796,
+        0.09709158333817906
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.5214737883945374,
+        1.1019612902933065
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": -0.2650255696310585,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.7671863330535688,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 1.098974280011448,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.19427304143642463,
+      "t95CiLog": [
+        -0.6612480498359616,
+        0.1311969105738447
+      ],
+      "t95CiMultiplicative": [
+        0.5162066806322197,
+        1.1401922751238502
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.1013742604977206
+    },
+    {
+      "abGeometricSystemRatio": 0.0030327719488716723,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.0025366841772813302,
+      "bootstrap95CiLog": [
+        -0.016712437469121023,
+        0.3789811290722489
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9834264405741392,
+        1.4607954689175737
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.17861924974275062,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.1955654456448814,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.5812967968242302,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.10275972672910796,
+      "t95CiLog": [
+        -0.030960594628550664,
+        0.3881990941140519
+      ],
+      "t95CiMultiplicative": [
+        0.9695137763737967,
+        1.4743232841582095
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.10146875359337881
+    },
+    {
+      "abGeometricSystemRatio": 0.002450462414076594,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.002286378727987519,
+      "bootstrap95CiLog": [
+        -0.17985320554188494,
+        0.3280068882651145
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8353928334492334,
+        1.3881985345360162
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C3",
+      "meanOrderEffectLog": 0.06930752275098545,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0717657508270737,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.7461324323560766,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.13189882564554867,
+      "t95CiLog": [
+        -0.19970190566472068,
+        0.3383169511666916
+      ],
+      "t95CiMultiplicative": [
+        0.8189748484575108,
+        1.4025849839093265
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.13069405950255597
+    },
+    {
+      "abGeometricSystemRatio": 0.38149604512483976,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.6323565783194814,
+      "bootstrap95CiLog": [
+        -1.163382400133676,
+        0.1540108174990214
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.3124276364021796,
+        1.1665035053607162
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C4",
+      "meanOrderEffectLog": -0.5053529572185573,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 0.6032926013653312,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 1.9423562586794645,
+      "scenarioId": "core-r01-s1-hetero",
+      "standardError": 0.34336332049809526,
+      "t95CiLog": [
+        -1.20564706623763,
+        0.1949411518005153
+      ],
+      "t95CiMultiplicative": [
+        0.2994981416648717,
+        1.2152394697306987
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.061504080335143436
+    },
+    {
+      "abGeometricSystemRatio": 0.011228156249995293,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.00917703331003595,
+      "bootstrap95CiLog": [
+        -0.00776899152529011,
+        0.4244978837823881
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.9922611090884587,
+        1.5288225802957938
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C4",
+      "meanOrderEffectLog": 0.201720590944294,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.2235061016631874,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.6367053648758846,
+      "scenarioId": "core-r07-s2-hetero",
+      "standardError": 0.11255467028039824,
+      "t95CiLog": [
+        -0.027836172502674783,
+        0.4312773543912628
+      ],
+      "t95CiMultiplicative": [
+        0.9725476838037047,
+        1.53922240085165
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.10342557953243066
+    },
+    {
+      "abGeometricSystemRatio": 0.02969831454214814,
+      "absoluteLogBound": 0.09531017980432493,
+      "baGeometricSystemRatio": 0.027763418184413916,
+      "bootstrap95CiLog": [
+        -0.18358782764287512,
+        0.32056903806090103
+      ],
+      "bootstrap95CiMultiplicative": [
+        0.8322787754447661,
+        1.3779116254508408
+      ],
+      "classification": "INCONCLUSIVE",
+      "contrastId": "C4",
+      "meanOrderEffectLog": 0.06737103327311389,
+      "metricId": "P4",
+      "multiplicativeBound": 1.1,
+      "multiplicativeOrderEffect": 1.0696922959875468,
+      "nMirroredPairs": 32,
+      "sampleSdLog": 0.7397584778959143,
+      "scenarioId": "goal-count-g32-hetero",
+      "standardError": 0.1307720590401099,
+      "t95CiLog": [
+        -0.19934033950029612,
+        0.3340824060465239
+      ],
+      "t95CiMultiplicative": [
+        0.8192710155910086,
+        1.39665823191569
+      ],
+      "tCritical": 2.039513446,
+      "waveCorrelation": -0.13087455992715197
+    }
+  ],
+  "schemaVersion": 4,
+  "source": {
+    "distinctMeasuredNumericPids": 365,
+    "executionManifestSha256": "df33956d5622d03f5965dabc2c43d96e0314fa65aec04da9e6b536d1d5b6f688",
+    "measuredAlgorithmSamples": 768,
+    "measuredMatchedSuperblocks": 192,
+    "measuredMirroredPairs": 96,
+    "measuredUnityProcesses": 384,
+    "pilotPlanSha256": "40a44a9f43c9b2cbe63905a0ec347b8295aea5e8f8b3e9bf34b0800bcc471784",
+    "pilotRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate12R_ProcessReuse_5pct/v7-gate13r-pr1b-order-effect-pathsafe-v4",
+    "provenanceSha256": "993f554a03bc52493c3fea116f1206f14746db89e4c14c59d8e4e15befbef320",
+    "recoveryReadsFrozenPilotOnly": true,
+    "recoveryWritesFrozenPilot": false,
+    "sourceTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed",
+    "uniqueMeasuredBlockEvidenceIdentities": 384,
+    "uniqueMeasuredOsProcessIdentities": 384,
+    "uniqueRunIds": 768,
+    "uniqueUnityProcessIds": 384
+  },
+  "status": "ANALYSIS-RECOVERY-FROM-COMPLETE-FAILED-NONFORMAL-PILOT / PILOT-DIAGNOSTIC-ONLY / EXCLUDED-FROM-FORMAL-ANALYSIS"
+}

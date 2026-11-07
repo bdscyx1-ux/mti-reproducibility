@@ -1,0 +1,60 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 11,
+  "status": "DIAGNOSTIC_COMPLETE_CONTINUE_AUTHORIZED_REPAIR",
+  "completedAtUtc": "2026-10-17T07:17:16.4754549Z",
+  "phase": "native-gc-alloc-metadata-shape-probe-run",
+  "process": {
+    "unityPid": 37092,
+    "startedAtUtc": "2026-10-17T07:16:59.9878127Z",
+    "exitedAtUtc": "2026-10-17T07:17:16.4754549Z",
+    "exitCode": 0
+  },
+  "observation": {
+    "stimulusPayloadBytes": [4096, 65536, 1048576],
+    "ownerCallbacksPerAllocation": 2,
+    "foreignCallbacksPerAllocation": 0,
+    "callbackPair": "Begin with metadata followed by End without metadata",
+    "dataBearingEventMetadataTypeValue": 3,
+    "dataBearingEventMetadataTypeName": "UInt32",
+    "dataBearingEventMetadataSizeBytes": 4,
+    "dataBearingEventPointerNonNull": true,
+    "priorContractExpectedType": "Int64",
+    "priorContractExpectedSizeBytes": 8
+  },
+  "evidence": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-011-metadata-shape-probe-run-v1/cycle-plan.v1.json",
+      "lengthBytes": 1258,
+      "sha256": "126f93a5ff70ad527e9c561d5087607f978a5200dc727db0afcf2837aa56ee6c"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-011-metadata-shape-probe-run-v1/unity-metadata-probe.log",
+      "lengthBytes": 92431,
+      "sha256": "971cf7d9b743c087581c16accc89eefdec818ff6667e7270e2789713feee39e5"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-009-metadata-shape-probe-v1/probe-output/metadata-shape-probe-receipt.v1.json",
+      "lengthBytes": 2408,
+      "sha256": "f6294cbd635901b481b71733d4a35cef5dd2051892578d5becd5ae4e2aeb9bbe"
+    }
+  ],
+  "diagnosis": "Unity 2022.3.30f1c1 exposes the GC.Alloc allocation-size payload to this PluginAPI callback as UInt32/4 bytes, not Int64/8 bytes. The probe deliberately did not accept or accumulate the payload. The former listener therefore fail-closed exactly as designed, but its ABI assumption was incompatible with the frozen Unity build.",
+  "repairDisposition": {
+    "metricChanged": false,
+    "eventSourceChanged": false,
+    "criteriaRelaxed": false,
+    "fallbackMetricUsed": false,
+    "nextRepair": "Create a versioned implementation and prospective contract that require the observed exact UInt32/4 allocation-size metadata and losslessly widen each positive value into checked 64-bit cumulative counters; retain every other known-answer criterion unchanged."
+  },
+  "scientificBoundary": {
+    "probeCountsAsD3Qualification": false,
+    "algorithmLaneExecuted": false,
+    "qualificationMeasuredRootCreated": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

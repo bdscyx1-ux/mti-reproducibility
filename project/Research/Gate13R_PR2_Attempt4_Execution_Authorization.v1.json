@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate13r-pr2-formal-attempt4-fresh-restart-blockwise-eligibility-auto-resume-v1",
+  "authorizedAtUtc": "2026-10-10T04:20:05.1127945Z",
+  "authorizationSource": {
+    "kind": "direct-user-instruction",
+    "relativePath": "Research/Gate13R_PR2_Attempt4_Restart_BlockwiseEligibility_AutoResume_User_Authorization.v1.txt",
+    "sha256": "b98239061c37e606a398c195e1e5dc1f4565770016fafca6d20a9959b5218137"
+  },
+  "executionContractRelativePath": "Research/Gate13R_PR2_Attempt4_Execution_Contract.v1.json",
+  "executionContractSha256": "a9c7a81e3c1a59aea37be1124a1237dabd6118e9f397050122bd76c308a16570",
+  "protocolAmendmentRelativePath": "Research/Gate13R_RQAligned_Preregistration_BlockwiseEligibility_AutoResume_Amendment.v1.md",
+  "protocolAmendmentSha256": "272126932a538548fe42db0c314291a769386356f23d8fb1061b33750741b674",
+  "formalAttempt4PhaseAAcquisitionAuthorized": true,
+  "freshRestartFromGlobalProcessOrdinal": 1,
+  "formalRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+  "perCompletedBlockFormalEligibilityAuthorized": true,
+  "automaticResumeAuthorized": true,
+  "maximumAutomaticResumeCount": 3,
+  "automaticResumeBoundary": "LAST-CONTIGUOUS-BLOCK-ELIGIBILITY-COMMIT",
+  "automaticMeasuredRetryAuthorized": false,
+  "attempt3ObservationReuseAuthorized": false,
+  "crossAttemptMergeAuthorized": false,
+  "automaticTopUpAuthorized": false,
+  "partialBlockSkipOrReplacementAuthorized": false,
+  "phaseBFormalStatisticalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "playableOrObsTimingAuthorized": false,
+  "authorizationNote": "Authorizes versioned attempt-4 preparation, prelaunch gates, one fresh Phase-A acquisition from ordinal 1, and at most three fail-closed boundary-safe automatic resumes. It does not authorize analysis or any measured retry of a partial or failed block."
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "gate14re-me-formal-st-end-to-end-package-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "protocolId": "gate14re-me-formal-st-v5",
+  "packageId": "gate14re-me-formal-st-v5-end-to-end-package-attempt-004",
+  "authorizationId": "gate14re-me-formal-st-end-to-end-fc17313b-ad51-4bbc-9999-56c835acd029",
+  "status": "AUTHORIZED_ONE_CLICK_THROUGH_ACCEPTED_DATA_PACKAGE_NOT_ANALYSIS",
+  "userAuthorization": {
+    "verbatim": "现在的一键迁移包内还需要给授权吗？我希望的迁移包是涵盖所有授权直至生成数据包",
+    "userScopeSha256": "0dafa5724cdea831a27d8490fc6f6f5df6b1d2815a1bd9ad2328d9f767a50409",
+    "interpretation": "A deliberate launch of the end-to-end entry point carries all stage authorizations needed to progress from algorithm-free readiness through formal-input generation, strict-serial formal ST collection, raw freeze, independent read-only acceptance, and creation of the complete accepted data package without requesting a new authorization at each stage.",
+    "launchGuardIsNotNewScientificAuthorization": true
+  },
+  "permissions": {
+    "readiness": true,
+    "formalInputGeneration": true,
+    "formalCollection": true,
+    "readOnlyAcceptance": true,
+    "acceptedDataPackageCreation": true,
+    "formalAnalysis": false,
+    "algorithmEffectInterpretation": false,
+    "rankingOrWinnerDecision": false,
+    "mq": false,
+    "mt": false,
+    "credentialPackaging": false
+  },
+  "roots": {
+    "formalInputRootRelativePath": "Research/FormalInputs/Gate14Re-ME/formal-st/v5/attempt-001",
+    "measuredRootRelativePath": "Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-001",
+    "acceptedDataPackageRootRelativePath": "Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-001",
+    "executionEvidenceRootRelativePath": "Research/Verification/Gate14Re-ME/formal-st-end-to-end-execution-attempt-001",
+    "readinessRootRelativePath": "PackageReadiness/end-to-end-attempt-001",
+    "allRootsMustBeFresh": true
+  },
+  "execution": {
+    "oracleBatchCount": 54,
+    "oracleInputsPerBatch": 24,
+    "strictSerialFreshUnityProcesses": true,
+    "maximumConcurrentUnityProcesses": 1,
+    "wholeSuperblockTechnicalReplacements": 0,
+    "retryInSameAttempt": false,
+    "resumeInSameAttempt": false,
+    "topUpInSameAttempt": false,
+    "mergeAcrossAttempts": false,
+    "skip": false,
+    "reorder": false,
+    "parallelCompletion": false,
+    "failurePolicy": "FAIL_CLOSED_PRESERVE_ALL_ROOTS_AND_REQUIRE_A_NEW_ATTEMPT"
+  },
+  "childAuthorizationPolicy": {
+    "preissuedInputGenerationAuthorization": true,
+    "collectionAuthorizationMayBeIssuedOnlyAfterInputFreeze": true,
+    "collectionAuthorizationMustBindExactInputFreezeAndScheduleHashes": true,
+    "acceptanceAuthorizationMayBeIssuedOnlyAfterRawAcquisitionFreeze": true,
+    "acceptanceAuthorizationMustBindExactRawFreezeAndTerminalHashes": true,
+    "childAuthorizationsMayNotExpandThisUmbrellaScope": true,
+    "noAdditionalUserAuthorizationRequiredWithinThisScope": true
+  },
+  "bindings": {
+    "orchestratorRelativePath": "Research/Gate14Re-ME/Package/v5/Run-To-Accepted-Data-Package.v5_1.ps1",
+    "orchestratorSha256": "83bb3b9a4ed7dc56f4429b93e5920351cc714b0d2f9e41e21e81f6646803c583",
+    "inputGenerationAuthorizationRelativePath": "Research/Gate14Re-ME/Package/v5/Authorizations/formal-input-generation-authorization.end-to-end.v1.json",
+    "inputGenerationAuthorizationSha256": "4d0c58eb4657ff77c4a88fc84b14ea4509d4e41415dee47e72f111894f0f06f8",
+    "identityBindingRelativePath": "Research/Gate14Re-ME/Package/v5/Authorizations/formal-st-algorithm-identity-binding.reused.v5.json",
+    "identityBindingSha256": "2a21042283b1197d2a66d7948aede3623b9c5e71ef2576c9f6534494c086dc5e",
+    "formalImplementationManifestSha256": "161a12b9325ca9ef181b9673cd4c7e73b5fa68a016911afd694c1493c86af3e3",
+    "formalAcquisitionContractSha256": "0eebffd7560c06414e7990cf9cb95e80aeaa3993643719fffe507981fb58be58",
+    "formalOperationalResourceBudgetSha256": "5f8d3febcf774118f05e29bd668ee55544882893426bb21464d2ed3bfdd77533",
+    "qualifiedSixAlgorithmFairnessBindingSha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+    "formalAcceptanceContractSha256": "c807266e6ed8d9cd3c3a57e3aa72bfe6e82a5f42db06f10762a9a713bd72f366"
+  },
+  "terminalBoundary": {
+    "requiredStatus": "PASS_ACCEPTED_FORMAL_ST_DATA_PACKAGE_READY_FORMAL_ANALYSIS_NOT_RUN",
+    "acceptedSuperblocks": 1296,
+    "namedAlgorithmLanes": 7776,
+    "typedParquetFullRoundTripRequired": true,
+    "sourceMeasuredRootWriteBackPermitted": false,
+    "formalAnalysisMustRemainNotRun": true,
+    "mqMustRemainNotRun": true,
+    "mtMustRemainNotRun": true
+  }
+}

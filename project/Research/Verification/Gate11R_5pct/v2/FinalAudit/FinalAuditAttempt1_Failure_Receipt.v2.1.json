@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "gate11r-attempt2-final-audit-attempt1-failure-v2.1",
+  "createdAtUtc": "2026-10-07T03:12:48.3416023Z",
+  "status": "FAILED-BEFORE-SUMMARY-AUTO-REPAIR-AUTHORIZED",
+  "failureClass": "FROZEN-CSV-HEADER-PROJECTION-MISMATCH",
+  "rootCause": "The audit script referenced kind/path/raw_bytes while the frozen CSV uses scope/relative_path/bytes.",
+  "failedScript": {
+    "path": "Research/Verification/Run-Gate11RFinalAuditV2.ps1",
+    "rawBytes": 25965,
+    "sha256": "698f1ba10d419561fd50d7224c93c4a8bea4c3938167d94b66776910a961e255"
+  },
+  "frozenCsv": {
+    "path": "Research/Baseline_SHA256.csv",
+    "rawBytes": 3760,
+    "sha256": "b492074228c1ce3ad6b102c863043f7af2cf3246105f51f2f1314ae1cd36b6e8",
+    "header": "scope,relative_path,bytes,sha256,note"
+  },
+  "summaryCreated": false,
+  "bundleManifestUnchanged": true,
+  "gate12RStarted": false,
+  "gate13RStarted": false
+}

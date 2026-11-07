@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "amendmentKind": "gate13r-36h-10pct-four-isolated-editor-lanes-readiness-amendment-v1",
+  "amendmentId": "gate13r-36h-10pct-four-lane-readiness-amendment-v1",
+  "createdAtLocal": "2026-10-08T12:12:00+08:00",
+  "authorization": {
+    "relativePath": "Research/Gate13R_36h_Redesign_Pilot_Authorization.v1.json",
+    "sha256": "a8c97f506048727a84558e22a680f619f71f8ecdb3762dc59b4c1a91764de123"
+  },
+  "specification": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_Redesign_Specification.v1.md",
+    "sha256": "68bad5a35eac48e46fe5c7099dc4b4f347616f814046b70075e993d665c11260"
+  },
+  "testDesign": {
+    "relativePath": "Research/Gate13R_36h_10pct_4Lane_Test_Design.v1.md",
+    "sha256": "4793a5e72f49569566fd07a1496447714f84e41492f3d107860020f1716d9767"
+  },
+  "supersededForLaunch": {
+    "relativePath": "Research/Gate13R_Formal_Campaign_Config.v1.json",
+    "sha256": "af5a164cdabeeff08cd6cd00b21ecd732fcbdc7f51be3454f99aaf65b2ef5109",
+    "disposition": "PRESERVE-BYTE-FOR-BYTE-NOT-LAUNCHABLE-UNDER-36H-CONSTRAINT",
+    "historicalPrecisionRelativeHalfWidth": 0.05,
+    "historicalLaneCount": 1
+  },
+  "frozenRedesign": {
+    "executionDesignId": "gate13r-36h-10pct-four-isolated-editor-lanes-v1",
+    "campaignCount": 74,
+    "campaignCohorts": {
+      "four-algorithm-shared-goal-v1": 32,
+      "per-agent-heterogeneous-goal-v1": 21,
+      "grouped-field-heterogeneous-goal-v1": 21
+    },
+    "relativeCiHalfWidth": 0.1,
+    "confidenceLevel": 0.95,
+    "sigmaUpperConfidence": 0.9,
+    "hardCap": null,
+    "minimumIndependentBlocks": 32,
+    "cycleMultiple": 4,
+    "freshUnityProcessPerWilliamsBlock": true,
+    "isolatedUnityEditorLaneCount": 4,
+    "hardEndToEndWallClockHours": 36,
+    "maximumReadinessP95Hours": 27,
+    "readinessReserveHours": 9
+  },
+  "runtimeProjection": {
+    "observedEfficiencyFormula": "sum_measured_wrapper_block_seconds/(4*measured_pilot_elapsed_seconds)",
+    "conservativeEfficiencyFormula": "min(0.85,0.90*observed_efficiency)",
+    "fixedAllowanceSeconds": 1800,
+    "formalP95Formula": "(sum(cohort_campaign_count*candidate_n_formal*cohort_p95_wrapper_seconds)/(4*conservative_efficiency)+1800)/3600",
+    "readinessPassRule": "formal_p95_hours <= 27"
+  },
+  "pilot": {
+    "authorizedCount": 1,
+    "analysisRole": "NON-FORMAL / EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "campaignSubsetCount": 12,
+    "measuredBlocksPerCampaign": 32,
+    "measuredBlockProcesses": 384,
+    "measuredSamples": 1152,
+    "warmupBlockProcesses": 8,
+    "automaticRetry": false,
+    "automaticResume": false,
+    "partialAttemptMerge": false
+  },
+  "notAuthorized": [
+    "Gate 13R formal campaign",
+    "formal output root creation",
+    "formal execution receipt",
+    "formal timing samples",
+    "Gate 14R analysis",
+    "Gate 15R execution"
+  ],
+  "reservedFormalRootsMustRemainAbsent": [
+    "Research/FormalRuns/Gate13R_ProcessReuse_5pct/v1",
+    "Research/FormalRuns/Gate13R_36h_10pct_4Lane/v1"
+  ],
+  "passed": true
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "tool_receipt",
+  "step": "Gate 13R-PR2 negative no-receipt fail-closed validation",
+  "command": "Invoke Run-Gate13RPR2FormalCampaignV4.ps1 with a deliberately absent receipt under native Windows PowerShell 5.1",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "gate_tokens": [
+    "MISSING-RECEIPT-REJECTED",
+    "CHILD-EXIT-NONZERO",
+    "FORMAL-ROOT-ABSENT",
+    "FORMAL-STATUS-ABSENT",
+    "UNITY-NEVER-LAUNCHED"
+  ],
+  "input_sha256": {
+    "Verification/Gate13R_PR2_Formal_Prelaunch/v1/NegativeNoReceiptV1/negative-no-receipt-summary.json": "8424f8cc9dc13ad23c023e20fdb34958cddc31f51ac9fdd12431761df1b47e91"
+  }
+}

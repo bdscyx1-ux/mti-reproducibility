@@ -1,0 +1,83 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate12r-canonical-input-upstream-reference-unit-tests-v3-explicit-backup-atomic-replace",
+    "completedAtUtc":  "2026-10-07T14:51:44.3700713Z",
+    "sourceAttempt":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v2",
+    "sourceAttemptModified":  false,
+    "checkCount":  13,
+    "checks":  [
+                   {
+                       "name":  "attempt2-preservation-present",
+                       "passed":  true,
+                       "evidence":  "H:\\DDM_Final_Project\\Research\\Gate12R_PilotAttempt2_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "name":  "attempt2-partial-manifest-still-frozen",
+                       "passed":  true,
+                       "evidence":  "attempt2 partial-output-manifest SHA-256"
+                   },
+                   {
+                       "name":  "positive-result-passed",
+                       "passed":  true,
+                       "evidence":  "d7f7084b05a383aa4b59896c378fcce6dd6d0a1db366de26a98c611e9b0da8f8"
+                   },
+                   {
+                       "name":  "positive-four-references",
+                       "passed":  true,
+                       "evidence":  "4"
+                   },
+                   {
+                       "name":  "positive-local-copies-absent",
+                       "passed":  true,
+                       "evidence":  "zero local canonical copies"
+                   },
+                   {
+                       "name":  "operations-and-results-unchanged",
+                       "passed":  true,
+                       "evidence":  "payload SHA list exact match"
+                   },
+                   {
+                       "name":  "raw-bytes-reduced",
+                       "passed":  true,
+                       "evidence":  "before=3259684 after=270976 removed=3003528"
+                   },
+                   {
+                       "name":  "all-references-resolve-and-hash",
+                       "passed":  true,
+                       "evidence":  "resolved=4"
+                   },
+                   {
+                       "name":  "block-reference-contract",
+                       "passed":  true,
+                       "evidence":  "block manifest reference fields"
+                   },
+                   {
+                       "name":  "outside-source-rejected",
+                       "passed":  true,
+                       "evidence":  "expected fail-closed rejection"
+                   },
+                   {
+                       "name":  "outside-negative-not-published",
+                       "passed":  true,
+                       "evidence":  "no success receipt"
+                   },
+                   {
+                       "name":  "hash-mismatch-rejected",
+                       "passed":  true,
+                       "evidence":  "expected fail-closed rejection"
+                   },
+                   {
+                       "name":  "hash-negative-not-published",
+                       "passed":  true,
+                       "evidence":  "no success receipt"
+                   }
+               ],
+    "positiveBeforeRawBytes":  3259684,
+    "positiveAfterRawBytes":  270976,
+    "positiveRemovedCanonicalRawBytes":  3003528,
+    "thresholdsChanged":  false,
+    "matrixChanged":  false,
+    "williamsChanged":  false,
+    "algorithmSemanticsChanged":  false,
+    "passed":  true
+}

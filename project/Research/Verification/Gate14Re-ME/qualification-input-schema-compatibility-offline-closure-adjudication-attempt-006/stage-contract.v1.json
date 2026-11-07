@@ -1,0 +1,70 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-offline-closure-adjudication-attempt-006",
+  "status": "FROZEN_PREEXECUTION_OFFLINE_READ_ONLY_CORRECTED_HASH_STAGE_CONTRACT",
+  "frozenAtUtc": "2026-10-17T13:08:39.3457868Z",
+  "projectRoot": "H:/DDM_Final_Project",
+  "retainedAttempt004": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-004",
+    "status": "FAILED_CLOSED_RETAINED_UNCHANGED_NOT_RECLASSIFIED",
+    "fileCount": 55,
+    "contentDigestSha256": "70d266bed18b2069106e6356eb405c1e725d81b3cede8772b5092e721c1b783c"
+  },
+  "retainedAttempt005": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-offline-closure-adjudication-attempt-005",
+    "status": "FAILED_CLOSED_RETAINED_UNCHANGED_NOT_RECLASSIFIED",
+    "fileCount": 6,
+    "contentDigestSha256": "3c9b8289884c055df9457a72b7d2f4e1a4d5333c581ffd2602da4ac626aa2e4d"
+  },
+  "retainedStatuses": [
+    {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v24.json",
+      "sha256": "103a6c916eb7657d00836a9f276ea57833aae2cf9251f612eecd6e3e94a0628d"
+    },
+    {
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v25.json",
+      "sha256": "90c102e62deccd7af45e5208cdd03baf1981bd8ccf3b3b9c22cf46d07ba95a9b"
+    }
+  ],
+  "authorizedCorrection": {
+    "field": "expectedUnityReceiptSha256",
+    "correctedSha256": "47ec9b695010ceb46e9d4422eaacdc03ab75afec75d3f19fb261884b5022f23e",
+    "allScientificPredicatesUnchanged": true,
+    "trustedLaunchIdentityRuleUnchanged": true,
+    "timestampComparatorUnchanged": true
+  },
+  "executionBoundary": {
+    "offlineAdjudicatorInvocationMaximum": 1,
+    "unityInvocationMaximum": 0,
+    "automaticRetryAuthorized": false,
+    "attempt004DeletionAuthorized": false,
+    "attempt004ModificationAuthorized": false,
+    "attempt004ReclassificationAuthorized": false,
+    "attempt005DeletionAuthorized": false,
+    "attempt005ModificationAuthorized": false,
+    "attempt005ReclassificationAuthorized": false,
+    "statusV24OrV25ModificationAuthorized": false,
+    "scheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMappingAuthorized": false,
+    "measuredRootCreationAuthorized": false,
+    "plannerAuthorized": false,
+    "algorithmLaneAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "terminalPassRequires": [
+    "attempt-006 source bindings all match",
+    "attempt-004 and attempt-005 retain their frozen failure states, files, directory residues and read-only state",
+    "Status v24 and Status v25 remain byte-identical and read-only",
+    "the attempt-005 failure is proven to be solely its frozen incorrect expectedUnityReceiptSha256 constant",
+    "the corrected receipt hash matches the attempt-004 receipt and its independent frozen manifests",
+    "all original attempt-005 evidence predicates pass under the corrected constant",
+    "Unity remains absent and all prohibited scientific activity remains zero"
+  ],
+  "successDisposition": "FREEZE_TERMINAL_PASS_STATUS_V26_AND_ADOPT_INPUT_SCHEMA_V2_AND_PLANNING_SCHEMA_BINDING_V2",
+  "failureDisposition": "FAIL_CLOSED_FREEZE_ATTEMPT_006_FAILURE_EVIDENCE_NO_RETRY_NO_ADOPTION"
+}

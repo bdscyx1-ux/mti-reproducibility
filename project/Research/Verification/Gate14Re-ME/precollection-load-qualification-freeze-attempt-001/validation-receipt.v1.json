@@ -1,0 +1,102 @@
+{
+  "schema": "gate14re-me-load-qualification-freeze-validation-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "PASS_OUTCOME_FREE_LOAD_QUALIFICATION_PROTOCOL_VALIDATION",
+  "validator": {
+    "path": "Research/Validate-Gate14ReMELoadQualificationFreezeV1.py",
+    "bytes": 22246,
+    "sha256": "0a205f99a0686dcb550c3456c860b4825097c37e9c39c765ea12d21125835c37"
+  },
+  "interpreter": {
+    "path": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "bytes": 107312,
+    "sha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+  },
+  "command": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe H:/DDM_Final_Project/Research/Validate-Gate14ReMELoadQualificationFreezeV1.py --root H:/DDM_Final_Project",
+  "exitCode": 0,
+  "result": "PASS",
+  "testCount": 239,
+  "validatedNewArtifacts": [
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Freeze_Authorization.v1.json",
+      "bytes": 2253,
+      "sha256": "5e2c6b7781069b41c18929bac80705d9523c8fe47d51403d1b51d11012085c1f"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Load_Qualification_Protocol.v1.json",
+      "bytes": 13494,
+      "sha256": "93f176513ba09f07abe2cb3182a5e7c20662495773d810c54caa7d9589dfa364"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.v2.md",
+      "bytes": 9962,
+      "sha256": "774942ace72f98961fa65fc97c43ecbc7f850f2dbad47775dc5ff1b96eb4c4d0"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.v2.json",
+      "bytes": 5144,
+      "sha256": "73d81fe3be7c0e8f1ba6bbf25e584d86137a2e196d89ec03de7e8d59bf6412f5"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v2.json",
+      "bytes": 4217,
+      "sha256": "8960c2050f34ff56a8f680f092bdc4cf156ed8cff4ae264015411cbb249255d6"
+    },
+    {
+      "path": "Research/Gate14Re-ME/Gate14Re_ME_Status.v2.json",
+      "bytes": 4455,
+      "sha256": "287b2483dc87bae95e1a0891d30879e58eaad0fea02c3d3885111506284f050a"
+    }
+  ],
+  "v1Preservation": {
+    "exactHashBindingsChecked": 8,
+    "allHashesUnchanged": true,
+    "allV1FrozenArtifactsRemainReadOnly": true
+  },
+  "checkGroups": {
+    "explicitUserAuthorizationAndScopeBoundary": "PASS",
+    "v1HashesAndReadOnlyPreservation": "PASS",
+    "sixAlgorithmCohortAndNoRankingWinnerComposite": "PASS",
+    "qualificationIndependentUnitAndAnonymousDecisionBoundary": "PASS",
+    "fortyEightCellThreeSeedCoreAndContextBalance": "PASS",
+    "eighteenHighCornerStressSuperblocks": "PASS",
+    "oneHundredSixtyTwoSuperblocksAndNineHundredSeventyTwoProcesses": "PASS",
+    "williamsSequenceAndPositionBalance": "PASS",
+    "twelveThousandEmptyBoundaryIterations": "PASS",
+    "algorithmNeutralGeometryAndAffectedAgentRules": "PASS",
+    "measurementFloorThresholds": "PASS",
+    "perLevelCoverageThresholds": "PASS",
+    "fourFoldWithinLaneDynamicRange": "PASS",
+    "timeoutMemoryStorageTwoFoldHeadroom": "PASS",
+    "completePerObservationQualificationRawDelivery": "PASS",
+    "failureAndWholeSuperblockReplacementPolicy": "PASS",
+    "passFailStatusesAndFailClosedAction": "PASS",
+    "MIPEFinalBAndExactResourceValuesNotInvented": "PASS",
+    "noQualificationFormalAnalysisOrExportRoots": "PASS",
+    "noPriorObservationAccessAndNoUnityExecution": "PASS"
+  },
+  "designSnapshot": {
+    "corePilotSuperblocks": 144,
+    "stressPilotSuperblocks": 18,
+    "totalPilotSuperblocks": 162,
+    "freshAlgorithmProcesses": 972,
+    "emptyBoundaryFreshProcesses": 12,
+    "emptyBoundaryRawIterations": 12000,
+    "expectedAlgorithmEventGroupRows": 23328,
+    "anonymousAlgorithmLanes": 6,
+    "independentUnit": "pilot input superblock"
+  },
+  "dataBoundary": {
+    "controlAndProtocolArtifactsOnly": true,
+    "priorGate14ReObservationsRead": false,
+    "excludedGate14ReTB2ObservationsRead": false,
+    "Gate14ReMEQualificationObservationsReadOrCreated": 0,
+    "Gate14ReMEFormalObservationsReadOrCreated": 0,
+    "UnityProcessesLaunched": 0,
+    "qualificationExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate10r-attempt2-controlled-retry-v1",
+  "createdAtUtc": "2026-10-06T12:51:38.3097951Z",
+  "status": "AUTHORIZED-ONE-ATTEMPT",
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "lineageId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "attempt": 2,
+  "authorizationSource": {
+    "relativePath": "Research/Gate10R_to_Gate12R_LedgerEntries/011-user-attempt2-authorization-source.txt",
+    "sha256": "99facd90b65fccf82a90160ab162cb6a3c5b3b5b374d5e966ad9c0c8d902333e",
+    "bytes": 3622
+  },
+  "runLedger": {
+    "passportRelativePath": "Research/Gate10R_to_Gate12R_Execution_Run_Passport.md",
+    "passportSha256AtAuthorization": "13986cf7bbedc6a94e70a55ff81cce8afb396a4226bc7fbf85df4b58da77ba9d",
+    "ledgerRelativePath": "Research/Gate10R_to_Gate12R_Execution_Run_Passport_run_ledger.yaml",
+    "ledgerSha256AtAuthorization": "0fd5d89deb9a4ccd275dc62c0f566c0704cbe34d5fd4382b6670412c2020aa8c",
+    "authorizationOpenSequence": 9,
+    "authorizationCloseSequence": 10
+  },
+  "allowedChanges": [
+    "add versioned-v2 Windows PowerShell 5.1-compatible entry points",
+    "add attempt-2 orchestration config and provenance",
+    "add attempt-2 preflight, receipt, logs, manifest, and checkpoint",
+    "create Research/Verification/Gate10R_ProcessReuse_5pct/v2 only after preflight writes are authorized",
+    "execute one complete Gate 10R attempt 2 after all no-Unity preflight checks pass",
+    "continue through Gate 11R and Gate 12R only after each preceding hard gate passes"
+  ],
+  "requiredPreflight": [
+    "windows-powershell-5.1-parser",
+    "parameter-binding-smoke",
+    "explicit-absolute-project-path",
+    "output-root-isolation",
+    "attempt1-byte-integrity",
+    "unity-not-started-during-smoke"
+  ],
+  "attempt1Boundary": {
+    "verificationRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v1",
+    "failureReceiptSha256": "a1d501c72fa1e1a21f041c9cb7c73967b85e0dafbe2b74fe1cf83d003613917a",
+    "partialManifestSha256": "9dc16acfc7bab0f72d621fd6620f83235411e3afa6d9138fbde1445f87ff138e",
+    "checkpointSha256": "069272d95443a4e4ef1aa2ddf8fe15147150e6d811ee95fa5e64f8d10dfda65a",
+    "mutationAllowed": false,
+    "resumeAllowed": false,
+    "reinterpretationAllowed": false
+  },
+  "attempt2VerificationRoot": "Research/Verification/Gate10R_ProcessReuse_5pct/v2",
+  "attempt2MaximumOfficialExecutions": 1,
+  "automaticRetryAuthorized": false,
+  "automaticResumeAuthorized": false,
+  "gate11RConditionalContinuationAuthorized": true,
+  "gate12RConditionalContinuationAuthorized": true,
+  "gate13RPreparationAuthorized": false,
+  "gate13RFormalCampaignAuthorized": false,
+  "gate13RFormalRootCreationAuthorized": false,
+  "formalCampaign": false
+}

@@ -1,0 +1,31 @@
+﻿Algorithm S3. Managed multi-query execution with private lane state
+"Input: algorithm A in {C-FF, IDFF}, 16 frozen lane inputs B, worker count W, CPU plan P
+Output: complete-batch time T and validated results R[0..15], or batch failure
+1   Load and verify B and cached oracle outcomes before batch timing
+2   Create W fixed workers; worker j binds to P[j], signals READY, and waits
+3   Coordinator waits for every READY signal; start clock; release workers
+4   In parallel, each worker j executes lanes i = j, j + W, ... < 16:
+5       if batch failure is already flagged: skip each unstarted lane
+6       otherwise verify the worker CPU binding and enter the lane
+7       Deserialize private B[i]; build private grid G; create planner A
+8       try:
+9           Initialize A; require valid status, budget, and grid version
+10          Run all initial queries; validate paths and record outcomes
+11          for each of the 24 event groups in frozen order:
+12              for each atomic partition in its prescribed order:
+13                  Require no pending repair; apply the changes to G
+14                  Call A.ApplyChanges using the technical budget
+15                  Require completed repair, valid budget, matching versions
+16              Run all fixed-start queries; validate paths; record outcomes
+17          Require the full query and repair counts; store result R[i]
+18       finally: reset the lane planner
+19       On a lane error: flag batch failure; stop admitting unstarted lanes
+20       Fingerprint successful results; verify the ending CPU binding
+21       On a binding error: flag batch failure
+22   Each worker clears its binding and signals DONE after its lane loop
+23   Coordinator waits for all DONE signals; stop clock at T; join workers
+24   Require 16 completed lanes, no failed/skipped lanes, and valid bindings
+25   Compare every recorded query with its cached oracle after timing
+26   If any check fails: reject the complete batch; do not retry or replace
+27   Return T and results in ascending lane order
+Within a lane, C-FF and IDFF execute the serial procedures of Algorithms S1 and S2."

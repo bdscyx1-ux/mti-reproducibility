@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "gate13r-pr2-s48-h48-formal-attempt2-prelaunch-evidence-manifest-v1",
+  "status": "ALL-PREFORMAL-HARD-GATES-PASSED / FORMAL-ROOT-ABSENT / FORMAL-RECEIPT-PENDING",
+  "authorizationId": "gate13r-pr2-s48-h48-formal-attempt-2-embedded-sample-contract-repair-and-one-raw-acquisition-v1",
+  "prelaunchCheckpoint": {
+    "relativePath": "Research/Gate13R_PR2_Attempt2_Prelaunch_Checkpoint.v1.json",
+    "sha256": "6d0fae0899b4b4e11753712585e5e14f300b10b823f345560ee079f496442768"
+  },
+  "implementation": [
+    {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV4.cs",
+      "sha256": "ef12eb01b903318c5ce9455d5872cff5e7f505f3d1496ffc860d512173be5467"
+    },
+    {
+      "relativePath": "Research/Gate13RPR2FormalExecutionV5.psm1",
+      "sha256": "2f87e3b9844ccd7d85ba8c7cf8bfd4736a6bef6ceb4400b33d38a206d53c69ce"
+    },
+    {
+      "relativePath": "Research/Run-Gate13RPR2FormalBlockV6.ps1",
+      "sha256": "06e2a51c1fe2f23e8189310d4708cd2a21f36bfd205bfbddf8df002ad0ac8e2a"
+    },
+    {
+      "relativePath": "Research/Run-Gate13RPR2FormalCampaignV6.ps1",
+      "sha256": "17ac97da23b2bf77b7d6beed8e901ed7c768095a7791f2ee2f2f0dfe211c155a"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Formal_Execution_Adapter_Provenance.v2.json",
+      "sha256": "9d6e4ea65cc956a770f7b9bda5f85249660af249451282cbf31ffdbf476f4a84"
+    }
+  ],
+  "specificationAndTests": [
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Embedded_Contract_Repair_Specification.v2.md",
+      "sha256": "5e0d45165a72e932ef9a4ad296093214315a336ed22f2bc215e76b2a7a15bcb6"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Block_Sample_Schema_Amendment.v2.json",
+      "sha256": "a4c73ec791dc7d19f956fb0e7342ac5def9ac6e4de82febcaaacecd30e014995"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Mechanical_Derivation_Receipt.v2.json",
+      "sha256": "84c915c5d663ccaeafb74a6c96fd1a6b338cdf5a8c65978bba1739a858c1895e"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Prelaunch_Test_Design.v1.md",
+      "sha256": "f9032bf6cb67be563a8c86e3dc69b441102545df565124fe8662b60ca0415695"
+    }
+  ],
+  "passedEvidence": [
+    {
+      "id": "parser-binding",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/parser-binding-summary.v1.json",
+      "sha256": "1a01daf8ea5f559939234b4ead7bf637510e1d0b56fe57a8797bf6744b9ffd1c"
+    },
+    {
+      "id": "contract-unit-ps5-18-of-18",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/ContractUnitPS5/summary.json",
+      "sha256": "9f59bb4359f2601077cb88696713c4f4d1a2f9afa5ec303372099ee414c0568c"
+    },
+    {
+      "id": "static-deterministic-46-of-46",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/StaticAttempt2/summary.json",
+      "sha256": "62ec4fec264cd92b451bd3435ea359b99e8535f63219542c3ed75f8129da70b0"
+    },
+    {
+      "id": "unity-self-tests",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/UnitySelfTestsAttempt1/unity-self-tests-summary.json",
+      "sha256": "a124a1551ff529003ac4b16e627005f0534b84e970f3d01ea806934de7bf5c44"
+    },
+    {
+      "id": "psapi-cim-telemetry",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/TelemetryAttempt1/probe.summary.json",
+      "sha256": "a0e0854342bfd571ee502b1b515b1b21923680095504d99c776f5221babb8660"
+    },
+    {
+      "id": "retained-regression-63-of-63",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/RetainedRegression/summary.json",
+      "sha256": "01130445af48c1f3798c211de81bbd76c98bcc55637a38618c2a59c33e6f5edd"
+    },
+    {
+      "id": "negative-no-receipt",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/NegativeNoReceiptAttempt2/summary.json",
+      "sha256": "cc0ced045b9ad285284676b3b2d52ff6c540bf29560c081c52d05ba7d6190caf"
+    },
+    {
+      "id": "complete-four-algorithm-contract-rehearsal",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/contract-rehearsal-evidence-manifest.v1.json",
+      "sha256": "881feb2564e17651e0df6993316b0ae954402d475c0973cbae704f997284d48f"
+    },
+    {
+      "id": "campaign-validation-only-dry-run",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/campaign-validation-only-dry-run-summary.v1.json",
+      "sha256": "8101dd38fcd4c696e092f06afc26dd7f5c44b563f8a50ef61ce9eb08d32459bc"
+    },
+    {
+      "id": "final-prelaunch-28-of-28",
+      "relativePath": "Research/Verification/Gate13R_PR2_Formal_Attempt2/v1/FinalPrelaunchAttempt1/audit.json",
+      "sha256": "19daff28f3b5b5c373cc19170dbe875c936bd254efd9c96d2e3f5b079399db3f"
+    }
+  ],
+  "preservedFailedValidationAttempts": [
+    {
+      "id": "base-derivation-attempt1",
+      "failureReceiptSha256": "9a8ecc7c4425c6d1785013669045b03fb5e2d41c5b7294c8cb18ca79dde66c82"
+    },
+    {
+      "id": "static-validator-attempt1",
+      "summarySha256": "ba65fc507ec2ab4a6932a7c9c118c8c990a09bfed9f395cfa1dd7a99fc4ce9ad"
+    },
+    {
+      "id": "negative-no-receipt-harness-attempt1",
+      "failureReceiptSha256": "8af2d334210aac9613853be34ee17b8d7c64d7c5c5791bd499886ba7ee856646"
+    }
+  ],
+  "attempt1FormalRoot": {
+    "fileCount": 31,
+    "rawBytes": 3338221,
+    "readOnlyFileCount": 31,
+    "canonicalTreeSha256": "026b9830f220b06af3f0a106f638b3d918d115ba08f5f06c13d9d76542ba4f56",
+    "unchanged": true
+  },
+  "formalRootV2Created": false,
+  "formalReceiptV2Created": false,
+  "formalStatusV2Created": false,
+  "formalStatisticalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "passed": true,
+  "immutable": true
+}

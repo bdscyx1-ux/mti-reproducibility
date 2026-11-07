@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr1b-v2-verification-attempt3-token-count-repair-v1",
+  "createdAtUtc": "2026-10-08T12:35:15.3976164Z",
+  "createdAtAsiaShanghai": "2026-10-08T20:35:15.3976164+08:00",
+  "authorizationBasis": "Gate 13R-PR1B v2 permits versioned pre-measurement implementation and orchestration repairs. No measured pilot process has started and the pilot v6 root remains absent.",
+  "diagnosisRelativePath": "Research/Gate13R_PR1B_v2_Verification_Attempt2_Failure_Diagnosis.v1.json",
+  "allowedChange": "Mechanically derive a new block-verification wrapper from frozen Run-Gate13RPR1BBlockVerificationV2.ps1 and replace only its demonstrably incorrect lower-bound token predicate with an exact frozen-source count of 13.",
+  "evidenceBeforeChange": {
+    "frozenV1SourceTokenCount": 13,
+    "allFourRouteCounts": 1,
+    "derivedPowerShellParserErrors": 0
+  },
+  "prohibitedChanges": [
+    "No change to block content, algorithms, scenarios, Williams order, AB/BA schedule, reset, telemetry, memory thresholds, contrasts, endpoints, or cardinalities.",
+    "No modification or continuation of v9 or v10.",
+    "No formal output, formal execution receipt, Gate 13R formal campaign, or Gate 14R work."
+  ],
+  "scientificContractChanged": false,
+  "newVerificationRoot": "Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2",
+  "pilotRootRemains": "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2",
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

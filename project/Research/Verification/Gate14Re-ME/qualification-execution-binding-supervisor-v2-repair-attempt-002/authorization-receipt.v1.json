@@ -1,0 +1,36 @@
+{
+  "schema": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-002",
+  "authorizationSeriesId": "gate14re-me-qualification-execution-binding-supervisor-v2-repair-attempt-001",
+  "status": "AUTHORIZED_SUBSEQUENT_ATTEMPT_WITHIN_SAME_MINIMUM_STAGE",
+  "authorizedLocalDate": "2026-10-17",
+  "source": "standing direct user authorization to perform all subsequent attempts within the same stage until an attempt passes",
+  "triggeringFailure": {
+    "attempt": 1,
+    "failureReceiptSha256": "e5842af9ec3a6205aa9e9014ad1fddd6fab2f99696995577575c4ae4607d4c3e",
+    "exactFailure": "prelaunch creation timestamp mismatch: TRUSTED_NOT_STRICT_ISO8601_OFFSET_TIMESTAMP",
+    "unityInvocationCount": 0
+  },
+  "authorized": {
+    "preservePriorFailuresWithoutModificationOrReclassification": true,
+    "repairJsonTimestampTextPreservationUsingDateKindString": true,
+    "updateSupervisorV2AndExecutionContractV2HashesAndLineage": true,
+    "rerunOfflineStaticKnownAnswer": true,
+    "necessaryCurrentFrozenImplementationCompilation": true,
+    "singleAlgorithmFreeUnityCompileIdentityProbe": true,
+    "createCurrentImplementationManifestV2AfterProbePass": true,
+    "freezeZeroReplacementFailStop": true
+  },
+  "notAuthorized": {
+    "qualificationMeasuredRootCreation": true,
+    "qualificationPlannerOrAlgorithmLaneExecution": true,
+    "qualificationOrFormalObservationProduction": true,
+    "replacementAssetGeneration": true,
+    "formalCollection": true,
+    "formalAnalysis": true,
+    "ranking": true,
+    "winnerAdjudication": true
+  },
+  "failurePolicy": "FAIL_CLOSED_PRESERVE_ALL_EVIDENCE_NO_SCOPE_EXPANSION_CONTINUE_ONLY_IN_NEW_ATTEMPT"
+}

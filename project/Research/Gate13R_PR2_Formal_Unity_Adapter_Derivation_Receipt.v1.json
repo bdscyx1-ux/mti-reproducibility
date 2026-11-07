@@ -1,0 +1,178 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-pr2-formal-unity-adapter-mechanical-derivation-receipt-v1",
+    "createdAtUtc":  "2026-10-08T16:58:54.2820809Z",
+    "sourceRelativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3.cs",
+    "sourceSha256":  "a47a731c979d58304230a150947ca1bb50207d13d1214b7d4de6e683bba6b5d6",
+    "targetRelativePath":  "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV1.cs",
+    "targetSha256":  "b084b802b84c49d67402df8769c63c9d9b6bb020229f67f20db434cbb1325f4a",
+    "routes":  [
+                   {
+                       "from":  "/// Gate 13R-PR1B v3 path-safe research-only entry point. This additive command leaves the",
+                       "to":  "/// Gate 13R-PR2 formal path-safe entry point, mechanically derived from the frozen",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "/// frozen V3 process-reuse implementation untouched, uses native Windows process",
+                       "to":  "/// PR1B V3 command. It retains the same workload, reset, telemetry, memory, and",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "/// counters, and takes the managed-memory endpoint only after the non-inlined",
+                       "to":  "/// atomic-persistence logic while binding a formally authorized config and receipt.",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "/// sample method has returned and a full collection boundary has completed.",
+                       "to":  "/// Both two-sample heterogeneous and four-sample shared Williams blocks are accepted.",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Gate13RPR1BMemoryAwareProcessReuseBatchCommandV3",
+                       "to":  "Gate13RPR2FormalBatchCommandV1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "public string pilotPlanRelativePath;",
+                       "to":  "public string formalConfigRelativePath;",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "public string pilotPlanSha256;",
+                       "to":  "public string formalConfigSha256;",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "telemetryProbeResultRelativePath",
+                       "to":  "executionReceiptRelativePath",
+                       "replacementCount":  2
+                   },
+                   {
+                       "from":  "telemetryProbeResultSha256",
+                       "to":  "executionReceiptSha256",
+                       "replacementCount":  5
+                   },
+                   {
+                       "from":  "gate13r-pr1b-v2-memory-aware-process-reuse-sample-summary-v1",
+                       "to":  "gate13r-pr2-rq-aligned-s48-h48-formal-sample-summary-v1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "gate13r-pr1b-v2-memory-aware-process-reuse-block-manifest-v1",
+                       "to":  "gate13r-pr2-rq-aligned-s48-h48-formal-block-manifest-v1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "gate13r-pr1b-v2-memory-aware-process-reuse-block-checkpoint-v1",
+                       "to":  "gate13r-pr2-rq-aligned-s48-h48-formal-block-checkpoint-v1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "gate13r-pr1b-v2-memory-aware-process-reuse-block-failure-v1",
+                       "to":  "gate13r-pr2-rq-aligned-s48-h48-formal-block-failure-v1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "gate13r-pr1b-v2-memory-gate-evaluation-v1",
+                       "to":  "gate13r-pr2-rq-aligned-s48-h48-formal-memory-gate-evaluation-v1",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "-ddmGate10RBlockPlanPath",
+                       "to":  "-ddmGate13RPR2BlockPlanPath",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "-ddmGate10RBlockPlanSha256",
+                       "to":  "-ddmGate13RPR2BlockPlanSha256",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "-ddmGate10ROutputDirectory",
+                       "to":  "-ddmGate13RPR2OutputDirectory",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Gate 10R process-reuse block plan is missing.",
+                       "to":  "Gate 13R-PR2 formal block plan is missing.",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "DDM Gate 10R process-reuse block completed: ",
+                       "to":  "DDM Gate 13R-PR2 formal block completed: ",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Unsupported Gate 10R process-reuse block-plan schema.",
+                       "to":  "Unsupported Gate 13R-PR2 formal block-plan schema.",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Gate 10R process-reuse design identity mismatch.",
+                       "to":  "Gate 13R-PR2 process-reuse design identity mismatch.",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "if (plan.formalCampaign) throw new InvalidOperationException(\"This command invocation is not authorized to produce formal samples.\");",
+                       "to":  "if (!plan.formalCampaign) throw new InvalidOperationException(\"The Gate 13R-PR2 formal adapter requires a formally authorized block plan.\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "if (expectedAlgorithms.Length != 2) throw new InvalidOperationException(\"Gate 13R-PR1B v2 accepts only a two-sample heterogeneous Williams block.\");",
+                       "to":  "if (expectedAlgorithms.Length != 2 \u0026\u0026 expectedAlgorithms.Length != 4) throw new InvalidOperationException(\"Gate 13R-PR2 accepts only a complete two- or four-sample frozen Williams cohort.\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "if (plan.verificationInjectedFailurePosition \u003c 0 || plan.verificationInjectedFailurePosition \u003e plan.entries.Length) throw new InvalidOperationException(\"Injected verification failure position is outside the block.\");",
+                       "to":  "if (plan.verificationInjectedFailurePosition != 0) throw new InvalidOperationException(\"Injected failures are forbidden in a formal block plan.\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "if (plan.verificationInjectedFailurePosition \u003e 0 \u0026\u0026 !string.Equals(plan.analysisRole, \"excluded-negative-fail-closed-verification\", StringComparison.Ordinal)) throw new InvalidOperationException(\"Injected failure is permitted only for the excluded negative verification fixture.\");",
+                       "to":  "if (!string.Equals(plan.analysisRole, \"formal-timing\", StringComparison.Ordinal)) throw new InvalidOperationException(\"The formal block analysis role must be formal-timing.\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "ValidateBoundFile(projectRoot, plan.pilotPlanRelativePath, plan.pilotPlanSha256, \"Gate 10R config\");",
+                       "to":  "ValidateBoundFile(projectRoot, plan.formalConfigRelativePath, plan.formalConfigSha256, \"Gate 13R-PR2 formal config\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "ValidateBoundFile(projectRoot, plan.specificationRelativePath, plan.specificationSha256, \"Gate 10R specification\");",
+                       "to":  "ValidateBoundFile(projectRoot, plan.specificationRelativePath, plan.specificationSha256, \"Gate 13R-PR2 formal execution specification\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "ValidateBoundFile(projectRoot, plan.testDesignRelativePath, plan.testDesignSha256, \"Gate 10R test design\");",
+                       "to":  "ValidateBoundFile(projectRoot, plan.testDesignRelativePath, plan.testDesignSha256, \"Gate 13R-PR2 prelaunch test design\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "ValidateBoundFile(projectRoot, plan.amendmentRelativePath, plan.amendmentSha256, \"Gate 10R authorization\");",
+                       "to":  "ValidateBoundFile(projectRoot, plan.amendmentRelativePath, plan.amendmentSha256, \"Gate 13R-PR2 two-phase amendment\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "ValidateBoundFile(projectRoot, plan.commandRelativePath, plan.commandSha256, \"Gate 10R command\");",
+                       "to":  "ValidateBoundFile(projectRoot, plan.commandRelativePath, plan.commandSha256, \"Gate 13R-PR2 formal command\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "ValidateBoundFile(projectRoot, plan.provenanceRelativePath, plan.provenanceSha256, \"Gate 10R provenance\");",
+                       "to":  "ValidateBoundFile(projectRoot, plan.provenanceRelativePath, plan.provenanceSha256, \"Gate 13R-PR2 formal execution provenance\");",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "ValidateBoundFile(projectRoot, plan.executionReceiptRelativePath, plan.executionReceiptSha256, \"successful telemetry probe result\");",
+                       "to":  "ValidateBoundFile(projectRoot, plan.executionReceiptRelativePath, plan.executionReceiptSha256, \"Gate 13R-PR2 formal execution receipt\");",
+                       "replacementCount":  1
+                   }
+               ],
+    "sourceFileModified":  false,
+    "researchAlgorithmSemanticsChanged":  false,
+    "scenarioSemanticsChanged":  false,
+    "resetTelemetryMemoryOrAtomicPersistenceChanged":  false,
+    "formalAuthorizationAndBindingChanged":  true,
+    "completeTwoOrFourSampleWilliamsCohortsAccepted":  true,
+    "formalCampaign":  true
+}

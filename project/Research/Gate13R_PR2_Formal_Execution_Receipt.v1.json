@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-s48-h48-formal-raw-acquisition-execution-receipt-v1",
+  "receiptId": "gate13r-pr2-s48-h48-formal-raw-acquisition-attempt-1-receipt-v1",
+  "createdAtUtc": "2026-10-08T17:41:19.2294994Z",
+  "createdAtLocal": "2026-10-09T01:41:19.2307036+08:00",
+  "timeZone": "Asia/Shanghai",
+  "status": "AUTHORIZED-FOR-ONE-RAW-ACQUISITION-ATTEMPT",
+  "authorizationId": "gate13r-pr2-s48-h48-formal-raw-acquisition-two-phase-authorization-v2",
+  "supplementalAuthorizationId": "gate13r-pr2-two-phase-supplemental-authorization-v1",
+  "formalCampaignAuthorized": true,
+  "rawAcquisitionAuthorized": true,
+  "rawDataCommitAuthorized": true,
+  "formalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "noAutomaticRetry": true,
+  "noAutomaticResume": true,
+  "noTopUp": true,
+  "noPartialMerge": true,
+  "adaptiveStoppingAllowed": false,
+  "twoPhaseCommitId": "gate13r-pr2-raw-analysis-two-phase-commit-v1",
+  "twoPhaseCommitRequired": true,
+  "ordinaryPostCollectionToolFailureMayRerunUnity": false,
+  "analysisFailureMayRerunUnity": false,
+  "requiredPostUnityIntermediateState": "UNITY-COLLECTION-COMPLETE / RAW-COMMIT-AUDIT-PENDING / NO-UNITY-RERUN",
+  "requiredRawTerminalState": "RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE",
+  "formalRootResolved": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1",
+  "formalRootExistedAtReceiptCreation": false,
+  "formalExecutionStatusExistedAtReceiptCreation": false,
+  "preflightCompletedAtUtc": "2026-10-08T17:41:19.2294994Z",
+  "bindings": {
+    "readinessSha256": "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc",
+    "configSha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+    "scheduleSha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "scheduleManifestSha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+    "commandSha256": "af9156588bc259dfa8cafeec4adb82c93a2b07f5e2ae772b4b0fd4115dce28a8",
+    "blockWrapperSha256": "30bf36239aaf321a4d454bf71f777a668476b1b962021d30ec3bb4d6abe25f54",
+    "orchestratorSha256": "66821f7642a260a80a5ea30f3e45a4e93e4dbc0c78095a3bcf2800d86bf65b53",
+    "moduleSha256": "5eaf15a3f1891d17849cf5c417aabaa03bcac7d25771e83ab905060b2db74b74",
+    "adapterProvenanceSha256": "b072752fea348b572cf66cb8b831baa95454bd134cf948b3a2991e1d8dc9981d",
+    "twoPhaseAmendmentSha256": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+    "twoPhaseSpecificationSha256": "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5",
+    "formalAuthorizationSha256": "b39323958710c4962cf868ae3ba6057f42649e8f23fb7f5feb04ffd12c438759",
+    "supplementalAuthorizationSha256": "4af69eb71362f89698d38760db335985a015af49f176dd7f81805cb6d2d4821a",
+    "prelaunchTestDesignSha256": "84c29a754ab419e95acacca0b27afabd261895c1f01affd572be6d26bb52c006",
+    "prelaunchCheckpointSha256": "92ad97462acc8a19ae27317e1f59c2de47615b2aa9b550257e2adf8448604315",
+    "prelaunchEvidenceManifestSha256": "1d32dbaa2f440836dea51348a730441141fed859532869c301de5591e1557909",
+    "finalParserBindingAuditSha256": "2d242432de2079751be5f042f8200243b7f782c16807fc8eff4fc55c7daab273",
+    "finalEnvironmentPreservationAuditSha256": "cae5ed774c2f901b0f93ae130b2f325b270f5fc621d067c1b0bf2fc1310006c5"
+  },
+  "resolvedBindings": {
+    "authorization": {
+      "id": "gate13r-pr2-s48-h48-formal-raw-acquisition-two-phase-authorization-v2",
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Authorization.v2.json",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Formal_Execution_Authorization.v2.json",
+      "sha256": "b39323958710c4962cf868ae3ba6057f42649e8f23fb7f5feb04ffd12c438759"
+    },
+    "supplementalAuthorization": {
+      "id": "gate13r-pr2-two-phase-supplemental-authorization-v1",
+      "relativePath": "Research/Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt",
+      "sha256": "4af69eb71362f89698d38760db335985a015af49f176dd7f81805cb6d2d4821a"
+    },
+    "twoPhaseAmendment": {
+      "id": "gate13r-pr2-raw-analysis-two-phase-commit-v1",
+      "relativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+      "sha256": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df"
+    },
+    "twoPhaseSpecification": {
+      "id": "gate13r-pr2-raw-analysis-two-phase-commit-specification-v1",
+      "relativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+      "sha256": "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5"
+    },
+    "readiness": {
+      "id": "gate13r-pr2-nonexecuting-formal-preparation-readiness-v1",
+      "relativePath": "Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_NonExecuting_Readiness_Checkpoint.v1.json",
+      "sha256": "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc"
+    },
+    "config": {
+      "id": "gate13r-pr2-rq-aligned-s48-h48-formal-campaign-config-v2",
+      "relativePath": "Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Formal_Campaign_Config.v2.json",
+      "sha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e"
+    },
+    "schedule": {
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Formal_Williams_Matched_Schedule.v2.jsonl",
+      "sha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae"
+    },
+    "scheduleManifest": {
+      "id": "gate13r-pr2-rq-aligned-s48-h48-schedule-manifest-v2",
+      "relativePath": "Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Formal_Williams_Matched_Schedule_Manifest.v2.json",
+      "sha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724"
+    },
+    "adapterProvenance": {
+      "id": "gate13r-pr2-s48-h48-formal-execution-adapter-and-prelaunch-provenance-v4",
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Adapter_Provenance.v4.json",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Formal_Execution_Adapter_Provenance.v4.json",
+      "sha256": "b072752fea348b572cf66cb8b831baa95454bd134cf948b3a2991e1d8dc9981d"
+    },
+    "prelaunchCheckpoint": {
+      "id": "gate13r-pr2-s48-h48-formal-final-prelaunch-checkpoint-v1",
+      "relativePath": "Research/Gate13R_PR2_Formal_Prelaunch_Checkpoint.v1.json",
+      "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Formal_Prelaunch_Checkpoint.v1.json",
+      "sha256": "92ad97462acc8a19ae27317e1f59c2de47615b2aa9b550257e2adf8448604315"
+    }
+  },
+  "design": {
+    "candidateId": "S48-H48",
+    "campaignCount": 74,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "heterogeneousMatchedSuperblockCount": 1008,
+    "abPerHeterogeneousScenario": 24,
+    "baPerHeterogeneousScenario": 24,
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "maximumCompleteWilliamsBlocksPerProcess": 1
+  },
+  "storage": {
+    "availableFreeBytes": 276232310784,
+    "minimumLaunchFreeBytes": 57397541440,
+    "projectedP95RawBytes": 9631912320,
+    "projectedSafetyBytes": 14447868480,
+    "reserveBytes": 42949672960,
+    "passed": true
+  },
+  "immutable": true
+}

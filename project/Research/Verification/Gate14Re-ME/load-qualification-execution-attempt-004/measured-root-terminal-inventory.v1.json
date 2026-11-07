@@ -1,0 +1,63 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-attempt-004-measured-root-terminal-inventory-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-load-qualification-execution-attempt-004-05296e8f-0603-406e-9cfa-93a58cc7fec0",
+  "attemptId": "load-qualification-execution-attempt-004",
+  "status": "FAILED_MEASURED_ROOT_INVENTORIED_FOR_READ_ONLY_FREEZE",
+  "observedAtUtc": "2026-10-17T18:27:36.8307919Z",
+  "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002",
+  "measuredRootExists": true,
+  "deliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-002",
+  "deliveryRootExists": false,
+  "totalFileCount": 6,
+  "totalBytes": 86733,
+  "files": [
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/failure-receipt.v2.json",
+      "bytes": 720,
+      "sha256": "bafbf3e36a4bad7699b7338ca166deb9495bc3cfbd1e664e17ab250ca77a5fa9"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/failures-and-voids.raw.v1.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/launch-receipt.v2.json",
+      "bytes": 2097,
+      "sha256": "a9aded15cf91d2da9acb5750767cb649b6afeaa631aa740e4dfbfd30b8afa90d"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/process-ledger.raw.v2.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/replacement-ledger.raw.v1.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-002/_control/unity-logs/process-0000.unity.log",
+      "bytes": 83916,
+      "sha256": "8584f1a11703d1fc417e9dd55af610ba44a2cf6fd2c214aeb32fdf22bb45c769"
+    }
+  ],
+  "structuralCounts": {
+    "processLedgerRows": 0,
+    "failureAndVoidRows": 0,
+    "replacementLedgerRows": 0,
+    "processIdentityReceipts": 0,
+    "instrumentReceipts": 0,
+    "oracleReceipts": 0,
+    "emptyBoundaryReceipts": 0,
+    "algorithmLaneReceipts": 0,
+    "qualificationObservationFiles": 0
+  },
+  "contentBoundary": {
+    "sampleOrAlgorithmOutputRead": false,
+    "scientificMetricValueReadOrInterpreted": false,
+    "algorithmComparisonPerformed": false
+  },
+  "readOnlyAfterFreezeRequired": true
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "gate14re-me-load-qualification-instrument-contract-v2",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "status": "FROZEN_SOURCE_ONLY_D3_V2_INSTRUMENT_CONTRACT",
+  "version": 2,
+  "frozenAtUtc": "2026-10-17T05:48:11.4962743Z",
+  "baseContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-instrument-contract.v1.json",
+    "sha256": "7515851e9b447c0e17c580e0cbad86186d156f606cb8828616cd7f4f50ea4503",
+    "unchangedEndpointsInherited": ["D1", "D2", "D4"],
+    "unchangedProcessResourceContractInherited": true
+  },
+  "endpointReplacement": {
+    "endpointId": "D3",
+    "semanticVersion": 2,
+    "name": "event-boundary managed-heap occupancy",
+    "unit": "bytes",
+    "counterId": "GC.GetTotalMemory(false)-managed-heap-occupancy-v1",
+    "api": "System.GC.GetTotalMemory(false)",
+    "scope": "current Unity process managed heap; native allocations excluded",
+    "primaryRawField": "eventGroupManagedHeapBytesEnd",
+    "rawFields": [
+      "eventGroupManagedHeapBytesStart",
+      "eventGroupManagedHeapBytesEnd",
+      "eventGroupManagedHeapSignedDeltaBytes"
+    ],
+    "formula": "eventGroupManagedHeapSignedDeltaBytes = eventGroupManagedHeapBytesEnd - eventGroupManagedHeapBytesStart",
+    "boundary": "capture immediately before and immediately after one complete event group; no forced collection inside the event-group boundary",
+    "negativeSignedDeltaPolicy": "retain exactly as observed; never clamp, censor, replace, or reinterpret as cumulative allocation",
+    "primaryInterpretation": "estimated live managed-heap occupancy at the end of the event group",
+    "semanticExclusions": [
+      "cumulative allocation throughput",
+      "thread-local lifetime allocated bytes",
+      "native allocations",
+      "RSS or committed process memory",
+      "peak memory between the two capture points"
+    ]
+  },
+  "retiredD3": {
+    "semanticVersion": 1,
+    "counterId": "GC.GetAllocatedBytesForCurrentThread-v1",
+    "status": "RETIRED_PROSPECTIVELY_UNQUALIFIED",
+    "mayBeUsedByFutureGate14ReMEExecution": false,
+    "reason": "The bound Unity runtime returned zero across a retained 1 MiB allocation; the later process-wide cumulative counter candidate was unavailable at compile time."
+  },
+  "standaloneQualificationEvidence": {
+    "knownAnswerReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-endpoint-replacement-attempt-002/d3-known-answer/d3-known-answer-receipt.v1.json",
+    "knownAnswerReceiptSha256": "e8b16d76e339c87fe5485edcd68c8a6518ce40a5e49acf15b6e8cc6dadfc65aa",
+    "status": "PASS_D3_MANAGED_HEAP_OCCUPANCY_KNOWN_ANSWER",
+    "negativeControlPassed": true,
+    "positiveControlsPassed": true,
+    "scaleSeparationPassed": true,
+    "reclamationControlPassed": true,
+    "sourceRelativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEManagedHeapOccupancyV1.cs",
+    "sourceSha256": "64e9ae20fdc5f03c9f737bc42a655f7488c359e3525b66f288f6ca963770a2ca",
+    "unityVersion": "2022.3.30f1c1",
+    "runtime": "Mono 6.13.0 (Visual Studio built mono)"
+  },
+  "integrationState": {
+    "d3V2StandaloneSourceQualified": true,
+    "currentLoadQualificationRunnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV1.cs",
+    "currentLoadQualificationRunnerSha256": "7bb9237e529f511ad12fcfcb8374db02818977092c3680b287aacc817d182033",
+    "currentLoadQualificationRunnerUpdatedForD3V2": false,
+    "currentOutputSchemaRelativePath": "Research/Gate14Re-ME/Execution/v1/load-qualification-output-schema.v1.json",
+    "currentOutputSchemaSha256": "ed7d7bddf8e1da647a6085aa8e717d4ee0578ceff3fa7844dbd05c4e17aaea1c",
+    "currentOutputSchemaUpdatedForD3V2": false,
+    "runtimeQualificationAttempt002Authorized": false,
+    "dataExporterKnownAnswerAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingOrWinnerAuthorized": false,
+    "requiredBeforeAnyAlgorithmExecution": "A separate authorization must version and integrate D3 v2 into the load-qualification runner and raw output schema, then execute a new full runtime qualification."
+  },
+  "scientificBoundary": {
+    "plannerConstructed": false,
+    "algorithmLaneExecuted": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

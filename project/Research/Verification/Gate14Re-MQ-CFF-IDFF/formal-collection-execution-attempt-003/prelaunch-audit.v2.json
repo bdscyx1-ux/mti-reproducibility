@@ -1,0 +1,128 @@
+{
+  "schema": "gate14re-mq-formal-prelaunch-audit-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "authorizationId": "gate14re-mq-formal-collection-attempt-003-f9cf80a8-7ad8-4ec4-8568-bb4d90a9a445",
+  "status": "PASS_FRESH_ROOTS_HASHES_SCOPE_AND_PROCESS_QUIESCENCE_VERIFIED",
+  "auditedAtUtc": "2026-10-21T17:41:47.3902469+00:00",
+  "auditedAtBeijing": "2026-10-22T01:41:47.3902469+08:00",
+  "evidenceRoot": "H:/DDM_Final_Project/Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-003",
+  "evidenceRootWasFreshlyCreated": true,
+  "measuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003",
+  "measuredRootAbsent": true,
+  "relatedSupervisorProcesses": 0,
+  "relatedMeasuredUnityProcesses": 0,
+  "hashChecks": [
+    {
+      "label": "execution authorization attempt-003",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-003/execution-authorization.v2.json",
+      "expectedSha256": "189d62a4f321cefe2d75055f34a4a02b3695c9086ce240c4f9afa880065fc7a6",
+      "actualSha256": "189d62a4f321cefe2d75055f34a4a02b3695c9086ce240c4f9afa880065fc7a6",
+      "match": true
+    },
+    {
+      "label": "final design implementation readiness terminal",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-freeze-v2_2-attempt-001/terminal-receipt.v2.json",
+      "expectedSha256": "77a77987e1e84536db8213623befbca44f085737444ab482afe9f38e1cb9ea99",
+      "actualSha256": "77a77987e1e84536db8213623befbca44f085737444ab482afe9f38e1cb9ea99",
+      "match": true
+    },
+    {
+      "label": "final freeze manifest",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-design-freeze-v2_2-attempt-001/final-freeze-manifest.v2.json",
+      "expectedSha256": "b0f7c6603fade4ffba8e6b4167c682c21968552c7750717c0a5036ad5af6f97f",
+      "actualSha256": "b0f7c6603fade4ffba8e6b4167c682c21968552c7750717c0a5036ad5af6f97f",
+      "match": true
+    },
+    {
+      "label": "prelaunch readiness v2.2",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/prelaunch-readiness-v2_2-attempt-001/readiness-terminal.v2.json",
+      "expectedSha256": "95b32b04fe5ed54528a75057d511dd6fd4ba1fcf2376f21c9c2d80dcad166cbf",
+      "actualSha256": "95b32b04fe5ed54528a75057d511dd6fd4ba1fcf2376f21c9c2d80dcad166cbf",
+      "match": true
+    },
+    {
+      "label": "implementation manifest v2.4",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-implementation-manifest.v2_4.json",
+      "expectedSha256": "d88c6281edc6cad895aa9fb9ef5c27542c6819f2a879a10c670807accb13561f",
+      "actualSha256": "d88c6281edc6cad895aa9fb9ef5c27542c6819f2a879a10c670807accb13561f",
+      "match": true
+    },
+    {
+      "label": "supervisor v2.2",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/Run-Gate14ReMQFormalCollection.v2_2.ps1",
+      "expectedSha256": "61b717834f820e564e62883281b0bdb76ca63d5119d1ef361dda506823cea3cd",
+      "actualSha256": "61b717834f820e564e62883281b0bdb76ca63d5119d1ef361dda506823cea3cd",
+      "match": true
+    },
+    {
+      "label": "execution contract",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-execution-contract.v2.json",
+      "expectedSha256": "d4406a0af544185993450205df358dc7e92abcd5fe0d051f4721cb9300277266",
+      "actualSha256": "d4406a0af544185993450205df358dc7e92abcd5fe0d051f4721cb9300277266",
+      "match": true
+    },
+    {
+      "label": "formal process schedule",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/formal-process-schedule.v2.jsonl",
+      "expectedSha256": "70121c16dd42472610ddeddb3848dcd25d279390930def5b66d29049316c44a5",
+      "actualSha256": "70121c16dd42472610ddeddb3848dcd25d279390930def5b66d29049316c44a5",
+      "match": true
+    },
+    {
+      "label": "formal block input assignments",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/FormalInputs/v2/formal-block-input-assignments.v2.jsonl",
+      "expectedSha256": "bf4d9cf0cf6bd808c02c24b95035cb4e887b883c5399ea8be7f47e4514d465db",
+      "actualSha256": "bf4d9cf0cf6bd808c02c24b95035cb4e887b883c5399ea8be7f47e4514d465db",
+      "match": true
+    },
+    {
+      "label": "opaque identity map",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Execution/v2/opaque-algorithm-identity-map.v2.json",
+      "expectedSha256": "aac226811f2e6ce2acf15f3fe3c5b0ad3861569992aef3cc5822d7188dbb8059",
+      "actualSha256": "aac226811f2e6ce2acf15f3fe3c5b0ad3861569992aef3cc5822d7188dbb8059",
+      "match": true
+    },
+    {
+      "label": "fairness and topology binding",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/fairness-and-topology-binding.v2.json",
+      "expectedSha256": "941f2f62464105d5c5e09e16126a1dff6cc4b74ab7a565ec8942b03342c466bb",
+      "actualSha256": "941f2f62464105d5c5e09e16126a1dff6cc4b74ab7a565ec8942b03342c466bb",
+      "match": true
+    },
+    {
+      "label": "resource budget",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v2/formal-mq-resource-budget.v2.json",
+      "expectedSha256": "9459b06376cbfceb8f0c1659e642d3355a0560ce76d47bb0693020a0f033f2aa",
+      "actualSha256": "9459b06376cbfceb8f0c1659e642d3355a0560ce76d47bb0693020a0f033f2aa",
+      "match": true
+    },
+    {
+      "label": "Unity executable",
+      "absolutePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+      "expectedSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+      "actualSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+      "match": true
+    },
+    {
+      "label": "PowerShell host",
+      "absolutePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+      "expectedSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+      "actualSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+      "match": true
+    }
+  ],
+  "scope": {
+    "formalMqCollection": true,
+    "formalAnalysis": false,
+    "st": false,
+    "mt": false
+  },
+  "launchPolicy": {
+    "singleAttempt": true,
+    "strictSerialMeasuredUnity": true,
+    "maximumConcurrentMeasuredUnityProcesses": 1,
+    "expectedFreshUnityProcesses": 864,
+    "failurePolicy": "preserve and stop; no retry, resume, top-up, replacement, merge, skip, or reorder"
+  }
+}

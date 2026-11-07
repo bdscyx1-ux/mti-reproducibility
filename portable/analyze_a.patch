@@ -1,0 +1,38 @@
+--- frozen/analyze_a.py
++++ portable/analyze_a.py
+@@ -1,6 +1,10 @@
+ from pathlib import Path
+ import json,hashlib,math,statistics,csv,datetime,sys
+-ROOT=Path('C:/Users/bdscy/DDM_Revision_20261103')
++from portable_paths import configuration, resolve_recorded_path
++ARGS=configuration()
++ROOT=ARGS.input_root
++OUTPUT=ARGS.output_root
++def relocated(value): return resolve_recorded_path(value, ROOT)
+ def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
+ def sha(p):
+  with open(p,'rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+@@ -15,11 +19,11 @@
+  ids=['A*-R','D*L','C-FF','IDFF'];totals={a:{k:0 for k in ['planOperationCount','succeededPlanCount','noPathPlanCount','invalidPlanCount','failedPlanCount','budgetExceededPlanCount']} for a in ids}
+  status_mismatches=[]
+  for j in jobs:
+-  folder=Path(j['output']);p=folder/'block-result.json';r=load(folder/'process-receipt.json');x=load(p)
++  folder=relocated(j['output']);p=folder/'block-result.json';r=load(folder/'process-receipt.json');x=load(p)
+   assert r['passed'] and r['exitCode']==0 and r['outputSha256']==sha(p)
+-  assert sha(j['plan'])==j['planSha256']
++  assert sha(relocated(j['plan']))==j['planSha256']
+   assert x['studyId']=='DDM-Revision-20261103-A' and x['completed'] and x['planSha256']==j['planSha256'] and x['scenarioId']==j['scenarioId'] and x['blockIndex']==j['blockIndex']
+-  assert [s['algorithmId'] for s in x['samples']]==load(j['plan'])['algorithms']
++  assert [s['algorithmId'] for s in x['samples']]==load(relocated(j['plan']))['algorithms']
+   samples={s['algorithmId']:s for s in x['samples']};assert len(samples)==4
+   values={a:samples[a]['dynamicHandlingMillisecondsPerScheduledEvent'] for a in ids};assert all(v>0 and math.isfinite(v) for v in values.values())
+   cases.setdefault(j['scenarioId'],{})[j['blockIndex']]=values
+@@ -42,7 +46,7 @@
+  for c,p in zip(contrasts,holm([c['p_unadjusted_prespecified'] for c in contrasts])):c['p_holm_5']=p
+  gm={a:math.exp(statistics.mean(statistics.mean(math.log(v[a]) for v in blocks.values()) for blocks in cases.values())) for a in ids}
+  summary={'studyId':'DDM-Revision-20261103-A','createdUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'blocks':1536,'algorithmSamples':6144,'scenarioCount':32,'geometricMeanP1_ms_per_event':gm,'contrasts':contrasts,'statusTotals':totals,'statusCountMismatchesAgainstAStar':status_mismatches,'analysis':'paired block log ratios; equal32campaign weights; normal reference andBonferroni99%individual intervals across5contrasts, Holm5; newacquisitiononly','interpretationBoundary':'fixedscenario matrix and frozenimplementations; failedqueries retainedandreported; nohistoricaltimingpooling','oracleVerification':load(ROOT/'A-oracle-verification.json')['passed']}
+- out=ROOT/'analysis/A';out.mkdir(parents=True,exist_ok=False)
++ out=OUTPUT/'A';out.mkdir(parents=True,exist_ok=False)
+  for name,data in [('summary.json',summary),('input-manifest.json',files)]:
+   (out/name).write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+  for name,data in [('sample-results.csv',rows),('paired-contrasts.csv',contrasts)]:

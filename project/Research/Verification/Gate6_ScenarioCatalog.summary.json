@@ -1,0 +1,85 @@
+﻿{
+    "savedAt":  "2026-10-05T16:45:10.2777286+08:00",
+    "exitCode":  0,
+    "logPath":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate6_ScenarioCatalog_Unity.log",
+    "compilerErrorMatchCount":  0,
+    "compilerErrorMatches":  [
+
+                             ],
+    "verificationResultPath":  "H:\\DDM_Final_Project\\Research\\Verification\\Gate6_ScenarioCatalog.json",
+    "verificationResult":  {
+                               "passed":  true,
+                               "assertionCount":  28,
+                               "scenarioCount":  3,
+                               "catalogPath":  "H:\\DDM_Final_Project\\Research\\Scenarios\\catalog.json",
+                               "error":  ""
+                           },
+    "catalogPath":  "H:\\DDM_Final_Project\\Research\\Scenarios\\catalog.json",
+    "catalog":  {
+                    "schemaVersion":  1,
+                    "algorithmId":  "A*-R",
+                    "scenarioCount":  3,
+                    "entries":  [
+                                    {
+                                        "file":  "dynamic_corridors_sparse_v1.scenario.json",
+                                        "scenarioId":  "dynamic-corridors-sparse-v1",
+                                        "sourceSha256":  "7a99bd229df801aafba8e018769c8a7fe3022852b40025b2e48267f3495a2634",
+                                        "fingerprintSha256":  "85df1443b080ad83f2fb397157bdc185fb0113b473eb1ce853bff86d3764c450",
+                                        "gridWidth":  10,
+                                        "gridHeight":  6,
+                                        "connectivity":  4,
+                                        "allowDiagonalCornerCutting":  false,
+                                        "agentCount":  2,
+                                        "scheduledEventCount":  4,
+                                        "dynamicPlanningPhaseCount":  3,
+                                        "planOperationCount":  8,
+                                        "repairOperationCount":  4,
+                                        "succeededPlanCount":  8,
+                                        "processedNodesOrCells":  592,
+                                        "expandedNodes":  102,
+                                        "relaxedEdges":  231
+                                    },
+                                    {
+                                        "file":  "eight_way_strict_corners_v1.scenario.json",
+                                        "scenarioId":  "eight-way-strict-corners-v1",
+                                        "sourceSha256":  "4da0ddd1bc8014767be92a5ac3864c64610e59907f7fc9bb6111a0c76fbfe1de",
+                                        "fingerprintSha256":  "6ea26f7b18ca888c43af25b330bafe05e05a48713a2de30c381108a733f2e9ca",
+                                        "gridWidth":  7,
+                                        "gridHeight":  7,
+                                        "connectivity":  8,
+                                        "allowDiagonalCornerCutting":  false,
+                                        "agentCount":  2,
+                                        "scheduledEventCount":  2,
+                                        "dynamicPlanningPhaseCount":  2,
+                                        "planOperationCount":  6,
+                                        "repairOperationCount":  2,
+                                        "succeededPlanCount":  6,
+                                        "processedNodesOrCells":  422,
+                                        "expandedNodes":  122,
+                                        "relaxedEdges":  219
+                                    },
+                                    {
+                                        "file":  "static_weighted_four_way_v1.scenario.json",
+                                        "scenarioId":  "static-weighted-four-way-v1",
+                                        "sourceSha256":  "9e6f066eae835f26dbca1aee625b046e4fdebb09f3b9818bd67678bd9e6e4681",
+                                        "fingerprintSha256":  "1d478701a3b71f4d2285e5306cc6605c303d457ced0cf00c46ca3921e76f36f9",
+                                        "gridWidth":  8,
+                                        "gridHeight":  6,
+                                        "connectivity":  4,
+                                        "allowDiagonalCornerCutting":  false,
+                                        "agentCount":  3,
+                                        "scheduledEventCount":  0,
+                                        "dynamicPlanningPhaseCount":  0,
+                                        "planOperationCount":  3,
+                                        "repairOperationCount":  0,
+                                        "succeededPlanCount":  3,
+                                        "processedNodesOrCells":  188,
+                                        "expandedNodes":  41,
+                                        "relaxedEdges":  60
+                                    }
+                                ]
+                },
+    "runtimeAssemblyCurrent":  true,
+    "editorAssemblyCurrent":  true,
+    "passed":  true
+}

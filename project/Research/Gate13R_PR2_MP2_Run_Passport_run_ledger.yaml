@@ -1,0 +1,158 @@
+ledger: ars-run-ledger/1.0
+created_at: '2026-10-09T05:43:18Z'
+entries:
+- seq: 1
+  kind: initial_instructions
+  at: '2026-10-09T05:43:18Z'
+  user_words: 授权 Gate 13R-PR2-MP2 前瞻性分层、场景规模感知 memory-policy 冻结，formal attempt 3 非执行配置/adapter
+    实现与 validation-only readiness；不授权 formal attempt 3 measured campaign、formal attempt-3
+    output root 或 execution receipt、正式统计分析或 Gate 14R。
+  prev_hash: null
+  hash: 1b81e3f551bc02f5d682f19a35f4ac241bec7add30b3ffd0f84520ff93cce64c
+- seq: 2
+  kind: tool_receipt
+  at: '2026-10-09T06:38:09Z'
+  step: mp2-validation-attempt-1
+  command: 'Validation-only attempt 1: run the initial MP2 static, schema, boundary,
+    deterministic-regeneration, frozen-input and formal-root-absence test suite; stop
+    before Unity when the explicit raw-transient diagnostic reason contract fails.'
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - FAILED-PRESERVED
+  - NO-UNITY-LAUNCHED
+  - NO-FORMAL-ROOT
+  input_sha256:
+    Verification/Gate13R_PR2_MP2/v1/attempt-1/failure-receipt.json: 645a86c9dabb21d6923583aaf1d639e26250e4ada72fe263854e284abde1b5a1
+    Verification/Gate13R_PR2_MP2/v1/attempt-1/checkpoint.json: 4dd0deebbc05a997c889c69677947f0b4abb1e432ce04b2fa0736c33707e8495
+    Verification/Gate13R_PR2_MP2/v1/attempt-1/partial-output-manifest.json: 8c3fec8feb3554e0dd1892c68ae324dc00be4fb560e9c2c5e06db3f38798673d
+  prev_hash: 1b81e3f551bc02f5d682f19a35f4ac241bec7add30b3ffd0f84520ff93cce64c
+  hash: e09fa1c3ad56c1f700f747a4e7abc825d91d2de8567a3182018659ef10de322c
+- seq: 3
+  kind: tool_receipt
+  at: '2026-10-09T06:38:09Z'
+  step: mp2-validation-attempt-2
+  command: 'Validation-only attempt 2: execute the versioned V2 static/unit suite,
+    Unity memory self-test, PSAPI/CIM probe and positive plus expected-negative synthetic
+    blocks; fail closed on the wrapper lock-hygiene role-classification defect.'
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - FAILED-PRESERVED
+  - EXPECTED-NEGATIVE-WRAPPER-DEFECT
+  - NO-FORMAL-ROOT
+  input_sha256:
+    Verification/Gate13R_PR2_MP2/v1/attempt-2/failure-receipt.json: ab58b5a7f7176b0ec18022cb9bdbd630fcc92169c4adf177074641e8ff4dadef
+    Verification/Gate13R_PR2_MP2/v1/attempt-2/checkpoint.json: 0e7ade1b1e69624fdec04981c1fad665125cfcb9819e6325a419ee5d94ed8caf
+    Verification/Gate13R_PR2_MP2/v1/attempt-2/partial-output-manifest.json: 20d18158d7bc57037f2c0bc57b494c1ff8ea45030301719b8de4bc4347ab50e8
+  prev_hash: e09fa1c3ad56c1f700f747a4e7abc825d91d2de8567a3182018659ef10de322c
+  hash: df6cd893695a0af90c649e7b48378575eb287aa20890bc6e6ab0edc48362df3f
+- seq: 4
+  kind: tool_receipt
+  at: '2026-10-09T06:38:09Z'
+  step: mp2-validation-attempt-3
+  command: 'Validation-only attempt 3: validate the versioned expected-negative lock-hygiene
+    wrapper repair; stop before generating active outputs or launching Unity when
+    the repair generator rejects its incorrect frozen V2 provenance literal.'
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - FAILED-PRESERVED
+  - NO-UNITY-LAUNCHED
+  - NO-FORMAL-ROOT
+  input_sha256:
+    Verification/Gate13R_PR2_MP2/v1/attempt-3/failure-receipt.json: 3099ec62b371355368a8b1353d643e82ae200dca1434ff4b7bf462a7f24c9735
+    Verification/Gate13R_PR2_MP2/v1/attempt-3/checkpoint.json: fb46898ad0d9fd16019b5ded49004b6576dbc6aaa8924aa8618946710f074c6f
+    Verification/Gate13R_PR2_MP2/v1/attempt-3/partial-output-manifest.json: a233ba0e297d5b12841275b8e0e983ef96bd7c4e143db5b606d6212cdb27989c
+  prev_hash: df6cd893695a0af90c649e7b48378575eb287aa20890bc6e6ab0edc48362df3f
+  hash: 54dfda348006ede2d59d07bd64c3fca0c4e38a73aa17449739eceda22b97f8c9
+- seq: 5
+  kind: tool_receipt
+  at: '2026-10-09T06:38:09Z'
+  step: mp2-validation-attempt-4
+  command: 'Validation-only attempt 4: run 69/69 static and unit checks, PowerShell
+    7 and Windows PowerShell 5.1 parser/binding checks, Unity 22/22 memory self-tests,
+    telemetry probes, one positive synthetic block, three fail-closed negative blocks,
+    preservation audit and final audit.'
+  status: passed
+  exit_status: 0
+  retries_used: 0
+  gate_tokens:
+  - VALIDATION-ONLY-PASSED
+  - FORMAL-CAMPAIGN-NOT-AUTHORIZED
+  - NO-FORMAL-ROOT
+  input_sha256:
+    Verification/Gate13R_PR2_MP2/v1/attempt-4/pass-receipt.json: 535e1bdf2c1a27331cba0bbd8eff2a49935226a659b89c1566b132e35134008d
+    Verification/Gate13R_PR2_MP2/v1/attempt-4/checkpoint.json: 1a31a45250c4753d11d1f5d39d7775a7fc9fe72aaa09f5a4554185c105f5a20c
+    Verification/Gate13R_PR2_MP2/v1/attempt-4/partial-output-manifest.json: b37cebf3acb8fbba502a620efa0ece656ff46a8a91205e01d42ba7b5e9c424a9
+    Gate13R_PR2_MP2_Final_Validation_Audit.v1.json: bbf41f14682a85e061799a5cb9daed2122d6f8631a878b22bb714ede161bbe9e
+  prev_hash: 54dfda348006ede2d59d07bd64c3fca0c4e38a73aa17449739eceda22b97f8c9
+  hash: 25973ae501ee2949c90878ca32a3e668df26afb5d85337acb17570f1602497ab
+- seq: 6
+  kind: tool_receipt
+  at: '2026-10-09T06:40:58Z'
+  step: mp2-evidence-manifest-v1
+  command: Create evidence manifest v1, then reject it from active use when the subsequently
+    finalized run-passport status changes an embedded artifact hash; preserve both
+    the manifest and the versioned failure receipt without overwrite.
+  status: failed
+  exit_status: 1
+  retries_used: 0
+  gate_tokens:
+  - FAILED-PRESERVED
+  - NO-EXPERIMENTAL-DATA-AFFECTED
+  - NO-FORMAL-ROOT
+  input_sha256:
+    Gate13R_PR2_MP2_Evidence_Manifest.v1.json: 28f0d44e701ab131bdecbd167dfe1169ce61ad62e476921b56f247c7a22af5d5
+    Gate13R_PR2_MP2_Evidence_Manifest_v1_Failure_Receipt.v1.json: fdee380b59ef99c4bce7e020e84de903f85b2543b12f10bd87218a9a4ccbc072
+  prev_hash: 25973ae501ee2949c90878ca32a3e668df26afb5d85337acb17570f1602497ab
+  hash: c3b97080d4b7f9e26c7299820672f63eede51569a9f0e77a7b14c09be4848715
+- seq: 7
+  kind: tool_receipt
+  at: '2026-10-09T06:40:58Z'
+  step: mp2-evidence-manifest-v2
+  command: Generate the versioned terminal MP2 evidence manifest v2 after run-passport
+    finalization, including the complete validation tree, active candidate artifacts,
+    failed-attempt evidence, frozen-upstream identities and formal-attempt-3 absence
+    proof.
+  status: passed
+  exit_status: 0
+  retries_used: 1
+  gate_tokens:
+  - EVIDENCE-MANIFEST-V2-ACTIVE
+  - FAILED-V1-PRESERVED
+  - NO-FORMAL-ROOT
+  input_sha256:
+    Gate13R_PR2_MP2_Evidence_Manifest.v2.json: 48f8760e93b42a72ebc396dc6fa31e20ea01ead8df7c89c91c80a87515471dbb
+    Gate13R_PR2_MP2_Evidence_Manifest_v1_Failure_Receipt.v1.json: fdee380b59ef99c4bce7e020e84de903f85b2543b12f10bd87218a9a4ccbc072
+  prev_hash: c3b97080d4b7f9e26c7299820672f63eede51569a9f0e77a7b14c09be4848715
+  hash: f898daf7c3f4106c2e197a31ebfa754fd0d01fd29371ba76ca6c900476bd195c
+- seq: 8
+  kind: tool_receipt
+  at: '2026-10-09T06:40:58Z'
+  step: mp2-nonexecuting-readiness
+  command: Finalize the Gate 13R-PR2-MP2 evidence manifest, non-executing readiness
+    checkpoint, project-plan and next-session updates, and the separate formal-attempt-3
+    authorization prompt while proving all forbidden formal-attempt-3 targets remain
+    absent.
+  status: passed
+  exit_status: 0
+  retries_used: 3
+  gate_tokens:
+  - MP2-PASSED
+  - WAIT-FOR-ATTEMPT3-AUTHORIZATION
+  - NO-FORMAL-ROOT
+  input_sha256:
+    Gate13R_PR2_MP2_Evidence_Manifest.v2.json: 48f8760e93b42a72ebc396dc6fa31e20ea01ead8df7c89c91c80a87515471dbb
+    Gate13R_PR2_MP2_Evidence_Manifest_v1_Failure_Receipt.v1.json: fdee380b59ef99c4bce7e020e84de903f85b2543b12f10bd87218a9a4ccbc072
+    Gate13R_PR2_MP2_NonExecuting_Readiness_Checkpoint.v1.json: 88333a15f3e5deb0eb7998bf15a5f1976df5de9a0382350016aa8623ad4680f8
+    Gate13R_PR2_MP2_NonExecuting_Readiness_Checkpoint.v1.md: 98da736bcff2005918071ba66cbc8efb13af46569bf04e9618671b93a0d3993e
+    Gate13R_PR2_Attempt3_Next_Authorization_Prompt.md: 5450ae3c10be99c6febc1ddd5a6fbb8e07e2673da9f39af4d356676e070b7438
+    Overall_Project_Plan.md: 6b1c5573b17f44c13f881cb3fe41f4d5d6a5b0335342dce6806bc6dd6be93050
+    Next_Session_Checkpoint.md: 0f8b8024704fe09cd4de449681d410c8f2141745e9c0a12c85ad1f2f41927fc0
+    Gate13R_PR2_MP2_Run_Passport.md: e0705b105674cc3a3982591561737f23231faaf5638450d113c44d4810c72db5
+  prev_hash: f898daf7c3f4106c2e197a31ebfa754fd0d01fd29371ba76ca6c900476bd195c
+  hash: 2bc2e99bf5e70f4b326fe1aa42a9a73e5e59a05d79126b4f3a54cde50a688aba

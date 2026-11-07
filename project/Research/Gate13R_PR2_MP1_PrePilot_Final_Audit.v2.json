@@ -1,0 +1,746 @@
+{
+  "schemaVersion": 2,
+  "auditKind": "gate13r-pr2-mp1-v2-final-validation-only-prepilot-audit-v1",
+  "completedAtUtc": "2026-10-09T04:34:15.5117860Z",
+  "completedAtAsiaShanghai": "2026-10-09T12:34:15.5117860",
+  "verificationRoot": "H:\\DDM_Final_Project\\Research\\Verification\\Gate13R_PR2_MP1_v2\\prepilot-attempt6",
+  "formalCampaign": false,
+  "measuredPilotStarted": false,
+  "formalAttempt3Authorized": false,
+  "formalAnalysisAuthorized": false,
+  "gate14RAuthorized": false,
+  "checkCount": 24,
+  "passedCheckCount": 24,
+  "failedCheckCount": 0,
+  "checks": [
+    {
+      "id": "static-unit-at-least-345",
+      "passed": true,
+      "evidence": {
+        "checkCount": 359,
+        "sha256": "0490f0b6c1e01ffec0453f90543bcd35b1fc67906c658a224fed36928ba8e6a0"
+      }
+    },
+    {
+      "id": "checkpoint-state-machine-ps7-12-of-12",
+      "passed": true,
+      "evidence": "7.6.5"
+    },
+    {
+      "id": "checkpoint-state-machine-ps51-12-of-12",
+      "passed": true,
+      "evidence": "5.1.26100.9444"
+    },
+    {
+      "id": "zero-block-outer-failure-ps7",
+      "passed": true,
+      "evidence": 1
+    },
+    {
+      "id": "zero-block-outer-failure-ps51",
+      "passed": true,
+      "evidence": 1
+    },
+    {
+      "id": "parser-and-binding-both-runtimes",
+      "passed": true,
+      "evidence": {
+        "schemaVersion": 1,
+        "summaryKind": "gate13r-pr2-mp1-v2-runtime-validation-v1",
+        "savedAtUtc": "2026-10-09T04:31:30.8440978Z",
+        "parserResults": [
+          {
+            "runtimeId": "ps7",
+            "runtime": "7.6.5",
+            "fileCount": 11,
+            "passedFileCount": 11,
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "runtime": "5.1.26100.9444",
+            "fileCount": 11,
+            "passedFileCount": 11,
+            "passed": true
+          }
+        ],
+        "parserPassedCount": 2,
+        "bindingTestCount": 20,
+        "bindingPassedCount": 20,
+        "bindingFailedCount": 0,
+        "bindingResults": [
+          {
+            "runtimeId": "ps7",
+            "entryId": "checkpoint-fixtures",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "zero-block-fixture",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "block-wrapper",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "campaign",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "launcher",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "unity-self-tests",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "telemetry",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "block-validation",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "finalizer",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps7",
+            "entryId": "prepilot-orchestrator",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "checkpoint-fixtures",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "zero-block-fixture",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "block-wrapper",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "campaign",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "launcher",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "unity-self-tests",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "telemetry",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "block-validation",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "finalizer",
+            "passed": true
+          },
+          {
+            "runtimeId": "ps51",
+            "entryId": "prepilot-orchestrator",
+            "passed": true
+          }
+        ],
+        "passed": true
+      }
+    },
+    {
+      "id": "unity-self-tests-2-of-2",
+      "passed": true,
+      "evidence": {
+        "schemaVersion": 1,
+        "summaryKind": "gate13r-pr2-mp1-unity-self-tests-v2",
+        "savedAtUtc": "2026-10-09T04:32:00.2067948Z",
+        "formalCampaign": false,
+        "measuredSampleCreated": false,
+        "testCount": 2,
+        "passedTestCount": 2,
+        "memoryPolicySummarySha256": "4c04ffaa82fe34b5fc3df127acfecb09f1d405406e3a72d7a45791ada0ce2355",
+        "pathSafeAtomicSummarySha256": "a0c7857b27186fcd64e34e5b7261e0c327ac8d17538baf951fc8f9f147eaff33",
+        "passed": true
+      }
+    },
+    {
+      "id": "memory-policy-and-telemetry-fixtures",
+      "passed": true,
+      "evidence": {
+        "schemaVersion": 1,
+        "summaryKind": "gate13r-pr2-mp1-memory-policy-self-test-v1",
+        "completedAtUtc": "2026-10-09T04:31:45.5684055Z",
+        "testCount": 10,
+        "passedTestCount": 10,
+        "tests": [
+          {
+            "id": "below-128-pass",
+            "sampleGrowthBytes": 134217727,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+          },
+          {
+            "id": "exact-128-pass",
+            "sampleGrowthBytes": 134217728,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+          },
+          {
+            "id": "above-128-alert",
+            "sampleGrowthBytes": 134217729,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "MEMORY-ALERT-128MIB",
+            "expectedReasonCode": "MEMORY-ALERT-128MIB",
+            "actualVerdict": "MEMORY-ALERT-128MIB",
+            "actualReasonCode": "MEMORY-ALERT-128MIB",
+            "passed": true
+          },
+          {
+            "id": "exact-256-alert-not-emergency",
+            "sampleGrowthBytes": 268435456,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "MEMORY-ALERT-128MIB",
+            "expectedReasonCode": "MEMORY-ALERT-128MIB",
+            "actualVerdict": "MEMORY-ALERT-128MIB",
+            "actualReasonCode": "MEMORY-ALERT-128MIB",
+            "passed": true
+          },
+          {
+            "id": "above-256-emergency",
+            "sampleGrowthBytes": 268435457,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "HARD-FAIL",
+            "expectedReasonCode": "HARD-FAIL-SAMPLE-EMERGENCY-256MIB",
+            "actualVerdict": "HARD-FAIL",
+            "actualReasonCode": "HARD-FAIL-SAMPLE-EMERGENCY-256MIB",
+            "passed": true
+          },
+          {
+            "id": "final-block-exact-256-pass",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 268435456,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": true,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+          },
+          {
+            "id": "final-block-above-256-fail",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 268435457,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": true,
+            "expectedVerdict": "HARD-FAIL",
+            "expectedReasonCode": "HARD-FAIL-BLOCK-MANAGED-256MIB",
+            "actualVerdict": "HARD-FAIL",
+            "actualReasonCode": "HARD-FAIL-BLOCK-MANAGED-256MIB",
+            "passed": true
+          },
+          {
+            "id": "nonfinal-block-above-256-fail",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 268435457,
+            "blockWorkingSetGrowthBytes": 0,
+            "blockPrivateMemoryGrowthBytes": 0,
+            "finalSampleInBlock": false,
+            "expectedVerdict": "HARD-FAIL",
+            "expectedReasonCode": "HARD-FAIL-BLOCK-MANAGED-256MIB",
+            "actualVerdict": "HARD-FAIL",
+            "actualReasonCode": "HARD-FAIL-BLOCK-MANAGED-256MIB",
+            "passed": true
+          },
+          {
+            "id": "native-exact-512-diagnostic-pass",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 536870912,
+            "blockPrivateMemoryGrowthBytes": 536870912,
+            "finalSampleInBlock": true,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+          },
+          {
+            "id": "native-above-512-diagnostic-pass",
+            "sampleGrowthBytes": 0,
+            "blockManagedGrowthBytes": 0,
+            "blockWorkingSetGrowthBytes": 536870913,
+            "blockPrivateMemoryGrowthBytes": 536870913,
+            "finalSampleInBlock": true,
+            "expectedVerdict": "PASS",
+            "expectedReasonCode": "PASS",
+            "actualVerdict": "PASS",
+            "actualReasonCode": "PASS",
+            "passed": true
+          }
+        ],
+        "telemetryValidationTestCount": 8,
+        "telemetryValidationPassedTestCount": 8,
+        "telemetryValidationTests": [
+          {
+            "id": "valid-sequence",
+            "expectedPassed": true,
+            "expectedReasonCode": "PASS",
+            "actualPassed": true,
+            "actualReasonCode": "PASS",
+            "passed": true
+          },
+          {
+            "id": "missing-before",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-MISSING",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-MISSING",
+            "passed": true
+          },
+          {
+            "id": "mixed-pid",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-MIXED-PID",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-MIXED-PID",
+            "passed": true
+          },
+          {
+            "id": "mixed-process-start",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-MIXED-PROCESS-START",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-MIXED-PROCESS-START",
+            "passed": true
+          },
+          {
+            "id": "nonfinite-process-age",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-NONFINITE-PROCESS-AGE",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-NONFINITE-PROCESS-AGE",
+            "passed": true
+          },
+          {
+            "id": "process-age-order",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-PROCESS-AGE-ORDER",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-PROCESS-AGE-ORDER",
+            "passed": true
+          },
+          {
+            "id": "nonpositive-working-set",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-WORKING-SET-NONPOSITIVE",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-WORKING-SET-NONPOSITIVE",
+            "passed": true
+          },
+          {
+            "id": "gc-count-order",
+            "expectedPassed": false,
+            "expectedReasonCode": "HARD-FAIL-TELEMETRY-GC-COUNT-ORDER",
+            "actualPassed": false,
+            "actualReasonCode": "HARD-FAIL-TELEMETRY-GC-COUNT-ORDER",
+            "passed": true
+          }
+        ],
+        "passed": true
+      }
+    },
+    {
+      "id": "unity-path-safe-atomic-14-of-14",
+      "passed": true,
+      "evidence": {
+        "schemaVersion": 1,
+        "summaryKind": "gate13r-pr2-mp1-path-safe-atomic-persistence-self-test-v1",
+        "completedAtUtc": "2026-10-09T04:31:57.8516276Z",
+        "rootCauseReasonCode": "WINDOWS-MONO-MAX-PATH-AT-ATOMIC-TEMP-FILE",
+        "v6FailedTemporaryPathLengthCharacters": 260,
+        "cffSuccessfulTemporaryPathLengthCharacters": 259,
+        "fixedTemporaryLeafLengthCharacters": 40,
+        "testCount": 14,
+        "passedTestCount": 14,
+        "tests": [
+          {
+            "id": "cff-position-legacy-temp-259",
+            "finalPathLength": 222,
+            "legacyTemporaryPathLength": 259,
+            "pathSafeTemporaryPathLength": 235,
+            "expectedLegacySuccess": true,
+            "actualLegacySuccess": true,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": true,
+            "pathSafeExceptionType": "",
+            "detail": "parent=194;fixedLeaf=40",
+            "passed": true
+          },
+          {
+            "id": "idff-v6-legacy-temp-260",
+            "finalPathLength": 223,
+            "legacyTemporaryPathLength": 260,
+            "pathSafeTemporaryPathLength": 236,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "System.IO.DirectoryNotFoundException",
+            "pathSafeSuccess": true,
+            "pathSafeExceptionType": "",
+            "detail": "parent=195;fixedLeaf=40",
+            "passed": true
+          },
+          {
+            "id": "legacy-temp-261",
+            "finalPathLength": 224,
+            "legacyTemporaryPathLength": 261,
+            "pathSafeTemporaryPathLength": 237,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "System.IO.DirectoryNotFoundException",
+            "pathSafeSuccess": true,
+            "pathSafeExceptionType": "",
+            "detail": "parent=196;fixedLeaf=40",
+            "passed": true
+          },
+          {
+            "id": "legacy-temp-280",
+            "finalPathLength": 243,
+            "legacyTemporaryPathLength": 280,
+            "pathSafeTemporaryPathLength": 256,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "System.IO.DirectoryNotFoundException",
+            "pathSafeSuccess": true,
+            "pathSafeExceptionType": "",
+            "detail": "parent=215;fixedLeaf=40",
+            "passed": true
+          },
+          {
+            "id": "missing-parent-rejected",
+            "finalPathLength": 146,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 256,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": false,
+            "pathSafeExceptionType": "System.IO.DirectoryNotFoundException",
+            "detail": "Expected fail-closed rejection with postcondition preservation.",
+            "passed": true
+          },
+          {
+            "id": "outside-containment-rejected",
+            "finalPathLength": 145,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 256,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": false,
+            "pathSafeExceptionType": "System.InvalidOperationException",
+            "detail": "Expected fail-closed rejection with postcondition preservation.",
+            "passed": true
+          },
+          {
+            "id": "directory-final-target-rejected",
+            "finalPathLength": 148,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 256,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": false,
+            "pathSafeExceptionType": "System.IO.IOException",
+            "detail": "Expected fail-closed rejection with postcondition preservation.",
+            "passed": true
+          },
+          {
+            "id": "reparse-point-rejected",
+            "finalPathLength": 144,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 256,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": false,
+            "pathSafeExceptionType": "System.InvalidOperationException",
+            "detail": "Expected fail-closed rejection with postcondition preservation.",
+            "passed": true
+          },
+          {
+            "id": "temporary-collision-preserved",
+            "finalPathLength": 150,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 167,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": false,
+            "pathSafeExceptionType": "System.IO.IOException",
+            "detail": "Expected fail-closed rejection with postcondition preservation.",
+            "passed": true
+          },
+          {
+            "id": "injected-write-failure-cleans-owned-temp",
+            "finalPathLength": 152,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 167,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": false,
+            "pathSafeExceptionType": "System.IO.IOException",
+            "detail": "Expected fail-closed rejection with postcondition preservation.",
+            "passed": true
+          },
+          {
+            "id": "injected-move-failure-cleans-owned-temp",
+            "finalPathLength": 151,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 167,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": false,
+            "pathSafeExceptionType": "System.IO.IOException",
+            "detail": "Expected fail-closed rejection with postcondition preservation.",
+            "passed": true
+          },
+          {
+            "id": "immutable-evidence-overwrite-rejected",
+            "finalPathLength": 150,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 167,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": false,
+            "pathSafeExceptionType": "System.IO.IOException",
+            "detail": "Expected fail-closed rejection with postcondition preservation.",
+            "passed": true
+          },
+          {
+            "id": "explicit-mutable-replacement",
+            "finalPathLength": 150,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 167,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": true,
+            "pathSafeExceptionType": "",
+            "detail": "Only explicitly mutable checkpoint/result targets may replace existing bytes.",
+            "passed": true
+          },
+          {
+            "id": "no-residual-owned-temporaries",
+            "finalPathLength": 0,
+            "legacyTemporaryPathLength": 0,
+            "pathSafeTemporaryPathLength": 0,
+            "expectedLegacySuccess": false,
+            "actualLegacySuccess": false,
+            "legacyExceptionType": "",
+            "pathSafeSuccess": true,
+            "pathSafeExceptionType": "",
+            "detail": "residual=0",
+            "passed": true
+          }
+        ],
+        "residualOwnedTemporaryFileCount": 0,
+        "passed": true
+      }
+    },
+    {
+      "id": "psapi-cim-telemetry-probe",
+      "passed": true,
+      "evidence": {
+        "schemaVersion": 1,
+        "summaryKind": "gate13r-pr2-mp1-telemetry-preflight-v2",
+        "savedAtUtc": "2026-10-09T04:32:13.8793484Z",
+        "unityProcessId": 31392,
+        "exitCode": 0,
+        "wallSeconds": 13.1282993,
+        "readySha256": "c36a7df745df6da1795b2af8b164a7b0b3879dbf7ec2d5c988594547f490d3f2",
+        "externalQuerySha256": "e08052b29a62dbdde4e73b70cb65fe56a3a17d53d0773b095bf58a3d81390ba8",
+        "resultSha256": "25100fe29ecae0fc4036c5335d8febaf4fa2a71387dc0182e7027bbae5e39b06",
+        "lockHygieneMode": "natural-lock-absence",
+        "licenseSerialAssigned": true,
+        "noValidLicenseError": false,
+        "inactiveHeadlessLicenseError": false,
+        "formalCampaign": false,
+        "excludedFromFormalAnalysis": true,
+        "errors": [],
+        "passed": true
+      }
+    },
+    {
+      "id": "positive-negative-block-validation-2-of-2",
+      "passed": true,
+      "evidence": {
+        "schemaVersion": 1,
+        "summaryKind": "gate13r-pr2-mp1-positive-negative-block-validation-v2",
+        "savedAtUtc": "2026-10-09T04:33:44.1306676Z",
+        "testCount": 2,
+        "passedTestCount": 2,
+        "results": [
+          {
+            "testId": "positive-complete-block",
+            "wrapperSummarySha256": "b4e7c6cfd45434b91c8af35ec5b0e3967854e1b0fec17b7647d1eb9f016a4034",
+            "failureResolutionSha256": "fc9ec7a2357fa64a44ceb8444cac05357b3dfe5749e20a6ad17b368f21254741",
+            "passed": true
+          },
+          {
+            "testId": "negative-fail-closed",
+            "wrapperSummarySha256": "0e7439eed02b5d8093bf5f3e70e547a39ed40e2b9e66c5d8a0fa8679624fbda7",
+            "failureResolutionSha256": "198a2cc6494caf177aae07c9163fcef1947aecaa780e9df9632794f3150222d2",
+            "passed": true
+          }
+        ],
+        "measuredPilotStarted": false,
+        "formalCampaign": false,
+        "passed": true
+      }
+    },
+    {
+      "id": "failure-precedence-ps7-6-of-6",
+      "passed": true,
+      "evidence": "7.6.5"
+    },
+    {
+      "id": "failure-precedence-ps51-6-of-6",
+      "passed": true,
+      "evidence": "5.1.26100.9444"
+    },
+    {
+      "id": "frozen-roots-postvalidation-byte-hash-invariance",
+      "passed": true,
+      "evidence": {
+        "formalAttempt2": {
+          "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+          "allFilesReadOnly": true,
+          "canonicalTreeContractId": "gate13r-pr2-attempt2-ordinal-tab-final-lf-v2",
+          "canonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+          "fileCount": 28020,
+          "rawBytes": 8536611302,
+          "readOnlyFileCount": 28020
+        },
+        "pilotV1": {
+          "absolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v1",
+          "allFilesReadOnly": true,
+          "canonicalTreeContractId": "mp1-pilot-v1-pipe-delimited-no-final-lf-v1",
+          "canonicalTreeSha256": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+          "fileCount": 5,
+          "rawBytes": 5247,
+          "readOnlyFileCount": 5
+        }
+      }
+    },
+    {
+      "id": "provenance-artifacts-byte-identical",
+      "passed": true,
+      "evidence": {
+        "artifactCount": 70,
+        "mismatchCount": 0,
+        "mismatches": []
+      }
+    },
+    {
+      "id": "pilot-v2-root-absent",
+      "passed": true,
+      "evidence": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v2"
+    },
+    {
+      "id": "formal-attempt3-root-absent",
+      "passed": true,
+      "evidence": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3"
+    },
+    {
+      "id": "formal-attempt3-receipt-absent",
+      "passed": true,
+      "evidence": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Receipt.v3.json"
+    },
+    {
+      "id": "unity-process-tree-zero",
+      "passed": true,
+      "evidence": []
+    },
+    {
+      "id": "project-unity-lock-absent",
+      "passed": true,
+      "evidence": "H:\\DDM_Final_Project\\Temp\\UnityLockfile"
+    },
+    {
+      "id": "h-drive-free-at-least-40-gib",
+      "passed": true,
+      "evidence": 267573735424
+    },
+    {
+      "id": "available-memory-at-least-8-gib",
+      "passed": true,
+      "evidence": 18947203072
+    },
+    {
+      "id": "high-performance-power-plan",
+      "passed": true,
+      "evidence": "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)"
+    },
+    {
+      "id": "ac-sleep-disabled",
+      "passed": true,
+      "evidence": "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)\r\n  GUID 别名: SCHEME_MIN\r\n  子组 GUID: 238c9fa8-0aad-41ed-83f4-97be242c8f20  (睡眠)\r\n    GUID 别名: SUB_SLEEP\r\n    电源设置 GUID: 29f6c1db-86da-48c5-9fdb-f2b67b1f44da  (在此时间后睡眠)\r\n      GUID 别名: STANDBYIDLE\r\n      最小可能的设置: 0x00000000\r\n      最大可能的设置: 0xffffffff\r\n      可能的设置增量: 0x00000001\r\n      可能的设置单位: 秒\r\n    当前交流电源设置索引: 0x00000000\r\n    当前直流电源设置索引: 0x00000000\r\n\r\n"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "gate14re-formal-phase-b-analysis-readiness-checkpoint-v1",
+  "studyId": "Gate14Re",
+  "status": "PASS_READY_FOR_AUTHORIZED_SINGLE_FORMAL_PHASE_B_EXECUTION",
+  "createdLocalDate": "2026-10-15",
+  "analysisContract": {
+    "path": "Research/Gate14Re/Analysis/Gate14Re_Formal_PhaseB_Analysis_Contract.v1.json",
+    "sha256": "208a9a4393d5a610c065a64f3dbb52747c0597d391a452b426d09e7d314272f2"
+  },
+  "implementationManifest": {
+    "path": "Research/Verification/Gate14Re/formal-phase-b-analysis-implementation-attempt-001/implementation-manifest.v1.json",
+    "bytes": 2161,
+    "sha256": "bd285e184ada424b966131ed6834640566cce7778bf32b61ad9743c992000223"
+  },
+  "analyzer": {
+    "path": "Research/Analyze-Gate14ReFormalPhaseBV1.py",
+    "bytes": 84443,
+    "sha256": "9c5bbbadfa06afc3ad715c5ceb579f4f10e8f022b694e50c37c0caeb4c217401"
+  },
+  "syntheticValidation": {
+    "path": "Research/Verification/Gate14Re/formal-phase-b-analysis-implementation-attempt-001/synthetic-validation-only-attempt-005/validation-receipt.v1.json",
+    "bytes": 1678,
+    "sha256": "38223c2436f1f1bee565a4642ca07946cad9e9cbb352473f52203fdd9c76bb56",
+    "status": "PASS"
+  },
+  "rawBindings": {
+    "formalRoot": "Research/FormalRuns/Gate14Re/PhaseA/attempt-001",
+    "rawCompleteSha256": "0fa68436e37333c5ccbc3360a3fd49460b9a338add16f95dc4f307de33e696fa",
+    "canonicalTreeSha256": "0c1e0bc2c8b286aa866901fdb26fbafc87bb5490f4578250eb2f4e2401df72dc",
+    "acceptedBlocks": 1536,
+    "algorithmLaneSamples": 6144,
+    "readOnly": true
+  },
+  "gates": {
+    "pythonCompile": "PASS",
+    "studentTKnownAnswer": "PASS",
+    "HolmKnownAnswer": "PASS",
+    "simultaneousIntervalConservatism": "PASS",
+    "clearWinnerKnownAnswer": "PASS",
+    "noForcedWinnerKnownAnswer": "PASS",
+    "clusterModelKnownAnswer": "PASS",
+    "formalOutcomeValuesUsedDuringPreparation": false,
+    "analysisRootExists": false,
+    "gate15Started": false
+  },
+  "nextAction": "single authorized formal Phase B execution into Research/Analysis/Gate14Re/PhaseB/attempt-001"
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-nonexecuting-readiness-sealed",
+  "command": "Sealed Gate 13R non-executing readiness after confirming the final audit, zero Unity processes, absent project lock, absent formal root and absent formal execution receipt. The evidence manifest binds 17 verification files / 76224915 raw bytes. The future formal authorization prompt and current plans/checkpoints were generated without launching the formal campaign.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "input_sha256": {
+    "Verification/Gate13R_NonExecuting_Preparation/v2/FinalAudit.summary.json": "498cd50b23d85a2e3686010b346a77417c6fdb32c3146d95f49b8818c8741cb7",
+    "Gate13R_Formal_Campaign_Authorization_Prompt.md": "06bf1f88f6f1f99425d534210d05c538c266a49374aa5ebfda912fc09b64c738"
+  },
+  "output_sha256": "4cb0763f9b1717b8e92ac8f3a1b13b1b09d543fd3f720da9b61e06e7a4dce182",
+  "gate_tokens": [
+    "GATE13R-NONEXECUTING-PREPARATION-PASSED",
+    "EVIDENCE-FILES-17",
+    "EVIDENCE-BYTES-76224915",
+    "NO-FORMAL-RECEIPT",
+    "NO-FORMAL-TIMING",
+    "FORMAL-ROOT-ABSENT"
+  ]
+}

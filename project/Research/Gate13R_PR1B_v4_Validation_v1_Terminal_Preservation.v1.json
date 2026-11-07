@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "preservationId": "gate13r-pr1b-v4-composite-identity-validation-v1-terminal-preservation-v1",
+  "createdAtUtc": "2026-10-08T15:44:39.7009174Z",
+  "createdAtAsiaShanghai": "2026-10-08T23:44:39.7009174+08:00",
+  "status": "FAILED-PRE-RECOVERY / VALIDATION-EVIDENCE-FROZEN / RECOVERY-NOT-STARTED",
+  "verificationRoot": {
+    "relativePath": "Research/Verification/Gate13R_PR1B_CompositeProcessIdentity_Recovery/v1",
+    "fileCount": 8,
+    "rawBytes": 327250,
+    "canonicalTreeSha256": "1e66f43d80887cd30dc5b33652b599763fad25c15e84d1c329504430f6d0f4e3"
+  },
+  "failure": {
+    "stage": "RECOVERY-WRAPPER-PREFLIGHT-BEFORE-PYTHON-RECOVERY-INVOCATION",
+    "reasonCode": "VALIDATION-SUMMARY-TRAILING-LITERAL-BACKTICK-N",
+    "message": "ConvertFrom-Json rejected additional text after the JSON document because Write-AtomicJson appended the single-quoted literal `n instead of an LF.",
+    "validationSummarySha256": "bc0cc2259aa15d2d5d4cc81890e2efb7cf25366865c86fa93e2b77b9c455e157",
+    "validationSummaryTail": "}]\\r\\n}`n"
+  },
+  "recoveryAttemptAccounting": {
+    "pythonRecoveryInvocationCount": 0,
+    "recoveryRootCreated": false,
+    "recoveryAttemptConsumed": false,
+    "oneAuthorizedRecoveryStillAvailable": true
+  },
+  "sourcePilotAfterFailure": {
+    "canonicalTreeSha256": "4125d99e4953dc78fd254b93343ea65f952623e98b0d3c26355770896a442bed",
+    "byteIdentical": true
+  },
+  "terminalEnvironment": {
+    "unityProcessCount": 0,
+    "unityInvoked": false,
+    "formalRootPresent": false
+  },
+  "automaticRecoveryRetryAttempted": false,
+  "pilotRetryResumeTopUpMergeAttempted": false
+}

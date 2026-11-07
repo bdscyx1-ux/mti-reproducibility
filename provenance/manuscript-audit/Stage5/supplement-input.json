@@ -1,0 +1,846 @@
+[
+  {
+    "index": 0,
+    "text": "Supplementary Materials"
+  },
+  {
+    "index": 1,
+    "text": "Shared Flow Fields for Dynamic Navigation in Interactive Strategy Environments"
+  },
+  {
+    "index": 2,
+    "text": "This document provides implementation procedures, experimental protocols, complete numerical outputs, workload matrices, and exploratory summaries supporting the main manuscript. Reference numbers correspond to the main reference list."
+  },
+  {
+    "index": 3,
+    "text": "Contents: S1 Software and validation; S2 Dynamic planning; S3 Movement; S4 Matched costs and concurrent workloads; S5 Complete model outputs; S6 Exploratory summaries; S7 Workload matrices; S8 Measurement scopes and numerical checks."
+  },
+  {
+    "index": 4,
+    "text": "S1 Software and validation"
+  },
+  {
+    "index": 5,
+    "text": "S1.1 Environment and software provenance"
+  },
+  {
+    "index": 6,
+    "text": "The project was evaluated with Unity 2022.3.30f1c1. Formal experiments use dedicated research runners and generated scenarios; the original project is retained as historical audit material. The movement runner uses an existing unit visual prefab with legacy motion components disabled and updates its positions from the research movement kernel."
+  },
+  {
+    "index": 7,
+    "text": "The research architecture separates a canonical navigation grid, planner interface, dynamic-change application, workload runner, metric collector, and bounded structured logger. The navigation layer exposes initialization, planning, and change-application operations with explicit versioning. The logging layer writes manifests, per-sample results, structural counts, failure categories, and SHA-256 provenance. This separation allows the same scenario and workload contract to drive multiple algorithms without allowing an algorithm-specific runner to redefine the task."
+  },
+  {
+    "index": 8,
+    "text": "The host specification recorded Windows 11 Pro build 26300, an AMD Ryzen 9 7950X3D (16 cores, 32 logical processors), 33,396,609,024 bytes of RAM, and an NVIDIA GeForce RTX 4070 Ti SUPER. A header audit of all 15,395 retained editor-process logs for the three dynamic-planning studies, SMSB, and MQ identifies Unity 2022.3.30f1c1, Windows build 26300, Mono, and editor execution with -batchmode -nographics (Null Device). Movement and callback lanes instead used standalone-build-attempt-003, a Mono player launched in batch mode with Direct3D 11. All 1,536 retained player-log headers identify driver 32.0.16.1692; the movement design records NVIDIA driver 616.92 and 16,376 MiB, whereas Unity reports 16,061 MB of VRAM. These are retained as source-specific reports rather than treated as interchangeable memory measurements."
+  },
+  {
+    "index": 9,
+    "text": "The movement application configured 1920 × 1080 FullScreenWindow mode, quality index 5, vSync disabled, no target-frame cap, a 0.02 s fixed step, a top-down orthographic camera, and no UI or debug gizmos. These display settings apply to the movement/callback application, not the graphics-disabled editor modules. The audit covered 3,552 four-method, 1,600 confirmation, 1,536 expanded-study, 7,843 SMSB, 864 MQ, and 1,536 movement/callback log headers. All identify Unity 2022.3.30f1c1. Editor headers consistently record Windows build 26300 and 31,849 MB physical memory but omit GPU-driver details; player headers identify the GPU and driver but omit the corresponding OS/RAM fields. Hardware-model and display-configuration statements therefore retain their design-record provenance rather than implying a complete per-process inventory."
+  },
+  {
+    "index": 10,
+    "text": "S1.2 Navigation procedures"
+  },
+  {
+    "index": 11,
+    "text": "A*-R is stateless between requests and performs a new A* search for each fixed-start plan. D*L owns one persistent state instance per agent and repairs that state after changes. C-FF owns one shared multi-source field and rebuilds the complete field after each relevant change. IDFF owns one shared incremental multi-source field and restores consistency only where required before refreshing directions. The four implementations use the same directed entry-cost convention, connectivity, and corner-cutting rule, while retaining their native state organization."
+  },
+  {
+    "index": 12,
+    "text": "Algorithms S1 and S2 specify the measured shared-field implementations. Let V denote grid cells, T the canonical goal set, and c(u, v) the cost of a legal move: the positive finite traversal cost of v multiplied by 1 for an orthogonal move or sqrt(2) for a diagonal move. Each queryable field stores an integration value, an owner goal, and a next-cell direction. Relaxation and consistency comparisons use a 1e-12 tolerance. Equal-cost owners are ordered by (y, x); direction selection further compares remaining cost and successor coordinate. C-FF allocates new arrays, revision storage, and a heap at each rebuild, while IDFF retains arrays across repairs. Consequently their measured contrast combines update strategy with memory-management policy. C-FF and IDFF are study-specific implementation labels."
+  },
+  {
+    "index": 13,
+    "text": "Algorithms S1 and S2 map to CorrectedFullRecomputeFlowFieldPlanner.cs (SHA-256 prefix bdaa52bc93950) and IncrementalDynamicFlowFieldPlanner.cs (63aa0792bd09), respectively. These source identities are recorded in the SMSB six-algorithm-fairness-binding.v4_1.json and MQ formal-mq-implementation-manifest.v2_4.json. Algorithm S3 maps to Gate14ReMQFormalRunnerV2 and its private-worker executor under the MQ v2 freeze. The historical class name CorrectedFullRecomputeFlowFieldPlanner denotes the C-FF implementation throughout this manuscript. Movement uses the separately frozen standalone build whose Assembly-CSharp.dll has SHA-256 prefix 2f763a06d43a; its identity must be preserved when interpreting movement failures."
+  },
+  {
+    "index": 14,
+    "text": "IDFF initialization sets g and rhs to infinity, clears owners and directions, initializes revision tags and an empty queue, and marks every direction dirty. UPDATE-VERTEX seeds each walkable goal with rhs = 0; the queue is drained and all directions are refreshed before queries are allowed. A queued vertex takes the lesser cost/owner pair from g and rhs. The heap orders its stored numeric cost exactly, then owner presence (present first), owner coordinate, vertex coordinate, and insertion sequence. Tolerance-based consistency checks therefore do not replace the heap's total ordering. Every UPDATE-VERTEX increments the vertex revision, invalidating older entries even when the vertex becomes consistent. Budget checks occur before queue steps and direction refreshes. Pending repair preserves the queue, revision tags, dirty set, and refresh cursor; a resume does not reinitialize the same change set or expose a partially repaired field. Each new IDFF repair also allocates two grid-length Boolean scratch arrays, scans the affected flags, and clears the grid-length dirty flags. Dirty direction dependencies include the changed cell and its geometric predecessors under the connectivity offsets. Bookkeeping includes these grid-wide operations alongside local consistency repair. The pseudocode presents the planning operations; the implementation additionally validates inputs and records metrics."
+  },
+  {
+    "index": 15,
+    "text": "The Expanded Search-Strategy Benchmark adds BiA*-R and LPA* [6, 11]. A*-R and BiA*-R use Manhattan distance for four-way grids and octile distance for eight-way grids, scaled by the minimum walkable traversal cost. A*-R ends when the goal is removed from its frontier. BiA*-R creates forward and reverse frontiers for every request and accepts its best connection when neither valid frontier has an f value below that connection cost; reverse expansion uses the original directed edge cost. Neither retains search state between requests. LPA* uses backward, goal-rooted g/rhs and queue state per agent with a fixed start. D*L instead updates its key offset when the requested start moves. Both persistent per-agent implementations update changed cells and their neighborhoods and rebuild their states if a lower traversal cost reduces the heuristic scale. The fixed-start studies emphasize update reuse, and D*L and LPA* share much of their implemented structure; SMSB consequently records equal deterministic grid work and retained state for these two backends."
+  },
+  {
+    "index": 16,
+    "text": "The prototype records specification identifiers and hashes, implementation hashes, processed-work units, planner instance counts, persistent-state counts, and shared-field counts. These fields prevent results from different algorithm identities or state models from being silently combined."
+  },
+  {
+    "index": 17,
+    "text": "S1.3 Validation and execution checks"
+  },
+  {
+    "index": 18,
+    "text": "In the earlier dynamic-planning and movement experiments, a complete Williams block is executed in one fresh Unity process. Each eligible algorithm appears at most once in that process, each sample reconstructs and disposes mutable state, and the process exits after the block. Algorithms are paired within a block, while blocks or campaign-level summaries supply the independent units specified by each analysis. Four-algorithm blocks use an even-order Williams design; two-algorithm blocks use balanced AB/BA order. SMSB instead assigns each of the six matched algorithm lanes to its own fresh Unity process, as described in Section S4.1."
+  },
+  {
+    "index": 19,
+    "text": "Preflight and post-run checks verify scenario hashes, algorithm identities, schedule position, predecessor balance, state reset, grid/planner version agreement, result-file hashes, process identity, memory conditions, and completion receipts. Partial blocks retain their failure category. Missing, zero, non-finite, failed, and over-budget observations are recorded with reason codes."
+  },
+  {
+    "index": 20,
+    "text": "Correctness checks cover route legality, shortest-path or field-reference agreement, deterministic identity, event order, and structural agreement with the archived reference cases. A separate array-scan shortest-path reference checks C-FF integration values and owners, followed by legal-direction construction; its record contains 24 static and 72 dynamic fields. IDFF is compared cell by cell with newly rebuilt C-FF across 24 initial and 96 dynamic fields, including integration, reachability, active goals, owners, and directions. Cases include directed entry costs, multi-goal ties, corner policies, blocking and restoration, cost changes, same-tick events, and interrupted repair. The tests document agreement for the listed cases; IDFF uses C-FF as its direct field oracle. The movement adapter is checked separately because its request sequence differs from the fixed-start workload."
+  },
+  {
+    "index": 21,
+    "text": "The archived verification entry points are Research/Verification/Run-Gate8CorrectedFlowFieldVerification.ps1 and Run-Gate9IncrementalFlowFieldVerification.ps1. Their result files, Gate8_CorrectedFlowField.json and Gate9_IncrementalFlowField.json, record passes with 86,089 and 103,138 assertions, respectively, and the field counts reported above. The independent array-scan reference is implemented in Gate8CorrectedFlowFieldVerification.cs; Gate9IncrementalFlowFieldVerification.cs performs the direct IDFF/C-FF comparisons. These records describe the archived test executions, not a new execution during manuscript verification."
+  },
+  {
+    "index": 22,
+    "text": "The Four-Method Dynamic-Update Benchmark included all 3,552 completed eligible block processes and 10,176 algorithm samples. Each of P1–P4 had 10,176 eligible continuous observations, P5 had 10,176 eligible count records, and no continuous metric was missing. The shared queue contained 1,536 processes; the two heterogeneous queues contained 1,008 processes each and formed 1,008 balanced matched superblocks."
+  },
+  {
+    "index": 23,
+    "text": "The Expanded Search-Strategy Benchmark completed 1,536 of 1,536 planned blocks and 6,144 samples with no whole-block replacements. The Independent Flow-Field Confirmation completed 1,600 paired blocks and 3,200 samples under its fixed 32-campaign, 50-block-per-campaign design. The Movement and Scaling Benchmark accepted 1,536 complete blocks and 6,144 algorithm-lane samples, with each experiment's formal raw tree held read-only during analysis."
+  },
+  {
+    "index": 24,
+    "text": "SMSB accepted 1,296 matched superblocks and 7,776 algorithm lanes. The 7,843 trusted natural process exits comprise 7,776 measurement processes, one instrument self-test, 54 oracle batches, and 12 empty-boundary checks. All correctness and D1–D4 measurement-validity gates passed. Two technical failures remain in the ledger. The first interrupted ledger writing after process ordinal 7,518 and was resolved by reconstructing its existing identity record; the second occurred before a new Unity process started because the frozen timestamp comparator had not been loaded. The v1/v2 resolution receipts and independent acceptance manifest record zero replacement rows and zero replayed algorithm lanes. The accepted package contains 186,624 event-group records (24 per lane). MQ completed 36 matched blocks, 864 fresh processes, and 13,824 private-lane executions with no failure or replacement."
+  },
+  {
+    "index": 25,
+    "text": "S2 Dynamic planning protocols and complete telemetry"
+  },
+  {
+    "index": 26,
+    "text": "S2.1 Task definitions and measurements"
+  },
+  {
+    "index": 27,
+    "text": "The Four-Method Dynamic-Update Benchmark scenario bundle contains 53 byte-canonical scenarios and 74 campaign profiles. The matrix covers core conditions and sampled grid-size, agent-count, dynamic-footprint, reachability, and goal-count levels. Every scenario materializes its grid, walkability, traversal costs, connectivity, starts, goals, scheduled changes, operation budgets, and deterministic identity. Regeneration and load-time validation check the complete structure and hashes. Section S7 specifies every matrix family, seed rule, and cohort mapping."
+  },
+  {
+    "index": 28,
+    "text": "Three goal cohorts are retained separately. The shared-goal cohort has one destination and includes A*-R, D*L, C-FF, and IDFF. Both heterogeneous cohorts submit each agent's declared destination. A*-R and D*L search for that destination. C-FF and IDFF construct one multi-source field from the complete goal set, but accept a request only when its destination equals the least-cost reachable owner at the start under the stated tie rule. A different owner causes InvalidRequest; the runner does not retarget the request or restrict the field to an agent-specific goal subset. Consequently the grouped-field cohort measures a mixture of accepted and rejected assigned-goal requests."
+  },
+  {
+    "index": 29,
+    "text": "The early dynamic-planning endpoints use planner-reported operation telemetry. For each tick containing scheduled changes, the runner applies all changes in order and then queries every agent from its fixed scenario start. A dynamic phase is the sum of the recorded planner repair timings and subsequent plan timings for that tick. A*-R includes change acknowledgement and fresh searches; D*L includes its per-agent updates and queries; C-FF includes full field rebuilding and queries; IDFF includes incremental repair, direction refresh, any plan-triggered completion, and queries. One counted repair is the backend change-application call, which can update several per-agent state instances. Initialization and the initial pre-event queries are recorded separately."
+  },
+  {
+    "index": 30,
+    "text": "P1 is the sum of dynamic-phase times divided by the number of scheduled change events. A same-tick group contributes its elapsed time once but contributes every event to the denominator; P1 is normalized handling time per scheduled event, not the mean time per distinct event tick. P2 is the nearest-rank P95 of the m phase times within a sample, using ordered value ceil(0.95m). For the four-phase schedules in the early matrix, this statistic is the sample maximum. P3 sums reported initialization, initial-plan, and later plan/repair times and divides by agent count. Its initialization boundary differs by implementation: IDFF creates its persistent arrays and queue before the stopwatch, while C-FF allocates during the timed rebuild. P3 retains these implementation-specific initialization boundaries. Positive P1–P4 sample endpoints are summarized by geometric means. P5 reports exact plan and repair overrun counts for the 10,000-ms per-operation termination budget; initialization has a separate 30,000-ms budget. These are termination budgets."
+  },
+  {
+    "index": 31,
+    "text": "P4 is the recorded dynamic memory diagnostic divided by scheduled-event count. The implementation uses the nonnegative difference in GC.GetAllocatedBytesForCurrentThread readings when either reading is positive; otherwise it uses the clipped increase in GC.GetTotalMemory(false). The fallback measures heap-occupancy change, whereas the first branch measures a cumulative counter difference. The archived output contains the resulting diagnostic but not the branch or both snapshots; successful queries can report zero despite creating path objects. P4 is retained with this counter-dependent interpretation and cannot establish comparable cumulative allocation savings across implementations. SMSB D3 is defined independently by its event-window instrument."
+  },
+  {
+    "index": 32,
+    "text": "The Movement and Scaling Benchmark adds movement traces, latched arrival state, completion categories, critical movement violations, and main-loop callback intervals. Its movement and callback measurements use separate lanes; neither is treated as a planning-timing sample. Section S3.3 specifies the M4 timing boundary."
+  },
+  {
+    "index": 33,
+    "text": "S2.2 Four method study"
+  },
+  {
+    "index": 34,
+    "text": "The Four-Method Dynamic-Update Benchmark used the complete 74-campaign matrix: 32 shared-goal campaigns, 21 per-agent heterogeneous-goal campaigns, and 21 grouped-field heterogeneous-goal campaigns. Every campaign contained 48 complete Williams blocks. The shared cohort therefore contributed 1,536 block processes and 6,144 algorithm samples; each heterogeneous cohort contributed 1,008 block processes and 2,016 samples. In total, 3,552 eligible fresh-process blocks and 10,176 samples were completed, with 2,544 samples per algorithm."
+  },
+  {
+    "index": 35,
+    "text": "The heterogeneous cohorts form 1,008 matched superblocks with the same scenario, repetition ordinal, and deterministic input identity. Process order is balanced: 504 run the per-agent cohort first and 504 the grouped-field cohort first. The secondary comparisons retain these cohort identities, but grouped-field timings include owner-mismatch rejection and cannot establish equal successful routing service."
+  },
+  {
+    "index": 36,
+    "text": "P1 was the sole confirmatory endpoint. Five shared-goal contrasts formed one family: C-FF/A*-R, C-FF/D*L, IDFF/A*-R, IDFF/D*L, and IDFF/C-FF. Lower P1 is better, so a ratio below one favors the numerator. D*L/A*-R was diagnostic rather than part of the confirmatory family. P2–P5 and all heterogeneous comparisons were supportive or secondary."
+  },
+  {
+    "index": 37,
+    "text": "Each block contributed a paired natural-log ratio. The 48 block ratios were averaged within each shared campaign, and the 32 equally weighted campaign means supplied the matrix estimate and standard error (their sample standard deviation divided by sqrt(32)). The frozen analysis used a normal approximation: the four field-versus-search contrasts were directional, with lower ratios favored, and IDFF/C-FF was two-sided. Holm adjustment [30] covered those five p values. Ordinary 95% intervals were two-sided. Five Bonferroni intervals with 99% individual coverage provide at least 95% family-wise coverage. The campaign means supply the inferential units. P5 is reported as exact overrun counts and operation denominators."
+  },
+  {
+    "index": 38,
+    "text": "P3 reported operation cost and the agent-count scaling model address different summaries. The latter uses the specified shared-goal agent-scale family and its level-dependent seed rule (Table S15). Heterogeneous analyses average 48 matched superblocks within each of 21 equally weighted scenario pairs. The five specified contrasts use 99% individual Bonferroni intervals; the additional D*L/A*-R interval is diagnostic."
+  },
+  {
+    "index": 39,
+    "text": "S2.3 Expanded search study"
+  },
+  {
+    "index": 40,
+    "text": "The expanded study acquired new measurements of BiA*-R, LPA*, C-FF, and IDFF on the 32 shared-goal scenarios. Each campaign contained 48 four-algorithm Williams blocks, giving 1,536 fresh processes and 6,144 algorithm samples. All planned blocks completed with zero whole-block replacements."
+  },
+  {
+    "index": 41,
+    "text": "The primary family contained BiA*-R/C-FF, BiA*-R/IDFF, LPA*/C-FF, and LPA*/IDFF. P1 retained the same definition and lower-is-better direction. Each campaign averaged its 48 paired block log ratios. The 32 campaign means then entered two-sided one-sample t inference with 31 degrees of freedom and standard error equal to their sample standard deviation divided by sqrt(32). The analysis reported raw P1 geometric means, ordinary 95% intervals, Holm-adjusted p values across four contrasts, and Bonferroni intervals with 98.75% individual and at least 95% family-wise coverage. This t procedure differs from the normal approximation used in the earlier four-method study. The four P1 contrasts define the study's comparison family."
+  },
+  {
+    "index": 42,
+    "text": "S2.4 Repeat run field confirmation"
+  },
+  {
+    "index": 43,
+    "text": "The repeat-run field confirmation acquired new observations for IDFF versus C-FF P1 across the fixed 32 shared-goal campaigns. Each campaign contains 50 paired blocks, balanced as 25 in each execution order, for 1,600 fresh processes and 3,200 samples. Its separate raw-data identifiers distinguish this acquisition from the earlier measurements."
+  },
+  {
+    "index": 44,
+    "text": "The single prespecified contrast was d = ln(P1_IDFF/P1_C-FF). The primary estimator equally weighted the 64 campaign-by-order strata, each containing 25 independent blocks. A Welch–Satterthwaite variance approximation produced a two-sided 95% interval and p value at alpha = 0.05. Because the confirmatory family contained only one contrast, no multiplicity correction was applied. The protocol treats missing or structurally invalid planned blocks as a non-estimable confirmation result. Unlike the earlier 32-campaign-mean analysis, whose uncertainty includes between-campaign variation, this estimator treats campaign and order strata as fixed and propagates the repeat-block variance within them. The resulting interval quantifies repeat-run precision for the specified matrix."
+  },
+  {
+    "index": 45,
+    "text": "The confirmation execution contract bound the analysis-plan SHA-256 before the new acquisition: it was frozen at 03:36:25 UTC on 11 October 2026, and the launch receipt was issued at 03:55:15 UTC that day. This establishes specification before this confirmation acquisition, after the earlier study had motivated the comparison. Recalculation from 1,600 hash-verified paired workload records reproduces the log ratio -0.2293235621, standard error 0.0042822829, and Welch–Satterthwaite degrees of freedom 337.6492334. It does not establish that all analyses in the paper preceded all earlier observations."
+  },
+  {
+    "index": 46,
+    "text": "The acquisitions retain their own estimands, pairing structures, uncertainty targets, and multiplicity families. The SMSB domain aggregation and both weighted scores are retrospective exploratory summaries, documented in Section S6."
+  },
+  {
+    "index": 47,
+    "text": "S2.5 Complete endpoint summaries"
+  },
+  {
+    "index": 48,
+    "text": "In the shared-goal cohort, original-scale P1 geometric means were 52.4800 ms/event for A*-R, 59.5523 for D*L, 11.1371 for C-FF, and 8.8945 for IDFF. Corresponding P2 means were 69.8998, 131.3757, 21.1129, and 19.1488 ms; P3 means were 7.1833, 14.3483, 1.5206, and 2.0522 ms/agent; P4 means were 7,136,552, 583,573, 554,126, and 138,432 bytes/event. Table S1 presents original-scale P1–P4 means for the shared and heterogeneous cohorts and the two additional dynamic-planning experiments."
+  },
+  {
+    "index": 49,
+    "text": "The confirmatory P1 contrasts were as follows: C-FF/A*-R was 0.2122 (Bonferroni CI with 99% individual coverage 0.1199–0.3757; Holm p = 5.47 × 10−12), C-FF/D*L was 0.1870 (0.0807–0.4333; p = 2.75 × 10−7), IDFF/A*-R was 0.1695 (0.0867–0.3315; p = 1.40 × 10−11), and IDFF/D*L was 0.1494 (0.0924–0.2413; p = 4.54 × 10−24). IDFF/C-FF was 0.7986 (0.4623–1.3797; Holm p = 0.289) and remained unresolved in this experiment. Supportive IDFF/C-FF ratios were 0.9070 for P2, 1.3495 for P3, and 0.2498 for P4. P5 recorded 0/601,104 overrun events for every algorithm in the shared-goal cohort. P3 includes reported initialization and pre-event planning, whereas P1 covers post-change handling; their IDFF/C-FF ratios therefore summarize different portions of the workload."
+  },
+  {
+    "index": 50,
+    "text": "The heterogeneous cohorts retain secondary request-handling comparisons for RQ1. Their original-scale P1–P4 geometric means appear separately in Table S1, reconstructed from 4,032 hash-verified workload records (1,008 per algorithm). All 24 ratios reconstructed from those means agree with the saved secondary analysis to relative tolerance 1e-10. Across 21 equally weighted scenario pairs, IDFF/C-FF P1 was 0.4174 (99% individual CI 0.2204–0.7903), and the diagnostic D*L/A*-R ratio was 1.1637 (0.6383–2.1216). Cross-family ratios were 0.1887 (0.0943–0.3774) for C-FF/A*-R, 0.1621 (0.0562–0.4673) for C-FF/D*L, 0.0787 (0.0353–0.1759) for IDFF/A*-R, and 0.0677 (0.0313–0.1461) for IDFF/D*L. Each algorithm retained P5 = 0/430,080 plan operations and 0/5,040 repair operations, or 0/435,120 overall. These ratios include rejected requests and are retained as descriptive historical telemetry, not successful-routing speedups."
+  },
+  {
+    "index": 51,
+    "text": "Across the 1,008 heterogeneous samples per algorithm, each backend received 430,080 queries, including initial and post-change queries. A*-R succeeded on all queries. D*L recorded 423,408 successes and 6,672 failures. C-FF and IDFF each recorded 50,976 successes and 379,104 invalid requests (88.15%). In the shared-goal cohort, each backend received 593,520 queries; A*-R, C-FF, and IDFF each recorded 590,448 successes and 3,072 no-path results, while the frozen D*L implementation recorded 582,384 successes, 1,728 no-path results, and 9,408 failures. These categories are distinct from the zero budget-overrun counts. Counts were reconstructed from all 10,176 hash-verified workload records; operation logs sampled from all 21 grouped-field scenarios identify the invalid category as InvalidRequest."
+  },
+  {
+    "index": 52,
+    "text": "In the Expanded Search-Strategy Benchmark, P1 geometric means were 100.0484, 58.7535, 10.9823, and 8.8222 ms/event for BiA*-R, LPA*, C-FF, and IDFF, respectively; Table S1 gives their P2–P4 profiles. Each algorithm retained P5 = 0/601,104. Supporting P1 ratios were 9.1100 for BiA*-R/C-FF, 11.3405 for BiA*-R/IDFF, 5.3498 for LPA*/C-FF, and 6.6597 for LPA*/IDFF. All Bonferroni intervals (98.75% individual, at least 95% family-wise coverage) excluded one and all Holm-adjusted p values were below 0.001."
+  },
+  {
+    "index": 53,
+    "text": "Field confirmation gave C-FF/IDFF P1 geometric means of 11.5352/9.1713 ms per scheduled event. Corresponding P2, P3 and P4 values were 21.7630/19.7384 ms, 1.5770/2.1021 ms per agent, and 815,495/249,389 bytes per event. Both algorithms recorded 0/626,150 operation-budget overruns. The P1 ratio was 0.7951 (95% interval 0.7884–0.8018). Table S2 provides a descriptive view across the first two acquisitions, with their source mapping retained."
+  },
+  {
+    "index": 54,
+    "text": "No sampled plan or repair exceeded its 10,000 ms budget. In the descriptive six-backend view, maximum plan utilization ranged from 0.0782% to 2.0627%, and maximum repair utilization from 0.000072% to 36.4707%. The largest operation was a 3,647.0733 ms D*L repair. Table S3 provides operation P95 values, maxima, and remaining margins."
+  },
+  {
+    "index": 55,
+    "text": "Table S1. Original-scale P1–P4 geometric means by acquisition and cohort"
+  },
+  {
+    "index": 56,
+    "text": "Note. Entries are geometric means of sample endpoints; times have four decimals and P4 is rounded to the nearest byte. P2 is the GM of within-sample phase P95 values, not a pooled operation percentile. P3 sums reported operation times with implementation-specific initialization exclusions; P4 is a counter-dependent memory diagnostic, not validated allocation (Section S2.1). Heterogeneous grouped-field rows include owner-mismatch request rejection and do not measure equivalent successful routing. Confirmation P2–P4 values are descriptive. n counts samples per algorithm."
+  },
+  {
+    "index": 57,
+    "text": "Table S2. Descriptive shared-goal telemetry with acquisition labels"
+  },
+  {
+    "index": 58,
+    "text": "This descriptive view uses the shared-goal four-method acquisition for A*-R/D*L and the expanded acquisition for BiA*-R/LPA*/C-FF/IDFF. P2 is the geometric mean of sample phase P95 values; P3 and P4 use the definitions in Section S2.1."
+  },
+  {
+    "index": 59,
+    "text": "Table S3. Plan and repair utilization of the operation termination budget"
+  },
+  {
+    "index": 60,
+    "text": "P95 is the nearest-rank operation percentile. Remaining margin equals 10,000 ms minus the observed maximum; parentheses give the fraction of the termination budget remaining. Each row contains 593,520 plan and 7,584 repair operations, nested within the source runs."
+  },
+  {
+    "index": 61,
+    "text": "S3 Movement protocol and decision rules"
+  },
+  {
+    "index": 62,
+    "text": "S3.1 Design and event schedule"
+  },
+  {
+    "index": 63,
+    "text": "The Movement and Scaling Benchmark independently evaluated A*-R, D*L, C-FF, and IDFF. This module has its own observations and analysis. Its main module comprised eight frozen shared-goal conditions, C01–C08, at N = 128. The selected conditions varied grid size (64 × 64 or 128 × 128), four- or eight-neighbor connectivity, weighted or uniform costs, obstacle proportion (0.25 or 0.10), and dynamic footprint (9 or 81 cells). These eight selected conditions cover those factors; Table S16 maps every condition to its source scenario and factors."
+  },
+  {
+    "index": 64,
+    "text": "Each design cell contained B = 48 complete blocks, with each of the four Williams rows used 12 times. A block ran all four algorithms on restored copies of the same frozen input in one fresh Unity process. The main module comprised eight conditions, two measurement lanes, and 48 blocks, yielding 768 processes. The quantity module used C01 and C07 as anchors at N = 1, 8, 32, 128, and 512; N = 128 reused the corresponding main-module observations once, and the remaining levels added 768 processes. The full design therefore contained 1,536 complete blocks and 6,144 algorithm-lane samples."
+  },
+  {
+    "index": 65,
+    "text": "For N below 128, starts were canonical prefixes of the source scenario's ordered starts. For N = 512, the original 128 starts were retained and 384 additional distinct, initially walkable and goal-reachable cells were selected by a deterministic SHA-256 ordering. Map, goal, event, and algorithm semantics were unchanged across quantity levels."
+  },
+  {
+    "index": 66,
+    "text": "The movement experiment schedules five changes in a maximum 180 s simulated window: block one footprint and unblock a disjoint footprint at tick 10 (0.20 s), in orders 0 and 1, increase traversal costs at 30 s, decrease them at 90 s, and restore the initial state at 150 s. The synchronizer applies both tick-10 changes before advancing agents. The unblock operation does not undo the newly blocked footprint, which remains blocked during the subsequent short trajectories. All 2,592 successful movement runs across the main and quantity conditions finish by 11.84 s and retain exactly those two initial events. Their completion results therefore cover the resulting obstacle configuration but not the later cost changes."
+  },
+  {
+    "index": 67,
+    "text": "At each event, the same NavigationChangeSet was applied to the canonical grid and the active planner. Grid, planner, and rendered-world revisions had to agree, and the structural log recorded event identity, tick, order, changed-cell count, old and new grid versions, planner repair status, and world revision. Missing, duplicated, reordered, or content-drifted events failed the block. An algorithm that completed before a later event retained its completion result and was not reactivated to force equal event exposure."
+  },
+  {
+    "index": 68,
+    "text": "S3.2 Arrival and movement validity"
+  },
+  {
+    "index": 69,
+    "text": "A unit was considered arrived when its grid cell equalled the shared goal cell and its horizontal distance from the cell center did not exceed 0.75 cell size for ten consecutive 0.02 s fixed ticks. Arrival was latched. After arrival, the runner retains the latched state."
+  },
+  {
+    "index": 70,
+    "text": "M1 was simulated elapsed time from measurement release until every registered unit latched arrival, calculated as the final tick count multiplied by the 0.02 s fixed step. It did not include wall-clock waiting caused by planner computation. Lower is better. A run that did not complete retained the failure-coded value M1 = 180 s and its terminal category; this value is not an observed successful travel time. M2 was the mean cumulative horizontal distance to first latched arrival over a common four-algorithm unit mask. The mask required finite traces and arrival under all four algorithms for at least max(1, ceil(0.8N)) units; an insufficient mask was missing rather than zero. M2 is physical path length in scene units, not traversal-cost-weighted graph cost."
+  },
+  {
+    "index": 71,
+    "text": "M3 was the reliability eligibility gate. An algorithm had to complete all units in at least 45 of 48 blocks in every one of the eight main movement conditions. Completion, timeout, no-path, budget exhaustion, and internal failure remained explicit terminal states. M5 was the movement-validity gate: the total number of critical violations across all main movement blocks had to be zero. Critical violations included illegal or invalid plans, non-finite state, world or grid escape, unauthorized blocked-topology traversal, forbidden corner cutting, incorrect-goal completion, and missing or duplicate unit identity."
+  },
+  {
+    "index": 72,
+    "text": "For D*L, main conditions C03, C04, C07, and C08 each have 48 blocks without all-agent completion; their InvalidPlan totals are 48, 48, 1,008, and 576 (1,680 in total). The archived adapter combines unsuccessful planner status and rejected returned paths in InvalidPlan. A subsequent source-level diagnostic recovered the historical DStarLitePlanner.cs byte-for-byte (SHA-256 prefix ae9f1bdc2a30), matching both the four-method manifests and the movement design contract. Replaying one deterministic trajectory set for each of the eight main movement conditions reproduced every failed-agent identity present in all 384 archived blocks. The replay separated the combined category into 1, 1, 21, and 12 planner InternalError results for C03, C04, C07, and C08, respectively, with no rejected successful paths. These are reconstructed diagnostic classifications; the original records retain their combined category."
+  },
+  {
+    "index": 73,
+    "text": "The historical repair loop compares priority keys exactly, although its g/rhs consistency test uses a 1e-12 tolerance. In a single-agent reproduction from core-r03-s1-shared (agent 55, start (63, 62), goal (14, 16)), the leading key differed by 1.42e-14 while the secondary key required further processing. Repair stopped and path extraction reached its step limit. The tolerance-aware revision (SHA-256 prefix b6938a3389de), already used by SMSB, changes only the two algorithm-control comparisons and their helper. With that revision, the eight movement replays produced 1,024 arrivals and zero InternalError results across 2,048 plan calls. In 53 fixed-start scenarios, the historical source reproduced all 335 failed query identities sampled across the scenarios, whose per-scenario status totals were identical over all 48 archived repetitions. The corrected source reduced InternalError from 335 to zero across 21,325 calls; successes increased from 20,954 to 21,261 and no-path results from 36 to 64. All 64 corrected no-path query identities matched archived A*-R results, and all returned successful paths passed legality checks. These functional checks ran under the installed Unity distribution's Mono runtime using the frozen scenario, grid, event and movement logic. They do not constitute a new standalone-Player performance acquisition or a full optimal-cost oracle test. The historical Player binary was unavailable at its recorded path, so the original timing results and their implementation identity remain unchanged."
+  },
+  {
+    "index": 74,
+    "text": "For algorithm a, condition c, and block r, let Cacr = 1 when all units complete and let Vacr count critical violations. Let I(.) denote an indicator equal to 1 when its condition holds and 0 otherwise. The reliability and correctness decisions are"
+  },
+  {
+    "index": 75,
+    "text": ""
+  },
+  {
+    "index": 76,
+    "text": ""
+  },
+  {
+    "index": 77,
+    "text": "S3.3 Main loop callback diagnostic"
+  },
+  {
+    "index": 78,
+    "text": "The M4 lane instantiated the complete unit population with renderers enabled. The archived launcher used Unity batch mode with Direct3D 11; the application configured the scene and display settings reported below. After 600 LateUpdate warm-up callbacks, each algorithm retained 1,800 consecutive callback intervals. The code computes (current timestamp − previous timestamp)/Stopwatch.Frequency using Stopwatch.GetTimestamp; multiplication by 1,000 converts the stored seconds to milliseconds. Each block supplies a median and nearest-rank P95. These are main-loop callback intervals. Each block contains repeated intervals, and the recorded simulation-step and event counts vary across algorithms."
+  },
+  {
+    "index": 79,
+    "text": "At N = 128, the recorded M4 eligibility criterion requires the median of 48 block P95 callback intervals to be at most 33.333 ms, with at most three block P95 values above 50 ms. This preserves the original callback-based selection rule; displayed-frame and input-response timing require separate measurement. N = 512 contributes to scaling summaries."
+  },
+  {
+    "index": 80,
+    "text": "The archived C01, N = 128, block 1 A*-R record illustrates the units: 1,800 stored intervals sum to 0.0428863 s and yield P95 = 0.0000439 s = 0.0439 ms. This example documents the interval calculation. The four algorithm records end at simulation ticks 4, 30, 3, and 2 in execution order and contain 0, 2, 0, and 0 structural events, respectively. These records expose the simulation coverage associated with the callback samples."
+  },
+  {
+    "index": 81,
+    "text": "Writing Qacr for block-level callback-interval P95 in milliseconds, the recorded condition-specific M4 gate is"
+  },
+  {
+    "index": 82,
+    "text": ""
+  },
+  {
+    "index": 83,
+    "text": ""
+  },
+  {
+    "index": 84,
+    "text": "The eligible set ℰ is fixed before the M1/M2 performance comparisons."
+  },
+  {
+    "index": 85,
+    "text": "S3.4 Selection rule and quantity effects"
+  },
+  {
+    "index": 86,
+    "text": "The recorded selection first restricted eligibility to algorithms passing M3, the M4 callback-interval gate, and M5. The eight main conditions were equally weighted for M1. Within-condition paired block log ratios supplied the repeat-run variance; the analysis used a Welch–Satterthwaite t reference where variance was positive, Holm adjustment across six unordered pairs, ordinary 95% intervals, and Bonferroni simultaneous 95% decision intervals. If estimated variance was zero, the frozen implementation returned a point interval and assigned p = 1 for an exactly zero log contrast or p = 0 otherwise. This branch defines the decision convention for deterministic outcomes on the fixed inputs. A unique M1 winner required an upper decision ratio below 0.95 against every other eligible algorithm."
+  },
+  {
+    "index": 87,
+    "text": "An M1 candidate also had to satisfy an M2 path-length guard with an upper ratio no greater than 1.10 against every other eligible algorithm. If no unique M1 winner existed, M2 could select a secondary winner only when all eligible M1 decision intervals lay wholly within the 0.95–1.05 practical tie band and one candidate's M2 upper ratio was below 1.00 against every other candidate. Otherwise the frozen outcome was no unique winner; point estimates could not force a ranking."
+  },
+  {
+    "index": 88,
+    "text": "Let Lm,ab and Um,ab be the lower and upper simultaneous decision bounds for the a/b ratio on endpoint Mm. Among eligible algorithms, the primary winner condition is"
+  },
+  {
+    "index": 89,
+    "text": ""
+  },
+  {
+    "index": 90,
+    "text": "If this yields no unique M1 winner, the secondary rule checks the practical tie band once per pair, oriented by the archived order A*-R, D*L, C-FF, IDFF, with the earlier algorithm in the numerator. The notation {a,b} below denotes each pair in that fixed orientation. For the eligible set, these are A*-R/C-FF, A*-R/IDFF, and C-FF/IDFF. The 0.95–1.05 band is not applied again to reciprocal ratios."
+  },
+  {
+    "index": 91,
+    "text": ""
+  },
+  {
+    "index": 92,
+    "text": ""
+  },
+  {
+    "index": 93,
+    "text": "A unique winner requires exactly one eligible algorithm to meet the applicable condition. The equations specify the original movement decision rule."
+  },
+  {
+    "index": 94,
+    "text": "Quantity effects were modelled across C01 and C07 using log2(N), algorithm, anchor condition, and algorithm-by-log2(N), with N centered at 128. CR1 cluster-robust covariance used the complete block as the cluster, with t inference using the number of included block clusters minus one degrees of freedom. Per-doubling ratios were reported for M1 and the M4 callback median and P95; M2, M3, and M5 were supportive. For deterministic simulated outcomes, these are fitted trend summaries conditional on the two anchors and the log-linear specification. Scaling did not alter the N = 128 selection decision."
+  },
+  {
+    "index": 95,
+    "text": "The formal raw root was committed read-only before analysis. All 1,536 planned blocks and 6,144 algorithm-lane samples were accepted. The analysis used no result-driven exclusion, threshold change, or sample expansion, and an 11-category statistical-integrity scan passed in all 11 categories. The raw data, formal selection, quantity analysis, and later engineering recommendation remain separately identified artifacts."
+  },
+  {
+    "index": 96,
+    "text": "Every eligible M1 pair has the finite-input ratio and saved decision interval 1.000000 [1.000000, 1.000000]. M2 ratios are 1.00002513 for A*-R/C-FF and A*-R/IDFF, and 1.00000000 for C-FF/IDFF, with corresponding point intervals. The rule therefore gives no unique winner. D*L's M1 ratio of 5.7184 includes failure-coded 180 s runs."
+  },
+  {
+    "index": 97,
+    "text": "In the quantity study, the fitted M1 ratio per doubling of N was 1.2325 (model-based 95% CI 1.1957–1.2705) for A*-R, C-FF, and IDFF, and 1.5275 (1.4988–1.5568) for D*L, including its failure-coded outcomes. For A*-R, D*L, C-FF, and IDFF, respectively, M4 callback-median ratios were 1.0115, 1.0239, 1.0093, and 1.0125; callback-P95 ratios were 0.9988, 0.9905, 0.9963, and 0.9947. These are two-anchor trend summaries, separate from the N = 128 selection."
+  },
+  {
+    "index": 98,
+    "text": "S4 Matched costs and concurrent workloads"
+  },
+  {
+    "index": 99,
+    "text": "S4.1 Cost benchmark and models"
+  },
+  {
+    "index": 100,
+    "text": "The six-algorithm cost and scaling supplement retains the archive identifier SMSB, originally named the Supplementary Movement and Scaling Benchmark. It measures fixed-start planning workloads. A*-R, BiA*-R, D*L, LPA*, C-FF, and IDFF are compared in 36 structural cells crossing agent count N = 32, 64, 128; changed-cell count F = 1, 9, 25, 81; and grid edge G = 64, 96, 128. Thirty-six matched repetitions per cell produce 1,296 superblocks. Each contains six algorithm lanes with identical inputs, one fresh Unity process per lane, and serial process execution. The 7,776 lanes are preceded by one instrument self-test, 54 oracle batches, and 12 empty-boundary checks. The matched superblock is the analysis unit; event groups and component records are nested within it."
+  },
+  {
+    "index": 101,
+    "text": "Each lane supplies five model outcomes. D1 comprises the geometric mean and nearest-rank P95 of 24 event-group times; its P95 is the 23rd ordered observation. This defines a finite-sample upper-tail summary. D2 sums Contains, IsWalkable, and GetTraversalCost calls through the planner proxy. D3 sums managed allocation bytes within the event windows, excluding initialization and control windows. D4 is the maximum logical-capacity retained-state total across 26 post-operation measurement points. It excludes transient overlap and whole-process resident memory. D5–D7 use D1 geometric mean latency to estimate scaling with N, F, and grid area G²."
+  },
+  {
+    "index": 102,
+    "text": "SMSB ran in the Unity editor using batch mode, no graphics, and an execute-method entry point. D1 times the instrumented event runner, including partition conversion, grid mutation, planner calls, request/record creation, reported-path-cost calculation, and cached-oracle comparison. D3 covers owner-thread allocations in the corresponding GC.Alloc callback window; D2 counts only calls through the planner’s grid proxy. Both instruments are active during D1. Their overhead remains in the measured event window. D4 samples retained state after operations and excludes transient old/new-field overlap. Table S17 defines these boundaries. The cost and score comparisons use this instrumented workload."
+  },
+  {
+    "index": 103,
+    "text": "Five separate random-intercept REML models used natural log for D1 GM, D1 P95, and D2, and log1p for D3 and D4. Fixed effects comprised algorithm, centered log2(N), log2(F), log2(G²), change topology, graph profile, atomic partition count, categorical execution position, and algorithm interactions with each continuous axis. The design had 34 full-rank columns. Each model assumes a common residual variance on its transformed scale, conditional independence of residuals, independent superblocks, and a shared random superblock intercept. All five used REML and normal-z inference without invoking the nonconvergence fallback. The random-intercept variance was zero for D1 GM, D1 P95, D2, and D3, and positive for D4. Saved diagnostics document numerical fit and rank. The reported intervals and ranking bounds use these model assumptions."
+  },
+  {
+    "index": 104,
+    "text": "For traceable absolute predictions, all algorithms were evaluated at the same reference design: N = 64, F = 11.61895, and G² = 8,520.02334 (the equivalents of the mean frozen log2 levels), compact changes, a four-way weighted dense graph, one atomic partition, execution position zero, and random intercept zero. Thus the centered continuous predictors were all zero. If ηa is the fitted fixed-effect linear predictor for algorithm a, the adjusted original-unit quantity is exp(ηa) for D1/D2 and exp(ηa) − 1 for D3/D4. These quantities are reference predictions on the transformed scale, not arithmetic population means; no residual-variance smearing correction is applied. Shared categorical main effects cancel in each algorithm contrast at the centered axes."
+  },
+  {
+    "index": 105,
+    "text": "Reference predictions can differ slightly from a constant raw endpoint because they include the categorical terms in the transformed model. For example, adjusted D4 predictions for A*-R and BiA*-R are 7.868 bytes, compared with raw retained-state counts of 8 bytes."
+  },
+  {
+    "index": 106,
+    "text": ""
+  },
+  {
+    "index": 107,
+    "text": ""
+  },
+  {
+    "index": 108,
+    "text": "The formal ratio divides the reference predictions, with 1 added to each prediction for D3/D4; Table S6 separately reports the raw arithmetic means. D5–D7 report the IDFF-minus-comparator difference in log-latency slope per one-unit increase in the corresponding log2 axis. A unit is a doubling of N, F, or G²; doubling grid edge G is two units of log2(G²). Section S5 and Tables S6–S9 show the original-unit summaries, model inputs, linear predictors, adjusted quantities, explicit numerator/denominator pairs, intervals, and decisions."
+  },
+  {
+    "index": 109,
+    "text": "The inferential family contained 35 IDFF-versus-comparator hypotheses (seven domains × five comparators). D1 used an intersection–union test: both GM and P95 had to support a reduction, and its one-sided composite p value was the maximum of the two component p values. Holm adjustment controlled the 35-hypothesis family at 0.05. Two-sided Bonferroni intervals controlled the family-wise error at 0.05 over 40 primitive contrasts (individual interval coverage 99.875%). A comparator hypothesis passed only when the hard gates were valid, its Holm-adjusted one-sided p value was below 0.05, its direction was favorable, and its simultaneous interval lay entirely below one for ratios or zero for slope differences. The 10% minimum-important-effect threshold was retained as a reporting flag, not an extra pass criterion."
+  },
+  {
+    "index": 110,
+    "text": "For SMSB domain d and comparator c, let Gd = 1 only when every required correctness, measurement-validity, and accepted-data condition is satisfied. Each required hard-gate indicator gj is binary, and Jd is its required gate set. For D1, both component tests enter the same comparator decision:"
+  },
+  {
+    "index": 111,
+    "text": ""
+  },
+  {
+    "index": 112,
+    "text": ""
+  },
+  {
+    "index": 113,
+    "text": "Let Kd contain GM and P95 for D1 and one component for each other domain. For component k, θ̂dck is the effect estimate and Udck is the upper simultaneous bound. The null boundary θ0,d is 1 for D1–D4 ratios and 0 for D5–D7 slope differences. With pHolm,dc adjusted over the 35 comparator hypotheses,"
+  },
+  {
+    "index": 114,
+    "text": ""
+  },
+  {
+    "index": 115,
+    "text": "S4.2 Managed private workload execution"
+  },
+  {
+    "index": 116,
+    "text": "The managed multi-query module evaluates concurrent execution of independent private workloads for C-FF and IDFF. Each individual field build, repair, and query remains serial, while the worker executor distributes whole workloads."
+  },
+  {
+    "index": 117,
+    "text": "Each of 36 complete matched blocks reused its own 16 private workload lanes across all 24 fresh Unity processes (two algorithms × 12 conditions), yielding 864 serial processes and 13,824 lane executions. The lane composition varied between blocks. Inputs came from a frozen pool of 108 workloads, three per SMSB structural cell; across the 576 block-lane assignments, each of the 36 cells appeared 16 times. Each lane owned a private grid and planner, assignment followed lane ordinal modulo worker count, and outputs were restored in ascending lane order. Every query was checked against a cached algorithm-neutral oracle after the timed batch. Section S7 records the input binding and workload envelope."
+  },
+  {
+    "index": 118,
+    "text": "The 12 conditions comprised two ST-direct serial controls, managed W1, W2, W4, and W8 under each of the prespecified large-L3 and high-frequency single-CCD placements, and balanced dual-CCD W8 and W16. The latter allocated four or eight workers per CCD. ST-direct used the caller thread; the confirmatory worker-scaling tests used the managed conditions. Windows CPU-set binding was mandatory, one logical sibling was used per physical core, and no measured Unity processes ran concurrently. The endpoint was complete-batch wall time in seconds, with lower values preferred. Within each single-CCD policy, a block supplied the equal-weight ordinary-least-squares slope of log(batch wall time) on log2(worker count); exponentiation gives the wall-time ratio per worker doubling. The dual-CCD estimand was the within-block W16/W8 log ratio. The complete matched block, rather than a process or lane, was the independent unit (n = 36)."
+  },
+  {
+    "index": 119,
+    "text": "The MQ code adds a fixed-worker executor and a measured workload wrapper around the C-FF and IDFF procedures in Algorithms S1 and S2. Algorithm S3 describes these additions. Each admitted lane deserializes its own input and constructs a private grid and planner, so mutable planner state is never shared between workers. The wrapper records compact query outcomes for comparison with the frozen algorithm-neutral oracle after timing. This tests parallel scheduling of independent workloads while retaining the serial planning operations."
+  },
+  {
+    "index": 120,
+    "text": "For managed execution, worker creation and CPU binding finish before the batch clock starts. The timed interval begins immediately before worker release and ends when all workers signal completion; it includes private input/grid/planner construction, initialization, repairs, queries, path-validity checks, outcome recording, and worker completion. Oracle loading, hash verification, and final oracle comparison are outside this interval. ST-direct has no worker pool and includes caller-thread binding and cleanup in its batch interval. Its timing is therefore retained as a control rather than substituted for managed W1 in the confirmatory scaling tests."
+  },
+  {
+    "index": 121,
+    "text": "The four single-CCD slopes formed the confirmatory primary family and were tested with one-sided one-sample Student t tests and Holm strong family-wise error control at 0.05. A claim additionally required a Bonferroni-compatible one-sided simultaneous upper ratio below 1 and a point ratio no greater than the prespecified 0.90 minimum-important-effect threshold. The two W16/W8 contrasts formed a gated key-secondary family and were tested with their own Holm procedure only if all four primary tests rejected. Ordinary two-sided 95% t intervals were retained for estimation. A 100,000-draw matched-block studentized bootstrap, an exact conditional one-sample signed-rank analysis, and leave-one-block-out analyses assessed sensitivity. Contrasts are defined within each algorithm and placement policy."
+  },
+  {
+    "index": 122,
+    "text": "For primary worker-scaling contrast j, let R̂j be the per-doubling ratio, Uj its simultaneous one-sided upper bound, and pHolm,j its adjusted one-sided p value. With I(·) denoting an indicator, the primary claim and the gate to key-secondary testing are"
+  },
+  {
+    "index": 123,
+    "text": ""
+  },
+  {
+    "index": 124,
+    "text": ""
+  },
+  {
+    "index": 125,
+    "text": "Table S4. Complete managed-worker scaling effects"
+  },
+  {
+    "index": 126,
+    "text": "Note. n is the number of complete matched blocks. Single-CCD ratios are exponentiated within-block slopes per worker doubling across W1–W8; dual-CCD ratios compare W16 with W8. Ordinary two-sided 95% CIs describe estimation. Holm-adjusted p values are one-sided within the four-test primary family or the gated two-test secondary family. The final column gives the Bonferroni-compatible one-sided family-wise 95% upper ratio. All rows met the adjusted-p, simultaneous-bound, and ratio ≤ 0.90 criteria. The contrasts are within algorithm and do not define a C-FF/IDFF ranking."
+  },
+  {
+    "index": 127,
+    "text": "Sensitivity analyses retained the conclusions in Table S18. All six studentized-bootstrap ratio intervals were below one, exact conditional signed-rank lower-tail p values were at most 4.37 × 10−11, and every leave-one-block-out ratio remained below 0.90."
+  },
+  {
+    "index": 128,
+    "text": "S5 Complete cost and scaling model outputs"
+  },
+  {
+    "index": 129,
+    "text": "S5.1 Record mapping and reference predictions"
+  },
+  {
+    "index": 130,
+    "text": "The SMSB provenance links acquisition attempt-003, acceptance attempt-002, formal analysis attempt-004, and reporting addendum-001. The accepted package records two resolved technical failures, zero replacements, and zero replayed algorithm lanes. The tables reproduce the archived model outputs, with 25 level ratios and 15 slope differences."
+  },
+  {
+    "index": 131,
+    "text": "Analysis entry points are Analyze-Gate13RPR2Attempt4PhaseBV2.py for the four-method study, Gate13R-AX2/Analysis/analyze_p1_v1.py for the expanded study, Analyze-Gate13RP1C5IndependentPhaseBV1.py for confirmation, Analyze-Gate14ReFormalPhaseBV1.py for movement, gate14re_me_formal_st_analysis_v1_3.py for SMSB, and analyze_formal_mq_v1.py for MQ. The first three analyzers use Python standard-library routines without NumPy, SciPy, or statsmodels dependencies. The four-method analysis preflight records Python 3.14.7; the confirmation acquisition binds the same Python executable hash, but these records do not independently log the interpreter version used by each final analysis invocation. The expanded acquisition binds a Python executable hash, while its final analysis output omits a patch-version record. Movement and MQ analysis contracts and validation records specify Python 3.12.14 and NumPy 2.3.5. The SMSB launcher binds Python 3.12.14 by executable hash and the frozen PyArrow 25.0.1 runtime; its analyzer also imports NumPy, whose historical version is not separately recorded for the final invocation. The manuscript audit used Python 3.12.14 and NumPy 2.3.5 to re-fit all five SMSB models from lane-estimands.v1.jsonl with the saved v1.3 script, reproducing every stored coefficient exactly. Audit versions are reported separately from historical execution evidence."
+  },
+  {
+    "index": 132,
+    "text": "The source chain is: immutable measurement records → typed accepted tables → one original-unit outcome vector per lane → transformed model inputs and design factors → fitted fixed-effect linear predictors → inverse-transformed reference values → explicit formal numerators and denominators → formal ratios, simultaneous intervals, and Holm decisions. The retained source-data exports include the original acceptance manifests and SHA-256 bindings, all 7,776 lane estimands, the expanded model-input CSV, model diagnostics, complete formal effects, and the reporting provenance tables."
+  },
+  {
+    "index": 133,
+    "text": "The arithmetic means of lane P95 are 85.462255 ms (IDFF) and 95.756894 ms (C-FF), whereas the geometric means of the same lane endpoints are 52.231435 and 46.683395 ms. Their geometric ratio is 1.118844, matching the adjusted model contrast. Thus the direction change is already present when arithmetic aggregation is replaced by geometric aggregation; it is not evidence that an algorithm label was reversed. All 34 design columns, the four zero random-intercept variances, and the D4 positive random-intercept variance are retained. The original 35 composite hypotheses and 40 primitive contrast intervals remain the comparison families."
+  },
+  {
+    "index": 134,
+    "text": "Join keys are superblockId and anonymousLaneId; algorithm identity and execution position come from the frozen schedule/identity binding. Event-group rows additionally use eventGroupIndex (0–23). D3 uses d3WindowRecordId to join each event group to its event-group allocation window. D4 combines logical state-component rows into persistentStateBytesTotal at each measurement point and then takes the maximum over the 26 points. These links retain the paired superblock as the experimental unit."
+  },
+  {
+    "index": 135,
+    "text": "Table S5. Endpoint construction from accepted records"
+  },
+  {
+    "index": 136,
+    "text": "The exact field mapping is retained in the provenance JSON and model-input CSV. D3 initialization/control windows are excluded by endpoint definition, and D4 is retained-state logical capacity. D2 component-call distributions are also retained in the original-unit source CSV. Table S17 defines the operational measurement windows and active instruments."
+  },
+  {
+    "index": 137,
+    "text": "For each lane, the three model covariates are log2(N) − 6, log2(F) − 3.538407798525415, and log2(G²) − 13.056641667147437. IDFF, compact topology, the four-way weighted dense graph, one atomic partition, and execution position zero are reference levels. The fixed-effect response η includes the saved intercept, algorithm term, axis terms, categorical terms, and algorithm–axis interactions. At the common reference point, ηIDFF is the intercept and ηC adds the comparator coefficient. The model-input CSV preserves the actual lane values; Table S6 summarizes them and Tables S7a–e expose the reference prediction and division used for every formal ratio."
+  },
+  {
+    "index": 138,
+    "text": "S5.2 Original unit outcomes"
+  },
+  {
+    "index": 139,
+    "text": "Table S6. Original-unit lane outcomes for all six algorithms"
+  },
+  {
+    "index": 140,
+    "text": "Each algorithm contributes n = 1,296 lanes, paired within the same 1,296 superblocks. D1 GM and P95 are already within-lane summaries; their means here average those lane endpoints. Counts and bytes retain their native units. These are descriptive summaries of the lane endpoints. The raw-scale source CSV includes SD, minima, maxima, 5th/95th percentiles, and D2 component counts; the lane file contains every underlying analysis row."
+  },
+  {
+    "index": 141,
+    "text": "S5.3 Model adjusted effects"
+  },
+  {
+    "index": 142,
+    "text": "In Tables S7a–e, each two-line pair is ordered IDFF then comparator. η denotes the fixed-effect linear predictor. The adjusted original-unit value a is exp(η) for D1/D2 and exp(η) − 1 for D3/D4. The formal numerator/denominator column gives the actual values divided: aIDFF/aC for D1/D2 and (aIDFF + 1)/(aC + 1) for D3/D4. Thus the one-byte shift remains explicit even when rounding makes it small. Original observations map to Table S6 by outcome and algorithm. The machine-readable provenance CSV preserves full precision, including raw means/medians, η, adjusted values, numerator, denominator, and the reproduced ratio."
+  },
+  {
+    "index": 143,
+    "text": "Table S7a. D1 geometric mean reference values and formal ratios"
+  },
+  {
+    "index": 144,
+    "text": "D1 Holm p values jointly test GM and P95. The numerator and denominator equal the adjusted values. Intervals use the 40-contrast family; stored zero p values are displayed as <1e−15."
+  },
+  {
+    "index": 145,
+    "text": "Table S7b. D1 P95 reference values and formal ratios"
+  },
+  {
+    "index": 146,
+    "text": "D1 Holm p values jointly test GM and P95. The numerator and denominator equal the adjusted values. Intervals use the 40-contrast family; stored zero p values are displayed as <1e−15."
+  },
+  {
+    "index": 147,
+    "text": "Table S7c. D2 grid-access reference values and formal ratios"
+  },
+  {
+    "index": 148,
+    "text": "The numerator and denominator equal the adjusted values. Intervals use the 40-contrast family; stored zero p values are displayed as <1e−15."
+  },
+  {
+    "index": 149,
+    "text": "Table S7d. D3 allocation reference values and formal ratios"
+  },
+  {
+    "index": 150,
+    "text": "Both adjusted values receive +1 before division because the model uses log1p. Intervals use the 40-contrast family; stored zero p values are displayed as <1e−15."
+  },
+  {
+    "index": 151,
+    "text": "Table S7e. D4 retained-state reference values and formal ratios"
+  },
+  {
+    "index": 152,
+    "text": "Both adjusted values receive +1 before division because the model uses log1p. Intervals use the 40-contrast family; stored zero p values are displayed as <1e−15."
+  },
+  {
+    "index": 153,
+    "text": "S5.4 Scaling profiles and slopes"
+  },
+  {
+    "index": 154,
+    "text": ""
+  },
+  {
+    "index": 155,
+    "text": "Figure S1. Original-unit latency profiles underlying D5–D7. a–c, Median lane GM latency with interquartile ranges for all six algorithms at each agent-count, change-footprint, or grid-edge level. Each N or G level contains 432 lanes per algorithm; each F level contains 324. All observations are included in these descriptive summaries. Horizontal and vertical axes are logarithmic; the grid panel displays G = 64, 96, 128, whereas the formal model uses log2(G²). D*L and LPA* curves are nearly coincident. Lines connect the displayed descriptive summaries; formal model slopes and intervals appear in Table S8."
+  },
+  {
+    "index": 156,
+    "text": "Table S8. Model slopes and all formal scaling contrasts"
+  },
+  {
+    "index": 157,
+    "text": "The outcome is ln(lane GM latency). Each row subtracts the comparator slope from the IDFF slope. D5 uses log2(N), D6 log2(F), and D7 log2(G²). Intervals and p values follow the same 40-primitive and 35-composite families used for the level comparisons. Pass combines the stated p-value, interval, and direction criteria. Full raw profiles and reference curves are in the axis and slope source CSVs."
+  },
+  {
+    "index": 158,
+    "text": "S5.5 Non passing comparator hypotheses"
+  },
+  {
+    "index": 159,
+    "text": "Table S9. Effects and criteria for all non-passing hypotheses"
+  },
+  {
+    "index": 160,
+    "text": "The table covers 15 composite hypotheses in 16 component rows because D1 has two components. D1–D4 effects are ratios with null one; D5–D7 effects are slope differences with null zero. D6 versus D*L and LPA* fails the interval criterion despite Holm p < 0.05. Non-passing results remain distinct from equivalence conclusions."
+  },
+  {
+    "index": 161,
+    "text": "S6 Exploratory domain aggregation and preference scores"
+  },
+  {
+    "index": 162,
+    "text": "S6.1 Domain aggregation"
+  },
+  {
+    "index": 163,
+    "text": "The final domain aggregation is exploratory and was revised after the endpoint analysis. A domain receives pass = 1 when its hard gates are valid and at least four of five comparator hypotheses pass; the overall rule requires at least four of seven domains. All comparators and domains remain in the counting rule. The accepted observations were reused with zero replacement or replay of measured lanes. Section S5.5 lists every non-passing comparator."
+  },
+  {
+    "index": 164,
+    "text": "The comparator set is C = {A*-R, BiA*-R, D*L, LPA*, C-FF}. The binary domain outcome Pd and the overall domain criterion O are"
+  },
+  {
+    "index": 165,
+    "text": ""
+  },
+  {
+    "index": 166,
+    "text": ""
+  },
+  {
+    "index": 167,
+    "text": "All five comparators and all seven domains remain in their respective denominators. An invalid hard gate gives a domain value of zero. The minimum-important-effect flag is reported separately from the decision indicator."
+  },
+  {
+    "index": 168,
+    "text": "The exploratory domain aggregation gives four passing domains of seven: D1, D2, D3, and D5. D4, D6, and D7 do not pass. Across all 35 comparator hypotheses, 20 pass and 15 do not. The non-passing C-FF comparisons in D1 and D5 remain visible in Table S10."
+  },
+  {
+    "index": 169,
+    "text": "Table S10. Exploratory domain decisions"
+  },
+  {
+    "index": 170,
+    "text": "Domain pass = 1 requires valid hard gates and at least four passing comparator hypotheses; otherwise it is 0. D1 requires both GM and P95 components. The five comparators remain in the same family regardless of domain pass. Four domain values equal to 1 satisfy the overall four-of-seven criterion."
+  },
+  {
+    "index": 171,
+    "text": "S6.2 Movement preference score"
+  },
+  {
+    "index": 172,
+    "text": "For the historical movement acquisition, the exploratory score gives IDFF 6, C-FF 8, and A*-R 13, with lower values preferred; D*L is ineligible. The score was fixed before algorithm-label unblinding but after outcomes were available. Section S6.2 and Table S19 provide the arrival, path, scaling, and callback inputs. Their fine differences determine the rank score, while the original movement decision remains no unique winner."
+  },
+  {
+    "index": 173,
+    "text": "Among the three eligible algorithms, movement ranks lexicographically order equally weighted condition means of the tuple (RMAT180, T95, T99, T100 minus T50, M1). RMAT180 is mean unit arrival time capped at 180 s, assigning 180 s to non-arrivals; T95 and T99 are nearest-rank quantiles of the capped times. Path and callback ranks use equal-condition GMs of M2 and block M4 P95. Scaling ranks order the mean submetric rank of fitted per-doubling RMAT180, M2, and M4-P95 ratios at the two anchors. All inputs prefer lower values."
+  },
+  {
+    "index": 174,
+    "text": "Competition ranks retain ties (for example, 1, 1, 3), using absolute tolerance 1e-12. The score is 2r_movement + r_path + r_scaling + r_callback; equal totals are resolved lexicographically by the movement tuple, M2, mean scaling subrank, callback P95, and finally the static tuple. Static fields are ordered as logical source lines, branch tokens, allocation sites, public tokens, and source bytes. No total-score tie occurred. Table S19 gives the numerical inputs. Arrival-profile differences can distinguish A*-R despite equal M1. The callback and deterministic-outcome definitions are given in Sections S3.3–S3.4."
+  },
+  {
+    "index": 175,
+    "text": "Table S11. Movement rank components and total"
+  },
+  {
+    "index": 176,
+    "text": "Note. IDFF: 2 × 1 + 1 + 1 + 2 = 6; C-FF: 2 × 1 + 1 + 2 + 3 = 8; A*-R: 2 × 3 + 3 + 3 + 1 = 13. Source: frozen decision workbook, movement and scaling outputs, and archived label mapping. Callback retains the original render-rank values with their corrected interpretation."
+  },
+  {
+    "index": 177,
+    "text": "S6.3 Latency and operating cost score"
+  },
+  {
+    "index": 178,
+    "text": "The post hoc ranking encodes priority for instrumented latency and recurring workload cost. Inputs are the saved fixed-effect reference predictors for D1–D4 and D1-GM scaling slopes for D5–D7. Within the six-algorithm cohort, lower inputs receive ascending ranks r, with midranks for numerical ties (absolute and relative tolerances both 1e-10). Utility is u = 100(6 − r)/5. D1 utility averages its GM and P95 component utilities; the total is 0.35u1 + 0.20u2 + 0.15u3 + 0.075(u4 + u5 + u6 + u7). Section S6 gives the utilities and score decomposition. This 0–100 scale is relative to the included algorithms, not a percentage speedup or probability. Conservative score bounds use Bonferroni simultaneous normal-z intervals for all 120 primitive all-pair contrasts at familywise alpha = 0.05. For each input, established pairwise orderings bound its possible rank; the utility transformation and weights propagate those bounds to the total. A uniquely separated score winner would require its lower bound to exceed every rival's upper bound. The rule was specified after endpoint results were available."
+  },
+  {
+    "index": 179,
+    "text": "The post hoc priority score gives IDFF 83.00, C-FF 74.50, A*-R 54.75, LPA* 32.75, D*L 28.75, and BiA*-R 26.25. The 8.50-point IDFF–C-FF difference reflects the stated ranks and weights within this candidate set."
+  },
+  {
+    "index": 180,
+    "text": "Table S12. Weighted scores and simultaneous bounds"
+  },
+  {
+    "index": 181,
+    "text": "Higher scores are preferred. The bounds propagate simultaneous all-pair ordering uncertainty through the weighted ranks. A separated score winner requires its lower bound to exceed every competitor's upper bound."
+  },
+  {
+    "index": 182,
+    "text": "The simultaneous score bounds are 75.50–87.50 for IDFF and 68.50–80.50 for C-FF. Their overlap leaves the point-score ordering unresolved under the separation rule. The individual endpoint comparisons retain the outcomes in Section S5."
+  },
+  {
+    "index": 183,
+    "text": "This six-algorithm rule uses midranks and prefers higher totals. Multiply each saved utility in Table S13 by its column weight and sum. D1 averages GM and P95 utilities before weighting. Section S6.3 defines the normalization and bounds; the score is separate from binary domain-pass outcomes."
+  },
+  {
+    "index": 184,
+    "text": "Table S13. Domain utilities and weighted total"
+  },
+  {
+    "index": 185,
+    "text": "Note. IDFF: 0.35 × 90 + 0.20 × 100 + 0.15 × 100 + 0.075 × (40 + 80 + 40 + 60) = 83.00. C-FF: 31.50 + 16.00 + 6.00 + 4.50 + 7.50 + 7.50 + 1.50 = 74.50. Source: ranking-and-score-contributions.v1.csv and ranking-contract.v1.json from the frozen SMSB ranking export. The model-based simultaneous score bounds in Table S12 overlap for IDFF and C-FF."
+  },
+  {
+    "index": 186,
+    "text": ""
+  },
+  {
+    "index": 187,
+    "text": "Figure S2. Exploratory score with latency and operating cost prioritized. Symbols show the weighted point scores and bars show conservative simultaneous bounds. The overlap between IDFF and C-FF retains both as plausible leaders under the stated preference and separation rule."
+  },
+  {
+    "index": 188,
+    "text": "S7 Workload matrices"
+  },
+  {
+    "index": 189,
+    "text": "The early dynamic-planning matrix contains 32 shared-goal scenarios and 21 heterogeneous scenarios. Every shared scenario supplies one campaign; every heterogeneous scenario supplies one per-agent and one grouped-field campaign, giving 53 scenarios and 74 profiles. The four-method, expanded, and independent-confirmation studies use the same 32 shared scenario identities with separate observations. Each shared campaign receives weight 1/32; each matched heterogeneous scenario pair receives weight 1/21. Tables S14–S15 specify their complete composition."
+  },
+  {
+    "index": 190,
+    "text": "Table S14. Core structural rows with two seeds and both goal structures"
+  },
+  {
+    "index": 191,
+    "text": "U denotes unit traversal cost; W uses costs {1, 2, 4, 8}. Shared variants have one goal. Each row r uses seed replication s = 1, 2 and seed 110000 + 10r + s. Canonical IDs are core-r{rr}-s{s}-shared and core-r{rr}-s{s}-hetero, where rr has two digits. These give 16 shared campaigns and 16 heterogeneous scenario pairs. Diagonal corner cutting is forbidden throughout the early matrix. Obstacle percentages are design targets; exact grid cells, starts, goals, and event coordinates are frozen in each canonical record."
+  },
+  {
+    "index": 192,
+    "text": "Table S15. Additional matrix families and level-to-seed rules"
+  },
+  {
+    "index": 193,
+    "text": "G is square-grid edge, N agent count, F changed-cell footprint, and H distinct goals. Three-digit fields GGG/NNN/FFF and two-digit HH use leading zeros. All shared rows have one goal. The reachability pair uses close-first-gate, close-second-gate, reopen-first-gate, and reopen-second-gate at ticks 10, 50000, 75000, and 99999. Other scenarios use block and unblock at tick 10 in that order, increased cost at tick 50000, decreased cost at tick 75000, and restoration at tick 99999. The fixed tick is 0.02 s. Plan/repair budgets are 10,000 ms and initialization is 30,000 ms."
+  },
+  {
+    "index": 194,
+    "text": "The early agent-count and footprint families use seeds 130000 + N and 140000 + F. Their ten canonical inputs have different initial grids, ordered starts, goals, and event realizations; the generator uses the seed for obstacle selection, terrain costs, start/goal ordering, and event-cell selection. These curves describe the resulting workload instances, not isolated effects on one fixed map. This qualification is separate from the movement quantity study, which preserves its anchor map and uses nested starts."
+  },
+  {
+    "index": 195,
+    "text": "The source matrix is formal-scenario-matrix.json, schema version 2, in the frozen scenario bundle v1. Its SHA-256 is cc5f020003f3fad75bd82ebb2c26df521fd639ff0ee5376132853120dbc16aa3. It binds all canonical records and campaign IDs. A shared campaign appends --shared to its scenario ID; heterogeneous profiles append --per-agent and --grouped-field. The table extraction verified all 53 source-file hashes. These matrix families identify the sampled operating envelope."
+  },
+  {
+    "index": 196,
+    "text": "S7.1 Movement conditions and concurrent input composition"
+  },
+  {
+    "index": 197,
+    "text": "Table S16. Main movement conditions at 128 agents"
+  },
+  {
+    "index": 198,
+    "text": "The full source ID is core-{row/seed}-shared, with r02-s1, for example, denoting row 2 and seed replication 1. Seeds follow Table S14. All conditions have one shared goal and forbid diagonal corner cutting. Asterisks identify C01 and C07, the quantity anchors. Movement uses its separately frozen source-scenario bundle and the retimed calendar in Section S3.1; the movement-specific canonical files define its inputs. The condition identities and hashes are bound by the movement design contract v2 and its timing amendment v3."
+  },
+  {
+    "index": 199,
+    "text": "MQ uses a pool of 108 frozen planning inputs, three per structural cell of G = {64, 96, 128}, N = {32, 64, 128}, and F = {1, 9, 25, 81}. The version-2 input-source manifest and block-input-assignment table bind input IDs, hashes, oracle caches, and lane ordinals. Across 36 blocks × 16 lanes, every cell appears 16 times; 36 source inputs appear six times and 72 appear five times. All 24 algorithm/worker conditions within a block reuse its assigned lane set. Thus blocks are matched workload mixtures, not 36 repetitions of one identical 16-lane batch."
+  },
+  {
+    "index": 200,
+    "text": "S8 Measurement scopes and supporting numerical checks"
+  },
+  {
+    "index": 201,
+    "text": "S8.1 Instrumented windows"
+  },
+  {
+    "index": 202,
+    "text": "Table S17. Operational scope of the matched cost measurements"
+  },
+  {
+    "index": 203,
+    "text": "The acquisition used Unity editor batch execution with graphics disabled and an execute-method entry point. D1 and D3 cover the instrumented workload, including the counting-proxy and allocation-callback overhead. MQ uses a separate batch timer that includes private construction and places the final oracle comparison after timing. D3 opens immediately before the D1 timer and closes immediately after it. The native callback records owner-thread allocation separately from foreign-thread activity; only owner-thread bytes enter D3. The archived component self-test passed the 1 MiB positive control, and all 12,000 empty windows reported valid counters with zero owner-thread bytes. D4 sums each retained component's recorded capacity or logical element count multiplied by its frozen bytes-per-element constant, then takes the maximum across 26 points. It excludes object headers and allocator overhead as well as transient rebuild overlap."
+  },
+  {
+    "index": 204,
+    "text": "S8.2 Worker scaling sensitivity"
+  },
+  {
+    "index": 205,
+    "text": "Table S18. Sensitivity summaries for managed-worker contrasts"
+  },
+  {
+    "index": 206,
+    "text": "Each contrast uses 36 matched blocks. The bootstrap used 100,000 valid draws and seed 141420274. Signed-rank values are unadjusted lower-tail probabilities conditional on observed ties; all contrasts had 36 nonzero block estimands. W+ was 0 for the first five rows and 2 for IDFF W16/W8. All leave-one-block-out estimates retained a reduction of at least 10%. These sensitivity checks retained the primary conclusions. Source: the frozen MQ sensitivity-analysis output v1."
+  },
+  {
+    "index": 207,
+    "text": "S8.3 Movement score inputs"
+  },
+  {
+    "index": 208,
+    "text": "Table S19. Numerical inputs for the movement preference score"
+  },
+  {
+    "index": 209,
+    "text": "Movement inputs use equal-condition arithmetic means; M2 and callback inputs use equal-condition geometric means. The arrival tuple follows the first five rows lexicographically. Scaling ratios are ranked separately, then ranked by mean rank. Competition ranks use absolute tolerance 1e-12 before rounding, so small arrival and path differences affect the score. The five lexical code metrics form an unused tie-breaker."
+  },
+  {
+    "index": 210,
+    "text": "The archived label mapping joins the frozen movement-resolution, quantity-scaling, M2, M4, and static-engineering outputs. Callback input follows Section S3.3. This exploratory score supplements the original no-unique-winner movement decision."
+  }
+]

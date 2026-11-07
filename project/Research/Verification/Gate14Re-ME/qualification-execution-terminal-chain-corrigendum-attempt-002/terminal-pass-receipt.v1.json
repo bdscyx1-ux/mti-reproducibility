@@ -1,0 +1,117 @@
+{
+  "schema": "gate14re-me-qualification-execution-terminal-chain-corrigendum-terminal-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-execution-terminal-chain-corrigendum-attempt-002",
+  "status": "PASS_TERMINAL_CHAIN_CORRIGENDUM_OFFLINE_ONLY",
+  "passed": true,
+  "startedAtUtc": "2026-10-17T15:35:57.688530Z",
+  "completedAtUtc": "2026-10-17T15:36:18.409837Z",
+  "versionedBindings": {
+    "manifestArtifacts": 48,
+    "contractBindings": 14
+  },
+  "structuralPositive": {
+    "schema": "gate14re-me-qualification-structural-validation-v3.1",
+    "studyId": "Gate14Re-ME",
+    "status": "PASS_SCHEMA_V3_STRUCTURAL_COMPLETE_RAW_NO_INFERENCE",
+    "profile": "synthetic-known-answer",
+    "outputSchemaSha256": "e9a16e52e041b5818f1d25a343bdf86260d654177aff97bb0c5102637d554a7c",
+    "d3ContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "identityBindingSha256": "f5cb5febb214a520ad88fe5b592c1688ccae291ee8059615a90d1badff5c302c",
+    "tableRows": {
+      "oracle-agent-checks": 0,
+      "oracle-event-checks": 0,
+      "operations": 0,
+      "event-groups": 24,
+      "d3-windows": 1026,
+      "persistent-state": 26,
+      "process-resources": 26,
+      "empty-boundary": 1000,
+      "replacement-ledger": 0,
+      "failures-and-voids": 0
+    },
+    "laneReceipts": 1,
+    "emptyBoundaryReceipts": 1,
+    "processResourceRows": 26,
+    "persistentStateMeasurementPointLanePairs": 26,
+    "eventGroupD3Joins": 24,
+    "emptyBoundaryD3Joins": 1000,
+    "acceptedSuperblockReceipts": 1,
+    "oraclePassReceipts": 1,
+    "instrumentCsharpReceipts": 1,
+    "processLedgerRows": 4,
+    "processIdentityReceipts": 4,
+    "supervisorFinalProcessOrdinal": 4,
+    "terminalControlPlaneClosed": true,
+    "supervisorFinalProcessOrdinalAsserted": true,
+    "d3WindowRecordIdsUnique": true,
+    "d3JoinsOneToOneAndComplete": true,
+    "retiredSnapshotFieldsAbsent": true,
+    "operationManagedAllocatedBytesTreatedAsD3": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "qualificationReusedForFormalInference": false
+  },
+  "structuralNegativeFixtures": [
+    {
+      "name": "missing-process-resource",
+      "passed": true,
+      "reasonContains": "requires 26 process-resource rows"
+    },
+    {
+      "name": "missing-persistent-measurement-point",
+      "passed": true,
+      "reasonContains": "persistent-state measurement-point coverage mismatch"
+    },
+    {
+      "name": "missing-accepted-superblock-receipt",
+      "passed": true,
+      "reasonContains": "requires 1 accepted-superblock receipt"
+    },
+    {
+      "name": "short-process-ledger",
+      "passed": true,
+      "reasonContains": "requires 4 process-ledger rows"
+    },
+    {
+      "name": "tampered-process-identity",
+      "passed": true,
+      "reasonContains": "process identity receipt"
+    },
+    {
+      "name": "wrong-terminal-process-count",
+      "passed": true,
+      "reasonContains": "unityProcessCount"
+    }
+  ],
+  "deliveryKnownAnswer": {
+    "buildStatus": "PASS_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+    "verifyStatus": "PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+    "tables": 10,
+    "products": 40,
+    "manifestSha256": "caed7fa48166bfefccc0254cf4cd497509b145461066142fcce19248d3d77872",
+    "missingProductNegativePassed": true
+  },
+  "resolvedPriorBlockers": [
+    "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+    "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE"
+  ],
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "formalDeliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "activation": {
+    "qualificationExecutionAuthorized": false,
+    "separateReadinessRecheckRequired": true
+  }
+}

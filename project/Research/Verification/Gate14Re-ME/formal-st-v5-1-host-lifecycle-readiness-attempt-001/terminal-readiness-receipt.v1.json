@@ -1,0 +1,91 @@
+{
+  "schema": "gate14re-me-formal-st-v5-1-local-host-lifecycle-readiness-terminal-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "PASS_LOCAL_ALGORITHM_FREE_COMPILE_BURST_AND_REPEAT_NATURAL_EXIT",
+  "implementationRevision": "v5.1-host-lifecycle-corrigendum",
+  "unity": {
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "version": "2022.3.30f1c1"
+  },
+  "entryPoint": "DDM.Research.Editor.Gate14ReMEReadinessCompileExitV4.Run",
+  "finalSourceSet": {
+    "supervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_1/Run-Gate14ReMEFormalST.v5_1.ps1",
+    "supervisorSha256": "7ab5584a763fb72ea58b2a0aa677ce072b02858d1f86428b2aea8f74f2e77300",
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEFormalSTRunnerV5_1.cs",
+    "runnerSha256": "12c44c11d831a28a5277b7f3b86687dfbe6572d50b93a74635a7437995c02d12",
+    "operationalBudgetRelativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-operational-resource-budget.v5_1.json",
+    "operationalBudgetSha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2"
+  },
+  "hostLifecycle": {
+    "freshUnityProcesses": 4,
+    "strictSerial": true,
+    "commandLineQuitPresent": false,
+    "runnerOwnedEditorApplicationExit": true,
+    "burstStableCompletionRequired": true,
+    "requiredConsecutiveBurstDoneObservations": 3,
+    "allProcessesGoneAfterExit": true,
+    "compilerErrorsFound": false,
+    "fatalOrCrashMarkersFound": false
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "processId": 18232,
+      "exitCode": null,
+      "exitCodeCapture": "PowerShell GUI invocation did not retain an exit-code handle",
+      "processGoneAfterWait": true,
+      "receiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/compile-exit-pass-001.v4.json",
+      "receiptSha256": "a30f204354c51095a27ec7d0a41a960fe4d5c99cc39250aaa807529b62c46b8e",
+      "logRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/unity-compile-exit-pass-001.log",
+      "logSha256": "c98ae76776e313082eb317b21bc5157cbf0c983cd1b74b87289c2977ffb59912",
+      "burstWaitMilliseconds": 1335
+    },
+    {
+      "pass": 2,
+      "processId": 9532,
+      "exitCode": 0,
+      "processGoneAfterWait": true,
+      "receiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/compile-exit-pass-002.v4.json",
+      "receiptSha256": "fa7af4b7e1f41d0654e7b8cd8bb030df1fae7c0b1bc76ed53fb3bc80ca36cc88",
+      "logRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/unity-compile-exit-pass-002.log",
+      "logSha256": "270fc5a868338380dafed48c2719c1aed4a3701dd81d60d11886d123233d04f8",
+      "burstWaitMilliseconds": 1075
+    },
+    {
+      "pass": 3,
+      "processId": 17204,
+      "exitCode": 0,
+      "processGoneAfterWait": true,
+      "receiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/compile-exit-pass-003.v4.json",
+      "receiptSha256": "809cee13bcf269b5f63b52c24f39110efafc2c6b155abbd010f83027e066e133",
+      "logRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/unity-compile-exit-pass-003.log",
+      "logSha256": "e1b9724c7ee88c36fa2e9b31da369b750126added9c320f981168b8edad31f07",
+      "burstWaitMilliseconds": 994
+    },
+    {
+      "pass": 4,
+      "processId": 720,
+      "exitCode": 0,
+      "processGoneAfterWait": true,
+      "receiptRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/compile-exit-pass-004.v4.json",
+      "receiptSha256": "7ba2956b97519fca50f4842051daf430dfa72c88d225cf1ec125c82740d16bbd",
+      "logRelativePath": "Research/Verification/Gate14Re-ME/formal-st-v5-1-host-lifecycle-readiness-attempt-001/unity-compile-exit-pass-004.log",
+      "logSha256": "18cdd0244baee922c0a8e1478e644e618e10b8b95dbb22d47366c9c0b91aa93b",
+      "burstWaitMilliseconds": 984
+    }
+  ],
+  "boundary": {
+    "algorithmsInstantiated": 0,
+    "qualificationExecuted": false,
+    "algorithmLaneExecuted": false,
+    "formalInputsCreated": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "mqStarted": false,
+    "mtStarted": false,
+    "algorithmObservationsReadOrInterpreted": false
+  },
+  "completedAtUtc": "2026-10-26T11:15:40.5015928Z"
+}

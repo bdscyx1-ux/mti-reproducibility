@@ -1,0 +1,98 @@
+{
+    "schemaVersion":  1,
+    "auditId":  "gate10r-attempt4-terminal-integrity-audit-v1",
+    "savedAtUtc":  "2026-10-06T15:27:38.5488673Z",
+    "status":  "GATE10R-TERMINAL-INTEGRITY-AUDIT-FAILED",
+    "assertionCount":  14,
+    "passedCount":  13,
+    "failedCount":  1,
+    "checks":  [
+                   {
+                       "name":  "gate10r-final-audit",
+                       "passed":  true,
+                       "detail":  "55/55"
+                   },
+                   {
+                       "name":  "gate10r-terminal-checkpoint",
+                       "passed":  true,
+                       "detail":  "GATE10R-PASSED-WAITING-FOR-USER-AUTHORIZATION"
+                   },
+                   {
+                       "name":  "downstream-authorization-boundary",
+                       "passed":  true,
+                       "detail":  "Gate 11R, Gate 12R, and Gate 13R remain unauthorized"
+                   },
+                   {
+                       "name":  "final-audit-to-manifest-binding",
+                       "passed":  true,
+                       "detail":  "95bb77828c4fa94d4d002bf455a8c2b2f9c9938d99840f61fba6f56c0c003106"
+                   },
+                   {
+                       "name":  "v4-evidence-manifest-revalidation",
+                       "passed":  true,
+                       "detail":  "artifacts=166;errors=0"
+                   },
+                   {
+                       "name":  "attempt1-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":4,\"rawBytes\":9577,\"treeSha256\":\"2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d\"}"
+                   },
+                   {
+                       "name":  "attempt2-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":101,\"rawBytes\":9375526,\"treeSha256\":\"da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce\"}"
+                   },
+                   {
+                       "name":  "attempt3-tree-byte-identical",
+                       "passed":  true,
+                       "detail":  "{\"fileCount\":165,\"rawBytes\":14661809,\"treeSha256\":\"29f5aa8f0461abb120792dea0f2806e46e4dc9836aa843ce747f2436c1645a23\"}"
+                   },
+                   {
+                       "name":  "frozen-retained-source-byte-identical",
+                       "passed":  true,
+                       "detail":  "13713 bytes / e56a3881...6885b1"
+                   },
+                   {
+                       "name":  "frozen-retained-summary-byte-identical",
+                       "passed":  true,
+                       "detail":  "1748 bytes / 1536ae45...136e54d"
+                   },
+                   {
+                       "name":  "frozen-baseline-24",
+                       "passed":  false,
+                       "detail":  "entries=26;errors=4"
+                   },
+                   {
+                       "name":  "unauthorized-downstream-roots-absent",
+                       "passed":  true,
+                       "detail":  ""
+                   },
+                   {
+                       "name":  "no-unity-process",
+                       "passed":  true,
+                       "detail":  "zero"
+                   },
+                   {
+                       "name":  "no-project-lock",
+                       "passed":  true,
+                       "detail":  "absent"
+                   }
+               ],
+    "v4Tree":  {
+                   "fileCount":  169,
+                   "rawBytes":  14661848,
+                   "treeSha256":  "ac7f70b2098f6fc28eaa48116faabe1a527f34168d1c851f5a5d7e8cbbbc53b2"
+               },
+    "finalAudit":  {
+                       "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v4/Gate10R_FinalAudit.summary.v4.json",
+                       "sha256":  "8714fea2235d488abad7278bd6ccef9cf50f75aae57969220f40a19de16dd72c"
+                   },
+    "terminalCheckpoint":  {
+                               "relativePath":  "Research/Verification/Gate10R_ProcessReuse_5pct/v4/gate10r-checkpoint.json",
+                               "sha256":  "fab889a1ff9f2d7911a6018b9cd3316e4dbff6e1c8cd8523678488ef252cbf56"
+                           },
+    "gate11RAuthorized":  false,
+    "gate12RAuthorized":  false,
+    "gate13RAuthorized":  false,
+    "formalCampaign":  false
+}

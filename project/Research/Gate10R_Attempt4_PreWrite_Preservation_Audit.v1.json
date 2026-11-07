@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "auditId": "gate10r-attempt4-prewrite-preservation-audit-v1",
+  "auditedAt": "2026-10-06T14:41:17.7173184Z",
+  "projectPath": "H:/DDM_Final_Project",
+  "passed": true,
+  "historicalRoots": {
+    "attempt1": {
+      "relativePath": "Verification/Gate10R_ProcessReuse_5pct/v1",
+      "fileCount": 4,
+      "rawBytes": 9577,
+      "treeSha256": "2baa66eb6ee95ecf0f68667b2790fba2a30ce8a24f54e8f9fe477cdc716b9e3d"
+    },
+    "attempt2": {
+      "relativePath": "Verification/Gate10R_ProcessReuse_5pct/v2",
+      "fileCount": 101,
+      "rawBytes": 9375526,
+      "treeSha256": "da9e6312e74db1bc1207660cf90eef28321ecda0abf1297be6c9298e6270dbce"
+    },
+    "attempt3": {
+      "relativePath": "Verification/Gate10R_ProcessReuse_5pct/v3",
+      "fileCount": 165,
+      "rawBytes": 14661809,
+      "treeSha256": "29f5aa8f0461abb120792dea0f2806e46e4dc9836aa843ce747f2436c1645a23"
+    }
+  },
+  "frozenRetainedEvidence": {
+    "source": {
+      "relativePath": "Verification/Run-Gate12AnalysisUnitTests.ps1",
+      "rawBytes": 13713,
+      "sha256": "e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1"
+    },
+    "summary": {
+      "relativePath": "Verification/Gate12_AnalysisUnitTests.summary.json",
+      "rawBytes": 1748,
+      "sha256": "1536ae459c3d8cbb90b8a9dad1f74e7937d5ceb205e6cc088745c798d136e54d",
+      "expectedAssertionCount": 63,
+      "expectedPassed": true
+    }
+  },
+  "freshness": {
+    "v4RootExisted": false,
+    "outsidePreflightRootExisted": false,
+    "unityProcessCount": 0,
+    "unityLockfilePresent": false
+  },
+  "authorizationBoundaries": {
+    "gate11rRootExists": false,
+    "gate12rRootExists": false,
+    "gate13rRootExists": false
+  },
+  "gateTokens": [
+    "ATTEMPTS-1-THROUGH-3-BYTE-IDENTICAL",
+    "ORIGINAL-TEST-AND-63-OF-63-SUMMARY-BYTE-IDENTICAL",
+    "V4-ROOT-ABSENT",
+    "UNITY-NOT-RUNNING",
+    "DOWNSTREAM-ROOTS-ABSENT",
+    "READY-FOR-OUTSIDE-V4-ROOT-NO-UNITY-PREFLIGHT"
+  ]
+}

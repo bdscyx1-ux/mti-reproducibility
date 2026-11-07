@@ -1,0 +1,26 @@
+{
+  "schema": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-001-failure-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-001",
+  "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-001",
+  "status": "FROZEN_FAILED_CLOSED_EVIDENCE",
+  "frozenAtUtc": "2026-10-17T16:24:23.7942191+00:00",
+  "exactFailure": "The property 'Count' cannot be found on this object. Verify that the property exists.",
+  "artifacts": [
+    {
+      "role": "failed-attempt-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-001/failure-receipt.v1.json",
+      "sha256": "7678550d5280e55d73750175ed7aa7e832076f95899ffa83af67cc00b3d5511e",
+      "bytes": 7426
+    },
+    {
+      "role": "failed-attempt-evidence",
+      "relativePath": "Research/Verification/Gate14Re-ME/supervisor-powershell-host-binding-corrigendum-attempt-001/Invoke-Gate14ReMESupervisorPowerShellHostBindingCorrigendumAttempt001.ps1",
+      "sha256": "f66eeaacbf2fad34a43875cf44b180713ec3c90eb561c00cda86ec41bb9f9f4e",
+      "bytes": 63507
+    }
+  ],
+  "retainedAttempt001FailureSha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+  "unityInvocationCount": 0,
+  "automaticRetryPerformed": false
+}

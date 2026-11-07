@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "manifestKind": "gate13r-pr2-attempt2-failure-diagnosis-frozen-input-manifest-v1",
+  "savedAtUtc": "2026-10-09T02:35:53.0768852Z",
+  "statusTokens": [
+    "NON-EXECUTING",
+    "FAILURE-DIAGNOSTIC-ONLY",
+    "PARTIAL-FORMAL-ATTEMPT-EXCLUDED-FROM-FORMAL-ANALYSIS",
+    "FORMAL-ATTEMPT3-NOT-AUTHORIZED",
+    "GATE14R-NOT-AUTHORIZED"
+  ],
+  "inputs": [
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Next_Authorization_Prompt.md",
+      "sha256": "a23106b665d78c807d2e6751579cfe39c5964f2afa973e138afc98c88152bc3a"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_User_Authorization.v1.txt",
+      "sha256": "63d783bcc5a15a4d10fe1d0f4138d602e0d043cb1963ac0f830bb372011d1f3f"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Authorization.v1.json",
+      "sha256": "dd702cb528f47379d29debcabb2c8fd6eca082cfbd9439b8be4fb2748706386c"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Formal_Execution_Receipt.v2.json",
+      "sha256": "a21466228b1e91dd8670093953b28333e235c9ff031b54fe385301c93ee8365e"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Partial_Output_Evidence_Manifest.v1.json",
+      "sha256": "11cf507ad3daee5c4d17adf3d7349e50b73a925f58fdb175e2b68315240eff5b"
+    },
+    {
+      "relativePath": "Research/Gate13R_PR2_Attempt2_Failure_Diagnosis_Canonical_Order_Amendment.v2.json",
+      "sha256": "8d91c000056b0e02fc873ccb81c18b7b53b61604f3c9843d88cf4ad3b38388a6"
+    },
+    {
+      "relativePath": "Research/Analyze-Gate13RPR2Attempt2FailureV1.py",
+      "sha256": "24366bbfce687f29f415198c3be65d25451ea9316daf4de9ad969d6e325a73e5",
+      "disposition": "failed manifest attempt implementation preserved"
+    },
+    {
+      "relativePath": "Research/Analyze-Gate13RPR2Attempt2FailureV2.py",
+      "sha256": "89c33eaf38e428676c149b830072994bc69df982591d45205d7931ec2e432c98",
+      "disposition": "active ordinal-order repair entry point"
+    }
+  ],
+  "failedRoot": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+    "fileCount": 28020,
+    "rawBytes": 8536611302,
+    "canonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "allFilesReadOnly": true
+  }
+}

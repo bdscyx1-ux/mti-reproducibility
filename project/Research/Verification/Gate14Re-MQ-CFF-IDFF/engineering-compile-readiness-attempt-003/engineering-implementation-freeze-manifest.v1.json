@@ -1,0 +1,147 @@
+{
+  "schema": "gate14re-mq-engineering-implementation-freeze-manifest-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "status": "FROZEN_READY_FOR_MANAGED_ONLY_ENGINEERING_QUALIFICATION",
+  "executionPolicy": {
+    "scope": "engineering-runtime-qualification-only-not-formal-MQ-collection",
+    "burstCompilation": "disabled-by-command-line-for-managed-only-path",
+    "freshExecutionRootRequired": true,
+    "sameAttemptRetryOrResumeAllowed": false,
+    "formalEffectInterpretationAllowed": false
+  },
+  "artifacts": [
+    {
+      "role": "prospective-engineering-contract",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v1/mq-gate14re-engineering-qualification-contract.v1.json",
+      "bytes": 2905,
+      "sha256": "ede61b86e2c6af77fed6c38be8004914307983c3eeea0194f499c1ed2af64138"
+    },
+    {
+      "role": "gate13r-design-implementation-freeze",
+      "relativePath": "Research/Gate14Re-MQ-CFF-IDFF/Design/v1/design-and-implementation-freeze-manifest.v1.json",
+      "bytes": 2554,
+      "sha256": "784f62a9fecb053fd07f6199f811b3cd97bd945876f46866da9f147bd6f20c7a"
+    },
+    {
+      "role": "topology-and-affinity-source",
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/WindowsCpuTopologyV1.cs",
+      "bytes": 25748,
+      "sha256": "a7301d86eb4846ba0dafddf1010561548ef99b7ad6c4adba39cd0037658f791d"
+    },
+    {
+      "role": "managed-fixed-worker-executor-source",
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/ManagedMultiQueryExecutorV1.cs",
+      "bytes": 31705,
+      "sha256": "69066fa0b6dfd9844af8c99ed52c4b50d267a7cd96773de03b76f7b7b4af02bf"
+    },
+    {
+      "role": "semantic-input-kernel-source",
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/Gate14ReMQInputKernelV1.cs",
+      "bytes": 28940,
+      "sha256": "7e50ce763bc21afd0e108298b4432fda4cf18dc620d139f61087df546cc5f774"
+    },
+    {
+      "role": "engineering-performance-kernel-source",
+      "relativePath": "Assets/_Scripts/Research/MQ/v1/Gate14ReMQPerformanceKernelV1.cs",
+      "bytes": 16239,
+      "sha256": "63963a88be905e1e3afe7e10470012c374e3b675372f388c42803e1d70ef5067"
+    },
+    {
+      "role": "gate13r-harness-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate13RMQCffIdffQualificationV1.cs",
+      "bytes": 38363,
+      "sha256": "478dfeee8d467df6a031f29b1555f4d2c80f3962e34f811f6f54f9596ad5a2db"
+    },
+    {
+      "role": "engineering-harness-source",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMQEngineeringQualificationV1.cs",
+      "bytes": 36487,
+      "sha256": "5ea8e1d8d8efddfa3ac891258e68e56ba50a0b123374a9ad44e3ce8f44fc23f8"
+    },
+    {
+      "role": "cff-algorithm-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/CorrectedFullRecomputeFlowFieldPlanner.cs",
+      "bytes": 34279,
+      "sha256": "bdaa52bc93950ea6a1737a7629ec6ceda60370f6ebc489deb166e2eddc51f3e1"
+    },
+    {
+      "role": "idff-algorithm-source",
+      "relativePath": "Assets/_Scripts/Research/Algorithms/IncrementalDynamicFlowFieldPlanner.cs",
+      "bytes": 46884,
+      "sha256": "63aa0792bd0935d1e98158278580cf2ece5980cf3e52ef7e9adb16bbcddc7638"
+    },
+    {
+      "role": "navigation-grid-source",
+      "relativePath": "Assets/_Scripts/Research/Grid/ResearchNavigationGrid.cs",
+      "bytes": 10018,
+      "sha256": "4d147321f9ccc4fb6da64265ceeec28f372542531fa72482b2eced8cdee2f582"
+    },
+    {
+      "role": "navigation-contract-source",
+      "relativePath": "Assets/_Scripts/Research/Navigation/NavigationContracts.cs",
+      "bytes": 5661,
+      "sha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+    },
+    {
+      "role": "gate13r-external-freeze-receipt",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/external-freeze-receipt.v1.json",
+      "bytes": 1235,
+      "sha256": "6b67f820b5c841d99ec915a2966a24bb48535047753fa95fe828cc0343718814"
+    },
+    {
+      "role": "gate13r-terminal-receipt",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/terminal-receipt.v1.json",
+      "bytes": 1917,
+      "sha256": "c3eb67b53c28ed9a1d7a1d340f7f49230789af46c8fba8c445d9088ca60dec6e"
+    },
+    {
+      "role": "gate13r-input-inventory",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/input-inventory.v1.json",
+      "bytes": 8404,
+      "sha256": "e6f88d922e4a27a0f4e5cdfb56000f7d8d03a9f602c406ffd265044d2c30c92d"
+    },
+    {
+      "role": "gate13r-topology-snapshot",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/topology-snapshot.v1.json",
+      "bytes": 15941,
+      "sha256": "0dbcb5d141ec3fe5545997b1591140d26625748315ed90bd022222a179193a72"
+    },
+    {
+      "role": "gate13r-affinity-plans",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/gate13r-mq-qualification-attempt-001/output/affinity-plans.v1.json",
+      "bytes": 29705,
+      "sha256": "7f45ab8e5042081d489b19b0640c5c688e1288b746a877cfe31b1e81745262a8"
+    },
+    {
+      "role": "unity-project-version",
+      "relativePath": "ProjectSettings/ProjectVersion.txt",
+      "bytes": 89,
+      "sha256": "48aa38463f4a9877772b9643daa63322b4dbdd55a69848006ec6bec8cc0b35ef"
+    },
+    {
+      "role": "unity-package-manifest",
+      "relativePath": "Packages/manifest.json",
+      "bytes": 1727,
+      "sha256": "be4565037805fd7142d6115301fa3289e6eaf0881047199c91db18c4dbf788c0"
+    },
+    {
+      "role": "unity-package-lock",
+      "relativePath": "Packages/packages-lock.json",
+      "bytes": 14202,
+      "sha256": "299d047edf56257cf99e16f273117dabf0b2c814493618cd5381035aab8067d5"
+    },
+    {
+      "role": "managed-only-compile-readiness-log",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-compile-readiness-attempt-003/unity-compile.log",
+      "bytes": 63306,
+      "sha256": "3cb283e4243b0a87a8747525f705479904a0a9b573cbcbfc0e2763f413e1c14f"
+    },
+    {
+      "role": "managed-only-compile-readiness-terminal",
+      "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/engineering-compile-readiness-attempt-003/compile-readiness-terminal.v1.json",
+      "bytes": 1833,
+      "sha256": "1fd7a6fdfefc0c60ed76fb574142208390577a159faac533c86155f62bc6d4a7"
+    }
+  ],
+  "createdAtUtc": "2026-10-21T05:04:49.5002069Z"
+}

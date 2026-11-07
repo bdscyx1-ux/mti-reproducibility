@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "failureId": "gate13-r2-pre-pilot-audit-attempt3-start-process-wait-hang-v1",
+  "failedAt": "2026-10-06T14:13:39.7175916+08:00",
+  "phase": "after-successful-negative-fixture-before-audit-summary-and-before-pilot",
+  "classification": "pre-pilot-audit-wrapper-wait-failure",
+  "message": "The expected Unity failure completed and Unity exited, but Windows PowerShell Start-Process -Wait remained blocked after the owned process no longer existed. The audit wrapper was interrupted without touching pilot/formal roots.",
+  "provenanceV3": {
+    "relativePath": "Research/Gate13_ProcessReuse_Provenance.v3.json",
+    "sha256": "7b020377c57c03e85caa90a43ea0f9d65a415fc5924c806aede0373077ee5fd2"
+  },
+  "negativeFixture": {
+    "planRelativePath": "Research/Verification/Gate13R2_NegativeBlockFixture.v1.block-plan.json",
+    "planSha256": "d07df17d467342de94e09eab8e7af84d11290fb6ff3862a8c926c02ba48fba3f",
+    "unityLogRelativePath": "Research/Verification/Gate13R2_NegativeBlockFixture.v1.Unity.log",
+    "unityLogSha256": "270a3d3ec806b6c07086c1b8c932c4f46a92ac608e1d2377c5c450f3f4e4b8ab",
+    "failureSha256": "3c108becef5a9e059558e9cb646562ebbc82dc135c0d8c3d044fbb73638126c4",
+    "checkpointSha256": "c35ef97b835b615afff2ae1068c7feaaa36dbd87e7fd9d6c2c65cfadd988f8b0",
+    "completedSampleCount": 1,
+    "failedPosition": 2,
+    "laterPositionsExecuted": false,
+    "sampleCompletionMarkerCount": 1,
+    "blockManifestExists": false,
+    "checkpointStatus": "failed-no-auto-retry",
+    "automaticRetryAttempted": false,
+    "automaticResumeAttempted": false,
+    "verdict": "EXPECTED-FAIL-CLOSED-EVIDENCE-VALID-DO-NOT-RERUN"
+  },
+  "evidenceState": {
+    "prePilotAuditSummaryCreated": false,
+    "processReusePilotRootCreated": false,
+    "processReuseFormalRootCreated": false,
+    "unityProcessCountAfterInterruption": 0,
+    "staleUnityLockfileObserved": true
+  },
+  "automaticRetryAttempted": false,
+  "automaticResumeAttempted": false,
+  "formalCampaign": false,
+  "formalExecutionAuthorized": false,
+  "disposition": "SUPERSEDED-BEFORE-PILOT-BY-V4-PROVENANCE; REUSE-VALID-NEGATIVE-FIXTURE-WITHOUT-RERUN"
+}

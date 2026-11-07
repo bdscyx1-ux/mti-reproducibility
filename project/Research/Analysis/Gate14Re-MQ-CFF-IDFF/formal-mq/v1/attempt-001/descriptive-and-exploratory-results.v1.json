@@ -1,0 +1,165 @@
+{
+  "algorithmRankingOrWinner": false,
+  "causalCcdAttribution": false,
+  "crossAlgorithmInteractions": [
+    {
+      "contrast": "C-FF minus IDFF corresponding block estimand",
+      "role": "exploratory estimate and ordinary interval only; no ranking or winner inference",
+      "summary": {
+        "degreesOfFreedom": 35,
+        "geometricEstimate": 0.9825268944156392,
+        "meanLogEstimate": -0.01762756216233454,
+        "n": 36,
+        "ordinaryTwoSided95CiGeometric": [
+          0.9487098312516832,
+          1.0175493775334774
+        ],
+        "ordinaryTwoSided95CiLog": [
+          -0.05265228977025273,
+          0.017397165445583646
+        ],
+        "sampleStandardDeviationLog": 0.10351585879900826,
+        "standardErrorLog": 0.017252643133168044
+      },
+      "topology": "LARGE_L3_CCD"
+    },
+    {
+      "contrast": "C-FF minus IDFF corresponding block estimand",
+      "role": "exploratory estimate and ordinary interval only; no ranking or winner inference",
+      "summary": {
+        "degreesOfFreedom": 35,
+        "geometricEstimate": 0.9803236807384643,
+        "meanLogEstimate": -0.01987247538226687,
+        "n": 36,
+        "ordinaryTwoSided95CiGeometric": [
+          0.9473459611085303,
+          1.0144493759091586
+        ],
+        "ordinaryTwoSided95CiLog": [
+          -0.05409092927008177,
+          0.01434597850554803
+        ],
+        "sampleStandardDeviationLog": 0.10113291045754295,
+        "standardErrorLog": 0.01685548507625716
+      },
+      "topology": "HIGH_FREQUENCY_CCD"
+    },
+    {
+      "contrast": "C-FF minus IDFF corresponding block estimand",
+      "role": "exploratory estimate and ordinary interval only; no ranking or winner inference",
+      "summary": {
+        "degreesOfFreedom": 35,
+        "geometricEstimate": 0.9572768027711608,
+        "meanLogEstimate": -0.04366268925577812,
+        "n": 36,
+        "ordinaryTwoSided95CiGeometric": [
+          0.895281010726713,
+          1.0235656359782919
+        ],
+        "ordinaryTwoSided95CiLog": [
+          -0.11061763152260393,
+          0.023292253011047682
+        ],
+        "sampleStandardDeviationLog": 0.19788586016073953,
+        "standardErrorLog": 0.032980976693456586
+      },
+      "topology": "DUAL_CCD_BALANCED"
+    }
+  ],
+  "schema": "gate14re-mq-formal-descriptive-and-exploratory-results-v1",
+  "stDirectVersusMqW1": [
+    {
+      "algorithmId": "C-FF",
+      "estimand": "log(MQ-W1 batchWallSeconds / ST-direct batchWallSeconds)",
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "role": "descriptive implementation-overhead sentinel only",
+      "summary": {
+        "degreesOfFreedom": 35,
+        "geometricEstimate": 1.0003665473839545,
+        "meanLogEstimate": 0.00036648022187363305,
+        "n": 36,
+        "ordinaryTwoSided95CiGeometric": [
+          0.9989183388617646,
+          1.001816855485101
+        ],
+        "ordinaryTwoSided95CiLog": [
+          -0.0010822465558314423,
+          0.0018152069995787082
+        ],
+        "sampleStandardDeviationLog": 0.0042817234223217005,
+        "standardErrorLog": 0.0007136205703869501
+      },
+      "topology": "LARGE_L3_CCD"
+    },
+    {
+      "algorithmId": "C-FF",
+      "estimand": "log(MQ-W1 batchWallSeconds / ST-direct batchWallSeconds)",
+      "opaqueAlgorithmSlot": "OPAQUE-A",
+      "role": "descriptive implementation-overhead sentinel only",
+      "summary": {
+        "degreesOfFreedom": 35,
+        "geometricEstimate": 0.9992403885219343,
+        "meanLogEstimate": -0.0007599001290487887,
+        "n": 36,
+        "ordinaryTwoSided95CiGeometric": [
+          0.9966819064106001,
+          1.0018054382559693
+        ],
+        "ordinaryTwoSided95CiLog": [
+          -0.00332361066943971,
+          0.001803810411342133
+        ],
+        "sampleStandardDeviationLog": 0.0075770667304387316,
+        "standardErrorLog": 0.001262844455073122
+      },
+      "topology": "HIGH_FREQUENCY_CCD"
+    },
+    {
+      "algorithmId": "IDFF",
+      "estimand": "log(MQ-W1 batchWallSeconds / ST-direct batchWallSeconds)",
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "role": "descriptive implementation-overhead sentinel only",
+      "summary": {
+        "degreesOfFreedom": 35,
+        "geometricEstimate": 1.0013516315674695,
+        "meanLogEstimate": 0.001350718935791132,
+        "n": 36,
+        "ordinaryTwoSided95CiGeometric": [
+          0.996978144661478,
+          1.0057443038365699
+        ],
+        "ordinaryTwoSided95CiLog": [
+          -0.0030264303623969875,
+          0.0057278682339792514
+        ],
+        "sampleStandardDeviationLog": 0.012936699287590872,
+        "standardErrorLog": 0.002156116547931812
+      },
+      "topology": "LARGE_L3_CCD"
+    },
+    {
+      "algorithmId": "IDFF",
+      "estimand": "log(MQ-W1 batchWallSeconds / ST-direct batchWallSeconds)",
+      "opaqueAlgorithmSlot": "OPAQUE-B",
+      "role": "descriptive implementation-overhead sentinel only",
+      "summary": {
+        "degreesOfFreedom": 35,
+        "geometricEstimate": 0.9997907383506711,
+        "meanLogEstimate": -0.00020928354760287528,
+        "n": 36,
+        "ordinaryTwoSided95CiGeometric": [
+          0.9977972481785653,
+          1.0017882112989105
+        ],
+        "ordinaryTwoSided95CiLog": [
+          -0.0022051814477930904,
+          0.00178661435258734
+        ],
+        "sampleStandardDeviationLog": 0.0058988919921426864,
+        "standardErrorLog": 0.0009831486653571143
+      },
+      "topology": "HIGH_FREQUENCY_CCD"
+    }
+  ],
+  "studyId": "Gate14Re-MQ-CFF-IDFF"
+}

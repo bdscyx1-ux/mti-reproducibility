@@ -1,0 +1,43 @@
+{
+  "status": "EXACT_DETERMINISTIC_REPLAY_AND_INDEPENDENT_VARIANCE_CHECK",
+  "start_utc": "2026-11-03T05:19:22.410499+00:00",
+  "end_utc": "2026-11-03T05:19:24.150774+00:00",
+  "elapsed_seconds": 1.7396231000002444,
+  "exit_code": 0,
+  "hard_timeout_seconds": 600,
+  "csv_files_exact": 7,
+  "numeric_json_files_exact": 5,
+  "independent_matrix_checks": [
+    {
+      "outcome": "D1_GEOMETRIC_MEAN",
+      "independent_cr1_se": 0.029055975865534,
+      "main_cr1_se": 0.02905597586553665,
+      "frozen_model_se_matched": true
+    },
+    {
+      "outcome": "D1_NEAREST_RANK_P95",
+      "independent_cr1_se": 0.029209659346773456,
+      "main_cr1_se": 0.029209659346767686,
+      "frozen_model_se_matched": true
+    },
+    {
+      "outcome": "D2",
+      "independent_cr1_se": 0.02989966460198759,
+      "main_cr1_se": 0.029899664601985995,
+      "frozen_model_se_matched": true
+    },
+    {
+      "outcome": "D3",
+      "independent_cr1_se": 0.01582013684597537,
+      "main_cr1_se": 0.01582013684597557,
+      "frozen_model_se_matched": true
+    },
+    {
+      "outcome": "D4",
+      "independent_cr1_se": 0.0013145738839999198,
+      "main_cr1_se": 0.0013145738839987068,
+      "frozen_model_se_matched": true
+    }
+  ],
+  "source_files_unchanged": 18
+}

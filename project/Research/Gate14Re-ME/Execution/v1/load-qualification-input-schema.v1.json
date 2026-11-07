@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-qualification-input-bundle-v1",
+  "title": "Gate14Re-ME load-qualification input bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "studyId",
+    "protocolId",
+    "inputId",
+    "superblockId",
+    "designRegion",
+    "seed",
+    "gridEdge",
+    "agentCount",
+    "changedCellCount",
+    "changeTopology",
+    "graphProfile",
+    "sameTickAtomicPartitions",
+    "contextStratumId",
+    "connectivity",
+    "allowDiagonalCornerCutting",
+    "defaultTraversalCost",
+    "initialCellOverrides",
+    "goal",
+    "starts",
+    "eventGroups"
+  ],
+  "properties": {
+    "schema": {"const": "gate14re-me-qualification-input-bundle-v1"},
+    "studyId": {"const": "Gate14Re-ME"},
+    "protocolId": {"const": "gate14re-me-load-qualification-v1"},
+    "inputId": {"type": "string", "minLength": 1},
+    "superblockId": {"type": "string", "minLength": 1},
+    "designRegion": {"enum": ["core", "stress"]},
+    "seed": {"type": "integer"},
+    "gridEdge": {"enum": [64, 128, 256]},
+    "agentCount": {"enum": [8, 32, 128, 512]},
+    "changedCellCount": {"enum": [1, 9, 81, 225]},
+    "changeTopology": {"enum": ["compact", "dispersed", "bottleneck"]},
+    "graphProfile": {"enum": ["four_way_weighted_dense", "eight_way_uniform_sparse"]},
+    "sameTickAtomicPartitions": {"enum": [1, 4, 16]},
+    "contextStratumId": {"type": "string", "minLength": 1},
+    "connectivity": {"enum": [4, 8]},
+    "allowDiagonalCornerCutting": {"type": "boolean"},
+    "defaultTraversalCost": {"type": "number", "exclusiveMinimum": 0},
+    "initialCellOverrides": {"type": "array", "items": {"$ref": "#/$defs/cellState"}},
+    "goal": {"$ref": "#/$defs/coordinate"},
+    "starts": {"type": "array", "minItems": 8, "maxItems": 512, "items": {"$ref": "#/$defs/coordinate"}},
+    "eventGroups": {"type": "array", "minItems": 24, "maxItems": 24, "items": {"$ref": "#/$defs/eventGroup"}}
+  },
+  "$defs": {
+    "coordinate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {"x": {"type": "integer"}, "y": {"type": "integer"}}
+    },
+    "cellState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "isWalkable", "traversalCost"],
+      "properties": {
+        "x": {"type": "integer"},
+        "y": {"type": "integer"},
+        "isWalkable": {"type": "boolean"},
+        "traversalCost": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "atomicPartition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["partitionIndex", "changes"],
+      "properties": {
+        "partitionIndex": {"type": "integer", "minimum": 0, "maximum": 15},
+        "changes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/cellState"}}
+      }
+    },
+    "eventGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eventGroupId", "eventGroupIndex", "cycleIndex", "phase", "atomicPartitions"],
+      "properties": {
+        "eventGroupId": {"type": "string", "minLength": 1},
+        "eventGroupIndex": {"type": "integer", "minimum": 0, "maximum": 23},
+        "cycleIndex": {"type": "integer", "minimum": 0, "maximum": 5},
+        "phase": {"enum": ["block", "unblock_or_restore", "increase_cost", "decrease_or_restore_cost"]},
+        "atomicPartitions": {"type": "array", "minItems": 1, "maxItems": 16, "items": {"$ref": "#/$defs/atomicPartition"}}
+      }
+    }
+  },
+  "semanticChecksOutsideJsonSchema": [
+    "starts length equals agentCount and all starts are unique, walkable and distinct from goal",
+    "every event group has exactly changedCellCount unique changed cells and exactly sameTickAtomicPartitions partitions",
+    "event index, cycle and four-phase order are exact",
+    "block/increase groups and their restore groups are byte-semantic inverses",
+    "algorithm-neutral Dijkstra oracle establishes the frozen affected-agent geometry gates",
+    "all 162 input bundles must pass before any algorithm lane may run"
+  ],
+  "authorizationBoundary": {
+    "schemaFrozen": true,
+    "inputBundlesGenerated": 0,
+    "inputGenerationAuthorized": false
+  }
+}

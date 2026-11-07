@@ -1,0 +1,31 @@
+{
+    "schemaVersion":  1,
+    "diagnosisKind":  "gate13r-48h-three-lane-v1-live-log-file-share-diagnosis",
+    "createdAtUtc":  "2026-10-08T08:50:26.1325753Z",
+    "terminalCheckpointSha256":  "218eeab50d60a5dc4ed0ad73129ba68846f5def66fce7ee724935c78a9f9d9b0",
+    "primaryFailure":  "The block wrapper used System.IO.File.ReadAllText while Unity retained an incompatible open handle on its live -logFile. The wrapper therefore observed an empty string and timed out despite successful serial assignment and method-ready evidence.",
+    "unityLicenseOutcome":  "SERIAL-ASSIGNMENT-SUCCEEDED",
+    "logFacts":  [
+                     {
+                         "lineNumber":  16,
+                         "classification":  "TRANSIENT-DIAGNOSTIC",
+                         "text":  "Access token is unavailable; failed to update"
+                     },
+                     {
+                         "lineNumber":  21,
+                         "classification":  "SUCCESS",
+                         "text":  "Serial number assigned to: REDACTED"
+                     }
+                 ],
+    "methodReadyPresent":  true,
+    "planningWorkloadStarted":  false,
+    "secondaryFailure":  "The failure-evidence enumerator used the Windows PowerShell 5.1-incompatible shorthand Where-Object Name -ne\u003cvalue\u003e, so the in-root partial manifest and failure receipt were not written. Independent external evidence was written create-new instead.",
+    "requiredProspectiveRepair":  [
+                                      "Use a FileStream/StreamReader opened with FileShare.ReadWrite | FileShare.Delete for live Unity log inspection.",
+                                      "Use script-block Where-Object syntax in all failure paths.",
+                                      "Create a new strict-serial version; never retry, resume, overwrite, or reinterpret three-lane v1."
+                                  ],
+    "pilotStarted":  false,
+    "formalCampaign":  false,
+    "passedDiagnosis":  true
+}

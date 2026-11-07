@@ -1,0 +1,126 @@
+{
+  "bootstrap": {
+    "byteIdentical": true,
+    "first95Ci": [
+      -0.0036875,
+      0.00271875
+    ],
+    "replicates": 20000,
+    "second95Ci": [
+      -0.0036875,
+      0.00271875
+    ],
+    "seed": 13012026
+  },
+  "checkCount": 17,
+  "checks": [
+    {
+      "expected": "PASS",
+      "expectedReasonCode": null,
+      "id": "legal-sequential-pid-reuse",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "PID-LIFETIME-OVERLAP",
+      "id": "illegal-overlapping-pid-reuse",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "DUPLICATE-OS-PROCESS-IDENTITY",
+      "id": "duplicate-os-process-identity",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "DUPLICATE-BLOCK-EVIDENCE-IDENTITY",
+      "id": "duplicate-block-evidence-identity",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "PROCESS-IDENTITY-MULTIPLE-BLOCKS",
+      "id": "one-process-identity-multiple-blocks",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "BLOCK-MULTIPLE-PROCESS-IDENTITIES",
+      "id": "one-block-multiple-process-identities",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "PROCESS-START-MISSING",
+      "id": "missing-process-start",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "PROCESS-START-NON-UTC",
+      "id": "non-utc-process-start",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "PROCESS-START-MALFORMED",
+      "id": "malformed-process-start",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "PROCESS-START-FUTURE",
+      "id": "future-process-start",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "PROCESS-TIME-ORDER-IMPOSSIBLE",
+      "id": "impossible-process-time-order",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "SAMPLE-BLOCK-PID-MISMATCH",
+      "id": "sample-block-pid-mismatch",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "DUPLICATE-RUN-ID",
+      "id": "duplicate-run-id",
+      "passed": true
+    },
+    {
+      "expected": null,
+      "expectedReasonCode": "DUPLICATE-SCHEDULE-KEY",
+      "id": "duplicate-schedule-key",
+      "passed": true
+    },
+    {
+      "expected": "PASS",
+      "expectedReasonCode": null,
+      "id": "bootstrap-20000-deterministic",
+      "passed": true
+    },
+    {
+      "expected": "PASS",
+      "expectedReasonCode": null,
+      "id": "frozen-v1-self-test",
+      "passed": true
+    },
+    {
+      "expected": "PASS",
+      "expectedReasonCode": null,
+      "id": "frozen-v4-self-test",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "passedCheckCount": 17,
+  "realPilotMetricValuesRead": false,
+  "schemaVersion": 1,
+  "testKind": "gate13r-pr1b-v4-composite-process-identity-synthetic-validation-v1",
+  "unityInvoked": false
+}

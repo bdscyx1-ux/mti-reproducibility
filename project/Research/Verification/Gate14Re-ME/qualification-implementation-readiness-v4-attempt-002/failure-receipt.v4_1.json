@@ -1,0 +1,33 @@
+{
+  "schema": "gate14re-me-qualification-implementation-readiness-failure-v4.1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-implementation-readiness-v4-attempt-002",
+  "status": "FAIL_CLOSED_UNITY_DID_NOT_NATURALLY_EXIT_WITHIN_300_SECONDS",
+  "phase": "ALGORITHM_FREE_COMPILE_WITH_BURST_COMPLETION_GUARD",
+  "observed": {
+    "runnerV4Compiled": true,
+    "readinessGuardCompiled": true,
+    "csharpCompilerErrorCount": 0,
+    "burstCompletionReceiptPass": true,
+    "burstCompletionElapsedMilliseconds": 914,
+    "naturalExitWithinLimit": false,
+    "stuckChildClass": "Unity.ILPP.Runner plus UnityAutoQuitter remained live after the receipt and shutdown sequence",
+    "unityProcessId": 119792,
+    "forcedTerminationAfterFailureClassification": true,
+    "unityExitCodeAfterForcedTermination": -1
+  },
+  "diagnosis": "The source compiled and Burst's current compilation predicate became stably done, but the source-triggered IL post-processing process did not drain; an internal PASS receipt alone is insufficient without natural process exit.",
+  "forwardRepair": "Perform the next readiness check in the now-compiled cache state, using the same guard and no source edits between attempts. This distinguishes first-import ILPP teardown from executable code defects.",
+  "boundaries": {
+    "measuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationProcessesExecuted": 0,
+    "algorithmLanesExecuted": 0,
+    "qualificationObservationsGenerated": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false,
+    "sameAttemptRetryPermitted": false
+  },
+  "failedAtUtc": "2026-10-19T12:18:33.947Z"
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "diagnosisKind": "gate13r-serial-10pct-formal-preparation-v1-storage-gate-diagnosis",
+  "recordedDate": "2026-10-08",
+  "status": "NONEXECUTING-PREPARATION-V1-REJECTED",
+  "failure": {
+    "classification": "reused-module-hardcoded-legacy-storage-threshold-and-unpropagated-child-result",
+    "legacyThresholdBytes": 188047724816,
+    "serial10pctThresholdBytes": 86835248752,
+    "storageSubresultError": "minimum-launch-threshold-changed",
+    "storageSubresultPassed": false,
+    "outerValidationIncorrectlyPassed": true,
+    "cause": "The mechanically derived v1 orchestrator reused Gate13RFormalPreparationV1.psm1. Test-G13RStorageGate in that frozen module requires the old 5% threshold, while the derived orchestrator supplied the new serial 10% threshold. The derived orchestrator recorded but did not promote the failed storage subresult.",
+    "unityLaunched": false,
+    "formalRootCreated": false,
+    "formalExecutionReceiptCreated": false,
+    "formalTimingCreated": false
+  },
+  "disposition": {
+    "v1EligibleForFormalExecution": false,
+    "v1MayBeReinterpretedAsPassed": false,
+    "v1MayBeOverwritten": false,
+    "requiredRepair": "Create versioned v2 module and scripts, bind the new byte threshold in the module, and require storageSnapshot.passed before validation-only success."
+  },
+  "v1Bindings": {
+    "configSha256": "0dff1a3c7f684d65c5012fa02cb8c42bd5ab7c445a8ee160d91a05ba21a6b244",
+    "scheduleSha256": "e590392889e10fda3dd6a6390236a4822e987a3ffe751f141b2485ca87b62fdd",
+    "scheduleManifestSha256": "9284007ae5d7bc5019222b6dc2ddf9afb86bec32a68a88da1ed6a503025bdc7c",
+    "provenanceSha256": "6b91478060e6ea0aee68c3b228a0b9cada411575385992d72465550857b79ad4",
+    "orchestratorValidationSummarySha256": "6763d9660b77d501d1cc7e3c6724453ca36fc9fd9b9159a4a30a6d3882bcfa67"
+  }
+}

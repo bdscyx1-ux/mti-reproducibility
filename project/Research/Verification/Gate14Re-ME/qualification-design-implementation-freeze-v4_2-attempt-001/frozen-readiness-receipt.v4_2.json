@@ -1,0 +1,105 @@
+{
+  "schema": "gate14re-me-qualification-frozen-readiness-receipt-v4.2",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_FROZEN_V4_2_V4_3_READ_ONLY_READINESS_FRESH_EXECUTION_AUTHORIZED_SEPARATELY",
+  "implementationManifestRelativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-current-implementation-manifest.v4_2.json",
+  "implementationManifestSha256": "ae9c6bc5641b36808d896b5cfcc509cb835a55b8c667212f7af5787fcf6b2a00",
+  "implementationManifestArtifacts": 39,
+  "frozenSourceInventoryRelativePath": "Research/Verification/Gate14Re-ME/qualification-design-implementation-freeze-v4_2-attempt-001/frozen-source-inventory.v4_2.jsonl",
+  "frozenSourceInventorySha256": "033d5a7a082734dd9467deec3a0f644c66d11be6b36975a468d600b1ec484dfd",
+  "contractHashes": {
+    "acquisition": "4498b9bf0b8d8e3cd92c6ddc65a6dbef1a61ec22f88acc6c63e52694cdeeaf7f",
+    "acceptance": "dfa6ded73db0ff97dca28880b81882f1a4babd44ea52e7ed963f338fb2dd0c1f"
+  },
+  "qualificationDesign": {
+    "G": [
+      64,
+      96,
+      128
+    ],
+    "N": [
+      32,
+      64,
+      128
+    ],
+    "F": [
+      1,
+      9,
+      25,
+      81
+    ],
+    "coreSuperblocks": 108,
+    "stressSuperblocks": 18,
+    "totalSuperblocks": 126,
+    "algorithmLanes": 756,
+    "oracleBatchProcesses": 6,
+    "plannedFreshProcesses": 775,
+    "identityBindingSha256": "77b88a23a559642d455edf0d4caad9a1f9c06b7ddf33703b8fd100f4a1878bd2",
+    "oracleBatchBalance": [
+      {
+        "batchIndex": 0,
+        "inputs": 21,
+        "core": 18,
+        "stress": 3
+      },
+      {
+        "batchIndex": 1,
+        "inputs": 21,
+        "core": 18,
+        "stress": 3
+      },
+      {
+        "batchIndex": 2,
+        "inputs": 21,
+        "core": 18,
+        "stress": 3
+      },
+      {
+        "batchIndex": 3,
+        "inputs": 21,
+        "core": 18,
+        "stress": 3
+      },
+      {
+        "batchIndex": 4,
+        "inputs": 21,
+        "core": 18,
+        "stress": 3
+      },
+      {
+        "batchIndex": 5,
+        "inputs": 21,
+        "core": 18,
+        "stress": 3
+      }
+    ]
+  },
+  "technicalRepair": {
+    "priorFailedAttempt": "load-qualification-execution-attempt-010",
+    "failureSealSha256": "4101192a424d33ac227d49fa61ca6580a2d01d381984ed92901f1f9ce151af6d",
+    "versionOwnedGeometryValidatorSha256": "08e2b067e667a11a0cae2f6162721bbd3b59c2e32ce806d247bd10aa63487eb9",
+    "scientificDesignChanged": false
+  },
+  "compileReadiness": {
+    "terminalReceiptSha256": "6d590303a6b464831648c6993ff4f340cb99b5dfaac4bf17e6e9bf8c44e4e6bc",
+    "freezeManifestSha256": "6455c1eecd88d4bd826ba862ca3a44d4bd575c2df8627b0f849248303363f646",
+    "unityNaturalExitCode": 0,
+    "compilerErrors": 0,
+    "burstCurrentCompilationDone": true
+  },
+  "hostReadiness": {
+    "activeUnityProcesses": 0,
+    "freeStorageBytes": 206112964608,
+    "requiredStorageBytes": 34359738368,
+    "storageHeadroomPassed": true
+  },
+  "authorizationBoundary": {
+    "freshQualificationAttemptAuthorized": true,
+    "sameAttemptRetryAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingOrWinnerAuthorized": false,
+    "migrationPackageBuildAuthorized": false
+  },
+  "completedAtUtc": "2026-10-19T14:33:40.084090Z"
+}

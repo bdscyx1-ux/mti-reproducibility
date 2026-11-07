@@ -1,0 +1,78 @@
+{
+  "candidate": {
+    "B36ConservativeHours": 125.49,
+    "B36PlanningDays": 6.275,
+    "B36PlanningHours": 150.588,
+    "B36PlanningReductionVersusOriginalPercent": 46.35,
+    "B36PointHours": 107.13,
+    "FLevels": [
+      1,
+      9,
+      81,
+      100
+    ],
+    "FMaximum": 100,
+    "GLevels": [
+      64,
+      128,
+      160
+    ],
+    "GMaximum": 160,
+    "NLevels": [
+      8,
+      32,
+      128,
+      192
+    ],
+    "NMaximum": 192,
+    "belowSevenDayGate": true,
+    "candidateId": "STRONG",
+    "conservativeHoursPerB": 3.48584,
+    "coreCells": 48,
+    "coreCellsWithAtLeastOneChangedMaximum": 30,
+    "highCornerStructuralProxyRatioToOriginal": 0.065104,
+    "highCornerStructuralProxyReductionPercent": 93.49,
+    "lanesPerB": 288,
+    "planningHoursPerBWith20PercentHeadroom": 4.183008,
+    "pointHoursPerB": 2.975842,
+    "unchangedCoreCells": 18
+  },
+  "notAuthorizedByThisArtifact": [
+    "editing old frozen artifacts",
+    "starting a new qualification",
+    "starting formal ST, MQ, or MT",
+    "changing formal sample size or scientific endpoints"
+  ],
+  "preserved": {
+    "algorithmCount": 6,
+    "coreSeedsPerCell": 3,
+    "factorial": "3 x 4 x 4 = 48 core cells",
+    "lowerFLevels": [
+      1,
+      9,
+      81
+    ],
+    "lowerGLevels": [
+      64,
+      128
+    ],
+    "lowerNLevels": [
+      8,
+      32,
+      128
+    ],
+    "stressContextStrata": 18,
+    "strictSerialFreshProcessExecution": true
+  },
+  "redesignAttemptId": "gnf-load-redesign-v1-attempt-001",
+  "requiredBeforeExecution": [
+    "explicit user approval of the exact proposed G, N, and F values",
+    "new versioned scientific design and gate refreeze",
+    "new planning inputs, schedule, identity binding, manifests, and implementation hashes",
+    "read-only readiness validation",
+    "new qualification evidence, measured, and delivery roots starting at ordinal 0"
+  ],
+  "schema": "gate14re-me-recommended-gnf-design-v1",
+  "status": "PROPOSED_PENDING_USER_APPROVAL_AND_NEW_QUALIFICATION",
+  "studyId": "Gate14Re-ME"
+}

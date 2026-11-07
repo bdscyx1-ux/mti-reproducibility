@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "GATE13R-PR2-ATTEMPT3-AUDITABLE-STORAGE-RECLAMATION",
+  "authorizationId": "gate13r-pr2-attempt3-storage-reclamation-v1",
+  "issuedAtUtc": "2026-10-11T12:55:53.8303936Z",
+  "issuedAtAsiaShanghai": "2026-10-11T20:55:53.8303936+08:00",
+  "authorizedBy": "USER-EXPLICIT-IN-CURRENT-THREAD",
+  "exactUserAuthorizationZh": "授权对 Gate 13R-PR2 attempt 3 执行一次可审计的存储回收：先只读扫描并生成 `Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/campaigns` 的完整相对路径、文件大小、SHA-256 和 canonical tree manifest，生成删除前快照及版本化 storage-reclamation receipt；确认 attempt 3 observations 未被 attempt 4 复用或合并，并复核 attempt 4 全部关键绑定哈希后，只删除该 `campaigns` 目录。保留 `v3/_control`、`v3/_plans`、`partial-output-manifest.json`、attempt 3 status/receipt、failure checkpoint、attempt 4 contract、historical preservation baseline 及全部 attempt 4 raw/analysis artifacts。删除后重新验证保留文件哈希、目标目录缺失和实际释放空间，并生成最终删除收据。不得删除或修改其他 Gate 13R/Gate 14R 文件，不得启动 Unity、实验、统计分析或 Gate 15V-R；不得自动扩大删除范围。",
+  "soleDeletionTarget": {
+    "relativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/campaigns",
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3\\campaigns"
+  },
+  "authorizedActions": [
+    "READ-ONLY-FULL-TARGET-SCAN",
+    "GENERATE-CANONICAL-PATH-SIZE-SHA256-MANIFEST",
+    "GENERATE-PRE-DELETE-SNAPSHOT",
+    "VERIFY-ATTEMPT4-NO-REUSE-NO-MERGE",
+    "VERIFY-FROZEN-BINDING-HASHES",
+    "DELETE-SOLE-EXACT-CAMPAIGNS-DIRECTORY",
+    "VERIFY-PRESERVED-HASHES-TARGET-ABSENCE-AND-FREED-SPACE",
+    "GENERATE-FINAL-STORAGE-RECLAMATION-RECEIPT"
+  ],
+  "mustPreserve": [
+    "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_control",
+    "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_plans",
+    "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/partial-output-manifest.json",
+    "Research/Gate13R_PR2_Formal_Execution_Status.v3.json",
+    "Research/Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+    "Research/FormalRuns/Gate13R_RQAligned_S48H48/v3/_control/formal-failure-checkpoint.json",
+    "Research/Gate13R_PR2_Attempt4_Execution_Contract.v1.json",
+    "Research/Gate13R_PR2_Attempt4_Historical_Preservation_Baseline.v1.json",
+    "ALL-GATE13R-ATTEMPT4-RAW-AND-ANALYSIS-ARTIFACTS",
+    "ALL-OTHER-GATE13R-AND-GATE14R-FILES"
+  ],
+  "authorizationBoundary": {
+    "additionalDeletionTargetsAuthorized": false,
+    "gate13RAttempt4MutationAuthorized": false,
+    "gate14RMutationOrExecutionAuthorized": false,
+    "unityLaunchAuthorized": false,
+    "experimentOrStatisticalAnalysisAuthorized": false,
+    "gate15VRExecutionAuthorized": false,
+    "automaticScopeExpansionAuthorized": false
+  },
+  "expectedPreDeleteTarget": {
+    "fileCount": 87832,
+    "rawBytes": 25876073527,
+    "descendantReparsePointCount": 0
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 2,
+  "authorizationKind": "gate13r-pr2-s48-h48-formal-raw-acquisition-two-phase-user-authorization-v2",
+  "authorizationId": "gate13r-pr2-s48-h48-formal-raw-acquisition-two-phase-authorization-v2",
+  "authorizedAtLocalDate": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "status": "FROZEN-BEFORE-FORMAL-ROOT-AND-FORMAL-DATA",
+  "parentAuthorization": {
+    "relativePath": "Research/Gate13R_PR2_Formal_Execution_Authorization.v1.json",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_Formal_Execution_Authorization.v1.json",
+    "sha256": "c0b5e19a8ebdd7ce9bf971f575c92fcc9c2fae90fd83cdd9266f50ae874258df"
+  },
+  "supplementalAuthorization": {
+    "id": "gate13r-pr2-two-phase-supplemental-authorization-v1",
+    "relativePath": "Research/Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt",
+    "resolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_TwoPhaseCommit_Supplemental_Authorization.v1.txt",
+    "sha256": "4af69eb71362f89698d38760db335985a015af49f176dd7f81805cb6d2d4821a",
+    "userSuppliedCompleteTextInChat": true,
+    "runLedgerCheckpointClosedSequence": 4,
+    "runLedgerFileReferenceSequence": 5
+  },
+  "twoPhaseCommit": {
+    "id": "gate13r-pr2-raw-analysis-two-phase-commit-v1",
+    "amendmentRelativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+    "amendmentResolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Amendment.v1.json",
+    "amendmentSha256": "805200a362440918682317f3ecf4fdb35fa441a1459457700a0f5f2a43a113df",
+    "specificationRelativePath": "Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+    "specificationResolvedAbsolutePath": "H:/DDM_Final_Project/Research/Gate13R_PR2_RawAnalysis_TwoPhaseCommit_Specification.v1.md",
+    "specificationSha256": "1641c22ddcb788f46ee1b2956f3bf8c8e13312459b5c22b139396001823085a5",
+    "requiredRawTerminalState": "RAW-DATA-COMPLETE / ANALYSIS-PENDING / IMMUTABLE",
+    "postUnityAuditorToolFailureState": "UNITY-COLLECTION-COMPLETE / RAW-COMMIT-AUDIT-PENDING / NO-UNITY-RERUN",
+    "rawContractViolationState": "RAW-CONTRACT-VIOLATION / USER-DECISION-REQUIRED / NO-UNITY-RERUN",
+    "twoPhaseCommitRequired": true,
+    "ordinaryPostCollectionToolFailureMayRerunUnity": false,
+    "analysisFailureMayRerunUnity": false
+  },
+  "authorizedScope": {
+    "formalRawAcquisitionAttemptCount": 1,
+    "selectedDesign": "S48-H48",
+    "campaignCount": 74,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "strictSerial": true,
+    "maximumConcurrentUnityEditorProcesses": 1,
+    "rawDataCommitAuthorized": true,
+    "versionedReadOnlyRawCommitAuditRecoveryAuthorizedAfterAllUnityCompletes": true,
+    "formalStatisticalAnalysisAuthorized": false,
+    "gate14RAuthorized": false
+  },
+  "activeInputs": {
+    "readinessSha256": "669a5291ab2e219461ca9797696ba29bce32e198c11a983f0f1f31f3f7799fbc",
+    "configSha256": "87d7012af4e8e5b5e16cb64b50f41f1dcb5b1eebf5d7eba1425b29e0fa13dd5e",
+    "scheduleSha256": "df8802c34ef033dd2eb906f6a70e8c8fc594bdc0a386a48afe6c756789075dae",
+    "scheduleManifestSha256": "b5763f1540c0193199201cd6bf025c43443d5bd2e67cb8808e0a2b86ef91b724",
+    "storageWallClockPreflightSha256": "c474499e647d5ad32efe01d199ede187b61f004e9487b8278e44109258cd0435",
+    "preparationProvenanceSha256": "9e81530bcf6d32dd1792c8bd693d72988bef6f37e59a1ad154019ca228908e56",
+    "preparationSchemaSha256": "940bfca8cb3e677deadff2600471eeaec9e99ff6bab9a06a625a0f30365a9d1e"
+  },
+  "failurePolicy": {
+    "automaticUnityRetry": false,
+    "automaticUnityResume": false,
+    "measuredBlockTopUp": false,
+    "partialAttemptMerge": false,
+    "adaptiveStopping": false,
+    "provenRawContractViolationRequiresSeparateUserDecision": true
+  },
+  "formalRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate13R_RQAligned_S48H48/v1"
+}

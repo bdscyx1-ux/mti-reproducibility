@@ -1,0 +1,113 @@
+{
+  "studyId": "DDM-Revision-20261103-A",
+  "createdUtc": "2026-11-03T22:02:23.974362+00:00",
+  "blocks": 1536,
+  "algorithmSamples": 6144,
+  "scenarioCount": 32,
+  "geometricMeanP1_ms_per_event": {
+    "A*-R": 51.59185329938402,
+    "D*L": 57.85814537670822,
+    "C-FF": 10.782790052763513,
+    "IDFF": 8.718487056973043
+  },
+  "contrasts": [
+    {
+      "numerator": "C-FF",
+      "denominator": "A*-R",
+      "ratio": 0.20900179705101332,
+      "ci99_low": 0.11778436857555782,
+      "ci99_high": 0.37086203966472364,
+      "logSE": 0.22264180381049054,
+      "p_unadjusted_prespecified": 1.024701613377573e-12,
+      "test_direction": "numerator-lower-one-sided",
+      "p_two_sided_diagnostic": 2.049403226755146e-12,
+      "p_holm_5": 4.098806453510292e-12
+    },
+    {
+      "numerator": "C-FF",
+      "denominator": "D*L",
+      "ratio": 0.18636598153220973,
+      "ci99_low": 0.07963188356329325,
+      "ci99_high": 0.4361604613415671,
+      "logSE": 0.3301064329008594,
+      "p_unadjusted_prespecified": 1.7960135710140005e-07,
+      "test_direction": "numerator-lower-one-sided",
+      "p_two_sided_diagnostic": 3.592027142028001e-07,
+      "p_holm_5": 3.592027142028001e-07
+    },
+    {
+      "numerator": "IDFF",
+      "denominator": "A*-R",
+      "ratio": 0.16898960784332076,
+      "ci99_low": 0.0865166149385927,
+      "ci99_high": 0.33008096282209737,
+      "logSE": 0.2599165807885055,
+      "p_unadjusted_prespecified": 3.950243124203021e-12,
+      "test_direction": "numerator-lower-one-sided",
+      "p_two_sided_diagnostic": 7.900486248406042e-12,
+      "p_holm_5": 1.1850729372609062e-11
+    },
+    {
+      "numerator": "IDFF",
+      "denominator": "D*L",
+      "ratio": 0.1506872887163579,
+      "ci99_low": 0.09390388866630141,
+      "ci99_high": 0.24180744059894907,
+      "logSE": 0.18360492869393272,
+      "p_unadjusted_prespecified": 3.251222751789746e-25,
+      "test_direction": "numerator-lower-one-sided",
+      "p_two_sided_diagnostic": 6.502445503579492e-25,
+      "p_holm_5": 1.6256113758948729e-24
+    },
+    {
+      "numerator": "IDFF",
+      "denominator": "C-FF",
+      "ratio": 0.8085557647242319,
+      "ci99_low": 0.4669771492606062,
+      "ci99_high": 1.399988041607453,
+      "logSE": 0.21312333212315981,
+      "p_unadjusted_prespecified": 0.31871516501335434,
+      "test_direction": "two-sided",
+      "p_two_sided_diagnostic": 0.31871516501335434,
+      "p_holm_5": 0.31871516501335434
+    }
+  ],
+  "statusTotals": {
+    "A*-R": {
+      "planOperationCount": 593520,
+      "succeededPlanCount": 590448,
+      "noPathPlanCount": 3072,
+      "invalidPlanCount": 0,
+      "failedPlanCount": 0,
+      "budgetExceededPlanCount": 0
+    },
+    "D*L": {
+      "planOperationCount": 593520,
+      "succeededPlanCount": 590448,
+      "noPathPlanCount": 3072,
+      "invalidPlanCount": 0,
+      "failedPlanCount": 0,
+      "budgetExceededPlanCount": 0
+    },
+    "C-FF": {
+      "planOperationCount": 593520,
+      "succeededPlanCount": 590448,
+      "noPathPlanCount": 3072,
+      "invalidPlanCount": 0,
+      "failedPlanCount": 0,
+      "budgetExceededPlanCount": 0
+    },
+    "IDFF": {
+      "planOperationCount": 593520,
+      "succeededPlanCount": 590448,
+      "noPathPlanCount": 3072,
+      "invalidPlanCount": 0,
+      "failedPlanCount": 0,
+      "budgetExceededPlanCount": 0
+    }
+  },
+  "statusCountMismatchesAgainstAStar": [],
+  "analysis": "paired block log ratios; equal32campaign weights; normal reference andBonferroni99%individual intervals across5contrasts, Holm5; newacquisitiononly",
+  "interpretationBoundary": "fixedscenario matrix and frozenimplementations; failedqueries retainedandreported; nohistoricaltimingpooling",
+  "oracleVerification": true
+}

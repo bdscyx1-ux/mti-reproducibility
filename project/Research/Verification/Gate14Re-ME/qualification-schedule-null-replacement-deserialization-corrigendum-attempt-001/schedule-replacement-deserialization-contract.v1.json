@@ -1,0 +1,76 @@
+{
+  "schema": "gate14re-me-qualification-schedule-replacement-deserialization-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "attemptId": "qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001",
+  "status": "FROZEN_FORWARD_ONLY_CANDIDATE_UNITY_KNOWN_ANSWER_PENDING",
+  "contractVersion": 1,
+  "createdAtUtc": "2026-10-17T17:49:20.4187303Z",
+  "authoritativeInterpretation": {
+    "memberScope": "top-level schedule-row member named replacement",
+    "rawTokenInspectedBeforeJsonUtilityNormalization": true,
+    "memberMissing": "NO_REPLACEMENT",
+    "jsonNull": "NO_REPLACEMENT",
+    "completeObject": "PRESERVE_AND_APPLY_ALL_EXISTING_REPLACEMENT_VALIDATION",
+    "emptyObject": "FAIL_CLOSED",
+    "partialObject": "FAIL_CLOSED",
+    "nonObjectNonNullToken": "FAIL_CLOSED",
+    "duplicateTopLevelReplacementMember": "FAIL_CLOSED",
+    "malformedJson": "FAIL_CLOSED"
+  },
+  "implementationBindings": {
+    "runner": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+      "preRepairSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+      "candidateSha256": "e93cbf1ff3d0551daf927acca95b02dc839aa925275ba5d7a0c170b7c5206401",
+      "candidateBytes": 90914
+    },
+    "knownAnswerHarness": {
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEScheduleNullReplacementKnownAnswerV1.cs",
+      "sha256": "abad9cf6fdae640384c821e6ce555d2b5bcad88cb9ffa2aa50fecb0a95176448",
+      "bytes": 18100,
+      "metaRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEScheduleNullReplacementKnownAnswerV1.cs.meta",
+      "metaSha256": "ffa880566fbff3fa2b81f7f410bb2514d73209af35e565bd23ecfe5fec28da8c"
+    },
+    "oneShotLauncher": {
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-schedule-null-replacement-deserialization-corrigendum-attempt-001/Invoke-Gate14ReMEScheduleNullReplacementKnownAnswerV1.ps1",
+      "sha256": "5060067ee4656b0484ddc5d22c11985b3220f1eba48f3ec160c4186b8faf1137",
+      "bytes": 32273,
+      "powershellParseErrors": 0
+    }
+  },
+  "requiredKnownAnswerCases": [
+    {
+      "caseId": "replacement-null",
+      "expected": "NORMALIZED_TO_NO_REPLACEMENT"
+    },
+    {
+      "caseId": "replacement-member-omitted",
+      "expected": "NORMALIZED_TO_NO_REPLACEMENT"
+    },
+    {
+      "caseId": "complete-valid-replacement-object",
+      "expected": "PRESERVED_FOR_EXISTING_DOWNSTREAM_VALIDATION"
+    },
+    {
+      "caseId": "empty-replacement-object",
+      "expected": "FAIL_CLOSED_EMPTY_OR_INCOMPLETE_REPLACEMENT"
+    },
+    {
+      "caseId": "partial-replacement-object",
+      "expected": "FAIL_CLOSED_EMPTY_OR_INCOMPLETE_REPLACEMENT"
+    }
+  ],
+  "unchangedScientificContract": {
+    "scheduleChanged": false,
+    "inputBundlesChanged": false,
+    "sealedIdentityChanged": false,
+    "algorithmImplementationsChanged": false,
+    "instrumentDefinitionsChanged": false,
+    "outputSchemaChanged": false,
+    "loadQualificationDesignChanged": false,
+    "replacementGenerationAuthorized": false,
+    "existingDownstreamReplacementPathHashIdentityAndUniquenessValidationRetained": true
+  },
+  "activationBoundary": "This candidate contract does not authorize qualification execution. It becomes a frozen PASS contract only after the single Unity known-answer, compilation evidence, retained-evidence checks, and terminal receipt all pass."
+}

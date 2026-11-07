@@ -1,0 +1,315 @@
+{
+    "schemaVersion":  1,
+    "summaryKind":  "gate12r-validation-only-pre-pilot-audit-v3-plan-v3-upstream-canonical-reference",
+    "auditMode":  "validation-only-no-pilot-root",
+    "savedAtUtc":  "2026-10-07T15:11:20.0918092Z",
+    "pilotPlanSha256":  "498f0bac34f5ba98c946efab5577f1feed5631a4766fdd8817c74f445b150c98",
+    "provenanceSha256":  "6c0c2f0147769c39ecc6006c99aec2a51980ac07c2fff6dfdac82a69245de760",
+    "telemetryResultSha256":  "c43fa5e118860eb375eb3a04549539537df8f921310d98417b58a6e34859793e",
+    "checkCount":  59,
+    "checks":  [
+                   {
+                       "id":  "plan-hash",
+                       "passed":  true,
+                       "evidence":  "frozen Gate12R plan bytes"
+                   },
+                   {
+                       "id":  "bundle-hash",
+                       "passed":  true,
+                       "evidence":  "authorized Gate11R bundle bytes"
+                   },
+                   {
+                       "id":  "binding-pilotPlanV3",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Plan.v3.json"
+                   },
+                   {
+                       "id":  "binding-specification",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Specification.v1.md"
+                   },
+                   {
+                       "id":  "binding-testDesign",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_5pct_ProcessReuse_Pilot_Test_Design.v1.md"
+                   },
+                   {
+                       "id":  "binding-executionAuthorization",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_Execution_Authorization.v1.json"
+                   },
+                   {
+                       "id":  "binding-unityCommandV2",
+                       "passed":  true,
+                       "evidence":  "Assets/_Scripts/Research/Editor/Gate12RProcessReuseBatchCommandV2.cs"
+                   },
+                   {
+                       "id":  "binding-gate11Bundle",
+                       "passed":  true,
+                       "evidence":  "Research/FormalScenarios/Gate11R_5pct/v1/bundle-manifest.json"
+                   },
+                   {
+                       "id":  "binding-pilotPlanV3Derivation",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_PilotPlanV3_Derivation.v1.json"
+                   },
+                   {
+                       "id":  "binding-pilotPlanV3Generator",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/New-Gate12RPilotPlanV3.ps1"
+                   },
+                   {
+                       "id":  "binding-storageDiagnosis",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_PilotAttempt2_Storage_Feasibility_Diagnosis.v1.md"
+                   },
+                   {
+                       "id":  "binding-storageAmendment",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_Canonical_Input_Reference_Amendment.v1.json"
+                   },
+                   {
+                       "id":  "binding-storageTestDesign",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_Canonical_Input_Reference_Test_Design.v1.md"
+                   },
+                   {
+                       "id":  "binding-pilotAttempt1Preservation",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_PilotAttempt1_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "binding-pilotAttempt1PartialManifest",
+                       "passed":  true,
+                       "evidence":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v1/partial-output-manifest.json"
+                   },
+                   {
+                       "id":  "binding-pilotAttempt2Preservation",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_PilotAttempt2_Terminal_Preservation.v1.json"
+                   },
+                   {
+                       "id":  "binding-pilotAttempt2PartialManifest",
+                       "passed":  true,
+                       "evidence":  "Research/PilotRuns/Gate12R_ProcessReuse_5pct/v2/partial-output-manifest.json"
+                   },
+                   {
+                       "id":  "binding-failedPilotPreservationAuditorV2",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Test-Gate12RFailedPilotPreservationV2.ps1"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceModuleV1Failed",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12RCanonicalInputReference.psm1"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceModuleV2",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12RCanonicalInputReferenceV2.psm1"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceModuleV2Derivation",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_CanonicalInputReferenceV2_Derivation.v1.json"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceUnitV1Failure",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_CanonicalInputReference/v1/failure-receipt.json"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceUnitV3Summary",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_CanonicalInputReference/v3/summary.json"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceUnitV3Runner",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RCanonicalInputReferenceUnitTestsV3.ps1"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceFreshUnityBlockManifest",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/storage-reference-wrapper-v1/block/block-manifest.json"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceFreshUnityReceipt",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/storage-reference-wrapper-v1/block/canonical-input-reference-receipt.json"
+                   },
+                   {
+                       "id":  "binding-canonicalReferenceFreshUnityWrapperSummary",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Gate12R_ProcessReuse_5pct/storage-reference-wrapper-v1/block.summary.json"
+                   },
+                   {
+                       "id":  "binding-blockRunnerV4",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RProcessReuseBlockV4.ps1"
+                   },
+                   {
+                       "id":  "binding-blockRunnerV4Derivation",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_ProcessReuse_BlockRunnerV4_Derivation.v1.json"
+                   },
+                   {
+                       "id":  "binding-compileGateV3",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RCompileV3.ps1"
+                   },
+                   {
+                       "id":  "binding-staticGateV4",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RStaticUnitAuditV4.ps1"
+                   },
+                   {
+                       "id":  "binding-telemetryRunnerV3",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RTelemetryProbeV3.ps1"
+                   },
+                   {
+                       "id":  "binding-coldRunnerV3",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RColdReferenceV3.ps1"
+                   },
+                   {
+                       "id":  "binding-blockRegressionGateV5",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RBlockAndRegressionGatesV5.ps1"
+                   },
+                   {
+                       "id":  "binding-validationOnlyGateV3",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RValidationOnlyPrePilotAuditV3.ps1"
+                   },
+                   {
+                       "id":  "binding-pilotRunnerV5",
+                       "passed":  true,
+                       "evidence":  "Research/Run-Gate12RPilotV5.ps1"
+                   },
+                   {
+                       "id":  "binding-prePilotAttemptV6",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RPrePilotAttemptV6.ps1"
+                   },
+                   {
+                       "id":  "binding-wrapperDerivationAttempt1Failure",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_StorageReference_Wrapper_Derivation_Attempt1_Failure.v1.json"
+                   },
+                   {
+                       "id":  "binding-wrapperDerivationV2",
+                       "passed":  true,
+                       "evidence":  "Research/Gate12R_StorageReference_Wrapper_Derivation.v2.json"
+                   },
+                   {
+                       "id":  "binding-pilotAnalyzer",
+                       "passed":  true,
+                       "evidence":  "Research/Analyze-Gate12RPilot.ps1"
+                   },
+                   {
+                       "id":  "binding-postPilotAudit",
+                       "passed":  true,
+                       "evidence":  "Research/Verification/Run-Gate12RPostPilotReadinessAudit.ps1"
+                   },
+                   {
+                       "id":  "static-unit",
+                       "passed":  true,
+                       "evidence":  "assertions=308"
+                   },
+                   {
+                       "id":  "playable-mapping",
+                       "passed":  true,
+                       "evidence":  "12 pilot campaigns mapped to visualization-only assets"
+                   },
+                   {
+                       "id":  "unity-compile",
+                       "passed":  true,
+                       "evidence":  "1ecf686a3461c24ba309a97966d3fcacaf9b283be93c9de68101e44e0fe3b3c1"
+                   },
+                   {
+                       "id":  "psapi-cim-telemetry",
+                       "passed":  true,
+                       "evidence":  "c43fa5e118860eb375eb3a04549539537df8f921310d98417b58a6e34859793e"
+                   },
+                   {
+                       "id":  "positive-negative-repeatability-cold",
+                       "passed":  true,
+                       "evidence":  "entries=14"
+                   },
+                   {
+                       "id":  "retained-regression",
+                       "passed":  true,
+                       "evidence":  "63/63 file-scope regression"
+                   },
+                   {
+                       "id":  "pilot-root-absent",
+                       "passed":  true,
+                       "evidence":  "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate12R_ProcessReuse_5pct\\v3"
+                   },
+                   {
+                       "id":  "formal-root-absent",
+                       "passed":  true,
+                       "evidence":  "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_ProcessReuse_5pct\\v1"
+                   },
+                   {
+                       "id":  "unity-closed",
+                       "passed":  true,
+                       "evidence":  "no Unity processes"
+                   },
+                   {
+                       "id":  "lock-absent",
+                       "passed":  true,
+                       "evidence":  "project lock absent"
+                   },
+                   {
+                       "id":  "power-scheme",
+                       "passed":  true,
+                       "evidence":  "电源方案 GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (高性能)"
+                   },
+                   {
+                       "id":  "ac-online",
+                       "passed":  true,
+                       "evidence":  "statusAvailable=True ac=1"
+                   },
+                   {
+                       "id":  "free-memory",
+                       "passed":  true,
+                       "evidence":  "freeBytes=18914488320"
+                   },
+                   {
+                       "id":  "mean-cpu-load",
+                       "passed":  true,
+                       "evidence":  "mean=2 samples=2,0,2,2,4"
+                   },
+                   {
+                       "id":  "pilot-storage-minimum",
+                       "passed":  true,
+                       "evidence":  "freeBytes=293254582272"
+                   },
+                   {
+                       "id":  "thermal-policy",
+                       "passed":  true,
+                       "evidence":  "unavailable: 不支持 "
+                   },
+                   {
+                       "id":  "precision-policy",
+                       "passed":  true,
+                       "evidence":  "5% minimum-32 multiple-4 no-cap"
+                   },
+                   {
+                       "id":  "non-formal-boundary",
+                       "passed":  true,
+                       "evidence":  "Gate13R remains unauthorized"
+                   }
+               ],
+    "failureCount":  0,
+    "failures":  [
+
+                 ],
+    "pilotExecutionAuthorizedByAudit":  true,
+    "formalCampaign":  false,
+    "gate13rAuthorized":  false,
+    "passed":  true
+}

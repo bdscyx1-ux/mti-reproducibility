@@ -1,0 +1,24 @@
+{
+    "schemaVersion":  1,
+    "wrapperKind":  "gate12r-static-unit-file-scope-compatibility-wrapper-v2",
+    "savedAtUtc":  "2026-10-07T09:59:11.7109598Z",
+    "executionMethod":  "Windows PowerShell 5.1 -File",
+    "sourceRelativePath":  "Research/Verification/Run-Gate12RStaticUnitAudit.ps1",
+    "sourceSha256":  "dfc8c94e3e2103946aa165c65beb58aa5b0aa744ba948984ac66766de9e8e049",
+    "derivedRelativePath":  "Research/Verification/Gate12R_ProcessReuse_5pct/v3/_DerivedHarness/Run-Gate12RStaticUnitAuditV2.derived.ps1",
+    "derivedSha256":  "0c107b9f7abe677ab620092a91f70f3253329b36133286f2b22e739ace76a587",
+    "allowedMechanicalReplacements":  [
+                                          {
+                                              "from":  "Gate12R_PreWrite_Preservation_Baseline.v1.json",
+                                              "to":  "Gate12R_PreWrite_Preservation_Baseline.v2.json"
+                                          },
+                                          {
+                                              "from":  "summaryKind=\u0027gate12r-static-unit-audit-v1\u0027",
+                                              "to":  "summaryKind=\u0027gate12r-static-unit-audit-v2-tree-identity-compatibility\u0027"
+                                          }
+                                      ],
+    "researchSemanticsChanged":  false,
+    "exitCode":  0,
+    "summarySha256":  "472249635abdecb60e781e907b28ef7c8eabcec56ea80773ffdbba744a062977",
+    "passed":  true
+}

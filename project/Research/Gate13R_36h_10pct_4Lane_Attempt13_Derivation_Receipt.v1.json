@@ -1,0 +1,272 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-36h-prepilot-attempt13-fresh-clone-bootstrap-derivation-v1",
+    "createdAtUtc":  "2026-10-08T05:31:20.9876968Z",
+    "status":  "NON-EXECUTING-PRE-PILOT-REPAIR",
+    "amendmentRelativePath":  "Research/Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v13.json",
+    "amendmentSha256":  "002f41e6ba54abaf310ed4f5f4b6817a3bbc8297c4e9ac6340ff28dee153366b",
+    "diagnosisRelativePath":  "Research/Gate13R_36h_10pct_4Lane_v12_Telemetry_Compile_Contention_Diagnosis.v1.json",
+    "diagnosisSha256":  "014e39a38dcb45bf025340a39ea99b3504628311b2b6f124749e3a32576d43d4",
+    "derivations":  [
+                        {
+                            "sourceRelativePath":  "Research\\Gate13R36hConcurrencyPreparationV12.psm1",
+                            "sourceSha256":  "e6938cbdd0cc4874654e6baab6f176e9159c81be5ce9749a22b31c5819d88b97",
+                            "destinationRelativePath":  "Research\\Gate13R36hConcurrencyPreparationV13.psm1",
+                            "destinationSha256":  "4ed03434176c379cfb8aa40eb08cf16f24d79eed76b0fc737fcb4c9168730de2",
+                            "uppercaseRouteCount":  0,
+                            "lowercaseRouteCount":  1,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Run-Gate13R36hBlockV12.ps1",
+                            "sourceSha256":  "00372545c17a2dc24799ffd1fdb15ba3e8c5bbd59a87967b76e71d08c03b40d4",
+                            "destinationRelativePath":  "Research\\Run-Gate13R36hBlockV13.ps1",
+                            "destinationSha256":  "bdfa0f8f70244ae0f525f5cffefa9c8cde72b0816e2870b7bb873a0235fcc1ec",
+                            "uppercaseRouteCount":  1,
+                            "lowercaseRouteCount":  6,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Run-Gate13R36hTelemetryProbeV12.ps1",
+                            "sourceSha256":  "b3052b539fcd60e34def983057af2d9ffbc6582bccd0a041306057c34cb0fd47",
+                            "destinationRelativePath":  "Research\\Run-Gate13R36hTelemetryProbeV13.ps1",
+                            "destinationSha256":  "1ec9eb3c22ba462281d8f455da33fd4368c29523df1082d73b62cf77780abe61",
+                            "uppercaseRouteCount":  1,
+                            "lowercaseRouteCount":  3,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Initialize-Gate13R36hLaneCopiesV12.ps1",
+                            "sourceSha256":  "67bf2efbbcd2a264254f4597f2c5d50af7d916663818f6f1f97df70c60a7e0c0",
+                            "destinationRelativePath":  "Research\\Initialize-Gate13R36hLaneCopiesV13.ps1",
+                            "destinationSha256":  "858ef132a4ade7ad0f2a7613389fcad7306a4e181bb2e976c6243a02d4a46efa",
+                            "uppercaseRouteCount":  1,
+                            "lowercaseRouteCount":  7,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Run-Gate13R36hConcurrencyPilotV12.ps1",
+                            "sourceSha256":  "c38f8c576b0076be43dc14a7b9cbb8d28fa58f6b86da1172b819dc6fc3490731",
+                            "destinationRelativePath":  "Research\\Run-Gate13R36hConcurrencyPilotV13.ps1",
+                            "destinationSha256":  "9db46f361a94de8d122510412a40b6555cd1c1f98b8e4d8cafc606af230ceda6",
+                            "uppercaseRouteCount":  3,
+                            "lowercaseRouteCount":  12,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Analyze-Gate13R36hConcurrencyPilotV12.ps1",
+                            "sourceSha256":  "3f7823682ad5e38a88698729041c6fe6dd8ec368659cab57c5a0f7bcd5bd6f99",
+                            "destinationRelativePath":  "Research\\Analyze-Gate13R36hConcurrencyPilotV13.ps1",
+                            "destinationSha256":  "dea06a721c8a37b30f452143b73b91a1e5875d3e70c761db8649097d909d3f32",
+                            "uppercaseRouteCount":  2,
+                            "lowercaseRouteCount":  5,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Verification\\New-Gate13R36hPilotScheduleV12.ps1",
+                            "sourceSha256":  "550728971898a3e8b5c4f58559d4c370dcaf9516d3067b15176a2d298cbc9cf6",
+                            "destinationRelativePath":  "Research\\Verification\\New-Gate13R36hPilotScheduleV13.ps1",
+                            "destinationSha256":  "1424255ec8a1c1730e2878fce9ebe4684eac3922c546c710d9ad79346482d338",
+                            "uppercaseRouteCount":  1,
+                            "lowercaseRouteCount":  7,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Verification\\Run-Gate13R36hStaticUnitV12.ps1",
+                            "sourceSha256":  "a962b0baac9481e2f05ab2a2d20188be5f962928c2e2b5f7502f17cd01c66263",
+                            "destinationRelativePath":  "Research\\Verification\\Run-Gate13R36hStaticUnitV13.ps1",
+                            "destinationSha256":  "3da3ca7cf63763893802ec5d4b69bff6fee16e9a6c6d8ce509d36eb53fe88d89",
+                            "uppercaseRouteCount":  25,
+                            "lowercaseRouteCount":  13,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Verification\\Run-Gate13R36hRetainedRegressionV12.ps1",
+                            "sourceSha256":  "7eb078393700b5f421b07776a63566175bff9754122ce69c465c3e87d52bacf5",
+                            "destinationRelativePath":  "Research\\Verification\\Run-Gate13R36hRetainedRegressionV13.ps1",
+                            "destinationSha256":  "9d416d886f6c2b28f61901413fd6c525e024d33be5375260097878e060aada09",
+                            "uppercaseRouteCount":  1,
+                            "lowercaseRouteCount":  2,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Verification\\Run-Gate13R36hVerificationV12.ps1",
+                            "sourceSha256":  "115366c3fb9454ee83dba4d853d22114549233dff474ccaf16a2a89e94996531",
+                            "destinationRelativePath":  "Research\\Verification\\Run-Gate13R36hVerificationV13.ps1",
+                            "destinationSha256":  "ed5ded652adecb3174f2f920573f6a51a98431cea06ee3249470c9fe7e392259",
+                            "uppercaseRouteCount":  9,
+                            "lowercaseRouteCount":  18,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV12.ps1",
+                            "sourceSha256":  "80eb69737d52f3a487e53f51ebc1d64d995f6796da1d5204587e6cc6b3d38f4d",
+                            "destinationRelativePath":  "Research\\Verification\\Run-Gate13R36hValidationOnlyPrePilotAuditV13.ps1",
+                            "destinationSha256":  "5dc7dd86b2001cdc3d3c90a5b20d4ad07f2dd6698972a3546b54b7131e93a9ff",
+                            "uppercaseRouteCount":  2,
+                            "lowercaseRouteCount":  11,
+                            "parserPassed":  true
+                        },
+                        {
+                            "sourceRelativePath":  "Research\\Verification\\Run-Gate13R36hLockHygieneUnitV12.ps1",
+                            "sourceSha256":  "4abbe6d186d59f4169e20343a965b42c6b073b73c50c86ed68a228fd127cfd38",
+                            "destinationRelativePath":  "Research\\Verification\\Run-Gate13R36hLockHygieneUnitV13.ps1",
+                            "destinationSha256":  "90f1d4507df4b3424480d8c73724da4844aa6b22b9a69af82503335ce46c34a2",
+                            "uppercaseRouteCount":  1,
+                            "lowercaseRouteCount":  4,
+                            "parserPassed":  true
+                        }
+                    ],
+    "overlays":  [
+                     "serial-lane-bootstrap-in-verification",
+                     "bootstrap-static-unit-coverage",
+                     "bootstrap-validation-audit-coverage"
+                 ],
+    "bootstrapRunnerSha256":  "882a82ec37cd397d9c7e9c418c5fd7e87a6df56779573f304de02cee2f52d49e",
+    "planV13Sha256":  "e7c013395e9543979140b1c0704c23c5f29c55247b2269cb52c2339515e9bebc",
+    "scheduleV13Sha256":  "c3b5382ceb81046d45b9167d837cddf41c6ef56cb45a9ebf6ba2f48eae914403",
+    "scheduleGenerationV13Sha256":  "b933e2a8deadf544a52d6a70f06fb886daa768e13882d91e151a942c62d2c54b",
+    "provenanceV13Sha256":  "68df02a08fb6fc6088cbcc0be5387c8528e4ef7e0374d51d750f26614a9c95d2",
+    "frozenV12Evidence":  [
+                              {
+                                  "relativePath":  "Research/Gate13R_36h_10pct_4Lane_PrePilot_Defect_Repair_Amendment.v12.json",
+                                  "beforeSha256":  "6665c5e3c01d0c5da180f3a47627ea92c514b0185d8a75959b4e2a18446fa714",
+                                  "afterSha256":  "6665c5e3c01d0c5da180f3a47627ea92c514b0185d8a75959b4e2a18446fa714",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Gate13R_36h_10pct_4Lane_Pilot_Plan.v12.json",
+                                  "beforeSha256":  "6485738a1d15ee696b63bc8bd4715f9c3145996c1b562e0173dae857220f15f2",
+                                  "afterSha256":  "6485738a1d15ee696b63bc8bd4715f9c3145996c1b562e0173dae857220f15f2",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Gate13R_36h_10pct_4Lane_Pilot_Schedule.v12.json",
+                                  "beforeSha256":  "3bd1e8b830f6b87b0e17c670205bcd585669bdac1a4681d502ab5bcf54a6fc77",
+                                  "afterSha256":  "3bd1e8b830f6b87b0e17c670205bcd585669bdac1a4681d502ab5bcf54a6fc77",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Gate13R_36h_10pct_4Lane_Pilot_Schedule_Generation.v12.json",
+                                  "beforeSha256":  "4457c5055e003b3492a8899fcd2c2d12b50db0da13535383da6d914d4882cf4e",
+                                  "afterSha256":  "4457c5055e003b3492a8899fcd2c2d12b50db0da13535383da6d914d4882cf4e",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Gate13R_36h_10pct_4Lane_Provenance.v12.json",
+                                  "beforeSha256":  "43818f93147bd2d965a2dca2eb68967af1854b579e75ab2b1a3620da62f712c3",
+                                  "afterSha256":  "43818f93147bd2d965a2dca2eb68967af1854b579e75ab2b1a3620da62f712c3",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Gate13R_36h_10pct_4Lane_Attempt12_Derivation_Receipt.v1.json",
+                                  "beforeSha256":  "2614f1112f4d0288c3c7c1fe9d346f24c966f65ca0449bd88ad6211b967a294f",
+                                  "afterSha256":  "2614f1112f4d0288c3c7c1fe9d346f24c966f65ca0449bd88ad6211b967a294f",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Gate13R_36h_10pct_4Lane/v12/execution-receipt.json",
+                                  "beforeSha256":  "4df6b7ade64bb904dbc4fb361c949fe59399924941812ff2c184c22d4294cf5f",
+                                  "afterSha256":  "4df6b7ade64bb904dbc4fb361c949fe59399924941812ff2c184c22d4294cf5f",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Gate13R_36h_10pct_4Lane/v12/verification-checkpoint.json",
+                                  "beforeSha256":  "fa5f8c8311ebf059ff896369da52cdf21687eabe338fd4ad59bbb3563f7bb5dc",
+                                  "afterSha256":  "fa5f8c8311ebf059ff896369da52cdf21687eabe338fd4ad59bbb3563f7bb5dc",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Gate13R_36h_10pct_4Lane/v12/failure-receipt.json",
+                                  "beforeSha256":  "de6e800bda9e54e1c8e2829af7c3da4cc6497fefc68bdccf9cdce455cf507485",
+                                  "afterSha256":  "de6e800bda9e54e1c8e2829af7c3da4cc6497fefc68bdccf9cdce455cf507485",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Gate13R_36h_10pct_4Lane/v12/partial-output-manifest.json",
+                                  "beforeSha256":  "f76461fe8d53752669405d25154d3519b08b5a5fe871b710e03e51293f936ac3",
+                                  "afterSha256":  "f76461fe8d53752669405d25154d3519b08b5a5fe871b710e03e51293f936ac3",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Gate13R36hConcurrencyPreparationV12.psm1",
+                                  "beforeSha256":  "e6938cbdd0cc4874654e6baab6f176e9159c81be5ce9749a22b31c5819d88b97",
+                                  "afterSha256":  "e6938cbdd0cc4874654e6baab6f176e9159c81be5ce9749a22b31c5819d88b97",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Run-Gate13R36hBlockV12.ps1",
+                                  "beforeSha256":  "00372545c17a2dc24799ffd1fdb15ba3e8c5bbd59a87967b76e71d08c03b40d4",
+                                  "afterSha256":  "00372545c17a2dc24799ffd1fdb15ba3e8c5bbd59a87967b76e71d08c03b40d4",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Run-Gate13R36hTelemetryProbeV12.ps1",
+                                  "beforeSha256":  "b3052b539fcd60e34def983057af2d9ffbc6582bccd0a041306057c34cb0fd47",
+                                  "afterSha256":  "b3052b539fcd60e34def983057af2d9ffbc6582bccd0a041306057c34cb0fd47",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Initialize-Gate13R36hLaneCopiesV12.ps1",
+                                  "beforeSha256":  "67bf2efbbcd2a264254f4597f2c5d50af7d916663818f6f1f97df70c60a7e0c0",
+                                  "afterSha256":  "67bf2efbbcd2a264254f4597f2c5d50af7d916663818f6f1f97df70c60a7e0c0",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Run-Gate13R36hConcurrencyPilotV12.ps1",
+                                  "beforeSha256":  "c38f8c576b0076be43dc14a7b9cbb8d28fa58f6b86da1172b819dc6fc3490731",
+                                  "afterSha256":  "c38f8c576b0076be43dc14a7b9cbb8d28fa58f6b86da1172b819dc6fc3490731",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Analyze-Gate13R36hConcurrencyPilotV12.ps1",
+                                  "beforeSha256":  "3f7823682ad5e38a88698729041c6fe6dd8ec368659cab57c5a0f7bcd5bd6f99",
+                                  "afterSha256":  "3f7823682ad5e38a88698729041c6fe6dd8ec368659cab57c5a0f7bcd5bd6f99",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/New-Gate13R36hPilotScheduleV12.ps1",
+                                  "beforeSha256":  "550728971898a3e8b5c4f58559d4c370dcaf9516d3067b15176a2d298cbc9cf6",
+                                  "afterSha256":  "550728971898a3e8b5c4f58559d4c370dcaf9516d3067b15176a2d298cbc9cf6",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Run-Gate13R36hStaticUnitV12.ps1",
+                                  "beforeSha256":  "a962b0baac9481e2f05ab2a2d20188be5f962928c2e2b5f7502f17cd01c66263",
+                                  "afterSha256":  "a962b0baac9481e2f05ab2a2d20188be5f962928c2e2b5f7502f17cd01c66263",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Run-Gate13R36hRetainedRegressionV12.ps1",
+                                  "beforeSha256":  "7eb078393700b5f421b07776a63566175bff9754122ce69c465c3e87d52bacf5",
+                                  "afterSha256":  "7eb078393700b5f421b07776a63566175bff9754122ce69c465c3e87d52bacf5",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Run-Gate13R36hVerificationV12.ps1",
+                                  "beforeSha256":  "115366c3fb9454ee83dba4d853d22114549233dff474ccaf16a2a89e94996531",
+                                  "afterSha256":  "115366c3fb9454ee83dba4d853d22114549233dff474ccaf16a2a89e94996531",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Run-Gate13R36hValidationOnlyPrePilotAuditV12.ps1",
+                                  "beforeSha256":  "80eb69737d52f3a487e53f51ebc1d64d995f6796da1d5204587e6cc6b3d38f4d",
+                                  "afterSha256":  "80eb69737d52f3a487e53f51ebc1d64d995f6796da1d5204587e6cc6b3d38f4d",
+                                  "preserved":  true
+                              },
+                              {
+                                  "relativePath":  "Research/Verification/Run-Gate13R36hLockHygieneUnitV12.ps1",
+                                  "beforeSha256":  "4abbe6d186d59f4169e20343a965b42c6b073b73c50c86ed68a228fd127cfd38",
+                                  "afterSha256":  "4abbe6d186d59f4169e20343a965b42c6b073b73c50c86ed68a228fd127cfd38",
+                                  "preserved":  true
+                              }
+                          ],
+    "frozenV12EvidencePreserved":  true,
+    "verificationRootCreated":  false,
+    "cloneRootCreated":  false,
+    "pilotRootCreated":  false,
+    "formalRootCreated":  false,
+    "pilotStarted":  false,
+    "formalCampaign":  false,
+    "passed":  true
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "gate14re-me-load-qualification-execution-plan-v4.2",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-bounded-gnf-discrimination-window-v4",
+  "attemptId": "load-qualification-execution-attempt-011",
+  "status": "PLANNED_NOT_LAUNCHED",
+  "createdAtUtc": "2026-10-19T14:34:30.9233419Z",
+  "projectRoot": "H:/DDM_Final_Project",
+  "executionEvidenceRootRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-011",
+  "measuredRootRelativePath": "Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-009",
+  "acceptanceDeliveryRootRelativePath": "Research/Exports/Gate14Re-ME/load-qualification/attempt-009",
+  "acceptanceOutputRootPolicy": "CREATE_FRESH_VERSIONED_ROOT_ONLY_AFTER_RAW_ACQUISITION_SEAL",
+  "processPlan": {
+    "instrumentSelfTest": 1,
+    "oracleBatch": 6,
+    "emptyBoundary": 12,
+    "algorithmLane": 756,
+    "total": 775,
+    "superblocks": 126,
+    "algorithmsPerSuperblock": 6,
+    "maximumConcurrentUnityProcesses": 1
+  },
+  "frozenLoadGrid": {
+    "G": [
+      64,
+      96,
+      128
+    ],
+    "N": [
+      32,
+      64,
+      128
+    ],
+    "F": [
+      1,
+      9,
+      25,
+      81
+    ],
+    "coreCells": 36,
+    "coreReplicatesPerCell": 3,
+    "coreSuperblocks": 108,
+    "stressCell": {
+      "G": 128,
+      "N": 128,
+      "F": 81
+    },
+    "stressSuperblocks": 18
+  },
+  "executionRules": {
+    "oneShot": true,
+    "strictSerial": true,
+    "freshUnityProcessPerUnit": true,
+    "zeroReplacementFailStop": true,
+    "retryResumeTopUpMergeSkipReorderReplacementOrParallelAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false
+  },
+  "frozenBindings": {
+    "designAndImplementationFreezeTerminalRelativePath": "Research/Verification/Gate14Re-ME/qualification-design-implementation-freeze-v4_2-attempt-001/terminal-receipt.v4_2.json",
+    "designAndImplementationFreezeTerminalSha256": "74f215d39353e7ba33009dc975d28cb6b814c599bc66528405282e70a4b1d8e6",
+    "designAndImplementationFreezeManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-design-implementation-freeze-v4_2-attempt-001/freeze-manifest.v4_2.json",
+    "designAndImplementationFreezeManifestSha256": "b76c9fe738ec250890ccad3ea5728909cb28ccce83e3db87a7a8f27ec6efe036",
+    "readinessReceiptRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-readiness-v4-attempt-009/terminal-readiness-receipt.v4_6.json",
+    "readinessReceiptSha256": "6d590303a6b464831648c6993ff4f340cb99b5dfaac4bf17e6e9bf8c44e4e6bc",
+    "implementationManifestRelativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-current-implementation-manifest.v4_2.json",
+    "implementationManifestSha256": "ae9c6bc5641b36808d896b5cfcc509cb835a55b8c667212f7af5787fcf6b2a00",
+    "acquisitionContractRelativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acquisition-contract.v4_2.json",
+    "acquisitionContractSha256": "4498b9bf0b8d8e3cd92c6ddc65a6dbef1a61ec22f88acc6c63e52694cdeeaf7f",
+    "acceptanceContractRelativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acceptance-contract.v4_3.json",
+    "acceptanceContractSha256": "dfa6ded73db0ff97dca28880b81882f1a4babd44ea52e7ed963f338fb2dd0c1f",
+    "planningAssetsManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets-freeze-manifest.v4.json",
+    "planningAssetsManifestSha256": "8624880f6fbe0b709dd6d2127b5861d62d862d592dcd2b0e311c579afffbeee3",
+    "scheduleRelativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/schedule/bounded-qualification-williams-schedule.v4.jsonl",
+    "scheduleSha256": "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb",
+    "resourceBudgetRelativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-resource-budget.v4_1.json",
+    "resourceBudgetSha256": "b6938a75285167045fb9736e6c5a765dba1e54eb037edabec91d82e56d5ccc4e",
+    "fairnessBindingRelativePath": "Research/Gate14Re-ME/Execution/v4/six-algorithm-fairness-binding.v4_1.json",
+    "fairnessBindingSha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+    "trustedIdentityRuleRelativePath": "Research/Verification/Gate14Re-ME/unity-executable-identity-rule-offline-adjudication-attempt-005/trusted-launch-identity-rule.v1.json",
+    "trustedIdentityRuleSha256": "f045ef93630202a72d603096687bac655b5b4ff01e8e0743e60d63881bbded06",
+    "timestampComparatorRelativePath": "Research/Verification/Gate14Re-ME/unity-trusted-identity-timestamp-comparator-corrigendum-attempt-007/Gate14ReMETrustedTimestampComparatorV1.ps1",
+    "timestampComparatorSha256": "d024c5471d1fc06fb08e9c9ca1c9cf612424d4299d8b8c6b856883745105eb27",
+    "unityExecutablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "powerShellExecutablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe",
+    "powerShellExecutableSha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+    "powerShellVersion": "7.6.5",
+    "pythonExecutablePath": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonExecutableSha256": "7d938c92a08d6495421f2f1076ccd7198aec0b288471abc0a55e90b1150d96a1"
+  },
+  "priorAttemptsIsolation": {
+    "attempt009PausedSealRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-paused-seal-attempt-009/terminal-seal-receipt.v1.json",
+    "attempt009PausedSealSha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705",
+    "attempt010FailureSealRelativePath": "Research/Verification/Gate14Re-ME/load-qualification-failure-seal-attempt-010/terminal-failure-seal-receipt.v1.json",
+    "attempt010FailureSealSha256": "4101192a424d33ac227d49fa61ca6580a2d01d381984ed92901f1f9ce151af6d",
+    "reuseOrMutationAuthorized": false
+  }
+}

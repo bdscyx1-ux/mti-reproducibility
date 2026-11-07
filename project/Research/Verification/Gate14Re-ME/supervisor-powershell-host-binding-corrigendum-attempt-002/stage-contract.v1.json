@@ -1,0 +1,42 @@
+{
+  "schema": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-002-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-002",
+  "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-002",
+  "status": "FROZEN_OFFLINE_HOST_BINDING_CORRIGENDUM_SCOPE",
+  "createdAtUtc": "2026-10-17T16:31:07.4934366+00:00",
+  "retainedFailure": {
+    "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-execution-attempt-001/failure-receipt.v1.json",
+    "sha256": "9f4d79f100bfe41018bb9972c6cf085ac275845391a1a1450cc1ff7bffd2822d",
+    "statusRetained": "FAILED_CLOSED_PRELAUNCH_FROZEN_POWERSHELL_RUNTIME_INCOMPATIBLE",
+    "modifiedOrReclassified": false
+  },
+  "permittedOutputs": [
+    "versioned execution contract v3.2",
+    "versioned current implementation manifest v3.2",
+    "one no-Unity PowerShell known-answer evidence package",
+    "terminal PASS receipt only if every assertion passes",
+    "Status v31 only if every assertion passes"
+  ],
+  "immutableAssets": [
+    "supervisor v3",
+    "RunnerV2",
+    "compiled assemblies",
+    "input schema v2",
+    "planning schema binding v2",
+    "162-row schedule",
+    "sealed identity",
+    "instrument contract v3",
+    "qualified D3-v3.1",
+    "all six algorithm implementations",
+    "structural-v3.1",
+    "delivery-v2.2"
+  ],
+  "invocationBudget": {
+    "powershellKnownAnswerProcesses": 1,
+    "unityProcesses": 0,
+    "plannerInvocations": 0,
+    "algorithmLaneExecutions": 0
+  },
+  "retryPolicy": "NO_AUTOMATIC_RETRY_FAIL_CLOSED"
+}

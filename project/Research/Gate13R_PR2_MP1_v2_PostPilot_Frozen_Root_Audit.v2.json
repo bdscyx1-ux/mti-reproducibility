@@ -1,0 +1,73 @@
+{
+  "analysisAttempt1": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\Analysis\\Gate13R_PR2_MP1\\v2\\attempt-1",
+    "allFilesReadOnly": true,
+    "evidenceManifestSha256": "29de1d6df9b12f8ede92f56914cb6cabc9f7a6cc246389d78de097c0bed990eb",
+    "fileCount": 3,
+    "outputChecks": [
+      {
+        "actualSha256": "9676878b0cc88fa4b7230016c55e63ec2c42940a214c8c3eff245ce16d78f119",
+        "expectedSha256": "9676878b0cc88fa4b7230016c55e63ec2c42940a214c8c3eff245ce16d78f119",
+        "passed": true,
+        "relativePath": "stage-separated-memory-analysis.json"
+      },
+      {
+        "actualSha256": "05bcfa7324ba7afcef8cfba081f8407431144d932007bdfeb09a2b0bd2cc2441",
+        "expectedSha256": "05bcfa7324ba7afcef8cfba081f8407431144d932007bdfeb09a2b0bd2cc2441",
+        "passed": true,
+        "relativePath": "memory-policy-decision-matrix.json"
+      }
+    ],
+    "passed": true
+  },
+  "auditKind": "gate13r-pr2-mp1-v2-postpilot-integrity-audit-v1",
+  "capturedAtUtc": "2026-10-09T05:21:31.535986Z",
+  "checks": {
+    "analysisAttempt1Passed": true,
+    "formalAttempt2Identity": true,
+    "formalAttempt3ReceiptAbsent": true,
+    "formalAttempt3RootAbsent": true,
+    "pilotV1Identity": true,
+    "pilotV2PhaseAComplete": true,
+    "pilotV2TopFilesReadOnly": true,
+    "rawTreePassed": true,
+    "unityLockAbsent": true
+  },
+  "formalAnalysisPerformed": false,
+  "formalAttempt2": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v2",
+    "allFilesReadOnly": true,
+    "canonicalTreeContractId": "gate13r-pr2-attempt2-ordinal-tab-final-lf-v2",
+    "canonicalTreeSha256": "aafd8018d67b54b0965dcf778d502aadbba249dc53f80ea0f7722c0c1a05867e",
+    "fileCount": 28020,
+    "rawBytes": 8536611302
+  },
+  "gate14RPerformed": false,
+  "labels": [
+    "NON-FORMAL",
+    "MEMORY-DIAGNOSTIC-ONLY",
+    "EXCLUDED-FROM-FORMAL-ANALYSIS"
+  ],
+  "passed": true,
+  "pilotV1": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v1",
+    "allFilesReadOnly": true,
+    "canonicalTreeContractId": "mp1-pilot-v1-pipe-delimited-no-final-lf-v1",
+    "canonicalTreeSha256": "a1f427a74a3a211778fa36d95f1a83b2d182c8f035e7d4970248274aeb91a265",
+    "fileCount": 5,
+    "rawBytes": 5247
+  },
+  "pilotV2Raw": {
+    "absolutePath": "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate13R_PR2_MemoryPolicy\\v2\\raw",
+    "allFilesReadOnly": true,
+    "canonicalTreeSha256": "13dd5c30cd016d42e80f472c962d09f89f4d0fb6714d68228e2c657f6c80da93",
+    "fileCount": 3360,
+    "firstMismatches": [],
+    "freezeReceiptSha256": "f5851d2b47a7a77323dba6388df0c06bbbeb9db5b6dfc6f67a92dc79acd0c050",
+    "manifestSha256": "3f9ae6c969c8ff6e92a0c3c694613beb95b4bde99541a666d83837d301437ddf",
+    "mismatchCount": 0,
+    "passed": true,
+    "rawBytes": 2607785161
+  },
+  "schemaVersion": 1
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "gate14re-me-schema-v2-tooling-bridge-validation-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-schema-v2-tooling-bridge-attempt-001",
+  "status": "PASS_SCHEMA_V2_TOOLING_BRIDGE_VALIDATION",
+  "validatedAtUtc": "2026-10-17T08:33:31.2432514Z",
+  "repairHistory": {
+    "initialAttemptStatus": "FAILED_CLOSED_SYNTHETIC_NEGATIVE_FIXTURE_PATH_POLICY_MISMATCH",
+    "initialFailureReceiptRelativePath": "Research/Verification/Gate14Re-ME/schema-v2-tooling-bridge-attempt-001/failure-receipt.v1.json",
+    "initialFailureReceiptSha256": "1aa5ebd573331392e60ac2948f2e9947675a5e796f0fd79323c52abf71b1d0f2",
+    "repairCycle": "repair-cycle-001",
+    "repairScope": "Removed only the redundant literal-name test after retaining containment beneath the exact authorized verification attempt.",
+    "initialEvidenceRetained": true
+  },
+  "sourceChecks": {
+    "pythonAstParsePassed": true,
+    "structuralV2Sha256": "daa1fc48077cc0cb8c62221956355a35c74e8b946660b683f7178e2072e9bc0e",
+    "deliveryV2Sha256": "5e9f8d8c3403321fb9e1b2b3f67fef00a963bf85f25c66d98bc2c41971434ec4",
+    "knownAnswerHarnessSha256": "8539b80e0c63624ac84ae5eb4477bad9328cfb0a8b7a5f22abcb958e89956555",
+    "pyarrowImportPassed": true,
+    "pyarrowVersion": "25.0.1"
+  },
+  "positiveStructuralCheck": {
+    "status": "PASS_SCHEMA_V2_STRUCTURAL_COMPLETE_RAW_NO_INFERENCE",
+    "independentCliRecheckPassed": true,
+    "d3WindowRows": 1025,
+    "eventGroupRows": 24,
+    "emptyBoundaryRows": 1000,
+    "eventGroupD3Joins": 24,
+    "emptyBoundaryD3Joins": 1000,
+    "d3RecordIdsUnique": true,
+    "d3JoinsOneToOneAndComplete": true,
+    "retiredSnapshotFieldsAbsent": true,
+    "operationManagedAllocatedBytesTreatedAsD3": false
+  },
+  "positiveDeliveryCheck": {
+    "buildStatus": "PASS_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+    "verifyStatus": "PASS_VERIFIED_SCHEMA_V2_COMPLETE_PER_OBSERVATION_DELIVERY",
+    "independentCliRecheckPassed": true,
+    "tables": 10,
+    "formatsPerTable": 4,
+    "products": 40,
+    "formats": [
+      "canonical JSONL",
+      "RFC 4180 CSV with canonical-JSON scalar cells",
+      "deterministic JSONL.GZ",
+      "typed Parquet"
+    ],
+    "completeValueTypeOrderRoundTripPassed": true,
+    "typedParquetRoundTripPassed": true,
+    "d3JoinsOneToOneAndComplete": true,
+    "aggregateOnlyPackage": false,
+    "deliveryManifestSha256": "1cb1d490d2397e6295a4883e23090349d550ca042a39bd97673ec8748e4a2070"
+  },
+  "negativeChecks": {
+    "passed": 9,
+    "expectedFailClosedTestIds": [
+      "tamper-source-hash",
+      "missing-d3-join-row",
+      "duplicate-record-id",
+      "bool-as-int-type-substitution",
+      "rate-formula-mismatch",
+      "retired-snapshot-field-injection",
+      "anonymous-label-swap",
+      "delivery-product-tamper",
+      "delivery-product-missing-file"
+    ],
+    "allFailedForIntendedReason": true
+  },
+  "bindingChecks": {
+    "parentRunnerSchemaFreezeSha256": "b244af408606e0758841f1ad44af5af0d565e12d83da3cfddf918b2412dbaa24",
+    "statusV9Sha256": "6785a099bcce12058aabcbbdb183df69a4696a7111b6048f2aa3f5af7756e641",
+    "outputSchemaV2Sha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb",
+    "qualifiedD3ContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce",
+    "typedParquetRuntimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e",
+    "runnerV2Sha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "protectedStructuralV1Sha256": "4cc4369c50b7b0b89bc7ec657b2384b93ff48905205046c93d25584ca3e5852f",
+    "protectedDeliveryV1Sha256": "3a5c58cbb4f4db93ebedd563175fa916f9a9443925a1c8955bb107cb3dbb4905",
+    "allExact": true
+  },
+  "scopeAudit": {
+    "status": "PASS_AUTHORIZED_SCOPE_ONLY",
+    "syntheticFixtureOnly": true,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "algorithmPlannerConstructedOrInvoked": false,
+    "algorithmLanesExecuted": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "forbiddenGate14ReMERootsAbsent": [
+      "Research/FormalRuns/Gate14Re-ME",
+      "Research/QualificationRuns/Gate14Re-ME",
+      "Research/MeasuredRuns/Gate14Re-ME"
+    ]
+  }
+}

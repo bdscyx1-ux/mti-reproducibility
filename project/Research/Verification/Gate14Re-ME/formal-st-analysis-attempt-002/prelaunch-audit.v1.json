@@ -1,0 +1,66 @@
+{
+  "schema": "gate14re-me-formal-st-analysis-prelaunch-audit-v1",
+  "studyId": "Gate14Re-ME",
+  "attempt": "formal-st-analysis-attempt-002",
+  "status": "READY_AWAITING_EXACT_COMMAND_CONFIRMATION",
+  "predecessorAttempt": {
+    "attempt": "formal-st-analysis-attempt-001",
+    "status": "FAIL_CLOSED_BEFORE_FORMAL_OBSERVATIONS_READ",
+    "externalFailureObservationSha256": "d7484ce283386c7869c1eec33f54bd178a13f11fd90fbdbedd891d3d86143c79",
+    "failureReceiptSha256": "65d5ede4e19988cf6388d7810d17ca6ef38b5b325efd2462ed80808e98259e7f",
+    "hashRecheckPass": true,
+    "modifiedByAttempt002Preparation": false
+  },
+  "tool": {
+    "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_formal_st_analysis_v1_1.py",
+    "sha256": "fb10ed4d52a9aad557a041a4909c21f561e176979e7668fcd06b9048f84379c9",
+    "pythonSyntaxPass": true,
+    "syntheticSelfTestStatus": "PASS_SYNTHETIC_STATISTICAL_SELF_TEST",
+    "syntheticSelfTestFormalObservationsRead": false,
+    "toolBindingDeltaSha256": "245842848332b9064f1d474c7bafe38c4230de69749acbeb1423b5fe638d993a",
+    "statisticalCodeByteIdenticalAfterTwoEvidenceLiteralReversions": true
+  },
+  "runtime": {
+    "pythonExecutable": "C:/Users/bdscy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "pythonVersion": "3.12.14",
+    "pythonExecutableSha256": "ceabb31054d429f57cb3825775677eeaf0db35fdabbc5ff6aef661c037154b00",
+    "frozenPyArrowVersion": "25.0.1",
+    "frozenPyArrowPythonAbi": "cp312",
+    "compatibleImportPass": true,
+    "runtimeManifestSha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+  },
+  "launcher": {
+    "relativePath": "Research/Verification/Gate14Re-ME/formal-st-analysis-attempt-002/Run-Gate14ReMEFormalSTAnalysisAttempt002.ps1",
+    "sha256": "d162fb5ba76e3c018d54a0b7b7121dd21ec86c92dd0a4f1310d31f5211d4bd93",
+    "powershellParserErrors": 0,
+    "runtimeHashPreflight": true,
+    "runtimeAbiProbe": true,
+    "automaticRetry": false
+  },
+  "executionContractSha256": "db011bc64b6bbf7d9c9a8eb3aae871498e5a511c20912e1473f8bb87d892938f",
+  "authorizationReceiptSha256": "594aecffc5276fe39e613e2afba67527deb20e6cd2a266f4c46bb1e957fb3700",
+  "frozenSourceHashRecheck": {
+    "acceptanceTerminalFinalSha256": "2f12db25a27c023ef786251f7400546417883af639b3d405cc31ee5f5c681823",
+    "acceptanceTerminalReceiptSha256": "35397eee59ec151faf6988babe2aa83676a3c03ed226e299e2a85c10e6081b7f",
+    "acceptanceManifestSha256": "9f6470e399fd00469a444959753e4fd07670c193cd0cd76331d88965dfa832f0",
+    "acceptanceFileManifestSha256": "02eefd2cffe1f611f0523cbb7f94c1e15ab60f4bfd86488cdcf4e2cabf348329",
+    "analysisContractSha256": "ed884beebaabb05cc039c6e401169cb80659386558e6af95f3eaec9bfec519cd",
+    "endpointMipeContractSha256": "6b38e152c8a17c0bedcd2e700aa8274167e2e0831b33c13cdfbb5227b1354132",
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "identityBindingSha256": "c3d8623560f9162de858ac01b2e861395b92953896e922413fababd0298db5b3",
+    "allPass": true
+  },
+  "exactLaunchCommand": "& 'C:\\Users\\bdscy\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe' -NoProfile -File 'H:\\DDM_Final_Project\\Research\\Verification\\Gate14Re-ME\\formal-st-analysis-attempt-002\\Run-Gate14ReMEFormalSTAnalysisAttempt002.ps1'",
+  "exactLaunchCommandUtf8Sha256": "bd4348f8450c7c9b723fbf8857367f36bc299ddd8ced9b6729bcdf047b34e161",
+  "freshOutputRoot": "H:/DDM_Final_Project/Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-002",
+  "freshOutputRootExists": false,
+  "formalObservationsRead": false,
+  "modelsFit": 0,
+  "effectsComputed": false,
+  "rankingOrWinnerComputed": false,
+  "mqPerformed": false,
+  "mtPerformed": false,
+  "nextAction": "WAIT_FOR_USER_CONFIRMATION_OF_EXACT_LAUNCH_COMMAND",
+  "createdAtUtc": "2026-10-30T12:26:22.487Z"
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate13r-pr1b-v3-stale-lock-recovery-receipt-v1",
+  "createdAtUtc": "2026-10-08T12:52:06.4406306Z",
+  "createdAtAsiaShanghai": "2026-10-08T20:52:06.4422990+08:00",
+  "authorizationSource": "Research/Gate13R_PR1B_v3_PathSafe_Next_Authorization_Prompt.md",
+  "preRecoveryAudit": {
+    "relativePath": "Research/Gate13R_PR1B_v3_StaleLock_PreRecovery_Audit.v1.json",
+    "sha256": "8ed2d4e6cb3c9f2a4dc6cd2e0af88050ee32387aedf94e6d96d03d59e6ab846e"
+  },
+  "status": "PASSED-EXACT-STALE-LOCK-RECOVERED",
+  "operation": {
+    "deletedExactAbsolutePath": "H:/DDM_Final_Project/Temp/UnityLockfile",
+    "deletedFileRawBytes": 0,
+    "deletedFileSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tempDirectoryDeleted": false,
+    "otherFilesDeleted": false
+  },
+  "postRecoveryState": {
+    "unityProcessCount": 0,
+    "lockPresent": false,
+    "tempDirectoryPresent": true,
+    "reservedFormalRootPresent": false,
+    "tempDirectoryNonLockIdentity": {
+      "fileCount": 2,
+      "rawBytes": 1059,
+      "treeSha256": "395f10876669523fba1b264d11e09bbcf5b31c9ae58623f136907e0d97085cee"
+    }
+  },
+  "frozenRootIdentitiesAfterRecovery": [
+    {"relativePath":"Research/PilotRuns/Gate12R_ProcessReuse_5pct/v6-gate13r-pr1b-order-effect-memory-v2","fileCount":49,"rawBytes":1955414,"treeSha256":"85a3fba48ae687acaa04b7b1f91afe0dc115f6efdde5bcaa4bbffa50e9139557"},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v9-gate13r-pr1b-order-effect-memory-v2","fileCount":20,"rawBytes":176860,"treeSha256":"5911830b100269a993a6b15194dac2ac18d2a3dc69ad677ce0005c830a047a74"},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v10-gate13r-pr1b-order-effect-memory-v2","fileCount":39,"rawBytes":275071,"treeSha256":"5d20fbea2e6e734c9feddc2ed199a365bc307caac1a4b2cef3bb680cfebb2d44"},
+    {"relativePath":"Research/Verification/Gate12R_ProcessReuse_5pct/v11-gate13r-pr1b-order-effect-memory-v2","fileCount":244,"rawBytes":6057665,"treeSha256":"d819eb685a119175a5b1e362e7ac14997ff27b6f6696d109a6dd0202546b8d5b"}
+  ],
+  "v6StatusUnchanged": "FAILED-NO-RETRY-NO-RESUME-NO-TOP-UP-NO-MERGE",
+  "gate13rFormalAuthorized": false,
+  "gate14rAuthorized": false
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "gate14re-me-status-v9",
+  "studyId": "Gate14Re-ME",
+  "status": "D3_V3_1_RUNNER_SCHEMA_INTEGRATION_FROZEN_PASS",
+  "version": 9,
+  "updatedAtUtc": "2026-10-17T08:14:27.3664256Z",
+  "previousVersionedStatus": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v8.json",
+    "sha256": "1e82467a579aca94aaaa1205c143ee40aea50e00fd4397d971e5ea8e7c697c15",
+    "retained": true,
+    "note": "Status v8 predates the retained attempt-003 and D3-v3.1 success evidence; v9 reconciles the later immutable receipts without modifying v8."
+  },
+  "parentD3V31Qualification": {
+    "status": "FROZEN_PASS_D3_V3_1_INSTRUMENT_QUALIFICATION",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/freeze-receipt.v1.json",
+    "freezeReceiptSha256": "23df3757a0cac246b5d120c9ef025a2861b2cc062e4b920c42fbb0b450147bc8",
+    "qualifiedContractRelativePath": "Research/Gate14Re-ME/Execution/v3/d3-cumulative-managed-allocation-contract.qualified.v1.json",
+    "qualifiedContractSha256": "a60531b41c4a3c61e9c0cdc31828d6e34a458f5cf4ae97413538d24c07ecbdce"
+  },
+  "currentIntegration": {
+    "status": "FROZEN_PASS_D3_V3_1_RUNNER_SCHEMA_INTEGRATION",
+    "freezeReceiptRelativePath": "Research/Verification/Gate14Re-ME/d3-v3-1-runner-schema-integration-attempt-001/freeze-receipt.v1.json",
+    "freezeReceiptLengthBytes": 4426,
+    "freezeReceiptSha256": "b244af408606e0758841f1ad44af5af0d565e12d83da3cfddf918b2412dbaa24",
+    "runnerRelativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV2.cs",
+    "runnerSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "outputSchemaRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-output-schema.v2.json",
+    "outputSchemaSha256": "eebb880290615c28bfacddd94fcdbfa7ee53351582adac6adf21bf31ab9856cb",
+    "instrumentContractRelativePath": "Research/Gate14Re-ME/Execution/v3/load-qualification-instrument-contract.v3.json",
+    "instrumentContractSha256": "c4f37f3457c222111914af95259630bba8b4c90db81aba892719634924166312",
+    "unityCompilationPassed": true,
+    "algorithmFreeIntegrationSelfCheckPassed": true
+  },
+  "rawDataGuarantee": {
+    "completePerWindowD3RawDeliveryRequired": true,
+    "d3RawFile": "d3-windows.raw.v1.jsonl",
+    "d3PrimaryValue": "managedAllocationBytes",
+    "d3RateValue": "managedAllocationRateBytesPerSecond",
+    "rawFormulaInputsRetained": true,
+    "foreignThreadDiagnosticsRetained": true,
+    "invalidMetadataAndOverflowDiagnosticsRetained": true,
+    "eventGroupAndEmptyBoundaryJoinKeysRetained": true,
+    "aggregateOnlyPackageAllowed": false
+  },
+  "currentQualifiedCapabilities": {
+    "typedParquetRuntimeFrozen": true,
+    "d2GridReadProxyPreviouslyQualified": true,
+    "d3V31TrueCumulativeCounterQualified": true,
+    "d3V31RunnerSourceIntegrated": true,
+    "d3V31OutputSchemaIntegrated": true,
+    "d4PersistentStateSizerPreviouslyQualified": true,
+    "clockMonotonicityPreviouslyQualified": true,
+    "unityCompilationPassedForIntegratedSources": true,
+    "algorithmFreeIntegrationSerializationPassed": true,
+    "fullRuntimeLoadQualificationPassed": false
+  },
+  "scientificBoundary": {
+    "priorFailedAndPassingEvidenceRetained": true,
+    "oldRunnerOrSchemaModified": false,
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationMeasuredRootCreated": false,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "algorithmRankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "fallbackMetricUsed": false
+  },
+  "authorizationState": {
+    "runnerSchemaIntegrationAuthorizationConsumed": true,
+    "qualificationToolingBridgeAuthorized": false,
+    "qualificationScheduleGenerationAuthorized": false,
+    "qualificationInputGenerationAuthorized": false,
+    "anonymousIdentityMapGenerationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "runtimeQualificationAuthorized": false,
+    "algorithmLaneExecutionAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "nextRequiredAction": "Separately authorize the minimum algorithm-free tooling bridge for schema v2: version the structural validator and lossless delivery validator/exporter to cover d3-windows joins and run only synthetic known-answer plus tamper/missing/duplicate/type negative tests."
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "gate14re-me-formal-st-endpoint-mipe-contract-v5.0",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_PRECOLLECTION",
+  "baseEndpointDictionary": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+    "sha256": "9736b16601cc8c89166d65a78ff466114ad6affb57f8be2c9df59a5ddfce22f8",
+    "allRawFieldsMeasurementBoundariesAndDeliveryRequirementsRemainNormative": true
+  },
+  "globalDirection": "lower_is_better",
+  "mipeRole": "prospective planning alternative and practical-importance reporting threshold; confirmatory superiority nulls remain ratio >= 1 or slope difference >= 0",
+  "ratioThreshold": 0.9,
+  "logThresholdExact": -0.10536051565782628,
+  "domains": [
+    {
+      "domainId": "D1_DYNAMIC_LATENCY",
+      "estimands": ["equal-design geometric-mean ratio", "equal-design nearest-rank P95 ratio"],
+      "mipe": "both ratios <= 0.90",
+      "planningAlternativeOnModelScale": "both log contrasts = ln(0.90)",
+      "confirmatoryRule": "intersection-union maximum of the two one-sided p-values for each comparator; both simultaneous confidence intervals must be entirely below ratio 1"
+    },
+    {
+      "domainId": "D2_GRID_READ_WORK",
+      "estimand": "geometric-mean grid-accessor-call ratio",
+      "mipe": "ratio <= 0.90",
+      "planningAlternativeOnModelScale": "log contrast = ln(0.90)",
+      "confirmatoryNullBoundary": "ratio = 1"
+    },
+    {
+      "domainId": "D3_DYNAMIC_ALLOCATION",
+      "estimand": "ratio-like contrast on log1p(total managed allocation bytes) with mandatory raw-byte summaries",
+      "mipe": "ratio on the 1+bytes scale <= 0.90",
+      "planningAlternativeOnModelScale": "log1p contrast = ln(0.90)",
+      "confirmatoryNullBoundary": "log1p contrast = 0"
+    },
+    {
+      "domainId": "D4_PERSISTENT_STATE_BYTES",
+      "estimand": "ratio-like contrast on log1p(max persistent-state bytes) with mandatory raw-byte summaries",
+      "mipe": "ratio on the 1+bytes scale <= 0.90",
+      "planningAlternativeOnModelScale": "log1p contrast = ln(0.90)",
+      "confirmatoryNullBoundary": "log1p contrast = 0"
+    },
+    {
+      "domainId": "D5_AGENT_COUNT_SCALING",
+      "axis": "log2(N)",
+      "levels": [32, 64, 128],
+      "mipe": "IDFF-minus-comparator slope difference per axis unit <= ln(0.90)",
+      "confirmatoryNullBoundary": 0
+    },
+    {
+      "domainId": "D6_CHANGE_FOOTPRINT_SCALING",
+      "axis": "log2(F)",
+      "levels": [1, 9, 25, 81],
+      "mipe": "IDFF-minus-comparator slope difference per axis unit <= ln(0.90)",
+      "confirmatoryNullBoundary": 0
+    },
+    {
+      "domainId": "D7_GRID_SIZE_SCALING",
+      "axis": "log2(G^2)",
+      "levels": [64, 96, 128],
+      "mipe": "IDFF-minus-comparator slope difference per log2 grid-cell-count unit <= ln(0.90)",
+      "confirmatoryNullBoundary": 0
+    }
+  ],
+  "movementTransferSentinel": "OMITTED",
+  "correctnessAndOracleHardGates": "UNCHANGED_AND_MANDATORY",
+  "prohibitions": [
+    "no post-outcome MIPE change",
+    "no endpoint deletion after outcome inspection",
+    "no conversion of the seven domains into a weighted score",
+    "no ranking or winner field"
+  ]
+}

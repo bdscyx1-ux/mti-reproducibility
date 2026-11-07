@@ -1,0 +1,42 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 2,
+  "status": "AUTHORIZED_IN_PROGRESS",
+  "phase": "windows-sdk-hermetic-installation",
+  "rationale": "The Visual Studio component installer requires an already elevated initiating process. To avoid UAC bypass while retaining an exact Microsoft-published Windows SDK, install the same 10.0.26100.7705 SDK family as a hermetic NuGet SDK. Microsoft documents NuGet as a supported Windows SDK acquisition channel.",
+  "packages": [
+    {
+      "id": "Microsoft.Windows.SDK.CPP",
+      "version": "10.0.26100.7705",
+      "source": "https://api.nuget.org/v3-flatcontainer/microsoft.windows.sdk.cpp/10.0.26100.7705/microsoft.windows.sdk.cpp.10.0.26100.7705.nupkg"
+    },
+    {
+      "id": "Microsoft.Windows.SDK.CPP.x64",
+      "version": "10.0.26100.7705",
+      "source": "https://api.nuget.org/v3-flatcontainer/microsoft.windows.sdk.cpp.x64/10.0.26100.7705/microsoft.windows.sdk.cpp.x64.10.0.26100.7705.nupkg"
+    }
+  ],
+  "target": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-002-hermetic-sdk-nuget/sdk",
+  "acceptance": {
+    "packageVersionsExact": true,
+    "packagesHashFrozen": true,
+    "headersAndX64LibrariesPresent": true,
+    "criticalFileHashesFrozen": true,
+    "compilerUsesExplicitFrozenPaths": true,
+    "compilerKeepsUtf8": true,
+    "compilerKeepsWarningsAsErrors": true
+  },
+  "prohibitions": {
+    "uacBypass": true,
+    "securitySettingChange": true,
+    "fallbackMetric": true,
+    "runnerOrSchemaIntegration": true,
+    "qualificationScheduleInputsOrIdentityMapping": true,
+    "qualificationMeasuredRoot": true,
+    "algorithmLane": true,
+    "formalCollectionAnalysisRankingOrWinner": true
+  }
+}

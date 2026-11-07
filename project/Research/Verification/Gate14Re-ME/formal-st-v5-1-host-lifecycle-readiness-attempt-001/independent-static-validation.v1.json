@@ -1,0 +1,53 @@
+{
+  "schema": "gate14re-me-formal-st-v5-1-independent-static-validation-v1",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_FORWARD_ONLY_HOST_LIFECYCLE_CORRIGENDUM_STATIC_VALIDATION",
+  "implementationRevision": "v5.1-host-lifecycle-corrigendum",
+  "implementationManifest": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-implementation-manifest.v5_1.json",
+    "sha256": "5ade759471ee2849ae2c9b31408e92b2625afc6c75500ff52abaccec64b096a8",
+    "artifactCount": 33,
+    "allArtifactHashesAndByteCountsMatch": true
+  },
+  "acquisitionContract": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5_1/formal-st-acquisition-contract.v5_1.json",
+    "sha256": "9535be91c3796d76af1473903f9dff806c5f2ea9c4b6ad49e016c8b2c23e1604",
+    "frozenBindingCount": 25,
+    "allFrozenBindingsPresentInManifest": true
+  },
+  "sourceChecks": {
+    "supervisorPowerShellParseErrors": 0,
+    "runnerMethod": "DDM.Research.Editor.Gate14ReMEFormalSTRunnerV5_1.Run",
+    "formalCommandConstructionContainsQuit": false,
+    "runnerOwnsTerminalExit": true,
+    "stableBurstCompletionBeforeExit": true,
+    "separateStartupExecutionBurstAndExitTimeouts": true,
+    "perProcessHandleDisposal": true
+  },
+  "preservedScientificBindings": {
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "sampleSizeDecisionSha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5",
+    "fairnessBindingSha256": "5a2ba89c08efa86f79c756ee3b0cc54a68c310e2414760f18f286e95095319ca",
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81],
+    "B": 36,
+    "superblocks": 1296,
+    "algorithmLanes": 7776,
+    "algorithms": 6,
+    "scientificTimeoutsChanged": false,
+    "algorithmsChanged": false,
+    "metricsChanged": false,
+    "sampleRulesChanged": false
+  },
+  "executionBoundary": {
+    "algorithmsInstantiated": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "mqStarted": false,
+    "mtStarted": false,
+    "algorithmObservationsReadOrInterpreted": false,
+    "migrationPackageCreatedOrModified": false
+  },
+  "validatedAtUtc": "2026-10-26T11:21:09.4797998Z"
+}

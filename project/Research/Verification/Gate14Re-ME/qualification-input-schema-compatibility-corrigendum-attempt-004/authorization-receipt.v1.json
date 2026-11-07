@@ -1,0 +1,41 @@
+{
+  "schema": "gate14re-me-qualification-input-schema-compatibility-corrigendum-authorization-v4",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-004",
+  "status": "AUTHORIZED_ONE_ISOLATED_ALGORITHM_FREE_UNITY_SCHEMA_COMPATIBILITY_SELF_CHECK",
+  "authorizedAtUtc": "2026-10-17T12:32:39.1068621Z",
+  "authorizationText": "单独授权 Gate14Re‑ME qualification input schema compatibility corrigendum attempt‑004，按照建议的最小边界执行一次隔离无算法 Unity schema compatibility 自检；允许必要的当前冻结实现编译和一次 Unity 自然启动/退出，使用 attempt‑007 冻结时间戳比较器完成 trusted identity 核验。仍禁止生成调度、输入 bundles、匿名身份映射和 measured root，禁止 planner、算法 lane、正式采集、正式分析、排名及赢家裁决；失败时保留并冻结全部证据，不自动扩大阶段范围。",
+  "authorizedActions": [
+    "create an independent attempt-004 evidence directory",
+    "bind and compile the current frozen implementation in an isolated Unity project",
+    "launch exactly one algorithm-free Unity process and allow it to exit naturally",
+    "run exactly one schema compatibility self-check",
+    "use the frozen attempt-007 strict timestamp comparator for trusted launch identity timestamp checks",
+    "freeze terminal pass or fail-closed evidence and a new versioned status"
+  ],
+  "requiredChecks": [
+    "JsonUtility preserves eventGroups[*].topology through serialization and deserialization",
+    "Gate14ReMEInputGeometryValidatorV1.ValidateGroupHeader is actually invoked",
+    "matching topology passes and missing or mismatched topology fails for the frozen reason",
+    "prelaunch, live-concurrent and post-exit external executable identity satisfy trusted launch identity rule v1",
+    "timestamp text is preserved and compared only through the frozen attempt-007 strict DateTimeOffset UTC-ticks comparator",
+    "PID, creation time, executable path, command line, execute method and isolated project identity agree",
+    "all retained evidence and current source bindings remain unchanged"
+  ],
+  "prohibitedActions": [
+    "automatic retry",
+    "scope expansion",
+    "schedule generation",
+    "qualification input bundle generation",
+    "anonymous identity mapping generation",
+    "measured root creation",
+    "planner execution",
+    "algorithm lane execution",
+    "formal collection",
+    "formal analysis",
+    "algorithm ranking",
+    "winner adjudication",
+    "signal or forced termination of Unity"
+  ],
+  "failureDisposition": "FAIL_CLOSED_FREEZE_ALL_EVIDENCE_NO_RETRY_NO_ADOPTION"
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "gate14re-me-gnf-load-redesign-analysis-plan-v2",
+  "studyId": "Gate14Re-ME",
+  "redesignAttemptId": "gnf-load-redesign-v2-attempt-001",
+  "status": "FROZEN_BEFORE_V2_COMPUTATION",
+  "frozenAtUtc": "2026-10-19T11:12:50.0944756Z",
+  "preserveExactly": {
+    "factorial": "3 G levels x 4 N levels x 4 F levels = 48 core cells",
+    "lowerG": [64, 128],
+    "lowerN": [8, 32, 128],
+    "lowerF": [1, 9, 81],
+    "coreSeedsPerCell": 3,
+    "coreSuperblocks": 144,
+    "stressContextStrata": 18,
+    "totalQualificationSuperblocks": 162,
+    "algorithms": 6,
+    "qualificationLanes": 972,
+    "totalQualificationFreshProcesses": 1147,
+    "pairingOrderMetricsGatesAndStoppingRules": "unchanged except coordinates and hashes that must bind to the approved new maxima"
+  },
+  "oldMaxima": {"G": 256, "N": 512, "F": 225},
+  "predeclaredV2Candidates": [
+    {
+      "candidateId": "PRIMARY_AXIS_BALANCED",
+      "maxima": {"G": 192, "N": 192, "F": 121},
+      "upperStepRatios": {"G_over_128": 1.5, "N_over_128": 1.5, "F_over_81": 1.4938271605},
+      "rationale": "Approximately equal 1.5x upper step on all three axes; G and N are multiples of 64 and F is 11 squared."
+    },
+    {
+      "candidateId": "MARGIN_F144",
+      "maxima": {"G": 176, "N": 192, "F": 144},
+      "rationale": "More runtime margin while retaining F=12 squared; G remains a multiple of 16."
+    },
+    {
+      "candidateId": "HIGHER_F_SPAN",
+      "maxima": {"G": 176, "N": 192, "F": 169},
+      "rationale": "Retain more F-axis span with F=13 squared while controlling the stronger N driver."
+    },
+    {
+      "candidateId": "MAXIMUM_MARGIN",
+      "maxima": {"G": 160, "N": 192, "F": 100},
+      "rationale": "First-screen fallback with the largest modeled runtime margin."
+    }
+  ],
+  "runtimeMethod": {
+    "formal": "Identical to v1: per-algorithm multilinear interpolation of log process-wall P50/maximum over log2 G/N/F; add pooled gap P50/P99; B=36; conservative x 1.20 planning headroom.",
+    "qualificationLaneStage": "Three core lanes per algorithm x cell plus eighteen stress lanes per algorithm. New stress P50/maximum equals interpolated new high-corner core value multiplied by that algorithm's observed old stress/core high-corner ratio; add 972 gaps.",
+    "qualificationBoundary": "Lane-stage only. Instrument, oracle, empty-boundary, structural validation, delivery, and finalization are not included and no exact full-acquisition ETA is claimed."
+  },
+  "recommendationRule": "Recommend PRIMARY_AXIS_BALANCED if its B=36 planning budget is below 168 hours. Otherwise recommend, in order, MARGIN_F144, HIGHER_F_SPAN, or MAXIMUM_MARGIN if below 168 hours. Recommendation remains a proposal requiring explicit user approval and a new refreeze.",
+  "outputs": [
+    "input-file-inventory.v2.jsonl",
+    "balanced-axis-candidate-evaluation.v2.csv",
+    "balanced-axis-candidate-evaluation.v2.json",
+    "recommended-gnf-design.v2.json",
+    "redesign-report.v2.md",
+    "file-manifest.v2.jsonl",
+    "terminal-receipt.v2.json"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "gate14re-mq-cff-idff-identity-blind-power-failure-seal-v1",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "attemptId": "identity-blind-power-v1-attempt-001",
+  "sealedAtUtc": "2026-10-21T06:06:00Z",
+  "status": "SEALED_FAIL_CLOSED_NO_CANDIDATE_MEETS_POWER",
+  "selectedB": null,
+  "reason": "None of B=36,72,108,144 achieved a worst-of-six opaque-primary Wilson 95 percent lower rejection-power bound of at least 0.90 under the prospectively frozen identity-blind nuisance model.",
+  "powerResult": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v1-attempt-001/power-result.v1.json",
+    "sha256": "78ad7905c4c8b85f4eb8b7d614d690af41e63b17146877e2f7c29ea734963b66"
+  },
+  "postExecutionValidation": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v1-attempt-001/post-execution-validation-receipt.v1.json",
+    "sha256": "53070d14dee3c6aa5d4c343aac819cb530037403a7be2755439b598eadafaf78"
+  },
+  "attemptFreezeManifest": {
+    "relativePath": "Research/Verification/Gate14Re-MQ-CFF-IDFF/identity-blind-power-v1-attempt-001/attempt-freeze-manifest.v1.json",
+    "sha256": "091e15de94a54a02f10097e03371109c54ba39f03f1feb44860313989081fb66"
+  },
+  "nextPermittedAction": "Obtain explicit user authorization for a new prospective scientific redesign and a wholly new power attempt; do not modify or reuse this sealed attempt.",
+  "implementationFreezeCreated": false,
+  "formalScheduleCreated": false,
+  "prelaunchReadinessRun": false,
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false
+}

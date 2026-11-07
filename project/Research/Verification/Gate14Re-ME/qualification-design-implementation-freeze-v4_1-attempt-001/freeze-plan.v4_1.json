@@ -1,0 +1,50 @@
+{
+  "schema": "gate14re-me-qualification-design-implementation-freeze-plan-v4.1",
+  "materialPassport": {
+    "schema": "ars-material-passport-v9",
+    "materialId": "gate14re-me-qualification-v4.1-freeze-plan-attempt-001",
+    "materialType": "EXPERIMENT_DESIGN_IMPLEMENTATION_FREEZE_PLAN",
+    "verificationStatus": "PREDECLARED"
+  },
+  "studyId": "Gate14Re-ME",
+  "status": "PREDECLARED_QUALIFICATION_FREEZE_PLAN_EXECUTION_UNAUTHORIZED",
+  "scope": {
+    "qualificationDesign": "G={64,96,128}, N={32,64,128}, F={1,9,25,81}; 108 core plus 18 stress superblocks",
+    "oracleStage": "six strict-serial algorithm-neutral oracle-batch processes; one immutable source/hash-bound cache per input; zero reference-oracle evaluation inside algorithm lanes",
+    "acquisition": "1 instrument + 6 oracle-batch + 12 empty-boundary + 756 algorithm-lane = 775 strict-serial fresh Unity processes",
+    "acceptance": "independent read-only offline streaming necessary acceptance with bounded-memory typed-Parquet full round trip",
+    "formalSampleSize": "not finalized; finalB remains null pending terminal qualification PASS and reproduced anonymous power",
+    "formalStudyDesign": "not frozen by this stage"
+  },
+  "allowedActions": [
+    "replace provisional qualification-only statuses with frozen execution-unauthorized statuses",
+    "update version-owned artifact hashes and byte counts",
+    "add acceptance-contract self-binding and source-acquisition-contract binding to the v4.2 launcher",
+    "perform JSON, Python, PowerShell, hash, schedule, input-structure, compile-receipt and host-headroom read-only checks",
+    "write a new versioned freeze evidence root"
+  ],
+  "prohibitedActions": [
+    "create an execution authorization",
+    "create or reserve evidence, measured or delivery roots for a new qualification attempt",
+    "start Unity or any qualification process",
+    "read, aggregate or interpret algorithm observations, effects, rankings or winners",
+    "change the six-algorithm cohort, metric semantics, stopping rules or formal sample size",
+    "modify or unseal attempt-009 raw data"
+  ],
+  "predeclaredChecks": [
+    "all implementation-manifest artifact byte counts and SHA-256 values match",
+    "frozen acquisition and acceptance contracts bind the exact entry points and leaf artifacts",
+    "input and schedule schemas are frozen while execution remains unauthorized",
+    "schedule contains exactly 126 unique ordinal-contiguous rows and 756 paired lanes",
+    "oracle batching contains exactly six balanced batches of 21 inputs",
+    "runner lane code contains no direct reference-oracle evaluation",
+    "supervisor cardinality is exactly 775 and preserves zero retry/resume/top-up/merge/skip/reorder/replacement",
+    "exact current runner source is covered by a natural-exit-zero Unity/Burst compile receipt",
+    "v4.2 acceptance launcher parses and requires the frozen acceptance contract by path and SHA-256",
+    "acceptance tool parses and output schema names the actual acceptance-manifest.v4_2.json artifact",
+    "no Unity process is active and qualification storage headroom is available",
+    "finalB is null and formal collection/analysis/ranking/winner adjudication remain unauthorized"
+  ],
+  "passMeaning": "Qualification v4.1/v4.2 is frozen and read-only ready for a later separately authorized fresh execution attempt. No execution is started by this PASS.",
+  "createdAtUtc": "2026-10-19T13:28:36.1925198Z"
+}

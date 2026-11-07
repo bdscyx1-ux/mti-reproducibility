@@ -1,0 +1,20 @@
+﻿Algorithm S1. Full-Recompute Flow Field (C-FF)
+"Input: grid G, canonical goal set T, legal-move relation N(.)
+Output: integration J, owner O, and next-cell direction D
+1   Allocate fresh arrays; set J[v] <- INF, O[v] <- NIL, and D[v] <- NIL for every v in V
+2   Q <- empty deterministic min-heap
+3   for each walkable goal t in T, in canonical order do
+4       J[t] <- 0; O[t] <- t; push the current record for t into Q
+5   while Q is not empty do
+6       u <- pop a record from Q; if stale, continue
+7       for each legal predecessor p of u do
+8           candidate <- c(p, u) + J[u]
+9           if (candidate, O[u]) improves (J[p], O[p]) then
+10              J[p] <- min(J[p], candidate); O[p] <- O[u]; push the revised p into Q
+11  for each walkable, reachable, non-goal cell v do
+12      S <- {s in N(v) : c(v, s) + J[s] equals J[v]}
+13      D[v] <- deterministic minimum of S by (total, owner, remainder, coordinate)
+14      assert O[v] equals O[D[v]]
+15  return (J, O, D)
+On every accepted grid change, build a fresh field by lines 1-15, then replace the old field.
+A plan query follows D until the declared owner goal and requires J to decrease at each step."

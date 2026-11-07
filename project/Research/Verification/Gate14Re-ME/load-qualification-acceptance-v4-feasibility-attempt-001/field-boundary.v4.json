@@ -1,0 +1,19 @@
+{
+  "schema": "gate14re-me-streaming-essential-acceptance-field-boundary-v4",
+  "version": 4,
+  "status": "FROZEN_BEFORE_FEASIBILITY_EXECUTION",
+  "allowed": [
+    "sealed file relative paths, sizes and SHA-256",
+    "raw table names and schema-required fields",
+    "flat JSON scalar values for lossless typed-Parquet conversion",
+    "row counts, field names, scalar types, ordered whole-row digests and ordered recordId digests",
+    "runtime, peak memory, file counts and byte counts"
+  ],
+  "prohibited": [
+    "algorithm identity mapping",
+    "algorithm-specific metric summaries",
+    "effects, directions, rankings, weighting or winner adjudication",
+    "using qualification observations as formal samples"
+  ],
+  "note": "Reading scalar row content is authorized solely to validate lossless serialization; no metric is aggregated or interpreted."
+}

@@ -1,0 +1,28 @@
+{
+  "attemptId": "gate13r-pr2-mp2-validation-attempt-1",
+  "failedGate": "STATIC-UNIT-DETERMINISM",
+  "failureCode": "MP2-MODULE-RAW-STAGE-REASON-CODE-OMITTED",
+  "failureDiagnosis": "The frozen test design requires raw-after-workload to be explicitly distinguishable from cleanup eligibility. The V1 PowerShell policy module returned PASS/PASS instead of PASS/RAW-TRANSIENT-DIAGNOSTIC-ONLY; the independent Python and Unity candidate logic already used the explicit diagnostic reason.",
+  "formalAttempt3ExecutionReceiptCreated": false,
+  "formalAttempt3MeasuredCampaignExecuted": false,
+  "formalAttempt3OutputRootCreated": false,
+  "formalStatisticalAnalysisExecuted": false,
+  "gate14RExecuted": false,
+  "implementationHashes": {
+    "Assets/_Scripts/Research/Editor/Gate13RPR2FormalBatchCommandV5.cs": "21f86b21a49c936edd5e65fde750d269a54be984186d9c802cbc2804b2691c75",
+    "Research/Gate13RPR2MP2MemoryPolicyV1.psm1": "8d152de177ce4b3d1c6449a92592771dc0c318184be57d71d0b071d0dc5e6e10",
+    "Research/New-Gate13RPR2MP2ArtifactsV1.py": "7292e0acff8e10f29c137d34a8cb806be58b9632c82722cfdbbfc27c64e99441",
+    "Research/New-Gate13RPR2MP2BlockPlanV1.py": "9729e0056b6616f2d43c47d4cc4ac76c320ab3ecff36a6a9a3896ed62f11d316",
+    "Research/Run-Gate13RPR2MP2FormalBlockV1.ps1": "9c561263a895fc9e3008a4377d3f3e122aa99d81d89269528750d312b7c235c0",
+    "Research/Test-Gate13RPR2MP2V1.py": "a8840bb1030e461f4eda5a6036ed3bc1a0e51b40a3fedcd81cba56b471868dda"
+  },
+  "repairBoundary": "Create independent V2 implementation/artifacts; do not overwrite or reinterpret V1/attempt-1.",
+  "retryAuthorized": true,
+  "schemaVersion": 1,
+  "status": "FAILED-VERSIONED-VALIDATION-REPAIR-AUTHORIZED",
+  "summary": {
+    "passed": 66,
+    "sha256": "7a5476ded8d93bb7f60978d43991b4bcc87257506947463e4b17c0e093582e4e",
+    "total": 67
+  }
+}

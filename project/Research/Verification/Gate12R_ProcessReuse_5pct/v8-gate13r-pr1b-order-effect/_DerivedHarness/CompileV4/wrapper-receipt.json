@@ -1,0 +1,28 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate12r-compile-v4-memory-aggregation-command-and-empty-array-wrapper",
+    "createdAtUtc":  "2026-10-08T11:37:08.3879406Z",
+    "sourceSha256":  "76ab2ede0c58f9b6da33404547851652299133b221e303fce28a87b5224472f3",
+    "derivedSha256":  "31a5d2c11e6ebba54013d5f20ae7fa4be1fbf672c64591773d8765895d9f1367",
+    "routes":  [
+                   {
+                       "from":  "$matches=if(Test-Path -LiteralPath $log){@(Select-String -LiteralPath $log -Pattern \u0027error CS\\d+|Scripts have compiler errors|Compilation failed|executeMethod.+could not be found\u0027 -CaseSensitive:$false)}else{@()}",
+                       "to":  "$matches=@();if(Test-Path -LiteralPath $log){$matches=@(Select-String -LiteralPath $log -Pattern \u0027error CS\\d+|Scripts have compiler errors|Compilation failed|executeMethod.+could not be found\u0027 -CaseSensitive:$false)}",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "Assets\\_Scripts\\Research\\Editor\\Gate10RProcessReuseBatchCommand.cs",
+                       "to":  "Assets\\_Scripts\\Research\\Editor\\Gate12RProcessReuseBatchCommandV3.cs",
+                       "replacementCount":  1
+                   },
+                   {
+                       "from":  "summaryKind=\u0027gate12r-unity-compilation-v1\u0027",
+                       "to":  "summaryKind=\u0027gate12r-unity-compilation-v3-memory-aggregation-command\u0027",
+                       "replacementCount":  1
+                   }
+               ],
+    "researchAlgorithmSemanticsChanged":  false,
+    "sampleThresholdChanged":  false,
+    "blockAggregationRuleChanged":  true,
+    "memoryAggregationCommandCompiled":  true
+}

@@ -1,0 +1,109 @@
+{
+  "analysisRecomputed": false,
+  "attemptId": "attempt-001",
+  "classification": "POST_HOC_COMPOSITE_ENGINEERING_RECOMMENDATION",
+  "confirmatoryStatisticalWinnerClaimed": false,
+  "confirmatoryStatisticalWinnerProductionAlgorithmId": null,
+  "forcedWinnerClaimed": false,
+  "gate15Started": false,
+  "mappedDecisionRows": [
+    {
+      "anonymousLabel": "U17",
+      "decisionScore": 8,
+      "movementRank": 1,
+      "pathRank": 1,
+      "productionAlgorithmId": "C-FF",
+      "renderRank": 3,
+      "scalingRank": 2,
+      "sourceLabel": "C",
+      "staticBurdenRank": 2
+    },
+    {
+      "anonymousLabel": "U29",
+      "decisionScore": 13,
+      "movementRank": 3,
+      "pathRank": 3,
+      "productionAlgorithmId": "A*-R",
+      "renderRank": 1,
+      "scalingRank": 3,
+      "sourceLabel": "A",
+      "staticBurdenRank": 1
+    },
+    {
+      "anonymousLabel": "U43",
+      "decisionScore": 6,
+      "movementRank": 1,
+      "pathRank": 1,
+      "productionAlgorithmId": "IDFF",
+      "renderRank": 2,
+      "scalingRank": 1,
+      "sourceLabel": "D",
+      "staticBurdenRank": 3
+    }
+  ],
+  "mappedEligibilityRows": [
+    {
+      "M3Pass": true,
+      "M4Pass": true,
+      "M5Pass": true,
+      "anonymousLabel": "U17",
+      "eligible": true,
+      "productionAlgorithmId": "C-FF",
+      "sourceLabel": "C"
+    },
+    {
+      "M3Pass": true,
+      "M4Pass": true,
+      "M5Pass": true,
+      "anonymousLabel": "U29",
+      "eligible": true,
+      "productionAlgorithmId": "A*-R",
+      "sourceLabel": "A"
+    },
+    {
+      "M3Pass": true,
+      "M4Pass": true,
+      "M5Pass": true,
+      "anonymousLabel": "U43",
+      "eligible": true,
+      "productionAlgorithmId": "IDFF",
+      "sourceLabel": "D"
+    },
+    {
+      "M3Pass": false,
+      "M4Pass": true,
+      "M5Pass": false,
+      "anonymousLabel": "U61",
+      "eligible": false,
+      "productionAlgorithmId": "D*L",
+      "sourceLabel": "B"
+    }
+  ],
+  "newUnityAcquisitionPerformed": false,
+  "originalFormalConclusionPreserved": "NO_UNIQUE_WINNER",
+  "recommendationBasis": "UNIQUE_MINIMUM_FROZEN_DECISION_SCORE",
+  "recommendedAnonymousLabel": "U43",
+  "recommendedProductionAlgorithmId": "IDFF",
+  "rulesOrWeightsChanged": false,
+  "schema": "gate14re-final-composite-engineering-recommendation-v1",
+  "scoreDirection": "lower is better",
+  "status": "FINAL-POST-HOC-COMPOSITE-ENGINEERING-RECOMMENDATION-COMPLETE",
+  "studyId": "Gate14Re",
+  "tieBreakOrder": [
+    "RMAT180",
+    "T95",
+    "T99",
+    "T100MinusT50",
+    "originalM1",
+    "M2",
+    "quantityScaling",
+    "M4P95",
+    "staticEngineeringBurden"
+  ],
+  "weights": {
+    "movementRank": 2,
+    "pathRank": 1,
+    "renderRank": 1,
+    "scalingRank": 1
+  }
+}

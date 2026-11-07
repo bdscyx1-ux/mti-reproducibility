@@ -1,0 +1,23 @@
+{
+  "schema": "gate14re-me-gnf-window-user-authorization-v2",
+  "studyId": "Gate14Re-ME",
+  "designAttemptId": "gnf-discrimination-window-design-v2-attempt-001",
+  "receivedAtUtc": "2026-10-19T11:26:52Z",
+  "userInstructionsOriginal": [
+    "N改为3组，32、64、128，F也改为3组，重新分配F数值",
+    "那就F维持4组吧"
+  ],
+  "resolvedLatestInstruction": {
+    "NLevelCount": 3,
+    "NLevels": [32, 64, 128],
+    "FLevelCount": 4,
+    "FLevelsProposedFromPriorEvidence": [1, 9, 25, 81]
+  },
+  "preservedInstructions": [
+    "lower every old maximum",
+    "avoid a too-small non-discriminating window",
+    "avoid a too-large long-running window",
+    "retain six-algorithm pairing and strict-serial fresh-process execution",
+    "do not start a new qualification without explicit approval of the exact refrozen design"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "gate14re-me-supervisor-powershell-host-binding-corrigendum-attempt-004-stage-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-supervisor-powershell-host-binding-auto-repair-until-pass",
+  "attemptId": "supervisor-powershell-host-binding-corrigendum-attempt-004",
+  "status": "FROZEN_METADATA_ONLY_READONLY_CLOSURE_SCOPE",
+  "createdAtUtc": "2026-10-17T16:41:02.2210239+00:00",
+  "defect": "attempt-003 nested path array prevented the intended readonly metadata assignment for its ten stage files",
+  "permittedMutation": "set readonly file attribute only on exact-hash attempt-003 evidence and freeze attempt-004 closure evidence",
+  "prohibited": [
+    "content mutation",
+    "known-answer rerun",
+    "Unity invocation",
+    "qualification execution",
+    "planner execution",
+    "algorithm lane execution",
+    "formal collection",
+    "analysis",
+    "ranking",
+    "weighting",
+    "winner adjudication"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-me-formal-st-process-ledger-schema-v5.0",
+  "title": "Gate14Re-ME formal ST trusted process ledger row v5",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema","ordinal","mode","processId","creationTimeUtc","exitedAtUtc","exitCode","identityReceiptRelativePath","identityReceiptSha256","state"],
+  "properties": {
+    "schema":{"const":"gate14re-me-formal-st-process-ledger-row-v5"},
+    "ordinal":{"type":"integer","minimum":0},
+    "mode":{"enum":["instrument-self-test","oracle-batch","empty-boundary","lane"]},
+    "processId":{"type":"integer","minimum":1},
+    "creationTimeUtc":{"type":"string","format":"date-time"},
+    "exitedAtUtc":{"type":"string","format":"date-time"},
+    "exitCode":{"const":0},
+    "identityReceiptRelativePath":{"type":"string","minLength":1},
+    "identityReceiptSha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "state":{"const":"EXITED_ZERO_TRUSTED_IDENTITY"}
+  }
+}

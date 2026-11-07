@@ -1,0 +1,59 @@
+{
+    "schemaVersion": 2,
+    "preregistrationId": "ddm-gate11r-planning-preregistration-v1",
+    "specificationId": "gate11r-process-reuse-5pct-scenario-playable-spec-v1",
+    "matrixId": "gate11r-process-reuse-5pct-scenario-matrix-v1",
+    "executionDesignId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+    "independentUnit": "one-fresh-unity-editor-process-per-complete-williams-block",
+    "precisionPolicyId": "two-sided-95pct-ci-relative-half-width-5pct-uncapped-v1",
+    "logRelativeHalfWidthTarget": 0.048790164169432,
+    "formula": "ceil((1.96*sigma_upper/ln(1.05))^2), round upward to multiple of four",
+    "minimumBlocks": 32,
+    "blockMultiple": 4,
+    "hardCapEnabled": false,
+    "primaryAnalysisIds": [
+        "P1-shared-planning-repair",
+        "P2-heterogeneous-treatment",
+        "P3-idff-vs-cff-dynamic",
+        "P4-memory-budget-failure"
+    ],
+    "secondaryAnalysisIds": [
+        "S1-factor-trends",
+        "S2-p95-dispersion",
+        "S3-failure-taxonomy",
+        "S4-position-predecessor-process-age",
+        "S5-resource-scaling"
+    ],
+    "multiplicityPolicy": "Holm correction within P1-P4 primary family",
+    "clusteringPolicy": "Williams block is the independent cluster; paired log contrasts plus mixed or cluster-robust sensitivity",
+    "exclusionRules": [
+        "invalid-scenario-proven-by-verifier",
+        "missing-eligibility-contract",
+        "frozen-input-hash-mismatch",
+        "prospective-versioned-user-approved-amendment"
+    ],
+    "forbiddenExclusions": [
+        "runtime-magnitude",
+        "effect-direction",
+        "statistical-significance",
+        "NoPath-frequency",
+        "budget-overrun",
+        "unfavorable-result"
+    ],
+    "pilotCampaignAnchors": [
+        "agent-scale-a512-shared--shared",
+        "core-r01-s1-hetero--grouped-field",
+        "core-r01-s1-hetero--per-agent",
+        "core-r01-s1-shared--shared",
+        "core-r07-s2-hetero--grouped-field",
+        "core-r07-s2-hetero--per-agent",
+        "core-r07-s2-shared--shared",
+        "dynamic-footprint-f225-shared--shared",
+        "goal-count-g32-hetero--grouped-field",
+        "goal-count-g32-hetero--per-agent",
+        "grid-scale-g256-shared--shared",
+        "reachability-c8-strict-shared--shared"
+    ],
+    "pilotExecuted": false,
+    "formalCampaignExecuted": false
+}

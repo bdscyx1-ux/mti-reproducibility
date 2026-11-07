@@ -1,0 +1,64 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-freeze-attempt-002-failure-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-freeze-attempt-002",
+  "attemptId": "qualification-execution-readiness-freeze-attempt-002",
+  "status": "FAILED_CLOSED_QUALIFICATION_EXECUTION_READINESS_TERMINAL_CHAIN_INCOMPLETE",
+  "passed": false,
+  "terminal": true,
+  "completedAtUtc": "2026-10-17T15:12:24.039299Z",
+  "readinessAudit": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-freeze-attempt-002/readiness-audit.v2.json",
+    "sha256": "0ca56eece5fcd92dbbbef955937d51c2d0cdee44852b5c5eb374d3c8b622bbb4",
+    "totalChecks": 37,
+    "passedChecks": 35,
+    "failedChecks": 2
+  },
+  "hardStopReasons": [
+    {
+      "blockerId": "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+      "reason": "Frozen output schema v2 still declares v1 launch, acquisition-complete, instrument-export, and delivery-manifest paths, while supervisor/delivery v2 produce the corresponding v2 paths. The terminal package is therefore not path/version-consistent with its frozen output schema.",
+      "disposition": "FAIL_CLOSED_NO_QUALIFICATION_EXECUTION"
+    },
+    {
+      "blockerId": "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE",
+      "reason": "The terminal structural-v2 receipt does not re-establish the complete frozen cardinality/provenance chain: it omits the 25,272 process-resource rows, persistent-state measurement-point coverage, 162 accepted-superblock receipts, the 1,147-row process ledger and 1,147 process-identity receipts; supervisor v2 also writes processOrdinal without an explicit final equality assertion to 1,147.",
+      "disposition": "FAIL_CLOSED_NO_QUALIFICATION_EXECUTION"
+    }
+  ],
+  "preservedPassEvidence": {
+    "allCoreAndRuntimeHashesMatched": true,
+    "planningAssetsAndWilliamsBalancePassed": true,
+    "expectedProcessFormula": "1 + 162 + 12 + 972 = 1147",
+    "serialFreshProcessControlFlowPassed": true,
+    "zeroReplacementFailStopPassed": true,
+    "runtimeBudgetPassed": true,
+    "compileIdentityPassed": true,
+    "completePerObservationBridgeEvidencePassed": true
+  },
+  "scientificBoundary": {
+    "measuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "rankingPerformed": false,
+    "winnerAdjudicationPerformed": false,
+    "sealedIdentityMappingDisclosed": false
+  },
+  "disposition": {
+    "qualificationExecutionAuthorized": false,
+    "measuredOrDeliveryRootCreationAllowed": false,
+    "unityRestartOrRetryAllowed": false,
+    "repairPerformed": false,
+    "automaticNextAttemptCreated": false,
+    "formalCollectionAnalysisRankingOrWinnerAllowed": false,
+    "nextStepRequiresSeparateRepairAuthorization": true
+  }
+}

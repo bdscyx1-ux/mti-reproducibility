@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate10r-attempt4-filescope-retained-regression-series-authorization-v1",
+  "authorizedAt": "2026-10-06T14:41:17.7173184Z",
+  "status": "AUTHORIZED-GATE10R-ATTEMPT4-SERIES-ONLY",
+  "attempt": 4,
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "lineageId": "gate10r-onward-one-process-per-williams-block-5pct-playable-v1",
+  "userAuthorizationSource": {
+    "relativePath": "Gate10R_to_Gate12R_LedgerEntries/041-user-attempt4-authorization-source.txt",
+    "sha256": "b44e1d3d3c81e1f04955ab21cecde945d754b1b27c11616d09c6142c7fab1323"
+  },
+  "authorized": {
+    "gate10rAttempt4Series": true,
+    "repairScope": "windows-powershell-5.1-child-scriptblock-to-file-script-scope-only",
+    "outsideV4RootNoUnityPreflight": true,
+    "oneExecutionPerVersionedReceipt": true,
+    "additiveAutomaticRetryResumeAfterAtomicFailureClosure": true,
+    "stopOnFirstGate10RPass": true
+  },
+  "notAuthorized": {
+    "gate11r": true,
+    "gate12r": true,
+    "gate13r": true,
+    "algorithmChanges": true,
+    "unityCommandChanges": true,
+    "processReuseSemanticChanges": true,
+    "williamsOrderChanges": true,
+    "resetSemanticChanges": true,
+    "telemetrySemanticChanges": true,
+    "lockHygieneSemanticChanges": true,
+    "precisionOrCapChanges": true,
+    "playableSemanticChanges": true,
+    "historicalEvidenceMutation": true
+  },
+  "retryPolicy": {
+    "sameRootOverwriteAllowed": false,
+    "sameReceiptReuseAllowed": false,
+    "attempt1Through3ResumeAllowed": false,
+    "eachFailedExecutionRequiresAtomicFailureReceiptManifestCheckpointAndHashes": true,
+    "eachRetryRequiresNewVersionedRootAndExecutionReceipt": true
+  },
+  "attempt4MaximumOfficialExecutionsPerReceipt": 1,
+  "automaticRetryAuthorized": true,
+  "automaticResumeAuthorized": true,
+  "gate11RConditionalContinuationAuthorized": false,
+  "gate12RConditionalContinuationAuthorized": false,
+  "gate13RPreparationAuthorized": false,
+  "gate13RFormalCampaignAuthorized": false,
+  "formalCampaign": false,
+  "successStop": "GATE10R-PASSED-WAITING-FOR-USER-AUTHORIZATION"
+}

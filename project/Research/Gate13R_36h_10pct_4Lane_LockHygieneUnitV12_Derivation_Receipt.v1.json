@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-36h-lock-hygiene-unit-v12-derivation-v1",
+  "createdAtUtc": "2026-10-08T05:17:58.0462101Z",
+  "sourceRelativePath": "Research/Verification/Run-Gate13R36hLockHygieneUnitV5.ps1",
+  "sourceSha256": "84af4c81f141debfc72d21b76fdd3255f5a89742131709c784f815b4d7f36d61",
+  "destinationRelativePath": "Research/Verification/Run-Gate13R36hLockHygieneUnitV12.ps1",
+  "destinationSha256": "4abbe6d186d59f4169e20343a965b42c6b073b73c50c86ed68a228fd127cfd38",
+  "routes": [
+    {
+      "from": "Run-Gate13R36hLockHygieneUnitV5",
+      "to": "Run-Gate13R36hLockHygieneUnitV12",
+      "count": 1
+    },
+    {
+      "from": "Gate13R_36h_10pct_4Lane\\v5",
+      "to": "Gate13R_36h_10pct_4Lane\\v12",
+      "count": 3
+    },
+    {
+      "from": "gate13r-36h-expected-negative-lock-hygiene-unit-v5",
+      "to": "gate13r-36h-expected-negative-lock-hygiene-unit-v12",
+      "count": 1
+    }
+  ],
+  "reverseTransformSha256": "84af4c81f141debfc72d21b76fdd3255f5a89742131709c784f815b4d7f36d61",
+  "lockModuleSha256": "9eba2284dc90fcf6dbbc59080301c1ac6db14c5029f8adab69db234c94f879d6",
+  "scientificSemanticsChanged": false,
+  "formalCampaign": false,
+  "pilotStarted": false,
+  "passed": true
+}

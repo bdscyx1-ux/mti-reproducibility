@@ -1,0 +1,32 @@
+{
+  "schema": "gate14re-engineering-recommendation-unblinding-authorization-v1",
+  "studyId": "Gate14Re",
+  "attemptId": "attempt-001",
+  "authorizationId": "gate14re-engineering-recommendation-unblinding-attempt-001-96e8e550-a642-4bcf-b360-67b0ac9e5791",
+  "authorizedUtc": "2026-10-15T18:16:34.9160403Z",
+  "status": "AUTHORIZED_ONCE",
+  "promptRelativePath": "Research/Gate14Re/EngineeringRecommendation/next-unblinding-and-final-recommendation-authorization-prompt.v1.md",
+  "promptSha256": "4ed33b7f481985bc8f421a254b508e71a661636fb046181f2589bd1ba7a46c6e",
+  "contractRelativePath": "Research/Gate14Re/EngineeringRecommendation/Unblinding/v1/Gate14Re_Engineering_Recommendation_Unblinding_Contract.v1.json",
+  "contractSha256": "d0a481422cdff3ca33bfc05be9f3cd44b743cf8cfd1184604e351619c0616aee",
+  "toolRelativePath": "Research/Unblind-Gate14ReEngineeringRecommendationV1.py",
+  "toolSha256": "bd4dc74c956c95469e55701afa13b30a22d5902ea5ebf3ff9c24ff9747f08764",
+  "userInstructionVerbatim": "按 `next-unblinding-and-final-recommendation-authorization-prompt.v1.md` 授权 Gate 14Re Engineering Recommendation attempt-001 执行一次标签解盲和最终综合工程推荐。仅允许解密并核对已冻结的 U17/U29/U43/U61 标签映射、验证 mapping commitment、将既有匿名预裁决映射到真实算法身份，并生成版本化只读 unblinding receipt、最终综合工程推荐、manifest 与 canonical tree。必须保留原 Gate 14Re `NO_UNIQUE_WINNER` 正式结论，明确最终结论是事后综合工程推荐而非确认性统计赢家；不得修改 formal raw、原 Phase B、冻结规则、权重或匿名结果，不得重新分析或补采，不得启动 Gate 15V-R/OBS。",
+  "scope": {
+    "decryptLabelMappingOnce": true,
+    "verifyMappingCommitment": true,
+    "mapFrozenAnonymousPreadjudication": true,
+    "writeVersionedReadOnlyOutputs": true,
+    "preserveOriginalNoUniqueWinner": true,
+    "modifyFormalRaw": false,
+    "modifyOriginalPhaseB": false,
+    "modifyAnonymousPreadjudication": false,
+    "changeRulesOrWeights": false,
+    "recomputeAnalysis": false,
+    "collectOrTopUpData": false,
+    "startGate15": false
+  },
+  "requiredOutputRoot": "Research/Analysis/Gate14Re/EngineeringRecommendation/final-attempt-001",
+  "requiredFinalClassification": "POST_HOC_COMPOSITE_ENGINEERING_RECOMMENDATION",
+  "requiredOriginalFormalConclusion": "NO_UNIQUE_WINNER"
+}

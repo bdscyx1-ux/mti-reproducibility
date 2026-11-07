@@ -1,0 +1,45 @@
+{
+  "schema": "gate14re-me-formal-st-attempt-003-recovery-acceptance-validation-v2",
+  "studyId": "Gate14Re-ME",
+  "status": "PASS_AUTHORIZED_CONTROL_PLANE_RECOVERY_COMPATIBILITY_PREFLIGHT",
+  "acceptanceAttempt": "attempt-002",
+  "sourceMeasuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-ME/formal-st/v5/attempt-003",
+  "outputRoot": "H:/DDM_Final_Project/Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-002",
+  "sealedRecoveryAwareAcquisitionTerminalValidated": true,
+  "preservedTechnicalFailureRows": 2,
+  "failureResolutionV1Validated": true,
+  "failureResolutionV2Validated": true,
+  "reconstructedLedgerRows": 1,
+  "resumedNewUnityProcesses": 324,
+  "replayedAlgorithmLanes": 0,
+  "replacementRows": 0,
+  "priorAcceptanceAttempt001RetryPerformed": false,
+  "sourceMutationPermitted": false,
+  "formalAnalysisAuthorized": false,
+  "formalAnalysisPerformed": false,
+  "rankingOrWinnerComputed": false,
+  "controlLedgerSourceMappings": {
+    "replacement-ledger": {
+      "legacyFileName": "replacement-ledger.raw.v1.jsonl",
+      "sealedRelativePath": "_control/replacement-ledger.raw.v5.jsonl",
+      "expectedRows": 0,
+      "expectedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "failures-and-voids": {
+      "legacyFileName": "failures-and-voids.raw.v1.jsonl",
+      "sealedRelativePath": "_control/failures-and-voids.raw.v5.jsonl",
+      "expectedRows": 2,
+      "expectedSha256": "fc36def2d515396256767a4105112bc3ac51e56b85d981a08e04bab610d5bd3b"
+    }
+  },
+  "compatibilityProjectionScope": [
+    "runner method identity v5.1 projected to frozen v5 validator token after exact validation",
+    "recovery-aware acquisition statuses projected to frozen no-recovery status tokens after exact validation",
+    "preserved resolved failure receipt/rows hidden only from the legacy zero-failure control-plane branch after exact validation",
+    "the two preserved technical failure rows remain visible to raw-table profiling and typed-Parquet round-trip",
+    "legacy replacement-ledger table source mapped in memory to the sealed v5 control ledger; zero rows required",
+    "legacy failures-and-voids table source mapped in memory to the sealed v5 control ledger; exactly two resolved technical rows retained"
+  ],
+  "elapsedSeconds": 0.178,
+  "createdAtUtc": "2026-10-30T11:06:11.336Z"
+}

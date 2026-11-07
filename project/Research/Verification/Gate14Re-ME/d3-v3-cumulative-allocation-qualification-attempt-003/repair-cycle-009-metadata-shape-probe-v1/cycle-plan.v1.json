@@ -1,0 +1,31 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 9,
+  "status": "AUTHORIZED_IN_PROGRESS",
+  "phase": "native-gc-alloc-metadata-shape-probe",
+  "rationale": "Cycle 008 proved one rejected GC.Alloc event per deliberate allocation. This versioned probe records, without accepting or accumulating, the exact callback event type, metadata count, first metadata type, size, pointer presence, and raw Int64 payload on the owner thread.",
+  "compilerPolicy": [
+    "/std:c++17",
+    "/O2",
+    "/LD",
+    "/EHsc",
+    "/W4",
+    "/WX",
+    "/utf-8",
+    "/permissive-",
+    "/Brepro"
+  ],
+  "scientificBoundary": {
+    "probeCountsAsD3Qualification": false,
+    "criteriaRelaxed": false,
+    "fallbackMetricUsed": false,
+    "qualificationRunnerOrOutputSchemaIntegration": false,
+    "algorithmLaneExecuted": false,
+    "qualificationMeasuredRootCreated": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

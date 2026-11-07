@@ -1,0 +1,56 @@
+{
+  "schema": "gate14re-me-formal-st-authorization-contract-corrigendum-v5.3",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "status": "FROZEN_FORWARD_ONLY_MINIMAL_TECHNICAL_CORRIGENDUM",
+  "implementationRevision": "v5.3-authorization-contract-parity-fix",
+  "failedAttemptEvidenceRoot": "Research/Verification/Gate14Re-ME/formal-st-local-execution-attempt-002",
+  "failedAttemptEvidenceSealSha256": "0f2a6ee6197f7ad0d0858b7da3b30312b1b75eaee95e3d38124bf68feb4e41cd",
+  "failedSupervisorRelativePath": "Research/Gate14Re-ME/Execution/v5_2/Run-Gate14ReMEFormalST.v5_2.ps1",
+  "failedSupervisorSha256": "cbcdc4030eac2e4d79ae1fbafa5c1a2fe1a3ee7e25c00044575974bf78fb9889",
+  "confirmedRootCause": {
+    "classification": "EXECUTION_AUTHORIZATION_STRUCTURAL_UNDERBINDING_NOT_CAUGHT_BY_SUPERVISOR_PREFLIGHT",
+    "failedMode": "instrument-self-test",
+    "failedOrdinal": 0,
+    "unityExitCode": 1,
+    "missingRequiredFields": [
+      "implementationManifestRelativePath",
+      "executionContractRelativePath",
+      "inputFreezeManifestRelativePath",
+      "scheduleRelativePath",
+      "authorizationNonce"
+    ],
+    "processLedgerRows": 0,
+    "algorithmLaneExecutions": 0
+  },
+  "forwardFix": {
+    "completeTypedAuthorizationPropertyGuard": true,
+    "exactAuthorizationPathBindingChecks": true,
+    "lowerCaseUuidV4NonceCheck": true,
+    "authorizationContractParityReceipt": true,
+    "readOnlyPreflightStillPrecedesMeasuredRootMutation": true
+  },
+  "unchanged": {
+    "scientificDesignSha256": "78b77db9346aca9f993af8c470ac685662d192a589afb6312c0e18c8dda73708",
+    "sampleSizeDecisionSha256": "d567a3aeac81e8a9fbbf8f103243aeb0a0675aa04b3ac2bf1074e54433cc8ed5",
+    "formalInputFreezeManifestSha256": "aa1a4d7b15f06ba82a9737f4f8a36a03ebf615014ee5caa33e7621e7b63b7bfe",
+    "scheduleSha256": "45293f6d6eea879f5c54e23fd144dc97ef3a5e4b4d130bff4b944fcb2b1882f3",
+    "runnerSha256": "12c44c11d831a28a5277b7f3b86687dfbe6572d50b93a74635a7437995c02d12",
+    "operationalResourceBudgetSha256": "973901965cafd162a567fc6a9ba2ad374d9f705cc525c9768adbb83d57e2d8b2",
+    "algorithms": true,
+    "metrics": true,
+    "sampleRules": true,
+    "timeouts": true,
+    "B": 36,
+    "structuralCells": 36,
+    "superblocks": 1296,
+    "algorithmLanes": 7776
+  },
+  "authorizationBoundary": {
+    "formalCollectionAuthorizedByThisCorrigendum": false,
+    "formalAnalysisAuthorized": false,
+    "mqAuthorized": false,
+    "mtAuthorized": false,
+    "migrationPackageModified": false
+  }
+}

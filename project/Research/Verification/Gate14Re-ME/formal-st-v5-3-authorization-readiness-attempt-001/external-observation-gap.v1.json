@@ -1,0 +1,36 @@
+{
+  "schema": "gate14re-me-formal-st-v5.3-readiness-external-observation-gap-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "formal-st-v5-3-authorization-readiness-attempt-001",
+  "status": "PRESERVED_NONTERMINAL_EXTERNAL_EXIT_CODE_NOT_CAPTURED",
+  "implementationRevision": "v5.3-authorization-contract-parity-fix",
+  "process": {
+    "pid": 34016,
+    "creationTimeUtc": "2026-10-26T12:09:39.5421364Z",
+    "executablePath": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "executableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "exactCommandLine": "\"H:\\UnityEditor\\2022.3.30f1c1\\Editor\\Unity.exe\" -batchmode -nographics -projectPath H:/DDM_Final_Project -executeMethod DDM.Research.Editor.Gate14ReMEReadinessCompileExitV4.Run --g14me-readiness-receipt H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-001/compile-readiness-receipt.v4.json -logFile H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/formal-st-v5-3-authorization-readiness-attempt-001/unity-readiness.log",
+    "commandLineQuitPresent": false,
+    "activeUnityProcessCountAtObservation": 0,
+    "exitCodeObserved": false
+  },
+  "availableEvidence": {
+    "compileReadinessReceiptStatus": "PASS_ALGORITHM_FREE_COMPILE_BURST_COMPLETION_GUARDED",
+    "compileReadinessReceiptSha256": "ac52133a4c8be6743631a458222506d92237b861d75a318037a372e0f283e818",
+    "unityLogSha256": "a5ac5e2530a2ddd9223cc8426636b13dc9dee71f19d34f928f9700f5cf2d907a"
+  },
+  "adjudication": {
+    "terminalPassIssued": false,
+    "reason": "The detached external launcher returned before Unity exited and therefore did not preserve a trustworthy external exit code. The PASS receipt is retained but is insufficient for the required composite terminal observation.",
+    "sameAttemptRerun": false,
+    "successorReadinessAttemptRequired": true
+  },
+  "scope": {
+    "algorithmLaneExecuted": false,
+    "formalInputRead": false,
+    "formalMeasuredRootCreated": false,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false
+  },
+  "observedAtUtc": "2026-10-26T12:10:15.9145942Z"
+}

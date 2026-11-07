@@ -1,0 +1,90 @@
+{
+  "schema": "gate14re-me-input-schema-corrigendum-source-and-evidence-freeze-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-input-schema-compatibility-corrigendum-attempt-001",
+  "status": "FAILED_STAGE_SOURCES_AND_EVIDENCE_RETAINED_NOT_ADOPTED",
+  "frozenAtUtc": "2026-10-17T08:57:58.4402606Z",
+  "stageSources": [
+    {
+      "role": "authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Input_Schema_Compatibility_Corrigendum_Authorization.v1.json",
+      "lengthBytes": 5847,
+      "sha256": "dc8a9e5563e0b428f895f7de56265e78d51b3c57b59295fc9ad4f0bf86c7d6b6"
+    },
+    {
+      "role": "plan",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Qualification_Input_Schema_Compatibility_Corrigendum_Plan.v1.md",
+      "lengthBytes": 3721,
+      "sha256": "6d93d2542baaccd82375ad364ad1ebfa2dc45c7e55bb4b52c917afc7b27fccbb"
+    },
+    {
+      "role": "corrected-input-validation-schema-candidate",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-input-schema.v2.json",
+      "lengthBytes": 4664,
+      "sha256": "1054fd12e2cecc5c74f985f4739c888aaa0550dec23136b5237c87040b6fd117"
+    },
+    {
+      "role": "planning-schema-binding-candidate",
+      "relativePath": "Research/Gate14Re-ME/Execution/v2/load-qualification-planning-schema-binding.v2.json",
+      "lengthBytes": 4360,
+      "sha256": "abbc8965a58d4ade2696ace3a0d7af47f48d92260540f589b9dc7af1b880d5e7"
+    },
+    {
+      "role": "schema-known-answer-tool",
+      "relativePath": "Research/Gate14Re-ME/Tools/Test-Gate14ReMEInputSchemaCompatibilityV1.ps1",
+      "lengthBytes": 14272,
+      "sha256": "b7931734393352dca71397f293428bb18685c912bb41709e04a88db0a16c20c3"
+    },
+    {
+      "role": "unity-self-check-harness",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEInputSchemaCompatibilitySelfCheckV1.cs",
+      "lengthBytes": 27378,
+      "sha256": "31ea1d3b60e7ae8a2df11f43d13f5b0105962c12a38b8ce5c7c0d9134bbb05c7"
+    },
+    {
+      "role": "unity-self-check-harness-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMEInputSchemaCompatibilitySelfCheckV1.cs.meta",
+      "lengthBytes": 243,
+      "sha256": "834af968e27d27f708bf1e99f77430d3c2f184ecf6828855582eb6d74b4b256c"
+    }
+  ],
+  "stageEvidence": [
+    {
+      "role": "schema-known-answer-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/schema-known-answer-receipt.v1.json",
+      "lengthBytes": 6621,
+      "sha256": "76977549e66d3e98af3e4f214b507bda1bba9d5d13006762d0f004bd62f40358",
+      "status": "PASS_INPUT_SCHEMA_COMPATIBILITY_KNOWN_ANSWER"
+    },
+    {
+      "role": "unity-log",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/unity-self-check.log",
+      "lengthBytes": 95852,
+      "sha256": "bffeb712a6c14871d7c69a599dab4c4576cdc9cd6fbbb172ae12a18758b5da7b"
+    },
+    {
+      "role": "unity-self-check-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-input-schema-compatibility-corrigendum-attempt-001/unity-self-check-output/input-schema-compatibility-self-check-receipt.v1.json",
+      "lengthBytes": 8436,
+      "sha256": "f9a3ee42729fc055836e8448043278732cd43decf2ca2a06c58e135fb979944b",
+      "status": "FAILED_CLOSED_INPUT_SCHEMA_COMPATIBILITY_UNITY_SELF_CHECK"
+    }
+  ],
+  "retainedProtectedBindings": {
+    "inputSchemaV1Sha256": "12105816916eaadc6575ed28dc96a6bb4a9863d2dbbe70cc034ebcfbf1de2c6b",
+    "qualificationContractsSourceSha256": "0e6a516c24eff27195b634227a96fde742eea6ef5899eaa7aeda7c514c2b7ee4",
+    "referenceOracleSourceSha256": "3dee772014b2416fa252163838deb4394c0e3ea2edc4334ac0fe27e17580cb25",
+    "qualificationRunnerV2SourceSha256": "39d371a5a9e858836bc448aabb04656e8576e296ca9b1cedb479cd3552ad1d73",
+    "navigationContractsSourceSha256": "7e074ec1fa13d9de2addeca4defa702fb773974d17615de3fffce93b5c4f5efa"
+  },
+  "disposition": {
+    "schemaKnownAnswerPassed": true,
+    "unityCompilationPassed": true,
+    "unityRuntimeSelfCheckPassed": false,
+    "schemaCandidateAdoptedForPlanning": false,
+    "planningBindingCandidateAdopted": false,
+    "retryAuthorizedOrPerformed": false,
+    "failedAttemptReusable": false,
+    "allEvidenceRetained": true
+  }
+}

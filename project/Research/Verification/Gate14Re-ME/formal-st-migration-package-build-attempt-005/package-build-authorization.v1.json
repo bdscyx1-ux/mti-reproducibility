@@ -1,0 +1,64 @@
+{
+  "schema": "gate14re-me-formal-st-migration-package-build-authorization-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "authorizationId": "gate14re-me-formal-st-v5-package-build-attempt-005",
+  "status": "AUTHORIZED_PACKAGE_BUILD_AND_VALIDATION_ONLY",
+  "userAuthorizationVerbatim": [
+    "授权后续工作",
+    "重新生成迁移包",
+    "这次的打包不需要添加UnityEditor和UnityHub安装包",
+    "把Research里除了FormalRuns的所有文件都打包吧，避免再次缺失文件"
+  ],
+  "userScopeSha256": "2c4a54779d75be1683dfcfa8291f626b0963e831dc17488e117e2dd62d9b77f8",
+  "authorized": {
+    "createFreshPackageStagingRoot": true,
+    "createFreshPackageBuildRoot": true,
+    "createFreshPackageTestRoot": true,
+    "copyCompleteResearchSnapshotExceptFormalRunsAndPackageOutputRoots": true,
+    "copyUnityInstaller": false,
+    "copyUnityHubInstaller": false,
+    "buildZip64Archive": true,
+    "extractAndValidatePackage": true,
+    "algorithmFreeCompileReadiness": true
+  },
+  "prohibited": {
+    "unityEditorInstallerInArchive": true,
+    "unityHubInstallerInArchive": true,
+    "credentialCopy": true,
+    "credentialsInArchive": true,
+    "formalInputOrScheduleMaterialization": true,
+    "formalMeasuredOrDeliveryRootCreation": true,
+    "formalSTCollection": true,
+    "formalAnalysis": true,
+    "MQ": true,
+    "MT": true
+  },
+  "researchInclusionPolicy": {
+    "requested": "all files below Research except Research/FormalRuns",
+    "effectiveSourceSnapshotExclusions": {
+      "Research/FormalRuns": "user-requested exclusion of measured/formal run data",
+      "Research/Packages": "package-output exclusion prevents recursive embedding and excludes the superseded Unity-bearing archive",
+      "Research/PackageStaging": "ephemeral package-construction output; excluded to prevent self-inclusion",
+      "Research/PackageTests": "ephemeral extraction/readiness output; excluded to prevent self-inclusion"
+    },
+    "allOtherResearchFilesRequired": true
+  },
+  "priorPackageAttempt": {
+    "terminalRelativePath": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-004/terminal-receipt.v1.json",
+    "terminalSha256": "6451ae0e03eed02ab7ad0e906c75403e5978cf4136756a580785a668fca521df",
+    "supersededForTransferBecauseSemanticSpecificationClosureWasIncomplete": true,
+    "mustNotBeModifiedOrReusedAsSuccessor": true
+  },
+  "frozenFormalSTFreezeIndex": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-freeze-index.v5_0.json",
+    "sha256": "35c3b98e42cc21b200308460c6b93fb48961b4a450522acc23958c76b70b00dd"
+  },
+  "roots": {
+    "staging": "Research/PackageStaging/Gate14Re-ME/formal-st/v5/attempt-005",
+    "build": "Research/Packages/Gate14Re-ME/formal-st/v5/attempt-005",
+    "test": "Research/PackageTests/Gate14Re-ME/formal-st/v5/attempt-005",
+    "evidence": "Research/Verification/Gate14Re-ME/formal-st-migration-package-build-attempt-005"
+  },
+  "authorizedAtUtc": "2026-10-23T03:29:19.514753Z"
+}

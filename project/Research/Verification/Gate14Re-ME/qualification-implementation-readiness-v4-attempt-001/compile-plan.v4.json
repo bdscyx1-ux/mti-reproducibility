@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-me-qualification-implementation-readiness-plan-v4",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-implementation-readiness-v4-attempt-001",
+  "status": "FROZEN_BEFORE_COMPILE",
+  "purpose": "Compile and statically validate the bounded-load v4 runner, acquisition-only supervisor, and independent read-only acceptance implementation without creating a measured root or running any qualification lane.",
+  "runner": {
+    "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMELoadQualificationRunnerV4.cs",
+    "sha256": "46f749de672600c287feb9aa37917b047c43526d15109a75bc652e1600e32ee3"
+  },
+  "supervisor": {
+    "relativePath": "Research/Gate14Re-ME/Execution/v4/Run-Gate14ReMELoadQualification.v4_0.ps1",
+    "sha256": "e8715f3e3749aa161bb74209560018e86880179a00154de64d3a7290c1822b95"
+  },
+  "acceptanceTool": {
+    "relativePath": "Research/Gate14Re-ME/Tools/gate14re_me_qualification_acceptance_v4_1.py",
+    "sha256": "2d6584b6a2e20a56bc671319a7346338b71b337f29d3e1eec553c95e6c0b8683"
+  },
+  "unity": {
+    "path": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "sha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf"
+  },
+  "rules": {
+    "batchCompileOnly": true,
+    "executeMethod": null,
+    "measuredRootCreation": false,
+    "qualificationProcesses": 0,
+    "algorithmLaneExecution": false,
+    "formalCollection": false,
+    "formalAnalysis": false,
+    "rankingOrWinner": false
+  },
+  "createdAtUtc": "2026-10-19T12:35:00Z"
+}

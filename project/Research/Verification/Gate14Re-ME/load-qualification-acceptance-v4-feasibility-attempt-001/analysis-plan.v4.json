@@ -1,0 +1,41 @@
+{
+  "schema": "gate14re-me-streaming-essential-acceptance-feasibility-plan-v4",
+  "version": 4,
+  "status": "FROZEN_BEFORE_FEASIBILITY_EXECUTION",
+  "studyId": "Gate14Re-ME",
+  "createdAtUtc": "2026-10-19T11:42:00.000Z",
+  "sourceAttempt": "load-qualification-execution-attempt-009",
+  "sourceMeasuredRoot": "H:/DDM_Final_Project/Research/PilotRuns/Gate14Re-ME/load-qualification/attempt-007",
+  "sourceSealRoot": "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/load-qualification-paused-seal-attempt-009",
+  "objective": "Test whether the reusable v4 acceptance path can retain all sealed raw rows and prove typed-Parquet value/type/order round trip with bounded memory and without repeating per-row source hashing.",
+  "necessaryAcceptance": [
+    "bind the paused seal and prior offline necessary structural PASS",
+    "replay the complete measured-root sealed inventory exactly once",
+    "scan every raw row in a bounded-memory type/profile pass",
+    "write typed Parquet in bounded batches",
+    "stream typed Parquet back and compare row count plus complete ordered canonical row digest",
+    "freeze per-table and whole-output manifests"
+  ],
+  "deliberatelyRemovedFromQualificationGate": [
+    "duplicate canonical JSONL because sealed raw JSONL is already the canonical complete record",
+    "CSV duplication",
+    "gzip JSONL duplication",
+    "whole-table in-memory row arrays",
+    "millions of recordId strings embedded in a delivery manifest",
+    "per-row re-hashing of a source file"
+  ],
+  "failClosedRules": [
+    "output root must be new",
+    "any binding, seal replay, JSON scalar/type, cardinality, digest, Parquet schema or round-trip mismatch fails",
+    "failure output is preserved and the same attempt is not retried",
+    "sealed source roots are never modified"
+  ],
+  "scientificBoundary": {
+    "algorithmIdentityOpened": false,
+    "algorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "formalInferencePerformed": false,
+    "attempt009QualificationTerminalPassClaimed": false
+  },
+  "reuseDecisionRule": "Reuse the implementation in v4 only if this independent attempt passes complete sealed inventory replay and all ten table-level typed-Parquet round trips."
+}

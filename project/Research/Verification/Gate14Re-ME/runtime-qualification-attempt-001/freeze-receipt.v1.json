@@ -1,0 +1,90 @@
+{
+  "schema": "gate14re-me-runtime-qualification-attempt-001-freeze-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-runtime-qualification-attempt-001",
+  "status": "FROZEN_FAIL_CLOSED_RUNTIME_QUALIFICATION_D3",
+  "version": 1,
+  "frozenAtUtc": "2026-10-17T05:03:26.0279266Z",
+  "outcome": {
+    "typedParquetRuntimeFrozenAndVerified": true,
+    "unityCompilationPassed": true,
+    "d2GridReadProxyPassed": true,
+    "d2SemanticInvariancePassed": true,
+    "d3AllocationCounterPositiveControlPassed": false,
+    "d3ActualDifferenceBytes": 0,
+    "d3ExpectedMinimumDifferenceBytes": 1048576,
+    "d4PersistentStateSizerPassed": true,
+    "clockMonotonicityPassed": true,
+    "exportKnownAnswerRun": false,
+    "overallRuntimeQualificationPassed": false
+  },
+  "frozenBindings": [
+    {
+      "role": "runtime-authorization",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Runtime_Qualification_Authorization.v1.json",
+      "sha256": "86f2e82282b98e5dd9d0e0f855faffcfee37c59ba9b18f03d2a0a417fee60b2d"
+    },
+    {
+      "role": "preexecution-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/preexecution-manifest.v1.json",
+      "sha256": "8cbf8de6fd151daa311e309dd854e9986956da5c8d5796dd8dad47c085a1ee1d"
+    },
+    {
+      "role": "prior-implementation-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/implementation-manifest.v1.json",
+      "sha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4"
+    },
+    {
+      "role": "typed-parquet-runtime-manifest",
+      "relativePath": "Research/Gate14Re-ME/Runtime/v1/typed-parquet-runtime-manifest.v1.json",
+      "sha256": "254375836c5c6c8ed09654d5f1817d1fa88c21a8c02447019f29116e3b2a088e"
+    },
+    {
+      "role": "unity-compile-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/unity-compile-receipt.v1.json",
+      "sha256": "8bf340c15b8438e053ef21b47d35ced495b3939033423e40c6164e9799d0e019"
+    },
+    {
+      "role": "csharp-instrument-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/csharp-instruments/instrument-runtime-receipt.v1.json",
+      "sha256": "be76050b64107f57b5b1086b3fcd318aa3d964c23f5f8dd9935798ff51f5b231"
+    },
+    {
+      "role": "failure-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/failure-receipt.v1.json",
+      "sha256": "8a508261f9c779ff3d3e3481d5eaf28ebc9d4c513cb69fdc8d30456b3ad9b49a"
+    },
+    {
+      "role": "status-v4",
+      "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_Status.v4.json",
+      "sha256": "cad8a34346450b9ca286fcbf277a8b5e673198a256e91848903d0b56fc959b37"
+    },
+    {
+      "role": "validator",
+      "relativePath": "Research/Validate-Gate14ReMERuntimeQualificationAttempt001V1.py",
+      "sha256": "9958a24896f704be3b5519d6d0a7a4ed01fc46b2778e84ff1b2b226ec584ce55"
+    },
+    {
+      "role": "validation-receipt",
+      "relativePath": "Research/Verification/Gate14Re-ME/runtime-qualification-attempt-001/validation-receipt.v1.json",
+      "sha256": "4600094ab4b4d65c73a10d950e95dbcfeca282b04cf2679c65497fb3f7cef615"
+    }
+  ],
+  "validation": {
+    "status": "PASS_FAILURE_EVIDENCE_FROZEN",
+    "checksPassed": 3237,
+    "checksFailed": 0,
+    "currentUnityProcessCount": 0
+  },
+  "scientificBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  },
+  "nextRequiredAction": "Do not retry attempt-001. A separately authorized D3 compatibility amendment and new source freeze must precede any new runtime-qualification attempt."
+}

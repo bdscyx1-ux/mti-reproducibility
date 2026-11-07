@@ -1,0 +1,92 @@
+{
+  "schema": "gate14re-me-status-v3",
+  "studyId": "Gate14Re-ME",
+  "version": 3,
+  "status": "QUALIFICATION_IMPLEMENTATION_SOURCE_FROZEN_EXECUTION_NOT_AUTHORIZED",
+  "localDate": "2026-10-17",
+  "authorizationId": "gate14re-me-qualification-implementation-freeze-attempt-001",
+  "scope": "cumulative six-algorithm Gate14Re-ME scientific freeze plus mandatory load-qualification protocol plus source-only qualification implementation and absolute resource budgets",
+  "inherits": {
+    "scientificContractV2Sha256": "73d81fe3be7c0e8f1ba6bbf25e584d86137a2e196d89ec03de7e8d59bf6412f5",
+    "note": "The v2 cumulative contract and all earlier read-only files remain unchanged; exact prior bindings are revalidated by the v3 freeze validator."
+  },
+  "implementation": {
+    "runnerSourceImplemented": true,
+    "algorithmNeutralOracleSourceImplemented": true,
+    "D1D2D3D4InstrumentSourceImplemented": true,
+    "structuralValidatorSourceImplemented": true,
+    "completePerObservationDeliverySourceImplemented": true,
+    "sixAlgorithmFairnessHashesFrozen": true,
+    "absoluteResourceBudgetsFrozen": true,
+    "implementationManifestRelativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-freeze-attempt-001/implementation-manifest.v1.json",
+    "unityCompilationPerformed": false,
+    "runtimeInstrumentQualificationPerformed": false,
+    "typedParquetEngineAvailable": false,
+    "productionAlgorithmSourcesModified": false
+  },
+  "frozenResourceSummary": {
+    "eventGroupHardTimeoutMilliseconds": 300000,
+    "laneWallClockHardTimeoutMilliseconds": 5400000,
+    "laneAssignedCommittedMemoryBytes": 17179869184,
+    "lanePeakCommittedMemoryPassCeilingBytes": 8589934592,
+    "qualificationReservedStorageBytes": 51539607552,
+    "qualificationPackagePassCeilingBytes": 25769803776,
+    "formalRawAndDeliveryReservedStorageBytes": 103079215104,
+    "formalProjectionPassCeilingBytes": 51539607552,
+    "maximumConcurrentUnityProcesses": 1,
+    "maximumWholeSuperblockTechnicalReplacements": 1
+  },
+  "scientificDesign": {
+    "algorithms": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF", "IDFF"],
+    "coreSuperblocks": 144,
+    "stressSuperblocks": 18,
+    "totalPilotSuperblocks": 162,
+    "freshAlgorithmProcesses": 972,
+    "eventGroupsPerLane": 24,
+    "emptyBoundaryProcesses": 12,
+    "emptyBoundaryRawIterations": 12000,
+    "qualificationUsesAnonymousLanes": true,
+    "qualificationCrossAlgorithmComparisons": false,
+    "qualificationRankingOrWinner": false,
+    "qualificationDataReusableForFormalInference": false
+  },
+  "currentEvidenceBoundary": {
+    "qualificationRootExists": false,
+    "formalRootExists": false,
+    "analysisRootExists": false,
+    "exportsRootExists": false,
+    "qualificationInputsGenerated": 0,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "UnityProcessesLaunched": 0,
+    "Gate14ReOrTB2OutcomesReadOrReused": false
+  },
+  "authorized": {
+    "qualificationImplementationSource": true,
+    "absoluteResourceBudgetFreeze": true,
+    "staticValidation": true,
+    "readOnlyFreezeEvidence": true
+  },
+  "notAuthorized": {
+    "qualificationInputOrScheduleGeneration": true,
+    "qualificationIdentityBindingGeneration": true,
+    "qualificationRootCreation": true,
+    "compileOrUnityExecution": true,
+    "runtimeInstrumentQualification": true,
+    "qualificationExecution": true,
+    "formalInputGeneration": true,
+    "formalCollection": true,
+    "formalRawCommit": true,
+    "formalAnalysis": true,
+    "ranking": true,
+    "winnerAdjudication": true,
+    "weightedComposite": true,
+    "subsequentExperiment": true
+  },
+  "blockingReadinessFacts": [
+    "Unity compilation and all runtime instrument controls are intentionally unperformed because they were not authorized.",
+    "The current frozen Python executable does not provide pyarrow, fastparquet, polars or duckdb; typed Parquet delivery cannot yet pass.",
+    "No qualification schedule, inputs, anonymous identity binding or measured root exists."
+  ],
+  "nextRequiredAction": "only after another separate explicit authorization: provision and hash-freeze a typed-Parquet runtime dependency, compile the frozen Unity sources, execute instrument known-answer/negative controls, generate and freeze the qualification schedule/inputs/identity binding, create the qualification measured root, and run qualification only; formal work remains unauthorized"
+}

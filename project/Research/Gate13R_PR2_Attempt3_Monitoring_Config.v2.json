@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "configId": "gate13r-pr2-attempt3-operational-monitoring-v2",
+  "formalAttemptOrdinal": 3,
+  "formalRoot": "H:\\DDM_Final_Project\\Research\\FormalRuns\\Gate13R_RQAligned_S48H48\\v3",
+  "formalReceipt": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Receipt.v3.json",
+  "formalStatus": "H:\\DDM_Final_Project\\Research\\Gate13R_PR2_Formal_Execution_Status.v3.json",
+  "monitoringRoot": "H:\\DDM_Final_Project\\Research\\Monitoring\\Gate13R_PR2_Attempt3\\v1",
+  "heartbeatAutomationId": "gate13r-attempt3-hourly-progress",
+  "watcherCadenceMinutes": 5,
+  "scheduledReportCadenceMinutes": 60,
+  "scheduledReportStates": [
+    "ACQUISITION-RUNNING",
+    "ACQUISITION-COMPLETE-COMMIT-PENDING",
+    "RAW-COMMIT-RECOVERY"
+  ],
+  "reportOnStart": true,
+  "reportOnFailure": true,
+  "reportOnCompletion": true,
+  "reportOnActionRequired": true,
+  "quietBeforeStart": true,
+  "quietAfterAcknowledgedTerminalState": true,
+  "catchUpReports": false,
+  "readRetry": {
+    "maxAttempts": 3,
+    "delaySeconds": [0, 2, 5]
+  },
+  "notificationRetry": {
+    "maxAttempts": 3,
+    "experimentActionAllowed": false
+  },
+  "stallPolicy": {
+    "statusStaleAdvisorySecondsExclusive": 900,
+    "noProgressStallSecondsExclusive": 1800,
+    "missingOwnedProcessActionSecondsExclusive": 300,
+    "blockHardTimeoutSeconds": 3600,
+    "hardTimeoutOverdueActionSecondsExclusive": 3660,
+    "monitorMayKillProcess": false
+  },
+  "etaPolicy": {
+    "safetyMultiplier": 1.25,
+    "rateChoice": "MIN-POSITIVE-OF-ROLLING-AND-OVERALL",
+    "zeroOrInsufficientRate": "UNAVAILABLE",
+    "researchInferenceAllowed": false
+  },
+  "fixedTotals": {
+    "campaignCount": 74,
+    "processCount": 3552,
+    "sampleCount": 10176,
+    "matchedSuperblockCount": 1008
+  },
+  "blinding": {
+    "operationalOnly": true,
+    "forbiddenFieldPatterns": [
+      "dynamicHandling",
+      "totalPlannerElapsed",
+      "ManagedAllocatedBytesPerScheduledEvent",
+      "budgetOverrunRate",
+      "timeTo95PercentArrival",
+      "pathEfficiencyRatio",
+      "completionRateByDeadline",
+      "frameTimeP95",
+      "MovementFailureRate",
+      "contrast",
+      "effect",
+      "confidenceInterval",
+      "pValue",
+      "ranking",
+      "winner",
+      "superiority"
+    ]
+  },
+  "writePolicy": {
+    "formalRootReadOnlyForMonitor": true,
+    "snapshotRootMustBeMonitoringRoot": true,
+    "atomicCreate": true,
+    "overwriteExistingSnapshot": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "authorizationKind": "GATE13R-PR2-ATTEMPT4-PHASEB-FORMAL-ANALYSIS-EXECUTION",
+  "authorizationId": "gate13r-pr2-attempt4-phaseb-formal-analysis-execution-20261011t014146z",
+  "issuedAtUtc": "2026-10-11T01:41:46.3995742Z",
+  "issuedAtAsiaShanghai": "2026-10-11T09:41:46.4064453+08:00",
+  "authorizedBy": "USER-EXPLICIT-IN-CURRENT-THREAD",
+  "exactUserExecutionAuthorization": "授权执行 Gate 13R-PR2 attempt 4 的 Phase B 正式统计分析；授权只读加载冻结的 P1–P5 正式结果并生成冻结契约规定的输出；绑定 Phase B 契约 SHA-256 `b59f6828cb1fd14dd7cb9911bd4260aafd8421828da5644cfdc016f33f9c6692`；原始数据根目录保持只读；不授权 Gate 14R，不授权 M1–M5，不授权任何实验重跑、补样、替换或重排。",
+  "contractRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Contract.v1.json",
+  "contractSha256": "b59f6828cb1fd14dd7cb9911bd4260aafd8421828da5644cfdc016f33f9c6692",
+  "frozenOutputTimestampUtc": "2026-10-11T01:41:46.3995742Z",
+  "outputRootRelativePath": "Research/Analysis/Gate13R_PR2_Attempt4_PhaseB/v1",
+  "rawRootRelativePath": "Research/FormalRuns/Gate13R_RQAligned_S48H48/v4",
+  "phaseBFormalStatisticalAnalysisAuthorized": true,
+  "formalOutcomeDataLoadingAuthorized": true,
+  "formalEffectEstimationAuthorized": true,
+  "formalInferenceAuthorized": true,
+  "formalAnalysisOutputCommitAuthorized": true,
+  "rawRootMutationAuthorized": false,
+  "unityLaunchOrControlAuthorized": false,
+  "experimentLaunchStopSignalResumeRetryTopUpMergeSkipReplaceOrReorderAuthorized": false,
+  "gate14RAuthorized": false,
+  "analysisScope": {
+    "authorizedMetricIds": [
+      "P1",
+      "P2",
+      "P3-PER-AGENT",
+      "P3-SCALING-SLOPE",
+      "P4",
+      "P5"
+    ],
+    "authorizedContrasts": ["C1", "C2", "C3", "C4", "C5"],
+    "authorizedCohorts": [
+      "four-algorithm-shared-goal-v1",
+      "per-agent-heterogeneous-goal-v1",
+      "grouped-field-heterogeneous-goal-v1"
+    ],
+    "mustUseFrozenScheduleAndAllFormallyEligibleBlocks": true,
+    "mustRetainMissingnessAndFailureReasons": true,
+    "mustUseFrozenMultiplicityAndConclusionRules": true
+  },
+  "explicitExclusions": {
+    "gate14RAuthorized": false,
+    "movementMetricIdsAuthorized": [],
+    "M1ThroughM5LoadingDerivationAnalysisOrReportingAuthorized": false,
+    "playableOrObsTimingAuthorized": false,
+    "rawRootWritesAuthorized": false,
+    "experimentRerunAuthorized": false,
+    "sampleTopUpAuthorized": false,
+    "sampleReplacementAuthorized": false,
+    "sampleReorderingAuthorized": false,
+    "outcomeConditionedDesignChangeAuthorized": false
+  },
+  "executionInstruction": {
+    "wrapperRelativePath": "Research/Run-Gate13RPR2Attempt4PhaseBV1.ps1",
+    "projectPath": "H:/DDM_Final_Project",
+    "authorizationRelativePath": "Research/Gate13R_PR2_Attempt4_PhaseB_Execution_Authorization.v1.json",
+    "singleExecutionOnly": true,
+    "automaticRetryAuthorized": false,
+    "overwriteAuthorized": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "gate14re-me-qualification-execution-readiness-recheck-attempt-003-terminal-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "protocolId": "gate14re-me-load-qualification-v1",
+  "designId": "gate14re-me-load-qualification-planning-v2",
+  "authorizationId": "gate14re-me-qualification-execution-readiness-recheck-attempt-003",
+  "attemptId": "qualification-execution-readiness-recheck-attempt-003",
+  "status": "PASS_QUALIFICATION_EXECUTION_READINESS_RECHECK_V3_FROZEN_EXECUTION_UNAUTHORIZED",
+  "passed": true,
+  "terminal": true,
+  "completedAtUtc": "2026-10-17T16:02:05.370314Z",
+  "readinessAudit": {
+    "relativePath": "Research/Verification/Gate14Re-ME/qualification-execution-readiness-recheck-attempt-003/readiness-recheck-audit.v3.json",
+    "sha256": "9668ccfa7f6249ded53a537248a45a7025ed5e6d7c24320f9fb7de9d7953de0d",
+    "totalChecks": 40,
+    "passedChecks": 40,
+    "failedChecks": 0
+  },
+  "resolvedRetainedAttempt002Blockers": [
+    "TERMINAL::OUTPUT_SCHEMA_RECEIPT_PATH_VERSION_ALIGNMENT",
+    "TERMINAL::FULL_CARDINALITY_PROCESS_AND_ACCEPTANCE_CLOSURE"
+  ],
+  "verifiedProspectiveClosure": {
+    "qualificationSuperblocks": 162,
+    "algorithmLaneProcesses": 972,
+    "oracleProcesses": 162,
+    "emptyBoundaryProcesses": 12,
+    "instrumentProcesses": 1,
+    "totalSerialFreshUnityProcesses": 1147,
+    "eventGroupRows": 23328,
+    "laneD3WindowRows": 24300,
+    "emptyBoundaryD3WindowRows": 12000,
+    "instrumentD3WindowRows": 1,
+    "processResourceRows": 25272,
+    "persistentStateMeasurementPointsPerLane": 26,
+    "acceptedSuperblockReceipts": 162,
+    "processLedgerRows": 1147,
+    "processIdentityReceipts": 1147,
+    "supervisorFinalProcessOrdinal": 1147
+  },
+  "verificationMeaning": "Static frozen-chain and existing offline known-answer readiness only; no qualification process ledger or observation exists yet.",
+  "scientificBoundary": {
+    "unityInvocationCount": 0,
+    "plannerInvocationCount": 0,
+    "algorithmLaneExecutionCount": 0,
+    "qualificationMeasuredRootCreated": false,
+    "deliveryRootCreated": false,
+    "qualificationObservationCount": 0,
+    "formalObservationCount": 0,
+    "formalCollectionPerformed": false,
+    "formalAnalysisPerformed": false,
+    "crossAlgorithmEffectsComputed": false,
+    "rankingOrWinnerComputed": false,
+    "sealedIdentityMappingOpened": false
+  },
+  "activation": {
+    "qualificationExecutionAuthorized": false,
+    "unityInvocationAuthorized": false,
+    "qualificationMeasuredRootCreationAuthorized": false,
+    "deliveryRootCreationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false,
+    "separateExecutionAuthorizationRequired": true
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "diagnosticId": "gate12-retry-warmup-wrapper-failure-v1",
+  "diagnosedAt": "2026-10-05T21:14:23.9899892+08:00",
+  "authorizedRetryConsumed": true,
+  "additionalRetryAuthorized": false,
+  "pilotPlanId": "gate12-isolated-pilot-v1",
+  "attemptRoot": "Research/PilotRuns/Gate12/v1",
+  "attemptStatus": "failed-no-auto-retry",
+  "failureClassification": "outer-process-exit-code-observation-false-negative",
+  "failureMessage": "Campaign failed with exit code : g12p-warmup-r01-shared",
+  "warmup": {
+    "campaignId": "g12p-warmup-r01-shared",
+    "wrapperPassed": true,
+    "campaignCompleted": true,
+    "formalCampaign": false,
+    "blockCount": 4,
+    "sampleCount": 16,
+    "scheduleEntryCount": 16,
+    "algorithmCounts": {
+      "A*-R": 4,
+      "D*L": 4,
+      "C-FF": 4,
+      "IDFF": 4
+    },
+    "positionBalanced": true,
+    "orderedPredecessorBalanced": true,
+    "runSummaryPassCount": 16,
+    "runExitCodeZeroCount": 16,
+    "runArtifactHashMismatchCount": 0,
+    "stderrBytes": 0,
+    "analysisExcludedByFrozenPlan": true
+  },
+  "measuredPilot": {
+    "campaignCount": 0,
+    "unityProcessCount": 0,
+    "measuredDirectoryExists": false,
+    "noiseAnalysisGenerated": false,
+    "candidateFormalSampleSizeGenerated": false
+  },
+  "attemptIdentity": {
+    "fileCount": 103,
+    "byteCount": 14187382,
+    "orderedPathByteHashAggregateSha256": "b52ee8f13c9b96edd2f0ab83f4969161ef5b257d1543588ec9608877086dc500",
+    "environmentStartSha256": "aaf852a50e004443da81d20353ea2a8d2d951a15683abe2b399ba08be7929169",
+    "pilotCheckpointSha256": "b0e073aaac74bfebb7644579096cc33b9df1ec50800ea1359c786374e68892b8",
+    "pilotFailureSha256": "c295fd5ee983f11b4269360b9928b0fe215018a66926c919d3e082ee62d6435d",
+    "warmupCampaignManifestSha256": "de900f8d91b544ff290c1329d55fb893c243efe620925f655ee0714f8f8101d8",
+    "warmupWrapperSummarySha256": "a04bd2047b1c56f273acd40783931efabf9a65a09da09b1ff0cd069158588da0",
+    "warmupStdoutSha256": "63bf5391df54d2cc892aca1ae4ad4de227f7941b3309c75eaf2f39613c8e6786",
+    "warmupStderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "rootCauseEvidence": {
+    "windowsPowerShellVersion": "5.1.26100.9444",
+    "startProcessPassThruAsyncExitCode": null,
+    "startProcessPassThruReflectionError": "Process was not started by this object, so requested information cannot be determined.",
+    "ownedDiagnosticsProcessExitCode": 0,
+    "probeScript": "Research/Verification/Probe-Gate12StartProcessExitCode.ps1",
+    "probeScriptSha256": "602e294f7ecb8461f11930f457b5ce9a5e06f495071da16f1efa23c1cc2fda83"
+  },
+  "remediation": {
+    "strategy": "Replace asynchronous Start-Process -PassThru with an owned System.Diagnostics.Process and asynchronously drain both redirected streams.",
+    "runnerSha256": "bf45cebf1b04a73f1d3ca4cbdc6375f3aab00b9979e129145ac27e91e62cb025",
+    "analysisModuleSha256": "96194e77239ad1e842d6ccacd2ffc870afdf8d3a2701144ae05dadeb472fe676",
+    "analysisRunnerSha256": "6aab2f34713ca929ca184bdda2238defedf022f2a39f050959aed02194b91a65",
+    "unitTestScriptSha256": "e56a3881c0fc9fc3ecceb760d1c51129e80ec2b306acdcfefed0a3814a6885b1",
+    "unitTestSummarySha256": "39fdaffcdf74ff1080be3b21037acbf4ffa55eecbfca4ac896157b52b95a16fb",
+    "unitTestAssertionCount": 63,
+    "unitTestsPassed": true
+  },
+  "frozenInputs": {
+    "specificationSha256": "29e6ca0de24b10f4a3a679378a353f9ae1821b130d1218f298591d2e89878b7c",
+    "testDesignSha256": "c8f71a54f9c73f936e3ddfeff6d4212bd48fb495847b9185a69adf720226e199",
+    "pilotPlanSha256": "cc63505f444223c06a7f69a979c6a0d2e7f0d29e8217d910fe46b61db5618ce4",
+    "gate11BundleManifestSha256": "ea596c8c9e6d1ca99e325c05c095024a4813ca1e65c771a8b4db8bf29364c12e",
+    "gate11BundleAggregateSha256": "91d9e3c66327185e48f68cafb05c674cc49e929adb576973098d0bfebd2e9a88",
+    "gate11BundleArtifactCount": 56,
+    "gate11BundleFileCount": 57,
+    "gate11BundlePassed": true
+  },
+  "safetyState": {
+    "unityProcessCount": 0,
+    "unityLockfilePresent": false,
+    "gate13Started": false,
+    "originalScriptsModified": false,
+    "originalScenesModified": false
+  },
+  "nextAuthorizedAction": "none",
+  "requiredNextAuthorization": "Archive the intact second attempt as v1-failed-warmup-attempt2 and run one new create-only Gate 12 attempt with the repaired monitor.",
+  "passed": true
+}

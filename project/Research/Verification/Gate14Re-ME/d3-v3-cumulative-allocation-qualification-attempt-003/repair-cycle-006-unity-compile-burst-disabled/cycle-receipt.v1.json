@@ -1,0 +1,57 @@
+{
+  "schema": "gate14re-me-d3-v3-attempt-003-repair-cycle-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-v3-cumulative-allocation-qualification-attempt-003",
+  "attempt": 3,
+  "repairCycle": 6,
+  "status": "FAILED_PRESERVED_CONTINUE_AUTHORIZED_REPAIR",
+  "completedAtUtc": "2026-10-17T07:03:19.5705966Z",
+  "phase": "unity-compile-and-clean-exit-with-burst-disabled",
+  "commandMode": [
+    "-batchmode",
+    "-nographics",
+    "-quit",
+    "--burst-disable-compilation"
+  ],
+  "bindings": {
+    "unityVersion": "2022.3.30f1c1",
+    "nativeDllSha256": "924d43ecbc03f4e606a26a3de1593e96fdf7d3607d6e9e3c8942c877f0575245",
+    "managedWrapperSha256": "0fcac01678ec387aa2659543a2b84cba67b58ec97bdbfbc1e84aa77f5f0c3f9c",
+    "harnessV2Sha256": "c63d8798582fd4bf7a2dcec0a73ce46bd6d5f6e588273df61a8dc614748450c6",
+    "harnessV2MetaSha256": "324fa14032a303aa83eb14fcf227aa4f620416d80940b495ad29ffb151f80b9e"
+  },
+  "positiveEvidenceBeforeHang": {
+    "nativePluginImported": true,
+    "managedSourcesCompiled": true,
+    "d3V3CompilerErrors": 0,
+    "d3V3CompilerWarnings": 0,
+    "batchmodeQuitSuccessfullyInvoked": true,
+    "priorBurstTeardownCrashReproduced": false
+  },
+  "failure": {
+    "exactPrimaryDiagnostic": "Unity logged 'Batchmode quit successfully invoked - shutting down!' but the verified qualification process remained alive with sustained CPU use and no further log progress.",
+    "failureClass": "editor-shutdown-hang-after-successful-compile",
+    "d3V3CompilerOrAbiFailureObserved": false,
+    "processExitCodeAfterEvidenceCaptureAndExactPidTermination": -1
+  },
+  "evidence": [
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-006-unity-compile-burst-disabled/unity-compile.log",
+      "lengthBytes": 22245,
+      "sha256": "8dcb107c2db5d9a71e5fdd1eb289c2294eba8b88fe1247cfe969027b3b0e04f4"
+    },
+    {
+      "relativePath": "Research/Verification/Gate14Re-ME/d3-v3-cumulative-allocation-qualification-attempt-003/repair-cycle-006-unity-compile-burst-disabled/shutdown-hang.dmp",
+      "lengthBytes": 1129801381,
+      "sha256": "ff2c3772adfaa78fd04330e342e850ab2cd7e9c1687df64ddf3728d32ef3391d"
+    }
+  ],
+  "diagnosis": "Disabling Burst removed the prior teardown crash and Unity completed D3-v3 import and compilation. The remaining failure is a shutdown hang triggered after immediate command-line -quit, before any known-answer execution. The exact process was verified, a full dump was preserved, and only that hung qualification process was terminated.",
+  "repairDisposition": {
+    "sourceChanged": false,
+    "criteriaRelaxed": false,
+    "metricChanged": false,
+    "algorithmCodeNeeded": false,
+    "nextRepair": "Run the algorithm-free known-answer entry point without command-line -quit and allow the harness to call EditorApplication.Exit only after it writes its terminal receipt. Keep --burst-disable-compilation."
+  }
+}

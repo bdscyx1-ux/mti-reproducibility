@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-mq-cff-idff-power-selection-seal-receipt-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "attemptId": "identity-blind-power-v2-attempt-001",
+  "sealedAtUtc": "2026-10-21T07:25:10.0030061Z",
+  "status": "PASS_B36_SELECTED_AND_SEALED",
+  "selectedB": 36,
+  "freshUnityProcessCount": 864,
+  "selectionRule": {
+    "candidateB": [36, 72, 108, 144],
+    "target": "minimum B for which every confirmatory-primary rejection-probability Wilson 95% lower bound is at least 0.90",
+    "selectedUsingHypotheses": ["P1", "P2", "P3", "P4"],
+    "keySecondaryExcludedFromSelection": ["S1", "S2"]
+  },
+  "worstPrimaryAtSelectedB": {
+    "hypothesisId": "P4",
+    "estimatedPower": 0.91204,
+    "wilson95Lower": 0.9107907558335663
+  },
+  "sevenDayGate": {
+    "stressMultiplier": 1.9,
+    "conservativeHours": 11.988586,
+    "thresholdHours": 168,
+    "triggered": false
+  },
+  "powerResultSha256": "75d52ba9f029920e711029cea02b7e98703290de75cf9413aa653a64eb802a3a",
+  "postExecutionValidationSha256": "6507030ea7da47936aeb6f48dabf5e2c544d04a42662d11e89ee614248db971a",
+  "attemptFreezeManifestSha256": "c2f6b92829ed8f6ce4389e7a76ecf05506e92f8d02834d0021871b8bce145849",
+  "formalCollectionStarted": false,
+  "formalAnalysisStarted": false,
+  "nextAuthorizedStage": "IMPLEMENTATION_SCHEDULE_FREEZE_AND_PRELAUNCH_READINESS_ONLY",
+  "immutable": true
+}

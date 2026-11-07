@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "auditKind": "gate13r-pr2-attempt3-postfailure-protocol-amendment-closure-audit-v1",
+  "auditedAtUtc": "2026-10-10T03:51:30.1711553Z",
+  "auditedAtAsiaShanghai": "2026-10-10T11:51:30.1683228+08:00",
+  "verdict": "PASS-NONEXECUTING-PROTOCOL-AMENDMENT-ONLY",
+  "jsonParseChecks": {
+    "recoveryStateMachineV2": "PASS",
+    "amendmentAuthorizationV1": "PASS",
+    "preservationManifestV1": "PASS"
+  },
+  "hashAndLengthVerification": {
+    "manifestEntryCountBeforeThisClosureAudit": 17,
+    "verified": true,
+    "mismatches": []
+  },
+  "scheduleStructuralCheck": {
+    "processesThroughOrdinal3469": 3469,
+    "sharedProcesses": 1536,
+    "heterogeneousProcesses": 1933,
+    "completeMatchedSuperblocksThroughOrdinal3469": 966,
+    "halfMatchedSuperblocksThroughOrdinal3469": 1,
+    "ordinal3469MatchedSuperblockId": "g13rpr2-h21-m0007",
+    "ordinal3470MatchedSuperblockId": "g13rpr2-h21-m0007",
+    "pairIdentityMatches": true,
+    "ordinal3470OutputExists": true,
+    "ordinal3470CommittedProcessIdentityExists": false,
+    "ordinal3471OutputExists": false
+  },
+  "writeBoundaryCheck": {
+    "formalRootWritesAfterAmendmentTimestamp": [],
+    "formalRawRootMutatedByAmendment": false
+  },
+  "scopeBoundary": {
+    "forensicRecoveryReadinessAuditCompleted": false,
+    "ordinal3470ForensicPromotionCompleted": false,
+    "unityContinuationAuthorized": false,
+    "unityContinuationStarted": false,
+    "formalStatisticalAnalysisAuthorized": false,
+    "formalStatisticalAnalysisRun": false,
+    "gate14RAuthorized": false,
+    "gate14RRun": false
+  },
+  "blindingDisclosure": {
+    "classification": "INCIDENTAL-AUTOMATED-AGENT-OUTCOME-FIELD-EXPOSURE-NO-FORMAL-ANALYSIS",
+    "independentOutcomeBlindReadinessValidationRequired": true
+  },
+  "nextRequiredGate": "SEPARATE-AUTHORIZATION-FOR-FORENSIC-RECOVERY-READINESS-AUDIT"
+}

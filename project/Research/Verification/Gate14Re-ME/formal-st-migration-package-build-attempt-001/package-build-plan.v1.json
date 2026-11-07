@@ -1,0 +1,53 @@
+{
+  "schema": "gate14re-me-formal-st-migration-package-build-plan-v1",
+  "studyId": "Gate14Re-ME",
+  "designId": "gate14re-me-formal-st-bounded-gnf-v5",
+  "attempt": 1,
+  "status": "IN_PROGRESS_NONEXECUTING",
+  "sourceOfTruth": "Research/Gate14Re-ME/Execution/v5/formal-st-freeze-index.v5_0.json",
+  "phases": [
+    "verify frozen v5 inputs and build authorization",
+    "create newly named formal v5 implementation, schemas, supervisor, generator, acceptance and readiness guard",
+    "compile and run algorithm-free known-answer/readiness checks",
+    "stage the portable Unity project, frozen contracts, offline runtime and Unity base installer without credentials",
+    "produce a canonical content manifest and ZIP64 archive",
+    "independently inspect the archive, extract it into the fresh test root and rerun non-executing readiness checks",
+    "freeze package build and validation receipts"
+  ],
+  "payloadBoundary": {
+    "include": [
+      "Assets",
+      "Packages",
+      "ProjectSettings",
+      "Research/Gate14Re-ME/Execution/v5",
+      "Research/Gate14Re-ME/Runtime/v1",
+      "Research/Gate14Re-ME/Tools needed by formal v5",
+      "decisive formal-v5 freeze evidence",
+      "Unity 2022.3.30f1c1 base installer"
+    ],
+    "exclude": [
+      "Library, Temp, Logs, obj and local caches",
+      "prior PilotRuns, Exports and bulk Verification evidence",
+      "all credentials, license files, tokens and account material",
+      "formal measured or delivery data"
+    ]
+  },
+  "scientificBoundary": {
+    "formalInputGeneration": false,
+    "formalScheduleRowsGenerated": false,
+    "formalCollection": false,
+    "formalAnalysis": false,
+    "MQ": false,
+    "MT": false
+  },
+  "archiveFormat": "ZIP64",
+  "validation": {
+    "credentialPathAndContentScan": true,
+    "perFileSha256": true,
+    "archiveEntryAndHashRoundTrip": true,
+    "freshExtraction": true,
+    "algorithmFreeUnityCompile": true,
+    "trustedIdentityOrdinalFailureRawParquetAndNoResumeKnownAnswerTests": true
+  },
+  "createdAtUtc": "2026-10-20T03:14:50.9184661Z"
+}

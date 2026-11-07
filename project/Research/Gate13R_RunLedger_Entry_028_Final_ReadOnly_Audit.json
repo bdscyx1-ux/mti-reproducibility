@@ -1,0 +1,26 @@
+{
+  "kind": "tool_receipt",
+  "step": "gate13r-postseal-readonly-integrity-audit-passed",
+  "command": "Performed the final read-only post-seal audit. Rehashed all eight principal frozen Gate 13R artifacts with zero mismatch, rehashed all 17 evidence-manifest files with zero mismatch, parsed all 19 Gate 13R PowerShell files with zero parser errors, and rehashed all seven prewrite-baseline upstream inputs with zero mismatch. Confirmed zero Unity processes, absent Unity lock, absent formal root, zero formal receipt candidates, formalExecutionAuthorized=false, formalRootCreated=false and no formal timing execution.",
+  "status": "passed",
+  "exit_status": 0,
+  "retries_used": 0,
+  "input_sha256": {
+    "Gate13R_NonExecuting_Readiness_Checkpoint.v1.json": "4cb0763f9b1717b8e92ac8f3a1b13b1b09d543fd3f720da9b61e06e7a4dce182",
+    "Gate13R_NonExecuting_Preparation_Evidence_Manifest.v1.json": "5da2251aee505a570f42f336048f4f5f4ad87f026df845e2f9aa36ece2e54f2c",
+    "Gate13R_PreWrite_Preservation_Baseline.v1.json": "e097d99108c0d0f4eb9516dc2374da40ddf6cc48885d404774f07d9f1bb36b00"
+  },
+  "output_sha256": "4cb0763f9b1717b8e92ac8f3a1b13b1b09d543fd3f720da9b61e06e7a4dce182",
+  "gate_tokens": [
+    "POSTSEAL-READONLY-AUDIT-PASSED",
+    "PRINCIPAL-HASHES-8-OF-8",
+    "EVIDENCE-REHASH-17-OF-17",
+    "POWERSHELL-PARSER-19-OF-19",
+    "UPSTREAM-REHASH-7-OF-7",
+    "UNITY-COUNT-0",
+    "LOCK-ABSENT",
+    "FORMAL-ROOT-ABSENT",
+    "FORMAL-RECEIPT-ABSENT",
+    "NO-FORMAL-TIMING"
+  ]
+}

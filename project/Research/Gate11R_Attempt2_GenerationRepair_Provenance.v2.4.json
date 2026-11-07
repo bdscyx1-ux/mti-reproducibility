@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "provenanceId": "gate11r-attempt2-generation-repair-v2.4",
+  "createdAtUtc": "2026-10-07T03:00:49.2093400Z",
+  "failureReceipt": {
+    "path": "Research/Verification/Gate11R_5pct/v2/Generation/GenerationAttempt1_Failure_Receipt.v2.1.json",
+    "sha256": "ce8ea34bb436863ac45ccd0c3278268aabfde0b074d84bf46e332cc736feb839"
+  },
+  "partialOutputManifest": {
+    "path": "Research/Verification/Gate11R_5pct/v2/Generation/GenerationAttempt1_Partial_Output_Manifest.v2.1.json",
+    "sha256": "96e2adb60b2b6232cdef58a86a23762c2a8d150ef5c4462afdd5aaa9c0cdb197"
+  },
+  "repair": {
+    "path": "Assets/_Scripts/Research/Editor/Gate11RScenarioPlayableBundleCommand.cs",
+    "beforeSha256": "8b5737c3adecd0dc49e9796f157e661376bb5be3a73ddbb4bc8d3c67a5414396",
+    "afterSha256": "bb49458ffbd6d8092fdb0224dba3a70e0aad3ddb22fda3caa07541dfdee4659f",
+    "afterRawBytes": 88639,
+    "changes": [
+      "Changed only the playable AssetDatabase staging root from a dot-prefixed hidden path to a visible retry-specific path.",
+      "Added a retry-specific generation entry point and summary path so attempt-1 evidence cannot be overwritten."
+    ]
+  },
+  "failedPartialOutputsArchivedByteForByte": true,
+  "productionRootsAbsentAfterArchive": true,
+  "researchSemanticsChanged": false,
+  "playableSemanticsChanged": false,
+  "gate12RAuthorized": false,
+  "gate13RAuthorized": false
+}

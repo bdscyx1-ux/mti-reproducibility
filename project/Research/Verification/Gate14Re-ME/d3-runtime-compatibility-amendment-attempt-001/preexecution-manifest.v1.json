@@ -1,0 +1,116 @@
+{
+  "schema": "gate14re-me-d3-runtime-compatibility-amendment-preexecution-manifest-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-d3-runtime-compatibility-amendment-attempt-001",
+  "status": "FROZEN_D3_ONLY_PREEXECUTION",
+  "version": 1,
+  "createdAtUtc": "2026-10-17T05:28:25.8147506Z",
+  "authorization": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Runtime_Compatibility_Amendment_Authorization.v1.json",
+    "sha256": "a3d6d370caba32c586a57ab205bcb8dc5e745130c87410aeec35318cc837463c"
+  },
+  "plan": {
+    "relativePath": "Research/Gate14Re-ME/Gate14Re_ME_D3_Runtime_Compatibility_Amendment_Plan.v1.md",
+    "sha256": "9db7d8e0e3c04d719ebd789da5d3cbf8b5f4368f5bc82bdb68a6c2749ae58df1"
+  },
+  "priorEvidenceBindings": {
+    "failedRuntimeQualificationFailureReceiptSha256": "8a508261f9c779ff3d3e3481d5eaf28ebc9d4c513cb69fdc8d30456b3ad9b49a",
+    "failedRuntimeQualificationFreezeReceiptSha256": "042f3ca2d07b4b78db04a7b272929f6052cc51739c0aeeaa4e6998b75f5554c8",
+    "statusV4Sha256": "cad8a34346450b9ca286fcbf277a8b5e673198a256e91848903d0b56fc959b37",
+    "priorImplementationManifestSha256": "9bbefec10e28eb68ddcd25143b33a9a84b4047d4440c153e4a8ed86c62edcba4",
+    "priorSourceFreezeReceiptSha256": "43c9dba8b49a1efe0802f6046170be57506c027af9ac764138843c60eef669f7"
+  },
+  "runtimeBinding": {
+    "unityExecutable": "H:/UnityEditor/2022.3.30f1c1/Editor/Unity.exe",
+    "unityExecutableSha256": "0a69d14cbe2ca82d0a6168da8156d9e0dd138a6b7d0260dcdea31fd3957ca9cf",
+    "unityVersion": "2022.3.30f1c1",
+    "hardTimeoutMilliseconds": 600000,
+    "automaticRetryAuthorized": false,
+    "maximumConcurrentUnityProcesses": 1
+  },
+  "sourceArtifacts": [
+    {
+      "role": "v2-folder-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2.meta",
+      "sha256": "615736219ad26f4b2cc5f11cc24a4a75489b1c46ff657e91a9c168dbd4bcb6de",
+      "bytes": 169
+    },
+    {
+      "role": "d3-process-wide-counter-source",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs",
+      "sha256": "d7a0b679180b59101a41279bf0750646dcdc672f526ddcb7feafbc9ba3fd82ce",
+      "bytes": 1080
+    },
+    {
+      "role": "d3-process-wide-counter-meta",
+      "relativePath": "Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs.meta",
+      "sha256": "53e5d701d327e17ed27fb97a9cc4863cd3336b8022330fbe64d19d7f9b9eb3e1",
+      "bytes": 240
+    },
+    {
+      "role": "d3-only-known-answer-harness",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3RuntimeCompatibilityRunnerV1.cs",
+      "sha256": "8f508dbdfb349f41cff2945173e047b7d5779ae695b83a2da4e1a7d05ffca35f",
+      "bytes": 23485
+    },
+    {
+      "role": "d3-only-known-answer-harness-meta",
+      "relativePath": "Assets/_Scripts/Research/Editor/Gate14ReMED3RuntimeCompatibilityRunnerV1.cs.meta",
+      "sha256": "ff7b7f68aeeddc8875dacb787066dc0f1947f10739c6769a29d6f4f81385d8c6",
+      "bytes": 240
+    }
+  ],
+  "command": {
+    "executeMethod": "DDM.Research.Editor.Gate14ReMED3RuntimeCompatibilityRunnerV1.Run",
+    "workingDirectory": "H:/DDM_Final_Project",
+    "projectPath": "H:/DDM_Final_Project",
+    "logRelativePath": "Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/unity-d3-known-answer.log",
+    "arguments": [
+      "-batchmode",
+      "-nographics",
+      "-quit",
+      "-projectPath",
+      "H:/DDM_Final_Project",
+      "-executeMethod",
+      "DDM.Research.Editor.Gate14ReMED3RuntimeCompatibilityRunnerV1.Run",
+      "-logFile",
+      "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/unity-d3-known-answer.log",
+      "--g14me-d3-authorization",
+      "H:/DDM_Final_Project/Research/Gate14Re-ME/Gate14Re_ME_D3_Runtime_Compatibility_Amendment_Authorization.v1.json",
+      "--g14me-d3-authorization-sha256",
+      "a3d6d370caba32c586a57ab205bcb8dc5e745130c87410aeec35318cc837463c",
+      "--g14me-d3-counter-source",
+      "H:/DDM_Final_Project/Assets/_Scripts/Research/Gate14ReME/v2/Gate14ReMEAllocationCounterV2.cs",
+      "--g14me-d3-counter-source-sha256",
+      "d7a0b679180b59101a41279bf0750646dcdc672f526ddcb7feafbc9ba3fd82ce",
+      "--g14me-d3-output-dir",
+      "H:/DDM_Final_Project/Research/Verification/Gate14Re-ME/d3-runtime-compatibility-amendment-attempt-001/d3-known-answer"
+    ]
+  },
+  "prospectiveAcceptance": {
+    "negativeControlIntervals": 64,
+    "negativeControlMaximumBytesPerEmptyInterval": 65536,
+    "positiveControlBytes": [1048576, 4194304],
+    "requiredScaleSeparationBytes": 3145728,
+    "thresholdsMayBeRelaxedAfterExecution": false
+  },
+  "staticBoundaryChecks": {
+    "authorizationJsonParsed": true,
+    "unityExecutableHashMatched": true,
+    "priorEvidenceHashesMatched": true,
+    "prohibitedRootsAbsent": true,
+    "d3KnownAnswerOutputAbsent": true,
+    "matchingUnityProcessesBeforeLaunch": 0
+  },
+  "evidenceBoundary": {
+    "qualificationScheduleRows": 0,
+    "qualificationInputs": 0,
+    "anonymousIdentityMappings": 0,
+    "qualificationObservations": 0,
+    "algorithmLanes": 0,
+    "formalObservations": 0,
+    "dataExporterKnownAnswerRun": false,
+    "formalAnalysisPerformed": false,
+    "rankingOrWinnerComputed": false
+  }
+}

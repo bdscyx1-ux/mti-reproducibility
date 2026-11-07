@@ -1,0 +1,34 @@
+{
+  "schema": "gate14re-formal-phase-a-external-launch-receipt-v1",
+  "studyId": "Gate14Re",
+  "status": "LAUNCHED",
+  "formalAttempt": 1,
+  "formalRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re/PhaseA/attempt-001",
+  "authorizationId": "gate14re-phase-a-attempt-001-b87e10a8-9d42-4512-8f4d-4b371eb7f75b",
+  "authorizationSha256": "98a842ef9fe996ac7566ae2ceed17394e189e187d8184ccd34ff44999fa66dc1",
+  "supervisorPath": "H:/DDM_Final_Project/Research/Gate14Re/Execution/Run-Gate14ReFormalPhaseA.v1.ps1",
+  "supervisorSha256": "3c0bcf6f228656d58fde5a22f07846bb26b29351ffb7a71f4d6ae30ee5530b49",
+  "supervisorPid": 29860,
+  "supervisorCreationTime": "2026-10-15T03:00:49.632968+08:00",
+  "launchReceiptPath": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re/PhaseA/attempt-001/_control/launch-receipt.v1.json",
+  "launchReceiptSha256AtConfirmation": "5a9c5606bcd9c17360db3f4941c9af1b5826e7e61c2bf8d8148edbf0fdd97ec2",
+  "launchReceiptStatus": "FORMAL_PHASE_A_ACQUISITION_RUNNING",
+  "plannedBlocks": 1536,
+  "fixedB": 48,
+  "initialStructuralSnapshot": {
+    "acceptedBlocks": 15,
+    "launchedProcesses": 15,
+    "wholeBlockReplacements": 0,
+    "failureReceiptExists": false
+  },
+  "priorPreRootRejection": {
+    "occurred": true,
+    "formalRootCreated": false,
+    "unityProcessStarted": false,
+    "formalObservationProduced": false,
+    "reason": "The initially generated authorization receipt locally transcribed the frozen build-receipt SHA-256 incorrectly. The frozen supervisor rejected it before formal-root creation. The receipt was corrected to the exact user-authorized and frozen-template hash before this launch."
+  },
+  "directionalM1M5OutcomeReadOrReported": false,
+  "formalAnalysisStarted": false,
+  "phaseBOrGate15Started": false
+}

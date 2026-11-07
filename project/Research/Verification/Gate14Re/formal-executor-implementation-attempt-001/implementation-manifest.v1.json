@@ -1,0 +1,141 @@
+{
+  "schema": "gate14re-formal-executor-implementation-manifest-v1",
+  "studyId": "Gate14Re",
+  "status": "PASS",
+  "scope": "formal Phase A executor, complete-block output validation, authorization guard, and nonexecuting serial supervisor",
+  "scientificDesignChanged": false,
+  "designBindings": {
+    "formalBlockPlan": {
+      "path": "Research/Gate14Re/Execution/Gate14Re_Formal_Block_Plan.v1.json",
+      "bytes": 1169554,
+      "sha256": "9d12fab76865477fed1742c1d51cc79eb57a06c2fcf40e0544f2045cfffd552d"
+    },
+    "executionContractV2": {
+      "path": "Research/Gate14Re/Execution/Gate14Re_Formal_Execution_Contract.v2.json",
+      "bytes": 3989,
+      "sha256": "6309d031e00fcf53380e74343adff5863c88aa1c11cb72542cd352a2f19c2bd3"
+    },
+    "outputSchemaV2": {
+      "path": "Research/Gate14Re/Execution/Gate14Re_Formal_Block_Output_Schema.v2.json",
+      "bytes": 5236,
+      "sha256": "0c248a4046df959bae078f360ba5d4dfc322d603dc0bdd8e920b492db11325c2"
+    }
+  },
+  "sources": [
+    {
+      "path": "Assets/_Scripts/Research/Gate14Re/v2/Gate14ReFormalContractsV1.cs",
+      "bytes": 5770,
+      "sha256": "2178e166eb13df8df824259de5e3348d71ae466ece7dc2a5c1f23061f79214a7"
+    },
+    {
+      "path": "Assets/_Scripts/Research/Gate14Re/v2/Gate14ReFormalControllerV1.cs",
+      "bytes": 39278,
+      "sha256": "d1f694dfec3853f58ff2964fc2c7615b06fb2eb669c5293305721e9d1927635b"
+    },
+    {
+      "path": "Assets/_Scripts/Research/Gate14Re/v2/Gate14ReFormalMathV1.cs",
+      "bytes": 3827,
+      "sha256": "d9182cbb2ac5054345785ce8311d39896a897a7b222142453c9040d87fe13cac"
+    },
+    {
+      "path": "Assets/_Scripts/Research/Editor/Gate14ReFormalValidationCommandV1.cs",
+      "bytes": 20161,
+      "sha256": "438b3e09375dcc7f88624ec000b5d5d658954228f31bec58d4c8e6c53689b17b"
+    },
+    {
+      "path": "Assets/_Scripts/Research/Editor/Gate14ReFormalBuildCommandV1.cs",
+      "bytes": 7014,
+      "sha256": "c5af0e46f33518e73ba57aa58b64db45faefc35a0038c54d9dfd589e5ab6dd85"
+    },
+    {
+      "path": "Research/Gate14Re/Execution/Run-Gate14ReFormalPhaseA.v1.ps1",
+      "bytes": 30262,
+      "sha256": "3c0bcf6f228656d58fde5a22f07846bb26b29351ffb7a71f4d6ae30ee5530b49"
+    }
+  ],
+  "compileOnly": {
+    "attempt": 8,
+    "status": "PASS",
+    "logPath": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/compile-only-attempt-008/unity-compile.log",
+    "logBytes": 70707,
+    "logSha256": "eb1fce6023879a791e3660d97980436282c47a3430fb5ad83e20dad727dc89cd",
+    "compilerErrorMatches": 0
+  },
+  "syntheticValidation": {
+    "attempt": 3,
+    "status": "PASS",
+    "assertions": 14013,
+    "frozenBlocks": 1536,
+    "designCells": 32,
+    "receiptPath": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/synthetic-validation-only-attempt-003/validation-receipt.v1.json",
+    "receiptSha256": "0aead4fb997ae7e134b61e1b819c3c29e23f460a0c4977527843f11748432cef",
+    "formalRootCreated": false,
+    "formalObservationProduced": false
+  },
+  "standaloneBuild": {
+    "acceptedAttempt": 3,
+    "buildReceiptPath": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/standalone-build-attempt-003/build-receipt.v2.json",
+    "buildReceiptSha256": "d110c97ca2f2f3d5a38490497ebfcf714d976c75b2397a68d46787e29c51ec9a",
+    "executableSha256": "88b1b04971f8b712ddd0f18bca4f7296d287fdd6cdadef57c155d37b9ef0928c",
+    "assemblyCSharpSha256": "2f763a06d43a5777d6ce47cdba998d5482e82557ad35ee72f9e07dcd193b2961",
+    "canonicalTreePath": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/standalone-build-attempt-003.canonical-tree.v1.jsonl",
+    "canonicalTreeSha256": "c4da85e66f9898834bc30b5e5618021458405f9a5962266c4d336479202abd46",
+    "canonicalTreeFiles": 151,
+    "canonicalTreeRawBytes": 78057154,
+    "buildFreezeReceiptPath": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/standalone-build-attempt-003.build-freeze-receipt.v1.json",
+    "buildFreezeReceiptSha256": "9df8bf66fa7df1d23e3454be5b23cdb99b907fa3e1848942b3845f56373c7199",
+    "allBuildFilesReadOnly": true,
+    "genericUnityLauncherAloneUsedForAuthorization": false
+  },
+  "sceneSourceNote": {
+    "buildReceiptBuildTimeSceneSourceSha256": "f4ca1c6dd17a7f949fded8d8072a592265080089a02bbe4861eaa5fd62518aa3",
+    "postBuildFrozenSceneSourceSha256": "e971a857d8cdf7e8600927a6b56b1bb1ced0b1f007967a4140216e6be0161315",
+    "interpretation": "The Unity scene asset was reserialized after the build receipt was emitted. The post-build source scene is retained as reference, but formal authorization does not use it as byte-identical build proof; it binds the accepted standalone build's complete 151-file canonical tree instead."
+  },
+  "liveValidation": {
+    "status": "PASS",
+    "markerPath": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/live-validation-only-attempt-002/validation-marker.v1.json",
+    "markerSha256": "c1ce26903c3114d7cc2e97f9cf8a68a817701690e01289524e9cd96bd6c0b484",
+    "algorithmsStructurallyInitialized": 4,
+    "orderedStructuralEventsApplied": 2,
+    "formalObservationProduced": false,
+    "m1ThroughM5OutputProduced": false,
+    "formalPhaseAStarted": false
+  },
+  "authorizationNegative": {
+    "status": "PASS_EXPECTED_REJECTION",
+    "receiptPath": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/live-formal-authorization-negative-attempt-001/would-be-block.json.failure.json",
+    "receiptSha256": "c466f559097cc9658827fff60a6d84ec2a4fdae141b3eedc07811942c926ab3c",
+    "exitCode": 1,
+    "formalObservationProduced": false,
+    "formalPhaseAStarted": false
+  },
+  "supervisorValidation": {
+    "status": "PASS",
+    "receiptPath": "Research/Verification/Gate14Re/formal-executor-implementation-attempt-001/formal-supervisor-validation-only-attempt-002/validation-receipt.v1.json",
+    "receiptSha256": "f130a1a0d1ae96da6ebe7434926177d5a23abf1d07e022ac94fabac2764a7b37",
+    "frozenBlocksValidated": 1536,
+    "frozenBuildFilesValidated": 151,
+    "syntheticPositiveAndTamperNegativeChecksPassed": true
+  },
+  "supersededEvidence": [
+    {
+      "buildAttempt": 1,
+      "dispositionSha256": "ead78ba689a7188625b8b3f2dad4184fde83f2e9dad80f7090c2eb83002c8ee0",
+      "admissibleForFormalAuthorization": false
+    },
+    {
+      "buildAttempt": 2,
+      "dispositionSha256": "9f37f74a32f9f4c17723a34f0e0e413e719fa05345e08e40f4269c76b6f14248",
+      "admissibleForFormalAuthorization": false
+    }
+  ],
+  "currentState": {
+    "formalAuthorizationIssued": false,
+    "formalRootExists": false,
+    "formalObservationProduced": false,
+    "formalPhaseAStarted": false,
+    "formalPhaseBStarted": false,
+    "gate15Started": false
+  }
+}

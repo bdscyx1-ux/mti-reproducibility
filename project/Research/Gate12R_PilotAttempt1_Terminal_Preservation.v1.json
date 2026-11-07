@@ -1,0 +1,60 @@
+{
+    "schemaVersion":  1,
+    "manifestKind":  "gate12r-pilot-attempt1-terminal-preservation-manifest-v1",
+    "savedAtUtc":  "2026-10-07T11:39:23.7858208Z",
+    "pilotRoot":  "H:\\DDM_Final_Project\\Research\\PilotRuns\\Gate12R_ProcessReuse_5pct\\v1",
+    "status":  "FAILED-NO-RESUME-NO-MERGE",
+    "formalCampaign":  false,
+    "excludedFromFormalAnalysis":  true,
+    "eligibleForSampleSizeEstimation":  false,
+    "eligibleForGate13R":  false,
+    "automaticRetryAuthorizedForThisRoot":  false,
+    "automaticResumeAuthorizedForThisRoot":  false,
+    "partialAttemptMergeAuthorized":  false,
+    "completedEntryCount":  246,
+    "warmupBlockCount":  8,
+    "coldControlCount":  36,
+    "completedMeasuredBlockCount":  202,
+    "completedMeasuredSampleCount":  608,
+    "failedMeasuredOrdinal":  247,
+    "failedCampaignId":  "core-r01-s1-hetero--per-agent",
+    "failedBlock":  17,
+    "primaryHardFailure":  {
+                               "message":  "Block retained managed-memory growth exceeded the frozen 128 MiB limit.",
+                               "blockManagedGrowthBytes":  134512640,
+                               "frozenLimitBytes":  134217728,
+                               "excessBytes":  294912
+                           },
+    "terminalEvidence":  [
+                             {
+                                 "name":  "partial-output-manifest.json",
+                                 "rawBytes":  1885422,
+                                 "sha256":  "bc3cae1882de95e33ef0ea6004da9bcc4b6696a44d7493d7d5eacde362b8af5c"
+                             },
+                             {
+                                 "name":  "failure-receipt.json",
+                                 "rawBytes":  577,
+                                 "sha256":  "c47582f963bcd858675a63cde44a313ba86b7007659b3d05174660fa40b9e096"
+                             },
+                             {
+                                 "name":  "pilot-checkpoint.json",
+                                 "rawBytes":  408269,
+                                 "sha256":  "7ae759c80cf0e6a2dabb246c85e24967c2cbe1d6a66574303670a72387254a14"
+                             },
+                             {
+                                 "name":  "execution-receipt.json",
+                                 "rawBytes":  896,
+                                 "sha256":  "91fd16ae85197c265fb076f48a695c07f7816b66b00df835bcaa1d240b1134b0"
+                             }
+                         ],
+    "failedBlockCheckpointSha256":  "093dda30ef64e0847e388ca8a7516fa37b817a70a107efc2a300912840be4353",
+    "failedBlockFailureSha256":  "573963fc5ad16079e011c2a0d2840f8f3a732e8ee24702986cc298609005356a",
+    "failedBlockExceptionType":  "System.InvalidOperationException",
+    "verifiedFileCountFromPartialManifest":  5330,
+    "verifiedRawBytesFromPartialManifest":  2391606830,
+    "rootFileCountIncludingPartialManifest":  5331,
+    "rootRawBytesIncludingPartialManifest":  2393492252,
+    "unexpectedFileCount":  0,
+    "independentFullHashAuditPassed":  true,
+    "reservedGate13RFormalRootAbsent":  true
+}

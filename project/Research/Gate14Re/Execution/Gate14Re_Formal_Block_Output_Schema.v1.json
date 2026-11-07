@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate14re-formal-block-output-schema-v1",
+  "title": "Gate 14Re formal complete-block output v1",
+  "type": "object",
+  "required": [
+    "schema", "studyId", "status", "blockId", "blockSequence", "module", "lane",
+    "conditionId", "scenarioId", "scenarioSha256", "unitCount", "blockIndex",
+    "williamsRow", "planSha256", "executableSha256", "authorizationId",
+    "movement", "m4", "completeFourAlgorithmBlock", "formalObservationProduced", "formalPhaseA"
+  ],
+  "properties": {
+    "schema": {"const": "gate14re-formal-block-output-v1"},
+    "studyId": {"const": "Gate14Re"},
+    "status": {"const": "COMPLETE"},
+    "blockId": {"type": "string", "minLength": 1},
+    "blockSequence": {"type": "integer", "minimum": 1, "maximum": 1536},
+    "module": {"enum": ["A", "Q"]},
+    "lane": {"enum": ["movement", "m4"]},
+    "conditionId": {"pattern": "^C0[1-8]$"},
+    "scenarioId": {"type": "string", "minLength": 1},
+    "scenarioSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "unitCount": {"enum": [1, 8, 32, 128, 512]},
+    "blockIndex": {"type": "integer", "minimum": 1, "maximum": 48},
+    "williamsRow": {"type": "integer", "minimum": 1, "maximum": 4},
+    "planSha256": {"const": "9d12fab76865477fed1742c1d51cc79eb57a06c2fcf40e0544f2045cfffd552d"},
+    "executableSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "authorizationId": {"type": "string", "minLength": 1},
+    "m2CommonMaskMinimum": {"type": "integer", "minimum": 0, "maximum": 512},
+    "m2CommonMaskAgentIds": {"type": "array", "uniqueItems": true, "items": {"type": "integer", "minimum": 0, "maximum": 511}},
+    "m2CommonMaskSufficient": {"type": "boolean"},
+    "movement": {"type": "array", "minItems": 0, "maxItems": 4, "items": {"$ref": "#/$defs/movementSample"}},
+    "m4": {"type": "array", "minItems": 0, "maxItems": 4, "items": {"$ref": "#/$defs/m4Sample"}},
+    "completeFourAlgorithmBlock": {"const": true},
+    "formalObservationProduced": {"const": true},
+    "formalPhaseA": {"const": true}
+  },
+  "allOf": [
+    {"if": {"properties": {"lane": {"const": "movement"}}}, "then": {"properties": {"movement": {"minItems": 4, "maxItems": 4}, "m4": {"maxItems": 0}}}},
+    {"if": {"properties": {"lane": {"const": "m4"}}}, "then": {"properties": {"movement": {"maxItems": 0}, "m4": {"minItems": 4, "maxItems": 4}}}}
+  ],
+  "$defs": {
+    "event": {
+      "type": "object",
+      "required": ["eventId", "scheduledTick", "order", "changedCellCount", "previousGridVersion", "newGridVersion", "plannerRepairStatus", "plannerFailureReason", "visualRevision"]
+    },
+    "unit": {
+      "type": "object",
+      "required": ["agentId", "terminalState", "arrived", "arrivalTick", "cumulativeHorizontalPathLength"]
+    },
+    "movementSample": {
+      "type": "object",
+      "required": ["algorithmLabel", "productionAlgorithmId", "orderPosition", "unitCount", "allUnitsArrived", "arrivedCount", "m1Seconds", "m5CriticalViolationCount", "units", "structuralEvents", "m2CommonMaskCount", "m2CommonMaskSufficient", "m2CommonMaskMeanPathLength"],
+      "properties": {
+        "algorithmLabel": {"enum": ["A", "B", "C", "D"]},
+        "productionAlgorithmId": {"enum": ["A*-R", "D*L", "C-FF", "IDFF"]},
+        "orderPosition": {"type": "integer", "minimum": 1, "maximum": 4},
+        "unitCount": {"enum": [1, 8, 32, 128, 512]},
+        "m1Seconds": {"type": "number", "minimum": 0, "maximum": 180},
+        "m5CriticalViolationCount": {"type": "integer", "minimum": 0},
+        "units": {"type": "array", "minItems": 1, "maxItems": 512, "items": {"$ref": "#/$defs/unit"}},
+        "structuralEvents": {"type": "array", "minItems": 0, "maxItems": 5, "items": {"$ref": "#/$defs/event"}}
+      }
+    },
+    "m4Sample": {
+      "type": "object",
+      "required": ["algorithmLabel", "productionAlgorithmId", "orderPosition", "unitCount", "unitsWithEnabledRenderer", "warmupRenderedFrames", "measuredRenderedFrameIntervals", "frameIntervalsSeconds", "medianFrameTimeSeconds", "nearestRankP95FrameTimeSeconds", "simulationTickAtEnd", "structuralEvents"],
+      "properties": {
+        "algorithmLabel": {"enum": ["A", "B", "C", "D"]},
+        "productionAlgorithmId": {"enum": ["A*-R", "D*L", "C-FF", "IDFF"]},
+        "orderPosition": {"type": "integer", "minimum": 1, "maximum": 4},
+        "unitCount": {"enum": [1, 8, 32, 128, 512]},
+        "unitsWithEnabledRenderer": {"type": "integer", "minimum": 1, "maximum": 512},
+        "warmupRenderedFrames": {"const": 600},
+        "measuredRenderedFrameIntervals": {"const": 1800},
+        "frameIntervalsSeconds": {"type": "array", "minItems": 1800, "maxItems": 1800, "items": {"type": "number", "exclusiveMinimum": 0}},
+        "medianFrameTimeSeconds": {"type": "number", "exclusiveMinimum": 0},
+        "nearestRankP95FrameTimeSeconds": {"type": "number", "exclusiveMinimum": 0},
+        "structuralEvents": {"type": "array", "minItems": 0, "maxItems": 5, "items": {"$ref": "#/$defs/event"}}
+      }
+    }
+  }
+}

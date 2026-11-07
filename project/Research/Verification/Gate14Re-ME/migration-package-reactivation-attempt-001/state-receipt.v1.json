@@ -1,0 +1,74 @@
+{
+  "schema": "gate14re-me-migration-package-reactivation-state-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "migration-package-reactivation-attempt-001",
+  "recordedAtUtc": "2026-10-20T03:01:30Z",
+  "previousState": "DORMANT_SEALED_FOR_LATER_REACTIVATION",
+  "currentState": "REACTIVATED_READY_FOR_BUILD_NOT_BUILT",
+  "status": "PASS_MIGRATION_PACKAGE_STAGE_REACTIVATED_WITHOUT_BUILD",
+  "prerequisites": {
+    "qualificationTerminal": {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-read-only-acceptance-attempt-001/qualification-terminal-pass-receipt.v1.json",
+      "sha256": "9ffc2c83896f1516eea969619ccc8c07f6be1bdab85cecead7224fc8f9cbeafa",
+      "status": "PASS"
+    },
+    "postQualificationRuntimeDiagnostic": {
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-post-qualification-runtime-diagnostic-attempt-002/terminal-receipt.v2.json",
+      "sha256": "92e2cd918f55bae33c38bd8a71b915b5ab7b5f96e8a31ccbeb06d9533b980e6e",
+      "status": "PASS"
+    },
+    "anonymousPower": {
+      "relativePath": "Research/Verification/Gate14Re-ME/formal-st-anonymous-power-attempt-001/power-result.v1.json",
+      "sha256": "b21ed3a52f918c1cd4f0d30140349cf2c71f5e9fb3688cf39f1972c7f1917864",
+      "finalEvidenceFreezeSha256": "aa4402dca4c327895e45292e66ed60d0d5162e5a5eaa8bcdb1712a2349479477",
+      "selectedB": 36,
+      "worstOpaqueTargetWilson95LowerPower": 0.9999807930748098,
+      "targetPowerAtLeast": 0.9,
+      "identityMappingOpened": false,
+      "status": "PASS"
+    },
+    "formalSTV5Freeze": {
+      "indexRelativePath": "Research/Gate14Re-ME/Execution/v5/formal-st-freeze-index.v5_0.json",
+      "indexSha256": "35c3b98e42cc21b200308460c6b93fb48961b4a450522acc23958c76b70b00dd",
+      "terminalRelativePath": "Research/Verification/Gate14Re-ME/formal-st-design-freeze-v5-attempt-001/terminal-receipt.v1.json",
+      "terminalSha256": "e792f20425227c6a2f67bc985f97eb61e390f7876e4ebedc89f565f0876c6665",
+      "finalEvidenceFreezeSha256": "a216705b8770429b9ae8579c95a91955f1257a4fbcbe149b43e81f21f70998af",
+      "status": "PASS_FORMAL_ST_V5_NONEXECUTING_FREEZE"
+    }
+  },
+  "frozenFormalPlanning": {
+    "G": [64, 96, 128],
+    "N": [32, 64, 128],
+    "F": [1, 9, 25, 81],
+    "B": 36,
+    "structuralCells": 36,
+    "independentSuperblocks": 1296,
+    "strictSerialFreshMeasuredLaneProcesses": 7776,
+    "primaryEventGroupRows": 186624,
+    "planningHoursWith20PercentHeadroom": 83.493,
+    "sevenDayGateHours": 168,
+    "sevenDayGateTriggered": false,
+    "reservedRawAndDeliveryStorageBytes": 64310367960,
+    "movementTransferSentinel": "OMITTED",
+    "correctnessAndOracleHardGates": "RETAINED"
+  },
+  "buildBoundary": {
+    "packageBuildAuthorized": false,
+    "packageStagingRootsCreated": 0,
+    "packageBuildRootsCreated": 0,
+    "packageTestRootsCreated": 0,
+    "formalRunRootsCreated": 0,
+    "formalDeliveryRootsCreated": 0,
+    "formalV5SourceCopiesCreated": 0,
+    "unityInstallerCopiesCreated": 0,
+    "credentialCopiesCreated": 0,
+    "zipFilesCreated": 0,
+    "migrationBundleBuilt": false,
+    "formalInputsGenerated": 0,
+    "formalScheduleRowsGenerated": 0,
+    "formalCollectionStarted": false,
+    "formalAnalysisStarted": false,
+    "MQOrMTStarted": false
+  },
+  "meaning": "The scientific and build-input contracts are frozen and the migration-package stage may be built only after a new explicit step-10 authorization. This receipt is not a package, installer, credential set, ZIP, execution authorization, or collection authorization."
+}

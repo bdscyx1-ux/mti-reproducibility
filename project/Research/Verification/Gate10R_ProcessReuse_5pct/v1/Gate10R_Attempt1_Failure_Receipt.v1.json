@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "gate10r-attempt1-unit-gate-failure-v1",
+  "createdAtUtc": "2026-10-06T08:25:21.828Z",
+  "status": "GATE10R-FAILED-NO-AUTO-RETRY",
+  "designId": "gate10r-one-fresh-unity-process-per-williams-block-5pct-v1",
+  "authorizationId": "gate10r-to-gate12r-sequential-execution-v1",
+  "attempt": 1,
+  "failedStage": "official-unit-test-entry",
+  "command": "C:/WINDOWS/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -ExecutionPolicy Bypass -File H:/DDM_Final_Project/Research/Verification/Run-Gate10RUnitTests.ps1",
+  "exitCode": 1,
+  "failure": {
+    "exception": "ParameterArgumentValidationErrorEmptyStringNotAllowed,Microsoft.PowerShell.Commands.SplitPathCommand",
+    "file": "Research/Verification/Run-Gate10RUnitTests.ps1",
+    "line": 3,
+    "column": 68,
+    "message": "$PSScriptRoot was empty while evaluating the default ProjectPath expression in Windows PowerShell 5.1 parameter binding."
+  },
+  "evidence": {
+    "stderrLog": {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v1/Attempt1-UnitGate-Failure.stderr.log",
+      "sha256": "ed11b29ab0e7331007a1ec30f1471fb28cf185924de006981ca7895db954f479"
+    },
+    "partialManifest": {
+      "relativePath": "Research/Verification/Gate10R_ProcessReuse_5pct/v1/Gate10R_Attempt1_Partial_Output_Manifest.v1.json",
+      "sha256": "9dc16acfc7bab0f72d621fd6620f83235411e3afa6d9138fbde1445f87ff138e"
+    }
+  },
+  "execution": {
+    "unityStarted": false,
+    "unityProcessCountAfterFailure": 0,
+    "projectLockExistsAfterFailure": false,
+    "compileStarted": false,
+    "telemetryProbeStarted": false,
+    "blockFixtureStarted": false,
+    "gate11Started": false,
+    "gate12PilotStarted": false,
+    "gate13FormalRootCreated": false
+  },
+  "disposition": [
+    "NO-AUTO-RETRY",
+    "NO-RESUME",
+    "PARTIAL-EVIDENCE-PRESERVED",
+    "WAIT-FOR-EXPLICIT-RETRY-AUTHORIZATION"
+  ],
+  "automaticRetryAttempted": false,
+  "automaticResumeAttempted": false,
+  "formalCampaign": false
+}
+

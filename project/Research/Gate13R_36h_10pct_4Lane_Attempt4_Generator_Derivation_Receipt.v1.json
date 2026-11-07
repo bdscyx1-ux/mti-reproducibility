@@ -1,0 +1,60 @@
+{
+    "schemaVersion":  1,
+    "receiptKind":  "gate13r-36h-attempt4-generator-derivation-v1",
+    "createdAtUtc":  "2026-10-08T04:48:10.3634096Z",
+    "sourceRelativePath":  "Research/Verification/New-Gate13R36hAttempt3ArtifactsV1.ps1",
+    "sourceSha256":  "507492e7f950aa0ff7791da7e6aa2ba57eb235a87b3dc5cd0eb7326fcb541182",
+    "destinationRelativePath":  "Research/Verification/New-Gate13R36hAttempt4ArtifactsV1.ps1",
+    "destinationSha256":  "89d4b9fdd79f808da7861a65ab8acfaff353e89b8ead5433984d175e45f8293a",
+    "routes":  [
+                   {
+                       "from":  "Attempt3",
+                       "to":  "Attempt4",
+                       "count":  3
+                   },
+                   {
+                       "from":  "attempt3",
+                       "to":  "attempt4",
+                       "count":  2
+                   },
+                   {
+                       "from":  "V3",
+                       "to":  "V4",
+                       "count":  52
+                   },
+                   {
+                       "from":  "v3",
+                       "to":  "v4",
+                       "count":  40
+                   },
+                   {
+                       "from":  "$plan.pilotAttempt=3",
+                       "to":  "$plan.pilotAttempt=4",
+                       "count":  1
+                   },
+                   {
+                       "from":  "    $(Route \"-v2\u0027\" \"-v4\u0027\")",
+                       "to":  "exact-non-overlapping-kind-routes",
+                       "count":  1
+                   },
+                   {
+                       "from":  "frozen-array-anchor",
+                       "to":  "frozen-v3-evidence-prefix",
+                       "count":  1
+                   },
+                   {
+                       "from":  "attempt2-upstream-anchor",
+                       "to":  "attempt2-plus-attempt3-upstream-bindings",
+                       "count":  1
+                   },
+                   {
+                       "from":  "v4-provenance-anchor",
+                       "to":  "v3-failure-and-v4-generator-bindings",
+                       "count":  1
+                   }
+               ],
+    "windowsPowerShell51ParsePassed":  true,
+    "formalCampaign":  false,
+    "pilotStarted":  false,
+    "passed":  true
+}

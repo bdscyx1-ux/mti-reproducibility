@@ -1,0 +1,83 @@
+{
+  "schema": "gate14re-me-qualification-readiness-freeze-manifest-v4",
+  "studyId": "Gate14Re-ME",
+  "attemptId": "qualification-implementation-readiness-v4-attempt-004",
+  "createdAtUtc": "2026-10-19T12:28:55.8664348Z",
+  "status": "VOID_DRAFT_NOT_FROZEN_SUPERSEDED_PENDING_ORACLE_SIMPLIFICATION",
+  "artifacts": [
+    {
+      "relativePath": "readiness-audit-plan.v4.json",
+      "bytes": 2593,
+      "sha256": "237d13ba9449f97c08d2a5da40421acb837fd7f57e45b5bc0a1cbcff76df44e8"
+    },
+    {
+      "relativePath": "Invoke-Gate14ReMEReadinessAudit.v4_0.ps1",
+      "bytes": 21721,
+      "sha256": "5ce0c5b144bbc5d2242a6533f5fb99a55042b3c1a695895ba5a1d6ccd6d0a132"
+    },
+    {
+      "relativePath": "readiness-audit-result.v4.json",
+      "bytes": 4050,
+      "sha256": "6976e79fb90365679df1fbda0c71a5a582d2fe5d51d9cb149c9a42dbec4814c4"
+    },
+    {
+      "relativePath": "bounded-qualification-v4-design-summary.md",
+      "bytes": 7152,
+      "sha256": "0f01f3ebb5c1094638624a3e60e56bad22b94057eeddc9e16ca185c12246bad9"
+    }
+  ],
+  "externalBindings": [
+    {
+      "role": "v4-implementation-manifest",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-current-implementation-manifest.v4_0.json",
+      "sha256": "5536e0f5ba5ee6b695ada076c00e2d3334fdc1371bdda7a07076d0c0a89c6ccf"
+    },
+    {
+      "role": "v4-acquisition-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acquisition-contract.v4_0.json",
+      "sha256": "26ce7b7ef99b89ce095dfa5f146891ec6fa5cdf308c00b6c10da443f90d846b1"
+    },
+    {
+      "role": "v4.1-read-only-acceptance-contract",
+      "relativePath": "Research/Gate14Re-ME/Execution/v4/load-qualification-acceptance-contract.v4_1.json",
+      "sha256": "57385f1e832b6a477af26155da1ca6fa079c57f394c502ad6c0d29d2b5448f21"
+    },
+    {
+      "role": "v4-schedule",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-planning-asset-generation-v4-attempt-002/planning-assets/schedule/bounded-qualification-williams-schedule.v4.jsonl",
+      "sha256": "8786f687a142900c0cf609817bbc1da957ec3ee9e09d12549e886fb892f026cb"
+    },
+    {
+      "role": "compile-readiness-pass",
+      "relativePath": "Research/Verification/Gate14Re-ME/qualification-implementation-readiness-v4-attempt-003/compile-readiness-receipt.v4_2.json",
+      "sha256": "e148401debcce58f91166ff0f9cbcb29840d258f331d25f5536bc2250f6eb63c"
+    },
+    {
+      "role": "attempt-009-terminal-paused-seal",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-paused-seal-attempt-009/terminal-seal-receipt.v1.json",
+      "sha256": "7c7c56f7b75b9fd1f4bbfee439960b6c486e180e940bdc09f99c171c059bd705"
+    },
+    {
+      "role": "attempt-009-measured-file-manifest",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-paused-seal-attempt-009/measured-file-manifest.v1.jsonl",
+      "sha256": "bb05763473cb5af321bd82f3b00a738cd3d066522527a813fef667b6c50a493f"
+    },
+    {
+      "role": "attempt-009-streaming-acceptance-feasibility-pass",
+      "relativePath": "Research/Verification/Gate14Re-ME/load-qualification-acceptance-v4-feasibility-attempt-001/delivery/terminal-final.v4.json",
+      "sha256": "8e23efa3dda65b437eb096c48740c68df7f0271859c7fabf28e40e664e03ef9e"
+    }
+  ],
+  "boundary": {
+    "userRequestedFreezeHold": true,
+    "readOnlyFreezeApplied": false,
+    "authoritativeFinalManifest": false,
+    "qualificationExecutionAuthorized": false,
+    "qualificationExecutionStarted": false,
+    "newMeasuredRootCreated": false,
+    "newDeliveryRootCreated": false,
+    "algorithmObservationsRead": false,
+    "formalBFinalized": false,
+    "migrationPackageState": "DORMANT_SEALED_FOR_LATER_REACTIVATION"
+  }
+}

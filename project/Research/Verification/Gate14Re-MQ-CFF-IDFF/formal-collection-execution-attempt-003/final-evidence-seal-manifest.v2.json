@@ -1,0 +1,130 @@
+{
+  "schema": "gate14re-mq-formal-collection-final-evidence-seal-manifest-v2",
+  "studyId": "Gate14Re-MQ-CFF-IDFF",
+  "designId": "gate14re-mq-cff-idff-formal-v2",
+  "authorizationId": "gate14re-mq-formal-collection-attempt-003-f9cf80a8-7ad8-4ec4-8568-bb4d90a9a445",
+  "status": "SEALED_FORMAL_MQ_COLLECTION_TERMINAL_PASS_FORMAL_ANALYSIS_NOT_AUTHORIZED",
+  "sealedAtUtc": "2026-10-22T04:01:36.5031009+00:00",
+  "evidenceRoot": "H:/DDM_Final_Project/Research/Verification/Gate14Re-MQ-CFF-IDFF/formal-collection-execution-attempt-003",
+  "measuredRoot": "H:/DDM_Final_Project/Research/FormalRuns/Gate14Re-MQ-CFF-IDFF/formal-mq/v2/attempt-003",
+  "artifactCount": 15,
+  "evidenceArtifactCount": 8,
+  "evidenceArtifacts": [
+    {
+      "relativePath": "collection-terminal-receipt.v2.json",
+      "bytes": 2581,
+      "sha256": "e3c2f64d3a612ca329924d0a2574e3301c9a60543ba8af87f2ac3e60b5e5f39b"
+    },
+    {
+      "relativePath": "execution-authorization.v2.json",
+      "bytes": 3378,
+      "sha256": "189d62a4f321cefe2d75055f34a4a02b3695c9086ce240c4f9afa880065fc7a6"
+    },
+    {
+      "relativePath": "external-launch-observation.v2.json",
+      "bytes": 4022,
+      "sha256": "b57640058cda197106d0a9b047bc46fa692d6c46ed01a85bee23ed77cd24d40d"
+    },
+    {
+      "relativePath": "external-terminal-observation.v2.json",
+      "bytes": 2547,
+      "sha256": "e9cc775311a97a0a444d49c9f8ac0d67be388d6a1f81ff53c832716f5b6e7183"
+    },
+    {
+      "relativePath": "launch-contract.v2.json",
+      "bytes": 6004,
+      "sha256": "dca4e236acf4346fb6b375f70931f042253aeb1356cb34db8d72e318424ab70f"
+    },
+    {
+      "relativePath": "prelaunch-audit.v2.json",
+      "bytes": 6415,
+      "sha256": "d184ca9d7b3fe0475593af51ddacb5572d8991689046466604063c1fa4ca59ef"
+    },
+    {
+      "relativePath": "supervisor.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "supervisor.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "measuredTerminalArtifactCount": 7,
+  "measuredTerminalArtifacts": [
+    {
+      "relativePath": "_control/acquisition-complete.v2.json",
+      "bytes": 377,
+      "sha256": "49d8dd3224a8b602ddabf3894aeb65b5cb3665b35e7c2881d4872f5e1dfaf33f"
+    },
+    {
+      "relativePath": "_control/acquisition-freeze-manifest.v2.json",
+      "bytes": 876412,
+      "sha256": "df3d760b678e1fb4bc4c863f23d7911600e76eefedae5efb0c197f53d021e6f0"
+    },
+    {
+      "relativePath": "_control/acquisition-terminal-receipt.v2.json",
+      "bytes": 708,
+      "sha256": "78a7b6acd2a46c2ff3babc38ef8814a82fd32152930b0e7c36b30ad795052aac"
+    },
+    {
+      "relativePath": "_control/failures-and-voids.raw.v2.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relativePath": "_control/launch-receipt.v2.json",
+      "bytes": 1469,
+      "sha256": "7092364d3d4273fb50a439d4b109c619b057f32fb0ad44631c8a898eb311e296"
+    },
+    {
+      "relativePath": "_control/process-ledger.raw.v2.jsonl",
+      "bytes": 2638174,
+      "sha256": "5df790c95061d86f3514eeec2a008c129984dc5fa7c16fac19116c26becc0613"
+    },
+    {
+      "relativePath": "_control/replacement-ledger.raw.v2.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "acquisitionFreezeAudit": {
+    "declaredFileCount": 4325,
+    "verifiedFileCount": 4325,
+    "duplicateRelativePaths": 0,
+    "unsafeRelativePaths": 0,
+    "missingFiles": 0,
+    "unaccountedFiles": 0,
+    "unexpectedExtraFiles": 0,
+    "sizeMismatches": 0,
+    "sha256Mismatches": 0,
+    "unityLogFiles": 864,
+    "formalBatchFiles": 864,
+    "formalLaneFiles": 864,
+    "processOutputFreezeManifests": 864,
+    "processTerminalReceipts": 864,
+    "uniqueProcessOrdinals": 864,
+    "processOrdinalRange": "0..863",
+    "matchedBlocks": 36,
+    "blockRange": "1..36"
+  },
+  "processLedgerValidation": {
+    "rows": 864,
+    "schema": "gate14re-mq-formal-process-ledger-row-v2",
+    "requiredState": "EXITED_ZERO_TRUSTED_IDENTITY",
+    "allExitCodeZero": true,
+    "allRetryResumeReplacementFalse": true,
+    "ordinalsUniqueAndStrictlyContinuous": true,
+    "ordinalRange": "0..863"
+  },
+  "supervisorNaturalExitZero": true,
+  "activeRelatedProcessesAtSeal": 0,
+  "formalCollectionComplete": true,
+  "formalAnalysisAuthorized": false,
+  "formalAnalysisStarted": false,
+  "stStarted": false,
+  "mtStarted": false,
+  "algorithmObservationsReadOrInterpreted": false,
+  "requiredNextGate": "separate explicit user authorization for formal MQ analysis"
+}

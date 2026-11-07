@@ -1,0 +1,406 @@
+{
+  "authorizationBoundary": {
+    "formalCampaignAuthorized": false,
+    "formalExecutionReceiptCreated": false,
+    "formalRootCreated": false,
+    "gate14RAuthorized": false,
+    "unityEditorLaunched": false
+  },
+  "checkCount": 63,
+  "checks": [
+    {
+      "name": "schema-config",
+      "passed": true
+    },
+    {
+      "name": "schema-manifest",
+      "passed": true
+    },
+    {
+      "name": "schema-preflight",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "schema-all-schedule-records",
+      "passed": true
+    },
+    {
+      "actual": 53,
+      "expected": 53,
+      "name": "matrix-scenario-count",
+      "passed": true
+    },
+    {
+      "actual": 74,
+      "expected": 74,
+      "name": "matrix-campaign-count",
+      "passed": true
+    },
+    {
+      "actual": 212,
+      "expected": 212,
+      "name": "matrix-eligibility-count",
+      "passed": true
+    },
+    {
+      "actual": 212,
+      "expected": 212,
+      "name": "preset-count",
+      "passed": true
+    },
+    {
+      "actual": 74,
+      "expected": 74,
+      "name": "campaign-id-unique",
+      "passed": true
+    },
+    {
+      "actual": 212,
+      "expected": 212,
+      "name": "preset-identity-unique",
+      "passed": true
+    },
+    {
+      "actual": 32,
+      "expected": 32,
+      "name": "cohort-shared-count",
+      "passed": true
+    },
+    {
+      "actual": 21,
+      "expected": 21,
+      "name": "cohort-per-agent-count",
+      "passed": true
+    },
+    {
+      "actual": 21,
+      "expected": 21,
+      "name": "cohort-grouped-count",
+      "passed": true
+    },
+    {
+      "actual": 3552,
+      "expected": 3552,
+      "name": "process-record-count",
+      "passed": true
+    },
+    {
+      "name": "global-process-ordinals-gapless",
+      "passed": true
+    },
+    {
+      "actual": 10176,
+      "expected": 10176,
+      "name": "sample-identity-count",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "record-content-bindings",
+      "passed": true
+    },
+    {
+      "actual": 3552,
+      "expected": 3552,
+      "name": "unique-block-ids",
+      "passed": true
+    },
+    {
+      "actual": 10176,
+      "expected": 10176,
+      "name": "unique-run-ids",
+      "passed": true
+    },
+    {
+      "actual": 13728,
+      "expected": 13728,
+      "name": "unique-output-paths",
+      "passed": true
+    },
+    {
+      "actual": {},
+      "expected": "74 campaigns x 48",
+      "name": "all-campaigns-have-48-blocks",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "per-campaign-williams-and-position-balance",
+      "passed": true
+    },
+    {
+      "actual": 1008,
+      "expected": 1008,
+      "name": "matched-superblock-count",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "matched-superblock-identity-and-contiguity",
+      "passed": true
+    },
+    {
+      "actual": 21,
+      "expected": 21,
+      "name": "heterogeneous-scenario-count",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "heterogeneous-order-row-orthogonality",
+      "passed": true
+    },
+    {
+      "actual": {
+        "campaignCount": 74,
+        "eligibleCellCount": 212,
+        "heterogeneousMatchedSuperblockCount": 1008,
+        "processCount": 3552,
+        "sampleCount": 10176,
+        "scenarioCount": 53
+      },
+      "expected": {
+        "campaignCount": 74,
+        "eligibleCellCount": 212,
+        "heterogeneousMatchedSuperblockCount": 1008,
+        "processCount": 3552,
+        "sampleCount": 10176,
+        "scenarioCount": 53
+      },
+      "name": "config-totals",
+      "passed": true
+    },
+    {
+      "actual": 74,
+      "expected": 74,
+      "name": "config-campaign-count",
+      "passed": true
+    },
+    {
+      "name": "config-formal-flags",
+      "passed": true
+    },
+    {
+      "name": "config-future-formal-root",
+      "passed": true
+    },
+    {
+      "name": "strict-serial-one-fresh-process",
+      "passed": true
+    },
+    {
+      "name": "no-cross-block-or-campaign-reuse",
+      "passed": true
+    },
+    {
+      "name": "per-sample-reset",
+      "passed": true
+    },
+    {
+      "name": "formal-fail-closed-no-retry-resume-topup-merge",
+      "passed": true
+    },
+    {
+      "name": "p1-sole-confirmatory-primary",
+      "passed": true
+    },
+    {
+      "name": "shared-c1-c5-holm-family",
+      "passed": true
+    },
+    {
+      "name": "heterogeneous-secondary-system-treatment",
+      "passed": true
+    },
+    {
+      "name": "p2-p5-supportive",
+      "passed": true
+    },
+    {
+      "name": "m1-m5-prospective-gate14r",
+      "passed": true
+    },
+    {
+      "name": "15pct-anchor-not-margin",
+      "passed": true
+    },
+    {
+      "name": "no-adaptive-stopping-or-per-campaign-guarantee",
+      "passed": true
+    },
+    {
+      "actual": {
+        "alertSamplesRetained": true,
+        "blockPrivateMemoryGrowthHardLimitBytes": 536870912,
+        "blockWorkingSetGrowthHardLimitBytes": 536870912,
+        "durableEvaluationBeforeDecisionRequired": true,
+        "exactThresholdPasses": true,
+        "policyId": "gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1",
+        "sampleAlertThresholdBytes": 134217728,
+        "sampleEmergencyStopBytes": 268435456,
+        "twoSampleBlockManagedGrowthHardLimitBytes": 268435456
+      },
+      "expected": {
+        "alertSamplesRetained": true,
+        "blockPrivateMemoryGrowthHardLimitBytes": 536870912,
+        "blockWorkingSetGrowthHardLimitBytes": 536870912,
+        "durableEvaluationBeforeDecisionRequired": true,
+        "exactThresholdPasses": true,
+        "policyId": "gate13r-pr1b-v2-sample-alert-128mib-emergency-256mib-block-256mib-v1",
+        "sampleAlertThresholdBytes": 134217728,
+        "sampleEmergencyStopBytes": 268435456,
+        "twoSampleBlockManagedGrowthHardLimitBytes": 268435456
+      },
+      "name": "memory-policy-carried-forward-exactly",
+      "passed": true
+    },
+    {
+      "name": "manifest-schedule-sha",
+      "passed": true
+    },
+    {
+      "actual": 11220567,
+      "expected": 11220567,
+      "name": "manifest-schedule-bytes",
+      "passed": true
+    },
+    {
+      "name": "manifest-config-sha",
+      "passed": true
+    },
+    {
+      "actual": 288367,
+      "expected": 288367,
+      "name": "manifest-config-bytes",
+      "passed": true
+    },
+    {
+      "name": "manifest-counts",
+      "passed": true
+    },
+    {
+      "name": "manifest-formal-not-authorized",
+      "passed": true
+    },
+    {
+      "actual": {
+        "conservativeSummedP95Hours": 26.45538207066667,
+        "minimumLaunchFreeBytes": 57397541440,
+        "projectedP95RawBytes": 9631912320,
+        "projectedSafetyBytes": 14447868480,
+        "reserveBytes": 42949672960,
+        "safetyMultiplier": 1.5,
+        "serialP50Hours": 20.808185450666667
+      },
+      "expected": {
+        "conservativeSummedP95Hours": 26.45538207066667,
+        "minimumLaunchFreeBytes": 57397541440,
+        "projectedP95RawBytes": 9631912320,
+        "projectedSafetyBytes": 14447868480,
+        "reserveBytes": 42949672960,
+        "safetyMultiplier": 1.5,
+        "serialP50Hours": 20.808185450666667
+      },
+      "name": "resource-projection-exact",
+      "passed": true
+    },
+    {
+      "name": "preflight-is-not-launch-authorization",
+      "passed": true
+    },
+    {
+      "actual": 276246306816,
+      "expected": 57397541440,
+      "name": "current-free-space-exceeds-minimum",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "all-config-input-bindings-current",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "prewrite-key-file-hashes-current",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "unity-process-count-zero",
+      "passed": true
+    },
+    {
+      "actual": false,
+      "expected": false,
+      "name": "future-formal-root-absent",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "formal-execution-receipt-absent",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "static-no-process-launch-constructs",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "expected": 0,
+      "name": "deterministic-regeneration-exit",
+      "passed": true
+    },
+    {
+      "actual": 0,
+      "detail": "[]",
+      "expected": 0,
+      "name": "deterministic-regeneration-byte-identical",
+      "passed": true
+    },
+    {
+      "name": "generation-summary-counts",
+      "passed": true
+    },
+    {
+      "name": "generation-summary-boundary",
+      "passed": true
+    },
+    {
+      "name": "authorization-boundary",
+      "passed": true
+    },
+    {
+      "name": "amendment-boundary",
+      "passed": true
+    }
+  ],
+  "failedCheckCount": 0,
+  "failedCheckNames": [],
+  "passedCheckCount": 63,
+  "schemaVersion": 1,
+  "status": "PASS",
+  "validatedAtUtc": "2026-10-08T17:02:12.925273+00:00",
+  "validationId": "gate13r-pr2-nonexecuting-core-validation-v4"
+}

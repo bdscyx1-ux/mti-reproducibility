@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "gate11r-attempt2-terminal-integrity-attempt1-failure-v2.1",
+  "createdAtUtc": "2026-10-07T03:26:47.5351928Z",
+  "status": "FAILED-16-OF-17-AUDIT-LITERAL-ONLY",
+  "failureClass": "WINDOWS-POWERSHELL-5.1-NOBOM-SCRIPT-LITERAL-DECODE",
+  "failedCheck": "overall-plan-current-state",
+  "passedCount": 16,
+  "failedCount": 1,
+  "failedAudit": {
+    "path": "Research/Gate11R_Attempt2_Terminal_Integrity_Audit.v2.json",
+    "rawBytes": 6385,
+    "sha256": "f45cbf7eabf8b268ed0b09da394e2dd787c37b172164b79fd3801344541cb29b"
+  },
+  "failedScript": {
+    "path": "Research/Verification/Run-Gate11RTerminalIntegrityAuditV2.ps1",
+    "rawBytes": 10136,
+    "sha256": "303b7d6e73141a1c3271520ebbf295b66dff66453d04466d1a8a697338c2c220"
+  },
+  "overallProjectPlanHashCheckPassed": true,
+  "allowedRepair": "Replace non-ASCII script-source literals with ASCII terminal-token and Gate 12R probes; retain the exact document hash check.",
+  "gate12RStarted": false,
+  "gate13RStarted": false
+}

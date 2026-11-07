@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-final-prelaunch-attempt1-failure-receipt-v1",
+  "failedAtUtc": "2026-10-08T17:33:37.6257966Z",
+  "status": "FAILED-PRELAUNCH-VALIDATION-IMPLEMENTATION-DEFECT / UNITY-NOT-LAUNCHED / FORMAL-ROOT-ABSENT / FORMAL-RECEIPT-ABSENT",
+  "failedImplementationRelativePath": "Research/Test-Gate13RPR2FinalPrelaunchV1.ps1",
+  "failedImplementationSha256": "9aa63898f87aa15952f346d6758a3566a68be94260a01048573522182ef1c856",
+  "failureClass": "POWERSHELL-NAMED-PARAMETER-MISMATCH",
+  "failureMessage": "Read-G13RPR2TextWithRetry has no MaximumWaitSeconds parameter; its bounded timeout parameter is TimeoutMilliseconds",
+  "formalRootExistsAfterFailure": false,
+  "formalExecutionReceiptExistsAfterFailure": false,
+  "formalExecutionStatusExistsAfterFailure": false,
+  "unityEditorProcessCountAfterFailure": 0,
+  "projectLockExistsAfterFailure": false,
+  "frozenInputModified": false,
+  "formalAttemptConsumed": false,
+  "retryScope": "VERSIONED-PRELAUNCH-VALIDATION-ONLY"
+}

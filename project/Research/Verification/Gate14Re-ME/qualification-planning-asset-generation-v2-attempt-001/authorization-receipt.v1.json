@@ -1,0 +1,29 @@
+{
+  "schema": "gate14re-me-qualification-planning-asset-generation-v2-attempt-001-authorization-receipt-v1",
+  "studyId": "Gate14Re-ME",
+  "authorizationId": "gate14re-me-qualification-planning-asset-generation-v2-attempt-001",
+  "authorizedAtUtc": "2026-10-17T13:59:17.804518Z",
+  "status": "AUTHORIZED_LIMITED_OFFLINE_PLANNING_ASSET_GENERATION",
+  "userAuthorization": "单独授权 Gate14Re‑ME qualification planning asset generation v2 attempt‑001：以 Status v27、qualification design gate14re-me-load-qualification-planning-v2、input schema v2 与 planning schema binding v2 为唯一合同；仅允许重新核对全部冻结哈希，生成并密封一个六算法至 ALG-A…ALG-F 的双射，生成 144 个 core 与 18 个 stress qualification input bundles，使用算法无关的离线 geometry/oracle validator 验证全部输入，并生成 162 行 Williams-balanced schedule；允许核对 schema、cardinality、seed/input/path 唯一性、context balance、Williams balance 和全部 SHA-256，并冻结 planning assets、manifest 与 terminal receipt。不得创建 measured root，不得启动 Unity，不得构造或调用六算法 planner，不得运行算法 lane，不得产生 qualification 或 formal observation，不得进行正式采集、正式分析、排名或赢家裁决；任一检查失败均保留证据并 fail closed。",
+  "authorizedOutputs": {
+    "sealedAnonymousIdentityBindings": 1,
+    "coreInputBundles": 144,
+    "stressInputBundles": 18,
+    "scheduleRows": 162,
+    "offlineGeometryOracleValidation": true,
+    "freezeManifest": true,
+    "terminalReceipt": true
+  },
+  "prohibited": [
+    "measured-root creation",
+    "Unity launch",
+    "planner construction or invocation",
+    "algorithm-lane execution",
+    "qualification observations",
+    "formal observations",
+    "formal collection",
+    "formal analysis",
+    "ranking",
+    "winner adjudication"
+  ]
+}

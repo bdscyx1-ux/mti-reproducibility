@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "gate13r-pr2-formal-adapter-static-test-failure-v1",
+  "failedAtUtc": "2026-10-08T17:03:39.2950034Z",
+  "testRelativePath": "Research/Test-Gate13RPR2FormalExecutionAdapterV2.py",
+  "testSha256": "5790948568c419e1612d62e66f7109cf1343cda018edc384d00f1bd1faecc009",
+  "summaryRelativePath": "Research/Verification/Gate13R_PR2_Formal_Prelaunch/v1/adapter-static-schedule-summary.v2.json",
+  "failureClass": "VALIDATOR-CHILD-PATH-SCOPE-MISMATCH",
+  "message": "childDirectory is intentionally block-relative and may repeat across blocks; global uniqueness must use outputRelativePath/childDirectory.",
+  "failedChecks": ["schedule-identities-unique", "schedule-content-errors-zero"],
+  "formalRootCreated": false,
+  "formalExecutionReceiptCreated": false,
+  "unityLaunched": false,
+  "formalAttemptConsumed": false,
+  "repairAllowed": true,
+  "passed": false
+}

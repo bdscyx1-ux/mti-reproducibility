@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "authorizationId": "gate13r-pr2-nonexecuting-formal-preparation-s48-h48-v1",
+  "stageId": "Gate13R-PR2",
+  "authorizationStatus": "AUTHORIZED-NON-EXECUTING-ONLY",
+  "authorizedAtUtc": "2026-10-08T16:08:24.434691+00:00",
+  "authorizedAtLocal": "2026-10-09T00:08:24.434691+08:00",
+  "localTimeZone": "Asia/Shanghai",
+  "authorizationPrompt": {
+    "relativePath": "Research/Gate13R_PR1B_v4_Next_Authorization_Prompt.md",
+    "sha256": "41060497a5157675865ddf7753cd80c471de9ac5106ed2819ce28977016fab9a"
+  },
+  "userWords": "授权 Gate 13R-PR2 非执行 formal-preparation redesign，严格按 `Research/Gate13R_PR1B_v4_Next_Authorization_Prompt.md` 中的完整授权文本执行；不授权 Gate 13R 正式 campaign，不授权 Gate 14R。",
+  "selectedCandidate": {
+    "candidateId": "S48-H48",
+    "sharedBlocksPerCampaign": 48,
+    "heterogeneousMatchedSuperblocksPerScenario": 48,
+    "heterogeneousOrderQuota": {
+      "AB": 24,
+      "BA": 24
+    },
+    "sharedProcessCount": 1536,
+    "sharedSampleCount": 6144,
+    "heterogeneousMatchedSuperblockCount": 1008,
+    "heterogeneousProcessCount": 2016,
+    "heterogeneousSampleCount": 4032,
+    "totalProcessCount": 3552,
+    "totalSampleCount": 10176
+  },
+  "permissions": {
+    "createVersionedNonExecutingDesignArtifacts": true,
+    "runStaticAndValidationOnlyChecks": true,
+    "versionedRepairAndRetryOfNewNonExecutingArtifacts": true,
+    "launchUnityEditor": false,
+    "createNewPilotSamples": false,
+    "runSupplementalPilot": false,
+    "createFormalOutputRoot": false,
+    "createFormalExecutionReceipt": false,
+    "runGate13RFormalCampaign": false,
+    "runGate14R": false,
+    "modifyFrozenUpstream": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "gate14re-me-status-draft-v1",
+  "proposedStudyId": "Gate14Re-ME",
+  "createdLocalDate": "2026-10-17",
+  "status": "SCIENTIFIC_REDESIGN_DRAFT_COMPLETE_USER_REVIEW_REQUIRED",
+  "scope": "multi-endpoint complexity extension with no ranking, no weighted composite, and no winner adjudication",
+  "lineage": {
+    "originalGate14ReModified": false,
+    "originalGate14ReFormalDataReadOrReusedForThisDraft": false,
+    "gate14ReTB2ExcludedAttemptDataReadOrReusedForThisDraft": false,
+    "newFormalRootExists": false
+  },
+  "draftArtifacts": [
+    "Research/Gate14Re-ME/Gate14Re_ME_Experiment_Plan.draft.v1.md",
+    "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.draft.v1.json",
+    "Research/Gate14Re-ME/Gate14Re_ME_NonExecuting_Scientific_Contract.draft.v1.json"
+  ],
+  "designSummary": {
+    "algorithms": ["A*-R", "BiA*-R", "D*L", "LPA*", "C-FF", "IDFF"],
+    "algorithmCount": 6,
+    "idffComparatorCount": 5,
+    "unorderedAlgorithmPairCount": 15,
+    "confirmatoryContrastCount": 35,
+    "primaryStructuralCells": 48,
+    "primaryEndpointDomains": 7,
+    "majoritySupportMinimumDomains": 4,
+    "ranking": false,
+    "weightedComposite": false,
+    "winnerAdjudication": false,
+    "B": null
+  },
+  "authorization": {
+    "planningDraft": true,
+    "scientificFreeze": false,
+    "implementation": false,
+    "inputGeneration": false,
+    "formalCollection": false,
+    "formalAnalysis": false
+  },
+  "nextRequiredAction": "user review of the six-algorithm cohort, new six-algorithm fairness contract, endpoint domains, majority language, practical effect thresholds, and blinded sample-size strategy"
+}

@@ -1,0 +1,58 @@
+{
+    "schemaVersion":  2,
+    "planId":  "g13r48verify-core-r01-s1-shared-shared-b001-plan",
+    "designId":  "gate13r-48h-10pct-three-isolated-editor-lanes-serial-license-admission-v1",
+    "blockId":  "g13r48verify-core-r01-s1-shared-shared-b001",
+    "campaignId":  "g13r48verify-core-r01-s1-shared-shared",
+    "scenarioRelativePath":  "Research/FormalScenarios/Gate11R_5pct/v1/Scenarios/core-r01-s1-shared.scenario.json",
+    "scenarioSourceSha256":  "7f1db9bd8a365b32cf34109d66f9889fb93b75311e4994fcd88db82ed05b0d36",
+    "comparisonCohortId":  "four-algorithm-shared-goal-v1",
+    "block":  1,
+    "formalCampaign":  false,
+    "analysisRole":  "excluded-verification",
+    "verificationInjectedFailurePosition":  0,
+    "pilotPlanRelativePath":  "Research/Gate13R_48h_10pct_3Lane_Pilot_Plan.v1.json",
+    "pilotPlanSha256":  "948b9637574238db93318cbe95fcef4214ce4c070bd7f454c993c43521a4c7d3",
+    "specificationRelativePath":  "Research/Gate13R_48h_10pct_3Lane_Redesign_Specification.v1.md",
+    "specificationSha256":  "95fcfc1e1723fa6f959a29a6ddf6f5027bfa1677954bfcba3d967d0c206ef807",
+    "testDesignRelativePath":  "Research/Gate13R_48h_10pct_3Lane_Test_Design.v1.md",
+    "testDesignSha256":  "7da3e470074bcd01da216810b00f7737a3ce8109b0b17abd90c8e1c04cbfe934",
+    "amendmentRelativePath":  "Research/Gate13R_48h_10pct_3Lane_Authorization_Amendment.v1.json",
+    "amendmentSha256":  "1aec1a2857104008b9f4cca50c010f9c0835d5c0d49ece5b0a2960bf401579df",
+    "commandRelativePath":  "Assets/_Scripts/Research/Editor/Gate13R48h3LaneBatchCommandV1.cs",
+    "commandSha256":  "557e6e4c7079b3214775d6240f4c50d4d88f53cc3d752b8f4e8560886017bfd1",
+    "provenanceRelativePath":  "Research/Gate13R_48h_10pct_3Lane_Provenance.v1.json",
+    "provenanceSha256":  "5995c2bb69e83fc0602ab229458033212c0109665b79568e5f8676dc608ff09f",
+    "telemetryProbeResultRelativePath":  "Research/Verification/Gate13R_48h_10pct_3Lane/v1/TelemetryProbe/telemetry-probe-result.json",
+    "telemetryProbeResultSha256":  "34b74799b76dcfd7e15ba70176b7bba16562ffb1184908b674b51c7a0f090e4f",
+    "entries":  [
+                    {
+                        "position":  1,
+                        "algorithmId":  "A*-R",
+                        "predecessorAlgorithmId":  "NONE",
+                        "runId":  "g13r48verify-core-r01-s1-shared-shared-b001-p01-astar-r",
+                        "directory":  "runs/p01-astar-r"
+                    },
+                    {
+                        "position":  2,
+                        "algorithmId":  "D*L",
+                        "predecessorAlgorithmId":  "A*-R",
+                        "runId":  "g13r48verify-core-r01-s1-shared-shared-b001-p02-dstar-l",
+                        "directory":  "runs/p02-dstar-l"
+                    },
+                    {
+                        "position":  3,
+                        "algorithmId":  "IDFF",
+                        "predecessorAlgorithmId":  "D*L",
+                        "runId":  "g13r48verify-core-r01-s1-shared-shared-b001-p03-idff",
+                        "directory":  "runs/p03-idff"
+                    },
+                    {
+                        "position":  4,
+                        "algorithmId":  "C-FF",
+                        "predecessorAlgorithmId":  "IDFF",
+                        "runId":  "g13r48verify-core-r01-s1-shared-shared-b001-p04-cff",
+                        "directory":  "runs/p04-cff"
+                    }
+                ]
+}

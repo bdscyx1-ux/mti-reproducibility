@@ -1,0 +1,34 @@
+{
+  "registryId": "gate13r-pr2-mp1-memory-policy-candidates-v1",
+  "schemaVersion": 1,
+  "status": "FROZEN-BEFORE-PILOT / CANDIDATES-UNFROZEN-FOR-FORMAL-USE",
+  "nativeDeltaCandidates": [
+    {"candidateId":"native-delta-512mib","thresholdBytes":536870912,"pilotRole":"DIAGNOSTIC-FLAG-ONLY","formalStatus":"UNFROZEN"},
+    {"candidateId":"native-delta-640mib","thresholdBytes":671088640,"pilotRole":"DIAGNOSTIC-FLAG-ONLY","formalStatus":"UNFROZEN"},
+    {"candidateId":"native-delta-768mib","thresholdBytes":805306368,"pilotRole":"DIAGNOSTIC-FLAG-ONLY","formalStatus":"UNFROZEN"},
+    {"candidateId":"native-delta-1024mib","thresholdBytes":1073741824,"pilotRole":"DIAGNOSTIC-FLAG-ONLY","formalStatus":"UNFROZEN"}
+  ],
+  "managedPilotRules": {
+    "sampleRetainedAlertBytes": 134217728,
+    "sampleRetainedEmergencyHardFailBytes": 268435456,
+    "blockRetainedHardFailBytes": 268435456
+  },
+  "hostSafetyRules": {
+    "absoluteWorkingSetHardFailBytes": 4294967296,
+    "absolutePrivateMemoryHardFailBytes": 4294967296,
+    "relativeWorkingSetGrowthHardFailBytes": 2147483648,
+    "relativePrivateMemoryGrowthHardFailBytes": 2147483648,
+    "availablePhysicalMemoryFloorBytes": 8589934592
+  },
+  "futurePolicyFamilies": [
+    {"id":"fixed-native-delta","status":"CANDIDATE"},
+    {"id":"absolute-plus-delta-layered","status":"CANDIDATE"},
+    {"id":"scenario-size-aware-envelope","status":"CANDIDATE"}
+  ],
+  "selectionProhibitions": [
+    "do-not-select-to-make-attempt2-pass",
+    "do-not-select-by-p1-p5-performance-direction",
+    "do-not-modify-attempt2-disposition",
+    "do-not-activate-formal-policy-without-new-authorization"
+  ]
+}

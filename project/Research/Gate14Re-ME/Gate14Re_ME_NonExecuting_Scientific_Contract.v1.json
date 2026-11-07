@@ -1,0 +1,318 @@
+{
+  "schema": "gate14re-me-nonexecuting-scientific-contract-v1",
+  "studyId": "Gate14Re-ME",
+  "version": 1,
+  "createdLocalDate": "2026-10-17",
+  "status": "FROZEN_NONEXECUTING_PRECOLLECTION_PARAMETERS_PENDING",
+  "freezeType": "scientific framework plus complete per-observation raw-data deliverability hard gate",
+  "purpose": "Prospectively test whether IDFF shows statistical advantage across a majority of seven prespecified resource and complexity-scaling endpoint domains without ranking, winner adjudication, or a weighted composite, while guaranteeing delivery of every raw observation for every named algorithm and metric.",
+  "integrityBoundary": {
+    "positiveIDFFResultGuaranteed": false,
+    "designMayIncreaseSensitivityToMechanisticIDFFAdvantages": true,
+    "allNullAdverseAndComparatorFavorableResultsMustBeReported": true,
+    "endpointSelectionAfterOutcomeInspection": false,
+    "ranking": false,
+    "winnerAdjudication": false,
+    "weightedComposite": false,
+    "lexicographicTiebreak": false,
+    "completeRawDataDeliveryMayBeRelaxedAfterCollection": false
+  },
+  "lineage": {
+    "originalGate14ReStatus": "FORMAL_COMPLETE_IMMUTABLE_NOT_REWRITTEN",
+    "originalGate14ReObservationsReused": 0,
+    "gate14ReTB2Attempt001Status": "USER_ABORTED_PERMANENTLY_EXCLUDED_AUDIT_ONLY",
+    "gate14ReTB2Attempt001ObservationsReused": 0,
+    "relationship": "independent prospective extension and replication; prior findings may motivate hypotheses but do not enter estimation, sample-size direction finding, input selection, endpoint selection, or raw-data merging"
+  },
+  "algorithms": [
+    "A*-R",
+    "BiA*-R",
+    "D*L",
+    "LPA*",
+    "C-FF",
+    "IDFF"
+  ],
+  "algorithmCohort": {
+    "count": 6,
+    "fixedOrderForIdentifiersOnly": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF",
+      "IDFF"
+    ],
+    "BiAStarR": {
+      "source": "Assets/_Scripts/Research/Algorithms/BidirectionalAStarRepeatedPlanner.cs",
+      "specification": "Research/Gate13R-AX2/Algorithms/Bidirectional_A_Star_Repeated_Specification.v1.md",
+      "mechanism": "bidirectional per-request full recompute"
+    },
+    "LPAStar": {
+      "source": "Assets/_Scripts/Research/Algorithms/LifelongPlanningAStarPlanner.cs",
+      "specification": "Research/Gate13R-AX2/Algorithms/Lifelong_Planning_A_Star_Specification.v1.md",
+      "mechanism": "backward goal-rooted per-agent incremental repair"
+    },
+    "allSixSourceAndSpecificationHashes": "must be recomputed, recorded, validated and frozen before any formal observation",
+    "algorithmImplementationMayBeChangedForThisStudy": false,
+    "onlyExternalInstrumentationAndReadOnlyStateIntrospectionMayBeAddedAfterIndependentValidation": true
+  },
+  "experimentalUnit": {
+    "independentUnit": "one newly generated immutable input superblock",
+    "pairedObservations": "six named fresh-process algorithm lanes within the same superblock",
+    "laneIsIndependentN": false,
+    "eventGroupIsIndependentN": false,
+    "agentIsIndependentN": false,
+    "queryIsIndependentN": false,
+    "operationIsIndependentN": false,
+    "frameTickOrCellIsIndependentN": false
+  },
+  "design": {
+    "gridEdgeLevels": [
+      64,
+      128,
+      256
+    ],
+    "agentCountLevels": [
+      8,
+      32,
+      128,
+      512
+    ],
+    "changedCellLevels": [
+      1,
+      9,
+      81,
+      225
+    ],
+    "primaryStructuralCells": 48,
+    "withinCellContextFactors": {
+      "changeTopology": [
+        "compact",
+        "dispersed",
+        "bottleneck"
+      ],
+      "graphProfile": [
+        "four_way_weighted_dense",
+        "eight_way_uniform_sparse"
+      ],
+      "sameTickAtomicPartitions": [
+        1,
+        4,
+        16
+      ],
+      "jointContextStrata": 18
+    },
+    "eventGroupsPerLane": 24,
+    "eventCyclesPerLane": 6,
+    "eventCycle": [
+      "block",
+      "unblock_or_restore",
+      "increase_cost",
+      "decrease_or_restore_cost"
+    ],
+    "sameUniqueChangedCellsAcrossAtomicPartitionVariants": true,
+    "postEventQueriesOnlyAfterCompleteSameTickGroup": true,
+    "BPerStructuralCell": null,
+    "BConstraint": "positive multiple of 36 selected and frozen before formal input draw, measured-root creation, or any formal observation",
+    "plannedSuperblocks": null,
+    "plannedFreshUnityProcesses": null,
+    "processFormula": "48 * finalB * 6",
+    "oneFreshProcessPerAlgorithmLane": true,
+    "pairedSixLaneSuperblock": true,
+    "algorithmCount": 6,
+    "unorderedAlgorithmPairCount": 15,
+    "sixTreatmentWilliamsExecutionOrders": [
+      [
+        "A*-R",
+        "BiA*-R",
+        "IDFF",
+        "D*L",
+        "C-FF",
+        "LPA*"
+      ],
+      [
+        "BiA*-R",
+        "D*L",
+        "A*-R",
+        "LPA*",
+        "IDFF",
+        "C-FF"
+      ],
+      [
+        "D*L",
+        "LPA*",
+        "BiA*-R",
+        "C-FF",
+        "A*-R",
+        "IDFF"
+      ],
+      [
+        "LPA*",
+        "C-FF",
+        "D*L",
+        "IDFF",
+        "BiA*-R",
+        "A*-R"
+      ],
+      [
+        "C-FF",
+        "IDFF",
+        "LPA*",
+        "A*-R",
+        "D*L",
+        "BiA*-R"
+      ],
+      [
+        "IDFF",
+        "A*-R",
+        "C-FF",
+        "BiA*-R",
+        "LPA*",
+        "D*L"
+      ]
+    ],
+    "executionOrderBalanceClaim": "each algorithm occurs once in each position and each directed first-order predecessor pair occurs once across the six sequences"
+  },
+  "sixAlgorithmFairnessBoundary": {
+    "sameByteIdenticalInputBundleWithinSuperblock": true,
+    "sameGridGoalStartsEventsBudgetsAndFixedStep": true,
+    "sameConnectivityCostCornerCuttingAndVersionSemantics": true,
+    "sameFreshProcessRequirement": true,
+    "sameDynamicMeasurementBoundary": true,
+    "samePathCorrectnessOracle": true,
+    "algorithmSpecificWarmupGcRebuildOrExtraQuery": false,
+    "mechanismSpecificNativeDiagnosticsMayUseDifferentSemantics": true,
+    "nativeDiagnosticsMustCarrySemanticsId": true,
+    "nativeDiagnosticsMayBeCombinedIntoCrossAlgorithmComposite": false,
+    "priorFourAlgorithmFairnessContractAutomaticallyExtendsToSix": false,
+    "precollectionRequirement": "a machine-readable six-algorithm source/specification/fairness binding with hashes must pass before collection readiness"
+  },
+  "fairDynamicBoundary": {
+    "includesAllApplyChangesInSameTickGroup": true,
+    "includesAllMandatoryPostEventPlanQueriesForNAgents": true,
+    "initializationSeparate": true,
+    "initialQueriesSeparate": true,
+    "applyChangesOnlyComparisonForbidden": true
+  },
+  "primaryEndpointDomains": [
+    "D1_DYNAMIC_LATENCY",
+    "D2_GRID_READ_WORK",
+    "D3_DYNAMIC_ALLOCATION",
+    "D4_PERSISTENT_STATE_BYTES",
+    "D5_AGENT_COUNT_SCALING",
+    "D6_CHANGE_FOOTPRINT_SCALING",
+    "D7_GRID_SIZE_SCALING"
+  ],
+  "endpointDictionary": "Research/Gate14Re-ME/Gate14Re_ME_Endpoint_Dictionary.v1.json",
+  "majoritySupportRule": {
+    "minimumIDFFAdvantageDomains": 4,
+    "totalDomains": 7,
+    "advantageDomainRequiresFavorableAdjustedEvidenceAgainst": [
+      "A*-R",
+      "BiA*-R",
+      "D*L",
+      "LPA*",
+      "C-FF"
+    ],
+    "correctnessAndMeasurementGatesRequired": true,
+    "failedOrInvalidDomainRemovedFromDenominator": false,
+    "claimType": "cross-domain statistical support only; never a winner, rank, aggregate score, or deployment decision"
+  },
+  "statisticalModel": {
+    "positiveOutcomes": "natural log",
+    "zeroPermittingOutcomes": "log1p plus raw-scale summaries",
+    "fixedEffects": [
+      "algorithm",
+      "log2_agent_count",
+      "log2_changed_cells",
+      "log2_grid_cell_count",
+      "change_topology",
+      "graph_profile",
+      "same_tick_atomic_partitions",
+      "algorithm_by_log2_agent_count",
+      "algorithm_by_log2_changed_cells",
+      "algorithm_by_log2_grid_cell_count",
+      "execution_order"
+    ],
+    "pairedCluster": "superblock",
+    "primaryEstimator": "prespecified mixed-effects model",
+    "nonconvergenceFallback": "same fixed-effect formula with superblock-cluster robust covariance",
+    "modelSelectionByPValueOrDirection": false,
+    "confirmatoryContrastCount": 35,
+    "D1ContrastConstruction": "within each IDFF-comparator pair use an intersection-union contrast over geometric-mean and P95 latency, taking the larger one-sided p-value; D1 contributes five domain-level contrasts",
+    "multiplicity": "Holm strong FWER alpha 0.05 over seven domains times five IDFF comparator contrasts",
+    "effectReporting": "effect estimate, simultaneous confidence interval, adjusted p-value, raw independent n, missingness, eligibility and raw distributions",
+    "fullFifteenPairMatrices": "all 15 unordered pairs in each 6-by-6 matrix are mandatory, exploratory, separately multiplicity controlled, and never ordered or ranked"
+  },
+  "measurementQualification": {
+    "gridReadProxyMustPreservePathStatusVersionAndNativeMetrics": true,
+    "allocationCounterMustPassMonotonicNonzeroSensitivityTest": true,
+    "persistentStateSizerMustUseFrozenAuditedPerContainerFormula": true,
+    "instrumentFailureBeforeCollection": "REDESIGN_AND_REFREEZE",
+    "instrumentFailureAfterCollection": "MEASUREMENT_INVALID_DOMAIN_REMAINS_IN_DENOMINATOR_NO_MAJORITY_CLAIM"
+  },
+  "sampleSize": {
+    "status": "PENDING_SEPARATELY_AUTHORIZED_PRECOLLECTION_PARAMETER_AMENDMENT",
+    "minimumPracticallyImportantEffects": null,
+    "finalB": null,
+    "targetPowerAtLeast": 0.9,
+    "familywiseAlpha": 0.05,
+    "BGrid": "positive multiples of 36",
+    "nuisanceOnlyDiagnosticMayOutputAlgorithmMeansDirectionsRanksOrWinner": false,
+    "formalAdaptiveExpansion": false,
+    "postOutcomeTopUp": false,
+    "bindingProtocol": "Research/Gate14Re-ME/Gate14Re_ME_Precollection_Parameter_Amendment_Protocol.v1.json"
+  },
+  "replacementPolicy": {
+    "infrastructureFailure": "void whole six-lane superblock and allow at most one documented whole-superblock replacement",
+    "algorithmSpecificFailure": "retain as outcome; no retry or replacement",
+    "resumeTopUpMergeSkipOrOutcomeDependentReorder": false,
+    "originalFailedOrVoidedEvidenceRetained": true
+  },
+  "rawDataDelivery": {
+    "binding": "Research/Gate14Re-ME/Gate14Re_ME_Data_Delivery_Contract.v1.json",
+    "completePerObservationRawDataDeliverable": true,
+    "hardScientificFreezeCondition": true,
+    "allSixAlgorithms": true,
+    "allPrimaryAndSecondaryMetrics": true,
+    "sampleRunLevel": true,
+    "metricLongLevel": true,
+    "eventGroupLevel": true,
+    "operationEventQueryLevel": true,
+    "stateComponentLevel": true,
+    "failureReplacementLevel": true,
+    "dataDictionaryProvenanceManifestAndHashesRequired": true,
+    "formalRawCommitCannotPassWithoutDeliveryReceipt": true,
+    "formalAnalysisCannotBeginWithoutDeliveryReceipt": true,
+    "aggregationOnlyStorageForbidden": true
+  },
+  "reporting": {
+    "allPrimaryDomainsReported": true,
+    "allSecondaryTradeoffsReported": true,
+    "allAlgorithmsReported": true,
+    "completeRawDistributionsReportedOrLinked": true,
+    "fullPairwiseMatrices": true,
+    "rankingTable": false,
+    "aggregateScore": false,
+    "winnerField": false
+  },
+  "authorizationBoundary": {
+    "scientificFrameworkFreezeAuthorized": true,
+    "rawDataDeliveryHardGateFreezeAuthorized": true,
+    "precollectionParameterProtocolFreezeAuthorized": true,
+    "implementationAuthorized": false,
+    "inputGenerationAuthorized": false,
+    "compileOrUnityExecutionAuthorized": false,
+    "formalMeasuredRootCreationAuthorized": false,
+    "formalCollectionAuthorized": false,
+    "formalExportExecutionAuthorized": false,
+    "formalAnalysisAuthorized": false,
+    "rankingAuthorized": false,
+    "winnerAdjudicationAuthorized": false
+  },
+  "remainingPrecollectionScientificAmendment": [
+    "define and explicitly authorize minimum practically important effects for power planning",
+    "freeze final B after an authorized identity-blind nuisance and resource assessment",
+    "freeze or omit the exact sentinel movement-transfer subset"
+  ]
+}
