@@ -7,6 +7,7 @@ telemetry without a retained numerical source are explicitly labelled retained.
 from pathlib import Path
 import argparse,csv,html,json,math,re,statistics,shutil
 ROOT=Path(__file__).resolve().parent
+from tools.repository_layout import repository_path
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def csvread(p):
     with p.open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
@@ -105,7 +106,7 @@ def main():
             ci=next(v for k,v in boot.items() if isinstance(v,list) and len(v)==2 and 'ratio' in k.lower())
         loo=r['leaveOneBlockOut'];rr.append([r['hypothesisId'],interval(ci,4),f"{r['signedRank']['exactLowerTailP']:.4g}",interval([math.exp(loo['minimumLeaveOneOutEstimate']),math.exp(loo['maximumLeaveOneOutEstimate'])],4)])
     put('Table_S18',rr,'mq/sensitivity-analysis.v1.json')
-    pref=res/'movement-preference';release=read(ROOT/'project/Research/Analysis/Gate14Re/EngineeringRecommendation/final-attempt-001/label-mapping-release.v1.json');ids={r['productionAlgorithmId']:r['anonymousLabel'] for r in release['rows']}
+    pref=res/'movement-preference';release=read(repository_path('project/Research/Analysis/Gate14Re/EngineeringRecommendation/final-attempt-001/label-mapping-release.v1.json'));ids={r['productionAlgorithmId']:r['anonymousLabel'] for r in release['rows']}
     dr={r['anonymousLabel']:r for r in read(pref/'anonymous-decision-workbook.json')['rows']}
     put('Table_S11',[['Algorithm','Movement ×2','Path ×1','Scaling ×1','Callback ×1','Static tie-break','Total']]+[[alg]+[str(dr[ids[alg]][k]) for k in ['movementRank','pathRank','scalingRank','renderRank','staticBurdenRank','decisionScore']] for alg in ['IDFF','C-FF','A*-R']],'movement-preference/anonymous-decision-workbook.json; released label mapping')
     e={r['anonymousLabel']:r for r in read(pref/'anonymous-movement-resolution.json')['anonymousAggregates']};m2={r['anonymousLabel']:r for r in read(pref/'anonymous-m2.json')['anonymousAggregates']};m4={r['anonymousLabel']:r for r in read(pref/'anonymous-m4.json')['anonymousAggregates']};sc={r['anonymousLabel']:r for r in read(pref/'anonymous-quantity-scaling.json')['anonymousScaling']};st={r['anonymousLabel']:r for r in read(pref/'anonymous-static-engineering.json')['anonymousProfiles']}

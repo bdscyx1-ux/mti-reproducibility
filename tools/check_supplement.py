@@ -2,9 +2,10 @@
 from pathlib import Path
 import argparse,csv,collections,hashlib,json,math,statistics,zipfile
 ROOT=Path(__file__).resolve().parents[1]
+from repository_layout import repository_path
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--archives',type=Path,required=True);args=ap.parse_args()
- sup=ROOT/'supplement-20261103';idx={};handles={};read_count=0
+ sup=repository_path('supplement-20261103');idx={};handles={};read_count=0
  for label in ['supplement-A','supplement-B','supplement-plans']:
   with (args.archives/(label+'.files.csv')).open(encoding='utf-8',newline='') as f:
    for r in csv.DictReader(f):idx[r['path']]=r
@@ -20,7 +21,7 @@ def main():
   read_count+=1;return json.loads(data),hashlib.sha256(data).hexdigest()
  def close(a,b):assert math.isclose(a,b,rel_tol=1e-10,abs_tol=1e-13),(a,b)
  try:
-  A=load_local(sup/'analysis/A/summary.json');jobs=load_local(sup/'A-jobs.json');assert len(jobs)==1536
+  A=load_local(repository_path('supplement-20261103/analysis/A/summary.json'));jobs=load_local(sup/'A-jobs.json');assert len(jobs)==1536
   cases=collections.defaultdict(dict);totals={a:collections.Counter() for a in A['statusTotals']}
   for j in jobs:
    out=member_path(j['output']);x,digest=raw(out+'/block-result.json');r,_=raw(out+'/process-receipt.json');plan,pdigest=raw(j['plan'])
@@ -61,7 +62,7 @@ def main():
     assert all(s[k]==0 for k in ['invalidPlanCount','internalFailureCount','m5CriticalViolationCount','activeAtCapCount','noPathCount','budgetExceededCount'])
     condition[(x['conditionId'],s['productionAlgorithmId'])].append(s)
   assert len(condition)==32 and all(len(v)==48 for v in condition.values()) and movement_blocks==384
-  with (sup/'analysis/B/condition-summary.csv').open(encoding='utf-8-sig',newline='') as f:
+  with (repository_path('supplement-20261103/analysis/B/condition-summary.csv')).open(encoding='utf-8-sig',newline='') as f:
    for row in csv.DictReader(f):
     vals=condition[(row['condition'],row['algorithm'])]
     close(float(row['meanSimulationSeconds']),statistics.mean(s['m1Seconds'] for s in vals))

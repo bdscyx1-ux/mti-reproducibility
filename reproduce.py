@@ -2,6 +2,7 @@
 from pathlib import Path,PurePosixPath
 import argparse,csv,hashlib,json,math,shutil,subprocess,sys,zipfile,os
 ROOT=Path(__file__).resolve().parent
+from tools.repository_layout import repository_path
 def sha(p):
     with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
@@ -48,8 +49,8 @@ def main():
     # Check originals and adaptations before executing scientific code.
     for binding in read(ROOT/'portable/adaptation-manifest.json'):
         for label,key in [('original','original_sha256'),('adapted','adapted_sha256')]:
-            assert sha(ROOT/binding[label])==binding[key],binding[label]
-    sup=ROOT/'supplement-20261103';wanted=set()
+            assert sha(repository_path(binding[label]))==binding[key],binding[label]
+    sup=repository_path('supplement-20261103');wanted=set()
     for job in read(sup/'A-jobs.json'):
         base=recorded(job['output']);wanted.update([base+'/block-result.json',base+'/process-receipt.json',recorded(job['plan'])])
     for job in read(sup/'B-formal-jobs.json'):
@@ -87,11 +88,11 @@ def main():
     stats={'numeric_values':0,'max_absolute_difference':0.,'csv_rows':0}
     excluded={'A':['createdUtc'],'B':['completedUtc','pythonVersion','numpyVersion','analyzerSha256']}
     for module in ['A','B']:
-        a=read(outputs/module/'summary.json');b=read(sup/'analysis'/module/'summary.json')
+        a=read(outputs/module/'summary.json');b=read(repository_path('supplement-20261103/analysis/'+module+'/summary.json'))
         for key in excluded[module]:a.pop(key,None);b.pop(key,None)
         compare(a,b,module+'/summary',stats)
         for name in (['sample-results.csv','paired-contrasts.csv'] if module=='A' else ['condition-summary.csv','paired-contrasts.csv']):
-            compare_csv(outputs/module/name,sup/'analysis'/module/name,stats)
+            compare_csv(outputs/module/name,repository_path('supplement-20261103/analysis/'+module+'/'+name),stats)
     selftest=read(outputs/'B/self-test.json');assert selftest['status']=='PASS' and selftest['checkCount']==10
     report={'status':'PASS','scope':'Complete supplemental A and B analyses; not historical acquisitions','python_version':sys.version,'numpy_version':np.__version__,'archives_used':used,'raw_files_verified_and_extracted':len(index),'A_blocks':1536,'B_blocks':768,'B_original_engine_self_checks':selftest['checkCount'],'original_acquisition_path_access':'blocked by audit hook in analyzer subprocesses','summary_metadata_excluded_from_comparison':excluded,**stats}
     (out/'REPRODUCTION_RESULT.json').write_text(json.dumps(report,indent=2),encoding='utf-8')

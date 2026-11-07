@@ -8,15 +8,31 @@ Start with [QUICKSTART.md](QUICKSTART.md). Run `python reproduce.py --archives .
 
 For historical results and manuscript displays, follow [HISTORICAL_QUICKSTART.md](HISTORICAL_QUICKSTART.md): run `reproduce_historical.py`, then `make_figures.py` and `make_tables.py`. Generated manuscript displays and their provenance are retained under `release-displays/`.
 
+## Experiments named as in the manuscript
+
+The current branch uses manuscript experiment names for study folders. Spaces are represented by hyphens, and `D* Lite` is written as `DStar-Lite` for portable filenames.
+
+| Manuscript experiment | Results and records |
+| --- | --- |
+| Four-Method Dynamic-Update Benchmark | [Four-Method-Dynamic-Update-Benchmark](project/Research/Analysis/Four-Method-Dynamic-Update-Benchmark) |
+| Expanded Search-Strategy Benchmark | [Expanded-Search-Strategy-Benchmark](project/Research/Analysis/Expanded-Search-Strategy-Benchmark) |
+| Independent Flow-Field Confirmation | [Independent-Flow-Field-Confirmation](project/Research/Analysis/Independent-Flow-Field-Confirmation) |
+| Movement and Scaling Benchmark | [Movement-and-Scaling-Benchmark](project/Research/Analysis/Movement-and-Scaling-Benchmark) |
+| Supplementary Movement and Scaling Benchmark (SMSB; matched six-algorithm cost and scaling benchmark) | [Supplementary-Movement-and-Scaling-Benchmark](project/Research/Analysis/Supplementary-Movement-and-Scaling-Benchmark) |
+| Managed multi-query module (MQ) | [Managed-Multi-Query-Module](project/Research/Analysis/Managed-Multi-Query-Module) |
+| Supplemental acquisition with corrected D* Lite | [Supplemental-Acquisition-with-Corrected-DStar-Lite](Supplemental-Acquisition-with-Corrected-DStar-Lite), with [shared-goal planning](Supplemental-Acquisition-with-Corrected-DStar-Lite/analysis/Shared-Goal-Planning) and [main movement](Supplemental-Acquisition-with-Corrected-DStar-Lite/analysis/Main-Movement) results |
+
+The same names apply to the corresponding source, design, input, verification, and audit folders. [The directory naming guide](docs/EXPERIMENT_NAMING.md) gives manuscript locations and explains compatibility with the frozen records; [the full path map](docs/EXPERIMENT_DIRECTORY_MAP.csv) lists every renamed directory. Historical study IDs inside records and filenames retain their acquisition meaning. The published **v1.0.0 tag and its Release ZIPs retain their original layout and checksums**; current entry points accept those same ZIPs.
+
 ## Contents
 
 - `project/Assets/_Scripts`: current source snapshot, including research and legacy support scripts. Current source is not automatically identical to every historical frozen implementation.
 - `project/Research/Analysis`: archived outputs for the historical acquisitions. Preserve acquisition and attempt identifiers when interpreting results.
 - `project/Research/FormalInputs`, `FormalScenarios`, `Scenarios`: input and scenario definitions.
-- `project/Research/Gate13R-AX2`, `Gate14Re`, `Gate14Re-ME`, `Gate14Re-MQ-CFF-IDFF`: designs, analysis code and supporting implementation records.
+- `project/Research/Expanded-Search-Strategy-Benchmark`, `Movement-and-Scaling-Benchmark`, `Supplementary-Movement-and-Scaling-Benchmark`, `Managed-Multi-Query-Module`: designs, analysis code and supporting implementation records.
 - `project/Research/Verification`: selected text-based verification records and archived code. These records describe earlier checks; their presence does not mean those checks were rerun during packaging.
-- `supplement-20261103`: corrected D* Lite supplemental planning and movement analyses, frozen source evidence and completion records. Raw records, plans and inputs are in separate archives.
-- `figure-support/smsb-audit`: additional SMSB diagnostics. These are post hoc diagnostics, not replacement confirmatory results or a verified export of every final manuscript figure.
+- `Supplemental-Acquisition-with-Corrected-DStar-Lite`: corrected D* Lite supplemental planning and movement analyses, frozen source evidence and completion records. Raw records, plans and inputs are in separate archives.
+- `figure-support/Supplementary-Movement-and-Scaling-Benchmark-Audit`: additional SMSB diagnostics. These are post hoc diagnostics, not replacement confirmatory results or a verified export of every final manuscript figure.
 - `figure-support/manuscript-embedded`: the five figures extracted from the supplied manuscript and supplementary DOCX files, with paragraph-order caption associations. These are delivered images, not editable plotting sources.
 - `provenance/manuscript-audit`: retained audit records.
 - `provenance/historical-dstar-diagnostic`: recovered historical D* Lite source and diagnostic evidence. The historical source hash matches the recorded implementation identity; it does not recover the historical executable.

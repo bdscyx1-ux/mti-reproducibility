@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "base_commit": "4391cac82868be3e814f2716dcdd4ee6836bc198",
+  "date": "2026-11-07",
+  "scope": "Manuscript experiment directory names and portable path resolution only",
+  "renamed_directories": 26,
+  "renamed_unity_folder_metadata": 2,
+  "relocated_files": 3667,
+  "existing_files_checked": 8622,
+  "all_relocated_research_payloads_byte_identical": true,
+  "all_8622_previous_paths_resolve_and_round_trip": true,
+  "reader_documentation_relative_links_checked": 19,
+  "reader_documentation_missing_links": 0,
+  "adaptation_or_documentation_files_changed": [
+    "README.md",
+    "docs/FILENAME_MAP.csv",
+    "docs/STUDY_MAP.csv",
+    "make_tables.py",
+    "portable/adaptation-manifest.json",
+    "portable/analyze_b.patch",
+    "portable/analyze_b.py",
+    "portable/historical/original-engines.json",
+    "reproduce.py",
+    "reproduce_historical.py",
+    "tools/check_supplement.py"
+  ],
+  "supplemental_reproduction": {
+    "status": "PASS",
+    "scope": "Complete supplemental A and B analyses; not historical acquisitions",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy_version": "2.3.5",
+    "archives_used": [
+      "supplement-A.part001.zip",
+      "supplement-A.part002.zip",
+      "supplement-B.part001.zip",
+      "supplement-plans.part001.zip"
+    ],
+    "raw_files_verified_and_extracted": 6144,
+    "A_blocks": 1536,
+    "B_blocks": 768,
+    "B_original_engine_self_checks": 10,
+    "original_acquisition_path_access": "blocked by audit hook in analyzer subprocesses",
+    "summary_metadata_excluded_from_comparison": {
+      "A": [
+        "createdUtc"
+      ],
+      "B": [
+        "completedUtc",
+        "pythonVersion",
+        "numpyVersion",
+        "analyzerSha256"
+      ]
+    },
+    "numeric_values": 51486,
+    "max_absolute_difference": 0.0,
+    "csv_rows": 6193
+  },
+  "historical_reproduction": {
+    "status": "PASS_FOR_FIVE_RECOVERABLE_STUDIES",
+    "studies": {
+      "four-method": {
+        "status": "PASS",
+        "compared_files": [
+          "heterogeneous-secondary-analysis.json",
+          "schedule-coverage-and-missingness.json",
+          "shared-primary-p1-analysis.json",
+          "shared-supportive-p2-p5-analysis.json"
+        ],
+        "numeric_values": 8340,
+        "max_absolute_difference": 3.568477751192299e-17,
+        "csv_rows": 0
+      },
+      "confirmation": {
+        "status": "PASS",
+        "compared_files": [
+          "confirmatory-p1-c5-result.json"
+        ],
+        "numeric_values": 85,
+        "max_absolute_difference": 0.0,
+        "csv_rows": 0
+      },
+      "movement": {
+        "status": "PASS",
+        "compared_files": [
+          "eligibility.json",
+          "m1-primary-pairwise.json",
+          "m2-guard-secondary.json",
+          "main-descriptive-summaries.json",
+          "quantity-effects.json",
+          "statistical-validation.json",
+          "winner-adjudication.json"
+        ],
+        "numeric_values": 4088,
+        "max_absolute_difference": 0.0,
+        "csv_rows": 0
+      },
+      "mq": {
+        "status": "PASS",
+        "compared_files": [
+          "confirmatory-and-secondary-results.v1.json",
+          "descriptive-and-exploratory-results.v1.json",
+          "descriptive-condition-summaries.v1.json",
+          "sensitivity-analysis.v1.json",
+          "statistical-validation.v1.json"
+        ],
+        "numeric_values": 873,
+        "max_absolute_difference": 0.0,
+        "csv_rows": 0
+      },
+      "smsb": {
+        "status": "PASS",
+        "compared_files": [
+          "confirmatory-results.v1.json",
+          "descriptive-summaries.v1.json",
+          "exploratory-pair-matrices.v1.json",
+          "hard-gates.v1.json",
+          "model-fit-diagnostics.v1.json",
+          "lane-estimands.v1.jsonl"
+        ],
+        "numeric_values": 443396,
+        "max_absolute_difference": 0.0,
+        "csv_rows": 0
+      },
+      "reporting-and-ranking": {
+        "status": "PASS",
+        "numeric_values": 7182,
+        "max_absolute_difference": 0.0,
+        "csv_rows": 805
+      },
+      "expanded-AX2": {
+        "status": "RAW_UNAVAILABLE_AGGREGATE_ONLY",
+        "reason": "Original block outputs deleted by historical cleanup; user reports no known backup. No raw-data replication claimed."
+      }
+    },
+    "metadata_excluded": [
+      "generatedAtUtc"
+    ],
+    "input_integrity": "See input-verification.json",
+    "original_machine_paths": "Denied by Python audit hook"
+  },
+  "regenerated_table_and_algorithm_files": 74,
+  "regenerated_table_and_algorithm_files_byte_identical": true,
+  "published_v1_0_0_tag_and_release_assets_unchanged": true,
+  "new_experimental_observations_collected": false
+}

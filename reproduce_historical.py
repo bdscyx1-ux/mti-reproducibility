@@ -6,6 +6,7 @@ were deleted before packaging. Output must be a fresh external directory.
 from pathlib import Path,PurePosixPath
 import argparse,csv,hashlib,importlib.util,json,math,os,shutil,sys,zipfile
 ROOT=Path(__file__).resolve().parent
+from tools.repository_layout import repository_path, legacy_relative_path
 sys.path.insert(0,str(ROOT/'portable/historical'))
 from reproduce import compare_csv,read,sha
 
@@ -62,7 +63,7 @@ def bound_project(inputs):
         if not p.is_file():continue
         rel=p.relative_to(src)
         if 'Analysis' in rel.parts[:2] or 'FormalRuns' in rel.parts or 'FormalDataPackages' in rel.parts:continue
-        target=dest/rel
+        target=inputs/legacy_relative_path('project/'+rel.as_posix())
         if target.exists():assert sha(target)==sha(p);continue
         target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(p,target)
     return dest
@@ -123,7 +124,7 @@ def run_movement(project,out,chosen):
     # never invoke machine-bound encrypted label custody or re-randomize labels.
     engine=load(project/'Research/Analyze-Gate14ReEngineeringRecommendationV1.py','frozen_movement_preference')
     contract=read(project/'Research/Gate14Re/EngineeringRecommendation/Gate14Re_Engineering_Recommendation_Contract.v1.json')
-    release=read(ROOT/'project/Research/Analysis/Gate14Re/EngineeringRecommendation/final-attempt-001/label-mapping-release.v1.json')
+    release=read(repository_path('project/Research/Analysis/Gate14Re/EngineeringRecommendation/final-attempt-001/label-mapping-release.v1.json'))
     mapping={r['sourceLabel']:r['anonymousLabel'] for r in release['rows']}
     for binding in contract['staticEngineeringTiebreak']['sourceBindings']:
         target=project/binding['path']
@@ -137,7 +138,7 @@ def run_movement(project,out,chosen):
         if isinstance(obj,str):(derived/name).write_text(obj,encoding='utf-8')
         else:
             write(derived/name,obj)
-            compare(obj,read(ROOT/'project/Research/Analysis/Gate14Re/EngineeringRecommendation/attempt-001'/name),name,stats)
+            compare(obj,read(repository_path('project/Research/Analysis/Gate14Re/EngineeringRecommendation/attempt-001')/name),name,stats)
     write(derived/'REPRODUCTION_RESULT.json',{'status':'PASS',**stats})
 
 def run_mq(project,out):
@@ -162,7 +163,7 @@ def run_mq(project,out):
 def run_smsb(project,out):
     import pyarrow.parquet as pq
     m=load(project/'Research/Gate14Re-ME/Tools/gate14re_me_formal_st_analysis_v1_3.py','frozen_smsb')
-    archived=ROOT/'project/Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-004'
+    archived=repository_path('project/Research/Analysis/Gate14Re-ME/formal-st/v5/attempt-004')
     bindings=read(archived/'analysis-manifest.v1.json')['bindings']
     package=project/'Research/FormalDataPackages/Gate14Re-ME/formal-st/v5/attempt-002'
     # Identify the frozen receipt by its hash, not the historical machine path.
@@ -176,7 +177,7 @@ def run_smsb(project,out):
 
 def run_reporting(project,results):
     import contextlib
-    base=ROOT/'project/Research/Analysis/Gate14Re-ME/formal-st/v5'
+    base=repository_path('project/Research/Analysis/Gate14Re-ME/formal-st/v5')
     m=load(project/'Research/Gate14Re-ME/Tools/gate14re_me_formal_st_raw_scale_provenance_v1_0.py','frozen_reporting')
     src=results/'smsb';out=results/'smsb-reporting';out.mkdir()
     lanes=[json.loads(x) for x in (src/'lane-estimands.v1.jsonl').read_text('utf-8-sig').splitlines()]
@@ -239,7 +240,7 @@ def clean(obj):
     if isinstance(obj,list):return [clean(v) for v in obj]
     return obj
 def validate(name,out):
-    archived=ROOT/'project/Research/Analysis'/EXPECTED[name]
+    archived=repository_path('project/Research/Analysis/'+EXPECTED[name])
     stats={'numeric_values':0,'max_absolute_difference':0.,'csv_rows':0};files=[]
     excluded={'analysis-input-audit.v1.json'}
     for actual in out.glob('*.json'):
@@ -260,8 +261,8 @@ def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--archives',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     a=p.parse_args();out=a.output.resolve()
     if out.exists() or out.is_relative_to(ROOT):p.error('Use a fresh output directory outside the repository')
-    for b in read(ROOT/'portable/historical/original-engines.json'):assert sha(ROOT/b['path'])==b['sha256'],b['path']
-    for b in read(ROOT/'portable/historical/adapter-hashes.json'):assert sha(ROOT/b['path'])==b['sha256'],b['path']
+    for b in read(ROOT/'portable/historical/original-engines.json'):assert sha(repository_path(b['path']))==b['sha256'],b['path']
+    for b in read(ROOT/'portable/historical/adapter-hashes.json'):assert sha(repository_path(b['path']))==b['sha256'],b['path']
     out.mkdir(parents=True);inputs=out/'inputs';inputs.mkdir()
     print('Verifying and extracting scientific inputs...',flush=True)
     chosen,used=extract(a.archives.resolve(),inputs);project=bound_project(inputs)

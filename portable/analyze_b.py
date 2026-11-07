@@ -4,7 +4,7 @@ from portable_paths import configuration, resolve_recorded_path
 ARGS=configuration()
 ROOT=ARGS.input_root
 OUTPUT=ARGS.output_root
-SOURCE=pathlib.Path(__file__).resolve().parents[1]/'supplement-20261103/evidence/Analyze-Gate14ReFormalPhaseBV1.py'
+SOURCE=pathlib.Path(__file__).resolve().parents[1]/'Supplemental-Acquisition-with-Corrected-DStar-Lite/evidence/Analyze-Gate14ReFormalPhaseBV1.py'
 SOURCE_HASH='9c5bbbadfa06afc3ad715c5ceb579f4f10e8f022b694e50c37c0caeb4c217401'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
