@@ -37,6 +37,14 @@ The lightweight tools use Python standard-library modules. Historical environmen
 
 ## Download
 
+On Windows, use a short checkout path and enable long paths for this clone:
+
+```powershell
+git -c core.longpaths=true clone https://github.com/bdscyx1-ux/mti-reproducibility.git C:/mti-reproducibility
+```
+
+The included `.gitattributes` preserves exact file bytes across platforms so that frozen-source checksum verification remains valid. Avoid editor-wide newline normalization of archived evidence.
+
 Repository: https://github.com/bdscyx1-ux/mti-reproducibility
 
 Version: **v1.0.0**. Data and convenience ZIPs are distributed through [the versioned GitHub Release](https://github.com/bdscyx1-ux/mti-reproducibility/releases/tag/v1.0.0). A completed release contains all 67 data ZIPs, their `*.files.csv` indexes, `archives.json` and the release checksum file. If the release is still a draft or assets are incomplete, do not treat the data publication as complete.
